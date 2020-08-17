@@ -34,7 +34,7 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-project": "^0.0.25",
+    "@cdktf/provider-project": "^0.0.26",
     "dot-prop": "^5.2.0",
     "projen": "^0.3.34",
     "standard-version": "^8.0.1",
@@ -60,7 +60,7 @@
     "cdktf-cli": "^0.0.14"
   },
   "peerDependencies": {
-    "cdktf": "^0.0.14",
+    "cdktf": "^0.0.15",
     "constructs": "^3.0.4"
   },
   "dependencies": {},
