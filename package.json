@@ -34,9 +34,9 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-project": "^0.0.27",
+    "@cdktf/provider-project": "^0.0.29",
     "dot-prop": "^5.2.0",
-    "projen": "^0.3.34",
+    "projen": "^0.3.36",
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -103,8 +103,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "cdktf-cdktf-provider-aws",
-        "module": "cdktf_cdktf_provider_aws"
+        "distName": "cdktf-cdktf-provider-google",
+        "module": "cdktf_cdktf_provider_google"
       }
     },
     "tsc": {

@@ -263,10 +263,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-project@^0.0.27":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.0.27.tgz#3ccab9318d4e6fe28a7a93e503a8fafa13bf07ea"
-  integrity sha512-ZVmHINdWu+6CdO16rZkpNvKQlDBz4MPS38SknFfeW1/uTryvrO4qLcsGJllQZLxMCtF/pXXdsh6lXU4oLHcO9w==
+"@cdktf/provider-project@^0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.0.29.tgz#dd36c9cf5098223681ea3d7a112561a8209c398c"
+  integrity sha512-LQu86w236+dK8eCBN9UpWbTHNOXDos1pi7p8tv9TQiwLi0CSqqrQkkoQs5YWbBYzkV9VDCc5FG/kz900kJ3qeg==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -4783,10 +4783,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.3.34:
-  version "0.3.35"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.35.tgz#f6a9ac4744000443c5ddeecb291a09ae59384ef8"
-  integrity sha512-Aj8RIRSR8PeTw55zl5+q7pUgMPg4j6ujOHM/56DTTCfci1jKgKiK6muved+uXQMZwe2sG60NrnBrVeo/AHkRng==
+projen@^0.3.36:
+  version "0.3.36"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.36.tgz#7a4cc51bfc303566c26aa96183ba72277cd2a81d"
+  integrity sha512-YgpFYFtEXoWObWPGKu8TRuvQCFjWSovm313a/sBZdsMdlWzCinJmENhUqlI3qdLpSuO+VVtSdPDfS8IgfW5g4w==
   dependencies:
     decamelize "^4.0.0"
     fs-extra "^9.0.1"

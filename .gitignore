@@ -60,3 +60,4 @@ package-lock.json
 !/API.md
 !/cdktf.json
 !/README.md
+!/.github/workflows/providerupgrade.yml
