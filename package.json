@@ -26,7 +26,8 @@
     "docgen": "jsii-docgen",
     "fetch": "rm -rf ./src/* && cdktf get && cp -R .gen/providers/google/* ./src/",
     "commit": "git add -A && git commit -am \"Update provider\" || echo \"No changes to commit\"",
-    "prebump": "yarn fetch && yarn compile && yarn run commit"
+    "should-release": "! git diff --exit-code v$(cat version.json | jq -r '.version') ./src ./package.json",
+    "prebump": "yarn fetch && yarn compile && yarn run commit && yarn run should-release"
   },
   "author": {
     "name": "HashiCorp",
@@ -34,7 +35,7 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-project": "^0.0.30",
+    "@cdktf/provider-project": "0.0.32",
     "dot-prop": "^5.2.0",
     "projen": "^0.3.37",
     "standard-version": "^8.0.1",
