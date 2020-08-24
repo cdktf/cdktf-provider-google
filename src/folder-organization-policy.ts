@@ -178,7 +178,7 @@ export class FolderOrganizationPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       constraint: this._constraint,
       folder: this._folder,

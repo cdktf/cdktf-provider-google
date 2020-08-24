@@ -389,7 +389,7 @@ export class ComputeForwardingRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       all_ports: this._allPorts,
       allow_global_access: this._allowGlobalAccess,

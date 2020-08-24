@@ -177,7 +177,7 @@ export class OrganizationPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       constraint: this._constraint,
       org_id: this._orgId,

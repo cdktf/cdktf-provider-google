@@ -97,7 +97,7 @@ export class IapAppEngineServiceIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_id: this._appId,
       policy_data: this._policyData,

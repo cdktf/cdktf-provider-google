@@ -664,7 +664,7 @@ export class AppEngineFlexibleAppVersion extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       beta_settings: this._betaSettings,
       default_expiration: this._defaultExpiration,

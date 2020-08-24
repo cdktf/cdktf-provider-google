@@ -101,7 +101,7 @@ export class ComputeProjectMetadataItem extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key: this._key,
       project: this._project,

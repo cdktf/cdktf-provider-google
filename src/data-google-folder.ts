@@ -105,7 +105,7 @@ export class DataGoogleFolder extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       folder: this._folder,
       lookup_organization: this._lookupOrganization,

@@ -163,7 +163,7 @@ export class ActiveDirectoryDomain extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin: this._admin,
       authorized_networks: this._authorizedNetworks,

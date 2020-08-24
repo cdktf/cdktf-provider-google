@@ -97,7 +97,7 @@ export class DataprocJobIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       job_id: this._jobId,
       policy_data: this._policyData,

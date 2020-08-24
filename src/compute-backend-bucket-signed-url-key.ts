@@ -112,7 +112,7 @@ export class ComputeBackendBucketSignedUrlKey extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_bucket: this._backendBucket,
       key_value: this._keyValue,

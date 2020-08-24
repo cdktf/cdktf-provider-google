@@ -167,7 +167,7 @@ export class ComputeNetworkPeering extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_create_routes: this._autoCreateRoutes,
       export_custom_routes: this._exportCustomRoutes,

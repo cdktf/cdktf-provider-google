@@ -142,7 +142,7 @@ export class BigtableInstance extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       deletion_protection: this._deletionProtection,
       display_name: this._displayName,

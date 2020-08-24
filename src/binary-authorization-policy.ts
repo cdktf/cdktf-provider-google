@@ -178,7 +178,7 @@ export class BinaryAuthorizationPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
       global_policy_evaluation_mode: this._globalPolicyEvaluationMode,

@@ -146,7 +146,7 @@ export class ComputeTargetTcpProxy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_service: this._backendService,
       description: this._description,

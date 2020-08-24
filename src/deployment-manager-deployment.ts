@@ -214,7 +214,7 @@ export class DeploymentManagerDeployment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       create_policy: this._createPolicy,
       delete_policy: this._deletePolicy,

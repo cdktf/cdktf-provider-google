@@ -104,7 +104,7 @@ export class OrganizationIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       members: this._members,
       org_id: this._orgId,

@@ -376,7 +376,7 @@ export class CloudRunService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       autogenerate_revision_name: this._autogenerateRevisionName,
       location: this._location,

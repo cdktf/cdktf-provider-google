@@ -136,7 +136,7 @@ export class ComputeAttachedDisk extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       device_name: this._deviceName,
       disk: this._disk,

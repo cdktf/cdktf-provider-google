@@ -280,7 +280,7 @@ export class ComputeRouterNat extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       drain_nat_ips: this._drainNatIps,
       icmp_idle_timeout_sec: this._icmpIdleTimeoutSec,

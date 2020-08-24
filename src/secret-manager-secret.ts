@@ -147,7 +147,7 @@ export class SecretManagerSecret extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       labels: this._labels,
       project: this._project,

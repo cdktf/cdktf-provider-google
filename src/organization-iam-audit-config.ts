@@ -95,7 +95,7 @@ export class OrganizationIamAuditConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       org_id: this._orgId,
       service: this._service,

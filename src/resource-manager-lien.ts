@@ -132,7 +132,7 @@ export class ResourceManagerLien extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       origin: this._origin,
       parent: this._parent,

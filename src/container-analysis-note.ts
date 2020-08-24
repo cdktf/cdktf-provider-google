@@ -190,7 +190,7 @@ export class ContainerAnalysisNote extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       expiration_time: this._expirationTime,
       long_description: this._longDescription,

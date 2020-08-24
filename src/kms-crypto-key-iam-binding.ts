@@ -103,7 +103,7 @@ export class KmsCryptoKeyIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       crypto_key_id: this._cryptoKeyId,
       members: this._members,

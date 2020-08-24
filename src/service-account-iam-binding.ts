@@ -103,7 +103,7 @@ export class ServiceAccountIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       members: this._members,
       role: this._role,

@@ -75,7 +75,7 @@ export class DataGoogleKmsSecretCiphertext extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       crypto_key: this._cryptoKey,
       plaintext: this._plaintext,

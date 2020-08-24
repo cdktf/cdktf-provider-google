@@ -235,7 +235,7 @@ export class ComputeRouterPeer extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       advertise_mode: this._advertiseMode,
       advertised_groups: this._advertisedGroups,

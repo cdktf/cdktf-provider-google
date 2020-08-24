@@ -156,7 +156,7 @@ export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: this._displayName,
       labels: this._labels,

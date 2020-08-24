@@ -118,7 +118,7 @@ export class LoggingBillingAccountBucketConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       billing_account: this._billingAccount,
       bucket_id: this._bucketId,

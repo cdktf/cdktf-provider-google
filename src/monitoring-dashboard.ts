@@ -89,7 +89,7 @@ export class MonitoringDashboard extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dashboard_json: this._dashboardJson,
       project: this._project,

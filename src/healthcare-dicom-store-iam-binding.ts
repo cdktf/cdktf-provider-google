@@ -103,7 +103,7 @@ export class HealthcareDicomStoreIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dicom_store_id: this._dicomStoreId,
       members: this._members,

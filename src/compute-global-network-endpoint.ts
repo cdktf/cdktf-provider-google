@@ -124,7 +124,7 @@ export class ComputeGlobalNetworkEndpoint extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       fqdn: this._fqdn,
       global_network_endpoint_group: this._globalNetworkEndpointGroup,

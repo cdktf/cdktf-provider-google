@@ -105,7 +105,7 @@ export class AccessContextManagerAccessPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       parent: this._parent,
       title: this._title,

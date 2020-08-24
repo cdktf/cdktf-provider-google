@@ -435,7 +435,7 @@ export class MonitoringSlo extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       calendar_period: this._calendarPeriod,
       display_name: this._displayName,

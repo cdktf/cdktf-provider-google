@@ -114,7 +114,7 @@ export class BinaryAuthorizationAttestorIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       attestor: this._attestor,
       member: this._member,

@@ -112,7 +112,7 @@ export class DataGoogleKmsCryptoKey extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_ring: this._keyRing,
       name: this._name,

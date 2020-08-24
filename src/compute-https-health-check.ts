@@ -210,7 +210,7 @@ export class ComputeHttpsHealthCheck extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       check_interval_sec: this._checkIntervalSec,
       description: this._description,

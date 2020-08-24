@@ -203,7 +203,7 @@ export class BigqueryDataTransferConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       data_refresh_window_days: this._dataRefreshWindowDays,
       data_source_id: this._dataSourceId,

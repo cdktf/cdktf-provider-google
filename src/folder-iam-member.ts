@@ -103,7 +103,7 @@ export class FolderIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       folder: this._folder,
       member: this._member,

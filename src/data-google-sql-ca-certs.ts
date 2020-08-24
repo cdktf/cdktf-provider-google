@@ -108,7 +108,7 @@ export class DataGoogleSqlCaCerts extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       instance: this._instance,
       project: this._project,

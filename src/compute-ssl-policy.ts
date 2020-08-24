@@ -179,7 +179,7 @@ export class ComputeSslPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       custom_features: this._customFeatures,
       description: this._description,

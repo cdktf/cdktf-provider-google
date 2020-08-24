@@ -166,7 +166,7 @@ export class ComputeNetwork extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_create_subnetworks: this._autoCreateSubnetworks,
       delete_default_routes_on_create: this._deleteDefaultRoutesOnCreate,

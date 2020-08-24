@@ -139,7 +139,7 @@ export class ComputeNetworkEndpoint extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       instance: this._instance,
       ip_address: this._ipAddress,

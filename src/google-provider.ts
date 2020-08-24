@@ -845,7 +845,7 @@ export class GoogleProvider extends TerraformProvider {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_context_manager_custom_endpoint: this._accessContextManagerCustomEndpoint,
       access_token: this._accessToken,

@@ -148,7 +148,7 @@ export class ComputeRouterInterface extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       interconnect_attachment: this._interconnectAttachment,
       ip_range: this._ipRange,

@@ -365,7 +365,7 @@ export class ComputeFirewall extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
       destination_ranges: this._destinationRanges,

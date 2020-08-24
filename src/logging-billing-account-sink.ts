@@ -117,7 +117,7 @@ export class LoggingBillingAccountSink extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       billing_account: this._billingAccount,
       destination: this._destination,

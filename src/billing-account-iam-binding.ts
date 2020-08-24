@@ -103,7 +103,7 @@ export class BillingAccountIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       billing_account_id: this._billingAccountId,
       members: this._members,

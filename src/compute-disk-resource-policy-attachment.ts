@@ -112,7 +112,7 @@ export class ComputeDiskResourcePolicyAttachment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       disk: this._disk,
       name: this._name,

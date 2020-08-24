@@ -137,7 +137,7 @@ export class PubsubTopic extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       kms_key_name: this._kmsKeyName,
       labels: this._labels,

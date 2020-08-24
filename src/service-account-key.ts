@@ -152,7 +152,7 @@ export class ServiceAccountKey extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_algorithm: this._keyAlgorithm,
       pgp_key: this._pgpKey,

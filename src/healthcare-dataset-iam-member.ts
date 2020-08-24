@@ -103,7 +103,7 @@ export class HealthcareDatasetIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset_id: this._datasetId,
       member: this._member,

@@ -235,7 +235,7 @@ export class DialogflowAgent extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_version: this._apiVersion,
       avatar_uri: this._avatarUri,

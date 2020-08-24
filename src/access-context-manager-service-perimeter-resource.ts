@@ -90,7 +90,7 @@ export class AccessContextManagerServicePerimeterResource extends TerraformResou
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       perimeter_name: this._perimeterName,
       resource: this._resource,

@@ -100,7 +100,7 @@ export class ProjectUsageExportBucket extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket_name: this._bucketName,
       prefix: this._prefix,

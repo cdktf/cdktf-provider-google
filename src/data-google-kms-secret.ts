@@ -86,7 +86,7 @@ export class DataGoogleKmsSecret extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_authenticated_data: this._additionalAuthenticatedData,
       ciphertext: this._ciphertext,

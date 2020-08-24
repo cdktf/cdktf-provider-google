@@ -106,7 +106,7 @@ export class OsLoginSshPublicKey extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       expiration_time_usec: this._expirationTimeUsec,
       key: this._key,

@@ -75,7 +75,7 @@ export class HealthcareHl7V2StoreIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       hl7_v2_store_id: this._hl7V2StoreId,
       policy_data: this._policyData,

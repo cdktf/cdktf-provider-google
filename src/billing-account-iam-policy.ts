@@ -75,7 +75,7 @@ export class BillingAccountIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       billing_account_id: this._billingAccountId,
       policy_data: this._policyData,

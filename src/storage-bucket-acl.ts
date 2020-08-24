@@ -96,7 +96,7 @@ export class StorageBucketAcl extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket: this._bucket,
       default_acl: this._defaultAcl,

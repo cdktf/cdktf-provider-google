@@ -97,7 +97,7 @@ export class DataCatalogEntryGroupIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       entry_group: this._entryGroup,
       policy_data: this._policyData,

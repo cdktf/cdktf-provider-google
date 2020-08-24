@@ -163,7 +163,7 @@ export class DataGoogleProjectOrganizationPolicy extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       constraint: this._constraint,
       project: this._project,

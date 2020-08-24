@@ -114,7 +114,7 @@ export class DataGoogleIamTestablePermissions extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       custom_support_level: this._customSupportLevel,
       full_resource_name: this._fullResourceName,

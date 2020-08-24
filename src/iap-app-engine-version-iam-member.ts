@@ -136,7 +136,7 @@ export class IapAppEngineVersionIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_id: this._appId,
       member: this._member,

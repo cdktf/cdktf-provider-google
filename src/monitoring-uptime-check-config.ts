@@ -274,7 +274,7 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: this._displayName,
       is_internal: this._isInternal,

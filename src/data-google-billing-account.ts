@@ -91,7 +91,7 @@ export class DataGoogleBillingAccount extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       billing_account: this._billingAccount,
       display_name: this._displayName,

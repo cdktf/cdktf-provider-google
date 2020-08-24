@@ -95,7 +95,7 @@ export class DataGoogleOrganization extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       domain: this._domain,
       organization: this._organization,

@@ -400,7 +400,7 @@ export class AppEngineStandardAppVersion extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       delete_service_on_destroy: this._deleteServiceOnDestroy,
       env_variables: this._envVariables,

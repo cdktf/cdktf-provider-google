@@ -162,7 +162,7 @@ export class BigtableAppProfile extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_profile_id: this._appProfileId,
       description: this._description,

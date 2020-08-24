@@ -199,7 +199,7 @@ export class HealthcareHl7V2Store extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset: this._dataset,
       labels: this._labels,

@@ -280,7 +280,7 @@ export class RedisInstance extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       alternative_location_id: this._alternativeLocationId,
       authorized_network: this._authorizedNetwork,

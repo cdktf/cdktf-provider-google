@@ -343,7 +343,7 @@ export class BigqueryTable extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       clustering: this._clustering,
       dataset_id: this._datasetId,

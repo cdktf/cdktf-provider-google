@@ -222,7 +222,7 @@ export class TpuNode extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       accelerator_type: this._acceleratorType,
       cidr_block: this._cidrBlock,

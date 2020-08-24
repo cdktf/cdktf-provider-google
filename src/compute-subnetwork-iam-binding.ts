@@ -125,7 +125,7 @@ export class ComputeSubnetworkIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       members: this._members,
       project: this._project,

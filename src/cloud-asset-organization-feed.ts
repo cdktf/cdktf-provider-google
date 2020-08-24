@@ -171,7 +171,7 @@ export class CloudAssetOrganizationFeed extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       asset_names: this._assetNames,
       asset_types: this._assetTypes,

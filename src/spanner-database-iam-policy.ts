@@ -97,7 +97,7 @@ export class SpannerDatabaseIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database: this._database,
       instance: this._instance,

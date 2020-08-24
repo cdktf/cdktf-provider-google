@@ -114,7 +114,7 @@ export class RuntimeconfigConfigIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       config: this._config,
       member: this._member,

@@ -412,7 +412,7 @@ export class ComputeInstanceTemplate extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       can_ip_forward: this._canIpForward,
       description: this._description,

@@ -164,7 +164,7 @@ export class ComputeBackendBucket extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket_name: this._bucketName,
       description: this._description,

@@ -170,7 +170,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: this._displayName,
       enabled: this._enabled,

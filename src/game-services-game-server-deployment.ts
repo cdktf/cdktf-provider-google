@@ -130,7 +130,7 @@ export class GameServicesGameServerDeployment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       deployment_id: this._deploymentId,
       description: this._description,

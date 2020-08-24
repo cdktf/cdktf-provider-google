@@ -137,7 +137,7 @@ export class SqlSourceRepresentationInstance extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database_version: this._databaseVersion,
       host: this._host,

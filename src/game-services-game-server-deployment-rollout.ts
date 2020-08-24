@@ -130,7 +130,7 @@ export class GameServicesGameServerDeploymentRollout extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       default_game_server_config: this._defaultGameServerConfig,
       deployment_id: this._deploymentId,

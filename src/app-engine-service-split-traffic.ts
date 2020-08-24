@@ -118,7 +118,7 @@ export class AppEngineServiceSplitTraffic extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       migrate_traffic: this._migrateTraffic,
       project: this._project,

@@ -166,7 +166,7 @@ export class DnsPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
       enable_inbound_forwarding: this._enableInboundForwarding,

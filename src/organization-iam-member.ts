@@ -104,7 +104,7 @@ export class OrganizationIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       member: this._member,
       org_id: this._orgId,

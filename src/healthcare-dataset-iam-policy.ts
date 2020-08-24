@@ -75,7 +75,7 @@ export class HealthcareDatasetIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset_id: this._datasetId,
       policy_data: this._policyData,

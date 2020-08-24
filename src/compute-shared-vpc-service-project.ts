@@ -88,7 +88,7 @@ export class ComputeSharedVpcServiceProject extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       host_project: this._hostProject,
       service_project: this._serviceProject,

@@ -97,7 +97,7 @@ export class DataGoogleIamPolicy extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       audit_config: this._auditConfig,
       binding: this._binding,

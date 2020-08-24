@@ -270,7 +270,7 @@ export class DataflowJob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_experiments: this._additionalExperiments,
       ip_configuration: this._ipConfiguration,

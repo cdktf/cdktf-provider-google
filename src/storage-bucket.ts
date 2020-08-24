@@ -310,7 +310,7 @@ export class StorageBucket extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket_policy_only: this._bucketPolicyOnly,
       default_event_based_hold: this._defaultEventBasedHold,

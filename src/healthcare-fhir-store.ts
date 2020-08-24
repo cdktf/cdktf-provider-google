@@ -262,7 +262,7 @@ export class HealthcareFhirStore extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset: this._dataset,
       disable_referential_integrity: this._disableReferentialIntegrity,

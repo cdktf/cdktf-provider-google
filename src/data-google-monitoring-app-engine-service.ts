@@ -101,7 +101,7 @@ export class DataGoogleMonitoringAppEngineService extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       module_id: this._moduleId,
       project: this._project,

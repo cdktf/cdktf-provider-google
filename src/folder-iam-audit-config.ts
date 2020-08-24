@@ -94,7 +94,7 @@ export class FolderIamAuditConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       folder: this._folder,
       service: this._service,

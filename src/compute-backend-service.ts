@@ -653,7 +653,7 @@ export class ComputeBackendService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       affinity_cookie_ttl_sec: this._affinityCookieTtlSec,
       connection_draining_timeout_sec: this._connectionDrainingTimeoutSec,

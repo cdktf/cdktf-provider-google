@@ -114,7 +114,7 @@ export class IapWebBackendServiceIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       member: this._member,
       project: this._project,

@@ -76,7 +76,7 @@ export class OrganizationIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       org_id: this._orgId,
       policy_data: this._policyData,

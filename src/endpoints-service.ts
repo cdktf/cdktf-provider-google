@@ -202,7 +202,7 @@ export class EndpointsService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       grpc_config: this._grpcConfig,
       openapi_config: this._openapiConfig,

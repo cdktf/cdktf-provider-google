@@ -118,7 +118,7 @@ export class LoggingFolderBucketConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket_id: this._bucketId,
       description: this._description,

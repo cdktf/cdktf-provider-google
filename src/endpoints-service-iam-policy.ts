@@ -75,7 +75,7 @@ export class EndpointsServiceIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       policy_data: this._policyData,
       service_name: this._serviceName,

@@ -86,7 +86,7 @@ export class RuntimeconfigConfigIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       config: this._config,
       policy_data: this._policyData,

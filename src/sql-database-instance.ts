@@ -353,7 +353,7 @@ export class SqlDatabaseInstance extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database_version: this._databaseVersion,
       master_instance_name: this._masterInstanceName,

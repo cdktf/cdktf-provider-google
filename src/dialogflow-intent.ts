@@ -250,7 +250,7 @@ export class DialogflowIntent extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       action: this._action,
       default_response_platforms: this._defaultResponsePlatforms,

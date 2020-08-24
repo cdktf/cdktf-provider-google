@@ -75,7 +75,7 @@ export class DataGoogleStorageProjectServiceAccount extends TerraformDataSource 
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       project: this._project,
       user_project: this._userProject,

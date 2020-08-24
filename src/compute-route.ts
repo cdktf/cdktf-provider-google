@@ -257,7 +257,7 @@ export class ComputeRoute extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
       dest_range: this._destRange,

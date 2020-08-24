@@ -70,7 +70,7 @@ export class StorageDefaultObjectAcl extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket: this._bucket,
       role_entity: this._roleEntity,

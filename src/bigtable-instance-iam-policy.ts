@@ -86,7 +86,7 @@ export class BigtableInstanceIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       instance: this._instance,
       policy_data: this._policyData,

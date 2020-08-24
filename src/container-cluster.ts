@@ -872,7 +872,7 @@ export class ContainerCluster extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_zones: this._additionalZones,
       cluster_ipv4_cidr: this._clusterIpv4Cidr,

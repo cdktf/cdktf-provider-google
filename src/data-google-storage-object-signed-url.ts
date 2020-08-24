@@ -141,7 +141,7 @@ export class DataGoogleStorageObjectSignedUrl extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket: this._bucket,
       content_md5: this._contentMd5,

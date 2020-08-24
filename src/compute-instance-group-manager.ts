@@ -283,7 +283,7 @@ export class ComputeInstanceGroupManager extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       base_instance_name: this._baseInstanceName,
       description: this._description,

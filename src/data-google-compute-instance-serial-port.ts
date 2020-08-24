@@ -97,7 +97,7 @@ export class DataGoogleComputeInstanceSerialPort extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       instance: this._instance,
       port: this._port,

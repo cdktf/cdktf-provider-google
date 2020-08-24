@@ -87,7 +87,7 @@ export class ComputeProjectDefaultNetworkTier extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       network_tier: this._networkTier,
       project: this._project,

@@ -75,7 +75,7 @@ export class HealthcareDicomStoreIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dicom_store_id: this._dicomStoreId,
       policy_data: this._policyData,

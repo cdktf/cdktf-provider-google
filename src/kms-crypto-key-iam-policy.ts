@@ -75,7 +75,7 @@ export class KmsCryptoKeyIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       crypto_key_id: this._cryptoKeyId,
       policy_data: this._policyData,

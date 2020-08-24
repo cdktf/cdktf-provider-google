@@ -120,7 +120,7 @@ export class DnsRecordSet extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       managed_zone: this._managedZone,
       name: this._name,

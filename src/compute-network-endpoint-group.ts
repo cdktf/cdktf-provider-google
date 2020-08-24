@@ -178,7 +178,7 @@ export class ComputeNetworkEndpointGroup extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       default_port: this._defaultPort,
       description: this._description,

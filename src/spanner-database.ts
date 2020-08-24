@@ -120,7 +120,7 @@ export class SpannerDatabase extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ddl: this._ddl,
       instance: this._instance,

@@ -97,7 +97,7 @@ export class DataGoogleServiceAccountAccessToken extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       delegates: this._delegates,
       lifetime: this._lifetime,

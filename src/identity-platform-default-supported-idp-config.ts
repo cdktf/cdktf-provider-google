@@ -149,7 +149,7 @@ export class IdentityPlatformDefaultSupportedIdpConfig extends TerraformResource
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       client_id: this._clientId,
       client_secret: this._clientSecret,

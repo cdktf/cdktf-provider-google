@@ -211,7 +211,7 @@ export class AppEngineApplication extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auth_domain: this._authDomain,
       database_type: this._databaseType,

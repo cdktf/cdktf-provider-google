@@ -97,7 +97,7 @@ export class CloudRunServiceIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: this._location,
       policy_data: this._policyData,

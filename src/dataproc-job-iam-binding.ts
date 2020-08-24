@@ -125,7 +125,7 @@ export class DataprocJobIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       job_id: this._jobId,
       members: this._members,

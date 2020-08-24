@@ -503,7 +503,7 @@ export class ComputeInstance extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_stopping_for_update: this._allowStoppingForUpdate,
       can_ip_forward: this._canIpForward,

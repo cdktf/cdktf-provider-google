@@ -125,7 +125,7 @@ export class SqlUser extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       host: this._host,
       instance: this._instance,

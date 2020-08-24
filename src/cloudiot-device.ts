@@ -269,7 +269,7 @@ export class CloudiotDevice extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       blocked: this._blocked,
       log_level: this._logLevel,

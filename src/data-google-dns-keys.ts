@@ -204,7 +204,7 @@ export class DataGoogleDnsKeys extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       managed_zone: this._managedZone,
       project: this._project,

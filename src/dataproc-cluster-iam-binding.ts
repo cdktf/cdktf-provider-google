@@ -125,7 +125,7 @@ export class DataprocClusterIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster: this._cluster,
       members: this._members,

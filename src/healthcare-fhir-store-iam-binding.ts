@@ -103,7 +103,7 @@ export class HealthcareFhirStoreIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       fhir_store_id: this._fhirStoreId,
       members: this._members,

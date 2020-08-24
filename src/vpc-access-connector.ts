@@ -157,7 +157,7 @@ export class VpcAccessConnector extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ip_cidr_range: this._ipCidrRange,
       max_throughput: this._maxThroughput,

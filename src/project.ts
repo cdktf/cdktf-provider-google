@@ -167,7 +167,7 @@ export class Project extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_create_network: this._autoCreateNetwork,
       billing_account: this._billingAccount,

@@ -248,7 +248,7 @@ export class ComputeSubnetwork extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
       enable_flow_logs: this._enableFlowLogs,

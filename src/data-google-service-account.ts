@@ -90,7 +90,7 @@ export class DataGoogleServiceAccount extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_id: this._accountId,
       project: this._project,

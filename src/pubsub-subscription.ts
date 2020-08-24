@@ -313,7 +313,7 @@ export class PubsubSubscription extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ack_deadline_seconds: this._ackDeadlineSeconds,
       filter: this._filter,

@@ -964,7 +964,7 @@ export class ComputeRegionUrlMap extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       default_service: this._defaultService,
       description: this._description,

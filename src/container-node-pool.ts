@@ -321,7 +321,7 @@ export class ContainerNodePool extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster: this._cluster,
       initial_node_count: this._initialNodeCount,

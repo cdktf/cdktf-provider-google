@@ -178,7 +178,7 @@ export class ComputeTargetPool extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backup_pool: this._backupPool,
       description: this._description,

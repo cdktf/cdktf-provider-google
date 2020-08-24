@@ -75,7 +75,7 @@ export class ServiceAccountIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       policy_data: this._policyData,
       service_account_id: this._serviceAccountId,

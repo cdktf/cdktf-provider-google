@@ -120,7 +120,7 @@ export class StorageHmacKey extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       project: this._project,
       service_account_email: this._serviceAccountEmail,

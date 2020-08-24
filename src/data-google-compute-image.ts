@@ -157,7 +157,7 @@ export class DataGoogleComputeImage extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       family: this._family,
       name: this._name,

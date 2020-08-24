@@ -177,7 +177,7 @@ export class ContainerAnalysisOccurrence extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       note_name: this._noteName,
       project: this._project,

@@ -175,7 +175,7 @@ export class GameServicesGameServerCluster extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_id: this._clusterId,
       description: this._description,

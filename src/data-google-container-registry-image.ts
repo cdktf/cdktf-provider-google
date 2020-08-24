@@ -108,7 +108,7 @@ export class DataGoogleContainerRegistryImage extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       digest: this._digest,
       name: this._name,

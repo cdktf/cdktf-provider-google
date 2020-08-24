@@ -249,7 +249,7 @@ export class DnsManagedZone extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
       dns_name: this._dnsName,

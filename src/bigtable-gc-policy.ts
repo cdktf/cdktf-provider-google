@@ -140,7 +140,7 @@ export class BigtableGcPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       column_family: this._columnFamily,
       instance_name: this._instanceName,

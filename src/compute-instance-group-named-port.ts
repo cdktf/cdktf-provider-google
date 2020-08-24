@@ -124,7 +124,7 @@ export class ComputeInstanceGroupNamedPortA extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       group: this._group,
       name: this._name,

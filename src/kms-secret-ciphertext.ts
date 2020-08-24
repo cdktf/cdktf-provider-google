@@ -106,7 +106,7 @@ export class KmsSecretCiphertext extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_authenticated_data: this._additionalAuthenticatedData,
       crypto_key: this._cryptoKey,

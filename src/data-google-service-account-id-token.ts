@@ -97,7 +97,7 @@ export class DataGoogleServiceAccountIdToken extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       delegates: this._delegates,
       include_email: this._includeEmail,

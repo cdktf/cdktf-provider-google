@@ -113,7 +113,7 @@ export class IapBrand extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_title: this._applicationTitle,
       project: this._project,

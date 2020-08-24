@@ -159,7 +159,7 @@ export class KmsKeyRingImportJob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       import_job_id: this._importJobId,
       import_method: this._importMethod,

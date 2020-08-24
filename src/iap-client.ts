@@ -100,7 +100,7 @@ export class IapClient extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       brand: this._brand,
       display_name: this._displayName,

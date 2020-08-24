@@ -134,7 +134,7 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: this._location,
       project: this._project,

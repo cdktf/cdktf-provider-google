@@ -203,7 +203,7 @@ export class BigqueryDatasetAccessA extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset_id: this._datasetId,
       domain: this._domain,

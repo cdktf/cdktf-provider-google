@@ -97,7 +97,7 @@ export class CloudfunctionsFunctionIamPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cloud_function: this._cloudFunction,
       policy_data: this._policyData,

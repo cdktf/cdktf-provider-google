@@ -106,7 +106,7 @@ export class ServiceNetworkingConnection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       network: this._network,
       reserved_peering_ranges: this._reservedPeeringRanges,

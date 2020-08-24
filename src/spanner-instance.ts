@@ -153,7 +153,7 @@ export class SpannerInstance extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       config: this._config,
       display_name: this._displayName,

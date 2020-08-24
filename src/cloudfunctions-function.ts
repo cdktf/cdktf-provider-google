@@ -334,7 +334,7 @@ export class CloudfunctionsFunction extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       available_memory_mb: this._availableMemoryMb,
       description: this._description,

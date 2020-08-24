@@ -110,7 +110,7 @@ export class ProjectService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       disable_dependent_services: this._disableDependentServices,
       disable_on_destroy: this._disableOnDestroy,

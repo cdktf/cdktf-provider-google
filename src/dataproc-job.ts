@@ -388,7 +388,7 @@ export class DataprocJob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       force_delete: this._forceDelete,
       labels: this._labels,

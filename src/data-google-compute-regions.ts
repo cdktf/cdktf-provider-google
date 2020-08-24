@@ -75,7 +75,7 @@ export class DataGoogleComputeRegions extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       project: this._project,
       status: this._status,

@@ -289,7 +289,7 @@ export class ComputeInterconnectAttachment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin_enabled: this._adminEnabled,
       bandwidth: this._bandwidth,

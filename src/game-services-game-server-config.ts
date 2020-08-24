@@ -214,7 +214,7 @@ export class GameServicesGameServerConfig extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       config_id: this._configId,
       deployment_id: this._deploymentId,

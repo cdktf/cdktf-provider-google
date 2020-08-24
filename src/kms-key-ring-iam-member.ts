@@ -103,7 +103,7 @@ export class KmsKeyRingIamMember extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_ring_id: this._keyRingId,
       member: this._member,

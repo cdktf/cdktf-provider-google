@@ -143,7 +143,7 @@ export class DataCatalogTag extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       column: this._column,
       parent: this._parent,

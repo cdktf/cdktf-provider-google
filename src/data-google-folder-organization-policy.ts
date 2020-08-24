@@ -163,7 +163,7 @@ export class DataGoogleFolderOrganizationPolicy extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       constraint: this._constraint,
       folder: this._folder,

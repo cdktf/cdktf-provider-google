@@ -301,7 +301,7 @@ export class CloudSchedulerJob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       attempt_deadline: this._attemptDeadline,
       description: this._description,

@@ -125,7 +125,7 @@ export class ComputeInstanceIamBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       instance_name: this._instanceName,
       members: this._members,

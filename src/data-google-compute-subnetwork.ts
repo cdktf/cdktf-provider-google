@@ -135,7 +135,7 @@ export class DataGoogleComputeSubnetwork extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       project: this._project,
