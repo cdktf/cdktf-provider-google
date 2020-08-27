@@ -285,7 +285,9 @@ If unspecified, this will be set to your project default. */
   readonly parameterMode?: string;
   /** Specifies a priority for the query. Default value: "INTERACTIVE" Possible values: ["INTERACTIVE", "BATCH"] */
   readonly priority?: string;
-  /** SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL. */
+  /** SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL.
+*NOTE*: queries containing [DML language](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language)
+('DELETE', 'UPDATE', 'MERGE', 'INSERT') must specify 'create_disposition = ""' and 'write_disposition = ""'. */
   readonly query: string;
   /** Allows the schema of the destination table to be updated as a side effect of the query job.
 Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;

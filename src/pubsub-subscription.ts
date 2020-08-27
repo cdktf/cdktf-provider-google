@@ -27,6 +27,10 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message. */
   readonly ackDeadlineSeconds?: number;
+  /** If 'true', messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order. */
+  readonly enableMessageOrdering?: boolean;
   /** The subscription only delivers the messages that match the filter. 
 Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
 by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription, 
@@ -170,6 +174,7 @@ export class PubsubSubscription extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._ackDeadlineSeconds = config.ackDeadlineSeconds;
+    this._enableMessageOrdering = config.enableMessageOrdering;
     this._filter = config.filter;
     this._labels = config.labels;
     this._messageRetentionDuration = config.messageRetentionDuration;
@@ -194,6 +199,15 @@ export class PubsubSubscription extends TerraformResource {
   }
   public set ackDeadlineSeconds(value: number | undefined) {
     this._ackDeadlineSeconds = value;
+  }
+
+  // enable_message_ordering - computed: false, optional: true, required: false
+  private _enableMessageOrdering?: boolean;
+  public get enableMessageOrdering() {
+    return this._enableMessageOrdering;
+  }
+  public set enableMessageOrdering(value: boolean | undefined) {
+    this._enableMessageOrdering = value;
   }
 
   // filter - computed: false, optional: true, required: false
@@ -316,6 +330,7 @@ export class PubsubSubscription extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ack_deadline_seconds: this._ackDeadlineSeconds,
+      enable_message_ordering: this._enableMessageOrdering,
       filter: this._filter,
       labels: this._labels,
       message_retention_duration: this._messageRetentionDuration,

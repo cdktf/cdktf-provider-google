@@ -23,7 +23,7 @@ export interface StorageBucketConfig extends TerraformMetaArguments {
   readonly project?: string;
   /** Enables Requester Pays on a storage bucket. */
   readonly requesterPays?: boolean;
-  /** The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE. */
+  /** The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. */
   readonly storageClass?: string;
   /** cors block */
   readonly cors?: StorageBucketCors[];
@@ -55,7 +55,7 @@ export interface StorageBucketEncryption {
   readonly defaultKmsKeyName: string;
 }
 export interface StorageBucketLifecycleRuleAction {
-  /** The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE. */
+  /** The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. */
   readonly storageClass?: string;
   /** The type of the action of this Lifecycle Rule. Supported values include: Delete and SetStorageClass. */
   readonly type: string;
@@ -66,7 +66,7 @@ export interface StorageBucketLifecycleRuleCondition {
   /** Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. */
   readonly createdBefore?: string;
   readonly isLive?: boolean;
-  /** Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, STANDARD, DURABLE_REDUCED_AVAILABILITY. */
+  /** Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY. */
   readonly matchesStorageClass?: string[];
   /** Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. */
   readonly numNewerVersions?: number;

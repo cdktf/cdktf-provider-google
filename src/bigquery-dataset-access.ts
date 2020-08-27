@@ -100,6 +100,11 @@ export class BigqueryDatasetAccessA extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // api_updated_member - computed: true, optional: false, required: true
+  public get apiUpdatedMember() {
+    return this.getBooleanAttribute('api_updated_member');
+  }
+
   // dataset_id - computed: false, optional: false, required: true
   private _datasetId: string;
   public get datasetId() {

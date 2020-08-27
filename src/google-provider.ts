@@ -7,6 +7,7 @@ import { TerraformProvider } from 'cdktf';
 // Configuration
 
 export interface GoogleProviderConfig {
+  readonly accessApprovalCustomEndpoint?: string;
   readonly accessContextManagerCustomEndpoint?: string;
   readonly accessToken?: string;
   readonly activeDirectoryCustomEndpoint?: string;
@@ -105,6 +106,7 @@ export class GoogleProvider extends TerraformProvider {
       },
       terraformProviderSource: 'google'
     });
+    this._accessApprovalCustomEndpoint = config.accessApprovalCustomEndpoint;
     this._accessContextManagerCustomEndpoint = config.accessContextManagerCustomEndpoint;
     this._accessToken = config.accessToken;
     this._activeDirectoryCustomEndpoint = config.activeDirectoryCustomEndpoint;
@@ -183,6 +185,15 @@ export class GoogleProvider extends TerraformProvider {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // access_approval_custom_endpoint - computed: false, optional: true, required: false
+  private _accessApprovalCustomEndpoint?: string;
+  public get accessApprovalCustomEndpoint() {
+    return this._accessApprovalCustomEndpoint;
+  }
+  public set accessApprovalCustomEndpoint(value: string | undefined) {
+    this._accessApprovalCustomEndpoint = value;
+  }
 
   // access_context_manager_custom_endpoint - computed: false, optional: true, required: false
   private _accessContextManagerCustomEndpoint?: string;
@@ -847,6 +858,7 @@ export class GoogleProvider extends TerraformProvider {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      access_approval_custom_endpoint: this._accessApprovalCustomEndpoint,
       access_context_manager_custom_endpoint: this._accessContextManagerCustomEndpoint,
       access_token: this._accessToken,
       active_directory_custom_endpoint: this._activeDirectoryCustomEndpoint,
