@@ -11,6 +11,8 @@ import { ComplexComputedList } from "cdktf";
 export interface DataGoogleSqlDatabaseInstanceConfig extends TerraformMetaArguments {
   /** The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week. */
   readonly name: string;
+  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  readonly project?: string;
 }
 export class DataGoogleSqlDatabaseInstanceIpAddress extends ComplexComputedList {
 
@@ -328,6 +330,7 @@ export class DataGoogleSqlDatabaseInstance extends TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._name = config.name;
+    this._project = config.project;
   }
 
   // ==========
@@ -382,9 +385,13 @@ export class DataGoogleSqlDatabaseInstance extends TerraformDataSource {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // project - computed: true, optional: false, required: true
+  // project - computed: false, optional: true, required: false
+  private _project?: string;
   public get project() {
-    return this.getStringAttribute('project');
+    return this._project;
+  }
+  public set project(value: string | undefined) {
+    this._project = value;
   }
 
   // public_ip_address - computed: true, optional: false, required: true
@@ -434,6 +441,7 @@ export class DataGoogleSqlDatabaseInstance extends TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
+      project: this._project,
     };
   }
 }

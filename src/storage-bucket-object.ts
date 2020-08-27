@@ -29,7 +29,7 @@ export interface StorageBucketObjectConfig extends TerraformMetaArguments {
   readonly name: string;
   /** A path to the data you want to upload. Must be defined if content is not. */
   readonly source?: string;
-  /** The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE. If not provided, this defaults to the bucket's default storage class or to a standard class. */
+  /** The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class. */
   readonly storageClass?: string;
 }
 

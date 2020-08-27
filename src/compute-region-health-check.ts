@@ -36,6 +36,8 @@ greater value than checkIntervalSec. */
   /** A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2. */
   readonly unhealthyThreshold?: number;
+  /** grpc_health_check block */
+  readonly grpcHealthCheck?: ComputeRegionHealthCheckGrpcHealthCheck[];
   /** http2_health_check block */
   readonly http2HealthCheck?: ComputeRegionHealthCheckHttp2HealthCheck[];
   /** http_health_check block */
@@ -48,6 +50,36 @@ consecutive failures. The default value is 2. */
   readonly tcpHealthCheck?: ComputeRegionHealthCheckTcpHealthCheck[];
   /** timeouts block */
   readonly timeouts?: ComputeRegionHealthCheckTimeouts;
+}
+export interface ComputeRegionHealthCheckGrpcHealthCheck {
+  /** The gRPC service name for the health check. 
+The value of grpcServiceName has the following meanings by convention:
+  - Empty serviceName means the overall status of all services at the backend.
+  - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+The grpcServiceName can only be ASCII. */
+  readonly grpcServiceName?: string;
+  /** The port number for the health check request. 
+Must be specified if portName and portSpecification are not set 
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535. */
+  readonly port?: number;
+  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence. */
+  readonly portName?: string;
+  /** Specifies how port is selected for health checking, can be one of the
+following values:
+
+  * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+  network endpoint is used for health checking. For other backends, the
+  port or named port specified in the Backend Service is used for health
+  checking.
+
+If not specified, gRPC health check follows behavior specified in 'port' and
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+  readonly portSpecification?: string;
 }
 export interface ComputeRegionHealthCheckHttp2HealthCheck {
   /** The value of the host header in the HTTP2 health check request.
@@ -263,6 +295,7 @@ export class ComputeRegionHealthCheck extends TerraformResource {
     this._region = config.region;
     this._timeoutSec = config.timeoutSec;
     this._unhealthyThreshold = config.unhealthyThreshold;
+    this._grpcHealthCheck = config.grpcHealthCheck;
     this._http2HealthCheck = config.http2HealthCheck;
     this._httpHealthCheck = config.httpHealthCheck;
     this._httpsHealthCheck = config.httpsHealthCheck;
@@ -371,6 +404,15 @@ export class ComputeRegionHealthCheck extends TerraformResource {
     this._unhealthyThreshold = value;
   }
 
+  // grpc_health_check - computed: false, optional: true, required: false
+  private _grpcHealthCheck?: ComputeRegionHealthCheckGrpcHealthCheck[];
+  public get grpcHealthCheck() {
+    return this._grpcHealthCheck;
+  }
+  public set grpcHealthCheck(value: ComputeRegionHealthCheckGrpcHealthCheck[] | undefined) {
+    this._grpcHealthCheck = value;
+  }
+
   // http2_health_check - computed: false, optional: true, required: false
   private _http2HealthCheck?: ComputeRegionHealthCheckHttp2HealthCheck[];
   public get http2HealthCheck() {
@@ -439,6 +481,7 @@ export class ComputeRegionHealthCheck extends TerraformResource {
       region: this._region,
       timeout_sec: this._timeoutSec,
       unhealthy_threshold: this._unhealthyThreshold,
+      grpc_health_check: this._grpcHealthCheck,
       http2_health_check: this._http2HealthCheck,
       http_health_check: this._httpHealthCheck,
       https_health_check: this._httpsHealthCheck,

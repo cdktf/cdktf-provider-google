@@ -1,0 +1,208 @@
+// https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import { TerraformResource } from 'cdktf';
+import { TerraformMetaArguments } from 'cdktf';
+
+// Configuration
+
+export interface AccessContextManagerServicePerimetersConfig extends TerraformMetaArguments {
+  /** The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id} */
+  readonly parent: string;
+  /** service_perimeters block */
+  readonly servicePerimeters?: AccessContextManagerServicePerimetersServicePerimeters[];
+  /** timeouts block */
+  readonly timeouts?: AccessContextManagerServicePerimetersTimeouts;
+}
+export interface AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServices {
+  /** The list of APIs usable within the Service Perimeter.
+Must be empty unless 'enableRestriction' is True. */
+  readonly allowedServices?: string[];
+  /** Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'. */
+  readonly enableRestriction?: boolean;
+}
+export interface AccessContextManagerServicePerimetersServicePerimetersSpec {
+  /** A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name} */
+  readonly accessLevels?: string[];
+  /** A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number} */
+  readonly resources?: string[];
+  /** GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+'storage.googleapis.com' is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions. */
+  readonly restrictedServices?: string[];
+  /** vpc_accessible_services block */
+  readonly vpcAccessibleServices?: AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServices[];
+}
+export interface AccessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServices {
+  /** The list of APIs usable within the Service Perimeter.
+Must be empty unless 'enableRestriction' is True. */
+  readonly allowedServices?: string[];
+  /** Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'. */
+  readonly enableRestriction?: boolean;
+}
+export interface AccessContextManagerServicePerimetersServicePerimetersStatus {
+  /** A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name} */
+  readonly accessLevels?: string[];
+  /** A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number} */
+  readonly resources?: string[];
+  /** GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+'storage.googleapis.com' is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions. */
+  readonly restrictedServices?: string[];
+  /** vpc_accessible_services block */
+  readonly vpcAccessibleServices?: AccessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServices[];
+}
+export interface AccessContextManagerServicePerimetersServicePerimeters {
+  /** Description of the ServicePerimeter and its use. Does not affect
+behavior. */
+  readonly description?: string;
+  /** Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name} */
+  readonly name: string;
+  /** Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves. Default value: "PERIMETER_TYPE_REGULAR" Possible values: ["PERIMETER_TYPE_REGULAR", "PERIMETER_TYPE_BRIDGE"] */
+  readonly perimeterType?: string;
+  /** Human readable title. Must be unique within the Policy. */
+  readonly title: string;
+  /** Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values. */
+  readonly useExplicitDryRunSpec?: boolean;
+  /** spec block */
+  readonly spec?: AccessContextManagerServicePerimetersServicePerimetersSpec[];
+  /** status block */
+  readonly status?: AccessContextManagerServicePerimetersServicePerimetersStatus[];
+}
+export interface AccessContextManagerServicePerimetersTimeouts {
+  readonly create?: string;
+  readonly delete?: string;
+  readonly update?: string;
+}
+
+// Resource
+
+export class AccessContextManagerServicePerimeters extends TerraformResource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  public constructor(scope: Construct, id: string, config: AccessContextManagerServicePerimetersConfig) {
+    super(scope, id, {
+      terraformResourceType: 'google_access_context_manager_service_perimeters',
+      terraformGeneratorMetadata: {
+        providerName: 'google'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._parent = config.parent;
+    this._servicePerimeters = config.servicePerimeters;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string;
+  public get id() {
+    return this._id ?? this.getStringAttribute('id');
+  }
+  public set id(value: string | undefined) {
+    this._id = value;
+  }
+
+  // parent - computed: false, optional: false, required: true
+  private _parent: string;
+  public get parent() {
+    return this._parent;
+  }
+  public set parent(value: string) {
+    this._parent = value;
+  }
+
+  // service_perimeters - computed: false, optional: true, required: false
+  private _servicePerimeters?: AccessContextManagerServicePerimetersServicePerimeters[];
+  public get servicePerimeters() {
+    return this._servicePerimeters;
+  }
+  public set servicePerimeters(value: AccessContextManagerServicePerimetersServicePerimeters[] | undefined) {
+    this._servicePerimeters = value;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: AccessContextManagerServicePerimetersTimeouts;
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public set timeouts(value: AccessContextManagerServicePerimetersTimeouts | undefined) {
+    this._timeouts = value;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      parent: this._parent,
+      service_perimeters: this._servicePerimeters,
+      timeouts: this._timeouts,
+    };
+  }
+}
