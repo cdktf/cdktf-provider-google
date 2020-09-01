@@ -66,7 +66,7 @@ export interface ComputeInstanceTemplateDisk {
   readonly diskName?: string;
   /** The size of the image in gigabytes. If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be exactly 375GB. */
   readonly diskSizeGb?: number;
-  /** The GCE disk type. Can be either "pd-ssd", "local-ssd", or "pd-standard". */
+  /** The GCE disk type. Can be either "pd-ssd", "local-ssd", "pd-balanced" or "pd-standard". */
   readonly diskType?: string;
   /** Specifies the disk interface to use for attaching this disk. */
   readonly interface?: string;

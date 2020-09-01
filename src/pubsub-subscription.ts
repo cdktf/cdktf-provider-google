@@ -64,6 +64,8 @@ messageRetentionDuration window. */
   readonly expirationPolicy?: PubsubSubscriptionExpirationPolicy[];
   /** push_config block */
   readonly pushConfig?: PubsubSubscriptionPushConfig[];
+  /** retry_policy block */
+  readonly retryPolicy?: PubsubSubscriptionRetryPolicy[];
   /** timeouts block */
   readonly timeouts?: PubsubSubscriptionTimeouts;
 }
@@ -148,6 +150,14 @@ For example, a Webhook endpoint might use
   /** oidc_token block */
   readonly oidcToken?: PubsubSubscriptionPushConfigOidcToken[];
 }
+export interface PubsubSubscriptionRetryPolicy {
+  /** The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. 
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+  readonly maximumBackoff?: string;
+  /** The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+  readonly minimumBackoff?: string;
+}
 export interface PubsubSubscriptionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -185,6 +195,7 @@ export class PubsubSubscription extends TerraformResource {
     this._deadLetterPolicy = config.deadLetterPolicy;
     this._expirationPolicy = config.expirationPolicy;
     this._pushConfig = config.pushConfig;
+    this._retryPolicy = config.retryPolicy;
     this._timeouts = config.timeouts;
   }
 
@@ -314,6 +325,15 @@ export class PubsubSubscription extends TerraformResource {
     this._pushConfig = value;
   }
 
+  // retry_policy - computed: false, optional: true, required: false
+  private _retryPolicy?: PubsubSubscriptionRetryPolicy[];
+  public get retryPolicy() {
+    return this._retryPolicy;
+  }
+  public set retryPolicy(value: PubsubSubscriptionRetryPolicy[] | undefined) {
+    this._retryPolicy = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PubsubSubscriptionTimeouts;
   public get timeouts() {
@@ -341,6 +361,7 @@ export class PubsubSubscription extends TerraformResource {
       dead_letter_policy: this._deadLetterPolicy,
       expiration_policy: this._expirationPolicy,
       push_config: this._pushConfig,
+      retry_policy: this._retryPolicy,
       timeouts: this._timeouts,
     };
   }

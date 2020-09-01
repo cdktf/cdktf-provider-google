@@ -25,6 +25,9 @@ Set the value to 0 to use the default value. */
   /** The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US. */
   readonly location?: string;
+  /** Pub/Sub topic where notifications will be sent after transfer runs
+associated with this transfer config finish. */
+  readonly notificationPubsubTopic?: string;
   /** These parameters are specific to each data source. */
   readonly params: { [key: string]: string };
   readonly project?: string;
@@ -75,6 +78,7 @@ export class BigqueryDataTransferConfig extends TerraformResource {
     this._disabled = config.disabled;
     this._displayName = config.displayName;
     this._location = config.location;
+    this._notificationPubsubTopic = config.notificationPubsubTopic;
     this._params = config.params;
     this._project = config.project;
     this._schedule = config.schedule;
@@ -154,6 +158,15 @@ export class BigqueryDataTransferConfig extends TerraformResource {
     return this.getStringAttribute('name');
   }
 
+  // notification_pubsub_topic - computed: false, optional: true, required: false
+  private _notificationPubsubTopic?: string;
+  public get notificationPubsubTopic() {
+    return this._notificationPubsubTopic;
+  }
+  public set notificationPubsubTopic(value: string | undefined) {
+    this._notificationPubsubTopic = value;
+  }
+
   // params - computed: false, optional: false, required: true
   private _params: { [key: string]: string };
   public get params() {
@@ -211,6 +224,7 @@ export class BigqueryDataTransferConfig extends TerraformResource {
       disabled: this._disabled,
       display_name: this._displayName,
       location: this._location,
+      notification_pubsub_topic: this._notificationPubsubTopic,
       params: this._params,
       project: this._project,
       schedule: this._schedule,
