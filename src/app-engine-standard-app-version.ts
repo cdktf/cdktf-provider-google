@@ -47,6 +47,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
   readonly manualScaling?: AppEngineStandardAppVersionManualScaling[];
   /** timeouts block */
   readonly timeouts?: AppEngineStandardAppVersionTimeouts;
+  /** vpc_access_connector block */
+  readonly vpcAccessConnector?: AppEngineStandardAppVersionVpcAccessConnector[];
 }
 export interface AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings {
   /** Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration. */
@@ -157,7 +159,7 @@ export interface AppEngineStandardAppVersionLibraries {
 export interface AppEngineStandardAppVersionManualScaling {
   /** Number of instances to assign to the service at the start.
 
-**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
 Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection. */
   readonly instances: number;
 }
@@ -165,6 +167,10 @@ export interface AppEngineStandardAppVersionTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
+}
+export interface AppEngineStandardAppVersionVpcAccessConnector {
+  /** Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1. */
+  readonly name: string;
 }
 
 // Resource
@@ -205,6 +211,7 @@ export class AppEngineStandardAppVersion extends TerraformResource {
     this._libraries = config.libraries;
     this._manualScaling = config.manualScaling;
     this._timeouts = config.timeouts;
+    this._vpcAccessConnector = config.vpcAccessConnector;
   }
 
   // ==========
@@ -396,6 +403,15 @@ export class AppEngineStandardAppVersion extends TerraformResource {
     this._timeouts = value;
   }
 
+  // vpc_access_connector - computed: false, optional: true, required: false
+  private _vpcAccessConnector?: AppEngineStandardAppVersionVpcAccessConnector[];
+  public get vpcAccessConnector() {
+    return this._vpcAccessConnector;
+  }
+  public set vpcAccessConnector(value: AppEngineStandardAppVersionVpcAccessConnector[] | undefined) {
+    this._vpcAccessConnector = value;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -421,6 +437,7 @@ export class AppEngineStandardAppVersion extends TerraformResource {
       libraries: this._libraries,
       manual_scaling: this._manualScaling,
       timeouts: this._timeouts,
+      vpc_access_connector: this._vpcAccessConnector,
     };
   }
 }

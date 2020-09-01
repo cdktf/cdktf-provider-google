@@ -84,7 +84,7 @@ export interface ComputeInstanceBootDiskInitializeParams {
   readonly labels?: { [key: string]: string };
   /** The size of the image in gigabytes. */
   readonly size?: number;
-  /** The GCE disk type. One of pd-standard or pd-ssd. */
+  /** The GCE disk type. One of pd-standard, pd-ssd or pd-balanced. */
   readonly type?: string;
 }
 export interface ComputeInstanceBootDisk {
