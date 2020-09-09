@@ -29,6 +29,8 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly patchConfig?: OsConfigPatchDeploymentPatchConfig[];
   /** recurring_schedule block */
   readonly recurringSchedule?: OsConfigPatchDeploymentRecurringSchedule[];
+  /** rollout block */
+  readonly rollout?: OsConfigPatchDeploymentRollout[];
   /** timeouts block */
   readonly timeouts?: OsConfigPatchDeploymentTimeouts;
 }
@@ -263,6 +265,18 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
   /** weekly block */
   readonly weekly?: OsConfigPatchDeploymentRecurringScheduleWeekly[];
 }
+export interface OsConfigPatchDeploymentRolloutDisruptionBudget {
+  /** Specifies a fixed value. */
+  readonly fixed?: number;
+  /** Specifies the relative value defined as a percentage, which will be multiplied by a reference value. */
+  readonly percentage?: number;
+}
+export interface OsConfigPatchDeploymentRollout {
+  /** Mode of the patch rollout. Possible values: ["ZONE_BY_ZONE", "CONCURRENT_ZONES"] */
+  readonly mode: string;
+  /** disruption_budget block */
+  readonly disruptionBudget: OsConfigPatchDeploymentRolloutDisruptionBudget[];
+}
 export interface OsConfigPatchDeploymentTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -295,6 +309,7 @@ export class OsConfigPatchDeployment extends TerraformResource {
     this._oneTimeSchedule = config.oneTimeSchedule;
     this._patchConfig = config.patchConfig;
     this._recurringSchedule = config.recurringSchedule;
+    this._rollout = config.rollout;
     this._timeouts = config.timeouts;
   }
 
@@ -403,6 +418,15 @@ export class OsConfigPatchDeployment extends TerraformResource {
     this._recurringSchedule = value;
   }
 
+  // rollout - computed: false, optional: true, required: false
+  private _rollout?: OsConfigPatchDeploymentRollout[];
+  public get rollout() {
+    return this._rollout;
+  }
+  public set rollout(value: OsConfigPatchDeploymentRollout[] | undefined) {
+    this._rollout = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: OsConfigPatchDeploymentTimeouts;
   public get timeouts() {
@@ -426,6 +450,7 @@ export class OsConfigPatchDeployment extends TerraformResource {
       one_time_schedule: this._oneTimeSchedule,
       patch_config: this._patchConfig,
       recurring_schedule: this._recurringSchedule,
+      rollout: this._rollout,
       timeouts: this._timeouts,
     };
   }

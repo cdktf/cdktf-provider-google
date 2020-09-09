@@ -44,8 +44,14 @@ NOTE: the granularity should be at least 8 hours, or less frequent. */
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account. */
   readonly serviceAccountName?: string;
+  /** sensitive_params block */
+  readonly sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
   /** timeouts block */
   readonly timeouts?: BigqueryDataTransferConfigTimeouts;
+}
+export interface BigqueryDataTransferConfigSensitiveParams {
+  /** The Secret Access Key of the AWS account transferring data from. */
+  readonly secretAccessKey: string;
 }
 export interface BigqueryDataTransferConfigTimeouts {
   readonly create?: string;
@@ -83,6 +89,7 @@ export class BigqueryDataTransferConfig extends TerraformResource {
     this._project = config.project;
     this._schedule = config.schedule;
     this._serviceAccountName = config.serviceAccountName;
+    this._sensitiveParams = config.sensitiveParams;
     this._timeouts = config.timeouts;
   }
 
@@ -203,6 +210,15 @@ export class BigqueryDataTransferConfig extends TerraformResource {
     this._serviceAccountName = value;
   }
 
+  // sensitive_params - computed: false, optional: true, required: false
+  private _sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
+  public get sensitiveParams() {
+    return this._sensitiveParams;
+  }
+  public set sensitiveParams(value: BigqueryDataTransferConfigSensitiveParams[] | undefined) {
+    this._sensitiveParams = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigqueryDataTransferConfigTimeouts;
   public get timeouts() {
@@ -229,6 +245,7 @@ export class BigqueryDataTransferConfig extends TerraformResource {
       project: this._project,
       schedule: this._schedule,
       service_account_name: this._serviceAccountName,
+      sensitive_params: this._sensitiveParams,
       timeouts: this._timeouts,
     };
   }

@@ -78,6 +78,9 @@ in the cloud console. Your project's Compute Engine System service account
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
   readonly kmsKeySelfLink?: string;
+  /** The service account used for the encryption request for the given KMS key. 
+If absent, the Compute Engine Service Agent service account is used. */
+  readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
@@ -89,6 +92,9 @@ in the cloud console. Your project's Compute Engine System service account
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
   readonly kmsKeySelfLink?: string;
+  /** The service account used for the encryption request for the given KMS key. 
+If absent, the Compute Engine Service Agent service account is used. */
+  readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
@@ -100,6 +106,9 @@ in the cloud console. Your project's Compute Engine System service account
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
   readonly kmsKeySelfLink?: string;
+  /** The service account used for the encryption request for the given KMS key. 
+If absent, the Compute Engine Service Agent service account is used. */
+  readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;

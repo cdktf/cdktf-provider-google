@@ -15,6 +15,7 @@ export interface GoogleProviderConfig {
   readonly bigQueryCustomEndpoint?: string;
   readonly bigqueryDataTransferCustomEndpoint?: string;
   readonly bigtableCustomEndpoint?: string;
+  readonly billingProject?: string;
   readonly binaryAuthorizationCustomEndpoint?: string;
   readonly cloudAssetCustomEndpoint?: string;
   readonly cloudBillingCustomEndpoint?: string;
@@ -32,6 +33,7 @@ export interface GoogleProviderConfig {
   readonly containerCustomEndpoint?: string;
   readonly credentials?: string;
   readonly dataCatalogCustomEndpoint?: string;
+  readonly dataLossPreventionCustomEndpoint?: string;
   readonly dataflowCustomEndpoint?: string;
   readonly dataprocBetaCustomEndpoint?: string;
   readonly dataprocCustomEndpoint?: string;
@@ -114,6 +116,7 @@ export class GoogleProvider extends TerraformProvider {
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
     this._bigqueryDataTransferCustomEndpoint = config.bigqueryDataTransferCustomEndpoint;
     this._bigtableCustomEndpoint = config.bigtableCustomEndpoint;
+    this._billingProject = config.billingProject;
     this._binaryAuthorizationCustomEndpoint = config.binaryAuthorizationCustomEndpoint;
     this._cloudAssetCustomEndpoint = config.cloudAssetCustomEndpoint;
     this._cloudBillingCustomEndpoint = config.cloudBillingCustomEndpoint;
@@ -131,6 +134,7 @@ export class GoogleProvider extends TerraformProvider {
     this._containerCustomEndpoint = config.containerCustomEndpoint;
     this._credentials = config.credentials;
     this._dataCatalogCustomEndpoint = config.dataCatalogCustomEndpoint;
+    this._dataLossPreventionCustomEndpoint = config.dataLossPreventionCustomEndpoint;
     this._dataflowCustomEndpoint = config.dataflowCustomEndpoint;
     this._dataprocBetaCustomEndpoint = config.dataprocBetaCustomEndpoint;
     this._dataprocCustomEndpoint = config.dataprocCustomEndpoint;
@@ -256,6 +260,15 @@ export class GoogleProvider extends TerraformProvider {
   }
   public set bigtableCustomEndpoint(value: string | undefined) {
     this._bigtableCustomEndpoint = value;
+  }
+
+  // billing_project - computed: false, optional: true, required: false
+  private _billingProject?: string;
+  public get billingProject() {
+    return this._billingProject;
+  }
+  public set billingProject(value: string | undefined) {
+    this._billingProject = value;
   }
 
   // binary_authorization_custom_endpoint - computed: false, optional: true, required: false
@@ -409,6 +422,15 @@ export class GoogleProvider extends TerraformProvider {
   }
   public set dataCatalogCustomEndpoint(value: string | undefined) {
     this._dataCatalogCustomEndpoint = value;
+  }
+
+  // data_loss_prevention_custom_endpoint - computed: false, optional: true, required: false
+  private _dataLossPreventionCustomEndpoint?: string;
+  public get dataLossPreventionCustomEndpoint() {
+    return this._dataLossPreventionCustomEndpoint;
+  }
+  public set dataLossPreventionCustomEndpoint(value: string | undefined) {
+    this._dataLossPreventionCustomEndpoint = value;
   }
 
   // dataflow_custom_endpoint - computed: false, optional: true, required: false
@@ -866,6 +888,7 @@ export class GoogleProvider extends TerraformProvider {
       big_query_custom_endpoint: this._bigQueryCustomEndpoint,
       bigquery_data_transfer_custom_endpoint: this._bigqueryDataTransferCustomEndpoint,
       bigtable_custom_endpoint: this._bigtableCustomEndpoint,
+      billing_project: this._billingProject,
       binary_authorization_custom_endpoint: this._binaryAuthorizationCustomEndpoint,
       cloud_asset_custom_endpoint: this._cloudAssetCustomEndpoint,
       cloud_billing_custom_endpoint: this._cloudBillingCustomEndpoint,
@@ -883,6 +906,7 @@ export class GoogleProvider extends TerraformProvider {
       container_custom_endpoint: this._containerCustomEndpoint,
       credentials: this._credentials,
       data_catalog_custom_endpoint: this._dataCatalogCustomEndpoint,
+      data_loss_prevention_custom_endpoint: this._dataLossPreventionCustomEndpoint,
       dataflow_custom_endpoint: this._dataflowCustomEndpoint,
       dataproc_beta_custom_endpoint: this._dataprocBetaCustomEndpoint,
       dataproc_custom_endpoint: this._dataprocCustomEndpoint,

@@ -179,6 +179,11 @@ export class ComputeInstanceGroupManager extends TerraformResource {
     this._name = value;
   }
 
+  // operation - computed: true, optional: false, required: true
+  public get operation() {
+    return this.getStringAttribute('operation');
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
