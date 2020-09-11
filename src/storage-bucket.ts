@@ -25,6 +25,8 @@ export interface StorageBucketConfig extends TerraformMetaArguments {
   readonly requesterPays?: boolean;
   /** The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. */
   readonly storageClass?: string;
+  /** Enables uniform bucket-level access on a bucket. */
+  readonly uniformBucketLevelAccess?: boolean;
   /** cors block */
   readonly cors?: StorageBucketCors[];
   /** encryption block */
@@ -130,6 +132,7 @@ export class StorageBucket extends TerraformResource {
     this._project = config.project;
     this._requesterPays = config.requesterPays;
     this._storageClass = config.storageClass;
+    this._uniformBucketLevelAccess = config.uniformBucketLevelAccess;
     this._cors = config.cors;
     this._encryption = config.encryption;
     this._lifecycleRule = config.lifecycleRule;
@@ -238,6 +241,15 @@ export class StorageBucket extends TerraformResource {
     this._storageClass = value;
   }
 
+  // uniform_bucket_level_access - computed: true, optional: true, required: false
+  private _uniformBucketLevelAccess?: boolean;
+  public get uniformBucketLevelAccess() {
+    return this._uniformBucketLevelAccess ?? this.getBooleanAttribute('uniform_bucket_level_access');
+  }
+  public set uniformBucketLevelAccess(value: boolean | undefined) {
+    this._uniformBucketLevelAccess = value;
+  }
+
   // url - computed: true, optional: false, required: true
   public get url() {
     return this.getStringAttribute('url');
@@ -321,6 +333,7 @@ export class StorageBucket extends TerraformResource {
       project: this._project,
       requester_pays: this._requesterPays,
       storage_class: this._storageClass,
+      uniform_bucket_level_access: this._uniformBucketLevelAccess,
       cors: this._cors,
       encryption: this._encryption,
       lifecycle_rule: this._lifecycleRule,
