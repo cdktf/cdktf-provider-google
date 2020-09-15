@@ -683,6 +683,11 @@ export class ContainerCluster extends TerraformResource {
     this._resourceLabels = value;
   }
 
+  // self_link - computed: true, optional: false, required: true
+  public get selfLink() {
+    return this.getStringAttribute('self_link');
+  }
+
   // services_ipv4_cidr - computed: true, optional: false, required: true
   public get servicesIpv4Cidr() {
     return this.getStringAttribute('services_ipv4_cidr');

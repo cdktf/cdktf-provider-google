@@ -1028,6 +1028,11 @@ export class DataGoogleContainerCluster extends TerraformDataSource {
     return new DataGoogleContainerClusterResourceUsageExportConfig(this, 'resource_usage_export_config', index);
   }
 
+  // self_link - computed: true, optional: false, required: true
+  public get selfLink() {
+    return this.getStringAttribute('self_link');
+  }
+
   // services_ipv4_cidr - computed: true, optional: false, required: true
   public get servicesIpv4Cidr() {
     return this.getStringAttribute('services_ipv4_cidr');

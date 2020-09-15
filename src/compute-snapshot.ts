@@ -23,6 +23,8 @@ character, which cannot be a dash. */
   readonly project?: string;
   /** A reference to the disk used to create this snapshot. */
   readonly sourceDisk: string;
+  /** Cloud Storage bucket storage location of the snapshot (regional or multi-regional). */
+  readonly storageLocations?: string[];
   /** A reference to the zone where the disk is hosted. */
   readonly zone?: string;
   /** snapshot_encryption_key block */
@@ -33,11 +35,19 @@ character, which cannot be a dash. */
   readonly timeouts?: ComputeSnapshotTimeouts;
 }
 export interface ComputeSnapshotSnapshotEncryptionKey {
+  /** The name of the encryption key that is stored in Google Cloud KMS. */
+  readonly kmsKeySelfLink?: string;
+  /** The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used. */
+  readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. */
-  readonly rawKey: string;
+  readonly rawKey?: string;
 }
 export interface ComputeSnapshotSourceDiskEncryptionKey {
+  /** The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used. */
+  readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
@@ -72,6 +82,7 @@ export class ComputeSnapshot extends TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._sourceDisk = config.sourceDisk;
+    this._storageLocations = config.storageLocations;
     this._zone = config.zone;
     this._snapshotEncryptionKey = config.snapshotEncryptionKey;
     this._sourceDiskEncryptionKey = config.sourceDiskEncryptionKey;
@@ -176,6 +187,15 @@ export class ComputeSnapshot extends TerraformResource {
     return this.getNumberAttribute('storage_bytes');
   }
 
+  // storage_locations - computed: true, optional: true, required: false
+  private _storageLocations?: string[];
+  public get storageLocations() {
+    return this._storageLocations ?? this.getListAttribute('storage_locations');
+  }
+  public set storageLocations(value: string[] | undefined) {
+    this._storageLocations = value;
+  }
+
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
@@ -223,6 +243,7 @@ export class ComputeSnapshot extends TerraformResource {
       name: this._name,
       project: this._project,
       source_disk: this._sourceDisk,
+      storage_locations: this._storageLocations,
       zone: this._zone,
       snapshot_encryption_key: this._snapshotEncryptionKey,
       source_disk_encryption_key: this._sourceDiskEncryptionKey,

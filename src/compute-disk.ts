@@ -78,7 +78,7 @@ in the cloud console. Your project's Compute Engine System service account
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key. 
+  /** The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used. */
   readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
@@ -92,7 +92,7 @@ in the cloud console. Your project's Compute Engine System service account
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key. 
+  /** The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used. */
   readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
