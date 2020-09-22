@@ -25,6 +25,7 @@ the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9]. */
 export interface SpannerDatabaseTimeouts {
   readonly create?: string;
   readonly delete?: string;
+  readonly update?: string;
 }
 
 // Resource

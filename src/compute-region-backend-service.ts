@@ -80,7 +80,7 @@ Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load 
   readonly project?: string;
   /** The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
-types and may result in errors if used with the GA API. Possible values: ["HTTP", "HTTPS", "HTTP2", "SSL", "TCP", "UDP"] */
+types and may result in errors if used with the GA API. Possible values: ["HTTP", "HTTPS", "HTTP2", "SSL", "TCP", "UDP", "GRPC"] */
   readonly protocol?: string;
   /** The Region in which the created backend service should reside.
 If it is not provided, the provider region is used. */

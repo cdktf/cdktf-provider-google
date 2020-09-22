@@ -38,6 +38,8 @@ export interface DataflowJobConfig extends TerraformMetaArguments {
   readonly tempGcsLocation: string;
   /** The GCS path to the Dataflow job template. */
   readonly templateGcsPath: string;
+  /** Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. */
+  readonly transformNameMapping?: { [key: string]: string };
   /** The zone in which the created job should run. If it is not provided, the provider zone is used. */
   readonly zone?: string;
   /** timeouts block */
@@ -81,6 +83,7 @@ export class DataflowJob extends TerraformResource {
     this._subnetwork = config.subnetwork;
     this._tempGcsLocation = config.tempGcsLocation;
     this._templateGcsPath = config.templateGcsPath;
+    this._transformNameMapping = config.transformNameMapping;
     this._zone = config.zone;
     this._timeouts = config.timeouts;
   }
@@ -243,6 +246,15 @@ export class DataflowJob extends TerraformResource {
     this._templateGcsPath = value;
   }
 
+  // transform_name_mapping - computed: false, optional: true, required: false
+  private _transformNameMapping?: { [key: string]: string };
+  public get transformNameMapping() {
+    return this._transformNameMapping;
+  }
+  public set transformNameMapping(value: { [key: string]: string } | undefined) {
+    this._transformNameMapping = value;
+  }
+
   // type - computed: true, optional: false, required: true
   public get type() {
     return this.getStringAttribute('type');
@@ -287,6 +299,7 @@ export class DataflowJob extends TerraformResource {
       subnetwork: this._subnetwork,
       temp_gcs_location: this._tempGcsLocation,
       template_gcs_path: this._templateGcsPath,
+      transform_name_mapping: this._transformNameMapping,
       zone: this._zone,
       timeouts: this._timeouts,
     };

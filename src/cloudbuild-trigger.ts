@@ -50,6 +50,82 @@ a build. */
   /** trigger_template block */
   readonly triggerTemplate?: CloudbuildTriggerTriggerTemplate[];
 }
+export interface CloudbuildTriggerBuildArtifactsObjects {
+  /** Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+
+Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+this location as a prefix. */
+  readonly location?: string;
+  /** Path globs used to match files in the build's workspace. */
+  readonly paths?: string[];
+}
+export interface CloudbuildTriggerBuildArtifacts {
+  /** A list of images to be pushed upon the successful completion of all build steps.
+
+The images will be pushed using the builder service account's credentials.
+
+The digests of the pushed images will be stored in the Build resource's results field.
+
+If any of the images fail to be pushed, the build is marked FAILURE. */
+  readonly images?: string[];
+  /** objects block */
+  readonly objects?: CloudbuildTriggerBuildArtifactsObjects[];
+}
+export interface CloudbuildTriggerBuildOptionsVolumes {
+  /** Name of the volume to mount.
+
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps. */
+  readonly name?: string;
+  /** Path at which to mount the volume.
+
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths. */
+  readonly path?: string;
+}
+export interface CloudbuildTriggerBuildOptions {
+  /** Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+some of the space will be used by the operating system and build utilities.
+Also note that this is the minimum disk size that will be allocated for the build --
+the build may run with a larger disk than requested. At present, the maximum disk size
+is 1000GB; builds that request more than the maximum are rejected with an error. */
+  readonly diskSizeGb?: number;
+  /** Option to specify whether or not to apply bash style string operations to the substitutions.
+
+NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file. */
+  readonly dynamicSubstitutions?: boolean;
+  /** A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE". */
+  readonly env?: string[];
+  /** Option to define build log streaming behavior to Google Cloud Storage. Possible values: ["STREAM_DEFAULT", "STREAM_ON", "STREAM_OFF"] */
+  readonly logStreamingOption?: string;
+  /** Option to specify the logging mode, which determines if and where build logs are stored. Possible values: ["LOGGING_UNSPECIFIED", "LEGACY", "GCS_ONLY", "STACKDRIVER_ONLY", "NONE"] */
+  readonly logging?: string;
+  /** Compute Engine machine type on which to run the build. Possible values: ["UNSPECIFIED", "N1_HIGHCPU_8", "N1_HIGHCPU_32"] */
+  readonly machineType?: string;
+  /** Requested verifiability options. Possible values: ["NOT_VERIFIED", "VERIFIED"] */
+  readonly requestedVerifyOption?: string;
+  /** A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build. */
+  readonly secretEnv?: string[];
+  /** Requested hash for SourceProvenance. Possible values: ["NONE", "SHA256", "MD5"] */
+  readonly sourceProvenanceHash?: string[];
+  /** Option to specify behavior when there is an error in the substitution checks.
+
+NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
+in the build configuration file. Possible values: ["MUST_MATCH", "ALLOW_LOOSE"] */
+  readonly substitutionOption?: string;
+  /** Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+
+This field is experimental. */
+  readonly workerPool?: string;
+  /** volumes block */
+  readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[];
+}
 export interface CloudbuildTriggerBuildSecret {
   /** Cloud KMS key name to use to decrypt these envs. */
   readonly kmsKeyName: string;
@@ -208,6 +284,10 @@ This timeout must be equal to or greater than the sum of the timeouts for build 
 The expected format is the number of seconds followed by s.
 Default time is ten minutes (600s). */
   readonly timeout?: string;
+  /** artifacts block */
+  readonly artifacts?: CloudbuildTriggerBuildArtifacts[];
+  /** options block */
+  readonly options?: CloudbuildTriggerBuildOptions[];
   /** secret block */
   readonly secret?: CloudbuildTriggerBuildSecret[];
   /** source block */

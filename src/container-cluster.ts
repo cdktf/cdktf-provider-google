@@ -97,6 +97,7 @@ export interface ContainerClusterConfig extends TerraformMetaArguments {
 }
 export interface ContainerClusterAddonsConfigCloudrunConfig {
   readonly disabled: boolean;
+  readonly loadBalancerType?: string;
 }
 export interface ContainerClusterAddonsConfigHorizontalPodAutoscaling {
   readonly disabled: boolean;

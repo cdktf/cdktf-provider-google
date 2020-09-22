@@ -27,6 +27,11 @@ export class DataGoogleContainerClusterAddonsConfigCloudrunConfig extends Comple
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
+
+  // load_balancer_type - computed: true, optional: false, required: true
+  public get loadBalancerType() {
+    return this.getStringAttribute('load_balancer_type');
+  }
 }
 export class DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling extends ComplexComputedList {
 

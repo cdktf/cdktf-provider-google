@@ -12,6 +12,7 @@ export interface DnsManagedZoneConfig extends TerraformMetaArguments {
   readonly description?: string;
   /** The DNS name of this managed zone, for instance "example.com.". */
   readonly dnsName: string;
+  readonly forceDestroy?: boolean;
   /** A set of key/value label pairs to assign to this ManagedZone. */
   readonly labels?: { [key: string]: string };
   /** User assigned name for this resource.
@@ -117,6 +118,7 @@ export class DnsManagedZone extends TerraformResource {
     });
     this._description = config.description;
     this._dnsName = config.dnsName;
+    this._forceDestroy = config.forceDestroy;
     this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
@@ -148,6 +150,15 @@ export class DnsManagedZone extends TerraformResource {
   }
   public set dnsName(value: string) {
     this._dnsName = value;
+  }
+
+  // force_destroy - computed: false, optional: true, required: false
+  private _forceDestroy?: boolean;
+  public get forceDestroy() {
+    return this._forceDestroy;
+  }
+  public set forceDestroy(value: boolean | undefined) {
+    this._forceDestroy = value;
   }
 
   // id - computed: true, optional: true, required: false
@@ -253,6 +264,7 @@ export class DnsManagedZone extends TerraformResource {
     return {
       description: this._description,
       dns_name: this._dnsName,
+      force_destroy: this._forceDestroy,
       labels: this._labels,
       name: this._name,
       project: this._project,
