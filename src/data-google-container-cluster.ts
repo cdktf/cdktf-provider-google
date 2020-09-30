@@ -16,10 +16,6 @@ export interface DataGoogleContainerClusterConfig extends TerraformMetaArguments
   readonly name: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
-  /** The region in which the cluster master will be created. Zone and region have been removed in favor of location. */
-  readonly region?: string;
-  /** The zone in which the cluster master will be created. Zone and region have been removed in favor of location. */
-  readonly zone?: string;
 }
 export class DataGoogleContainerClusterAddonsConfigCloudrunConfig extends ComplexComputedList {
 
@@ -47,13 +43,6 @@ export class DataGoogleContainerClusterAddonsConfigHttpLoadBalancing extends Com
     return this.getBooleanAttribute('disabled');
   }
 }
-export class DataGoogleContainerClusterAddonsConfigKubernetesDashboard extends ComplexComputedList {
-
-  // disabled - computed: true, optional: false, required: true
-  public get disabled() {
-    return this.getBooleanAttribute('disabled');
-  }
-}
 export class DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig extends ComplexComputedList {
 
   // disabled - computed: true, optional: false, required: true
@@ -75,11 +64,6 @@ export class DataGoogleContainerClusterAddonsConfig extends ComplexComputedList 
 
   // http_load_balancing - computed: true, optional: false, required: true
   public get httpLoadBalancing() {
-    return 'not implemented' as any;
-  }
-
-  // kubernetes_dashboard - computed: true, optional: false, required: true
-  public get kubernetesDashboard() {
     return 'not implemented' as any;
   }
 
@@ -165,11 +149,6 @@ export class DataGoogleContainerClusterIpAllocationPolicy extends ComplexCompute
     return this.getStringAttribute('cluster_secondary_range_name');
   }
 
-  // node_ipv4_cidr_block - computed: true, optional: false, required: true
-  public get nodeIpv4CidrBlock() {
-    return this.getStringAttribute('node_ipv4_cidr_block');
-  }
-
   // services_ipv4_cidr_block - computed: true, optional: false, required: true
   public get servicesIpv4CidrBlock() {
     return this.getStringAttribute('services_ipv4_cidr_block');
@@ -178,11 +157,6 @@ export class DataGoogleContainerClusterIpAllocationPolicy extends ComplexCompute
   // services_secondary_range_name - computed: true, optional: false, required: true
   public get servicesSecondaryRangeName() {
     return this.getStringAttribute('services_secondary_range_name');
-  }
-
-  // subnetwork_name - computed: true, optional: false, required: true
-  public get subnetworkName() {
-    return this.getStringAttribute('subnetwork_name');
   }
 }
 export class DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow extends ComplexComputedList {
@@ -308,13 +282,6 @@ export class DataGoogleContainerClusterNodeConfigGuestAccelerator extends Comple
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleContainerClusterNodeConfigSandboxConfig extends ComplexComputedList {
-
-  // sandbox_type - computed: true, optional: false, required: true
-  public get sandboxType() {
-    return this.getStringAttribute('sandbox_type');
-  }
-}
 export class DataGoogleContainerClusterNodeConfigShieldedInstanceConfig extends ComplexComputedList {
 
   // enable_integrity_monitoring - computed: true, optional: false, required: true
@@ -408,11 +375,6 @@ export class DataGoogleContainerClusterNodeConfig extends ComplexComputedList {
     return this.getBooleanAttribute('preemptible');
   }
 
-  // sandbox_config - computed: true, optional: false, required: true
-  public get sandboxConfig() {
-    return 'not implemented' as any;
-  }
-
   // service_account - computed: true, optional: false, required: true
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
@@ -472,13 +434,6 @@ export class DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator extend
   // type - computed: true, optional: false, required: true
   public get type() {
     return this.getStringAttribute('type');
-  }
-}
-export class DataGoogleContainerClusterNodePoolNodeConfigSandboxConfig extends ComplexComputedList {
-
-  // sandbox_type - computed: true, optional: false, required: true
-  public get sandboxType() {
-    return this.getStringAttribute('sandbox_type');
   }
 }
 export class DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig extends ComplexComputedList {
@@ -572,11 +527,6 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends ComplexCompute
   // preemptible - computed: true, optional: false, required: true
   public get preemptible() {
     return this.getBooleanAttribute('preemptible');
-  }
-
-  // sandbox_config - computed: true, optional: false, required: true
-  public get sandboxConfig() {
-    return 'not implemented' as any;
   }
 
   // service_account - computed: true, optional: false, required: true
@@ -785,18 +735,11 @@ export class DataGoogleContainerCluster extends TerraformDataSource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
-    this._region = config.region;
-    this._zone = config.zone;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // additional_zones - computed: true, optional: false, required: true
-  public get additionalZones() {
-    return this.getListAttribute('additional_zones');
-  }
 
   // addons_config - computed: true, optional: false, required: true
   public addonsConfig(index: string) {
@@ -1004,15 +947,6 @@ export class DataGoogleContainerCluster extends TerraformDataSource {
     this._project = value;
   }
 
-  // region - computed: false, optional: true, required: false
-  private _region?: string;
-  public get region() {
-    return this._region;
-  }
-  public set region(value: string | undefined) {
-    this._region = value;
-  }
-
   // release_channel - computed: true, optional: false, required: true
   public releaseChannel(index: string) {
     return new DataGoogleContainerClusterReleaseChannel(this, 'release_channel', index);
@@ -1058,15 +992,6 @@ export class DataGoogleContainerCluster extends TerraformDataSource {
     return new DataGoogleContainerClusterWorkloadIdentityConfig(this, 'workload_identity_config', index);
   }
 
-  // zone - computed: false, optional: true, required: false
-  private _zone?: string;
-  public get zone() {
-    return this._zone;
-  }
-  public set zone(value: string | undefined) {
-    this._zone = value;
-  }
-
   // =========
   // SYNTHESIS
   // =========
@@ -1076,8 +1001,6 @@ export class DataGoogleContainerCluster extends TerraformDataSource {
       location: this._location,
       name: this._name,
       project: this._project,
-      region: this._region,
-      zone: this._zone,
     };
   }
 }

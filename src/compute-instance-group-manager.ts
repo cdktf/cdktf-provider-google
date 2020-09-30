@@ -12,8 +12,6 @@ export interface ComputeInstanceGroupManagerConfig extends TerraformMetaArgument
   readonly baseInstanceName: string;
   /** An optional textual description of the instance group manager. */
   readonly description?: string;
-  /** The full URL to an instance template from which all new instances of this version will be created. */
-  readonly instanceTemplate?: string;
   /** The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens. */
   readonly name: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
@@ -106,7 +104,6 @@ export class ComputeInstanceGroupManager extends TerraformResource {
     });
     this._baseInstanceName = config.baseInstanceName;
     this._description = config.description;
-    this._instanceTemplate = config.instanceTemplate;
     this._name = config.name;
     this._project = config.project;
     this._targetPools = config.targetPools;
@@ -161,15 +158,6 @@ export class ComputeInstanceGroupManager extends TerraformResource {
     return this.getStringAttribute('instance_group');
   }
 
-  // instance_template - computed: true, optional: true, required: false
-  private _instanceTemplate?: string;
-  public get instanceTemplate() {
-    return this._instanceTemplate ?? this.getStringAttribute('instance_template');
-  }
-  public set instanceTemplate(value: string | undefined) {
-    this._instanceTemplate = value;
-  }
-
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -214,11 +202,6 @@ export class ComputeInstanceGroupManager extends TerraformResource {
   }
   public set targetSize(value: number | undefined) {
     this._targetSize = value;
-  }
-
-  // update_strategy - computed: true, optional: false, required: true
-  public get updateStrategy() {
-    return this.getStringAttribute('update_strategy');
   }
 
   // wait_for_instances - computed: false, optional: true, required: false
@@ -292,7 +275,6 @@ export class ComputeInstanceGroupManager extends TerraformResource {
     return {
       base_instance_name: this._baseInstanceName,
       description: this._description,
-      instance_template: this._instanceTemplate,
       name: this._name,
       project: this._project,
       target_pools: this._targetPools,

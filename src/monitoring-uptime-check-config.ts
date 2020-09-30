@@ -10,7 +10,6 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface MonitoringUptimeCheckConfigConfig extends TerraformMetaArguments {
   /** A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced. */
   readonly displayName: string;
-  readonly isInternal?: boolean;
   /** How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s. */
   readonly period?: string;
   readonly project?: string;
@@ -22,8 +21,6 @@ export interface MonitoringUptimeCheckConfigConfig extends TerraformMetaArgument
   readonly contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[];
   /** http_check block */
   readonly httpCheck?: MonitoringUptimeCheckConfigHttpCheck[];
-  /** internal_checkers block */
-  readonly internalCheckers?: MonitoringUptimeCheckConfigInternalCheckers[];
   /** monitored_resource block */
   readonly monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource[];
   /** resource_group block */
@@ -67,13 +64,6 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   /** auth_info block */
   readonly authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo[];
 }
-export interface MonitoringUptimeCheckConfigInternalCheckers {
-  readonly displayName?: string;
-  readonly gcpZone?: string;
-  readonly name?: string;
-  readonly network?: string;
-  readonly peerProjectId?: string;
-}
 export interface MonitoringUptimeCheckConfigMonitoredResource {
   /** Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone". */
   readonly labels: { [key: string]: string };
@@ -116,14 +106,12 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._displayName = config.displayName;
-    this._isInternal = config.isInternal;
     this._period = config.period;
     this._project = config.project;
     this._selectedRegions = config.selectedRegions;
     this._timeout = config.timeout;
     this._contentMatchers = config.contentMatchers;
     this._httpCheck = config.httpCheck;
-    this._internalCheckers = config.internalCheckers;
     this._monitoredResource = config.monitoredResource;
     this._resourceGroup = config.resourceGroup;
     this._tcpCheck = config.tcpCheck;
@@ -150,15 +138,6 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
   }
   public set id(value: string | undefined) {
     this._id = value;
-  }
-
-  // is_internal - computed: true, optional: true, required: false
-  private _isInternal?: boolean;
-  public get isInternal() {
-    return this._isInternal ?? this.getBooleanAttribute('is_internal');
-  }
-  public set isInternal(value: boolean | undefined) {
-    this._isInternal = value;
   }
 
   // name - computed: true, optional: false, required: true
@@ -225,15 +204,6 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
     this._httpCheck = value;
   }
 
-  // internal_checkers - computed: false, optional: true, required: false
-  private _internalCheckers?: MonitoringUptimeCheckConfigInternalCheckers[];
-  public get internalCheckers() {
-    return this._internalCheckers;
-  }
-  public set internalCheckers(value: MonitoringUptimeCheckConfigInternalCheckers[] | undefined) {
-    this._internalCheckers = value;
-  }
-
   // monitored_resource - computed: false, optional: true, required: false
   private _monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource[];
   public get monitoredResource() {
@@ -277,14 +247,12 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: this._displayName,
-      is_internal: this._isInternal,
       period: this._period,
       project: this._project,
       selected_regions: this._selectedRegions,
       timeout: this._timeout,
       content_matchers: this._contentMatchers,
       http_check: this._httpCheck,
-      internal_checkers: this._internalCheckers,
       monitored_resource: this._monitoredResource,
       resource_group: this._resourceGroup,
       tcp_check: this._tcpCheck,

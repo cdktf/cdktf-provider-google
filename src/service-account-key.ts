@@ -10,7 +10,6 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface ServiceAccountKeyConfig extends TerraformMetaArguments {
   /** The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048". */
   readonly keyAlgorithm?: string;
-  readonly pgpKey?: string;
   readonly privateKeyType?: string;
   /** A field that allows clients to upload their own public key. If set, use this public key data to create a service account key for given service account. Please note, the expected format for this field is a base64 encoded X509_PEM. */
   readonly publicKeyData?: string;
@@ -39,7 +38,6 @@ export class ServiceAccountKey extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._keyAlgorithm = config.keyAlgorithm;
-    this._pgpKey = config.pgpKey;
     this._privateKeyType = config.privateKeyType;
     this._publicKeyData = config.publicKeyData;
     this._publicKeyType = config.publicKeyType;
@@ -73,28 +71,9 @@ export class ServiceAccountKey extends TerraformResource {
     return this.getStringAttribute('name');
   }
 
-  // pgp_key - computed: true, optional: true, required: false
-  private _pgpKey?: string;
-  public get pgpKey() {
-    return this._pgpKey ?? this.getStringAttribute('pgp_key');
-  }
-  public set pgpKey(value: string | undefined) {
-    this._pgpKey = value;
-  }
-
   // private_key - computed: true, optional: false, required: true
   public get privateKey() {
     return this.getStringAttribute('private_key');
-  }
-
-  // private_key_encrypted - computed: true, optional: false, required: true
-  public get privateKeyEncrypted() {
-    return this.getStringAttribute('private_key_encrypted');
-  }
-
-  // private_key_fingerprint - computed: true, optional: false, required: true
-  public get privateKeyFingerprint() {
-    return this.getStringAttribute('private_key_fingerprint');
   }
 
   // private_key_type - computed: false, optional: true, required: false
@@ -155,7 +134,6 @@ export class ServiceAccountKey extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_algorithm: this._keyAlgorithm,
-      pgp_key: this._pgpKey,
       private_key_type: this._privateKeyType,
       public_key_data: this._publicKeyData,
       public_key_type: this._publicKeyType,

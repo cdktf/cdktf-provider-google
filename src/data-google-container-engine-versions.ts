@@ -11,9 +11,7 @@ import { StringMap } from "cdktf";
 export interface DataGoogleContainerEngineVersionsConfig extends TerraformMetaArguments {
   readonly location?: string;
   readonly project?: string;
-  readonly region?: string;
   readonly versionPrefix?: string;
-  readonly zone?: string;
 }
 
 // Resource
@@ -37,9 +35,7 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
     });
     this._location = config.location;
     this._project = config.project;
-    this._region = config.region;
     this._versionPrefix = config.versionPrefix;
-    this._zone = config.zone;
   }
 
   // ==========
@@ -88,15 +84,6 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
     this._project = value;
   }
 
-  // region - computed: true, optional: true, required: false
-  private _region?: string;
-  public get region() {
-    return this._region ?? this.getStringAttribute('region');
-  }
-  public set region(value: string | undefined) {
-    this._region = value;
-  }
-
   // release_channel_default_version - computed: true, optional: false, required: true
   public releaseChannelDefaultVersion(key: string): string {
     return new StringMap(this, 'release_channel_default_version').lookup(key);
@@ -121,15 +108,6 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
     this._versionPrefix = value;
   }
 
-  // zone - computed: true, optional: true, required: false
-  private _zone?: string;
-  public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
-  }
-  public set zone(value: string | undefined) {
-    this._zone = value;
-  }
-
   // =========
   // SYNTHESIS
   // =========
@@ -138,9 +116,7 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
     return {
       location: this._location,
       project: this._project,
-      region: this._region,
       version_prefix: this._versionPrefix,
-      zone: this._zone,
     };
   }
 }
