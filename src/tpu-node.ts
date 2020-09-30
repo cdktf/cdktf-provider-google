@@ -20,7 +20,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block. */
-  readonly cidrBlock: string;
+  readonly cidrBlock?: string;
   /** The user-supplied description of the TPU. Maximum of 512 characters. */
   readonly description?: string;
   /** Resource labels to represent user provided metadata. */
@@ -35,6 +35,11 @@ used. */
   readonly project?: string;
   /** The version of Tensorflow running in the Node. */
   readonly tensorflowVersion: string;
+  /** Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled. */
+  readonly useServiceNetworking?: boolean;
   /** The GCP location for the TPU. */
   readonly zone: string;
   /** scheduling_config block */
@@ -91,6 +96,7 @@ export class TpuNode extends TerraformResource {
     this._network = config.network;
     this._project = config.project;
     this._tensorflowVersion = config.tensorflowVersion;
+    this._useServiceNetworking = config.useServiceNetworking;
     this._zone = config.zone;
     this._schedulingConfig = config.schedulingConfig;
     this._timeouts = config.timeouts;
@@ -109,12 +115,12 @@ export class TpuNode extends TerraformResource {
     this._acceleratorType = value;
   }
 
-  // cidr_block - computed: false, optional: false, required: true
-  private _cidrBlock: string;
+  // cidr_block - computed: true, optional: true, required: false
+  private _cidrBlock?: string;
   public get cidrBlock() {
-    return this._cidrBlock;
+    return this._cidrBlock ?? this.getStringAttribute('cidr_block');
   }
-  public set cidrBlock(value: string) {
+  public set cidrBlock(value: string | undefined) {
     this._cidrBlock = value;
   }
 
@@ -191,6 +197,15 @@ export class TpuNode extends TerraformResource {
     this._tensorflowVersion = value;
   }
 
+  // use_service_networking - computed: false, optional: true, required: false
+  private _useServiceNetworking?: boolean;
+  public get useServiceNetworking() {
+    return this._useServiceNetworking;
+  }
+  public set useServiceNetworking(value: boolean | undefined) {
+    this._useServiceNetworking = value;
+  }
+
   // zone - computed: false, optional: false, required: true
   private _zone: string;
   public get zone() {
@@ -232,6 +247,7 @@ export class TpuNode extends TerraformResource {
       network: this._network,
       project: this._project,
       tensorflow_version: this._tensorflowVersion,
+      use_service_networking: this._useServiceNetworking,
       zone: this._zone,
       scheduling_config: this._schedulingConfig,
       timeouts: this._timeouts,

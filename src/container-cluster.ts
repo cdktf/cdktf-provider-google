@@ -8,8 +8,6 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface ContainerClusterConfig extends TerraformMetaArguments {
-  /** Additional_zones has been removed in favor of node_locations. */
-  readonly additionalZones?: string[];
   /** The IP address range of the Kubernetes pods in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only work for routes-based clusters, where ip_allocation_policy is not defined. */
   readonly clusterIpv4Cidr?: string;
   /** The default maximum number of pods per node in this cluster. This doesn't work on "routes-based" clusters, clusters that don't have IP Aliasing enabled. */
@@ -48,16 +46,12 @@ export interface ContainerClusterConfig extends TerraformMetaArguments {
   readonly nodeVersion?: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
-  /** The region in which the cluster master will be created. Zone and region have been removed in favor of location. */
-  readonly region?: string;
   /** If true, deletes the default node pool upon cluster creation. If you're using google_container_node_pool resources with no default node pool, this should be set to true, alongside setting initial_node_count to at least 1. */
   readonly removeDefaultNodePool?: boolean;
   /** The GCE resource labels (a map of key/value pairs) to be applied to the cluster. */
   readonly resourceLabels?: { [key: string]: string };
   /** The name or self_link of the Google Compute Engine subnetwork in which the cluster's instances are launched. */
   readonly subnetwork?: string;
-  /** The zone in which the cluster master will be created. Zone and region have been removed in favor of location. */
-  readonly zone?: string;
   /** addons_config block */
   readonly addonsConfig?: ContainerClusterAddonsConfig[];
   /** authenticator_groups_config block */
@@ -105,9 +99,6 @@ export interface ContainerClusterAddonsConfigHorizontalPodAutoscaling {
 export interface ContainerClusterAddonsConfigHttpLoadBalancing {
   readonly disabled: boolean;
 }
-export interface ContainerClusterAddonsConfigKubernetesDashboard {
-  readonly disabled?: boolean;
-}
 export interface ContainerClusterAddonsConfigNetworkPolicyConfig {
   readonly disabled: boolean;
 }
@@ -118,8 +109,6 @@ export interface ContainerClusterAddonsConfig {
   readonly horizontalPodAutoscaling?: ContainerClusterAddonsConfigHorizontalPodAutoscaling[];
   /** http_load_balancing block */
   readonly httpLoadBalancing?: ContainerClusterAddonsConfigHttpLoadBalancing[];
-  /** kubernetes_dashboard block */
-  readonly kubernetesDashboard?: ContainerClusterAddonsConfigKubernetesDashboard[];
   /** network_policy_config block */
   readonly networkPolicyConfig?: ContainerClusterAddonsConfigNetworkPolicyConfig[];
 }
@@ -160,12 +149,10 @@ export interface ContainerClusterIpAllocationPolicy {
   readonly clusterIpv4CidrBlock?: string;
   /** The name of the existing secondary range in the cluster's subnetwork to use for pod IP addresses. Alternatively, cluster_ipv4_cidr_block can be used to automatically create a GKE-managed one. */
   readonly clusterSecondaryRangeName?: string;
-  readonly nodeIpv4CidrBlock?: string;
   /** The IP address range of the services IPs in this cluster. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. */
   readonly servicesIpv4CidrBlock?: string;
   /** The name of the existing secondary range in the cluster's subnetwork to use for service ClusterIPs. Alternatively, services_ipv4_cidr_block can be used to automatically create a GKE-managed one. */
   readonly servicesSecondaryRangeName?: string;
-  readonly subnetworkName?: string;
 }
 export interface ContainerClusterMaintenancePolicyDailyMaintenanceWindow {
   readonly startTime: string;
@@ -218,9 +205,6 @@ export interface ContainerClusterNodeConfigTaint {
   readonly key?: string;
   readonly value?: string;
 }
-export interface ContainerClusterNodeConfigSandboxConfig {
-  readonly sandboxType: string;
-}
 export interface ContainerClusterNodeConfigShieldedInstanceConfig {
   readonly enableIntegrityMonitoring?: boolean;
   readonly enableSecureBoot?: boolean;
@@ -243,8 +227,6 @@ export interface ContainerClusterNodeConfig {
   readonly serviceAccount?: string;
   readonly tags?: string[];
   readonly taint?: ContainerClusterNodeConfigTaint[];
-  /** sandbox_config block */
-  readonly sandboxConfig?: ContainerClusterNodeConfigSandboxConfig[];
   /** shielded_instance_config block */
   readonly shieldedInstanceConfig?: ContainerClusterNodeConfigShieldedInstanceConfig[];
   /** workload_metadata_config block */
@@ -271,9 +253,6 @@ export interface ContainerClusterNodePoolNodeConfigTaint {
   readonly key?: string;
   readonly value?: string;
 }
-export interface ContainerClusterNodePoolNodeConfigSandboxConfig {
-  readonly sandboxType: string;
-}
 export interface ContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
   readonly enableIntegrityMonitoring?: boolean;
   readonly enableSecureBoot?: boolean;
@@ -296,8 +275,6 @@ export interface ContainerClusterNodePoolNodeConfig {
   readonly serviceAccount?: string;
   readonly tags?: string[];
   readonly taint?: ContainerClusterNodePoolNodeConfigTaint[];
-  /** sandbox_config block */
-  readonly sandboxConfig?: ContainerClusterNodePoolNodeConfigSandboxConfig[];
   /** shielded_instance_config block */
   readonly shieldedInstanceConfig?: ContainerClusterNodePoolNodeConfigShieldedInstanceConfig[];
   /** workload_metadata_config block */
@@ -394,7 +371,6 @@ export class ContainerCluster extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._additionalZones = config.additionalZones;
     this._clusterIpv4Cidr = config.clusterIpv4Cidr;
     this._defaultMaxPodsPerNode = config.defaultMaxPodsPerNode;
     this._description = config.description;
@@ -414,11 +390,9 @@ export class ContainerCluster extends TerraformResource {
     this._nodeLocations = config.nodeLocations;
     this._nodeVersion = config.nodeVersion;
     this._project = config.project;
-    this._region = config.region;
     this._removeDefaultNodePool = config.removeDefaultNodePool;
     this._resourceLabels = config.resourceLabels;
     this._subnetwork = config.subnetwork;
-    this._zone = config.zone;
     this._addonsConfig = config.addonsConfig;
     this._authenticatorGroupsConfig = config.authenticatorGroupsConfig;
     this._clusterAutoscaling = config.clusterAutoscaling;
@@ -442,15 +416,6 @@ export class ContainerCluster extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // additional_zones - computed: true, optional: true, required: false
-  private _additionalZones?: string[];
-  public get additionalZones() {
-    return this._additionalZones ?? this.getListAttribute('additional_zones');
-  }
-  public set additionalZones(value: string[] | undefined) {
-    this._additionalZones = value;
-  }
 
   // cluster_ipv4_cidr - computed: true, optional: true, required: false
   private _clusterIpv4Cidr?: string;
@@ -488,10 +453,10 @@ export class ContainerCluster extends TerraformResource {
     this._enableBinaryAuthorization = value;
   }
 
-  // enable_intranode_visibility - computed: true, optional: true, required: false
+  // enable_intranode_visibility - computed: false, optional: true, required: false
   private _enableIntranodeVisibility?: boolean;
   public get enableIntranodeVisibility() {
-    return this._enableIntranodeVisibility ?? this.getBooleanAttribute('enable_intranode_visibility');
+    return this._enableIntranodeVisibility;
   }
   public set enableIntranodeVisibility(value: boolean | undefined) {
     this._enableIntranodeVisibility = value;
@@ -524,10 +489,10 @@ export class ContainerCluster extends TerraformResource {
     this._enableShieldedNodes = value;
   }
 
-  // enable_tpu - computed: true, optional: true, required: false
+  // enable_tpu - computed: false, optional: true, required: false
   private _enableTpu?: boolean;
   public get enableTpu() {
-    return this._enableTpu ?? this.getBooleanAttribute('enable_tpu');
+    return this._enableTpu;
   }
   public set enableTpu(value: boolean | undefined) {
     this._enableTpu = value;
@@ -657,15 +622,6 @@ export class ContainerCluster extends TerraformResource {
     this._project = value;
   }
 
-  // region - computed: true, optional: true, required: false
-  private _region?: string;
-  public get region() {
-    return this._region ?? this.getStringAttribute('region');
-  }
-  public set region(value: string | undefined) {
-    this._region = value;
-  }
-
   // remove_default_node_pool - computed: false, optional: true, required: false
   private _removeDefaultNodePool?: boolean;
   public get removeDefaultNodePool() {
@@ -701,15 +657,6 @@ export class ContainerCluster extends TerraformResource {
   }
   public set subnetwork(value: string | undefined) {
     this._subnetwork = value;
-  }
-
-  // zone - computed: true, optional: true, required: false
-  private _zone?: string;
-  public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
-  }
-  public set zone(value: string | undefined) {
-    this._zone = value;
   }
 
   // addons_config - computed: false, optional: true, required: false
@@ -880,7 +827,6 @@ export class ContainerCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_zones: this._additionalZones,
       cluster_ipv4_cidr: this._clusterIpv4Cidr,
       default_max_pods_per_node: this._defaultMaxPodsPerNode,
       description: this._description,
@@ -900,11 +846,9 @@ export class ContainerCluster extends TerraformResource {
       node_locations: this._nodeLocations,
       node_version: this._nodeVersion,
       project: this._project,
-      region: this._region,
       remove_default_node_pool: this._removeDefaultNodePool,
       resource_labels: this._resourceLabels,
       subnetwork: this._subnetwork,
-      zone: this._zone,
       addons_config: this._addonsConfig,
       authenticator_groups_config: this._authenticatorGroupsConfig,
       cluster_autoscaling: this._clusterAutoscaling,

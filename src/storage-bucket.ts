@@ -67,7 +67,6 @@ export interface StorageBucketLifecycleRuleCondition {
   readonly age?: number;
   /** Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. */
   readonly createdBefore?: string;
-  readonly isLive?: boolean;
   /** Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY. */
   readonly matchesStorageClass?: string[];
   /** Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. */

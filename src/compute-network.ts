@@ -116,11 +116,6 @@ export class ComputeNetwork extends TerraformResource {
     this._id = value;
   }
 
-  // ipv4_range - computed: true, optional: false, required: true
-  public get ipv4Range() {
-    return this.getStringAttribute('ipv4_range');
-  }
-
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {

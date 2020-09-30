@@ -8,7 +8,6 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface ComputeNetworkPeeringConfig extends TerraformMetaArguments {
-  readonly autoCreateRoutes?: boolean;
   /** Whether to export the custom routes to the peer network. Defaults to false. */
   readonly exportCustomRoutes?: boolean;
   readonly exportSubnetRoutesWithPublicIp?: boolean;
@@ -48,7 +47,6 @@ export class ComputeNetworkPeering extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._autoCreateRoutes = config.autoCreateRoutes;
     this._exportCustomRoutes = config.exportCustomRoutes;
     this._exportSubnetRoutesWithPublicIp = config.exportSubnetRoutesWithPublicIp;
     this._importCustomRoutes = config.importCustomRoutes;
@@ -62,15 +60,6 @@ export class ComputeNetworkPeering extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // auto_create_routes - computed: true, optional: true, required: false
-  private _autoCreateRoutes?: boolean;
-  public get autoCreateRoutes() {
-    return this._autoCreateRoutes ?? this.getBooleanAttribute('auto_create_routes');
-  }
-  public set autoCreateRoutes(value: boolean | undefined) {
-    this._autoCreateRoutes = value;
-  }
 
   // export_custom_routes - computed: false, optional: true, required: false
   private _exportCustomRoutes?: boolean;
@@ -169,7 +158,6 @@ export class ComputeNetworkPeering extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_create_routes: this._autoCreateRoutes,
       export_custom_routes: this._exportCustomRoutes,
       export_subnet_routes_with_public_ip: this._exportSubnetRoutesWithPublicIp,
       import_custom_routes: this._importCustomRoutes,

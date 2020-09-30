@@ -12,7 +12,6 @@ export interface ComputeSubnetworkConfig extends TerraformMetaArguments {
 you create the resource. This field can be set only at resource
 creation time. */
   readonly description?: string;
-  readonly enableFlowLogs?: boolean;
   /** The range of internal addresses that are owned by this subnetwork.
 Provide this property when you create the subnetwork. For example,
 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
@@ -104,7 +103,6 @@ export class ComputeSubnetwork extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
-    this._enableFlowLogs = config.enableFlowLogs;
     this._ipCidrRange = config.ipCidrRange;
     this._name = config.name;
     this._network = config.network;
@@ -132,15 +130,6 @@ export class ComputeSubnetwork extends TerraformResource {
   }
   public set description(value: string | undefined) {
     this._description = value;
-  }
-
-  // enable_flow_logs - computed: true, optional: true, required: false
-  private _enableFlowLogs?: boolean;
-  public get enableFlowLogs() {
-    return this._enableFlowLogs ?? this.getBooleanAttribute('enable_flow_logs');
-  }
-  public set enableFlowLogs(value: boolean | undefined) {
-    this._enableFlowLogs = value;
   }
 
   // fingerprint - computed: true, optional: false, required: true
@@ -255,7 +244,6 @@ export class ComputeSubnetwork extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
-      enable_flow_logs: this._enableFlowLogs,
       ip_cidr_range: this._ipCidrRange,
       name: this._name,
       network: this._network,

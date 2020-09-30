@@ -53,7 +53,6 @@ or unnecessary diffs. */
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"] */
   readonly ipProtocol?: string;
-  readonly ipVersion?: string;
   /** This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
 Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
@@ -171,7 +170,6 @@ export class ComputeForwardingRule extends TerraformResource {
     this._description = config.description;
     this._ipAddress = config.ipAddress;
     this._ipProtocol = config.ipProtocol;
-    this._ipVersion = config.ipVersion;
     this._loadBalancingScheme = config.loadBalancingScheme;
     this._name = config.name;
     this._network = config.network;
@@ -256,15 +254,6 @@ export class ComputeForwardingRule extends TerraformResource {
   }
   public set ipProtocol(value: string | undefined) {
     this._ipProtocol = value;
-  }
-
-  // ip_version - computed: true, optional: true, required: false
-  private _ipVersion?: string;
-  public get ipVersion() {
-    return this._ipVersion ?? this.getStringAttribute('ip_version');
-  }
-  public set ipVersion(value: string | undefined) {
-    this._ipVersion = value;
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
@@ -397,7 +386,6 @@ export class ComputeForwardingRule extends TerraformResource {
       description: this._description,
       ip_address: this._ipAddress,
       ip_protocol: this._ipProtocol,
-      ip_version: this._ipVersion,
       load_balancing_scheme: this._loadBalancingScheme,
       name: this._name,
       network: this._network,

@@ -24,7 +24,6 @@ export interface ComputeRegionInstanceGroupManagerConfig extends TerraformMetaAr
   readonly targetPools?: string[];
   /** The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0. */
   readonly targetSize?: number;
-  readonly updateStrategy?: string;
   /** Whether to wait for all instances to be created/updated before returning. Note that if this is set to true and the operation does not succeed, Terraform will continue trying until it times out. */
   readonly waitForInstances?: boolean;
   /** auto_healing_policies block */
@@ -115,7 +114,6 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
     this._region = config.region;
     this._targetPools = config.targetPools;
     this._targetSize = config.targetSize;
-    this._updateStrategy = config.updateStrategy;
     this._waitForInstances = config.waitForInstances;
     this._autoHealingPolicies = config.autoHealingPolicies;
     this._namedPort = config.namedPort;
@@ -174,11 +172,6 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
     return this.getStringAttribute('instance_group');
   }
 
-  // instance_template - computed: true, optional: false, required: true
-  public get instanceTemplate() {
-    return this.getStringAttribute('instance_template');
-  }
-
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -227,15 +220,6 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
   }
   public set targetSize(value: number | undefined) {
     this._targetSize = value;
-  }
-
-  // update_strategy - computed: true, optional: true, required: false
-  private _updateStrategy?: string;
-  public get updateStrategy() {
-    return this._updateStrategy ?? this.getStringAttribute('update_strategy');
-  }
-  public set updateStrategy(value: string | undefined) {
-    this._updateStrategy = value;
   }
 
   // wait_for_instances - computed: false, optional: true, required: false
@@ -306,7 +290,6 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
       region: this._region,
       target_pools: this._targetPools,
       target_size: this._targetSize,
-      update_strategy: this._updateStrategy,
       wait_for_instances: this._waitForInstances,
       auto_healing_policies: this._autoHealingPolicies,
       named_port: this._namedPort,

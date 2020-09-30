@@ -19,7 +19,6 @@ name is limited to 512 Unicode characters. */
   readonly displayName: string;
   /** Whether or not the policy is enabled. The default is true. */
   readonly enabled?: boolean;
-  readonly labels?: string[];
   /** Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
 on an already opened incident. Each element of this array corresponds
@@ -451,7 +450,6 @@ export class MonitoringAlertPolicy extends TerraformResource {
     this._combiner = config.combiner;
     this._displayName = config.displayName;
     this._enabled = config.enabled;
-    this._labels = config.labels;
     this._notificationChannels = config.notificationChannels;
     this._project = config.project;
     this._userLabels = config.userLabels;
@@ -503,15 +501,6 @@ export class MonitoringAlertPolicy extends TerraformResource {
   }
   public set id(value: string | undefined) {
     this._id = value;
-  }
-
-  // labels - computed: true, optional: true, required: false
-  private _labels?: string[];
-  public get labels() {
-    return this._labels ?? this.getListAttribute('labels');
-  }
-  public set labels(value: string[] | undefined) {
-    this._labels = value;
   }
 
   // name - computed: true, optional: false, required: true
@@ -582,7 +571,6 @@ export class MonitoringAlertPolicy extends TerraformResource {
       combiner: this._combiner,
       display_name: this._displayName,
       enabled: this._enabled,
-      labels: this._labels,
       notification_channels: this._notificationChannels,
       project: this._project,
       user_labels: this._userLabels,

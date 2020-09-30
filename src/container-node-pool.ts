@@ -26,12 +26,8 @@ export interface ContainerNodePoolConfig extends TerraformMetaArguments {
   readonly nodeLocations?: string[];
   /** The ID of the project in which to create the node pool. If blank, the provider-configured project will be used. */
   readonly project?: string;
-  /** The region of the cluster */
-  readonly region?: string;
   /** The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged. While a fuzzy version can be specified, it's recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source's version_prefix field to approximate fuzzy versions in a Terraform-compatible way. */
   readonly version?: string;
-  /** The zone of the cluster */
-  readonly zone?: string;
   /** autoscaling block */
   readonly autoscaling?: ContainerNodePoolAutoscaling[];
   /** management block */
@@ -64,9 +60,6 @@ export interface ContainerNodePoolNodeConfigTaint {
   readonly key?: string;
   readonly value?: string;
 }
-export interface ContainerNodePoolNodeConfigSandboxConfig {
-  readonly sandboxType: string;
-}
 export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
   readonly enableIntegrityMonitoring?: boolean;
   readonly enableSecureBoot?: boolean;
@@ -89,8 +82,6 @@ export interface ContainerNodePoolNodeConfig {
   readonly serviceAccount?: string;
   readonly tags?: string[];
   readonly taint?: ContainerNodePoolNodeConfigTaint[];
-  /** sandbox_config block */
-  readonly sandboxConfig?: ContainerNodePoolNodeConfigSandboxConfig[];
   /** shielded_instance_config block */
   readonly shieldedInstanceConfig?: ContainerNodePoolNodeConfigShieldedInstanceConfig[];
   /** workload_metadata_config block */
@@ -136,9 +127,7 @@ export class ContainerNodePool extends TerraformResource {
     this._nodeCount = config.nodeCount;
     this._nodeLocations = config.nodeLocations;
     this._project = config.project;
-    this._region = config.region;
     this._version = config.version;
-    this._zone = config.zone;
     this._autoscaling = config.autoscaling;
     this._management = config.management;
     this._nodeConfig = config.nodeConfig;
@@ -245,15 +234,6 @@ export class ContainerNodePool extends TerraformResource {
     this._project = value;
   }
 
-  // region - computed: true, optional: true, required: false
-  private _region?: string;
-  public get region() {
-    return this._region ?? this.getStringAttribute('region');
-  }
-  public set region(value: string | undefined) {
-    this._region = value;
-  }
-
   // version - computed: true, optional: true, required: false
   private _version?: string;
   public get version() {
@@ -261,15 +241,6 @@ export class ContainerNodePool extends TerraformResource {
   }
   public set version(value: string | undefined) {
     this._version = value;
-  }
-
-  // zone - computed: true, optional: true, required: false
-  private _zone?: string;
-  public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
-  }
-  public set zone(value: string | undefined) {
-    this._zone = value;
   }
 
   // autoscaling - computed: false, optional: true, required: false
@@ -332,9 +303,7 @@ export class ContainerNodePool extends TerraformResource {
       node_count: this._nodeCount,
       node_locations: this._nodeLocations,
       project: this._project,
-      region: this._region,
       version: this._version,
-      zone: this._zone,
       autoscaling: this._autoscaling,
       management: this._management,
       node_config: this._nodeConfig,
