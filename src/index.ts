@@ -155,6 +155,7 @@ export * from './data-catalog-entry-group-iam-member';
 export * from './data-catalog-entry-group-iam-policy';
 export * from './data-catalog-tag';
 export * from './data-catalog-tag-template';
+export * from './data-loss-prevention-deidentify-template';
 export * from './data-loss-prevention-inspect-template';
 export * from './data-loss-prevention-job-trigger';
 export * from './data-loss-prevention-stored-info-type';
