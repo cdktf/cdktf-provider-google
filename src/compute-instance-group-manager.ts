@@ -28,6 +28,8 @@ export interface ComputeInstanceGroupManagerConfig extends TerraformMetaArgument
   readonly autoHealingPolicies?: ComputeInstanceGroupManagerAutoHealingPolicies[];
   /** named_port block */
   readonly namedPort?: ComputeInstanceGroupManagerNamedPort[];
+  /** stateful_disk block */
+  readonly statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[];
   /** timeouts block */
   readonly timeouts?: ComputeInstanceGroupManagerTimeouts;
   /** update_policy block */
@@ -46,6 +48,12 @@ export interface ComputeInstanceGroupManagerNamedPort {
   readonly name: string;
   /** The port number. */
   readonly port: number;
+}
+export interface ComputeInstanceGroupManagerStatefulDisk {
+  /** A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER detatch the disk when the VM is deleted, but not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER. */
+  readonly deleteRule?: string;
+  /** The device name of the disk to be attached. */
+  readonly deviceName: string;
 }
 export interface ComputeInstanceGroupManagerTimeouts {
   readonly create?: string;
@@ -112,6 +120,7 @@ export class ComputeInstanceGroupManager extends TerraformResource {
     this._zone = config.zone;
     this._autoHealingPolicies = config.autoHealingPolicies;
     this._namedPort = config.namedPort;
+    this._statefulDisk = config.statefulDisk;
     this._timeouts = config.timeouts;
     this._updatePolicy = config.updatePolicy;
     this._version = config.version;
@@ -240,6 +249,15 @@ export class ComputeInstanceGroupManager extends TerraformResource {
     this._namedPort = value;
   }
 
+  // stateful_disk - computed: false, optional: true, required: false
+  private _statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[];
+  public get statefulDisk() {
+    return this._statefulDisk;
+  }
+  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[] | undefined) {
+    this._statefulDisk = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeInstanceGroupManagerTimeouts;
   public get timeouts() {
@@ -283,6 +301,7 @@ export class ComputeInstanceGroupManager extends TerraformResource {
       zone: this._zone,
       auto_healing_policies: this._autoHealingPolicies,
       named_port: this._namedPort,
+      stateful_disk: this._statefulDisk,
       timeouts: this._timeouts,
       update_policy: this._updatePolicy,
       version: this._version,

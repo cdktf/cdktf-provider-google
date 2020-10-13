@@ -30,6 +30,8 @@ export interface BigqueryTableConfig extends TerraformMetaArguments {
   readonly encryptionConfiguration?: BigqueryTableEncryptionConfiguration[];
   /** external_data_configuration block */
   readonly externalDataConfiguration?: BigqueryTableExternalDataConfiguration[];
+  /** materialized_view block */
+  readonly materializedView?: BigqueryTableMaterializedView[];
   /** range_partitioning block */
   readonly rangePartitioning?: BigqueryTableRangePartitioning[];
   /** time_partitioning block */
@@ -88,6 +90,14 @@ export interface BigqueryTableExternalDataConfiguration {
   readonly googleSheetsOptions?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions[];
   /** hive_partitioning_options block */
   readonly hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions[];
+}
+export interface BigqueryTableMaterializedView {
+  /** Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. */
+  readonly enableRefresh?: boolean;
+  /** A query whose result is persisted. */
+  readonly query: string;
+  /** Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000 */
+  readonly refreshIntervalMs?: number;
 }
 export interface BigqueryTableRangePartitioningRange {
   /** End of the range partitioning, exclusive. */
@@ -150,6 +160,7 @@ export class BigqueryTable extends TerraformResource {
     this._tableId = config.tableId;
     this._encryptionConfiguration = config.encryptionConfiguration;
     this._externalDataConfiguration = config.externalDataConfiguration;
+    this._materializedView = config.materializedView;
     this._rangePartitioning = config.rangePartitioning;
     this._timePartitioning = config.timePartitioning;
     this._view = config.view;
@@ -312,6 +323,15 @@ export class BigqueryTable extends TerraformResource {
     this._externalDataConfiguration = value;
   }
 
+  // materialized_view - computed: false, optional: true, required: false
+  private _materializedView?: BigqueryTableMaterializedView[];
+  public get materializedView() {
+    return this._materializedView;
+  }
+  public set materializedView(value: BigqueryTableMaterializedView[] | undefined) {
+    this._materializedView = value;
+  }
+
   // range_partitioning - computed: false, optional: true, required: false
   private _rangePartitioning?: BigqueryTableRangePartitioning[];
   public get rangePartitioning() {
@@ -356,6 +376,7 @@ export class BigqueryTable extends TerraformResource {
       table_id: this._tableId,
       encryption_configuration: this._encryptionConfiguration,
       external_data_configuration: this._externalDataConfiguration,
+      materialized_view: this._materializedView,
       range_partitioning: this._rangePartitioning,
       time_partitioning: this._timePartitioning,
       view: this._view,

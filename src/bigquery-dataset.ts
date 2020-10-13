@@ -96,10 +96,9 @@ domain specified will be granted the specified access */
   /** An email address of a Google Group to grant access to. */
   readonly groupByEmail?: string;
   /** Describes the rights granted to the user specified by the other
-member of the access object. Primitive, Predefined and custom
-roles are supported. Predefined roles that have equivalent
-primitive roles are swapped by the API to their Primitive
-counterparts. See
+member of the access object. Basic, predefined, and custom roles
+are supported. Predefined roles that have equivalent basic roles
+are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control). */
   readonly role?: string;
   /** A special group to grant access to. Possible values include:

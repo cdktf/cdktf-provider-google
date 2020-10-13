@@ -1,13 +1,14 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_forwarding_rule.html
+// https://www.terraform.io/docs/providers/google/r/data_google_compute_global_forwarding_rule.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
 import { TerraformDataSource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
+import { ComplexComputedList } from "cdktf";
 
 // Configuration
 
-export interface DataGoogleComputeForwardingRuleConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeGlobalForwardingRuleConfig extends TerraformMetaArguments {
   /** Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -17,22 +18,43 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. */
   readonly name: string;
   readonly project?: string;
-  /** A reference to the region where the regional forwarding rule resides.
-This field is not applicable to global forwarding rules. */
-  readonly region?: string;
+}
+export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels extends ComplexComputedList {
+
+  // name - computed: true, optional: false, required: true
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // value - computed: true, optional: false, required: true
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends ComplexComputedList {
+
+  // filter_labels - computed: true, optional: false, required: true
+  public get filterLabels() {
+    return 'not implemented' as any;
+  }
+
+  // filter_match_criteria - computed: true, optional: false, required: true
+  public get filterMatchCriteria() {
+    return this.getStringAttribute('filter_match_criteria');
+  }
 }
 
 // Resource
 
-export class DataGoogleComputeForwardingRule extends TerraformDataSource {
+export class DataGoogleComputeGlobalForwardingRule extends TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataGoogleComputeForwardingRuleConfig) {
+  public constructor(scope: Construct, id: string, config: DataGoogleComputeGlobalForwardingRuleConfig) {
     super(scope, id, {
-      terraformResourceType: 'google_compute_forwarding_rule',
+      terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google'
       },
@@ -43,32 +65,11 @@ export class DataGoogleComputeForwardingRule extends TerraformDataSource {
     });
     this._name = config.name;
     this._project = config.project;
-    this._region = config.region;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // all_ports - computed: true, optional: false, required: true
-  public get allPorts() {
-    return this.getBooleanAttribute('all_ports');
-  }
-
-  // allow_global_access - computed: true, optional: false, required: true
-  public get allowGlobalAccess() {
-    return this.getBooleanAttribute('allow_global_access');
-  }
-
-  // backend_service - computed: true, optional: false, required: true
-  public get backendService() {
-    return this.getStringAttribute('backend_service');
-  }
-
-  // creation_timestamp - computed: true, optional: false, required: true
-  public get creationTimestamp() {
-    return this.getStringAttribute('creation_timestamp');
-  }
 
   // description - computed: true, optional: false, required: true
   public get description() {
@@ -94,9 +95,19 @@ export class DataGoogleComputeForwardingRule extends TerraformDataSource {
     return this.getStringAttribute('ip_protocol');
   }
 
+  // ip_version - computed: true, optional: false, required: true
+  public get ipVersion() {
+    return this.getStringAttribute('ip_version');
+  }
+
   // load_balancing_scheme - computed: true, optional: false, required: true
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
+  }
+
+  // metadata_filters - computed: true, optional: false, required: true
+  public metadataFilters(index: string) {
+    return new DataGoogleComputeGlobalForwardingRuleMetadataFilters(this, 'metadata_filters', index);
   }
 
   // name - computed: false, optional: false, required: true
@@ -108,24 +119,9 @@ export class DataGoogleComputeForwardingRule extends TerraformDataSource {
     this._name = value;
   }
 
-  // network - computed: true, optional: false, required: true
-  public get network() {
-    return this.getStringAttribute('network');
-  }
-
-  // network_tier - computed: true, optional: false, required: true
-  public get networkTier() {
-    return this.getStringAttribute('network_tier');
-  }
-
   // port_range - computed: true, optional: false, required: true
   public get portRange() {
     return this.getStringAttribute('port_range');
-  }
-
-  // ports - computed: true, optional: false, required: true
-  public get ports() {
-    return this.getListAttribute('ports');
   }
 
   // project - computed: false, optional: true, required: false
@@ -137,33 +133,9 @@ export class DataGoogleComputeForwardingRule extends TerraformDataSource {
     this._project = value;
   }
 
-  // region - computed: false, optional: true, required: false
-  private _region?: string;
-  public get region() {
-    return this._region;
-  }
-  public set region(value: string | undefined) {
-    this._region = value;
-  }
-
   // self_link - computed: true, optional: false, required: true
   public get selfLink() {
     return this.getStringAttribute('self_link');
-  }
-
-  // service_label - computed: true, optional: false, required: true
-  public get serviceLabel() {
-    return this.getStringAttribute('service_label');
-  }
-
-  // service_name - computed: true, optional: false, required: true
-  public get serviceName() {
-    return this.getStringAttribute('service_name');
-  }
-
-  // subnetwork - computed: true, optional: false, required: true
-  public get subnetwork() {
-    return this.getStringAttribute('subnetwork');
   }
 
   // target - computed: true, optional: false, required: true
@@ -179,7 +151,6 @@ export class DataGoogleComputeForwardingRule extends TerraformDataSource {
     return {
       name: this._name,
       project: this._project,
-      region: this._region,
     };
   }
 }

@@ -22,8 +22,11 @@ connections, but still work to finish started). */
   readonly description?: string;
   /** The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
-check can be specified, and a health check is required. */
-  readonly healthChecks: string[];
+check can be specified. 
+
+A health check must be specified unless the backend service uses an internet
+or serverless NEG as a backend. */
+  readonly healthChecks?: string[];
   /** Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s). Default value: "INTERNAL" Possible values: ["INTERNAL", "INTERNAL_MANAGED"] */
@@ -437,12 +440,12 @@ export class ComputeRegionBackendService extends TerraformResource {
     return this.getStringAttribute('fingerprint');
   }
 
-  // health_checks - computed: false, optional: false, required: true
-  private _healthChecks: string[];
+  // health_checks - computed: false, optional: true, required: false
+  private _healthChecks?: string[];
   public get healthChecks() {
     return this._healthChecks;
   }
-  public set healthChecks(value: string[]) {
+  public set healthChecks(value: string[] | undefined) {
     this._healthChecks = value;
   }
 
