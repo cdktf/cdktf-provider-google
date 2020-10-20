@@ -11,6 +11,8 @@ import { ComplexComputedList } from "cdktf";
 export interface SqlDatabaseInstanceConfig extends TerraformMetaArguments {
   /** The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, POSTGRES_9_6,POSTGRES_11, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions. */
   readonly databaseVersion?: string;
+  /** Used to block Terraform from deleting a SQL Instance. */
+  readonly deletionProtection?: boolean;
   /** The name of the instance that will act as the master in the replication setup. Note, this requires the master to have binary_log_enabled set, as well as existing backups. */
   readonly masterInstanceName?: string;
   /** The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week. */
@@ -205,6 +207,7 @@ export class SqlDatabaseInstance extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._databaseVersion = config.databaseVersion;
+    this._deletionProtection = config.deletionProtection;
     this._masterInstanceName = config.masterInstanceName;
     this._name = config.name;
     this._project = config.project;
@@ -231,6 +234,15 @@ export class SqlDatabaseInstance extends TerraformResource {
   }
   public set databaseVersion(value: string | undefined) {
     this._databaseVersion = value;
+  }
+
+  // deletion_protection - computed: false, optional: true, required: false
+  private _deletionProtection?: boolean;
+  public get deletionProtection() {
+    return this._deletionProtection;
+  }
+  public set deletionProtection(value: boolean | undefined) {
+    this._deletionProtection = value;
   }
 
   // first_ip_address - computed: true, optional: false, required: true
@@ -356,6 +368,7 @@ export class SqlDatabaseInstance extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database_version: this._databaseVersion,
+      deletion_protection: this._deletionProtection,
       master_instance_name: this._masterInstanceName,
       name: this._name,
       project: this._project,

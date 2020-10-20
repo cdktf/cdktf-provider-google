@@ -18,10 +18,22 @@ export interface LoggingBillingAccountSinkConfig extends TerraformMetaArguments 
   readonly name: string;
   /** bigquery_options block */
   readonly bigqueryOptions?: LoggingBillingAccountSinkBigqueryOptions[];
+  /** exclusions block */
+  readonly exclusions?: LoggingBillingAccountSinkExclusions[];
 }
 export interface LoggingBillingAccountSinkBigqueryOptions {
   /** Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone. */
   readonly usePartitionedTables: boolean;
+}
+export interface LoggingBillingAccountSinkExclusions {
+  /** A description of this exclusion. */
+  readonly description?: string;
+  /** If set to True, then this exclusion is disabled and it does not exclude any log entries */
+  readonly disabled?: boolean;
+  /** An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries */
+  readonly filter: string;
+  /** A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric. */
+  readonly name: string;
 }
 
 // Resource
@@ -48,6 +60,7 @@ export class LoggingBillingAccountSink extends TerraformResource {
     this._filter = config.filter;
     this._name = config.name;
     this._bigqueryOptions = config.bigqueryOptions;
+    this._exclusions = config.exclusions;
   }
 
   // ==========
@@ -113,6 +126,15 @@ export class LoggingBillingAccountSink extends TerraformResource {
     this._bigqueryOptions = value;
   }
 
+  // exclusions - computed: false, optional: true, required: false
+  private _exclusions?: LoggingBillingAccountSinkExclusions[];
+  public get exclusions() {
+    return this._exclusions;
+  }
+  public set exclusions(value: LoggingBillingAccountSinkExclusions[] | undefined) {
+    this._exclusions = value;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -124,6 +146,7 @@ export class LoggingBillingAccountSink extends TerraformResource {
       filter: this._filter,
       name: this._name,
       bigquery_options: this._bigqueryOptions,
+      exclusions: this._exclusions,
     };
   }
 }

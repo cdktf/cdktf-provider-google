@@ -19,6 +19,8 @@ export interface CloudTasksQueueConfig extends TerraformMetaArguments {
   readonly rateLimits?: CloudTasksQueueRateLimits[];
   /** retry_config block */
   readonly retryConfig?: CloudTasksQueueRetryConfig[];
+  /** stackdriver_logging_config block */
+  readonly stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig[];
   /** timeouts block */
   readonly timeouts?: CloudTasksQueueTimeouts;
 }
@@ -82,6 +84,12 @@ maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried. */
   readonly minBackoff?: string;
 }
+export interface CloudTasksQueueStackdriverLoggingConfig {
+  /** Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged. */
+  readonly samplingRatio: number;
+}
 export interface CloudTasksQueueTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -113,6 +121,7 @@ export class CloudTasksQueue extends TerraformResource {
     this._appEngineRoutingOverride = config.appEngineRoutingOverride;
     this._rateLimits = config.rateLimits;
     this._retryConfig = config.retryConfig;
+    this._stackdriverLoggingConfig = config.stackdriverLoggingConfig;
     this._timeouts = config.timeouts;
   }
 
@@ -183,6 +192,15 @@ export class CloudTasksQueue extends TerraformResource {
     this._retryConfig = value;
   }
 
+  // stackdriver_logging_config - computed: false, optional: true, required: false
+  private _stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig[];
+  public get stackdriverLoggingConfig() {
+    return this._stackdriverLoggingConfig;
+  }
+  public set stackdriverLoggingConfig(value: CloudTasksQueueStackdriverLoggingConfig[] | undefined) {
+    this._stackdriverLoggingConfig = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudTasksQueueTimeouts;
   public get timeouts() {
@@ -204,6 +222,7 @@ export class CloudTasksQueue extends TerraformResource {
       app_engine_routing_override: this._appEngineRoutingOverride,
       rate_limits: this._rateLimits,
       retry_config: this._retryConfig,
+      stackdriver_logging_config: this._stackdriverLoggingConfig,
       timeouts: this._timeouts,
     };
   }

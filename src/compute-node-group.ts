@@ -10,6 +10,8 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface ComputeNodeGroupConfig extends TerraformMetaArguments {
   /** An optional textual description of the resource. */
   readonly description?: string;
+  /** Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. */
+  readonly maintenancePolicy?: string;
   /** Name of the resource. */
   readonly name?: string;
   /** The URL of the node template to which this node group belongs. */
@@ -19,8 +21,25 @@ export interface ComputeNodeGroupConfig extends TerraformMetaArguments {
   readonly size: number;
   /** Zone where this node group is located */
   readonly zone?: string;
+  /** autoscaling_policy block */
+  readonly autoscalingPolicy?: ComputeNodeGroupAutoscalingPolicy[];
   /** timeouts block */
   readonly timeouts?: ComputeNodeGroupTimeouts;
+}
+export interface ComputeNodeGroupAutoscalingPolicy {
+  /** Maximum size of the node group. Set to a value less than or equal
+to 100 and greater than or equal to min-nodes. */
+  readonly maxNodes?: number;
+  /** Minimum size of the node group. Must be less
+than or equal to max-nodes. The default value is 0. */
+  readonly minNodes?: number;
+  /** The autoscaling mode. Set to one of the following:
+  - OFF: Disables the autoscaler.
+  - ON: Enables scaling in and scaling out.
+  - ONLY_SCALE_OUT: Enables only scaling out.
+  You must use this mode if your node groups are configured to
+  restart their hosted VMs on minimal servers. Possible values: ["OFF", "ON", "ONLY_SCALE_OUT"] */
+  readonly mode?: string;
 }
 export interface ComputeNodeGroupTimeouts {
   readonly create?: string;
@@ -48,11 +67,13 @@ export class ComputeNodeGroup extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._maintenancePolicy = config.maintenancePolicy;
     this._name = config.name;
     this._nodeTemplate = config.nodeTemplate;
     this._project = config.project;
     this._size = config.size;
     this._zone = config.zone;
+    this._autoscalingPolicy = config.autoscalingPolicy;
     this._timeouts = config.timeouts;
   }
 
@@ -81,6 +102,15 @@ export class ComputeNodeGroup extends TerraformResource {
   }
   public set id(value: string | undefined) {
     this._id = value;
+  }
+
+  // maintenance_policy - computed: false, optional: true, required: false
+  private _maintenancePolicy?: string;
+  public get maintenancePolicy() {
+    return this._maintenancePolicy;
+  }
+  public set maintenancePolicy(value: string | undefined) {
+    this._maintenancePolicy = value;
   }
 
   // name - computed: false, optional: true, required: false
@@ -133,6 +163,15 @@ export class ComputeNodeGroup extends TerraformResource {
     this._zone = value;
   }
 
+  // autoscaling_policy - computed: false, optional: true, required: false
+  private _autoscalingPolicy?: ComputeNodeGroupAutoscalingPolicy[];
+  public get autoscalingPolicy() {
+    return this._autoscalingPolicy;
+  }
+  public set autoscalingPolicy(value: ComputeNodeGroupAutoscalingPolicy[] | undefined) {
+    this._autoscalingPolicy = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNodeGroupTimeouts;
   public get timeouts() {
@@ -149,11 +188,13 @@ export class ComputeNodeGroup extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: this._description,
+      maintenance_policy: this._maintenancePolicy,
       name: this._name,
       node_template: this._nodeTemplate,
       project: this._project,
       size: this._size,
       zone: this._zone,
+      autoscaling_policy: this._autoscalingPolicy,
       timeouts: this._timeouts,
     };
   }
