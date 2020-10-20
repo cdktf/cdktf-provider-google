@@ -347,6 +347,11 @@ export class DataGoogleSqlDatabaseInstance extends TerraformDataSource {
     return this.getStringAttribute('database_version');
   }
 
+  // deletion_protection - computed: true, optional: false, required: true
+  public get deletionProtection() {
+    return this.getBooleanAttribute('deletion_protection');
+  }
+
   // first_ip_address - computed: true, optional: false, required: true
   public get firstIpAddress() {
     return this.getStringAttribute('first_ip_address');

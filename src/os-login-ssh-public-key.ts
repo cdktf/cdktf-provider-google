@@ -12,6 +12,8 @@ export interface OsLoginSshPublicKeyConfig extends TerraformMetaArguments {
   readonly expirationTimeUsec?: string;
   /** Public key text in SSH format, defined by RFC4253 section 6.6. */
   readonly key: string;
+  /** The project ID of the Google Cloud Platform project. */
+  readonly project?: string;
   /** The user email. */
   readonly user: string;
   /** timeouts block */
@@ -44,6 +46,7 @@ export class OsLoginSshPublicKey extends TerraformResource {
     });
     this._expirationTimeUsec = config.expirationTimeUsec;
     this._key = config.key;
+    this._project = config.project;
     this._user = config.user;
     this._timeouts = config.timeouts;
   }
@@ -84,6 +87,15 @@ export class OsLoginSshPublicKey extends TerraformResource {
     this._key = value;
   }
 
+  // project - computed: false, optional: true, required: false
+  private _project?: string;
+  public get project() {
+    return this._project;
+  }
+  public set project(value: string | undefined) {
+    this._project = value;
+  }
+
   // user - computed: false, optional: false, required: true
   private _user: string;
   public get user() {
@@ -110,6 +122,7 @@ export class OsLoginSshPublicKey extends TerraformResource {
     return {
       expiration_time_usec: this._expirationTimeUsec,
       key: this._key,
+      project: this._project,
       user: this._user,
       timeouts: this._timeouts,
     };

@@ -359,6 +359,7 @@ export * from './storage-transfer-job';
 export * from './tpu-node';
 export * from './vpc-access-connector';
 export * from './data-google-active-folder';
+export * from './data-google-app-engine-default-service-account';
 export * from './data-google-bigquery-default-service-account';
 export * from './data-google-billing-account';
 export * from './data-google-client-config';

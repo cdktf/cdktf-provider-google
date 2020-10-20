@@ -10,6 +10,7 @@ import { StringMap } from "cdktf";
 
 export interface DataGoogleComputeImageConfig extends TerraformMetaArguments {
   readonly family?: string;
+  readonly filter?: string;
   readonly name?: string;
   readonly project?: string;
 }
@@ -34,6 +35,7 @@ export class DataGoogleComputeImage extends TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._family = config.family;
+    this._filter = config.filter;
     this._name = config.name;
     this._project = config.project;
   }
@@ -69,6 +71,15 @@ export class DataGoogleComputeImage extends TerraformDataSource {
   }
   public set family(value: string | undefined) {
     this._family = value;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter?: string;
+  public get filter() {
+    return this._filter;
+  }
+  public set filter(value: string | undefined) {
+    this._filter = value;
   }
 
   // id - computed: true, optional: true, required: false
@@ -160,6 +171,7 @@ export class DataGoogleComputeImage extends TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       family: this._family,
+      filter: this._filter,
       name: this._name,
       project: this._project,
     };

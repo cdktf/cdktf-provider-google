@@ -120,7 +120,7 @@ export interface BigqueryTableTimePartitioning {
   readonly field?: string;
   /** If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. */
   readonly requirePartitionFilter?: boolean;
-  /** The supported types are DAY and HOUR, which will generate one partition per day or hour based on data loading time. */
+  /** The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. */
   readonly type: string;
 }
 export interface BigqueryTableView {

@@ -8,6 +8,8 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface DataprocClusterConfig extends TerraformMetaArguments {
+  /** The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a terraform apply */
+  readonly gracefulDecommissionTimeout?: string;
   /** The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster. */
   readonly labels?: { [key: string]: string };
   /** The name of the cluster, unique within the project and zone. */
@@ -217,6 +219,7 @@ export class DataprocCluster extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._gracefulDecommissionTimeout = config.gracefulDecommissionTimeout;
     this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
@@ -228,6 +231,15 @@ export class DataprocCluster extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // graceful_decommission_timeout - computed: false, optional: true, required: false
+  private _gracefulDecommissionTimeout?: string;
+  public get gracefulDecommissionTimeout() {
+    return this._gracefulDecommissionTimeout;
+  }
+  public set gracefulDecommissionTimeout(value: string | undefined) {
+    this._gracefulDecommissionTimeout = value;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string;
@@ -298,6 +310,7 @@ export class DataprocCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      graceful_decommission_timeout: this._gracefulDecommissionTimeout,
       labels: this._labels,
       name: this._name,
       project: this._project,
