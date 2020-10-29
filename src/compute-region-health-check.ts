@@ -54,8 +54,10 @@ consecutive failures. The default value is 2. */
 export interface ComputeRegionHealthCheckGrpcHealthCheck {
   /** The gRPC service name for the health check. 
 The value of grpcServiceName has the following meanings by convention:
-  - Empty serviceName means the overall status of all services at the backend.
-  - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+
+* Empty serviceName means the overall status of all services at the backend.
+* Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+
 The grpcServiceName can only be ASCII. */
   readonly grpcServiceName?: string;
   /** The port number for the health check request. 

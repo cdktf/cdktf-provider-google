@@ -19,6 +19,9 @@ the user can explicitly connect subnetwork resources. */
   /** An optional description of this resource. The resource must be
 recreated to modify this field. */
   readonly description?: string;
+  /** Maximum Transmission Unit in bytes. The minimum value for this field is 1460
+and the maximum value is 1500 bytes. */
+  readonly mtu?: number;
   /** Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -65,6 +68,7 @@ export class ComputeNetwork extends TerraformResource {
     this._autoCreateSubnetworks = config.autoCreateSubnetworks;
     this._deleteDefaultRoutesOnCreate = config.deleteDefaultRoutesOnCreate;
     this._description = config.description;
+    this._mtu = config.mtu;
     this._name = config.name;
     this._project = config.project;
     this._routingMode = config.routingMode;
@@ -114,6 +118,15 @@ export class ComputeNetwork extends TerraformResource {
   }
   public set id(value: string | undefined) {
     this._id = value;
+  }
+
+  // mtu - computed: true, optional: true, required: false
+  private _mtu?: number;
+  public get mtu() {
+    return this._mtu ?? this.getNumberAttribute('mtu');
+  }
+  public set mtu(value: number | undefined) {
+    this._mtu = value;
   }
 
   // name - computed: false, optional: false, required: true
@@ -166,6 +179,7 @@ export class ComputeNetwork extends TerraformResource {
       auto_create_subnetworks: this._autoCreateSubnetworks,
       delete_default_routes_on_create: this._deleteDefaultRoutesOnCreate,
       description: this._description,
+      mtu: this._mtu,
       name: this._name,
       project: this._project,
       routing_mode: this._routingMode,

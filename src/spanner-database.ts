@@ -13,6 +13,7 @@ database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created. */
   readonly ddl?: string[];
+  readonly deletionProtection?: boolean;
   /** The instance to create the database on. */
   readonly instance: string;
   /** A unique identifier for the database, which cannot be changed after
@@ -48,6 +49,7 @@ export class SpannerDatabase extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._ddl = config.ddl;
+    this._deletionProtection = config.deletionProtection;
     this._instance = config.instance;
     this._name = config.name;
     this._project = config.project;
@@ -65,6 +67,15 @@ export class SpannerDatabase extends TerraformResource {
   }
   public set ddl(value: string[] | undefined) {
     this._ddl = value;
+  }
+
+  // deletion_protection - computed: false, optional: true, required: false
+  private _deletionProtection?: boolean;
+  public get deletionProtection() {
+    return this._deletionProtection;
+  }
+  public set deletionProtection(value: boolean | undefined) {
+    this._deletionProtection = value;
   }
 
   // id - computed: true, optional: true, required: false
@@ -124,6 +135,7 @@ export class SpannerDatabase extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ddl: this._ddl,
+      deletion_protection: this._deletionProtection,
       instance: this._instance,
       name: this._name,
       project: this._project,

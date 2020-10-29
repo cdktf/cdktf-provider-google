@@ -210,6 +210,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
   /** Specifies the allowed number retries. This number must be > 0. */
   readonly numRetries?: number;
   /** Specifies one or more conditions when this retry rule applies. Valid values are:
+
 - 5xx: Loadbalancer will attempt a retry if the backend service responds with
 any 5xx response code, or if the backend service does not respond at all,
 example: disconnects, reset, read timeout, connection failure, and refused
@@ -463,9 +464,10 @@ length of 1024 characters. */
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters {
   /** Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
-  - MATCH_ANY: At least one of the filterLabels must have a matching label in the
+
+* MATCH_ANY: At least one of the filterLabels must have a matching label in the
 provided metadata.
-  - MATCH_ALL: All filterLabels must have matching labels in
+* MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"] */
   readonly filterMatchCriteria: string;
   /** filter_labels block */
@@ -591,25 +593,26 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy 
   /** Specifies the allowed number retries. This number must be > 0. */
   readonly numRetries: number;
   /** Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with
   any 5xx response code, or if the backend service does not respond at all,
   example: disconnects, reset, read timeout, connection failure, and refused
   streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
+* gateway-error: Similar to 5xx, but only applies to response codes
   502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
+* connect-failure: Loadbalancer will retry on failures
   connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
   Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+* refused-stream: Loadbalancer will retry if the backend service resets the stream with a
   REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
+* cancelled: Loadbalancer will retry if the gRPC status code in the response
   header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
+* deadline-exceeded: Loadbalancer will retry if the
   gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
   header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
+* unavailable: Loadbalancer will retry if the gRPC status code in
   the response header is set to unavailable */
   readonly retryConditions?: string[];
   /** per_try_timeout block */

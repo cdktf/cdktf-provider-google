@@ -50,6 +50,8 @@ export interface GoogleProviderConfig {
   readonly iamCustomEndpoint?: string;
   readonly iapCustomEndpoint?: string;
   readonly identityPlatformCustomEndpoint?: string;
+  readonly impersonateServiceAccount?: string;
+  readonly impersonateServiceAccountDelegates?: string[];
   readonly kmsCustomEndpoint?: string;
   readonly loggingCustomEndpoint?: string;
   readonly mlEngineCustomEndpoint?: string;
@@ -151,6 +153,8 @@ export class GoogleProvider extends TerraformProvider {
     this._iamCustomEndpoint = config.iamCustomEndpoint;
     this._iapCustomEndpoint = config.iapCustomEndpoint;
     this._identityPlatformCustomEndpoint = config.identityPlatformCustomEndpoint;
+    this._impersonateServiceAccount = config.impersonateServiceAccount;
+    this._impersonateServiceAccountDelegates = config.impersonateServiceAccountDelegates;
     this._kmsCustomEndpoint = config.kmsCustomEndpoint;
     this._loggingCustomEndpoint = config.loggingCustomEndpoint;
     this._mlEngineCustomEndpoint = config.mlEngineCustomEndpoint;
@@ -577,6 +581,24 @@ export class GoogleProvider extends TerraformProvider {
     this._identityPlatformCustomEndpoint = value;
   }
 
+  // impersonate_service_account - computed: false, optional: true, required: false
+  private _impersonateServiceAccount?: string;
+  public get impersonateServiceAccount() {
+    return this._impersonateServiceAccount;
+  }
+  public set impersonateServiceAccount(value: string | undefined) {
+    this._impersonateServiceAccount = value;
+  }
+
+  // impersonate_service_account_delegates - computed: false, optional: true, required: false
+  private _impersonateServiceAccountDelegates?: string[];
+  public get impersonateServiceAccountDelegates() {
+    return this._impersonateServiceAccountDelegates;
+  }
+  public set impersonateServiceAccountDelegates(value: string[] | undefined) {
+    this._impersonateServiceAccountDelegates = value;
+  }
+
   // kms_custom_endpoint - computed: false, optional: true, required: false
   private _kmsCustomEndpoint?: string;
   public get kmsCustomEndpoint() {
@@ -923,6 +945,8 @@ export class GoogleProvider extends TerraformProvider {
       iam_custom_endpoint: this._iamCustomEndpoint,
       iap_custom_endpoint: this._iapCustomEndpoint,
       identity_platform_custom_endpoint: this._identityPlatformCustomEndpoint,
+      impersonate_service_account: this._impersonateServiceAccount,
+      impersonate_service_account_delegates: this._impersonateServiceAccountDelegates,
       kms_custom_endpoint: this._kmsCustomEndpoint,
       logging_custom_endpoint: this._loggingCustomEndpoint,
       ml_engine_custom_endpoint: this._mlEngineCustomEndpoint,

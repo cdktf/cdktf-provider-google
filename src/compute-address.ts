@@ -30,7 +30,7 @@ specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
   readonly project?: string;
   /** The purpose of this resource, which can be one of the following values:
 
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 
 This should only be set when using an Internal address. Possible values: ["GCE_ENDPOINT"] */
   readonly purpose?: string;

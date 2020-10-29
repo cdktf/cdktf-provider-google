@@ -39,20 +39,20 @@ rawDisk.source property but not both to create an image. */
   /** URL of the source image used to create this image. In order to create an image, you must provide the full or partial
 URL of one of the following:
 
-The selfLink URL
-This property
-The rawDisk.source URL
-The sourceDisk URL */
+* The selfLink URL
+* This property
+* The rawDisk.source URL
+* The sourceDisk URL */
   readonly sourceImage?: string;
   /** URL of the source snapshot used to create this image.
 
 In order to create an image, you must provide the full or partial URL of one of the following:
 
-The selfLink URL
-This property
-The sourceImage URL
-The rawDisk.source URL
-The sourceDisk URL */
+* The selfLink URL
+* This property
+* The sourceImage URL
+* The rawDisk.source URL
+* The sourceDisk URL */
   readonly sourceSnapshot?: string;
   /** guest_os_features block */
   readonly guestOsFeatures?: ComputeImageGuestOsFeatures[];

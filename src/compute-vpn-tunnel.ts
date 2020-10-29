@@ -27,6 +27,15 @@ must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash. */
   readonly name: string;
+  /** URL of the peer side external VPN gateway to which this VPN tunnel is connected. */
+  readonly peerExternalGateway?: string;
+  /** The interface ID of the external VPN gateway to which this VPN tunnel is connected. */
+  readonly peerExternalGatewayInterface?: number;
+  /** URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+ID in the peer GCP VPN gateway.
+This field must reference a 'google_compute_ha_vpn_gateway' resource. */
+  readonly peerGcpGateway?: string;
   /** IP address of the peer VPN gateway. Only IPv4 is supported. */
   readonly peerIp?: string;
   readonly project?: string;
@@ -45,6 +54,12 @@ gateway and the peer VPN gateway. */
   /** URL of the Target VPN gateway with which this VPN tunnel is
 associated. */
   readonly targetVpnGateway?: string;
+  /** URL of the VPN gateway with which this VPN tunnel is associated.
+This must be used if a High Availability VPN gateway resource is created.
+This field must reference a 'google_compute_ha_vpn_gateway' resource. */
+  readonly vpnGateway?: string;
+  /** The interface ID of the VPN gateway with which this VPN tunnel is associated. */
+  readonly vpnGatewayInterface?: number;
   /** timeouts block */
   readonly timeouts?: ComputeVpnTunnelTimeouts;
 }
@@ -76,6 +91,9 @@ export class ComputeVpnTunnel extends TerraformResource {
     this._ikeVersion = config.ikeVersion;
     this._localTrafficSelector = config.localTrafficSelector;
     this._name = config.name;
+    this._peerExternalGateway = config.peerExternalGateway;
+    this._peerExternalGatewayInterface = config.peerExternalGatewayInterface;
+    this._peerGcpGateway = config.peerGcpGateway;
     this._peerIp = config.peerIp;
     this._project = config.project;
     this._region = config.region;
@@ -83,6 +101,8 @@ export class ComputeVpnTunnel extends TerraformResource {
     this._router = config.router;
     this._sharedSecret = config.sharedSecret;
     this._targetVpnGateway = config.targetVpnGateway;
+    this._vpnGateway = config.vpnGateway;
+    this._vpnGatewayInterface = config.vpnGatewayInterface;
     this._timeouts = config.timeouts;
   }
 
@@ -143,6 +163,33 @@ export class ComputeVpnTunnel extends TerraformResource {
   }
   public set name(value: string) {
     this._name = value;
+  }
+
+  // peer_external_gateway - computed: false, optional: true, required: false
+  private _peerExternalGateway?: string;
+  public get peerExternalGateway() {
+    return this._peerExternalGateway;
+  }
+  public set peerExternalGateway(value: string | undefined) {
+    this._peerExternalGateway = value;
+  }
+
+  // peer_external_gateway_interface - computed: false, optional: true, required: false
+  private _peerExternalGatewayInterface?: number;
+  public get peerExternalGatewayInterface() {
+    return this._peerExternalGatewayInterface;
+  }
+  public set peerExternalGatewayInterface(value: number | undefined) {
+    this._peerExternalGatewayInterface = value;
+  }
+
+  // peer_gcp_gateway - computed: false, optional: true, required: false
+  private _peerGcpGateway?: string;
+  public get peerGcpGateway() {
+    return this._peerGcpGateway;
+  }
+  public set peerGcpGateway(value: string | undefined) {
+    this._peerGcpGateway = value;
   }
 
   // peer_ip - computed: true, optional: true, required: false
@@ -223,6 +270,24 @@ export class ComputeVpnTunnel extends TerraformResource {
     return this.getStringAttribute('tunnel_id');
   }
 
+  // vpn_gateway - computed: false, optional: true, required: false
+  private _vpnGateway?: string;
+  public get vpnGateway() {
+    return this._vpnGateway;
+  }
+  public set vpnGateway(value: string | undefined) {
+    this._vpnGateway = value;
+  }
+
+  // vpn_gateway_interface - computed: false, optional: true, required: false
+  private _vpnGatewayInterface?: number;
+  public get vpnGatewayInterface() {
+    return this._vpnGatewayInterface;
+  }
+  public set vpnGatewayInterface(value: number | undefined) {
+    this._vpnGatewayInterface = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeVpnTunnelTimeouts;
   public get timeouts() {
@@ -242,6 +307,9 @@ export class ComputeVpnTunnel extends TerraformResource {
       ike_version: this._ikeVersion,
       local_traffic_selector: this._localTrafficSelector,
       name: this._name,
+      peer_external_gateway: this._peerExternalGateway,
+      peer_external_gateway_interface: this._peerExternalGatewayInterface,
+      peer_gcp_gateway: this._peerGcpGateway,
       peer_ip: this._peerIp,
       project: this._project,
       region: this._region,
@@ -249,6 +317,8 @@ export class ComputeVpnTunnel extends TerraformResource {
       router: this._router,
       shared_secret: this._sharedSecret,
       target_vpn_gateway: this._targetVpnGateway,
+      vpn_gateway: this._vpnGateway,
+      vpn_gateway_interface: this._vpnGatewayInterface,
       timeouts: this._timeouts,
     };
   }
