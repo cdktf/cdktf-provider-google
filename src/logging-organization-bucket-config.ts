@@ -12,7 +12,7 @@ export interface LoggingOrganizationBucketConfigConfig extends TerraformMetaArgu
   readonly bucketId: string;
   /** An optional description for this bucket. */
   readonly description?: string;
-  /** The location of the bucket. The supported locations are: "global" "us-central1" */
+  /** The location of the bucket. */
   readonly location: string;
   /** The parent resource that contains the logging bucket. */
   readonly organization: string;

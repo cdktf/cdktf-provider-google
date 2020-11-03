@@ -24,6 +24,9 @@ The first rotation will take place after the specified period. The rotation peri
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter 's' (seconds). It must be greater than a day (ie, 86400). */
   readonly rotationPeriod?: string;
+  /** If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
+You must use the 'google_kms_key_ring_import_job' resource to import the CryptoKeyVersion. */
+  readonly skipInitialVersionCreation?: boolean;
   /** timeouts block */
   readonly timeouts?: KmsCryptoKeyTimeouts;
   /** version_template block */
@@ -66,6 +69,7 @@ export class KmsCryptoKey extends TerraformResource {
     this._name = config.name;
     this._purpose = config.purpose;
     this._rotationPeriod = config.rotationPeriod;
+    this._skipInitialVersionCreation = config.skipInitialVersionCreation;
     this._timeouts = config.timeouts;
     this._versionTemplate = config.versionTemplate;
   }
@@ -133,6 +137,15 @@ export class KmsCryptoKey extends TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
+  // skip_initial_version_creation - computed: false, optional: true, required: false
+  private _skipInitialVersionCreation?: boolean;
+  public get skipInitialVersionCreation() {
+    return this._skipInitialVersionCreation;
+  }
+  public set skipInitialVersionCreation(value: boolean | undefined) {
+    this._skipInitialVersionCreation = value;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KmsCryptoKeyTimeouts;
   public get timeouts() {
@@ -162,6 +175,7 @@ export class KmsCryptoKey extends TerraformResource {
       name: this._name,
       purpose: this._purpose,
       rotation_period: this._rotationPeriod,
+      skip_initial_version_creation: this._skipInitialVersionCreation,
       timeouts: this._timeouts,
       version_template: this._versionTemplate,
     };

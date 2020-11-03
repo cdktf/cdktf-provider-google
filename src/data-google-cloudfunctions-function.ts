@@ -87,6 +87,11 @@ export class DataGoogleCloudfunctionsFunction extends TerraformDataSource {
     return this.getNumberAttribute('available_memory_mb');
   }
 
+  // build_environment_variables - computed: true, optional: false, required: true
+  public buildEnvironmentVariables(key: string): string {
+    return new StringMap(this, 'build_environment_variables').lookup(key);
+  }
+
   // description - computed: true, optional: false, required: true
   public get description() {
     return this.getStringAttribute('description');

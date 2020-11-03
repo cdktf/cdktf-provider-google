@@ -44,10 +44,37 @@ NOTE: the granularity should be at least 8 hours, or less frequent. */
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account. */
   readonly serviceAccountName?: string;
+  /** email_preferences block */
+  readonly emailPreferences?: BigqueryDataTransferConfigEmailPreferences[];
+  /** schedule_options block */
+  readonly scheduleOptions?: BigqueryDataTransferConfigScheduleOptions[];
   /** sensitive_params block */
   readonly sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
   /** timeouts block */
   readonly timeouts?: BigqueryDataTransferConfigTimeouts;
+}
+export interface BigqueryDataTransferConfigEmailPreferences {
+  /** If true, email notifications will be sent on transfer run failures. */
+  readonly enableFailureEmail: boolean;
+}
+export interface BigqueryDataTransferConfigScheduleOptions {
+  /** If true, automatic scheduling of data transfer runs for this
+configuration will be disabled. The runs can be started on ad-hoc
+basis using transferConfigs.startManualRuns API. When automatic
+scheduling is disabled, the TransferConfig.schedule field will
+be ignored. */
+  readonly disableAutoScheduling?: boolean;
+  /** Defines time to stop scheduling transfer runs. A transfer run cannot be
+scheduled at or after the end time. The end time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option. */
+  readonly endTime?: string;
+  /** Specifies time to start scheduling transfer runs. The first run will be
+scheduled at or after the start time according to a recurrence pattern
+defined in the schedule string. The start time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option. */
+  readonly startTime?: string;
 }
 export interface BigqueryDataTransferConfigSensitiveParams {
   /** The Secret Access Key of the AWS account transferring data from. */
@@ -89,6 +116,8 @@ export class BigqueryDataTransferConfig extends TerraformResource {
     this._project = config.project;
     this._schedule = config.schedule;
     this._serviceAccountName = config.serviceAccountName;
+    this._emailPreferences = config.emailPreferences;
+    this._scheduleOptions = config.scheduleOptions;
     this._sensitiveParams = config.sensitiveParams;
     this._timeouts = config.timeouts;
   }
@@ -210,6 +239,24 @@ export class BigqueryDataTransferConfig extends TerraformResource {
     this._serviceAccountName = value;
   }
 
+  // email_preferences - computed: false, optional: true, required: false
+  private _emailPreferences?: BigqueryDataTransferConfigEmailPreferences[];
+  public get emailPreferences() {
+    return this._emailPreferences;
+  }
+  public set emailPreferences(value: BigqueryDataTransferConfigEmailPreferences[] | undefined) {
+    this._emailPreferences = value;
+  }
+
+  // schedule_options - computed: false, optional: true, required: false
+  private _scheduleOptions?: BigqueryDataTransferConfigScheduleOptions[];
+  public get scheduleOptions() {
+    return this._scheduleOptions;
+  }
+  public set scheduleOptions(value: BigqueryDataTransferConfigScheduleOptions[] | undefined) {
+    this._scheduleOptions = value;
+  }
+
   // sensitive_params - computed: false, optional: true, required: false
   private _sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
   public get sensitiveParams() {
@@ -245,6 +292,8 @@ export class BigqueryDataTransferConfig extends TerraformResource {
       project: this._project,
       schedule: this._schedule,
       service_account_name: this._serviceAccountName,
+      email_preferences: this._emailPreferences,
+      schedule_options: this._scheduleOptions,
       sensitive_params: this._sensitiveParams,
       timeouts: this._timeouts,
     };

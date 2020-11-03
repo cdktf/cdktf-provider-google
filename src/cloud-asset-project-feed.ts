@@ -29,10 +29,25 @@ project will be used. */
   /** This is the client-assigned asset feed identifier and it needs to be unique under a specific parent. */
   readonly feedId: string;
   readonly project?: string;
+  /** condition block */
+  readonly condition?: CloudAssetProjectFeedCondition[];
   /** feed_output_config block */
   readonly feedOutputConfig: CloudAssetProjectFeedFeedOutputConfig[];
   /** timeouts block */
   readonly timeouts?: CloudAssetProjectFeedTimeouts;
+}
+export interface CloudAssetProjectFeedCondition {
+  /** Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI. */
+  readonly description?: string;
+  /** Textual representation of an expression in Common Expression Language syntax. */
+  readonly expression: string;
+  /** String indicating the location of the expression for error reporting, e.g. a file 
+name and a position in the file. */
+  readonly location?: string;
+  /** Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression. */
+  readonly title?: string;
 }
 export interface CloudAssetProjectFeedFeedOutputConfigPubsubDestination {
   /** Destination on Cloud Pubsub topic. */
@@ -73,6 +88,7 @@ export class CloudAssetProjectFeed extends TerraformResource {
     this._contentType = config.contentType;
     this._feedId = config.feedId;
     this._project = config.project;
+    this._condition = config.condition;
     this._feedOutputConfig = config.feedOutputConfig;
     this._timeouts = config.timeouts;
   }
@@ -149,6 +165,15 @@ export class CloudAssetProjectFeed extends TerraformResource {
     this._project = value;
   }
 
+  // condition - computed: false, optional: true, required: false
+  private _condition?: CloudAssetProjectFeedCondition[];
+  public get condition() {
+    return this._condition;
+  }
+  public set condition(value: CloudAssetProjectFeedCondition[] | undefined) {
+    this._condition = value;
+  }
+
   // feed_output_config - computed: false, optional: false, required: true
   private _feedOutputConfig: CloudAssetProjectFeedFeedOutputConfig[];
   public get feedOutputConfig() {
@@ -179,6 +204,7 @@ export class CloudAssetProjectFeed extends TerraformResource {
       content_type: this._contentType,
       feed_id: this._feedId,
       project: this._project,
+      condition: this._condition,
       feed_output_config: this._feedOutputConfig,
       timeouts: this._timeouts,
     };

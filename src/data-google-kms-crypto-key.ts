@@ -103,6 +103,11 @@ export class DataGoogleKmsCryptoKey extends TerraformDataSource {
     return this.getStringAttribute('self_link');
   }
 
+  // skip_initial_version_creation - computed: true, optional: false, required: true
+  public get skipInitialVersionCreation() {
+    return this.getBooleanAttribute('skip_initial_version_creation');
+  }
+
   // version_template - computed: true, optional: false, required: true
   public versionTemplate(index: string) {
     return new DataGoogleKmsCryptoKeyVersionTemplate(this, 'version_template', index);

@@ -29,7 +29,7 @@ or serverless NEG as a backend. */
   readonly healthChecks?: string[];
   /** Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Default value: "INTERNAL" Possible values: ["INTERNAL", "INTERNAL_MANAGED"] */
+balancing cannot be used with the other(s). Default value: "INTERNAL" Possible values: ["EXTERNAL", "INTERNAL", "INTERNAL_MANAGED"] */
   readonly loadBalancingScheme?: string;
   /** The load balancing algorithm used within the scope of the locality.
 The possible values are -

@@ -167,6 +167,38 @@ in length. */
   /** trigger block */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionAbsentTrigger[];
 }
+export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger {
+  /** The absolute number of time series
+that must fail the predicate for the
+condition to be triggered. */
+  readonly count?: number;
+  /** The percentage of time series that
+must fail the predicate for the
+condition to be triggered. */
+  readonly percent?: number;
+}
+export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage {
+  /** The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly. */
+  readonly duration: string;
+  /** Monitoring Query Language query that outputs a boolean stream. */
+  readonly query: string;
+  /** trigger block */
+  readonly trigger?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger[];
+}
 export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   /** The alignment period for per-time
 series alignment. If present,
@@ -409,6 +441,8 @@ policy. */
   readonly displayName: string;
   /** condition_absent block */
   readonly conditionAbsent?: MonitoringAlertPolicyConditionsConditionAbsent[];
+  /** condition_monitoring_query_language block */
+  readonly conditionMonitoringQueryLanguage?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage[];
   /** condition_threshold block */
   readonly conditionThreshold?: MonitoringAlertPolicyConditionsConditionThreshold[];
 }

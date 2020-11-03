@@ -12,7 +12,7 @@ export interface LoggingProjectBucketConfigConfig extends TerraformMetaArguments
   readonly bucketId: string;
   /** An optional description for this bucket. */
   readonly description?: string;
-  /** The location of the bucket. The supported locations are: "global" "us-central1" */
+  /** The location of the bucket. */
   readonly location: string;
   /** The parent project that contains the logging bucket. */
   readonly project: string;

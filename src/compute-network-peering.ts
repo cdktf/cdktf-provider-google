@@ -26,6 +26,7 @@ export interface ComputeNetworkPeeringConfig extends TerraformMetaArguments {
 export interface ComputeNetworkPeeringTimeouts {
   readonly create?: string;
   readonly delete?: string;
+  readonly update?: string;
 }
 
 // Resource

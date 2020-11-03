@@ -10,6 +10,8 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface CloudfunctionsFunctionConfig extends TerraformMetaArguments {
   /** Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB. */
   readonly availableMemoryMb?: number;
+  /**  A set of key/value environment variable pairs available during build time. */
+  readonly buildEnvironmentVariables?: { [key: string]: string };
   /** Description of the function. */
   readonly description?: string;
   /** Name of the function that will be executed when the Google Cloud Function is triggered. */
@@ -96,6 +98,7 @@ export class CloudfunctionsFunction extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._availableMemoryMb = config.availableMemoryMb;
+    this._buildEnvironmentVariables = config.buildEnvironmentVariables;
     this._description = config.description;
     this._entryPoint = config.entryPoint;
     this._environmentVariables = config.environmentVariables;
@@ -130,6 +133,15 @@ export class CloudfunctionsFunction extends TerraformResource {
   }
   public set availableMemoryMb(value: number | undefined) {
     this._availableMemoryMb = value;
+  }
+
+  // build_environment_variables - computed: false, optional: true, required: false
+  private _buildEnvironmentVariables?: { [key: string]: string };
+  public get buildEnvironmentVariables() {
+    return this._buildEnvironmentVariables;
+  }
+  public set buildEnvironmentVariables(value: { [key: string]: string } | undefined) {
+    this._buildEnvironmentVariables = value;
   }
 
   // description - computed: false, optional: true, required: false
@@ -337,6 +349,7 @@ export class CloudfunctionsFunction extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       available_memory_mb: this._availableMemoryMb,
+      build_environment_variables: this._buildEnvironmentVariables,
       description: this._description,
       entry_point: this._entryPoint,
       environment_variables: this._environmentVariables,

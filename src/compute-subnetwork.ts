@@ -31,6 +31,8 @@ Only networks that are in the distributed mode can have subnetworks. */
   /** When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access. */
   readonly privateIpGoogleAccess?: boolean;
+  /** The private IPv6 google access type for the VMs in this subnet. */
+  readonly privateIpv6GoogleAccess?: string;
   readonly project?: string;
   /** The GCP region for this subnetwork. */
   readonly region?: string;
@@ -61,7 +63,8 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection. Default value: "INTERVAL_5_SEC" Possible values: ["INTERVAL_5_SEC", "INTERVAL_30_SEC", "INTERVAL_1_MIN", "INTERVAL_5_MIN", "INTERVAL_10_MIN", "INTERVAL_15_MIN"] */
   readonly aggregationInterval?: string;
   /** Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
-https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field. */
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
+The default value is 'true', which evaluates to include everything. */
   readonly filterExpr?: string;
   /** Can only be specified if VPC flow logging for this subnetwork is enabled.
 The value of the field must be in [0, 1]. Set the sampling rate of VPC
@@ -107,6 +110,7 @@ export class ComputeSubnetwork extends TerraformResource {
     this._name = config.name;
     this._network = config.network;
     this._privateIpGoogleAccess = config.privateIpGoogleAccess;
+    this._privateIpv6GoogleAccess = config.privateIpv6GoogleAccess;
     this._project = config.project;
     this._region = config.region;
     this._secondaryIpRange = config.secondaryIpRange;
@@ -187,6 +191,15 @@ export class ComputeSubnetwork extends TerraformResource {
     this._privateIpGoogleAccess = value;
   }
 
+  // private_ipv6_google_access - computed: true, optional: true, required: false
+  private _privateIpv6GoogleAccess?: string;
+  public get privateIpv6GoogleAccess() {
+    return this._privateIpv6GoogleAccess ?? this.getStringAttribute('private_ipv6_google_access');
+  }
+  public set privateIpv6GoogleAccess(value: string | undefined) {
+    this._privateIpv6GoogleAccess = value;
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
@@ -248,6 +261,7 @@ export class ComputeSubnetwork extends TerraformResource {
       name: this._name,
       network: this._network,
       private_ip_google_access: this._privateIpGoogleAccess,
+      private_ipv6_google_access: this._privateIpv6GoogleAccess,
       project: this._project,
       region: this._region,
       secondary_ip_range: this._secondaryIpRange,

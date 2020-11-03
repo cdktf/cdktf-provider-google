@@ -29,10 +29,25 @@ enablement check, quota, and billing. */
   readonly feedId: string;
   /** The folder this feed should be created in. */
   readonly folder: string;
+  /** condition block */
+  readonly condition?: CloudAssetFolderFeedCondition[];
   /** feed_output_config block */
   readonly feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig[];
   /** timeouts block */
   readonly timeouts?: CloudAssetFolderFeedTimeouts;
+}
+export interface CloudAssetFolderFeedCondition {
+  /** Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI. */
+  readonly description?: string;
+  /** Textual representation of an expression in Common Expression Language syntax. */
+  readonly expression: string;
+  /** String indicating the location of the expression for error reporting, e.g. a file 
+name and a position in the file. */
+  readonly location?: string;
+  /** Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression. */
+  readonly title?: string;
 }
 export interface CloudAssetFolderFeedFeedOutputConfigPubsubDestination {
   /** Destination on Cloud Pubsub topic. */
@@ -73,6 +88,7 @@ export class CloudAssetFolderFeed extends TerraformResource {
     this._contentType = config.contentType;
     this._feedId = config.feedId;
     this._folder = config.folder;
+    this._condition = config.condition;
     this._feedOutputConfig = config.feedOutputConfig;
     this._timeouts = config.timeouts;
   }
@@ -154,6 +170,15 @@ export class CloudAssetFolderFeed extends TerraformResource {
     return this.getStringAttribute('name');
   }
 
+  // condition - computed: false, optional: true, required: false
+  private _condition?: CloudAssetFolderFeedCondition[];
+  public get condition() {
+    return this._condition;
+  }
+  public set condition(value: CloudAssetFolderFeedCondition[] | undefined) {
+    this._condition = value;
+  }
+
   // feed_output_config - computed: false, optional: false, required: true
   private _feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig[];
   public get feedOutputConfig() {
@@ -184,6 +209,7 @@ export class CloudAssetFolderFeed extends TerraformResource {
       content_type: this._contentType,
       feed_id: this._feedId,
       folder: this._folder,
+      condition: this._condition,
       feed_output_config: this._feedOutputConfig,
       timeouts: this._timeouts,
     };

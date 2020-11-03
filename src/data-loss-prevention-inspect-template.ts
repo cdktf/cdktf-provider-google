@@ -24,6 +24,53 @@ export interface DataLossPreventionInspectTemplateConfig extends TerraformMetaAr
   /** timeouts block */
   readonly timeouts?: DataLossPreventionInspectTemplateTimeouts;
 }
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath {
+  /** A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt' */
+  readonly path: string;
+}
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList {
+  /** Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits. */
+  readonly words: string[];
+}
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary {
+  /** cloud_storage_path block */
+  readonly cloudStoragePath?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath[];
+  /** word_list block */
+  readonly wordList?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList[];
+}
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType {
+  /** Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
+listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. */
+  readonly name: string;
+}
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex {
+  /** The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included. */
+  readonly groupIndexes?: number[];
+  /** Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub. */
+  readonly pattern: string;
+}
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType {
+  /** Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342'
+or 'projects/project-id/storedInfoTypes/432452342'. */
+  readonly name: string;
+}
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes {
+  /** If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: ["EXCLUSION_TYPE_EXCLUDE"] */
+  readonly exclusionType?: string;
+  /** Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"] */
+  readonly likelihood?: string;
+  /** dictionary block */
+  readonly dictionary?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary[];
+  /** info_type block */
+  readonly infoType: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType[];
+  /** regex block */
+  readonly regex?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex[];
+  /** stored_type block */
+  readonly storedType?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType[];
+}
 export interface DataLossPreventionInspectTemplateInspectConfigInfoTypes {
   /** Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. */
@@ -148,6 +195,8 @@ export interface DataLossPreventionInspectTemplateInspectConfig {
   readonly includeQuote?: boolean;
   /** Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info Default value: "POSSIBLE" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"] */
   readonly minLikelihood?: string;
+  /** custom_info_types block */
+  readonly customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[];
   /** info_types block */
   readonly infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[];
   /** limits block */

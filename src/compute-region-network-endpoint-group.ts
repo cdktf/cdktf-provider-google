@@ -1,0 +1,240 @@
+// https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import { TerraformResource } from 'cdktf';
+import { TerraformMetaArguments } from 'cdktf';
+
+// Configuration
+
+export interface ComputeRegionNetworkEndpointGroupConfig extends TerraformMetaArguments {
+  /** An optional description of this resource. Provide this property when
+you create the resource. */
+  readonly description?: string;
+  /** Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash. */
+  readonly name: string;
+  /** Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: "SERVERLESS" Possible values: ["SERVERLESS"] */
+  readonly networkEndpointType?: string;
+  readonly project?: string;
+  /** A reference to the region where the Serverless NEGs Reside. */
+  readonly region: string;
+  /** app_engine block */
+  readonly appEngine?: ComputeRegionNetworkEndpointGroupAppEngine[];
+  /** cloud_function block */
+  readonly cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction[];
+  /** cloud_run block */
+  readonly cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun[];
+  /** timeouts block */
+  readonly timeouts?: ComputeRegionNetworkEndpointGroupTimeouts;
+}
+export interface ComputeRegionNetworkEndpointGroupAppEngine {
+  /** Optional serving service.
+The service name must be 1-63 characters long, and comply with RFC1035.
+Example value: "default", "my-service". */
+  readonly service?: string;
+  /** A template to parse service and version fields from a request URL.
+URL mask allows for routing to multiple App Engine services without
+having to create multiple Network Endpoint Groups and backend services.
+
+For example, the request URLs "foo1-dot-appname.appspot.com/v1" and
+"foo1-dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with
+URL mask "-dot-appname.appspot.com/". The URL mask will parse
+them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2" } respectively. */
+  readonly urlMask?: string;
+  /** Optional serving version.
+The version must be 1-63 characters long, and comply with RFC1035.
+Example value: "v1", "v2". */
+  readonly version?: string;
+}
+export interface ComputeRegionNetworkEndpointGroupCloudFunction {
+  /** A user-defined name of the Cloud Function.
+The function name is case-sensitive and must be 1-63 characters long.
+Example value: "func1". */
+  readonly function?: string;
+  /** A template to parse function field from a request URL. URL mask allows
+for routing to multiple Cloud Functions without having to create
+multiple Network Endpoint Groups and backend services.
+
+For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
+can be backed by the same Serverless NEG with URL mask "/". The URL mask
+will parse them to { function = "function1" } and { function = "function2" } respectively. */
+  readonly urlMask?: string;
+}
+export interface ComputeRegionNetworkEndpointGroupCloudRun {
+  /** Cloud Run service is the main resource of Cloud Run.
+The service must be 1-63 characters long, and comply with RFC1035.
+Example value: "run-service". */
+  readonly service?: string;
+  /** Cloud Run tag represents the "named-revision" to provide
+additional fine-grained traffic routing information.
+The tag must be 1-63 characters long, and comply with RFC1035.
+Example value: "revision-0010". */
+  readonly tag?: string;
+  /** A template to parse service and tag fields from a request URL. 
+URL mask allows for routing to multiple Run services without having 
+to create multiple network endpoint groups and backend services.
+
+For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" 
+an be backed by the same Serverless Network Endpoint Group (NEG) with 
+URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="foo1" } 
+and { service="bar2", tag="foo2" } respectively. */
+  readonly urlMask?: string;
+}
+export interface ComputeRegionNetworkEndpointGroupTimeouts {
+  readonly create?: string;
+  readonly delete?: string;
+}
+
+// Resource
+
+export class ComputeRegionNetworkEndpointGroup extends TerraformResource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  public constructor(scope: Construct, id: string, config: ComputeRegionNetworkEndpointGroupConfig) {
+    super(scope, id, {
+      terraformResourceType: 'google_compute_region_network_endpoint_group',
+      terraformGeneratorMetadata: {
+        providerName: 'google'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._description = config.description;
+    this._name = config.name;
+    this._networkEndpointType = config.networkEndpointType;
+    this._project = config.project;
+    this._region = config.region;
+    this._appEngine = config.appEngine;
+    this._cloudFunction = config.cloudFunction;
+    this._cloudRun = config.cloudRun;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this._description;
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string;
+  public get id() {
+    return this._id ?? this.getStringAttribute('id');
+  }
+  public set id(value: string | undefined) {
+    this._id = value;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name: string;
+  public get name() {
+    return this._name;
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+
+  // network_endpoint_type - computed: false, optional: true, required: false
+  private _networkEndpointType?: string;
+  public get networkEndpointType() {
+    return this._networkEndpointType;
+  }
+  public set networkEndpointType(value: string | undefined) {
+    this._networkEndpointType = value;
+  }
+
+  // project - computed: true, optional: true, required: false
+  private _project?: string;
+  public get project() {
+    return this._project ?? this.getStringAttribute('project');
+  }
+  public set project(value: string | undefined) {
+    this._project = value;
+  }
+
+  // region - computed: false, optional: false, required: true
+  private _region: string;
+  public get region() {
+    return this._region;
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+
+  // self_link - computed: true, optional: false, required: true
+  public get selfLink() {
+    return this.getStringAttribute('self_link');
+  }
+
+  // app_engine - computed: false, optional: true, required: false
+  private _appEngine?: ComputeRegionNetworkEndpointGroupAppEngine[];
+  public get appEngine() {
+    return this._appEngine;
+  }
+  public set appEngine(value: ComputeRegionNetworkEndpointGroupAppEngine[] | undefined) {
+    this._appEngine = value;
+  }
+
+  // cloud_function - computed: false, optional: true, required: false
+  private _cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction[];
+  public get cloudFunction() {
+    return this._cloudFunction;
+  }
+  public set cloudFunction(value: ComputeRegionNetworkEndpointGroupCloudFunction[] | undefined) {
+    this._cloudFunction = value;
+  }
+
+  // cloud_run - computed: false, optional: true, required: false
+  private _cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun[];
+  public get cloudRun() {
+    return this._cloudRun;
+  }
+  public set cloudRun(value: ComputeRegionNetworkEndpointGroupCloudRun[] | undefined) {
+    this._cloudRun = value;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: ComputeRegionNetworkEndpointGroupTimeouts;
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public set timeouts(value: ComputeRegionNetworkEndpointGroupTimeouts | undefined) {
+    this._timeouts = value;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: this._description,
+      name: this._name,
+      network_endpoint_type: this._networkEndpointType,
+      project: this._project,
+      region: this._region,
+      app_engine: this._appEngine,
+      cloud_function: this._cloudFunction,
+      cloud_run: this._cloudRun,
+      timeouts: this._timeouts,
+    };
+  }
+}

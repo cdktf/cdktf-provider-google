@@ -14,7 +14,7 @@ export interface LoggingBillingAccountBucketConfigConfig extends TerraformMetaAr
   readonly bucketId: string;
   /** An optional description for this bucket. */
   readonly description?: string;
-  /** The location of the bucket. The supported locations are: "global" "us-central1" */
+  /** The location of the bucket. */
   readonly location: string;
   /** Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. */
   readonly retentionDays?: number;
