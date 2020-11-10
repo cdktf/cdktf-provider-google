@@ -24,56 +24,56 @@ export interface EndpointsServiceConfig extends TerraformMetaArguments {
 }
 export class EndpointsServiceApisMethods extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // request_type - computed: true, optional: false, required: true
+  // request_type - computed: true, optional: false, required: false
   public get requestType() {
     return this.getStringAttribute('request_type');
   }
 
-  // response_type - computed: true, optional: false, required: true
+  // response_type - computed: true, optional: false, required: false
   public get responseType() {
     return this.getStringAttribute('response_type');
   }
 
-  // syntax - computed: true, optional: false, required: true
+  // syntax - computed: true, optional: false, required: false
   public get syntax() {
     return this.getStringAttribute('syntax');
   }
 }
 export class EndpointsServiceApis extends ComplexComputedList {
 
-  // methods - computed: true, optional: false, required: true
+  // methods - computed: true, optional: false, required: false
   public get methods() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('methods') as any;
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // syntax - computed: true, optional: false, required: true
+  // syntax - computed: true, optional: false, required: false
   public get syntax() {
     return this.getStringAttribute('syntax');
   }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
 }
 export class EndpointsServiceEndpoints extends ComplexComputedList {
 
-  // address - computed: true, optional: false, required: true
+  // address - computed: true, optional: false, required: false
   public get address() {
     return this.getStringAttribute('address');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -115,22 +115,22 @@ export class EndpointsService extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // apis - computed: true, optional: false, required: true
+  // apis - computed: true, optional: false, required: false
   public apis(index: string) {
     return new EndpointsServiceApis(this, 'apis', index);
   }
 
-  // config_id - computed: true, optional: false, required: true
+  // config_id - computed: true, optional: false, required: false
   public get configId() {
     return this.getStringAttribute('config_id');
   }
 
-  // dns_address - computed: true, optional: false, required: true
+  // dns_address - computed: true, optional: false, required: false
   public get dnsAddress() {
     return this.getStringAttribute('dns_address');
   }
 
-  // endpoints - computed: true, optional: false, required: true
+  // endpoints - computed: true, optional: false, required: false
   public endpoints(index: string) {
     return new EndpointsServiceEndpoints(this, 'endpoints', index);
   }
@@ -138,64 +138,99 @@ export class EndpointsService extends TerraformResource {
   // grpc_config - computed: false, optional: true, required: false
   private _grpcConfig?: string;
   public get grpcConfig() {
-    return this._grpcConfig;
+    return this.getStringAttribute('grpc_config');
   }
-  public set grpcConfig(value: string | undefined) {
+  public set grpcConfig(value: string ) {
     this._grpcConfig = value;
+  }
+  public resetGrpcConfig() {
+    this._grpcConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get grpcConfigInput() {
+    return this._grpcConfig
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // openapi_config - computed: false, optional: true, required: false
   private _openapiConfig?: string;
   public get openapiConfig() {
-    return this._openapiConfig;
+    return this.getStringAttribute('openapi_config');
   }
-  public set openapiConfig(value: string | undefined) {
+  public set openapiConfig(value: string ) {
     this._openapiConfig = value;
+  }
+  public resetOpenapiConfig() {
+    this._openapiConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openapiConfigInput() {
+    return this._openapiConfig
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // protoc_output_base64 - computed: false, optional: true, required: false
   private _protocOutputBase64?: string;
   public get protocOutputBase64() {
-    return this._protocOutputBase64;
+    return this.getStringAttribute('protoc_output_base64');
   }
-  public set protocOutputBase64(value: string | undefined) {
+  public set protocOutputBase64(value: string ) {
     this._protocOutputBase64 = value;
+  }
+  public resetProtocOutputBase64() {
+    this._protocOutputBase64 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocOutputBase64Input() {
+    return this._protocOutputBase64
   }
 
   // service_name - computed: false, optional: false, required: true
   private _serviceName: string;
   public get serviceName() {
-    return this._serviceName;
+    return this.getStringAttribute('service_name');
   }
   public set serviceName(value: string) {
     this._serviceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EndpointsServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: EndpointsServiceTimeouts | undefined) {
+  public set timeouts(value: EndpointsServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

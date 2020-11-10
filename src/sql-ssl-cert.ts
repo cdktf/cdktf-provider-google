@@ -51,12 +51,12 @@ export class SqlSslCert extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // cert - computed: true, optional: false, required: true
+  // cert - computed: true, optional: false, required: false
   public get cert() {
     return this.getStringAttribute('cert');
   }
 
-  // cert_serial_number - computed: true, optional: false, required: true
+  // cert_serial_number - computed: true, optional: false, required: false
   public get certSerialNumber() {
     return this.getStringAttribute('cert_serial_number');
   }
@@ -64,41 +64,45 @@ export class SqlSslCert extends TerraformResource {
   // common_name - computed: false, optional: false, required: true
   private _commonName: string;
   public get commonName() {
-    return this._commonName;
+    return this.getStringAttribute('common_name');
   }
   public set commonName(value: string) {
     this._commonName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get commonNameInput() {
+    return this._commonName
+  }
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // expiration_time - computed: true, optional: false, required: true
+  // expiration_time - computed: true, optional: false, required: false
   public get expirationTime() {
     return this.getStringAttribute('expiration_time');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance - computed: false, optional: false, required: true
   private _instance: string;
   public get instance() {
-    return this._instance;
+    return this.getStringAttribute('instance');
   }
   public set instance(value: string) {
     this._instance = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance
+  }
 
-  // private_key - computed: true, optional: false, required: true
+  // private_key - computed: true, optional: false, required: false
   public get privateKey() {
     return this.getStringAttribute('private_key');
   }
@@ -106,18 +110,25 @@ export class SqlSslCert extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // server_ca_cert - computed: true, optional: false, required: true
+  // server_ca_cert - computed: true, optional: false, required: false
   public get serverCaCert() {
     return this.getStringAttribute('server_ca_cert');
   }
 
-  // sha1_fingerprint - computed: true, optional: false, required: true
+  // sha1_fingerprint - computed: true, optional: false, required: false
   public get sha1Fingerprint() {
     return this.getStringAttribute('sha1_fingerprint');
   }
@@ -125,10 +136,17 @@ export class SqlSslCert extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlSslCertTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SqlSslCertTimeouts | undefined) {
+  public set timeouts(value: SqlSslCertTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

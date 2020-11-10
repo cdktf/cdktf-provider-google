@@ -138,45 +138,59 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
   // base_instance_name - computed: false, optional: false, required: true
   private _baseInstanceName: string;
   public get baseInstanceName() {
-    return this._baseInstanceName;
+    return this.getStringAttribute('base_instance_name');
   }
   public set baseInstanceName(value: string) {
     this._baseInstanceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseInstanceNameInput() {
+    return this._baseInstanceName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // distribution_policy_zones - computed: true, optional: true, required: false
   private _distributionPolicyZones?: string[];
   public get distributionPolicyZones() {
-    return this._distributionPolicyZones ?? this.getListAttribute('distribution_policy_zones');
+    return this.getListAttribute('distribution_policy_zones');
   }
-  public set distributionPolicyZones(value: string[] | undefined) {
+  public set distributionPolicyZones(value: string[]) {
     this._distributionPolicyZones = value;
   }
+  public resetDistributionPolicyZones() {
+    this._distributionPolicyZones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get distributionPolicyZonesInput() {
+    return this._distributionPolicyZones
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // instance_group - computed: true, optional: false, required: true
+  // instance_group - computed: true, optional: false, required: false
   public get instanceGroup() {
     return this.getStringAttribute('instance_group');
   }
@@ -184,31 +198,46 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: false, optional: false, required: true
   private _region: string;
   public get region() {
-    return this._region;
+    return this.getStringAttribute('region');
   }
   public set region(value: string) {
     this._region = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -216,82 +245,142 @@ export class ComputeRegionInstanceGroupManager extends TerraformResource {
   // target_pools - computed: false, optional: true, required: false
   private _targetPools?: string[];
   public get targetPools() {
-    return this._targetPools;
+    return this.getListAttribute('target_pools');
   }
-  public set targetPools(value: string[] | undefined) {
+  public set targetPools(value: string[] ) {
     this._targetPools = value;
+  }
+  public resetTargetPools() {
+    this._targetPools = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetPoolsInput() {
+    return this._targetPools
   }
 
   // target_size - computed: true, optional: true, required: false
   private _targetSize?: number;
   public get targetSize() {
-    return this._targetSize ?? this.getNumberAttribute('target_size');
+    return this.getNumberAttribute('target_size');
   }
-  public set targetSize(value: number | undefined) {
+  public set targetSize(value: number) {
     this._targetSize = value;
+  }
+  public resetTargetSize() {
+    this._targetSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetSizeInput() {
+    return this._targetSize
   }
 
   // wait_for_instances - computed: false, optional: true, required: false
   private _waitForInstances?: boolean;
   public get waitForInstances() {
-    return this._waitForInstances;
+    return this.getBooleanAttribute('wait_for_instances');
   }
-  public set waitForInstances(value: boolean | undefined) {
+  public set waitForInstances(value: boolean ) {
     this._waitForInstances = value;
+  }
+  public resetWaitForInstances() {
+    this._waitForInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitForInstancesInput() {
+    return this._waitForInstances
   }
 
   // auto_healing_policies - computed: false, optional: true, required: false
   private _autoHealingPolicies?: ComputeRegionInstanceGroupManagerAutoHealingPolicies[];
   public get autoHealingPolicies() {
-    return this._autoHealingPolicies;
+    return this.interpolationForAttribute('auto_healing_policies') as any;
   }
-  public set autoHealingPolicies(value: ComputeRegionInstanceGroupManagerAutoHealingPolicies[] | undefined) {
+  public set autoHealingPolicies(value: ComputeRegionInstanceGroupManagerAutoHealingPolicies[] ) {
     this._autoHealingPolicies = value;
+  }
+  public resetAutoHealingPolicies() {
+    this._autoHealingPolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoHealingPoliciesInput() {
+    return this._autoHealingPolicies
   }
 
   // named_port - computed: false, optional: true, required: false
   private _namedPort?: ComputeRegionInstanceGroupManagerNamedPort[];
   public get namedPort() {
-    return this._namedPort;
+    return this.interpolationForAttribute('named_port') as any;
   }
-  public set namedPort(value: ComputeRegionInstanceGroupManagerNamedPort[] | undefined) {
+  public set namedPort(value: ComputeRegionInstanceGroupManagerNamedPort[] ) {
     this._namedPort = value;
+  }
+  public resetNamedPort() {
+    this._namedPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namedPortInput() {
+    return this._namedPort
   }
 
   // stateful_disk - computed: false, optional: true, required: false
   private _statefulDisk?: ComputeRegionInstanceGroupManagerStatefulDisk[];
   public get statefulDisk() {
-    return this._statefulDisk;
+    return this.interpolationForAttribute('stateful_disk') as any;
   }
-  public set statefulDisk(value: ComputeRegionInstanceGroupManagerStatefulDisk[] | undefined) {
+  public set statefulDisk(value: ComputeRegionInstanceGroupManagerStatefulDisk[] ) {
     this._statefulDisk = value;
+  }
+  public resetStatefulDisk() {
+    this._statefulDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statefulDiskInput() {
+    return this._statefulDisk
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRegionInstanceGroupManagerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRegionInstanceGroupManagerTimeouts | undefined) {
+  public set timeouts(value: ComputeRegionInstanceGroupManagerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // update_policy - computed: false, optional: true, required: false
   private _updatePolicy?: ComputeRegionInstanceGroupManagerUpdatePolicy[];
   public get updatePolicy() {
-    return this._updatePolicy;
+    return this.interpolationForAttribute('update_policy') as any;
   }
-  public set updatePolicy(value: ComputeRegionInstanceGroupManagerUpdatePolicy[] | undefined) {
+  public set updatePolicy(value: ComputeRegionInstanceGroupManagerUpdatePolicy[] ) {
     this._updatePolicy = value;
+  }
+  public resetUpdatePolicy() {
+    this._updatePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updatePolicyInput() {
+    return this._updatePolicy
   }
 
   // version - computed: false, optional: false, required: true
   private _version: ComputeRegionInstanceGroupManagerVersion[];
   public get version() {
-    return this._version;
+    return this.interpolationForAttribute('version') as any;
   }
   public set version(value: ComputeRegionInstanceGroupManagerVersion[]) {
     this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // =========

@@ -90,26 +90,22 @@ export class ContainerAnalysisOccurrence extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // kind - computed: true, optional: false, required: true
+  // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -117,40 +113,62 @@ export class ContainerAnalysisOccurrence extends TerraformResource {
   // note_name - computed: false, optional: false, required: true
   private _noteName: string;
   public get noteName() {
-    return this._noteName;
+    return this.getStringAttribute('note_name');
   }
   public set noteName(value: string) {
     this._noteName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noteNameInput() {
+    return this._noteName
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // remediation - computed: false, optional: true, required: false
   private _remediation?: string;
   public get remediation() {
-    return this._remediation;
+    return this.getStringAttribute('remediation');
   }
-  public set remediation(value: string | undefined) {
+  public set remediation(value: string ) {
     this._remediation = value;
+  }
+  public resetRemediation() {
+    this._remediation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remediationInput() {
+    return this._remediation
   }
 
   // resource_uri - computed: false, optional: false, required: true
   private _resourceUri: string;
   public get resourceUri() {
-    return this._resourceUri;
+    return this.getStringAttribute('resource_uri');
   }
   public set resourceUri(value: string) {
     this._resourceUri = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceUriInput() {
+    return this._resourceUri
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -158,19 +176,30 @@ export class ContainerAnalysisOccurrence extends TerraformResource {
   // attestation - computed: false, optional: false, required: true
   private _attestation: ContainerAnalysisOccurrenceAttestation[];
   public get attestation() {
-    return this._attestation;
+    return this.interpolationForAttribute('attestation') as any;
   }
   public set attestation(value: ContainerAnalysisOccurrenceAttestation[]) {
     this._attestation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attestationInput() {
+    return this._attestation
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerAnalysisOccurrenceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ContainerAnalysisOccurrenceTimeouts | undefined) {
+  public set timeouts(value: ContainerAnalysisOccurrenceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

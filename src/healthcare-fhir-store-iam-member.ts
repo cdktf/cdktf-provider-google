@@ -49,7 +49,7 @@ export class HealthcareFhirStoreIamMember extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
@@ -57,46 +57,61 @@ export class HealthcareFhirStoreIamMember extends TerraformResource {
   // fhir_store_id - computed: false, optional: false, required: true
   private _fhirStoreId: string;
   public get fhirStoreId() {
-    return this._fhirStoreId;
+    return this.getStringAttribute('fhir_store_id');
   }
   public set fhirStoreId(value: string) {
     this._fhirStoreId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get fhirStoreIdInput() {
+    return this._fhirStoreId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // member - computed: false, optional: false, required: true
   private _member: string;
   public get member() {
-    return this._member;
+    return this.getStringAttribute('member');
   }
   public set member(value: string) {
     this._member = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberInput() {
+    return this._member
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // condition - computed: false, optional: true, required: false
   private _condition?: HealthcareFhirStoreIamMemberCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: HealthcareFhirStoreIamMemberCondition[] | undefined) {
+  public set condition(value: HealthcareFhirStoreIamMemberCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // =========

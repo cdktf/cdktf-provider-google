@@ -81,7 +81,7 @@ export class ContainerAnalysisNote extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
@@ -89,22 +89,25 @@ export class ContainerAnalysisNote extends TerraformResource {
   // expiration_time - computed: false, optional: true, required: false
   private _expirationTime?: string;
   public get expirationTime() {
-    return this._expirationTime;
+    return this.getStringAttribute('expiration_time');
   }
-  public set expirationTime(value: string | undefined) {
+  public set expirationTime(value: string ) {
     this._expirationTime = value;
+  }
+  public resetExpirationTime() {
+    this._expirationTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationTimeInput() {
+    return this._expirationTime
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // kind - computed: true, optional: false, required: true
+  // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
   }
@@ -112,49 +115,81 @@ export class ContainerAnalysisNote extends TerraformResource {
   // long_description - computed: false, optional: true, required: false
   private _longDescription?: string;
   public get longDescription() {
-    return this._longDescription;
+    return this.getStringAttribute('long_description');
   }
-  public set longDescription(value: string | undefined) {
+  public set longDescription(value: string ) {
     this._longDescription = value;
+  }
+  public resetLongDescription() {
+    this._longDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get longDescriptionInput() {
+    return this._longDescription
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // related_note_names - computed: false, optional: true, required: false
   private _relatedNoteNames?: string[];
   public get relatedNoteNames() {
-    return this._relatedNoteNames;
+    return this.getListAttribute('related_note_names');
   }
-  public set relatedNoteNames(value: string[] | undefined) {
+  public set relatedNoteNames(value: string[] ) {
     this._relatedNoteNames = value;
+  }
+  public resetRelatedNoteNames() {
+    this._relatedNoteNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relatedNoteNamesInput() {
+    return this._relatedNoteNames
   }
 
   // short_description - computed: false, optional: true, required: false
   private _shortDescription?: string;
   public get shortDescription() {
-    return this._shortDescription;
+    return this.getStringAttribute('short_description');
   }
-  public set shortDescription(value: string | undefined) {
+  public set shortDescription(value: string ) {
     this._shortDescription = value;
   }
+  public resetShortDescription() {
+    this._shortDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shortDescriptionInput() {
+    return this._shortDescription
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -162,28 +197,46 @@ export class ContainerAnalysisNote extends TerraformResource {
   // attestation_authority - computed: false, optional: false, required: true
   private _attestationAuthority: ContainerAnalysisNoteAttestationAuthority[];
   public get attestationAuthority() {
-    return this._attestationAuthority;
+    return this.interpolationForAttribute('attestation_authority') as any;
   }
   public set attestationAuthority(value: ContainerAnalysisNoteAttestationAuthority[]) {
     this._attestationAuthority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attestationAuthorityInput() {
+    return this._attestationAuthority
   }
 
   // related_url - computed: false, optional: true, required: false
   private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[];
   public get relatedUrl() {
-    return this._relatedUrl;
+    return this.interpolationForAttribute('related_url') as any;
   }
-  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[] | undefined) {
+  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[] ) {
     this._relatedUrl = value;
+  }
+  public resetRelatedUrl() {
+    this._relatedUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relatedUrlInput() {
+    return this._relatedUrl
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerAnalysisNoteTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ContainerAnalysisNoteTimeouts | undefined) {
+  public set timeouts(value: ContainerAnalysisNoteTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

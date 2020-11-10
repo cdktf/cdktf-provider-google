@@ -39,12 +39,12 @@ export class DataGoogleOrganization extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // directory_customer_id - computed: true, optional: false, required: true
+  // directory_customer_id - computed: true, optional: false, required: false
   public get directoryCustomerId() {
     return this.getStringAttribute('directory_customer_id');
   }
@@ -52,32 +52,35 @@ export class DataGoogleOrganization extends TerraformDataSource {
   // domain - computed: true, optional: true, required: false
   private _domain?: string;
   public get domain() {
-    return this._domain ?? this.getStringAttribute('domain');
+    return this.getStringAttribute('domain');
   }
-  public set domain(value: string | undefined) {
+  public set domain(value: string) {
     this._domain = value;
+  }
+  public resetDomain() {
+    this._domain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainInput() {
+    return this._domain
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // lifecycle_state - computed: true, optional: false, required: true
+  // lifecycle_state - computed: true, optional: false, required: false
   public get lifecycleState() {
     return this.getStringAttribute('lifecycle_state');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // org_id - computed: true, optional: false, required: true
+  // org_id - computed: true, optional: false, required: false
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
@@ -85,10 +88,17 @@ export class DataGoogleOrganization extends TerraformDataSource {
   // organization - computed: false, optional: true, required: false
   private _organization?: string;
   public get organization() {
-    return this._organization;
+    return this.getStringAttribute('organization');
   }
-  public set organization(value: string | undefined) {
+  public set organization(value: string ) {
     this._organization = value;
+  }
+  public resetOrganization() {
+    this._organization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization
   }
 
   // =========

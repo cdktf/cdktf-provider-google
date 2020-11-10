@@ -133,36 +133,43 @@ export class ComputeInstanceGroupManager extends TerraformResource {
   // base_instance_name - computed: false, optional: false, required: true
   private _baseInstanceName: string;
   public get baseInstanceName() {
-    return this._baseInstanceName;
+    return this.getStringAttribute('base_instance_name');
   }
   public set baseInstanceName(value: string) {
     this._baseInstanceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseInstanceNameInput() {
+    return this._baseInstanceName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // instance_group - computed: true, optional: false, required: true
+  // instance_group - computed: true, optional: false, required: false
   public get instanceGroup() {
     return this.getStringAttribute('instance_group');
   }
@@ -170,13 +177,17 @@ export class ComputeInstanceGroupManager extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // operation - computed: true, optional: false, required: true
+  // operation - computed: true, optional: false, required: false
   public get operation() {
     return this.getStringAttribute('operation');
   }
@@ -184,13 +195,20 @@ export class ComputeInstanceGroupManager extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -198,91 +216,158 @@ export class ComputeInstanceGroupManager extends TerraformResource {
   // target_pools - computed: false, optional: true, required: false
   private _targetPools?: string[];
   public get targetPools() {
-    return this._targetPools;
+    return this.getListAttribute('target_pools');
   }
-  public set targetPools(value: string[] | undefined) {
+  public set targetPools(value: string[] ) {
     this._targetPools = value;
+  }
+  public resetTargetPools() {
+    this._targetPools = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetPoolsInput() {
+    return this._targetPools
   }
 
   // target_size - computed: true, optional: true, required: false
   private _targetSize?: number;
   public get targetSize() {
-    return this._targetSize ?? this.getNumberAttribute('target_size');
+    return this.getNumberAttribute('target_size');
   }
-  public set targetSize(value: number | undefined) {
+  public set targetSize(value: number) {
     this._targetSize = value;
+  }
+  public resetTargetSize() {
+    this._targetSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetSizeInput() {
+    return this._targetSize
   }
 
   // wait_for_instances - computed: false, optional: true, required: false
   private _waitForInstances?: boolean;
   public get waitForInstances() {
-    return this._waitForInstances;
+    return this.getBooleanAttribute('wait_for_instances');
   }
-  public set waitForInstances(value: boolean | undefined) {
+  public set waitForInstances(value: boolean ) {
     this._waitForInstances = value;
+  }
+  public resetWaitForInstances() {
+    this._waitForInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitForInstancesInput() {
+    return this._waitForInstances
   }
 
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // auto_healing_policies - computed: false, optional: true, required: false
   private _autoHealingPolicies?: ComputeInstanceGroupManagerAutoHealingPolicies[];
   public get autoHealingPolicies() {
-    return this._autoHealingPolicies;
+    return this.interpolationForAttribute('auto_healing_policies') as any;
   }
-  public set autoHealingPolicies(value: ComputeInstanceGroupManagerAutoHealingPolicies[] | undefined) {
+  public set autoHealingPolicies(value: ComputeInstanceGroupManagerAutoHealingPolicies[] ) {
     this._autoHealingPolicies = value;
+  }
+  public resetAutoHealingPolicies() {
+    this._autoHealingPolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoHealingPoliciesInput() {
+    return this._autoHealingPolicies
   }
 
   // named_port - computed: false, optional: true, required: false
   private _namedPort?: ComputeInstanceGroupManagerNamedPort[];
   public get namedPort() {
-    return this._namedPort;
+    return this.interpolationForAttribute('named_port') as any;
   }
-  public set namedPort(value: ComputeInstanceGroupManagerNamedPort[] | undefined) {
+  public set namedPort(value: ComputeInstanceGroupManagerNamedPort[] ) {
     this._namedPort = value;
+  }
+  public resetNamedPort() {
+    this._namedPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namedPortInput() {
+    return this._namedPort
   }
 
   // stateful_disk - computed: false, optional: true, required: false
   private _statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[];
   public get statefulDisk() {
-    return this._statefulDisk;
+    return this.interpolationForAttribute('stateful_disk') as any;
   }
-  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[] | undefined) {
+  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[] ) {
     this._statefulDisk = value;
+  }
+  public resetStatefulDisk() {
+    this._statefulDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statefulDiskInput() {
+    return this._statefulDisk
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeInstanceGroupManagerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeInstanceGroupManagerTimeouts | undefined) {
+  public set timeouts(value: ComputeInstanceGroupManagerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // update_policy - computed: false, optional: true, required: false
   private _updatePolicy?: ComputeInstanceGroupManagerUpdatePolicy[];
   public get updatePolicy() {
-    return this._updatePolicy;
+    return this.interpolationForAttribute('update_policy') as any;
   }
-  public set updatePolicy(value: ComputeInstanceGroupManagerUpdatePolicy[] | undefined) {
+  public set updatePolicy(value: ComputeInstanceGroupManagerUpdatePolicy[] ) {
     this._updatePolicy = value;
+  }
+  public resetUpdatePolicy() {
+    this._updatePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updatePolicyInput() {
+    return this._updatePolicy
   }
 
   // version - computed: false, optional: false, required: true
   private _version: ComputeInstanceGroupManagerVersion[];
   public get version() {
-    return this._version;
+    return this.interpolationForAttribute('version') as any;
   }
   public set version(value: ComputeInstanceGroupManagerVersion[]) {
     this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // =========

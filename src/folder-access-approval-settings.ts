@@ -83,7 +83,7 @@ export class FolderAccessApprovalSettings extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // enrolled_ancestor - computed: true, optional: false, required: true
+  // enrolled_ancestor - computed: true, optional: false, required: false
   public get enrolledAncestor() {
     return this.getBooleanAttribute('enrolled_ancestor');
   }
@@ -91,22 +91,22 @@ export class FolderAccessApprovalSettings extends TerraformResource {
   // folder_id - computed: false, optional: false, required: true
   private _folderId: string;
   public get folderId() {
-    return this._folderId;
+    return this.getStringAttribute('folder_id');
   }
   public set folderId(value: string) {
     this._folderId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderIdInput() {
+    return this._folderId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -114,28 +114,46 @@ export class FolderAccessApprovalSettings extends TerraformResource {
   // notification_emails - computed: true, optional: true, required: false
   private _notificationEmails?: string[];
   public get notificationEmails() {
-    return this._notificationEmails ?? this.getListAttribute('notification_emails');
+    return this.getListAttribute('notification_emails');
   }
-  public set notificationEmails(value: string[] | undefined) {
+  public set notificationEmails(value: string[]) {
     this._notificationEmails = value;
+  }
+  public resetNotificationEmails() {
+    this._notificationEmails = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationEmailsInput() {
+    return this._notificationEmails
   }
 
   // enrolled_services - computed: false, optional: false, required: true
   private _enrolledServices: FolderAccessApprovalSettingsEnrolledServices[];
   public get enrolledServices() {
-    return this._enrolledServices;
+    return this.interpolationForAttribute('enrolled_services') as any;
   }
   public set enrolledServices(value: FolderAccessApprovalSettingsEnrolledServices[]) {
     this._enrolledServices = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enrolledServicesInput() {
+    return this._enrolledServices
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: FolderAccessApprovalSettingsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: FolderAccessApprovalSettingsTimeouts | undefined) {
+  public set timeouts(value: FolderAccessApprovalSettingsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

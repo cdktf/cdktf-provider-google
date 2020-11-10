@@ -62,15 +62,11 @@ export class DataGoogleIamPolicy extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // policy_data - computed: true, optional: false, required: true
+  // policy_data - computed: true, optional: false, required: false
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -78,19 +74,33 @@ export class DataGoogleIamPolicy extends TerraformDataSource {
   // audit_config - computed: false, optional: true, required: false
   private _auditConfig?: DataGoogleIamPolicyAuditConfig[];
   public get auditConfig() {
-    return this._auditConfig;
+    return this.interpolationForAttribute('audit_config') as any;
   }
-  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] | undefined) {
+  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] ) {
     this._auditConfig = value;
+  }
+  public resetAuditConfig() {
+    this._auditConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get auditConfigInput() {
+    return this._auditConfig
   }
 
   // binding - computed: false, optional: true, required: false
   private _binding?: DataGoogleIamPolicyBinding[];
   public get binding() {
-    return this._binding;
+    return this.interpolationForAttribute('binding') as any;
   }
-  public set binding(value: DataGoogleIamPolicyBinding[] | undefined) {
+  public set binding(value: DataGoogleIamPolicyBinding[] ) {
     this._binding = value;
+  }
+  public resetBinding() {
+    this._binding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bindingInput() {
+    return this._binding
   }
 
   // =========

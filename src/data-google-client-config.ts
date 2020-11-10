@@ -35,31 +35,27 @@ export class DataGoogleClientConfig extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // access_token - computed: true, optional: false, required: true
+  // access_token - computed: true, optional: false, required: false
   public get accessToken() {
     return this.getStringAttribute('access_token');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // project - computed: true, optional: false, required: true
+  // project - computed: true, optional: false, required: false
   public get project() {
     return this.getStringAttribute('project');
   }
 
-  // region - computed: true, optional: false, required: true
+  // region - computed: true, optional: false, required: false
   public get region() {
     return this.getStringAttribute('region');
   }
 
-  // zone - computed: true, optional: false, required: true
+  // zone - computed: true, optional: false, required: false
   public get zone() {
     return this.getStringAttribute('zone');
   }

@@ -49,29 +49,32 @@ export class ServiceAccountKey extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // key_algorithm - computed: false, optional: true, required: false
   private _keyAlgorithm?: string;
   public get keyAlgorithm() {
-    return this._keyAlgorithm;
+    return this.getStringAttribute('key_algorithm');
   }
-  public set keyAlgorithm(value: string | undefined) {
+  public set keyAlgorithm(value: string ) {
     this._keyAlgorithm = value;
   }
+  public resetKeyAlgorithm() {
+    this._keyAlgorithm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyAlgorithmInput() {
+    return this._keyAlgorithm
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // private_key - computed: true, optional: false, required: true
+  // private_key - computed: true, optional: false, required: false
   public get privateKey() {
     return this.getStringAttribute('private_key');
   }
@@ -79,13 +82,20 @@ export class ServiceAccountKey extends TerraformResource {
   // private_key_type - computed: false, optional: true, required: false
   private _privateKeyType?: string;
   public get privateKeyType() {
-    return this._privateKeyType;
+    return this.getStringAttribute('private_key_type');
   }
-  public set privateKeyType(value: string | undefined) {
+  public set privateKeyType(value: string ) {
     this._privateKeyType = value;
   }
+  public resetPrivateKeyType() {
+    this._privateKeyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyTypeInput() {
+    return this._privateKeyType
+  }
 
-  // public_key - computed: true, optional: false, required: true
+  // public_key - computed: true, optional: false, required: false
   public get publicKey() {
     return this.getStringAttribute('public_key');
   }
@@ -93,36 +103,54 @@ export class ServiceAccountKey extends TerraformResource {
   // public_key_data - computed: false, optional: true, required: false
   private _publicKeyData?: string;
   public get publicKeyData() {
-    return this._publicKeyData;
+    return this.getStringAttribute('public_key_data');
   }
-  public set publicKeyData(value: string | undefined) {
+  public set publicKeyData(value: string ) {
     this._publicKeyData = value;
+  }
+  public resetPublicKeyData() {
+    this._publicKeyData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyDataInput() {
+    return this._publicKeyData
   }
 
   // public_key_type - computed: false, optional: true, required: false
   private _publicKeyType?: string;
   public get publicKeyType() {
-    return this._publicKeyType;
+    return this.getStringAttribute('public_key_type');
   }
-  public set publicKeyType(value: string | undefined) {
+  public set publicKeyType(value: string ) {
     this._publicKeyType = value;
+  }
+  public resetPublicKeyType() {
+    this._publicKeyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyTypeInput() {
+    return this._publicKeyType
   }
 
   // service_account_id - computed: false, optional: false, required: true
   private _serviceAccountId: string;
   public get serviceAccountId() {
-    return this._serviceAccountId;
+    return this.getStringAttribute('service_account_id');
   }
   public set serviceAccountId(value: string) {
     this._serviceAccountId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountIdInput() {
+    return this._serviceAccountId
+  }
 
-  // valid_after - computed: true, optional: false, required: true
+  // valid_after - computed: true, optional: false, required: false
   public get validAfter() {
     return this.getStringAttribute('valid_after');
   }
 
-  // valid_before - computed: true, optional: false, required: true
+  // valid_before - computed: true, optional: false, required: false
   public get validBefore() {
     return this.getStringAttribute('valid_before');
   }

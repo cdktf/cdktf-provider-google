@@ -130,84 +130,133 @@ export class CloudTasksQueue extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string ) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // app_engine_routing_override - computed: false, optional: true, required: false
   private _appEngineRoutingOverride?: CloudTasksQueueAppEngineRoutingOverride[];
   public get appEngineRoutingOverride() {
-    return this._appEngineRoutingOverride;
+    return this.interpolationForAttribute('app_engine_routing_override') as any;
   }
-  public set appEngineRoutingOverride(value: CloudTasksQueueAppEngineRoutingOverride[] | undefined) {
+  public set appEngineRoutingOverride(value: CloudTasksQueueAppEngineRoutingOverride[] ) {
     this._appEngineRoutingOverride = value;
+  }
+  public resetAppEngineRoutingOverride() {
+    this._appEngineRoutingOverride = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appEngineRoutingOverrideInput() {
+    return this._appEngineRoutingOverride
   }
 
   // rate_limits - computed: false, optional: true, required: false
   private _rateLimits?: CloudTasksQueueRateLimits[];
   public get rateLimits() {
-    return this._rateLimits;
+    return this.interpolationForAttribute('rate_limits') as any;
   }
-  public set rateLimits(value: CloudTasksQueueRateLimits[] | undefined) {
+  public set rateLimits(value: CloudTasksQueueRateLimits[] ) {
     this._rateLimits = value;
+  }
+  public resetRateLimits() {
+    this._rateLimits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateLimitsInput() {
+    return this._rateLimits
   }
 
   // retry_config - computed: false, optional: true, required: false
   private _retryConfig?: CloudTasksQueueRetryConfig[];
   public get retryConfig() {
-    return this._retryConfig;
+    return this.interpolationForAttribute('retry_config') as any;
   }
-  public set retryConfig(value: CloudTasksQueueRetryConfig[] | undefined) {
+  public set retryConfig(value: CloudTasksQueueRetryConfig[] ) {
     this._retryConfig = value;
+  }
+  public resetRetryConfig() {
+    this._retryConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryConfigInput() {
+    return this._retryConfig
   }
 
   // stackdriver_logging_config - computed: false, optional: true, required: false
   private _stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig[];
   public get stackdriverLoggingConfig() {
-    return this._stackdriverLoggingConfig;
+    return this.interpolationForAttribute('stackdriver_logging_config') as any;
   }
-  public set stackdriverLoggingConfig(value: CloudTasksQueueStackdriverLoggingConfig[] | undefined) {
+  public set stackdriverLoggingConfig(value: CloudTasksQueueStackdriverLoggingConfig[] ) {
     this._stackdriverLoggingConfig = value;
+  }
+  public resetStackdriverLoggingConfig() {
+    this._stackdriverLoggingConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stackdriverLoggingConfigInput() {
+    return this._stackdriverLoggingConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudTasksQueueTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudTasksQueueTimeouts | undefined) {
+  public set timeouts(value: CloudTasksQueueTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

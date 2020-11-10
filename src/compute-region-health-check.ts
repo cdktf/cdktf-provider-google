@@ -313,13 +313,20 @@ export class ComputeRegionHealthCheck extends TerraformResource {
   // check_interval_sec - computed: false, optional: true, required: false
   private _checkIntervalSec?: number;
   public get checkIntervalSec() {
-    return this._checkIntervalSec;
+    return this.getNumberAttribute('check_interval_sec');
   }
-  public set checkIntervalSec(value: number | undefined) {
+  public set checkIntervalSec(value: number ) {
     this._checkIntervalSec = value;
   }
+  public resetCheckIntervalSec() {
+    this._checkIntervalSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get checkIntervalSecInput() {
+    return this._checkIntervalSec
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -327,58 +334,86 @@ export class ComputeRegionHealthCheck extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // healthy_threshold - computed: false, optional: true, required: false
   private _healthyThreshold?: number;
   public get healthyThreshold() {
-    return this._healthyThreshold;
+    return this.getNumberAttribute('healthy_threshold');
   }
-  public set healthyThreshold(value: number | undefined) {
+  public set healthyThreshold(value: number ) {
     this._healthyThreshold = value;
+  }
+  public resetHealthyThreshold() {
+    this._healthyThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthyThresholdInput() {
+    return this._healthyThreshold
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -386,13 +421,20 @@ export class ComputeRegionHealthCheck extends TerraformResource {
   // timeout_sec - computed: false, optional: true, required: false
   private _timeoutSec?: number;
   public get timeoutSec() {
-    return this._timeoutSec;
+    return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number ) {
     this._timeoutSec = value;
   }
+  public resetTimeoutSec() {
+    this._timeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutSecInput() {
+    return this._timeoutSec
+  }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -400,73 +442,129 @@ export class ComputeRegionHealthCheck extends TerraformResource {
   // unhealthy_threshold - computed: false, optional: true, required: false
   private _unhealthyThreshold?: number;
   public get unhealthyThreshold() {
-    return this._unhealthyThreshold;
+    return this.getNumberAttribute('unhealthy_threshold');
   }
-  public set unhealthyThreshold(value: number | undefined) {
+  public set unhealthyThreshold(value: number ) {
     this._unhealthyThreshold = value;
+  }
+  public resetUnhealthyThreshold() {
+    this._unhealthyThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unhealthyThresholdInput() {
+    return this._unhealthyThreshold
   }
 
   // grpc_health_check - computed: false, optional: true, required: false
   private _grpcHealthCheck?: ComputeRegionHealthCheckGrpcHealthCheck[];
   public get grpcHealthCheck() {
-    return this._grpcHealthCheck;
+    return this.interpolationForAttribute('grpc_health_check') as any;
   }
-  public set grpcHealthCheck(value: ComputeRegionHealthCheckGrpcHealthCheck[] | undefined) {
+  public set grpcHealthCheck(value: ComputeRegionHealthCheckGrpcHealthCheck[] ) {
     this._grpcHealthCheck = value;
+  }
+  public resetGrpcHealthCheck() {
+    this._grpcHealthCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get grpcHealthCheckInput() {
+    return this._grpcHealthCheck
   }
 
   // http2_health_check - computed: false, optional: true, required: false
   private _http2HealthCheck?: ComputeRegionHealthCheckHttp2HealthCheck[];
   public get http2HealthCheck() {
-    return this._http2HealthCheck;
+    return this.interpolationForAttribute('http2_health_check') as any;
   }
-  public set http2HealthCheck(value: ComputeRegionHealthCheckHttp2HealthCheck[] | undefined) {
+  public set http2HealthCheck(value: ComputeRegionHealthCheckHttp2HealthCheck[] ) {
     this._http2HealthCheck = value;
+  }
+  public resetHttp2HealthCheck() {
+    this._http2HealthCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get http2HealthCheckInput() {
+    return this._http2HealthCheck
   }
 
   // http_health_check - computed: false, optional: true, required: false
   private _httpHealthCheck?: ComputeRegionHealthCheckHttpHealthCheck[];
   public get httpHealthCheck() {
-    return this._httpHealthCheck;
+    return this.interpolationForAttribute('http_health_check') as any;
   }
-  public set httpHealthCheck(value: ComputeRegionHealthCheckHttpHealthCheck[] | undefined) {
+  public set httpHealthCheck(value: ComputeRegionHealthCheckHttpHealthCheck[] ) {
     this._httpHealthCheck = value;
+  }
+  public resetHttpHealthCheck() {
+    this._httpHealthCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpHealthCheckInput() {
+    return this._httpHealthCheck
   }
 
   // https_health_check - computed: false, optional: true, required: false
   private _httpsHealthCheck?: ComputeRegionHealthCheckHttpsHealthCheck[];
   public get httpsHealthCheck() {
-    return this._httpsHealthCheck;
+    return this.interpolationForAttribute('https_health_check') as any;
   }
-  public set httpsHealthCheck(value: ComputeRegionHealthCheckHttpsHealthCheck[] | undefined) {
+  public set httpsHealthCheck(value: ComputeRegionHealthCheckHttpsHealthCheck[] ) {
     this._httpsHealthCheck = value;
+  }
+  public resetHttpsHealthCheck() {
+    this._httpsHealthCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsHealthCheckInput() {
+    return this._httpsHealthCheck
   }
 
   // ssl_health_check - computed: false, optional: true, required: false
   private _sslHealthCheck?: ComputeRegionHealthCheckSslHealthCheck[];
   public get sslHealthCheck() {
-    return this._sslHealthCheck;
+    return this.interpolationForAttribute('ssl_health_check') as any;
   }
-  public set sslHealthCheck(value: ComputeRegionHealthCheckSslHealthCheck[] | undefined) {
+  public set sslHealthCheck(value: ComputeRegionHealthCheckSslHealthCheck[] ) {
     this._sslHealthCheck = value;
+  }
+  public resetSslHealthCheck() {
+    this._sslHealthCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslHealthCheckInput() {
+    return this._sslHealthCheck
   }
 
   // tcp_health_check - computed: false, optional: true, required: false
   private _tcpHealthCheck?: ComputeRegionHealthCheckTcpHealthCheck[];
   public get tcpHealthCheck() {
-    return this._tcpHealthCheck;
+    return this.interpolationForAttribute('tcp_health_check') as any;
   }
-  public set tcpHealthCheck(value: ComputeRegionHealthCheckTcpHealthCheck[] | undefined) {
+  public set tcpHealthCheck(value: ComputeRegionHealthCheckTcpHealthCheck[] ) {
     this._tcpHealthCheck = value;
+  }
+  public resetTcpHealthCheck() {
+    this._tcpHealthCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpHealthCheckInput() {
+    return this._tcpHealthCheck
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRegionHealthCheckTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRegionHealthCheckTimeouts | undefined) {
+  public set timeouts(value: ComputeRegionHealthCheckTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

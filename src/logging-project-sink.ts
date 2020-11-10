@@ -73,58 +73,83 @@ export class LoggingProjectSink extends TerraformResource {
   // destination - computed: false, optional: false, required: true
   private _destination: string;
   public get destination() {
-    return this._destination;
+    return this.getStringAttribute('destination');
   }
   public set destination(value: string) {
     this._destination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination
   }
 
   // filter - computed: false, optional: true, required: false
   private _filter?: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string ) {
     this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // unique_writer_identity - computed: false, optional: true, required: false
   private _uniqueWriterIdentity?: boolean;
   public get uniqueWriterIdentity() {
-    return this._uniqueWriterIdentity;
+    return this.getBooleanAttribute('unique_writer_identity');
   }
-  public set uniqueWriterIdentity(value: boolean | undefined) {
+  public set uniqueWriterIdentity(value: boolean ) {
     this._uniqueWriterIdentity = value;
   }
+  public resetUniqueWriterIdentity() {
+    this._uniqueWriterIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uniqueWriterIdentityInput() {
+    return this._uniqueWriterIdentity
+  }
 
-  // writer_identity - computed: true, optional: false, required: true
+  // writer_identity - computed: true, optional: false, required: false
   public get writerIdentity() {
     return this.getStringAttribute('writer_identity');
   }
@@ -132,19 +157,33 @@ export class LoggingProjectSink extends TerraformResource {
   // bigquery_options - computed: false, optional: true, required: false
   private _bigqueryOptions?: LoggingProjectSinkBigqueryOptions[];
   public get bigqueryOptions() {
-    return this._bigqueryOptions;
+    return this.interpolationForAttribute('bigquery_options') as any;
   }
-  public set bigqueryOptions(value: LoggingProjectSinkBigqueryOptions[] | undefined) {
+  public set bigqueryOptions(value: LoggingProjectSinkBigqueryOptions[] ) {
     this._bigqueryOptions = value;
+  }
+  public resetBigqueryOptions() {
+    this._bigqueryOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryOptionsInput() {
+    return this._bigqueryOptions
   }
 
   // exclusions - computed: false, optional: true, required: false
   private _exclusions?: LoggingProjectSinkExclusions[];
   public get exclusions() {
-    return this._exclusions;
+    return this.interpolationForAttribute('exclusions') as any;
   }
-  public set exclusions(value: LoggingProjectSinkExclusions[] | undefined) {
+  public set exclusions(value: LoggingProjectSinkExclusions[] ) {
     this._exclusions = value;
+  }
+  public resetExclusions() {
+    this._exclusions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionsInput() {
+    return this._exclusions
   }
 
   // =========

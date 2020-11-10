@@ -63,83 +63,116 @@ export class VpcAccessConnector extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_cidr_range - computed: false, optional: false, required: true
   private _ipCidrRange: string;
   public get ipCidrRange() {
-    return this._ipCidrRange;
+    return this.getStringAttribute('ip_cidr_range');
   }
   public set ipCidrRange(value: string) {
     this._ipCidrRange = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipCidrRangeInput() {
+    return this._ipCidrRange
   }
 
   // max_throughput - computed: false, optional: true, required: false
   private _maxThroughput?: number;
   public get maxThroughput() {
-    return this._maxThroughput;
+    return this.getNumberAttribute('max_throughput');
   }
-  public set maxThroughput(value: number | undefined) {
+  public set maxThroughput(value: number ) {
     this._maxThroughput = value;
+  }
+  public resetMaxThroughput() {
+    this._maxThroughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxThroughputInput() {
+    return this._maxThroughput
   }
 
   // min_throughput - computed: false, optional: true, required: false
   private _minThroughput?: number;
   public get minThroughput() {
-    return this._minThroughput;
+    return this.getNumberAttribute('min_throughput');
   }
-  public set minThroughput(value: number | undefined) {
+  public set minThroughput(value: number ) {
     this._minThroughput = value;
+  }
+  public resetMinThroughput() {
+    this._minThroughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minThroughputInput() {
+    return this._minThroughput
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: false, optional: false, required: true
   private _region: string;
   public get region() {
-    return this._region;
+    return this.getStringAttribute('region');
   }
   public set region(value: string) {
     this._region = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -147,10 +180,17 @@ export class VpcAccessConnector extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VpcAccessConnectorTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VpcAccessConnectorTimeouts | undefined) {
+  public set timeouts(value: VpcAccessConnectorTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

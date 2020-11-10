@@ -221,49 +221,73 @@ export class AppEngineStandardAppVersion extends TerraformResource {
   // delete_service_on_destroy - computed: false, optional: true, required: false
   private _deleteServiceOnDestroy?: boolean;
   public get deleteServiceOnDestroy() {
-    return this._deleteServiceOnDestroy;
+    return this.getBooleanAttribute('delete_service_on_destroy');
   }
-  public set deleteServiceOnDestroy(value: boolean | undefined) {
+  public set deleteServiceOnDestroy(value: boolean ) {
     this._deleteServiceOnDestroy = value;
+  }
+  public resetDeleteServiceOnDestroy() {
+    this._deleteServiceOnDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteServiceOnDestroyInput() {
+    return this._deleteServiceOnDestroy
   }
 
   // env_variables - computed: false, optional: true, required: false
   private _envVariables?: { [key: string]: string };
   public get envVariables() {
-    return this._envVariables;
+    return this.interpolationForAttribute('env_variables') as any;
   }
-  public set envVariables(value: { [key: string]: string } | undefined) {
+  public set envVariables(value: { [key: string]: string } ) {
     this._envVariables = value;
+  }
+  public resetEnvVariables() {
+    this._envVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envVariablesInput() {
+    return this._envVariables
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // inbound_services - computed: false, optional: true, required: false
   private _inboundServices?: string[];
   public get inboundServices() {
-    return this._inboundServices;
+    return this.getListAttribute('inbound_services');
   }
-  public set inboundServices(value: string[] | undefined) {
+  public set inboundServices(value: string[] ) {
     this._inboundServices = value;
+  }
+  public resetInboundServices() {
+    this._inboundServices = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundServicesInput() {
+    return this._inboundServices
   }
 
   // instance_class - computed: true, optional: true, required: false
   private _instanceClass?: string;
   public get instanceClass() {
-    return this._instanceClass ?? this.getStringAttribute('instance_class');
+    return this.getStringAttribute('instance_class');
   }
-  public set instanceClass(value: string | undefined) {
+  public set instanceClass(value: string) {
     this._instanceClass = value;
   }
+  public resetInstanceClass() {
+    this._instanceClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceClassInput() {
+    return this._instanceClass
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -271,145 +295,248 @@ export class AppEngineStandardAppVersion extends TerraformResource {
   // noop_on_destroy - computed: false, optional: true, required: false
   private _noopOnDestroy?: boolean;
   public get noopOnDestroy() {
-    return this._noopOnDestroy;
+    return this.getBooleanAttribute('noop_on_destroy');
   }
-  public set noopOnDestroy(value: boolean | undefined) {
+  public set noopOnDestroy(value: boolean ) {
     this._noopOnDestroy = value;
+  }
+  public resetNoopOnDestroy() {
+    this._noopOnDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noopOnDestroyInput() {
+    return this._noopOnDestroy
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // runtime - computed: false, optional: false, required: true
   private _runtime: string;
   public get runtime() {
-    return this._runtime;
+    return this.getStringAttribute('runtime');
   }
   public set runtime(value: string) {
     this._runtime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runtimeInput() {
+    return this._runtime
   }
 
   // runtime_api_version - computed: false, optional: true, required: false
   private _runtimeApiVersion?: string;
   public get runtimeApiVersion() {
-    return this._runtimeApiVersion;
+    return this.getStringAttribute('runtime_api_version');
   }
-  public set runtimeApiVersion(value: string | undefined) {
+  public set runtimeApiVersion(value: string ) {
     this._runtimeApiVersion = value;
+  }
+  public resetRuntimeApiVersion() {
+    this._runtimeApiVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runtimeApiVersionInput() {
+    return this._runtimeApiVersion
   }
 
   // service - computed: false, optional: false, required: true
   private _service: string;
   public get service() {
-    return this._service;
+    return this.getStringAttribute('service');
   }
   public set service(value: string) {
     this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
   }
 
   // threadsafe - computed: false, optional: true, required: false
   private _threadsafe?: boolean;
   public get threadsafe() {
-    return this._threadsafe;
+    return this.getBooleanAttribute('threadsafe');
   }
-  public set threadsafe(value: boolean | undefined) {
+  public set threadsafe(value: boolean ) {
     this._threadsafe = value;
+  }
+  public resetThreadsafe() {
+    this._threadsafe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threadsafeInput() {
+    return this._threadsafe
   }
 
   // version_id - computed: false, optional: true, required: false
   private _versionId?: string;
   public get versionId() {
-    return this._versionId;
+    return this.getStringAttribute('version_id');
   }
-  public set versionId(value: string | undefined) {
+  public set versionId(value: string ) {
     this._versionId = value;
+  }
+  public resetVersionId() {
+    this._versionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionIdInput() {
+    return this._versionId
   }
 
   // automatic_scaling - computed: false, optional: true, required: false
   private _automaticScaling?: AppEngineStandardAppVersionAutomaticScaling[];
   public get automaticScaling() {
-    return this._automaticScaling;
+    return this.interpolationForAttribute('automatic_scaling') as any;
   }
-  public set automaticScaling(value: AppEngineStandardAppVersionAutomaticScaling[] | undefined) {
+  public set automaticScaling(value: AppEngineStandardAppVersionAutomaticScaling[] ) {
     this._automaticScaling = value;
+  }
+  public resetAutomaticScaling() {
+    this._automaticScaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticScalingInput() {
+    return this._automaticScaling
   }
 
   // basic_scaling - computed: false, optional: true, required: false
   private _basicScaling?: AppEngineStandardAppVersionBasicScaling[];
   public get basicScaling() {
-    return this._basicScaling;
+    return this.interpolationForAttribute('basic_scaling') as any;
   }
-  public set basicScaling(value: AppEngineStandardAppVersionBasicScaling[] | undefined) {
+  public set basicScaling(value: AppEngineStandardAppVersionBasicScaling[] ) {
     this._basicScaling = value;
+  }
+  public resetBasicScaling() {
+    this._basicScaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get basicScalingInput() {
+    return this._basicScaling
   }
 
   // deployment - computed: false, optional: false, required: true
   private _deployment: AppEngineStandardAppVersionDeployment[];
   public get deployment() {
-    return this._deployment;
+    return this.interpolationForAttribute('deployment') as any;
   }
   public set deployment(value: AppEngineStandardAppVersionDeployment[]) {
     this._deployment = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentInput() {
+    return this._deployment
   }
 
   // entrypoint - computed: false, optional: true, required: false
   private _entrypoint?: AppEngineStandardAppVersionEntrypoint[];
   public get entrypoint() {
-    return this._entrypoint;
+    return this.interpolationForAttribute('entrypoint') as any;
   }
-  public set entrypoint(value: AppEngineStandardAppVersionEntrypoint[] | undefined) {
+  public set entrypoint(value: AppEngineStandardAppVersionEntrypoint[] ) {
     this._entrypoint = value;
+  }
+  public resetEntrypoint() {
+    this._entrypoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entrypointInput() {
+    return this._entrypoint
   }
 
   // handlers - computed: false, optional: true, required: false
   private _handlers?: AppEngineStandardAppVersionHandlers[];
   public get handlers() {
-    return this._handlers;
+    return this.interpolationForAttribute('handlers') as any;
   }
-  public set handlers(value: AppEngineStandardAppVersionHandlers[] | undefined) {
+  public set handlers(value: AppEngineStandardAppVersionHandlers[] ) {
     this._handlers = value;
+  }
+  public resetHandlers() {
+    this._handlers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get handlersInput() {
+    return this._handlers
   }
 
   // libraries - computed: false, optional: true, required: false
   private _libraries?: AppEngineStandardAppVersionLibraries[];
   public get libraries() {
-    return this._libraries;
+    return this.interpolationForAttribute('libraries') as any;
   }
-  public set libraries(value: AppEngineStandardAppVersionLibraries[] | undefined) {
+  public set libraries(value: AppEngineStandardAppVersionLibraries[] ) {
     this._libraries = value;
+  }
+  public resetLibraries() {
+    this._libraries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get librariesInput() {
+    return this._libraries
   }
 
   // manual_scaling - computed: false, optional: true, required: false
   private _manualScaling?: AppEngineStandardAppVersionManualScaling[];
   public get manualScaling() {
-    return this._manualScaling;
+    return this.interpolationForAttribute('manual_scaling') as any;
   }
-  public set manualScaling(value: AppEngineStandardAppVersionManualScaling[] | undefined) {
+  public set manualScaling(value: AppEngineStandardAppVersionManualScaling[] ) {
     this._manualScaling = value;
+  }
+  public resetManualScaling() {
+    this._manualScaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualScalingInput() {
+    return this._manualScaling
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppEngineStandardAppVersionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppEngineStandardAppVersionTimeouts | undefined) {
+  public set timeouts(value: AppEngineStandardAppVersionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // vpc_access_connector - computed: false, optional: true, required: false
   private _vpcAccessConnector?: AppEngineStandardAppVersionVpcAccessConnector[];
   public get vpcAccessConnector() {
-    return this._vpcAccessConnector;
+    return this.interpolationForAttribute('vpc_access_connector') as any;
   }
-  public set vpcAccessConnector(value: AppEngineStandardAppVersionVpcAccessConnector[] | undefined) {
+  public set vpcAccessConnector(value: AppEngineStandardAppVersionVpcAccessConnector[] ) {
     this._vpcAccessConnector = value;
+  }
+  public resetVpcAccessConnector() {
+    this._vpcAccessConnector = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcAccessConnectorInput() {
+    return this._vpcAccessConnector
   }
 
   // =========

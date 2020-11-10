@@ -51,12 +51,12 @@ export class SecretManagerSecretVersion extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // destroy_time - computed: true, optional: false, required: true
+  // destroy_time - computed: true, optional: false, required: false
   public get destroyTime() {
     return this.getStringAttribute('destroy_time');
   }
@@ -64,22 +64,25 @@ export class SecretManagerSecretVersion extends TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -87,28 +90,46 @@ export class SecretManagerSecretVersion extends TerraformResource {
   // secret - computed: false, optional: false, required: true
   private _secret: string;
   public get secret() {
-    return this._secret;
+    return this.getStringAttribute('secret');
   }
   public set secret(value: string) {
     this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
   }
 
   // secret_data - computed: false, optional: true, required: false
   private _secretData?: string;
   public get secretData() {
-    return this._secretData;
+    return this.getStringAttribute('secret_data');
   }
-  public set secretData(value: string | undefined) {
+  public set secretData(value: string ) {
     this._secretData = value;
+  }
+  public resetSecretData() {
+    this._secretData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretDataInput() {
+    return this._secretData
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SecretManagerSecretVersionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SecretManagerSecretVersionTimeouts | undefined) {
+  public set timeouts(value: SecretManagerSecretVersionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

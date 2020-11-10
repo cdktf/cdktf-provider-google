@@ -13,37 +13,37 @@ export interface DataGoogleProjectsConfig extends TerraformMetaArguments {
 }
 export class DataGoogleProjectsProjects extends ComplexComputedList {
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // labels - computed: true, optional: false, required: true
+  // labels - computed: true, optional: false, required: false
   public get labels() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('labels') as any;
   }
 
-  // lifecycle_state - computed: true, optional: false, required: true
+  // lifecycle_state - computed: true, optional: false, required: false
   public get lifecycleState() {
     return this.getStringAttribute('lifecycle_state');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // number - computed: true, optional: false, required: true
+  // number - computed: true, optional: false, required: false
   public get number() {
     return this.getStringAttribute('number');
   }
 
-  // parent - computed: true, optional: false, required: true
+  // parent - computed: true, optional: false, required: false
   public get parent() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('parent') as any;
   }
 
-  // project_id - computed: true, optional: false, required: true
+  // project_id - computed: true, optional: false, required: false
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
@@ -78,22 +78,22 @@ export class DataGoogleProjects extends TerraformDataSource {
   // filter - computed: false, optional: false, required: true
   private _filter: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
   public set filter(value: string) {
     this._filter = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // projects - computed: true, optional: false, required: true
+  // projects - computed: true, optional: false, required: false
   public projects(index: string) {
     return new DataGoogleProjectsProjects(this, 'projects', index);
   }

@@ -21,24 +21,24 @@ character, which cannot be a dash. */
 }
 export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // value - computed: true, optional: false, required: true
+  // value - computed: true, optional: false, required: false
   public get value() {
     return this.getStringAttribute('value');
   }
 }
 export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends ComplexComputedList {
 
-  // filter_labels - computed: true, optional: false, required: true
+  // filter_labels - computed: true, optional: false, required: false
   public get filterLabels() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('filter_labels') as any;
   }
 
-  // filter_match_criteria - computed: true, optional: false, required: true
+  // filter_match_criteria - computed: true, optional: false, required: false
   public get filterMatchCriteria() {
     return this.getStringAttribute('filter_match_criteria');
   }
@@ -71,41 +71,37 @@ export class DataGoogleComputeGlobalForwardingRule extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
 
-  // ip_protocol - computed: true, optional: false, required: true
+  // ip_protocol - computed: true, optional: false, required: false
   public get ipProtocol() {
     return this.getStringAttribute('ip_protocol');
   }
 
-  // ip_version - computed: true, optional: false, required: true
+  // ip_version - computed: true, optional: false, required: false
   public get ipVersion() {
     return this.getStringAttribute('ip_version');
   }
 
-  // load_balancing_scheme - computed: true, optional: false, required: true
+  // load_balancing_scheme - computed: true, optional: false, required: false
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
   }
 
-  // metadata_filters - computed: true, optional: false, required: true
+  // metadata_filters - computed: true, optional: false, required: false
   public metadataFilters(index: string) {
     return new DataGoogleComputeGlobalForwardingRuleMetadataFilters(this, 'metadata_filters', index);
   }
@@ -113,13 +109,17 @@ export class DataGoogleComputeGlobalForwardingRule extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // port_range - computed: true, optional: false, required: true
+  // port_range - computed: true, optional: false, required: false
   public get portRange() {
     return this.getStringAttribute('port_range');
   }
@@ -127,18 +127,25 @@ export class DataGoogleComputeGlobalForwardingRule extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // target - computed: true, optional: false, required: true
+  // target - computed: true, optional: false, required: false
   public get target() {
     return this.getStringAttribute('target');
   }

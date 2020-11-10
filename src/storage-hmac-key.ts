@@ -51,30 +51,33 @@ export class StorageHmacKey extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // access_id - computed: true, optional: false, required: true
+  // access_id - computed: true, optional: false, required: false
   public get accessId() {
     return this.getStringAttribute('access_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // secret - computed: true, optional: false, required: true
+  // secret - computed: true, optional: false, required: false
   public get secret() {
     return this.getStringAttribute('secret');
   }
@@ -82,27 +85,38 @@ export class StorageHmacKey extends TerraformResource {
   // service_account_email - computed: false, optional: false, required: true
   private _serviceAccountEmail: string;
   public get serviceAccountEmail() {
-    return this._serviceAccountEmail;
+    return this.getStringAttribute('service_account_email');
   }
   public set serviceAccountEmail(value: string) {
     this._serviceAccountEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountEmailInput() {
+    return this._serviceAccountEmail
   }
 
   // state - computed: false, optional: true, required: false
   private _state?: string;
   public get state() {
-    return this._state;
+    return this.getStringAttribute('state');
   }
-  public set state(value: string | undefined) {
+  public set state(value: string ) {
     this._state = value;
   }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state
+  }
 
-  // time_created - computed: true, optional: false, required: true
+  // time_created - computed: true, optional: false, required: false
   public get timeCreated() {
     return this.getStringAttribute('time_created');
   }
 
-  // updated - computed: true, optional: false, required: true
+  // updated - computed: true, optional: false, required: false
   public get updated() {
     return this.getStringAttribute('updated');
   }
@@ -110,10 +124,17 @@ export class StorageHmacKey extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageHmacKeyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageHmacKeyTimeouts | undefined) {
+  public set timeouts(value: StorageHmacKeyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

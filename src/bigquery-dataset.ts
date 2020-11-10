@@ -162,7 +162,7 @@ export class BigqueryDataset extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_time - computed: true, optional: false, required: true
+  // creation_time - computed: true, optional: false, required: false
   public get creationTime() {
     return this.getNumberAttribute('creation_time');
   }
@@ -170,49 +170,81 @@ export class BigqueryDataset extends TerraformResource {
   // dataset_id - computed: false, optional: false, required: true
   private _datasetId: string;
   public get datasetId() {
-    return this._datasetId;
+    return this.getStringAttribute('dataset_id');
   }
   public set datasetId(value: string) {
     this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
   }
 
   // default_partition_expiration_ms - computed: false, optional: true, required: false
   private _defaultPartitionExpirationMs?: number;
   public get defaultPartitionExpirationMs() {
-    return this._defaultPartitionExpirationMs;
+    return this.getNumberAttribute('default_partition_expiration_ms');
   }
-  public set defaultPartitionExpirationMs(value: number | undefined) {
+  public set defaultPartitionExpirationMs(value: number ) {
     this._defaultPartitionExpirationMs = value;
+  }
+  public resetDefaultPartitionExpirationMs() {
+    this._defaultPartitionExpirationMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultPartitionExpirationMsInput() {
+    return this._defaultPartitionExpirationMs
   }
 
   // default_table_expiration_ms - computed: false, optional: true, required: false
   private _defaultTableExpirationMs?: number;
   public get defaultTableExpirationMs() {
-    return this._defaultTableExpirationMs;
+    return this.getNumberAttribute('default_table_expiration_ms');
   }
-  public set defaultTableExpirationMs(value: number | undefined) {
+  public set defaultTableExpirationMs(value: number ) {
     this._defaultTableExpirationMs = value;
+  }
+  public resetDefaultTableExpirationMs() {
+    this._defaultTableExpirationMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTableExpirationMsInput() {
+    return this._defaultTableExpirationMs
   }
 
   // delete_contents_on_destroy - computed: false, optional: true, required: false
   private _deleteContentsOnDestroy?: boolean;
   public get deleteContentsOnDestroy() {
-    return this._deleteContentsOnDestroy;
+    return this.getBooleanAttribute('delete_contents_on_destroy');
   }
-  public set deleteContentsOnDestroy(value: boolean | undefined) {
+  public set deleteContentsOnDestroy(value: boolean ) {
     this._deleteContentsOnDestroy = value;
+  }
+  public resetDeleteContentsOnDestroy() {
+    this._deleteContentsOnDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteContentsOnDestroyInput() {
+    return this._deleteContentsOnDestroy
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
@@ -220,31 +252,41 @@ export class BigqueryDataset extends TerraformResource {
   // friendly_name - computed: false, optional: true, required: false
   private _friendlyName?: string;
   public get friendlyName() {
-    return this._friendlyName;
+    return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string | undefined) {
+  public set friendlyName(value: string ) {
     this._friendlyName = value;
+  }
+  public resetFriendlyName() {
+    this._friendlyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get friendlyNameInput() {
+    return this._friendlyName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // last_modified_time - computed: true, optional: false, required: true
+  // last_modified_time - computed: true, optional: false, required: false
   public get lastModifiedTime() {
     return this.getNumberAttribute('last_modified_time');
   }
@@ -252,22 +294,36 @@ export class BigqueryDataset extends TerraformResource {
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -275,28 +331,49 @@ export class BigqueryDataset extends TerraformResource {
   // access - computed: false, optional: true, required: false
   private _access?: BigqueryDatasetAccess[];
   public get access() {
-    return this._access;
+    return this.interpolationForAttribute('access') as any;
   }
-  public set access(value: BigqueryDatasetAccess[] | undefined) {
+  public set access(value: BigqueryDatasetAccess[] ) {
     this._access = value;
+  }
+  public resetAccess() {
+    this._access = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessInput() {
+    return this._access
   }
 
   // default_encryption_configuration - computed: false, optional: true, required: false
   private _defaultEncryptionConfiguration?: BigqueryDatasetDefaultEncryptionConfiguration[];
   public get defaultEncryptionConfiguration() {
-    return this._defaultEncryptionConfiguration;
+    return this.interpolationForAttribute('default_encryption_configuration') as any;
   }
-  public set defaultEncryptionConfiguration(value: BigqueryDatasetDefaultEncryptionConfiguration[] | undefined) {
+  public set defaultEncryptionConfiguration(value: BigqueryDatasetDefaultEncryptionConfiguration[] ) {
     this._defaultEncryptionConfiguration = value;
+  }
+  public resetDefaultEncryptionConfiguration() {
+    this._defaultEncryptionConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultEncryptionConfigurationInput() {
+    return this._defaultEncryptionConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigqueryDatasetTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BigqueryDatasetTimeouts | undefined) {
+  public set timeouts(value: BigqueryDatasetTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

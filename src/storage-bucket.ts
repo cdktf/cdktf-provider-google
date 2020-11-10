@@ -148,85 +148,134 @@ export class StorageBucket extends TerraformResource {
   // bucket_policy_only - computed: true, optional: true, required: false
   private _bucketPolicyOnly?: boolean;
   public get bucketPolicyOnly() {
-    return this._bucketPolicyOnly ?? this.getBooleanAttribute('bucket_policy_only');
+    return this.getBooleanAttribute('bucket_policy_only');
   }
-  public set bucketPolicyOnly(value: boolean | undefined) {
+  public set bucketPolicyOnly(value: boolean) {
     this._bucketPolicyOnly = value;
+  }
+  public resetBucketPolicyOnly() {
+    this._bucketPolicyOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketPolicyOnlyInput() {
+    return this._bucketPolicyOnly
   }
 
   // default_event_based_hold - computed: false, optional: true, required: false
   private _defaultEventBasedHold?: boolean;
   public get defaultEventBasedHold() {
-    return this._defaultEventBasedHold;
+    return this.getBooleanAttribute('default_event_based_hold');
   }
-  public set defaultEventBasedHold(value: boolean | undefined) {
+  public set defaultEventBasedHold(value: boolean ) {
     this._defaultEventBasedHold = value;
+  }
+  public resetDefaultEventBasedHold() {
+    this._defaultEventBasedHold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultEventBasedHoldInput() {
+    return this._defaultEventBasedHold
   }
 
   // force_destroy - computed: false, optional: true, required: false
   private _forceDestroy?: boolean;
   public get forceDestroy() {
-    return this._forceDestroy;
+    return this.getBooleanAttribute('force_destroy');
   }
-  public set forceDestroy(value: boolean | undefined) {
+  public set forceDestroy(value: boolean ) {
     this._forceDestroy = value;
+  }
+  public resetForceDestroy() {
+    this._forceDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDestroyInput() {
+    return this._forceDestroy
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // requester_pays - computed: false, optional: true, required: false
   private _requesterPays?: boolean;
   public get requesterPays() {
-    return this._requesterPays;
+    return this.getBooleanAttribute('requester_pays');
   }
-  public set requesterPays(value: boolean | undefined) {
+  public set requesterPays(value: boolean ) {
     this._requesterPays = value;
   }
+  public resetRequesterPays() {
+    this._requesterPays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requesterPaysInput() {
+    return this._requesterPays
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -234,22 +283,36 @@ export class StorageBucket extends TerraformResource {
   // storage_class - computed: false, optional: true, required: false
   private _storageClass?: string;
   public get storageClass() {
-    return this._storageClass;
+    return this.getStringAttribute('storage_class');
   }
-  public set storageClass(value: string | undefined) {
+  public set storageClass(value: string ) {
     this._storageClass = value;
+  }
+  public resetStorageClass() {
+    this._storageClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageClassInput() {
+    return this._storageClass
   }
 
   // uniform_bucket_level_access - computed: true, optional: true, required: false
   private _uniformBucketLevelAccess?: boolean;
   public get uniformBucketLevelAccess() {
-    return this._uniformBucketLevelAccess ?? this.getBooleanAttribute('uniform_bucket_level_access');
+    return this.getBooleanAttribute('uniform_bucket_level_access');
   }
-  public set uniformBucketLevelAccess(value: boolean | undefined) {
+  public set uniformBucketLevelAccess(value: boolean) {
     this._uniformBucketLevelAccess = value;
   }
+  public resetUniformBucketLevelAccess() {
+    this._uniformBucketLevelAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uniformBucketLevelAccessInput() {
+    return this._uniformBucketLevelAccess
+  }
 
-  // url - computed: true, optional: false, required: true
+  // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
   }
@@ -257,64 +320,113 @@ export class StorageBucket extends TerraformResource {
   // cors - computed: false, optional: true, required: false
   private _cors?: StorageBucketCors[];
   public get cors() {
-    return this._cors;
+    return this.interpolationForAttribute('cors') as any;
   }
-  public set cors(value: StorageBucketCors[] | undefined) {
+  public set cors(value: StorageBucketCors[] ) {
     this._cors = value;
+  }
+  public resetCors() {
+    this._cors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get corsInput() {
+    return this._cors
   }
 
   // encryption - computed: false, optional: true, required: false
   private _encryption?: StorageBucketEncryption[];
   public get encryption() {
-    return this._encryption;
+    return this.interpolationForAttribute('encryption') as any;
   }
-  public set encryption(value: StorageBucketEncryption[] | undefined) {
+  public set encryption(value: StorageBucketEncryption[] ) {
     this._encryption = value;
+  }
+  public resetEncryption() {
+    this._encryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption
   }
 
   // lifecycle_rule - computed: false, optional: true, required: false
   private _lifecycleRule?: StorageBucketLifecycleRule[];
   public get lifecycleRule() {
-    return this._lifecycleRule;
+    return this.interpolationForAttribute('lifecycle_rule') as any;
   }
-  public set lifecycleRule(value: StorageBucketLifecycleRule[] | undefined) {
+  public set lifecycleRule(value: StorageBucketLifecycleRule[] ) {
     this._lifecycleRule = value;
+  }
+  public resetLifecycleRule() {
+    this._lifecycleRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lifecycleRuleInput() {
+    return this._lifecycleRule
   }
 
   // logging - computed: false, optional: true, required: false
   private _logging?: StorageBucketLogging[];
   public get logging() {
-    return this._logging;
+    return this.interpolationForAttribute('logging') as any;
   }
-  public set logging(value: StorageBucketLogging[] | undefined) {
+  public set logging(value: StorageBucketLogging[] ) {
     this._logging = value;
+  }
+  public resetLogging() {
+    this._logging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingInput() {
+    return this._logging
   }
 
   // retention_policy - computed: false, optional: true, required: false
   private _retentionPolicy?: StorageBucketRetentionPolicy[];
   public get retentionPolicy() {
-    return this._retentionPolicy;
+    return this.interpolationForAttribute('retention_policy') as any;
   }
-  public set retentionPolicy(value: StorageBucketRetentionPolicy[] | undefined) {
+  public set retentionPolicy(value: StorageBucketRetentionPolicy[] ) {
     this._retentionPolicy = value;
+  }
+  public resetRetentionPolicy() {
+    this._retentionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy
   }
 
   // versioning - computed: false, optional: true, required: false
   private _versioning?: StorageBucketVersioning[];
   public get versioning() {
-    return this._versioning;
+    return this.interpolationForAttribute('versioning') as any;
   }
-  public set versioning(value: StorageBucketVersioning[] | undefined) {
+  public set versioning(value: StorageBucketVersioning[] ) {
     this._versioning = value;
+  }
+  public resetVersioning() {
+    this._versioning = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versioningInput() {
+    return this._versioning
   }
 
   // website - computed: false, optional: true, required: false
   private _website?: StorageBucketWebsite[];
   public get website() {
-    return this._website;
+    return this.interpolationForAttribute('website') as any;
   }
-  public set website(value: StorageBucketWebsite[] | undefined) {
+  public set website(value: StorageBucketWebsite[] ) {
     this._website = value;
+  }
+  public resetWebsite() {
+    this._website = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get websiteInput() {
+    return this._website
   }
 
   // =========

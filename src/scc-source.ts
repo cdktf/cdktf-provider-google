@@ -60,31 +60,38 @@ export class SccSource extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -92,19 +99,30 @@ export class SccSource extends TerraformResource {
   // organization - computed: false, optional: false, required: true
   private _organization: string;
   public get organization() {
-    return this._organization;
+    return this.getStringAttribute('organization');
   }
   public set organization(value: string) {
     this._organization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SccSourceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SccSourceTimeouts | undefined) {
+  public set timeouts(value: SccSourceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

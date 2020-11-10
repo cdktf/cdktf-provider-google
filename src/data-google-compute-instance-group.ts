@@ -16,12 +16,12 @@ export interface DataGoogleComputeInstanceGroupConfig extends TerraformMetaArgum
 }
 export class DataGoogleComputeInstanceGroupNamedPort extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // port - computed: true, optional: false, required: true
+  // port - computed: true, optional: false, required: false
   public get port() {
     return this.getNumberAttribute('port');
   }
@@ -56,21 +56,17 @@ export class DataGoogleComputeInstanceGroup extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // instances - computed: true, optional: false, required: true
+  // instances - computed: true, optional: false, required: false
   public get instances() {
     return this.getListAttribute('instances');
   }
@@ -78,18 +74,25 @@ export class DataGoogleComputeInstanceGroup extends TerraformDataSource {
   // name - computed: false, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string ) {
     this._name = value;
   }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // named_port - computed: true, optional: false, required: true
+  // named_port - computed: true, optional: false, required: false
   public namedPort(index: string) {
     return new DataGoogleComputeInstanceGroupNamedPort(this, 'named_port', index);
   }
 
-  // network - computed: true, optional: false, required: true
+  // network - computed: true, optional: false, required: false
   public get network() {
     return this.getStringAttribute('network');
   }
@@ -97,22 +100,36 @@ export class DataGoogleComputeInstanceGroup extends TerraformDataSource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // self_link - computed: true, optional: true, required: false
   private _selfLink?: string;
   public get selfLink() {
-    return this._selfLink ?? this.getStringAttribute('self_link');
+    return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string | undefined) {
+  public set selfLink(value: string) {
     this._selfLink = value;
   }
+  public resetSelfLink() {
+    this._selfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selfLinkInput() {
+    return this._selfLink
+  }
 
-  // size - computed: true, optional: false, required: true
+  // size - computed: true, optional: false, required: false
   public get size() {
     return this.getNumberAttribute('size');
   }
@@ -120,10 +137,17 @@ export class DataGoogleComputeInstanceGroup extends TerraformDataSource {
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // =========

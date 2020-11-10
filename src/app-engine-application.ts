@@ -27,17 +27,17 @@ export interface AppEngineApplicationConfig extends TerraformMetaArguments {
 }
 export class AppEngineApplicationUrlDispatchRule extends ComplexComputedList {
 
-  // domain - computed: true, optional: false, required: true
+  // domain - computed: true, optional: false, required: false
   public get domain() {
     return this.getStringAttribute('domain');
   }
 
-  // path - computed: true, optional: false, required: true
+  // path - computed: true, optional: false, required: false
   public get path() {
     return this.getStringAttribute('path');
   }
 
-  // service - computed: true, optional: false, required: true
+  // service - computed: true, optional: false, required: false
   public get service() {
     return this.getStringAttribute('service');
   }
@@ -91,7 +91,7 @@ export class AppEngineApplication extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // app_id - computed: true, optional: false, required: true
+  // app_id - computed: true, optional: false, required: false
   public get appId() {
     return this.getStringAttribute('app_id');
   }
@@ -99,13 +99,20 @@ export class AppEngineApplication extends TerraformResource {
   // auth_domain - computed: true, optional: true, required: false
   private _authDomain?: string;
   public get authDomain() {
-    return this._authDomain ?? this.getStringAttribute('auth_domain');
+    return this.getStringAttribute('auth_domain');
   }
-  public set authDomain(value: string | undefined) {
+  public set authDomain(value: string) {
     this._authDomain = value;
   }
+  public resetAuthDomain() {
+    this._authDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authDomainInput() {
+    return this._authDomain
+  }
 
-  // code_bucket - computed: true, optional: false, required: true
+  // code_bucket - computed: true, optional: false, required: false
   public get codeBucket() {
     return this.getStringAttribute('code_bucket');
   }
@@ -113,46 +120,53 @@ export class AppEngineApplication extends TerraformResource {
   // database_type - computed: true, optional: true, required: false
   private _databaseType?: string;
   public get databaseType() {
-    return this._databaseType ?? this.getStringAttribute('database_type');
+    return this.getStringAttribute('database_type');
   }
-  public set databaseType(value: string | undefined) {
+  public set databaseType(value: string) {
     this._databaseType = value;
   }
+  public resetDatabaseType() {
+    this._databaseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseTypeInput() {
+    return this._databaseType
+  }
 
-  // default_bucket - computed: true, optional: false, required: true
+  // default_bucket - computed: true, optional: false, required: false
   public get defaultBucket() {
     return this.getStringAttribute('default_bucket');
   }
 
-  // default_hostname - computed: true, optional: false, required: true
+  // default_hostname - computed: true, optional: false, required: false
   public get defaultHostname() {
     return this.getStringAttribute('default_hostname');
   }
 
-  // gcr_domain - computed: true, optional: false, required: true
+  // gcr_domain - computed: true, optional: false, required: false
   public get gcrDomain() {
     return this.getStringAttribute('gcr_domain');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location_id - computed: false, optional: false, required: true
   private _locationId: string;
   public get locationId() {
-    return this._locationId;
+    return this.getStringAttribute('location_id');
   }
   public set locationId(value: string) {
     this._locationId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get locationIdInput() {
+    return this._locationId
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -160,22 +174,36 @@ export class AppEngineApplication extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // serving_status - computed: true, optional: true, required: false
   private _servingStatus?: string;
   public get servingStatus() {
-    return this._servingStatus ?? this.getStringAttribute('serving_status');
+    return this.getStringAttribute('serving_status');
   }
-  public set servingStatus(value: string | undefined) {
+  public set servingStatus(value: string) {
     this._servingStatus = value;
   }
+  public resetServingStatus() {
+    this._servingStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servingStatusInput() {
+    return this._servingStatus
+  }
 
-  // url_dispatch_rule - computed: true, optional: false, required: true
+  // url_dispatch_rule - computed: true, optional: false, required: false
   public urlDispatchRule(index: string) {
     return new AppEngineApplicationUrlDispatchRule(this, 'url_dispatch_rule', index);
   }
@@ -183,28 +211,49 @@ export class AppEngineApplication extends TerraformResource {
   // feature_settings - computed: false, optional: true, required: false
   private _featureSettings?: AppEngineApplicationFeatureSettings[];
   public get featureSettings() {
-    return this._featureSettings;
+    return this.interpolationForAttribute('feature_settings') as any;
   }
-  public set featureSettings(value: AppEngineApplicationFeatureSettings[] | undefined) {
+  public set featureSettings(value: AppEngineApplicationFeatureSettings[] ) {
     this._featureSettings = value;
+  }
+  public resetFeatureSettings() {
+    this._featureSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get featureSettingsInput() {
+    return this._featureSettings
   }
 
   // iap - computed: false, optional: true, required: false
   private _iap?: AppEngineApplicationIap[];
   public get iap() {
-    return this._iap;
+    return this.interpolationForAttribute('iap') as any;
   }
-  public set iap(value: AppEngineApplicationIap[] | undefined) {
+  public set iap(value: AppEngineApplicationIap[] ) {
     this._iap = value;
+  }
+  public resetIap() {
+    this._iap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iapInput() {
+    return this._iap
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppEngineApplicationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppEngineApplicationTimeouts | undefined) {
+  public set timeouts(value: AppEngineApplicationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

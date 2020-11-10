@@ -50,21 +50,17 @@ export class AccessContextManagerAccessPolicy extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -72,22 +68,30 @@ export class AccessContextManagerAccessPolicy extends TerraformResource {
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // title - computed: false, optional: false, required: true
   private _title: string;
   public get title() {
-    return this._title;
+    return this.getStringAttribute('title');
   }
   public set title(value: string) {
     this._title = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -95,10 +99,17 @@ export class AccessContextManagerAccessPolicy extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerAccessPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerAccessPolicyTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerAccessPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

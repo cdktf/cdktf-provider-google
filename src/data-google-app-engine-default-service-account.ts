@@ -37,26 +37,22 @@ export class DataGoogleAppEngineDefaultServiceAccount extends TerraformDataSourc
   // ATTRIBUTES
   // ==========
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -64,13 +60,20 @@ export class DataGoogleAppEngineDefaultServiceAccount extends TerraformDataSourc
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // unique_id - computed: true, optional: false, required: true
+  // unique_id - computed: true, optional: false, required: false
   public get uniqueId() {
     return this.getStringAttribute('unique_id');
   }

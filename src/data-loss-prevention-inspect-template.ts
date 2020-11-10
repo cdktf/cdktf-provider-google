@@ -243,31 +243,41 @@ export class DataLossPreventionInspectTemplate extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -275,28 +285,46 @@ export class DataLossPreventionInspectTemplate extends TerraformResource {
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // inspect_config - computed: false, optional: true, required: false
   private _inspectConfig?: DataLossPreventionInspectTemplateInspectConfig[];
   public get inspectConfig() {
-    return this._inspectConfig;
+    return this.interpolationForAttribute('inspect_config') as any;
   }
-  public set inspectConfig(value: DataLossPreventionInspectTemplateInspectConfig[] | undefined) {
+  public set inspectConfig(value: DataLossPreventionInspectTemplateInspectConfig[] ) {
     this._inspectConfig = value;
+  }
+  public resetInspectConfig() {
+    this._inspectConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inspectConfigInput() {
+    return this._inspectConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataLossPreventionInspectTemplateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataLossPreventionInspectTemplateTimeouts | undefined) {
+  public set timeouts(value: DataLossPreventionInspectTemplateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -74,7 +74,7 @@ export class ComputeTargetGrpcProxy extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -82,50 +82,64 @@ export class ComputeTargetGrpcProxy extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // self_link_with_id - computed: true, optional: false, required: true
+  // self_link_with_id - computed: true, optional: false, required: false
   public get selfLinkWithId() {
     return this.getStringAttribute('self_link_with_id');
   }
@@ -133,28 +147,49 @@ export class ComputeTargetGrpcProxy extends TerraformResource {
   // url_map - computed: false, optional: true, required: false
   private _urlMap?: string;
   public get urlMap() {
-    return this._urlMap;
+    return this.getStringAttribute('url_map');
   }
-  public set urlMap(value: string | undefined) {
+  public set urlMap(value: string ) {
     this._urlMap = value;
+  }
+  public resetUrlMap() {
+    this._urlMap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlMapInput() {
+    return this._urlMap
   }
 
   // validate_for_proxyless - computed: false, optional: true, required: false
   private _validateForProxyless?: boolean;
   public get validateForProxyless() {
-    return this._validateForProxyless;
+    return this.getBooleanAttribute('validate_for_proxyless');
   }
-  public set validateForProxyless(value: boolean | undefined) {
+  public set validateForProxyless(value: boolean ) {
     this._validateForProxyless = value;
+  }
+  public resetValidateForProxyless() {
+    this._validateForProxyless = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validateForProxylessInput() {
+    return this._validateForProxyless
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeTargetGrpcProxyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeTargetGrpcProxyTimeouts | undefined) {
+  public set timeouts(value: ComputeTargetGrpcProxyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

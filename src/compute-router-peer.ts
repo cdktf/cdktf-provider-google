@@ -107,54 +107,75 @@ export class ComputeRouterPeer extends TerraformResource {
   // advertise_mode - computed: false, optional: true, required: false
   private _advertiseMode?: string;
   public get advertiseMode() {
-    return this._advertiseMode;
+    return this.getStringAttribute('advertise_mode');
   }
-  public set advertiseMode(value: string | undefined) {
+  public set advertiseMode(value: string ) {
     this._advertiseMode = value;
+  }
+  public resetAdvertiseMode() {
+    this._advertiseMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertiseModeInput() {
+    return this._advertiseMode
   }
 
   // advertised_groups - computed: false, optional: true, required: false
   private _advertisedGroups?: string[];
   public get advertisedGroups() {
-    return this._advertisedGroups;
+    return this.getListAttribute('advertised_groups');
   }
-  public set advertisedGroups(value: string[] | undefined) {
+  public set advertisedGroups(value: string[] ) {
     this._advertisedGroups = value;
+  }
+  public resetAdvertisedGroups() {
+    this._advertisedGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedGroupsInput() {
+    return this._advertisedGroups
   }
 
   // advertised_route_priority - computed: false, optional: true, required: false
   private _advertisedRoutePriority?: number;
   public get advertisedRoutePriority() {
-    return this._advertisedRoutePriority;
+    return this.getNumberAttribute('advertised_route_priority');
   }
-  public set advertisedRoutePriority(value: number | undefined) {
+  public set advertisedRoutePriority(value: number ) {
     this._advertisedRoutePriority = value;
+  }
+  public resetAdvertisedRoutePriority() {
+    this._advertisedRoutePriority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedRoutePriorityInput() {
+    return this._advertisedRoutePriority
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interface - computed: false, optional: false, required: true
   private _interface: string;
   public get interface() {
-    return this._interface;
+    return this.getStringAttribute('interface');
   }
   public set interface(value: string) {
     this._interface = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceInput() {
+    return this._interface
+  }
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
 
-  // management_type - computed: true, optional: false, required: true
+  // management_type - computed: true, optional: false, required: false
   public get managementType() {
     return this.getStringAttribute('management_type');
   }
@@ -162,73 +183,117 @@ export class ComputeRouterPeer extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // peer_asn - computed: false, optional: false, required: true
   private _peerAsn: number;
   public get peerAsn() {
-    return this._peerAsn;
+    return this.getNumberAttribute('peer_asn');
   }
   public set peerAsn(value: number) {
     this._peerAsn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerAsnInput() {
+    return this._peerAsn
   }
 
   // peer_ip_address - computed: false, optional: false, required: true
   private _peerIpAddress: string;
   public get peerIpAddress() {
-    return this._peerIpAddress;
+    return this.getStringAttribute('peer_ip_address');
   }
   public set peerIpAddress(value: string) {
     this._peerIpAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerIpAddressInput() {
+    return this._peerIpAddress
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // router - computed: false, optional: false, required: true
   private _router: string;
   public get router() {
-    return this._router;
+    return this.getStringAttribute('router');
   }
   public set router(value: string) {
     this._router = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routerInput() {
+    return this._router
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
   private _advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[];
   public get advertisedIpRanges() {
-    return this._advertisedIpRanges;
+    return this.interpolationForAttribute('advertised_ip_ranges') as any;
   }
-  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[] | undefined) {
+  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[] ) {
     this._advertisedIpRanges = value;
+  }
+  public resetAdvertisedIpRanges() {
+    this._advertisedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedIpRangesInput() {
+    return this._advertisedIpRanges
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRouterPeerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRouterPeerTimeouts | undefined) {
+  public set timeouts(value: ComputeRouterPeerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

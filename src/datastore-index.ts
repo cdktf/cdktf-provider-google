@@ -62,22 +62,25 @@ export class DatastoreIndex extends TerraformResource {
   // ancestor - computed: false, optional: true, required: false
   private _ancestor?: string;
   public get ancestor() {
-    return this._ancestor;
+    return this.getStringAttribute('ancestor');
   }
-  public set ancestor(value: string | undefined) {
+  public set ancestor(value: string ) {
     this._ancestor = value;
+  }
+  public resetAncestor() {
+    this._ancestor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ancestorInput() {
+    return this._ancestor
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // index_id - computed: true, optional: false, required: true
+  // index_id - computed: true, optional: false, required: false
   public get indexId() {
     return this.getStringAttribute('index_id');
   }
@@ -85,37 +88,62 @@ export class DatastoreIndex extends TerraformResource {
   // kind - computed: false, optional: false, required: true
   private _kind: string;
   public get kind() {
-    return this._kind;
+    return this.getStringAttribute('kind');
   }
   public set kind(value: string) {
     this._kind = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // properties - computed: false, optional: true, required: false
   private _properties?: DatastoreIndexProperties[];
   public get properties() {
-    return this._properties;
+    return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: DatastoreIndexProperties[] | undefined) {
+  public set properties(value: DatastoreIndexProperties[] ) {
     this._properties = value;
+  }
+  public resetProperties() {
+    this._properties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DatastoreIndexTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DatastoreIndexTimeouts | undefined) {
+  public set timeouts(value: DatastoreIndexTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

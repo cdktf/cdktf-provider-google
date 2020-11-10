@@ -65,81 +65,117 @@ export class ComputeNetworkPeering extends TerraformResource {
   // export_custom_routes - computed: false, optional: true, required: false
   private _exportCustomRoutes?: boolean;
   public get exportCustomRoutes() {
-    return this._exportCustomRoutes;
+    return this.getBooleanAttribute('export_custom_routes');
   }
-  public set exportCustomRoutes(value: boolean | undefined) {
+  public set exportCustomRoutes(value: boolean ) {
     this._exportCustomRoutes = value;
+  }
+  public resetExportCustomRoutes() {
+    this._exportCustomRoutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exportCustomRoutesInput() {
+    return this._exportCustomRoutes
   }
 
   // export_subnet_routes_with_public_ip - computed: false, optional: true, required: false
   private _exportSubnetRoutesWithPublicIp?: boolean;
   public get exportSubnetRoutesWithPublicIp() {
-    return this._exportSubnetRoutesWithPublicIp;
+    return this.getBooleanAttribute('export_subnet_routes_with_public_ip');
   }
-  public set exportSubnetRoutesWithPublicIp(value: boolean | undefined) {
+  public set exportSubnetRoutesWithPublicIp(value: boolean ) {
     this._exportSubnetRoutesWithPublicIp = value;
+  }
+  public resetExportSubnetRoutesWithPublicIp() {
+    this._exportSubnetRoutesWithPublicIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exportSubnetRoutesWithPublicIpInput() {
+    return this._exportSubnetRoutesWithPublicIp
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // import_custom_routes - computed: false, optional: true, required: false
   private _importCustomRoutes?: boolean;
   public get importCustomRoutes() {
-    return this._importCustomRoutes;
+    return this.getBooleanAttribute('import_custom_routes');
   }
-  public set importCustomRoutes(value: boolean | undefined) {
+  public set importCustomRoutes(value: boolean ) {
     this._importCustomRoutes = value;
+  }
+  public resetImportCustomRoutes() {
+    this._importCustomRoutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importCustomRoutesInput() {
+    return this._importCustomRoutes
   }
 
   // import_subnet_routes_with_public_ip - computed: false, optional: true, required: false
   private _importSubnetRoutesWithPublicIp?: boolean;
   public get importSubnetRoutesWithPublicIp() {
-    return this._importSubnetRoutesWithPublicIp;
+    return this.getBooleanAttribute('import_subnet_routes_with_public_ip');
   }
-  public set importSubnetRoutesWithPublicIp(value: boolean | undefined) {
+  public set importSubnetRoutesWithPublicIp(value: boolean ) {
     this._importSubnetRoutesWithPublicIp = value;
+  }
+  public resetImportSubnetRoutesWithPublicIp() {
+    this._importSubnetRoutesWithPublicIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importSubnetRoutesWithPublicIpInput() {
+    return this._importSubnetRoutesWithPublicIp
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // peer_network - computed: false, optional: false, required: true
   private _peerNetwork: string;
   public get peerNetwork() {
-    return this._peerNetwork;
+    return this.getStringAttribute('peer_network');
   }
   public set peerNetwork(value: string) {
     this._peerNetwork = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get peerNetworkInput() {
+    return this._peerNetwork
+  }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
 
-  // state_details - computed: true, optional: false, required: true
+  // state_details - computed: true, optional: false, required: false
   public get stateDetails() {
     return this.getStringAttribute('state_details');
   }
@@ -147,10 +183,17 @@ export class ComputeNetworkPeering extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNetworkPeeringTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeNetworkPeeringTimeouts | undefined) {
+  public set timeouts(value: ComputeNetworkPeeringTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

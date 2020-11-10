@@ -64,21 +64,17 @@ export class ResourceManagerLien extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -86,46 +82,69 @@ export class ResourceManagerLien extends TerraformResource {
   // origin - computed: false, optional: false, required: true
   private _origin: string;
   public get origin() {
-    return this._origin;
+    return this.getStringAttribute('origin');
   }
   public set origin(value: string) {
     this._origin = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originInput() {
+    return this._origin
   }
 
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // reason - computed: false, optional: false, required: true
   private _reason: string;
   public get reason() {
-    return this._reason;
+    return this.getStringAttribute('reason');
   }
   public set reason(value: string) {
     this._reason = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reasonInput() {
+    return this._reason
   }
 
   // restrictions - computed: false, optional: false, required: true
   private _restrictions: string[];
   public get restrictions() {
-    return this._restrictions;
+    return this.getListAttribute('restrictions');
   }
   public set restrictions(value: string[]) {
     this._restrictions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restrictionsInput() {
+    return this._restrictions
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ResourceManagerLienTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ResourceManagerLienTimeouts | undefined) {
+  public set timeouts(value: ResourceManagerLienTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

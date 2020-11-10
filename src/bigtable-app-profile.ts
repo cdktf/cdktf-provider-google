@@ -75,58 +75,86 @@ export class BigtableAppProfile extends TerraformResource {
   // app_profile_id - computed: false, optional: false, required: true
   private _appProfileId: string;
   public get appProfileId() {
-    return this._appProfileId;
+    return this.getStringAttribute('app_profile_id');
   }
   public set appProfileId(value: string) {
     this._appProfileId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appProfileIdInput() {
+    return this._appProfileId
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ignore_warnings - computed: false, optional: true, required: false
   private _ignoreWarnings?: boolean;
   public get ignoreWarnings() {
-    return this._ignoreWarnings;
+    return this.getBooleanAttribute('ignore_warnings');
   }
-  public set ignoreWarnings(value: boolean | undefined) {
+  public set ignoreWarnings(value: boolean ) {
     this._ignoreWarnings = value;
+  }
+  public resetIgnoreWarnings() {
+    this._ignoreWarnings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreWarningsInput() {
+    return this._ignoreWarnings
   }
 
   // instance - computed: false, optional: true, required: false
   private _instance?: string;
   public get instance() {
-    return this._instance;
+    return this.getStringAttribute('instance');
   }
-  public set instance(value: string | undefined) {
+  public set instance(value: string ) {
     this._instance = value;
+  }
+  public resetInstance() {
+    this._instance = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance
   }
 
   // multi_cluster_routing_use_any - computed: false, optional: true, required: false
   private _multiClusterRoutingUseAny?: boolean;
   public get multiClusterRoutingUseAny() {
-    return this._multiClusterRoutingUseAny;
+    return this.getBooleanAttribute('multi_cluster_routing_use_any');
   }
-  public set multiClusterRoutingUseAny(value: boolean | undefined) {
+  public set multiClusterRoutingUseAny(value: boolean ) {
     this._multiClusterRoutingUseAny = value;
   }
+  public resetMultiClusterRoutingUseAny() {
+    this._multiClusterRoutingUseAny = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiClusterRoutingUseAnyInput() {
+    return this._multiClusterRoutingUseAny
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -134,28 +162,49 @@ export class BigtableAppProfile extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // single_cluster_routing - computed: false, optional: true, required: false
   private _singleClusterRouting?: BigtableAppProfileSingleClusterRouting[];
   public get singleClusterRouting() {
-    return this._singleClusterRouting;
+    return this.interpolationForAttribute('single_cluster_routing') as any;
   }
-  public set singleClusterRouting(value: BigtableAppProfileSingleClusterRouting[] | undefined) {
+  public set singleClusterRouting(value: BigtableAppProfileSingleClusterRouting[] ) {
     this._singleClusterRouting = value;
+  }
+  public resetSingleClusterRouting() {
+    this._singleClusterRouting = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get singleClusterRoutingInput() {
+    return this._singleClusterRouting
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigtableAppProfileTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BigtableAppProfileTimeouts | undefined) {
+  public set timeouts(value: BigtableAppProfileTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

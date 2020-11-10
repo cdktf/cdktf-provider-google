@@ -321,40 +321,54 @@ export class MonitoringSlo extends TerraformResource {
   // calendar_period - computed: false, optional: true, required: false
   private _calendarPeriod?: string;
   public get calendarPeriod() {
-    return this._calendarPeriod;
+    return this.getStringAttribute('calendar_period');
   }
-  public set calendarPeriod(value: string | undefined) {
+  public set calendarPeriod(value: string ) {
     this._calendarPeriod = value;
+  }
+  public resetCalendarPeriod() {
+    this._calendarPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get calendarPeriodInput() {
+    return this._calendarPeriod
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // goal - computed: false, optional: false, required: true
   private _goal: number;
   public get goal() {
-    return this._goal;
+    return this.getNumberAttribute('goal');
   }
   public set goal(value: number) {
     this._goal = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get goalInput() {
+    return this._goal
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -362,73 +376,126 @@ export class MonitoringSlo extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // rolling_period_days - computed: false, optional: true, required: false
   private _rollingPeriodDays?: number;
   public get rollingPeriodDays() {
-    return this._rollingPeriodDays;
+    return this.getNumberAttribute('rolling_period_days');
   }
-  public set rollingPeriodDays(value: number | undefined) {
+  public set rollingPeriodDays(value: number ) {
     this._rollingPeriodDays = value;
+  }
+  public resetRollingPeriodDays() {
+    this._rollingPeriodDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rollingPeriodDaysInput() {
+    return this._rollingPeriodDays
   }
 
   // service - computed: false, optional: false, required: true
   private _service: string;
   public get service() {
-    return this._service;
+    return this.getStringAttribute('service');
   }
   public set service(value: string) {
     this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
   }
 
   // slo_id - computed: true, optional: true, required: false
   private _sloId?: string;
   public get sloId() {
-    return this._sloId ?? this.getStringAttribute('slo_id');
+    return this.getStringAttribute('slo_id');
   }
-  public set sloId(value: string | undefined) {
+  public set sloId(value: string) {
     this._sloId = value;
+  }
+  public resetSloId() {
+    this._sloId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sloIdInput() {
+    return this._sloId
   }
 
   // basic_sli - computed: false, optional: true, required: false
   private _basicSli?: MonitoringSloBasicSli[];
   public get basicSli() {
-    return this._basicSli;
+    return this.interpolationForAttribute('basic_sli') as any;
   }
-  public set basicSli(value: MonitoringSloBasicSli[] | undefined) {
+  public set basicSli(value: MonitoringSloBasicSli[] ) {
     this._basicSli = value;
+  }
+  public resetBasicSli() {
+    this._basicSli = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get basicSliInput() {
+    return this._basicSli
   }
 
   // request_based_sli - computed: false, optional: true, required: false
   private _requestBasedSli?: MonitoringSloRequestBasedSli[];
   public get requestBasedSli() {
-    return this._requestBasedSli;
+    return this.interpolationForAttribute('request_based_sli') as any;
   }
-  public set requestBasedSli(value: MonitoringSloRequestBasedSli[] | undefined) {
+  public set requestBasedSli(value: MonitoringSloRequestBasedSli[] ) {
     this._requestBasedSli = value;
+  }
+  public resetRequestBasedSli() {
+    this._requestBasedSli = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestBasedSliInput() {
+    return this._requestBasedSli
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitoringSloTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitoringSloTimeouts | undefined) {
+  public set timeouts(value: MonitoringSloTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // windows_based_sli - computed: false, optional: true, required: false
   private _windowsBasedSli?: MonitoringSloWindowsBasedSli[];
   public get windowsBasedSli() {
-    return this._windowsBasedSli;
+    return this.interpolationForAttribute('windows_based_sli') as any;
   }
-  public set windowsBasedSli(value: MonitoringSloWindowsBasedSli[] | undefined) {
+  public set windowsBasedSli(value: MonitoringSloWindowsBasedSli[] ) {
     this._windowsBasedSli = value;
+  }
+  public resetWindowsBasedSli() {
+    this._windowsBasedSli = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsBasedSliInput() {
+    return this._windowsBasedSli
   }
 
   // =========

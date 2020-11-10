@@ -51,12 +51,12 @@ filling prompt is forwarded to the webhook. Possible values: ["WEBHOOK_STATE_ENA
 }
 export class DialogflowIntentFollowupIntentInfo extends ComplexComputedList {
 
-  // followup_intent_name - computed: true, optional: false, required: true
+  // followup_intent_name - computed: true, optional: false, required: false
   public get followupIntentName() {
     return this.getStringAttribute('followup_intent_name');
   }
 
-  // parent_followup_intent_name - computed: true, optional: false, required: true
+  // parent_followup_intent_name - computed: true, optional: false, required: false
   public get parentFollowupIntentName() {
     return this.getStringAttribute('parent_followup_intent_name');
   }
@@ -108,81 +108,123 @@ export class DialogflowIntent extends TerraformResource {
   // action - computed: true, optional: true, required: false
   private _action?: string;
   public get action() {
-    return this._action ?? this.getStringAttribute('action');
+    return this.getStringAttribute('action');
   }
-  public set action(value: string | undefined) {
+  public set action(value: string) {
     this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action
   }
 
   // default_response_platforms - computed: false, optional: true, required: false
   private _defaultResponsePlatforms?: string[];
   public get defaultResponsePlatforms() {
-    return this._defaultResponsePlatforms;
+    return this.getListAttribute('default_response_platforms');
   }
-  public set defaultResponsePlatforms(value: string[] | undefined) {
+  public set defaultResponsePlatforms(value: string[] ) {
     this._defaultResponsePlatforms = value;
+  }
+  public resetDefaultResponsePlatforms() {
+    this._defaultResponsePlatforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultResponsePlatformsInput() {
+    return this._defaultResponsePlatforms
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // events - computed: false, optional: true, required: false
   private _events?: string[];
   public get events() {
-    return this._events;
+    return this.getListAttribute('events');
   }
-  public set events(value: string[] | undefined) {
+  public set events(value: string[] ) {
     this._events = value;
   }
+  public resetEvents() {
+    this._events = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventsInput() {
+    return this._events
+  }
 
-  // followup_intent_info - computed: true, optional: false, required: true
+  // followup_intent_info - computed: true, optional: false, required: false
   public followupIntentInfo(index: string) {
     return new DialogflowIntentFollowupIntentInfo(this, 'followup_intent_info', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // input_context_names - computed: false, optional: true, required: false
   private _inputContextNames?: string[];
   public get inputContextNames() {
-    return this._inputContextNames;
+    return this.getListAttribute('input_context_names');
   }
-  public set inputContextNames(value: string[] | undefined) {
+  public set inputContextNames(value: string[] ) {
     this._inputContextNames = value;
+  }
+  public resetInputContextNames() {
+    this._inputContextNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputContextNamesInput() {
+    return this._inputContextNames
   }
 
   // is_fallback - computed: true, optional: true, required: false
   private _isFallback?: boolean;
   public get isFallback() {
-    return this._isFallback ?? this.getBooleanAttribute('is_fallback');
+    return this.getBooleanAttribute('is_fallback');
   }
-  public set isFallback(value: boolean | undefined) {
+  public set isFallback(value: boolean) {
     this._isFallback = value;
+  }
+  public resetIsFallback() {
+    this._isFallback = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isFallbackInput() {
+    return this._isFallback
   }
 
   // ml_disabled - computed: true, optional: true, required: false
   private _mlDisabled?: boolean;
   public get mlDisabled() {
-    return this._mlDisabled ?? this.getBooleanAttribute('ml_disabled');
+    return this.getBooleanAttribute('ml_disabled');
   }
-  public set mlDisabled(value: boolean | undefined) {
+  public set mlDisabled(value: boolean) {
     this._mlDisabled = value;
   }
+  public resetMlDisabled() {
+    this._mlDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mlDisabledInput() {
+    return this._mlDisabled
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -190,40 +232,68 @@ export class DialogflowIntent extends TerraformResource {
   // parent_followup_intent_name - computed: true, optional: true, required: false
   private _parentFollowupIntentName?: string;
   public get parentFollowupIntentName() {
-    return this._parentFollowupIntentName ?? this.getStringAttribute('parent_followup_intent_name');
+    return this.getStringAttribute('parent_followup_intent_name');
   }
-  public set parentFollowupIntentName(value: string | undefined) {
+  public set parentFollowupIntentName(value: string) {
     this._parentFollowupIntentName = value;
+  }
+  public resetParentFollowupIntentName() {
+    this._parentFollowupIntentName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentFollowupIntentNameInput() {
+    return this._parentFollowupIntentName
   }
 
   // priority - computed: true, optional: true, required: false
   private _priority?: number;
   public get priority() {
-    return this._priority ?? this.getNumberAttribute('priority');
+    return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // reset_contexts - computed: true, optional: true, required: false
   private _resetContexts?: boolean;
   public get resetContexts() {
-    return this._resetContexts ?? this.getBooleanAttribute('reset_contexts');
+    return this.getBooleanAttribute('reset_contexts');
   }
-  public set resetContexts(value: boolean | undefined) {
+  public set resetContexts(value: boolean) {
     this._resetContexts = value;
   }
+  public resetResetContexts() {
+    this._resetContexts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resetContextsInput() {
+    return this._resetContexts
+  }
 
-  // root_followup_intent_name - computed: true, optional: false, required: true
+  // root_followup_intent_name - computed: true, optional: false, required: false
   public get rootFollowupIntentName() {
     return this.getStringAttribute('root_followup_intent_name');
   }
@@ -231,19 +301,33 @@ export class DialogflowIntent extends TerraformResource {
   // webhook_state - computed: true, optional: true, required: false
   private _webhookState?: string;
   public get webhookState() {
-    return this._webhookState ?? this.getStringAttribute('webhook_state');
+    return this.getStringAttribute('webhook_state');
   }
-  public set webhookState(value: string | undefined) {
+  public set webhookState(value: string) {
     this._webhookState = value;
+  }
+  public resetWebhookState() {
+    this._webhookState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookStateInput() {
+    return this._webhookState
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DialogflowIntentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DialogflowIntentTimeouts | undefined) {
+  public set timeouts(value: DialogflowIntentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

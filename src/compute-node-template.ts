@@ -71,7 +71,7 @@ export class ComputeNodeTemplate extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -79,67 +79,105 @@ export class ComputeNodeTemplate extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string ) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // node_affinity_labels - computed: false, optional: true, required: false
   private _nodeAffinityLabels?: { [key: string]: string };
   public get nodeAffinityLabels() {
-    return this._nodeAffinityLabels;
+    return this.interpolationForAttribute('node_affinity_labels') as any;
   }
-  public set nodeAffinityLabels(value: { [key: string]: string } | undefined) {
+  public set nodeAffinityLabels(value: { [key: string]: string } ) {
     this._nodeAffinityLabels = value;
+  }
+  public resetNodeAffinityLabels() {
+    this._nodeAffinityLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeAffinityLabelsInput() {
+    return this._nodeAffinityLabels
   }
 
   // node_type - computed: false, optional: true, required: false
   private _nodeType?: string;
   public get nodeType() {
-    return this._nodeType;
+    return this.getStringAttribute('node_type');
   }
-  public set nodeType(value: string | undefined) {
+  public set nodeType(value: string ) {
     this._nodeType = value;
+  }
+  public resetNodeType() {
+    this._nodeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeTypeInput() {
+    return this._nodeType
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -147,19 +185,33 @@ export class ComputeNodeTemplate extends TerraformResource {
   // node_type_flexibility - computed: false, optional: true, required: false
   private _nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility[];
   public get nodeTypeFlexibility() {
-    return this._nodeTypeFlexibility;
+    return this.interpolationForAttribute('node_type_flexibility') as any;
   }
-  public set nodeTypeFlexibility(value: ComputeNodeTemplateNodeTypeFlexibility[] | undefined) {
+  public set nodeTypeFlexibility(value: ComputeNodeTemplateNodeTypeFlexibility[] ) {
     this._nodeTypeFlexibility = value;
+  }
+  public resetNodeTypeFlexibility() {
+    this._nodeTypeFlexibility = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeTypeFlexibilityInput() {
+    return this._nodeTypeFlexibility
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNodeTemplateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeNodeTemplateTimeouts | undefined) {
+  public set timeouts(value: ComputeNodeTemplateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

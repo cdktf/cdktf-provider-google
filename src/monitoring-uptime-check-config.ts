@@ -125,22 +125,22 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -148,40 +148,65 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
   // period - computed: false, optional: true, required: false
   private _period?: string;
   public get period() {
-    return this._period;
+    return this.getStringAttribute('period');
   }
-  public set period(value: string | undefined) {
+  public set period(value: string ) {
     this._period = value;
+  }
+  public resetPeriod() {
+    this._period = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodInput() {
+    return this._period
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // selected_regions - computed: false, optional: true, required: false
   private _selectedRegions?: string[];
   public get selectedRegions() {
-    return this._selectedRegions;
+    return this.getListAttribute('selected_regions');
   }
-  public set selectedRegions(value: string[] | undefined) {
+  public set selectedRegions(value: string[] ) {
     this._selectedRegions = value;
+  }
+  public resetSelectedRegions() {
+    this._selectedRegions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectedRegionsInput() {
+    return this._selectedRegions
   }
 
   // timeout - computed: false, optional: false, required: true
   private _timeout: string;
   public get timeout() {
-    return this._timeout;
+    return this.getStringAttribute('timeout');
   }
   public set timeout(value: string) {
     this._timeout = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
+  }
 
-  // uptime_check_id - computed: true, optional: false, required: true
+  // uptime_check_id - computed: true, optional: false, required: false
   public get uptimeCheckId() {
     return this.getStringAttribute('uptime_check_id');
   }
@@ -189,55 +214,97 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
   // content_matchers - computed: false, optional: true, required: false
   private _contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[];
   public get contentMatchers() {
-    return this._contentMatchers;
+    return this.interpolationForAttribute('content_matchers') as any;
   }
-  public set contentMatchers(value: MonitoringUptimeCheckConfigContentMatchers[] | undefined) {
+  public set contentMatchers(value: MonitoringUptimeCheckConfigContentMatchers[] ) {
     this._contentMatchers = value;
+  }
+  public resetContentMatchers() {
+    this._contentMatchers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentMatchersInput() {
+    return this._contentMatchers
   }
 
   // http_check - computed: false, optional: true, required: false
   private _httpCheck?: MonitoringUptimeCheckConfigHttpCheck[];
   public get httpCheck() {
-    return this._httpCheck;
+    return this.interpolationForAttribute('http_check') as any;
   }
-  public set httpCheck(value: MonitoringUptimeCheckConfigHttpCheck[] | undefined) {
+  public set httpCheck(value: MonitoringUptimeCheckConfigHttpCheck[] ) {
     this._httpCheck = value;
+  }
+  public resetHttpCheck() {
+    this._httpCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpCheckInput() {
+    return this._httpCheck
   }
 
   // monitored_resource - computed: false, optional: true, required: false
   private _monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource[];
   public get monitoredResource() {
-    return this._monitoredResource;
+    return this.interpolationForAttribute('monitored_resource') as any;
   }
-  public set monitoredResource(value: MonitoringUptimeCheckConfigMonitoredResource[] | undefined) {
+  public set monitoredResource(value: MonitoringUptimeCheckConfigMonitoredResource[] ) {
     this._monitoredResource = value;
+  }
+  public resetMonitoredResource() {
+    this._monitoredResource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitoredResourceInput() {
+    return this._monitoredResource
   }
 
   // resource_group - computed: false, optional: true, required: false
   private _resourceGroup?: MonitoringUptimeCheckConfigResourceGroup[];
   public get resourceGroup() {
-    return this._resourceGroup;
+    return this.interpolationForAttribute('resource_group') as any;
   }
-  public set resourceGroup(value: MonitoringUptimeCheckConfigResourceGroup[] | undefined) {
+  public set resourceGroup(value: MonitoringUptimeCheckConfigResourceGroup[] ) {
     this._resourceGroup = value;
+  }
+  public resetResourceGroup() {
+    this._resourceGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupInput() {
+    return this._resourceGroup
   }
 
   // tcp_check - computed: false, optional: true, required: false
   private _tcpCheck?: MonitoringUptimeCheckConfigTcpCheck[];
   public get tcpCheck() {
-    return this._tcpCheck;
+    return this.interpolationForAttribute('tcp_check') as any;
   }
-  public set tcpCheck(value: MonitoringUptimeCheckConfigTcpCheck[] | undefined) {
+  public set tcpCheck(value: MonitoringUptimeCheckConfigTcpCheck[] ) {
     this._tcpCheck = value;
+  }
+  public resetTcpCheck() {
+    this._tcpCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpCheckInput() {
+    return this._tcpCheck
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitoringUptimeCheckConfigTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitoringUptimeCheckConfigTimeouts | undefined) {
+  public set timeouts(value: MonitoringUptimeCheckConfigTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

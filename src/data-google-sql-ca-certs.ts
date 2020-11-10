@@ -14,27 +14,27 @@ export interface DataGoogleSqlCaCertsConfig extends TerraformMetaArguments {
 }
 export class DataGoogleSqlCaCertsCerts extends ComplexComputedList {
 
-  // cert - computed: true, optional: false, required: true
+  // cert - computed: true, optional: false, required: false
   public get cert() {
     return this.getStringAttribute('cert');
   }
 
-  // common_name - computed: true, optional: false, required: true
+  // common_name - computed: true, optional: false, required: false
   public get commonName() {
     return this.getStringAttribute('common_name');
   }
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // expiration_time - computed: true, optional: false, required: true
+  // expiration_time - computed: true, optional: false, required: false
   public get expirationTime() {
     return this.getStringAttribute('expiration_time');
   }
 
-  // sha1_fingerprint - computed: true, optional: false, required: true
+  // sha1_fingerprint - computed: true, optional: false, required: false
   public get sha1Fingerprint() {
     return this.getStringAttribute('sha1_fingerprint');
   }
@@ -67,41 +67,48 @@ export class DataGoogleSqlCaCerts extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // active_version - computed: true, optional: false, required: true
+  // active_version - computed: true, optional: false, required: false
   public get activeVersion() {
     return this.getStringAttribute('active_version');
   }
 
-  // certs - computed: true, optional: false, required: true
+  // certs - computed: true, optional: false, required: false
   public certs(index: string) {
     return new DataGoogleSqlCaCertsCerts(this, 'certs', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance - computed: false, optional: false, required: true
   private _instance: string;
   public get instance() {
-    return this._instance;
+    return this.getStringAttribute('instance');
   }
   public set instance(value: string) {
     this._instance = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // =========

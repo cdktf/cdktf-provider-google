@@ -43,7 +43,7 @@ export class DataGoogleServiceAccountAccessToken extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // access_token - computed: true, optional: false, required: true
+  // access_token - computed: true, optional: false, required: false
   public get accessToken() {
     return this.getStringAttribute('access_token');
   }
@@ -51,46 +51,64 @@ export class DataGoogleServiceAccountAccessToken extends TerraformDataSource {
   // delegates - computed: false, optional: true, required: false
   private _delegates?: string[];
   public get delegates() {
-    return this._delegates;
+    return this.getListAttribute('delegates');
   }
-  public set delegates(value: string[] | undefined) {
+  public set delegates(value: string[] ) {
     this._delegates = value;
+  }
+  public resetDelegates() {
+    this._delegates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delegatesInput() {
+    return this._delegates
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // lifetime - computed: false, optional: true, required: false
   private _lifetime?: string;
   public get lifetime() {
-    return this._lifetime;
+    return this.getStringAttribute('lifetime');
   }
-  public set lifetime(value: string | undefined) {
+  public set lifetime(value: string ) {
     this._lifetime = value;
+  }
+  public resetLifetime() {
+    this._lifetime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lifetimeInput() {
+    return this._lifetime
   }
 
   // scopes - computed: false, optional: false, required: true
   private _scopes: string[];
   public get scopes() {
-    return this._scopes;
+    return this.getListAttribute('scopes');
   }
   public set scopes(value: string[]) {
     this._scopes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopesInput() {
+    return this._scopes
   }
 
   // target_service_account - computed: false, optional: false, required: true
   private _targetServiceAccount: string;
   public get targetServiceAccount() {
-    return this._targetServiceAccount;
+    return this.getStringAttribute('target_service_account');
   }
   public set targetServiceAccount(value: string) {
     this._targetServiceAccount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetServiceAccountInput() {
+    return this._targetServiceAccount
   }
 
   // =========

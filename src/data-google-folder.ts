@@ -39,12 +39,12 @@ export class DataGoogleFolder extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -52,27 +52,27 @@ export class DataGoogleFolder extends TerraformDataSource {
   // folder - computed: false, optional: false, required: true
   private _folder: string;
   public get folder() {
-    return this._folder;
+    return this.getStringAttribute('folder');
   }
   public set folder(value: string) {
     this._folder = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
+  }
 
-  // folder_id - computed: true, optional: false, required: true
+  // folder_id - computed: true, optional: false, required: false
   public get folderId() {
     return this.getStringAttribute('folder_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // lifecycle_state - computed: true, optional: false, required: true
+  // lifecycle_state - computed: true, optional: false, required: false
   public get lifecycleState() {
     return this.getStringAttribute('lifecycle_state');
   }
@@ -80,23 +80,30 @@ export class DataGoogleFolder extends TerraformDataSource {
   // lookup_organization - computed: false, optional: true, required: false
   private _lookupOrganization?: boolean;
   public get lookupOrganization() {
-    return this._lookupOrganization;
+    return this.getBooleanAttribute('lookup_organization');
   }
-  public set lookupOrganization(value: boolean | undefined) {
+  public set lookupOrganization(value: boolean ) {
     this._lookupOrganization = value;
   }
+  public resetLookupOrganization() {
+    this._lookupOrganization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lookupOrganizationInput() {
+    return this._lookupOrganization
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // organization - computed: true, optional: false, required: true
+  // organization - computed: true, optional: false, required: false
   public get organization() {
     return this.getStringAttribute('organization');
   }
 
-  // parent - computed: true, optional: false, required: true
+  // parent - computed: true, optional: false, required: false
   public get parent() {
     return this.getStringAttribute('parent');
   }

@@ -56,45 +56,59 @@ export class ServiceAccount extends TerraformResource {
   // account_id - computed: false, optional: false, required: true
   private _accountId: string;
   public get accountId() {
-    return this._accountId;
+    return this.getStringAttribute('account_id');
   }
   public set accountId(value: string) {
     this._accountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountIdInput() {
+    return this._accountId
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
   }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -102,13 +116,20 @@ export class ServiceAccount extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // unique_id - computed: true, optional: false, required: true
+  // unique_id - computed: true, optional: false, required: false
   public get uniqueId() {
     return this.getStringAttribute('unique_id');
   }
@@ -116,10 +137,17 @@ export class ServiceAccount extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ServiceAccountTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ServiceAccountTimeouts | undefined) {
+  public set timeouts(value: ServiceAccountTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

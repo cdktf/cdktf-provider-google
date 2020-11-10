@@ -88,22 +88,36 @@ export class ComputeAddress extends TerraformResource {
   // address - computed: true, optional: true, required: false
   private _address?: string;
   public get address() {
-    return this._address ?? this.getStringAttribute('address');
+    return this.getStringAttribute('address');
   }
-  public set address(value: string | undefined) {
+  public set address(value: string) {
     this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address
   }
 
   // address_type - computed: false, optional: true, required: false
   private _addressType?: string;
   public get addressType() {
-    return this._addressType;
+    return this.getStringAttribute('address_type');
   }
-  public set addressType(value: string | undefined) {
+  public set addressType(value: string ) {
     this._addressType = value;
   }
+  public resetAddressType() {
+    this._addressType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressTypeInput() {
+    return this._addressType
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -111,67 +125,102 @@ export class ComputeAddress extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network_tier - computed: true, optional: true, required: false
   private _networkTier?: string;
   public get networkTier() {
-    return this._networkTier ?? this.getStringAttribute('network_tier');
+    return this.getStringAttribute('network_tier');
   }
-  public set networkTier(value: string | undefined) {
+  public set networkTier(value: string) {
     this._networkTier = value;
+  }
+  public resetNetworkTier() {
+    this._networkTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkTierInput() {
+    return this._networkTier
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // purpose - computed: true, optional: true, required: false
   private _purpose?: string;
   public get purpose() {
-    return this._purpose ?? this.getStringAttribute('purpose');
+    return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string | undefined) {
+  public set purpose(value: string) {
     this._purpose = value;
+  }
+  public resetPurpose() {
+    this._purpose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purposeInput() {
+    return this._purpose
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -179,13 +228,20 @@ export class ComputeAddress extends TerraformResource {
   // subnetwork - computed: true, optional: true, required: false
   private _subnetwork?: string;
   public get subnetwork() {
-    return this._subnetwork ?? this.getStringAttribute('subnetwork');
+    return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork
+  }
 
-  // users - computed: true, optional: false, required: true
+  // users - computed: true, optional: false, required: false
   public get users() {
     return this.getListAttribute('users');
   }
@@ -193,10 +249,17 @@ export class ComputeAddress extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeAddressTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeAddressTimeouts | undefined) {
+  public set timeouts(value: ComputeAddressTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

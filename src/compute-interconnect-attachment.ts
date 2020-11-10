@@ -65,7 +65,7 @@ using PARTNER type this will be managed upstream. */
 }
 export class ComputeInterconnectAttachmentPrivateInterconnectInfo extends ComplexComputedList {
 
-  // tag8021q - computed: true, optional: false, required: true
+  // tag8021q - computed: true, optional: false, required: false
   public get tag8021Q() {
     return this.getNumberAttribute('tag8021q');
   }
@@ -117,41 +117,62 @@ export class ComputeInterconnectAttachment extends TerraformResource {
   // admin_enabled - computed: false, optional: true, required: false
   private _adminEnabled?: boolean;
   public get adminEnabled() {
-    return this._adminEnabled;
+    return this.getBooleanAttribute('admin_enabled');
   }
-  public set adminEnabled(value: boolean | undefined) {
+  public set adminEnabled(value: boolean ) {
     this._adminEnabled = value;
+  }
+  public resetAdminEnabled() {
+    this._adminEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminEnabledInput() {
+    return this._adminEnabled
   }
 
   // bandwidth - computed: true, optional: true, required: false
   private _bandwidth?: string;
   public get bandwidth() {
-    return this._bandwidth ?? this.getStringAttribute('bandwidth');
+    return this.getStringAttribute('bandwidth');
   }
-  public set bandwidth(value: string | undefined) {
+  public set bandwidth(value: string) {
     this._bandwidth = value;
+  }
+  public resetBandwidth() {
+    this._bandwidth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bandwidthInput() {
+    return this._bandwidth
   }
 
   // candidate_subnets - computed: false, optional: true, required: false
   private _candidateSubnets?: string[];
   public get candidateSubnets() {
-    return this._candidateSubnets;
+    return this.getListAttribute('candidate_subnets');
   }
-  public set candidateSubnets(value: string[] | undefined) {
+  public set candidateSubnets(value: string[] ) {
     this._candidateSubnets = value;
   }
+  public resetCandidateSubnets() {
+    this._candidateSubnets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get candidateSubnetsInput() {
+    return this._candidateSubnets
+  }
 
-  // cloud_router_ip_address - computed: true, optional: false, required: true
+  // cloud_router_ip_address - computed: true, optional: false, required: false
   public get cloudRouterIpAddress() {
     return this.getStringAttribute('cloud_router_ip_address');
   }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
 
-  // customer_router_ip_address - computed: true, optional: false, required: true
+  // customer_router_ip_address - computed: true, optional: false, required: false
   public get customerRouterIpAddress() {
     return this.getStringAttribute('customer_router_ip_address');
   }
@@ -159,64 +180,85 @@ export class ComputeInterconnectAttachment extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // edge_availability_domain - computed: true, optional: true, required: false
   private _edgeAvailabilityDomain?: string;
   public get edgeAvailabilityDomain() {
-    return this._edgeAvailabilityDomain ?? this.getStringAttribute('edge_availability_domain');
+    return this.getStringAttribute('edge_availability_domain');
   }
-  public set edgeAvailabilityDomain(value: string | undefined) {
+  public set edgeAvailabilityDomain(value: string) {
     this._edgeAvailabilityDomain = value;
   }
+  public resetEdgeAvailabilityDomain() {
+    this._edgeAvailabilityDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeAvailabilityDomainInput() {
+    return this._edgeAvailabilityDomain
+  }
 
-  // google_reference_id - computed: true, optional: false, required: true
+  // google_reference_id - computed: true, optional: false, required: false
   public get googleReferenceId() {
     return this.getStringAttribute('google_reference_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interconnect - computed: false, optional: true, required: false
   private _interconnect?: string;
   public get interconnect() {
-    return this._interconnect;
+    return this.getStringAttribute('interconnect');
   }
-  public set interconnect(value: string | undefined) {
+  public set interconnect(value: string ) {
     this._interconnect = value;
+  }
+  public resetInterconnect() {
+    this._interconnect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interconnectInput() {
+    return this._interconnect
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // pairing_key - computed: true, optional: false, required: true
+  // pairing_key - computed: true, optional: false, required: false
   public get pairingKey() {
     return this.getStringAttribute('pairing_key');
   }
 
-  // partner_asn - computed: true, optional: false, required: true
+  // partner_asn - computed: true, optional: false, required: false
   public get partnerAsn() {
     return this.getStringAttribute('partner_asn');
   }
 
-  // private_interconnect_info - computed: true, optional: false, required: true
+  // private_interconnect_info - computed: true, optional: false, required: false
   public privateInterconnectInfo(index: string) {
     return new ComputeInterconnectAttachmentPrivateInterconnectInfo(this, 'private_interconnect_info', index);
   }
@@ -224,36 +266,54 @@ export class ComputeInterconnectAttachment extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // router - computed: false, optional: false, required: true
   private _router: string;
   public get router() {
-    return this._router;
+    return this.getStringAttribute('router');
   }
   public set router(value: string) {
     this._router = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get routerInput() {
+    return this._router
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -261,28 +321,49 @@ export class ComputeInterconnectAttachment extends TerraformResource {
   // type - computed: true, optional: true, required: false
   private _type?: string;
   public get type() {
-    return this._type ?? this.getStringAttribute('type');
+    return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // vlan_tag8021q - computed: true, optional: true, required: false
   private _vlanTag8021Q?: number;
   public get vlanTag8021Q() {
-    return this._vlanTag8021Q ?? this.getNumberAttribute('vlan_tag8021q');
+    return this.getNumberAttribute('vlan_tag8021q');
   }
-  public set vlanTag8021Q(value: number | undefined) {
+  public set vlanTag8021Q(value: number) {
     this._vlanTag8021Q = value;
+  }
+  public resetVlanTag8021Q() {
+    this._vlanTag8021Q = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vlanTag8021QInput() {
+    return this._vlanTag8021Q
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeInterconnectAttachmentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeInterconnectAttachmentTimeouts | undefined) {
+  public set timeouts(value: ComputeInterconnectAttachmentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

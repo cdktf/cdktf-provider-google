@@ -53,24 +53,24 @@ export class ServiceNetworkingConnection extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
+  }
 
-  // peering - computed: true, optional: false, required: true
+  // peering - computed: true, optional: false, required: false
   public get peering() {
     return this.getStringAttribute('peering');
   }
@@ -78,28 +78,43 @@ export class ServiceNetworkingConnection extends TerraformResource {
   // reserved_peering_ranges - computed: false, optional: false, required: true
   private _reservedPeeringRanges: string[];
   public get reservedPeeringRanges() {
-    return this._reservedPeeringRanges;
+    return this.getListAttribute('reserved_peering_ranges');
   }
   public set reservedPeeringRanges(value: string[]) {
     this._reservedPeeringRanges = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservedPeeringRangesInput() {
+    return this._reservedPeeringRanges
   }
 
   // service - computed: false, optional: false, required: true
   private _service: string;
   public get service() {
-    return this._service;
+    return this.getStringAttribute('service');
   }
   public set service(value: string) {
     this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ServiceNetworkingConnectionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ServiceNetworkingConnectionTimeouts | undefined) {
+  public set timeouts(value: ServiceNetworkingConnectionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

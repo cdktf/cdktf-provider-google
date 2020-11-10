@@ -69,18 +69,22 @@ export class StorageBucketAccessControl extends TerraformResource {
   // bucket - computed: false, optional: false, required: true
   private _bucket: string;
   public get bucket() {
-    return this._bucket;
+    return this.getStringAttribute('bucket');
   }
   public set bucket(value: string) {
     this._bucket = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket
+  }
 
-  // domain - computed: true, optional: false, required: true
+  // domain - computed: true, optional: false, required: false
   public get domain() {
     return this.getStringAttribute('domain');
   }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
@@ -88,37 +92,51 @@ export class StorageBucketAccessControl extends TerraformResource {
   // entity - computed: false, optional: false, required: true
   private _entity: string;
   public get entity() {
-    return this._entity;
+    return this.getStringAttribute('entity');
   }
   public set entity(value: string) {
     this._entity = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get entityInput() {
+    return this._entity
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // role - computed: false, optional: true, required: false
   private _role?: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
-  public set role(value: string | undefined) {
+  public set role(value: string ) {
     this._role = value;
+  }
+  public resetRole() {
+    this._role = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageBucketAccessControlTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageBucketAccessControlTimeouts | undefined) {
+  public set timeouts(value: StorageBucketAccessControlTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -420,113 +420,179 @@ export class ContainerCluster extends TerraformResource {
   // cluster_ipv4_cidr - computed: true, optional: true, required: false
   private _clusterIpv4Cidr?: string;
   public get clusterIpv4Cidr() {
-    return this._clusterIpv4Cidr ?? this.getStringAttribute('cluster_ipv4_cidr');
+    return this.getStringAttribute('cluster_ipv4_cidr');
   }
-  public set clusterIpv4Cidr(value: string | undefined) {
+  public set clusterIpv4Cidr(value: string) {
     this._clusterIpv4Cidr = value;
+  }
+  public resetClusterIpv4Cidr() {
+    this._clusterIpv4Cidr = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterIpv4CidrInput() {
+    return this._clusterIpv4Cidr
   }
 
   // default_max_pods_per_node - computed: true, optional: true, required: false
   private _defaultMaxPodsPerNode?: number;
   public get defaultMaxPodsPerNode() {
-    return this._defaultMaxPodsPerNode ?? this.getNumberAttribute('default_max_pods_per_node');
+    return this.getNumberAttribute('default_max_pods_per_node');
   }
-  public set defaultMaxPodsPerNode(value: number | undefined) {
+  public set defaultMaxPodsPerNode(value: number) {
     this._defaultMaxPodsPerNode = value;
+  }
+  public resetDefaultMaxPodsPerNode() {
+    this._defaultMaxPodsPerNode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultMaxPodsPerNodeInput() {
+    return this._defaultMaxPodsPerNode
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // enable_binary_authorization - computed: false, optional: true, required: false
   private _enableBinaryAuthorization?: boolean;
   public get enableBinaryAuthorization() {
-    return this._enableBinaryAuthorization;
+    return this.getBooleanAttribute('enable_binary_authorization');
   }
-  public set enableBinaryAuthorization(value: boolean | undefined) {
+  public set enableBinaryAuthorization(value: boolean ) {
     this._enableBinaryAuthorization = value;
+  }
+  public resetEnableBinaryAuthorization() {
+    this._enableBinaryAuthorization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableBinaryAuthorizationInput() {
+    return this._enableBinaryAuthorization
   }
 
   // enable_intranode_visibility - computed: false, optional: true, required: false
   private _enableIntranodeVisibility?: boolean;
   public get enableIntranodeVisibility() {
-    return this._enableIntranodeVisibility;
+    return this.getBooleanAttribute('enable_intranode_visibility');
   }
-  public set enableIntranodeVisibility(value: boolean | undefined) {
+  public set enableIntranodeVisibility(value: boolean ) {
     this._enableIntranodeVisibility = value;
+  }
+  public resetEnableIntranodeVisibility() {
+    this._enableIntranodeVisibility = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIntranodeVisibilityInput() {
+    return this._enableIntranodeVisibility
   }
 
   // enable_kubernetes_alpha - computed: false, optional: true, required: false
   private _enableKubernetesAlpha?: boolean;
   public get enableKubernetesAlpha() {
-    return this._enableKubernetesAlpha;
+    return this.getBooleanAttribute('enable_kubernetes_alpha');
   }
-  public set enableKubernetesAlpha(value: boolean | undefined) {
+  public set enableKubernetesAlpha(value: boolean ) {
     this._enableKubernetesAlpha = value;
+  }
+  public resetEnableKubernetesAlpha() {
+    this._enableKubernetesAlpha = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableKubernetesAlphaInput() {
+    return this._enableKubernetesAlpha
   }
 
   // enable_legacy_abac - computed: false, optional: true, required: false
   private _enableLegacyAbac?: boolean;
   public get enableLegacyAbac() {
-    return this._enableLegacyAbac;
+    return this.getBooleanAttribute('enable_legacy_abac');
   }
-  public set enableLegacyAbac(value: boolean | undefined) {
+  public set enableLegacyAbac(value: boolean ) {
     this._enableLegacyAbac = value;
+  }
+  public resetEnableLegacyAbac() {
+    this._enableLegacyAbac = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableLegacyAbacInput() {
+    return this._enableLegacyAbac
   }
 
   // enable_shielded_nodes - computed: false, optional: true, required: false
   private _enableShieldedNodes?: boolean;
   public get enableShieldedNodes() {
-    return this._enableShieldedNodes;
+    return this.getBooleanAttribute('enable_shielded_nodes');
   }
-  public set enableShieldedNodes(value: boolean | undefined) {
+  public set enableShieldedNodes(value: boolean ) {
     this._enableShieldedNodes = value;
+  }
+  public resetEnableShieldedNodes() {
+    this._enableShieldedNodes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableShieldedNodesInput() {
+    return this._enableShieldedNodes
   }
 
   // enable_tpu - computed: false, optional: true, required: false
   private _enableTpu?: boolean;
   public get enableTpu() {
-    return this._enableTpu;
+    return this.getBooleanAttribute('enable_tpu');
   }
-  public set enableTpu(value: boolean | undefined) {
+  public set enableTpu(value: boolean ) {
     this._enableTpu = value;
   }
+  public resetEnableTpu() {
+    this._enableTpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableTpuInput() {
+    return this._enableTpu
+  }
 
-  // endpoint - computed: true, optional: false, required: true
+  // endpoint - computed: true, optional: false, required: false
   public get endpoint() {
     return this.getStringAttribute('endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // initial_node_count - computed: false, optional: true, required: false
   private _initialNodeCount?: number;
   public get initialNodeCount() {
-    return this._initialNodeCount;
+    return this.getNumberAttribute('initial_node_count');
   }
-  public set initialNodeCount(value: number | undefined) {
+  public set initialNodeCount(value: number ) {
     this._initialNodeCount = value;
   }
+  public resetInitialNodeCount() {
+    this._initialNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initialNodeCountInput() {
+    return this._initialNodeCount
+  }
 
-  // instance_group_urls - computed: true, optional: false, required: true
+  // instance_group_urls - computed: true, optional: false, required: false
   public get instanceGroupUrls() {
     return this.getListAttribute('instance_group_urls');
   }
 
-  // label_fingerprint - computed: true, optional: false, required: true
+  // label_fingerprint - computed: true, optional: false, required: false
   public get labelFingerprint() {
     return this.getStringAttribute('label_fingerprint');
   }
@@ -534,22 +600,36 @@ export class ContainerCluster extends TerraformResource {
   // location - computed: true, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location ?? this.getStringAttribute('location');
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // logging_service - computed: true, optional: true, required: false
   private _loggingService?: string;
   public get loggingService() {
-    return this._loggingService ?? this.getStringAttribute('logging_service');
+    return this.getStringAttribute('logging_service');
   }
-  public set loggingService(value: string | undefined) {
+  public set loggingService(value: string) {
     this._loggingService = value;
   }
+  public resetLoggingService() {
+    this._loggingService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingServiceInput() {
+    return this._loggingService
+  }
 
-  // master_version - computed: true, optional: false, required: true
+  // master_version - computed: true, optional: false, required: false
   public get masterVersion() {
     return this.getStringAttribute('master_version');
   }
@@ -557,58 +637,97 @@ export class ContainerCluster extends TerraformResource {
   // min_master_version - computed: false, optional: true, required: false
   private _minMasterVersion?: string;
   public get minMasterVersion() {
-    return this._minMasterVersion;
+    return this.getStringAttribute('min_master_version');
   }
-  public set minMasterVersion(value: string | undefined) {
+  public set minMasterVersion(value: string ) {
     this._minMasterVersion = value;
+  }
+  public resetMinMasterVersion() {
+    this._minMasterVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minMasterVersionInput() {
+    return this._minMasterVersion
   }
 
   // monitoring_service - computed: true, optional: true, required: false
   private _monitoringService?: string;
   public get monitoringService() {
-    return this._monitoringService ?? this.getStringAttribute('monitoring_service');
+    return this.getStringAttribute('monitoring_service');
   }
-  public set monitoringService(value: string | undefined) {
+  public set monitoringService(value: string) {
     this._monitoringService = value;
+  }
+  public resetMonitoringService() {
+    this._monitoringService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitoringServiceInput() {
+    return this._monitoringService
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: true, required: false
   private _network?: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string ) {
     this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // node_locations - computed: true, optional: true, required: false
   private _nodeLocations?: string[];
   public get nodeLocations() {
-    return this._nodeLocations ?? this.getListAttribute('node_locations');
+    return this.getListAttribute('node_locations');
   }
-  public set nodeLocations(value: string[] | undefined) {
+  public set nodeLocations(value: string[]) {
     this._nodeLocations = value;
+  }
+  public resetNodeLocations() {
+    this._nodeLocations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeLocationsInput() {
+    return this._nodeLocations
   }
 
   // node_version - computed: true, optional: true, required: false
   private _nodeVersion?: string;
   public get nodeVersion() {
-    return this._nodeVersion ?? this.getStringAttribute('node_version');
+    return this.getStringAttribute('node_version');
   }
-  public set nodeVersion(value: string | undefined) {
+  public set nodeVersion(value: string) {
     this._nodeVersion = value;
   }
+  public resetNodeVersion() {
+    this._nodeVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeVersionInput() {
+    return this._nodeVersion
+  }
 
-  // operation - computed: true, optional: false, required: true
+  // operation - computed: true, optional: false, required: false
   public get operation() {
     return this.getStringAttribute('operation');
   }
@@ -616,36 +735,57 @@ export class ContainerCluster extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // remove_default_node_pool - computed: false, optional: true, required: false
   private _removeDefaultNodePool?: boolean;
   public get removeDefaultNodePool() {
-    return this._removeDefaultNodePool;
+    return this.getBooleanAttribute('remove_default_node_pool');
   }
-  public set removeDefaultNodePool(value: boolean | undefined) {
+  public set removeDefaultNodePool(value: boolean ) {
     this._removeDefaultNodePool = value;
+  }
+  public resetRemoveDefaultNodePool() {
+    this._removeDefaultNodePool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get removeDefaultNodePoolInput() {
+    return this._removeDefaultNodePool
   }
 
   // resource_labels - computed: false, optional: true, required: false
   private _resourceLabels?: { [key: string]: string };
   public get resourceLabels() {
-    return this._resourceLabels;
+    return this.interpolationForAttribute('resource_labels') as any;
   }
-  public set resourceLabels(value: { [key: string]: string } | undefined) {
+  public set resourceLabels(value: { [key: string]: string } ) {
     this._resourceLabels = value;
   }
+  public resetResourceLabels() {
+    this._resourceLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceLabelsInput() {
+    return this._resourceLabels
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // services_ipv4_cidr - computed: true, optional: false, required: true
+  // services_ipv4_cidr - computed: true, optional: false, required: false
   public get servicesIpv4Cidr() {
     return this.getStringAttribute('services_ipv4_cidr');
   }
@@ -653,172 +793,305 @@ export class ContainerCluster extends TerraformResource {
   // subnetwork - computed: true, optional: true, required: false
   private _subnetwork?: string;
   public get subnetwork() {
-    return this._subnetwork ?? this.getStringAttribute('subnetwork');
+    return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork
   }
 
   // addons_config - computed: false, optional: true, required: false
   private _addonsConfig?: ContainerClusterAddonsConfig[];
   public get addonsConfig() {
-    return this._addonsConfig;
+    return this.interpolationForAttribute('addons_config') as any;
   }
-  public set addonsConfig(value: ContainerClusterAddonsConfig[] | undefined) {
+  public set addonsConfig(value: ContainerClusterAddonsConfig[] ) {
     this._addonsConfig = value;
+  }
+  public resetAddonsConfig() {
+    this._addonsConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addonsConfigInput() {
+    return this._addonsConfig
   }
 
   // authenticator_groups_config - computed: false, optional: true, required: false
   private _authenticatorGroupsConfig?: ContainerClusterAuthenticatorGroupsConfig[];
   public get authenticatorGroupsConfig() {
-    return this._authenticatorGroupsConfig;
+    return this.interpolationForAttribute('authenticator_groups_config') as any;
   }
-  public set authenticatorGroupsConfig(value: ContainerClusterAuthenticatorGroupsConfig[] | undefined) {
+  public set authenticatorGroupsConfig(value: ContainerClusterAuthenticatorGroupsConfig[] ) {
     this._authenticatorGroupsConfig = value;
+  }
+  public resetAuthenticatorGroupsConfig() {
+    this._authenticatorGroupsConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticatorGroupsConfigInput() {
+    return this._authenticatorGroupsConfig
   }
 
   // cluster_autoscaling - computed: false, optional: true, required: false
   private _clusterAutoscaling?: ContainerClusterClusterAutoscaling[];
   public get clusterAutoscaling() {
-    return this._clusterAutoscaling;
+    return this.interpolationForAttribute('cluster_autoscaling') as any;
   }
-  public set clusterAutoscaling(value: ContainerClusterClusterAutoscaling[] | undefined) {
+  public set clusterAutoscaling(value: ContainerClusterClusterAutoscaling[] ) {
     this._clusterAutoscaling = value;
+  }
+  public resetClusterAutoscaling() {
+    this._clusterAutoscaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterAutoscalingInput() {
+    return this._clusterAutoscaling
   }
 
   // database_encryption - computed: false, optional: true, required: false
   private _databaseEncryption?: ContainerClusterDatabaseEncryption[];
   public get databaseEncryption() {
-    return this._databaseEncryption;
+    return this.interpolationForAttribute('database_encryption') as any;
   }
-  public set databaseEncryption(value: ContainerClusterDatabaseEncryption[] | undefined) {
+  public set databaseEncryption(value: ContainerClusterDatabaseEncryption[] ) {
     this._databaseEncryption = value;
+  }
+  public resetDatabaseEncryption() {
+    this._databaseEncryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseEncryptionInput() {
+    return this._databaseEncryption
   }
 
   // ip_allocation_policy - computed: false, optional: true, required: false
   private _ipAllocationPolicy?: ContainerClusterIpAllocationPolicy[];
   public get ipAllocationPolicy() {
-    return this._ipAllocationPolicy;
+    return this.interpolationForAttribute('ip_allocation_policy') as any;
   }
-  public set ipAllocationPolicy(value: ContainerClusterIpAllocationPolicy[] | undefined) {
+  public set ipAllocationPolicy(value: ContainerClusterIpAllocationPolicy[] ) {
     this._ipAllocationPolicy = value;
+  }
+  public resetIpAllocationPolicy() {
+    this._ipAllocationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAllocationPolicyInput() {
+    return this._ipAllocationPolicy
   }
 
   // maintenance_policy - computed: false, optional: true, required: false
   private _maintenancePolicy?: ContainerClusterMaintenancePolicy[];
   public get maintenancePolicy() {
-    return this._maintenancePolicy;
+    return this.interpolationForAttribute('maintenance_policy') as any;
   }
-  public set maintenancePolicy(value: ContainerClusterMaintenancePolicy[] | undefined) {
+  public set maintenancePolicy(value: ContainerClusterMaintenancePolicy[] ) {
     this._maintenancePolicy = value;
+  }
+  public resetMaintenancePolicy() {
+    this._maintenancePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenancePolicyInput() {
+    return this._maintenancePolicy
   }
 
   // master_auth - computed: false, optional: true, required: false
   private _masterAuth?: ContainerClusterMasterAuth[];
   public get masterAuth() {
-    return this._masterAuth;
+    return this.interpolationForAttribute('master_auth') as any;
   }
-  public set masterAuth(value: ContainerClusterMasterAuth[] | undefined) {
+  public set masterAuth(value: ContainerClusterMasterAuth[] ) {
     this._masterAuth = value;
+  }
+  public resetMasterAuth() {
+    this._masterAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get masterAuthInput() {
+    return this._masterAuth
   }
 
   // master_authorized_networks_config - computed: false, optional: true, required: false
   private _masterAuthorizedNetworksConfig?: ContainerClusterMasterAuthorizedNetworksConfig[];
   public get masterAuthorizedNetworksConfig() {
-    return this._masterAuthorizedNetworksConfig;
+    return this.interpolationForAttribute('master_authorized_networks_config') as any;
   }
-  public set masterAuthorizedNetworksConfig(value: ContainerClusterMasterAuthorizedNetworksConfig[] | undefined) {
+  public set masterAuthorizedNetworksConfig(value: ContainerClusterMasterAuthorizedNetworksConfig[] ) {
     this._masterAuthorizedNetworksConfig = value;
+  }
+  public resetMasterAuthorizedNetworksConfig() {
+    this._masterAuthorizedNetworksConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get masterAuthorizedNetworksConfigInput() {
+    return this._masterAuthorizedNetworksConfig
   }
 
   // network_policy - computed: false, optional: true, required: false
   private _networkPolicy?: ContainerClusterNetworkPolicy[];
   public get networkPolicy() {
-    return this._networkPolicy;
+    return this.interpolationForAttribute('network_policy') as any;
   }
-  public set networkPolicy(value: ContainerClusterNetworkPolicy[] | undefined) {
+  public set networkPolicy(value: ContainerClusterNetworkPolicy[] ) {
     this._networkPolicy = value;
+  }
+  public resetNetworkPolicy() {
+    this._networkPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkPolicyInput() {
+    return this._networkPolicy
   }
 
   // node_config - computed: false, optional: true, required: false
   private _nodeConfig?: ContainerClusterNodeConfig[];
   public get nodeConfig() {
-    return this._nodeConfig;
+    return this.interpolationForAttribute('node_config') as any;
   }
-  public set nodeConfig(value: ContainerClusterNodeConfig[] | undefined) {
+  public set nodeConfig(value: ContainerClusterNodeConfig[] ) {
     this._nodeConfig = value;
+  }
+  public resetNodeConfig() {
+    this._nodeConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeConfigInput() {
+    return this._nodeConfig
   }
 
   // node_pool - computed: false, optional: true, required: false
   private _nodePool?: ContainerClusterNodePool[];
   public get nodePool() {
-    return this._nodePool;
+    return this.interpolationForAttribute('node_pool') as any;
   }
-  public set nodePool(value: ContainerClusterNodePool[] | undefined) {
+  public set nodePool(value: ContainerClusterNodePool[] ) {
     this._nodePool = value;
+  }
+  public resetNodePool() {
+    this._nodePool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePoolInput() {
+    return this._nodePool
   }
 
   // pod_security_policy_config - computed: false, optional: true, required: false
   private _podSecurityPolicyConfig?: ContainerClusterPodSecurityPolicyConfig[];
   public get podSecurityPolicyConfig() {
-    return this._podSecurityPolicyConfig;
+    return this.interpolationForAttribute('pod_security_policy_config') as any;
   }
-  public set podSecurityPolicyConfig(value: ContainerClusterPodSecurityPolicyConfig[] | undefined) {
+  public set podSecurityPolicyConfig(value: ContainerClusterPodSecurityPolicyConfig[] ) {
     this._podSecurityPolicyConfig = value;
+  }
+  public resetPodSecurityPolicyConfig() {
+    this._podSecurityPolicyConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podSecurityPolicyConfigInput() {
+    return this._podSecurityPolicyConfig
   }
 
   // private_cluster_config - computed: false, optional: true, required: false
   private _privateClusterConfig?: ContainerClusterPrivateClusterConfig[];
   public get privateClusterConfig() {
-    return this._privateClusterConfig;
+    return this.interpolationForAttribute('private_cluster_config') as any;
   }
-  public set privateClusterConfig(value: ContainerClusterPrivateClusterConfig[] | undefined) {
+  public set privateClusterConfig(value: ContainerClusterPrivateClusterConfig[] ) {
     this._privateClusterConfig = value;
+  }
+  public resetPrivateClusterConfig() {
+    this._privateClusterConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateClusterConfigInput() {
+    return this._privateClusterConfig
   }
 
   // release_channel - computed: false, optional: true, required: false
   private _releaseChannel?: ContainerClusterReleaseChannel[];
   public get releaseChannel() {
-    return this._releaseChannel;
+    return this.interpolationForAttribute('release_channel') as any;
   }
-  public set releaseChannel(value: ContainerClusterReleaseChannel[] | undefined) {
+  public set releaseChannel(value: ContainerClusterReleaseChannel[] ) {
     this._releaseChannel = value;
+  }
+  public resetReleaseChannel() {
+    this._releaseChannel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get releaseChannelInput() {
+    return this._releaseChannel
   }
 
   // resource_usage_export_config - computed: false, optional: true, required: false
   private _resourceUsageExportConfig?: ContainerClusterResourceUsageExportConfig[];
   public get resourceUsageExportConfig() {
-    return this._resourceUsageExportConfig;
+    return this.interpolationForAttribute('resource_usage_export_config') as any;
   }
-  public set resourceUsageExportConfig(value: ContainerClusterResourceUsageExportConfig[] | undefined) {
+  public set resourceUsageExportConfig(value: ContainerClusterResourceUsageExportConfig[] ) {
     this._resourceUsageExportConfig = value;
+  }
+  public resetResourceUsageExportConfig() {
+    this._resourceUsageExportConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceUsageExportConfigInput() {
+    return this._resourceUsageExportConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerClusterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ContainerClusterTimeouts | undefined) {
+  public set timeouts(value: ContainerClusterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // vertical_pod_autoscaling - computed: false, optional: true, required: false
   private _verticalPodAutoscaling?: ContainerClusterVerticalPodAutoscaling[];
   public get verticalPodAutoscaling() {
-    return this._verticalPodAutoscaling;
+    return this.interpolationForAttribute('vertical_pod_autoscaling') as any;
   }
-  public set verticalPodAutoscaling(value: ContainerClusterVerticalPodAutoscaling[] | undefined) {
+  public set verticalPodAutoscaling(value: ContainerClusterVerticalPodAutoscaling[] ) {
     this._verticalPodAutoscaling = value;
+  }
+  public resetVerticalPodAutoscaling() {
+    this._verticalPodAutoscaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verticalPodAutoscalingInput() {
+    return this._verticalPodAutoscaling
   }
 
   // workload_identity_config - computed: false, optional: true, required: false
   private _workloadIdentityConfig?: ContainerClusterWorkloadIdentityConfig[];
   public get workloadIdentityConfig() {
-    return this._workloadIdentityConfig;
+    return this.interpolationForAttribute('workload_identity_config') as any;
   }
-  public set workloadIdentityConfig(value: ContainerClusterWorkloadIdentityConfig[] | undefined) {
+  public set workloadIdentityConfig(value: ContainerClusterWorkloadIdentityConfig[] ) {
     this._workloadIdentityConfig = value;
+  }
+  public resetWorkloadIdentityConfig() {
+    this._workloadIdentityConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadIdentityConfigInput() {
+    return this._workloadIdentityConfig
   }
 
   // =========

@@ -122,7 +122,7 @@ export class ComputeSubnetwork extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -130,104 +130,154 @@ export class ComputeSubnetwork extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
-  // gateway_address - computed: true, optional: false, required: true
+  // gateway_address - computed: true, optional: false, required: false
   public get gatewayAddress() {
     return this.getStringAttribute('gateway_address');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_cidr_range - computed: false, optional: false, required: true
   private _ipCidrRange: string;
   public get ipCidrRange() {
-    return this._ipCidrRange;
+    return this.getStringAttribute('ip_cidr_range');
   }
   public set ipCidrRange(value: string) {
     this._ipCidrRange = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipCidrRangeInput() {
+    return this._ipCidrRange
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // private_ip_google_access - computed: false, optional: true, required: false
   private _privateIpGoogleAccess?: boolean;
   public get privateIpGoogleAccess() {
-    return this._privateIpGoogleAccess;
+    return this.getBooleanAttribute('private_ip_google_access');
   }
-  public set privateIpGoogleAccess(value: boolean | undefined) {
+  public set privateIpGoogleAccess(value: boolean ) {
     this._privateIpGoogleAccess = value;
+  }
+  public resetPrivateIpGoogleAccess() {
+    this._privateIpGoogleAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpGoogleAccessInput() {
+    return this._privateIpGoogleAccess
   }
 
   // private_ipv6_google_access - computed: true, optional: true, required: false
   private _privateIpv6GoogleAccess?: string;
   public get privateIpv6GoogleAccess() {
-    return this._privateIpv6GoogleAccess ?? this.getStringAttribute('private_ipv6_google_access');
+    return this.getStringAttribute('private_ipv6_google_access');
   }
-  public set privateIpv6GoogleAccess(value: string | undefined) {
+  public set privateIpv6GoogleAccess(value: string) {
     this._privateIpv6GoogleAccess = value;
+  }
+  public resetPrivateIpv6GoogleAccess() {
+    this._privateIpv6GoogleAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpv6GoogleAccessInput() {
+    return this._privateIpv6GoogleAccess
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // secondary_ip_range - computed: true, optional: true, required: false
   private _secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[]
-  public get secondaryIpRange(): ComputeSubnetworkSecondaryIpRange[] | undefined {
-    return this._secondaryIpRange; // Getting the computed value is not yet implemented
+  public get secondaryIpRange(): ComputeSubnetworkSecondaryIpRange[] {
+    return this.interpolationForAttribute('secondary_ip_range') as any; // Getting the computed value is not yet implemented
   }
-  public set secondaryIpRange(value: ComputeSubnetworkSecondaryIpRange[] | undefined) {
+  public set secondaryIpRange(value: ComputeSubnetworkSecondaryIpRange[]) {
     this._secondaryIpRange = value;
   }
+  public resetSecondaryIpRange() {
+    this._secondaryIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryIpRangeInput() {
+    return this._secondaryIpRange
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -235,19 +285,33 @@ export class ComputeSubnetwork extends TerraformResource {
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeSubnetworkLogConfig[];
   public get logConfig() {
-    return this._logConfig;
+    return this.interpolationForAttribute('log_config') as any;
   }
-  public set logConfig(value: ComputeSubnetworkLogConfig[] | undefined) {
+  public set logConfig(value: ComputeSubnetworkLogConfig[] ) {
     this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeSubnetworkTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeSubnetworkTimeouts | undefined) {
+  public set timeouts(value: ComputeSubnetworkTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -81,13 +81,17 @@ export class ComputeBackendBucket extends TerraformResource {
   // bucket_name - computed: false, optional: false, required: true
   private _bucketName: string;
   public get bucketName() {
-    return this._bucketName;
+    return this.getStringAttribute('bucket_name');
   }
   public set bucketName(value: string) {
     this._bucketName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get bucketNameInput() {
+    return this._bucketName
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -95,49 +99,70 @@ export class ComputeBackendBucket extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // enable_cdn - computed: false, optional: true, required: false
   private _enableCdn?: boolean;
   public get enableCdn() {
-    return this._enableCdn;
+    return this.getBooleanAttribute('enable_cdn');
   }
-  public set enableCdn(value: boolean | undefined) {
+  public set enableCdn(value: boolean ) {
     this._enableCdn = value;
+  }
+  public resetEnableCdn() {
+    this._enableCdn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableCdnInput() {
+    return this._enableCdn
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -145,19 +170,33 @@ export class ComputeBackendBucket extends TerraformResource {
   // cdn_policy - computed: false, optional: true, required: false
   private _cdnPolicy?: ComputeBackendBucketCdnPolicy[];
   public get cdnPolicy() {
-    return this._cdnPolicy;
+    return this.interpolationForAttribute('cdn_policy') as any;
   }
-  public set cdnPolicy(value: ComputeBackendBucketCdnPolicy[] | undefined) {
+  public set cdnPolicy(value: ComputeBackendBucketCdnPolicy[] ) {
     this._cdnPolicy = value;
+  }
+  public resetCdnPolicy() {
+    this._cdnPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cdnPolicyInput() {
+    return this._cdnPolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeBackendBucketTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeBackendBucketTimeouts | undefined) {
+  public set timeouts(value: ComputeBackendBucketTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

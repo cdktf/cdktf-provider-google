@@ -56,40 +56,54 @@ export class StorageNotification extends TerraformResource {
   // bucket - computed: false, optional: false, required: true
   private _bucket: string;
   public get bucket() {
-    return this._bucket;
+    return this.getStringAttribute('bucket');
   }
   public set bucket(value: string) {
     this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket
   }
 
   // custom_attributes - computed: false, optional: true, required: false
   private _customAttributes?: { [key: string]: string };
   public get customAttributes() {
-    return this._customAttributes;
+    return this.interpolationForAttribute('custom_attributes') as any;
   }
-  public set customAttributes(value: { [key: string]: string } | undefined) {
+  public set customAttributes(value: { [key: string]: string } ) {
     this._customAttributes = value;
+  }
+  public resetCustomAttributes() {
+    this._customAttributes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customAttributesInput() {
+    return this._customAttributes
   }
 
   // event_types - computed: false, optional: true, required: false
   private _eventTypes?: string[];
   public get eventTypes() {
-    return this._eventTypes;
+    return this.getListAttribute('event_types');
   }
-  public set eventTypes(value: string[] | undefined) {
+  public set eventTypes(value: string[] ) {
     this._eventTypes = value;
+  }
+  public resetEventTypes() {
+    this._eventTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventTypesInput() {
+    return this._eventTypes
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // notification_id - computed: true, optional: false, required: true
+  // notification_id - computed: true, optional: false, required: false
   public get notificationId() {
     return this.getStringAttribute('notification_id');
   }
@@ -97,22 +111,33 @@ export class StorageNotification extends TerraformResource {
   // object_name_prefix - computed: false, optional: true, required: false
   private _objectNamePrefix?: string;
   public get objectNamePrefix() {
-    return this._objectNamePrefix;
+    return this.getStringAttribute('object_name_prefix');
   }
-  public set objectNamePrefix(value: string | undefined) {
+  public set objectNamePrefix(value: string ) {
     this._objectNamePrefix = value;
+  }
+  public resetObjectNamePrefix() {
+    this._objectNamePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectNamePrefixInput() {
+    return this._objectNamePrefix
   }
 
   // payload_format - computed: false, optional: false, required: true
   private _payloadFormat: string;
   public get payloadFormat() {
-    return this._payloadFormat;
+    return this.getStringAttribute('payload_format');
   }
   public set payloadFormat(value: string) {
     this._payloadFormat = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get payloadFormatInput() {
+    return this._payloadFormat
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -120,10 +145,14 @@ export class StorageNotification extends TerraformResource {
   // topic - computed: false, optional: false, required: true
   private _topic: string;
   public get topic() {
-    return this._topic;
+    return this.getStringAttribute('topic');
   }
   public set topic(value: string) {
     this._topic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicInput() {
+    return this._topic
   }
 
   // =========

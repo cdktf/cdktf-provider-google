@@ -70,91 +70,132 @@ export class ActiveDirectoryDomainTrust extends TerraformResource {
   // domain - computed: false, optional: false, required: true
   private _domain: string;
   public get domain() {
-    return this._domain;
+    return this.getStringAttribute('domain');
   }
   public set domain(value: string) {
     this._domain = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get domainInput() {
+    return this._domain
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // selective_authentication - computed: false, optional: true, required: false
   private _selectiveAuthentication?: boolean;
   public get selectiveAuthentication() {
-    return this._selectiveAuthentication;
+    return this.getBooleanAttribute('selective_authentication');
   }
-  public set selectiveAuthentication(value: boolean | undefined) {
+  public set selectiveAuthentication(value: boolean ) {
     this._selectiveAuthentication = value;
+  }
+  public resetSelectiveAuthentication() {
+    this._selectiveAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectiveAuthenticationInput() {
+    return this._selectiveAuthentication
   }
 
   // target_dns_ip_addresses - computed: false, optional: false, required: true
   private _targetDnsIpAddresses: string[];
   public get targetDnsIpAddresses() {
-    return this._targetDnsIpAddresses;
+    return this.getListAttribute('target_dns_ip_addresses');
   }
   public set targetDnsIpAddresses(value: string[]) {
     this._targetDnsIpAddresses = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetDnsIpAddressesInput() {
+    return this._targetDnsIpAddresses
   }
 
   // target_domain_name - computed: false, optional: false, required: true
   private _targetDomainName: string;
   public get targetDomainName() {
-    return this._targetDomainName;
+    return this.getStringAttribute('target_domain_name');
   }
   public set targetDomainName(value: string) {
     this._targetDomainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetDomainNameInput() {
+    return this._targetDomainName
   }
 
   // trust_direction - computed: false, optional: false, required: true
   private _trustDirection: string;
   public get trustDirection() {
-    return this._trustDirection;
+    return this.getStringAttribute('trust_direction');
   }
   public set trustDirection(value: string) {
     this._trustDirection = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustDirectionInput() {
+    return this._trustDirection
   }
 
   // trust_handshake_secret - computed: false, optional: false, required: true
   private _trustHandshakeSecret: string;
   public get trustHandshakeSecret() {
-    return this._trustHandshakeSecret;
+    return this.getStringAttribute('trust_handshake_secret');
   }
   public set trustHandshakeSecret(value: string) {
     this._trustHandshakeSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustHandshakeSecretInput() {
+    return this._trustHandshakeSecret
   }
 
   // trust_type - computed: false, optional: false, required: true
   private _trustType: string;
   public get trustType() {
-    return this._trustType;
+    return this.getStringAttribute('trust_type');
   }
   public set trustType(value: string) {
     this._trustType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustTypeInput() {
+    return this._trustType
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ActiveDirectoryDomainTrustTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ActiveDirectoryDomainTrustTimeouts | undefined) {
+  public set timeouts(value: ActiveDirectoryDomainTrustTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

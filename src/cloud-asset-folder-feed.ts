@@ -100,72 +100,101 @@ export class CloudAssetFolderFeed extends TerraformResource {
   // asset_names - computed: false, optional: true, required: false
   private _assetNames?: string[];
   public get assetNames() {
-    return this._assetNames;
+    return this.getListAttribute('asset_names');
   }
-  public set assetNames(value: string[] | undefined) {
+  public set assetNames(value: string[] ) {
     this._assetNames = value;
+  }
+  public resetAssetNames() {
+    this._assetNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assetNamesInput() {
+    return this._assetNames
   }
 
   // asset_types - computed: false, optional: true, required: false
   private _assetTypes?: string[];
   public get assetTypes() {
-    return this._assetTypes;
+    return this.getListAttribute('asset_types');
   }
-  public set assetTypes(value: string[] | undefined) {
+  public set assetTypes(value: string[] ) {
     this._assetTypes = value;
+  }
+  public resetAssetTypes() {
+    this._assetTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assetTypesInput() {
+    return this._assetTypes
   }
 
   // billing_project - computed: false, optional: false, required: true
   private _billingProject: string;
   public get billingProject() {
-    return this._billingProject;
+    return this.getStringAttribute('billing_project');
   }
   public set billingProject(value: string) {
     this._billingProject = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingProjectInput() {
+    return this._billingProject
   }
 
   // content_type - computed: false, optional: true, required: false
   private _contentType?: string;
   public get contentType() {
-    return this._contentType;
+    return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string ) {
     this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
   }
 
   // feed_id - computed: false, optional: false, required: true
   private _feedId: string;
   public get feedId() {
-    return this._feedId;
+    return this.getStringAttribute('feed_id');
   }
   public set feedId(value: string) {
     this._feedId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get feedIdInput() {
+    return this._feedId
   }
 
   // folder - computed: false, optional: false, required: true
   private _folder: string;
   public get folder() {
-    return this._folder;
+    return this.getStringAttribute('folder');
   }
   public set folder(value: string) {
     this._folder = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
+  }
 
-  // folder_id - computed: true, optional: false, required: true
+  // folder_id - computed: true, optional: false, required: false
   public get folderId() {
     return this.getStringAttribute('folder_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -173,28 +202,46 @@ export class CloudAssetFolderFeed extends TerraformResource {
   // condition - computed: false, optional: true, required: false
   private _condition?: CloudAssetFolderFeedCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: CloudAssetFolderFeedCondition[] | undefined) {
+  public set condition(value: CloudAssetFolderFeedCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // feed_output_config - computed: false, optional: false, required: true
   private _feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig[];
   public get feedOutputConfig() {
-    return this._feedOutputConfig;
+    return this.interpolationForAttribute('feed_output_config') as any;
   }
   public set feedOutputConfig(value: CloudAssetFolderFeedFeedOutputConfig[]) {
     this._feedOutputConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get feedOutputConfigInput() {
+    return this._feedOutputConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudAssetFolderFeedTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudAssetFolderFeedTimeouts | undefined) {
+  public set timeouts(value: CloudAssetFolderFeedTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

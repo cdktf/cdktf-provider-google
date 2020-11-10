@@ -110,36 +110,57 @@ export class RedisInstance extends TerraformResource {
   // alternative_location_id - computed: true, optional: true, required: false
   private _alternativeLocationId?: string;
   public get alternativeLocationId() {
-    return this._alternativeLocationId ?? this.getStringAttribute('alternative_location_id');
+    return this.getStringAttribute('alternative_location_id');
   }
-  public set alternativeLocationId(value: string | undefined) {
+  public set alternativeLocationId(value: string) {
     this._alternativeLocationId = value;
+  }
+  public resetAlternativeLocationId() {
+    this._alternativeLocationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alternativeLocationIdInput() {
+    return this._alternativeLocationId
   }
 
   // authorized_network - computed: true, optional: true, required: false
   private _authorizedNetwork?: string;
   public get authorizedNetwork() {
-    return this._authorizedNetwork ?? this.getStringAttribute('authorized_network');
+    return this.getStringAttribute('authorized_network');
   }
-  public set authorizedNetwork(value: string | undefined) {
+  public set authorizedNetwork(value: string) {
     this._authorizedNetwork = value;
+  }
+  public resetAuthorizedNetwork() {
+    this._authorizedNetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizedNetworkInput() {
+    return this._authorizedNetwork
   }
 
   // connect_mode - computed: false, optional: true, required: false
   private _connectMode?: string;
   public get connectMode() {
-    return this._connectMode;
+    return this.getStringAttribute('connect_mode');
   }
-  public set connectMode(value: string | undefined) {
+  public set connectMode(value: string ) {
     this._connectMode = value;
   }
+  public resetConnectMode() {
+    this._connectMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectModeInput() {
+    return this._connectMode
+  }
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // current_location_id - computed: true, optional: false, required: true
+  // current_location_id - computed: true, optional: false, required: false
   public get currentLocationId() {
     return this.getStringAttribute('current_location_id');
   }
@@ -147,68 +168,93 @@ export class RedisInstance extends TerraformResource {
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
   }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
-  // host - computed: true, optional: false, required: true
+  // host - computed: true, optional: false, required: false
   public get host() {
     return this.getStringAttribute('host');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // location_id - computed: true, optional: true, required: false
   private _locationId?: string;
   public get locationId() {
-    return this._locationId ?? this.getStringAttribute('location_id');
+    return this.getStringAttribute('location_id');
   }
-  public set locationId(value: string | undefined) {
+  public set locationId(value: string) {
     this._locationId = value;
+  }
+  public resetLocationId() {
+    this._locationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationIdInput() {
+    return this._locationId
   }
 
   // memory_size_gb - computed: false, optional: false, required: true
   private _memorySizeGb: number;
   public get memorySizeGb() {
-    return this._memorySizeGb;
+    return this.getNumberAttribute('memory_size_gb');
   }
   public set memorySizeGb(value: number) {
     this._memorySizeGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memorySizeGbInput() {
+    return this._memorySizeGb
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // persistence_iam_identity - computed: true, optional: false, required: true
+  // persistence_iam_identity - computed: true, optional: false, required: false
   public get persistenceIamIdentity() {
     return this.getStringAttribute('persistence_iam_identity');
   }
 
-  // port - computed: true, optional: false, required: true
+  // port - computed: true, optional: false, required: false
   public get port() {
     return this.getNumberAttribute('port');
   }
@@ -216,64 +262,113 @@ export class RedisInstance extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // redis_configs - computed: false, optional: true, required: false
   private _redisConfigs?: { [key: string]: string };
   public get redisConfigs() {
-    return this._redisConfigs;
+    return this.interpolationForAttribute('redis_configs') as any;
   }
-  public set redisConfigs(value: { [key: string]: string } | undefined) {
+  public set redisConfigs(value: { [key: string]: string } ) {
     this._redisConfigs = value;
+  }
+  public resetRedisConfigs() {
+    this._redisConfigs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redisConfigsInput() {
+    return this._redisConfigs
   }
 
   // redis_version - computed: true, optional: true, required: false
   private _redisVersion?: string;
   public get redisVersion() {
-    return this._redisVersion ?? this.getStringAttribute('redis_version');
+    return this.getStringAttribute('redis_version');
   }
-  public set redisVersion(value: string | undefined) {
+  public set redisVersion(value: string) {
     this._redisVersion = value;
+  }
+  public resetRedisVersion() {
+    this._redisVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redisVersionInput() {
+    return this._redisVersion
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // reserved_ip_range - computed: true, optional: true, required: false
   private _reservedIpRange?: string;
   public get reservedIpRange() {
-    return this._reservedIpRange ?? this.getStringAttribute('reserved_ip_range');
+    return this.getStringAttribute('reserved_ip_range');
   }
-  public set reservedIpRange(value: string | undefined) {
+  public set reservedIpRange(value: string) {
     this._reservedIpRange = value;
+  }
+  public resetReservedIpRange() {
+    this._reservedIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservedIpRangeInput() {
+    return this._reservedIpRange
   }
 
   // tier - computed: false, optional: true, required: false
   private _tier?: string;
   public get tier() {
-    return this._tier;
+    return this.getStringAttribute('tier');
   }
-  public set tier(value: string | undefined) {
+  public set tier(value: string ) {
     this._tier = value;
+  }
+  public resetTier() {
+    this._tier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RedisInstanceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RedisInstanceTimeouts | undefined) {
+  public set timeouts(value: RedisInstanceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

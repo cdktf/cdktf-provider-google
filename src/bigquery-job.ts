@@ -363,33 +363,40 @@ export class BigqueryJob extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // job_id - computed: false, optional: false, required: true
   private _jobId: string;
   public get jobId() {
-    return this._jobId;
+    return this.getStringAttribute('job_id');
   }
   public set jobId(value: string) {
     this._jobId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobIdInput() {
+    return this._jobId
   }
 
   // job_timeout_ms - computed: false, optional: true, required: false
   private _jobTimeoutMs?: string;
   public get jobTimeoutMs() {
-    return this._jobTimeoutMs;
+    return this.getStringAttribute('job_timeout_ms');
   }
-  public set jobTimeoutMs(value: string | undefined) {
+  public set jobTimeoutMs(value: string ) {
     this._jobTimeoutMs = value;
   }
+  public resetJobTimeoutMs() {
+    this._jobTimeoutMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobTimeoutMsInput() {
+    return this._jobTimeoutMs
+  }
 
-  // job_type - computed: true, optional: false, required: true
+  // job_type - computed: true, optional: false, required: false
   public get jobType() {
     return this.getStringAttribute('job_type');
   }
@@ -397,31 +404,52 @@ export class BigqueryJob extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // user_email - computed: true, optional: false, required: true
+  // user_email - computed: true, optional: false, required: false
   public get userEmail() {
     return this.getStringAttribute('user_email');
   }
@@ -429,46 +457,81 @@ export class BigqueryJob extends TerraformResource {
   // copy - computed: false, optional: true, required: false
   private _copy?: BigqueryJobCopy[];
   public get copy() {
-    return this._copy;
+    return this.interpolationForAttribute('copy') as any;
   }
-  public set copy(value: BigqueryJobCopy[] | undefined) {
+  public set copy(value: BigqueryJobCopy[] ) {
     this._copy = value;
+  }
+  public resetCopy() {
+    this._copy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copyInput() {
+    return this._copy
   }
 
   // extract - computed: false, optional: true, required: false
   private _extract?: BigqueryJobExtract[];
   public get extract() {
-    return this._extract;
+    return this.interpolationForAttribute('extract') as any;
   }
-  public set extract(value: BigqueryJobExtract[] | undefined) {
+  public set extract(value: BigqueryJobExtract[] ) {
     this._extract = value;
+  }
+  public resetExtract() {
+    this._extract = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extractInput() {
+    return this._extract
   }
 
   // load - computed: false, optional: true, required: false
   private _load?: BigqueryJobLoad[];
   public get load() {
-    return this._load;
+    return this.interpolationForAttribute('load') as any;
   }
-  public set load(value: BigqueryJobLoad[] | undefined) {
+  public set load(value: BigqueryJobLoad[] ) {
     this._load = value;
+  }
+  public resetLoad() {
+    this._load = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadInput() {
+    return this._load
   }
 
   // query - computed: false, optional: true, required: false
   private _query?: BigqueryJobQuery[];
   public get query() {
-    return this._query;
+    return this.interpolationForAttribute('query') as any;
   }
-  public set query(value: BigqueryJobQuery[] | undefined) {
+  public set query(value: BigqueryJobQuery[] ) {
     this._query = value;
+  }
+  public resetQuery() {
+    this._query = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryInput() {
+    return this._query
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigqueryJobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BigqueryJobTimeouts | undefined) {
+  public set timeouts(value: BigqueryJobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

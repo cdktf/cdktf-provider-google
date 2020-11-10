@@ -53,7 +53,7 @@ export class OrganizationIamCustomRole extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // deleted - computed: true, optional: false, required: true
+  // deleted - computed: true, optional: false, required: false
   public get deleted() {
     return this.getBooleanAttribute('deleted');
   }
@@ -61,22 +61,25 @@ export class OrganizationIamCustomRole extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -84,46 +87,69 @@ export class OrganizationIamCustomRole extends TerraformResource {
   // org_id - computed: false, optional: false, required: true
   private _orgId: string;
   public get orgId() {
-    return this._orgId;
+    return this.getStringAttribute('org_id');
   }
   public set orgId(value: string) {
     this._orgId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orgIdInput() {
+    return this._orgId
   }
 
   // permissions - computed: false, optional: false, required: true
   private _permissions: string[];
   public get permissions() {
-    return this._permissions;
+    return this.getListAttribute('permissions');
   }
   public set permissions(value: string[]) {
     this._permissions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions
   }
 
   // role_id - computed: false, optional: false, required: true
   private _roleId: string;
   public get roleId() {
-    return this._roleId;
+    return this.getStringAttribute('role_id');
   }
   public set roleId(value: string) {
     this._roleId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleIdInput() {
+    return this._roleId
   }
 
   // stage - computed: false, optional: true, required: false
   private _stage?: string;
   public get stage() {
-    return this._stage;
+    return this.getStringAttribute('stage');
   }
-  public set stage(value: string | undefined) {
+  public set stage(value: string ) {
     this._stage = value;
+  }
+  public resetStage() {
+    this._stage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stageInput() {
+    return this._stage
   }
 
   // title - computed: false, optional: false, required: true
   private _title: string;
   public get title() {
-    return this._title;
+    return this.getStringAttribute('title');
   }
   public set title(value: string) {
     this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
   }
 
   // =========

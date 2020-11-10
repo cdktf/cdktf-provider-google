@@ -54,85 +54,131 @@ export class DataGoogleStorageObjectSignedUrl extends TerraformDataSource {
   // bucket - computed: false, optional: false, required: true
   private _bucket: string;
   public get bucket() {
-    return this._bucket;
+    return this.getStringAttribute('bucket');
   }
   public set bucket(value: string) {
     this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket
   }
 
   // content_md5 - computed: false, optional: true, required: false
   private _contentMd5?: string;
   public get contentMd5() {
-    return this._contentMd5;
+    return this.getStringAttribute('content_md5');
   }
-  public set contentMd5(value: string | undefined) {
+  public set contentMd5(value: string ) {
     this._contentMd5 = value;
+  }
+  public resetContentMd5() {
+    this._contentMd5 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentMd5Input() {
+    return this._contentMd5
   }
 
   // content_type - computed: false, optional: true, required: false
   private _contentType?: string;
   public get contentType() {
-    return this._contentType;
+    return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string ) {
     this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
   }
 
   // credentials - computed: false, optional: true, required: false
   private _credentials?: string;
   public get credentials() {
-    return this._credentials;
+    return this.getStringAttribute('credentials');
   }
-  public set credentials(value: string | undefined) {
+  public set credentials(value: string ) {
     this._credentials = value;
+  }
+  public resetCredentials() {
+    this._credentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get credentialsInput() {
+    return this._credentials
   }
 
   // duration - computed: false, optional: true, required: false
   private _duration?: string;
   public get duration() {
-    return this._duration;
+    return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string ) {
     this._duration = value;
+  }
+  public resetDuration() {
+    this._duration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration
   }
 
   // extension_headers - computed: false, optional: true, required: false
   private _extensionHeaders?: { [key: string]: string };
   public get extensionHeaders() {
-    return this._extensionHeaders;
+    return this.interpolationForAttribute('extension_headers') as any;
   }
-  public set extensionHeaders(value: { [key: string]: string } | undefined) {
+  public set extensionHeaders(value: { [key: string]: string } ) {
     this._extensionHeaders = value;
+  }
+  public resetExtensionHeaders() {
+    this._extensionHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionHeadersInput() {
+    return this._extensionHeaders
   }
 
   // http_method - computed: false, optional: true, required: false
   private _httpMethod?: string;
   public get httpMethod() {
-    return this._httpMethod;
+    return this.getStringAttribute('http_method');
   }
-  public set httpMethod(value: string | undefined) {
+  public set httpMethod(value: string ) {
     this._httpMethod = value;
+  }
+  public resetHttpMethod() {
+    this._httpMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpMethodInput() {
+    return this._httpMethod
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // path - computed: false, optional: false, required: true
   private _path: string;
   public get path() {
-    return this._path;
+    return this.getStringAttribute('path');
   }
   public set path(value: string) {
     this._path = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
 
-  // signed_url - computed: true, optional: false, required: true
+  // signed_url - computed: true, optional: false, required: false
   public get signedUrl() {
     return this.getStringAttribute('signed_url');
   }

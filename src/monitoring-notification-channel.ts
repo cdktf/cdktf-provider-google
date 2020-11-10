@@ -83,49 +83,73 @@ export class MonitoringNotificationChannel extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -133,31 +157,49 @@ export class MonitoringNotificationChannel extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // user_labels - computed: false, optional: true, required: false
   private _userLabels?: { [key: string]: string };
   public get userLabels() {
-    return this._userLabels;
+    return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | undefined) {
+  public set userLabels(value: { [key: string]: string } ) {
     this._userLabels = value;
   }
+  public resetUserLabels() {
+    this._userLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userLabelsInput() {
+    return this._userLabels
+  }
 
-  // verification_status - computed: true, optional: false, required: true
+  // verification_status - computed: true, optional: false, required: false
   public get verificationStatus() {
     return this.getStringAttribute('verification_status');
   }
@@ -165,19 +207,33 @@ export class MonitoringNotificationChannel extends TerraformResource {
   // sensitive_labels - computed: false, optional: true, required: false
   private _sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels[];
   public get sensitiveLabels() {
-    return this._sensitiveLabels;
+    return this.interpolationForAttribute('sensitive_labels') as any;
   }
-  public set sensitiveLabels(value: MonitoringNotificationChannelSensitiveLabels[] | undefined) {
+  public set sensitiveLabels(value: MonitoringNotificationChannelSensitiveLabels[] ) {
     this._sensitiveLabels = value;
+  }
+  public resetSensitiveLabels() {
+    this._sensitiveLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitiveLabelsInput() {
+    return this._sensitiveLabels
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitoringNotificationChannelTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitoringNotificationChannelTimeouts | undefined) {
+  public set timeouts(value: MonitoringNotificationChannelTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

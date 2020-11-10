@@ -37,37 +37,40 @@ export class DataGoogleNetblockIpRanges extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // cidr_blocks - computed: true, optional: false, required: true
+  // cidr_blocks - computed: true, optional: false, required: false
   public get cidrBlocks() {
     return this.getListAttribute('cidr_blocks');
   }
 
-  // cidr_blocks_ipv4 - computed: true, optional: false, required: true
+  // cidr_blocks_ipv4 - computed: true, optional: false, required: false
   public get cidrBlocksIpv4() {
     return this.getListAttribute('cidr_blocks_ipv4');
   }
 
-  // cidr_blocks_ipv6 - computed: true, optional: false, required: true
+  // cidr_blocks_ipv6 - computed: true, optional: false, required: false
   public get cidrBlocksIpv6() {
     return this.getListAttribute('cidr_blocks_ipv6');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // range_type - computed: false, optional: true, required: false
   private _rangeType?: string;
   public get rangeType() {
-    return this._rangeType;
+    return this.getStringAttribute('range_type');
   }
-  public set rangeType(value: string | undefined) {
+  public set rangeType(value: string ) {
     this._rangeType = value;
+  }
+  public resetRangeType() {
+    this._rangeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeTypeInput() {
+    return this._rangeType
   }
 
   // =========

@@ -95,31 +95,41 @@ export class DataflowJob extends TerraformResource {
   // additional_experiments - computed: false, optional: true, required: false
   private _additionalExperiments?: string[];
   public get additionalExperiments() {
-    return this._additionalExperiments;
+    return this.getListAttribute('additional_experiments');
   }
-  public set additionalExperiments(value: string[] | undefined) {
+  public set additionalExperiments(value: string[] ) {
     this._additionalExperiments = value;
+  }
+  public resetAdditionalExperiments() {
+    this._additionalExperiments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalExperimentsInput() {
+    return this._additionalExperiments
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_configuration - computed: false, optional: true, required: false
   private _ipConfiguration?: string;
   public get ipConfiguration() {
-    return this._ipConfiguration;
+    return this.getStringAttribute('ip_configuration');
   }
-  public set ipConfiguration(value: string | undefined) {
+  public set ipConfiguration(value: string ) {
     this._ipConfiguration = value;
   }
+  public resetIpConfiguration() {
+    this._ipConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationInput() {
+    return this._ipConfiguration
+  }
 
-  // job_id - computed: true, optional: false, required: true
+  // job_id - computed: true, optional: false, required: false
   public get jobId() {
     return this.getStringAttribute('job_id');
   }
@@ -127,94 +137,161 @@ export class DataflowJob extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // machine_type - computed: false, optional: true, required: false
   private _machineType?: string;
   public get machineType() {
-    return this._machineType;
+    return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string ) {
     this._machineType = value;
+  }
+  public resetMachineType() {
+    this._machineType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineTypeInput() {
+    return this._machineType
   }
 
   // max_workers - computed: false, optional: true, required: false
   private _maxWorkers?: number;
   public get maxWorkers() {
-    return this._maxWorkers;
+    return this.getNumberAttribute('max_workers');
   }
-  public set maxWorkers(value: number | undefined) {
+  public set maxWorkers(value: number ) {
     this._maxWorkers = value;
+  }
+  public resetMaxWorkers() {
+    this._maxWorkers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWorkersInput() {
+    return this._maxWorkers
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: true, required: false
   private _network?: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string ) {
     this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // on_delete - computed: false, optional: true, required: false
   private _onDelete?: string;
   public get onDelete() {
-    return this._onDelete;
+    return this.getStringAttribute('on_delete');
   }
-  public set onDelete(value: string | undefined) {
+  public set onDelete(value: string ) {
     this._onDelete = value;
+  }
+  public resetOnDelete() {
+    this._onDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onDeleteInput() {
+    return this._onDelete
   }
 
   // parameters - computed: false, optional: true, required: false
   private _parameters?: { [key: string]: string };
   public get parameters() {
-    return this._parameters;
+    return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | undefined) {
+  public set parameters(value: { [key: string]: string } ) {
     this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: false, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region;
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string ) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // service_account_email - computed: false, optional: true, required: false
   private _serviceAccountEmail?: string;
   public get serviceAccountEmail() {
-    return this._serviceAccountEmail;
+    return this.getStringAttribute('service_account_email');
   }
-  public set serviceAccountEmail(value: string | undefined) {
+  public set serviceAccountEmail(value: string ) {
     this._serviceAccountEmail = value;
   }
+  public resetServiceAccountEmail() {
+    this._serviceAccountEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountEmailInput() {
+    return this._serviceAccountEmail
+  }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -222,40 +299,62 @@ export class DataflowJob extends TerraformResource {
   // subnetwork - computed: false, optional: true, required: false
   private _subnetwork?: string;
   public get subnetwork() {
-    return this._subnetwork;
+    return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string ) {
     this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork
   }
 
   // temp_gcs_location - computed: false, optional: false, required: true
   private _tempGcsLocation: string;
   public get tempGcsLocation() {
-    return this._tempGcsLocation;
+    return this.getStringAttribute('temp_gcs_location');
   }
   public set tempGcsLocation(value: string) {
     this._tempGcsLocation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tempGcsLocationInput() {
+    return this._tempGcsLocation
   }
 
   // template_gcs_path - computed: false, optional: false, required: true
   private _templateGcsPath: string;
   public get templateGcsPath() {
-    return this._templateGcsPath;
+    return this.getStringAttribute('template_gcs_path');
   }
   public set templateGcsPath(value: string) {
     this._templateGcsPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateGcsPathInput() {
+    return this._templateGcsPath
   }
 
   // transform_name_mapping - computed: false, optional: true, required: false
   private _transformNameMapping?: { [key: string]: string };
   public get transformNameMapping() {
-    return this._transformNameMapping;
+    return this.interpolationForAttribute('transform_name_mapping') as any;
   }
-  public set transformNameMapping(value: { [key: string]: string } | undefined) {
+  public set transformNameMapping(value: { [key: string]: string } ) {
     this._transformNameMapping = value;
   }
+  public resetTransformNameMapping() {
+    this._transformNameMapping = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformNameMappingInput() {
+    return this._transformNameMapping
+  }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -263,19 +362,33 @@ export class DataflowJob extends TerraformResource {
   // zone - computed: false, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone;
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string ) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataflowJobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataflowJobTimeouts | undefined) {
+  public set timeouts(value: DataflowJobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

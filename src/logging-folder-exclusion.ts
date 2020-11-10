@@ -52,55 +52,77 @@ export class LoggingFolderExclusion extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean;
   public get disabled() {
-    return this._disabled;
+    return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean | undefined) {
+  public set disabled(value: boolean ) {
     this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
   }
 
   // filter - computed: false, optional: false, required: true
   private _filter: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
   public set filter(value: string) {
     this._filter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
   }
 
   // folder - computed: false, optional: false, required: true
   private _folder: string;
   public get folder() {
-    return this._folder;
+    return this.getStringAttribute('folder');
   }
   public set folder(value: string) {
     this._folder = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // =========

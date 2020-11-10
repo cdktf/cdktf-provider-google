@@ -88,49 +88,70 @@ export class GameServicesGameServerCluster extends TerraformResource {
   // cluster_id - computed: false, optional: false, required: true
   private _clusterId: string;
   public get clusterId() {
-    return this._clusterId;
+    return this.getStringAttribute('cluster_id');
   }
   public set clusterId(value: string) {
     this._clusterId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterIdInput() {
+    return this._clusterId
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
   }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -138,37 +159,59 @@ export class GameServicesGameServerCluster extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // realm_id - computed: false, optional: false, required: true
   private _realmId: string;
   public get realmId() {
-    return this._realmId;
+    return this.getStringAttribute('realm_id');
   }
   public set realmId(value: string) {
     this._realmId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get realmIdInput() {
+    return this._realmId
   }
 
   // connection_info - computed: false, optional: false, required: true
   private _connectionInfo: GameServicesGameServerClusterConnectionInfo[];
   public get connectionInfo() {
-    return this._connectionInfo;
+    return this.interpolationForAttribute('connection_info') as any;
   }
   public set connectionInfo(value: GameServicesGameServerClusterConnectionInfo[]) {
     this._connectionInfo = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionInfoInput() {
+    return this._connectionInfo
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: GameServicesGameServerClusterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: GameServicesGameServerClusterTimeouts | undefined) {
+  public set timeouts(value: GameServicesGameServerClusterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

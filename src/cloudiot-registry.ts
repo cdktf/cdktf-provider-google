@@ -90,101 +90,164 @@ export class CloudiotRegistry extends TerraformResource {
 
   // http_config - computed: true, optional: true, required: false
   private _httpConfig?: { [key: string]: string }
-  public get httpConfig(): { [key: string]: string } | undefined {
-    return this._httpConfig; // Getting the computed value is not yet implemented
+  public get httpConfig(): { [key: string]: string } {
+    return this.interpolationForAttribute('http_config') as any; // Getting the computed value is not yet implemented
   }
-  public set httpConfig(value: { [key: string]: string } | undefined) {
+  public set httpConfig(value: { [key: string]: string }) {
     this._httpConfig = value;
+  }
+  public resetHttpConfig() {
+    this._httpConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpConfigInput() {
+    return this._httpConfig
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // log_level - computed: false, optional: true, required: false
   private _logLevel?: string;
   public get logLevel() {
-    return this._logLevel;
+    return this.getStringAttribute('log_level');
   }
-  public set logLevel(value: string | undefined) {
+  public set logLevel(value: string ) {
     this._logLevel = value;
+  }
+  public resetLogLevel() {
+    this._logLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logLevelInput() {
+    return this._logLevel
   }
 
   // mqtt_config - computed: true, optional: true, required: false
   private _mqttConfig?: { [key: string]: string }
-  public get mqttConfig(): { [key: string]: string } | undefined {
-    return this._mqttConfig; // Getting the computed value is not yet implemented
+  public get mqttConfig(): { [key: string]: string } {
+    return this.interpolationForAttribute('mqtt_config') as any; // Getting the computed value is not yet implemented
   }
-  public set mqttConfig(value: { [key: string]: string } | undefined) {
+  public set mqttConfig(value: { [key: string]: string }) {
     this._mqttConfig = value;
+  }
+  public resetMqttConfig() {
+    this._mqttConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mqttConfigInput() {
+    return this._mqttConfig
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // state_notification_config - computed: false, optional: true, required: false
   private _stateNotificationConfig?: { [key: string]: string };
   public get stateNotificationConfig() {
-    return this._stateNotificationConfig;
+    return this.interpolationForAttribute('state_notification_config') as any;
   }
-  public set stateNotificationConfig(value: { [key: string]: string } | undefined) {
+  public set stateNotificationConfig(value: { [key: string]: string } ) {
     this._stateNotificationConfig = value;
+  }
+  public resetStateNotificationConfig() {
+    this._stateNotificationConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateNotificationConfigInput() {
+    return this._stateNotificationConfig
   }
 
   // credentials - computed: false, optional: true, required: false
   private _credentials?: CloudiotRegistryCredentials[];
   public get credentials() {
-    return this._credentials;
+    return this.interpolationForAttribute('credentials') as any;
   }
-  public set credentials(value: CloudiotRegistryCredentials[] | undefined) {
+  public set credentials(value: CloudiotRegistryCredentials[] ) {
     this._credentials = value;
+  }
+  public resetCredentials() {
+    this._credentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get credentialsInput() {
+    return this._credentials
   }
 
   // event_notification_configs - computed: false, optional: true, required: false
   private _eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[];
   public get eventNotificationConfigs() {
-    return this._eventNotificationConfigs;
+    return this.interpolationForAttribute('event_notification_configs') as any;
   }
-  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[] | undefined) {
+  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[] ) {
     this._eventNotificationConfigs = value;
+  }
+  public resetEventNotificationConfigs() {
+    this._eventNotificationConfigs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventNotificationConfigsInput() {
+    return this._eventNotificationConfigs
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudiotRegistryTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudiotRegistryTimeouts | undefined) {
+  public set timeouts(value: CloudiotRegistryTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

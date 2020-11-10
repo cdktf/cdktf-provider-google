@@ -60,39 +60,53 @@ export class AppEngineApplicationUrlDispatchRules extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // dispatch_rules - computed: false, optional: false, required: true
   private _dispatchRules: AppEngineApplicationUrlDispatchRulesDispatchRules[];
   public get dispatchRules() {
-    return this._dispatchRules;
+    return this.interpolationForAttribute('dispatch_rules') as any;
   }
   public set dispatchRules(value: AppEngineApplicationUrlDispatchRulesDispatchRules[]) {
     this._dispatchRules = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dispatchRulesInput() {
+    return this._dispatchRules
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppEngineApplicationUrlDispatchRulesTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppEngineApplicationUrlDispatchRulesTimeouts | undefined) {
+  public set timeouts(value: AppEngineApplicationUrlDispatchRulesTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

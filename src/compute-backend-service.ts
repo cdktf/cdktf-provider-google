@@ -422,22 +422,36 @@ export class ComputeBackendService extends TerraformResource {
   // affinity_cookie_ttl_sec - computed: false, optional: true, required: false
   private _affinityCookieTtlSec?: number;
   public get affinityCookieTtlSec() {
-    return this._affinityCookieTtlSec;
+    return this.getNumberAttribute('affinity_cookie_ttl_sec');
   }
-  public set affinityCookieTtlSec(value: number | undefined) {
+  public set affinityCookieTtlSec(value: number ) {
     this._affinityCookieTtlSec = value;
+  }
+  public resetAffinityCookieTtlSec() {
+    this._affinityCookieTtlSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get affinityCookieTtlSecInput() {
+    return this._affinityCookieTtlSec
   }
 
   // connection_draining_timeout_sec - computed: false, optional: true, required: false
   private _connectionDrainingTimeoutSec?: number;
   public get connectionDrainingTimeoutSec() {
-    return this._connectionDrainingTimeoutSec;
+    return this.getNumberAttribute('connection_draining_timeout_sec');
   }
-  public set connectionDrainingTimeoutSec(value: number | undefined) {
+  public set connectionDrainingTimeoutSec(value: number ) {
     this._connectionDrainingTimeoutSec = value;
   }
+  public resetConnectionDrainingTimeoutSec() {
+    this._connectionDrainingTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionDrainingTimeoutSecInput() {
+    return this._connectionDrainingTimeoutSec
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -445,31 +459,52 @@ export class ComputeBackendService extends TerraformResource {
   // custom_request_headers - computed: false, optional: true, required: false
   private _customRequestHeaders?: string[];
   public get customRequestHeaders() {
-    return this._customRequestHeaders;
+    return this.getListAttribute('custom_request_headers');
   }
-  public set customRequestHeaders(value: string[] | undefined) {
+  public set customRequestHeaders(value: string[] ) {
     this._customRequestHeaders = value;
+  }
+  public resetCustomRequestHeaders() {
+    this._customRequestHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRequestHeadersInput() {
+    return this._customRequestHeaders
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // enable_cdn - computed: false, optional: true, required: false
   private _enableCdn?: boolean;
   public get enableCdn() {
-    return this._enableCdn;
+    return this.getBooleanAttribute('enable_cdn');
   }
-  public set enableCdn(value: boolean | undefined) {
+  public set enableCdn(value: boolean ) {
     this._enableCdn = value;
   }
+  public resetEnableCdn() {
+    this._enableCdn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableCdnInput() {
+    return this._enableCdn
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
@@ -477,85 +512,134 @@ export class ComputeBackendService extends TerraformResource {
   // health_checks - computed: false, optional: true, required: false
   private _healthChecks?: string[];
   public get healthChecks() {
-    return this._healthChecks;
+    return this.getListAttribute('health_checks');
   }
-  public set healthChecks(value: string[] | undefined) {
+  public set healthChecks(value: string[] ) {
     this._healthChecks = value;
+  }
+  public resetHealthChecks() {
+    this._healthChecks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthChecksInput() {
+    return this._healthChecks
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
   private _loadBalancingScheme?: string;
   public get loadBalancingScheme() {
-    return this._loadBalancingScheme;
+    return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string | undefined) {
+  public set loadBalancingScheme(value: string ) {
     this._loadBalancingScheme = value;
+  }
+  public resetLoadBalancingScheme() {
+    this._loadBalancingScheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancingSchemeInput() {
+    return this._loadBalancingScheme
   }
 
   // locality_lb_policy - computed: false, optional: true, required: false
   private _localityLbPolicy?: string;
   public get localityLbPolicy() {
-    return this._localityLbPolicy;
+    return this.getStringAttribute('locality_lb_policy');
   }
-  public set localityLbPolicy(value: string | undefined) {
+  public set localityLbPolicy(value: string ) {
     this._localityLbPolicy = value;
+  }
+  public resetLocalityLbPolicy() {
+    this._localityLbPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityLbPolicyInput() {
+    return this._localityLbPolicy
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // port_name - computed: true, optional: true, required: false
   private _portName?: string;
   public get portName() {
-    return this._portName ?? this.getStringAttribute('port_name');
+    return this.getStringAttribute('port_name');
   }
-  public set portName(value: string | undefined) {
+  public set portName(value: string) {
     this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // protocol - computed: true, optional: true, required: false
   private _protocol?: string;
   public get protocol() {
-    return this._protocol ?? this.getStringAttribute('protocol');
+    return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
   }
 
   // security_policy - computed: false, optional: true, required: false
   private _securityPolicy?: string;
   public get securityPolicy() {
-    return this._securityPolicy;
+    return this.getStringAttribute('security_policy');
   }
-  public set securityPolicy(value: string | undefined) {
+  public set securityPolicy(value: string ) {
     this._securityPolicy = value;
   }
+  public resetSecurityPolicy() {
+    this._securityPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityPolicyInput() {
+    return this._securityPolicy
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -563,91 +647,161 @@ export class ComputeBackendService extends TerraformResource {
   // session_affinity - computed: true, optional: true, required: false
   private _sessionAffinity?: string;
   public get sessionAffinity() {
-    return this._sessionAffinity ?? this.getStringAttribute('session_affinity');
+    return this.getStringAttribute('session_affinity');
   }
-  public set sessionAffinity(value: string | undefined) {
+  public set sessionAffinity(value: string) {
     this._sessionAffinity = value;
+  }
+  public resetSessionAffinity() {
+    this._sessionAffinity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionAffinityInput() {
+    return this._sessionAffinity
   }
 
   // timeout_sec - computed: true, optional: true, required: false
   private _timeoutSec?: number;
   public get timeoutSec() {
-    return this._timeoutSec ?? this.getNumberAttribute('timeout_sec');
+    return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number) {
     this._timeoutSec = value;
+  }
+  public resetTimeoutSec() {
+    this._timeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutSecInput() {
+    return this._timeoutSec
   }
 
   // backend - computed: false, optional: true, required: false
   private _backend?: ComputeBackendServiceBackend[];
   public get backend() {
-    return this._backend;
+    return this.interpolationForAttribute('backend') as any;
   }
-  public set backend(value: ComputeBackendServiceBackend[] | undefined) {
+  public set backend(value: ComputeBackendServiceBackend[] ) {
     this._backend = value;
+  }
+  public resetBackend() {
+    this._backend = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendInput() {
+    return this._backend
   }
 
   // cdn_policy - computed: false, optional: true, required: false
   private _cdnPolicy?: ComputeBackendServiceCdnPolicy[];
   public get cdnPolicy() {
-    return this._cdnPolicy;
+    return this.interpolationForAttribute('cdn_policy') as any;
   }
-  public set cdnPolicy(value: ComputeBackendServiceCdnPolicy[] | undefined) {
+  public set cdnPolicy(value: ComputeBackendServiceCdnPolicy[] ) {
     this._cdnPolicy = value;
+  }
+  public resetCdnPolicy() {
+    this._cdnPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cdnPolicyInput() {
+    return this._cdnPolicy
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
   private _circuitBreakers?: ComputeBackendServiceCircuitBreakers[];
   public get circuitBreakers() {
-    return this._circuitBreakers;
+    return this.interpolationForAttribute('circuit_breakers') as any;
   }
-  public set circuitBreakers(value: ComputeBackendServiceCircuitBreakers[] | undefined) {
+  public set circuitBreakers(value: ComputeBackendServiceCircuitBreakers[] ) {
     this._circuitBreakers = value;
+  }
+  public resetCircuitBreakers() {
+    this._circuitBreakers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get circuitBreakersInput() {
+    return this._circuitBreakers
   }
 
   // consistent_hash - computed: false, optional: true, required: false
   private _consistentHash?: ComputeBackendServiceConsistentHash[];
   public get consistentHash() {
-    return this._consistentHash;
+    return this.interpolationForAttribute('consistent_hash') as any;
   }
-  public set consistentHash(value: ComputeBackendServiceConsistentHash[] | undefined) {
+  public set consistentHash(value: ComputeBackendServiceConsistentHash[] ) {
     this._consistentHash = value;
+  }
+  public resetConsistentHash() {
+    this._consistentHash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consistentHashInput() {
+    return this._consistentHash
   }
 
   // iap - computed: false, optional: true, required: false
   private _iap?: ComputeBackendServiceIap[];
   public get iap() {
-    return this._iap;
+    return this.interpolationForAttribute('iap') as any;
   }
-  public set iap(value: ComputeBackendServiceIap[] | undefined) {
+  public set iap(value: ComputeBackendServiceIap[] ) {
     this._iap = value;
+  }
+  public resetIap() {
+    this._iap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iapInput() {
+    return this._iap
   }
 
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeBackendServiceLogConfig[];
   public get logConfig() {
-    return this._logConfig;
+    return this.interpolationForAttribute('log_config') as any;
   }
-  public set logConfig(value: ComputeBackendServiceLogConfig[] | undefined) {
+  public set logConfig(value: ComputeBackendServiceLogConfig[] ) {
     this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
   }
 
   // outlier_detection - computed: false, optional: true, required: false
   private _outlierDetection?: ComputeBackendServiceOutlierDetection[];
   public get outlierDetection() {
-    return this._outlierDetection;
+    return this.interpolationForAttribute('outlier_detection') as any;
   }
-  public set outlierDetection(value: ComputeBackendServiceOutlierDetection[] | undefined) {
+  public set outlierDetection(value: ComputeBackendServiceOutlierDetection[] ) {
     this._outlierDetection = value;
+  }
+  public resetOutlierDetection() {
+    this._outlierDetection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outlierDetectionInput() {
+    return this._outlierDetection
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeBackendServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeBackendServiceTimeouts | undefined) {
+  public set timeouts(value: ComputeBackendServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -66,40 +66,51 @@ export class MonitoringGroup extends TerraformResource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // filter - computed: false, optional: false, required: true
   private _filter: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
   public set filter(value: string) {
     this._filter = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // is_cluster - computed: false, optional: true, required: false
   private _isCluster?: boolean;
   public get isCluster() {
-    return this._isCluster;
+    return this.getBooleanAttribute('is_cluster');
   }
-  public set isCluster(value: boolean | undefined) {
+  public set isCluster(value: boolean ) {
     this._isCluster = value;
   }
+  public resetIsCluster() {
+    this._isCluster = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isClusterInput() {
+    return this._isCluster
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -107,28 +118,49 @@ export class MonitoringGroup extends TerraformResource {
   // parent_name - computed: false, optional: true, required: false
   private _parentName?: string;
   public get parentName() {
-    return this._parentName;
+    return this.getStringAttribute('parent_name');
   }
-  public set parentName(value: string | undefined) {
+  public set parentName(value: string ) {
     this._parentName = value;
+  }
+  public resetParentName() {
+    this._parentName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentNameInput() {
+    return this._parentName
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitoringGroupTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitoringGroupTimeouts | undefined) {
+  public set timeouts(value: MonitoringGroupTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

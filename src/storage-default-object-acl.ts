@@ -42,28 +42,35 @@ export class StorageDefaultObjectAcl extends TerraformResource {
   // bucket - computed: false, optional: false, required: true
   private _bucket: string;
   public get bucket() {
-    return this._bucket;
+    return this.getStringAttribute('bucket');
   }
   public set bucket(value: string) {
     this._bucket = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // role_entity - computed: true, optional: true, required: false
   private _roleEntity?: string[];
   public get roleEntity() {
-    return this._roleEntity ?? this.getListAttribute('role_entity');
+    return this.getListAttribute('role_entity');
   }
-  public set roleEntity(value: string[] | undefined) {
+  public set roleEntity(value: string[]) {
     this._roleEntity = value;
+  }
+  public resetRoleEntity() {
+    this._roleEntity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleEntityInput() {
+    return this._roleEntity
   }
 
   // =========

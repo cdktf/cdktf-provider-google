@@ -56,69 +56,98 @@ export class DataCatalogEntryGroupIamMember extends TerraformResource {
   // entry_group - computed: false, optional: false, required: true
   private _entryGroup: string;
   public get entryGroup() {
-    return this._entryGroup;
+    return this.getStringAttribute('entry_group');
   }
   public set entryGroup(value: string) {
     this._entryGroup = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get entryGroupInput() {
+    return this._entryGroup
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // member - computed: false, optional: false, required: true
   private _member: string;
   public get member() {
-    return this._member;
+    return this.getStringAttribute('member');
   }
   public set member(value: string) {
     this._member = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberInput() {
+    return this._member
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // condition - computed: false, optional: true, required: false
   private _condition?: DataCatalogEntryGroupIamMemberCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: DataCatalogEntryGroupIamMemberCondition[] | undefined) {
+  public set condition(value: DataCatalogEntryGroupIamMemberCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // =========

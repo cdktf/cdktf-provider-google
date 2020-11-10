@@ -50,7 +50,7 @@ export class Folder extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
@@ -58,32 +58,32 @@ export class Folder extends TerraformResource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
-  // folder_id - computed: true, optional: false, required: true
+  // folder_id - computed: true, optional: false, required: false
   public get folderId() {
     return this.getStringAttribute('folder_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // lifecycle_state - computed: true, optional: false, required: true
+  // lifecycle_state - computed: true, optional: false, required: false
   public get lifecycleState() {
     return this.getStringAttribute('lifecycle_state');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -91,19 +91,30 @@ export class Folder extends TerraformResource {
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: FolderTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: FolderTimeouts | undefined) {
+  public set timeouts(value: FolderTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

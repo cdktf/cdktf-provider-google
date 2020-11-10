@@ -17,7 +17,7 @@ monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae
 }
 export class DataGoogleMonitoringAppEngineServiceTelemetry extends ComplexComputedList {
 
-  // resource_name - computed: true, optional: false, required: true
+  // resource_name - computed: true, optional: false, required: false
   public get resourceName() {
     return this.getStringAttribute('resource_name');
   }
@@ -50,30 +50,30 @@ export class DataGoogleMonitoringAppEngineService extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // module_id - computed: false, optional: false, required: true
   private _moduleId: string;
   public get moduleId() {
-    return this._moduleId;
+    return this.getStringAttribute('module_id');
   }
   public set moduleId(value: string) {
     this._moduleId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get moduleIdInput() {
+    return this._moduleId
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -81,18 +81,25 @@ export class DataGoogleMonitoringAppEngineService extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // service_id - computed: true, optional: false, required: true
+  // service_id - computed: true, optional: false, required: false
   public get serviceId() {
     return this.getStringAttribute('service_id');
   }
 
-  // telemetry - computed: true, optional: false, required: true
+  // telemetry - computed: true, optional: false, required: false
   public telemetry(index: string) {
     return new DataGoogleMonitoringAppEngineServiceTelemetry(this, 'telemetry', index);
   }

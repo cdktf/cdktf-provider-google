@@ -39,35 +39,35 @@ export class DataGoogleDnsManagedZone extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
-  // dns_name - computed: true, optional: false, required: true
+  // dns_name - computed: true, optional: false, required: false
   public get dnsName() {
     return this.getStringAttribute('dns_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // name_servers - computed: true, optional: false, required: true
+  // name_servers - computed: true, optional: false, required: false
   public get nameServers() {
     return this.getListAttribute('name_servers');
   }
@@ -75,13 +75,20 @@ export class DataGoogleDnsManagedZone extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // visibility - computed: true, optional: false, required: true
+  // visibility - computed: true, optional: false, required: false
   public get visibility() {
     return this.getStringAttribute('visibility');
   }

@@ -81,40 +81,51 @@ export class HealthcareDicomStore extends TerraformResource {
   // dataset - computed: false, optional: false, required: true
   private _dataset: string;
   public get dataset() {
-    return this._dataset;
+    return this.getStringAttribute('dataset');
   }
   public set dataset(value: string) {
     this._dataset = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -122,19 +133,33 @@ export class HealthcareDicomStore extends TerraformResource {
   // notification_config - computed: false, optional: true, required: false
   private _notificationConfig?: HealthcareDicomStoreNotificationConfig[];
   public get notificationConfig() {
-    return this._notificationConfig;
+    return this.interpolationForAttribute('notification_config') as any;
   }
-  public set notificationConfig(value: HealthcareDicomStoreNotificationConfig[] | undefined) {
+  public set notificationConfig(value: HealthcareDicomStoreNotificationConfig[] ) {
     this._notificationConfig = value;
+  }
+  public resetNotificationConfig() {
+    this._notificationConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationConfigInput() {
+    return this._notificationConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: HealthcareDicomStoreTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: HealthcareDicomStoreTimeouts | undefined) {
+  public set timeouts(value: HealthcareDicomStoreTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -41,31 +41,27 @@ export class DataGoogleSecretManagerSecretVersion extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // destroy_time - computed: true, optional: false, required: true
+  // destroy_time - computed: true, optional: false, required: false
   public get destroyTime() {
     return this.getStringAttribute('destroy_time');
   }
 
-  // enabled - computed: true, optional: false, required: true
+  // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -73,22 +69,33 @@ export class DataGoogleSecretManagerSecretVersion extends TerraformDataSource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // secret - computed: false, optional: false, required: true
   private _secret: string;
   public get secret() {
-    return this._secret;
+    return this.getStringAttribute('secret');
   }
   public set secret(value: string) {
     this._secret = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
+  }
 
-  // secret_data - computed: true, optional: false, required: true
+  // secret_data - computed: true, optional: false, required: false
   public get secretData() {
     return this.getStringAttribute('secret_data');
   }
@@ -96,10 +103,17 @@ export class DataGoogleSecretManagerSecretVersion extends TerraformDataSource {
   // version - computed: true, optional: true, required: false
   private _version?: string;
   public get version() {
-    return this._version ?? this.getStringAttribute('version');
+    return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // =========

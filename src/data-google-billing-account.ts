@@ -44,31 +44,41 @@ export class DataGoogleBillingAccount extends TerraformDataSource {
   // billing_account - computed: false, optional: true, required: false
   private _billingAccount?: string;
   public get billingAccount() {
-    return this._billingAccount;
+    return this.getStringAttribute('billing_account');
   }
-  public set billingAccount(value: string | undefined) {
+  public set billingAccount(value: string ) {
     this._billingAccount = value;
+  }
+  public resetBillingAccount() {
+    this._billingAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingAccountInput() {
+    return this._billingAccount
   }
 
   // display_name - computed: true, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName ?? this.getStringAttribute('display_name');
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -76,13 +86,20 @@ export class DataGoogleBillingAccount extends TerraformDataSource {
   // open - computed: true, optional: true, required: false
   private _open?: boolean;
   public get open() {
-    return this._open ?? this.getBooleanAttribute('open');
+    return this.getBooleanAttribute('open');
   }
-  public set open(value: boolean | undefined) {
+  public set open(value: boolean) {
     this._open = value;
   }
+  public resetOpen() {
+    this._open = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openInput() {
+    return this._open
+  }
 
-  // project_ids - computed: true, optional: false, required: true
+  // project_ids - computed: true, optional: false, required: false
   public get projectIds() {
     return this.getListAttribute('project_ids');
   }

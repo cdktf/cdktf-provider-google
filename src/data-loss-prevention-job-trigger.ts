@@ -221,36 +221,46 @@ export class DataLossPreventionJobTrigger extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // last_run_time - computed: true, optional: false, required: true
+  // last_run_time - computed: true, optional: false, required: false
   public get lastRunTime() {
     return this.getStringAttribute('last_run_time');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -258,46 +268,75 @@ export class DataLossPreventionJobTrigger extends TerraformResource {
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // status - computed: false, optional: true, required: false
   private _status?: string;
   public get status() {
-    return this._status;
+    return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string ) {
     this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
   }
 
   // inspect_job - computed: false, optional: true, required: false
   private _inspectJob?: DataLossPreventionJobTriggerInspectJob[];
   public get inspectJob() {
-    return this._inspectJob;
+    return this.interpolationForAttribute('inspect_job') as any;
   }
-  public set inspectJob(value: DataLossPreventionJobTriggerInspectJob[] | undefined) {
+  public set inspectJob(value: DataLossPreventionJobTriggerInspectJob[] ) {
     this._inspectJob = value;
+  }
+  public resetInspectJob() {
+    this._inspectJob = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inspectJobInput() {
+    return this._inspectJob
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataLossPreventionJobTriggerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataLossPreventionJobTriggerTimeouts | undefined) {
+  public set timeouts(value: DataLossPreventionJobTriggerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // triggers - computed: false, optional: false, required: true
   private _triggers: DataLossPreventionJobTriggerTriggers[];
   public get triggers() {
-    return this._triggers;
+    return this.interpolationForAttribute('triggers') as any;
   }
   public set triggers(value: DataLossPreventionJobTriggerTriggers[]) {
     this._triggers = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggersInput() {
+    return this._triggers
   }
 
   // =========

@@ -115,82 +115,131 @@ export class AccessContextManagerAccessLevelCondition extends TerraformResource 
   // access_level - computed: false, optional: false, required: true
   private _accessLevel: string;
   public get accessLevel() {
-    return this._accessLevel;
+    return this.getStringAttribute('access_level');
   }
   public set accessLevel(value: string) {
     this._accessLevel = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get accessLevelInput() {
+    return this._accessLevel
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_subnetworks - computed: false, optional: true, required: false
   private _ipSubnetworks?: string[];
   public get ipSubnetworks() {
-    return this._ipSubnetworks;
+    return this.getListAttribute('ip_subnetworks');
   }
-  public set ipSubnetworks(value: string[] | undefined) {
+  public set ipSubnetworks(value: string[] ) {
     this._ipSubnetworks = value;
+  }
+  public resetIpSubnetworks() {
+    this._ipSubnetworks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipSubnetworksInput() {
+    return this._ipSubnetworks
   }
 
   // members - computed: false, optional: true, required: false
   private _members?: string[];
   public get members() {
-    return this._members;
+    return this.getListAttribute('members');
   }
-  public set members(value: string[] | undefined) {
+  public set members(value: string[] ) {
     this._members = value;
+  }
+  public resetMembers() {
+    this._members = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get membersInput() {
+    return this._members
   }
 
   // negate - computed: false, optional: true, required: false
   private _negate?: boolean;
   public get negate() {
-    return this._negate;
+    return this.getBooleanAttribute('negate');
   }
-  public set negate(value: boolean | undefined) {
+  public set negate(value: boolean ) {
     this._negate = value;
+  }
+  public resetNegate() {
+    this._negate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateInput() {
+    return this._negate
   }
 
   // regions - computed: false, optional: true, required: false
   private _regions?: string[];
   public get regions() {
-    return this._regions;
+    return this.getListAttribute('regions');
   }
-  public set regions(value: string[] | undefined) {
+  public set regions(value: string[] ) {
     this._regions = value;
+  }
+  public resetRegions() {
+    this._regions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionsInput() {
+    return this._regions
   }
 
   // required_access_levels - computed: false, optional: true, required: false
   private _requiredAccessLevels?: string[];
   public get requiredAccessLevels() {
-    return this._requiredAccessLevels;
+    return this.getListAttribute('required_access_levels');
   }
-  public set requiredAccessLevels(value: string[] | undefined) {
+  public set requiredAccessLevels(value: string[] ) {
     this._requiredAccessLevels = value;
+  }
+  public resetRequiredAccessLevels() {
+    this._requiredAccessLevels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requiredAccessLevelsInput() {
+    return this._requiredAccessLevels
   }
 
   // device_policy - computed: false, optional: true, required: false
   private _devicePolicy?: AccessContextManagerAccessLevelConditionDevicePolicy[];
   public get devicePolicy() {
-    return this._devicePolicy;
+    return this.interpolationForAttribute('device_policy') as any;
   }
-  public set devicePolicy(value: AccessContextManagerAccessLevelConditionDevicePolicy[] | undefined) {
+  public set devicePolicy(value: AccessContextManagerAccessLevelConditionDevicePolicy[] ) {
     this._devicePolicy = value;
+  }
+  public resetDevicePolicy() {
+    this._devicePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get devicePolicyInput() {
+    return this._devicePolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerAccessLevelConditionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerAccessLevelConditionTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerAccessLevelConditionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

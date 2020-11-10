@@ -71,58 +71,86 @@ export class Project extends TerraformResource {
   // auto_create_network - computed: false, optional: true, required: false
   private _autoCreateNetwork?: boolean;
   public get autoCreateNetwork() {
-    return this._autoCreateNetwork;
+    return this.getBooleanAttribute('auto_create_network');
   }
-  public set autoCreateNetwork(value: boolean | undefined) {
+  public set autoCreateNetwork(value: boolean ) {
     this._autoCreateNetwork = value;
+  }
+  public resetAutoCreateNetwork() {
+    this._autoCreateNetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoCreateNetworkInput() {
+    return this._autoCreateNetwork
   }
 
   // billing_account - computed: false, optional: true, required: false
   private _billingAccount?: string;
   public get billingAccount() {
-    return this._billingAccount;
+    return this.getStringAttribute('billing_account');
   }
-  public set billingAccount(value: string | undefined) {
+  public set billingAccount(value: string ) {
     this._billingAccount = value;
+  }
+  public resetBillingAccount() {
+    this._billingAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingAccountInput() {
+    return this._billingAccount
   }
 
   // folder_id - computed: true, optional: true, required: false
   private _folderId?: string;
   public get folderId() {
-    return this._folderId ?? this.getStringAttribute('folder_id');
+    return this.getStringAttribute('folder_id');
   }
-  public set folderId(value: string | undefined) {
+  public set folderId(value: string) {
     this._folderId = value;
+  }
+  public resetFolderId() {
+    this._folderId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get folderIdInput() {
+    return this._folderId
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // number - computed: true, optional: false, required: true
+  // number - computed: true, optional: false, required: false
   public get number() {
     return this.getStringAttribute('number');
   }
@@ -130,37 +158,62 @@ export class Project extends TerraformResource {
   // org_id - computed: true, optional: true, required: false
   private _orgId?: string;
   public get orgId() {
-    return this._orgId ?? this.getStringAttribute('org_id');
+    return this.getStringAttribute('org_id');
   }
-  public set orgId(value: string | undefined) {
+  public set orgId(value: string) {
     this._orgId = value;
+  }
+  public resetOrgId() {
+    this._orgId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orgIdInput() {
+    return this._orgId
   }
 
   // project_id - computed: false, optional: false, required: true
   private _projectId: string;
   public get projectId() {
-    return this._projectId;
+    return this.getStringAttribute('project_id');
   }
   public set projectId(value: string) {
     this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
   }
 
   // skip_delete - computed: true, optional: true, required: false
   private _skipDelete?: boolean;
   public get skipDelete() {
-    return this._skipDelete ?? this.getBooleanAttribute('skip_delete');
+    return this.getBooleanAttribute('skip_delete');
   }
-  public set skipDelete(value: boolean | undefined) {
+  public set skipDelete(value: boolean) {
     this._skipDelete = value;
+  }
+  public resetSkipDelete() {
+    this._skipDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipDeleteInput() {
+    return this._skipDelete
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ProjectTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ProjectTimeouts | undefined) {
+  public set timeouts(value: ProjectTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

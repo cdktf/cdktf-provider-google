@@ -38,15 +38,11 @@ export class DataGoogleIamRole extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // included_permissions - computed: true, optional: false, required: true
+  // included_permissions - computed: true, optional: false, required: false
   public get includedPermissions() {
     return this.getListAttribute('included_permissions');
   }
@@ -54,18 +50,22 @@ export class DataGoogleIamRole extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // stage - computed: true, optional: false, required: true
+  // stage - computed: true, optional: false, required: false
   public get stage() {
     return this.getStringAttribute('stage');
   }
 
-  // title - computed: true, optional: false, required: true
+  // title - computed: true, optional: false, required: false
   public get title() {
     return this.getStringAttribute('title');
   }

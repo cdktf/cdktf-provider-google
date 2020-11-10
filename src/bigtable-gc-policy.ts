@@ -67,73 +67,109 @@ export class BigtableGcPolicy extends TerraformResource {
   // column_family - computed: false, optional: false, required: true
   private _columnFamily: string;
   public get columnFamily() {
-    return this._columnFamily;
+    return this.getStringAttribute('column_family');
   }
   public set columnFamily(value: string) {
     this._columnFamily = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get columnFamilyInput() {
+    return this._columnFamily
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance_name - computed: false, optional: false, required: true
   private _instanceName: string;
   public get instanceName() {
-    return this._instanceName;
+    return this.getStringAttribute('instance_name');
   }
   public set instanceName(value: string) {
     this._instanceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceNameInput() {
+    return this._instanceName
   }
 
   // mode - computed: false, optional: true, required: false
   private _mode?: string;
   public get mode() {
-    return this._mode;
+    return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string ) {
     this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // table - computed: false, optional: false, required: true
   private _table: string;
   public get table() {
-    return this._table;
+    return this.getStringAttribute('table');
   }
   public set table(value: string) {
     this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table
   }
 
   // max_age - computed: false, optional: true, required: false
   private _maxAge?: BigtableGcPolicyMaxAge[];
   public get maxAge() {
-    return this._maxAge;
+    return this.interpolationForAttribute('max_age') as any;
   }
-  public set maxAge(value: BigtableGcPolicyMaxAge[] | undefined) {
+  public set maxAge(value: BigtableGcPolicyMaxAge[] ) {
     this._maxAge = value;
+  }
+  public resetMaxAge() {
+    this._maxAge = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInput() {
+    return this._maxAge
   }
 
   // max_version - computed: false, optional: true, required: false
   private _maxVersion?: BigtableGcPolicyMaxVersion[];
   public get maxVersion() {
-    return this._maxVersion;
+    return this.interpolationForAttribute('max_version') as any;
   }
-  public set maxVersion(value: BigtableGcPolicyMaxVersion[] | undefined) {
+  public set maxVersion(value: BigtableGcPolicyMaxVersion[] ) {
     this._maxVersion = value;
+  }
+  public resetMaxVersion() {
+    this._maxVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxVersionInput() {
+    return this._maxVersion
   }
 
   // =========

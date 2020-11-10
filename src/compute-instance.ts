@@ -224,27 +224,41 @@ export class ComputeInstance extends TerraformResource {
   // allow_stopping_for_update - computed: false, optional: true, required: false
   private _allowStoppingForUpdate?: boolean;
   public get allowStoppingForUpdate() {
-    return this._allowStoppingForUpdate;
+    return this.getBooleanAttribute('allow_stopping_for_update');
   }
-  public set allowStoppingForUpdate(value: boolean | undefined) {
+  public set allowStoppingForUpdate(value: boolean ) {
     this._allowStoppingForUpdate = value;
+  }
+  public resetAllowStoppingForUpdate() {
+    this._allowStoppingForUpdate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowStoppingForUpdateInput() {
+    return this._allowStoppingForUpdate
   }
 
   // can_ip_forward - computed: false, optional: true, required: false
   private _canIpForward?: boolean;
   public get canIpForward() {
-    return this._canIpForward;
+    return this.getBooleanAttribute('can_ip_forward');
   }
-  public set canIpForward(value: boolean | undefined) {
+  public set canIpForward(value: boolean ) {
     this._canIpForward = value;
   }
+  public resetCanIpForward() {
+    this._canIpForward = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get canIpForwardInput() {
+    return this._canIpForward
+  }
 
-  // cpu_platform - computed: true, optional: false, required: true
+  // cpu_platform - computed: true, optional: false, required: false
   public get cpuPlatform() {
     return this.getStringAttribute('cpu_platform');
   }
 
-  // current_status - computed: true, optional: false, required: true
+  // current_status - computed: true, optional: false, required: false
   public get currentStatus() {
     return this.getStringAttribute('current_status');
   }
@@ -252,72 +266,110 @@ export class ComputeInstance extends TerraformResource {
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean;
   public get deletionProtection() {
-    return this._deletionProtection;
+    return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean | undefined) {
+  public set deletionProtection(value: boolean ) {
     this._deletionProtection = value;
+  }
+  public resetDeletionProtection() {
+    this._deletionProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionInput() {
+    return this._deletionProtection
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // desired_status - computed: false, optional: true, required: false
   private _desiredStatus?: string;
   public get desiredStatus() {
-    return this._desiredStatus;
+    return this.getStringAttribute('desired_status');
   }
-  public set desiredStatus(value: string | undefined) {
+  public set desiredStatus(value: string ) {
     this._desiredStatus = value;
+  }
+  public resetDesiredStatus() {
+    this._desiredStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredStatusInput() {
+    return this._desiredStatus
   }
 
   // enable_display - computed: false, optional: true, required: false
   private _enableDisplay?: boolean;
   public get enableDisplay() {
-    return this._enableDisplay;
+    return this.getBooleanAttribute('enable_display');
   }
-  public set enableDisplay(value: boolean | undefined) {
+  public set enableDisplay(value: boolean ) {
     this._enableDisplay = value;
+  }
+  public resetEnableDisplay() {
+    this._enableDisplay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableDisplayInput() {
+    return this._enableDisplay
   }
 
   // guest_accelerator - computed: true, optional: true, required: false
   private _guestAccelerator?: ComputeInstanceGuestAccelerator[]
-  public get guestAccelerator(): ComputeInstanceGuestAccelerator[] | undefined {
-    return this._guestAccelerator; // Getting the computed value is not yet implemented
+  public get guestAccelerator(): ComputeInstanceGuestAccelerator[] {
+    return this.interpolationForAttribute('guest_accelerator') as any; // Getting the computed value is not yet implemented
   }
-  public set guestAccelerator(value: ComputeInstanceGuestAccelerator[] | undefined) {
+  public set guestAccelerator(value: ComputeInstanceGuestAccelerator[]) {
     this._guestAccelerator = value;
+  }
+  public resetGuestAccelerator() {
+    this._guestAccelerator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get guestAcceleratorInput() {
+    return this._guestAccelerator
   }
 
   // hostname - computed: false, optional: true, required: false
   private _hostname?: string;
   public get hostname() {
-    return this._hostname;
+    return this.getStringAttribute('hostname');
   }
-  public set hostname(value: string | undefined) {
+  public set hostname(value: string ) {
     this._hostname = value;
+  }
+  public resetHostname() {
+    this._hostname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostnameInput() {
+    return this._hostname
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // instance_id - computed: true, optional: false, required: true
+  // instance_id - computed: true, optional: false, required: false
   public get instanceId() {
     return this.getStringAttribute('instance_id');
   }
 
-  // label_fingerprint - computed: true, optional: false, required: true
+  // label_fingerprint - computed: true, optional: false, required: false
   public get labelFingerprint() {
     return this.getStringAttribute('label_fingerprint');
   }
@@ -325,31 +377,49 @@ export class ComputeInstance extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // machine_type - computed: false, optional: false, required: true
   private _machineType: string;
   public get machineType() {
-    return this._machineType;
+    return this.getStringAttribute('machine_type');
   }
   public set machineType(value: string) {
     this._machineType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineTypeInput() {
+    return this._machineType
   }
 
   // metadata - computed: false, optional: true, required: false
   private _metadata?: { [key: string]: string };
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | undefined) {
+  public set metadata(value: { [key: string]: string } ) {
     this._metadata = value;
   }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
+  }
 
-  // metadata_fingerprint - computed: true, optional: false, required: true
+  // metadata_fingerprint - computed: true, optional: false, required: false
   public get metadataFingerprint() {
     return this.getStringAttribute('metadata_fingerprint');
   }
@@ -357,49 +427,81 @@ export class ComputeInstance extends TerraformResource {
   // metadata_startup_script - computed: false, optional: true, required: false
   private _metadataStartupScript?: string;
   public get metadataStartupScript() {
-    return this._metadataStartupScript;
+    return this.getStringAttribute('metadata_startup_script');
   }
-  public set metadataStartupScript(value: string | undefined) {
+  public set metadataStartupScript(value: string ) {
     this._metadataStartupScript = value;
+  }
+  public resetMetadataStartupScript() {
+    this._metadataStartupScript = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataStartupScriptInput() {
+    return this._metadataStartupScript
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
   private _minCpuPlatform?: string;
   public get minCpuPlatform() {
-    return this._minCpuPlatform ?? this.getStringAttribute('min_cpu_platform');
+    return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
+  }
+  public resetMinCpuPlatform() {
+    this._minCpuPlatform = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCpuPlatformInput() {
+    return this._minCpuPlatform
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // resource_policies - computed: false, optional: true, required: false
   private _resourcePolicies?: string[];
   public get resourcePolicies() {
-    return this._resourcePolicies;
+    return this.getListAttribute('resource_policies');
   }
-  public set resourcePolicies(value: string[] | undefined) {
+  public set resourcePolicies(value: string[] ) {
     this._resourcePolicies = value;
   }
+  public resetResourcePolicies() {
+    this._resourcePolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourcePoliciesInput() {
+    return this._resourcePolicies
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -407,13 +509,20 @@ export class ComputeInstance extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: string[];
   public get tags() {
-    return this._tags;
+    return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[] ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // tags_fingerprint - computed: true, optional: false, required: true
+  // tags_fingerprint - computed: true, optional: false, required: false
   public get tagsFingerprint() {
     return this.getStringAttribute('tags_fingerprint');
   }
@@ -421,82 +530,139 @@ export class ComputeInstance extends TerraformResource {
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // attached_disk - computed: false, optional: true, required: false
   private _attachedDisk?: ComputeInstanceAttachedDisk[];
   public get attachedDisk() {
-    return this._attachedDisk;
+    return this.interpolationForAttribute('attached_disk') as any;
   }
-  public set attachedDisk(value: ComputeInstanceAttachedDisk[] | undefined) {
+  public set attachedDisk(value: ComputeInstanceAttachedDisk[] ) {
     this._attachedDisk = value;
+  }
+  public resetAttachedDisk() {
+    this._attachedDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attachedDiskInput() {
+    return this._attachedDisk
   }
 
   // boot_disk - computed: false, optional: false, required: true
   private _bootDisk: ComputeInstanceBootDisk[];
   public get bootDisk() {
-    return this._bootDisk;
+    return this.interpolationForAttribute('boot_disk') as any;
   }
   public set bootDisk(value: ComputeInstanceBootDisk[]) {
     this._bootDisk = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootDiskInput() {
+    return this._bootDisk
   }
 
   // network_interface - computed: false, optional: false, required: true
   private _networkInterface: ComputeInstanceNetworkInterface[];
   public get networkInterface() {
-    return this._networkInterface;
+    return this.interpolationForAttribute('network_interface') as any;
   }
   public set networkInterface(value: ComputeInstanceNetworkInterface[]) {
     this._networkInterface = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceInput() {
+    return this._networkInterface
   }
 
   // scheduling - computed: false, optional: true, required: false
   private _scheduling?: ComputeInstanceScheduling[];
   public get scheduling() {
-    return this._scheduling;
+    return this.interpolationForAttribute('scheduling') as any;
   }
-  public set scheduling(value: ComputeInstanceScheduling[] | undefined) {
+  public set scheduling(value: ComputeInstanceScheduling[] ) {
     this._scheduling = value;
+  }
+  public resetScheduling() {
+    this._scheduling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schedulingInput() {
+    return this._scheduling
   }
 
   // scratch_disk - computed: false, optional: true, required: false
   private _scratchDisk?: ComputeInstanceScratchDisk[];
   public get scratchDisk() {
-    return this._scratchDisk;
+    return this.interpolationForAttribute('scratch_disk') as any;
   }
-  public set scratchDisk(value: ComputeInstanceScratchDisk[] | undefined) {
+  public set scratchDisk(value: ComputeInstanceScratchDisk[] ) {
     this._scratchDisk = value;
+  }
+  public resetScratchDisk() {
+    this._scratchDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scratchDiskInput() {
+    return this._scratchDisk
   }
 
   // service_account - computed: false, optional: true, required: false
   private _serviceAccount?: ComputeInstanceServiceAccount[];
   public get serviceAccount() {
-    return this._serviceAccount;
+    return this.interpolationForAttribute('service_account') as any;
   }
-  public set serviceAccount(value: ComputeInstanceServiceAccount[] | undefined) {
+  public set serviceAccount(value: ComputeInstanceServiceAccount[] ) {
     this._serviceAccount = value;
+  }
+  public resetServiceAccount() {
+    this._serviceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountInput() {
+    return this._serviceAccount
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
   private _shieldedInstanceConfig?: ComputeInstanceShieldedInstanceConfig[];
   public get shieldedInstanceConfig() {
-    return this._shieldedInstanceConfig;
+    return this.interpolationForAttribute('shielded_instance_config') as any;
   }
-  public set shieldedInstanceConfig(value: ComputeInstanceShieldedInstanceConfig[] | undefined) {
+  public set shieldedInstanceConfig(value: ComputeInstanceShieldedInstanceConfig[] ) {
     this._shieldedInstanceConfig = value;
+  }
+  public resetShieldedInstanceConfig() {
+    this._shieldedInstanceConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shieldedInstanceConfigInput() {
+    return this._shieldedInstanceConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeInstanceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeInstanceTimeouts | undefined) {
+  public set timeouts(value: ComputeInstanceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

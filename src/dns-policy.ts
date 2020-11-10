@@ -88,82 +88,131 @@ export class DnsPolicy extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // enable_inbound_forwarding - computed: false, optional: true, required: false
   private _enableInboundForwarding?: boolean;
   public get enableInboundForwarding() {
-    return this._enableInboundForwarding;
+    return this.getBooleanAttribute('enable_inbound_forwarding');
   }
-  public set enableInboundForwarding(value: boolean | undefined) {
+  public set enableInboundForwarding(value: boolean ) {
     this._enableInboundForwarding = value;
+  }
+  public resetEnableInboundForwarding() {
+    this._enableInboundForwarding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableInboundForwardingInput() {
+    return this._enableInboundForwarding
   }
 
   // enable_logging - computed: false, optional: true, required: false
   private _enableLogging?: boolean;
   public get enableLogging() {
-    return this._enableLogging;
+    return this.getBooleanAttribute('enable_logging');
   }
-  public set enableLogging(value: boolean | undefined) {
+  public set enableLogging(value: boolean ) {
     this._enableLogging = value;
+  }
+  public resetEnableLogging() {
+    this._enableLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableLoggingInput() {
+    return this._enableLogging
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // alternative_name_server_config - computed: false, optional: true, required: false
   private _alternativeNameServerConfig?: DnsPolicyAlternativeNameServerConfig[];
   public get alternativeNameServerConfig() {
-    return this._alternativeNameServerConfig;
+    return this.interpolationForAttribute('alternative_name_server_config') as any;
   }
-  public set alternativeNameServerConfig(value: DnsPolicyAlternativeNameServerConfig[] | undefined) {
+  public set alternativeNameServerConfig(value: DnsPolicyAlternativeNameServerConfig[] ) {
     this._alternativeNameServerConfig = value;
+  }
+  public resetAlternativeNameServerConfig() {
+    this._alternativeNameServerConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alternativeNameServerConfigInput() {
+    return this._alternativeNameServerConfig
   }
 
   // networks - computed: false, optional: true, required: false
   private _networks?: DnsPolicyNetworks[];
   public get networks() {
-    return this._networks;
+    return this.interpolationForAttribute('networks') as any;
   }
-  public set networks(value: DnsPolicyNetworks[] | undefined) {
+  public set networks(value: DnsPolicyNetworks[] ) {
     this._networks = value;
+  }
+  public resetNetworks() {
+    this._networks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networksInput() {
+    return this._networks
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DnsPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DnsPolicyTimeouts | undefined) {
+  public set timeouts(value: DnsPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

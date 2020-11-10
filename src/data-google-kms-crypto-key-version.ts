@@ -14,12 +14,12 @@ export interface DataGoogleKmsCryptoKeyVersionConfig extends TerraformMetaArgume
 }
 export class DataGoogleKmsCryptoKeyVersionPublicKey extends ComplexComputedList {
 
-  // algorithm - computed: true, optional: false, required: true
+  // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
     return this.getStringAttribute('algorithm');
   }
 
-  // pem - computed: true, optional: false, required: true
+  // pem - computed: true, optional: false, required: false
   public get pem() {
     return this.getStringAttribute('pem');
   }
@@ -52,7 +52,7 @@ export class DataGoogleKmsCryptoKeyVersion extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // algorithm - computed: true, optional: false, required: true
+  // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
     return this.getStringAttribute('algorithm');
   }
@@ -60,32 +60,32 @@ export class DataGoogleKmsCryptoKeyVersion extends TerraformDataSource {
   // crypto_key - computed: false, optional: false, required: true
   private _cryptoKey: string;
   public get cryptoKey() {
-    return this._cryptoKey;
+    return this.getStringAttribute('crypto_key');
   }
   public set cryptoKey(value: string) {
     this._cryptoKey = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get cryptoKeyInput() {
+    return this._cryptoKey
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // protection_level - computed: true, optional: false, required: true
+  // protection_level - computed: true, optional: false, required: false
   public get protectionLevel() {
     return this.getStringAttribute('protection_level');
   }
 
-  // public_key - computed: true, optional: false, required: true
+  // public_key - computed: true, optional: false, required: false
   public publicKey(index: string) {
     return new DataGoogleKmsCryptoKeyVersionPublicKey(this, 'public_key', index);
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -93,10 +93,17 @@ export class DataGoogleKmsCryptoKeyVersion extends TerraformDataSource {
   // version - computed: false, optional: true, required: false
   private _version?: number;
   public get version() {
-    return this._version;
+    return this.getNumberAttribute('version');
   }
-  public set version(value: number | undefined) {
+  public set version(value: number ) {
     this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // =========

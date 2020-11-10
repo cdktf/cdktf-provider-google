@@ -61,64 +61,96 @@ export class SqlUser extends TerraformResource {
   // host - computed: false, optional: true, required: false
   private _host?: string;
   public get host() {
-    return this._host;
+    return this.getStringAttribute('host');
   }
-  public set host(value: string | undefined) {
+  public set host(value: string ) {
     this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance - computed: false, optional: false, required: true
   private _instance: string;
   public get instance() {
-    return this._instance;
+    return this.getStringAttribute('instance');
   }
   public set instance(value: string) {
     this._instance = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // password - computed: false, optional: true, required: false
   private _password?: string;
   public get password() {
-    return this._password;
+    return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string ) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlUserTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SqlUserTimeouts | undefined) {
+  public set timeouts(value: SqlUserTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

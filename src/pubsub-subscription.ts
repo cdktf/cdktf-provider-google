@@ -206,67 +206,102 @@ export class PubsubSubscription extends TerraformResource {
   // ack_deadline_seconds - computed: true, optional: true, required: false
   private _ackDeadlineSeconds?: number;
   public get ackDeadlineSeconds() {
-    return this._ackDeadlineSeconds ?? this.getNumberAttribute('ack_deadline_seconds');
+    return this.getNumberAttribute('ack_deadline_seconds');
   }
-  public set ackDeadlineSeconds(value: number | undefined) {
+  public set ackDeadlineSeconds(value: number) {
     this._ackDeadlineSeconds = value;
+  }
+  public resetAckDeadlineSeconds() {
+    this._ackDeadlineSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ackDeadlineSecondsInput() {
+    return this._ackDeadlineSeconds
   }
 
   // enable_message_ordering - computed: false, optional: true, required: false
   private _enableMessageOrdering?: boolean;
   public get enableMessageOrdering() {
-    return this._enableMessageOrdering;
+    return this.getBooleanAttribute('enable_message_ordering');
   }
-  public set enableMessageOrdering(value: boolean | undefined) {
+  public set enableMessageOrdering(value: boolean ) {
     this._enableMessageOrdering = value;
+  }
+  public resetEnableMessageOrdering() {
+    this._enableMessageOrdering = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableMessageOrderingInput() {
+    return this._enableMessageOrdering
   }
 
   // filter - computed: false, optional: true, required: false
   private _filter?: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string ) {
     this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // message_retention_duration - computed: false, optional: true, required: false
   private _messageRetentionDuration?: string;
   public get messageRetentionDuration() {
-    return this._messageRetentionDuration;
+    return this.getStringAttribute('message_retention_duration');
   }
-  public set messageRetentionDuration(value: string | undefined) {
+  public set messageRetentionDuration(value: string ) {
     this._messageRetentionDuration = value;
+  }
+  public resetMessageRetentionDuration() {
+    this._messageRetentionDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageRetentionDurationInput() {
+    return this._messageRetentionDuration
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // path - computed: true, optional: false, required: true
+  // path - computed: true, optional: false, required: false
   public get path() {
     return this.getStringAttribute('path');
   }
@@ -274,73 +309,126 @@ export class PubsubSubscription extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // retain_acked_messages - computed: false, optional: true, required: false
   private _retainAckedMessages?: boolean;
   public get retainAckedMessages() {
-    return this._retainAckedMessages;
+    return this.getBooleanAttribute('retain_acked_messages');
   }
-  public set retainAckedMessages(value: boolean | undefined) {
+  public set retainAckedMessages(value: boolean ) {
     this._retainAckedMessages = value;
+  }
+  public resetRetainAckedMessages() {
+    this._retainAckedMessages = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retainAckedMessagesInput() {
+    return this._retainAckedMessages
   }
 
   // topic - computed: false, optional: false, required: true
   private _topic: string;
   public get topic() {
-    return this._topic;
+    return this.getStringAttribute('topic');
   }
   public set topic(value: string) {
     this._topic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicInput() {
+    return this._topic
   }
 
   // dead_letter_policy - computed: false, optional: true, required: false
   private _deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy[];
   public get deadLetterPolicy() {
-    return this._deadLetterPolicy;
+    return this.interpolationForAttribute('dead_letter_policy') as any;
   }
-  public set deadLetterPolicy(value: PubsubSubscriptionDeadLetterPolicy[] | undefined) {
+  public set deadLetterPolicy(value: PubsubSubscriptionDeadLetterPolicy[] ) {
     this._deadLetterPolicy = value;
+  }
+  public resetDeadLetterPolicy() {
+    this._deadLetterPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deadLetterPolicyInput() {
+    return this._deadLetterPolicy
   }
 
   // expiration_policy - computed: false, optional: true, required: false
   private _expirationPolicy?: PubsubSubscriptionExpirationPolicy[];
   public get expirationPolicy() {
-    return this._expirationPolicy;
+    return this.interpolationForAttribute('expiration_policy') as any;
   }
-  public set expirationPolicy(value: PubsubSubscriptionExpirationPolicy[] | undefined) {
+  public set expirationPolicy(value: PubsubSubscriptionExpirationPolicy[] ) {
     this._expirationPolicy = value;
+  }
+  public resetExpirationPolicy() {
+    this._expirationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationPolicyInput() {
+    return this._expirationPolicy
   }
 
   // push_config - computed: false, optional: true, required: false
   private _pushConfig?: PubsubSubscriptionPushConfig[];
   public get pushConfig() {
-    return this._pushConfig;
+    return this.interpolationForAttribute('push_config') as any;
   }
-  public set pushConfig(value: PubsubSubscriptionPushConfig[] | undefined) {
+  public set pushConfig(value: PubsubSubscriptionPushConfig[] ) {
     this._pushConfig = value;
+  }
+  public resetPushConfig() {
+    this._pushConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pushConfigInput() {
+    return this._pushConfig
   }
 
   // retry_policy - computed: false, optional: true, required: false
   private _retryPolicy?: PubsubSubscriptionRetryPolicy[];
   public get retryPolicy() {
-    return this._retryPolicy;
+    return this.interpolationForAttribute('retry_policy') as any;
   }
-  public set retryPolicy(value: PubsubSubscriptionRetryPolicy[] | undefined) {
+  public set retryPolicy(value: PubsubSubscriptionRetryPolicy[] ) {
     this._retryPolicy = value;
+  }
+  public resetRetryPolicy() {
+    this._retryPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryPolicyInput() {
+    return this._retryPolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PubsubSubscriptionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: PubsubSubscriptionTimeouts | undefined) {
+  public set timeouts(value: PubsubSubscriptionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

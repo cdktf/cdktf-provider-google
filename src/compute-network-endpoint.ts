@@ -64,75 +64,108 @@ export class ComputeNetworkEndpoint extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance - computed: false, optional: false, required: true
   private _instance: string;
   public get instance() {
-    return this._instance;
+    return this.getStringAttribute('instance');
   }
   public set instance(value: string) {
     this._instance = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance
   }
 
   // ip_address - computed: false, optional: false, required: true
   private _ipAddress: string;
   public get ipAddress() {
-    return this._ipAddress;
+    return this.getStringAttribute('ip_address');
   }
   public set ipAddress(value: string) {
     this._ipAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress
   }
 
   // network_endpoint_group - computed: false, optional: false, required: true
   private _networkEndpointGroup: string;
   public get networkEndpointGroup() {
-    return this._networkEndpointGroup;
+    return this.getStringAttribute('network_endpoint_group');
   }
   public set networkEndpointGroup(value: string) {
     this._networkEndpointGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkEndpointGroupInput() {
+    return this._networkEndpointGroup
   }
 
   // port - computed: false, optional: false, required: true
   private _port: number;
   public get port() {
-    return this._port;
+    return this.getNumberAttribute('port');
   }
   public set port(value: number) {
     this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNetworkEndpointTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeNetworkEndpointTimeouts | undefined) {
+  public set timeouts(value: ComputeNetworkEndpointTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

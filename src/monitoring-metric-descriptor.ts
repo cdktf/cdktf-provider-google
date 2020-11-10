@@ -108,54 +108,69 @@ export class MonitoringMetricDescriptor extends TerraformResource {
   // description - computed: false, optional: false, required: true
   private _description: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
   public set description(value: string) {
     this._description = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // launch_stage - computed: false, optional: true, required: false
   private _launchStage?: string;
   public get launchStage() {
-    return this._launchStage;
+    return this.getStringAttribute('launch_stage');
   }
-  public set launchStage(value: string | undefined) {
+  public set launchStage(value: string ) {
     this._launchStage = value;
+  }
+  public resetLaunchStage() {
+    this._launchStage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get launchStageInput() {
+    return this._launchStage
   }
 
   // metric_kind - computed: false, optional: false, required: true
   private _metricKind: string;
   public get metricKind() {
-    return this._metricKind;
+    return this.getStringAttribute('metric_kind');
   }
   public set metricKind(value: string) {
     this._metricKind = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get metricKindInput() {
+    return this._metricKind
+  }
 
-  // monitored_resource_types - computed: true, optional: false, required: true
+  // monitored_resource_types - computed: true, optional: false, required: false
   public get monitoredResourceTypes() {
     return this.getListAttribute('monitored_resource_types');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -163,64 +178,107 @@ export class MonitoringMetricDescriptor extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // unit - computed: false, optional: true, required: false
   private _unit?: string;
   public get unit() {
-    return this._unit;
+    return this.getStringAttribute('unit');
   }
-  public set unit(value: string | undefined) {
+  public set unit(value: string ) {
     this._unit = value;
+  }
+  public resetUnit() {
+    this._unit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unitInput() {
+    return this._unit
   }
 
   // value_type - computed: false, optional: false, required: true
   private _valueType: string;
   public get valueType() {
-    return this._valueType;
+    return this.getStringAttribute('value_type');
   }
   public set valueType(value: string) {
     this._valueType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueTypeInput() {
+    return this._valueType
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: MonitoringMetricDescriptorLabels[];
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: MonitoringMetricDescriptorLabels[] | undefined) {
+  public set labels(value: MonitoringMetricDescriptorLabels[] ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // metadata - computed: false, optional: true, required: false
   private _metadata?: MonitoringMetricDescriptorMetadata[];
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: MonitoringMetricDescriptorMetadata[] | undefined) {
+  public set metadata(value: MonitoringMetricDescriptorMetadata[] ) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitoringMetricDescriptorTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitoringMetricDescriptorTimeouts | undefined) {
+  public set timeouts(value: MonitoringMetricDescriptorTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

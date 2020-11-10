@@ -58,40 +58,51 @@ export class ProjectDefaultServiceAccounts extends TerraformResource {
   // action - computed: false, optional: false, required: true
   private _action: string;
   public get action() {
-    return this._action;
+    return this.getStringAttribute('action');
   }
   public set action(value: string) {
     this._action = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: false, optional: false, required: true
   private _project: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
   public set project(value: string) {
     this._project = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // restore_policy - computed: false, optional: true, required: false
   private _restorePolicy?: string;
   public get restorePolicy() {
-    return this._restorePolicy;
+    return this.getStringAttribute('restore_policy');
   }
-  public set restorePolicy(value: string | undefined) {
+  public set restorePolicy(value: string ) {
     this._restorePolicy = value;
   }
+  public resetRestorePolicy() {
+    this._restorePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restorePolicyInput() {
+    return this._restorePolicy
+  }
 
-  // service_accounts - computed: true, optional: false, required: true
+  // service_accounts - computed: true, optional: false, required: false
   public serviceAccounts(key: string): string {
     return new StringMap(this, 'service_accounts').lookup(key);
   }
@@ -99,10 +110,17 @@ export class ProjectDefaultServiceAccounts extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ProjectDefaultServiceAccountsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ProjectDefaultServiceAccountsTimeouts | undefined) {
+  public set timeouts(value: ProjectDefaultServiceAccountsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

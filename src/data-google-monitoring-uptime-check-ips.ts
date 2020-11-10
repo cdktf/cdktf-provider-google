@@ -12,17 +12,17 @@ export interface DataGoogleMonitoringUptimeCheckIpsConfig extends TerraformMetaA
 }
 export class DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps extends ComplexComputedList {
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // region - computed: true, optional: false, required: true
+  // region - computed: true, optional: false, required: false
   public get region() {
     return this.getStringAttribute('region');
   }
@@ -54,15 +54,11 @@ export class DataGoogleMonitoringUptimeCheckIps extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // uptime_check_ips - computed: true, optional: false, required: true
+  // uptime_check_ips - computed: true, optional: false, required: false
   public uptimeCheckIps(index: string) {
     return new DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps(this, 'uptime_check_ips', index);
   }

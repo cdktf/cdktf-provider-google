@@ -46,22 +46,25 @@ export class DataGoogleServiceAccountIdToken extends TerraformDataSource {
   // delegates - computed: false, optional: true, required: false
   private _delegates?: string[];
   public get delegates() {
-    return this._delegates;
+    return this.getListAttribute('delegates');
   }
-  public set delegates(value: string[] | undefined) {
+  public set delegates(value: string[] ) {
     this._delegates = value;
+  }
+  public resetDelegates() {
+    this._delegates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delegatesInput() {
+    return this._delegates
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // id_token - computed: true, optional: false, required: true
+  // id_token - computed: true, optional: false, required: false
   public get idToken() {
     return this.getStringAttribute('id_token');
   }
@@ -69,28 +72,46 @@ export class DataGoogleServiceAccountIdToken extends TerraformDataSource {
   // include_email - computed: false, optional: true, required: false
   private _includeEmail?: boolean;
   public get includeEmail() {
-    return this._includeEmail;
+    return this.getBooleanAttribute('include_email');
   }
-  public set includeEmail(value: boolean | undefined) {
+  public set includeEmail(value: boolean ) {
     this._includeEmail = value;
+  }
+  public resetIncludeEmail() {
+    this._includeEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeEmailInput() {
+    return this._includeEmail
   }
 
   // target_audience - computed: false, optional: false, required: true
   private _targetAudience: string;
   public get targetAudience() {
-    return this._targetAudience;
+    return this.getStringAttribute('target_audience');
   }
   public set targetAudience(value: string) {
     this._targetAudience = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetAudienceInput() {
+    return this._targetAudience
   }
 
   // target_service_account - computed: false, optional: true, required: false
   private _targetServiceAccount?: string;
   public get targetServiceAccount() {
-    return this._targetServiceAccount;
+    return this.getStringAttribute('target_service_account');
   }
-  public set targetServiceAccount(value: string | undefined) {
+  public set targetServiceAccount(value: string ) {
     this._targetServiceAccount = value;
+  }
+  public resetTargetServiceAccount() {
+    this._targetServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetServiceAccountInput() {
+    return this._targetServiceAccount
   }
 
   // =========

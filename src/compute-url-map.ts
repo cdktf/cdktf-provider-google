@@ -1228,7 +1228,7 @@ export class ComputeUrlMap extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -1236,36 +1236,46 @@ export class ComputeUrlMap extends TerraformResource {
   // default_service - computed: false, optional: true, required: false
   private _defaultService?: string;
   public get defaultService() {
-    return this._defaultService;
+    return this.getStringAttribute('default_service');
   }
-  public set defaultService(value: string | undefined) {
+  public set defaultService(value: string ) {
     this._defaultService = value;
+  }
+  public resetDefaultService() {
+    this._defaultService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultServiceInput() {
+    return this._defaultService
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // map_id - computed: true, optional: false, required: true
+  // map_id - computed: true, optional: false, required: false
   public get mapId() {
     return this.getNumberAttribute('map_id');
   }
@@ -1273,22 +1283,33 @@ export class ComputeUrlMap extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -1296,64 +1317,113 @@ export class ComputeUrlMap extends TerraformResource {
   // default_route_action - computed: false, optional: true, required: false
   private _defaultRouteAction?: ComputeUrlMapDefaultRouteAction[];
   public get defaultRouteAction() {
-    return this._defaultRouteAction;
+    return this.interpolationForAttribute('default_route_action') as any;
   }
-  public set defaultRouteAction(value: ComputeUrlMapDefaultRouteAction[] | undefined) {
+  public set defaultRouteAction(value: ComputeUrlMapDefaultRouteAction[] ) {
     this._defaultRouteAction = value;
+  }
+  public resetDefaultRouteAction() {
+    this._defaultRouteAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultRouteActionInput() {
+    return this._defaultRouteAction
   }
 
   // default_url_redirect - computed: false, optional: true, required: false
   private _defaultUrlRedirect?: ComputeUrlMapDefaultUrlRedirect[];
   public get defaultUrlRedirect() {
-    return this._defaultUrlRedirect;
+    return this.interpolationForAttribute('default_url_redirect') as any;
   }
-  public set defaultUrlRedirect(value: ComputeUrlMapDefaultUrlRedirect[] | undefined) {
+  public set defaultUrlRedirect(value: ComputeUrlMapDefaultUrlRedirect[] ) {
     this._defaultUrlRedirect = value;
+  }
+  public resetDefaultUrlRedirect() {
+    this._defaultUrlRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultUrlRedirectInput() {
+    return this._defaultUrlRedirect
   }
 
   // header_action - computed: false, optional: true, required: false
   private _headerAction?: ComputeUrlMapHeaderAction[];
   public get headerAction() {
-    return this._headerAction;
+    return this.interpolationForAttribute('header_action') as any;
   }
-  public set headerAction(value: ComputeUrlMapHeaderAction[] | undefined) {
+  public set headerAction(value: ComputeUrlMapHeaderAction[] ) {
     this._headerAction = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction
   }
 
   // host_rule - computed: false, optional: true, required: false
   private _hostRule?: ComputeUrlMapHostRule[];
   public get hostRule() {
-    return this._hostRule;
+    return this.interpolationForAttribute('host_rule') as any;
   }
-  public set hostRule(value: ComputeUrlMapHostRule[] | undefined) {
+  public set hostRule(value: ComputeUrlMapHostRule[] ) {
     this._hostRule = value;
+  }
+  public resetHostRule() {
+    this._hostRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRuleInput() {
+    return this._hostRule
   }
 
   // path_matcher - computed: false, optional: true, required: false
   private _pathMatcher?: ComputeUrlMapPathMatcher[];
   public get pathMatcher() {
-    return this._pathMatcher;
+    return this.interpolationForAttribute('path_matcher') as any;
   }
-  public set pathMatcher(value: ComputeUrlMapPathMatcher[] | undefined) {
+  public set pathMatcher(value: ComputeUrlMapPathMatcher[] ) {
     this._pathMatcher = value;
+  }
+  public resetPathMatcher() {
+    this._pathMatcher = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathMatcherInput() {
+    return this._pathMatcher
   }
 
   // test - computed: false, optional: true, required: false
   private _test?: ComputeUrlMapTest[];
   public get test() {
-    return this._test;
+    return this.interpolationForAttribute('test') as any;
   }
-  public set test(value: ComputeUrlMapTest[] | undefined) {
+  public set test(value: ComputeUrlMapTest[] ) {
     this._test = value;
+  }
+  public resetTest() {
+    this._test = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testInput() {
+    return this._test
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeUrlMapTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeUrlMapTimeouts | undefined) {
+  public set timeouts(value: ComputeUrlMapTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

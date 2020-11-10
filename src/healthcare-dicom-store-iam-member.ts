@@ -52,51 +52,66 @@ export class HealthcareDicomStoreIamMember extends TerraformResource {
   // dicom_store_id - computed: false, optional: false, required: true
   private _dicomStoreId: string;
   public get dicomStoreId() {
-    return this._dicomStoreId;
+    return this.getStringAttribute('dicom_store_id');
   }
   public set dicomStoreId(value: string) {
     this._dicomStoreId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get dicomStoreIdInput() {
+    return this._dicomStoreId
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // member - computed: false, optional: false, required: true
   private _member: string;
   public get member() {
-    return this._member;
+    return this.getStringAttribute('member');
   }
   public set member(value: string) {
     this._member = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberInput() {
+    return this._member
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // condition - computed: false, optional: true, required: false
   private _condition?: HealthcareDicomStoreIamMemberCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: HealthcareDicomStoreIamMemberCondition[] | undefined) {
+  public set condition(value: HealthcareDicomStoreIamMemberCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // =========

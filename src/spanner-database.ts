@@ -63,58 +63,83 @@ export class SpannerDatabase extends TerraformResource {
   // ddl - computed: false, optional: true, required: false
   private _ddl?: string[];
   public get ddl() {
-    return this._ddl;
+    return this.getListAttribute('ddl');
   }
-  public set ddl(value: string[] | undefined) {
+  public set ddl(value: string[] ) {
     this._ddl = value;
+  }
+  public resetDdl() {
+    this._ddl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ddlInput() {
+    return this._ddl
   }
 
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean;
   public get deletionProtection() {
-    return this._deletionProtection;
+    return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean | undefined) {
+  public set deletionProtection(value: boolean ) {
     this._deletionProtection = value;
+  }
+  public resetDeletionProtection() {
+    this._deletionProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionInput() {
+    return this._deletionProtection
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance - computed: false, optional: false, required: true
   private _instance: string;
   public get instance() {
-    return this._instance;
+    return this.getStringAttribute('instance');
   }
   public set instance(value: string) {
     this._instance = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -122,10 +147,17 @@ export class SpannerDatabase extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SpannerDatabaseTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SpannerDatabaseTimeouts | undefined) {
+  public set timeouts(value: SpannerDatabaseTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

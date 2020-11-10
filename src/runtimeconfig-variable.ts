@@ -49,51 +49,69 @@ export class RuntimeconfigVariable extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // text - computed: false, optional: true, required: false
   private _text?: string;
   public get text() {
-    return this._text;
+    return this.getStringAttribute('text');
   }
-  public set text(value: string | undefined) {
+  public set text(value: string ) {
     this._text = value;
   }
+  public resetText() {
+    this._text = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get textInput() {
+    return this._text
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -101,10 +119,17 @@ export class RuntimeconfigVariable extends TerraformResource {
   // value - computed: false, optional: true, required: false
   private _value?: string;
   public get value() {
-    return this._value;
+    return this.getStringAttribute('value');
   }
-  public set value(value: string | undefined) {
+  public set value(value: string ) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
   }
 
   // =========

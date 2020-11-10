@@ -173,13 +173,20 @@ export class BigqueryTable extends TerraformResource {
   // clustering - computed: false, optional: true, required: false
   private _clustering?: string[];
   public get clustering() {
-    return this._clustering;
+    return this.getListAttribute('clustering');
   }
-  public set clustering(value: string[] | undefined) {
+  public set clustering(value: string[] ) {
     this._clustering = value;
   }
+  public resetClustering() {
+    this._clustering = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusteringInput() {
+    return this._clustering
+  }
 
-  // creation_time - computed: true, optional: false, required: true
+  // creation_time - computed: true, optional: false, required: false
   public get creationTime() {
     return this.getNumberAttribute('creation_time');
   }
@@ -187,22 +194,33 @@ export class BigqueryTable extends TerraformResource {
   // dataset_id - computed: false, optional: false, required: true
   private _datasetId: string;
   public get datasetId() {
-    return this._datasetId;
+    return this.getStringAttribute('dataset_id');
   }
   public set datasetId(value: string) {
     this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
@@ -210,60 +228,77 @@ export class BigqueryTable extends TerraformResource {
   // expiration_time - computed: true, optional: true, required: false
   private _expirationTime?: number;
   public get expirationTime() {
-    return this._expirationTime ?? this.getNumberAttribute('expiration_time');
+    return this.getNumberAttribute('expiration_time');
   }
-  public set expirationTime(value: number | undefined) {
+  public set expirationTime(value: number) {
     this._expirationTime = value;
+  }
+  public resetExpirationTime() {
+    this._expirationTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationTimeInput() {
+    return this._expirationTime
   }
 
   // friendly_name - computed: false, optional: true, required: false
   private _friendlyName?: string;
   public get friendlyName() {
-    return this._friendlyName;
+    return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string | undefined) {
+  public set friendlyName(value: string ) {
     this._friendlyName = value;
+  }
+  public resetFriendlyName() {
+    this._friendlyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get friendlyNameInput() {
+    return this._friendlyName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // last_modified_time - computed: true, optional: false, required: true
+  // last_modified_time - computed: true, optional: false, required: false
   public get lastModifiedTime() {
     return this.getNumberAttribute('last_modified_time');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // num_bytes - computed: true, optional: false, required: true
+  // num_bytes - computed: true, optional: false, required: false
   public get numBytes() {
     return this.getNumberAttribute('num_bytes');
   }
 
-  // num_long_term_bytes - computed: true, optional: false, required: true
+  // num_long_term_bytes - computed: true, optional: false, required: false
   public get numLongTermBytes() {
     return this.getNumberAttribute('num_long_term_bytes');
   }
 
-  // num_rows - computed: true, optional: false, required: true
+  // num_rows - computed: true, optional: false, required: false
   public get numRows() {
     return this.getNumberAttribute('num_rows');
   }
@@ -271,22 +306,36 @@ export class BigqueryTable extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // schema - computed: true, optional: true, required: false
   private _schema?: string;
   public get schema() {
-    return this._schema ?? this.getStringAttribute('schema');
+    return this.getStringAttribute('schema');
   }
-  public set schema(value: string | undefined) {
+  public set schema(value: string) {
     this._schema = value;
   }
+  public resetSchema() {
+    this._schema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -294,13 +343,17 @@ export class BigqueryTable extends TerraformResource {
   // table_id - computed: false, optional: false, required: true
   private _tableId: string;
   public get tableId() {
-    return this._tableId;
+    return this.getStringAttribute('table_id');
   }
   public set tableId(value: string) {
     this._tableId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -308,55 +361,97 @@ export class BigqueryTable extends TerraformResource {
   // encryption_configuration - computed: false, optional: true, required: false
   private _encryptionConfiguration?: BigqueryTableEncryptionConfiguration[];
   public get encryptionConfiguration() {
-    return this._encryptionConfiguration;
+    return this.interpolationForAttribute('encryption_configuration') as any;
   }
-  public set encryptionConfiguration(value: BigqueryTableEncryptionConfiguration[] | undefined) {
+  public set encryptionConfiguration(value: BigqueryTableEncryptionConfiguration[] ) {
     this._encryptionConfiguration = value;
+  }
+  public resetEncryptionConfiguration() {
+    this._encryptionConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionConfigurationInput() {
+    return this._encryptionConfiguration
   }
 
   // external_data_configuration - computed: false, optional: true, required: false
   private _externalDataConfiguration?: BigqueryTableExternalDataConfiguration[];
   public get externalDataConfiguration() {
-    return this._externalDataConfiguration;
+    return this.interpolationForAttribute('external_data_configuration') as any;
   }
-  public set externalDataConfiguration(value: BigqueryTableExternalDataConfiguration[] | undefined) {
+  public set externalDataConfiguration(value: BigqueryTableExternalDataConfiguration[] ) {
     this._externalDataConfiguration = value;
+  }
+  public resetExternalDataConfiguration() {
+    this._externalDataConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalDataConfigurationInput() {
+    return this._externalDataConfiguration
   }
 
   // materialized_view - computed: false, optional: true, required: false
   private _materializedView?: BigqueryTableMaterializedView[];
   public get materializedView() {
-    return this._materializedView;
+    return this.interpolationForAttribute('materialized_view') as any;
   }
-  public set materializedView(value: BigqueryTableMaterializedView[] | undefined) {
+  public set materializedView(value: BigqueryTableMaterializedView[] ) {
     this._materializedView = value;
+  }
+  public resetMaterializedView() {
+    this._materializedView = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get materializedViewInput() {
+    return this._materializedView
   }
 
   // range_partitioning - computed: false, optional: true, required: false
   private _rangePartitioning?: BigqueryTableRangePartitioning[];
   public get rangePartitioning() {
-    return this._rangePartitioning;
+    return this.interpolationForAttribute('range_partitioning') as any;
   }
-  public set rangePartitioning(value: BigqueryTableRangePartitioning[] | undefined) {
+  public set rangePartitioning(value: BigqueryTableRangePartitioning[] ) {
     this._rangePartitioning = value;
+  }
+  public resetRangePartitioning() {
+    this._rangePartitioning = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangePartitioningInput() {
+    return this._rangePartitioning
   }
 
   // time_partitioning - computed: false, optional: true, required: false
   private _timePartitioning?: BigqueryTableTimePartitioning[];
   public get timePartitioning() {
-    return this._timePartitioning;
+    return this.interpolationForAttribute('time_partitioning') as any;
   }
-  public set timePartitioning(value: BigqueryTableTimePartitioning[] | undefined) {
+  public set timePartitioning(value: BigqueryTableTimePartitioning[] ) {
     this._timePartitioning = value;
+  }
+  public resetTimePartitioning() {
+    this._timePartitioning = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timePartitioningInput() {
+    return this._timePartitioning
   }
 
   // view - computed: false, optional: true, required: false
   private _view?: BigqueryTableView[];
   public get view() {
-    return this._view;
+    return this.interpolationForAttribute('view') as any;
   }
-  public set view(value: BigqueryTableView[] | undefined) {
+  public set view(value: BigqueryTableView[] ) {
     this._view = value;
+  }
+  public resetView() {
+    this._view = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get viewInput() {
+    return this._view
   }
 
   // =========

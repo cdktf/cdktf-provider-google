@@ -111,94 +111,144 @@ export class ComputeRoute extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // dest_range - computed: false, optional: false, required: true
   private _destRange: string;
   public get destRange() {
-    return this._destRange;
+    return this.getStringAttribute('dest_range');
   }
   public set destRange(value: string) {
     this._destRange = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get destRangeInput() {
+    return this._destRange
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // next_hop_gateway - computed: false, optional: true, required: false
   private _nextHopGateway?: string;
   public get nextHopGateway() {
-    return this._nextHopGateway;
+    return this.getStringAttribute('next_hop_gateway');
   }
-  public set nextHopGateway(value: string | undefined) {
+  public set nextHopGateway(value: string ) {
     this._nextHopGateway = value;
+  }
+  public resetNextHopGateway() {
+    this._nextHopGateway = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopGatewayInput() {
+    return this._nextHopGateway
   }
 
   // next_hop_ilb - computed: false, optional: true, required: false
   private _nextHopIlb?: string;
   public get nextHopIlb() {
-    return this._nextHopIlb;
+    return this.getStringAttribute('next_hop_ilb');
   }
-  public set nextHopIlb(value: string | undefined) {
+  public set nextHopIlb(value: string ) {
     this._nextHopIlb = value;
+  }
+  public resetNextHopIlb() {
+    this._nextHopIlb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopIlbInput() {
+    return this._nextHopIlb
   }
 
   // next_hop_instance - computed: false, optional: true, required: false
   private _nextHopInstance?: string;
   public get nextHopInstance() {
-    return this._nextHopInstance;
+    return this.getStringAttribute('next_hop_instance');
   }
-  public set nextHopInstance(value: string | undefined) {
+  public set nextHopInstance(value: string ) {
     this._nextHopInstance = value;
+  }
+  public resetNextHopInstance() {
+    this._nextHopInstance = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopInstanceInput() {
+    return this._nextHopInstance
   }
 
   // next_hop_instance_zone - computed: false, optional: true, required: false
   private _nextHopInstanceZone?: string;
   public get nextHopInstanceZone() {
-    return this._nextHopInstanceZone;
+    return this.getStringAttribute('next_hop_instance_zone');
   }
-  public set nextHopInstanceZone(value: string | undefined) {
+  public set nextHopInstanceZone(value: string ) {
     this._nextHopInstanceZone = value;
+  }
+  public resetNextHopInstanceZone() {
+    this._nextHopInstanceZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopInstanceZoneInput() {
+    return this._nextHopInstanceZone
   }
 
   // next_hop_ip - computed: true, optional: true, required: false
   private _nextHopIp?: string;
   public get nextHopIp() {
-    return this._nextHopIp ?? this.getStringAttribute('next_hop_ip');
+    return this.getStringAttribute('next_hop_ip');
   }
-  public set nextHopIp(value: string | undefined) {
+  public set nextHopIp(value: string) {
     this._nextHopIp = value;
   }
+  public resetNextHopIp() {
+    this._nextHopIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopIpInput() {
+    return this._nextHopIp
+  }
 
-  // next_hop_network - computed: true, optional: false, required: true
+  // next_hop_network - computed: true, optional: false, required: false
   public get nextHopNetwork() {
     return this.getStringAttribute('next_hop_network');
   }
@@ -206,31 +256,52 @@ export class ComputeRoute extends TerraformResource {
   // next_hop_vpn_tunnel - computed: false, optional: true, required: false
   private _nextHopVpnTunnel?: string;
   public get nextHopVpnTunnel() {
-    return this._nextHopVpnTunnel;
+    return this.getStringAttribute('next_hop_vpn_tunnel');
   }
-  public set nextHopVpnTunnel(value: string | undefined) {
+  public set nextHopVpnTunnel(value: string ) {
     this._nextHopVpnTunnel = value;
+  }
+  public resetNextHopVpnTunnel() {
+    this._nextHopVpnTunnel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopVpnTunnelInput() {
+    return this._nextHopVpnTunnel
   }
 
   // priority - computed: false, optional: true, required: false
   private _priority?: number;
   public get priority() {
-    return this._priority;
+    return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number ) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -238,19 +309,33 @@ export class ComputeRoute extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: string[];
   public get tags() {
-    return this._tags;
+    return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[] ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRouteTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRouteTimeouts | undefined) {
+  public set timeouts(value: ComputeRouteTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

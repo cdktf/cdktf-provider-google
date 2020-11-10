@@ -14,12 +14,12 @@ export interface DataGoogleComposerImageVersionsConfig extends TerraformMetaArgu
 }
 export class DataGoogleComposerImageVersionsImageVersions extends ComplexComputedList {
 
-  // image_version_id - computed: true, optional: false, required: true
+  // image_version_id - computed: true, optional: false, required: false
   public get imageVersionId() {
     return this.getStringAttribute('image_version_id');
   }
 
-  // supported_python_versions - computed: true, optional: false, required: true
+  // supported_python_versions - computed: true, optional: false, required: false
   public get supportedPythonVersions() {
     return this.getListAttribute('supported_python_versions');
   }
@@ -53,15 +53,11 @@ export class DataGoogleComposerImageVersions extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // image_versions - computed: true, optional: false, required: true
+  // image_versions - computed: true, optional: false, required: false
   public imageVersions(index: string) {
     return new DataGoogleComposerImageVersionsImageVersions(this, 'image_versions', index);
   }
@@ -69,19 +65,33 @@ export class DataGoogleComposerImageVersions extends TerraformDataSource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // =========

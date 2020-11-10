@@ -51,37 +51,48 @@ export class ComputeSharedVpcServiceProject extends TerraformResource {
   // host_project - computed: false, optional: false, required: true
   private _hostProject: string;
   public get hostProject() {
-    return this._hostProject;
+    return this.getStringAttribute('host_project');
   }
   public set hostProject(value: string) {
     this._hostProject = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get hostProjectInput() {
+    return this._hostProject
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // service_project - computed: false, optional: false, required: true
   private _serviceProject: string;
   public get serviceProject() {
-    return this._serviceProject;
+    return this.getStringAttribute('service_project');
   }
   public set serviceProject(value: string) {
     this._serviceProject = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceProjectInput() {
+    return this._serviceProject
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeSharedVpcServiceProjectTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeSharedVpcServiceProjectTimeouts | undefined) {
+  public set timeouts(value: ComputeSharedVpcServiceProjectTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

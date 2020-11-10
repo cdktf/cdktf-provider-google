@@ -93,7 +93,7 @@ export class ComputeSnapshot extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -101,27 +101,30 @@ export class ComputeSnapshot extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // disk_size_gb - computed: true, optional: false, required: true
+  // disk_size_gb - computed: true, optional: false, required: false
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // label_fingerprint - computed: true, optional: false, required: true
+  // label_fingerprint - computed: true, optional: false, required: false
   public get labelFingerprint() {
     return this.getStringAttribute('label_fingerprint');
   }
@@ -129,13 +132,20 @@ export class ComputeSnapshot extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // licenses - computed: true, optional: false, required: true
+  // licenses - computed: true, optional: false, required: false
   public get licenses() {
     return this.getListAttribute('licenses');
   }
@@ -143,27 +153,38 @@ export class ComputeSnapshot extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // snapshot_id - computed: true, optional: false, required: true
+  // snapshot_id - computed: true, optional: false, required: false
   public get snapshotId() {
     return this.getNumberAttribute('snapshot_id');
   }
@@ -171,18 +192,22 @@ export class ComputeSnapshot extends TerraformResource {
   // source_disk - computed: false, optional: false, required: true
   private _sourceDisk: string;
   public get sourceDisk() {
-    return this._sourceDisk;
+    return this.getStringAttribute('source_disk');
   }
   public set sourceDisk(value: string) {
     this._sourceDisk = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDiskInput() {
+    return this._sourceDisk
+  }
 
-  // source_disk_link - computed: true, optional: false, required: true
+  // source_disk_link - computed: true, optional: false, required: false
   public get sourceDiskLink() {
     return this.getStringAttribute('source_disk_link');
   }
 
-  // storage_bytes - computed: true, optional: false, required: true
+  // storage_bytes - computed: true, optional: false, required: false
   public get storageBytes() {
     return this.getNumberAttribute('storage_bytes');
   }
@@ -190,46 +215,81 @@ export class ComputeSnapshot extends TerraformResource {
   // storage_locations - computed: true, optional: true, required: false
   private _storageLocations?: string[];
   public get storageLocations() {
-    return this._storageLocations ?? this.getListAttribute('storage_locations');
+    return this.getListAttribute('storage_locations');
   }
-  public set storageLocations(value: string[] | undefined) {
+  public set storageLocations(value: string[]) {
     this._storageLocations = value;
+  }
+  public resetStorageLocations() {
+    this._storageLocations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageLocationsInput() {
+    return this._storageLocations
   }
 
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // snapshot_encryption_key - computed: false, optional: true, required: false
   private _snapshotEncryptionKey?: ComputeSnapshotSnapshotEncryptionKey[];
   public get snapshotEncryptionKey() {
-    return this._snapshotEncryptionKey;
+    return this.interpolationForAttribute('snapshot_encryption_key') as any;
   }
-  public set snapshotEncryptionKey(value: ComputeSnapshotSnapshotEncryptionKey[] | undefined) {
+  public set snapshotEncryptionKey(value: ComputeSnapshotSnapshotEncryptionKey[] ) {
     this._snapshotEncryptionKey = value;
+  }
+  public resetSnapshotEncryptionKey() {
+    this._snapshotEncryptionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotEncryptionKeyInput() {
+    return this._snapshotEncryptionKey
   }
 
   // source_disk_encryption_key - computed: false, optional: true, required: false
   private _sourceDiskEncryptionKey?: ComputeSnapshotSourceDiskEncryptionKey[];
   public get sourceDiskEncryptionKey() {
-    return this._sourceDiskEncryptionKey;
+    return this.interpolationForAttribute('source_disk_encryption_key') as any;
   }
-  public set sourceDiskEncryptionKey(value: ComputeSnapshotSourceDiskEncryptionKey[] | undefined) {
+  public set sourceDiskEncryptionKey(value: ComputeSnapshotSourceDiskEncryptionKey[] ) {
     this._sourceDiskEncryptionKey = value;
+  }
+  public resetSourceDiskEncryptionKey() {
+    this._sourceDiskEncryptionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDiskEncryptionKeyInput() {
+    return this._sourceDiskEncryptionKey
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeSnapshotTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeSnapshotTimeouts | undefined) {
+  public set timeouts(value: ComputeSnapshotTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

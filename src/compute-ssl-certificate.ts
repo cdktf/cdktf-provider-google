@@ -72,18 +72,22 @@ export class ComputeSslCertificate extends TerraformResource {
   // certificate - computed: false, optional: false, required: true
   private _certificate: string;
   public get certificate() {
-    return this._certificate;
+    return this.getStringAttribute('certificate');
   }
   public set certificate(value: string) {
     this._certificate = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
+  }
 
-  // certificate_id - computed: true, optional: false, required: true
+  // certificate_id - computed: true, optional: false, required: false
   public get certificateId() {
     return this.getNumberAttribute('certificate_id');
   }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -91,58 +95,86 @@ export class ComputeSslCertificate extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // name_prefix - computed: true, optional: true, required: false
   private _namePrefix?: string;
   public get namePrefix() {
-    return this._namePrefix ?? this.getStringAttribute('name_prefix');
+    return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string) {
     this._namePrefix = value;
+  }
+  public resetNamePrefix() {
+    this._namePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePrefixInput() {
+    return this._namePrefix
   }
 
   // private_key - computed: false, optional: false, required: true
   private _privateKey: string;
   public get privateKey() {
-    return this._privateKey;
+    return this.getStringAttribute('private_key');
   }
   public set privateKey(value: string) {
     this._privateKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyInput() {
+    return this._privateKey
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -150,10 +182,17 @@ export class ComputeSslCertificate extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeSslCertificateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeSslCertificateTimeouts | undefined) {
+  public set timeouts(value: ComputeSslCertificateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

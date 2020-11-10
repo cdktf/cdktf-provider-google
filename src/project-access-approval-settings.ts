@@ -72,21 +72,17 @@ export class ProjectAccessApprovalSettings extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // enrolled_ancestor - computed: true, optional: false, required: true
+  // enrolled_ancestor - computed: true, optional: false, required: false
   public get enrolledAncestor() {
     return this.getBooleanAttribute('enrolled_ancestor');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -94,46 +90,75 @@ export class ProjectAccessApprovalSettings extends TerraformResource {
   // notification_emails - computed: true, optional: true, required: false
   private _notificationEmails?: string[];
   public get notificationEmails() {
-    return this._notificationEmails ?? this.getListAttribute('notification_emails');
+    return this.getListAttribute('notification_emails');
   }
-  public set notificationEmails(value: string[] | undefined) {
+  public set notificationEmails(value: string[]) {
     this._notificationEmails = value;
+  }
+  public resetNotificationEmails() {
+    this._notificationEmails = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationEmailsInput() {
+    return this._notificationEmails
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // project_id - computed: false, optional: false, required: true
   private _projectId: string;
   public get projectId() {
-    return this._projectId;
+    return this.getStringAttribute('project_id');
   }
   public set projectId(value: string) {
     this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
   }
 
   // enrolled_services - computed: false, optional: false, required: true
   private _enrolledServices: ProjectAccessApprovalSettingsEnrolledServices[];
   public get enrolledServices() {
-    return this._enrolledServices;
+    return this.interpolationForAttribute('enrolled_services') as any;
   }
   public set enrolledServices(value: ProjectAccessApprovalSettingsEnrolledServices[]) {
     this._enrolledServices = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enrolledServicesInput() {
+    return this._enrolledServices
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ProjectAccessApprovalSettingsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ProjectAccessApprovalSettingsTimeouts | undefined) {
+  public set timeouts(value: ProjectAccessApprovalSettingsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

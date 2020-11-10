@@ -142,31 +142,38 @@ export class ContainerNodePool extends TerraformResource {
   // cluster - computed: false, optional: false, required: true
   private _cluster: string;
   public get cluster() {
-    return this._cluster;
+    return this.getStringAttribute('cluster');
   }
   public set cluster(value: string) {
     this._cluster = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get clusterInput() {
+    return this._cluster
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // initial_node_count - computed: true, optional: true, required: false
   private _initialNodeCount?: number;
   public get initialNodeCount() {
-    return this._initialNodeCount ?? this.getNumberAttribute('initial_node_count');
+    return this.getNumberAttribute('initial_node_count');
   }
-  public set initialNodeCount(value: number | undefined) {
+  public set initialNodeCount(value: number) {
     this._initialNodeCount = value;
   }
+  public resetInitialNodeCount() {
+    this._initialNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initialNodeCountInput() {
+    return this._initialNodeCount
+  }
 
-  // instance_group_urls - computed: true, optional: false, required: true
+  // instance_group_urls - computed: true, optional: false, required: false
   public get instanceGroupUrls() {
     return this.getListAttribute('instance_group_urls');
   }
@@ -174,118 +181,209 @@ export class ContainerNodePool extends TerraformResource {
   // location - computed: true, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location ?? this.getStringAttribute('location');
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // max_pods_per_node - computed: true, optional: true, required: false
   private _maxPodsPerNode?: number;
   public get maxPodsPerNode() {
-    return this._maxPodsPerNode ?? this.getNumberAttribute('max_pods_per_node');
+    return this.getNumberAttribute('max_pods_per_node');
   }
-  public set maxPodsPerNode(value: number | undefined) {
+  public set maxPodsPerNode(value: number) {
     this._maxPodsPerNode = value;
+  }
+  public resetMaxPodsPerNode() {
+    this._maxPodsPerNode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxPodsPerNodeInput() {
+    return this._maxPodsPerNode
   }
 
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // name_prefix - computed: true, optional: true, required: false
   private _namePrefix?: string;
   public get namePrefix() {
-    return this._namePrefix ?? this.getStringAttribute('name_prefix');
+    return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string) {
     this._namePrefix = value;
+  }
+  public resetNamePrefix() {
+    this._namePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePrefixInput() {
+    return this._namePrefix
   }
 
   // node_count - computed: true, optional: true, required: false
   private _nodeCount?: number;
   public get nodeCount() {
-    return this._nodeCount ?? this.getNumberAttribute('node_count');
+    return this.getNumberAttribute('node_count');
   }
-  public set nodeCount(value: number | undefined) {
+  public set nodeCount(value: number) {
     this._nodeCount = value;
+  }
+  public resetNodeCount() {
+    this._nodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeCountInput() {
+    return this._nodeCount
   }
 
   // node_locations - computed: true, optional: true, required: false
   private _nodeLocations?: string[];
   public get nodeLocations() {
-    return this._nodeLocations ?? this.getListAttribute('node_locations');
+    return this.getListAttribute('node_locations');
   }
-  public set nodeLocations(value: string[] | undefined) {
+  public set nodeLocations(value: string[]) {
     this._nodeLocations = value;
+  }
+  public resetNodeLocations() {
+    this._nodeLocations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeLocationsInput() {
+    return this._nodeLocations
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // version - computed: true, optional: true, required: false
   private _version?: string;
   public get version() {
-    return this._version ?? this.getStringAttribute('version');
+    return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // autoscaling - computed: false, optional: true, required: false
   private _autoscaling?: ContainerNodePoolAutoscaling[];
   public get autoscaling() {
-    return this._autoscaling;
+    return this.interpolationForAttribute('autoscaling') as any;
   }
-  public set autoscaling(value: ContainerNodePoolAutoscaling[] | undefined) {
+  public set autoscaling(value: ContainerNodePoolAutoscaling[] ) {
     this._autoscaling = value;
+  }
+  public resetAutoscaling() {
+    this._autoscaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscalingInput() {
+    return this._autoscaling
   }
 
   // management - computed: false, optional: true, required: false
   private _management?: ContainerNodePoolManagement[];
   public get management() {
-    return this._management;
+    return this.interpolationForAttribute('management') as any;
   }
-  public set management(value: ContainerNodePoolManagement[] | undefined) {
+  public set management(value: ContainerNodePoolManagement[] ) {
     this._management = value;
+  }
+  public resetManagement() {
+    this._management = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementInput() {
+    return this._management
   }
 
   // node_config - computed: false, optional: true, required: false
   private _nodeConfig?: ContainerNodePoolNodeConfig[];
   public get nodeConfig() {
-    return this._nodeConfig;
+    return this.interpolationForAttribute('node_config') as any;
   }
-  public set nodeConfig(value: ContainerNodePoolNodeConfig[] | undefined) {
+  public set nodeConfig(value: ContainerNodePoolNodeConfig[] ) {
     this._nodeConfig = value;
+  }
+  public resetNodeConfig() {
+    this._nodeConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeConfigInput() {
+    return this._nodeConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerNodePoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ContainerNodePoolTimeouts | undefined) {
+  public set timeouts(value: ContainerNodePoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
   private _upgradeSettings?: ContainerNodePoolUpgradeSettings[];
   public get upgradeSettings() {
-    return this._upgradeSettings;
+    return this.interpolationForAttribute('upgrade_settings') as any;
   }
-  public set upgradeSettings(value: ContainerNodePoolUpgradeSettings[] | undefined) {
+  public set upgradeSettings(value: ContainerNodePoolUpgradeSettings[] ) {
     this._upgradeSettings = value;
+  }
+  public resetUpgradeSettings() {
+    this._upgradeSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradeSettingsInput() {
+    return this._upgradeSettings
   }
 
   // =========

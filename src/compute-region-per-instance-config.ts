@@ -85,93 +85,143 @@ export class ComputeRegionPerInstanceConfig extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // minimal_action - computed: false, optional: true, required: false
   private _minimalAction?: string;
   public get minimalAction() {
-    return this._minimalAction;
+    return this.getStringAttribute('minimal_action');
   }
-  public set minimalAction(value: string | undefined) {
+  public set minimalAction(value: string ) {
     this._minimalAction = value;
+  }
+  public resetMinimalAction() {
+    this._minimalAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimalActionInput() {
+    return this._minimalAction
   }
 
   // most_disruptive_allowed_action - computed: false, optional: true, required: false
   private _mostDisruptiveAllowedAction?: string;
   public get mostDisruptiveAllowedAction() {
-    return this._mostDisruptiveAllowedAction;
+    return this.getStringAttribute('most_disruptive_allowed_action');
   }
-  public set mostDisruptiveAllowedAction(value: string | undefined) {
+  public set mostDisruptiveAllowedAction(value: string ) {
     this._mostDisruptiveAllowedAction = value;
+  }
+  public resetMostDisruptiveAllowedAction() {
+    this._mostDisruptiveAllowedAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mostDisruptiveAllowedActionInput() {
+    return this._mostDisruptiveAllowedAction
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: false, optional: false, required: true
   private _region: string;
   public get region() {
-    return this._region;
+    return this.getStringAttribute('region');
   }
   public set region(value: string) {
     this._region = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // region_instance_group_manager - computed: false, optional: false, required: true
   private _regionInstanceGroupManager: string;
   public get regionInstanceGroupManager() {
-    return this._regionInstanceGroupManager;
+    return this.getStringAttribute('region_instance_group_manager');
   }
   public set regionInstanceGroupManager(value: string) {
     this._regionInstanceGroupManager = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInstanceGroupManagerInput() {
+    return this._regionInstanceGroupManager
   }
 
   // remove_instance_state_on_destroy - computed: false, optional: true, required: false
   private _removeInstanceStateOnDestroy?: boolean;
   public get removeInstanceStateOnDestroy() {
-    return this._removeInstanceStateOnDestroy;
+    return this.getBooleanAttribute('remove_instance_state_on_destroy');
   }
-  public set removeInstanceStateOnDestroy(value: boolean | undefined) {
+  public set removeInstanceStateOnDestroy(value: boolean ) {
     this._removeInstanceStateOnDestroy = value;
+  }
+  public resetRemoveInstanceStateOnDestroy() {
+    this._removeInstanceStateOnDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get removeInstanceStateOnDestroyInput() {
+    return this._removeInstanceStateOnDestroy
   }
 
   // preserved_state - computed: false, optional: true, required: false
   private _preservedState?: ComputeRegionPerInstanceConfigPreservedState[];
   public get preservedState() {
-    return this._preservedState;
+    return this.interpolationForAttribute('preserved_state') as any;
   }
-  public set preservedState(value: ComputeRegionPerInstanceConfigPreservedState[] | undefined) {
+  public set preservedState(value: ComputeRegionPerInstanceConfigPreservedState[] ) {
     this._preservedState = value;
+  }
+  public resetPreservedState() {
+    this._preservedState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preservedStateInput() {
+    return this._preservedState
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRegionPerInstanceConfigTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRegionPerInstanceConfigTimeouts | undefined) {
+  public set timeouts(value: ComputeRegionPerInstanceConfigTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

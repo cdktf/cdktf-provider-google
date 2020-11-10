@@ -49,7 +49,7 @@ export class FolderIamBinding extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
@@ -57,46 +57,61 @@ export class FolderIamBinding extends TerraformResource {
   // folder - computed: false, optional: false, required: true
   private _folder: string;
   public get folder() {
-    return this._folder;
+    return this.getStringAttribute('folder');
   }
   public set folder(value: string) {
     this._folder = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // members - computed: false, optional: false, required: true
   private _members: string[];
   public get members() {
-    return this._members;
+    return this.getListAttribute('members');
   }
   public set members(value: string[]) {
     this._members = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get membersInput() {
+    return this._members
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // condition - computed: false, optional: true, required: false
   private _condition?: FolderIamBindingCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: FolderIamBindingCondition[] | undefined) {
+  public set condition(value: FolderIamBindingCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // =========

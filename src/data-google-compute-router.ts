@@ -24,34 +24,34 @@ except the last character, which cannot be a dash. */
 }
 export class DataGoogleComputeRouterBgpAdvertisedIpRanges extends ComplexComputedList {
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
-  // range - computed: true, optional: false, required: true
+  // range - computed: true, optional: false, required: false
   public get range() {
     return this.getStringAttribute('range');
   }
 }
 export class DataGoogleComputeRouterBgp extends ComplexComputedList {
 
-  // advertise_mode - computed: true, optional: false, required: true
+  // advertise_mode - computed: true, optional: false, required: false
   public get advertiseMode() {
     return this.getStringAttribute('advertise_mode');
   }
 
-  // advertised_groups - computed: true, optional: false, required: true
+  // advertised_groups - computed: true, optional: false, required: false
   public get advertisedGroups() {
     return this.getListAttribute('advertised_groups');
   }
 
-  // advertised_ip_ranges - computed: true, optional: false, required: true
+  // advertised_ip_ranges - computed: true, optional: false, required: false
   public get advertisedIpRanges() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('advertised_ip_ranges') as any;
   }
 
-  // asn - computed: true, optional: false, required: true
+  // asn - computed: true, optional: false, required: false
   public get asn() {
     return this.getNumberAttribute('asn');
   }
@@ -86,67 +86,85 @@ export class DataGoogleComputeRouter extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // bgp - computed: true, optional: false, required: true
+  // bgp - computed: true, optional: false, required: false
   public bgp(index: string) {
     return new DataGoogleComputeRouterBgp(this, 'bgp', index);
   }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: false, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region;
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string ) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }

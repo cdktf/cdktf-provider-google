@@ -27,17 +27,17 @@ the sensitive_labels block, but cannot be configured in both places. */
 }
 export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends ComplexComputedList {
 
-  // auth_token - computed: true, optional: false, required: true
+  // auth_token - computed: true, optional: false, required: false
   public get authToken() {
     return this.getStringAttribute('auth_token');
   }
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // service_key - computed: true, optional: false, required: true
+  // service_key - computed: true, optional: false, required: false
   public get serviceKey() {
     return this.getStringAttribute('service_key');
   }
@@ -73,7 +73,7 @@ export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource
   // ATTRIBUTES
   // ==========
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
@@ -81,36 +81,46 @@ export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
   }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
-  // enabled - computed: true, optional: false, required: true
+  // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -118,13 +128,20 @@ export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // sensitive_labels - computed: true, optional: false, required: true
+  // sensitive_labels - computed: true, optional: false, required: false
   public sensitiveLabels(index: string) {
     return new DataGoogleMonitoringNotificationChannelSensitiveLabels(this, 'sensitive_labels', index);
   }
@@ -132,22 +149,36 @@ export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource
   // type - computed: false, optional: true, required: false
   private _type?: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string ) {
     this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // user_labels - computed: false, optional: true, required: false
   private _userLabels?: { [key: string]: string };
   public get userLabels() {
-    return this._userLabels;
+    return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | undefined) {
+  public set userLabels(value: { [key: string]: string } ) {
     this._userLabels = value;
   }
+  public resetUserLabels() {
+    this._userLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userLabelsInput() {
+    return this._userLabels
+  }
 
-  // verification_status - computed: true, optional: false, required: true
+  // verification_status - computed: true, optional: false, required: false
   public get verificationStatus() {
     return this.getStringAttribute('verification_status');
   }

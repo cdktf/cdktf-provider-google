@@ -30,12 +30,12 @@ export interface StorageDefaultObjectAccessControlConfig extends TerraformMetaAr
 }
 export class StorageDefaultObjectAccessControlProjectTeam extends ComplexComputedList {
 
-  // project_number - computed: true, optional: false, required: true
+  // project_number - computed: true, optional: false, required: false
   public get projectNumber() {
     return this.getStringAttribute('project_number');
   }
 
-  // team - computed: true, optional: false, required: true
+  // team - computed: true, optional: false, required: false
   public get team() {
     return this.getStringAttribute('team');
   }
@@ -79,18 +79,22 @@ export class StorageDefaultObjectAccessControl extends TerraformResource {
   // bucket - computed: false, optional: false, required: true
   private _bucket: string;
   public get bucket() {
-    return this._bucket;
+    return this.getStringAttribute('bucket');
   }
   public set bucket(value: string) {
     this._bucket = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket
+  }
 
-  // domain - computed: true, optional: false, required: true
+  // domain - computed: true, optional: false, required: false
   public get domain() {
     return this.getStringAttribute('domain');
   }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
@@ -98,41 +102,48 @@ export class StorageDefaultObjectAccessControl extends TerraformResource {
   // entity - computed: false, optional: false, required: true
   private _entity: string;
   public get entity() {
-    return this._entity;
+    return this.getStringAttribute('entity');
   }
   public set entity(value: string) {
     this._entity = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get entityInput() {
+    return this._entity
+  }
 
-  // entity_id - computed: true, optional: false, required: true
+  // entity_id - computed: true, optional: false, required: false
   public get entityId() {
     return this.getStringAttribute('entity_id');
   }
 
-  // generation - computed: true, optional: false, required: true
+  // generation - computed: true, optional: false, required: false
   public get generation() {
     return this.getNumberAttribute('generation');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // object - computed: false, optional: true, required: false
   private _object?: string;
   public get object() {
-    return this._object;
+    return this.getStringAttribute('object');
   }
-  public set object(value: string | undefined) {
+  public set object(value: string ) {
     this._object = value;
   }
+  public resetObject() {
+    this._object = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectInput() {
+    return this._object
+  }
 
-  // project_team - computed: true, optional: false, required: true
+  // project_team - computed: true, optional: false, required: false
   public projectTeam(index: string) {
     return new StorageDefaultObjectAccessControlProjectTeam(this, 'project_team', index);
   }
@@ -140,19 +151,30 @@ export class StorageDefaultObjectAccessControl extends TerraformResource {
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageDefaultObjectAccessControlTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageDefaultObjectAccessControlTimeouts | undefined) {
+  public set timeouts(value: StorageDefaultObjectAccessControlTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

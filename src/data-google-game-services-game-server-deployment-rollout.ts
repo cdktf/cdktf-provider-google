@@ -14,21 +14,21 @@ export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends
 }
 export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector extends ComplexComputedList {
 
-  // realms - computed: true, optional: false, required: true
+  // realms - computed: true, optional: false, required: false
   public get realms() {
     return this.getListAttribute('realms');
   }
 }
 export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides extends ComplexComputedList {
 
-  // config_version - computed: true, optional: false, required: true
+  // config_version - computed: true, optional: false, required: false
   public get configVersion() {
     return this.getStringAttribute('config_version');
   }
 
-  // realms_selector - computed: true, optional: false, required: true
+  // realms_selector - computed: true, optional: false, required: false
   public get realmsSelector() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('realms_selector') as any;
   }
 }
 
@@ -58,7 +58,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends Terraform
   // ATTRIBUTES
   // ==========
 
-  // default_game_server_config - computed: true, optional: false, required: true
+  // default_game_server_config - computed: true, optional: false, required: false
   public get defaultGameServerConfig() {
     return this.getStringAttribute('default_game_server_config');
   }
@@ -66,32 +66,32 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends Terraform
   // deployment_id - computed: false, optional: false, required: true
   private _deploymentId: string;
   public get deploymentId() {
-    return this._deploymentId;
+    return this.getStringAttribute('deployment_id');
   }
   public set deploymentId(value: string) {
     this._deploymentId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentIdInput() {
+    return this._deploymentId
+  }
 
-  // game_server_config_overrides - computed: true, optional: false, required: true
+  // game_server_config_overrides - computed: true, optional: false, required: false
   public gameServerConfigOverrides(index: string) {
     return new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides(this, 'game_server_config_overrides', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // project - computed: true, optional: false, required: true
+  // project - computed: true, optional: false, required: false
   public get project() {
     return this.getStringAttribute('project');
   }

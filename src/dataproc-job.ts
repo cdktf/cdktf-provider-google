@@ -40,22 +40,22 @@ export interface DataprocJobConfig extends TerraformMetaArguments {
 }
 export class DataprocJobStatus extends ComplexComputedList {
 
-  // details - computed: true, optional: false, required: true
+  // details - computed: true, optional: false, required: false
   public get details() {
     return this.getStringAttribute('details');
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
 
-  // state_start_time - computed: true, optional: false, required: true
+  // state_start_time - computed: true, optional: false, required: false
   public get stateStartTime() {
     return this.getStringAttribute('state_start_time');
   }
 
-  // substate - computed: true, optional: false, required: true
+  // substate - computed: true, optional: false, required: false
   public get substate() {
     return this.getStringAttribute('substate');
   }
@@ -234,12 +234,12 @@ export class DataprocJob extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // driver_controls_files_uri - computed: true, optional: false, required: true
+  // driver_controls_files_uri - computed: true, optional: false, required: false
   public get driverControlsFilesUri() {
     return this.getStringAttribute('driver_controls_files_uri');
   }
 
-  // driver_output_resource_uri - computed: true, optional: false, required: true
+  // driver_output_resource_uri - computed: true, optional: false, required: false
   public get driverOutputResourceUri() {
     return this.getStringAttribute('driver_output_resource_uri');
   }
@@ -247,49 +247,73 @@ export class DataprocJob extends TerraformResource {
   // force_delete - computed: false, optional: true, required: false
   private _forceDelete?: boolean;
   public get forceDelete() {
-    return this._forceDelete;
+    return this.getBooleanAttribute('force_delete');
   }
-  public set forceDelete(value: boolean | undefined) {
+  public set forceDelete(value: boolean ) {
     this._forceDelete = value;
+  }
+  public resetForceDelete() {
+    this._forceDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDeleteInput() {
+    return this._forceDelete
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: false, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region;
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string ) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public status(index: string) {
     return new DataprocJobStatus(this, 'status', index);
   }
@@ -297,91 +321,158 @@ export class DataprocJob extends TerraformResource {
   // hadoop_config - computed: false, optional: true, required: false
   private _hadoopConfig?: DataprocJobHadoopConfig[];
   public get hadoopConfig() {
-    return this._hadoopConfig;
+    return this.interpolationForAttribute('hadoop_config') as any;
   }
-  public set hadoopConfig(value: DataprocJobHadoopConfig[] | undefined) {
+  public set hadoopConfig(value: DataprocJobHadoopConfig[] ) {
     this._hadoopConfig = value;
+  }
+  public resetHadoopConfig() {
+    this._hadoopConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hadoopConfigInput() {
+    return this._hadoopConfig
   }
 
   // hive_config - computed: false, optional: true, required: false
   private _hiveConfig?: DataprocJobHiveConfig[];
   public get hiveConfig() {
-    return this._hiveConfig;
+    return this.interpolationForAttribute('hive_config') as any;
   }
-  public set hiveConfig(value: DataprocJobHiveConfig[] | undefined) {
+  public set hiveConfig(value: DataprocJobHiveConfig[] ) {
     this._hiveConfig = value;
+  }
+  public resetHiveConfig() {
+    this._hiveConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hiveConfigInput() {
+    return this._hiveConfig
   }
 
   // pig_config - computed: false, optional: true, required: false
   private _pigConfig?: DataprocJobPigConfig[];
   public get pigConfig() {
-    return this._pigConfig;
+    return this.interpolationForAttribute('pig_config') as any;
   }
-  public set pigConfig(value: DataprocJobPigConfig[] | undefined) {
+  public set pigConfig(value: DataprocJobPigConfig[] ) {
     this._pigConfig = value;
+  }
+  public resetPigConfig() {
+    this._pigConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pigConfigInput() {
+    return this._pigConfig
   }
 
   // placement - computed: false, optional: false, required: true
   private _placement: DataprocJobPlacement[];
   public get placement() {
-    return this._placement;
+    return this.interpolationForAttribute('placement') as any;
   }
   public set placement(value: DataprocJobPlacement[]) {
     this._placement = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementInput() {
+    return this._placement
   }
 
   // pyspark_config - computed: false, optional: true, required: false
   private _pysparkConfig?: DataprocJobPysparkConfig[];
   public get pysparkConfig() {
-    return this._pysparkConfig;
+    return this.interpolationForAttribute('pyspark_config') as any;
   }
-  public set pysparkConfig(value: DataprocJobPysparkConfig[] | undefined) {
+  public set pysparkConfig(value: DataprocJobPysparkConfig[] ) {
     this._pysparkConfig = value;
+  }
+  public resetPysparkConfig() {
+    this._pysparkConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pysparkConfigInput() {
+    return this._pysparkConfig
   }
 
   // reference - computed: false, optional: true, required: false
   private _reference?: DataprocJobReference[];
   public get reference() {
-    return this._reference;
+    return this.interpolationForAttribute('reference') as any;
   }
-  public set reference(value: DataprocJobReference[] | undefined) {
+  public set reference(value: DataprocJobReference[] ) {
     this._reference = value;
+  }
+  public resetReference() {
+    this._reference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get referenceInput() {
+    return this._reference
   }
 
   // scheduling - computed: false, optional: true, required: false
   private _scheduling?: DataprocJobScheduling[];
   public get scheduling() {
-    return this._scheduling;
+    return this.interpolationForAttribute('scheduling') as any;
   }
-  public set scheduling(value: DataprocJobScheduling[] | undefined) {
+  public set scheduling(value: DataprocJobScheduling[] ) {
     this._scheduling = value;
+  }
+  public resetScheduling() {
+    this._scheduling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schedulingInput() {
+    return this._scheduling
   }
 
   // spark_config - computed: false, optional: true, required: false
   private _sparkConfig?: DataprocJobSparkConfig[];
   public get sparkConfig() {
-    return this._sparkConfig;
+    return this.interpolationForAttribute('spark_config') as any;
   }
-  public set sparkConfig(value: DataprocJobSparkConfig[] | undefined) {
+  public set sparkConfig(value: DataprocJobSparkConfig[] ) {
     this._sparkConfig = value;
+  }
+  public resetSparkConfig() {
+    this._sparkConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sparkConfigInput() {
+    return this._sparkConfig
   }
 
   // sparksql_config - computed: false, optional: true, required: false
   private _sparksqlConfig?: DataprocJobSparksqlConfig[];
   public get sparksqlConfig() {
-    return this._sparksqlConfig;
+    return this.interpolationForAttribute('sparksql_config') as any;
   }
-  public set sparksqlConfig(value: DataprocJobSparksqlConfig[] | undefined) {
+  public set sparksqlConfig(value: DataprocJobSparksqlConfig[] ) {
     this._sparksqlConfig = value;
+  }
+  public resetSparksqlConfig() {
+    this._sparksqlConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sparksqlConfigInput() {
+    return this._sparksqlConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataprocJobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataprocJobTimeouts | undefined) {
+  public set timeouts(value: DataprocJobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

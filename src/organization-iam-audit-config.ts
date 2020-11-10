@@ -50,45 +50,53 @@ export class OrganizationIamAuditConfig extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // org_id - computed: false, optional: false, required: true
   private _orgId: string;
   public get orgId() {
-    return this._orgId;
+    return this.getStringAttribute('org_id');
   }
   public set orgId(value: string) {
     this._orgId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orgIdInput() {
+    return this._orgId
   }
 
   // service - computed: false, optional: false, required: true
   private _service: string;
   public get service() {
-    return this._service;
+    return this.getStringAttribute('service');
   }
   public set service(value: string) {
     this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
   }
 
   // audit_log_config - computed: false, optional: false, required: true
   private _auditLogConfig: OrganizationIamAuditConfigAuditLogConfig[];
   public get auditLogConfig() {
-    return this._auditLogConfig;
+    return this.interpolationForAttribute('audit_log_config') as any;
   }
   public set auditLogConfig(value: OrganizationIamAuditConfigAuditLogConfig[]) {
     this._auditLogConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get auditLogConfigInput() {
+    return this._auditLogConfig
   }
 
   // =========

@@ -39,7 +39,7 @@ export class DataGoogleKmsSecretCiphertext extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // ciphertext - computed: true, optional: false, required: true
+  // ciphertext - computed: true, optional: false, required: false
   public get ciphertext() {
     return this.getStringAttribute('ciphertext');
   }
@@ -47,28 +47,32 @@ export class DataGoogleKmsSecretCiphertext extends TerraformDataSource {
   // crypto_key - computed: false, optional: false, required: true
   private _cryptoKey: string;
   public get cryptoKey() {
-    return this._cryptoKey;
+    return this.getStringAttribute('crypto_key');
   }
   public set cryptoKey(value: string) {
     this._cryptoKey = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get cryptoKeyInput() {
+    return this._cryptoKey
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // plaintext - computed: false, optional: false, required: true
   private _plaintext: string;
   public get plaintext() {
-    return this._plaintext;
+    return this.getStringAttribute('plaintext');
   }
   public set plaintext(value: string) {
     this._plaintext = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get plaintextInput() {
+    return this._plaintext
   }
 
   // =========

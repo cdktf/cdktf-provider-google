@@ -82,81 +82,123 @@ export class ComputeNetwork extends TerraformResource {
   // auto_create_subnetworks - computed: false, optional: true, required: false
   private _autoCreateSubnetworks?: boolean;
   public get autoCreateSubnetworks() {
-    return this._autoCreateSubnetworks;
+    return this.getBooleanAttribute('auto_create_subnetworks');
   }
-  public set autoCreateSubnetworks(value: boolean | undefined) {
+  public set autoCreateSubnetworks(value: boolean ) {
     this._autoCreateSubnetworks = value;
+  }
+  public resetAutoCreateSubnetworks() {
+    this._autoCreateSubnetworks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoCreateSubnetworksInput() {
+    return this._autoCreateSubnetworks
   }
 
   // delete_default_routes_on_create - computed: false, optional: true, required: false
   private _deleteDefaultRoutesOnCreate?: boolean;
   public get deleteDefaultRoutesOnCreate() {
-    return this._deleteDefaultRoutesOnCreate;
+    return this.getBooleanAttribute('delete_default_routes_on_create');
   }
-  public set deleteDefaultRoutesOnCreate(value: boolean | undefined) {
+  public set deleteDefaultRoutesOnCreate(value: boolean ) {
     this._deleteDefaultRoutesOnCreate = value;
+  }
+  public resetDeleteDefaultRoutesOnCreate() {
+    this._deleteDefaultRoutesOnCreate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteDefaultRoutesOnCreateInput() {
+    return this._deleteDefaultRoutesOnCreate
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // gateway_ipv4 - computed: true, optional: false, required: true
+  // gateway_ipv4 - computed: true, optional: false, required: false
   public get gatewayIpv4() {
     return this.getStringAttribute('gateway_ipv4');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // mtu - computed: true, optional: true, required: false
   private _mtu?: number;
   public get mtu() {
-    return this._mtu ?? this.getNumberAttribute('mtu');
+    return this.getNumberAttribute('mtu');
   }
-  public set mtu(value: number | undefined) {
+  public set mtu(value: number) {
     this._mtu = value;
+  }
+  public resetMtu() {
+    this._mtu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mtuInput() {
+    return this._mtu
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // routing_mode - computed: true, optional: true, required: false
   private _routingMode?: string;
   public get routingMode() {
-    return this._routingMode ?? this.getStringAttribute('routing_mode');
+    return this.getStringAttribute('routing_mode');
   }
-  public set routingMode(value: string | undefined) {
+  public set routingMode(value: string) {
     this._routingMode = value;
   }
+  public resetRoutingMode() {
+    this._routingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingModeInput() {
+    return this._routingMode
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -164,10 +206,17 @@ export class ComputeNetwork extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNetworkTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeNetworkTimeouts | undefined) {
+  public set timeouts(value: ComputeNetworkTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

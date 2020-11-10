@@ -46,41 +46,37 @@ export class DataGoogleComputeSslPolicy extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
 
-  // custom_features - computed: true, optional: false, required: true
+  // custom_features - computed: true, optional: false, required: false
   public get customFeatures() {
     return this.getListAttribute('custom_features');
   }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
-  // enabled_features - computed: true, optional: false, required: true
+  // enabled_features - computed: true, optional: false, required: false
   public get enabledFeatures() {
     return this.getListAttribute('enabled_features');
   }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // min_tls_version - computed: true, optional: false, required: true
+  // min_tls_version - computed: true, optional: false, required: false
   public get minTlsVersion() {
     return this.getStringAttribute('min_tls_version');
   }
@@ -88,13 +84,17 @@ export class DataGoogleComputeSslPolicy extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // profile - computed: true, optional: false, required: true
+  // profile - computed: true, optional: false, required: false
   public get profile() {
     return this.getStringAttribute('profile');
   }
@@ -102,13 +102,20 @@ export class DataGoogleComputeSslPolicy extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }

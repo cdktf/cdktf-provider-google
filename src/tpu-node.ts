@@ -49,12 +49,12 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
 }
 export class TpuNodeNetworkEndpoints extends ComplexComputedList {
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
 
-  // port - computed: true, optional: false, required: true
+  // port - computed: true, optional: false, required: false
   public get port() {
     return this.getNumberAttribute('port');
   }
@@ -109,67 +109,99 @@ export class TpuNode extends TerraformResource {
   // accelerator_type - computed: false, optional: false, required: true
   private _acceleratorType: string;
   public get acceleratorType() {
-    return this._acceleratorType;
+    return this.getStringAttribute('accelerator_type');
   }
   public set acceleratorType(value: string) {
     this._acceleratorType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratorTypeInput() {
+    return this._acceleratorType
   }
 
   // cidr_block - computed: true, optional: true, required: false
   private _cidrBlock?: string;
   public get cidrBlock() {
-    return this._cidrBlock ?? this.getStringAttribute('cidr_block');
+    return this.getStringAttribute('cidr_block');
   }
-  public set cidrBlock(value: string | undefined) {
+  public set cidrBlock(value: string) {
     this._cidrBlock = value;
+  }
+  public resetCidrBlock() {
+    this._cidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrBlockInput() {
+    return this._cidrBlock
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: true, optional: true, required: false
   private _network?: string;
   public get network() {
-    return this._network ?? this.getStringAttribute('network');
+    return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
+  }
 
-  // network_endpoints - computed: true, optional: false, required: true
+  // network_endpoints - computed: true, optional: false, required: false
   public networkEndpoints(index: string) {
     return new TpuNodeNetworkEndpoints(this, 'network_endpoints', index);
   }
@@ -177,13 +209,20 @@ export class TpuNode extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // service_account - computed: true, optional: false, required: true
+  // service_account - computed: true, optional: false, required: false
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
@@ -191,46 +230,75 @@ export class TpuNode extends TerraformResource {
   // tensorflow_version - computed: false, optional: false, required: true
   private _tensorflowVersion: string;
   public get tensorflowVersion() {
-    return this._tensorflowVersion;
+    return this.getStringAttribute('tensorflow_version');
   }
   public set tensorflowVersion(value: string) {
     this._tensorflowVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tensorflowVersionInput() {
+    return this._tensorflowVersion
   }
 
   // use_service_networking - computed: false, optional: true, required: false
   private _useServiceNetworking?: boolean;
   public get useServiceNetworking() {
-    return this._useServiceNetworking;
+    return this.getBooleanAttribute('use_service_networking');
   }
-  public set useServiceNetworking(value: boolean | undefined) {
+  public set useServiceNetworking(value: boolean ) {
     this._useServiceNetworking = value;
+  }
+  public resetUseServiceNetworking() {
+    this._useServiceNetworking = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useServiceNetworkingInput() {
+    return this._useServiceNetworking
   }
 
   // zone - computed: false, optional: false, required: true
   private _zone: string;
   public get zone() {
-    return this._zone;
+    return this.getStringAttribute('zone');
   }
   public set zone(value: string) {
     this._zone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // scheduling_config - computed: false, optional: true, required: false
   private _schedulingConfig?: TpuNodeSchedulingConfig[];
   public get schedulingConfig() {
-    return this._schedulingConfig;
+    return this.interpolationForAttribute('scheduling_config') as any;
   }
-  public set schedulingConfig(value: TpuNodeSchedulingConfig[] | undefined) {
+  public set schedulingConfig(value: TpuNodeSchedulingConfig[] ) {
     this._schedulingConfig = value;
+  }
+  public resetSchedulingConfig() {
+    this._schedulingConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schedulingConfigInput() {
+    return this._schedulingConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: TpuNodeTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: TpuNodeTimeouts | undefined) {
+  public set timeouts(value: TpuNodeTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

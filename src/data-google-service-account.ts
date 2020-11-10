@@ -42,32 +42,32 @@ export class DataGoogleServiceAccount extends TerraformDataSource {
   // account_id - computed: false, optional: false, required: true
   private _accountId: string;
   public get accountId() {
-    return this._accountId;
+    return this.getStringAttribute('account_id');
   }
   public set accountId(value: string) {
     this._accountId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get accountIdInput() {
+    return this._accountId
+  }
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -75,13 +75,20 @@ export class DataGoogleServiceAccount extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // unique_id - computed: true, optional: false, required: true
+  // unique_id - computed: true, optional: false, required: false
   public get uniqueId() {
     return this.getStringAttribute('unique_id');
   }

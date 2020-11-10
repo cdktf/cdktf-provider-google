@@ -50,50 +50,50 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 }
 export class DataCatalogEntryBigqueryDateShardedSpec extends ComplexComputedList {
 
-  // dataset - computed: true, optional: false, required: true
+  // dataset - computed: true, optional: false, required: false
   public get dataset() {
     return this.getStringAttribute('dataset');
   }
 
-  // shard_count - computed: true, optional: false, required: true
+  // shard_count - computed: true, optional: false, required: false
   public get shardCount() {
     return this.getNumberAttribute('shard_count');
   }
 
-  // table_prefix - computed: true, optional: false, required: true
+  // table_prefix - computed: true, optional: false, required: false
   public get tablePrefix() {
     return this.getStringAttribute('table_prefix');
   }
 }
 export class DataCatalogEntryBigqueryTableSpecTableSpec extends ComplexComputedList {
 
-  // grouped_entry - computed: true, optional: false, required: true
+  // grouped_entry - computed: true, optional: false, required: false
   public get groupedEntry() {
     return this.getStringAttribute('grouped_entry');
   }
 }
 export class DataCatalogEntryBigqueryTableSpecViewSpec extends ComplexComputedList {
 
-  // view_query - computed: true, optional: false, required: true
+  // view_query - computed: true, optional: false, required: false
   public get viewQuery() {
     return this.getStringAttribute('view_query');
   }
 }
 export class DataCatalogEntryBigqueryTableSpec extends ComplexComputedList {
 
-  // table_source_type - computed: true, optional: false, required: true
+  // table_source_type - computed: true, optional: false, required: false
   public get tableSourceType() {
     return this.getStringAttribute('table_source_type');
   }
 
-  // table_spec - computed: true, optional: false, required: true
+  // table_spec - computed: true, optional: false, required: false
   public get tableSpec() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('table_spec') as any;
   }
 
-  // view_spec - computed: true, optional: false, required: true
+  // view_spec - computed: true, optional: false, required: false
   public get viewSpec() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('view_spec') as any;
   }
 }
 export interface DataCatalogEntryGcsFilesetSpec {
@@ -153,12 +153,12 @@ export class DataCatalogEntry extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // bigquery_date_sharded_spec - computed: true, optional: false, required: true
+  // bigquery_date_sharded_spec - computed: true, optional: false, required: false
   public bigqueryDateShardedSpec(index: string) {
     return new DataCatalogEntryBigqueryDateShardedSpec(this, 'bigquery_date_sharded_spec', index);
   }
 
-  // bigquery_table_spec - computed: true, optional: false, required: true
+  // bigquery_table_spec - computed: true, optional: false, required: false
   public bigqueryTableSpec(index: string) {
     return new DataCatalogEntryBigqueryTableSpec(this, 'bigquery_table_spec', index);
   }
@@ -166,49 +166,67 @@ export class DataCatalogEntry extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // entry_group - computed: false, optional: false, required: true
   private _entryGroup: string;
   public get entryGroup() {
-    return this._entryGroup;
+    return this.getStringAttribute('entry_group');
   }
   public set entryGroup(value: string) {
     this._entryGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entryGroupInput() {
+    return this._entryGroup
   }
 
   // entry_id - computed: false, optional: false, required: true
   private _entryId: string;
   public get entryId() {
-    return this._entryId;
+    return this.getStringAttribute('entry_id');
   }
   public set entryId(value: string) {
     this._entryId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get entryIdInput() {
+    return this._entryId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // integrated_system - computed: true, optional: false, required: true
+  // integrated_system - computed: true, optional: false, required: false
   public get integratedSystem() {
     return this.getStringAttribute('integrated_system');
   }
@@ -216,13 +234,20 @@ export class DataCatalogEntry extends TerraformResource {
   // linked_resource - computed: true, optional: true, required: false
   private _linkedResource?: string;
   public get linkedResource() {
-    return this._linkedResource ?? this.getStringAttribute('linked_resource');
+    return this.getStringAttribute('linked_resource');
   }
-  public set linkedResource(value: string | undefined) {
+  public set linkedResource(value: string) {
     this._linkedResource = value;
   }
+  public resetLinkedResource() {
+    this._linkedResource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedResourceInput() {
+    return this._linkedResource
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -230,55 +255,97 @@ export class DataCatalogEntry extends TerraformResource {
   // schema - computed: false, optional: true, required: false
   private _schema?: string;
   public get schema() {
-    return this._schema;
+    return this.getStringAttribute('schema');
   }
-  public set schema(value: string | undefined) {
+  public set schema(value: string ) {
     this._schema = value;
+  }
+  public resetSchema() {
+    this._schema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema
   }
 
   // type - computed: false, optional: true, required: false
   private _type?: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string ) {
     this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // user_specified_system - computed: false, optional: true, required: false
   private _userSpecifiedSystem?: string;
   public get userSpecifiedSystem() {
-    return this._userSpecifiedSystem;
+    return this.getStringAttribute('user_specified_system');
   }
-  public set userSpecifiedSystem(value: string | undefined) {
+  public set userSpecifiedSystem(value: string ) {
     this._userSpecifiedSystem = value;
+  }
+  public resetUserSpecifiedSystem() {
+    this._userSpecifiedSystem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userSpecifiedSystemInput() {
+    return this._userSpecifiedSystem
   }
 
   // user_specified_type - computed: false, optional: true, required: false
   private _userSpecifiedType?: string;
   public get userSpecifiedType() {
-    return this._userSpecifiedType;
+    return this.getStringAttribute('user_specified_type');
   }
-  public set userSpecifiedType(value: string | undefined) {
+  public set userSpecifiedType(value: string ) {
     this._userSpecifiedType = value;
+  }
+  public resetUserSpecifiedType() {
+    this._userSpecifiedType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userSpecifiedTypeInput() {
+    return this._userSpecifiedType
   }
 
   // gcs_fileset_spec - computed: false, optional: true, required: false
   private _gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec[];
   public get gcsFilesetSpec() {
-    return this._gcsFilesetSpec;
+    return this.interpolationForAttribute('gcs_fileset_spec') as any;
   }
-  public set gcsFilesetSpec(value: DataCatalogEntryGcsFilesetSpec[] | undefined) {
+  public set gcsFilesetSpec(value: DataCatalogEntryGcsFilesetSpec[] ) {
     this._gcsFilesetSpec = value;
+  }
+  public resetGcsFilesetSpec() {
+    this._gcsFilesetSpec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gcsFilesetSpecInput() {
+    return this._gcsFilesetSpec
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataCatalogEntryTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataCatalogEntryTimeouts | undefined) {
+  public set timeouts(value: DataCatalogEntryTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

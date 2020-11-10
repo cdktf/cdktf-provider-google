@@ -20,322 +20,322 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#names */
 }
 export class DataGoogleCloudRunServiceMetadata extends ComplexComputedList {
 
-  // annotations - computed: true, optional: false, required: true
+  // annotations - computed: true, optional: false, required: false
   public get annotations() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('annotations') as any;
   }
 
-  // generation - computed: true, optional: false, required: true
+  // generation - computed: true, optional: false, required: false
   public get generation() {
     return this.getNumberAttribute('generation');
   }
 
-  // labels - computed: true, optional: false, required: true
+  // labels - computed: true, optional: false, required: false
   public get labels() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('labels') as any;
   }
 
-  // namespace - computed: true, optional: false, required: true
+  // namespace - computed: true, optional: false, required: false
   public get namespace() {
     return this.getStringAttribute('namespace');
   }
 
-  // resource_version - computed: true, optional: false, required: true
+  // resource_version - computed: true, optional: false, required: false
   public get resourceVersion() {
     return this.getStringAttribute('resource_version');
   }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // uid - computed: true, optional: false, required: true
+  // uid - computed: true, optional: false, required: false
   public get uid() {
     return this.getStringAttribute('uid');
   }
 }
 export class DataGoogleCloudRunServiceStatusConditions extends ComplexComputedList {
 
-  // message - computed: true, optional: false, required: true
+  // message - computed: true, optional: false, required: false
   public get message() {
     return this.getStringAttribute('message');
   }
 
-  // reason - computed: true, optional: false, required: true
+  // reason - computed: true, optional: false, required: false
   public get reason() {
     return this.getStringAttribute('reason');
   }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 }
 export class DataGoogleCloudRunServiceStatus extends ComplexComputedList {
 
-  // conditions - computed: true, optional: false, required: true
+  // conditions - computed: true, optional: false, required: false
   public get conditions() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('conditions') as any;
   }
 
-  // latest_created_revision_name - computed: true, optional: false, required: true
+  // latest_created_revision_name - computed: true, optional: false, required: false
   public get latestCreatedRevisionName() {
     return this.getStringAttribute('latest_created_revision_name');
   }
 
-  // latest_ready_revision_name - computed: true, optional: false, required: true
+  // latest_ready_revision_name - computed: true, optional: false, required: false
   public get latestReadyRevisionName() {
     return this.getStringAttribute('latest_ready_revision_name');
   }
 
-  // observed_generation - computed: true, optional: false, required: true
+  // observed_generation - computed: true, optional: false, required: false
   public get observedGeneration() {
     return this.getNumberAttribute('observed_generation');
   }
 
-  // url - computed: true, optional: false, required: true
+  // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
   }
 }
 export class DataGoogleCloudRunServiceTemplateMetadata extends ComplexComputedList {
 
-  // annotations - computed: true, optional: false, required: true
+  // annotations - computed: true, optional: false, required: false
   public get annotations() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('annotations') as any;
   }
 
-  // generation - computed: true, optional: false, required: true
+  // generation - computed: true, optional: false, required: false
   public get generation() {
     return this.getNumberAttribute('generation');
   }
 
-  // labels - computed: true, optional: false, required: true
+  // labels - computed: true, optional: false, required: false
   public get labels() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('labels') as any;
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // namespace - computed: true, optional: false, required: true
+  // namespace - computed: true, optional: false, required: false
   public get namespace() {
     return this.getStringAttribute('namespace');
   }
 
-  // resource_version - computed: true, optional: false, required: true
+  // resource_version - computed: true, optional: false, required: false
   public get resourceVersion() {
     return this.getStringAttribute('resource_version');
   }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // uid - computed: true, optional: false, required: true
+  // uid - computed: true, optional: false, required: false
   public get uid() {
     return this.getStringAttribute('uid');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnv extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // value - computed: true, optional: false, required: true
+  // value - computed: true, optional: false, required: false
   public get value() {
     return this.getStringAttribute('value');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef extends ComplexComputedList {
 
-  // local_object_reference - computed: true, optional: false, required: true
+  // local_object_reference - computed: true, optional: false, required: false
   public get localObjectReference() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('local_object_reference') as any;
   }
 
-  // optional - computed: true, optional: false, required: true
+  // optional - computed: true, optional: false, required: false
   public get optional() {
     return this.getBooleanAttribute('optional');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef extends ComplexComputedList {
 
-  // local_object_reference - computed: true, optional: false, required: true
+  // local_object_reference - computed: true, optional: false, required: false
   public get localObjectReference() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('local_object_reference') as any;
   }
 
-  // optional - computed: true, optional: false, required: true
+  // optional - computed: true, optional: false, required: false
   public get optional() {
     return this.getBooleanAttribute('optional');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom extends ComplexComputedList {
 
-  // config_map_ref - computed: true, optional: false, required: true
+  // config_map_ref - computed: true, optional: false, required: false
   public get configMapRef() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('config_map_ref') as any;
   }
 
-  // prefix - computed: true, optional: false, required: true
+  // prefix - computed: true, optional: false, required: false
   public get prefix() {
     return this.getStringAttribute('prefix');
   }
 
-  // secret_ref - computed: true, optional: false, required: true
+  // secret_ref - computed: true, optional: false, required: false
   public get secretRef() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('secret_ref') as any;
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersPorts extends ComplexComputedList {
 
-  // container_port - computed: true, optional: false, required: true
+  // container_port - computed: true, optional: false, required: false
   public get containerPort() {
     return this.getNumberAttribute('container_port');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // protocol - computed: true, optional: false, required: true
+  // protocol - computed: true, optional: false, required: false
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersResources extends ComplexComputedList {
 
-  // limits - computed: true, optional: false, required: true
+  // limits - computed: true, optional: false, required: false
   public get limits() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('limits') as any;
   }
 
-  // requests - computed: true, optional: false, required: true
+  // requests - computed: true, optional: false, required: false
   public get requests() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('requests') as any;
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainers extends ComplexComputedList {
 
-  // args - computed: true, optional: false, required: true
+  // args - computed: true, optional: false, required: false
   public get args() {
     return this.getListAttribute('args');
   }
 
-  // command - computed: true, optional: false, required: true
+  // command - computed: true, optional: false, required: false
   public get command() {
     return this.getListAttribute('command');
   }
 
-  // env - computed: true, optional: false, required: true
+  // env - computed: true, optional: false, required: false
   public get env() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('env') as any;
   }
 
-  // env_from - computed: true, optional: false, required: true
+  // env_from - computed: true, optional: false, required: false
   public get envFrom() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('env_from') as any;
   }
 
-  // image - computed: true, optional: false, required: true
+  // image - computed: true, optional: false, required: false
   public get image() {
     return this.getStringAttribute('image');
   }
 
-  // ports - computed: true, optional: false, required: true
+  // ports - computed: true, optional: false, required: false
   public get ports() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('ports') as any;
   }
 
-  // resources - computed: true, optional: false, required: true
+  // resources - computed: true, optional: false, required: false
   public get resources() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('resources') as any;
   }
 
-  // working_dir - computed: true, optional: false, required: true
+  // working_dir - computed: true, optional: false, required: false
   public get workingDir() {
     return this.getStringAttribute('working_dir');
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpec extends ComplexComputedList {
 
-  // container_concurrency - computed: true, optional: false, required: true
+  // container_concurrency - computed: true, optional: false, required: false
   public get containerConcurrency() {
     return this.getNumberAttribute('container_concurrency');
   }
 
-  // containers - computed: true, optional: false, required: true
+  // containers - computed: true, optional: false, required: false
   public get containers() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('containers') as any;
   }
 
-  // service_account_name - computed: true, optional: false, required: true
+  // service_account_name - computed: true, optional: false, required: false
   public get serviceAccountName() {
     return this.getStringAttribute('service_account_name');
   }
 
-  // serving_state - computed: true, optional: false, required: true
+  // serving_state - computed: true, optional: false, required: false
   public get servingState() {
     return this.getStringAttribute('serving_state');
   }
 
-  // timeout_seconds - computed: true, optional: false, required: true
+  // timeout_seconds - computed: true, optional: false, required: false
   public get timeoutSeconds() {
     return this.getNumberAttribute('timeout_seconds');
   }
 }
 export class DataGoogleCloudRunServiceTemplate extends ComplexComputedList {
 
-  // metadata - computed: true, optional: false, required: true
+  // metadata - computed: true, optional: false, required: false
   public get metadata() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('metadata') as any;
   }
 
-  // spec - computed: true, optional: false, required: true
+  // spec - computed: true, optional: false, required: false
   public get spec() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('spec') as any;
   }
 }
 export class DataGoogleCloudRunServiceTraffic extends ComplexComputedList {
 
-  // latest_revision - computed: true, optional: false, required: true
+  // latest_revision - computed: true, optional: false, required: false
   public get latestRevision() {
     return this.getBooleanAttribute('latest_revision');
   }
 
-  // percent - computed: true, optional: false, required: true
+  // percent - computed: true, optional: false, required: false
   public get percent() {
     return this.getNumberAttribute('percent');
   }
 
-  // revision_name - computed: true, optional: false, required: true
+  // revision_name - computed: true, optional: false, required: false
   public get revisionName() {
     return this.getStringAttribute('revision_name');
   }
@@ -369,30 +369,30 @@ export class DataGoogleCloudRunService extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // autogenerate_revision_name - computed: true, optional: false, required: true
+  // autogenerate_revision_name - computed: true, optional: false, required: false
   public get autogenerateRevisionName() {
     return this.getBooleanAttribute('autogenerate_revision_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
 
-  // metadata - computed: true, optional: false, required: true
+  // metadata - computed: true, optional: false, required: false
   public metadata(index: string) {
     return new DataGoogleCloudRunServiceMetadata(this, 'metadata', index);
   }
@@ -400,32 +400,43 @@ export class DataGoogleCloudRunService extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public status(index: string) {
     return new DataGoogleCloudRunServiceStatus(this, 'status', index);
   }
 
-  // template - computed: true, optional: false, required: true
+  // template - computed: true, optional: false, required: false
   public template(index: string) {
     return new DataGoogleCloudRunServiceTemplate(this, 'template', index);
   }
 
-  // traffic - computed: true, optional: false, required: true
+  // traffic - computed: true, optional: false, required: false
   public traffic(index: string) {
     return new DataGoogleCloudRunServiceTraffic(this, 'traffic', index);
   }

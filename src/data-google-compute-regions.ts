@@ -40,15 +40,11 @@ export class DataGoogleComputeRegions extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // names - computed: true, optional: false, required: true
+  // names - computed: true, optional: false, required: false
   public get names() {
     return this.getListAttribute('names');
   }
@@ -56,19 +52,33 @@ export class DataGoogleComputeRegions extends TerraformDataSource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // status - computed: false, optional: true, required: false
   private _status?: string;
   public get status() {
-    return this._status;
+    return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string ) {
     this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
   }
 
   // =========

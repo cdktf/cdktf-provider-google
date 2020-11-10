@@ -28,51 +28,51 @@ export interface CloudiotDeviceConfig extends TerraformMetaArguments {
 }
 export class CloudiotDeviceConfigA extends ComplexComputedList {
 
-  // binary_data - computed: true, optional: false, required: true
+  // binary_data - computed: true, optional: false, required: false
   public get binaryData() {
     return this.getStringAttribute('binary_data');
   }
 
-  // cloud_update_time - computed: true, optional: false, required: true
+  // cloud_update_time - computed: true, optional: false, required: false
   public get cloudUpdateTime() {
     return this.getStringAttribute('cloud_update_time');
   }
 
-  // device_ack_time - computed: true, optional: false, required: true
+  // device_ack_time - computed: true, optional: false, required: false
   public get deviceAckTime() {
     return this.getStringAttribute('device_ack_time');
   }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
 }
 export class CloudiotDeviceLastErrorStatus extends ComplexComputedList {
 
-  // details - computed: true, optional: false, required: true
+  // details - computed: true, optional: false, required: false
   public get details() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('details') as any;
   }
 
-  // message - computed: true, optional: false, required: true
+  // message - computed: true, optional: false, required: false
   public get message() {
     return this.getStringAttribute('message');
   }
 
-  // number - computed: true, optional: false, required: true
+  // number - computed: true, optional: false, required: false
   public get number() {
     return this.getNumberAttribute('number');
   }
 }
 export class CloudiotDeviceState extends ComplexComputedList {
 
-  // binary_data - computed: true, optional: false, required: true
+  // binary_data - computed: true, optional: false, required: false
   public get binaryData() {
     return this.getStringAttribute('binary_data');
   }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -137,57 +137,60 @@ export class CloudiotDevice extends TerraformResource {
   // blocked - computed: false, optional: true, required: false
   private _blocked?: boolean;
   public get blocked() {
-    return this._blocked;
+    return this.getBooleanAttribute('blocked');
   }
-  public set blocked(value: boolean | undefined) {
+  public set blocked(value: boolean ) {
     this._blocked = value;
   }
+  public resetBlocked() {
+    this._blocked = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blockedInput() {
+    return this._blocked
+  }
 
-  // config - computed: true, optional: false, required: true
+  // config - computed: true, optional: false, required: false
   public config(index: string) {
     return new CloudiotDeviceConfigA(this, 'config', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // last_config_ack_time - computed: true, optional: false, required: true
+  // last_config_ack_time - computed: true, optional: false, required: false
   public get lastConfigAckTime() {
     return this.getStringAttribute('last_config_ack_time');
   }
 
-  // last_config_send_time - computed: true, optional: false, required: true
+  // last_config_send_time - computed: true, optional: false, required: false
   public get lastConfigSendTime() {
     return this.getStringAttribute('last_config_send_time');
   }
 
-  // last_error_status - computed: true, optional: false, required: true
+  // last_error_status - computed: true, optional: false, required: false
   public lastErrorStatus(index: string) {
     return new CloudiotDeviceLastErrorStatus(this, 'last_error_status', index);
   }
 
-  // last_error_time - computed: true, optional: false, required: true
+  // last_error_time - computed: true, optional: false, required: false
   public get lastErrorTime() {
     return this.getStringAttribute('last_error_time');
   }
 
-  // last_event_time - computed: true, optional: false, required: true
+  // last_event_time - computed: true, optional: false, required: false
   public get lastEventTime() {
     return this.getStringAttribute('last_event_time');
   }
 
-  // last_heartbeat_time - computed: true, optional: false, required: true
+  // last_heartbeat_time - computed: true, optional: false, required: false
   public get lastHeartbeatTime() {
     return this.getStringAttribute('last_heartbeat_time');
   }
 
-  // last_state_time - computed: true, optional: false, required: true
+  // last_state_time - computed: true, optional: false, required: false
   public get lastStateTime() {
     return this.getStringAttribute('last_state_time');
   }
@@ -195,31 +198,49 @@ export class CloudiotDevice extends TerraformResource {
   // log_level - computed: false, optional: true, required: false
   private _logLevel?: string;
   public get logLevel() {
-    return this._logLevel;
+    return this.getStringAttribute('log_level');
   }
-  public set logLevel(value: string | undefined) {
+  public set logLevel(value: string ) {
     this._logLevel = value;
+  }
+  public resetLogLevel() {
+    this._logLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logLevelInput() {
+    return this._logLevel
   }
 
   // metadata - computed: false, optional: true, required: false
   private _metadata?: { [key: string]: string };
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | undefined) {
+  public set metadata(value: { [key: string]: string } ) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // num_id - computed: true, optional: false, required: true
+  // num_id - computed: true, optional: false, required: false
   public get numId() {
     return this.getStringAttribute('num_id');
   }
@@ -227,13 +248,17 @@ export class CloudiotDevice extends TerraformResource {
   // registry - computed: false, optional: false, required: true
   private _registry: string;
   public get registry() {
-    return this._registry;
+    return this.getStringAttribute('registry');
   }
   public set registry(value: string) {
     this._registry = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get registryInput() {
+    return this._registry
+  }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public state(index: string) {
     return new CloudiotDeviceState(this, 'state', index);
   }
@@ -241,28 +266,49 @@ export class CloudiotDevice extends TerraformResource {
   // credentials - computed: false, optional: true, required: false
   private _credentials?: CloudiotDeviceCredentials[];
   public get credentials() {
-    return this._credentials;
+    return this.interpolationForAttribute('credentials') as any;
   }
-  public set credentials(value: CloudiotDeviceCredentials[] | undefined) {
+  public set credentials(value: CloudiotDeviceCredentials[] ) {
     this._credentials = value;
+  }
+  public resetCredentials() {
+    this._credentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get credentialsInput() {
+    return this._credentials
   }
 
   // gateway_config - computed: false, optional: true, required: false
   private _gatewayConfig?: CloudiotDeviceGatewayConfig[];
   public get gatewayConfig() {
-    return this._gatewayConfig;
+    return this.interpolationForAttribute('gateway_config') as any;
   }
-  public set gatewayConfig(value: CloudiotDeviceGatewayConfig[] | undefined) {
+  public set gatewayConfig(value: CloudiotDeviceGatewayConfig[] ) {
     this._gatewayConfig = value;
+  }
+  public resetGatewayConfig() {
+    this._gatewayConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayConfigInput() {
+    return this._gatewayConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudiotDeviceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudiotDeviceTimeouts | undefined) {
+  public set timeouts(value: CloudiotDeviceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -42,15 +42,11 @@ export class DataGoogleServiceAccountKey extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // key_algorithm - computed: true, optional: false, required: true
+  // key_algorithm - computed: true, optional: false, required: false
   public get keyAlgorithm() {
     return this.getStringAttribute('key_algorithm');
   }
@@ -58,22 +54,33 @@ export class DataGoogleServiceAccountKey extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // public_key - computed: true, optional: false, required: true
+  // public_key - computed: true, optional: false, required: false
   public get publicKey() {
     return this.getStringAttribute('public_key');
   }
@@ -81,10 +88,17 @@ export class DataGoogleServiceAccountKey extends TerraformDataSource {
   // public_key_type - computed: false, optional: true, required: false
   private _publicKeyType?: string;
   public get publicKeyType() {
-    return this._publicKeyType;
+    return this.getStringAttribute('public_key_type');
   }
-  public set publicKeyType(value: string | undefined) {
+  public set publicKeyType(value: string ) {
     this._publicKeyType = value;
+  }
+  public resetPublicKeyType() {
+    this._publicKeyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyTypeInput() {
+    return this._publicKeyType
   }
 
   // =========

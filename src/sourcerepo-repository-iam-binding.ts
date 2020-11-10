@@ -51,63 +51,85 @@ export class SourcerepoRepositoryIamBinding extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // members - computed: false, optional: false, required: true
   private _members: string[];
   public get members() {
-    return this._members;
+    return this.getListAttribute('members');
   }
   public set members(value: string[]) {
     this._members = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get membersInput() {
+    return this._members
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // repository - computed: false, optional: false, required: true
   private _repository: string;
   public get repository() {
-    return this._repository;
+    return this.getStringAttribute('repository');
   }
   public set repository(value: string) {
     this._repository = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // condition - computed: false, optional: true, required: false
   private _condition?: SourcerepoRepositoryIamBindingCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: SourcerepoRepositoryIamBindingCondition[] | undefined) {
+  public set condition(value: SourcerepoRepositoryIamBindingCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // =========

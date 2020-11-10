@@ -73,58 +73,80 @@ export class LoggingFolderSink extends TerraformResource {
   // destination - computed: false, optional: false, required: true
   private _destination: string;
   public get destination() {
-    return this._destination;
+    return this.getStringAttribute('destination');
   }
   public set destination(value: string) {
     this._destination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination
   }
 
   // filter - computed: false, optional: true, required: false
   private _filter?: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string ) {
     this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
   }
 
   // folder - computed: false, optional: false, required: true
   private _folder: string;
   public get folder() {
-    return this._folder;
+    return this.getStringAttribute('folder');
   }
   public set folder(value: string) {
     this._folder = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // include_children - computed: false, optional: true, required: false
   private _includeChildren?: boolean;
   public get includeChildren() {
-    return this._includeChildren;
+    return this.getBooleanAttribute('include_children');
   }
-  public set includeChildren(value: boolean | undefined) {
+  public set includeChildren(value: boolean ) {
     this._includeChildren = value;
+  }
+  public resetIncludeChildren() {
+    this._includeChildren = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeChildrenInput() {
+    return this._includeChildren
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // writer_identity - computed: true, optional: false, required: true
+  // writer_identity - computed: true, optional: false, required: false
   public get writerIdentity() {
     return this.getStringAttribute('writer_identity');
   }
@@ -132,19 +154,33 @@ export class LoggingFolderSink extends TerraformResource {
   // bigquery_options - computed: false, optional: true, required: false
   private _bigqueryOptions?: LoggingFolderSinkBigqueryOptions[];
   public get bigqueryOptions() {
-    return this._bigqueryOptions;
+    return this.interpolationForAttribute('bigquery_options') as any;
   }
-  public set bigqueryOptions(value: LoggingFolderSinkBigqueryOptions[] | undefined) {
+  public set bigqueryOptions(value: LoggingFolderSinkBigqueryOptions[] ) {
     this._bigqueryOptions = value;
+  }
+  public resetBigqueryOptions() {
+    this._bigqueryOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryOptionsInput() {
+    return this._bigqueryOptions
   }
 
   // exclusions - computed: false, optional: true, required: false
   private _exclusions?: LoggingFolderSinkExclusions[];
   public get exclusions() {
-    return this._exclusions;
+    return this.interpolationForAttribute('exclusions') as any;
   }
-  public set exclusions(value: LoggingFolderSinkExclusions[] | undefined) {
+  public set exclusions(value: LoggingFolderSinkExclusions[] ) {
     this._exclusions = value;
+  }
+  public resetExclusions() {
+    this._exclusions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionsInput() {
+    return this._exclusions
   }
 
   // =========

@@ -159,39 +159,53 @@ export class AccessContextManagerServicePerimeters extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // service_perimeters - computed: false, optional: true, required: false
   private _servicePerimeters?: AccessContextManagerServicePerimetersServicePerimeters[];
   public get servicePerimeters() {
-    return this._servicePerimeters;
+    return this.interpolationForAttribute('service_perimeters') as any;
   }
-  public set servicePerimeters(value: AccessContextManagerServicePerimetersServicePerimeters[] | undefined) {
+  public set servicePerimeters(value: AccessContextManagerServicePerimetersServicePerimeters[] ) {
     this._servicePerimeters = value;
+  }
+  public resetServicePerimeters() {
+    this._servicePerimeters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePerimetersInput() {
+    return this._servicePerimeters
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerServicePerimetersTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerServicePerimetersTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerServicePerimetersTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

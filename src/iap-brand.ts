@@ -57,27 +57,27 @@ export class IapBrand extends TerraformResource {
   // application_title - computed: false, optional: false, required: true
   private _applicationTitle: string;
   public get applicationTitle() {
-    return this._applicationTitle;
+    return this.getStringAttribute('application_title');
   }
   public set applicationTitle(value: string) {
     this._applicationTitle = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get applicationTitleInput() {
+    return this._applicationTitle
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // org_internal_only - computed: true, optional: false, required: true
+  // org_internal_only - computed: true, optional: false, required: false
   public get orgInternalOnly() {
     return this.getBooleanAttribute('org_internal_only');
   }
@@ -85,28 +85,46 @@ export class IapBrand extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // support_email - computed: false, optional: false, required: true
   private _supportEmail: string;
   public get supportEmail() {
-    return this._supportEmail;
+    return this.getStringAttribute('support_email');
   }
   public set supportEmail(value: string) {
     this._supportEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get supportEmailInput() {
+    return this._supportEmail
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IapBrandTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IapBrandTimeouts | undefined) {
+  public set timeouts(value: IapBrandTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

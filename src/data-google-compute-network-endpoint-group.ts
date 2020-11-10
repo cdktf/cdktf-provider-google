@@ -51,40 +51,43 @@ export class DataGoogleComputeNetworkEndpointGroup extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // default_port - computed: true, optional: false, required: true
+  // default_port - computed: true, optional: false, required: false
   public get defaultPort() {
     return this.getNumberAttribute('default_port');
   }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string ) {
     this._name = value;
   }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // network - computed: true, optional: false, required: true
+  // network - computed: true, optional: false, required: false
   public get network() {
     return this.getStringAttribute('network');
   }
 
-  // network_endpoint_type - computed: true, optional: false, required: true
+  // network_endpoint_type - computed: true, optional: false, required: false
   public get networkEndpointType() {
     return this.getStringAttribute('network_endpoint_type');
   }
@@ -92,27 +95,41 @@ export class DataGoogleComputeNetworkEndpointGroup extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // self_link - computed: false, optional: true, required: false
   private _selfLink?: string;
   public get selfLink() {
-    return this._selfLink;
+    return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string | undefined) {
+  public set selfLink(value: string ) {
     this._selfLink = value;
   }
+  public resetSelfLink() {
+    this._selfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selfLinkInput() {
+    return this._selfLink
+  }
 
-  // size - computed: true, optional: false, required: true
+  // size - computed: true, optional: false, required: false
   public get size() {
     return this.getNumberAttribute('size');
   }
 
-  // subnetwork - computed: true, optional: false, required: true
+  // subnetwork - computed: true, optional: false, required: false
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
@@ -120,10 +137,17 @@ export class DataGoogleComputeNetworkEndpointGroup extends TerraformDataSource {
   // zone - computed: false, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone;
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string ) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // =========

@@ -103,22 +103,36 @@ export class DialogflowAgent extends TerraformResource {
   // api_version - computed: true, optional: true, required: false
   private _apiVersion?: string;
   public get apiVersion() {
-    return this._apiVersion ?? this.getStringAttribute('api_version');
+    return this.getStringAttribute('api_version');
   }
-  public set apiVersion(value: string | undefined) {
+  public set apiVersion(value: string) {
     this._apiVersion = value;
+  }
+  public resetApiVersion() {
+    this._apiVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiVersionInput() {
+    return this._apiVersion
   }
 
   // avatar_uri - computed: false, optional: true, required: false
   private _avatarUri?: string;
   public get avatarUri() {
-    return this._avatarUri;
+    return this.getStringAttribute('avatar_uri');
   }
-  public set avatarUri(value: string | undefined) {
+  public set avatarUri(value: string ) {
     this._avatarUri = value;
   }
+  public resetAvatarUri() {
+    this._avatarUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get avatarUriInput() {
+    return this._avatarUri
+  }
 
-  // avatar_uri_backend - computed: true, optional: false, required: true
+  // avatar_uri_backend - computed: true, optional: false, required: false
   public get avatarUriBackend() {
     return this.getStringAttribute('avatar_uri_backend');
   }
@@ -126,109 +140,173 @@ export class DialogflowAgent extends TerraformResource {
   // classification_threshold - computed: false, optional: true, required: false
   private _classificationThreshold?: number;
   public get classificationThreshold() {
-    return this._classificationThreshold;
+    return this.getNumberAttribute('classification_threshold');
   }
-  public set classificationThreshold(value: number | undefined) {
+  public set classificationThreshold(value: number ) {
     this._classificationThreshold = value;
+  }
+  public resetClassificationThreshold() {
+    this._classificationThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get classificationThresholdInput() {
+    return this._classificationThreshold
   }
 
   // default_language_code - computed: false, optional: false, required: true
   private _defaultLanguageCode: string;
   public get defaultLanguageCode() {
-    return this._defaultLanguageCode;
+    return this.getStringAttribute('default_language_code');
   }
   public set defaultLanguageCode(value: string) {
     this._defaultLanguageCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultLanguageCodeInput() {
+    return this._defaultLanguageCode
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // enable_logging - computed: false, optional: true, required: false
   private _enableLogging?: boolean;
   public get enableLogging() {
-    return this._enableLogging;
+    return this.getBooleanAttribute('enable_logging');
   }
-  public set enableLogging(value: boolean | undefined) {
+  public set enableLogging(value: boolean ) {
     this._enableLogging = value;
+  }
+  public resetEnableLogging() {
+    this._enableLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableLoggingInput() {
+    return this._enableLogging
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // match_mode - computed: true, optional: true, required: false
   private _matchMode?: string;
   public get matchMode() {
-    return this._matchMode ?? this.getStringAttribute('match_mode');
+    return this.getStringAttribute('match_mode');
   }
-  public set matchMode(value: string | undefined) {
+  public set matchMode(value: string) {
     this._matchMode = value;
+  }
+  public resetMatchMode() {
+    this._matchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchModeInput() {
+    return this._matchMode
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // supported_language_codes - computed: false, optional: true, required: false
   private _supportedLanguageCodes?: string[];
   public get supportedLanguageCodes() {
-    return this._supportedLanguageCodes;
+    return this.getListAttribute('supported_language_codes');
   }
-  public set supportedLanguageCodes(value: string[] | undefined) {
+  public set supportedLanguageCodes(value: string[] ) {
     this._supportedLanguageCodes = value;
+  }
+  public resetSupportedLanguageCodes() {
+    this._supportedLanguageCodes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get supportedLanguageCodesInput() {
+    return this._supportedLanguageCodes
   }
 
   // tier - computed: false, optional: true, required: false
   private _tier?: string;
   public get tier() {
-    return this._tier;
+    return this.getStringAttribute('tier');
   }
-  public set tier(value: string | undefined) {
+  public set tier(value: string ) {
     this._tier = value;
+  }
+  public resetTier() {
+    this._tier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
   }
 
   // time_zone - computed: false, optional: false, required: true
   private _timeZone: string;
   public get timeZone() {
-    return this._timeZone;
+    return this.getStringAttribute('time_zone');
   }
   public set timeZone(value: string) {
     this._timeZone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DialogflowAgentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DialogflowAgentTimeouts | undefined) {
+  public set timeouts(value: DialogflowAgentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

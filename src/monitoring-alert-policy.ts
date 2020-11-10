@@ -43,12 +43,12 @@ must begin with a letter. */
 }
 export class MonitoringAlertPolicyCreationRecord extends ComplexComputedList {
 
-  // mutate_time - computed: true, optional: false, required: true
+  // mutate_time - computed: true, optional: false, required: false
   public get mutateTime() {
     return this.getStringAttribute('mutate_time');
   }
 
-  // mutated_by - computed: true, optional: false, required: true
+  // mutated_by - computed: true, optional: false, required: false
   public get mutatedBy() {
     return this.getStringAttribute('mutated_by');
   }
@@ -499,13 +499,17 @@ export class MonitoringAlertPolicy extends TerraformResource {
   // combiner - computed: false, optional: false, required: true
   private _combiner: string;
   public get combiner() {
-    return this._combiner;
+    return this.getStringAttribute('combiner');
   }
   public set combiner(value: string) {
     this._combiner = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get combinerInput() {
+    return this._combiner
+  }
 
-  // creation_record - computed: true, optional: false, required: true
+  // creation_record - computed: true, optional: false, required: false
   public creationRecord(index: string) {
     return new MonitoringAlertPolicyCreationRecord(this, 'creation_record', index);
   }
@@ -513,31 +517,38 @@ export class MonitoringAlertPolicy extends TerraformResource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -545,55 +556,94 @@ export class MonitoringAlertPolicy extends TerraformResource {
   // notification_channels - computed: false, optional: true, required: false
   private _notificationChannels?: string[];
   public get notificationChannels() {
-    return this._notificationChannels;
+    return this.getListAttribute('notification_channels');
   }
-  public set notificationChannels(value: string[] | undefined) {
+  public set notificationChannels(value: string[] ) {
     this._notificationChannels = value;
+  }
+  public resetNotificationChannels() {
+    this._notificationChannels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationChannelsInput() {
+    return this._notificationChannels
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // user_labels - computed: false, optional: true, required: false
   private _userLabels?: { [key: string]: string };
   public get userLabels() {
-    return this._userLabels;
+    return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | undefined) {
+  public set userLabels(value: { [key: string]: string } ) {
     this._userLabels = value;
+  }
+  public resetUserLabels() {
+    this._userLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userLabelsInput() {
+    return this._userLabels
   }
 
   // conditions - computed: false, optional: false, required: true
   private _conditions: MonitoringAlertPolicyConditions[];
   public get conditions() {
-    return this._conditions;
+    return this.interpolationForAttribute('conditions') as any;
   }
   public set conditions(value: MonitoringAlertPolicyConditions[]) {
     this._conditions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionsInput() {
+    return this._conditions
   }
 
   // documentation - computed: false, optional: true, required: false
   private _documentation?: MonitoringAlertPolicyDocumentation[];
   public get documentation() {
-    return this._documentation;
+    return this.interpolationForAttribute('documentation') as any;
   }
-  public set documentation(value: MonitoringAlertPolicyDocumentation[] | undefined) {
+  public set documentation(value: MonitoringAlertPolicyDocumentation[] ) {
     this._documentation = value;
+  }
+  public resetDocumentation() {
+    this._documentation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentationInput() {
+    return this._documentation
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitoringAlertPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitoringAlertPolicyTimeouts | undefined) {
+  public set timeouts(value: MonitoringAlertPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

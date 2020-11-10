@@ -93,22 +93,36 @@ export class ComputeGlobalAddress extends TerraformResource {
   // address - computed: true, optional: true, required: false
   private _address?: string;
   public get address() {
-    return this._address ?? this.getStringAttribute('address');
+    return this.getStringAttribute('address');
   }
-  public set address(value: string | undefined) {
+  public set address(value: string) {
     this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address
   }
 
   // address_type - computed: false, optional: true, required: false
   private _addressType?: string;
   public get addressType() {
-    return this._addressType;
+    return this.getStringAttribute('address_type');
   }
-  public set addressType(value: string | undefined) {
+  public set addressType(value: string ) {
     this._addressType = value;
   }
+  public resetAddressType() {
+    this._addressType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressTypeInput() {
+    return this._addressType
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -116,76 +130,118 @@ export class ComputeGlobalAddress extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_version - computed: false, optional: true, required: false
   private _ipVersion?: string;
   public get ipVersion() {
-    return this._ipVersion;
+    return this.getStringAttribute('ip_version');
   }
-  public set ipVersion(value: string | undefined) {
+  public set ipVersion(value: string ) {
     this._ipVersion = value;
+  }
+  public resetIpVersion() {
+    this._ipVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipVersionInput() {
+    return this._ipVersion
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: true, required: false
   private _network?: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string ) {
     this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // prefix_length - computed: false, optional: true, required: false
   private _prefixLength?: number;
   public get prefixLength() {
-    return this._prefixLength;
+    return this.getNumberAttribute('prefix_length');
   }
-  public set prefixLength(value: number | undefined) {
+  public set prefixLength(value: number ) {
     this._prefixLength = value;
+  }
+  public resetPrefixLength() {
+    this._prefixLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixLengthInput() {
+    return this._prefixLength
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // purpose - computed: false, optional: true, required: false
   private _purpose?: string;
   public get purpose() {
-    return this._purpose;
+    return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string | undefined) {
+  public set purpose(value: string ) {
     this._purpose = value;
   }
+  public resetPurpose() {
+    this._purpose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purposeInput() {
+    return this._purpose
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -193,10 +249,17 @@ export class ComputeGlobalAddress extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeGlobalAddressTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeGlobalAddressTimeouts | undefined) {
+  public set timeouts(value: ComputeGlobalAddressTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

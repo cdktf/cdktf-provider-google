@@ -101,7 +101,7 @@ export class BigqueryRoutine extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_time - computed: true, optional: false, required: true
+  // creation_time - computed: true, optional: false, required: false
   public get creationTime() {
     return this.getNumberAttribute('creation_time');
   }
@@ -109,67 +109,99 @@ export class BigqueryRoutine extends TerraformResource {
   // dataset_id - computed: false, optional: false, required: true
   private _datasetId: string;
   public get datasetId() {
-    return this._datasetId;
+    return this.getStringAttribute('dataset_id');
   }
   public set datasetId(value: string) {
     this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
   }
 
   // definition_body - computed: false, optional: false, required: true
   private _definitionBody: string;
   public get definitionBody() {
-    return this._definitionBody;
+    return this.getStringAttribute('definition_body');
   }
   public set definitionBody(value: string) {
     this._definitionBody = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get definitionBodyInput() {
+    return this._definitionBody
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // determinism_level - computed: false, optional: true, required: false
   private _determinismLevel?: string;
   public get determinismLevel() {
-    return this._determinismLevel;
+    return this.getStringAttribute('determinism_level');
   }
-  public set determinismLevel(value: string | undefined) {
+  public set determinismLevel(value: string ) {
     this._determinismLevel = value;
+  }
+  public resetDeterminismLevel() {
+    this._determinismLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get determinismLevelInput() {
+    return this._determinismLevel
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // imported_libraries - computed: false, optional: true, required: false
   private _importedLibraries?: string[];
   public get importedLibraries() {
-    return this._importedLibraries;
+    return this.getListAttribute('imported_libraries');
   }
-  public set importedLibraries(value: string[] | undefined) {
+  public set importedLibraries(value: string[] ) {
     this._importedLibraries = value;
+  }
+  public resetImportedLibraries() {
+    this._importedLibraries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importedLibrariesInput() {
+    return this._importedLibraries
   }
 
   // language - computed: false, optional: true, required: false
   private _language?: string;
   public get language() {
-    return this._language;
+    return this.getStringAttribute('language');
   }
-  public set language(value: string | undefined) {
+  public set language(value: string ) {
     this._language = value;
   }
+  public resetLanguage() {
+    this._language = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get languageInput() {
+    return this._language
+  }
 
-  // last_modified_time - computed: true, optional: false, required: true
+  // last_modified_time - computed: true, optional: false, required: false
   public get lastModifiedTime() {
     return this.getNumberAttribute('last_modified_time');
   }
@@ -177,55 +209,94 @@ export class BigqueryRoutine extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // return_type - computed: false, optional: true, required: false
   private _returnType?: string;
   public get returnType() {
-    return this._returnType;
+    return this.getStringAttribute('return_type');
   }
-  public set returnType(value: string | undefined) {
+  public set returnType(value: string ) {
     this._returnType = value;
+  }
+  public resetReturnType() {
+    this._returnType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get returnTypeInput() {
+    return this._returnType
   }
 
   // routine_id - computed: false, optional: false, required: true
   private _routineId: string;
   public get routineId() {
-    return this._routineId;
+    return this.getStringAttribute('routine_id');
   }
   public set routineId(value: string) {
     this._routineId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routineIdInput() {
+    return this._routineId
   }
 
   // routine_type - computed: false, optional: true, required: false
   private _routineType?: string;
   public get routineType() {
-    return this._routineType;
+    return this.getStringAttribute('routine_type');
   }
-  public set routineType(value: string | undefined) {
+  public set routineType(value: string ) {
     this._routineType = value;
+  }
+  public resetRoutineType() {
+    this._routineType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routineTypeInput() {
+    return this._routineType
   }
 
   // arguments - computed: false, optional: true, required: false
   private _arguments?: BigqueryRoutineArguments[];
   public get arguments() {
-    return this._arguments;
+    return this.interpolationForAttribute('arguments') as any;
   }
-  public set arguments(value: BigqueryRoutineArguments[] | undefined) {
+  public set arguments(value: BigqueryRoutineArguments[] ) {
     this._arguments = value;
+  }
+  public resetArguments() {
+    this._arguments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argumentsInput() {
+    return this._arguments
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigqueryRoutineTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BigqueryRoutineTimeouts | undefined) {
+  public set timeouts(value: BigqueryRoutineTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -129,67 +129,96 @@ export class BigqueryDataTransferConfig extends TerraformResource {
   // data_refresh_window_days - computed: false, optional: true, required: false
   private _dataRefreshWindowDays?: number;
   public get dataRefreshWindowDays() {
-    return this._dataRefreshWindowDays;
+    return this.getNumberAttribute('data_refresh_window_days');
   }
-  public set dataRefreshWindowDays(value: number | undefined) {
+  public set dataRefreshWindowDays(value: number ) {
     this._dataRefreshWindowDays = value;
+  }
+  public resetDataRefreshWindowDays() {
+    this._dataRefreshWindowDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataRefreshWindowDaysInput() {
+    return this._dataRefreshWindowDays
   }
 
   // data_source_id - computed: false, optional: false, required: true
   private _dataSourceId: string;
   public get dataSourceId() {
-    return this._dataSourceId;
+    return this.getStringAttribute('data_source_id');
   }
   public set dataSourceId(value: string) {
     this._dataSourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataSourceIdInput() {
+    return this._dataSourceId
   }
 
   // destination_dataset_id - computed: false, optional: false, required: true
   private _destinationDatasetId: string;
   public get destinationDatasetId() {
-    return this._destinationDatasetId;
+    return this.getStringAttribute('destination_dataset_id');
   }
   public set destinationDatasetId(value: string) {
     this._destinationDatasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationDatasetIdInput() {
+    return this._destinationDatasetId
   }
 
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean;
   public get disabled() {
-    return this._disabled;
+    return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean | undefined) {
+  public set disabled(value: boolean ) {
     this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
   }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -197,82 +226,142 @@ export class BigqueryDataTransferConfig extends TerraformResource {
   // notification_pubsub_topic - computed: false, optional: true, required: false
   private _notificationPubsubTopic?: string;
   public get notificationPubsubTopic() {
-    return this._notificationPubsubTopic;
+    return this.getStringAttribute('notification_pubsub_topic');
   }
-  public set notificationPubsubTopic(value: string | undefined) {
+  public set notificationPubsubTopic(value: string ) {
     this._notificationPubsubTopic = value;
+  }
+  public resetNotificationPubsubTopic() {
+    this._notificationPubsubTopic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationPubsubTopicInput() {
+    return this._notificationPubsubTopic
   }
 
   // params - computed: false, optional: false, required: true
   private _params: { [key: string]: string };
   public get params() {
-    return this._params;
+    return this.interpolationForAttribute('params') as any;
   }
   public set params(value: { [key: string]: string }) {
     this._params = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get paramsInput() {
+    return this._params
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // schedule - computed: false, optional: true, required: false
   private _schedule?: string;
   public get schedule() {
-    return this._schedule;
+    return this.getStringAttribute('schedule');
   }
-  public set schedule(value: string | undefined) {
+  public set schedule(value: string ) {
     this._schedule = value;
+  }
+  public resetSchedule() {
+    this._schedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule
   }
 
   // service_account_name - computed: false, optional: true, required: false
   private _serviceAccountName?: string;
   public get serviceAccountName() {
-    return this._serviceAccountName;
+    return this.getStringAttribute('service_account_name');
   }
-  public set serviceAccountName(value: string | undefined) {
+  public set serviceAccountName(value: string ) {
     this._serviceAccountName = value;
+  }
+  public resetServiceAccountName() {
+    this._serviceAccountName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountNameInput() {
+    return this._serviceAccountName
   }
 
   // email_preferences - computed: false, optional: true, required: false
   private _emailPreferences?: BigqueryDataTransferConfigEmailPreferences[];
   public get emailPreferences() {
-    return this._emailPreferences;
+    return this.interpolationForAttribute('email_preferences') as any;
   }
-  public set emailPreferences(value: BigqueryDataTransferConfigEmailPreferences[] | undefined) {
+  public set emailPreferences(value: BigqueryDataTransferConfigEmailPreferences[] ) {
     this._emailPreferences = value;
+  }
+  public resetEmailPreferences() {
+    this._emailPreferences = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailPreferencesInput() {
+    return this._emailPreferences
   }
 
   // schedule_options - computed: false, optional: true, required: false
   private _scheduleOptions?: BigqueryDataTransferConfigScheduleOptions[];
   public get scheduleOptions() {
-    return this._scheduleOptions;
+    return this.interpolationForAttribute('schedule_options') as any;
   }
-  public set scheduleOptions(value: BigqueryDataTransferConfigScheduleOptions[] | undefined) {
+  public set scheduleOptions(value: BigqueryDataTransferConfigScheduleOptions[] ) {
     this._scheduleOptions = value;
+  }
+  public resetScheduleOptions() {
+    this._scheduleOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleOptionsInput() {
+    return this._scheduleOptions
   }
 
   // sensitive_params - computed: false, optional: true, required: false
   private _sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
   public get sensitiveParams() {
-    return this._sensitiveParams;
+    return this.interpolationForAttribute('sensitive_params') as any;
   }
-  public set sensitiveParams(value: BigqueryDataTransferConfigSensitiveParams[] | undefined) {
+  public set sensitiveParams(value: BigqueryDataTransferConfigSensitiveParams[] ) {
     this._sensitiveParams = value;
+  }
+  public resetSensitiveParams() {
+    this._sensitiveParams = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitiveParamsInput() {
+    return this._sensitiveParams
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigqueryDataTransferConfigTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BigqueryDataTransferConfigTimeouts | undefined) {
+  public set timeouts(value: BigqueryDataTransferConfigTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

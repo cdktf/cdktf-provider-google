@@ -361,7 +361,7 @@ export class CloudbuildTrigger extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
@@ -369,94 +369,153 @@ export class CloudbuildTrigger extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean;
   public get disabled() {
-    return this._disabled;
+    return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean | undefined) {
+  public set disabled(value: boolean ) {
     this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
   }
 
   // filename - computed: false, optional: true, required: false
   private _filename?: string;
   public get filename() {
-    return this._filename;
+    return this.getStringAttribute('filename');
   }
-  public set filename(value: string | undefined) {
+  public set filename(value: string ) {
     this._filename = value;
+  }
+  public resetFilename() {
+    this._filename = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filenameInput() {
+    return this._filename
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ignored_files - computed: false, optional: true, required: false
   private _ignoredFiles?: string[];
   public get ignoredFiles() {
-    return this._ignoredFiles;
+    return this.getListAttribute('ignored_files');
   }
-  public set ignoredFiles(value: string[] | undefined) {
+  public set ignoredFiles(value: string[] ) {
     this._ignoredFiles = value;
+  }
+  public resetIgnoredFiles() {
+    this._ignoredFiles = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoredFilesInput() {
+    return this._ignoredFiles
   }
 
   // included_files - computed: false, optional: true, required: false
   private _includedFiles?: string[];
   public get includedFiles() {
-    return this._includedFiles;
+    return this.getListAttribute('included_files');
   }
-  public set includedFiles(value: string[] | undefined) {
+  public set includedFiles(value: string[] ) {
     this._includedFiles = value;
+  }
+  public resetIncludedFiles() {
+    this._includedFiles = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includedFilesInput() {
+    return this._includedFiles
   }
 
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // substitutions - computed: false, optional: true, required: false
   private _substitutions?: { [key: string]: string };
   public get substitutions() {
-    return this._substitutions;
+    return this.interpolationForAttribute('substitutions') as any;
   }
-  public set substitutions(value: { [key: string]: string } | undefined) {
+  public set substitutions(value: { [key: string]: string } ) {
     this._substitutions = value;
+  }
+  public resetSubstitutions() {
+    this._substitutions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get substitutionsInput() {
+    return this._substitutions
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: string[];
   public get tags() {
-    return this._tags;
+    return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[] ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // trigger_id - computed: true, optional: false, required: true
+  // trigger_id - computed: true, optional: false, required: false
   public get triggerId() {
     return this.getStringAttribute('trigger_id');
   }
@@ -464,28 +523,49 @@ export class CloudbuildTrigger extends TerraformResource {
   // build - computed: false, optional: true, required: false
   private _build?: CloudbuildTriggerBuild[];
   public get buildAttribute() {
-    return this._build;
+    return this.interpolationForAttribute('build') as any;
   }
-  public set buildAttribute(value: CloudbuildTriggerBuild[] | undefined) {
+  public set buildAttribute(value: CloudbuildTriggerBuild[] ) {
     this._build = value;
+  }
+  public resetBuildAttribute() {
+    this._build = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get buildAttributeInput() {
+    return this._build
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudbuildTriggerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudbuildTriggerTimeouts | undefined) {
+  public set timeouts(value: CloudbuildTriggerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // trigger_template - computed: false, optional: true, required: false
   private _triggerTemplate?: CloudbuildTriggerTriggerTemplate[];
   public get triggerTemplate() {
-    return this._triggerTemplate;
+    return this.interpolationForAttribute('trigger_template') as any;
   }
-  public set triggerTemplate(value: CloudbuildTriggerTriggerTemplate[] | undefined) {
+  public set triggerTemplate(value: CloudbuildTriggerTriggerTemplate[] ) {
     this._triggerTemplate = value;
+  }
+  public resetTriggerTemplate() {
+    this._triggerTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerTemplateInput() {
+    return this._triggerTemplate
   }
 
   // =========

@@ -317,7 +317,7 @@ export class OsConfigPatchDeployment extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
@@ -325,36 +325,46 @@ export class OsConfigPatchDeployment extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // duration - computed: false, optional: true, required: false
   private _duration?: string;
   public get duration() {
-    return this._duration;
+    return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string ) {
     this._duration = value;
+  }
+  public resetDuration() {
+    this._duration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // last_execute_time - computed: true, optional: false, required: true
+  // last_execute_time - computed: true, optional: false, required: false
   public get lastExecuteTime() {
     return this.getStringAttribute('last_execute_time');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -362,22 +372,33 @@ export class OsConfigPatchDeployment extends TerraformResource {
   // patch_deployment_id - computed: false, optional: false, required: true
   private _patchDeploymentId: string;
   public get patchDeploymentId() {
-    return this._patchDeploymentId;
+    return this.getStringAttribute('patch_deployment_id');
   }
   public set patchDeploymentId(value: string) {
     this._patchDeploymentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchDeploymentIdInput() {
+    return this._patchDeploymentId
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -385,55 +406,94 @@ export class OsConfigPatchDeployment extends TerraformResource {
   // instance_filter - computed: false, optional: false, required: true
   private _instanceFilter: OsConfigPatchDeploymentInstanceFilter[];
   public get instanceFilter() {
-    return this._instanceFilter;
+    return this.interpolationForAttribute('instance_filter') as any;
   }
   public set instanceFilter(value: OsConfigPatchDeploymentInstanceFilter[]) {
     this._instanceFilter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceFilterInput() {
+    return this._instanceFilter
   }
 
   // one_time_schedule - computed: false, optional: true, required: false
   private _oneTimeSchedule?: OsConfigPatchDeploymentOneTimeSchedule[];
   public get oneTimeSchedule() {
-    return this._oneTimeSchedule;
+    return this.interpolationForAttribute('one_time_schedule') as any;
   }
-  public set oneTimeSchedule(value: OsConfigPatchDeploymentOneTimeSchedule[] | undefined) {
+  public set oneTimeSchedule(value: OsConfigPatchDeploymentOneTimeSchedule[] ) {
     this._oneTimeSchedule = value;
+  }
+  public resetOneTimeSchedule() {
+    this._oneTimeSchedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oneTimeScheduleInput() {
+    return this._oneTimeSchedule
   }
 
   // patch_config - computed: false, optional: true, required: false
   private _patchConfig?: OsConfigPatchDeploymentPatchConfig[];
   public get patchConfig() {
-    return this._patchConfig;
+    return this.interpolationForAttribute('patch_config') as any;
   }
-  public set patchConfig(value: OsConfigPatchDeploymentPatchConfig[] | undefined) {
+  public set patchConfig(value: OsConfigPatchDeploymentPatchConfig[] ) {
     this._patchConfig = value;
+  }
+  public resetPatchConfig() {
+    this._patchConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchConfigInput() {
+    return this._patchConfig
   }
 
   // recurring_schedule - computed: false, optional: true, required: false
   private _recurringSchedule?: OsConfigPatchDeploymentRecurringSchedule[];
   public get recurringSchedule() {
-    return this._recurringSchedule;
+    return this.interpolationForAttribute('recurring_schedule') as any;
   }
-  public set recurringSchedule(value: OsConfigPatchDeploymentRecurringSchedule[] | undefined) {
+  public set recurringSchedule(value: OsConfigPatchDeploymentRecurringSchedule[] ) {
     this._recurringSchedule = value;
+  }
+  public resetRecurringSchedule() {
+    this._recurringSchedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recurringScheduleInput() {
+    return this._recurringSchedule
   }
 
   // rollout - computed: false, optional: true, required: false
   private _rollout?: OsConfigPatchDeploymentRollout[];
   public get rollout() {
-    return this._rollout;
+    return this.interpolationForAttribute('rollout') as any;
   }
-  public set rollout(value: OsConfigPatchDeploymentRollout[] | undefined) {
+  public set rollout(value: OsConfigPatchDeploymentRollout[] ) {
     this._rollout = value;
+  }
+  public resetRollout() {
+    this._rollout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rolloutInput() {
+    return this._rollout
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: OsConfigPatchDeploymentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: OsConfigPatchDeploymentTimeouts | undefined) {
+  public set timeouts(value: OsConfigPatchDeploymentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

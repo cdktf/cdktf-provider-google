@@ -191,31 +191,52 @@ export class ComputeForwardingRule extends TerraformResource {
   // all_ports - computed: false, optional: true, required: false
   private _allPorts?: boolean;
   public get allPorts() {
-    return this._allPorts;
+    return this.getBooleanAttribute('all_ports');
   }
-  public set allPorts(value: boolean | undefined) {
+  public set allPorts(value: boolean ) {
     this._allPorts = value;
+  }
+  public resetAllPorts() {
+    this._allPorts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allPortsInput() {
+    return this._allPorts
   }
 
   // allow_global_access - computed: false, optional: true, required: false
   private _allowGlobalAccess?: boolean;
   public get allowGlobalAccess() {
-    return this._allowGlobalAccess;
+    return this.getBooleanAttribute('allow_global_access');
   }
-  public set allowGlobalAccess(value: boolean | undefined) {
+  public set allowGlobalAccess(value: boolean ) {
     this._allowGlobalAccess = value;
+  }
+  public resetAllowGlobalAccess() {
+    this._allowGlobalAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowGlobalAccessInput() {
+    return this._allowGlobalAccess
   }
 
   // backend_service - computed: false, optional: true, required: false
   private _backendService?: string;
   public get backendService() {
-    return this._backendService;
+    return this.getStringAttribute('backend_service');
   }
-  public set backendService(value: string | undefined) {
+  public set backendService(value: string ) {
     this._backendService = value;
   }
+  public resetBackendService() {
+    this._backendService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -223,112 +244,182 @@ export class ComputeForwardingRule extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_address - computed: true, optional: true, required: false
   private _ipAddress?: string;
   public get ipAddress() {
-    return this._ipAddress ?? this.getStringAttribute('ip_address');
+    return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string | undefined) {
+  public set ipAddress(value: string) {
     this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress
   }
 
   // ip_protocol - computed: true, optional: true, required: false
   private _ipProtocol?: string;
   public get ipProtocol() {
-    return this._ipProtocol ?? this.getStringAttribute('ip_protocol');
+    return this.getStringAttribute('ip_protocol');
   }
-  public set ipProtocol(value: string | undefined) {
+  public set ipProtocol(value: string) {
     this._ipProtocol = value;
+  }
+  public resetIpProtocol() {
+    this._ipProtocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipProtocolInput() {
+    return this._ipProtocol
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
   private _loadBalancingScheme?: string;
   public get loadBalancingScheme() {
-    return this._loadBalancingScheme;
+    return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string | undefined) {
+  public set loadBalancingScheme(value: string ) {
     this._loadBalancingScheme = value;
+  }
+  public resetLoadBalancingScheme() {
+    this._loadBalancingScheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancingSchemeInput() {
+    return this._loadBalancingScheme
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: true, optional: true, required: false
   private _network?: string;
   public get network() {
-    return this._network ?? this.getStringAttribute('network');
+    return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // network_tier - computed: true, optional: true, required: false
   private _networkTier?: string;
   public get networkTier() {
-    return this._networkTier ?? this.getStringAttribute('network_tier');
+    return this.getStringAttribute('network_tier');
   }
-  public set networkTier(value: string | undefined) {
+  public set networkTier(value: string) {
     this._networkTier = value;
+  }
+  public resetNetworkTier() {
+    this._networkTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkTierInput() {
+    return this._networkTier
   }
 
   // port_range - computed: false, optional: true, required: false
   private _portRange?: string;
   public get portRange() {
-    return this._portRange;
+    return this.getStringAttribute('port_range');
   }
-  public set portRange(value: string | undefined) {
+  public set portRange(value: string ) {
     this._portRange = value;
+  }
+  public resetPortRange() {
+    this._portRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portRangeInput() {
+    return this._portRange
   }
 
   // ports - computed: false, optional: true, required: false
   private _ports?: string[];
   public get ports() {
-    return this._ports;
+    return this.getListAttribute('ports');
   }
-  public set ports(value: string[] | undefined) {
+  public set ports(value: string[] ) {
     this._ports = value;
+  }
+  public resetPorts() {
+    this._ports = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portsInput() {
+    return this._ports
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -336,13 +427,20 @@ export class ComputeForwardingRule extends TerraformResource {
   // service_label - computed: false, optional: true, required: false
   private _serviceLabel?: string;
   public get serviceLabel() {
-    return this._serviceLabel;
+    return this.getStringAttribute('service_label');
   }
-  public set serviceLabel(value: string | undefined) {
+  public set serviceLabel(value: string ) {
     this._serviceLabel = value;
   }
+  public resetServiceLabel() {
+    this._serviceLabel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceLabelInput() {
+    return this._serviceLabel
+  }
 
-  // service_name - computed: true, optional: false, required: true
+  // service_name - computed: true, optional: false, required: false
   public get serviceName() {
     return this.getStringAttribute('service_name');
   }
@@ -350,28 +448,49 @@ export class ComputeForwardingRule extends TerraformResource {
   // subnetwork - computed: true, optional: true, required: false
   private _subnetwork?: string;
   public get subnetwork() {
-    return this._subnetwork ?? this.getStringAttribute('subnetwork');
+    return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork
   }
 
   // target - computed: false, optional: true, required: false
   private _target?: string;
   public get target() {
-    return this._target;
+    return this.getStringAttribute('target');
   }
-  public set target(value: string | undefined) {
+  public set target(value: string ) {
     this._target = value;
+  }
+  public resetTarget() {
+    this._target = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeForwardingRuleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeForwardingRuleTimeouts | undefined) {
+  public set timeouts(value: ComputeForwardingRuleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

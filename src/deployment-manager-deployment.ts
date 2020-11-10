@@ -108,22 +108,36 @@ export class DeploymentManagerDeployment extends TerraformResource {
   // create_policy - computed: false, optional: true, required: false
   private _createPolicy?: string;
   public get createPolicy() {
-    return this._createPolicy;
+    return this.getStringAttribute('create_policy');
   }
-  public set createPolicy(value: string | undefined) {
+  public set createPolicy(value: string ) {
     this._createPolicy = value;
+  }
+  public resetCreatePolicy() {
+    this._createPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createPolicyInput() {
+    return this._createPolicy
   }
 
   // delete_policy - computed: false, optional: true, required: false
   private _deletePolicy?: string;
   public get deletePolicy() {
-    return this._deletePolicy;
+    return this.getStringAttribute('delete_policy');
   }
-  public set deletePolicy(value: string | undefined) {
+  public set deletePolicy(value: string ) {
     this._deletePolicy = value;
   }
+  public resetDeletePolicy() {
+    this._deletePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletePolicyInput() {
+    return this._deletePolicy
+  }
 
-  // deployment_id - computed: true, optional: false, required: true
+  // deployment_id - computed: true, optional: false, required: false
   public get deploymentId() {
     return this.getStringAttribute('deployment_id');
   }
@@ -131,22 +145,25 @@ export class DeploymentManagerDeployment extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // manifest - computed: true, optional: false, required: true
+  // manifest - computed: true, optional: false, required: false
   public get manifest() {
     return this.getStringAttribute('manifest');
   }
@@ -154,31 +171,49 @@ export class DeploymentManagerDeployment extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // preview - computed: false, optional: true, required: false
   private _preview?: boolean;
   public get preview() {
-    return this._preview;
+    return this.getBooleanAttribute('preview');
   }
-  public set preview(value: boolean | undefined) {
+  public set preview(value: boolean ) {
     this._preview = value;
+  }
+  public resetPreview() {
+    this._preview = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get previewInput() {
+    return this._preview
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -186,28 +221,46 @@ export class DeploymentManagerDeployment extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: DeploymentManagerDeploymentLabels[];
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: DeploymentManagerDeploymentLabels[] | undefined) {
+  public set labels(value: DeploymentManagerDeploymentLabels[] ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // target - computed: false, optional: false, required: true
   private _target: DeploymentManagerDeploymentTarget[];
   public get target() {
-    return this._target;
+    return this.interpolationForAttribute('target') as any;
   }
   public set target(value: DeploymentManagerDeploymentTarget[]) {
     this._target = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DeploymentManagerDeploymentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DeploymentManagerDeploymentTimeouts | undefined) {
+  public set timeouts(value: DeploymentManagerDeploymentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

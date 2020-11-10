@@ -126,154 +126,250 @@ export class ComputeRouterNat extends TerraformResource {
   // drain_nat_ips - computed: false, optional: true, required: false
   private _drainNatIps?: string[];
   public get drainNatIps() {
-    return this._drainNatIps;
+    return this.getListAttribute('drain_nat_ips');
   }
-  public set drainNatIps(value: string[] | undefined) {
+  public set drainNatIps(value: string[] ) {
     this._drainNatIps = value;
+  }
+  public resetDrainNatIps() {
+    this._drainNatIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get drainNatIpsInput() {
+    return this._drainNatIps
   }
 
   // icmp_idle_timeout_sec - computed: false, optional: true, required: false
   private _icmpIdleTimeoutSec?: number;
   public get icmpIdleTimeoutSec() {
-    return this._icmpIdleTimeoutSec;
+    return this.getNumberAttribute('icmp_idle_timeout_sec');
   }
-  public set icmpIdleTimeoutSec(value: number | undefined) {
+  public set icmpIdleTimeoutSec(value: number ) {
     this._icmpIdleTimeoutSec = value;
+  }
+  public resetIcmpIdleTimeoutSec() {
+    this._icmpIdleTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get icmpIdleTimeoutSecInput() {
+    return this._icmpIdleTimeoutSec
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // min_ports_per_vm - computed: false, optional: true, required: false
   private _minPortsPerVm?: number;
   public get minPortsPerVm() {
-    return this._minPortsPerVm;
+    return this.getNumberAttribute('min_ports_per_vm');
   }
-  public set minPortsPerVm(value: number | undefined) {
+  public set minPortsPerVm(value: number ) {
     this._minPortsPerVm = value;
+  }
+  public resetMinPortsPerVm() {
+    this._minPortsPerVm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minPortsPerVmInput() {
+    return this._minPortsPerVm
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // nat_ip_allocate_option - computed: false, optional: false, required: true
   private _natIpAllocateOption: string;
   public get natIpAllocateOption() {
-    return this._natIpAllocateOption;
+    return this.getStringAttribute('nat_ip_allocate_option');
   }
   public set natIpAllocateOption(value: string) {
     this._natIpAllocateOption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natIpAllocateOptionInput() {
+    return this._natIpAllocateOption
   }
 
   // nat_ips - computed: false, optional: true, required: false
   private _natIps?: string[];
   public get natIps() {
-    return this._natIps;
+    return this.getListAttribute('nat_ips');
   }
-  public set natIps(value: string[] | undefined) {
+  public set natIps(value: string[] ) {
     this._natIps = value;
+  }
+  public resetNatIps() {
+    this._natIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natIpsInput() {
+    return this._natIps
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // router - computed: false, optional: false, required: true
   private _router: string;
   public get router() {
-    return this._router;
+    return this.getStringAttribute('router');
   }
   public set router(value: string) {
     this._router = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routerInput() {
+    return this._router
   }
 
   // source_subnetwork_ip_ranges_to_nat - computed: false, optional: false, required: true
   private _sourceSubnetworkIpRangesToNat: string;
   public get sourceSubnetworkIpRangesToNat() {
-    return this._sourceSubnetworkIpRangesToNat;
+    return this.getStringAttribute('source_subnetwork_ip_ranges_to_nat');
   }
   public set sourceSubnetworkIpRangesToNat(value: string) {
     this._sourceSubnetworkIpRangesToNat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSubnetworkIpRangesToNatInput() {
+    return this._sourceSubnetworkIpRangesToNat
   }
 
   // tcp_established_idle_timeout_sec - computed: false, optional: true, required: false
   private _tcpEstablishedIdleTimeoutSec?: number;
   public get tcpEstablishedIdleTimeoutSec() {
-    return this._tcpEstablishedIdleTimeoutSec;
+    return this.getNumberAttribute('tcp_established_idle_timeout_sec');
   }
-  public set tcpEstablishedIdleTimeoutSec(value: number | undefined) {
+  public set tcpEstablishedIdleTimeoutSec(value: number ) {
     this._tcpEstablishedIdleTimeoutSec = value;
+  }
+  public resetTcpEstablishedIdleTimeoutSec() {
+    this._tcpEstablishedIdleTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpEstablishedIdleTimeoutSecInput() {
+    return this._tcpEstablishedIdleTimeoutSec
   }
 
   // tcp_transitory_idle_timeout_sec - computed: false, optional: true, required: false
   private _tcpTransitoryIdleTimeoutSec?: number;
   public get tcpTransitoryIdleTimeoutSec() {
-    return this._tcpTransitoryIdleTimeoutSec;
+    return this.getNumberAttribute('tcp_transitory_idle_timeout_sec');
   }
-  public set tcpTransitoryIdleTimeoutSec(value: number | undefined) {
+  public set tcpTransitoryIdleTimeoutSec(value: number ) {
     this._tcpTransitoryIdleTimeoutSec = value;
+  }
+  public resetTcpTransitoryIdleTimeoutSec() {
+    this._tcpTransitoryIdleTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpTransitoryIdleTimeoutSecInput() {
+    return this._tcpTransitoryIdleTimeoutSec
   }
 
   // udp_idle_timeout_sec - computed: false, optional: true, required: false
   private _udpIdleTimeoutSec?: number;
   public get udpIdleTimeoutSec() {
-    return this._udpIdleTimeoutSec;
+    return this.getNumberAttribute('udp_idle_timeout_sec');
   }
-  public set udpIdleTimeoutSec(value: number | undefined) {
+  public set udpIdleTimeoutSec(value: number ) {
     this._udpIdleTimeoutSec = value;
+  }
+  public resetUdpIdleTimeoutSec() {
+    this._udpIdleTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get udpIdleTimeoutSecInput() {
+    return this._udpIdleTimeoutSec
   }
 
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeRouterNatLogConfig[];
   public get logConfig() {
-    return this._logConfig;
+    return this.interpolationForAttribute('log_config') as any;
   }
-  public set logConfig(value: ComputeRouterNatLogConfig[] | undefined) {
+  public set logConfig(value: ComputeRouterNatLogConfig[] ) {
     this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
   }
 
   // subnetwork - computed: false, optional: true, required: false
   private _subnetwork?: ComputeRouterNatSubnetwork[];
   public get subnetwork() {
-    return this._subnetwork;
+    return this.interpolationForAttribute('subnetwork') as any;
   }
-  public set subnetwork(value: ComputeRouterNatSubnetwork[] | undefined) {
+  public set subnetwork(value: ComputeRouterNatSubnetwork[] ) {
     this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRouterNatTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRouterNatTimeouts | undefined) {
+  public set timeouts(value: ComputeRouterNatTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -140,91 +140,141 @@ export class LoggingMetric extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // filter - computed: false, optional: false, required: true
   private _filter: string;
   public get filter() {
-    return this._filter;
+    return this.getStringAttribute('filter');
   }
   public set filter(value: string) {
     this._filter = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // label_extractors - computed: false, optional: true, required: false
   private _labelExtractors?: { [key: string]: string };
   public get labelExtractors() {
-    return this._labelExtractors;
+    return this.interpolationForAttribute('label_extractors') as any;
   }
-  public set labelExtractors(value: { [key: string]: string } | undefined) {
+  public set labelExtractors(value: { [key: string]: string } ) {
     this._labelExtractors = value;
+  }
+  public resetLabelExtractors() {
+    this._labelExtractors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelExtractorsInput() {
+    return this._labelExtractors
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // value_extractor - computed: false, optional: true, required: false
   private _valueExtractor?: string;
   public get valueExtractor() {
-    return this._valueExtractor;
+    return this.getStringAttribute('value_extractor');
   }
-  public set valueExtractor(value: string | undefined) {
+  public set valueExtractor(value: string ) {
     this._valueExtractor = value;
+  }
+  public resetValueExtractor() {
+    this._valueExtractor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueExtractorInput() {
+    return this._valueExtractor
   }
 
   // bucket_options - computed: false, optional: true, required: false
   private _bucketOptions?: LoggingMetricBucketOptions[];
   public get bucketOptions() {
-    return this._bucketOptions;
+    return this.interpolationForAttribute('bucket_options') as any;
   }
-  public set bucketOptions(value: LoggingMetricBucketOptions[] | undefined) {
+  public set bucketOptions(value: LoggingMetricBucketOptions[] ) {
     this._bucketOptions = value;
+  }
+  public resetBucketOptions() {
+    this._bucketOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketOptionsInput() {
+    return this._bucketOptions
   }
 
   // metric_descriptor - computed: false, optional: false, required: true
   private _metricDescriptor: LoggingMetricMetricDescriptor[];
   public get metricDescriptor() {
-    return this._metricDescriptor;
+    return this.interpolationForAttribute('metric_descriptor') as any;
   }
   public set metricDescriptor(value: LoggingMetricMetricDescriptor[]) {
     this._metricDescriptor = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricDescriptorInput() {
+    return this._metricDescriptor
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LoggingMetricTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LoggingMetricTimeouts | undefined) {
+  public set timeouts(value: LoggingMetricTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

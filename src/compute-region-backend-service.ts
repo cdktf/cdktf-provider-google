@@ -406,22 +406,36 @@ export class ComputeRegionBackendService extends TerraformResource {
   // affinity_cookie_ttl_sec - computed: false, optional: true, required: false
   private _affinityCookieTtlSec?: number;
   public get affinityCookieTtlSec() {
-    return this._affinityCookieTtlSec;
+    return this.getNumberAttribute('affinity_cookie_ttl_sec');
   }
-  public set affinityCookieTtlSec(value: number | undefined) {
+  public set affinityCookieTtlSec(value: number ) {
     this._affinityCookieTtlSec = value;
+  }
+  public resetAffinityCookieTtlSec() {
+    this._affinityCookieTtlSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get affinityCookieTtlSecInput() {
+    return this._affinityCookieTtlSec
   }
 
   // connection_draining_timeout_sec - computed: false, optional: true, required: false
   private _connectionDrainingTimeoutSec?: number;
   public get connectionDrainingTimeoutSec() {
-    return this._connectionDrainingTimeoutSec;
+    return this.getNumberAttribute('connection_draining_timeout_sec');
   }
-  public set connectionDrainingTimeoutSec(value: number | undefined) {
+  public set connectionDrainingTimeoutSec(value: number ) {
     this._connectionDrainingTimeoutSec = value;
   }
+  public resetConnectionDrainingTimeoutSec() {
+    this._connectionDrainingTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionDrainingTimeoutSecInput() {
+    return this._connectionDrainingTimeoutSec
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -429,13 +443,20 @@ export class ComputeRegionBackendService extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
@@ -443,94 +464,150 @@ export class ComputeRegionBackendService extends TerraformResource {
   // health_checks - computed: false, optional: true, required: false
   private _healthChecks?: string[];
   public get healthChecks() {
-    return this._healthChecks;
+    return this.getListAttribute('health_checks');
   }
-  public set healthChecks(value: string[] | undefined) {
+  public set healthChecks(value: string[] ) {
     this._healthChecks = value;
+  }
+  public resetHealthChecks() {
+    this._healthChecks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthChecksInput() {
+    return this._healthChecks
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
   private _loadBalancingScheme?: string;
   public get loadBalancingScheme() {
-    return this._loadBalancingScheme;
+    return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string | undefined) {
+  public set loadBalancingScheme(value: string ) {
     this._loadBalancingScheme = value;
+  }
+  public resetLoadBalancingScheme() {
+    this._loadBalancingScheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancingSchemeInput() {
+    return this._loadBalancingScheme
   }
 
   // locality_lb_policy - computed: false, optional: true, required: false
   private _localityLbPolicy?: string;
   public get localityLbPolicy() {
-    return this._localityLbPolicy;
+    return this.getStringAttribute('locality_lb_policy');
   }
-  public set localityLbPolicy(value: string | undefined) {
+  public set localityLbPolicy(value: string ) {
     this._localityLbPolicy = value;
+  }
+  public resetLocalityLbPolicy() {
+    this._localityLbPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityLbPolicyInput() {
+    return this._localityLbPolicy
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: true, required: false
   private _network?: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string ) {
     this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // port_name - computed: true, optional: true, required: false
   private _portName?: string;
   public get portName() {
-    return this._portName ?? this.getStringAttribute('port_name');
+    return this.getStringAttribute('port_name');
   }
-  public set portName(value: string | undefined) {
+  public set portName(value: string) {
     this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // protocol - computed: true, optional: true, required: false
   private _protocol?: string;
   public get protocol() {
-    return this._protocol ?? this.getStringAttribute('protocol');
+    return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -538,82 +615,145 @@ export class ComputeRegionBackendService extends TerraformResource {
   // session_affinity - computed: true, optional: true, required: false
   private _sessionAffinity?: string;
   public get sessionAffinity() {
-    return this._sessionAffinity ?? this.getStringAttribute('session_affinity');
+    return this.getStringAttribute('session_affinity');
   }
-  public set sessionAffinity(value: string | undefined) {
+  public set sessionAffinity(value: string) {
     this._sessionAffinity = value;
+  }
+  public resetSessionAffinity() {
+    this._sessionAffinity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionAffinityInput() {
+    return this._sessionAffinity
   }
 
   // timeout_sec - computed: true, optional: true, required: false
   private _timeoutSec?: number;
   public get timeoutSec() {
-    return this._timeoutSec ?? this.getNumberAttribute('timeout_sec');
+    return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number) {
     this._timeoutSec = value;
+  }
+  public resetTimeoutSec() {
+    this._timeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutSecInput() {
+    return this._timeoutSec
   }
 
   // backend - computed: false, optional: true, required: false
   private _backend?: ComputeRegionBackendServiceBackend[];
   public get backend() {
-    return this._backend;
+    return this.interpolationForAttribute('backend') as any;
   }
-  public set backend(value: ComputeRegionBackendServiceBackend[] | undefined) {
+  public set backend(value: ComputeRegionBackendServiceBackend[] ) {
     this._backend = value;
+  }
+  public resetBackend() {
+    this._backend = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendInput() {
+    return this._backend
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
   private _circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers[];
   public get circuitBreakers() {
-    return this._circuitBreakers;
+    return this.interpolationForAttribute('circuit_breakers') as any;
   }
-  public set circuitBreakers(value: ComputeRegionBackendServiceCircuitBreakers[] | undefined) {
+  public set circuitBreakers(value: ComputeRegionBackendServiceCircuitBreakers[] ) {
     this._circuitBreakers = value;
+  }
+  public resetCircuitBreakers() {
+    this._circuitBreakers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get circuitBreakersInput() {
+    return this._circuitBreakers
   }
 
   // consistent_hash - computed: false, optional: true, required: false
   private _consistentHash?: ComputeRegionBackendServiceConsistentHash[];
   public get consistentHash() {
-    return this._consistentHash;
+    return this.interpolationForAttribute('consistent_hash') as any;
   }
-  public set consistentHash(value: ComputeRegionBackendServiceConsistentHash[] | undefined) {
+  public set consistentHash(value: ComputeRegionBackendServiceConsistentHash[] ) {
     this._consistentHash = value;
+  }
+  public resetConsistentHash() {
+    this._consistentHash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consistentHashInput() {
+    return this._consistentHash
   }
 
   // failover_policy - computed: false, optional: true, required: false
   private _failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy[];
   public get failoverPolicy() {
-    return this._failoverPolicy;
+    return this.interpolationForAttribute('failover_policy') as any;
   }
-  public set failoverPolicy(value: ComputeRegionBackendServiceFailoverPolicy[] | undefined) {
+  public set failoverPolicy(value: ComputeRegionBackendServiceFailoverPolicy[] ) {
     this._failoverPolicy = value;
+  }
+  public resetFailoverPolicy() {
+    this._failoverPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverPolicyInput() {
+    return this._failoverPolicy
   }
 
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeRegionBackendServiceLogConfig[];
   public get logConfig() {
-    return this._logConfig;
+    return this.interpolationForAttribute('log_config') as any;
   }
-  public set logConfig(value: ComputeRegionBackendServiceLogConfig[] | undefined) {
+  public set logConfig(value: ComputeRegionBackendServiceLogConfig[] ) {
     this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
   }
 
   // outlier_detection - computed: false, optional: true, required: false
   private _outlierDetection?: ComputeRegionBackendServiceOutlierDetection[];
   public get outlierDetection() {
-    return this._outlierDetection;
+    return this.interpolationForAttribute('outlier_detection') as any;
   }
-  public set outlierDetection(value: ComputeRegionBackendServiceOutlierDetection[] | undefined) {
+  public set outlierDetection(value: ComputeRegionBackendServiceOutlierDetection[] ) {
     this._outlierDetection = value;
+  }
+  public resetOutlierDetection() {
+    this._outlierDetection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outlierDetectionInput() {
+    return this._outlierDetection
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeRegionBackendServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeRegionBackendServiceTimeouts | undefined) {
+  public set timeouts(value: ComputeRegionBackendServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

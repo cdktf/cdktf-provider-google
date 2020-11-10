@@ -125,31 +125,41 @@ export class DataLossPreventionStoredInfoType extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -157,46 +167,78 @@ export class DataLossPreventionStoredInfoType extends TerraformResource {
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // dictionary - computed: false, optional: true, required: false
   private _dictionary?: DataLossPreventionStoredInfoTypeDictionary[];
   public get dictionary() {
-    return this._dictionary;
+    return this.interpolationForAttribute('dictionary') as any;
   }
-  public set dictionary(value: DataLossPreventionStoredInfoTypeDictionary[] | undefined) {
+  public set dictionary(value: DataLossPreventionStoredInfoTypeDictionary[] ) {
     this._dictionary = value;
+  }
+  public resetDictionary() {
+    this._dictionary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dictionaryInput() {
+    return this._dictionary
   }
 
   // large_custom_dictionary - computed: false, optional: true, required: false
   private _largeCustomDictionary?: DataLossPreventionStoredInfoTypeLargeCustomDictionary[];
   public get largeCustomDictionary() {
-    return this._largeCustomDictionary;
+    return this.interpolationForAttribute('large_custom_dictionary') as any;
   }
-  public set largeCustomDictionary(value: DataLossPreventionStoredInfoTypeLargeCustomDictionary[] | undefined) {
+  public set largeCustomDictionary(value: DataLossPreventionStoredInfoTypeLargeCustomDictionary[] ) {
     this._largeCustomDictionary = value;
+  }
+  public resetLargeCustomDictionary() {
+    this._largeCustomDictionary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get largeCustomDictionaryInput() {
+    return this._largeCustomDictionary
   }
 
   // regex - computed: false, optional: true, required: false
   private _regex?: DataLossPreventionStoredInfoTypeRegex[];
   public get regex() {
-    return this._regex;
+    return this.interpolationForAttribute('regex') as any;
   }
-  public set regex(value: DataLossPreventionStoredInfoTypeRegex[] | undefined) {
+  public set regex(value: DataLossPreventionStoredInfoTypeRegex[] ) {
     this._regex = value;
+  }
+  public resetRegex() {
+    this._regex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexInput() {
+    return this._regex
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataLossPreventionStoredInfoTypeTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataLossPreventionStoredInfoTypeTimeouts | undefined) {
+  public set timeouts(value: DataLossPreventionStoredInfoTypeTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

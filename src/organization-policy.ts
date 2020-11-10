@@ -94,36 +94,40 @@ export class OrganizationPolicy extends TerraformResource {
   // constraint - computed: false, optional: false, required: true
   private _constraint: string;
   public get constraint() {
-    return this._constraint;
+    return this.getStringAttribute('constraint');
   }
   public set constraint(value: string) {
     this._constraint = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get constraintInput() {
+    return this._constraint
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // org_id - computed: false, optional: false, required: true
   private _orgId: string;
   public get orgId() {
-    return this._orgId;
+    return this.getStringAttribute('org_id');
   }
   public set orgId(value: string) {
     this._orgId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get orgIdInput() {
+    return this._orgId
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -131,46 +135,81 @@ export class OrganizationPolicy extends TerraformResource {
   // version - computed: true, optional: true, required: false
   private _version?: number;
   public get version() {
-    return this._version ?? this.getNumberAttribute('version');
+    return this.getNumberAttribute('version');
   }
-  public set version(value: number | undefined) {
+  public set version(value: number) {
     this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // boolean_policy - computed: false, optional: true, required: false
   private _booleanPolicy?: OrganizationPolicyBooleanPolicy[];
   public get booleanPolicy() {
-    return this._booleanPolicy;
+    return this.interpolationForAttribute('boolean_policy') as any;
   }
-  public set booleanPolicy(value: OrganizationPolicyBooleanPolicy[] | undefined) {
+  public set booleanPolicy(value: OrganizationPolicyBooleanPolicy[] ) {
     this._booleanPolicy = value;
+  }
+  public resetBooleanPolicy() {
+    this._booleanPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get booleanPolicyInput() {
+    return this._booleanPolicy
   }
 
   // list_policy - computed: false, optional: true, required: false
   private _listPolicy?: OrganizationPolicyListPolicy[];
   public get listPolicy() {
-    return this._listPolicy;
+    return this.interpolationForAttribute('list_policy') as any;
   }
-  public set listPolicy(value: OrganizationPolicyListPolicy[] | undefined) {
+  public set listPolicy(value: OrganizationPolicyListPolicy[] ) {
     this._listPolicy = value;
+  }
+  public resetListPolicy() {
+    this._listPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get listPolicyInput() {
+    return this._listPolicy
   }
 
   // restore_policy - computed: false, optional: true, required: false
   private _restorePolicy?: OrganizationPolicyRestorePolicy[];
   public get restorePolicy() {
-    return this._restorePolicy;
+    return this.interpolationForAttribute('restore_policy') as any;
   }
-  public set restorePolicy(value: OrganizationPolicyRestorePolicy[] | undefined) {
+  public set restorePolicy(value: OrganizationPolicyRestorePolicy[] ) {
     this._restorePolicy = value;
+  }
+  public resetRestorePolicy() {
+    this._restorePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restorePolicyInput() {
+    return this._restorePolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: OrganizationPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: OrganizationPolicyTimeouts | undefined) {
+  public set timeouts(value: OrganizationPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

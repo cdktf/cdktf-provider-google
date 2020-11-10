@@ -100,7 +100,7 @@ export class BigqueryDatasetAccessA extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // api_updated_member - computed: true, optional: false, required: true
+  // api_updated_member - computed: true, optional: false, required: false
   public get apiUpdatedMember() {
     return this.getBooleanAttribute('api_updated_member');
   }
@@ -108,100 +108,163 @@ export class BigqueryDatasetAccessA extends TerraformResource {
   // dataset_id - computed: false, optional: false, required: true
   private _datasetId: string;
   public get datasetId() {
-    return this._datasetId;
+    return this.getStringAttribute('dataset_id');
   }
   public set datasetId(value: string) {
     this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
   }
 
   // domain - computed: false, optional: true, required: false
   private _domain?: string;
   public get domain() {
-    return this._domain;
+    return this.getStringAttribute('domain');
   }
-  public set domain(value: string | undefined) {
+  public set domain(value: string ) {
     this._domain = value;
+  }
+  public resetDomain() {
+    this._domain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainInput() {
+    return this._domain
   }
 
   // group_by_email - computed: false, optional: true, required: false
   private _groupByEmail?: string;
   public get groupByEmail() {
-    return this._groupByEmail;
+    return this.getStringAttribute('group_by_email');
   }
-  public set groupByEmail(value: string | undefined) {
+  public set groupByEmail(value: string ) {
     this._groupByEmail = value;
+  }
+  public resetGroupByEmail() {
+    this._groupByEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupByEmailInput() {
+    return this._groupByEmail
   }
 
   // iam_member - computed: false, optional: true, required: false
   private _iamMember?: string;
   public get iamMember() {
-    return this._iamMember;
+    return this.getStringAttribute('iam_member');
   }
-  public set iamMember(value: string | undefined) {
+  public set iamMember(value: string ) {
     this._iamMember = value;
+  }
+  public resetIamMember() {
+    this._iamMember = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iamMemberInput() {
+    return this._iamMember
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // role - computed: false, optional: true, required: false
   private _role?: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
-  public set role(value: string | undefined) {
+  public set role(value: string ) {
     this._role = value;
+  }
+  public resetRole() {
+    this._role = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // special_group - computed: false, optional: true, required: false
   private _specialGroup?: string;
   public get specialGroup() {
-    return this._specialGroup;
+    return this.getStringAttribute('special_group');
   }
-  public set specialGroup(value: string | undefined) {
+  public set specialGroup(value: string ) {
     this._specialGroup = value;
+  }
+  public resetSpecialGroup() {
+    this._specialGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get specialGroupInput() {
+    return this._specialGroup
   }
 
   // user_by_email - computed: false, optional: true, required: false
   private _userByEmail?: string;
   public get userByEmail() {
-    return this._userByEmail;
+    return this.getStringAttribute('user_by_email');
   }
-  public set userByEmail(value: string | undefined) {
+  public set userByEmail(value: string ) {
     this._userByEmail = value;
+  }
+  public resetUserByEmail() {
+    this._userByEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userByEmailInput() {
+    return this._userByEmail
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BigqueryDatasetAccessTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BigqueryDatasetAccessTimeouts | undefined) {
+  public set timeouts(value: BigqueryDatasetAccessTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // view - computed: false, optional: true, required: false
   private _view?: BigqueryDatasetAccessViewA[];
   public get view() {
-    return this._view;
+    return this.interpolationForAttribute('view') as any;
   }
-  public set view(value: BigqueryDatasetAccessViewA[] | undefined) {
+  public set view(value: BigqueryDatasetAccessViewA[] ) {
     this._view = value;
+  }
+  public resetView() {
+    this._view = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get viewInput() {
+    return this._view
   }
 
   // =========

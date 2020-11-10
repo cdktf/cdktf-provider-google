@@ -152,39 +152,53 @@ export class AccessContextManagerAccessLevels extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // access_levels - computed: false, optional: true, required: false
   private _accessLevels?: AccessContextManagerAccessLevelsAccessLevels[];
   public get accessLevels() {
-    return this._accessLevels;
+    return this.interpolationForAttribute('access_levels') as any;
   }
-  public set accessLevels(value: AccessContextManagerAccessLevelsAccessLevels[] | undefined) {
+  public set accessLevels(value: AccessContextManagerAccessLevelsAccessLevels[] ) {
     this._accessLevels = value;
+  }
+  public resetAccessLevels() {
+    this._accessLevels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessLevelsInput() {
+    return this._accessLevels
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerAccessLevelsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerAccessLevelsTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerAccessLevelsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -79,60 +79,85 @@ export class KmsCryptoKey extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // key_ring - computed: false, optional: false, required: true
   private _keyRing: string;
   public get keyRing() {
-    return this._keyRing;
+    return this.getStringAttribute('key_ring');
   }
   public set keyRing(value: string) {
     this._keyRing = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyRingInput() {
+    return this._keyRing
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // purpose - computed: false, optional: true, required: false
   private _purpose?: string;
   public get purpose() {
-    return this._purpose;
+    return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string | undefined) {
+  public set purpose(value: string ) {
     this._purpose = value;
+  }
+  public resetPurpose() {
+    this._purpose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purposeInput() {
+    return this._purpose
   }
 
   // rotation_period - computed: false, optional: true, required: false
   private _rotationPeriod?: string;
   public get rotationPeriod() {
-    return this._rotationPeriod;
+    return this.getStringAttribute('rotation_period');
   }
-  public set rotationPeriod(value: string | undefined) {
+  public set rotationPeriod(value: string ) {
     this._rotationPeriod = value;
   }
+  public resetRotationPeriod() {
+    this._rotationPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rotationPeriodInput() {
+    return this._rotationPeriod
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -140,28 +165,49 @@ export class KmsCryptoKey extends TerraformResource {
   // skip_initial_version_creation - computed: false, optional: true, required: false
   private _skipInitialVersionCreation?: boolean;
   public get skipInitialVersionCreation() {
-    return this._skipInitialVersionCreation;
+    return this.getBooleanAttribute('skip_initial_version_creation');
   }
-  public set skipInitialVersionCreation(value: boolean | undefined) {
+  public set skipInitialVersionCreation(value: boolean ) {
     this._skipInitialVersionCreation = value;
+  }
+  public resetSkipInitialVersionCreation() {
+    this._skipInitialVersionCreation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipInitialVersionCreationInput() {
+    return this._skipInitialVersionCreation
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KmsCryptoKeyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: KmsCryptoKeyTimeouts | undefined) {
+  public set timeouts(value: KmsCryptoKeyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // version_template - computed: false, optional: true, required: false
   private _versionTemplate?: KmsCryptoKeyVersionTemplate[];
   public get versionTemplate() {
-    return this._versionTemplate;
+    return this.interpolationForAttribute('version_template') as any;
   }
-  public set versionTemplate(value: KmsCryptoKeyVersionTemplate[] | undefined) {
+  public set versionTemplate(value: KmsCryptoKeyVersionTemplate[] ) {
     this._versionTemplate = value;
+  }
+  public resetVersionTemplate() {
+    this._versionTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionTemplateInput() {
+    return this._versionTemplate
   }
 
   // =========

@@ -180,7 +180,7 @@ export class ComputeFirewall extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -188,94 +188,147 @@ export class ComputeFirewall extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // destination_ranges - computed: true, optional: true, required: false
   private _destinationRanges?: string[];
   public get destinationRanges() {
-    return this._destinationRanges ?? this.getListAttribute('destination_ranges');
+    return this.getListAttribute('destination_ranges');
   }
-  public set destinationRanges(value: string[] | undefined) {
+  public set destinationRanges(value: string[]) {
     this._destinationRanges = value;
+  }
+  public resetDestinationRanges() {
+    this._destinationRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationRangesInput() {
+    return this._destinationRanges
   }
 
   // direction - computed: true, optional: true, required: false
   private _direction?: string;
   public get direction() {
-    return this._direction ?? this.getStringAttribute('direction');
+    return this.getStringAttribute('direction');
   }
-  public set direction(value: string | undefined) {
+  public set direction(value: string) {
     this._direction = value;
+  }
+  public resetDirection() {
+    this._direction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directionInput() {
+    return this._direction
   }
 
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean;
   public get disabled() {
-    return this._disabled;
+    return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean | undefined) {
+  public set disabled(value: boolean ) {
     this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
   }
 
   // enable_logging - computed: true, optional: true, required: false
   private _enableLogging?: boolean;
   public get enableLogging() {
-    return this._enableLogging ?? this.getBooleanAttribute('enable_logging');
+    return this.getBooleanAttribute('enable_logging');
   }
-  public set enableLogging(value: boolean | undefined) {
+  public set enableLogging(value: boolean) {
     this._enableLogging = value;
+  }
+  public resetEnableLogging() {
+    this._enableLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableLoggingInput() {
+    return this._enableLogging
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network - computed: false, optional: false, required: true
   private _network: string;
   public get network() {
-    return this._network;
+    return this.getStringAttribute('network');
   }
   public set network(value: string) {
     this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
   }
 
   // priority - computed: false, optional: true, required: false
   private _priority?: number;
   public get priority() {
-    return this._priority;
+    return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number ) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -283,82 +336,145 @@ export class ComputeFirewall extends TerraformResource {
   // source_ranges - computed: true, optional: true, required: false
   private _sourceRanges?: string[];
   public get sourceRanges() {
-    return this._sourceRanges ?? this.getListAttribute('source_ranges');
+    return this.getListAttribute('source_ranges');
   }
-  public set sourceRanges(value: string[] | undefined) {
+  public set sourceRanges(value: string[]) {
     this._sourceRanges = value;
+  }
+  public resetSourceRanges() {
+    this._sourceRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceRangesInput() {
+    return this._sourceRanges
   }
 
   // source_service_accounts - computed: false, optional: true, required: false
   private _sourceServiceAccounts?: string[];
   public get sourceServiceAccounts() {
-    return this._sourceServiceAccounts;
+    return this.getListAttribute('source_service_accounts');
   }
-  public set sourceServiceAccounts(value: string[] | undefined) {
+  public set sourceServiceAccounts(value: string[] ) {
     this._sourceServiceAccounts = value;
+  }
+  public resetSourceServiceAccounts() {
+    this._sourceServiceAccounts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceServiceAccountsInput() {
+    return this._sourceServiceAccounts
   }
 
   // source_tags - computed: false, optional: true, required: false
   private _sourceTags?: string[];
   public get sourceTags() {
-    return this._sourceTags;
+    return this.getListAttribute('source_tags');
   }
-  public set sourceTags(value: string[] | undefined) {
+  public set sourceTags(value: string[] ) {
     this._sourceTags = value;
+  }
+  public resetSourceTags() {
+    this._sourceTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceTagsInput() {
+    return this._sourceTags
   }
 
   // target_service_accounts - computed: false, optional: true, required: false
   private _targetServiceAccounts?: string[];
   public get targetServiceAccounts() {
-    return this._targetServiceAccounts;
+    return this.getListAttribute('target_service_accounts');
   }
-  public set targetServiceAccounts(value: string[] | undefined) {
+  public set targetServiceAccounts(value: string[] ) {
     this._targetServiceAccounts = value;
+  }
+  public resetTargetServiceAccounts() {
+    this._targetServiceAccounts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetServiceAccountsInput() {
+    return this._targetServiceAccounts
   }
 
   // target_tags - computed: false, optional: true, required: false
   private _targetTags?: string[];
   public get targetTags() {
-    return this._targetTags;
+    return this.getListAttribute('target_tags');
   }
-  public set targetTags(value: string[] | undefined) {
+  public set targetTags(value: string[] ) {
     this._targetTags = value;
+  }
+  public resetTargetTags() {
+    this._targetTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetTagsInput() {
+    return this._targetTags
   }
 
   // allow - computed: false, optional: true, required: false
   private _allow?: ComputeFirewallAllow[];
   public get allow() {
-    return this._allow;
+    return this.interpolationForAttribute('allow') as any;
   }
-  public set allow(value: ComputeFirewallAllow[] | undefined) {
+  public set allow(value: ComputeFirewallAllow[] ) {
     this._allow = value;
+  }
+  public resetAllow() {
+    this._allow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowInput() {
+    return this._allow
   }
 
   // deny - computed: false, optional: true, required: false
   private _deny?: ComputeFirewallDeny[];
   public get deny() {
-    return this._deny;
+    return this.interpolationForAttribute('deny') as any;
   }
-  public set deny(value: ComputeFirewallDeny[] | undefined) {
+  public set deny(value: ComputeFirewallDeny[] ) {
     this._deny = value;
+  }
+  public resetDeny() {
+    this._deny = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get denyInput() {
+    return this._deny
   }
 
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeFirewallLogConfig[];
   public get logConfig() {
-    return this._logConfig;
+    return this.interpolationForAttribute('log_config') as any;
   }
-  public set logConfig(value: ComputeFirewallLogConfig[] | undefined) {
+  public set logConfig(value: ComputeFirewallLogConfig[] ) {
     this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeFirewallTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeFirewallTimeouts | undefined) {
+  public set timeouts(value: ComputeFirewallTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

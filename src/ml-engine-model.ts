@@ -73,91 +73,147 @@ export class MlEngineModel extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // online_prediction_console_logging - computed: false, optional: true, required: false
   private _onlinePredictionConsoleLogging?: boolean;
   public get onlinePredictionConsoleLogging() {
-    return this._onlinePredictionConsoleLogging;
+    return this.getBooleanAttribute('online_prediction_console_logging');
   }
-  public set onlinePredictionConsoleLogging(value: boolean | undefined) {
+  public set onlinePredictionConsoleLogging(value: boolean ) {
     this._onlinePredictionConsoleLogging = value;
+  }
+  public resetOnlinePredictionConsoleLogging() {
+    this._onlinePredictionConsoleLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlinePredictionConsoleLoggingInput() {
+    return this._onlinePredictionConsoleLogging
   }
 
   // online_prediction_logging - computed: false, optional: true, required: false
   private _onlinePredictionLogging?: boolean;
   public get onlinePredictionLogging() {
-    return this._onlinePredictionLogging;
+    return this.getBooleanAttribute('online_prediction_logging');
   }
-  public set onlinePredictionLogging(value: boolean | undefined) {
+  public set onlinePredictionLogging(value: boolean ) {
     this._onlinePredictionLogging = value;
+  }
+  public resetOnlinePredictionLogging() {
+    this._onlinePredictionLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlinePredictionLoggingInput() {
+    return this._onlinePredictionLogging
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // regions - computed: false, optional: true, required: false
   private _regions?: string[];
   public get regions() {
-    return this._regions;
+    return this.getListAttribute('regions');
   }
-  public set regions(value: string[] | undefined) {
+  public set regions(value: string[] ) {
     this._regions = value;
+  }
+  public resetRegions() {
+    this._regions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionsInput() {
+    return this._regions
   }
 
   // default_version - computed: false, optional: true, required: false
   private _defaultVersion?: MlEngineModelDefaultVersion[];
   public get defaultVersion() {
-    return this._defaultVersion;
+    return this.interpolationForAttribute('default_version') as any;
   }
-  public set defaultVersion(value: MlEngineModelDefaultVersion[] | undefined) {
+  public set defaultVersion(value: MlEngineModelDefaultVersion[] ) {
     this._defaultVersion = value;
+  }
+  public resetDefaultVersion() {
+    this._defaultVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultVersionInput() {
+    return this._defaultVersion
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MlEngineModelTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MlEngineModelTimeouts | undefined) {
+  public set timeouts(value: MlEngineModelTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

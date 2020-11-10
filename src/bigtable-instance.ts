@@ -69,73 +69,115 @@ export class BigtableInstance extends TerraformResource {
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean;
   public get deletionProtection() {
-    return this._deletionProtection;
+    return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean | undefined) {
+  public set deletionProtection(value: boolean ) {
     this._deletionProtection = value;
+  }
+  public resetDeletionProtection() {
+    this._deletionProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionInput() {
+    return this._deletionProtection
   }
 
   // display_name - computed: true, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName ?? this.getStringAttribute('display_name');
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instance_type - computed: false, optional: true, required: false
   private _instanceType?: string;
   public get instanceType() {
-    return this._instanceType;
+    return this.getStringAttribute('instance_type');
   }
-  public set instanceType(value: string | undefined) {
+  public set instanceType(value: string ) {
     this._instanceType = value;
+  }
+  public resetInstanceType() {
+    this._instanceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceTypeInput() {
+    return this._instanceType
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // cluster - computed: false, optional: true, required: false
   private _cluster?: BigtableInstanceCluster[];
   public get cluster() {
-    return this._cluster;
+    return this.interpolationForAttribute('cluster') as any;
   }
-  public set cluster(value: BigtableInstanceCluster[] | undefined) {
+  public set cluster(value: BigtableInstanceCluster[] ) {
     this._cluster = value;
+  }
+  public resetCluster() {
+    this._cluster = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterInput() {
+    return this._cluster
   }
 
   // =========

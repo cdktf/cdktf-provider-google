@@ -49,50 +49,50 @@ export class DataGoogleComputeSslCertificate extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // certificate - computed: true, optional: false, required: true
+  // certificate - computed: true, optional: false, required: false
   public get certificate() {
     return this.getStringAttribute('certificate');
   }
 
-  // certificate_id - computed: true, optional: false, required: true
+  // certificate_id - computed: true, optional: false, required: false
   public get certificateId() {
     return this.getNumberAttribute('certificate_id');
   }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // name_prefix - computed: true, optional: false, required: true
+  // name_prefix - computed: true, optional: false, required: false
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
   }
 
-  // private_key - computed: true, optional: false, required: true
+  // private_key - computed: true, optional: false, required: false
   public get privateKey() {
     return this.getStringAttribute('private_key');
   }
@@ -100,13 +100,20 @@ export class DataGoogleComputeSslCertificate extends TerraformDataSource {
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }

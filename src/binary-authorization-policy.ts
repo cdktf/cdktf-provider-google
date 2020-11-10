@@ -105,73 +105,115 @@ export class BinaryAuthorizationPolicy extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // global_policy_evaluation_mode - computed: true, optional: true, required: false
   private _globalPolicyEvaluationMode?: string;
   public get globalPolicyEvaluationMode() {
-    return this._globalPolicyEvaluationMode ?? this.getStringAttribute('global_policy_evaluation_mode');
+    return this.getStringAttribute('global_policy_evaluation_mode');
   }
-  public set globalPolicyEvaluationMode(value: string | undefined) {
+  public set globalPolicyEvaluationMode(value: string) {
     this._globalPolicyEvaluationMode = value;
+  }
+  public resetGlobalPolicyEvaluationMode() {
+    this._globalPolicyEvaluationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalPolicyEvaluationModeInput() {
+    return this._globalPolicyEvaluationMode
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // admission_whitelist_patterns - computed: false, optional: true, required: false
   private _admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[];
   public get admissionWhitelistPatterns() {
-    return this._admissionWhitelistPatterns;
+    return this.interpolationForAttribute('admission_whitelist_patterns') as any;
   }
-  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | undefined) {
+  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] ) {
     this._admissionWhitelistPatterns = value;
+  }
+  public resetAdmissionWhitelistPatterns() {
+    this._admissionWhitelistPatterns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get admissionWhitelistPatternsInput() {
+    return this._admissionWhitelistPatterns
   }
 
   // cluster_admission_rules - computed: false, optional: true, required: false
   private _clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[];
   public get clusterAdmissionRules() {
-    return this._clusterAdmissionRules;
+    return this.interpolationForAttribute('cluster_admission_rules') as any;
   }
-  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[] | undefined) {
+  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[] ) {
     this._clusterAdmissionRules = value;
+  }
+  public resetClusterAdmissionRules() {
+    this._clusterAdmissionRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterAdmissionRulesInput() {
+    return this._clusterAdmissionRules
   }
 
   // default_admission_rule - computed: false, optional: false, required: true
   private _defaultAdmissionRule: BinaryAuthorizationPolicyDefaultAdmissionRule[];
   public get defaultAdmissionRule() {
-    return this._defaultAdmissionRule;
+    return this.interpolationForAttribute('default_admission_rule') as any;
   }
   public set defaultAdmissionRule(value: BinaryAuthorizationPolicyDefaultAdmissionRule[]) {
     this._defaultAdmissionRule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultAdmissionRuleInput() {
+    return this._defaultAdmissionRule
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BinaryAuthorizationPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BinaryAuthorizationPolicyTimeouts | undefined) {
+  public set timeouts(value: BinaryAuthorizationPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

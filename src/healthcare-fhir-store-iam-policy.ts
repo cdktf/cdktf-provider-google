@@ -39,7 +39,7 @@ export class HealthcareFhirStoreIamPolicy extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
@@ -47,28 +47,32 @@ export class HealthcareFhirStoreIamPolicy extends TerraformResource {
   // fhir_store_id - computed: false, optional: false, required: true
   private _fhirStoreId: string;
   public get fhirStoreId() {
-    return this._fhirStoreId;
+    return this.getStringAttribute('fhir_store_id');
   }
   public set fhirStoreId(value: string) {
     this._fhirStoreId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get fhirStoreIdInput() {
+    return this._fhirStoreId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // policy_data - computed: false, optional: false, required: true
   private _policyData: string;
   public get policyData() {
-    return this._policyData;
+    return this.getStringAttribute('policy_data');
   }
   public set policyData(value: string) {
     this._policyData = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDataInput() {
+    return this._policyData
   }
 
   // =========

@@ -61,57 +61,82 @@ export class AppEngineServiceSplitTraffic extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // migrate_traffic - computed: false, optional: true, required: false
   private _migrateTraffic?: boolean;
   public get migrateTraffic() {
-    return this._migrateTraffic;
+    return this.getBooleanAttribute('migrate_traffic');
   }
-  public set migrateTraffic(value: boolean | undefined) {
+  public set migrateTraffic(value: boolean ) {
     this._migrateTraffic = value;
+  }
+  public resetMigrateTraffic() {
+    this._migrateTraffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get migrateTrafficInput() {
+    return this._migrateTraffic
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // service - computed: false, optional: false, required: true
   private _service: string;
   public get service() {
-    return this._service;
+    return this.getStringAttribute('service');
   }
   public set service(value: string) {
     this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
   }
 
   // split - computed: false, optional: false, required: true
   private _split: AppEngineServiceSplitTrafficSplit[];
   public get split() {
-    return this._split;
+    return this.interpolationForAttribute('split') as any;
   }
   public set split(value: AppEngineServiceSplitTrafficSplit[]) {
     this._split = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get splitInput() {
+    return this._split
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppEngineServiceSplitTrafficTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppEngineServiceSplitTrafficTimeouts | undefined) {
+  public set timeouts(value: AppEngineServiceSplitTrafficTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -16,60 +16,60 @@ export interface DataGoogleFolderOrganizationPolicyConfig extends TerraformMetaA
 }
 export class DataGoogleFolderOrganizationPolicyBooleanPolicy extends ComplexComputedList {
 
-  // enforced - computed: true, optional: false, required: true
+  // enforced - computed: true, optional: false, required: false
   public get enforced() {
     return this.getBooleanAttribute('enforced');
   }
 }
 export class DataGoogleFolderOrganizationPolicyListPolicyAllow extends ComplexComputedList {
 
-  // all - computed: true, optional: false, required: true
+  // all - computed: true, optional: false, required: false
   public get all() {
     return this.getBooleanAttribute('all');
   }
 
-  // values - computed: true, optional: false, required: true
+  // values - computed: true, optional: false, required: false
   public get values() {
     return this.getListAttribute('values');
   }
 }
 export class DataGoogleFolderOrganizationPolicyListPolicyDeny extends ComplexComputedList {
 
-  // all - computed: true, optional: false, required: true
+  // all - computed: true, optional: false, required: false
   public get all() {
     return this.getBooleanAttribute('all');
   }
 
-  // values - computed: true, optional: false, required: true
+  // values - computed: true, optional: false, required: false
   public get values() {
     return this.getListAttribute('values');
   }
 }
 export class DataGoogleFolderOrganizationPolicyListPolicy extends ComplexComputedList {
 
-  // allow - computed: true, optional: false, required: true
+  // allow - computed: true, optional: false, required: false
   public get allow() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('allow') as any;
   }
 
-  // deny - computed: true, optional: false, required: true
+  // deny - computed: true, optional: false, required: false
   public get deny() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('deny') as any;
   }
 
-  // inherit_from_parent - computed: true, optional: false, required: true
+  // inherit_from_parent - computed: true, optional: false, required: false
   public get inheritFromParent() {
     return this.getBooleanAttribute('inherit_from_parent');
   }
 
-  // suggested_value - computed: true, optional: false, required: true
+  // suggested_value - computed: true, optional: false, required: false
   public get suggestedValue() {
     return this.getStringAttribute('suggested_value');
   }
 }
 export class DataGoogleFolderOrganizationPolicyRestorePolicy extends ComplexComputedList {
 
-  // default - computed: true, optional: false, required: true
+  // default - computed: true, optional: false, required: false
   public get default() {
     return this.getBooleanAttribute('default');
   }
@@ -102,7 +102,7 @@ export class DataGoogleFolderOrganizationPolicy extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // boolean_policy - computed: true, optional: false, required: true
+  // boolean_policy - computed: true, optional: false, required: false
   public booleanPolicy(index: string) {
     return new DataGoogleFolderOrganizationPolicyBooleanPolicy(this, 'boolean_policy', index);
   }
@@ -110,13 +110,17 @@ export class DataGoogleFolderOrganizationPolicy extends TerraformDataSource {
   // constraint - computed: false, optional: false, required: true
   private _constraint: string;
   public get constraint() {
-    return this._constraint;
+    return this.getStringAttribute('constraint');
   }
   public set constraint(value: string) {
     this._constraint = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get constraintInput() {
+    return this._constraint
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
@@ -124,37 +128,37 @@ export class DataGoogleFolderOrganizationPolicy extends TerraformDataSource {
   // folder - computed: false, optional: false, required: true
   private _folder: string;
   public get folder() {
-    return this._folder;
+    return this.getStringAttribute('folder');
   }
   public set folder(value: string) {
     this._folder = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // list_policy - computed: true, optional: false, required: true
+  // list_policy - computed: true, optional: false, required: false
   public listPolicy(index: string) {
     return new DataGoogleFolderOrganizationPolicyListPolicy(this, 'list_policy', index);
   }
 
-  // restore_policy - computed: true, optional: false, required: true
+  // restore_policy - computed: true, optional: false, required: false
   public restorePolicy(index: string) {
     return new DataGoogleFolderOrganizationPolicyRestorePolicy(this, 'restore_policy', index);
   }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getNumberAttribute('version');
   }

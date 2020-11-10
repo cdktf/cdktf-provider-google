@@ -77,13 +77,17 @@ export class ComputeTargetSslProxy extends TerraformResource {
   // backend_service - computed: false, optional: false, required: true
   private _backendService: string;
   public get backendService() {
-    return this._backendService;
+    return this.getStringAttribute('backend_service');
   }
   public set backendService(value: string) {
     this._backendService = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -91,54 +95,75 @@ export class ComputeTargetSslProxy extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // proxy_header - computed: false, optional: true, required: false
   private _proxyHeader?: string;
   public get proxyHeader() {
-    return this._proxyHeader;
+    return this.getStringAttribute('proxy_header');
   }
-  public set proxyHeader(value: string | undefined) {
+  public set proxyHeader(value: string ) {
     this._proxyHeader = value;
   }
+  public resetProxyHeader() {
+    this._proxyHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyHeaderInput() {
+    return this._proxyHeader
+  }
 
-  // proxy_id - computed: true, optional: false, required: true
+  // proxy_id - computed: true, optional: false, required: false
   public get proxyId() {
     return this.getNumberAttribute('proxy_id');
   }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -146,28 +171,46 @@ export class ComputeTargetSslProxy extends TerraformResource {
   // ssl_certificates - computed: false, optional: false, required: true
   private _sslCertificates: string[];
   public get sslCertificates() {
-    return this._sslCertificates;
+    return this.getListAttribute('ssl_certificates');
   }
   public set sslCertificates(value: string[]) {
     this._sslCertificates = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslCertificatesInput() {
+    return this._sslCertificates
   }
 
   // ssl_policy - computed: false, optional: true, required: false
   private _sslPolicy?: string;
   public get sslPolicy() {
-    return this._sslPolicy;
+    return this.getStringAttribute('ssl_policy');
   }
-  public set sslPolicy(value: string | undefined) {
+  public set sslPolicy(value: string ) {
     this._sslPolicy = value;
+  }
+  public resetSslPolicy() {
+    this._sslPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslPolicyInput() {
+    return this._sslPolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeTargetSslProxyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeTargetSslProxyTimeouts | undefined) {
+  public set timeouts(value: ComputeTargetSslProxyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

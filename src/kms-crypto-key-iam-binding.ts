@@ -52,51 +52,66 @@ export class KmsCryptoKeyIamBinding extends TerraformResource {
   // crypto_key_id - computed: false, optional: false, required: true
   private _cryptoKeyId: string;
   public get cryptoKeyId() {
-    return this._cryptoKeyId;
+    return this.getStringAttribute('crypto_key_id');
   }
   public set cryptoKeyId(value: string) {
     this._cryptoKeyId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get cryptoKeyIdInput() {
+    return this._cryptoKeyId
+  }
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // members - computed: false, optional: false, required: true
   private _members: string[];
   public get members() {
-    return this._members;
+    return this.getListAttribute('members');
   }
   public set members(value: string[]) {
     this._members = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get membersInput() {
+    return this._members
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // condition - computed: false, optional: true, required: false
   private _condition?: KmsCryptoKeyIamBindingCondition[];
   public get condition() {
-    return this._condition;
+    return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: KmsCryptoKeyIamBindingCondition[] | undefined) {
+  public set condition(value: KmsCryptoKeyIamBindingCondition[] ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // =========

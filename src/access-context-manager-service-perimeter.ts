@@ -160,7 +160,7 @@ export class AccessContextManagerServicePerimeter extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
@@ -168,58 +168,80 @@ export class AccessContextManagerServicePerimeter extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // perimeter_type - computed: false, optional: true, required: false
   private _perimeterType?: string;
   public get perimeterType() {
-    return this._perimeterType;
+    return this.getStringAttribute('perimeter_type');
   }
-  public set perimeterType(value: string | undefined) {
+  public set perimeterType(value: string ) {
     this._perimeterType = value;
+  }
+  public resetPerimeterType() {
+    this._perimeterType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perimeterTypeInput() {
+    return this._perimeterType
   }
 
   // title - computed: false, optional: false, required: true
   private _title: string;
   public get title() {
-    return this._title;
+    return this.getStringAttribute('title');
   }
   public set title(value: string) {
     this._title = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
 
-  // update_time - computed: true, optional: false, required: true
+  // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
@@ -227,37 +249,65 @@ export class AccessContextManagerServicePerimeter extends TerraformResource {
   // use_explicit_dry_run_spec - computed: false, optional: true, required: false
   private _useExplicitDryRunSpec?: boolean;
   public get useExplicitDryRunSpec() {
-    return this._useExplicitDryRunSpec;
+    return this.getBooleanAttribute('use_explicit_dry_run_spec');
   }
-  public set useExplicitDryRunSpec(value: boolean | undefined) {
+  public set useExplicitDryRunSpec(value: boolean ) {
     this._useExplicitDryRunSpec = value;
+  }
+  public resetUseExplicitDryRunSpec() {
+    this._useExplicitDryRunSpec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useExplicitDryRunSpecInput() {
+    return this._useExplicitDryRunSpec
   }
 
   // spec - computed: false, optional: true, required: false
   private _spec?: AccessContextManagerServicePerimeterSpec[];
   public get spec() {
-    return this._spec;
+    return this.interpolationForAttribute('spec') as any;
   }
-  public set spec(value: AccessContextManagerServicePerimeterSpec[] | undefined) {
+  public set spec(value: AccessContextManagerServicePerimeterSpec[] ) {
     this._spec = value;
+  }
+  public resetSpec() {
+    this._spec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get specInput() {
+    return this._spec
   }
 
   // status - computed: false, optional: true, required: false
   private _status?: AccessContextManagerServicePerimeterStatus[];
   public get status() {
-    return this._status;
+    return this.interpolationForAttribute('status') as any;
   }
-  public set status(value: AccessContextManagerServicePerimeterStatus[] | undefined) {
+  public set status(value: AccessContextManagerServicePerimeterStatus[] ) {
     this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerServicePerimeterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerServicePerimeterTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerServicePerimeterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

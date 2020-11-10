@@ -67,58 +67,83 @@ export class ComputeGlobalNetworkEndpointGroup extends TerraformResource {
   // default_port - computed: false, optional: true, required: false
   private _defaultPort?: number;
   public get defaultPort() {
-    return this._defaultPort;
+    return this.getNumberAttribute('default_port');
   }
-  public set defaultPort(value: number | undefined) {
+  public set defaultPort(value: number ) {
     this._defaultPort = value;
+  }
+  public resetDefaultPort() {
+    this._defaultPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultPortInput() {
+    return this._defaultPort
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network_endpoint_type - computed: false, optional: false, required: true
   private _networkEndpointType: string;
   public get networkEndpointType() {
-    return this._networkEndpointType;
+    return this.getStringAttribute('network_endpoint_type');
   }
   public set networkEndpointType(value: string) {
     this._networkEndpointType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkEndpointTypeInput() {
+    return this._networkEndpointType
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -126,10 +151,17 @@ export class ComputeGlobalNetworkEndpointGroup extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeGlobalNetworkEndpointGroupTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeGlobalNetworkEndpointGroupTimeouts | undefined) {
+  public set timeouts(value: ComputeGlobalNetworkEndpointGroupTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

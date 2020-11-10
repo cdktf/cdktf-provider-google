@@ -79,30 +79,33 @@ export class SecretManagerSecret extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -110,37 +113,59 @@ export class SecretManagerSecret extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // secret_id - computed: false, optional: false, required: true
   private _secretId: string;
   public get secretId() {
-    return this._secretId;
+    return this.getStringAttribute('secret_id');
   }
   public set secretId(value: string) {
     this._secretId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretIdInput() {
+    return this._secretId
   }
 
   // replication - computed: false, optional: false, required: true
   private _replication: SecretManagerSecretReplication[];
   public get replication() {
-    return this._replication;
+    return this.interpolationForAttribute('replication') as any;
   }
   public set replication(value: SecretManagerSecretReplication[]) {
     this._replication = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationInput() {
+    return this._replication
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SecretManagerSecretTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SecretManagerSecretTimeouts | undefined) {
+  public set timeouts(value: SecretManagerSecretTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

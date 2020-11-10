@@ -78,22 +78,25 @@ export class DataCatalogTag extends TerraformResource {
   // column - computed: false, optional: true, required: false
   private _column?: string;
   public get column() {
-    return this._column;
+    return this.getStringAttribute('column');
   }
-  public set column(value: string | undefined) {
+  public set column(value: string ) {
     this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -101,22 +104,33 @@ export class DataCatalogTag extends TerraformResource {
   // parent - computed: false, optional: true, required: false
   private _parent?: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
-  public set parent(value: string | undefined) {
+  public set parent(value: string ) {
     this._parent = value;
+  }
+  public resetParent() {
+    this._parent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // template - computed: false, optional: false, required: true
   private _template: string;
   public get template() {
-    return this._template;
+    return this.getStringAttribute('template');
   }
   public set template(value: string) {
     this._template = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get templateInput() {
+    return this._template
+  }
 
-  // template_displayname - computed: true, optional: false, required: true
+  // template_displayname - computed: true, optional: false, required: false
   public get templateDisplayname() {
     return this.getStringAttribute('template_displayname');
   }
@@ -124,19 +138,30 @@ export class DataCatalogTag extends TerraformResource {
   // fields - computed: false, optional: false, required: true
   private _fields: DataCatalogTagFields[];
   public get fields() {
-    return this._fields;
+    return this.interpolationForAttribute('fields') as any;
   }
   public set fields(value: DataCatalogTagFields[]) {
     this._fields = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldsInput() {
+    return this._fields
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataCatalogTagTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataCatalogTagTimeouts | undefined) {
+  public set timeouts(value: DataCatalogTagTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

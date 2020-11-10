@@ -88,82 +88,119 @@ export class IdentityPlatformTenantInboundSamlConfig extends TerraformResource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // tenant - computed: false, optional: false, required: true
   private _tenant: string;
   public get tenant() {
-    return this._tenant;
+    return this.getStringAttribute('tenant');
   }
   public set tenant(value: string) {
     this._tenant = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantInput() {
+    return this._tenant
   }
 
   // idp_config - computed: false, optional: false, required: true
   private _idpConfig: IdentityPlatformTenantInboundSamlConfigIdpConfig[];
   public get idpConfig() {
-    return this._idpConfig;
+    return this.interpolationForAttribute('idp_config') as any;
   }
   public set idpConfig(value: IdentityPlatformTenantInboundSamlConfigIdpConfig[]) {
     this._idpConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idpConfigInput() {
+    return this._idpConfig
   }
 
   // sp_config - computed: false, optional: false, required: true
   private _spConfig: IdentityPlatformTenantInboundSamlConfigSpConfig[];
   public get spConfig() {
-    return this._spConfig;
+    return this.interpolationForAttribute('sp_config') as any;
   }
   public set spConfig(value: IdentityPlatformTenantInboundSamlConfigSpConfig[]) {
     this._spConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spConfigInput() {
+    return this._spConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IdentityPlatformTenantInboundSamlConfigTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IdentityPlatformTenantInboundSamlConfigTimeouts | undefined) {
+  public set timeouts(value: IdentityPlatformTenantInboundSamlConfigTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

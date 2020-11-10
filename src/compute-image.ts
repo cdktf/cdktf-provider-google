@@ -123,12 +123,12 @@ export class ComputeImage extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // archive_size_bytes - computed: true, optional: false, required: true
+  // archive_size_bytes - computed: true, optional: false, required: false
   public get archiveSizeBytes() {
     return this.getNumberAttribute('archive_size_bytes');
   }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -136,40 +136,57 @@ export class ComputeImage extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // disk_size_gb - computed: true, optional: true, required: false
   private _diskSizeGb?: number;
   public get diskSizeGb() {
-    return this._diskSizeGb ?? this.getNumberAttribute('disk_size_gb');
+    return this.getNumberAttribute('disk_size_gb');
   }
-  public set diskSizeGb(value: number | undefined) {
+  public set diskSizeGb(value: number) {
     this._diskSizeGb = value;
+  }
+  public resetDiskSizeGb() {
+    this._diskSizeGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeGbInput() {
+    return this._diskSizeGb
   }
 
   // family - computed: false, optional: true, required: false
   private _family?: string;
   public get family() {
-    return this._family;
+    return this.getStringAttribute('family');
   }
-  public set family(value: string | undefined) {
+  public set family(value: string ) {
     this._family = value;
+  }
+  public resetFamily() {
+    this._family = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get familyInput() {
+    return this._family
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // label_fingerprint - computed: true, optional: false, required: true
+  // label_fingerprint - computed: true, optional: false, required: false
   public get labelFingerprint() {
     return this.getStringAttribute('label_fingerprint');
   }
@@ -177,40 +194,65 @@ export class ComputeImage extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // licenses - computed: true, optional: true, required: false
   private _licenses?: string[];
   public get licenses() {
-    return this._licenses ?? this.getListAttribute('licenses');
+    return this.getListAttribute('licenses');
   }
-  public set licenses(value: string[] | undefined) {
+  public set licenses(value: string[]) {
     this._licenses = value;
+  }
+  public resetLicenses() {
+    this._licenses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licensesInput() {
+    return this._licenses
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -218,55 +260,97 @@ export class ComputeImage extends TerraformResource {
   // source_disk - computed: false, optional: true, required: false
   private _sourceDisk?: string;
   public get sourceDisk() {
-    return this._sourceDisk;
+    return this.getStringAttribute('source_disk');
   }
-  public set sourceDisk(value: string | undefined) {
+  public set sourceDisk(value: string ) {
     this._sourceDisk = value;
+  }
+  public resetSourceDisk() {
+    this._sourceDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDiskInput() {
+    return this._sourceDisk
   }
 
   // source_image - computed: false, optional: true, required: false
   private _sourceImage?: string;
   public get sourceImage() {
-    return this._sourceImage;
+    return this.getStringAttribute('source_image');
   }
-  public set sourceImage(value: string | undefined) {
+  public set sourceImage(value: string ) {
     this._sourceImage = value;
+  }
+  public resetSourceImage() {
+    this._sourceImage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageInput() {
+    return this._sourceImage
   }
 
   // source_snapshot - computed: false, optional: true, required: false
   private _sourceSnapshot?: string;
   public get sourceSnapshot() {
-    return this._sourceSnapshot;
+    return this.getStringAttribute('source_snapshot');
   }
-  public set sourceSnapshot(value: string | undefined) {
+  public set sourceSnapshot(value: string ) {
     this._sourceSnapshot = value;
+  }
+  public resetSourceSnapshot() {
+    this._sourceSnapshot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotInput() {
+    return this._sourceSnapshot
   }
 
   // guest_os_features - computed: false, optional: true, required: false
   private _guestOsFeatures?: ComputeImageGuestOsFeatures[];
   public get guestOsFeatures() {
-    return this._guestOsFeatures;
+    return this.interpolationForAttribute('guest_os_features') as any;
   }
-  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[] | undefined) {
+  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[] ) {
     this._guestOsFeatures = value;
+  }
+  public resetGuestOsFeatures() {
+    this._guestOsFeatures = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get guestOsFeaturesInput() {
+    return this._guestOsFeatures
   }
 
   // raw_disk - computed: false, optional: true, required: false
   private _rawDisk?: ComputeImageRawDisk[];
   public get rawDisk() {
-    return this._rawDisk;
+    return this.interpolationForAttribute('raw_disk') as any;
   }
-  public set rawDisk(value: ComputeImageRawDisk[] | undefined) {
+  public set rawDisk(value: ComputeImageRawDisk[] ) {
     this._rawDisk = value;
+  }
+  public resetRawDisk() {
+    this._rawDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawDiskInput() {
+    return this._rawDisk
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeImageTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeImageTimeouts | undefined) {
+  public set timeouts(value: ComputeImageTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

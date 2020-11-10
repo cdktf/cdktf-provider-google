@@ -16,29 +16,29 @@ export interface DataGoogleComputeRegionInstanceGroupConfig extends TerraformMet
 }
 export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // port - computed: true, optional: false, required: true
+  // port - computed: true, optional: false, required: false
   public get port() {
     return this.getNumberAttribute('port');
   }
 }
 export class DataGoogleComputeRegionInstanceGroupInstances extends ComplexComputedList {
 
-  // instance - computed: true, optional: false, required: true
+  // instance - computed: true, optional: false, required: false
   public get instance() {
     return this.getStringAttribute('instance');
   }
 
-  // named_ports - computed: true, optional: false, required: true
+  // named_ports - computed: true, optional: false, required: false
   public get namedPorts() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('named_ports') as any;
   }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
   }
@@ -74,15 +74,11 @@ export class DataGoogleComputeRegionInstanceGroup extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // instances - computed: true, optional: false, required: true
+  // instances - computed: true, optional: false, required: false
   public instances(index: string) {
     return new DataGoogleComputeRegionInstanceGroupInstances(this, 'instances', index);
   }
@@ -90,40 +86,68 @@ export class DataGoogleComputeRegionInstanceGroup extends TerraformDataSource {
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // self_link - computed: true, optional: true, required: false
   private _selfLink?: string;
   public get selfLink() {
-    return this._selfLink ?? this.getStringAttribute('self_link');
+    return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string | undefined) {
+  public set selfLink(value: string) {
     this._selfLink = value;
   }
+  public resetSelfLink() {
+    this._selfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selfLinkInput() {
+    return this._selfLink
+  }
 
-  // size - computed: true, optional: false, required: true
+  // size - computed: true, optional: false, required: false
   public get size() {
     return this.getNumberAttribute('size');
   }

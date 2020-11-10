@@ -23,63 +23,63 @@ export interface CloudRunDomainMappingConfig extends TerraformMetaArguments {
 }
 export class CloudRunDomainMappingStatusConditions extends ComplexComputedList {
 
-  // message - computed: true, optional: false, required: true
+  // message - computed: true, optional: false, required: false
   public get message() {
     return this.getStringAttribute('message');
   }
 
-  // reason - computed: true, optional: false, required: true
+  // reason - computed: true, optional: false, required: false
   public get reason() {
     return this.getStringAttribute('reason');
   }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 }
 export class CloudRunDomainMappingStatusResourceRecords extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // rrdata - computed: true, optional: false, required: true
+  // rrdata - computed: true, optional: false, required: false
   public get rrdata() {
     return this.getStringAttribute('rrdata');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 }
 export class CloudRunDomainMappingStatus extends ComplexComputedList {
 
-  // conditions - computed: true, optional: false, required: true
+  // conditions - computed: true, optional: false, required: false
   public get conditions() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('conditions') as any;
   }
 
-  // mapped_route_name - computed: true, optional: false, required: true
+  // mapped_route_name - computed: true, optional: false, required: false
   public get mappedRouteName() {
     return this.getStringAttribute('mapped_route_name');
   }
 
-  // observed_generation - computed: true, optional: false, required: true
+  // observed_generation - computed: true, optional: false, required: false
   public get observedGeneration() {
     return this.getNumberAttribute('observed_generation');
   }
 
-  // resource_records - computed: true, optional: false, required: true
+  // resource_records - computed: true, optional: false, required: false
   public get resourceRecords() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('resource_records') as any;
   }
 }
 export interface CloudRunDomainMappingMetadata {
@@ -145,42 +145,53 @@ export class CloudRunDomainMapping extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public status(index: string) {
     return new CloudRunDomainMappingStatus(this, 'status', index);
   }
@@ -188,28 +199,43 @@ export class CloudRunDomainMapping extends TerraformResource {
   // metadata - computed: false, optional: false, required: true
   private _metadata: CloudRunDomainMappingMetadata[];
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
   public set metadata(value: CloudRunDomainMappingMetadata[]) {
     this._metadata = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // spec - computed: false, optional: false, required: true
   private _spec: CloudRunDomainMappingSpec[];
   public get spec() {
-    return this._spec;
+    return this.interpolationForAttribute('spec') as any;
   }
   public set spec(value: CloudRunDomainMappingSpec[]) {
     this._spec = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get specInput() {
+    return this._spec
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudRunDomainMappingTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudRunDomainMappingTimeouts | undefined) {
+  public set timeouts(value: CloudRunDomainMappingTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

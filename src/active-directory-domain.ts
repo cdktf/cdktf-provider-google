@@ -71,63 +71,88 @@ export class ActiveDirectoryDomain extends TerraformResource {
   // admin - computed: false, optional: true, required: false
   private _admin?: string;
   public get admin() {
-    return this._admin;
+    return this.getStringAttribute('admin');
   }
-  public set admin(value: string | undefined) {
+  public set admin(value: string ) {
     this._admin = value;
+  }
+  public resetAdmin() {
+    this._admin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminInput() {
+    return this._admin
   }
 
   // authorized_networks - computed: false, optional: true, required: false
   private _authorizedNetworks?: string[];
   public get authorizedNetworks() {
-    return this._authorizedNetworks;
+    return this.getListAttribute('authorized_networks');
   }
-  public set authorizedNetworks(value: string[] | undefined) {
+  public set authorizedNetworks(value: string[] ) {
     this._authorizedNetworks = value;
+  }
+  public resetAuthorizedNetworks() {
+    this._authorizedNetworks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizedNetworksInput() {
+    return this._authorizedNetworks
   }
 
   // domain_name - computed: false, optional: false, required: true
   private _domainName: string;
   public get domainName() {
-    return this._domainName;
+    return this.getStringAttribute('domain_name');
   }
   public set domainName(value: string) {
     this._domainName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName
+  }
 
-  // fqdn - computed: true, optional: false, required: true
+  // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // locations - computed: false, optional: false, required: true
   private _locations: string[];
   public get locations() {
-    return this._locations;
+    return this.getListAttribute('locations');
   }
   public set locations(value: string[]) {
     this._locations = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get locationsInput() {
+    return this._locations
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -135,28 +160,46 @@ export class ActiveDirectoryDomain extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // reserved_ip_range - computed: false, optional: false, required: true
   private _reservedIpRange: string;
   public get reservedIpRange() {
-    return this._reservedIpRange;
+    return this.getStringAttribute('reserved_ip_range');
   }
   public set reservedIpRange(value: string) {
     this._reservedIpRange = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservedIpRangeInput() {
+    return this._reservedIpRange
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ActiveDirectoryDomainTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ActiveDirectoryDomainTimeouts | undefined) {
+  public set timeouts(value: ActiveDirectoryDomainTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

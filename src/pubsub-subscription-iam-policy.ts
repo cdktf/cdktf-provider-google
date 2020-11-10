@@ -41,45 +41,56 @@ export class PubsubSubscriptionIamPolicy extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // etag - computed: true, optional: false, required: true
+  // etag - computed: true, optional: false, required: false
   public get etag() {
     return this.getStringAttribute('etag');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // policy_data - computed: false, optional: false, required: true
   private _policyData: string;
   public get policyData() {
-    return this._policyData;
+    return this.getStringAttribute('policy_data');
   }
   public set policyData(value: string) {
     this._policyData = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDataInput() {
+    return this._policyData
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // subscription - computed: false, optional: false, required: true
   private _subscription: string;
   public get subscription() {
-    return this._subscription;
+    return this.getStringAttribute('subscription');
   }
   public set subscription(value: string) {
     this._subscription = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionInput() {
+    return this._subscription
   }
 
   // =========

@@ -137,58 +137,83 @@ export class DnsManagedZone extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // dns_name - computed: false, optional: false, required: true
   private _dnsName: string;
   public get dnsName() {
-    return this._dnsName;
+    return this.getStringAttribute('dns_name');
   }
   public set dnsName(value: string) {
     this._dnsName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsNameInput() {
+    return this._dnsName
   }
 
   // force_destroy - computed: false, optional: true, required: false
   private _forceDestroy?: boolean;
   public get forceDestroy() {
-    return this._forceDestroy;
+    return this.getBooleanAttribute('force_destroy');
   }
-  public set forceDestroy(value: boolean | undefined) {
+  public set forceDestroy(value: boolean ) {
     this._forceDestroy = value;
+  }
+  public resetForceDestroy() {
+    this._forceDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDestroyInput() {
+    return this._forceDestroy
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // name_servers - computed: true, optional: false, required: true
+  // name_servers - computed: true, optional: false, required: false
   public get nameServers() {
     return this.getListAttribute('name_servers');
   }
@@ -196,64 +221,113 @@ export class DnsManagedZone extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // visibility - computed: false, optional: true, required: false
   private _visibility?: string;
   public get visibility() {
-    return this._visibility;
+    return this.getStringAttribute('visibility');
   }
-  public set visibility(value: string | undefined) {
+  public set visibility(value: string ) {
     this._visibility = value;
+  }
+  public resetVisibility() {
+    this._visibility = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get visibilityInput() {
+    return this._visibility
   }
 
   // dnssec_config - computed: false, optional: true, required: false
   private _dnssecConfig?: DnsManagedZoneDnssecConfig[];
   public get dnssecConfig() {
-    return this._dnssecConfig;
+    return this.interpolationForAttribute('dnssec_config') as any;
   }
-  public set dnssecConfig(value: DnsManagedZoneDnssecConfig[] | undefined) {
+  public set dnssecConfig(value: DnsManagedZoneDnssecConfig[] ) {
     this._dnssecConfig = value;
+  }
+  public resetDnssecConfig() {
+    this._dnssecConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnssecConfigInput() {
+    return this._dnssecConfig
   }
 
   // forwarding_config - computed: false, optional: true, required: false
   private _forwardingConfig?: DnsManagedZoneForwardingConfig[];
   public get forwardingConfig() {
-    return this._forwardingConfig;
+    return this.interpolationForAttribute('forwarding_config') as any;
   }
-  public set forwardingConfig(value: DnsManagedZoneForwardingConfig[] | undefined) {
+  public set forwardingConfig(value: DnsManagedZoneForwardingConfig[] ) {
     this._forwardingConfig = value;
+  }
+  public resetForwardingConfig() {
+    this._forwardingConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardingConfigInput() {
+    return this._forwardingConfig
   }
 
   // peering_config - computed: false, optional: true, required: false
   private _peeringConfig?: DnsManagedZonePeeringConfig[];
   public get peeringConfig() {
-    return this._peeringConfig;
+    return this.interpolationForAttribute('peering_config') as any;
   }
-  public set peeringConfig(value: DnsManagedZonePeeringConfig[] | undefined) {
+  public set peeringConfig(value: DnsManagedZonePeeringConfig[] ) {
     this._peeringConfig = value;
+  }
+  public resetPeeringConfig() {
+    this._peeringConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeringConfigInput() {
+    return this._peeringConfig
   }
 
   // private_visibility_config - computed: false, optional: true, required: false
   private _privateVisibilityConfig?: DnsManagedZonePrivateVisibilityConfig[];
   public get privateVisibilityConfig() {
-    return this._privateVisibilityConfig;
+    return this.interpolationForAttribute('private_visibility_config') as any;
   }
-  public set privateVisibilityConfig(value: DnsManagedZonePrivateVisibilityConfig[] | undefined) {
+  public set privateVisibilityConfig(value: DnsManagedZonePrivateVisibilityConfig[] ) {
     this._privateVisibilityConfig = value;
+  }
+  public resetPrivateVisibilityConfig() {
+    this._privateVisibilityConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateVisibilityConfigInput() {
+    return this._privateVisibilityConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DnsManagedZoneTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DnsManagedZoneTimeouts | undefined) {
+  public set timeouts(value: DnsManagedZoneTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

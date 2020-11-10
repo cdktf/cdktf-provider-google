@@ -42,26 +42,22 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // default_cluster_version - computed: true, optional: false, required: true
+  // default_cluster_version - computed: true, optional: false, required: false
   public get defaultClusterVersion() {
     return this.getStringAttribute('default_cluster_version');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // latest_master_version - computed: true, optional: false, required: true
+  // latest_master_version - computed: true, optional: false, required: false
   public get latestMasterVersion() {
     return this.getStringAttribute('latest_master_version');
   }
 
-  // latest_node_version - computed: true, optional: false, required: true
+  // latest_node_version - computed: true, optional: false, required: false
   public get latestNodeVersion() {
     return this.getStringAttribute('latest_node_version');
   }
@@ -69,32 +65,46 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // release_channel_default_version - computed: true, optional: false, required: true
+  // release_channel_default_version - computed: true, optional: false, required: false
   public releaseChannelDefaultVersion(key: string): string {
     return new StringMap(this, 'release_channel_default_version').lookup(key);
   }
 
-  // valid_master_versions - computed: true, optional: false, required: true
+  // valid_master_versions - computed: true, optional: false, required: false
   public get validMasterVersions() {
     return this.getListAttribute('valid_master_versions');
   }
 
-  // valid_node_versions - computed: true, optional: false, required: true
+  // valid_node_versions - computed: true, optional: false, required: false
   public get validNodeVersions() {
     return this.getListAttribute('valid_node_versions');
   }
@@ -102,10 +112,17 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
   // version_prefix - computed: false, optional: true, required: false
   private _versionPrefix?: string;
   public get versionPrefix() {
-    return this._versionPrefix;
+    return this.getStringAttribute('version_prefix');
   }
-  public set versionPrefix(value: string | undefined) {
+  public set versionPrefix(value: string ) {
     this._versionPrefix = value;
+  }
+  public resetVersionPrefix() {
+    this._versionPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionPrefixInput() {
+    return this._versionPrefix
   }
 
   // =========

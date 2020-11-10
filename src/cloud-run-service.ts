@@ -29,49 +29,49 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#names */
 }
 export class CloudRunServiceStatusConditions extends ComplexComputedList {
 
-  // message - computed: true, optional: false, required: true
+  // message - computed: true, optional: false, required: false
   public get message() {
     return this.getStringAttribute('message');
   }
 
-  // reason - computed: true, optional: false, required: true
+  // reason - computed: true, optional: false, required: false
   public get reason() {
     return this.getStringAttribute('reason');
   }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 }
 export class CloudRunServiceStatus extends ComplexComputedList {
 
-  // conditions - computed: true, optional: false, required: true
+  // conditions - computed: true, optional: false, required: false
   public get conditions() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('conditions') as any;
   }
 
-  // latest_created_revision_name - computed: true, optional: false, required: true
+  // latest_created_revision_name - computed: true, optional: false, required: false
   public get latestCreatedRevisionName() {
     return this.getStringAttribute('latest_created_revision_name');
   }
 
-  // latest_ready_revision_name - computed: true, optional: false, required: true
+  // latest_ready_revision_name - computed: true, optional: false, required: false
   public get latestReadyRevisionName() {
     return this.getStringAttribute('latest_ready_revision_name');
   }
 
-  // observed_generation - computed: true, optional: false, required: true
+  // observed_generation - computed: true, optional: false, required: false
   public get observedGeneration() {
     return this.getNumberAttribute('observed_generation');
   }
 
-  // url - computed: true, optional: false, required: true
+  // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
   }
@@ -289,49 +289,67 @@ export class CloudRunService extends TerraformResource {
   // autogenerate_revision_name - computed: false, optional: true, required: false
   private _autogenerateRevisionName?: boolean;
   public get autogenerateRevisionName() {
-    return this._autogenerateRevisionName;
+    return this.getBooleanAttribute('autogenerate_revision_name');
   }
-  public set autogenerateRevisionName(value: boolean | undefined) {
+  public set autogenerateRevisionName(value: boolean ) {
     this._autogenerateRevisionName = value;
+  }
+  public resetAutogenerateRevisionName() {
+    this._autogenerateRevisionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autogenerateRevisionNameInput() {
+    return this._autogenerateRevisionName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public status(index: string) {
     return new CloudRunServiceStatus(this, 'status', index);
   }
@@ -339,37 +357,65 @@ export class CloudRunService extends TerraformResource {
   // metadata - computed: false, optional: true, required: false
   private _metadata?: CloudRunServiceMetadata[];
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: CloudRunServiceMetadata[] | undefined) {
+  public set metadata(value: CloudRunServiceMetadata[] ) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // template - computed: false, optional: true, required: false
   private _template?: CloudRunServiceTemplate[];
   public get template() {
-    return this._template;
+    return this.interpolationForAttribute('template') as any;
   }
-  public set template(value: CloudRunServiceTemplate[] | undefined) {
+  public set template(value: CloudRunServiceTemplate[] ) {
     this._template = value;
+  }
+  public resetTemplate() {
+    this._template = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateInput() {
+    return this._template
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudRunServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CloudRunServiceTimeouts | undefined) {
+  public set timeouts(value: CloudRunServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // traffic - computed: false, optional: true, required: false
   private _traffic?: CloudRunServiceTraffic[];
   public get traffic() {
-    return this._traffic;
+    return this.interpolationForAttribute('traffic') as any;
   }
-  public set traffic(value: CloudRunServiceTraffic[] | undefined) {
+  public set traffic(value: CloudRunServiceTraffic[] ) {
     this._traffic = value;
+  }
+  public resetTraffic() {
+    this._traffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trafficInput() {
+    return this._traffic
   }
 
   // =========

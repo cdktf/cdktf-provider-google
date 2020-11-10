@@ -158,7 +158,7 @@ export class ComputeDisk extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -166,31 +166,41 @@ export class ComputeDisk extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // image - computed: false, optional: true, required: false
   private _image?: string;
   public get image() {
-    return this._image;
+    return this.getStringAttribute('image');
   }
-  public set image(value: string | undefined) {
+  public set image(value: string ) {
     this._image = value;
   }
+  public resetImage() {
+    this._image = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageInput() {
+    return this._image
+  }
 
-  // label_fingerprint - computed: true, optional: false, required: true
+  // label_fingerprint - computed: true, optional: false, required: false
   public get labelFingerprint() {
     return this.getStringAttribute('label_fingerprint');
   }
@@ -198,18 +208,25 @@ export class ComputeDisk extends TerraformResource {
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
   }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
 
-  // last_attach_timestamp - computed: true, optional: false, required: true
+  // last_attach_timestamp - computed: true, optional: false, required: false
   public get lastAttachTimestamp() {
     return this.getStringAttribute('last_attach_timestamp');
   }
 
-  // last_detach_timestamp - computed: true, optional: false, required: true
+  // last_detach_timestamp - computed: true, optional: false, required: false
   public get lastDetachTimestamp() {
     return this.getStringAttribute('last_detach_timestamp');
   }
@@ -217,31 +234,49 @@ export class ComputeDisk extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // physical_block_size_bytes - computed: true, optional: true, required: false
   private _physicalBlockSizeBytes?: number;
   public get physicalBlockSizeBytes() {
-    return this._physicalBlockSizeBytes ?? this.getNumberAttribute('physical_block_size_bytes');
+    return this.getNumberAttribute('physical_block_size_bytes');
   }
-  public set physicalBlockSizeBytes(value: number | undefined) {
+  public set physicalBlockSizeBytes(value: number) {
     this._physicalBlockSizeBytes = value;
+  }
+  public resetPhysicalBlockSizeBytes() {
+    this._physicalBlockSizeBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get physicalBlockSizeBytesInput() {
+    return this._physicalBlockSizeBytes
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -249,27 +284,41 @@ export class ComputeDisk extends TerraformResource {
   // size - computed: true, optional: true, required: false
   private _size?: number;
   public get size() {
-    return this._size ?? this.getNumberAttribute('size');
+    return this.getNumberAttribute('size');
   }
-  public set size(value: number | undefined) {
+  public set size(value: number) {
     this._size = value;
+  }
+  public resetSize() {
+    this._size = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size
   }
 
   // snapshot - computed: false, optional: true, required: false
   private _snapshot?: string;
   public get snapshot() {
-    return this._snapshot;
+    return this.getStringAttribute('snapshot');
   }
-  public set snapshot(value: string | undefined) {
+  public set snapshot(value: string ) {
     this._snapshot = value;
   }
+  public resetSnapshot() {
+    this._snapshot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotInput() {
+    return this._snapshot
+  }
 
-  // source_image_id - computed: true, optional: false, required: true
+  // source_image_id - computed: true, optional: false, required: false
   public get sourceImageId() {
     return this.getStringAttribute('source_image_id');
   }
 
-  // source_snapshot_id - computed: true, optional: false, required: true
+  // source_snapshot_id - computed: true, optional: false, required: false
   public get sourceSnapshotId() {
     return this.getStringAttribute('source_snapshot_id');
   }
@@ -277,13 +326,20 @@ export class ComputeDisk extends TerraformResource {
   // type - computed: false, optional: true, required: false
   private _type?: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string ) {
     this._type = value;
   }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
 
-  // users - computed: true, optional: false, required: true
+  // users - computed: true, optional: false, required: false
   public get users() {
     return this.getListAttribute('users');
   }
@@ -291,46 +347,81 @@ export class ComputeDisk extends TerraformResource {
   // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone ?? this.getStringAttribute('zone');
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
   private _diskEncryptionKey?: ComputeDiskDiskEncryptionKey[];
   public get diskEncryptionKey() {
-    return this._diskEncryptionKey;
+    return this.interpolationForAttribute('disk_encryption_key') as any;
   }
-  public set diskEncryptionKey(value: ComputeDiskDiskEncryptionKey[] | undefined) {
+  public set diskEncryptionKey(value: ComputeDiskDiskEncryptionKey[] ) {
     this._diskEncryptionKey = value;
+  }
+  public resetDiskEncryptionKey() {
+    this._diskEncryptionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionKeyInput() {
+    return this._diskEncryptionKey
   }
 
   // source_image_encryption_key - computed: false, optional: true, required: false
   private _sourceImageEncryptionKey?: ComputeDiskSourceImageEncryptionKey[];
   public get sourceImageEncryptionKey() {
-    return this._sourceImageEncryptionKey;
+    return this.interpolationForAttribute('source_image_encryption_key') as any;
   }
-  public set sourceImageEncryptionKey(value: ComputeDiskSourceImageEncryptionKey[] | undefined) {
+  public set sourceImageEncryptionKey(value: ComputeDiskSourceImageEncryptionKey[] ) {
     this._sourceImageEncryptionKey = value;
+  }
+  public resetSourceImageEncryptionKey() {
+    this._sourceImageEncryptionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageEncryptionKeyInput() {
+    return this._sourceImageEncryptionKey
   }
 
   // source_snapshot_encryption_key - computed: false, optional: true, required: false
   private _sourceSnapshotEncryptionKey?: ComputeDiskSourceSnapshotEncryptionKey[];
   public get sourceSnapshotEncryptionKey() {
-    return this._sourceSnapshotEncryptionKey;
+    return this.interpolationForAttribute('source_snapshot_encryption_key') as any;
   }
-  public set sourceSnapshotEncryptionKey(value: ComputeDiskSourceSnapshotEncryptionKey[] | undefined) {
+  public set sourceSnapshotEncryptionKey(value: ComputeDiskSourceSnapshotEncryptionKey[] ) {
     this._sourceSnapshotEncryptionKey = value;
+  }
+  public resetSourceSnapshotEncryptionKey() {
+    this._sourceSnapshotEncryptionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotEncryptionKeyInput() {
+    return this._sourceSnapshotEncryptionKey
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeDiskTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeDiskTimeouts | undefined) {
+  public set timeouts(value: ComputeDiskTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -55,55 +55,83 @@ export class ProjectService extends TerraformResource {
   // disable_dependent_services - computed: false, optional: true, required: false
   private _disableDependentServices?: boolean;
   public get disableDependentServices() {
-    return this._disableDependentServices;
+    return this.getBooleanAttribute('disable_dependent_services');
   }
-  public set disableDependentServices(value: boolean | undefined) {
+  public set disableDependentServices(value: boolean ) {
     this._disableDependentServices = value;
+  }
+  public resetDisableDependentServices() {
+    this._disableDependentServices = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableDependentServicesInput() {
+    return this._disableDependentServices
   }
 
   // disable_on_destroy - computed: false, optional: true, required: false
   private _disableOnDestroy?: boolean;
   public get disableOnDestroy() {
-    return this._disableOnDestroy;
+    return this.getBooleanAttribute('disable_on_destroy');
   }
-  public set disableOnDestroy(value: boolean | undefined) {
+  public set disableOnDestroy(value: boolean ) {
     this._disableOnDestroy = value;
+  }
+  public resetDisableOnDestroy() {
+    this._disableOnDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableOnDestroyInput() {
+    return this._disableOnDestroy
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // service - computed: false, optional: false, required: true
   private _service: string;
   public get service() {
-    return this._service;
+    return this.getStringAttribute('service');
   }
   public set service(value: string) {
     this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ProjectServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ProjectServiceTimeouts | undefined) {
+  public set timeouts(value: ProjectServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

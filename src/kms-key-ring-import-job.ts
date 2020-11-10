@@ -24,19 +24,19 @@ versionTemplate on the CryptoKey you attempt to import into. Possible values: ["
 }
 export class KmsKeyRingImportJobAttestation extends ComplexComputedList {
 
-  // content - computed: true, optional: false, required: true
+  // content - computed: true, optional: false, required: false
   public get content() {
     return this.getStringAttribute('content');
   }
 
-  // format - computed: true, optional: false, required: true
+  // format - computed: true, optional: false, required: false
   public get format() {
     return this.getStringAttribute('format');
   }
 }
 export class KmsKeyRingImportJobPublicKey extends ComplexComputedList {
 
-  // pem - computed: true, optional: false, required: true
+  // pem - computed: true, optional: false, required: false
   public get pem() {
     return this.getStringAttribute('pem');
   }
@@ -76,53 +76,61 @@ export class KmsKeyRingImportJob extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // attestation - computed: true, optional: false, required: true
+  // attestation - computed: true, optional: false, required: false
   public attestation(index: string) {
     return new KmsKeyRingImportJobAttestation(this, 'attestation', index);
   }
 
-  // expire_time - computed: true, optional: false, required: true
+  // expire_time - computed: true, optional: false, required: false
   public get expireTime() {
     return this.getStringAttribute('expire_time');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // import_job_id - computed: false, optional: false, required: true
   private _importJobId: string;
   public get importJobId() {
-    return this._importJobId;
+    return this.getStringAttribute('import_job_id');
   }
   public set importJobId(value: string) {
     this._importJobId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importJobIdInput() {
+    return this._importJobId
   }
 
   // import_method - computed: false, optional: false, required: true
   private _importMethod: string;
   public get importMethod() {
-    return this._importMethod;
+    return this.getStringAttribute('import_method');
   }
   public set importMethod(value: string) {
     this._importMethod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importMethodInput() {
+    return this._importMethod
   }
 
   // key_ring - computed: false, optional: false, required: true
   private _keyRing: string;
   public get keyRing() {
-    return this._keyRing;
+    return this.getStringAttribute('key_ring');
   }
   public set keyRing(value: string) {
     this._keyRing = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get keyRingInput() {
+    return this._keyRing
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -130,18 +138,22 @@ export class KmsKeyRingImportJob extends TerraformResource {
   // protection_level - computed: false, optional: false, required: true
   private _protectionLevel: string;
   public get protectionLevel() {
-    return this._protectionLevel;
+    return this.getStringAttribute('protection_level');
   }
   public set protectionLevel(value: string) {
     this._protectionLevel = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get protectionLevelInput() {
+    return this._protectionLevel
+  }
 
-  // public_key - computed: true, optional: false, required: true
+  // public_key - computed: true, optional: false, required: false
   public publicKey(index: string) {
     return new KmsKeyRingImportJobPublicKey(this, 'public_key', index);
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -149,10 +161,17 @@ export class KmsKeyRingImportJob extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KmsKeyRingImportJobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: KmsKeyRingImportJobTimeouts | undefined) {
+  public set timeouts(value: KmsKeyRingImportJobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

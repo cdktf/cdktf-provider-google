@@ -32,44 +32,44 @@ export interface SqlDatabaseInstanceConfig extends TerraformMetaArguments {
 }
 export class SqlDatabaseInstanceIpAddress extends ComplexComputedList {
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
 
-  // time_to_retire - computed: true, optional: false, required: true
+  // time_to_retire - computed: true, optional: false, required: false
   public get timeToRetire() {
     return this.getStringAttribute('time_to_retire');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 }
 export class SqlDatabaseInstanceServerCaCert extends ComplexComputedList {
 
-  // cert - computed: true, optional: false, required: true
+  // cert - computed: true, optional: false, required: false
   public get cert() {
     return this.getStringAttribute('cert');
   }
 
-  // common_name - computed: true, optional: false, required: true
+  // common_name - computed: true, optional: false, required: false
   public get commonName() {
     return this.getStringAttribute('common_name');
   }
 
-  // create_time - computed: true, optional: false, required: true
+  // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
 
-  // expiration_time - computed: true, optional: false, required: true
+  // expiration_time - computed: true, optional: false, required: false
   public get expirationTime() {
     return this.getStringAttribute('expiration_time');
   }
 
-  // sha1_fingerprint - computed: true, optional: false, required: true
+  // sha1_fingerprint - computed: true, optional: false, required: false
   public get sha1Fingerprint() {
     return this.getStringAttribute('sha1_fingerprint');
   }
@@ -222,7 +222,7 @@ export class SqlDatabaseInstance extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // connection_name - computed: true, optional: false, required: true
+  // connection_name - computed: true, optional: false, required: false
   public get connectionName() {
     return this.getStringAttribute('connection_name');
   }
@@ -230,36 +230,46 @@ export class SqlDatabaseInstance extends TerraformResource {
   // database_version - computed: false, optional: true, required: false
   private _databaseVersion?: string;
   public get databaseVersion() {
-    return this._databaseVersion;
+    return this.getStringAttribute('database_version');
   }
-  public set databaseVersion(value: string | undefined) {
+  public set databaseVersion(value: string ) {
     this._databaseVersion = value;
+  }
+  public resetDatabaseVersion() {
+    this._databaseVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseVersionInput() {
+    return this._databaseVersion
   }
 
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean;
   public get deletionProtection() {
-    return this._deletionProtection;
+    return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean | undefined) {
+  public set deletionProtection(value: boolean ) {
     this._deletionProtection = value;
   }
+  public resetDeletionProtection() {
+    this._deletionProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionInput() {
+    return this._deletionProtection
+  }
 
-  // first_ip_address - computed: true, optional: false, required: true
+  // first_ip_address - computed: true, optional: false, required: false
   public get firstIpAddress() {
     return this.getStringAttribute('first_ip_address');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public ipAddress(index: string) {
     return new SqlDatabaseInstanceIpAddress(this, 'ip_address', index);
   }
@@ -267,22 +277,36 @@ export class SqlDatabaseInstance extends TerraformResource {
   // master_instance_name - computed: true, optional: true, required: false
   private _masterInstanceName?: string;
   public get masterInstanceName() {
-    return this._masterInstanceName ?? this.getStringAttribute('master_instance_name');
+    return this.getStringAttribute('master_instance_name');
   }
-  public set masterInstanceName(value: string | undefined) {
+  public set masterInstanceName(value: string) {
     this._masterInstanceName = value;
+  }
+  public resetMasterInstanceName() {
+    this._masterInstanceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get masterInstanceNameInput() {
+    return this._masterInstanceName
   }
 
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
@@ -290,13 +314,20 @@ export class SqlDatabaseInstance extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // public_ip_address - computed: true, optional: false, required: true
+  // public_ip_address - computed: true, optional: false, required: false
   public get publicIpAddress() {
     return this.getStringAttribute('public_ip_address');
   }
@@ -304,32 +335,46 @@ export class SqlDatabaseInstance extends TerraformResource {
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // root_password - computed: false, optional: true, required: false
   private _rootPassword?: string;
   public get rootPassword() {
-    return this._rootPassword;
+    return this.getStringAttribute('root_password');
   }
-  public set rootPassword(value: string | undefined) {
+  public set rootPassword(value: string ) {
     this._rootPassword = value;
   }
+  public resetRootPassword() {
+    this._rootPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootPasswordInput() {
+    return this._rootPassword
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
 
-  // server_ca_cert - computed: true, optional: false, required: true
+  // server_ca_cert - computed: true, optional: false, required: false
   public serverCaCert(index: string) {
     return new SqlDatabaseInstanceServerCaCert(this, 'server_ca_cert', index);
   }
 
-  // service_account_email_address - computed: true, optional: false, required: true
+  // service_account_email_address - computed: true, optional: false, required: false
   public get serviceAccountEmailAddress() {
     return this.getStringAttribute('service_account_email_address');
   }
@@ -337,28 +382,46 @@ export class SqlDatabaseInstance extends TerraformResource {
   // replica_configuration - computed: false, optional: true, required: false
   private _replicaConfiguration?: SqlDatabaseInstanceReplicaConfiguration[];
   public get replicaConfiguration() {
-    return this._replicaConfiguration;
+    return this.interpolationForAttribute('replica_configuration') as any;
   }
-  public set replicaConfiguration(value: SqlDatabaseInstanceReplicaConfiguration[] | undefined) {
+  public set replicaConfiguration(value: SqlDatabaseInstanceReplicaConfiguration[] ) {
     this._replicaConfiguration = value;
+  }
+  public resetReplicaConfiguration() {
+    this._replicaConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaConfigurationInput() {
+    return this._replicaConfiguration
   }
 
   // settings - computed: false, optional: false, required: true
   private _settings: SqlDatabaseInstanceSettings[];
   public get settings() {
-    return this._settings;
+    return this.interpolationForAttribute('settings') as any;
   }
   public set settings(value: SqlDatabaseInstanceSettings[]) {
     this._settings = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get settingsInput() {
+    return this._settings
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlDatabaseInstanceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SqlDatabaseInstanceTimeouts | undefined) {
+  public set timeouts(value: SqlDatabaseInstanceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

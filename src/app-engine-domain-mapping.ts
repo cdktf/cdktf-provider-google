@@ -22,17 +22,17 @@ By default, overrides are rejected. Default value: "STRICT" Possible values: ["S
 }
 export class AppEngineDomainMappingResourceRecords extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // rrdata - computed: true, optional: false, required: true
+  // rrdata - computed: true, optional: false, required: false
   public get rrdata() {
     return this.getStringAttribute('rrdata');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -88,22 +88,22 @@ export class AppEngineDomainMapping extends TerraformResource {
   // domain_name - computed: false, optional: false, required: true
   private _domainName: string;
   public get domainName() {
-    return this._domainName;
+    return this.getStringAttribute('domain_name');
   }
   public set domainName(value: string) {
     this._domainName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -111,22 +111,36 @@ export class AppEngineDomainMapping extends TerraformResource {
   // override_strategy - computed: false, optional: true, required: false
   private _overrideStrategy?: string;
   public get overrideStrategy() {
-    return this._overrideStrategy;
+    return this.getStringAttribute('override_strategy');
   }
-  public set overrideStrategy(value: string | undefined) {
+  public set overrideStrategy(value: string ) {
     this._overrideStrategy = value;
+  }
+  public resetOverrideStrategy() {
+    this._overrideStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overrideStrategyInput() {
+    return this._overrideStrategy
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
 
-  // resource_records - computed: true, optional: false, required: true
+  // resource_records - computed: true, optional: false, required: false
   public resourceRecords(index: string) {
     return new AppEngineDomainMappingResourceRecords(this, 'resource_records', index);
   }
@@ -134,19 +148,33 @@ export class AppEngineDomainMapping extends TerraformResource {
   // ssl_settings - computed: false, optional: true, required: false
   private _sslSettings?: AppEngineDomainMappingSslSettings[];
   public get sslSettings() {
-    return this._sslSettings;
+    return this.interpolationForAttribute('ssl_settings') as any;
   }
-  public set sslSettings(value: AppEngineDomainMappingSslSettings[] | undefined) {
+  public set sslSettings(value: AppEngineDomainMappingSslSettings[] ) {
     this._sslSettings = value;
+  }
+  public resetSslSettings() {
+    this._sslSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslSettingsInput() {
+    return this._sslSettings
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppEngineDomainMappingTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppEngineDomainMappingTimeouts | undefined) {
+  public set timeouts(value: AppEngineDomainMappingTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -91,13 +91,20 @@ export class ComputeHttpHealthCheck extends TerraformResource {
   // check_interval_sec - computed: false, optional: true, required: false
   private _checkIntervalSec?: number;
   public get checkIntervalSec() {
-    return this._checkIntervalSec;
+    return this.getNumberAttribute('check_interval_sec');
   }
-  public set checkIntervalSec(value: number | undefined) {
+  public set checkIntervalSec(value: number ) {
     this._checkIntervalSec = value;
   }
+  public resetCheckIntervalSec() {
+    this._checkIntervalSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get checkIntervalSecInput() {
+    return this._checkIntervalSec
+  }
 
-  // creation_timestamp - computed: true, optional: false, required: true
+  // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
   }
@@ -105,76 +112,118 @@ export class ComputeHttpHealthCheck extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // healthy_threshold - computed: false, optional: true, required: false
   private _healthyThreshold?: number;
   public get healthyThreshold() {
-    return this._healthyThreshold;
+    return this.getNumberAttribute('healthy_threshold');
   }
-  public set healthyThreshold(value: number | undefined) {
+  public set healthyThreshold(value: number ) {
     this._healthyThreshold = value;
+  }
+  public resetHealthyThreshold() {
+    this._healthyThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthyThresholdInput() {
+    return this._healthyThreshold
   }
 
   // host - computed: false, optional: true, required: false
   private _host?: string;
   public get host() {
-    return this._host;
+    return this.getStringAttribute('host');
   }
-  public set host(value: string | undefined) {
+  public set host(value: string ) {
     this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // port - computed: false, optional: true, required: false
   private _port?: number;
   public get port() {
-    return this._port;
+    return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number ) {
     this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // request_path - computed: false, optional: true, required: false
   private _requestPath?: string;
   public get requestPath() {
-    return this._requestPath;
+    return this.getStringAttribute('request_path');
   }
-  public set requestPath(value: string | undefined) {
+  public set requestPath(value: string ) {
     this._requestPath = value;
   }
+  public resetRequestPath() {
+    this._requestPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestPathInput() {
+    return this._requestPath
+  }
 
-  // self_link - computed: true, optional: false, required: true
+  // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
@@ -182,28 +231,49 @@ export class ComputeHttpHealthCheck extends TerraformResource {
   // timeout_sec - computed: false, optional: true, required: false
   private _timeoutSec?: number;
   public get timeoutSec() {
-    return this._timeoutSec;
+    return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number ) {
     this._timeoutSec = value;
+  }
+  public resetTimeoutSec() {
+    this._timeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutSecInput() {
+    return this._timeoutSec
   }
 
   // unhealthy_threshold - computed: false, optional: true, required: false
   private _unhealthyThreshold?: number;
   public get unhealthyThreshold() {
-    return this._unhealthyThreshold;
+    return this.getNumberAttribute('unhealthy_threshold');
   }
-  public set unhealthyThreshold(value: number | undefined) {
+  public set unhealthyThreshold(value: number ) {
     this._unhealthyThreshold = value;
+  }
+  public resetUnhealthyThreshold() {
+    this._unhealthyThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unhealthyThresholdInput() {
+    return this._unhealthyThreshold
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeHttpHealthCheckTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ComputeHttpHealthCheckTimeouts | undefined) {
+  public set timeouts(value: ComputeHttpHealthCheckTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

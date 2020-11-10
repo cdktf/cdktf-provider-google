@@ -53,13 +53,17 @@ export class IapClient extends TerraformResource {
   // brand - computed: false, optional: false, required: true
   private _brand: string;
   public get brand() {
-    return this._brand;
+    return this.getStringAttribute('brand');
   }
   public set brand(value: string) {
     this._brand = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get brandInput() {
+    return this._brand
+  }
 
-  // client_id - computed: true, optional: false, required: true
+  // client_id - computed: true, optional: false, required: false
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
@@ -67,22 +71,22 @@ export class IapClient extends TerraformResource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // secret - computed: true, optional: false, required: true
+  // secret - computed: true, optional: false, required: false
   public get secret() {
     return this.getStringAttribute('secret');
   }
@@ -90,10 +94,17 @@ export class IapClient extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IapClientTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IapClientTimeouts | undefined) {
+  public set timeouts(value: IapClientTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

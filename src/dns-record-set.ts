@@ -54,66 +54,89 @@ export class DnsRecordSet extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // managed_zone - computed: false, optional: false, required: true
   private _managedZone: string;
   public get managedZone() {
-    return this._managedZone;
+    return this.getStringAttribute('managed_zone');
   }
   public set managedZone(value: string) {
     this._managedZone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedZoneInput() {
+    return this._managedZone
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // rrdatas - computed: false, optional: false, required: true
   private _rrdatas: string[];
   public get rrdatas() {
-    return this._rrdatas;
+    return this.getListAttribute('rrdatas');
   }
   public set rrdatas(value: string[]) {
     this._rrdatas = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rrdatasInput() {
+    return this._rrdatas
   }
 
   // ttl - computed: false, optional: false, required: true
   private _ttl: number;
   public get ttl() {
-    return this._ttl;
+    return this.getNumberAttribute('ttl');
   }
   public set ttl(value: number) {
     this._ttl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // =========

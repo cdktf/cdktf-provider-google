@@ -91,31 +91,41 @@ export class DataCatalogTagTemplate extends TerraformResource {
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // force_delete - computed: false, optional: true, required: false
   private _forceDelete?: boolean;
   public get forceDelete() {
-    return this._forceDelete;
+    return this.getBooleanAttribute('force_delete');
   }
-  public set forceDelete(value: boolean | undefined) {
+  public set forceDelete(value: boolean ) {
     this._forceDelete = value;
+  }
+  public resetForceDelete() {
+    this._forceDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDeleteInput() {
+    return this._forceDelete
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -123,46 +133,75 @@ export class DataCatalogTagTemplate extends TerraformResource {
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
-    return this._region ?? this.getStringAttribute('region');
+    return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region
   }
 
   // tag_template_id - computed: false, optional: false, required: true
   private _tagTemplateId: string;
   public get tagTemplateId() {
-    return this._tagTemplateId;
+    return this.getStringAttribute('tag_template_id');
   }
   public set tagTemplateId(value: string) {
     this._tagTemplateId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagTemplateIdInput() {
+    return this._tagTemplateId
   }
 
   // fields - computed: false, optional: false, required: true
   private _fields: DataCatalogTagTemplateFields[];
   public get fields() {
-    return this._fields;
+    return this.interpolationForAttribute('fields') as any;
   }
   public set fields(value: DataCatalogTagTemplateFields[]) {
     this._fields = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldsInput() {
+    return this._fields
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataCatalogTagTemplateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataCatalogTagTemplateTimeouts | undefined) {
+  public set timeouts(value: DataCatalogTagTemplateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -51,39 +51,50 @@ export class AccessContextManagerServicePerimeterResource extends TerraformResou
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // perimeter_name - computed: false, optional: false, required: true
   private _perimeterName: string;
   public get perimeterName() {
-    return this._perimeterName;
+    return this.getStringAttribute('perimeter_name');
   }
   public set perimeterName(value: string) {
     this._perimeterName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perimeterNameInput() {
+    return this._perimeterName
   }
 
   // resource - computed: false, optional: false, required: true
   private _resource: string;
   public get resource() {
-    return this._resource;
+    return this.getStringAttribute('resource');
   }
   public set resource(value: string) {
     this._resource = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceInput() {
+    return this._resource
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerServicePerimeterResourceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerServicePerimeterResourceTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerServicePerimeterResourceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

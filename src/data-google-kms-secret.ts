@@ -44,40 +44,51 @@ export class DataGoogleKmsSecret extends TerraformDataSource {
   // additional_authenticated_data - computed: false, optional: true, required: false
   private _additionalAuthenticatedData?: string;
   public get additionalAuthenticatedData() {
-    return this._additionalAuthenticatedData;
+    return this.getStringAttribute('additional_authenticated_data');
   }
-  public set additionalAuthenticatedData(value: string | undefined) {
+  public set additionalAuthenticatedData(value: string ) {
     this._additionalAuthenticatedData = value;
+  }
+  public resetAdditionalAuthenticatedData() {
+    this._additionalAuthenticatedData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalAuthenticatedDataInput() {
+    return this._additionalAuthenticatedData
   }
 
   // ciphertext - computed: false, optional: false, required: true
   private _ciphertext: string;
   public get ciphertext() {
-    return this._ciphertext;
+    return this.getStringAttribute('ciphertext');
   }
   public set ciphertext(value: string) {
     this._ciphertext = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ciphertextInput() {
+    return this._ciphertext
   }
 
   // crypto_key - computed: false, optional: false, required: true
   private _cryptoKey: string;
   public get cryptoKey() {
-    return this._cryptoKey;
+    return this.getStringAttribute('crypto_key');
   }
   public set cryptoKey(value: string) {
     this._cryptoKey = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get cryptoKeyInput() {
+    return this._cryptoKey
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // plaintext - computed: true, optional: false, required: true
+  // plaintext - computed: true, optional: false, required: false
   public get plaintext() {
     return this.getStringAttribute('plaintext');
   }

@@ -58,60 +58,85 @@ export class OsLoginSshPublicKey extends TerraformResource {
   // expiration_time_usec - computed: false, optional: true, required: false
   private _expirationTimeUsec?: string;
   public get expirationTimeUsec() {
-    return this._expirationTimeUsec;
+    return this.getStringAttribute('expiration_time_usec');
   }
-  public set expirationTimeUsec(value: string | undefined) {
+  public set expirationTimeUsec(value: string ) {
     this._expirationTimeUsec = value;
   }
+  public resetExpirationTimeUsec() {
+    this._expirationTimeUsec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationTimeUsecInput() {
+    return this._expirationTimeUsec
+  }
 
-  // fingerprint - computed: true, optional: false, required: true
+  // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // key - computed: false, optional: false, required: true
   private _key: string;
   public get key() {
-    return this._key;
+    return this.getStringAttribute('key');
   }
   public set key(value: string) {
     this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key
   }
 
   // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project;
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string ) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // user - computed: false, optional: false, required: true
   private _user: string;
   public get user() {
-    return this._user;
+    return this.getStringAttribute('user');
   }
   public set user(value: string) {
     this._user = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userInput() {
+    return this._user
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: OsLoginSshPublicKeyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: OsLoginSshPublicKeyTimeouts | undefined) {
+  public set timeouts(value: OsLoginSshPublicKeyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

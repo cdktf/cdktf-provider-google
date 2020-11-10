@@ -154,73 +154,109 @@ export class AccessContextManagerAccessLevel extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parent - computed: false, optional: false, required: true
   private _parent: string;
   public get parent() {
-    return this._parent;
+    return this.getStringAttribute('parent');
   }
   public set parent(value: string) {
     this._parent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentInput() {
+    return this._parent
   }
 
   // title - computed: false, optional: false, required: true
   private _title: string;
   public get title() {
-    return this._title;
+    return this.getStringAttribute('title');
   }
   public set title(value: string) {
     this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
   }
 
   // basic - computed: false, optional: true, required: false
   private _basic?: AccessContextManagerAccessLevelBasic[];
   public get basic() {
-    return this._basic;
+    return this.interpolationForAttribute('basic') as any;
   }
-  public set basic(value: AccessContextManagerAccessLevelBasic[] | undefined) {
+  public set basic(value: AccessContextManagerAccessLevelBasic[] ) {
     this._basic = value;
+  }
+  public resetBasic() {
+    this._basic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get basicInput() {
+    return this._basic
   }
 
   // custom - computed: false, optional: true, required: false
   private _custom?: AccessContextManagerAccessLevelCustom[];
   public get custom() {
-    return this._custom;
+    return this.interpolationForAttribute('custom') as any;
   }
-  public set custom(value: AccessContextManagerAccessLevelCustom[] | undefined) {
+  public set custom(value: AccessContextManagerAccessLevelCustom[] ) {
     this._custom = value;
+  }
+  public resetCustom() {
+    this._custom = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customInput() {
+    return this._custom
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AccessContextManagerAccessLevelTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AccessContextManagerAccessLevelTimeouts | undefined) {
+  public set timeouts(value: AccessContextManagerAccessLevelTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

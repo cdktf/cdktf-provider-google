@@ -120,91 +120,141 @@ export class NetworkManagementConnectivityTest extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string };
   public get labels() {
-    return this._labels;
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | undefined) {
+  public set labels(value: { [key: string]: string } ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // project - computed: true, optional: true, required: false
   private _project?: string;
   public get project() {
-    return this._project ?? this.getStringAttribute('project');
+    return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
   }
 
   // protocol - computed: false, optional: true, required: false
   private _protocol?: string;
   public get protocol() {
-    return this._protocol;
+    return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string ) {
     this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
   }
 
   // related_projects - computed: false, optional: true, required: false
   private _relatedProjects?: string[];
   public get relatedProjects() {
-    return this._relatedProjects;
+    return this.getListAttribute('related_projects');
   }
-  public set relatedProjects(value: string[] | undefined) {
+  public set relatedProjects(value: string[] ) {
     this._relatedProjects = value;
+  }
+  public resetRelatedProjects() {
+    this._relatedProjects = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relatedProjectsInput() {
+    return this._relatedProjects
   }
 
   // destination - computed: false, optional: false, required: true
   private _destination: NetworkManagementConnectivityTestDestination[];
   public get destination() {
-    return this._destination;
+    return this.interpolationForAttribute('destination') as any;
   }
   public set destination(value: NetworkManagementConnectivityTestDestination[]) {
     this._destination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination
   }
 
   // source - computed: false, optional: false, required: true
   private _source: NetworkManagementConnectivityTestSource[];
   public get source() {
-    return this._source;
+    return this.interpolationForAttribute('source') as any;
   }
   public set source(value: NetworkManagementConnectivityTestSource[]) {
     this._source = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NetworkManagementConnectivityTestTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NetworkManagementConnectivityTestTimeouts | undefined) {
+  public set timeouts(value: NetworkManagementConnectivityTestTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========
