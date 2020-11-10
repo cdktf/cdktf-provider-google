@@ -89,7 +89,7 @@ export interface ComputeInstanceFromTemplateBootDiskInitializeParams {
   readonly labels?: { [key: string]: string };
   /** The size of the image in gigabytes. */
   readonly size?: number;
-  /** The GCE disk type. One of pd-standard, pd-ssd or pd-balanced. */
+  /** The Google Compute Engine disk type. One of pd-standard, pd-ssd or pd-balanced. */
   readonly type?: string;
 }
 export interface ComputeInstanceFromTemplateBootDisk {

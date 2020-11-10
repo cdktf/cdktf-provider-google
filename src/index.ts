@@ -298,6 +298,7 @@ export * from './os-config-patch-deployment';
 export * from './os-login-ssh-public-key';
 export * from './project';
 export * from './project-access-approval-settings';
+export * from './project-default-service-accounts';
 export * from './project-iam-audit-config';
 export * from './project-iam-binding';
 export * from './project-iam-custom-role';

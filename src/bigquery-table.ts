@@ -80,7 +80,7 @@ export interface BigqueryTableExternalDataConfiguration {
   readonly maxBadRecords?: number;
   /** A JSON schema for the external table. Schema is required for CSV and JSON formats and is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats when using external tables. */
   readonly schema?: string;
-  /** The data format. Supported values are: "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", and "DATSTORE_BACKUP". To use "GOOGLE_SHEETS" the scopes must include "googleapis.com/auth/drive.readonly". */
+  /** The data format. Supported values are: "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS" the scopes must include "googleapis.com/auth/drive.readonly". */
   readonly sourceFormat: string;
   /** A list of the fully-qualified URIs that point to your data in Google Cloud. */
   readonly sourceUris: string[];
