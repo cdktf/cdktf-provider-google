@@ -15,7 +15,7 @@ export interface StorageBucketConfig extends TerraformMetaArguments {
   readonly forceDestroy?: boolean;
   /** A set of key/value label pairs to assign to the bucket. */
   readonly labels?: { [key: string]: string };
-  /** The GCS location */
+  /** The Google Cloud Storage location */
   readonly location?: string;
   /** The name of the bucket. */
   readonly name: string;
@@ -83,7 +83,7 @@ export interface StorageBucketLifecycleRule {
 export interface StorageBucketLogging {
   /** The bucket that will receive log objects. */
   readonly logBucket: string;
-  /** The object prefix for log objects. If it's not provided, by default GCS sets this to this bucket's name. */
+  /** The object prefix for log objects. If it's not provided, by default Google Cloud Storage sets this to this bucket's name. */
   readonly logObjectPrefix?: string;
 }
 export interface StorageBucketRetentionPolicy {

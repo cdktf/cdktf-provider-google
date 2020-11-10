@@ -66,7 +66,7 @@ export interface ComputeInstanceTemplateDisk {
   readonly diskName?: string;
   /** The size of the image in gigabytes. If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be exactly 375GB. */
   readonly diskSizeGb?: number;
-  /** The GCE disk type. Can be either "pd-ssd", "local-ssd", "pd-balanced" or "pd-standard". */
+  /** The Google Compute Engine disk type. Can be either "pd-ssd", "local-ssd", "pd-balanced" or "pd-standard". */
   readonly diskType?: string;
   /** Specifies the disk interface to use for attaching this disk. */
   readonly interface?: string;
@@ -78,7 +78,7 @@ export interface ComputeInstanceTemplateDisk {
   readonly source?: string;
   /** The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. */
   readonly sourceImage?: string;
-  /** The type of GCE disk, can be either "SCRATCH" or "PERSISTENT". */
+  /** The type of Google Compute Engine disk, can be either "SCRATCH" or "PERSISTENT". */
   readonly type?: string;
   /** disk_encryption_key block */
   readonly diskEncryptionKey?: ComputeInstanceTemplateDiskDiskEncryptionKey[];

@@ -83,7 +83,7 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   readonly clientKey?: string;
   /** The number of seconds between connect retries. */
   readonly connectRetryInterval?: number;
-  /** Path to a SQL file in GCS from which slave instances are created. Format is gs://bucket/filename. */
+  /** Path to a SQL file in Google Cloud Storage from which slave instances are created. Format is gs://bucket/filename. */
   readonly dumpFilePath?: string;
   /** Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. */
   readonly failoverTarget?: boolean;
@@ -147,7 +147,7 @@ export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
 export interface SqlDatabaseInstanceSettings {
   /** This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND. */
   readonly activationPolicy?: string;
-  /** This property is only applicable to First Generation instances. First Generation instances are now deprecated, see https://cloud.google.com/sql/docs/mysql/deprecation-notice for information on how to upgrade to Second Generation instances. A list of Google App Engine (GAE) project names that are allowed to access this instance. */
+  /** This property is only applicable to First Generation instances. First Generation instances are now deprecated, see https://cloud.google.com/sql/docs/mysql/deprecation-notice for information on how to upgrade to Second Generation instances. A list of Google App Engine project names that are allowed to access this instance. */
   readonly authorizedGaeApplications?: string[];
   /** The availability type of the Cloud SQL instance, high availability
 (REGIONAL) or single zone (ZONAL). For MySQL instances, ensure that

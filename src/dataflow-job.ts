@@ -34,9 +34,9 @@ export interface DataflowJobConfig extends TerraformMetaArguments {
   readonly serviceAccountEmail?: string;
   /** The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". */
   readonly subnetwork?: string;
-  /** A writeable location on GCS for the Dataflow job to dump its temporary data. */
+  /** A writeable location on Google Cloud Storage for the Dataflow job to dump its temporary data. */
   readonly tempGcsLocation: string;
-  /** The GCS path to the Dataflow job template. */
+  /** The Google Cloud Storage path to the Dataflow job template. */
   readonly templateGcsPath: string;
   /** Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. */
   readonly transformNameMapping?: { [key: string]: string };
