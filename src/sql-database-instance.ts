@@ -131,7 +131,7 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   readonly authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[];
 }
 export interface SqlDatabaseInstanceSettingsLocationPreference {
-  /** A GAE application whose zone to remain in. Must be in the same region as this instance. */
+  /** A Google App Engine application whose zone to remain in. Must be in the same region as this instance. */
   readonly followGaeApplication?: string;
   /** The preferred compute engine zone. */
   readonly zone?: string;

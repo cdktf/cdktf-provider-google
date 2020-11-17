@@ -68,6 +68,21 @@ of the instances. */
 Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"] */
   readonly type?: string;
 }
+export interface ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
+  /** Specifies a fixed number of VM instances. This must be a positive
+integer. */
+  readonly fixed?: number;
+  /** Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%. */
+  readonly percent?: number;
+}
+export interface ComputeRegionAutoscalerAutoscalingPolicyScaleInControl {
+  /** How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above. */
+  readonly timeWindowSec?: number;
+  /** max_scaled_in_replicas block */
+  readonly maxScaledInReplicas?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas[];
+}
 export interface ComputeRegionAutoscalerAutoscalingPolicy {
   /** The number of seconds that the autoscaler should wait before it
 starts collecting information from a new instance. This prevents
@@ -98,6 +113,8 @@ allowed. */
   readonly loadBalancingUtilization?: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization[];
   /** metric block */
   readonly metric?: ComputeRegionAutoscalerAutoscalingPolicyMetric[];
+  /** scale_in_control block */
+  readonly scaleInControl?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControl[];
 }
 export interface ComputeRegionAutoscalerTimeouts {
   readonly create?: string;
