@@ -21,6 +21,7 @@ export interface GoogleProviderConfig {
   readonly cloudBillingCustomEndpoint?: string;
   readonly cloudBuildCustomEndpoint?: string;
   readonly cloudFunctionsCustomEndpoint?: string;
+  readonly cloudIdentityCustomEndpoint?: string;
   readonly cloudIotCustomEndpoint?: string;
   readonly cloudRunCustomEndpoint?: string;
   readonly cloudSchedulerCustomEndpoint?: string;
@@ -124,6 +125,7 @@ export class GoogleProvider extends TerraformProvider {
     this._cloudBillingCustomEndpoint = config.cloudBillingCustomEndpoint;
     this._cloudBuildCustomEndpoint = config.cloudBuildCustomEndpoint;
     this._cloudFunctionsCustomEndpoint = config.cloudFunctionsCustomEndpoint;
+    this._cloudIdentityCustomEndpoint = config.cloudIdentityCustomEndpoint;
     this._cloudIotCustomEndpoint = config.cloudIotCustomEndpoint;
     this._cloudRunCustomEndpoint = config.cloudRunCustomEndpoint;
     this._cloudSchedulerCustomEndpoint = config.cloudSchedulerCustomEndpoint;
@@ -416,6 +418,22 @@ export class GoogleProvider extends TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get cloudFunctionsCustomEndpointInput() {
     return this._cloudFunctionsCustomEndpoint
+  }
+
+  // cloud_identity_custom_endpoint - computed: false, optional: true, required: false
+  private _cloudIdentityCustomEndpoint?: string;
+  public get cloudIdentityCustomEndpoint() {
+    return this._cloudIdentityCustomEndpoint;
+  }
+  public set cloudIdentityCustomEndpoint(value: string  | undefined) {
+    this._cloudIdentityCustomEndpoint = value;
+  }
+  public resetCloudIdentityCustomEndpoint() {
+    this._cloudIdentityCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudIdentityCustomEndpointInput() {
+    return this._cloudIdentityCustomEndpoint
   }
 
   // cloud_iot_custom_endpoint - computed: false, optional: true, required: false
@@ -1462,6 +1480,7 @@ export class GoogleProvider extends TerraformProvider {
       cloud_billing_custom_endpoint: this._cloudBillingCustomEndpoint,
       cloud_build_custom_endpoint: this._cloudBuildCustomEndpoint,
       cloud_functions_custom_endpoint: this._cloudFunctionsCustomEndpoint,
+      cloud_identity_custom_endpoint: this._cloudIdentityCustomEndpoint,
       cloud_iot_custom_endpoint: this._cloudIotCustomEndpoint,
       cloud_run_custom_endpoint: this._cloudRunCustomEndpoint,
       cloud_scheduler_custom_endpoint: this._cloudSchedulerCustomEndpoint,

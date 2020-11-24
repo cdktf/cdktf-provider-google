@@ -171,6 +171,23 @@ export class DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow e
     return this.getStringAttribute('start_time');
   }
 }
+export class DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusion extends ComplexComputedList {
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // exclusion_name - computed: true, optional: false, required: false
+  public get exclusionName() {
+    return this.getStringAttribute('exclusion_name');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
 export class DataGoogleContainerClusterMaintenancePolicyRecurringWindow extends ComplexComputedList {
 
   // end_time - computed: true, optional: false, required: false
@@ -193,6 +210,11 @@ export class DataGoogleContainerClusterMaintenancePolicy extends ComplexComputed
   // daily_maintenance_window - computed: true, optional: false, required: false
   public get dailyMaintenanceWindow() {
     return this.interpolationForAttribute('daily_maintenance_window') as any;
+  }
+
+  // maintenance_exclusion - computed: true, optional: false, required: false
+  public get maintenanceExclusion() {
+    return this.interpolationForAttribute('maintenance_exclusion') as any;
   }
 
   // recurring_window - computed: true, optional: false, required: false

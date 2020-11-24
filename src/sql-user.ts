@@ -8,6 +8,10 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface SqlUserConfig extends TerraformMetaArguments {
+  /** The deletion policy for the user. Setting ABANDON allows the resource
+				to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
+				have been granted SQL roles. Possible values are: "ABANDON". */
+  readonly deletionPolicy?: string;
   /** The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created. */
   readonly host?: string;
   /** The name of the Cloud SQL instance. Changing this forces a new resource to be created. */
@@ -46,6 +50,7 @@ export class SqlUser extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._deletionPolicy = config.deletionPolicy;
     this._host = config.host;
     this._instance = config.instance;
     this._name = config.name;
@@ -57,6 +62,22 @@ export class SqlUser extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // deletion_policy - computed: false, optional: true, required: false
+  private _deletionPolicy?: string;
+  public get deletionPolicy() {
+    return this.getStringAttribute('deletion_policy');
+  }
+  public set deletionPolicy(value: string ) {
+    this._deletionPolicy = value;
+  }
+  public resetDeletionPolicy() {
+    this._deletionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionPolicyInput() {
+    return this._deletionPolicy
+  }
 
   // host - computed: false, optional: true, required: false
   private _host?: string;
@@ -159,6 +180,7 @@ export class SqlUser extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      deletion_policy: this._deletionPolicy,
       host: this._host,
       instance: this._instance,
       name: this._name,

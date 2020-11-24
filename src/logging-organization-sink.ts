@@ -8,8 +8,12 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface LoggingOrganizationSinkConfig extends TerraformMetaArguments {
+  /** A description of this sink. The maximum length of the description is 8000 characters. */
+  readonly description?: string;
   /** The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource. */
   readonly destination: string;
+  /** If set to True, then this sink is disabled and it does not export any log entries. */
+  readonly disabled?: boolean;
   /** The filter to apply when exporting logs. Only log entries that match the filter are exported. */
   readonly filter?: string;
   /** Whether or not to include children organizations in the sink export. If true, logs associated with child projects are also exported; otherwise only logs relating to the provided organization are included. */
@@ -57,7 +61,9 @@ export class LoggingOrganizationSink extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._description = config.description;
     this._destination = config.destination;
+    this._disabled = config.disabled;
     this._filter = config.filter;
     this._includeChildren = config.includeChildren;
     this._name = config.name;
@@ -70,6 +76,22 @@ export class LoggingOrganizationSink extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
   // destination - computed: false, optional: false, required: true
   private _destination: string;
   public get destination() {
@@ -81,6 +103,22 @@ export class LoggingOrganizationSink extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
     return this._destination
+  }
+
+  // disabled - computed: false, optional: true, required: false
+  private _disabled?: boolean;
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean ) {
+    this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
   }
 
   // filter - computed: false, optional: true, required: false
@@ -189,7 +227,9 @@ export class LoggingOrganizationSink extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      description: this._description,
       destination: this._destination,
+      disabled: this._disabled,
       filter: this._filter,
       include_children: this._includeChildren,
       name: this._name,

@@ -157,6 +157,11 @@ export interface ContainerClusterIpAllocationPolicy {
 export interface ContainerClusterMaintenancePolicyDailyMaintenanceWindow {
   readonly startTime: string;
 }
+export interface ContainerClusterMaintenancePolicyMaintenanceExclusion {
+  readonly endTime: string;
+  readonly exclusionName: string;
+  readonly startTime: string;
+}
 export interface ContainerClusterMaintenancePolicyRecurringWindow {
   readonly endTime: string;
   readonly recurrence: string;
@@ -165,6 +170,8 @@ export interface ContainerClusterMaintenancePolicyRecurringWindow {
 export interface ContainerClusterMaintenancePolicy {
   /** daily_maintenance_window block */
   readonly dailyMaintenanceWindow?: ContainerClusterMaintenancePolicyDailyMaintenanceWindow[];
+  /** maintenance_exclusion block */
+  readonly maintenanceExclusion?: ContainerClusterMaintenancePolicyMaintenanceExclusion[];
   /** recurring_window block */
   readonly recurringWindow?: ContainerClusterMaintenancePolicyRecurringWindow[];
 }
