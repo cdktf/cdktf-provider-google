@@ -3790,7 +3790,7 @@ jsii-pacmak@^1.11.0, jsii-pacmak@^1.9.0:
     xmlbuilder "^15.1.1"
     yargs "^16.1.1"
 
-jsii-reflect@^1.14.1, jsii-reflect@^1.15.0, jsii-reflect@^1.9.0:
+jsii-reflect@^1.15.0, jsii-reflect@^1.9.0:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.15.0.tgz#a65297a581b2b7bfbaa213d0bca7f76c693f718e"
   integrity sha512-8mKV5OVt/FwRdLNmr7By5T0HyhjjLlHsE5oiOta6NdkdMB7magjzZ1bucenJ2DdvPidX2dP6IDujfOKoXVNsjA==
