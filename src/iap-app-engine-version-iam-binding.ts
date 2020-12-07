@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapAppEngineVersionIamBindingConfig extends TerraformMetaArguments {
+export interface IapAppEngineVersionIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly appId: string;
   readonly members: string[];
   readonly project?: string;
@@ -23,9 +22,19 @@ export interface IapAppEngineVersionIamBindingCondition {
   readonly title: string;
 }
 
+function iapAppEngineVersionIamBindingConditionToTerraform(struct?: IapAppEngineVersionIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class IapAppEngineVersionIamBinding extends TerraformResource {
+export class IapAppEngineVersionIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -168,13 +177,13 @@ export class IapAppEngineVersionIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_id: this._appId,
-      members: this._members,
-      project: this._project,
-      role: this._role,
-      service: this._service,
-      version_id: this._versionId,
-      condition: this._condition,
+      app_id: cdktf.stringToTerraform(this._appId),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      service: cdktf.stringToTerraform(this._service),
+      version_id: cdktf.stringToTerraform(this._versionId),
+      condition: cdktf.listMapper(iapAppEngineVersionIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

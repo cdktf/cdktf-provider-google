@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeInterconnectAttachmentConfig extends TerraformMetaArguments {
+export interface ComputeInterconnectAttachmentConfig extends cdktf.TerraformMetaArguments {
   /** Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment */
   readonly adminEnabled?: boolean;
@@ -63,7 +61,7 @@ using PARTNER type this will be managed upstream. */
   /** timeouts block */
   readonly timeouts?: ComputeInterconnectAttachmentTimeouts;
 }
-export class ComputeInterconnectAttachmentPrivateInterconnectInfo extends ComplexComputedList {
+export class ComputeInterconnectAttachmentPrivateInterconnectInfo extends cdktf.ComplexComputedList {
 
   // tag8021q - computed: true, optional: false, required: false
   public get tag8021Q() {
@@ -76,9 +74,19 @@ export interface ComputeInterconnectAttachmentTimeouts {
   readonly update?: string;
 }
 
+function computeInterconnectAttachmentTimeoutsToTerraform(struct?: ComputeInterconnectAttachmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeInterconnectAttachment extends TerraformResource {
+export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -372,19 +380,19 @@ export class ComputeInterconnectAttachment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_enabled: this._adminEnabled,
-      bandwidth: this._bandwidth,
-      candidate_subnets: this._candidateSubnets,
-      description: this._description,
-      edge_availability_domain: this._edgeAvailabilityDomain,
-      interconnect: this._interconnect,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      router: this._router,
-      type: this._type,
-      vlan_tag8021q: this._vlanTag8021Q,
-      timeouts: this._timeouts,
+      admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
+      bandwidth: cdktf.stringToTerraform(this._bandwidth),
+      candidate_subnets: cdktf.listMapper(cdktf.stringToTerraform)(this._candidateSubnets),
+      description: cdktf.stringToTerraform(this._description),
+      edge_availability_domain: cdktf.stringToTerraform(this._edgeAvailabilityDomain),
+      interconnect: cdktf.stringToTerraform(this._interconnect),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      router: cdktf.stringToTerraform(this._router),
+      type: cdktf.stringToTerraform(this._type),
+      vlan_tag8021q: cdktf.numberToTerraform(this._vlanTag8021Q),
+      timeouts: computeInterconnectAttachmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

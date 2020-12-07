@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OrganizationIamCustomRoleConfig extends TerraformMetaArguments {
+export interface OrganizationIamCustomRoleConfig extends cdktf.TerraformMetaArguments {
   /** A human-readable description for the role. */
   readonly description?: string;
   /** The numeric ID of the organization in which you want to create a custom role. */
@@ -24,7 +23,7 @@ export interface OrganizationIamCustomRoleConfig extends TerraformMetaArguments 
 
 // Resource
 
-export class OrganizationIamCustomRole extends TerraformResource {
+export class OrganizationIamCustomRole extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -158,12 +157,12 @@ export class OrganizationIamCustomRole extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      org_id: this._orgId,
-      permissions: this._permissions,
-      role_id: this._roleId,
-      stage: this._stage,
-      title: this._title,
+      description: cdktf.stringToTerraform(this._description),
+      org_id: cdktf.stringToTerraform(this._orgId),
+      permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._permissions),
+      role_id: cdktf.stringToTerraform(this._roleId),
+      stage: cdktf.stringToTerraform(this._stage),
+      title: cdktf.stringToTerraform(this._title),
     };
   }
 }

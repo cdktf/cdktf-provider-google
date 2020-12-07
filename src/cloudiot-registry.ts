@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudiotRegistryConfig extends TerraformMetaArguments {
+export interface CloudiotRegistryConfig extends cdktf.TerraformMetaArguments {
   /** Activate or deactivate HTTP. */
   readonly httpConfig?: { [key: string]: string };
   /** The default logging verbosity for activity from devices in this
@@ -37,6 +36,14 @@ export interface CloudiotRegistryCredentials {
   /** A public key certificate format and data. */
   readonly publicKeyCertificate: { [key: string]: string };
 }
+
+function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredentials): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    public_key_certificate: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.publicKeyCertificate),
+  }
+}
+
 export interface CloudiotRegistryEventNotificationConfigs {
   /** PubSub topic name to publish device events. */
   readonly pubsubTopicName: string;
@@ -47,15 +54,34 @@ value can only be used for the last 'event_notification_configs'
 item. */
   readonly subfolderMatches?: string;
 }
+
+function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: CloudiotRegistryEventNotificationConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_topic_name: cdktf.stringToTerraform(struct!.pubsubTopicName),
+    subfolder_matches: cdktf.stringToTerraform(struct!.subfolderMatches),
+  }
+}
+
 export interface CloudiotRegistryTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudiotRegistry extends TerraformResource {
+export class CloudiotRegistry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -256,16 +282,16 @@ export class CloudiotRegistry extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      http_config: this._httpConfig,
-      log_level: this._logLevel,
-      mqtt_config: this._mqttConfig,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      state_notification_config: this._stateNotificationConfig,
-      credentials: this._credentials,
-      event_notification_configs: this._eventNotificationConfigs,
-      timeouts: this._timeouts,
+      http_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._httpConfig),
+      log_level: cdktf.stringToTerraform(this._logLevel),
+      mqtt_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._mqttConfig),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      state_notification_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._stateNotificationConfig),
+      credentials: cdktf.listMapper(cloudiotRegistryCredentialsToTerraform)(this._credentials),
+      event_notification_configs: cdktf.listMapper(cloudiotRegistryEventNotificationConfigsToTerraform)(this._eventNotificationConfigs),
+      timeouts: cloudiotRegistryTimeoutsToTerraform(this._timeouts),
     };
   }
 }

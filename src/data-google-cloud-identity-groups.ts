@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleCloudIdentityGroupsConfig extends TerraformMetaArguments {
+export interface DataGoogleCloudIdentityGroupsConfig extends cdktf.TerraformMetaArguments {
   /** The resource name of the entity under which this Group resides in the
 Cloud Identity resource hierarchy.
 
@@ -16,7 +14,7 @@ Must be of the form identitysources/{identity_source_id} for external-identity-m
 groups or customers/{customer_id} for Google Groups. */
   readonly parent: string;
 }
-export class DataGoogleCloudIdentityGroupsGroupsGroupKey extends ComplexComputedList {
+export class DataGoogleCloudIdentityGroupsGroupsGroupKey extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -28,7 +26,7 @@ export class DataGoogleCloudIdentityGroupsGroupsGroupKey extends ComplexComputed
     return this.getStringAttribute('namespace');
   }
 }
-export class DataGoogleCloudIdentityGroupsGroups extends ComplexComputedList {
+export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedList {
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -73,7 +71,7 @@ export class DataGoogleCloudIdentityGroupsGroups extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleCloudIdentityGroups extends TerraformDataSource {
+export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -126,7 +124,7 @@ export class DataGoogleCloudIdentityGroups extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      parent: this._parent,
+      parent: cdktf.stringToTerraform(this._parent),
     };
   }
 }

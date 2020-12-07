@@ -2,15 +2,13 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleMonitoringUptimeCheckIpsConfig extends TerraformMetaArguments {
+export interface DataGoogleMonitoringUptimeCheckIpsConfig extends cdktf.TerraformMetaArguments {
 }
-export class DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps extends ComplexComputedList {
+export class DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps extends cdktf.ComplexComputedList {
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -30,7 +28,7 @@ export class DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps extends ComplexCom
 
 // Resource
 
-export class DataGoogleMonitoringUptimeCheckIps extends TerraformDataSource {
+export class DataGoogleMonitoringUptimeCheckIps extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER

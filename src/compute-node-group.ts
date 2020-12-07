@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNodeGroupConfig extends TerraformMetaArguments {
+export interface ComputeNodeGroupConfig extends cdktf.TerraformMetaArguments {
   /** An optional textual description of the resource. */
   readonly description?: string;
   /** Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. */
@@ -41,15 +40,35 @@ than or equal to max-nodes. The default value is 0. */
   restart their hosted VMs on minimal servers. Possible values: ["OFF", "ON", "ONLY_SCALE_OUT"] */
   readonly mode?: string;
 }
+
+function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNodeGroupAutoscalingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_nodes: cdktf.numberToTerraform(struct!.maxNodes),
+    min_nodes: cdktf.numberToTerraform(struct!.minNodes),
+    mode: cdktf.stringToTerraform(struct!.mode),
+  }
+}
+
 export interface ComputeNodeGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeNodeGroup extends TerraformResource {
+export class ComputeNodeGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -240,15 +259,15 @@ export class ComputeNodeGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      maintenance_policy: this._maintenancePolicy,
-      name: this._name,
-      node_template: this._nodeTemplate,
-      project: this._project,
-      size: this._size,
-      zone: this._zone,
-      autoscaling_policy: this._autoscalingPolicy,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      maintenance_policy: cdktf.stringToTerraform(this._maintenancePolicy),
+      name: cdktf.stringToTerraform(this._name),
+      node_template: cdktf.stringToTerraform(this._nodeTemplate),
+      project: cdktf.stringToTerraform(this._project),
+      size: cdktf.numberToTerraform(this._size),
+      zone: cdktf.stringToTerraform(this._zone),
+      autoscaling_policy: cdktf.listMapper(computeNodeGroupAutoscalingPolicyToTerraform)(this._autoscalingPolicy),
+      timeouts: computeNodeGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

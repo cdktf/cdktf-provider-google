@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleKmsKeyRingConfig extends TerraformMetaArguments {
+export interface DataGoogleKmsKeyRingConfig extends cdktf.TerraformMetaArguments {
   /** The location for the KeyRing.
 A full list of valid locations can be found by running 'gcloud kms locations list'. */
   readonly location: string;
@@ -18,7 +17,7 @@ A full list of valid locations can be found by running 'gcloud kms locations lis
 
 // Resource
 
-export class DataGoogleKmsKeyRing extends TerraformDataSource {
+export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -102,9 +101,9 @@ export class DataGoogleKmsKeyRing extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      project: this._project,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRouterInterfaceConfig extends TerraformMetaArguments {
+export interface ComputeRouterInterfaceConfig extends cdktf.TerraformMetaArguments {
   /** The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified. */
   readonly interconnectAttachment?: string;
   /** IP address and range of the interface. The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created. */
@@ -30,9 +29,18 @@ export interface ComputeRouterInterfaceTimeouts {
   readonly delete?: string;
 }
 
+function computeRouterInterfaceTimeoutsToTerraform(struct?: ComputeRouterInterfaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeRouterInterface extends TerraformResource {
+export class ComputeRouterInterface extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -196,14 +204,14 @@ export class ComputeRouterInterface extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      interconnect_attachment: this._interconnectAttachment,
-      ip_range: this._ipRange,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      router: this._router,
-      vpn_tunnel: this._vpnTunnel,
-      timeouts: this._timeouts,
+      interconnect_attachment: cdktf.stringToTerraform(this._interconnectAttachment),
+      ip_range: cdktf.stringToTerraform(this._ipRange),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      router: cdktf.stringToTerraform(this._router),
+      vpn_tunnel: cdktf.stringToTerraform(this._vpnTunnel),
+      timeouts: computeRouterInterfaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

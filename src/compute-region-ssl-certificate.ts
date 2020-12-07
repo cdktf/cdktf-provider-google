@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionSslCertificateConfig extends TerraformMetaArguments {
+export interface ComputeRegionSslCertificateConfig extends cdktf.TerraformMetaArguments {
   /** The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
 The chain must include at least one intermediate cert. */
@@ -40,9 +39,18 @@ export interface ComputeRegionSslCertificateTimeouts {
   readonly delete?: string;
 }
 
+function computeRegionSslCertificateTimeoutsToTerraform(struct?: ComputeRegionSslCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionSslCertificate extends TerraformResource {
+export class ComputeRegionSslCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -221,14 +229,14 @@ export class ComputeRegionSslCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      certificate: this._certificate,
-      description: this._description,
-      name: this._name,
-      name_prefix: this._namePrefix,
-      private_key: this._privateKey,
-      project: this._project,
-      region: this._region,
-      timeouts: this._timeouts,
+      certificate: cdktf.stringToTerraform(this._certificate),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      name_prefix: cdktf.stringToTerraform(this._namePrefix),
+      private_key: cdktf.stringToTerraform(this._privateKey),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      timeouts: computeRegionSslCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

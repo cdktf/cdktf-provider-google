@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageNotificationConfig extends TerraformMetaArguments {
+export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments {
   /** The name of the bucket. */
   readonly bucket: string;
   /**  A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription */
@@ -24,7 +23,7 @@ export interface StorageNotificationConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class StorageNotification extends TerraformResource {
+export class StorageNotification extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -161,12 +160,12 @@ export class StorageNotification extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      custom_attributes: this._customAttributes,
-      event_types: this._eventTypes,
-      object_name_prefix: this._objectNamePrefix,
-      payload_format: this._payloadFormat,
-      topic: this._topic,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      custom_attributes: cdktf.hashMapper(cdktf.anyToTerraform)(this._customAttributes),
+      event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._eventTypes),
+      object_name_prefix: cdktf.stringToTerraform(this._objectNamePrefix),
+      payload_format: cdktf.stringToTerraform(this._payloadFormat),
+      topic: cdktf.stringToTerraform(this._topic),
     };
   }
 }

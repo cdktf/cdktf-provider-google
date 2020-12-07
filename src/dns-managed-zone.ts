@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DnsManagedZoneConfig extends TerraformMetaArguments {
+export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   /** A textual description field. Defaults to 'Managed by Terraform'. */
   readonly description?: string;
   /** The DNS name of this managed zone, for instance "example.com.". */
@@ -48,6 +47,17 @@ to sign all other types of resource record sets. Possible values: ["keySigning",
   /** Identifies what kind of resource this is */
   readonly kind?: string;
 }
+
+function dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform(struct?: DnsManagedZoneDnssecConfigDefaultKeySpecs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    algorithm: cdktf.stringToTerraform(struct!.algorithm),
+    key_length: cdktf.numberToTerraform(struct!.keyLength),
+    key_type: cdktf.stringToTerraform(struct!.keyType),
+    kind: cdktf.stringToTerraform(struct!.kind),
+  }
+}
+
 export interface DnsManagedZoneDnssecConfig {
   /** Identifies what kind of resource this is */
   readonly kind?: string;
@@ -59,6 +69,17 @@ non_existence can only be updated when the state is 'off'. Possible values: ["ns
   /** default_key_specs block */
   readonly defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[];
 }
+
+function dnsManagedZoneDnssecConfigToTerraform(struct?: DnsManagedZoneDnssecConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kind: cdktf.stringToTerraform(struct!.kind),
+    non_existence: cdktf.stringToTerraform(struct!.nonExistence),
+    state: cdktf.stringToTerraform(struct!.state),
+    default_key_specs: cdktf.listMapper(dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform)(struct!.defaultKeySpecs),
+  }
+}
+
 export interface DnsManagedZoneForwardingConfigTargetNameServers {
   /** Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
@@ -67,39 +88,98 @@ to the Internet. When set to 'private', Cloud DNS will always send queries throu
   /** IPv4 address of a target name server. */
   readonly ipv4Address: string;
 }
+
+function dnsManagedZoneForwardingConfigTargetNameServersToTerraform(struct?: DnsManagedZoneForwardingConfigTargetNameServers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    forwarding_path: cdktf.stringToTerraform(struct!.forwardingPath),
+    ipv4_address: cdktf.stringToTerraform(struct!.ipv4Address),
+  }
+}
+
 export interface DnsManagedZoneForwardingConfig {
   /** target_name_servers block */
   readonly targetNameServers: DnsManagedZoneForwardingConfigTargetNameServers[];
 }
+
+function dnsManagedZoneForwardingConfigToTerraform(struct?: DnsManagedZoneForwardingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_name_servers: cdktf.listMapper(dnsManagedZoneForwardingConfigTargetNameServersToTerraform)(struct!.targetNameServers),
+  }
+}
+
 export interface DnsManagedZonePeeringConfigTargetNetwork {
   /** The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}' */
   readonly networkUrl: string;
 }
+
+function dnsManagedZonePeeringConfigTargetNetworkToTerraform(struct?: DnsManagedZonePeeringConfigTargetNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_url: cdktf.stringToTerraform(struct!.networkUrl),
+  }
+}
+
 export interface DnsManagedZonePeeringConfig {
   /** target_network block */
   readonly targetNetwork: DnsManagedZonePeeringConfigTargetNetwork[];
 }
+
+function dnsManagedZonePeeringConfigToTerraform(struct?: DnsManagedZonePeeringConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_network: cdktf.listMapper(dnsManagedZonePeeringConfigTargetNetworkToTerraform)(struct!.targetNetwork),
+  }
+}
+
 export interface DnsManagedZonePrivateVisibilityConfigNetworks {
   /** The id or fully qualified URL of the VPC network to bind to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}' */
   readonly networkUrl: string;
 }
+
+function dnsManagedZonePrivateVisibilityConfigNetworksToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigNetworks): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_url: cdktf.stringToTerraform(struct!.networkUrl),
+  }
+}
+
 export interface DnsManagedZonePrivateVisibilityConfig {
   /** networks block */
   readonly networks: DnsManagedZonePrivateVisibilityConfigNetworks[];
 }
+
+function dnsManagedZonePrivateVisibilityConfigToTerraform(struct?: DnsManagedZonePrivateVisibilityConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    networks: cdktf.listMapper(dnsManagedZonePrivateVisibilityConfigNetworksToTerraform)(struct!.networks),
+  }
+}
+
 export interface DnsManagedZoneTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DnsManagedZone extends TerraformResource {
+export class DnsManagedZone extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -336,18 +416,18 @@ export class DnsManagedZone extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      dns_name: this._dnsName,
-      force_destroy: this._forceDestroy,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      visibility: this._visibility,
-      dnssec_config: this._dnssecConfig,
-      forwarding_config: this._forwardingConfig,
-      peering_config: this._peeringConfig,
-      private_visibility_config: this._privateVisibilityConfig,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      dns_name: cdktf.stringToTerraform(this._dnsName),
+      force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      visibility: cdktf.stringToTerraform(this._visibility),
+      dnssec_config: cdktf.listMapper(dnsManagedZoneDnssecConfigToTerraform)(this._dnssecConfig),
+      forwarding_config: cdktf.listMapper(dnsManagedZoneForwardingConfigToTerraform)(this._forwardingConfig),
+      peering_config: cdktf.listMapper(dnsManagedZonePeeringConfigToTerraform)(this._peeringConfig),
+      private_visibility_config: cdktf.listMapper(dnsManagedZonePrivateVisibilityConfigToTerraform)(this._privateVisibilityConfig),
+      timeouts: dnsManagedZoneTimeoutsToTerraform(this._timeouts),
     };
   }
 }

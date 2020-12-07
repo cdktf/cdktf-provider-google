@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OrganizationIamBindingConfig extends TerraformMetaArguments {
+export interface OrganizationIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly members: string[];
   /** The numeric ID of the organization in which you want to manage the audit logging config. */
   readonly orgId: string;
@@ -21,9 +20,19 @@ export interface OrganizationIamBindingCondition {
   readonly title: string;
 }
 
+function organizationIamBindingConditionToTerraform(struct?: OrganizationIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class OrganizationIamBinding extends TerraformResource {
+export class OrganizationIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -121,10 +130,10 @@ export class OrganizationIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      members: this._members,
-      org_id: this._orgId,
-      role: this._role,
-      condition: this._condition,
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      org_id: cdktf.stringToTerraform(this._orgId),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(organizationIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

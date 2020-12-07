@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigtableAppProfileConfig extends TerraformMetaArguments {
+export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   /** The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'. */
   readonly appProfileId: string;
   /** Long form description of the use case for this app profile. */
@@ -33,15 +32,34 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
   /** The cluster to which read/write requests should be routed. */
   readonly clusterId: string;
 }
+
+function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: BigtableAppProfileSingleClusterRouting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_transactional_writes: cdktf.booleanToTerraform(struct!.allowTransactionalWrites),
+    cluster_id: cdktf.stringToTerraform(struct!.clusterId),
+  }
+}
+
 export interface BigtableAppProfileTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BigtableAppProfile extends TerraformResource {
+export class BigtableAppProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -213,14 +231,14 @@ export class BigtableAppProfile extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_profile_id: this._appProfileId,
-      description: this._description,
-      ignore_warnings: this._ignoreWarnings,
-      instance: this._instance,
-      multi_cluster_routing_use_any: this._multiClusterRoutingUseAny,
-      project: this._project,
-      single_cluster_routing: this._singleClusterRouting,
-      timeouts: this._timeouts,
+      app_profile_id: cdktf.stringToTerraform(this._appProfileId),
+      description: cdktf.stringToTerraform(this._description),
+      ignore_warnings: cdktf.booleanToTerraform(this._ignoreWarnings),
+      instance: cdktf.stringToTerraform(this._instance),
+      multi_cluster_routing_use_any: cdktf.booleanToTerraform(this._multiClusterRoutingUseAny),
+      project: cdktf.stringToTerraform(this._project),
+      single_cluster_routing: cdktf.listMapper(bigtableAppProfileSingleClusterRoutingToTerraform)(this._singleClusterRouting),
+      timeouts: bigtableAppProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BinaryAuthorizationAttestorIamPolicyConfig extends TerraformMetaArguments {
+export interface BinaryAuthorizationAttestorIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly attestor: string;
   readonly policyData: string;
   readonly project?: string;
@@ -15,7 +14,7 @@ export interface BinaryAuthorizationAttestorIamPolicyConfig extends TerraformMet
 
 // Resource
 
-export class BinaryAuthorizationAttestorIamPolicy extends TerraformResource {
+export class BinaryAuthorizationAttestorIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class BinaryAuthorizationAttestorIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      attestor: this._attestor,
-      policy_data: this._policyData,
-      project: this._project,
+      attestor: cdktf.stringToTerraform(this._attestor),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

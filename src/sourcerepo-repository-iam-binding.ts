@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SourcerepoRepositoryIamBindingConfig extends TerraformMetaArguments {
+export interface SourcerepoRepositoryIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly members: string[];
   readonly project?: string;
   readonly repository: string;
@@ -21,9 +20,19 @@ export interface SourcerepoRepositoryIamBindingCondition {
   readonly title: string;
 }
 
+function sourcerepoRepositoryIamBindingConditionToTerraform(struct?: SourcerepoRepositoryIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class SourcerepoRepositoryIamBinding extends TerraformResource {
+export class SourcerepoRepositoryIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class SourcerepoRepositoryIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      members: this._members,
-      project: this._project,
-      repository: this._repository,
-      role: this._role,
-      condition: this._condition,
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      project: cdktf.stringToTerraform(this._project),
+      repository: cdktf.stringToTerraform(this._repository),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(sourcerepoRepositoryIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

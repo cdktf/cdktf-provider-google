@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface TpuNodeConfig extends TerraformMetaArguments {
+export interface TpuNodeConfig extends cdktf.TerraformMetaArguments {
   /** The type of hardware accelerators associated with this node. */
   readonly acceleratorType: string;
   /** The CIDR block that the TPU node will use when selecting an IP
@@ -47,7 +45,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
   /** timeouts block */
   readonly timeouts?: TpuNodeTimeouts;
 }
-export class TpuNodeNetworkEndpoints extends ComplexComputedList {
+export class TpuNodeNetworkEndpoints extends cdktf.ComplexComputedList {
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -63,15 +61,33 @@ export interface TpuNodeSchedulingConfig {
   /** Defines whether the TPU instance is preemptible. */
   readonly preemptible: boolean;
 }
+
+function tpuNodeSchedulingConfigToTerraform(struct?: TpuNodeSchedulingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+  }
+}
+
 export interface TpuNodeTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class TpuNode extends TerraformResource {
+export class TpuNode extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -307,18 +323,18 @@ export class TpuNode extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      accelerator_type: this._acceleratorType,
-      cidr_block: this._cidrBlock,
-      description: this._description,
-      labels: this._labels,
-      name: this._name,
-      network: this._network,
-      project: this._project,
-      tensorflow_version: this._tensorflowVersion,
-      use_service_networking: this._useServiceNetworking,
-      zone: this._zone,
-      scheduling_config: this._schedulingConfig,
-      timeouts: this._timeouts,
+      accelerator_type: cdktf.stringToTerraform(this._acceleratorType),
+      cidr_block: cdktf.stringToTerraform(this._cidrBlock),
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      project: cdktf.stringToTerraform(this._project),
+      tensorflow_version: cdktf.stringToTerraform(this._tensorflowVersion),
+      use_service_networking: cdktf.booleanToTerraform(this._useServiceNetworking),
+      zone: cdktf.stringToTerraform(this._zone),
+      scheduling_config: cdktf.listMapper(tpuNodeSchedulingConfigToTerraform)(this._schedulingConfig),
+      timeouts: tpuNodeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

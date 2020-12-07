@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingBillingAccountSinkConfig extends TerraformMetaArguments {
+export interface LoggingBillingAccountSinkConfig extends cdktf.TerraformMetaArguments {
   /** The billing account exported to the sink. */
   readonly billingAccount: string;
   /** A description of this sink. The maximum length of the description is 8000 characters. */
@@ -29,6 +28,14 @@ export interface LoggingBillingAccountSinkBigqueryOptions {
   /** Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone. */
   readonly usePartitionedTables: boolean;
 }
+
+function loggingBillingAccountSinkBigqueryOptionsToTerraform(struct?: LoggingBillingAccountSinkBigqueryOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    use_partitioned_tables: cdktf.booleanToTerraform(struct!.usePartitionedTables),
+  }
+}
+
 export interface LoggingBillingAccountSinkExclusions {
   /** A description of this exclusion. */
   readonly description?: string;
@@ -40,9 +47,20 @@ export interface LoggingBillingAccountSinkExclusions {
   readonly name: string;
 }
 
+function loggingBillingAccountSinkExclusionsToTerraform(struct?: LoggingBillingAccountSinkExclusions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    filter: cdktf.stringToTerraform(struct!.filter),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
 // Resource
 
-export class LoggingBillingAccountSink extends TerraformResource {
+export class LoggingBillingAccountSink extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,14 +226,14 @@ export class LoggingBillingAccountSink extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      billing_account: this._billingAccount,
-      description: this._description,
-      destination: this._destination,
-      disabled: this._disabled,
-      filter: this._filter,
-      name: this._name,
-      bigquery_options: this._bigqueryOptions,
-      exclusions: this._exclusions,
+      billing_account: cdktf.stringToTerraform(this._billingAccount),
+      description: cdktf.stringToTerraform(this._description),
+      destination: cdktf.stringToTerraform(this._destination),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      filter: cdktf.stringToTerraform(this._filter),
+      name: cdktf.stringToTerraform(this._name),
+      bigquery_options: cdktf.listMapper(loggingBillingAccountSinkBigqueryOptionsToTerraform)(this._bigqueryOptions),
+      exclusions: cdktf.listMapper(loggingBillingAccountSinkExclusionsToTerraform)(this._exclusions),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataCatalogEntryGroupIamMemberConfig extends TerraformMetaArguments {
+export interface DataCatalogEntryGroupIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly entryGroup: string;
   readonly member: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface DataCatalogEntryGroupIamMemberCondition {
   readonly title: string;
 }
 
+function dataCatalogEntryGroupIamMemberConditionToTerraform(struct?: DataCatalogEntryGroupIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class DataCatalogEntryGroupIamMember extends TerraformResource {
+export class DataCatalogEntryGroupIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class DataCatalogEntryGroupIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      entry_group: this._entryGroup,
-      member: this._member,
-      project: this._project,
-      region: this._region,
-      role: this._role,
-      condition: this._condition,
+      entry_group: cdktf.stringToTerraform(this._entryGroup),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(dataCatalogEntryGroupIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

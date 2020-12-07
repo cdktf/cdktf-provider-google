@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringMetricDescriptorConfig extends TerraformMetaArguments {
+export interface MonitoringMetricDescriptorConfig extends cdktf.TerraformMetaArguments {
   /** A detailed description of the metric, which can be used in documentation. */
   readonly description: string;
   /** A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count". */
@@ -57,21 +56,50 @@ export interface MonitoringMetricDescriptorLabels {
   /** The type of data that can be assigned to the label. Default value: "STRING" Possible values: ["STRING", "BOOL", "INT64"] */
   readonly valueType?: string;
 }
+
+function monitoringMetricDescriptorLabelsToTerraform(struct?: MonitoringMetricDescriptorLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    key: cdktf.stringToTerraform(struct!.key),
+    value_type: cdktf.stringToTerraform(struct!.valueType),
+  }
+}
+
 export interface MonitoringMetricDescriptorMetadata {
   /** The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'. */
   readonly ingestDelay?: string;
   /** The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'. */
   readonly samplePeriod?: string;
 }
+
+function monitoringMetricDescriptorMetadataToTerraform(struct?: MonitoringMetricDescriptorMetadata): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ingest_delay: cdktf.stringToTerraform(struct!.ingestDelay),
+    sample_period: cdktf.stringToTerraform(struct!.samplePeriod),
+  }
+}
+
 export interface MonitoringMetricDescriptorTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetricDescriptorTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringMetricDescriptor extends TerraformResource {
+export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -287,17 +315,17 @@ export class MonitoringMetricDescriptor extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      launch_stage: this._launchStage,
-      metric_kind: this._metricKind,
-      project: this._project,
-      type: this._type,
-      unit: this._unit,
-      value_type: this._valueType,
-      labels: this._labels,
-      metadata: this._metadata,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      launch_stage: cdktf.stringToTerraform(this._launchStage),
+      metric_kind: cdktf.stringToTerraform(this._metricKind),
+      project: cdktf.stringToTerraform(this._project),
+      type: cdktf.stringToTerraform(this._type),
+      unit: cdktf.stringToTerraform(this._unit),
+      value_type: cdktf.stringToTerraform(this._valueType),
+      labels: cdktf.listMapper(monitoringMetricDescriptorLabelsToTerraform)(this._labels),
+      metadata: cdktf.listMapper(monitoringMetricDescriptorMetadataToTerraform)(this._metadata),
+      timeouts: monitoringMetricDescriptorTimeoutsToTerraform(this._timeouts),
     };
   }
 }

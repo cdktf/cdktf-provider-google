@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FolderIamBindingConfig extends TerraformMetaArguments {
+export interface FolderIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly folder: string;
   readonly members: string[];
   readonly role: string;
@@ -20,9 +19,19 @@ export interface FolderIamBindingCondition {
   readonly title: string;
 }
 
+function folderIamBindingConditionToTerraform(struct?: FolderIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class FolderIamBinding extends TerraformResource {
+export class FolderIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class FolderIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      folder: this._folder,
-      members: this._members,
-      role: this._role,
-      condition: this._condition,
+      folder: cdktf.stringToTerraform(this._folder),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(folderIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeSslPolicyConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeSslPolicyConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -21,7 +20,7 @@ character, which cannot be a dash. */
 
 // Resource
 
-export class DataGoogleComputeSslPolicy extends TerraformDataSource {
+export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -126,8 +125,8 @@ export class DataGoogleComputeSslPolicy extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

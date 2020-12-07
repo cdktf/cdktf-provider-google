@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleKmsSecretConfig extends TerraformMetaArguments {
+export interface DataGoogleKmsSecretConfig extends cdktf.TerraformMetaArguments {
   readonly additionalAuthenticatedData?: string;
   readonly ciphertext: string;
   readonly cryptoKey: string;
@@ -15,7 +14,7 @@ export interface DataGoogleKmsSecretConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DataGoogleKmsSecret extends TerraformDataSource {
+export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class DataGoogleKmsSecret extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_authenticated_data: this._additionalAuthenticatedData,
-      ciphertext: this._ciphertext,
-      crypto_key: this._cryptoKey,
+      additional_authenticated_data: cdktf.stringToTerraform(this._additionalAuthenticatedData),
+      ciphertext: cdktf.stringToTerraform(this._ciphertext),
+      crypto_key: cdktf.stringToTerraform(this._cryptoKey),
     };
   }
 }

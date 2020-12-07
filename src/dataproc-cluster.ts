@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataprocClusterConfig extends TerraformMetaArguments {
+export interface DataprocClusterConfig extends cdktf.TerraformMetaArguments {
   /** The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a terraform apply */
   readonly gracefulDecommissionTimeout?: string;
   /** The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster. */
@@ -27,10 +26,26 @@ export interface DataprocClusterClusterConfigAutoscalingConfig {
   /** The autoscaling policy used by the cluster. */
   readonly policyUri: string;
 }
+
+function dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct?: DataprocClusterClusterConfigAutoscalingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    policy_uri: cdktf.stringToTerraform(struct!.policyUri),
+  }
+}
+
 export interface DataprocClusterClusterConfigEncryptionConfig {
   /** The Cloud KMS key name to use for PD disk encryption for all instances in the cluster. */
   readonly kmsKeyName: string;
 }
+
+function dataprocClusterClusterConfigEncryptionConfigToTerraform(struct?: DataprocClusterClusterConfigEncryptionConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface DataprocClusterClusterConfigGceClusterConfig {
   /** By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in. */
   readonly internalIpOnly?: boolean;
@@ -49,18 +64,51 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
   /** The GCP zone where your data is stored and used (i.e. where the master and the worker nodes will be created in). If region is set to 'global' (default) then zone is mandatory, otherwise GCP is able to make use of Auto Zone Placement to determine this automatically for you. Note: This setting additionally determines and restricts which computing resources are available for use with other configs such as cluster_config.master_config.machine_type and cluster_config.worker_config.machine_type. */
   readonly zone?: string;
 }
+
+function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    internal_ip_only: cdktf.booleanToTerraform(struct!.internalIpOnly),
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    network: cdktf.stringToTerraform(struct!.network),
+    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceAccountScopes),
+    subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
+    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    zone: cdktf.stringToTerraform(struct!.zone),
+  }
+}
+
 export interface DataprocClusterClusterConfigInitializationAction {
   /** The script to be executed during initialization of the cluster. The script must be a GCS file with a gs:// prefix. */
   readonly script: string;
   /** The maximum duration (in seconds) which script is allowed to take to execute its action. GCP will default to a predetermined computed value if not set (currently 300). */
   readonly timeoutSec?: number;
 }
+
+function dataprocClusterClusterConfigInitializationActionToTerraform(struct?: DataprocClusterClusterConfigInitializationAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    script: cdktf.stringToTerraform(struct!.script),
+    timeout_sec: cdktf.numberToTerraform(struct!.timeoutSec),
+  }
+}
+
 export interface DataprocClusterClusterConfigMasterConfigAccelerators {
   /** The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8. */
   readonly acceleratorCount: number;
   /** The short name of the accelerator type to expose to this instance. For example, nvidia-tesla-k80. */
   readonly acceleratorType: string;
 }
+
+function dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigMasterConfigAccelerators): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    accelerator_count: cdktf.numberToTerraform(struct!.acceleratorCount),
+    accelerator_type: cdktf.stringToTerraform(struct!.acceleratorType),
+  }
+}
+
 export interface DataprocClusterClusterConfigMasterConfigDiskConfig {
   /** Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories. */
   readonly bootDiskSizeGb?: number;
@@ -69,6 +117,16 @@ export interface DataprocClusterClusterConfigMasterConfigDiskConfig {
   /** The amount of local SSD disks that will be attached to each master cluster node. Defaults to 0. */
   readonly numLocalSsds?: number;
 }
+
+function dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigDiskConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    boot_disk_size_gb: cdktf.numberToTerraform(struct!.bootDiskSizeGb),
+    boot_disk_type: cdktf.stringToTerraform(struct!.bootDiskType),
+    num_local_ssds: cdktf.numberToTerraform(struct!.numLocalSsds),
+  }
+}
+
 export interface DataprocClusterClusterConfigMasterConfig {
   /** The URI for the image to use for this master/worker */
   readonly imageUri?: string;
@@ -83,6 +141,19 @@ export interface DataprocClusterClusterConfigMasterConfig {
   /** disk_config block */
   readonly diskConfig?: DataprocClusterClusterConfigMasterConfigDiskConfig[];
 }
+
+function dataprocClusterClusterConfigMasterConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    image_uri: cdktf.stringToTerraform(struct!.imageUri),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    num_instances: cdktf.numberToTerraform(struct!.numInstances),
+    accelerators: cdktf.listMapper(dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform)(struct!.accelerators),
+    disk_config: cdktf.listMapper(dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform)(struct!.diskConfig),
+  }
+}
+
 export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
   /** Size of the primary disk attached to each preemptible worker node, specified in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories. */
   readonly bootDiskSizeGb?: number;
@@ -91,12 +162,31 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
   /** The amount of local SSD disks that will be attached to each preemptible worker node. Defaults to 0. */
   readonly numLocalSsds?: number;
 }
+
+function dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    boot_disk_size_gb: cdktf.numberToTerraform(struct!.bootDiskSizeGb),
+    boot_disk_type: cdktf.stringToTerraform(struct!.bootDiskType),
+    num_local_ssds: cdktf.numberToTerraform(struct!.numLocalSsds),
+  }
+}
+
 export interface DataprocClusterClusterConfigPreemptibleWorkerConfig {
   /** Specifies the number of preemptible nodes to create. Defaults to 0. */
   readonly numInstances?: number;
   /** disk_config block */
   readonly diskConfig?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig[];
 }
+
+function dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    num_instances: cdktf.numberToTerraform(struct!.numInstances),
+    disk_config: cdktf.listMapper(dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToTerraform)(struct!.diskConfig),
+  }
+}
+
 export interface DataprocClusterClusterConfigSecurityConfigKerberosConfig {
   /** The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship. */
   readonly crossRealmTrustAdminServer?: string;
@@ -132,10 +222,40 @@ by Dataproc */
   /** The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate. */
   readonly truststoreUri?: string;
 }
+
+function dataprocClusterClusterConfigSecurityConfigKerberosConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigKerberosConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cross_realm_trust_admin_server: cdktf.stringToTerraform(struct!.crossRealmTrustAdminServer),
+    cross_realm_trust_kdc: cdktf.stringToTerraform(struct!.crossRealmTrustKdc),
+    cross_realm_trust_realm: cdktf.stringToTerraform(struct!.crossRealmTrustRealm),
+    cross_realm_trust_shared_password_uri: cdktf.stringToTerraform(struct!.crossRealmTrustSharedPasswordUri),
+    enable_kerberos: cdktf.booleanToTerraform(struct!.enableKerberos),
+    kdc_db_key_uri: cdktf.stringToTerraform(struct!.kdcDbKeyUri),
+    key_password_uri: cdktf.stringToTerraform(struct!.keyPasswordUri),
+    keystore_password_uri: cdktf.stringToTerraform(struct!.keystorePasswordUri),
+    keystore_uri: cdktf.stringToTerraform(struct!.keystoreUri),
+    kms_key_uri: cdktf.stringToTerraform(struct!.kmsKeyUri),
+    realm: cdktf.stringToTerraform(struct!.realm),
+    root_principal_password_uri: cdktf.stringToTerraform(struct!.rootPrincipalPasswordUri),
+    tgt_lifetime_hours: cdktf.numberToTerraform(struct!.tgtLifetimeHours),
+    truststore_password_uri: cdktf.stringToTerraform(struct!.truststorePasswordUri),
+    truststore_uri: cdktf.stringToTerraform(struct!.truststoreUri),
+  }
+}
+
 export interface DataprocClusterClusterConfigSecurityConfig {
   /** kerberos_config block */
   readonly kerberosConfig: DataprocClusterClusterConfigSecurityConfigKerberosConfig[];
 }
+
+function dataprocClusterClusterConfigSecurityConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kerberos_config: cdktf.listMapper(dataprocClusterClusterConfigSecurityConfigKerberosConfigToTerraform)(struct!.kerberosConfig),
+  }
+}
+
 export interface DataprocClusterClusterConfigSoftwareConfig {
   /** The Cloud Dataproc image version to use for the cluster - this controls the sets of software versions installed onto the nodes when you create clusters. If not specified, defaults to the latest version. */
   readonly imageVersion?: string;
@@ -144,12 +264,31 @@ export interface DataprocClusterClusterConfigSoftwareConfig {
   /** A list of override and additional properties (key/value pairs) used to modify various aspects of the common configuration files used when creating a cluster. */
   readonly overrideProperties?: { [key: string]: string };
 }
+
+function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: DataprocClusterClusterConfigSoftwareConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    image_version: cdktf.stringToTerraform(struct!.imageVersion),
+    optional_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.optionalComponents),
+    override_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.overrideProperties),
+  }
+}
+
 export interface DataprocClusterClusterConfigWorkerConfigAccelerators {
   /** The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8. */
   readonly acceleratorCount: number;
   /** The short name of the accelerator type to expose to this instance. For example, nvidia-tesla-k80. */
   readonly acceleratorType: string;
 }
+
+function dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigAccelerators): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    accelerator_count: cdktf.numberToTerraform(struct!.acceleratorCount),
+    accelerator_type: cdktf.stringToTerraform(struct!.acceleratorType),
+  }
+}
+
 export interface DataprocClusterClusterConfigWorkerConfigDiskConfig {
   /** Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories. */
   readonly bootDiskSizeGb?: number;
@@ -158,6 +297,16 @@ export interface DataprocClusterClusterConfigWorkerConfigDiskConfig {
   /** The amount of local SSD disks that will be attached to each master cluster node. Defaults to 0. */
   readonly numLocalSsds?: number;
 }
+
+function dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigDiskConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    boot_disk_size_gb: cdktf.numberToTerraform(struct!.bootDiskSizeGb),
+    boot_disk_type: cdktf.stringToTerraform(struct!.bootDiskType),
+    num_local_ssds: cdktf.numberToTerraform(struct!.numLocalSsds),
+  }
+}
+
 export interface DataprocClusterClusterConfigWorkerConfig {
   /** The URI for the image to use for this master/worker */
   readonly imageUri?: string;
@@ -172,6 +321,19 @@ export interface DataprocClusterClusterConfigWorkerConfig {
   /** disk_config block */
   readonly diskConfig?: DataprocClusterClusterConfigWorkerConfigDiskConfig[];
 }
+
+function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    image_uri: cdktf.stringToTerraform(struct!.imageUri),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    num_instances: cdktf.numberToTerraform(struct!.numInstances),
+    accelerators: cdktf.listMapper(dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform)(struct!.accelerators),
+    disk_config: cdktf.listMapper(dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform)(struct!.diskConfig),
+  }
+}
+
 export interface DataprocClusterClusterConfig {
   /** The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster. Note: If you don't explicitly specify a staging_bucket then GCP will auto create / assign one for you. However, you are not guaranteed an auto generated bucket which is solely dedicated to your cluster; it may be shared with other clusters in the same region/zone also choosing to use the auto generation option. */
   readonly stagingBucket?: string;
@@ -194,15 +356,42 @@ export interface DataprocClusterClusterConfig {
   /** worker_config block */
   readonly workerConfig?: DataprocClusterClusterConfigWorkerConfig[];
 }
+
+function dataprocClusterClusterConfigToTerraform(struct?: DataprocClusterClusterConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    staging_bucket: cdktf.stringToTerraform(struct!.stagingBucket),
+    autoscaling_config: cdktf.listMapper(dataprocClusterClusterConfigAutoscalingConfigToTerraform)(struct!.autoscalingConfig),
+    encryption_config: cdktf.listMapper(dataprocClusterClusterConfigEncryptionConfigToTerraform)(struct!.encryptionConfig),
+    gce_cluster_config: cdktf.listMapper(dataprocClusterClusterConfigGceClusterConfigToTerraform)(struct!.gceClusterConfig),
+    initialization_action: cdktf.listMapper(dataprocClusterClusterConfigInitializationActionToTerraform)(struct!.initializationAction),
+    master_config: cdktf.listMapper(dataprocClusterClusterConfigMasterConfigToTerraform)(struct!.masterConfig),
+    preemptible_worker_config: cdktf.listMapper(dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform)(struct!.preemptibleWorkerConfig),
+    security_config: cdktf.listMapper(dataprocClusterClusterConfigSecurityConfigToTerraform)(struct!.securityConfig),
+    software_config: cdktf.listMapper(dataprocClusterClusterConfigSoftwareConfigToTerraform)(struct!.softwareConfig),
+    worker_config: cdktf.listMapper(dataprocClusterClusterConfigWorkerConfigToTerraform)(struct!.workerConfig),
+  }
+}
+
 export interface DataprocClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataprocCluster extends TerraformResource {
+export class DataprocCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -352,13 +541,13 @@ export class DataprocCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      graceful_decommission_timeout: this._gracefulDecommissionTimeout,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      cluster_config: this._clusterConfig,
-      timeouts: this._timeouts,
+      graceful_decommission_timeout: cdktf.stringToTerraform(this._gracefulDecommissionTimeout),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      cluster_config: cdktf.listMapper(dataprocClusterClusterConfigToTerraform)(this._clusterConfig),
+      timeouts: dataprocClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudRunServiceIamPolicyConfig extends TerraformMetaArguments {
+export interface CloudRunServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly location?: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface CloudRunServiceIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class CloudRunServiceIamPolicy extends TerraformResource {
+export class CloudRunServiceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class CloudRunServiceIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      policy_data: this._policyData,
-      project: this._project,
-      service: this._service,
+      location: cdktf.stringToTerraform(this._location),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      service: cdktf.stringToTerraform(this._service),
     };
   }
 }

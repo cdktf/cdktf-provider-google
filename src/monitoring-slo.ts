@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringSloConfig extends TerraformMetaArguments {
+export interface MonitoringSloConfig extends cdktf.TerraformMetaArguments {
   /** A calendar period, semantically "since the start of the current
 <calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"] */
   readonly calendarPeriod?: string;
@@ -39,6 +38,14 @@ Good service is defined to be the count of requests made to
 this service that return in no more than threshold. */
   readonly threshold: string;
 }
+
+function monitoringSloBasicSliLatencyToTerraform(struct?: MonitoringSloBasicSliLatency): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    threshold: cdktf.stringToTerraform(struct!.threshold),
+  }
+}
+
 export interface MonitoringSloBasicSli {
   /** An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -64,6 +71,17 @@ field will result in an error. */
   /** latency block */
   readonly latency: MonitoringSloBasicSliLatency[];
 }
+
+function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSli): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    location: cdktf.listMapper(cdktf.stringToTerraform)(struct!.location),
+    method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
+    version: cdktf.listMapper(cdktf.stringToTerraform)(struct!.version),
+    latency: cdktf.listMapper(monitoringSloBasicSliLatencyToTerraform)(struct!.latency),
+  }
+}
+
 export interface MonitoringSloRequestBasedSliDistributionCutRange {
   /** max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -74,6 +92,15 @@ will be set to "-infinity", defining an open range
 "< range.max" */
   readonly min?: number;
 }
+
+function monitoringSloRequestBasedSliDistributionCutRangeToTerraform(struct?: MonitoringSloRequestBasedSliDistributionCutRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max: cdktf.numberToTerraform(struct!.max),
+    min: cdktf.numberToTerraform(struct!.min),
+  }
+}
+
 export interface MonitoringSloRequestBasedSliDistributionCut {
   /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
@@ -84,6 +111,15 @@ MetricKind = DELTA or MetricKind = CUMULATIVE. */
   /** range block */
   readonly range: MonitoringSloRequestBasedSliDistributionCutRange[];
 }
+
+function monitoringSloRequestBasedSliDistributionCutToTerraform(struct?: MonitoringSloRequestBasedSliDistributionCut): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    distribution_filter: cdktf.stringToTerraform(struct!.distributionFilter),
+    range: cdktf.listMapper(monitoringSloRequestBasedSliDistributionCutRangeToTerraform)(struct!.range),
+  }
+}
+
 export interface MonitoringSloRequestBasedSliGoodTotalRatio {
   /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
@@ -114,23 +150,60 @@ Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
 must be set (good + bad = total is assumed). */
   readonly totalServiceFilter?: string;
 }
+
+function monitoringSloRequestBasedSliGoodTotalRatioToTerraform(struct?: MonitoringSloRequestBasedSliGoodTotalRatio): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bad_service_filter: cdktf.stringToTerraform(struct!.badServiceFilter),
+    good_service_filter: cdktf.stringToTerraform(struct!.goodServiceFilter),
+    total_service_filter: cdktf.stringToTerraform(struct!.totalServiceFilter),
+  }
+}
+
 export interface MonitoringSloRequestBasedSli {
   /** distribution_cut block */
   readonly distributionCut?: MonitoringSloRequestBasedSliDistributionCut[];
   /** good_total_ratio block */
   readonly goodTotalRatio?: MonitoringSloRequestBasedSliGoodTotalRatio[];
 }
+
+function monitoringSloRequestBasedSliToTerraform(struct?: MonitoringSloRequestBasedSli): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    distribution_cut: cdktf.listMapper(monitoringSloRequestBasedSliDistributionCutToTerraform)(struct!.distributionCut),
+    good_total_ratio: cdktf.listMapper(monitoringSloRequestBasedSliGoodTotalRatioToTerraform)(struct!.goodTotalRatio),
+  }
+}
+
 export interface MonitoringSloTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function monitoringSloTimeoutsToTerraform(struct?: MonitoringSloTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
   /** A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold. */
   readonly threshold: string;
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    threshold: cdktf.stringToTerraform(struct!.threshold),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
   /** An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -156,6 +229,17 @@ field will result in an error. */
   /** latency block */
   readonly latency: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency[];
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    location: cdktf.listMapper(cdktf.stringToTerraform)(struct!.location),
+    method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
+    version: cdktf.listMapper(cdktf.stringToTerraform)(struct!.version),
+    latency: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyToTerraform)(struct!.latency),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
   /** max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -166,6 +250,15 @@ will be set to "-infinity", defining an open range
 "< range.max" */
   readonly min?: number;
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max: cdktf.numberToTerraform(struct!.max),
+    min: cdktf.numberToTerraform(struct!.min),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
   /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
@@ -176,6 +269,15 @@ MetricKind = DELTA or MetricKind = CUMULATIVE. */
   /** range block */
   readonly range: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange[];
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    distribution_filter: cdktf.stringToTerraform(struct!.distributionFilter),
+    range: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeToTerraform)(struct!.range),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
   /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
@@ -204,12 +306,31 @@ Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE. */
   readonly totalServiceFilter?: string;
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bad_service_filter: cdktf.stringToTerraform(struct!.badServiceFilter),
+    good_service_filter: cdktf.stringToTerraform(struct!.goodServiceFilter),
+    total_service_filter: cdktf.stringToTerraform(struct!.totalServiceFilter),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance {
   /** distribution_cut block */
   readonly distributionCut?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut[];
   /** good_total_ratio block */
   readonly goodTotalRatio?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio[];
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    distribution_cut: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutToTerraform)(struct!.distributionCut),
+    good_total_ratio: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioToTerraform)(struct!.goodTotalRatio),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThreshold {
   /** If window performance >= threshold, the window is counted
 as good. */
@@ -219,6 +340,16 @@ as good. */
   /** performance block */
   readonly performance?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance[];
 }
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    threshold: cdktf.numberToTerraform(struct!.threshold),
+    basic_sli_performance: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceToTerraform)(struct!.basicSliPerformance),
+    performance: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceToTerraform)(struct!.performance),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliMetricMeanInRangeRange {
   /** max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -229,6 +360,15 @@ will be set to "-infinity", defining an open range
 "< range.max" */
   readonly min?: number;
 }
+
+function monitoringSloWindowsBasedSliMetricMeanInRangeRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricMeanInRangeRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max: cdktf.numberToTerraform(struct!.max),
+    min: cdktf.numberToTerraform(struct!.min),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliMetricMeanInRange {
   /** A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
@@ -240,6 +380,15 @@ under good service. */
   /** range block */
   readonly range: MonitoringSloWindowsBasedSliMetricMeanInRangeRange[];
 }
+
+function monitoringSloWindowsBasedSliMetricMeanInRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricMeanInRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    time_series: cdktf.stringToTerraform(struct!.timeSeries),
+    range: cdktf.listMapper(monitoringSloWindowsBasedSliMetricMeanInRangeRangeToTerraform)(struct!.range),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliMetricSumInRangeRange {
   /** max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -250,6 +399,15 @@ will be set to "-infinity", defining an open range
 "< range.max" */
   readonly min?: number;
 }
+
+function monitoringSloWindowsBasedSliMetricSumInRangeRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricSumInRangeRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max: cdktf.numberToTerraform(struct!.max),
+    min: cdktf.numberToTerraform(struct!.min),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliMetricSumInRange {
   /** A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
@@ -263,6 +421,15 @@ Summed value 'X' should satisfy
   /** range block */
   readonly range: MonitoringSloWindowsBasedSliMetricSumInRangeRange[];
 }
+
+function monitoringSloWindowsBasedSliMetricSumInRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricSumInRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    time_series: cdktf.stringToTerraform(struct!.timeSeries),
+    range: cdktf.listMapper(monitoringSloWindowsBasedSliMetricSumInRangeRangeToTerraform)(struct!.range),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSli {
   /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 with ValueType = BOOL. The window is good if any true values
@@ -282,9 +449,21 @@ integer fraction of a day and at least 60s. */
   readonly metricSumInRange?: MonitoringSloWindowsBasedSliMetricSumInRange[];
 }
 
+function monitoringSloWindowsBasedSliToTerraform(struct?: MonitoringSloWindowsBasedSli): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    good_bad_metric_filter: cdktf.stringToTerraform(struct!.goodBadMetricFilter),
+    window_period: cdktf.stringToTerraform(struct!.windowPeriod),
+    good_total_ratio_threshold: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdToTerraform)(struct!.goodTotalRatioThreshold),
+    metric_mean_in_range: cdktf.listMapper(monitoringSloWindowsBasedSliMetricMeanInRangeToTerraform)(struct!.metricMeanInRange),
+    metric_sum_in_range: cdktf.listMapper(monitoringSloWindowsBasedSliMetricSumInRangeToTerraform)(struct!.metricSumInRange),
+  }
+}
+
+
 // Resource
 
-export class MonitoringSlo extends TerraformResource {
+export class MonitoringSlo extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -504,17 +683,17 @@ export class MonitoringSlo extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      calendar_period: this._calendarPeriod,
-      display_name: this._displayName,
-      goal: this._goal,
-      project: this._project,
-      rolling_period_days: this._rollingPeriodDays,
-      service: this._service,
-      slo_id: this._sloId,
-      basic_sli: this._basicSli,
-      request_based_sli: this._requestBasedSli,
-      timeouts: this._timeouts,
-      windows_based_sli: this._windowsBasedSli,
+      calendar_period: cdktf.stringToTerraform(this._calendarPeriod),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      goal: cdktf.numberToTerraform(this._goal),
+      project: cdktf.stringToTerraform(this._project),
+      rolling_period_days: cdktf.numberToTerraform(this._rollingPeriodDays),
+      service: cdktf.stringToTerraform(this._service),
+      slo_id: cdktf.stringToTerraform(this._sloId),
+      basic_sli: cdktf.listMapper(monitoringSloBasicSliToTerraform)(this._basicSli),
+      request_based_sli: cdktf.listMapper(monitoringSloRequestBasedSliToTerraform)(this._requestBasedSli),
+      timeouts: monitoringSloTimeoutsToTerraform(this._timeouts),
+      windows_based_sli: cdktf.listMapper(monitoringSloWindowsBasedSliToTerraform)(this._windowsBasedSli),
     };
   }
 }

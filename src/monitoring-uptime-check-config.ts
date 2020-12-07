@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringUptimeCheckConfigConfig extends TerraformMetaArguments {
+export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaArguments {
   /** A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced. */
   readonly displayName: string;
   /** How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s. */
@@ -36,12 +35,30 @@ export interface MonitoringUptimeCheckConfigContentMatchers {
   /** The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value: "CONTAINS_STRING" Possible values: ["CONTAINS_STRING", "NOT_CONTAINS_STRING", "MATCHES_REGEX", "NON_MATCHES_REGEX"] */
   readonly matcher?: string;
 }
+
+function monitoringUptimeCheckConfigContentMatchersToTerraform(struct?: MonitoringUptimeCheckConfigContentMatchers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    matcher: cdktf.stringToTerraform(struct!.matcher),
+  }
+}
+
 export interface MonitoringUptimeCheckConfigHttpCheckAuthInfo {
   /** The password to authenticate. */
   readonly password: string;
   /** The username to authenticate. */
   readonly username: string;
 }
+
+function monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckAuthInfo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface MonitoringUptimeCheckConfigHttpCheck {
   /** The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=". */
   readonly body?: string;
@@ -64,31 +81,84 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   /** auth_info block */
   readonly authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo[];
 }
+
+function monitoringUptimeCheckConfigHttpCheckToTerraform(struct?: MonitoringUptimeCheckConfigHttpCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body: cdktf.stringToTerraform(struct!.body),
+    content_type: cdktf.stringToTerraform(struct!.contentType),
+    headers: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.headers),
+    mask_headers: cdktf.booleanToTerraform(struct!.maskHeaders),
+    path: cdktf.stringToTerraform(struct!.path),
+    port: cdktf.numberToTerraform(struct!.port),
+    request_method: cdktf.stringToTerraform(struct!.requestMethod),
+    use_ssl: cdktf.booleanToTerraform(struct!.useSsl),
+    validate_ssl: cdktf.booleanToTerraform(struct!.validateSsl),
+    auth_info: cdktf.listMapper(monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform)(struct!.authInfo),
+  }
+}
+
 export interface MonitoringUptimeCheckConfigMonitoredResource {
   /** Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone". */
   readonly labels: { [key: string]: string };
   /** The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list). */
   readonly type: string;
 }
+
+function monitoringUptimeCheckConfigMonitoredResourceToTerraform(struct?: MonitoringUptimeCheckConfigMonitoredResource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MonitoringUptimeCheckConfigResourceGroup {
   /** The group of resources being monitored. Should be the 'name' of a group */
   readonly groupId?: string;
   /** The resource type of the group members. Possible values: ["RESOURCE_TYPE_UNSPECIFIED", "INSTANCE", "AWS_ELB_LOAD_BALANCER"] */
   readonly resourceType?: string;
 }
+
+function monitoringUptimeCheckConfigResourceGroupToTerraform(struct?: MonitoringUptimeCheckConfigResourceGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    group_id: cdktf.stringToTerraform(struct!.groupId),
+    resource_type: cdktf.stringToTerraform(struct!.resourceType),
+  }
+}
+
 export interface MonitoringUptimeCheckConfigTcpCheck {
   /** The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL. */
   readonly port: number;
 }
+
+function monitoringUptimeCheckConfigTcpCheckToTerraform(struct?: MonitoringUptimeCheckConfigTcpCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+  }
+}
+
 export interface MonitoringUptimeCheckConfigTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: MonitoringUptimeCheckConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringUptimeCheckConfig extends TerraformResource {
+export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -313,17 +383,17 @@ export class MonitoringUptimeCheckConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      period: this._period,
-      project: this._project,
-      selected_regions: this._selectedRegions,
-      timeout: this._timeout,
-      content_matchers: this._contentMatchers,
-      http_check: this._httpCheck,
-      monitored_resource: this._monitoredResource,
-      resource_group: this._resourceGroup,
-      tcp_check: this._tcpCheck,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      period: cdktf.stringToTerraform(this._period),
+      project: cdktf.stringToTerraform(this._project),
+      selected_regions: cdktf.listMapper(cdktf.stringToTerraform)(this._selectedRegions),
+      timeout: cdktf.stringToTerraform(this._timeout),
+      content_matchers: cdktf.listMapper(monitoringUptimeCheckConfigContentMatchersToTerraform)(this._contentMatchers),
+      http_check: cdktf.listMapper(monitoringUptimeCheckConfigHttpCheckToTerraform)(this._httpCheck),
+      monitored_resource: cdktf.listMapper(monitoringUptimeCheckConfigMonitoredResourceToTerraform)(this._monitoredResource),
+      resource_group: cdktf.listMapper(monitoringUptimeCheckConfigResourceGroupToTerraform)(this._resourceGroup),
+      tcp_check: cdktf.listMapper(monitoringUptimeCheckConfigTcpCheckToTerraform)(this._tcpCheck),
+      timeouts: monitoringUptimeCheckConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

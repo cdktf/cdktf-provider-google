@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeRegionInstanceGroupConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeRegionInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   readonly name?: string;
   readonly project?: string;
   readonly region?: string;
   readonly selfLink?: string;
 }
-export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends ComplexComputedList {
+export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -26,7 +24,7 @@ export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends Com
     return this.getNumberAttribute('port');
   }
 }
-export class DataGoogleComputeRegionInstanceGroupInstances extends ComplexComputedList {
+export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.ComplexComputedList {
 
   // instance - computed: true, optional: false, required: false
   public get instance() {
@@ -46,7 +44,7 @@ export class DataGoogleComputeRegionInstanceGroupInstances extends ComplexComput
 
 // Resource
 
-export class DataGoogleComputeRegionInstanceGroup extends TerraformDataSource {
+export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -158,10 +156,10 @@ export class DataGoogleComputeRegionInstanceGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      self_link: this._selfLink,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      self_link: cdktf.stringToTerraform(this._selfLink),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudRunDomainMappingConfig extends TerraformMetaArguments {
+export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArguments {
   /** The location of the cloud run instance. eg us-central1 */
   readonly location: string;
   /** Name should be a verified domain */
@@ -21,7 +19,7 @@ export interface CloudRunDomainMappingConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: CloudRunDomainMappingTimeouts;
 }
-export class CloudRunDomainMappingStatusConditions extends ComplexComputedList {
+export class CloudRunDomainMappingStatusConditions extends cdktf.ComplexComputedList {
 
   // message - computed: true, optional: false, required: false
   public get message() {
@@ -43,7 +41,7 @@ export class CloudRunDomainMappingStatusConditions extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class CloudRunDomainMappingStatusResourceRecords extends ComplexComputedList {
+export class CloudRunDomainMappingStatusResourceRecords extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -60,7 +58,7 @@ export class CloudRunDomainMappingStatusResourceRecords extends ComplexComputedL
     return this.getStringAttribute('type');
   }
 }
-export class CloudRunDomainMappingStatus extends ComplexComputedList {
+export class CloudRunDomainMappingStatus extends cdktf.ComplexComputedList {
 
   // conditions - computed: true, optional: false, required: false
   public get conditions() {
@@ -96,6 +94,16 @@ More info: http://kubernetes.io/docs/user-guide/labels */
 project ID or project number. */
   readonly namespace: string;
 }
+
+function cloudRunDomainMappingMetadataToTerraform(struct?: CloudRunDomainMappingMetadata): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    annotations: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.annotations),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+  }
+}
+
 export interface CloudRunDomainMappingSpec {
   /** The mode of the certificate. Default value: "AUTOMATIC" Possible values: ["NONE", "AUTOMATIC"] */
   readonly certificateMode?: string;
@@ -108,14 +116,33 @@ has given such a warning. */
 The route must exist. */
   readonly routeName: string;
 }
+
+function cloudRunDomainMappingSpecToTerraform(struct?: CloudRunDomainMappingSpec): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_mode: cdktf.stringToTerraform(struct!.certificateMode),
+    force_override: cdktf.booleanToTerraform(struct!.forceOverride),
+    route_name: cdktf.stringToTerraform(struct!.routeName),
+  }
+}
+
 export interface CloudRunDomainMappingTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomainMappingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class CloudRunDomainMapping extends TerraformResource {
+export class CloudRunDomainMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -244,12 +271,12 @@ export class CloudRunDomainMapping extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      project: this._project,
-      metadata: this._metadata,
-      spec: this._spec,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      metadata: cdktf.listMapper(cloudRunDomainMappingMetadataToTerraform)(this._metadata),
+      spec: cdktf.listMapper(cloudRunDomainMappingSpecToTerraform)(this._spec),
+      timeouts: cloudRunDomainMappingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

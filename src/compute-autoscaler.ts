@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeAutoscalerConfig extends TerraformMetaArguments {
+export interface ComputeAutoscalerConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Name of the resource. The name must be 1-63 characters long and match
@@ -42,12 +41,28 @@ specified or until the average utilization reaches the target
 utilization. */
   readonly target: number;
 }
+
+function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyCpuUtilization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target: cdktf.numberToTerraform(struct!.target),
+  }
+}
+
 export interface ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization {
   /** Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8. */
   readonly target: number;
 }
+
+function computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target: cdktf.numberToTerraform(struct!.target),
+  }
+}
+
 export interface ComputeAutoscalerAutoscalingPolicyMetric {
   /** The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
@@ -68,6 +83,16 @@ of the instances. */
 Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"] */
   readonly type?: string;
 }
+
+function computeAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyMetric): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    target: cdktf.numberToTerraform(struct!.target),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
   /** Specifies a fixed number of VM instances. This must be a positive
 integer. */
@@ -76,6 +101,15 @@ integer. */
 For example, specify 80 for 80%. */
   readonly percent?: number;
 }
+
+function computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fixed: cdktf.numberToTerraform(struct!.fixed),
+    percent: cdktf.numberToTerraform(struct!.percent),
+  }
+}
+
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControl {
   /** How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above. */
@@ -83,6 +117,15 @@ to include directives regarding slower scale down, as described above. */
   /** max_scaled_in_replicas block */
   readonly maxScaledInReplicas?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas[];
 }
+
+function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    time_window_sec: cdktf.numberToTerraform(struct!.timeWindowSec),
+    max_scaled_in_replicas: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform)(struct!.maxScaledInReplicas),
+  }
+}
+
 export interface ComputeAutoscalerAutoscalingPolicy {
   /** The number of seconds that the autoscaler should wait before it
 starts collecting information from a new instance. This prevents
@@ -116,15 +159,40 @@ allowed. */
   /** scale_in_control block */
   readonly scaleInControl?: ComputeAutoscalerAutoscalingPolicyScaleInControl[];
 }
+
+function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscalerAutoscalingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cooldown_period: cdktf.numberToTerraform(struct!.cooldownPeriod),
+    max_replicas: cdktf.numberToTerraform(struct!.maxReplicas),
+    min_replicas: cdktf.numberToTerraform(struct!.minReplicas),
+    mode: cdktf.stringToTerraform(struct!.mode),
+    cpu_utilization: cdktf.listMapper(computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform)(struct!.cpuUtilization),
+    load_balancing_utilization: cdktf.listMapper(computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform)(struct!.loadBalancingUtilization),
+    metric: cdktf.listMapper(computeAutoscalerAutoscalingPolicyMetricToTerraform)(struct!.metric),
+    scale_in_control: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScaleInControlToTerraform)(struct!.scaleInControl),
+  }
+}
+
 export interface ComputeAutoscalerTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeAutoscaler extends TerraformResource {
+export class ComputeAutoscaler extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -278,13 +346,13 @@ export class ComputeAutoscaler extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      target: this._target,
-      zone: this._zone,
-      autoscaling_policy: this._autoscalingPolicy,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      target: cdktf.stringToTerraform(this._target),
+      zone: cdktf.stringToTerraform(this._zone),
+      autoscaling_policy: cdktf.listMapper(computeAutoscalerAutoscalingPolicyToTerraform)(this._autoscalingPolicy),
+      timeouts: computeAutoscalerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

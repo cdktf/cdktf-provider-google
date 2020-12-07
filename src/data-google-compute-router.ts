@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeRouterConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeRouterConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
@@ -22,7 +20,7 @@ except the last character, which cannot be a dash. */
   /** Region where the router resides. */
   readonly region?: string;
 }
-export class DataGoogleComputeRouterBgpAdvertisedIpRanges extends ComplexComputedList {
+export class DataGoogleComputeRouterBgpAdvertisedIpRanges extends cdktf.ComplexComputedList {
 
   // description - computed: true, optional: false, required: false
   public get description() {
@@ -34,7 +32,7 @@ export class DataGoogleComputeRouterBgpAdvertisedIpRanges extends ComplexCompute
     return this.getStringAttribute('range');
   }
 }
-export class DataGoogleComputeRouterBgp extends ComplexComputedList {
+export class DataGoogleComputeRouterBgp extends cdktf.ComplexComputedList {
 
   // advertise_mode - computed: true, optional: false, required: false
   public get advertiseMode() {
@@ -59,7 +57,7 @@ export class DataGoogleComputeRouterBgp extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleComputeRouter extends TerraformDataSource {
+export class DataGoogleComputeRouter extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -175,10 +173,10 @@ export class DataGoogleComputeRouter extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      network: this._network,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapWebBackendServiceIamPolicyConfig extends TerraformMetaArguments {
+export interface IapWebBackendServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly policyData: string;
   readonly project?: string;
   readonly webBackendService: string;
@@ -15,7 +14,7 @@ export interface IapWebBackendServiceIamPolicyConfig extends TerraformMetaArgume
 
 // Resource
 
-export class IapWebBackendServiceIamPolicy extends TerraformResource {
+export class IapWebBackendServiceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class IapWebBackendServiceIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      policy_data: this._policyData,
-      project: this._project,
-      web_backend_service: this._webBackendService,
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      web_backend_service: cdktf.stringToTerraform(this._webBackendService),
     };
   }
 }

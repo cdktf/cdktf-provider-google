@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface GameServicesGameServerClusterConfig extends TerraformMetaArguments {
+export interface GameServicesGameServerClusterConfig extends cdktf.TerraformMetaArguments {
   /** Required. The resource name of the game server cluster */
   readonly clusterId: string;
   /** Human readable description of the cluster. */
@@ -38,6 +37,14 @@ GameServerCluster resource are used to generate the full name of the
 GKE cluster. */
   readonly cluster: string;
 }
+
+function gameServicesGameServerClusterConnectionInfoGkeClusterReferenceToTerraform(struct?: GameServicesGameServerClusterConnectionInfoGkeClusterReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cluster: cdktf.stringToTerraform(struct!.cluster),
+  }
+}
+
 export interface GameServicesGameServerClusterConnectionInfo {
   /** Namespace designated on the game server cluster where the game server
 instances will be created. The namespace existence will be validated
@@ -46,15 +53,34 @@ during creation. */
   /** gke_cluster_reference block */
   readonly gkeClusterReference: GameServicesGameServerClusterConnectionInfoGkeClusterReference[];
 }
+
+function gameServicesGameServerClusterConnectionInfoToTerraform(struct?: GameServicesGameServerClusterConnectionInfo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+    gke_cluster_reference: cdktf.listMapper(gameServicesGameServerClusterConnectionInfoGkeClusterReferenceToTerraform)(struct!.gkeClusterReference),
+  }
+}
+
 export interface GameServicesGameServerClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function gameServicesGameServerClusterTimeoutsToTerraform(struct?: GameServicesGameServerClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class GameServicesGameServerCluster extends TerraformResource {
+export class GameServicesGameServerCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -220,14 +246,14 @@ export class GameServicesGameServerCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_id: this._clusterId,
-      description: this._description,
-      labels: this._labels,
-      location: this._location,
-      project: this._project,
-      realm_id: this._realmId,
-      connection_info: this._connectionInfo,
-      timeouts: this._timeouts,
+      cluster_id: cdktf.stringToTerraform(this._clusterId),
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      realm_id: cdktf.stringToTerraform(this._realmId),
+      connection_info: cdktf.listMapper(gameServicesGameServerClusterConnectionInfoToTerraform)(this._connectionInfo),
+      timeouts: gameServicesGameServerClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

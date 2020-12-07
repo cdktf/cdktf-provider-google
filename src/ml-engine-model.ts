@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MlEngineModelConfig extends TerraformMetaArguments {
+export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
   /** The description specified for the model when it was created. */
   readonly description?: string;
   /** One or more labels that you can add, to organize your models. */
@@ -31,14 +30,31 @@ export interface MlEngineModelDefaultVersion {
   /** The name specified for the version when it was created. */
   readonly name: string;
 }
+
+function mlEngineModelDefaultVersionToTerraform(struct?: MlEngineModelDefaultVersion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface MlEngineModelTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function mlEngineModelTimeoutsToTerraform(struct?: MlEngineModelTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class MlEngineModel extends TerraformResource {
+export class MlEngineModel extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -222,15 +238,15 @@ export class MlEngineModel extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      labels: this._labels,
-      name: this._name,
-      online_prediction_console_logging: this._onlinePredictionConsoleLogging,
-      online_prediction_logging: this._onlinePredictionLogging,
-      project: this._project,
-      regions: this._regions,
-      default_version: this._defaultVersion,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      online_prediction_console_logging: cdktf.booleanToTerraform(this._onlinePredictionConsoleLogging),
+      online_prediction_logging: cdktf.booleanToTerraform(this._onlinePredictionLogging),
+      project: cdktf.stringToTerraform(this._project),
+      regions: cdktf.listMapper(cdktf.stringToTerraform)(this._regions),
+      default_version: cdktf.listMapper(mlEngineModelDefaultVersionToTerraform)(this._defaultVersion),
+      timeouts: mlEngineModelTimeoutsToTerraform(this._timeouts),
     };
   }
 }

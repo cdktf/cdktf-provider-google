@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BinaryAuthorizationAttestorConfig extends TerraformMetaArguments {
+export interface BinaryAuthorizationAttestorConfig extends cdktf.TerraformMetaArguments {
   /** A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs. */
   readonly description?: string;
@@ -30,6 +29,15 @@ publicKeyPem (i.e. this algorithm must match that of the
 public key). */
   readonly signatureAlgorithm?: string;
 }
+
+function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    public_key_pem: cdktf.stringToTerraform(struct!.publicKeyPem),
+    signature_algorithm: cdktf.stringToTerraform(struct!.signatureAlgorithm),
+  }
+}
+
 export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
   /** ASCII-armored representation of a PGP public key, as the
 entire output by the command
@@ -53,6 +61,17 @@ See the documentation on publicKey cases below for details. */
   /** pkix_public_key block */
   readonly pkixPublicKey?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey[];
 }
+
+function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ascii_armored_pgp_public_key: cdktf.stringToTerraform(struct!.asciiArmoredPgpPublicKey),
+    comment: cdktf.stringToTerraform(struct!.comment),
+    id: cdktf.stringToTerraform(struct!.id),
+    pkix_public_key: cdktf.listMapper(binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyToTerraform)(struct!.pkixPublicKey),
+  }
+}
+
 export interface BinaryAuthorizationAttestorAttestationAuthorityNote {
   /** The resource name of a ATTESTATION_AUTHORITY Note, created by the
 user. If the Note is in a different project from the Attestor, it
@@ -65,15 +84,34 @@ and that links to this Note. */
   /** public_keys block */
   readonly publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[];
 }
+
+function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNote): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    note_reference: cdktf.stringToTerraform(struct!.noteReference),
+    public_keys: cdktf.listMapper(binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform)(struct!.publicKeys),
+  }
+}
+
 export interface BinaryAuthorizationAttestorTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthorizationAttestorTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BinaryAuthorizationAttestor extends TerraformResource {
+export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -186,11 +224,11 @@ export class BinaryAuthorizationAttestor extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      attestation_authority_note: this._attestationAuthorityNote,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      attestation_authority_note: cdktf.listMapper(binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform)(this._attestationAuthorityNote),
+      timeouts: binaryAuthorizationAttestorTimeoutsToTerraform(this._timeouts),
     };
   }
 }

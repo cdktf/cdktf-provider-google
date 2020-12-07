@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlSourceRepresentationInstanceConfig extends TerraformMetaArguments {
+export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The MySQL version running on your source database server. Possible values: ["MYSQL_5_6", "MYSQL_5_7"] */
   readonly databaseVersion: string;
   /** The externally accessible IPv4 address for the source database server. */
@@ -29,9 +28,18 @@ export interface SqlSourceRepresentationInstanceTimeouts {
   readonly delete?: string;
 }
 
+function sqlSourceRepresentationInstanceTimeoutsToTerraform(struct?: SqlSourceRepresentationInstanceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class SqlSourceRepresentationInstance extends TerraformResource {
+export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -175,13 +183,13 @@ export class SqlSourceRepresentationInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      database_version: this._databaseVersion,
-      host: this._host,
-      name: this._name,
-      port: this._port,
-      project: this._project,
-      region: this._region,
-      timeouts: this._timeouts,
+      database_version: cdktf.stringToTerraform(this._databaseVersion),
+      host: cdktf.stringToTerraform(this._host),
+      name: cdktf.stringToTerraform(this._name),
+      port: cdktf.numberToTerraform(this._port),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      timeouts: sqlSourceRepresentationInstanceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

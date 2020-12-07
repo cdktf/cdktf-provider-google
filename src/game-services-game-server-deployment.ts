@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface GameServicesGameServerDeploymentConfig extends TerraformMetaArguments {
+export interface GameServicesGameServerDeploymentConfig extends cdktf.TerraformMetaArguments {
   /** A unique id for the deployment. */
   readonly deploymentId: string;
   /** Human readable description of the game server deployment. */
@@ -27,9 +26,19 @@ export interface GameServicesGameServerDeploymentTimeouts {
   readonly update?: string;
 }
 
+function gameServicesGameServerDeploymentTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class GameServicesGameServerDeployment extends TerraformResource {
+export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,12 +176,12 @@ export class GameServicesGameServerDeployment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      deployment_id: this._deploymentId,
-      description: this._description,
-      labels: this._labels,
-      location: this._location,
-      project: this._project,
-      timeouts: this._timeouts,
+      deployment_id: cdktf.stringToTerraform(this._deploymentId),
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: gameServicesGameServerDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

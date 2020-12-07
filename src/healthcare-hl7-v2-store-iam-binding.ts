@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareHl7V2StoreIamBindingConfig extends TerraformMetaArguments {
+export interface HealthcareHl7V2StoreIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly hl7V2StoreId: string;
   readonly members: string[];
   readonly role: string;
@@ -20,9 +19,19 @@ export interface HealthcareHl7V2StoreIamBindingCondition {
   readonly title: string;
 }
 
+function healthcareHl7V2StoreIamBindingConditionToTerraform(struct?: HealthcareHl7V2StoreIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class HealthcareHl7V2StoreIamBinding extends TerraformResource {
+export class HealthcareHl7V2StoreIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class HealthcareHl7V2StoreIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hl7_v2_store_id: this._hl7V2StoreId,
-      members: this._members,
-      role: this._role,
-      condition: this._condition,
+      hl7_v2_store_id: cdktf.stringToTerraform(this._hl7V2StoreId),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(healthcareHl7V2StoreIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

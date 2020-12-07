@@ -2,18 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleAppEngineDefaultServiceAccountConfig extends TerraformMetaArguments {
+export interface DataGoogleAppEngineDefaultServiceAccountConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
 }
 
 // Resource
 
-export class DataGoogleAppEngineDefaultServiceAccount extends TerraformDataSource {
+export class DataGoogleAppEngineDefaultServiceAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -84,7 +83,7 @@ export class DataGoogleAppEngineDefaultServiceAccount extends TerraformDataSourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppEngineFlexibleAppVersionConfig extends TerraformMetaArguments {
+export interface AppEngineFlexibleAppVersionConfig extends cdktf.TerraformMetaArguments {
   /** Metadata settings that are supplied to this version to enable beta runtime features. */
   readonly betaSettings?: { [key: string]: string };
   /** Duration that static files should be cached by web proxies and browsers.
@@ -82,12 +81,33 @@ export interface AppEngineFlexibleAppVersionApiConfig {
   /** URL to serve the endpoint at. */
   readonly url?: string;
 }
+
+function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngineFlexibleAppVersionApiConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auth_fail_action: cdktf.stringToTerraform(struct!.authFailAction),
+    login: cdktf.stringToTerraform(struct!.login),
+    script: cdktf.stringToTerraform(struct!.script),
+    security_level: cdktf.stringToTerraform(struct!.securityLevel),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization {
   /** Period of time over which CPU utilization is calculated. */
   readonly aggregationWindowLength?: string;
   /** Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1. */
   readonly targetUtilization: number;
 }
+
+function appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aggregation_window_length: cdktf.stringToTerraform(struct!.aggregationWindowLength),
+    target_utilization: cdktf.numberToTerraform(struct!.targetUtilization),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
   /** Target bytes read per second. */
   readonly targetReadBytesPerSecond?: number;
@@ -98,6 +118,17 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
   /** Target ops written per second. */
   readonly targetWriteOpsPerSecond?: number;
 }
+
+function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_read_bytes_per_second: cdktf.numberToTerraform(struct!.targetReadBytesPerSecond),
+    target_read_ops_per_second: cdktf.numberToTerraform(struct!.targetReadOpsPerSecond),
+    target_write_bytes_per_second: cdktf.numberToTerraform(struct!.targetWriteBytesPerSecond),
+    target_write_ops_per_second: cdktf.numberToTerraform(struct!.targetWriteOpsPerSecond),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
   /** Target bytes received per second. */
   readonly targetReceivedBytesPerSecond?: number;
@@ -108,12 +139,32 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
   /** Target packets sent per second. */
   readonly targetSentPacketsPerSecond?: number;
 }
+
+function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_received_bytes_per_second: cdktf.numberToTerraform(struct!.targetReceivedBytesPerSecond),
+    target_received_packets_per_second: cdktf.numberToTerraform(struct!.targetReceivedPacketsPerSecond),
+    target_sent_bytes_per_second: cdktf.numberToTerraform(struct!.targetSentBytesPerSecond),
+    target_sent_packets_per_second: cdktf.numberToTerraform(struct!.targetSentPacketsPerSecond),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization {
   /** Target number of concurrent requests. */
   readonly targetConcurrentRequests?: number;
   /** Target requests per second. */
   readonly targetRequestCountPerSecond?: string;
 }
+
+function appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_concurrent_requests: cdktf.numberToTerraform(struct!.targetConcurrentRequests),
+    target_request_count_per_second: cdktf.stringToTerraform(struct!.targetRequestCountPerSecond),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionAutomaticScaling {
   /** The time period that the Autoscaler should wait before it starts collecting information from a new instance.
 This prevents the autoscaler from collecting information when the instance is initializing,
@@ -144,6 +195,25 @@ Defaults to a runtime-specific value. */
   /** request_utilization block */
   readonly requestUtilization?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization[];
 }
+
+function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cool_down_period: cdktf.stringToTerraform(struct!.coolDownPeriod),
+    max_concurrent_requests: cdktf.numberToTerraform(struct!.maxConcurrentRequests),
+    max_idle_instances: cdktf.numberToTerraform(struct!.maxIdleInstances),
+    max_pending_latency: cdktf.stringToTerraform(struct!.maxPendingLatency),
+    max_total_instances: cdktf.numberToTerraform(struct!.maxTotalInstances),
+    min_idle_instances: cdktf.numberToTerraform(struct!.minIdleInstances),
+    min_pending_latency: cdktf.stringToTerraform(struct!.minPendingLatency),
+    min_total_instances: cdktf.numberToTerraform(struct!.minTotalInstances),
+    cpu_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform)(struct!.cpuUtilization),
+    disk_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform)(struct!.diskUtilization),
+    network_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform)(struct!.networkUtilization),
+    request_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform)(struct!.requestUtilization),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionDeploymentCloudBuildOptions {
   /** Path to the yaml file used in deployment, used to determine runtime configuration details. */
   readonly appYamlPath: string;
@@ -152,11 +222,28 @@ export interface AppEngineFlexibleAppVersionDeploymentCloudBuildOptions {
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
   readonly cloudBuildTimeout?: string;
 }
+
+function appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    app_yaml_path: cdktf.stringToTerraform(struct!.appYamlPath),
+    cloud_build_timeout: cdktf.stringToTerraform(struct!.cloudBuildTimeout),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionDeploymentContainer {
   /** URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
 Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest" */
   readonly image: string;
 }
+
+function appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentContainer): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    image: cdktf.stringToTerraform(struct!.image),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionDeploymentFiles {
   readonly name: string;
   /** SHA1 checksum of the file */
@@ -164,12 +251,31 @@ export interface AppEngineFlexibleAppVersionDeploymentFiles {
   /** Source URL */
   readonly sourceUrl: string;
 }
+
+function appEngineFlexibleAppVersionDeploymentFilesToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentFiles): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    sha1_sum: cdktf.stringToTerraform(struct!.sha1Sum),
+    source_url: cdktf.stringToTerraform(struct!.sourceUrl),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionDeploymentZip {
   /** files count */
   readonly filesCount?: number;
   /** Source URL */
   readonly sourceUrl: string;
 }
+
+function appEngineFlexibleAppVersionDeploymentZipToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentZip): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    files_count: cdktf.numberToTerraform(struct!.filesCount),
+    source_url: cdktf.stringToTerraform(struct!.sourceUrl),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionDeployment {
   /** cloud_build_options block */
   readonly cloudBuildOptions?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions[];
@@ -180,6 +286,17 @@ export interface AppEngineFlexibleAppVersionDeployment {
   /** zip block */
   readonly zip?: AppEngineFlexibleAppVersionDeploymentZip[];
 }
+
+function appEngineFlexibleAppVersionDeploymentToTerraform(struct?: AppEngineFlexibleAppVersionDeployment): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloud_build_options: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform)(struct!.cloudBuildOptions),
+    container: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentContainerToTerraform)(struct!.container),
+    files: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentFilesToTerraform)(struct!.files),
+    zip: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentZipToTerraform)(struct!.zip),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionEndpointsApiService {
   /** Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
 
@@ -198,14 +315,41 @@ For example "myapi.endpoints.myproject.cloud.goog" */
   /** Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default value: "FIXED" Possible values: ["FIXED", "MANAGED"] */
   readonly rolloutStrategy?: string;
 }
+
+function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct?: AppEngineFlexibleAppVersionEndpointsApiService): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    config_id: cdktf.stringToTerraform(struct!.configId),
+    disable_trace_sampling: cdktf.booleanToTerraform(struct!.disableTraceSampling),
+    name: cdktf.stringToTerraform(struct!.name),
+    rollout_strategy: cdktf.stringToTerraform(struct!.rolloutStrategy),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionEntrypoint {
   /** The format should be a shell command that can be fed to bash -c. */
   readonly shell: string;
 }
+
+function appEngineFlexibleAppVersionEntrypointToTerraform(struct?: AppEngineFlexibleAppVersionEntrypoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    shell: cdktf.stringToTerraform(struct!.shell),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionHandlersScript {
   /** Path to the script from the application root directory. */
   readonly scriptPath: string;
 }
+
+function appEngineFlexibleAppVersionHandlersScriptToTerraform(struct?: AppEngineFlexibleAppVersionHandlersScript): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionHandlersStaticFiles {
   /** Whether files should also be uploaded as code data. By default, files declared in static file handlers are
 uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
@@ -229,6 +373,20 @@ The path can refer to text matched in groupings in the URL pattern. */
   /** Regular expression that matches the file paths for all files that should be referenced by this handler. */
   readonly uploadPathRegex?: string;
 }
+
+function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct?: AppEngineFlexibleAppVersionHandlersStaticFiles): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    application_readable: cdktf.booleanToTerraform(struct!.applicationReadable),
+    expiration: cdktf.stringToTerraform(struct!.expiration),
+    http_headers: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.httpHeaders),
+    mime_type: cdktf.stringToTerraform(struct!.mimeType),
+    path: cdktf.stringToTerraform(struct!.path),
+    require_matching_file: cdktf.booleanToTerraform(struct!.requireMatchingFile),
+    upload_path_regex: cdktf.stringToTerraform(struct!.uploadPathRegex),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionHandlers {
   /** Actions to take when the user is not logged in. Possible values: ["AUTH_FAIL_ACTION_REDIRECT", "AUTH_FAIL_ACTION_UNAUTHORIZED"] */
   readonly authFailAction?: string;
@@ -246,6 +404,20 @@ All URLs that begin with this prefix are handled by this handler, using the port
   /** static_files block */
   readonly staticFiles?: AppEngineFlexibleAppVersionHandlersStaticFiles[];
 }
+
+function appEngineFlexibleAppVersionHandlersToTerraform(struct?: AppEngineFlexibleAppVersionHandlers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auth_fail_action: cdktf.stringToTerraform(struct!.authFailAction),
+    login: cdktf.stringToTerraform(struct!.login),
+    redirect_http_response_code: cdktf.stringToTerraform(struct!.redirectHttpResponseCode),
+    security_level: cdktf.stringToTerraform(struct!.securityLevel),
+    url_regex: cdktf.stringToTerraform(struct!.urlRegex),
+    script: cdktf.listMapper(appEngineFlexibleAppVersionHandlersScriptToTerraform)(struct!.script),
+    static_files: cdktf.listMapper(appEngineFlexibleAppVersionHandlersStaticFilesToTerraform)(struct!.staticFiles),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionLivenessCheck {
   /** Interval between health checks. */
   readonly checkInterval?: string;
@@ -262,6 +434,20 @@ export interface AppEngineFlexibleAppVersionLivenessCheck {
   /** Time before the check is considered failed. Default: "4s" */
   readonly timeout?: string;
 }
+
+function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: AppEngineFlexibleAppVersionLivenessCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    check_interval: cdktf.stringToTerraform(struct!.checkInterval),
+    failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
+    host: cdktf.stringToTerraform(struct!.host),
+    initial_delay: cdktf.stringToTerraform(struct!.initialDelay),
+    path: cdktf.stringToTerraform(struct!.path),
+    success_threshold: cdktf.numberToTerraform(struct!.successThreshold),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionManualScaling {
   /** Number of instances to assign to the service at the start.
 
@@ -269,6 +455,14 @@ export interface AppEngineFlexibleAppVersionManualScaling {
 Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection. */
   readonly instances: number;
 }
+
+function appEngineFlexibleAppVersionManualScalingToTerraform(struct?: AppEngineFlexibleAppVersionManualScaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instances: cdktf.numberToTerraform(struct!.instances),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionNetwork {
   /** List of ports, or port pairs, to forward from the virtual machine to the application container. */
   readonly forwardedPorts?: string[];
@@ -286,6 +480,18 @@ If the network that the instance is being created in is a custom Subnet Mode Net
 If specified, the subnetwork must exist in the same region as the App Engine flexible environment application. */
   readonly subnetwork?: string;
 }
+
+function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngineFlexibleAppVersionNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    forwarded_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.forwardedPorts),
+    instance_tag: cdktf.stringToTerraform(struct!.instanceTag),
+    name: cdktf.stringToTerraform(struct!.name),
+    session_affinity: cdktf.booleanToTerraform(struct!.sessionAffinity),
+    subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionReadinessCheck {
   /** A maximum time limit on application initialization, measured from moment the application successfully
 replies to a healthcheck until it is ready to serve traffic. Default: "300s" */
@@ -303,6 +509,20 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s" */
   /** Time before the check is considered failed. Default: "4s" */
   readonly timeout?: string;
 }
+
+function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: AppEngineFlexibleAppVersionReadinessCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    app_start_timeout: cdktf.stringToTerraform(struct!.appStartTimeout),
+    check_interval: cdktf.stringToTerraform(struct!.checkInterval),
+    failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
+    host: cdktf.stringToTerraform(struct!.host),
+    path: cdktf.stringToTerraform(struct!.path),
+    success_threshold: cdktf.numberToTerraform(struct!.successThreshold),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionResourcesVolumes {
   /** Unique name for the volume. */
   readonly name: string;
@@ -311,6 +531,16 @@ export interface AppEngineFlexibleAppVersionResourcesVolumes {
   /** Underlying volume type, e.g. 'tmpfs'. */
   readonly volumeType: string;
 }
+
+function appEngineFlexibleAppVersionResourcesVolumesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesVolumes): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    size_gb: cdktf.numberToTerraform(struct!.sizeGb),
+    volume_type: cdktf.stringToTerraform(struct!.volumeType),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionResources {
   /** Number of CPU cores needed. */
   readonly cpu?: number;
@@ -321,19 +551,48 @@ export interface AppEngineFlexibleAppVersionResources {
   /** volumes block */
   readonly volumes?: AppEngineFlexibleAppVersionResourcesVolumes[];
 }
+
+function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngineFlexibleAppVersionResources): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cpu: cdktf.numberToTerraform(struct!.cpu),
+    disk_gb: cdktf.numberToTerraform(struct!.diskGb),
+    memory_gb: cdktf.numberToTerraform(struct!.memoryGb),
+    volumes: cdktf.listMapper(appEngineFlexibleAppVersionResourcesVolumesToTerraform)(struct!.volumes),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngineFlexibleAppVersionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface AppEngineFlexibleAppVersionVpcAccessConnector {
   /** Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1. */
   readonly name: string;
 }
 
+function appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(struct?: AppEngineFlexibleAppVersionVpcAccessConnector): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
 // Resource
 
-export class AppEngineFlexibleAppVersion extends TerraformResource {
+export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -853,35 +1112,35 @@ export class AppEngineFlexibleAppVersion extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      beta_settings: this._betaSettings,
-      default_expiration: this._defaultExpiration,
-      delete_service_on_destroy: this._deleteServiceOnDestroy,
-      env_variables: this._envVariables,
-      inbound_services: this._inboundServices,
-      instance_class: this._instanceClass,
-      nobuild_files_regex: this._nobuildFilesRegex,
-      noop_on_destroy: this._noopOnDestroy,
-      project: this._project,
-      runtime: this._runtime,
-      runtime_api_version: this._runtimeApiVersion,
-      runtime_channel: this._runtimeChannel,
-      runtime_main_executable_path: this._runtimeMainExecutablePath,
-      service: this._service,
-      serving_status: this._servingStatus,
-      version_id: this._versionId,
-      api_config: this._apiConfig,
-      automatic_scaling: this._automaticScaling,
-      deployment: this._deployment,
-      endpoints_api_service: this._endpointsApiService,
-      entrypoint: this._entrypoint,
-      handlers: this._handlers,
-      liveness_check: this._livenessCheck,
-      manual_scaling: this._manualScaling,
-      network: this._network,
-      readiness_check: this._readinessCheck,
-      resources: this._resources,
-      timeouts: this._timeouts,
-      vpc_access_connector: this._vpcAccessConnector,
+      beta_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._betaSettings),
+      default_expiration: cdktf.stringToTerraform(this._defaultExpiration),
+      delete_service_on_destroy: cdktf.booleanToTerraform(this._deleteServiceOnDestroy),
+      env_variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._envVariables),
+      inbound_services: cdktf.listMapper(cdktf.stringToTerraform)(this._inboundServices),
+      instance_class: cdktf.stringToTerraform(this._instanceClass),
+      nobuild_files_regex: cdktf.stringToTerraform(this._nobuildFilesRegex),
+      noop_on_destroy: cdktf.booleanToTerraform(this._noopOnDestroy),
+      project: cdktf.stringToTerraform(this._project),
+      runtime: cdktf.stringToTerraform(this._runtime),
+      runtime_api_version: cdktf.stringToTerraform(this._runtimeApiVersion),
+      runtime_channel: cdktf.stringToTerraform(this._runtimeChannel),
+      runtime_main_executable_path: cdktf.stringToTerraform(this._runtimeMainExecutablePath),
+      service: cdktf.stringToTerraform(this._service),
+      serving_status: cdktf.stringToTerraform(this._servingStatus),
+      version_id: cdktf.stringToTerraform(this._versionId),
+      api_config: cdktf.listMapper(appEngineFlexibleAppVersionApiConfigToTerraform)(this._apiConfig),
+      automatic_scaling: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingToTerraform)(this._automaticScaling),
+      deployment: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentToTerraform)(this._deployment),
+      endpoints_api_service: cdktf.listMapper(appEngineFlexibleAppVersionEndpointsApiServiceToTerraform)(this._endpointsApiService),
+      entrypoint: cdktf.listMapper(appEngineFlexibleAppVersionEntrypointToTerraform)(this._entrypoint),
+      handlers: cdktf.listMapper(appEngineFlexibleAppVersionHandlersToTerraform)(this._handlers),
+      liveness_check: cdktf.listMapper(appEngineFlexibleAppVersionLivenessCheckToTerraform)(this._livenessCheck),
+      manual_scaling: cdktf.listMapper(appEngineFlexibleAppVersionManualScalingToTerraform)(this._manualScaling),
+      network: cdktf.listMapper(appEngineFlexibleAppVersionNetworkToTerraform)(this._network),
+      readiness_check: cdktf.listMapper(appEngineFlexibleAppVersionReadinessCheckToTerraform)(this._readinessCheck),
+      resources: cdktf.listMapper(appEngineFlexibleAppVersionResourcesToTerraform)(this._resources),
+      timeouts: appEngineFlexibleAppVersionTimeoutsToTerraform(this._timeouts),
+      vpc_access_connector: cdktf.listMapper(appEngineFlexibleAppVersionVpcAccessConnectorToTerraform)(this._vpcAccessConnector),
     };
   }
 }

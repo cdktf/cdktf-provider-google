@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeInstanceGroupNamedPortAConfig extends TerraformMetaArguments {
+export interface ComputeInstanceGroupNamedPortAConfig extends cdktf.TerraformMetaArguments {
   /** The name of the instance group. */
   readonly group: string;
   /** The name for this named port. The name must be 1-63 characters
@@ -26,9 +25,18 @@ export interface ComputeInstanceGroupNamedPortTimeouts {
   readonly delete?: string;
 }
 
+function computeInstanceGroupNamedPortTimeoutsToTerraform(struct?: ComputeInstanceGroupNamedPortTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeInstanceGroupNamedPortA extends TerraformResource {
+export class ComputeInstanceGroupNamedPortA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -155,12 +163,12 @@ export class ComputeInstanceGroupNamedPortA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      group: this._group,
-      name: this._name,
-      port: this._port,
-      project: this._project,
-      zone: this._zone,
-      timeouts: this._timeouts,
+      group: cdktf.stringToTerraform(this._group),
+      name: cdktf.stringToTerraform(this._name),
+      port: cdktf.numberToTerraform(this._port),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
+      timeouts: computeInstanceGroupNamedPortTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServiceAccountKeyConfig extends TerraformMetaArguments {
+export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
   /** The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048". */
   readonly keyAlgorithm?: string;
   readonly privateKeyType?: string;
@@ -20,7 +19,7 @@ export interface ServiceAccountKeyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class ServiceAccountKey extends TerraformResource {
+export class ServiceAccountKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -161,11 +160,11 @@ export class ServiceAccountKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_algorithm: this._keyAlgorithm,
-      private_key_type: this._privateKeyType,
-      public_key_data: this._publicKeyData,
-      public_key_type: this._publicKeyType,
-      service_account_id: this._serviceAccountId,
+      key_algorithm: cdktf.stringToTerraform(this._keyAlgorithm),
+      private_key_type: cdktf.stringToTerraform(this._privateKeyType),
+      public_key_data: cdktf.stringToTerraform(this._publicKeyData),
+      public_key_type: cdktf.stringToTerraform(this._publicKeyType),
+      service_account_id: cdktf.stringToTerraform(this._serviceAccountId),
     };
   }
 }

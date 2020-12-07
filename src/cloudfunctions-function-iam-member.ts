@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudfunctionsFunctionIamMemberConfig extends TerraformMetaArguments {
+export interface CloudfunctionsFunctionIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly cloudFunction: string;
   readonly member: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface CloudfunctionsFunctionIamMemberCondition {
   readonly title: string;
 }
 
+function cloudfunctionsFunctionIamMemberConditionToTerraform(struct?: CloudfunctionsFunctionIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class CloudfunctionsFunctionIamMember extends TerraformResource {
+export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class CloudfunctionsFunctionIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cloud_function: this._cloudFunction,
-      member: this._member,
-      project: this._project,
-      region: this._region,
-      role: this._role,
-      condition: this._condition,
+      cloud_function: cdktf.stringToTerraform(this._cloudFunction),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(cloudfunctionsFunctionIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

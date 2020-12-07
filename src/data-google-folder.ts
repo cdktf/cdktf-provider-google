@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleFolderConfig extends TerraformMetaArguments {
+export interface DataGoogleFolderConfig extends cdktf.TerraformMetaArguments {
   readonly folder: string;
   readonly lookupOrganization?: boolean;
 }
 
 // Resource
 
-export class DataGoogleFolder extends TerraformDataSource {
+export class DataGoogleFolder extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -114,8 +113,8 @@ export class DataGoogleFolder extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      folder: this._folder,
-      lookup_organization: this._lookupOrganization,
+      folder: cdktf.stringToTerraform(this._folder),
+      lookup_organization: cdktf.booleanToTerraform(this._lookupOrganization),
     };
   }
 }

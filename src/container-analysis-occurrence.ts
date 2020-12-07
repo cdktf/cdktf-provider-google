@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerAnalysisOccurrenceConfig extends TerraformMetaArguments {
+export interface ContainerAnalysisOccurrenceConfig extends cdktf.TerraformMetaArguments {
   /** The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests. */
@@ -46,6 +45,15 @@ have a canonical serialization that can always be
 unambiguously computed to derive the payload. */
   readonly signature?: string;
 }
+
+function containerAnalysisOccurrenceAttestationSignaturesToTerraform(struct?: ContainerAnalysisOccurrenceAttestationSignatures): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    public_key_id: cdktf.stringToTerraform(struct!.publicKeyId),
+    signature: cdktf.stringToTerraform(struct!.signature),
+  }
+}
+
 export interface ContainerAnalysisOccurrenceAttestation {
   /** The serialized payload that is verified by one or
 more signatures. A base64-encoded string. */
@@ -53,15 +61,34 @@ more signatures. A base64-encoded string. */
   /** signatures block */
   readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[];
 }
+
+function containerAnalysisOccurrenceAttestationToTerraform(struct?: ContainerAnalysisOccurrenceAttestation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    serialized_payload: cdktf.stringToTerraform(struct!.serializedPayload),
+    signatures: cdktf.listMapper(containerAnalysisOccurrenceAttestationSignaturesToTerraform)(struct!.signatures),
+  }
+}
+
 export interface ContainerAnalysisOccurrenceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalysisOccurrenceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ContainerAnalysisOccurrence extends TerraformResource {
+export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,12 +235,12 @@ export class ContainerAnalysisOccurrence extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      note_name: this._noteName,
-      project: this._project,
-      remediation: this._remediation,
-      resource_uri: this._resourceUri,
-      attestation: this._attestation,
-      timeouts: this._timeouts,
+      note_name: cdktf.stringToTerraform(this._noteName),
+      project: cdktf.stringToTerraform(this._project),
+      remediation: cdktf.stringToTerraform(this._remediation),
+      resource_uri: cdktf.stringToTerraform(this._resourceUri),
+      attestation: cdktf.listMapper(containerAnalysisOccurrenceAttestationToTerraform)(this._attestation),
+      timeouts: containerAnalysisOccurrenceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudbuildTriggerConfig extends TerraformMetaArguments {
+export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   /** Human-readable description of the trigger. */
   readonly description?: string;
   /** Whether the trigger is disabled or not. If true, the trigger will never result in a build. */
@@ -59,6 +58,15 @@ this location as a prefix. */
   /** Path globs used to match files in the build's workspace. */
   readonly paths?: string[];
 }
+
+function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: CloudbuildTriggerBuildArtifactsObjects): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+  }
+}
+
 export interface CloudbuildTriggerBuildArtifacts {
   /** A list of images to be pushed upon the successful completion of all build steps.
 
@@ -71,6 +79,15 @@ If any of the images fail to be pushed, the build is marked FAILURE. */
   /** objects block */
   readonly objects?: CloudbuildTriggerBuildArtifactsObjects[];
 }
+
+function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTriggerBuildArtifacts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
+    objects: cdktf.listMapper(cloudbuildTriggerBuildArtifactsObjectsToTerraform)(struct!.objects),
+  }
+}
+
 export interface CloudbuildTriggerBuildOptionsVolumes {
   /** Name of the volume to mount.
 
@@ -83,6 +100,15 @@ Paths must be absolute and cannot conflict with other volume paths on the same
 build step or with certain reserved volume paths. */
   readonly path?: string;
 }
+
+function cloudbuildTriggerBuildOptionsVolumesToTerraform(struct?: CloudbuildTriggerBuildOptionsVolumes): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CloudbuildTriggerBuildOptions {
   /** Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
 some of the space will be used by the operating system and build utilities.
@@ -126,6 +152,25 @@ This field is experimental. */
   /** volumes block */
   readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[];
 }
+
+function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTriggerBuildOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    dynamic_substitutions: cdktf.booleanToTerraform(struct!.dynamicSubstitutions),
+    env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.env),
+    log_streaming_option: cdktf.stringToTerraform(struct!.logStreamingOption),
+    logging: cdktf.stringToTerraform(struct!.logging),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    requested_verify_option: cdktf.stringToTerraform(struct!.requestedVerifyOption),
+    secret_env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretEnv),
+    source_provenance_hash: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceProvenanceHash),
+    substitution_option: cdktf.stringToTerraform(struct!.substitutionOption),
+    worker_pool: cdktf.stringToTerraform(struct!.workerPool),
+    volumes: cdktf.listMapper(cloudbuildTriggerBuildOptionsVolumesToTerraform)(struct!.volumes),
+  }
+}
+
 export interface CloudbuildTriggerBuildSecret {
   /** Cloud KMS key name to use to decrypt these envs. */
   readonly kmsKeyName: string;
@@ -135,6 +180,15 @@ and must be used by at least one build step. Values can be at most 64 KB in size
 There can be at most 100 secret values across all of a build's secrets. */
   readonly secretEnv?: { [key: string]: string };
 }
+
+function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTriggerBuildSecret): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+    secret_env: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secretEnv),
+  }
+}
+
 export interface CloudbuildTriggerBuildSourceRepoSource {
   /** Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
@@ -160,6 +214,21 @@ The syntax of the regular expressions accepted is the syntax accepted by RE2 and
 described at https://github.com/google/re2/wiki/Syntax */
   readonly tagName?: string;
 }
+
+function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: CloudbuildTriggerBuildSourceRepoSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    branch_name: cdktf.stringToTerraform(struct!.branchName),
+    commit_sha: cdktf.stringToTerraform(struct!.commitSha),
+    dir: cdktf.stringToTerraform(struct!.dir),
+    invert_regex: cdktf.booleanToTerraform(struct!.invertRegex),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    repo_name: cdktf.stringToTerraform(struct!.repoName),
+    substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.substitutions),
+    tag_name: cdktf.stringToTerraform(struct!.tagName),
+  }
+}
+
 export interface CloudbuildTriggerBuildSourceStorageSource {
   /** Google Cloud Storage bucket containing the source. */
   readonly bucket: string;
@@ -170,12 +239,31 @@ If the generation is omitted, the latest generation will be used */
 This object must be a gzipped archive file (.tar.gz) containing source to build. */
   readonly object: string;
 }
+
+function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: CloudbuildTriggerBuildSourceStorageSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket: cdktf.stringToTerraform(struct!.bucket),
+    generation: cdktf.stringToTerraform(struct!.generation),
+    object: cdktf.stringToTerraform(struct!.object),
+  }
+}
+
 export interface CloudbuildTriggerBuildSource {
   /** repo_source block */
   readonly repoSource?: CloudbuildTriggerBuildSourceRepoSource[];
   /** storage_source block */
   readonly storageSource?: CloudbuildTriggerBuildSourceStorageSource[];
 }
+
+function cloudbuildTriggerBuildSourceToTerraform(struct?: CloudbuildTriggerBuildSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    repo_source: cdktf.listMapper(cloudbuildTriggerBuildSourceRepoSourceToTerraform)(struct!.repoSource),
+    storage_source: cdktf.listMapper(cloudbuildTriggerBuildSourceStorageSourceToTerraform)(struct!.storageSource),
+  }
+}
+
 export interface CloudbuildTriggerBuildStepVolumes {
   /** Name of the volume to mount.
 
@@ -188,6 +276,15 @@ Paths must be absolute and cannot conflict with other volume paths on
 the same build step or with certain reserved volume paths. */
   readonly path: string;
 }
+
+function cloudbuildTriggerBuildStepVolumesToTerraform(struct?: CloudbuildTriggerBuildStepVolumes): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CloudbuildTriggerBuildStep {
   /** A list of arguments that will be presented to the step when it is started.
 
@@ -260,6 +357,24 @@ have completed successfully. */
   /** volumes block */
   readonly volumes?: CloudbuildTriggerBuildStepVolumes[];
 }
+
+function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTriggerBuildStep): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    dir: cdktf.stringToTerraform(struct!.dir),
+    entrypoint: cdktf.stringToTerraform(struct!.entrypoint),
+    env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.env),
+    id: cdktf.stringToTerraform(struct!.id),
+    name: cdktf.stringToTerraform(struct!.name),
+    secret_env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretEnv),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+    timing: cdktf.stringToTerraform(struct!.timing),
+    wait_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.waitFor),
+    volumes: cdktf.listMapper(cloudbuildTriggerBuildStepVolumesToTerraform)(struct!.volumes),
+  }
+}
+
 export interface CloudbuildTriggerBuild {
   /** A list of images to be pushed upon the successful completion of all build steps.
 The images are pushed using the builder service account's credentials.
@@ -295,11 +410,39 @@ Default time is ten minutes (600s). */
   /** step block */
   readonly step: CloudbuildTriggerBuildStep[];
 }
+
+function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuild): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
+    logs_bucket: cdktf.stringToTerraform(struct!.logsBucket),
+    queue_ttl: cdktf.stringToTerraform(struct!.queueTtl),
+    substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.substitutions),
+    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+    artifacts: cdktf.listMapper(cloudbuildTriggerBuildArtifactsToTerraform)(struct!.artifacts),
+    options: cdktf.listMapper(cloudbuildTriggerBuildOptionsToTerraform)(struct!.options),
+    secret: cdktf.listMapper(cloudbuildTriggerBuildSecretToTerraform)(struct!.secret),
+    source: cdktf.listMapper(cloudbuildTriggerBuildSourceToTerraform)(struct!.source),
+    step: cdktf.listMapper(cloudbuildTriggerBuildStepToTerraform)(struct!.step),
+  }
+}
+
 export interface CloudbuildTriggerTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface CloudbuildTriggerTriggerTemplate {
   /** Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 This field is a regular expression. */
@@ -324,9 +467,23 @@ This field is a regular expression. */
   readonly tagName?: string;
 }
 
+function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerTriggerTemplate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    branch_name: cdktf.stringToTerraform(struct!.branchName),
+    commit_sha: cdktf.stringToTerraform(struct!.commitSha),
+    dir: cdktf.stringToTerraform(struct!.dir),
+    invert_regex: cdktf.booleanToTerraform(struct!.invertRegex),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    repo_name: cdktf.stringToTerraform(struct!.repoName),
+    tag_name: cdktf.stringToTerraform(struct!.tagName),
+  }
+}
+
+
 // Resource
 
-export class CloudbuildTrigger extends TerraformResource {
+export class CloudbuildTrigger extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -574,18 +731,18 @@ export class CloudbuildTrigger extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      disabled: this._disabled,
-      filename: this._filename,
-      ignored_files: this._ignoredFiles,
-      included_files: this._includedFiles,
-      name: this._name,
-      project: this._project,
-      substitutions: this._substitutions,
-      tags: this._tags,
-      build: this._build,
-      timeouts: this._timeouts,
-      trigger_template: this._triggerTemplate,
+      description: cdktf.stringToTerraform(this._description),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      filename: cdktf.stringToTerraform(this._filename),
+      ignored_files: cdktf.listMapper(cdktf.stringToTerraform)(this._ignoredFiles),
+      included_files: cdktf.listMapper(cdktf.stringToTerraform)(this._includedFiles),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(this._substitutions),
+      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      build: cdktf.listMapper(cloudbuildTriggerBuildToTerraform)(this._build),
+      timeouts: cloudbuildTriggerTimeoutsToTerraform(this._timeouts),
+      trigger_template: cdktf.listMapper(cloudbuildTriggerTriggerTemplateToTerraform)(this._triggerTemplate),
     };
   }
 }

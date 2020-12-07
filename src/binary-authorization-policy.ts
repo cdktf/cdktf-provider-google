@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BinaryAuthorizationPolicyConfig extends TerraformMetaArguments {
+export interface BinaryAuthorizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /** A descriptive comment. */
   readonly description?: string;
   /** Controls the evaluation of a Google-maintained global admission policy
@@ -31,6 +30,14 @@ wildcard, but this is allowed only in text after the registry/
 part. */
   readonly namePattern: string;
 }
+
+function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(struct?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name_pattern: cdktf.stringToTerraform(struct!.namePattern),
+  }
+}
+
 export interface BinaryAuthorizationPolicyClusterAdmissionRules {
   readonly cluster: string;
   /** The action when a pod creation is denied by the admission rule. Possible values: ["ENFORCED_BLOCK_AND_AUDIT_LOG", "DRYRUN_AUDIT_LOG_ONLY"] */
@@ -48,6 +55,17 @@ Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty. */
   readonly requireAttestationsBy?: string[];
 }
+
+function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct?: BinaryAuthorizationPolicyClusterAdmissionRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cluster: cdktf.stringToTerraform(struct!.cluster),
+    enforcement_mode: cdktf.stringToTerraform(struct!.enforcementMode),
+    evaluation_mode: cdktf.stringToTerraform(struct!.evaluationMode),
+    require_attestations_by: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requireAttestationsBy),
+  }
+}
+
 export interface BinaryAuthorizationPolicyDefaultAdmissionRule {
   /** The action when a pod creation is denied by the admission rule. Possible values: ["ENFORCED_BLOCK_AND_AUDIT_LOG", "DRYRUN_AUDIT_LOG_ONLY"] */
   readonly enforcementMode: string;
@@ -64,15 +82,35 @@ Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty. */
   readonly requireAttestationsBy?: string[];
 }
+
+function binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(struct?: BinaryAuthorizationPolicyDefaultAdmissionRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enforcement_mode: cdktf.stringToTerraform(struct!.enforcementMode),
+    evaluation_mode: cdktf.stringToTerraform(struct!.evaluationMode),
+    require_attestations_by: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requireAttestationsBy),
+  }
+}
+
 export interface BinaryAuthorizationPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuthorizationPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BinaryAuthorizationPolicy extends TerraformResource {
+export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -222,13 +260,13 @@ export class BinaryAuthorizationPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      global_policy_evaluation_mode: this._globalPolicyEvaluationMode,
-      project: this._project,
-      admission_whitelist_patterns: this._admissionWhitelistPatterns,
-      cluster_admission_rules: this._clusterAdmissionRules,
-      default_admission_rule: this._defaultAdmissionRule,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      global_policy_evaluation_mode: cdktf.stringToTerraform(this._globalPolicyEvaluationMode),
+      project: cdktf.stringToTerraform(this._project),
+      admission_whitelist_patterns: cdktf.listMapper(binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform)(this._admissionWhitelistPatterns),
+      cluster_admission_rules: cdktf.listMapper(binaryAuthorizationPolicyClusterAdmissionRulesToTerraform)(this._clusterAdmissionRules),
+      default_admission_rule: cdktf.listMapper(binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform)(this._defaultAdmissionRule),
+      timeouts: binaryAuthorizationPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

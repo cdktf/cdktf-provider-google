@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleTpuTensorflowVersionsConfig extends TerraformMetaArguments {
+export interface DataGoogleTpuTensorflowVersionsConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   readonly zone?: string;
 }
 
 // Resource
 
-export class DataGoogleTpuTensorflowVersions extends TerraformDataSource {
+export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -87,8 +86,8 @@ export class DataGoogleTpuTensorflowVersions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
-      zone: this._zone,
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeGlobalNetworkEndpointConfig extends TerraformMetaArguments {
+export interface ComputeGlobalNetworkEndpointConfig extends cdktf.TerraformMetaArguments {
   /** Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT. */
   readonly fqdn?: string;
@@ -26,9 +25,18 @@ export interface ComputeGlobalNetworkEndpointTimeouts {
   readonly delete?: string;
 }
 
+function computeGlobalNetworkEndpointTimeoutsToTerraform(struct?: ComputeGlobalNetworkEndpointTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeGlobalNetworkEndpoint extends TerraformResource {
+export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -158,12 +166,12 @@ export class ComputeGlobalNetworkEndpoint extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      fqdn: this._fqdn,
-      global_network_endpoint_group: this._globalNetworkEndpointGroup,
-      ip_address: this._ipAddress,
-      port: this._port,
-      project: this._project,
-      timeouts: this._timeouts,
+      fqdn: cdktf.stringToTerraform(this._fqdn),
+      global_network_endpoint_group: cdktf.stringToTerraform(this._globalNetworkEndpointGroup),
+      ip_address: cdktf.stringToTerraform(this._ipAddress),
+      port: cdktf.numberToTerraform(this._port),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeGlobalNetworkEndpointTimeoutsToTerraform(this._timeouts),
     };
   }
 }

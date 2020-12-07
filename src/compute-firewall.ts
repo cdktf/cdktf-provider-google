@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeFirewallConfig extends TerraformMetaArguments {
+export interface ComputeFirewallConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. */
   readonly description?: string;
@@ -112,6 +111,15 @@ one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number. */
   readonly protocol: string;
 }
+
+function computeFirewallAllowToTerraform(struct?: ComputeFirewallAllow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ports),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface ComputeFirewallDeny {
   /** An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -127,19 +135,46 @@ one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number. */
   readonly protocol: string;
 }
+
+function computeFirewallDenyToTerraform(struct?: ComputeFirewallDeny): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ports),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface ComputeFirewallLogConfig {
   /** This field denotes whether to include or exclude metadata for firewall logs. Possible values: ["EXCLUDE_ALL_METADATA", "INCLUDE_ALL_METADATA"] */
   readonly metadata: string;
 }
+
+function computeFirewallLogConfigToTerraform(struct?: ComputeFirewallLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metadata: cdktf.stringToTerraform(struct!.metadata),
+  }
+}
+
 export interface ComputeFirewallTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeFirewallTimeoutsToTerraform(struct?: ComputeFirewallTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeFirewall extends TerraformResource {
+export class ComputeFirewall extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -483,24 +518,24 @@ export class ComputeFirewall extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      destination_ranges: this._destinationRanges,
-      direction: this._direction,
-      disabled: this._disabled,
-      enable_logging: this._enableLogging,
-      name: this._name,
-      network: this._network,
-      priority: this._priority,
-      project: this._project,
-      source_ranges: this._sourceRanges,
-      source_service_accounts: this._sourceServiceAccounts,
-      source_tags: this._sourceTags,
-      target_service_accounts: this._targetServiceAccounts,
-      target_tags: this._targetTags,
-      allow: this._allow,
-      deny: this._deny,
-      log_config: this._logConfig,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      destination_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationRanges),
+      direction: cdktf.stringToTerraform(this._direction),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      enable_logging: cdktf.booleanToTerraform(this._enableLogging),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      priority: cdktf.numberToTerraform(this._priority),
+      project: cdktf.stringToTerraform(this._project),
+      source_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceRanges),
+      source_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceServiceAccounts),
+      source_tags: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceTags),
+      target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._targetServiceAccounts),
+      target_tags: cdktf.listMapper(cdktf.stringToTerraform)(this._targetTags),
+      allow: cdktf.listMapper(computeFirewallAllowToTerraform)(this._allow),
+      deny: cdktf.listMapper(computeFirewallDenyToTerraform)(this._deny),
+      log_config: cdktf.listMapper(computeFirewallLogConfigToTerraform)(this._logConfig),
+      timeouts: computeFirewallTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryTableConfig extends TerraformMetaArguments {
+export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   /** Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order. */
   readonly clustering?: string[];
   /** The dataset ID to create the table in. Changing this forces a new resource to be created. */
@@ -43,6 +42,14 @@ export interface BigqueryTableEncryptionConfiguration {
   /** The self link or full name of a key which should be used to encrypt this table. Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource. */
   readonly kmsKeyName: string;
 }
+
+function bigqueryTableEncryptionConfigurationToTerraform(struct?: BigqueryTableEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface BigqueryTableExternalDataConfigurationCsvOptions {
   /** Indicates if BigQuery should accept rows that are missing trailing optional columns. */
   readonly allowJaggedRows?: boolean;
@@ -57,18 +64,49 @@ export interface BigqueryTableExternalDataConfigurationCsvOptions {
   /** The number of rows at the top of a CSV file that BigQuery will skip when reading the data. */
   readonly skipLeadingRows?: number;
 }
+
+function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationCsvOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_jagged_rows: cdktf.booleanToTerraform(struct!.allowJaggedRows),
+    allow_quoted_newlines: cdktf.booleanToTerraform(struct!.allowQuotedNewlines),
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    quote: cdktf.stringToTerraform(struct!.quote),
+    skip_leading_rows: cdktf.numberToTerraform(struct!.skipLeadingRows),
+  }
+}
+
 export interface BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
   /** Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20" */
   readonly range?: string;
   /** The number of rows at the top of the sheet that BigQuery will skip when reading the data. At least one of range or skip_leading_rows must be set. */
   readonly skipLeadingRows?: number;
 }
+
+function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    range: cdktf.stringToTerraform(struct!.range),
+    skip_leading_rows: cdktf.numberToTerraform(struct!.skipLeadingRows),
+  }
+}
+
 export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
   /** When set, what mode of hive partitioning to use when reading data. */
   readonly mode?: string;
   /** When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins. */
   readonly sourceUriPrefix?: string;
 }
+
+function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationHivePartitioningOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    source_uri_prefix: cdktf.stringToTerraform(struct!.sourceUriPrefix),
+  }
+}
+
 export interface BigqueryTableExternalDataConfiguration {
   /** Let BigQuery try to autodetect the schema and format of the table. */
   readonly autodetect: boolean;
@@ -91,6 +129,23 @@ export interface BigqueryTableExternalDataConfiguration {
   /** hive_partitioning_options block */
   readonly hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions[];
 }
+
+function bigqueryTableExternalDataConfigurationToTerraform(struct?: BigqueryTableExternalDataConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    autodetect: cdktf.booleanToTerraform(struct!.autodetect),
+    compression: cdktf.stringToTerraform(struct!.compression),
+    ignore_unknown_values: cdktf.booleanToTerraform(struct!.ignoreUnknownValues),
+    max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
+    schema: cdktf.stringToTerraform(struct!.schema),
+    source_format: cdktf.stringToTerraform(struct!.sourceFormat),
+    source_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceUris),
+    csv_options: cdktf.listMapper(bigqueryTableExternalDataConfigurationCsvOptionsToTerraform)(struct!.csvOptions),
+    google_sheets_options: cdktf.listMapper(bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform)(struct!.googleSheetsOptions),
+    hive_partitioning_options: cdktf.listMapper(bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform)(struct!.hivePartitioningOptions),
+  }
+}
+
 export interface BigqueryTableMaterializedView {
   /** Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. */
   readonly enableRefresh?: boolean;
@@ -99,6 +154,16 @@ export interface BigqueryTableMaterializedView {
   /** Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000 */
   readonly refreshIntervalMs?: number;
 }
+
+function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableMaterializedView): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_refresh: cdktf.booleanToTerraform(struct!.enableRefresh),
+    query: cdktf.stringToTerraform(struct!.query),
+    refresh_interval_ms: cdktf.numberToTerraform(struct!.refreshIntervalMs),
+  }
+}
+
 export interface BigqueryTableRangePartitioningRange {
   /** End of the range partitioning, exclusive. */
   readonly end: number;
@@ -107,12 +172,31 @@ export interface BigqueryTableRangePartitioningRange {
   /** Start of the range partitioning, inclusive. */
   readonly start: number;
 }
+
+function bigqueryTableRangePartitioningRangeToTerraform(struct?: BigqueryTableRangePartitioningRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end: cdktf.numberToTerraform(struct!.end),
+    interval: cdktf.numberToTerraform(struct!.interval),
+    start: cdktf.numberToTerraform(struct!.start),
+  }
+}
+
 export interface BigqueryTableRangePartitioning {
   /** The field used to determine how to create a range-based partition. */
   readonly field: string;
   /** range block */
   readonly range: BigqueryTableRangePartitioningRange[];
 }
+
+function bigqueryTableRangePartitioningToTerraform(struct?: BigqueryTableRangePartitioning): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    field: cdktf.stringToTerraform(struct!.field),
+    range: cdktf.listMapper(bigqueryTableRangePartitioningRangeToTerraform)(struct!.range),
+  }
+}
+
 export interface BigqueryTableTimePartitioning {
   /** Number of milliseconds for which to keep the storage for a partition. */
   readonly expirationMs?: number;
@@ -123,6 +207,17 @@ export interface BigqueryTableTimePartitioning {
   /** The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. */
   readonly type: string;
 }
+
+function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableTimePartitioning): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiration_ms: cdktf.numberToTerraform(struct!.expirationMs),
+    field: cdktf.stringToTerraform(struct!.field),
+    require_partition_filter: cdktf.booleanToTerraform(struct!.requirePartitionFilter),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface BigqueryTableView {
   /** A query that BigQuery executes when the view is referenced. */
   readonly query: string;
@@ -130,9 +225,18 @@ export interface BigqueryTableView {
   readonly useLegacySql?: boolean;
 }
 
+function bigqueryTableViewToTerraform(struct?: BigqueryTableView): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    query: cdktf.stringToTerraform(struct!.query),
+    use_legacy_sql: cdktf.booleanToTerraform(struct!.useLegacySql),
+  }
+}
+
+
 // Resource
 
-export class BigqueryTable extends TerraformResource {
+export class BigqueryTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -460,21 +564,21 @@ export class BigqueryTable extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      clustering: this._clustering,
-      dataset_id: this._datasetId,
-      description: this._description,
-      expiration_time: this._expirationTime,
-      friendly_name: this._friendlyName,
-      labels: this._labels,
-      project: this._project,
-      schema: this._schema,
-      table_id: this._tableId,
-      encryption_configuration: this._encryptionConfiguration,
-      external_data_configuration: this._externalDataConfiguration,
-      materialized_view: this._materializedView,
-      range_partitioning: this._rangePartitioning,
-      time_partitioning: this._timePartitioning,
-      view: this._view,
+      clustering: cdktf.listMapper(cdktf.stringToTerraform)(this._clustering),
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      description: cdktf.stringToTerraform(this._description),
+      expiration_time: cdktf.numberToTerraform(this._expirationTime),
+      friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      project: cdktf.stringToTerraform(this._project),
+      schema: cdktf.stringToTerraform(this._schema),
+      table_id: cdktf.stringToTerraform(this._tableId),
+      encryption_configuration: cdktf.listMapper(bigqueryTableEncryptionConfigurationToTerraform)(this._encryptionConfiguration),
+      external_data_configuration: cdktf.listMapper(bigqueryTableExternalDataConfigurationToTerraform)(this._externalDataConfiguration),
+      materialized_view: cdktf.listMapper(bigqueryTableMaterializedViewToTerraform)(this._materializedView),
+      range_partitioning: cdktf.listMapper(bigqueryTableRangePartitioningToTerraform)(this._rangePartitioning),
+      time_partitioning: cdktf.listMapper(bigqueryTableTimePartitioningToTerraform)(this._timePartitioning),
+      view: cdktf.listMapper(bigqueryTableViewToTerraform)(this._view),
     };
   }
 }

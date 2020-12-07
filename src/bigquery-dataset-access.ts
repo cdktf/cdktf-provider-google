@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryDatasetAccessAConfig extends TerraformMetaArguments {
+export interface BigqueryDatasetAccessAConfig extends cdktf.TerraformMetaArguments {
   /** A unique ID for this dataset, without the project name. The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters. */
@@ -54,6 +53,15 @@ export interface BigqueryDatasetAccessTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
+
+function bigqueryDatasetAccessTimeoutsToTerraform(struct?: BigqueryDatasetAccessTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
 export interface BigqueryDatasetAccessViewA {
   /** The ID of the dataset containing this table. */
   readonly datasetId: string;
@@ -65,9 +73,19 @@ is 1,024 characters. */
   readonly tableId: string;
 }
 
+function bigqueryDatasetAccessViewAToTerraform(struct?: BigqueryDatasetAccessViewA): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
+
 // Resource
 
-export class BigqueryDatasetAccessA extends TerraformResource {
+export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -273,16 +291,16 @@ export class BigqueryDatasetAccessA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      domain: this._domain,
-      group_by_email: this._groupByEmail,
-      iam_member: this._iamMember,
-      project: this._project,
-      role: this._role,
-      special_group: this._specialGroup,
-      user_by_email: this._userByEmail,
-      timeouts: this._timeouts,
-      view: this._view,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      domain: cdktf.stringToTerraform(this._domain),
+      group_by_email: cdktf.stringToTerraform(this._groupByEmail),
+      iam_member: cdktf.stringToTerraform(this._iamMember),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      special_group: cdktf.stringToTerraform(this._specialGroup),
+      user_by_email: cdktf.stringToTerraform(this._userByEmail),
+      timeouts: bigqueryDatasetAccessTimeoutsToTerraform(this._timeouts),
+      view: cdktf.listMapper(bigqueryDatasetAccessViewAToTerraform)(this._view),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AccessContextManagerAccessLevelsConfig extends TerraformMetaArguments {
+export interface AccessContextManagerAccessLevelsConfig extends cdktf.TerraformMetaArguments {
   /** The AccessPolicy this AccessLevel lives in.
 Format: accessPolicies/{policy_id} */
   readonly parent: string;
@@ -24,6 +23,15 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1". */
   /** The operating system type of the device. Possible values: ["OS_UNSPECIFIED", "DESKTOP_MAC", "DESKTOP_WINDOWS", "DESKTOP_LINUX", "DESKTOP_CHROME_OS"] */
   readonly osType: string;
 }
+
+function accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    minimum_version: cdktf.stringToTerraform(struct!.minimumVersion),
+    os_type: cdktf.stringToTerraform(struct!.osType),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy {
   /** A list of allowed device management levels.
 An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"] */
@@ -41,6 +49,19 @@ to be true. Defaults to false. */
   /** os_constraints block */
   readonly osConstraints?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints[];
 }
+
+function accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_device_management_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedDeviceManagementLevels),
+    allowed_encryption_statuses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedEncryptionStatuses),
+    require_admin_approval: cdktf.booleanToTerraform(struct!.requireAdminApproval),
+    require_corp_owned: cdktf.booleanToTerraform(struct!.requireCorpOwned),
+    require_screen_lock: cdktf.booleanToTerraform(struct!.requireScreenLock),
+    os_constraints: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraintsToTerraform)(struct!.osConstraints),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   /** A list of CIDR block IP subnetwork specification. May be IPv4
 or IPv6.
@@ -79,6 +100,19 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name} */
   /** device_policy block */
   readonly devicePolicy?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy[];
 }
+
+function accessContextManagerAccessLevelsAccessLevelsBasicConditionsToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ip_subnetworks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipSubnetworks),
+    members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.members),
+    negate: cdktf.booleanToTerraform(struct!.negate),
+    regions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.regions),
+    required_access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requiredAccessLevels),
+    device_policy: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyToTerraform)(struct!.devicePolicy),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsAccessLevelsBasic {
   /** How the conditions list should be combined to determine if a request
 is granted this AccessLevel. If AND is used, each Condition in
@@ -89,6 +123,15 @@ for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND",
   /** conditions block */
   readonly conditions: AccessContextManagerAccessLevelsAccessLevelsBasicConditions[];
 }
+
+function accessContextManagerAccessLevelsAccessLevelsBasicToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasic): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    combining_function: cdktf.stringToTerraform(struct!.combiningFunction),
+    conditions: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicConditionsToTerraform)(struct!.conditions),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsAccessLevelsCustomExpr {
   /** Description of the expression */
   readonly description?: string;
@@ -99,10 +142,29 @@ export interface AccessContextManagerAccessLevelsAccessLevelsCustomExpr {
   /** Title for the expression, i.e. a short string describing its purpose. */
   readonly title?: string;
 }
+
+function accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsCustomExpr): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    location: cdktf.stringToTerraform(struct!.location),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsAccessLevelsCustom {
   /** expr block */
   readonly expr: AccessContextManagerAccessLevelsAccessLevelsCustomExpr[];
 }
+
+function accessContextManagerAccessLevelsAccessLevelsCustomToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsCustom): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expr: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform)(struct!.expr),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsAccessLevels {
   /** Description of the AccessLevel and its use. Does not affect behavior. */
   readonly description?: string;
@@ -117,15 +179,37 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name} */
   /** custom block */
   readonly custom?: AccessContextManagerAccessLevelsAccessLevelsCustom[];
 }
+
+function accessContextManagerAccessLevelsAccessLevelsToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    title: cdktf.stringToTerraform(struct!.title),
+    basic: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicToTerraform)(struct!.basic),
+    custom: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsCustomToTerraform)(struct!.custom),
+  }
+}
+
 export interface AccessContextManagerAccessLevelsTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function accessContextManagerAccessLevelsTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AccessContextManagerAccessLevels extends TerraformResource {
+export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -207,9 +291,9 @@ export class AccessContextManagerAccessLevels extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      parent: this._parent,
-      access_levels: this._accessLevels,
-      timeouts: this._timeouts,
+      parent: cdktf.stringToTerraform(this._parent),
+      access_levels: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsToTerraform)(this._accessLevels),
+      timeouts: accessContextManagerAccessLevelsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

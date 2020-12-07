@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNodeTemplateConfig extends TerraformMetaArguments {
+export interface ComputeNodeTemplateConfig extends cdktf.TerraformMetaArguments {
   /** An optional textual description of the resource. */
   readonly description?: string;
   /** Name of the resource. */
@@ -33,14 +32,32 @@ export interface ComputeNodeTemplateNodeTypeFlexibility {
   /** Physical memory available to the node, defined in MB. */
   readonly memory?: string;
 }
+
+function computeNodeTemplateNodeTypeFlexibilityToTerraform(struct?: ComputeNodeTemplateNodeTypeFlexibility): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cpus: cdktf.stringToTerraform(struct!.cpus),
+    memory: cdktf.stringToTerraform(struct!.memory),
+  }
+}
+
 export interface ComputeNodeTemplateTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function computeNodeTemplateTimeoutsToTerraform(struct?: ComputeNodeTemplateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeNodeTemplate extends TerraformResource {
+export class ComputeNodeTemplate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -220,14 +237,14 @@ export class ComputeNodeTemplate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      node_affinity_labels: this._nodeAffinityLabels,
-      node_type: this._nodeType,
-      project: this._project,
-      region: this._region,
-      node_type_flexibility: this._nodeTypeFlexibility,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      node_affinity_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._nodeAffinityLabels),
+      node_type: cdktf.stringToTerraform(this._nodeType),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      node_type_flexibility: cdktf.listMapper(computeNodeTemplateNodeTypeFlexibilityToTerraform)(this._nodeTypeFlexibility),
+      timeouts: computeNodeTemplateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

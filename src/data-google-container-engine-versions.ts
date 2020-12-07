@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleContainerEngineVersionsConfig extends TerraformMetaArguments {
+export interface DataGoogleContainerEngineVersionsConfig extends cdktf.TerraformMetaArguments {
   readonly location?: string;
   readonly project?: string;
   readonly versionPrefix?: string;
@@ -16,7 +14,7 @@ export interface DataGoogleContainerEngineVersionsConfig extends TerraformMetaAr
 
 // Resource
 
-export class DataGoogleContainerEngineVersions extends TerraformDataSource {
+export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -96,7 +94,7 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
 
   // release_channel_default_version - computed: true, optional: false, required: false
   public releaseChannelDefaultVersion(key: string): string {
-    return new StringMap(this, 'release_channel_default_version').lookup(key);
+    return new cdktf.StringMap(this, 'release_channel_default_version').lookup(key);
   }
 
   // valid_master_versions - computed: true, optional: false, required: false
@@ -131,9 +129,9 @@ export class DataGoogleContainerEngineVersions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      project: this._project,
-      version_prefix: this._versionPrefix,
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      version_prefix: cdktf.stringToTerraform(this._versionPrefix),
     };
   }
 }

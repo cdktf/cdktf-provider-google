@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IdentityPlatformTenantInboundSamlConfigConfig extends TerraformMetaArguments {
+export interface IdentityPlatformTenantInboundSamlConfigConfig extends cdktf.TerraformMetaArguments {
   /** Human friendly display name. */
   readonly displayName: string;
   /** If this config allows users to sign in with the provider. */
@@ -30,6 +29,14 @@ export interface IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates
   /** The x509 certificate */
   readonly x509Certificate?: string;
 }
+
+function identityPlatformTenantInboundSamlConfigIdpConfigIdpCertificatesToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x509_certificate: cdktf.stringToTerraform(struct!.x509Certificate),
+  }
+}
+
 export interface IdentityPlatformTenantInboundSamlConfigIdpConfig {
   /** Unique identifier for all SAML entities */
   readonly idpEntityId: string;
@@ -40,21 +47,51 @@ export interface IdentityPlatformTenantInboundSamlConfigIdpConfig {
   /** idp_certificates block */
   readonly idpCertificates: IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates[];
 }
+
+function identityPlatformTenantInboundSamlConfigIdpConfigToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigIdpConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    idp_entity_id: cdktf.stringToTerraform(struct!.idpEntityId),
+    sign_request: cdktf.booleanToTerraform(struct!.signRequest),
+    sso_url: cdktf.stringToTerraform(struct!.ssoUrl),
+    idp_certificates: cdktf.listMapper(identityPlatformTenantInboundSamlConfigIdpConfigIdpCertificatesToTerraform)(struct!.idpCertificates),
+  }
+}
+
 export interface IdentityPlatformTenantInboundSamlConfigSpConfig {
   /** Callback URI where responses from IDP are handled. Must start with 'https://'. */
   readonly callbackUri: string;
   /** Unique identifier for all SAML entities. */
   readonly spEntityId: string;
 }
+
+function identityPlatformTenantInboundSamlConfigSpConfigToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigSpConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    callback_uri: cdktf.stringToTerraform(struct!.callbackUri),
+    sp_entity_id: cdktf.stringToTerraform(struct!.spEntityId),
+  }
+}
+
 export interface IdentityPlatformTenantInboundSamlConfigTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function identityPlatformTenantInboundSamlConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IdentityPlatformTenantInboundSamlConfig extends TerraformResource {
+export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -209,14 +246,14 @@ export class IdentityPlatformTenantInboundSamlConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      enabled: this._enabled,
-      name: this._name,
-      project: this._project,
-      tenant: this._tenant,
-      idp_config: this._idpConfig,
-      sp_config: this._spConfig,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      tenant: cdktf.stringToTerraform(this._tenant),
+      idp_config: cdktf.listMapper(identityPlatformTenantInboundSamlConfigIdpConfigToTerraform)(this._idpConfig),
+      sp_config: cdktf.listMapper(identityPlatformTenantInboundSamlConfigSpConfigToTerraform)(this._spConfig),
+      timeouts: identityPlatformTenantInboundSamlConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

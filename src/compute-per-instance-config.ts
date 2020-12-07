@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputePerInstanceConfigConfig extends TerraformMetaArguments {
+export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArguments {
   /** The instance group manager this instance config is part of. */
   readonly instanceGroupManager: string;
   readonly minimalAction?: string;
@@ -38,21 +37,51 @@ deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER
 'projects/project-id/zones/zone/disks/disk-name'. */
   readonly source: string;
 }
+
+function computePerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputePerInstanceConfigPreservedStateDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_rule: cdktf.stringToTerraform(struct!.deleteRule),
+    device_name: cdktf.stringToTerraform(struct!.deviceName),
+    mode: cdktf.stringToTerraform(struct!.mode),
+    source: cdktf.stringToTerraform(struct!.source),
+  }
+}
+
 export interface ComputePerInstanceConfigPreservedState {
   /** Preserved metadata defined for this instance. This is a list of key->value pairs. */
   readonly metadata?: { [key: string]: string };
   /** disk block */
   readonly disk?: ComputePerInstanceConfigPreservedStateDisk[];
 }
+
+function computePerInstanceConfigPreservedStateToTerraform(struct?: ComputePerInstanceConfigPreservedState): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    disk: cdktf.listMapper(computePerInstanceConfigPreservedStateDiskToTerraform)(struct!.disk),
+  }
+}
+
 export interface ComputePerInstanceConfigTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computePerInstanceConfigTimeoutsToTerraform(struct?: ComputePerInstanceConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputePerInstanceConfig extends TerraformResource {
+export class ComputePerInstanceConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -230,15 +259,15 @@ export class ComputePerInstanceConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance_group_manager: this._instanceGroupManager,
-      minimal_action: this._minimalAction,
-      most_disruptive_allowed_action: this._mostDisruptiveAllowedAction,
-      name: this._name,
-      project: this._project,
-      remove_instance_state_on_destroy: this._removeInstanceStateOnDestroy,
-      zone: this._zone,
-      preserved_state: this._preservedState,
-      timeouts: this._timeouts,
+      instance_group_manager: cdktf.stringToTerraform(this._instanceGroupManager),
+      minimal_action: cdktf.stringToTerraform(this._minimalAction),
+      most_disruptive_allowed_action: cdktf.stringToTerraform(this._mostDisruptiveAllowedAction),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      remove_instance_state_on_destroy: cdktf.booleanToTerraform(this._removeInstanceStateOnDestroy),
+      zone: cdktf.stringToTerraform(this._zone),
+      preserved_state: cdktf.listMapper(computePerInstanceConfigPreservedStateToTerraform)(this._preservedState),
+      timeouts: computePerInstanceConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

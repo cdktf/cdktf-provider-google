@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSubnetworkConfig extends TerraformMetaArguments {
+export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time. */
@@ -56,6 +55,15 @@ export interface ComputeSubnetworkSecondaryIpRange {
   readonly ipCidrRange?: string;
   readonly rangeName?: string;
 }
+
+function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSubnetworkSecondaryIpRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ip_cidr_range: cdktf.stringToTerraform(struct!.ipCidrRange),
+    range_name: cdktf.stringToTerraform(struct!.rangeName),
+  }
+}
+
 export interface ComputeSubnetworkLogConfig {
   /** Can only be specified if VPC flow logging for this subnetwork is enabled.
 Toggles the aggregation interval for collecting flow logs. Increasing the
@@ -80,15 +88,37 @@ flow logs. Default value: "INCLUDE_ALL_METADATA" Possible values: ["EXCLUDE_ALL_
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA. */
   readonly metadataFields?: string[];
 }
+
+function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetworkLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aggregation_interval: cdktf.stringToTerraform(struct!.aggregationInterval),
+    filter_expr: cdktf.stringToTerraform(struct!.filterExpr),
+    flow_sampling: cdktf.numberToTerraform(struct!.flowSampling),
+    metadata: cdktf.stringToTerraform(struct!.metadata),
+    metadata_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.metadataFields),
+  }
+}
+
 export interface ComputeSubnetworkTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeSubnetwork extends TerraformResource {
+export class ComputeSubnetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -320,17 +350,17 @@ export class ComputeSubnetwork extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      ip_cidr_range: this._ipCidrRange,
-      name: this._name,
-      network: this._network,
-      private_ip_google_access: this._privateIpGoogleAccess,
-      private_ipv6_google_access: this._privateIpv6GoogleAccess,
-      project: this._project,
-      region: this._region,
-      secondary_ip_range: this._secondaryIpRange,
-      log_config: this._logConfig,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      ip_cidr_range: cdktf.stringToTerraform(this._ipCidrRange),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      private_ip_google_access: cdktf.booleanToTerraform(this._privateIpGoogleAccess),
+      private_ipv6_google_access: cdktf.stringToTerraform(this._privateIpv6GoogleAccess),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      secondary_ip_range: cdktf.listMapper(computeSubnetworkSecondaryIpRangeToTerraform)(this._secondaryIpRange),
+      log_config: cdktf.listMapper(computeSubnetworkLogConfigToTerraform)(this._logConfig),
+      timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

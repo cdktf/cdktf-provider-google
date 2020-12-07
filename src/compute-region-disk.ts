@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionDiskConfig extends TerraformMetaArguments {
+export interface ComputeRegionDiskConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. */
   readonly description?: string;
@@ -65,20 +64,46 @@ export interface ComputeRegionDiskDiskEncryptionKey {
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeRegionDiskDiskEncryptionKeyToTerraform(struct?: ComputeRegionDiskDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeRegionDiskSourceSnapshotEncryptionKey {
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeRegionDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeRegionDiskSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeRegionDiskTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRegionDiskTimeoutsToTerraform(struct?: ComputeRegionDiskTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionDisk extends TerraformResource {
+export class ComputeRegionDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -362,19 +387,19 @@ export class ComputeRegionDisk extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      labels: this._labels,
-      name: this._name,
-      physical_block_size_bytes: this._physicalBlockSizeBytes,
-      project: this._project,
-      region: this._region,
-      replica_zones: this._replicaZones,
-      size: this._size,
-      snapshot: this._snapshot,
-      type: this._type,
-      disk_encryption_key: this._diskEncryptionKey,
-      source_snapshot_encryption_key: this._sourceSnapshotEncryptionKey,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      physical_block_size_bytes: cdktf.numberToTerraform(this._physicalBlockSizeBytes),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      replica_zones: cdktf.listMapper(cdktf.stringToTerraform)(this._replicaZones),
+      size: cdktf.numberToTerraform(this._size),
+      snapshot: cdktf.stringToTerraform(this._snapshot),
+      type: cdktf.stringToTerraform(this._type),
+      disk_encryption_key: cdktf.listMapper(computeRegionDiskDiskEncryptionKeyToTerraform)(this._diskEncryptionKey),
+      source_snapshot_encryption_key: cdktf.listMapper(computeRegionDiskSourceSnapshotEncryptionKeyToTerraform)(this._sourceSnapshotEncryptionKey),
+      timeouts: computeRegionDiskTimeoutsToTerraform(this._timeouts),
     };
   }
 }

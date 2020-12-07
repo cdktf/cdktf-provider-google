@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryDatasetIamBindingConfig extends TerraformMetaArguments {
+export interface BigqueryDatasetIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly datasetId: string;
   readonly members: string[];
   readonly project?: string;
@@ -21,9 +20,19 @@ export interface BigqueryDatasetIamBindingCondition {
   readonly title: string;
 }
 
+function bigqueryDatasetIamBindingConditionToTerraform(struct?: BigqueryDatasetIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class BigqueryDatasetIamBinding extends TerraformResource {
+export class BigqueryDatasetIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class BigqueryDatasetIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      members: this._members,
-      project: this._project,
-      role: this._role,
-      condition: this._condition,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(bigqueryDatasetIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryDatasetConfig extends TerraformMetaArguments {
+export interface BigqueryDatasetConfig extends cdktf.TerraformMetaArguments {
   /** A unique ID for this dataset, without the project name. The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters. */
@@ -81,6 +80,16 @@ A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters. */
   readonly tableId: string;
 }
+
+function bigqueryDatasetAccessViewToTerraform(struct?: BigqueryDatasetAccessView): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface BigqueryDatasetAccess {
   /** A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access */
@@ -113,21 +122,52 @@ fred@example.com */
   /** view block */
   readonly view?: BigqueryDatasetAccessView[];
 }
+
+function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    domain: cdktf.stringToTerraform(struct!.domain),
+    group_by_email: cdktf.stringToTerraform(struct!.groupByEmail),
+    role: cdktf.stringToTerraform(struct!.role),
+    special_group: cdktf.stringToTerraform(struct!.specialGroup),
+    user_by_email: cdktf.stringToTerraform(struct!.userByEmail),
+    view: cdktf.listMapper(bigqueryDatasetAccessViewToTerraform)(struct!.view),
+  }
+}
+
 export interface BigqueryDatasetDefaultEncryptionConfiguration {
   /** Describes the Cloud KMS encryption key that will be used to protect destination
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key. */
   readonly kmsKeyName: string;
 }
+
+function bigqueryDatasetDefaultEncryptionConfigurationToTerraform(struct?: BigqueryDatasetDefaultEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface BigqueryDatasetTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BigqueryDataset extends TerraformResource {
+export class BigqueryDataset extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -382,18 +422,18 @@ export class BigqueryDataset extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      default_partition_expiration_ms: this._defaultPartitionExpirationMs,
-      default_table_expiration_ms: this._defaultTableExpirationMs,
-      delete_contents_on_destroy: this._deleteContentsOnDestroy,
-      description: this._description,
-      friendly_name: this._friendlyName,
-      labels: this._labels,
-      location: this._location,
-      project: this._project,
-      access: this._access,
-      default_encryption_configuration: this._defaultEncryptionConfiguration,
-      timeouts: this._timeouts,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      default_partition_expiration_ms: cdktf.numberToTerraform(this._defaultPartitionExpirationMs),
+      default_table_expiration_ms: cdktf.numberToTerraform(this._defaultTableExpirationMs),
+      delete_contents_on_destroy: cdktf.booleanToTerraform(this._deleteContentsOnDestroy),
+      description: cdktf.stringToTerraform(this._description),
+      friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      access: cdktf.listMapper(bigqueryDatasetAccessToTerraform)(this._access),
+      default_encryption_configuration: cdktf.listMapper(bigqueryDatasetDefaultEncryptionConfigurationToTerraform)(this._defaultEncryptionConfiguration),
+      timeouts: bigqueryDatasetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

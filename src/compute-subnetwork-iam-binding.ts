@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSubnetworkIamBindingConfig extends TerraformMetaArguments {
+export interface ComputeSubnetworkIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly members: string[];
   readonly project?: string;
   readonly region?: string;
@@ -22,9 +21,19 @@ export interface ComputeSubnetworkIamBindingCondition {
   readonly title: string;
 }
 
+function computeSubnetworkIamBindingConditionToTerraform(struct?: ComputeSubnetworkIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class ComputeSubnetworkIamBinding extends TerraformResource {
+export class ComputeSubnetworkIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class ComputeSubnetworkIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      members: this._members,
-      project: this._project,
-      region: this._region,
-      role: this._role,
-      subnetwork: this._subnetwork,
-      condition: this._condition,
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      role: cdktf.stringToTerraform(this._role),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
+      condition: cdktf.listMapper(computeSubnetworkIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

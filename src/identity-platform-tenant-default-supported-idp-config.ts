@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IdentityPlatformTenantDefaultSupportedIdpConfigConfig extends TerraformMetaArguments {
+export interface IdentityPlatformTenantDefaultSupportedIdpConfigConfig extends cdktf.TerraformMetaArguments {
   /** OAuth client ID */
   readonly clientId: string;
   /** OAuth client secret */
@@ -48,9 +47,19 @@ export interface IdentityPlatformTenantDefaultSupportedIdpConfigTimeouts {
   readonly update?: string;
 }
 
+function identityPlatformTenantDefaultSupportedIdpConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantDefaultSupportedIdpConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IdentityPlatformTenantDefaultSupportedIdpConfig extends TerraformResource {
+export class IdentityPlatformTenantDefaultSupportedIdpConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -196,13 +205,13 @@ export class IdentityPlatformTenantDefaultSupportedIdpConfig extends TerraformRe
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      enabled: this._enabled,
-      idp_id: this._idpId,
-      project: this._project,
-      tenant: this._tenant,
-      timeouts: this._timeouts,
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      idp_id: cdktf.stringToTerraform(this._idpId),
+      project: cdktf.stringToTerraform(this._project),
+      tenant: cdktf.stringToTerraform(this._tenant),
+      timeouts: identityPlatformTenantDefaultSupportedIdpConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

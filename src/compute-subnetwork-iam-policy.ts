@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSubnetworkIamPolicyConfig extends TerraformMetaArguments {
+export interface ComputeSubnetworkIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly policyData: string;
   readonly project?: string;
   readonly region?: string;
@@ -16,7 +15,7 @@ export interface ComputeSubnetworkIamPolicyConfig extends TerraformMetaArguments
 
 // Resource
 
-export class ComputeSubnetworkIamPolicy extends TerraformResource {
+export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class ComputeSubnetworkIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      policy_data: this._policyData,
-      project: this._project,
-      region: this._region,
-      subnetwork: this._subnetwork,
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
     };
   }
 }

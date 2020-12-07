@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeExternalVpnGatewayConfig extends TerraformMetaArguments {
+export interface ComputeExternalVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Name of the resource. Provided by the client when the resource is
@@ -39,14 +38,32 @@ your on-premise gateway or another Cloud provider's VPN gateway,
 it cannot be an IP address from Google Compute Engine. */
   readonly ipAddress?: string;
 }
+
+function computeExternalVpnGatewayInterfaceToTerraform(struct?: ComputeExternalVpnGatewayInterface): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.numberToTerraform(struct!.id),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+  }
+}
+
 export interface ComputeExternalVpnGatewayTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function computeExternalVpnGatewayTimeoutsToTerraform(struct?: ComputeExternalVpnGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeExternalVpnGateway extends TerraformResource {
+export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -184,12 +201,12 @@ export class ComputeExternalVpnGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      redundancy_type: this._redundancyType,
-      interface: this._interface,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      redundancy_type: cdktf.stringToTerraform(this._redundancyType),
+      interface: cdktf.listMapper(computeExternalVpnGatewayInterfaceToTerraform)(this._interface),
+      timeouts: computeExternalVpnGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

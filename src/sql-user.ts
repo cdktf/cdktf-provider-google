@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlUserConfig extends TerraformMetaArguments {
+export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   /** The deletion policy for the user. Setting ABANDON allows the resource
 				to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
 				have been granted SQL roles. Possible values are: "ABANDON". */
@@ -31,9 +30,19 @@ export interface SqlUserTimeouts {
   readonly update?: string;
 }
 
+function sqlUserTimeoutsToTerraform(struct?: SqlUserTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlUser extends TerraformResource {
+export class SqlUser extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -180,13 +189,13 @@ export class SqlUser extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      deletion_policy: this._deletionPolicy,
-      host: this._host,
-      instance: this._instance,
-      name: this._name,
-      password: this._password,
-      project: this._project,
-      timeouts: this._timeouts,
+      deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
+      host: cdktf.stringToTerraform(this._host),
+      instance: cdktf.stringToTerraform(this._instance),
+      name: cdktf.stringToTerraform(this._name),
+      password: cdktf.stringToTerraform(this._password),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: sqlUserTimeoutsToTerraform(this._timeouts),
     };
   }
 }

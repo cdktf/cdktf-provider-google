@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageTransferJobConfig extends TerraformMetaArguments {
+export interface StorageTransferJobConfig extends cdktf.TerraformMetaArguments {
   /** Unique description to identify the Transfer Job. */
   readonly description: string;
   /** The project in which the resource belongs. If it is not provided, the provider project is used. */
@@ -27,6 +26,16 @@ export interface StorageTransferJobScheduleScheduleEndDate {
   /** Year of date. Must be from 1 to 9999. */
   readonly year: number;
 }
+
+function storageTransferJobScheduleScheduleEndDateToTerraform(struct?: StorageTransferJobScheduleScheduleEndDate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day: cdktf.numberToTerraform(struct!.day),
+    month: cdktf.numberToTerraform(struct!.month),
+    year: cdktf.numberToTerraform(struct!.year),
+  }
+}
+
 export interface StorageTransferJobScheduleScheduleStartDate {
   /** Day of month. Must be from 1 to 31 and valid for the year and month. */
   readonly day: number;
@@ -35,6 +44,16 @@ export interface StorageTransferJobScheduleScheduleStartDate {
   /** Year of date. Must be from 1 to 9999. */
   readonly year: number;
 }
+
+function storageTransferJobScheduleScheduleStartDateToTerraform(struct?: StorageTransferJobScheduleScheduleStartDate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day: cdktf.numberToTerraform(struct!.day),
+    month: cdktf.numberToTerraform(struct!.month),
+    year: cdktf.numberToTerraform(struct!.year),
+  }
+}
+
 export interface StorageTransferJobScheduleStartTimeOfDay {
   /** Hours of day in 24 hour format. Should be from 0 to 23. */
   readonly hours: number;
@@ -45,6 +64,17 @@ export interface StorageTransferJobScheduleStartTimeOfDay {
   /** Seconds of minutes of the time. Must normally be from 0 to 59. */
   readonly seconds: number;
 }
+
+function storageTransferJobScheduleStartTimeOfDayToTerraform(struct?: StorageTransferJobScheduleStartTimeOfDay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface StorageTransferJobSchedule {
   /** schedule_end_date block */
   readonly scheduleEndDate?: StorageTransferJobScheduleScheduleEndDate[];
@@ -53,30 +83,82 @@ export interface StorageTransferJobSchedule {
   /** start_time_of_day block */
   readonly startTimeOfDay?: StorageTransferJobScheduleStartTimeOfDay[];
 }
+
+function storageTransferJobScheduleToTerraform(struct?: StorageTransferJobSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    schedule_end_date: cdktf.listMapper(storageTransferJobScheduleScheduleEndDateToTerraform)(struct!.scheduleEndDate),
+    schedule_start_date: cdktf.listMapper(storageTransferJobScheduleScheduleStartDateToTerraform)(struct!.scheduleStartDate),
+    start_time_of_day: cdktf.listMapper(storageTransferJobScheduleStartTimeOfDayToTerraform)(struct!.startTimeOfDay),
+  }
+}
+
 export interface StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
   /** AWS Key ID. */
   readonly accessKeyId: string;
   /** AWS Secret Access Key. */
   readonly secretAccessKey: string;
 }
+
+function storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access_key_id: cdktf.stringToTerraform(struct!.accessKeyId),
+    secret_access_key: cdktf.stringToTerraform(struct!.secretAccessKey),
+  }
+}
+
 export interface StorageTransferJobTransferSpecAwsS3DataSource {
   /** S3 Bucket name. */
   readonly bucketName: string;
   /** aws_access_key block */
   readonly awsAccessKey: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey[];
 }
+
+function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket_name: cdktf.stringToTerraform(struct!.bucketName),
+    aws_access_key: cdktf.listMapper(storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform)(struct!.awsAccessKey),
+  }
+}
+
 export interface StorageTransferJobTransferSpecGcsDataSink {
   /** Google Cloud Storage bucket name. */
   readonly bucketName: string;
 }
+
+function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSink): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket_name: cdktf.stringToTerraform(struct!.bucketName),
+  }
+}
+
 export interface StorageTransferJobTransferSpecGcsDataSource {
   /** Google Cloud Storage bucket name. */
   readonly bucketName: string;
 }
+
+function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket_name: cdktf.stringToTerraform(struct!.bucketName),
+  }
+}
+
 export interface StorageTransferJobTransferSpecHttpDataSource {
   /** The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported. */
   readonly listUrl: string;
 }
+
+function storageTransferJobTransferSpecHttpDataSourceToTerraform(struct?: StorageTransferJobTransferSpecHttpDataSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    list_url: cdktf.stringToTerraform(struct!.listUrl),
+  }
+}
+
 export interface StorageTransferJobTransferSpecObjectConditions {
   /** exclude_prefixes must follow the requirements described for include_prefixes. */
   readonly excludePrefixes?: string[];
@@ -87,6 +169,17 @@ export interface StorageTransferJobTransferSpecObjectConditions {
   /** A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
   readonly minTimeElapsedSinceLastModification?: string;
 }
+
+function storageTransferJobTransferSpecObjectConditionsToTerraform(struct?: StorageTransferJobTransferSpecObjectConditions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exclude_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludePrefixes),
+    include_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includePrefixes),
+    max_time_elapsed_since_last_modification: cdktf.stringToTerraform(struct!.maxTimeElapsedSinceLastModification),
+    min_time_elapsed_since_last_modification: cdktf.stringToTerraform(struct!.minTimeElapsedSinceLastModification),
+  }
+}
+
 export interface StorageTransferJobTransferSpecTransferOptions {
   /** Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and delete_objects_unique_in_sink are mutually exclusive. */
   readonly deleteObjectsFromSourceAfterTransfer?: boolean;
@@ -95,6 +188,16 @@ export interface StorageTransferJobTransferSpecTransferOptions {
   /** Whether overwriting objects that already exist in the sink is allowed. */
   readonly overwriteObjectsAlreadyExistingInSink?: boolean;
 }
+
+function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: StorageTransferJobTransferSpecTransferOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_objects_from_source_after_transfer: cdktf.booleanToTerraform(struct!.deleteObjectsFromSourceAfterTransfer),
+    delete_objects_unique_in_sink: cdktf.booleanToTerraform(struct!.deleteObjectsUniqueInSink),
+    overwrite_objects_already_existing_in_sink: cdktf.booleanToTerraform(struct!.overwriteObjectsAlreadyExistingInSink),
+  }
+}
+
 export interface StorageTransferJobTransferSpec {
   /** aws_s3_data_source block */
   readonly awsS3DataSource?: StorageTransferJobTransferSpecAwsS3DataSource[];
@@ -110,9 +213,22 @@ export interface StorageTransferJobTransferSpec {
   readonly transferOptions?: StorageTransferJobTransferSpecTransferOptions[];
 }
 
+function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTransferSpec): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aws_s3_data_source: cdktf.listMapper(storageTransferJobTransferSpecAwsS3DataSourceToTerraform)(struct!.awsS3DataSource),
+    gcs_data_sink: cdktf.listMapper(storageTransferJobTransferSpecGcsDataSinkToTerraform)(struct!.gcsDataSink),
+    gcs_data_source: cdktf.listMapper(storageTransferJobTransferSpecGcsDataSourceToTerraform)(struct!.gcsDataSource),
+    http_data_source: cdktf.listMapper(storageTransferJobTransferSpecHttpDataSourceToTerraform)(struct!.httpDataSource),
+    object_conditions: cdktf.listMapper(storageTransferJobTransferSpecObjectConditionsToTerraform)(struct!.objectConditions),
+    transfer_options: cdktf.listMapper(storageTransferJobTransferSpecTransferOptionsToTerraform)(struct!.transferOptions),
+  }
+}
+
+
 // Resource
 
-export class StorageTransferJob extends TerraformResource {
+export class StorageTransferJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -242,11 +358,11 @@ export class StorageTransferJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      project: this._project,
-      status: this._status,
-      schedule: this._schedule,
-      transfer_spec: this._transferSpec,
+      description: cdktf.stringToTerraform(this._description),
+      project: cdktf.stringToTerraform(this._project),
+      status: cdktf.stringToTerraform(this._status),
+      schedule: cdktf.listMapper(storageTransferJobScheduleToTerraform)(this._schedule),
+      transfer_spec: cdktf.listMapper(storageTransferJobTransferSpecToTerraform)(this._transferSpec),
     };
   }
 }

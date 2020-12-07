@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleSecretManagerSecretVersionConfig extends TerraformMetaArguments {
+export interface DataGoogleSecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   readonly secret: string;
   readonly version?: string;
@@ -15,7 +14,7 @@ export interface DataGoogleSecretManagerSecretVersionConfig extends TerraformMet
 
 // Resource
 
-export class DataGoogleSecretManagerSecretVersion extends TerraformDataSource {
+export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -122,9 +121,9 @@ export class DataGoogleSecretManagerSecretVersion extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
-      secret: this._secret,
-      version: this._version,
+      project: cdktf.stringToTerraform(this._project),
+      secret: cdktf.stringToTerraform(this._secret),
+      version: cdktf.stringToTerraform(this._version),
     };
   }
 }

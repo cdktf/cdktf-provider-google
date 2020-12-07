@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudfunctionsFunctionConfig extends TerraformMetaArguments {
+export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
   /** Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB. */
   readonly availableMemoryMb?: number;
   /**  A set of key/value environment variable pairs available during build time. */
@@ -59,6 +58,14 @@ export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
   /** Whether the function should be retried on failure. Defaults to false. */
   readonly retry: boolean;
 }
+
+function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: CloudfunctionsFunctionEventTriggerFailurePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retry: cdktf.booleanToTerraform(struct!.retry),
+  }
+}
+
 export interface CloudfunctionsFunctionEventTrigger {
   /** The type of event to observe. For example: "google.storage.object.finalize". See the documentation on calling Cloud Functions for a full reference of accepted triggers. */
   readonly eventType: string;
@@ -67,10 +74,28 @@ export interface CloudfunctionsFunctionEventTrigger {
   /** failure_policy block */
   readonly failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy[];
 }
+
+function cloudfunctionsFunctionEventTriggerToTerraform(struct?: CloudfunctionsFunctionEventTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    event_type: cdktf.stringToTerraform(struct!.eventType),
+    resource: cdktf.stringToTerraform(struct!.resource),
+    failure_policy: cdktf.listMapper(cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform)(struct!.failurePolicy),
+  }
+}
+
 export interface CloudfunctionsFunctionSourceRepository {
   /** The URL pointing to the hosted repository where the function is defined. */
   readonly url: string;
 }
+
+function cloudfunctionsFunctionSourceRepositoryToTerraform(struct?: CloudfunctionsFunctionSourceRepository): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface CloudfunctionsFunctionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -78,9 +103,20 @@ export interface CloudfunctionsFunctionTimeouts {
   readonly update?: string;
 }
 
+function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFunctionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudfunctionsFunction extends TerraformResource {
+export class CloudfunctionsFunction extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -499,29 +535,29 @@ export class CloudfunctionsFunction extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      available_memory_mb: this._availableMemoryMb,
-      build_environment_variables: this._buildEnvironmentVariables,
-      description: this._description,
-      entry_point: this._entryPoint,
-      environment_variables: this._environmentVariables,
-      https_trigger_url: this._httpsTriggerUrl,
-      ingress_settings: this._ingressSettings,
-      labels: this._labels,
-      max_instances: this._maxInstances,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      runtime: this._runtime,
-      service_account_email: this._serviceAccountEmail,
-      source_archive_bucket: this._sourceArchiveBucket,
-      source_archive_object: this._sourceArchiveObject,
-      timeout: this._timeout,
-      trigger_http: this._triggerHttp,
-      vpc_connector: this._vpcConnector,
-      vpc_connector_egress_settings: this._vpcConnectorEgressSettings,
-      event_trigger: this._eventTrigger,
-      source_repository: this._sourceRepository,
-      timeouts: this._timeouts,
+      available_memory_mb: cdktf.numberToTerraform(this._availableMemoryMb),
+      build_environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._buildEnvironmentVariables),
+      description: cdktf.stringToTerraform(this._description),
+      entry_point: cdktf.stringToTerraform(this._entryPoint),
+      environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._environmentVariables),
+      https_trigger_url: cdktf.stringToTerraform(this._httpsTriggerUrl),
+      ingress_settings: cdktf.stringToTerraform(this._ingressSettings),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      max_instances: cdktf.numberToTerraform(this._maxInstances),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      runtime: cdktf.stringToTerraform(this._runtime),
+      service_account_email: cdktf.stringToTerraform(this._serviceAccountEmail),
+      source_archive_bucket: cdktf.stringToTerraform(this._sourceArchiveBucket),
+      source_archive_object: cdktf.stringToTerraform(this._sourceArchiveObject),
+      timeout: cdktf.numberToTerraform(this._timeout),
+      trigger_http: cdktf.booleanToTerraform(this._triggerHttp),
+      vpc_connector: cdktf.stringToTerraform(this._vpcConnector),
+      vpc_connector_egress_settings: cdktf.stringToTerraform(this._vpcConnectorEgressSettings),
+      event_trigger: cdktf.listMapper(cloudfunctionsFunctionEventTriggerToTerraform)(this._eventTrigger),
+      source_repository: cdktf.listMapper(cloudfunctionsFunctionSourceRepositoryToTerraform)(this._sourceRepository),
+      timeouts: cloudfunctionsFunctionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

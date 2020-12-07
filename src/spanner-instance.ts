@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpannerInstanceConfig extends TerraformMetaArguments {
+export interface SpannerInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The name of the instance's configuration (similar but not
 quite the same as a region) which defines defines the geographic placement and
 replication of your databases in this instance. It determines where your data
@@ -40,9 +39,19 @@ export interface SpannerInstanceTimeouts {
   readonly update?: string;
 }
 
+function spannerInstanceTimeoutsToTerraform(struct?: SpannerInstanceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SpannerInstance extends TerraformResource {
+export class SpannerInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -194,13 +203,13 @@ export class SpannerInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      config: this._config,
-      display_name: this._displayName,
-      labels: this._labels,
-      name: this._name,
-      num_nodes: this._numNodes,
-      project: this._project,
-      timeouts: this._timeouts,
+      config: cdktf.stringToTerraform(this._config),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      num_nodes: cdktf.numberToTerraform(this._numNodes),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: spannerInstanceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

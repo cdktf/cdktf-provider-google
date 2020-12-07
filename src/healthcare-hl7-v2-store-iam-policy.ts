@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareHl7V2StoreIamPolicyConfig extends TerraformMetaArguments {
+export interface HealthcareHl7V2StoreIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly hl7V2StoreId: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class HealthcareHl7V2StoreIamPolicy extends TerraformResource {
+export class HealthcareHl7V2StoreIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class HealthcareHl7V2StoreIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hl7_v2_store_id: this._hl7V2StoreId,
-      policy_data: this._policyData,
+      hl7_v2_store_id: cdktf.stringToTerraform(this._hl7V2StoreId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

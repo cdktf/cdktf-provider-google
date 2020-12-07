@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerClusterConfig extends TerraformMetaArguments {
+export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   /** The IP address range of the Kubernetes pods in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only work for routes-based clusters, where ip_allocation_policy is not defined. */
   readonly clusterIpv4Cidr?: string;
   /** The default maximum number of pods per node in this cluster. This doesn't work on "routes-based" clusters, clusters that don't have IP Aliasing enabled. */
@@ -93,15 +92,48 @@ export interface ContainerClusterAddonsConfigCloudrunConfig {
   readonly disabled: boolean;
   readonly loadBalancerType?: string;
 }
+
+function containerClusterAddonsConfigCloudrunConfigToTerraform(struct?: ContainerClusterAddonsConfigCloudrunConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    load_balancer_type: cdktf.stringToTerraform(struct!.loadBalancerType),
+  }
+}
+
 export interface ContainerClusterAddonsConfigHorizontalPodAutoscaling {
   readonly disabled: boolean;
 }
+
+function containerClusterAddonsConfigHorizontalPodAutoscalingToTerraform(struct?: ContainerClusterAddonsConfigHorizontalPodAutoscaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+  }
+}
+
 export interface ContainerClusterAddonsConfigHttpLoadBalancing {
   readonly disabled: boolean;
 }
+
+function containerClusterAddonsConfigHttpLoadBalancingToTerraform(struct?: ContainerClusterAddonsConfigHttpLoadBalancing): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+  }
+}
+
 export interface ContainerClusterAddonsConfigNetworkPolicyConfig {
   readonly disabled: boolean;
 }
+
+function containerClusterAddonsConfigNetworkPolicyConfigToTerraform(struct?: ContainerClusterAddonsConfigNetworkPolicyConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+  }
+}
+
 export interface ContainerClusterAddonsConfig {
   /** cloudrun_config block */
   readonly cloudrunConfig?: ContainerClusterAddonsConfigCloudrunConfig[];
@@ -112,16 +144,44 @@ export interface ContainerClusterAddonsConfig {
   /** network_policy_config block */
   readonly networkPolicyConfig?: ContainerClusterAddonsConfigNetworkPolicyConfig[];
 }
+
+function containerClusterAddonsConfigToTerraform(struct?: ContainerClusterAddonsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloudrun_config: cdktf.listMapper(containerClusterAddonsConfigCloudrunConfigToTerraform)(struct!.cloudrunConfig),
+    horizontal_pod_autoscaling: cdktf.listMapper(containerClusterAddonsConfigHorizontalPodAutoscalingToTerraform)(struct!.horizontalPodAutoscaling),
+    http_load_balancing: cdktf.listMapper(containerClusterAddonsConfigHttpLoadBalancingToTerraform)(struct!.httpLoadBalancing),
+    network_policy_config: cdktf.listMapper(containerClusterAddonsConfigNetworkPolicyConfigToTerraform)(struct!.networkPolicyConfig),
+  }
+}
+
 export interface ContainerClusterAuthenticatorGroupsConfig {
   /** The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com. */
   readonly securityGroup: string;
 }
+
+function containerClusterAuthenticatorGroupsConfigToTerraform(struct?: ContainerClusterAuthenticatorGroupsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    security_group: cdktf.stringToTerraform(struct!.securityGroup),
+  }
+}
+
 export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   /** Scopes that are used by NAP when creating node pools. */
   readonly oauthScopes?: string[];
   /** The Google Cloud Platform Service Account to be used by the node VMs. */
   readonly serviceAccount?: string;
 }
+
+function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaults): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+  }
+}
+
 export interface ContainerClusterClusterAutoscalingResourceLimits {
   /** Maximum amount of the resource in the cluster. */
   readonly maximum?: number;
@@ -130,6 +190,16 @@ export interface ContainerClusterClusterAutoscalingResourceLimits {
   /** The type of the resource. For example, cpu and memory. See the guide to using Node Auto-Provisioning for a list of types. */
   readonly resourceType: string;
 }
+
+function containerClusterClusterAutoscalingResourceLimitsToTerraform(struct?: ContainerClusterClusterAutoscalingResourceLimits): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    maximum: cdktf.numberToTerraform(struct!.maximum),
+    minimum: cdktf.numberToTerraform(struct!.minimum),
+    resource_type: cdktf.stringToTerraform(struct!.resourceType),
+  }
+}
+
 export interface ContainerClusterClusterAutoscaling {
   /** Whether node auto-provisioning is enabled. Resource limits for cpu and memory must be defined to enable node auto-provisioning. */
   readonly enabled: boolean;
@@ -138,12 +208,31 @@ export interface ContainerClusterClusterAutoscaling {
   /** resource_limits block */
   readonly resourceLimits?: ContainerClusterClusterAutoscalingResourceLimits[];
 }
+
+function containerClusterClusterAutoscalingToTerraform(struct?: ContainerClusterClusterAutoscaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    auto_provisioning_defaults: cdktf.listMapper(containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerraform)(struct!.autoProvisioningDefaults),
+    resource_limits: cdktf.listMapper(containerClusterClusterAutoscalingResourceLimitsToTerraform)(struct!.resourceLimits),
+  }
+}
+
 export interface ContainerClusterDatabaseEncryption {
   /** The key to use to encrypt/decrypt secrets. */
   readonly keyName?: string;
   /** ENCRYPTED or DECRYPTED. */
   readonly state: string;
 }
+
+function containerClusterDatabaseEncryptionToTerraform(struct?: ContainerClusterDatabaseEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_name: cdktf.stringToTerraform(struct!.keyName),
+    state: cdktf.stringToTerraform(struct!.state),
+  }
+}
+
 export interface ContainerClusterIpAllocationPolicy {
   /** The IP address range for the cluster pod IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. */
   readonly clusterIpv4CidrBlock?: string;
@@ -154,19 +243,58 @@ export interface ContainerClusterIpAllocationPolicy {
   /** The name of the existing secondary range in the cluster's subnetwork to use for service ClusterIPs. Alternatively, services_ipv4_cidr_block can be used to automatically create a GKE-managed one. */
   readonly servicesSecondaryRangeName?: string;
 }
+
+function containerClusterIpAllocationPolicyToTerraform(struct?: ContainerClusterIpAllocationPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cluster_ipv4_cidr_block: cdktf.stringToTerraform(struct!.clusterIpv4CidrBlock),
+    cluster_secondary_range_name: cdktf.stringToTerraform(struct!.clusterSecondaryRangeName),
+    services_ipv4_cidr_block: cdktf.stringToTerraform(struct!.servicesIpv4CidrBlock),
+    services_secondary_range_name: cdktf.stringToTerraform(struct!.servicesSecondaryRangeName),
+  }
+}
+
 export interface ContainerClusterMaintenancePolicyDailyMaintenanceWindow {
   readonly startTime: string;
 }
+
+function containerClusterMaintenancePolicyDailyMaintenanceWindowToTerraform(struct?: ContainerClusterMaintenancePolicyDailyMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface ContainerClusterMaintenancePolicyMaintenanceExclusion {
   readonly endTime: string;
   readonly exclusionName: string;
   readonly startTime: string;
 }
+
+function containerClusterMaintenancePolicyMaintenanceExclusionToTerraform(struct?: ContainerClusterMaintenancePolicyMaintenanceExclusion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end_time: cdktf.stringToTerraform(struct!.endTime),
+    exclusion_name: cdktf.stringToTerraform(struct!.exclusionName),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface ContainerClusterMaintenancePolicyRecurringWindow {
   readonly endTime: string;
   readonly recurrence: string;
   readonly startTime: string;
 }
+
+function containerClusterMaintenancePolicyRecurringWindowToTerraform(struct?: ContainerClusterMaintenancePolicyRecurringWindow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end_time: cdktf.stringToTerraform(struct!.endTime),
+    recurrence: cdktf.stringToTerraform(struct!.recurrence),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface ContainerClusterMaintenancePolicy {
   /** daily_maintenance_window block */
   readonly dailyMaintenanceWindow?: ContainerClusterMaintenancePolicyDailyMaintenanceWindow[];
@@ -175,10 +303,28 @@ export interface ContainerClusterMaintenancePolicy {
   /** recurring_window block */
   readonly recurringWindow?: ContainerClusterMaintenancePolicyRecurringWindow[];
 }
+
+function containerClusterMaintenancePolicyToTerraform(struct?: ContainerClusterMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    daily_maintenance_window: cdktf.listMapper(containerClusterMaintenancePolicyDailyMaintenanceWindowToTerraform)(struct!.dailyMaintenanceWindow),
+    maintenance_exclusion: cdktf.listMapper(containerClusterMaintenancePolicyMaintenanceExclusionToTerraform)(struct!.maintenanceExclusion),
+    recurring_window: cdktf.listMapper(containerClusterMaintenancePolicyRecurringWindowToTerraform)(struct!.recurringWindow),
+  }
+}
+
 export interface ContainerClusterMasterAuthClientCertificateConfig {
   /** Whether client certificate authorization is enabled for this cluster. */
   readonly issueClientCertificate: boolean;
 }
+
+function containerClusterMasterAuthClientCertificateConfigToTerraform(struct?: ContainerClusterMasterAuthClientCertificateConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    issue_client_certificate: cdktf.booleanToTerraform(struct!.issueClientCertificate),
+  }
+}
+
 export interface ContainerClusterMasterAuth {
   /** The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint. */
   readonly password?: string;
@@ -187,38 +333,110 @@ export interface ContainerClusterMasterAuth {
   /** client_certificate_config block */
   readonly clientCertificateConfig?: ContainerClusterMasterAuthClientCertificateConfig[];
 }
+
+function containerClusterMasterAuthToTerraform(struct?: ContainerClusterMasterAuth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+    client_certificate_config: cdktf.listMapper(containerClusterMasterAuthClientCertificateConfigToTerraform)(struct!.clientCertificateConfig),
+  }
+}
+
 export interface ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks {
   /** External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation. */
   readonly cidrBlock: string;
   /** Field for users to identify CIDR blocks. */
   readonly displayName?: string;
 }
+
+function containerClusterMasterAuthorizedNetworksConfigCidrBlocksToTerraform(struct?: ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cidr_block: cdktf.stringToTerraform(struct!.cidrBlock),
+    display_name: cdktf.stringToTerraform(struct!.displayName),
+  }
+}
+
 export interface ContainerClusterMasterAuthorizedNetworksConfig {
   /** cidr_blocks block */
   readonly cidrBlocks?: ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks[];
 }
+
+function containerClusterMasterAuthorizedNetworksConfigToTerraform(struct?: ContainerClusterMasterAuthorizedNetworksConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cidr_blocks: cdktf.listMapper(containerClusterMasterAuthorizedNetworksConfigCidrBlocksToTerraform)(struct!.cidrBlocks),
+  }
+}
+
 export interface ContainerClusterNetworkPolicy {
   /** Whether network policy is enabled on the cluster. */
   readonly enabled: boolean;
   /** The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED. */
   readonly provider?: string;
 }
+
+function containerClusterNetworkPolicyToTerraform(struct?: ContainerClusterNetworkPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    provider: cdktf.stringToTerraform(struct!.provider),
+  }
+}
+
 export interface ContainerClusterNodeConfigGuestAccelerator {
   readonly count?: number;
   readonly type?: string;
 }
+
+function containerClusterNodeConfigGuestAcceleratorToTerraform(struct?: ContainerClusterNodeConfigGuestAccelerator): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ContainerClusterNodeConfigTaint {
   readonly effect?: string;
   readonly key?: string;
   readonly value?: string;
 }
+
+function containerClusterNodeConfigTaintToTerraform(struct?: ContainerClusterNodeConfigTaint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    effect: cdktf.stringToTerraform(struct!.effect),
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ContainerClusterNodeConfigShieldedInstanceConfig {
   readonly enableIntegrityMonitoring?: boolean;
   readonly enableSecureBoot?: boolean;
 }
+
+function containerClusterNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerClusterNodeConfigShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+  }
+}
+
 export interface ContainerClusterNodeConfigWorkloadMetadataConfig {
   readonly nodeMetadata: string;
 }
+
+function containerClusterNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerClusterNodeConfigWorkloadMetadataConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
+  }
+}
+
 export interface ContainerClusterNodeConfig {
   readonly diskSizeGb?: number;
   readonly diskType?: string;
@@ -239,34 +457,111 @@ export interface ContainerClusterNodeConfig {
   /** workload_metadata_config block */
   readonly workloadMetadataConfig?: ContainerClusterNodeConfigWorkloadMetadataConfig[];
 }
+
+function containerClusterNodeConfigToTerraform(struct?: ContainerClusterNodeConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    disk_type: cdktf.stringToTerraform(struct!.diskType),
+    guest_accelerator: cdktf.listMapper(containerClusterNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
+    image_type: cdktf.stringToTerraform(struct!.imageType),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    taint: cdktf.listMapper(containerClusterNodeConfigTaintToTerraform)(struct!.taint),
+    shielded_instance_config: cdktf.listMapper(containerClusterNodeConfigShieldedInstanceConfigToTerraform)(struct!.shieldedInstanceConfig),
+    workload_metadata_config: cdktf.listMapper(containerClusterNodeConfigWorkloadMetadataConfigToTerraform)(struct!.workloadMetadataConfig),
+  }
+}
+
 export interface ContainerClusterNodePoolAutoscaling {
   /** Maximum number of nodes in the NodePool. Must be >= min_node_count. */
   readonly maxNodeCount: number;
   /** Minimum number of nodes in the NodePool. Must be >=0 and <= max_node_count. */
   readonly minNodeCount: number;
 }
+
+function containerClusterNodePoolAutoscalingToTerraform(struct?: ContainerClusterNodePoolAutoscaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
+    min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
+  }
+}
+
 export interface ContainerClusterNodePoolManagement {
   /** Whether the nodes will be automatically repaired. */
   readonly autoRepair?: boolean;
   /** Whether the nodes will be automatically upgraded. */
   readonly autoUpgrade?: boolean;
 }
+
+function containerClusterNodePoolManagementToTerraform(struct?: ContainerClusterNodePoolManagement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_repair: cdktf.booleanToTerraform(struct!.autoRepair),
+    auto_upgrade: cdktf.booleanToTerraform(struct!.autoUpgrade),
+  }
+}
+
 export interface ContainerClusterNodePoolNodeConfigGuestAccelerator {
   readonly count?: number;
   readonly type?: string;
 }
+
+function containerClusterNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: ContainerClusterNodePoolNodeConfigGuestAccelerator): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ContainerClusterNodePoolNodeConfigTaint {
   readonly effect?: string;
   readonly key?: string;
   readonly value?: string;
 }
+
+function containerClusterNodePoolNodeConfigTaintToTerraform(struct?: ContainerClusterNodePoolNodeConfigTaint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    effect: cdktf.stringToTerraform(struct!.effect),
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
   readonly enableIntegrityMonitoring?: boolean;
   readonly enableSecureBoot?: boolean;
 }
+
+function containerClusterNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerClusterNodePoolNodeConfigShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+  }
+}
+
 export interface ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig {
   readonly nodeMetadata: string;
 }
+
+function containerClusterNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
+  }
+}
+
 export interface ContainerClusterNodePoolNodeConfig {
   readonly diskSizeGb?: number;
   readonly diskType?: string;
@@ -287,12 +582,44 @@ export interface ContainerClusterNodePoolNodeConfig {
   /** workload_metadata_config block */
   readonly workloadMetadataConfig?: ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig[];
 }
+
+function containerClusterNodePoolNodeConfigToTerraform(struct?: ContainerClusterNodePoolNodeConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    disk_type: cdktf.stringToTerraform(struct!.diskType),
+    guest_accelerator: cdktf.listMapper(containerClusterNodePoolNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
+    image_type: cdktf.stringToTerraform(struct!.imageType),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    taint: cdktf.listMapper(containerClusterNodePoolNodeConfigTaintToTerraform)(struct!.taint),
+    shielded_instance_config: cdktf.listMapper(containerClusterNodePoolNodeConfigShieldedInstanceConfigToTerraform)(struct!.shieldedInstanceConfig),
+    workload_metadata_config: cdktf.listMapper(containerClusterNodePoolNodeConfigWorkloadMetadataConfigToTerraform)(struct!.workloadMetadataConfig),
+  }
+}
+
 export interface ContainerClusterNodePoolUpgradeSettings {
   /** The number of additional nodes that can be added to the node pool during an upgrade. Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater. */
   readonly maxSurge: number;
   /** The number of nodes that can be simultaneously unavailable during an upgrade. Increasing max_unavailable raises the number of nodes that can be upgraded in parallel. Can be set to 0 or greater. */
   readonly maxUnavailable: number;
 }
+
+function containerClusterNodePoolUpgradeSettingsToTerraform(struct?: ContainerClusterNodePoolUpgradeSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_surge: cdktf.numberToTerraform(struct!.maxSurge),
+    max_unavailable: cdktf.numberToTerraform(struct!.maxUnavailable),
+  }
+}
+
 export interface ContainerClusterNodePool {
   /** The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Changing this will force recreation of the resource. */
   readonly initialNodeCount?: number;
@@ -317,10 +644,36 @@ export interface ContainerClusterNodePool {
   /** upgrade_settings block */
   readonly upgradeSettings?: ContainerClusterNodePoolUpgradeSettings[];
 }
+
+function containerClusterNodePoolToTerraform(struct?: ContainerClusterNodePool): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    initial_node_count: cdktf.numberToTerraform(struct!.initialNodeCount),
+    max_pods_per_node: cdktf.numberToTerraform(struct!.maxPodsPerNode),
+    name: cdktf.stringToTerraform(struct!.name),
+    name_prefix: cdktf.stringToTerraform(struct!.namePrefix),
+    node_count: cdktf.numberToTerraform(struct!.nodeCount),
+    node_locations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeLocations),
+    version: cdktf.stringToTerraform(struct!.version),
+    autoscaling: cdktf.listMapper(containerClusterNodePoolAutoscalingToTerraform)(struct!.autoscaling),
+    management: cdktf.listMapper(containerClusterNodePoolManagementToTerraform)(struct!.management),
+    node_config: cdktf.listMapper(containerClusterNodePoolNodeConfigToTerraform)(struct!.nodeConfig),
+    upgrade_settings: cdktf.listMapper(containerClusterNodePoolUpgradeSettingsToTerraform)(struct!.upgradeSettings),
+  }
+}
+
 export interface ContainerClusterPodSecurityPolicyConfig {
   /** Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created. */
   readonly enabled: boolean;
 }
+
+function containerClusterPodSecurityPolicyConfigToTerraform(struct?: ContainerClusterPodSecurityPolicyConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ContainerClusterPrivateClusterConfig {
   /** Enables the private cluster feature, creating a private endpoint on the cluster. In a private cluster, nodes only have RFC 1918 private addresses and communicate with the master's private endpoint via private networking. */
   readonly enablePrivateEndpoint: boolean;
@@ -329,14 +682,40 @@ export interface ContainerClusterPrivateClusterConfig {
   /** The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning private IP addresses to the cluster master(s) and the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network, and it must be a /28 subnet. See Private Cluster Limitations for more details. This field only applies to private clusters, when enable_private_nodes is true. */
   readonly masterIpv4CidrBlock?: string;
 }
+
+function containerClusterPrivateClusterConfigToTerraform(struct?: ContainerClusterPrivateClusterConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_private_endpoint: cdktf.booleanToTerraform(struct!.enablePrivateEndpoint),
+    enable_private_nodes: cdktf.booleanToTerraform(struct!.enablePrivateNodes),
+    master_ipv4_cidr_block: cdktf.stringToTerraform(struct!.masterIpv4CidrBlock),
+  }
+}
+
 export interface ContainerClusterReleaseChannel {
   /** The selected release channel. */
   readonly channel: string;
 }
+
+function containerClusterReleaseChannelToTerraform(struct?: ContainerClusterReleaseChannel): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    channel: cdktf.stringToTerraform(struct!.channel),
+  }
+}
+
 export interface ContainerClusterResourceUsageExportConfigBigqueryDestination {
   /** The ID of a BigQuery Dataset. */
   readonly datasetId: string;
 }
+
+function containerClusterResourceUsageExportConfigBigqueryDestinationToTerraform(struct?: ContainerClusterResourceUsageExportConfigBigqueryDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+  }
+}
+
 export interface ContainerClusterResourceUsageExportConfig {
   /** Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic. */
   readonly enableNetworkEgressMetering?: boolean;
@@ -345,23 +724,60 @@ export interface ContainerClusterResourceUsageExportConfig {
   /** bigquery_destination block */
   readonly bigqueryDestination: ContainerClusterResourceUsageExportConfigBigqueryDestination[];
 }
+
+function containerClusterResourceUsageExportConfigToTerraform(struct?: ContainerClusterResourceUsageExportConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_network_egress_metering: cdktf.booleanToTerraform(struct!.enableNetworkEgressMetering),
+    enable_resource_consumption_metering: cdktf.booleanToTerraform(struct!.enableResourceConsumptionMetering),
+    bigquery_destination: cdktf.listMapper(containerClusterResourceUsageExportConfigBigqueryDestinationToTerraform)(struct!.bigqueryDestination),
+  }
+}
+
 export interface ContainerClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function containerClusterTimeoutsToTerraform(struct?: ContainerClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ContainerClusterVerticalPodAutoscaling {
   /** Enables vertical pod autoscaling. */
   readonly enabled: boolean;
 }
+
+function containerClusterVerticalPodAutoscalingToTerraform(struct?: ContainerClusterVerticalPodAutoscaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ContainerClusterWorkloadIdentityConfig {
   readonly identityNamespace: string;
 }
 
+function containerClusterWorkloadIdentityConfigToTerraform(struct?: ContainerClusterWorkloadIdentityConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_namespace: cdktf.stringToTerraform(struct!.identityNamespace),
+  }
+}
+
+
 // Resource
 
-export class ContainerCluster extends TerraformResource {
+export class ContainerCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -1107,46 +1523,46 @@ export class ContainerCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_ipv4_cidr: this._clusterIpv4Cidr,
-      default_max_pods_per_node: this._defaultMaxPodsPerNode,
-      description: this._description,
-      enable_binary_authorization: this._enableBinaryAuthorization,
-      enable_intranode_visibility: this._enableIntranodeVisibility,
-      enable_kubernetes_alpha: this._enableKubernetesAlpha,
-      enable_legacy_abac: this._enableLegacyAbac,
-      enable_shielded_nodes: this._enableShieldedNodes,
-      enable_tpu: this._enableTpu,
-      initial_node_count: this._initialNodeCount,
-      location: this._location,
-      logging_service: this._loggingService,
-      min_master_version: this._minMasterVersion,
-      monitoring_service: this._monitoringService,
-      name: this._name,
-      network: this._network,
-      node_locations: this._nodeLocations,
-      node_version: this._nodeVersion,
-      project: this._project,
-      remove_default_node_pool: this._removeDefaultNodePool,
-      resource_labels: this._resourceLabels,
-      subnetwork: this._subnetwork,
-      addons_config: this._addonsConfig,
-      authenticator_groups_config: this._authenticatorGroupsConfig,
-      cluster_autoscaling: this._clusterAutoscaling,
-      database_encryption: this._databaseEncryption,
-      ip_allocation_policy: this._ipAllocationPolicy,
-      maintenance_policy: this._maintenancePolicy,
-      master_auth: this._masterAuth,
-      master_authorized_networks_config: this._masterAuthorizedNetworksConfig,
-      network_policy: this._networkPolicy,
-      node_config: this._nodeConfig,
-      node_pool: this._nodePool,
-      pod_security_policy_config: this._podSecurityPolicyConfig,
-      private_cluster_config: this._privateClusterConfig,
-      release_channel: this._releaseChannel,
-      resource_usage_export_config: this._resourceUsageExportConfig,
-      timeouts: this._timeouts,
-      vertical_pod_autoscaling: this._verticalPodAutoscaling,
-      workload_identity_config: this._workloadIdentityConfig,
+      cluster_ipv4_cidr: cdktf.stringToTerraform(this._clusterIpv4Cidr),
+      default_max_pods_per_node: cdktf.numberToTerraform(this._defaultMaxPodsPerNode),
+      description: cdktf.stringToTerraform(this._description),
+      enable_binary_authorization: cdktf.booleanToTerraform(this._enableBinaryAuthorization),
+      enable_intranode_visibility: cdktf.booleanToTerraform(this._enableIntranodeVisibility),
+      enable_kubernetes_alpha: cdktf.booleanToTerraform(this._enableKubernetesAlpha),
+      enable_legacy_abac: cdktf.booleanToTerraform(this._enableLegacyAbac),
+      enable_shielded_nodes: cdktf.booleanToTerraform(this._enableShieldedNodes),
+      enable_tpu: cdktf.booleanToTerraform(this._enableTpu),
+      initial_node_count: cdktf.numberToTerraform(this._initialNodeCount),
+      location: cdktf.stringToTerraform(this._location),
+      logging_service: cdktf.stringToTerraform(this._loggingService),
+      min_master_version: cdktf.stringToTerraform(this._minMasterVersion),
+      monitoring_service: cdktf.stringToTerraform(this._monitoringService),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      node_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeLocations),
+      node_version: cdktf.stringToTerraform(this._nodeVersion),
+      project: cdktf.stringToTerraform(this._project),
+      remove_default_node_pool: cdktf.booleanToTerraform(this._removeDefaultNodePool),
+      resource_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._resourceLabels),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
+      addons_config: cdktf.listMapper(containerClusterAddonsConfigToTerraform)(this._addonsConfig),
+      authenticator_groups_config: cdktf.listMapper(containerClusterAuthenticatorGroupsConfigToTerraform)(this._authenticatorGroupsConfig),
+      cluster_autoscaling: cdktf.listMapper(containerClusterClusterAutoscalingToTerraform)(this._clusterAutoscaling),
+      database_encryption: cdktf.listMapper(containerClusterDatabaseEncryptionToTerraform)(this._databaseEncryption),
+      ip_allocation_policy: cdktf.listMapper(containerClusterIpAllocationPolicyToTerraform)(this._ipAllocationPolicy),
+      maintenance_policy: cdktf.listMapper(containerClusterMaintenancePolicyToTerraform)(this._maintenancePolicy),
+      master_auth: cdktf.listMapper(containerClusterMasterAuthToTerraform)(this._masterAuth),
+      master_authorized_networks_config: cdktf.listMapper(containerClusterMasterAuthorizedNetworksConfigToTerraform)(this._masterAuthorizedNetworksConfig),
+      network_policy: cdktf.listMapper(containerClusterNetworkPolicyToTerraform)(this._networkPolicy),
+      node_config: cdktf.listMapper(containerClusterNodeConfigToTerraform)(this._nodeConfig),
+      node_pool: cdktf.listMapper(containerClusterNodePoolToTerraform)(this._nodePool),
+      pod_security_policy_config: cdktf.listMapper(containerClusterPodSecurityPolicyConfigToTerraform)(this._podSecurityPolicyConfig),
+      private_cluster_config: cdktf.listMapper(containerClusterPrivateClusterConfigToTerraform)(this._privateClusterConfig),
+      release_channel: cdktf.listMapper(containerClusterReleaseChannelToTerraform)(this._releaseChannel),
+      resource_usage_export_config: cdktf.listMapper(containerClusterResourceUsageExportConfigToTerraform)(this._resourceUsageExportConfig),
+      timeouts: containerClusterTimeoutsToTerraform(this._timeouts),
+      vertical_pod_autoscaling: cdktf.listMapper(containerClusterVerticalPodAutoscalingToTerraform)(this._verticalPodAutoscaling),
+      workload_identity_config: cdktf.listMapper(containerClusterWorkloadIdentityConfigToTerraform)(this._workloadIdentityConfig),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapTunnelInstanceIamPolicyConfig extends TerraformMetaArguments {
+export interface IapTunnelInstanceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly instance: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface IapTunnelInstanceIamPolicyConfig extends TerraformMetaArguments
 
 // Resource
 
-export class IapTunnelInstanceIamPolicy extends TerraformResource {
+export class IapTunnelInstanceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class IapTunnelInstanceIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance: this._instance,
-      policy_data: this._policyData,
-      project: this._project,
-      zone: this._zone,
+      instance: cdktf.stringToTerraform(this._instance),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

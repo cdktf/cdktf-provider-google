@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionHealthCheckConfig extends TerraformMetaArguments {
+export interface ComputeRegionHealthCheckConfig extends cdktf.TerraformMetaArguments {
   /** How often (in seconds) to send a health check. The default value is 5
 seconds. */
   readonly checkIntervalSec?: number;
@@ -83,6 +82,17 @@ If not specified, gRPC health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
   readonly portSpecification?: string;
 }
+
+function computeRegionHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeRegionHealthCheckGrpcHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    grpc_service_name: cdktf.stringToTerraform(struct!.grpcServiceName),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+  }
+}
+
 export interface ComputeRegionHealthCheckHttp2HealthCheck {
   /** The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -120,6 +130,20 @@ The default value is /. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeRegionHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeRegionHealthCheckHttp2HealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request_path: cdktf.stringToTerraform(struct!.requestPath),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeRegionHealthCheckHttpHealthCheck {
   /** The value of the host header in the HTTP health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -157,6 +181,20 @@ The default value is /. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeRegionHealthCheckHttpHealthCheckToTerraform(struct?: ComputeRegionHealthCheckHttpHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request_path: cdktf.stringToTerraform(struct!.requestPath),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeRegionHealthCheckHttpsHealthCheck {
   /** The value of the host header in the HTTPS health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -194,6 +232,20 @@ The default value is /. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeRegionHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeRegionHealthCheckHttpsHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request_path: cdktf.stringToTerraform(struct!.requestPath),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeRegionHealthCheckSslHealthCheck {
   /** The TCP port number for the SSL health check request.
 The default value is 443. */
@@ -229,6 +281,19 @@ data can only be ASCII. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeRegionHealthCheckSslHealthCheckToTerraform(struct?: ComputeRegionHealthCheckSslHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request: cdktf.stringToTerraform(struct!.request),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeRegionHealthCheckTcpHealthCheck {
   /** The TCP port number for the TCP health check request.
 The default value is 80. */
@@ -264,15 +329,38 @@ data can only be ASCII. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeRegionHealthCheckTcpHealthCheckToTerraform(struct?: ComputeRegionHealthCheckTcpHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request: cdktf.stringToTerraform(struct!.request),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeRegionHealthCheckTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRegionHealthCheckTimeoutsToTerraform(struct?: ComputeRegionHealthCheckTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionHealthCheck extends TerraformResource {
+export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -573,21 +661,21 @@ export class ComputeRegionHealthCheck extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      check_interval_sec: this._checkIntervalSec,
-      description: this._description,
-      healthy_threshold: this._healthyThreshold,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      timeout_sec: this._timeoutSec,
-      unhealthy_threshold: this._unhealthyThreshold,
-      grpc_health_check: this._grpcHealthCheck,
-      http2_health_check: this._http2HealthCheck,
-      http_health_check: this._httpHealthCheck,
-      https_health_check: this._httpsHealthCheck,
-      ssl_health_check: this._sslHealthCheck,
-      tcp_health_check: this._tcpHealthCheck,
-      timeouts: this._timeouts,
+      check_interval_sec: cdktf.numberToTerraform(this._checkIntervalSec),
+      description: cdktf.stringToTerraform(this._description),
+      healthy_threshold: cdktf.numberToTerraform(this._healthyThreshold),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
+      unhealthy_threshold: cdktf.numberToTerraform(this._unhealthyThreshold),
+      grpc_health_check: cdktf.listMapper(computeRegionHealthCheckGrpcHealthCheckToTerraform)(this._grpcHealthCheck),
+      http2_health_check: cdktf.listMapper(computeRegionHealthCheckHttp2HealthCheckToTerraform)(this._http2HealthCheck),
+      http_health_check: cdktf.listMapper(computeRegionHealthCheckHttpHealthCheckToTerraform)(this._httpHealthCheck),
+      https_health_check: cdktf.listMapper(computeRegionHealthCheckHttpsHealthCheckToTerraform)(this._httpsHealthCheck),
+      ssl_health_check: cdktf.listMapper(computeRegionHealthCheckSslHealthCheckToTerraform)(this._sslHealthCheck),
+      tcp_health_check: cdktf.listMapper(computeRegionHealthCheckTcpHealthCheckToTerraform)(this._tcpHealthCheck),
+      timeouts: computeRegionHealthCheckTimeoutsToTerraform(this._timeouts),
     };
   }
 }

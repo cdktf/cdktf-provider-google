@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeDiskIamPolicyConfig extends TerraformMetaArguments {
+export interface ComputeDiskIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface ComputeDiskIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class ComputeDiskIamPolicy extends TerraformResource {
+export class ComputeDiskIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class ComputeDiskIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      policy_data: this._policyData,
-      project: this._project,
-      zone: this._zone,
+      name: cdktf.stringToTerraform(this._name),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

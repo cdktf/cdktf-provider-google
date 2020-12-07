@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AccessContextManagerAccessPolicyConfig extends TerraformMetaArguments {
+export interface AccessContextManagerAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The parent of this AccessPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} */
   readonly parent: string;
@@ -22,9 +21,19 @@ export interface AccessContextManagerAccessPolicyTimeouts {
   readonly update?: string;
 }
 
+function accessContextManagerAccessPolicyTimeoutsToTerraform(struct?: AccessContextManagerAccessPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AccessContextManagerAccessPolicy extends TerraformResource {
+export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -118,9 +127,9 @@ export class AccessContextManagerAccessPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      parent: this._parent,
-      title: this._title,
-      timeouts: this._timeouts,
+      parent: cdktf.stringToTerraform(this._parent),
+      title: cdktf.stringToTerraform(this._title),
+      timeouts: accessContextManagerAccessPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

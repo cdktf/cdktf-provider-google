@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DialogflowEntityTypeConfig extends TerraformMetaArguments {
+export interface DialogflowEntityTypeConfig extends cdktf.TerraformMetaArguments {
   /** The name of this entity type to be displayed on the console. */
   readonly displayName: string;
   /** Enables fuzzy entity extraction during classification. */
@@ -38,15 +37,34 @@ For KIND_LIST entity types:
 * A string that can contain references to other entity types (with or without aliases). */
   readonly value: string;
 }
+
+function dialogflowEntityTypeEntitiesToTerraform(struct?: DialogflowEntityTypeEntities): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    synonyms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.synonyms),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface DialogflowEntityTypeTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dialogflowEntityTypeTimeoutsToTerraform(struct?: DialogflowEntityTypeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DialogflowEntityType extends TerraformResource {
+export class DialogflowEntityType extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -181,12 +199,12 @@ export class DialogflowEntityType extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      enable_fuzzy_extraction: this._enableFuzzyExtraction,
-      kind: this._kind,
-      project: this._project,
-      entities: this._entities,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enable_fuzzy_extraction: cdktf.booleanToTerraform(this._enableFuzzyExtraction),
+      kind: cdktf.stringToTerraform(this._kind),
+      project: cdktf.stringToTerraform(this._project),
+      entities: cdktf.listMapper(dialogflowEntityTypeEntitiesToTerraform)(this._entities),
+      timeouts: dialogflowEntityTypeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

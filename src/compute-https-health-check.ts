@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeHttpsHealthCheckConfig extends TerraformMetaArguments {
+export interface ComputeHttpsHealthCheckConfig extends cdktf.TerraformMetaArguments {
   /** How often (in seconds) to send a health check. The default value is 5
 seconds. */
   readonly checkIntervalSec?: number;
@@ -52,9 +51,19 @@ export interface ComputeHttpsHealthCheckTimeouts {
   readonly update?: string;
 }
 
+function computeHttpsHealthCheckTimeoutsToTerraform(struct?: ComputeHttpsHealthCheckTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeHttpsHealthCheck extends TerraformResource {
+export class ComputeHttpsHealthCheck extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -282,17 +291,17 @@ export class ComputeHttpsHealthCheck extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      check_interval_sec: this._checkIntervalSec,
-      description: this._description,
-      healthy_threshold: this._healthyThreshold,
-      host: this._host,
-      name: this._name,
-      port: this._port,
-      project: this._project,
-      request_path: this._requestPath,
-      timeout_sec: this._timeoutSec,
-      unhealthy_threshold: this._unhealthyThreshold,
-      timeouts: this._timeouts,
+      check_interval_sec: cdktf.numberToTerraform(this._checkIntervalSec),
+      description: cdktf.stringToTerraform(this._description),
+      healthy_threshold: cdktf.numberToTerraform(this._healthyThreshold),
+      host: cdktf.stringToTerraform(this._host),
+      name: cdktf.stringToTerraform(this._name),
+      port: cdktf.numberToTerraform(this._port),
+      project: cdktf.stringToTerraform(this._project),
+      request_path: cdktf.stringToTerraform(this._requestPath),
+      timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
+      unhealthy_threshold: cdktf.numberToTerraform(this._unhealthyThreshold),
+      timeouts: computeHttpsHealthCheckTimeoutsToTerraform(this._timeouts),
     };
   }
 }

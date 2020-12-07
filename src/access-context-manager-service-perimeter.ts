@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AccessContextManagerServicePerimeterConfig extends TerraformMetaArguments {
+export interface AccessContextManagerServicePerimeterConfig extends cdktf.TerraformMetaArguments {
   /** Description of the ServicePerimeter and its use. Does not affect
 behavior. */
   readonly description?: string;
@@ -62,6 +61,15 @@ Must be empty unless 'enableRestriction' is True. */
 list of APIs specified in 'allowedServices'. */
   readonly enableRestriction?: boolean;
 }
+
+function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterSpecVpcAccessibleServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedServices),
+    enable_restriction: cdktf.booleanToTerraform(struct!.enableRestriction),
+  }
+}
+
 export interface AccessContextManagerServicePerimeterSpec {
   /** A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -87,6 +95,17 @@ restrictions. */
   /** vpc_accessible_services block */
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimeterSpecVpcAccessibleServices[];
 }
+
+function accessContextManagerServicePerimeterSpecToTerraform(struct?: AccessContextManagerServicePerimeterSpec): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.accessLevels),
+    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
+    restricted_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.restrictedServices),
+    vpc_accessible_services: cdktf.listMapper(accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform)(struct!.vpcAccessibleServices),
+  }
+}
+
 export interface AccessContextManagerServicePerimeterStatusVpcAccessibleServices {
   /** The list of APIs usable within the Service Perimeter.
 Must be empty unless 'enableRestriction' is True. */
@@ -95,6 +114,15 @@ Must be empty unless 'enableRestriction' is True. */
 list of APIs specified in 'allowedServices'. */
   readonly enableRestriction?: boolean;
 }
+
+function accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterStatusVpcAccessibleServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedServices),
+    enable_restriction: cdktf.booleanToTerraform(struct!.enableRestriction),
+  }
+}
+
 export interface AccessContextManagerServicePerimeterStatus {
   /** A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -120,15 +148,36 @@ restrictions. */
   /** vpc_accessible_services block */
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimeterStatusVpcAccessibleServices[];
 }
+
+function accessContextManagerServicePerimeterStatusToTerraform(struct?: AccessContextManagerServicePerimeterStatus): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.accessLevels),
+    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
+    restricted_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.restrictedServices),
+    vpc_accessible_services: cdktf.listMapper(accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform)(struct!.vpcAccessibleServices),
+  }
+}
+
 export interface AccessContextManagerServicePerimeterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?: AccessContextManagerServicePerimeterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AccessContextManagerServicePerimeter extends TerraformResource {
+export class AccessContextManagerServicePerimeter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -316,15 +365,15 @@ export class AccessContextManagerServicePerimeter extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      parent: this._parent,
-      perimeter_type: this._perimeterType,
-      title: this._title,
-      use_explicit_dry_run_spec: this._useExplicitDryRunSpec,
-      spec: this._spec,
-      status: this._status,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      parent: cdktf.stringToTerraform(this._parent),
+      perimeter_type: cdktf.stringToTerraform(this._perimeterType),
+      title: cdktf.stringToTerraform(this._title),
+      use_explicit_dry_run_spec: cdktf.booleanToTerraform(this._useExplicitDryRunSpec),
+      spec: cdktf.listMapper(accessContextManagerServicePerimeterSpecToTerraform)(this._spec),
+      status: cdktf.listMapper(accessContextManagerServicePerimeterStatusToTerraform)(this._status),
+      timeouts: accessContextManagerServicePerimeterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

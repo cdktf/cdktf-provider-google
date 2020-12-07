@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigtableGcPolicyConfig extends TerraformMetaArguments {
+export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The name of the column family. */
   readonly columnFamily: string;
   /** The name of the Bigtable instance. */
@@ -27,14 +26,30 @@ export interface BigtableGcPolicyMaxAge {
   /** Number of days before applying GC policy. */
   readonly days: number;
 }
+
+function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAge): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+  }
+}
+
 export interface BigtableGcPolicyMaxVersion {
   /** Number of version before applying the GC policy. */
   readonly number: number;
 }
 
+function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    number: cdktf.numberToTerraform(struct!.number),
+  }
+}
+
+
 // Resource
 
-export class BigtableGcPolicy extends TerraformResource {
+export class BigtableGcPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -178,13 +193,13 @@ export class BigtableGcPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      column_family: this._columnFamily,
-      instance_name: this._instanceName,
-      mode: this._mode,
-      project: this._project,
-      table: this._table,
-      max_age: this._maxAge,
-      max_version: this._maxVersion,
+      column_family: cdktf.stringToTerraform(this._columnFamily),
+      instance_name: cdktf.stringToTerraform(this._instanceName),
+      mode: cdktf.stringToTerraform(this._mode),
+      project: cdktf.stringToTerraform(this._project),
+      table: cdktf.stringToTerraform(this._table),
+      max_age: cdktf.listMapper(bigtableGcPolicyMaxAgeToTerraform)(this._maxAge),
+      max_version: cdktf.listMapper(bigtableGcPolicyMaxVersionToTerraform)(this._maxVersion),
     };
   }
 }

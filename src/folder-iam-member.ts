@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FolderIamMemberConfig extends TerraformMetaArguments {
+export interface FolderIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly folder: string;
   readonly member: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface FolderIamMemberCondition {
   readonly title: string;
 }
 
+function folderIamMemberConditionToTerraform(struct?: FolderIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class FolderIamMember extends TerraformResource {
+export class FolderIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class FolderIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      folder: this._folder,
-      member: this._member,
-      role: this._role,
-      condition: this._condition,
+      folder: cdktf.stringToTerraform(this._folder),
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(folderIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

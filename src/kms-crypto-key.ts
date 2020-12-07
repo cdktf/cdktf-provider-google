@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsCryptoKeyConfig extends TerraformMetaArguments {
+export interface KmsCryptoKeyConfig extends cdktf.TerraformMetaArguments {
   /** The KeyRing that this key belongs to.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''. */
   readonly keyRing: string;
@@ -37,6 +36,16 @@ export interface KmsCryptoKeyTimeouts {
   readonly delete?: string;
   readonly update?: string;
 }
+
+function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface KmsCryptoKeyVersionTemplate {
   /** The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs. */
@@ -45,9 +54,18 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
   readonly protectionLevel?: string;
 }
 
+function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemplate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    algorithm: cdktf.stringToTerraform(struct!.algorithm),
+    protection_level: cdktf.stringToTerraform(struct!.protectionLevel),
+  }
+}
+
+
 // Resource
 
-export class KmsCryptoKey extends TerraformResource {
+export class KmsCryptoKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -216,14 +234,14 @@ export class KmsCryptoKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_ring: this._keyRing,
-      labels: this._labels,
-      name: this._name,
-      purpose: this._purpose,
-      rotation_period: this._rotationPeriod,
-      skip_initial_version_creation: this._skipInitialVersionCreation,
-      timeouts: this._timeouts,
-      version_template: this._versionTemplate,
+      key_ring: cdktf.stringToTerraform(this._keyRing),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      purpose: cdktf.stringToTerraform(this._purpose),
+      rotation_period: cdktf.stringToTerraform(this._rotationPeriod),
+      skip_initial_version_creation: cdktf.booleanToTerraform(this._skipInitialVersionCreation),
+      timeouts: kmsCryptoKeyTimeoutsToTerraform(this._timeouts),
+      version_template: cdktf.listMapper(kmsCryptoKeyVersionTemplateToTerraform)(this._versionTemplate),
     };
   }
 }

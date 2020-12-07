@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AccessContextManagerServicePerimeterResourceConfig extends TerraformMetaArguments {
+export interface AccessContextManagerServicePerimeterResourceConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Service Perimeter to add this resource to. */
   readonly perimeterName: string;
   /** A GCP resource that is inside of the service perimeter.
@@ -22,9 +21,18 @@ export interface AccessContextManagerServicePerimeterResourceTimeouts {
   readonly delete?: string;
 }
 
+function accessContextManagerServicePerimeterResourceTimeoutsToTerraform(struct?: AccessContextManagerServicePerimeterResourceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class AccessContextManagerServicePerimeterResource extends TerraformResource {
+export class AccessContextManagerServicePerimeterResource extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -103,9 +111,9 @@ export class AccessContextManagerServicePerimeterResource extends TerraformResou
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      perimeter_name: this._perimeterName,
-      resource: this._resource,
-      timeouts: this._timeouts,
+      perimeter_name: cdktf.stringToTerraform(this._perimeterName),
+      resource: cdktf.stringToTerraform(this._resource),
+      timeouts: accessContextManagerServicePerimeterResourceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapTunnelInstanceIamMemberConfig extends TerraformMetaArguments {
+export interface IapTunnelInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly instance: string;
   readonly member: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface IapTunnelInstanceIamMemberCondition {
   readonly title: string;
 }
 
+function iapTunnelInstanceIamMemberConditionToTerraform(struct?: IapTunnelInstanceIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class IapTunnelInstanceIamMember extends TerraformResource {
+export class IapTunnelInstanceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class IapTunnelInstanceIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance: this._instance,
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      zone: this._zone,
-      condition: this._condition,
+      instance: cdktf.stringToTerraform(this._instance),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      zone: cdktf.stringToTerraform(this._zone),
+      condition: cdktf.listMapper(iapTunnelInstanceIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

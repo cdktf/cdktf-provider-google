@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeBackendServiceConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeBackendServiceConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -19,7 +17,7 @@ character, which cannot be a dash. */
   readonly name: string;
   readonly project?: string;
 }
-export class DataGoogleComputeBackendServiceBackend extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceBackend extends cdktf.ComplexComputedList {
 
   // balancing_mode - computed: true, optional: false, required: false
   public get balancingMode() {
@@ -76,7 +74,7 @@ export class DataGoogleComputeBackendServiceBackend extends ComplexComputedList 
     return this.getNumberAttribute('max_utilization');
   }
 }
-export class DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy extends cdktf.ComplexComputedList {
 
   // include_host - computed: true, optional: false, required: false
   public get includeHost() {
@@ -103,7 +101,7 @@ export class DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy extends Comp
     return this.getListAttribute('query_string_whitelist');
   }
 }
-export class DataGoogleComputeBackendServiceCdnPolicy extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceCdnPolicy extends cdktf.ComplexComputedList {
 
   // cache_key_policy - computed: true, optional: false, required: false
   public get cacheKeyPolicy() {
@@ -115,7 +113,7 @@ export class DataGoogleComputeBackendServiceCdnPolicy extends ComplexComputedLis
     return this.getNumberAttribute('signed_url_cache_max_age_sec');
   }
 }
-export class DataGoogleComputeBackendServiceCircuitBreakers extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceCircuitBreakers extends cdktf.ComplexComputedList {
 
   // max_connections - computed: true, optional: false, required: false
   public get maxConnections() {
@@ -142,7 +140,7 @@ export class DataGoogleComputeBackendServiceCircuitBreakers extends ComplexCompu
     return this.getNumberAttribute('max_retries');
   }
 }
-export class DataGoogleComputeBackendServiceConsistentHashHttpCookieTtl extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceConsistentHashHttpCookieTtl extends cdktf.ComplexComputedList {
 
   // nanos - computed: true, optional: false, required: false
   public get nanos() {
@@ -154,7 +152,7 @@ export class DataGoogleComputeBackendServiceConsistentHashHttpCookieTtl extends 
     return this.getNumberAttribute('seconds');
   }
 }
-export class DataGoogleComputeBackendServiceConsistentHashHttpCookie extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceConsistentHashHttpCookie extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -171,7 +169,7 @@ export class DataGoogleComputeBackendServiceConsistentHashHttpCookie extends Com
     return this.interpolationForAttribute('ttl') as any;
   }
 }
-export class DataGoogleComputeBackendServiceConsistentHash extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceConsistentHash extends cdktf.ComplexComputedList {
 
   // http_cookie - computed: true, optional: false, required: false
   public get httpCookie() {
@@ -188,7 +186,7 @@ export class DataGoogleComputeBackendServiceConsistentHash extends ComplexComput
     return this.getNumberAttribute('minimum_ring_size');
   }
 }
-export class DataGoogleComputeBackendServiceIap extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceIap extends cdktf.ComplexComputedList {
 
   // oauth2_client_id - computed: true, optional: false, required: false
   public get oauth2ClientId() {
@@ -205,7 +203,7 @@ export class DataGoogleComputeBackendServiceIap extends ComplexComputedList {
     return this.getStringAttribute('oauth2_client_secret_sha256');
   }
 }
-export class DataGoogleComputeBackendServiceLogConfig extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceLogConfig extends cdktf.ComplexComputedList {
 
   // enable - computed: true, optional: false, required: false
   public get enable() {
@@ -217,7 +215,7 @@ export class DataGoogleComputeBackendServiceLogConfig extends ComplexComputedLis
     return this.getNumberAttribute('sample_rate');
   }
 }
-export class DataGoogleComputeBackendServiceOutlierDetectionBaseEjectionTime extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceOutlierDetectionBaseEjectionTime extends cdktf.ComplexComputedList {
 
   // nanos - computed: true, optional: false, required: false
   public get nanos() {
@@ -229,7 +227,7 @@ export class DataGoogleComputeBackendServiceOutlierDetectionBaseEjectionTime ext
     return this.getNumberAttribute('seconds');
   }
 }
-export class DataGoogleComputeBackendServiceOutlierDetectionInterval extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceOutlierDetectionInterval extends cdktf.ComplexComputedList {
 
   // nanos - computed: true, optional: false, required: false
   public get nanos() {
@@ -241,7 +239,7 @@ export class DataGoogleComputeBackendServiceOutlierDetectionInterval extends Com
     return this.getNumberAttribute('seconds');
   }
 }
-export class DataGoogleComputeBackendServiceOutlierDetection extends ComplexComputedList {
+export class DataGoogleComputeBackendServiceOutlierDetection extends cdktf.ComplexComputedList {
 
   // base_ejection_time - computed: true, optional: false, required: false
   public get baseEjectionTime() {
@@ -301,7 +299,7 @@ export class DataGoogleComputeBackendServiceOutlierDetection extends ComplexComp
 
 // Resource
 
-export class DataGoogleComputeBackendService extends TerraformDataSource {
+export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -486,8 +484,8 @@ export class DataGoogleComputeBackendService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

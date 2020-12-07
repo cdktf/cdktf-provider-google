@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageBucketObjectConfig extends TerraformMetaArguments {
+export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments {
   /** The name of the containing bucket. */
   readonly bucket: string;
   /** Cache-Control directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600 */
@@ -35,7 +34,7 @@ export interface StorageBucketObjectConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class StorageBucketObject extends TerraformResource {
+export class StorageBucketObject extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -292,18 +291,18 @@ export class StorageBucketObject extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      cache_control: this._cacheControl,
-      content: this._content,
-      content_disposition: this._contentDisposition,
-      content_encoding: this._contentEncoding,
-      content_language: this._contentLanguage,
-      content_type: this._contentType,
-      detect_md5hash: this._detectMd5Hash,
-      metadata: this._metadata,
-      name: this._name,
-      source: this._source,
-      storage_class: this._storageClass,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      cache_control: cdktf.stringToTerraform(this._cacheControl),
+      content: cdktf.stringToTerraform(this._content),
+      content_disposition: cdktf.stringToTerraform(this._contentDisposition),
+      content_encoding: cdktf.stringToTerraform(this._contentEncoding),
+      content_language: cdktf.stringToTerraform(this._contentLanguage),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      detect_md5hash: cdktf.stringToTerraform(this._detectMd5Hash),
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      source: cdktf.stringToTerraform(this._source),
+      storage_class: cdktf.stringToTerraform(this._storageClass),
     };
   }
 }

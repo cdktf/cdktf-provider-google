@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FolderAccessApprovalSettingsConfig extends TerraformMetaArguments {
+export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
   /** ID of the folder of the access approval settings. */
   readonly folderId: string;
   /** A list of email addresses to which notifications relating to approval requests should be sent.
@@ -48,15 +47,34 @@ Note: These values are supported as input, but considered a legacy format:
   /** The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"] */
   readonly enrollmentLevel?: string;
 }
+
+function folderAccessApprovalSettingsEnrolledServicesToTerraform(struct?: FolderAccessApprovalSettingsEnrolledServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloud_product: cdktf.stringToTerraform(struct!.cloudProduct),
+    enrollment_level: cdktf.stringToTerraform(struct!.enrollmentLevel),
+  }
+}
+
 export interface FolderAccessApprovalSettingsTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessApprovalSettingsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FolderAccessApprovalSettings extends TerraformResource {
+export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -162,10 +180,10 @@ export class FolderAccessApprovalSettings extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      folder_id: this._folderId,
-      notification_emails: this._notificationEmails,
-      enrolled_services: this._enrolledServices,
-      timeouts: this._timeouts,
+      folder_id: cdktf.stringToTerraform(this._folderId),
+      notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
+      enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),
+      timeouts: folderAccessApprovalSettingsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataprocJobIamPolicyConfig extends TerraformMetaArguments {
+export interface DataprocJobIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly jobId: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface DataprocJobIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DataprocJobIamPolicy extends TerraformResource {
+export class DataprocJobIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class DataprocJobIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      job_id: this._jobId,
-      policy_data: this._policyData,
-      project: this._project,
-      region: this._region,
+      job_id: cdktf.stringToTerraform(this._jobId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

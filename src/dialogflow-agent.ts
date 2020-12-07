@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DialogflowAgentConfig extends TerraformMetaArguments {
+export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
   /** API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
 different service endpoints for different API versions. However, bots connectors and webhook calls will follow 
 the specified API version.
@@ -62,9 +61,19 @@ export interface DialogflowAgentTimeouts {
   readonly update?: string;
 }
 
+function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DialogflowAgent extends TerraformResource {
+export class DialogflowAgent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -315,19 +324,19 @@ export class DialogflowAgent extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_version: this._apiVersion,
-      avatar_uri: this._avatarUri,
-      classification_threshold: this._classificationThreshold,
-      default_language_code: this._defaultLanguageCode,
-      description: this._description,
-      display_name: this._displayName,
-      enable_logging: this._enableLogging,
-      match_mode: this._matchMode,
-      project: this._project,
-      supported_language_codes: this._supportedLanguageCodes,
-      tier: this._tier,
-      time_zone: this._timeZone,
-      timeouts: this._timeouts,
+      api_version: cdktf.stringToTerraform(this._apiVersion),
+      avatar_uri: cdktf.stringToTerraform(this._avatarUri),
+      classification_threshold: cdktf.numberToTerraform(this._classificationThreshold),
+      default_language_code: cdktf.stringToTerraform(this._defaultLanguageCode),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enable_logging: cdktf.booleanToTerraform(this._enableLogging),
+      match_mode: cdktf.stringToTerraform(this._matchMode),
+      project: cdktf.stringToTerraform(this._project),
+      supported_language_codes: cdktf.listMapper(cdktf.stringToTerraform)(this._supportedLanguageCodes),
+      tier: cdktf.stringToTerraform(this._tier),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
+      timeouts: dialogflowAgentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

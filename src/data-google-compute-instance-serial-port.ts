@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeInstanceSerialPortConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeInstanceSerialPortConfig extends cdktf.TerraformMetaArguments {
   readonly instance: string;
   readonly port: number;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface DataGoogleComputeInstanceSerialPortConfig extends TerraformMeta
 
 // Resource
 
-export class DataGoogleComputeInstanceSerialPort extends TerraformDataSource {
+export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class DataGoogleComputeInstanceSerialPort extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance: this._instance,
-      port: this._port,
-      project: this._project,
-      zone: this._zone,
+      instance: cdktf.stringToTerraform(this._instance),
+      port: cdktf.numberToTerraform(this._port),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecretManagerSecretIamMemberConfig extends TerraformMetaArguments {
+export interface SecretManagerSecretIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly member: string;
   readonly project?: string;
   readonly role: string;
@@ -21,9 +20,19 @@ export interface SecretManagerSecretIamMemberCondition {
   readonly title: string;
 }
 
+function secretManagerSecretIamMemberConditionToTerraform(struct?: SecretManagerSecretIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class SecretManagerSecretIamMember extends TerraformResource {
+export class SecretManagerSecretIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class SecretManagerSecretIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      secret_id: this._secretId,
-      condition: this._condition,
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      secret_id: cdktf.stringToTerraform(this._secretId),
+      condition: cdktf.listMapper(secretManagerSecretIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

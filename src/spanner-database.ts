@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpannerDatabaseConfig extends TerraformMetaArguments {
+export interface SpannerDatabaseConfig extends cdktf.TerraformMetaArguments {
   /** An optional list of DDL statements to run inside the newly created
 database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
@@ -29,9 +28,19 @@ export interface SpannerDatabaseTimeouts {
   readonly update?: string;
 }
 
+function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SpannerDatabase extends TerraformResource {
+export class SpannerDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -166,12 +175,12 @@ export class SpannerDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      ddl: this._ddl,
-      deletion_protection: this._deletionProtection,
-      instance: this._instance,
-      name: this._name,
-      project: this._project,
-      timeouts: this._timeouts,
+      ddl: cdktf.listMapper(cdktf.stringToTerraform)(this._ddl),
+      deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
+      instance: cdktf.stringToTerraform(this._instance),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: spannerDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

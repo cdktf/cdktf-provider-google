@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ActiveDirectoryDomainTrustConfig extends TerraformMetaArguments {
+export interface ActiveDirectoryDomainTrustConfig extends cdktf.TerraformMetaArguments {
   /** The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains. */
   readonly domain: string;
@@ -33,9 +32,19 @@ export interface ActiveDirectoryDomainTrustTimeouts {
   readonly update?: string;
 }
 
+function activeDirectoryDomainTrustTimeoutsToTerraform(struct?: ActiveDirectoryDomainTrustTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ActiveDirectoryDomainTrust extends TerraformResource {
+export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -204,15 +213,15 @@ export class ActiveDirectoryDomainTrust extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      domain: this._domain,
-      project: this._project,
-      selective_authentication: this._selectiveAuthentication,
-      target_dns_ip_addresses: this._targetDnsIpAddresses,
-      target_domain_name: this._targetDomainName,
-      trust_direction: this._trustDirection,
-      trust_handshake_secret: this._trustHandshakeSecret,
-      trust_type: this._trustType,
-      timeouts: this._timeouts,
+      domain: cdktf.stringToTerraform(this._domain),
+      project: cdktf.stringToTerraform(this._project),
+      selective_authentication: cdktf.booleanToTerraform(this._selectiveAuthentication),
+      target_dns_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._targetDnsIpAddresses),
+      target_domain_name: cdktf.stringToTerraform(this._targetDomainName),
+      trust_direction: cdktf.stringToTerraform(this._trustDirection),
+      trust_handshake_secret: cdktf.stringToTerraform(this._trustHandshakeSecret),
+      trust_type: cdktf.stringToTerraform(this._trustType),
+      timeouts: activeDirectoryDomainTrustTimeoutsToTerraform(this._timeouts),
     };
   }
 }

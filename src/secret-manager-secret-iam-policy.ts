@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecretManagerSecretIamPolicyConfig extends TerraformMetaArguments {
+export interface SecretManagerSecretIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly policyData: string;
   readonly project?: string;
   readonly secretId: string;
@@ -15,7 +14,7 @@ export interface SecretManagerSecretIamPolicyConfig extends TerraformMetaArgumen
 
 // Resource
 
-export class SecretManagerSecretIamPolicy extends TerraformResource {
+export class SecretManagerSecretIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class SecretManagerSecretIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      policy_data: this._policyData,
-      project: this._project,
-      secret_id: this._secretId,
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      secret_id: cdktf.stringToTerraform(this._secretId),
     };
   }
 }

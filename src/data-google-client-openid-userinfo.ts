@@ -2,17 +2,16 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleClientOpenidUserinfoConfig extends TerraformMetaArguments {
+export interface DataGoogleClientOpenidUserinfoConfig extends cdktf.TerraformMetaArguments {
 }
 
 // Resource
 
-export class DataGoogleClientOpenidUserinfo extends TerraformDataSource {
+export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER

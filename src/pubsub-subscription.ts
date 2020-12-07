@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PubsubSubscriptionConfig extends TerraformMetaArguments {
+export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /** This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
 delivery but before the ack deadline expires and before the message is
@@ -96,6 +95,15 @@ This field will be honored on a best effort basis.
 If this parameter is 0, a default value of 5 is used. */
   readonly maxDeliveryAttempts?: number;
 }
+
+function pubsubSubscriptionDeadLetterPolicyToTerraform(struct?: PubsubSubscriptionDeadLetterPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dead_letter_topic: cdktf.stringToTerraform(struct!.deadLetterTopic),
+    max_delivery_attempts: cdktf.numberToTerraform(struct!.maxDeliveryAttempts),
+  }
+}
+
 export interface PubsubSubscriptionExpirationPolicy {
   /** Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -104,6 +112,14 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 Example - "3.5s". */
   readonly ttl: string;
 }
+
+function pubsubSubscriptionExpirationPolicyToTerraform(struct?: PubsubSubscriptionExpirationPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ttl: cdktf.stringToTerraform(struct!.ttl),
+  }
+}
+
 export interface PubsubSubscriptionPushConfigOidcToken {
   /** Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -118,6 +134,15 @@ subscriptions.modifyPushConfig RPCs) must have the
 iam.serviceAccounts.actAs permission for the service account. */
   readonly serviceAccountEmail: string;
 }
+
+function pubsubSubscriptionPushConfigOidcTokenToTerraform(struct?: PubsubSubscriptionPushConfigOidcToken): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    audience: cdktf.stringToTerraform(struct!.audience),
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+  }
+}
+
 export interface PubsubSubscriptionPushConfig {
   /** Endpoint configuration attributes.
 
@@ -150,6 +175,16 @@ For example, a Webhook endpoint might use
   /** oidc_token block */
   readonly oidcToken?: PubsubSubscriptionPushConfigOidcToken[];
 }
+
+function pubsubSubscriptionPushConfigToTerraform(struct?: PubsubSubscriptionPushConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    attributes: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.attributes),
+    push_endpoint: cdktf.stringToTerraform(struct!.pushEndpoint),
+    oidc_token: cdktf.listMapper(pubsubSubscriptionPushConfigOidcTokenToTerraform)(struct!.oidcToken),
+  }
+}
+
 export interface PubsubSubscriptionRetryPolicy {
   /** The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
@@ -158,15 +193,34 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
   readonly minimumBackoff?: string;
 }
+
+function pubsubSubscriptionRetryPolicyToTerraform(struct?: PubsubSubscriptionRetryPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    maximum_backoff: cdktf.stringToTerraform(struct!.maximumBackoff),
+    minimum_backoff: cdktf.stringToTerraform(struct!.minimumBackoff),
+  }
+}
+
 export interface PubsubSubscriptionTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PubsubSubscription extends TerraformResource {
+export class PubsubSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -437,20 +491,20 @@ export class PubsubSubscription extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      ack_deadline_seconds: this._ackDeadlineSeconds,
-      enable_message_ordering: this._enableMessageOrdering,
-      filter: this._filter,
-      labels: this._labels,
-      message_retention_duration: this._messageRetentionDuration,
-      name: this._name,
-      project: this._project,
-      retain_acked_messages: this._retainAckedMessages,
-      topic: this._topic,
-      dead_letter_policy: this._deadLetterPolicy,
-      expiration_policy: this._expirationPolicy,
-      push_config: this._pushConfig,
-      retry_policy: this._retryPolicy,
-      timeouts: this._timeouts,
+      ack_deadline_seconds: cdktf.numberToTerraform(this._ackDeadlineSeconds),
+      enable_message_ordering: cdktf.booleanToTerraform(this._enableMessageOrdering),
+      filter: cdktf.stringToTerraform(this._filter),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      message_retention_duration: cdktf.stringToTerraform(this._messageRetentionDuration),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      retain_acked_messages: cdktf.booleanToTerraform(this._retainAckedMessages),
+      topic: cdktf.stringToTerraform(this._topic),
+      dead_letter_policy: cdktf.listMapper(pubsubSubscriptionDeadLetterPolicyToTerraform)(this._deadLetterPolicy),
+      expiration_policy: cdktf.listMapper(pubsubSubscriptionExpirationPolicyToTerraform)(this._expirationPolicy),
+      push_config: cdktf.listMapper(pubsubSubscriptionPushConfigToTerraform)(this._pushConfig),
+      retry_policy: cdktf.listMapper(pubsubSubscriptionRetryPolicyToTerraform)(this._retryPolicy),
+      timeouts: pubsubSubscriptionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

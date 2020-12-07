@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectIamCustomRoleConfig extends TerraformMetaArguments {
+export interface ProjectIamCustomRoleConfig extends cdktf.TerraformMetaArguments {
   /** A human-readable description for the role. */
   readonly description?: string;
   /** The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified. */
@@ -24,7 +23,7 @@ export interface ProjectIamCustomRoleConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class ProjectIamCustomRole extends TerraformResource {
+export class ProjectIamCustomRole extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -161,12 +160,12 @@ export class ProjectIamCustomRole extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      permissions: this._permissions,
-      project: this._project,
-      role_id: this._roleId,
-      stage: this._stage,
-      title: this._title,
+      description: cdktf.stringToTerraform(this._description),
+      permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._permissions),
+      project: cdktf.stringToTerraform(this._project),
+      role_id: cdktf.stringToTerraform(this._roleId),
+      stage: cdktf.stringToTerraform(this._stage),
+      title: cdktf.stringToTerraform(this._title),
     };
   }
 }

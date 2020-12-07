@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapBrandConfig extends TerraformMetaArguments {
+export interface IapBrandConfig extends cdktf.TerraformMetaArguments {
   /** Application name displayed on OAuth consent screen. */
   readonly applicationTitle: string;
   readonly project?: string;
@@ -25,9 +24,18 @@ export interface IapBrandTimeouts {
   readonly delete?: string;
 }
 
+function iapBrandTimeoutsToTerraform(struct?: IapBrandTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class IapBrand extends TerraformResource {
+export class IapBrand extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -133,10 +141,10 @@ export class IapBrand extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_title: this._applicationTitle,
-      project: this._project,
-      support_email: this._supportEmail,
-      timeouts: this._timeouts,
+      application_title: cdktf.stringToTerraform(this._applicationTitle),
+      project: cdktf.stringToTerraform(this._project),
+      support_email: cdktf.stringToTerraform(this._supportEmail),
+      timeouts: iapBrandTimeoutsToTerraform(this._timeouts),
     };
   }
 }

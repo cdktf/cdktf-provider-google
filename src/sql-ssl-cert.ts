@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlSslCertConfig extends TerraformMetaArguments {
+export interface SqlSslCertConfig extends cdktf.TerraformMetaArguments {
   /** The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created. */
   readonly commonName: string;
   /** The name of the Cloud SQL instance. Changing this forces a new resource to be created. */
@@ -22,9 +21,18 @@ export interface SqlSslCertTimeouts {
   readonly delete?: string;
 }
 
+function sqlSslCertTimeoutsToTerraform(struct?: SqlSslCertTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class SqlSslCert extends TerraformResource {
+export class SqlSslCert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -155,10 +163,10 @@ export class SqlSslCert extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      common_name: this._commonName,
-      instance: this._instance,
-      project: this._project,
-      timeouts: this._timeouts,
+      common_name: cdktf.stringToTerraform(this._commonName),
+      instance: cdktf.stringToTerraform(this._instance),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: sqlSslCertTimeoutsToTerraform(this._timeouts),
     };
   }
 }

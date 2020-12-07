@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRouterNatConfig extends TerraformMetaArguments {
+export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   /** A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT. */
   readonly drainNatIps?: string[];
@@ -62,6 +61,15 @@ export interface ComputeRouterNatLogConfig {
   /** Specifies the desired filtering of logs on this NAT. Possible values: ["ERRORS_ONLY", "TRANSLATIONS_ONLY", "ALL"] */
   readonly filter: string;
 }
+
+function computeRouterNatLogConfigToTerraform(struct?: ComputeRouterNatLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable: cdktf.booleanToTerraform(struct!.enable),
+    filter: cdktf.stringToTerraform(struct!.filter),
+  }
+}
+
 export interface ComputeRouterNatSubnetwork {
   /** Self-link of subnetwork to NAT */
   readonly name: string;
@@ -76,15 +84,35 @@ should have NAT enabled. Supported values include:
 'PRIMARY_IP_RANGE'. */
   readonly sourceIpRangesToNat: string[];
 }
+
+function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatSubnetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    secondary_ip_range_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secondaryIpRangeNames),
+    source_ip_ranges_to_nat: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpRangesToNat),
+  }
+}
+
 export interface ComputeRouterNatTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRouterNat extends TerraformResource {
+export class ComputeRouterNat extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -378,22 +406,22 @@ export class ComputeRouterNat extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      drain_nat_ips: this._drainNatIps,
-      icmp_idle_timeout_sec: this._icmpIdleTimeoutSec,
-      min_ports_per_vm: this._minPortsPerVm,
-      name: this._name,
-      nat_ip_allocate_option: this._natIpAllocateOption,
-      nat_ips: this._natIps,
-      project: this._project,
-      region: this._region,
-      router: this._router,
-      source_subnetwork_ip_ranges_to_nat: this._sourceSubnetworkIpRangesToNat,
-      tcp_established_idle_timeout_sec: this._tcpEstablishedIdleTimeoutSec,
-      tcp_transitory_idle_timeout_sec: this._tcpTransitoryIdleTimeoutSec,
-      udp_idle_timeout_sec: this._udpIdleTimeoutSec,
-      log_config: this._logConfig,
-      subnetwork: this._subnetwork,
-      timeouts: this._timeouts,
+      drain_nat_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._drainNatIps),
+      icmp_idle_timeout_sec: cdktf.numberToTerraform(this._icmpIdleTimeoutSec),
+      min_ports_per_vm: cdktf.numberToTerraform(this._minPortsPerVm),
+      name: cdktf.stringToTerraform(this._name),
+      nat_ip_allocate_option: cdktf.stringToTerraform(this._natIpAllocateOption),
+      nat_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._natIps),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      router: cdktf.stringToTerraform(this._router),
+      source_subnetwork_ip_ranges_to_nat: cdktf.stringToTerraform(this._sourceSubnetworkIpRangesToNat),
+      tcp_established_idle_timeout_sec: cdktf.numberToTerraform(this._tcpEstablishedIdleTimeoutSec),
+      tcp_transitory_idle_timeout_sec: cdktf.numberToTerraform(this._tcpTransitoryIdleTimeoutSec),
+      udp_idle_timeout_sec: cdktf.numberToTerraform(this._udpIdleTimeoutSec),
+      log_config: cdktf.listMapper(computeRouterNatLogConfigToTerraform)(this._logConfig),
+      subnetwork: cdktf.listMapper(computeRouterNatSubnetworkToTerraform)(this._subnetwork),
+      timeouts: computeRouterNatTimeoutsToTerraform(this._timeouts),
     };
   }
 }

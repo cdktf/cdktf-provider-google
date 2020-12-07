@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EndpointsServiceIamMemberConfig extends TerraformMetaArguments {
+export interface EndpointsServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly member: string;
   readonly role: string;
   readonly serviceName: string;
@@ -20,9 +19,19 @@ export interface EndpointsServiceIamMemberCondition {
   readonly title: string;
 }
 
+function endpointsServiceIamMemberConditionToTerraform(struct?: EndpointsServiceIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class EndpointsServiceIamMember extends TerraformResource {
+export class EndpointsServiceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class EndpointsServiceIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      member: this._member,
-      role: this._role,
-      service_name: this._serviceName,
-      condition: this._condition,
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      condition: cdktf.listMapper(endpointsServiceIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

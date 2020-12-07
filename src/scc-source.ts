@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SccSourceConfig extends TerraformMetaArguments {
+export interface SccSourceConfig extends cdktf.TerraformMetaArguments {
   /** The description of the source (max of 1024 characters). */
   readonly description?: string;
   /** The source’s display name. A source’s display name must be unique
@@ -28,9 +27,19 @@ export interface SccSourceTimeouts {
   readonly update?: string;
 }
 
+function sccSourceTimeoutsToTerraform(struct?: SccSourceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SccSource extends TerraformResource {
+export class SccSource extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,10 +140,10 @@ export class SccSource extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      organization: this._organization,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      organization: cdktf.stringToTerraform(this._organization),
+      timeouts: sccSourceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

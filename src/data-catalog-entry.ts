@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataCatalogEntryConfig extends TerraformMetaArguments {
+export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   /** Entry description, which can consist of several sentences or paragraphs that describe entry contents. */
   readonly description?: string;
   /** Display information such as title and description. A short name to identify the entry,
@@ -48,7 +46,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
   /** timeouts block */
   readonly timeouts?: DataCatalogEntryTimeouts;
 }
-export class DataCatalogEntryBigqueryDateShardedSpec extends ComplexComputedList {
+export class DataCatalogEntryBigqueryDateShardedSpec extends cdktf.ComplexComputedList {
 
   // dataset - computed: true, optional: false, required: false
   public get dataset() {
@@ -65,21 +63,21 @@ export class DataCatalogEntryBigqueryDateShardedSpec extends ComplexComputedList
     return this.getStringAttribute('table_prefix');
   }
 }
-export class DataCatalogEntryBigqueryTableSpecTableSpec extends ComplexComputedList {
+export class DataCatalogEntryBigqueryTableSpecTableSpec extends cdktf.ComplexComputedList {
 
   // grouped_entry - computed: true, optional: false, required: false
   public get groupedEntry() {
     return this.getStringAttribute('grouped_entry');
   }
 }
-export class DataCatalogEntryBigqueryTableSpecViewSpec extends ComplexComputedList {
+export class DataCatalogEntryBigqueryTableSpecViewSpec extends cdktf.ComplexComputedList {
 
   // view_query - computed: true, optional: false, required: false
   public get viewQuery() {
     return this.getStringAttribute('view_query');
   }
 }
-export class DataCatalogEntryBigqueryTableSpec extends ComplexComputedList {
+export class DataCatalogEntryBigqueryTableSpec extends cdktf.ComplexComputedList {
 
   // table_source_type - computed: true, optional: false, required: false
   public get tableSourceType() {
@@ -111,15 +109,33 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt */
   readonly filePatterns: string[];
 }
+
+function dataCatalogEntryGcsFilesetSpecToTerraform(struct?: DataCatalogEntryGcsFilesetSpec): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    file_patterns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.filePatterns),
+  }
+}
+
 export interface DataCatalogEntryTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataCatalogEntry extends TerraformResource {
+export class DataCatalogEntry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -354,17 +370,17 @@ export class DataCatalogEntry extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      entry_group: this._entryGroup,
-      entry_id: this._entryId,
-      linked_resource: this._linkedResource,
-      schema: this._schema,
-      type: this._type,
-      user_specified_system: this._userSpecifiedSystem,
-      user_specified_type: this._userSpecifiedType,
-      gcs_fileset_spec: this._gcsFilesetSpec,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      entry_group: cdktf.stringToTerraform(this._entryGroup),
+      entry_id: cdktf.stringToTerraform(this._entryId),
+      linked_resource: cdktf.stringToTerraform(this._linkedResource),
+      schema: cdktf.stringToTerraform(this._schema),
+      type: cdktf.stringToTerraform(this._type),
+      user_specified_system: cdktf.stringToTerraform(this._userSpecifiedSystem),
+      user_specified_type: cdktf.stringToTerraform(this._userSpecifiedType),
+      gcs_fileset_spec: cdktf.listMapper(dataCatalogEntryGcsFilesetSpecToTerraform)(this._gcsFilesetSpec),
+      timeouts: dataCatalogEntryTimeoutsToTerraform(this._timeouts),
     };
   }
 }

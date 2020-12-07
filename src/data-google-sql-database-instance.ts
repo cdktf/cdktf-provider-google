@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleSqlDatabaseInstanceConfig extends TerraformMetaArguments {
+export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week. */
   readonly name: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
 }
-export class DataGoogleSqlDatabaseInstanceIpAddress extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceIpAddress extends cdktf.ComplexComputedList {
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -31,7 +29,7 @@ export class DataGoogleSqlDatabaseInstanceIpAddress extends ComplexComputedList 
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends cdktf.ComplexComputedList {
 
   // ca_certificate - computed: true, optional: false, required: false
   public get caCertificate() {
@@ -88,7 +86,7 @@ export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends ComplexCo
     return this.getBooleanAttribute('verify_server_certificate');
   }
 }
-export class DataGoogleSqlDatabaseInstanceServerCaCert extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -115,7 +113,7 @@ export class DataGoogleSqlDatabaseInstanceServerCaCert extends ComplexComputedLi
     return this.getStringAttribute('sha1_fingerprint');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cdktf.ComplexComputedList {
 
   // binary_log_enabled - computed: true, optional: false, required: false
   public get binaryLogEnabled() {
@@ -142,7 +140,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends Co
     return this.getStringAttribute('start_time');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -154,7 +152,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends ComplexC
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks extends cdktf.ComplexComputedList {
 
   // expiration_time - computed: true, optional: false, required: false
   public get expirationTime() {
@@ -171,7 +169,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetwo
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends cdktf.ComplexComputedList {
 
   // authorized_networks - computed: true, optional: false, required: false
   public get authorizedNetworks() {
@@ -193,7 +191,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends Comple
     return this.getBooleanAttribute('require_ssl');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsLocationPreference extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettingsLocationPreference extends cdktf.ComplexComputedList {
 
   // follow_gae_application - computed: true, optional: false, required: false
   public get followGaeApplication() {
@@ -205,7 +203,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsLocationPreference extends Com
     return this.getStringAttribute('zone');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow extends cdktf.ComplexComputedList {
 
   // day - computed: true, optional: false, required: false
   public get day() {
@@ -222,7 +220,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow extends Comp
     return this.getStringAttribute('update_track');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettings extends ComplexComputedList {
+export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputedList {
 
   // activation_policy - computed: true, optional: false, required: false
   public get activationPolicy() {
@@ -312,7 +310,7 @@ export class DataGoogleSqlDatabaseInstanceSettings extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleSqlDatabaseInstance extends TerraformDataSource {
+export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -452,8 +450,8 @@ export class DataGoogleSqlDatabaseInstance extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IdentityPlatformTenantConfig extends TerraformMetaArguments {
+export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArguments {
   /** Whether to allow email/password user authentication. */
   readonly allowPasswordSignup?: boolean;
   /** Whether authentication is disabled for the tenant. If true, the users under
@@ -28,9 +27,19 @@ export interface IdentityPlatformTenantTimeouts {
   readonly update?: string;
 }
 
+function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTenantTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IdentityPlatformTenant extends TerraformResource {
+export class IdentityPlatformTenant extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -168,12 +177,12 @@ export class IdentityPlatformTenant extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allow_password_signup: this._allowPasswordSignup,
-      disable_auth: this._disableAuth,
-      display_name: this._displayName,
-      enable_email_link_signin: this._enableEmailLinkSignin,
-      project: this._project,
-      timeouts: this._timeouts,
+      allow_password_signup: cdktf.booleanToTerraform(this._allowPasswordSignup),
+      disable_auth: cdktf.booleanToTerraform(this._disableAuth),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enable_email_link_signin: cdktf.booleanToTerraform(this._enableEmailLinkSignin),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: identityPlatformTenantTimeoutsToTerraform(this._timeouts),
     };
   }
 }

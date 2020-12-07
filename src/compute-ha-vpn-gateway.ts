@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeHaVpnGatewayConfig extends TerraformMetaArguments {
+export interface ComputeHaVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Name of the resource. Provided by the client when the resource is
@@ -27,7 +25,7 @@ character, which cannot be a dash. */
   /** timeouts block */
   readonly timeouts?: ComputeHaVpnGatewayTimeouts;
 }
-export class ComputeHaVpnGatewayVpnInterfaces extends ComplexComputedList {
+export class ComputeHaVpnGatewayVpnInterfaces extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -44,9 +42,18 @@ export interface ComputeHaVpnGatewayTimeouts {
   readonly delete?: string;
 }
 
+function computeHaVpnGatewayTimeoutsToTerraform(struct?: ComputeHaVpnGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeHaVpnGateway extends TerraformResource {
+export class ComputeHaVpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -186,12 +193,12 @@ export class ComputeHaVpnGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      network: this._network,
-      project: this._project,
-      region: this._region,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      timeouts: computeHaVpnGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

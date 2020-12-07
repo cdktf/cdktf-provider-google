@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudIdentityGroupConfig extends TerraformMetaArguments {
+export interface CloudIdentityGroupConfig extends cdktf.TerraformMetaArguments {
   /** An extended description to help users determine the purpose of a Group.
 Must not be longer than 4,096 characters. */
   readonly description?: string;
@@ -51,15 +50,34 @@ The namespace must correspond to an identity source created in Admin Console
 and must be in the form of 'identitysources/{identity_source_id}'. */
   readonly namespace?: string;
 }
+
+function cloudIdentityGroupGroupKeyToTerraform(struct?: CloudIdentityGroupGroupKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+  }
+}
+
 export interface CloudIdentityGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudIdentityGroup extends TerraformResource {
+export class CloudIdentityGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -201,12 +219,12 @@ export class CloudIdentityGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      labels: this._labels,
-      parent: this._parent,
-      group_key: this._groupKey,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      parent: cdktf.stringToTerraform(this._parent),
+      group_key: cdktf.listMapper(cloudIdentityGroupGroupKeyToTerraform)(this._groupKey),
+      timeouts: cloudIdentityGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

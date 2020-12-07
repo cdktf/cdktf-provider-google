@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RuntimeconfigVariableConfig extends TerraformMetaArguments {
+export interface RuntimeconfigVariableConfig extends cdktf.TerraformMetaArguments {
   /** The name of the variable to manage. Note that variable names can be hierarchical using slashes (e.g. "prod-variables/hostname"). */
   readonly name: string;
   /** The name of the RuntimeConfig resource containing this variable. */
@@ -20,7 +19,7 @@ export interface RuntimeconfigVariableConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class RuntimeconfigVariable extends TerraformResource {
+export class RuntimeconfigVariable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +137,11 @@ export class RuntimeconfigVariable extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      parent: this._parent,
-      project: this._project,
-      text: this._text,
-      value: this._value,
+      name: cdktf.stringToTerraform(this._name),
+      parent: cdktf.stringToTerraform(this._parent),
+      project: cdktf.stringToTerraform(this._project),
+      text: cdktf.stringToTerraform(this._text),
+      value: cdktf.stringToTerraform(this._value),
     };
   }
 }

@@ -2,17 +2,16 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeLbIpRangesConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeLbIpRangesConfig extends cdktf.TerraformMetaArguments {
 }
 
 // Resource
 
-export class DataGoogleComputeLbIpRanges extends TerraformDataSource {
+export class DataGoogleComputeLbIpRanges extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER

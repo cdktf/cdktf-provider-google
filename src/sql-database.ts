@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlDatabaseConfig extends TerraformMetaArguments {
+export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /** The charset value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
@@ -36,9 +35,19 @@ export interface SqlDatabaseTimeouts {
   readonly update?: string;
 }
 
+function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlDatabase extends TerraformResource {
+export class SqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -173,12 +182,12 @@ export class SqlDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      charset: this._charset,
-      collation: this._collation,
-      instance: this._instance,
-      name: this._name,
-      project: this._project,
-      timeouts: this._timeouts,
+      charset: cdktf.stringToTerraform(this._charset),
+      collation: cdktf.stringToTerraform(this._collation),
+      instance: cdktf.stringToTerraform(this._instance),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: sqlDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

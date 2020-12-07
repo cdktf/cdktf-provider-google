@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeBackendBucketConfig extends TerraformMetaArguments {
+export interface ComputeBackendBucketConfig extends cdktf.TerraformMetaArguments {
   /** Cloud Storage bucket name. */
   readonly bucketName: string;
   /** An optional textual description of the resource; provided by the
@@ -40,15 +39,33 @@ max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered. */
   readonly signedUrlCacheMaxAgeSec: number;
 }
+
+function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
+  }
+}
+
 export interface ComputeBackendBucketTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeBackendBucket extends TerraformResource {
+export class ComputeBackendBucket extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -205,13 +222,13 @@ export class ComputeBackendBucket extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket_name: this._bucketName,
-      description: this._description,
-      enable_cdn: this._enableCdn,
-      name: this._name,
-      project: this._project,
-      cdn_policy: this._cdnPolicy,
-      timeouts: this._timeouts,
+      bucket_name: cdktf.stringToTerraform(this._bucketName),
+      description: cdktf.stringToTerraform(this._description),
+      enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      cdn_policy: cdktf.listMapper(computeBackendBucketCdnPolicyToTerraform)(this._cdnPolicy),
+      timeouts: computeBackendBucketTimeoutsToTerraform(this._timeouts),
     };
   }
 }

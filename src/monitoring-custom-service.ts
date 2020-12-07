@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringCustomServiceConfig extends TerraformMetaArguments {
+export interface MonitoringCustomServiceConfig extends cdktf.TerraformMetaArguments {
   /** Name used for UI elements listing this Service. */
   readonly displayName?: string;
   readonly project?: string;
@@ -25,15 +24,33 @@ Formatted as described in
 https://cloud.google.com/apis/design/resource_names. */
   readonly resourceName?: string;
 }
+
+function monitoringCustomServiceTelemetryToTerraform(struct?: MonitoringCustomServiceTelemetry): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resource_name: cdktf.stringToTerraform(struct!.resourceName),
+  }
+}
+
 export interface MonitoringCustomServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringCustomService extends TerraformResource {
+export class MonitoringCustomService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -157,11 +174,11 @@ export class MonitoringCustomService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      project: this._project,
-      service_id: this._serviceId,
-      telemetry: this._telemetry,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      project: cdktf.stringToTerraform(this._project),
+      service_id: cdktf.stringToTerraform(this._serviceId),
+      telemetry: cdktf.listMapper(monitoringCustomServiceTelemetryToTerraform)(this._telemetry),
+      timeouts: monitoringCustomServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeTargetInstanceConfig extends TerraformMetaArguments {
+export interface ComputeTargetInstanceConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** The Compute instance VM handling traffic for this target instance.
@@ -39,9 +38,18 @@ export interface ComputeTargetInstanceTimeouts {
   readonly delete?: string;
 }
 
+function computeTargetInstanceTimeoutsToTerraform(struct?: ComputeTargetInstanceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeTargetInstance extends TerraformResource {
+export class ComputeTargetInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -198,13 +206,13 @@ export class ComputeTargetInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      instance: this._instance,
-      name: this._name,
-      nat_policy: this._natPolicy,
-      project: this._project,
-      zone: this._zone,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      instance: cdktf.stringToTerraform(this._instance),
+      name: cdktf.stringToTerraform(this._name),
+      nat_policy: cdktf.stringToTerraform(this._natPolicy),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
+      timeouts: computeTargetInstanceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

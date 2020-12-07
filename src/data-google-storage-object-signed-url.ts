@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleStorageObjectSignedUrlConfig extends TerraformMetaArguments {
+export interface DataGoogleStorageObjectSignedUrlConfig extends cdktf.TerraformMetaArguments {
   readonly bucket: string;
   readonly contentMd5?: string;
   readonly contentType?: string;
@@ -20,7 +19,7 @@ export interface DataGoogleStorageObjectSignedUrlConfig extends TerraformMetaArg
 
 // Resource
 
-export class DataGoogleStorageObjectSignedUrl extends TerraformDataSource {
+export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -189,14 +188,14 @@ export class DataGoogleStorageObjectSignedUrl extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      content_md5: this._contentMd5,
-      content_type: this._contentType,
-      credentials: this._credentials,
-      duration: this._duration,
-      extension_headers: this._extensionHeaders,
-      http_method: this._httpMethod,
-      path: this._path,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      content_md5: cdktf.stringToTerraform(this._contentMd5),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      credentials: cdktf.stringToTerraform(this._credentials),
+      duration: cdktf.stringToTerraform(this._duration),
+      extension_headers: cdktf.hashMapper(cdktf.anyToTerraform)(this._extensionHeaders),
+      http_method: cdktf.stringToTerraform(this._httpMethod),
+      path: cdktf.stringToTerraform(this._path),
     };
   }
 }

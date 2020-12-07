@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeInstanceIamMemberConfig extends TerraformMetaArguments {
+export interface ComputeInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly instanceName: string;
   readonly member: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface ComputeInstanceIamMemberCondition {
   readonly title: string;
 }
 
+function computeInstanceIamMemberConditionToTerraform(struct?: ComputeInstanceIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class ComputeInstanceIamMember extends TerraformResource {
+export class ComputeInstanceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class ComputeInstanceIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance_name: this._instanceName,
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      zone: this._zone,
-      condition: this._condition,
+      instance_name: cdktf.stringToTerraform(this._instanceName),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      zone: cdktf.stringToTerraform(this._zone),
+      condition: cdktf.listMapper(computeInstanceIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

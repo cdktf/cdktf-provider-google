@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OsConfigPatchDeploymentConfig extends TerraformMetaArguments {
+export interface OsConfigPatchDeploymentConfig extends cdktf.TerraformMetaArguments {
   /** Description of the patch deployment. Length of the description is limited to 1024 characters. */
   readonly description?: string;
   /** Duration of the patch. After the duration ends, the patch times out.
@@ -38,6 +37,14 @@ export interface OsConfigPatchDeploymentInstanceFilterGroupLabels {
   /** Compute Engine instance labels that must be present for a VM instance to be targeted by this filter */
   readonly labels: { [key: string]: string };
 }
+
+function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+  }
+}
+
 export interface OsConfigPatchDeploymentInstanceFilter {
   /** Target all VM instances in the project. If true, no other criteria is permitted. */
   readonly all?: boolean;
@@ -53,11 +60,31 @@ VMs when targeting configs, for example prefix="prod-". */
   /** group_labels block */
   readonly groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[];
 }
+
+function osConfigPatchDeploymentInstanceFilterToTerraform(struct?: OsConfigPatchDeploymentInstanceFilter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    all: cdktf.booleanToTerraform(struct!.all),
+    instance_name_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.instanceNamePrefixes),
+    instances: cdktf.listMapper(cdktf.stringToTerraform)(struct!.instances),
+    zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.zones),
+    group_labels: cdktf.listMapper(osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform)(struct!.groupLabels),
+  }
+}
+
 export interface OsConfigPatchDeploymentOneTimeSchedule {
   /** The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z". */
   readonly executeTime: string;
 }
+
+function osConfigPatchDeploymentOneTimeScheduleToTerraform(struct?: OsConfigPatchDeploymentOneTimeSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    execute_time: cdktf.stringToTerraform(struct!.executeTime),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigApt {
   /** List of packages to exclude from update. These packages will be excluded. */
   readonly excludes?: string[];
@@ -68,10 +95,28 @@ any other patch configuration fields. */
   /** By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values: ["DIST", "UPGRADE"] */
   readonly type?: string;
 }
+
+function osConfigPatchDeploymentPatchConfigAptToTerraform(struct?: OsConfigPatchDeploymentPatchConfigApt): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    excludes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludes),
+    exclusive_packages: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exclusivePackages),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigGoo {
   /** goo update settings. Use this setting to override the default goo patch rules. */
   readonly enabled: boolean;
 }
+
+function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConfigPatchDeploymentPatchConfigGoo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject {
   /** Bucket of the Cloud Storage object. */
   readonly bucket: string;
@@ -80,6 +125,16 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGc
   /** Name of the Cloud Storage object. */
   readonly object: string;
 }
+
+function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket: cdktf.stringToTerraform(struct!.bucket),
+    generation_number: cdktf.stringToTerraform(struct!.generationNumber),
+    object: cdktf.stringToTerraform(struct!.object),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
   /** Defaults to [0]. A list of possible return values that the execution can return to indicate a success. */
   readonly allowedSuccessCodes?: number[];
@@ -91,6 +146,17 @@ be executed directly, which will likely only succeed for scripts with shebang li
   /** gcs_object block */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject[];
 }
+
+function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_success_codes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.allowedSuccessCodes),
+    interpreter: cdktf.stringToTerraform(struct!.interpreter),
+    local_path: cdktf.stringToTerraform(struct!.localPath),
+    gcs_object: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToTerraform)(struct!.gcsObject),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject {
   /** Bucket of the Cloud Storage object. */
   readonly bucket: string;
@@ -99,6 +165,16 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig
   /** Name of the Cloud Storage object. */
   readonly object: string;
 }
+
+function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket: cdktf.stringToTerraform(struct!.bucket),
+    generation_number: cdktf.stringToTerraform(struct!.generationNumber),
+    object: cdktf.stringToTerraform(struct!.object),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig {
   /** Defaults to [0]. A list of possible return values that the execution can return to indicate a success. */
   readonly allowedSuccessCodes?: number[];
@@ -110,12 +186,32 @@ be executed directly, which will likely only succeed for scripts with shebang li
   /** gcs_object block */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject[];
 }
+
+function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_success_codes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.allowedSuccessCodes),
+    interpreter: cdktf.stringToTerraform(struct!.interpreter),
+    local_path: cdktf.stringToTerraform(struct!.localPath),
+    gcs_object: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToTerraform)(struct!.gcsObject),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPostStep {
   /** linux_exec_step_config block */
   readonly linuxExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig[];
   /** windows_exec_step_config block */
   readonly windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig[];
 }
+
+function osConfigPatchDeploymentPatchConfigPostStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStep): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linux_exec_step_config: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToTerraform)(struct!.linuxExecStepConfig),
+    windows_exec_step_config: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToTerraform)(struct!.windowsExecStepConfig),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject {
   /** Bucket of the Cloud Storage object. */
   readonly bucket: string;
@@ -124,6 +220,16 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcs
   /** Name of the Cloud Storage object. */
   readonly object: string;
 }
+
+function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket: cdktf.stringToTerraform(struct!.bucket),
+    generation_number: cdktf.stringToTerraform(struct!.generationNumber),
+    object: cdktf.stringToTerraform(struct!.object),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
   /** Defaults to [0]. A list of possible return values that the execution can return to indicate a success. */
   readonly allowedSuccessCodes?: number[];
@@ -135,6 +241,17 @@ be executed directly, which will likely only succeed for scripts with shebang li
   /** gcs_object block */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject[];
 }
+
+function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_success_codes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.allowedSuccessCodes),
+    interpreter: cdktf.stringToTerraform(struct!.interpreter),
+    local_path: cdktf.stringToTerraform(struct!.localPath),
+    gcs_object: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToTerraform)(struct!.gcsObject),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject {
   /** Bucket of the Cloud Storage object. */
   readonly bucket: string;
@@ -143,6 +260,16 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigG
   /** Name of the Cloud Storage object. */
   readonly object: string;
 }
+
+function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bucket: cdktf.stringToTerraform(struct!.bucket),
+    generation_number: cdktf.stringToTerraform(struct!.generationNumber),
+    object: cdktf.stringToTerraform(struct!.object),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
   /** Defaults to [0]. A list of possible return values that the execution can return to indicate a success. */
   readonly allowedSuccessCodes?: number[];
@@ -154,12 +281,32 @@ be executed directly, which will likely only succeed for scripts with shebang li
   /** gcs_object block */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject[];
 }
+
+function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_success_codes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.allowedSuccessCodes),
+    interpreter: cdktf.stringToTerraform(struct!.interpreter),
+    local_path: cdktf.stringToTerraform(struct!.localPath),
+    gcs_object: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToTerraform)(struct!.gcsObject),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigPreStep {
   /** linux_exec_step_config block */
   readonly linuxExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig[];
   /** windows_exec_step_config block */
   readonly windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig[];
 }
+
+function osConfigPatchDeploymentPatchConfigPreStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStep): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linux_exec_step_config: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTerraform)(struct!.linuxExecStepConfig),
+    windows_exec_step_config: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToTerraform)(struct!.windowsExecStepConfig),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigWindowsUpdate {
   /** Only apply updates of these windows update classifications. If empty, all updates are applied. Possible values: ["CRITICAL", "SECURITY", "DEFINITION", "DRIVER", "FEATURE_PACK", "SERVICE_PACK", "TOOL", "UPDATE_ROLLUP", "UPDATE"] */
   readonly classifications?: string[];
@@ -169,6 +316,16 @@ export interface OsConfigPatchDeploymentPatchConfigWindowsUpdate {
 This field must not be used with other patch configurations. */
   readonly exclusivePatches?: string[];
 }
+
+function osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform(struct?: OsConfigPatchDeploymentPatchConfigWindowsUpdate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    classifications: cdktf.listMapper(cdktf.stringToTerraform)(struct!.classifications),
+    excludes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludes),
+    exclusive_patches: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exclusivePatches),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigYum {
   /** List of packages to exclude from update. These packages will be excluded. */
   readonly excludes?: string[];
@@ -181,6 +338,17 @@ any other patch configuration fields. */
   /** Adds the --security flag to yum update. Not supported on all platforms. */
   readonly security?: boolean;
 }
+
+function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConfigPatchDeploymentPatchConfigYum): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    excludes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludes),
+    exclusive_packages: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exclusivePackages),
+    minimal: cdktf.booleanToTerraform(struct!.minimal),
+    security: cdktf.booleanToTerraform(struct!.security),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfigZypper {
   /** Install only patches with these categories. Common categories include security, recommended, and feature. */
   readonly categories?: string[];
@@ -196,6 +364,19 @@ This field must not be used with any other patch configuration fields. */
   /** Adds the --with-update flag, to zypper patch. */
   readonly withUpdate?: boolean;
 }
+
+function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsConfigPatchDeploymentPatchConfigZypper): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    categories: cdktf.listMapper(cdktf.stringToTerraform)(struct!.categories),
+    excludes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludes),
+    exclusive_patches: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exclusivePatches),
+    severities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.severities),
+    with_optional: cdktf.booleanToTerraform(struct!.withOptional),
+    with_update: cdktf.booleanToTerraform(struct!.withUpdate),
+  }
+}
+
 export interface OsConfigPatchDeploymentPatchConfig {
   /** Post-patch reboot settings. Possible values: ["DEFAULT", "ALWAYS", "NEVER"] */
   readonly rebootConfig?: string;
@@ -214,12 +395,36 @@ export interface OsConfigPatchDeploymentPatchConfig {
   /** zypper block */
   readonly zypper?: OsConfigPatchDeploymentPatchConfigZypper[];
 }
+
+function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    reboot_config: cdktf.stringToTerraform(struct!.rebootConfig),
+    apt: cdktf.listMapper(osConfigPatchDeploymentPatchConfigAptToTerraform)(struct!.apt),
+    goo: cdktf.listMapper(osConfigPatchDeploymentPatchConfigGooToTerraform)(struct!.goo),
+    post_step: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPostStepToTerraform)(struct!.postStep),
+    pre_step: cdktf.listMapper(osConfigPatchDeploymentPatchConfigPreStepToTerraform)(struct!.preStep),
+    windows_update: cdktf.listMapper(osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform)(struct!.windowsUpdate),
+    yum: cdktf.listMapper(osConfigPatchDeploymentPatchConfigYumToTerraform)(struct!.yum),
+    zypper: cdktf.listMapper(osConfigPatchDeploymentPatchConfigZypperToTerraform)(struct!.zypper),
+  }
+}
+
 export interface OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
   /** A day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"] */
   readonly dayOfWeek: string;
   /** Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month. */
   readonly weekOrdinal: number;
 }
+
+function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
+    week_ordinal: cdktf.numberToTerraform(struct!.weekOrdinal),
+  }
+}
+
 export interface OsConfigPatchDeploymentRecurringScheduleMonthly {
   /** One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
@@ -228,6 +433,15 @@ will not run in February, April, June, etc. */
   /** week_day_of_month block */
   readonly weekDayOfMonth?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth[];
 }
+
+function osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthly): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    month_day: cdktf.numberToTerraform(struct!.monthDay),
+    week_day_of_month: cdktf.listMapper(osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToTerraform)(struct!.weekDayOfMonth),
+  }
+}
+
 export interface OsConfigPatchDeploymentRecurringScheduleTimeOfDay {
   /** Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time. */
@@ -239,16 +453,44 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
   /** Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds. */
   readonly seconds?: number;
 }
+
+function osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeOfDay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
   /** IANA Time Zone Database time zone, e.g. "America/New_York". */
   readonly id: string;
   /** IANA Time Zone Database version number, e.g. "2019a". */
   readonly version?: string;
 }
+
+function osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeZone): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface OsConfigPatchDeploymentRecurringScheduleWeekly {
   /** IANA Time Zone Database time zone, e.g. "America/New_York". Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"] */
   readonly dayOfWeek: string;
 }
+
+function osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleWeekly): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
+  }
+}
+
 export interface OsConfigPatchDeploymentRecurringSchedule {
   /** The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z". */
@@ -265,26 +507,66 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
   /** weekly block */
   readonly weekly?: OsConfigPatchDeploymentRecurringScheduleWeekly[];
 }
+
+function osConfigPatchDeploymentRecurringScheduleToTerraform(struct?: OsConfigPatchDeploymentRecurringSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end_time: cdktf.stringToTerraform(struct!.endTime),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+    monthly: cdktf.listMapper(osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform)(struct!.monthly),
+    time_of_day: cdktf.listMapper(osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform)(struct!.timeOfDay),
+    time_zone: cdktf.listMapper(osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform)(struct!.timeZone),
+    weekly: cdktf.listMapper(osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform)(struct!.weekly),
+  }
+}
+
 export interface OsConfigPatchDeploymentRolloutDisruptionBudget {
   /** Specifies a fixed value. */
   readonly fixed?: number;
   /** Specifies the relative value defined as a percentage, which will be multiplied by a reference value. */
   readonly percentage?: number;
 }
+
+function osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform(struct?: OsConfigPatchDeploymentRolloutDisruptionBudget): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fixed: cdktf.numberToTerraform(struct!.fixed),
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+  }
+}
+
 export interface OsConfigPatchDeploymentRollout {
   /** Mode of the patch rollout. Possible values: ["ZONE_BY_ZONE", "CONCURRENT_ZONES"] */
   readonly mode: string;
   /** disruption_budget block */
   readonly disruptionBudget: OsConfigPatchDeploymentRolloutDisruptionBudget[];
 }
+
+function osConfigPatchDeploymentRolloutToTerraform(struct?: OsConfigPatchDeploymentRollout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    disruption_budget: cdktf.listMapper(osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform)(struct!.disruptionBudget),
+  }
+}
+
 export interface OsConfigPatchDeploymentTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatchDeploymentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class OsConfigPatchDeployment extends TerraformResource {
+export class OsConfigPatchDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -502,16 +784,16 @@ export class OsConfigPatchDeployment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      duration: this._duration,
-      patch_deployment_id: this._patchDeploymentId,
-      project: this._project,
-      instance_filter: this._instanceFilter,
-      one_time_schedule: this._oneTimeSchedule,
-      patch_config: this._patchConfig,
-      recurring_schedule: this._recurringSchedule,
-      rollout: this._rollout,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      duration: cdktf.stringToTerraform(this._duration),
+      patch_deployment_id: cdktf.stringToTerraform(this._patchDeploymentId),
+      project: cdktf.stringToTerraform(this._project),
+      instance_filter: cdktf.listMapper(osConfigPatchDeploymentInstanceFilterToTerraform)(this._instanceFilter),
+      one_time_schedule: cdktf.listMapper(osConfigPatchDeploymentOneTimeScheduleToTerraform)(this._oneTimeSchedule),
+      patch_config: cdktf.listMapper(osConfigPatchDeploymentPatchConfigToTerraform)(this._patchConfig),
+      recurring_schedule: cdktf.listMapper(osConfigPatchDeploymentRecurringScheduleToTerraform)(this._recurringSchedule),
+      rollout: cdktf.listMapper(osConfigPatchDeploymentRolloutToTerraform)(this._rollout),
+      timeouts: osConfigPatchDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

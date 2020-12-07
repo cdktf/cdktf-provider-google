@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareHl7V2StoreConfig extends TerraformMetaArguments {
+export interface HealthcareHl7V2StoreConfig extends cdktf.TerraformMetaArguments {
   /** Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}' */
   readonly dataset: string;
@@ -46,6 +45,14 @@ project. cloud-healthcare@system.gserviceaccount.com must have publisher permiss
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail. */
   readonly pubsubTopic: string;
 }
+
+function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: HealthcareHl7V2StoreNotificationConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
+  }
+}
+
 export interface HealthcareHl7V2StoreNotificationConfigs {
   /** Restricts notifications sent for messages matching a filter. If this is empty, all messages
 are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
@@ -69,6 +76,15 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver */
   readonly pubsubTopic: string;
 }
+
+function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filter: cdktf.stringToTerraform(struct!.filter),
+    pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
+  }
+}
+
 export interface HealthcareHl7V2StoreParserConfig {
   /** Determines whether messages with no header are allowed. */
   readonly allowNullHeader?: boolean;
@@ -80,15 +96,35 @@ store if schematized parsing is desired. */
 A base64-encoded string. */
   readonly segmentTerminator?: string;
 }
+
+function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_null_header: cdktf.booleanToTerraform(struct!.allowNullHeader),
+    schema: cdktf.stringToTerraform(struct!.schema),
+    segment_terminator: cdktf.stringToTerraform(struct!.segmentTerminator),
+  }
+}
+
 export interface HealthcareHl7V2StoreTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HealthcareHl7V2Store extends TerraformResource {
+export class HealthcareHl7V2Store extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -240,13 +276,13 @@ export class HealthcareHl7V2Store extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset: this._dataset,
-      labels: this._labels,
-      name: this._name,
-      notification_config: this._notificationConfig,
-      notification_configs: this._notificationConfigs,
-      parser_config: this._parserConfig,
-      timeouts: this._timeouts,
+      dataset: cdktf.stringToTerraform(this._dataset),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      notification_config: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigToTerraform)(this._notificationConfig),
+      notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs),
+      parser_config: cdktf.listMapper(healthcareHl7V2StoreParserConfigToTerraform)(this._parserConfig),
+      timeouts: healthcareHl7V2StoreTimeoutsToTerraform(this._timeouts),
     };
   }
 }

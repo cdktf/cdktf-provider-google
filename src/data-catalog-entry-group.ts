@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataCatalogEntryGroupConfig extends TerraformMetaArguments {
+export interface DataCatalogEntryGroupConfig extends cdktf.TerraformMetaArguments {
   /** Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. */
   readonly description?: string;
   /** A short name to identify the entry group, for example, "analytics data - jan 2011". */
@@ -27,9 +26,19 @@ export interface DataCatalogEntryGroupTimeouts {
   readonly update?: string;
 }
 
+function dataCatalogEntryGroupTimeoutsToTerraform(struct?: DataCatalogEntryGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataCatalogEntryGroup extends TerraformResource {
+export class DataCatalogEntryGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,12 +176,12 @@ export class DataCatalogEntryGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      entry_group_id: this._entryGroupId,
-      project: this._project,
-      region: this._region,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      entry_group_id: cdktf.stringToTerraform(this._entryGroupId),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      timeouts: dataCatalogEntryGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

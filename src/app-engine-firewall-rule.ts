@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppEngineFirewallRuleConfig extends TerraformMetaArguments {
+export interface AppEngineFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   /** The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"] */
   readonly action: string;
   /** An optional string description of this rule. */
@@ -31,9 +30,19 @@ export interface AppEngineFirewallRuleTimeouts {
   readonly update?: string;
 }
 
+function appEngineFirewallRuleTimeoutsToTerraform(struct?: AppEngineFirewallRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppEngineFirewallRule extends TerraformResource {
+export class AppEngineFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -163,12 +172,12 @@ export class AppEngineFirewallRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      action: this._action,
-      description: this._description,
-      priority: this._priority,
-      project: this._project,
-      source_range: this._sourceRange,
-      timeouts: this._timeouts,
+      action: cdktf.stringToTerraform(this._action),
+      description: cdktf.stringToTerraform(this._description),
+      priority: cdktf.numberToTerraform(this._priority),
+      project: cdktf.stringToTerraform(this._project),
+      source_range: cdktf.stringToTerraform(this._sourceRange),
+      timeouts: appEngineFirewallRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

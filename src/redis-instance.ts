@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RedisInstanceConfig extends TerraformMetaArguments {
+export interface RedisInstanceConfig extends cdktf.TerraformMetaArguments {
   /** Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
@@ -67,9 +66,19 @@ export interface RedisInstanceTimeouts {
   readonly update?: string;
 }
 
+function redisInstanceTimeoutsToTerraform(struct?: RedisInstanceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RedisInstance extends TerraformResource {
+export class RedisInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -377,21 +386,21 @@ export class RedisInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      alternative_location_id: this._alternativeLocationId,
-      authorized_network: this._authorizedNetwork,
-      connect_mode: this._connectMode,
-      display_name: this._displayName,
-      labels: this._labels,
-      location_id: this._locationId,
-      memory_size_gb: this._memorySizeGb,
-      name: this._name,
-      project: this._project,
-      redis_configs: this._redisConfigs,
-      redis_version: this._redisVersion,
-      region: this._region,
-      reserved_ip_range: this._reservedIpRange,
-      tier: this._tier,
-      timeouts: this._timeouts,
+      alternative_location_id: cdktf.stringToTerraform(this._alternativeLocationId),
+      authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
+      connect_mode: cdktf.stringToTerraform(this._connectMode),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location_id: cdktf.stringToTerraform(this._locationId),
+      memory_size_gb: cdktf.numberToTerraform(this._memorySizeGb),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      redis_configs: cdktf.hashMapper(cdktf.anyToTerraform)(this._redisConfigs),
+      redis_version: cdktf.stringToTerraform(this._redisVersion),
+      region: cdktf.stringToTerraform(this._region),
+      reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),
+      tier: cdktf.stringToTerraform(this._tier),
+      timeouts: redisInstanceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EndpointsServiceConfig extends TerraformMetaArguments {
+export interface EndpointsServiceConfig extends cdktf.TerraformMetaArguments {
   /** The full text of the Service Config YAML file (Example located here). If provided, must also provide protoc_output_base64. open_api config must not be provided. */
   readonly grpcConfig?: string;
   /** The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and protoc_output_base64 must be specified. */
@@ -22,7 +20,7 @@ export interface EndpointsServiceConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: EndpointsServiceTimeouts;
 }
-export class EndpointsServiceApisMethods extends ComplexComputedList {
+export class EndpointsServiceApisMethods extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -44,7 +42,7 @@ export class EndpointsServiceApisMethods extends ComplexComputedList {
     return this.getStringAttribute('syntax');
   }
 }
-export class EndpointsServiceApis extends ComplexComputedList {
+export class EndpointsServiceApis extends cdktf.ComplexComputedList {
 
   // methods - computed: true, optional: false, required: false
   public get methods() {
@@ -66,7 +64,7 @@ export class EndpointsServiceApis extends ComplexComputedList {
     return this.getStringAttribute('version');
   }
 }
-export class EndpointsServiceEndpoints extends ComplexComputedList {
+export class EndpointsServiceEndpoints extends cdktf.ComplexComputedList {
 
   // address - computed: true, optional: false, required: false
   public get address() {
@@ -84,9 +82,19 @@ export interface EndpointsServiceTimeouts {
   readonly update?: string;
 }
 
+function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class EndpointsService extends TerraformResource {
+export class EndpointsService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -239,12 +247,12 @@ export class EndpointsService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      grpc_config: this._grpcConfig,
-      openapi_config: this._openapiConfig,
-      project: this._project,
-      protoc_output_base64: this._protocOutputBase64,
-      service_name: this._serviceName,
-      timeouts: this._timeouts,
+      grpc_config: cdktf.stringToTerraform(this._grpcConfig),
+      openapi_config: cdktf.stringToTerraform(this._openapiConfig),
+      project: cdktf.stringToTerraform(this._project),
+      protoc_output_base64: cdktf.stringToTerraform(this._protocOutputBase64),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      timeouts: endpointsServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

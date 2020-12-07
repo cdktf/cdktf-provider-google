@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OrganizationAccessApprovalSettingsConfig extends TerraformMetaArguments {
+export interface OrganizationAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
   /** A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed. */
@@ -35,15 +34,34 @@ export interface OrganizationAccessApprovalSettingsEnrolledServices {
   /** The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"] */
   readonly enrollmentLevel?: string;
 }
+
+function organizationAccessApprovalSettingsEnrolledServicesToTerraform(struct?: OrganizationAccessApprovalSettingsEnrolledServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloud_product: cdktf.stringToTerraform(struct!.cloudProduct),
+    enrollment_level: cdktf.stringToTerraform(struct!.enrollmentLevel),
+  }
+}
+
 export interface OrganizationAccessApprovalSettingsTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function organizationAccessApprovalSettingsTimeoutsToTerraform(struct?: OrganizationAccessApprovalSettingsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class OrganizationAccessApprovalSettings extends TerraformResource {
+export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,10 +167,10 @@ export class OrganizationAccessApprovalSettings extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      notification_emails: this._notificationEmails,
-      organization_id: this._organizationId,
-      enrolled_services: this._enrolledServices,
-      timeouts: this._timeouts,
+      notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
+      organization_id: cdktf.stringToTerraform(this._organizationId),
+      enrolled_services: cdktf.listMapper(organizationAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),
+      timeouts: organizationAccessApprovalSettingsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

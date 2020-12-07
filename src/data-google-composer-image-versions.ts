@@ -2,17 +2,15 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComposerImageVersionsConfig extends TerraformMetaArguments {
+export interface DataGoogleComposerImageVersionsConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   readonly region?: string;
 }
-export class DataGoogleComposerImageVersionsImageVersions extends ComplexComputedList {
+export class DataGoogleComposerImageVersionsImageVersions extends cdktf.ComplexComputedList {
 
   // image_version_id - computed: true, optional: false, required: false
   public get imageVersionId() {
@@ -27,7 +25,7 @@ export class DataGoogleComposerImageVersionsImageVersions extends ComplexCompute
 
 // Resource
 
-export class DataGoogleComposerImageVersions extends TerraformDataSource {
+export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -100,8 +98,8 @@ export class DataGoogleComposerImageVersions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
-      region: this._region,
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

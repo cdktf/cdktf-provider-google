@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecretManagerSecretVersionConfig extends TerraformMetaArguments {
+export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
   /** The current state of the SecretVersion. */
   readonly enabled?: boolean;
   /** Secret Manager secret resource */
@@ -22,9 +21,18 @@ export interface SecretManagerSecretVersionTimeouts {
   readonly delete?: string;
 }
 
+function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSecretVersionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class SecretManagerSecretVersion extends TerraformResource {
+export class SecretManagerSecretVersion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,10 +146,10 @@ export class SecretManagerSecretVersion extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      secret: this._secret,
-      secret_data: this._secretData,
-      timeouts: this._timeouts,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      secret: cdktf.stringToTerraform(this._secret),
+      secret_data: cdktf.stringToTerraform(this._secretData),
+      timeouts: secretManagerSecretVersionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

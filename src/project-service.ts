@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectServiceConfig extends TerraformMetaArguments {
+export interface ProjectServiceConfig extends cdktf.TerraformMetaArguments {
   readonly disableDependentServices?: boolean;
   readonly disableOnDestroy?: boolean;
   readonly project?: string;
@@ -22,9 +21,20 @@ export interface ProjectServiceTimeouts {
   readonly update?: string;
 }
 
+function projectServiceTimeoutsToTerraform(struct?: ProjectServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ProjectService extends TerraformResource {
+export class ProjectService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -140,11 +150,11 @@ export class ProjectService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      disable_dependent_services: this._disableDependentServices,
-      disable_on_destroy: this._disableOnDestroy,
-      project: this._project,
-      service: this._service,
-      timeouts: this._timeouts,
+      disable_dependent_services: cdktf.booleanToTerraform(this._disableDependentServices),
+      disable_on_destroy: cdktf.booleanToTerraform(this._disableOnDestroy),
+      project: cdktf.stringToTerraform(this._project),
+      service: cdktf.stringToTerraform(this._service),
+      timeouts: projectServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

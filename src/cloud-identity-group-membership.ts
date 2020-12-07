@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudIdentityGroupMembershipConfig extends TerraformMetaArguments {
+export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Group to create this membership in. */
   readonly group: string;
   /** preferred_member_key block */
@@ -38,19 +37,46 @@ The namespace must correspond to an identity source created in Admin Console
 and must be in the form of 'identitysources/{identity_source_id}'. */
   readonly namespace?: string;
 }
+
+function cloudIdentityGroupMembershipPreferredMemberKeyToTerraform(struct?: CloudIdentityGroupMembershipPreferredMemberKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+  }
+}
+
 export interface CloudIdentityGroupMembershipRoles {
   /** The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: ["OWNER", "MANAGER", "MEMBER"] */
   readonly name: string;
 }
+
+function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdentityGroupMembershipRoles): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface CloudIdentityGroupMembershipTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudIdentityGroupMembershipTimeoutsToTerraform(struct?: CloudIdentityGroupMembershipTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudIdentityGroupMembership extends TerraformResource {
+export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -166,10 +192,10 @@ export class CloudIdentityGroupMembership extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      group: this._group,
-      preferred_member_key: this._preferredMemberKey,
-      roles: this._roles,
-      timeouts: this._timeouts,
+      group: cdktf.stringToTerraform(this._group),
+      preferred_member_key: cdktf.listMapper(cloudIdentityGroupMembershipPreferredMemberKeyToTerraform)(this._preferredMemberKey),
+      roles: cdktf.listMapper(cloudIdentityGroupMembershipRolesToTerraform)(this._roles),
+      timeouts: cloudIdentityGroupMembershipTimeoutsToTerraform(this._timeouts),
     };
   }
 }

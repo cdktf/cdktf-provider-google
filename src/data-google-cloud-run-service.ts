@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleCloudRunServiceConfig extends TerraformMetaArguments {
+export interface DataGoogleCloudRunServiceConfig extends cdktf.TerraformMetaArguments {
   /** The location of the cloud run instance. eg us-central1 */
   readonly location: string;
   /** Name must be unique within a namespace, within a Cloud Run region.
@@ -18,7 +16,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#names */
   readonly name: string;
   readonly project?: string;
 }
-export class DataGoogleCloudRunServiceMetadata extends ComplexComputedList {
+export class DataGoogleCloudRunServiceMetadata extends cdktf.ComplexComputedList {
 
   // annotations - computed: true, optional: false, required: false
   public get annotations() {
@@ -55,7 +53,7 @@ export class DataGoogleCloudRunServiceMetadata extends ComplexComputedList {
     return this.getStringAttribute('uid');
   }
 }
-export class DataGoogleCloudRunServiceStatusConditions extends ComplexComputedList {
+export class DataGoogleCloudRunServiceStatusConditions extends cdktf.ComplexComputedList {
 
   // message - computed: true, optional: false, required: false
   public get message() {
@@ -77,7 +75,7 @@ export class DataGoogleCloudRunServiceStatusConditions extends ComplexComputedLi
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleCloudRunServiceStatus extends ComplexComputedList {
+export class DataGoogleCloudRunServiceStatus extends cdktf.ComplexComputedList {
 
   // conditions - computed: true, optional: false, required: false
   public get conditions() {
@@ -104,7 +102,7 @@ export class DataGoogleCloudRunServiceStatus extends ComplexComputedList {
     return this.getStringAttribute('url');
   }
 }
-export class DataGoogleCloudRunServiceTemplateMetadata extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateMetadata extends cdktf.ComplexComputedList {
 
   // annotations - computed: true, optional: false, required: false
   public get annotations() {
@@ -146,7 +144,7 @@ export class DataGoogleCloudRunServiceTemplateMetadata extends ComplexComputedLi
     return this.getStringAttribute('uid');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersEnv extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersEnv extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -158,14 +156,14 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnv extends ComplexC
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef extends cdktf.ComplexComputedList {
 
   // local_object_reference - computed: true, optional: false, required: false
   public get localObjectReference() {
@@ -177,14 +175,14 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef 
     return this.getBooleanAttribute('optional');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef extends cdktf.ComplexComputedList {
 
   // local_object_reference - computed: true, optional: false, required: false
   public get localObjectReference() {
@@ -196,7 +194,7 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef ext
     return this.getBooleanAttribute('optional');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom extends cdktf.ComplexComputedList {
 
   // config_map_ref - computed: true, optional: false, required: false
   public get configMapRef() {
@@ -213,7 +211,7 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom extends Comp
     return this.interpolationForAttribute('secret_ref') as any;
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersPorts extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersPorts extends cdktf.ComplexComputedList {
 
   // container_port - computed: true, optional: false, required: false
   public get containerPort() {
@@ -230,7 +228,7 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersPorts extends Comple
     return this.getStringAttribute('protocol');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainersResources extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainersResources extends cdktf.ComplexComputedList {
 
   // limits - computed: true, optional: false, required: false
   public get limits() {
@@ -242,7 +240,7 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersResources extends Co
     return this.interpolationForAttribute('requests') as any;
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpecContainers extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpecContainers extends cdktf.ComplexComputedList {
 
   // args - computed: true, optional: false, required: false
   public get args() {
@@ -284,7 +282,7 @@ export class DataGoogleCloudRunServiceTemplateSpecContainers extends ComplexComp
     return this.getStringAttribute('working_dir');
   }
 }
-export class DataGoogleCloudRunServiceTemplateSpec extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplateSpec extends cdktf.ComplexComputedList {
 
   // container_concurrency - computed: true, optional: false, required: false
   public get containerConcurrency() {
@@ -311,7 +309,7 @@ export class DataGoogleCloudRunServiceTemplateSpec extends ComplexComputedList {
     return this.getNumberAttribute('timeout_seconds');
   }
 }
-export class DataGoogleCloudRunServiceTemplate extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTemplate extends cdktf.ComplexComputedList {
 
   // metadata - computed: true, optional: false, required: false
   public get metadata() {
@@ -323,7 +321,7 @@ export class DataGoogleCloudRunServiceTemplate extends ComplexComputedList {
     return this.interpolationForAttribute('spec') as any;
   }
 }
-export class DataGoogleCloudRunServiceTraffic extends ComplexComputedList {
+export class DataGoogleCloudRunServiceTraffic extends cdktf.ComplexComputedList {
 
   // latest_revision - computed: true, optional: false, required: false
   public get latestRevision() {
@@ -343,7 +341,7 @@ export class DataGoogleCloudRunServiceTraffic extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleCloudRunService extends TerraformDataSource {
+export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -447,9 +445,9 @@ export class DataGoogleCloudRunService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      project: this._project,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

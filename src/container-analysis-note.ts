@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerAnalysisNoteConfig extends TerraformMetaArguments {
+export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArguments {
   /** Time of expiration for this note. Leave empty if note does not expire. */
   readonly expirationTime?: string;
   /** A detailed description of the note */
@@ -31,25 +30,60 @@ export interface ContainerAnalysisNoteAttestationAuthorityHint {
 example "qa". */
   readonly humanReadableName: string;
 }
+
+function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityHint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    human_readable_name: cdktf.stringToTerraform(struct!.humanReadableName),
+  }
+}
+
 export interface ContainerAnalysisNoteAttestationAuthority {
   /** hint block */
   readonly hint: ContainerAnalysisNoteAttestationAuthorityHint[];
 }
+
+function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: ContainerAnalysisNoteAttestationAuthority): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    hint: cdktf.listMapper(containerAnalysisNoteAttestationAuthorityHintToTerraform)(struct!.hint),
+  }
+}
+
 export interface ContainerAnalysisNoteRelatedUrl {
   /** Label to describe usage of the URL */
   readonly label?: string;
   /** Specific URL associated with the resource. */
   readonly url: string;
 }
+
+function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNoteRelatedUrl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    label: cdktf.stringToTerraform(struct!.label),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface ContainerAnalysisNoteTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ContainerAnalysisNote extends TerraformResource {
+export class ContainerAnalysisNote extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -245,15 +279,15 @@ export class ContainerAnalysisNote extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      expiration_time: this._expirationTime,
-      long_description: this._longDescription,
-      name: this._name,
-      project: this._project,
-      related_note_names: this._relatedNoteNames,
-      short_description: this._shortDescription,
-      attestation_authority: this._attestationAuthority,
-      related_url: this._relatedUrl,
-      timeouts: this._timeouts,
+      expiration_time: cdktf.stringToTerraform(this._expirationTime),
+      long_description: cdktf.stringToTerraform(this._longDescription),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      related_note_names: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedNoteNames),
+      short_description: cdktf.stringToTerraform(this._shortDescription),
+      attestation_authority: cdktf.listMapper(containerAnalysisNoteAttestationAuthorityToTerraform)(this._attestationAuthority),
+      related_url: cdktf.listMapper(containerAnalysisNoteRelatedUrlToTerraform)(this._relatedUrl),
+      timeouts: containerAnalysisNoteTimeoutsToTerraform(this._timeouts),
     };
   }
 }

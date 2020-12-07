@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNetworkEndpointGroupConfig extends TerraformMetaArguments {
+export interface ComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /** The default port used if the port number is not specified in the
 network endpoint. */
   readonly defaultPort?: number;
@@ -40,9 +39,18 @@ export interface ComputeNetworkEndpointGroupTimeouts {
   readonly delete?: string;
 }
 
+function computeNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeNetworkEndpointGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeNetworkEndpointGroup extends TerraformResource {
+export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -233,15 +241,15 @@ export class ComputeNetworkEndpointGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      default_port: this._defaultPort,
-      description: this._description,
-      name: this._name,
-      network: this._network,
-      network_endpoint_type: this._networkEndpointType,
-      project: this._project,
-      subnetwork: this._subnetwork,
-      zone: this._zone,
-      timeouts: this._timeouts,
+      default_port: cdktf.numberToTerraform(this._defaultPort),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      network_endpoint_type: cdktf.stringToTerraform(this._networkEndpointType),
+      project: cdktf.stringToTerraform(this._project),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
+      zone: cdktf.stringToTerraform(this._zone),
+      timeouts: computeNetworkEndpointGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

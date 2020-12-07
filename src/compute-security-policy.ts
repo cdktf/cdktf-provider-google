@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSecurityPolicyConfig extends TerraformMetaArguments {
+export interface ComputeSecurityPolicyConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this security policy. Max size is 2048. */
   readonly description?: string;
   /** The name of the security policy. */
@@ -23,10 +22,26 @@ export interface ComputeSecurityPolicyRuleMatchConfig {
   /** Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '*' matches all IPs (can be used to override the default behavior). */
   readonly srcIpRanges: string[];
 }
+
+function computeSecurityPolicyRuleMatchConfigToTerraform(struct?: ComputeSecurityPolicyRuleMatchConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    src_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.srcIpRanges),
+  }
+}
+
 export interface ComputeSecurityPolicyRuleMatchExpr {
   /** Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported. */
   readonly expression: string;
 }
+
+function computeSecurityPolicyRuleMatchExprToTerraform(struct?: ComputeSecurityPolicyRuleMatchExpr): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expression: cdktf.stringToTerraform(struct!.expression),
+  }
+}
+
 export interface ComputeSecurityPolicyRuleMatch {
   /** Predefined rule expression. If this field is specified, config must also be specified. Available options:   SRC_IPS_V1: Must specify the corresponding src_ip_ranges field in config. */
   readonly versionedExpr?: string;
@@ -35,6 +50,16 @@ export interface ComputeSecurityPolicyRuleMatch {
   /** expr block */
   readonly expr?: ComputeSecurityPolicyRuleMatchExpr[];
 }
+
+function computeSecurityPolicyRuleMatchToTerraform(struct?: ComputeSecurityPolicyRuleMatch): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    versioned_expr: cdktf.stringToTerraform(struct!.versionedExpr),
+    config: cdktf.listMapper(computeSecurityPolicyRuleMatchConfigToTerraform)(struct!.config),
+    expr: cdktf.listMapper(computeSecurityPolicyRuleMatchExprToTerraform)(struct!.expr),
+  }
+}
+
 export interface ComputeSecurityPolicyRule {
   /** Action to take when match matches the request. Valid values:   "allow" : allow access to target, "deny(status)" : deny access to target, returns the HTTP response code specified (valid values are 403, 404 and 502) */
   readonly action: string;
@@ -47,15 +72,37 @@ export interface ComputeSecurityPolicyRule {
   /** match block */
   readonly match: ComputeSecurityPolicyRuleMatch[];
 }
+
+function computeSecurityPolicyRuleToTerraform(struct?: ComputeSecurityPolicyRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    description: cdktf.stringToTerraform(struct!.description),
+    preview: cdktf.booleanToTerraform(struct!.preview),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    match: cdktf.listMapper(computeSecurityPolicyRuleMatchToTerraform)(struct!.match),
+  }
+}
+
 export interface ComputeSecurityPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurityPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeSecurityPolicy extends TerraformResource {
+export class ComputeSecurityPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -181,11 +228,11 @@ export class ComputeSecurityPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      rule: this._rule,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      rule: cdktf.listMapper(computeSecurityPolicyRuleToTerraform)(this._rule),
+      timeouts: computeSecurityPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

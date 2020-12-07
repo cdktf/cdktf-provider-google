@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleOrganizationConfig extends TerraformMetaArguments {
+export interface DataGoogleOrganizationConfig extends cdktf.TerraformMetaArguments {
   readonly domain?: string;
   readonly organization?: string;
 }
 
 // Resource
 
-export class DataGoogleOrganization extends TerraformDataSource {
+export class DataGoogleOrganization extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -107,8 +106,8 @@ export class DataGoogleOrganization extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      domain: this._domain,
-      organization: this._organization,
+      domain: cdktf.stringToTerraform(this._domain),
+      organization: cdktf.stringToTerraform(this._organization),
     };
   }
 }

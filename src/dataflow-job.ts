@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataflowJobConfig extends TerraformMetaArguments {
+export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   /** List of experiments that should be used by the job. An example value is ["enable_stackdriver_agent_metrics"]. */
   readonly additionalExperiments?: string[];
   /** The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE". */
@@ -49,9 +48,17 @@ export interface DataflowJobTimeouts {
   readonly update?: string;
 }
 
+function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataflowJob extends TerraformResource {
+export class DataflowJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -397,24 +404,24 @@ export class DataflowJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_experiments: this._additionalExperiments,
-      ip_configuration: this._ipConfiguration,
-      labels: this._labels,
-      machine_type: this._machineType,
-      max_workers: this._maxWorkers,
-      name: this._name,
-      network: this._network,
-      on_delete: this._onDelete,
-      parameters: this._parameters,
-      project: this._project,
-      region: this._region,
-      service_account_email: this._serviceAccountEmail,
-      subnetwork: this._subnetwork,
-      temp_gcs_location: this._tempGcsLocation,
-      template_gcs_path: this._templateGcsPath,
-      transform_name_mapping: this._transformNameMapping,
-      zone: this._zone,
-      timeouts: this._timeouts,
+      additional_experiments: cdktf.listMapper(cdktf.stringToTerraform)(this._additionalExperiments),
+      ip_configuration: cdktf.stringToTerraform(this._ipConfiguration),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      machine_type: cdktf.stringToTerraform(this._machineType),
+      max_workers: cdktf.numberToTerraform(this._maxWorkers),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      on_delete: cdktf.stringToTerraform(this._onDelete),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      service_account_email: cdktf.stringToTerraform(this._serviceAccountEmail),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
+      temp_gcs_location: cdktf.stringToTerraform(this._tempGcsLocation),
+      template_gcs_path: cdktf.stringToTerraform(this._templateGcsPath),
+      transform_name_mapping: cdktf.hashMapper(cdktf.anyToTerraform)(this._transformNameMapping),
+      zone: cdktf.stringToTerraform(this._zone),
+      timeouts: dataflowJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface GameServicesGameServerConfigConfig extends TerraformMetaArguments {
+export interface GameServicesGameServerConfigConfig extends cdktf.TerraformMetaArguments {
   /** A unique id for the deployment config. */
   readonly configId: string;
   /** A unique id for the deployment. */
@@ -41,6 +40,15 @@ The format of the spec can be found :
   /** The name of the FleetConfig. */
   readonly name?: string;
 }
+
+function gameServicesGameServerConfigFleetConfigsToTerraform(struct?: GameServicesGameServerConfigFleetConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fleet_spec: cdktf.stringToTerraform(struct!.fleetSpec),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface GameServicesGameServerConfigScalingConfigsSchedules {
   /** The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
@@ -60,10 +68,29 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z". */
   readonly startTime?: string;
 }
+
+function gameServicesGameServerConfigScalingConfigsSchedulesToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSchedules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cron_job_duration: cdktf.stringToTerraform(struct!.cronJobDuration),
+    cron_spec: cdktf.stringToTerraform(struct!.cronSpec),
+    end_time: cdktf.stringToTerraform(struct!.endTime),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface GameServicesGameServerConfigScalingConfigsSelectors {
   /** Set of labels to group by. */
   readonly labels?: { [key: string]: string };
 }
+
+function gameServicesGameServerConfigScalingConfigsSelectorsToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSelectors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+  }
+}
+
 export interface GameServicesGameServerConfigScalingConfigs {
   /** Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
@@ -76,14 +103,34 @@ https://agones.dev/site/docs/reference/fleetautoscaler/ */
   /** selectors block */
   readonly selectors?: GameServicesGameServerConfigScalingConfigsSelectors[];
 }
+
+function gameServicesGameServerConfigScalingConfigsToTerraform(struct?: GameServicesGameServerConfigScalingConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fleet_autoscaler_spec: cdktf.stringToTerraform(struct!.fleetAutoscalerSpec),
+    name: cdktf.stringToTerraform(struct!.name),
+    schedules: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsSchedulesToTerraform)(struct!.schedules),
+    selectors: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsSelectorsToTerraform)(struct!.selectors),
+  }
+}
+
 export interface GameServicesGameServerConfigTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function gameServicesGameServerConfigTimeoutsToTerraform(struct?: GameServicesGameServerConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class GameServicesGameServerConfig extends TerraformResource {
+export class GameServicesGameServerConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -266,15 +313,15 @@ export class GameServicesGameServerConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      config_id: this._configId,
-      deployment_id: this._deploymentId,
-      description: this._description,
-      labels: this._labels,
-      location: this._location,
-      project: this._project,
-      fleet_configs: this._fleetConfigs,
-      scaling_configs: this._scalingConfigs,
-      timeouts: this._timeouts,
+      config_id: cdktf.stringToTerraform(this._configId),
+      deployment_id: cdktf.stringToTerraform(this._deploymentId),
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      fleet_configs: cdktf.listMapper(gameServicesGameServerConfigFleetConfigsToTerraform)(this._fleetConfigs),
+      scaling_configs: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsToTerraform)(this._scalingConfigs),
+      timeouts: gameServicesGameServerConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

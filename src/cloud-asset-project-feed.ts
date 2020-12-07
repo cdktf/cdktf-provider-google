@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudAssetProjectFeedConfig extends TerraformMetaArguments {
+export interface CloudAssetProjectFeedConfig extends cdktf.TerraformMetaArguments {
   /** A list of the full names of the assets to receive updates. You must specify either or both of 
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
@@ -49,23 +48,60 @@ name and a position in the file. */
 This can be used e.g. in UIs which allow to enter the expression. */
   readonly title?: string;
 }
+
+function cloudAssetProjectFeedConditionToTerraform(struct?: CloudAssetProjectFeedCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    location: cdktf.stringToTerraform(struct!.location),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
 export interface CloudAssetProjectFeedFeedOutputConfigPubsubDestination {
   /** Destination on Cloud Pubsub topic. */
   readonly topic: string;
 }
+
+function cloudAssetProjectFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetProjectFeedFeedOutputConfigPubsubDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
 export interface CloudAssetProjectFeedFeedOutputConfig {
   /** pubsub_destination block */
   readonly pubsubDestination: CloudAssetProjectFeedFeedOutputConfigPubsubDestination[];
 }
+
+function cloudAssetProjectFeedFeedOutputConfigToTerraform(struct?: CloudAssetProjectFeedFeedOutputConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_destination: cdktf.listMapper(cloudAssetProjectFeedFeedOutputConfigPubsubDestinationToTerraform)(struct!.pubsubDestination),
+  }
+}
+
 export interface CloudAssetProjectFeedTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudAssetProjectFeedTimeoutsToTerraform(struct?: CloudAssetProjectFeedTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudAssetProjectFeed extends TerraformResource {
+export class CloudAssetProjectFeed extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -251,15 +287,15 @@ export class CloudAssetProjectFeed extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      asset_names: this._assetNames,
-      asset_types: this._assetTypes,
-      billing_project: this._billingProject,
-      content_type: this._contentType,
-      feed_id: this._feedId,
-      project: this._project,
-      condition: this._condition,
-      feed_output_config: this._feedOutputConfig,
-      timeouts: this._timeouts,
+      asset_names: cdktf.listMapper(cdktf.stringToTerraform)(this._assetNames),
+      asset_types: cdktf.listMapper(cdktf.stringToTerraform)(this._assetTypes),
+      billing_project: cdktf.stringToTerraform(this._billingProject),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      feed_id: cdktf.stringToTerraform(this._feedId),
+      project: cdktf.stringToTerraform(this._project),
+      condition: cdktf.listMapper(cloudAssetProjectFeedConditionToTerraform)(this._condition),
+      feed_output_config: cdktf.listMapper(cloudAssetProjectFeedFeedOutputConfigToTerraform)(this._feedOutputConfig),
+      timeouts: cloudAssetProjectFeedTimeoutsToTerraform(this._timeouts),
     };
   }
 }

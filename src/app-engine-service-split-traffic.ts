@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppEngineServiceSplitTrafficConfig extends TerraformMetaArguments {
+export interface AppEngineServiceSplitTrafficConfig extends cdktf.TerraformMetaArguments {
   /** If set to true traffic will be migrated to this version. */
   readonly migrateTraffic?: boolean;
   readonly project?: string;
@@ -24,15 +23,34 @@ export interface AppEngineServiceSplitTrafficSplit {
   /** Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: ["UNSPECIFIED", "COOKIE", "IP", "RANDOM"] */
   readonly shardBy?: string;
 }
+
+function appEngineServiceSplitTrafficSplitToTerraform(struct?: AppEngineServiceSplitTrafficSplit): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allocations: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.allocations),
+    shard_by: cdktf.stringToTerraform(struct!.shardBy),
+  }
+}
+
 export interface AppEngineServiceSplitTrafficTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServiceSplitTrafficTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppEngineServiceSplitTraffic extends TerraformResource {
+export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -145,11 +163,11 @@ export class AppEngineServiceSplitTraffic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      migrate_traffic: this._migrateTraffic,
-      project: this._project,
-      service: this._service,
-      split: this._split,
-      timeouts: this._timeouts,
+      migrate_traffic: cdktf.booleanToTerraform(this._migrateTraffic),
+      project: cdktf.stringToTerraform(this._project),
+      service: cdktf.stringToTerraform(this._service),
+      split: cdktf.listMapper(appEngineServiceSplitTrafficSplitToTerraform)(this._split),
+      timeouts: appEngineServiceSplitTrafficTimeoutsToTerraform(this._timeouts),
     };
   }
 }

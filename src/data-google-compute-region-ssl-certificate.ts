@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeRegionSslCertificateConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeRegionSslCertificateConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -27,7 +26,7 @@ If it is not provided, the provider region is used. */
 
 // Resource
 
-export class DataGoogleComputeRegionSslCertificate extends TerraformDataSource {
+export class DataGoogleComputeRegionSslCertificate extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -144,9 +143,9 @@ export class DataGoogleComputeRegionSslCertificate extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

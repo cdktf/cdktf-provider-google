@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudRunServiceConfig extends TerraformMetaArguments {
+export interface CloudRunServiceConfig extends cdktf.TerraformMetaArguments {
   readonly autogenerateRevisionName?: boolean;
   /** The location of the cloud run instance. eg us-central1 */
   readonly location: string;
@@ -27,7 +25,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#names */
   /** traffic block */
   readonly traffic?: CloudRunServiceTraffic[];
 }
-export class CloudRunServiceStatusConditions extends ComplexComputedList {
+export class CloudRunServiceStatusConditions extends cdktf.ComplexComputedList {
 
   // message - computed: true, optional: false, required: false
   public get message() {
@@ -49,7 +47,7 @@ export class CloudRunServiceStatusConditions extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class CloudRunServiceStatus extends ComplexComputedList {
+export class CloudRunServiceStatus extends cdktf.ComplexComputedList {
 
   // conditions - computed: true, optional: false, required: false
   public get conditions() {
@@ -90,6 +88,16 @@ More info: http://kubernetes.io/docs/user-guide/labels */
 project ID or project number. */
   readonly namespace?: string;
 }
+
+function cloudRunServiceMetadataToTerraform(struct?: CloudRunServiceMetadata): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    annotations: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.annotations),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+  }
+}
+
 export interface CloudRunServiceTemplateMetadata {
   /** Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
@@ -109,6 +117,17 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#names */
 project ID or project number. It will default to the resource's project. */
   readonly namespace?: string;
 }
+
+function cloudRunServiceTemplateMetadataToTerraform(struct?: CloudRunServiceTemplateMetadata): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    annotations: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.annotations),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    name: cdktf.stringToTerraform(struct!.name),
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersEnv {
   /** Name of the environment variable. */
   readonly name?: string;
@@ -122,30 +141,73 @@ exists or not.
 Defaults to "". */
   readonly value?: string;
 }
+
+function cloudRunServiceTemplateSpecContainersEnvToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnv): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference {
   /** Name of the referent.
 More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names */
   readonly name: string;
 }
+
+function cloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReferenceToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef {
   /** Specify whether the ConfigMap must be defined */
   readonly optional?: boolean;
   /** local_object_reference block */
   readonly localObjectReference?: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference[];
 }
+
+function cloudRunServiceTemplateSpecContainersEnvFromConfigMapRefToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    optional: cdktf.booleanToTerraform(struct!.optional),
+    local_object_reference: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReferenceToTerraform)(struct!.localObjectReference),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference {
   /** Name of the referent.
 More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names */
   readonly name: string;
 }
+
+function cloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReferenceToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersEnvFromSecretRef {
   /** Specify whether the Secret must be defined */
   readonly optional?: boolean;
   /** local_object_reference block */
   readonly localObjectReference?: CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference[];
 }
+
+function cloudRunServiceTemplateSpecContainersEnvFromSecretRefToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvFromSecretRef): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    optional: cdktf.booleanToTerraform(struct!.optional),
+    local_object_reference: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReferenceToTerraform)(struct!.localObjectReference),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersEnvFrom {
   /** An optional identifier to prepend to each key in the ConfigMap. */
   readonly prefix?: string;
@@ -154,6 +216,16 @@ export interface CloudRunServiceTemplateSpecContainersEnvFrom {
   /** secret_ref block */
   readonly secretRef?: CloudRunServiceTemplateSpecContainersEnvFromSecretRef[];
 }
+
+function cloudRunServiceTemplateSpecContainersEnvFromToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvFrom): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    prefix: cdktf.stringToTerraform(struct!.prefix),
+    config_map_ref: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromConfigMapRefToTerraform)(struct!.configMapRef),
+    secret_ref: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromSecretRefToTerraform)(struct!.secretRef),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersPorts {
   /** Port number. */
   readonly containerPort: number;
@@ -162,6 +234,16 @@ export interface CloudRunServiceTemplateSpecContainersPorts {
   /** Protocol used on port. Defaults to TCP. */
   readonly protocol?: string;
 }
+
+function cloudRunServiceTemplateSpecContainersPortsToTerraform(struct?: CloudRunServiceTemplateSpecContainersPorts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container_port: cdktf.numberToTerraform(struct!.containerPort),
+    name: cdktf.stringToTerraform(struct!.name),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainersResources {
   /** Limits describes the maximum amount of compute resources allowed.
 The values of the map is string form of the 'quantity' k8s type:
@@ -174,6 +256,15 @@ The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go */
   readonly requests?: { [key: string]: string };
 }
+
+function cloudRunServiceTemplateSpecContainersResourcesToTerraform(struct?: CloudRunServiceTemplateSpecContainersResources): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    limits: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.limits),
+    requests: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.requests),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainers {
   /** Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -212,6 +303,21 @@ might be configured in the container image. */
   /** resources block */
   readonly resources?: CloudRunServiceTemplateSpecContainersResources[];
 }
+
+function cloudRunServiceTemplateSpecContainersToTerraform(struct?: CloudRunServiceTemplateSpecContainers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    command: cdktf.listMapper(cdktf.stringToTerraform)(struct!.command),
+    image: cdktf.stringToTerraform(struct!.image),
+    working_dir: cdktf.stringToTerraform(struct!.workingDir),
+    env: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvToTerraform)(struct!.env),
+    env_from: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromToTerraform)(struct!.envFrom),
+    ports: cdktf.listMapper(cloudRunServiceTemplateSpecContainersPortsToTerraform)(struct!.ports),
+    resources: cdktf.listMapper(cloudRunServiceTemplateSpecContainersResourcesToTerraform)(struct!.resources),
+  }
+}
+
 export interface CloudRunServiceTemplateSpec {
   /** ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
@@ -230,17 +336,47 @@ will use the project's default service account. */
   /** containers block */
   readonly containers?: CloudRunServiceTemplateSpecContainers[];
 }
+
+function cloudRunServiceTemplateSpecToTerraform(struct?: CloudRunServiceTemplateSpec): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container_concurrency: cdktf.numberToTerraform(struct!.containerConcurrency),
+    service_account_name: cdktf.stringToTerraform(struct!.serviceAccountName),
+    timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
+    containers: cdktf.listMapper(cloudRunServiceTemplateSpecContainersToTerraform)(struct!.containers),
+  }
+}
+
 export interface CloudRunServiceTemplate {
   /** metadata block */
   readonly metadata?: CloudRunServiceTemplateMetadata[];
   /** spec block */
   readonly spec?: CloudRunServiceTemplateSpec[];
 }
+
+function cloudRunServiceTemplateToTerraform(struct?: CloudRunServiceTemplate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metadata: cdktf.listMapper(cloudRunServiceTemplateMetadataToTerraform)(struct!.metadata),
+    spec: cdktf.listMapper(cloudRunServiceTemplateSpecToTerraform)(struct!.spec),
+  }
+}
+
 export interface CloudRunServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function cloudRunServiceTimeoutsToTerraform(struct?: CloudRunServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface CloudRunServiceTraffic {
   /** LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
@@ -253,9 +389,19 @@ false when RevisionName is non-empty. */
   readonly revisionName?: string;
 }
 
+function cloudRunServiceTrafficToTerraform(struct?: CloudRunServiceTraffic): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    latest_revision: cdktf.booleanToTerraform(struct!.latestRevision),
+    percent: cdktf.numberToTerraform(struct!.percent),
+    revision_name: cdktf.stringToTerraform(struct!.revisionName),
+  }
+}
+
+
 // Resource
 
-export class CloudRunService extends TerraformResource {
+export class CloudRunService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -424,14 +570,14 @@ export class CloudRunService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      autogenerate_revision_name: this._autogenerateRevisionName,
-      location: this._location,
-      name: this._name,
-      project: this._project,
-      metadata: this._metadata,
-      template: this._template,
-      timeouts: this._timeouts,
-      traffic: this._traffic,
+      autogenerate_revision_name: cdktf.booleanToTerraform(this._autogenerateRevisionName),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      metadata: cdktf.listMapper(cloudRunServiceMetadataToTerraform)(this._metadata),
+      template: cdktf.listMapper(cloudRunServiceTemplateToTerraform)(this._template),
+      timeouts: cloudRunServiceTimeoutsToTerraform(this._timeouts),
+      traffic: cdktf.listMapper(cloudRunServiceTrafficToTerraform)(this._traffic),
     };
   }
 }

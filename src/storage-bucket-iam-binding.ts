@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageBucketIamBindingConfig extends TerraformMetaArguments {
+export interface StorageBucketIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly bucket: string;
   readonly members: string[];
   readonly role: string;
@@ -20,9 +19,19 @@ export interface StorageBucketIamBindingCondition {
   readonly title: string;
 }
 
+function storageBucketIamBindingConditionToTerraform(struct?: StorageBucketIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class StorageBucketIamBinding extends TerraformResource {
+export class StorageBucketIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class StorageBucketIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      members: this._members,
-      role: this._role,
-      condition: this._condition,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(storageBucketIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

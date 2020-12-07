@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeInstanceTemplateConfig extends TerraformMetaArguments {
+export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArguments {
   /** Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false. */
   readonly canIpForward?: boolean;
   /** A brief description of this resource. */
@@ -55,6 +54,14 @@ export interface ComputeInstanceTemplateDiskDiskEncryptionKey {
   /** The self link of the encryption key that is stored in Google Cloud KMS. */
   readonly kmsKeySelfLink: string;
 }
+
+function computeInstanceTemplateDiskDiskEncryptionKeyToTerraform(struct?: ComputeInstanceTemplateDiskDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+  }
+}
+
 export interface ComputeInstanceTemplateDisk {
   /** Whether or not the disk should be auto-deleted. This defaults to true. */
   readonly autoDelete?: boolean;
@@ -83,24 +90,71 @@ export interface ComputeInstanceTemplateDisk {
   /** disk_encryption_key block */
   readonly diskEncryptionKey?: ComputeInstanceTemplateDiskDiskEncryptionKey[];
 }
+
+function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceTemplateDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_delete: cdktf.booleanToTerraform(struct!.autoDelete),
+    boot: cdktf.booleanToTerraform(struct!.boot),
+    device_name: cdktf.stringToTerraform(struct!.deviceName),
+    disk_name: cdktf.stringToTerraform(struct!.diskName),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    disk_type: cdktf.stringToTerraform(struct!.diskType),
+    interface: cdktf.stringToTerraform(struct!.interface),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    mode: cdktf.stringToTerraform(struct!.mode),
+    source: cdktf.stringToTerraform(struct!.source),
+    source_image: cdktf.stringToTerraform(struct!.sourceImage),
+    type: cdktf.stringToTerraform(struct!.type),
+    disk_encryption_key: cdktf.listMapper(computeInstanceTemplateDiskDiskEncryptionKeyToTerraform)(struct!.diskEncryptionKey),
+  }
+}
+
 export interface ComputeInstanceTemplateGuestAccelerator {
   /** The number of the guest accelerator cards exposed to this instance. */
   readonly count: number;
   /** The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80. */
   readonly type: string;
 }
+
+function computeInstanceTemplateGuestAcceleratorToTerraform(struct?: ComputeInstanceTemplateGuestAccelerator): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ComputeInstanceTemplateNetworkInterfaceAccessConfig {
   /** The IP address that will be 1:1 mapped to the instance's network ip. If not given, one will be generated. */
   readonly natIp?: string;
   /** The networking tier used for configuring this instance template. This field can take the following values: PREMIUM or STANDARD. If this field is not specified, it is assumed to be PREMIUM. */
   readonly networkTier?: string;
 }
+
+function computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceAccessConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nat_ip: cdktf.stringToTerraform(struct!.natIp),
+    network_tier: cdktf.stringToTerraform(struct!.networkTier),
+  }
+}
+
 export interface ComputeInstanceTemplateNetworkInterfaceAliasIpRange {
   /** The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. At the time of writing only a netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API error. */
   readonly ipCidrRange: string;
   /** The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range. If left unspecified, the primary range of the subnetwork will be used. */
   readonly subnetworkRangeName?: string;
 }
+
+function computeInstanceTemplateNetworkInterfaceAliasIpRangeToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceAliasIpRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ip_cidr_range: cdktf.stringToTerraform(struct!.ipCidrRange),
+    subnetwork_range_name: cdktf.stringToTerraform(struct!.subnetworkRangeName),
+  }
+}
+
 export interface ComputeInstanceTemplateNetworkInterface {
   /** The name or self_link of the network to attach this interface to. Use network attribute for Legacy or Auto subnetted networks and subnetwork for custom subnetted networks. */
   readonly network?: string;
@@ -115,11 +169,34 @@ export interface ComputeInstanceTemplateNetworkInterface {
   /** alias_ip_range block */
   readonly aliasIpRange?: ComputeInstanceTemplateNetworkInterfaceAliasIpRange[];
 }
+
+function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInstanceTemplateNetworkInterface): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network: cdktf.stringToTerraform(struct!.network),
+    network_ip: cdktf.stringToTerraform(struct!.networkIp),
+    subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
+    subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
+    access_config: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),
+    alias_ip_range: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
+  }
+}
+
 export interface ComputeInstanceTemplateSchedulingNodeAffinities {
   readonly key: string;
   readonly operator: string;
   readonly values: string[];
 }
+
+function computeInstanceTemplateSchedulingNodeAffinitiesToTerraform(struct?: ComputeInstanceTemplateSchedulingNodeAffinities): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ComputeInstanceTemplateScheduling {
   /** Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true. */
   readonly automaticRestart?: boolean;
@@ -130,12 +207,32 @@ export interface ComputeInstanceTemplateScheduling {
   /** node_affinities block */
   readonly nodeAffinities?: ComputeInstanceTemplateSchedulingNodeAffinities[];
 }
+
+function computeInstanceTemplateSchedulingToTerraform(struct?: ComputeInstanceTemplateScheduling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    automatic_restart: cdktf.booleanToTerraform(struct!.automaticRestart),
+    on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
+    preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+    node_affinities: cdktf.listMapper(computeInstanceTemplateSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),
+  }
+}
+
 export interface ComputeInstanceTemplateServiceAccount {
   /** The service account e-mail address. If not given, the default Google Compute Engine service account is used. */
   readonly email?: string;
   /** A list of service scopes. Both OAuth2 URLs and gcloud short names are supported. To allow full access to all Cloud APIs, use the cloud-platform scope. */
   readonly scopes: string[];
 }
+
+function computeInstanceTemplateServiceAccountToTerraform(struct?: ComputeInstanceTemplateServiceAccount): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email: cdktf.stringToTerraform(struct!.email),
+    scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.scopes),
+  }
+}
+
 export interface ComputeInstanceTemplateShieldedInstanceConfig {
   /** Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true. */
   readonly enableIntegrityMonitoring?: boolean;
@@ -144,14 +241,33 @@ export interface ComputeInstanceTemplateShieldedInstanceConfig {
   /** Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true. */
   readonly enableVtpm?: boolean;
 }
+
+function computeInstanceTemplateShieldedInstanceConfigToTerraform(struct?: ComputeInstanceTemplateShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+    enable_vtpm: cdktf.booleanToTerraform(struct!.enableVtpm),
+  }
+}
+
 export interface ComputeInstanceTemplateTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function computeInstanceTemplateTimeoutsToTerraform(struct?: ComputeInstanceTemplateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeInstanceTemplate extends TerraformResource {
+export class ComputeInstanceTemplate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -551,27 +667,27 @@ export class ComputeInstanceTemplate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      can_ip_forward: this._canIpForward,
-      description: this._description,
-      enable_display: this._enableDisplay,
-      instance_description: this._instanceDescription,
-      labels: this._labels,
-      machine_type: this._machineType,
-      metadata: this._metadata,
-      metadata_startup_script: this._metadataStartupScript,
-      min_cpu_platform: this._minCpuPlatform,
-      name: this._name,
-      name_prefix: this._namePrefix,
-      project: this._project,
-      region: this._region,
-      tags: this._tags,
-      disk: this._disk,
-      guest_accelerator: this._guestAccelerator,
-      network_interface: this._networkInterface,
-      scheduling: this._scheduling,
-      service_account: this._serviceAccount,
-      shielded_instance_config: this._shieldedInstanceConfig,
-      timeouts: this._timeouts,
+      can_ip_forward: cdktf.booleanToTerraform(this._canIpForward),
+      description: cdktf.stringToTerraform(this._description),
+      enable_display: cdktf.booleanToTerraform(this._enableDisplay),
+      instance_description: cdktf.stringToTerraform(this._instanceDescription),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      machine_type: cdktf.stringToTerraform(this._machineType),
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata_startup_script: cdktf.stringToTerraform(this._metadataStartupScript),
+      min_cpu_platform: cdktf.stringToTerraform(this._minCpuPlatform),
+      name: cdktf.stringToTerraform(this._name),
+      name_prefix: cdktf.stringToTerraform(this._namePrefix),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      disk: cdktf.listMapper(computeInstanceTemplateDiskToTerraform)(this._disk),
+      guest_accelerator: cdktf.listMapper(computeInstanceTemplateGuestAcceleratorToTerraform)(this._guestAccelerator),
+      network_interface: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceToTerraform)(this._networkInterface),
+      scheduling: cdktf.listMapper(computeInstanceTemplateSchedulingToTerraform)(this._scheduling),
+      service_account: cdktf.listMapper(computeInstanceTemplateServiceAccountToTerraform)(this._serviceAccount),
+      shielded_instance_config: cdktf.listMapper(computeInstanceTemplateShieldedInstanceConfigToTerraform)(this._shieldedInstanceConfig),
+      timeouts: computeInstanceTemplateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

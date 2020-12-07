@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleServiceAccountIdTokenConfig extends TerraformMetaArguments {
+export interface DataGoogleServiceAccountIdTokenConfig extends cdktf.TerraformMetaArguments {
   readonly delegates?: string[];
   readonly includeEmail?: boolean;
   readonly targetAudience: string;
@@ -16,7 +15,7 @@ export interface DataGoogleServiceAccountIdTokenConfig extends TerraformMetaArgu
 
 // Resource
 
-export class DataGoogleServiceAccountIdToken extends TerraformDataSource {
+export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +119,10 @@ export class DataGoogleServiceAccountIdToken extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      delegates: this._delegates,
-      include_email: this._includeEmail,
-      target_audience: this._targetAudience,
-      target_service_account: this._targetServiceAccount,
+      delegates: cdktf.listMapper(cdktf.stringToTerraform)(this._delegates),
+      include_email: cdktf.booleanToTerraform(this._includeEmail),
+      target_audience: cdktf.stringToTerraform(this._targetAudience),
+      target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),
     };
   }
 }

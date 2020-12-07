@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNetworkEndpointConfig extends TerraformMetaArguments {
+export interface ComputeNetworkEndpointConfig extends cdktf.TerraformMetaArguments {
   /** The name for a specific VM instance that the IP address belongs to.
 This is required for network endpoints of type GCE_VM_IP_PORT.
 The instance must be in the same zone of network endpoint group. */
@@ -31,9 +30,18 @@ export interface ComputeNetworkEndpointTimeouts {
   readonly delete?: string;
 }
 
+function computeNetworkEndpointTimeoutsToTerraform(struct?: ComputeNetworkEndpointTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeNetworkEndpoint extends TerraformResource {
+export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -174,13 +182,13 @@ export class ComputeNetworkEndpoint extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance: this._instance,
-      ip_address: this._ipAddress,
-      network_endpoint_group: this._networkEndpointGroup,
-      port: this._port,
-      project: this._project,
-      zone: this._zone,
-      timeouts: this._timeouts,
+      instance: cdktf.stringToTerraform(this._instance),
+      ip_address: cdktf.stringToTerraform(this._ipAddress),
+      network_endpoint_group: cdktf.stringToTerraform(this._networkEndpointGroup),
+      port: cdktf.numberToTerraform(this._port),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
+      timeouts: computeNetworkEndpointTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FilestoreInstanceConfig extends TerraformMetaArguments {
+export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /** A description of the instance. */
   readonly description?: string;
   /** Resource labels to represent user-provided metadata. */
@@ -33,6 +32,15 @@ for the standard tier, or 2560 GiB for the premium tier. */
   /** The name of the fileshare (16 characters or less) */
   readonly name: string;
 }
+
+function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanceFileShares): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity_gb: cdktf.numberToTerraform(struct!.capacityGb),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface FilestoreInstanceNetworks {
   /** IP versions for which the instance has
 IP addresses assigned. Possible values: ["ADDRESS_MODE_UNSPECIFIED", "MODE_IPV4", "MODE_IPV6"] */
@@ -44,15 +52,35 @@ instance is connected. */
 addresses reserved for this instance. */
   readonly reservedIpRange?: string;
 }
+
+function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceNetworks): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    modes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.modes),
+    network: cdktf.stringToTerraform(struct!.network),
+    reserved_ip_range: cdktf.stringToTerraform(struct!.reservedIpRange),
+  }
+}
+
 export interface FilestoreInstanceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FilestoreInstance extends TerraformResource {
+export class FilestoreInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -234,15 +262,15 @@ export class FilestoreInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      tier: this._tier,
-      zone: this._zone,
-      file_shares: this._fileShares,
-      networks: this._networks,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      tier: cdktf.stringToTerraform(this._tier),
+      zone: cdktf.stringToTerraform(this._zone),
+      file_shares: cdktf.listMapper(filestoreInstanceFileSharesToTerraform)(this._fileShares),
+      networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform)(this._networks),
+      timeouts: filestoreInstanceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

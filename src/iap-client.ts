@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapClientConfig extends TerraformMetaArguments {
+export interface IapClientConfig extends cdktf.TerraformMetaArguments {
   /** Identifier of the brand to which this client
 is attached to. The format is
 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'. */
@@ -22,9 +21,18 @@ export interface IapClientTimeouts {
   readonly delete?: string;
 }
 
+function iapClientTimeoutsToTerraform(struct?: IapClientTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class IapClient extends TerraformResource {
+export class IapClient extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -113,9 +121,9 @@ export class IapClient extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      brand: this._brand,
-      display_name: this._displayName,
-      timeouts: this._timeouts,
+      brand: cdktf.stringToTerraform(this._brand),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      timeouts: iapClientTimeoutsToTerraform(this._timeouts),
     };
   }
 }

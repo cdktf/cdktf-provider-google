@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleKmsCryptoKeyConfig extends TerraformMetaArguments {
+export interface DataGoogleKmsCryptoKeyConfig extends cdktf.TerraformMetaArguments {
   /** The KeyRing that this key belongs to.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''. */
   readonly keyRing: string;
   /** The resource name for the CryptoKey. */
   readonly name: string;
 }
-export class DataGoogleKmsCryptoKeyVersionTemplate extends ComplexComputedList {
+export class DataGoogleKmsCryptoKeyVersionTemplate extends cdktf.ComplexComputedList {
 
   // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
@@ -31,7 +28,7 @@ export class DataGoogleKmsCryptoKeyVersionTemplate extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleKmsCryptoKey extends TerraformDataSource {
+export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -76,7 +73,7 @@ export class DataGoogleKmsCryptoKey extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // name - computed: false, optional: false, required: true
@@ -123,8 +120,8 @@ export class DataGoogleKmsCryptoKey extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_ring: this._keyRing,
-      name: this._name,
+      key_ring: cdktf.stringToTerraform(this._keyRing),
+      name: cdktf.stringToTerraform(this._name),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeImageConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeImageConfig extends cdktf.TerraformMetaArguments {
   readonly family?: string;
   readonly filter?: string;
   readonly name?: string;
@@ -17,7 +15,7 @@ export interface DataGoogleComputeImageConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DataGoogleComputeImage extends TerraformDataSource {
+export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -118,7 +116,7 @@ export class DataGoogleComputeImage extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // licenses - computed: true, optional: false, required: false
@@ -194,10 +192,10 @@ export class DataGoogleComputeImage extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      family: this._family,
-      filter: this._filter,
-      name: this._name,
-      project: this._project,
+      family: cdktf.stringToTerraform(this._family),
+      filter: cdktf.stringToTerraform(this._filter),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

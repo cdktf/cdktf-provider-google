@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsKeyRingIamPolicyConfig extends TerraformMetaArguments {
+export interface KmsKeyRingIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly keyRingId: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class KmsKeyRingIamPolicy extends TerraformResource {
+export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class KmsKeyRingIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_ring_id: this._keyRingId,
-      policy_data: this._policyData,
+      key_ring_id: cdktf.stringToTerraform(this._keyRingId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

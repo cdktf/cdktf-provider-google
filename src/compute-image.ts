@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeImageConfig extends TerraformMetaArguments {
+export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. */
   readonly description?: string;
@@ -65,6 +64,14 @@ export interface ComputeImageGuestOsFeatures {
   /** The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS"] */
   readonly type: string;
 }
+
+function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGuestOsFeatures): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ComputeImageRawDisk {
   /** The format used to encode and transmit the block device, which
 should be TAR. This is just a container and transmission format
@@ -79,15 +86,35 @@ You must provide either this property or the sourceDisk property
 but not both. */
   readonly source: string;
 }
+
+function computeImageRawDiskToTerraform(struct?: ComputeImageRawDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container_type: cdktf.stringToTerraform(struct!.containerType),
+    sha1: cdktf.stringToTerraform(struct!.sha1),
+    source: cdktf.stringToTerraform(struct!.source),
+  }
+}
+
 export interface ComputeImageTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeImage extends TerraformResource {
+export class ComputeImage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -359,19 +386,19 @@ export class ComputeImage extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      disk_size_gb: this._diskSizeGb,
-      family: this._family,
-      labels: this._labels,
-      licenses: this._licenses,
-      name: this._name,
-      project: this._project,
-      source_disk: this._sourceDisk,
-      source_image: this._sourceImage,
-      source_snapshot: this._sourceSnapshot,
-      guest_os_features: this._guestOsFeatures,
-      raw_disk: this._rawDisk,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
+      family: cdktf.stringToTerraform(this._family),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      licenses: cdktf.listMapper(cdktf.stringToTerraform)(this._licenses),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      source_disk: cdktf.stringToTerraform(this._sourceDisk),
+      source_image: cdktf.stringToTerraform(this._sourceImage),
+      source_snapshot: cdktf.stringToTerraform(this._sourceSnapshot),
+      guest_os_features: cdktf.listMapper(computeImageGuestOsFeaturesToTerraform)(this._guestOsFeatures),
+      raw_disk: cdktf.listMapper(computeImageRawDiskToTerraform)(this._rawDisk),
+      timeouts: computeImageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

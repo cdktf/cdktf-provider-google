@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleServiceAccountAccessTokenConfig extends TerraformMetaArguments {
+export interface DataGoogleServiceAccountAccessTokenConfig extends cdktf.TerraformMetaArguments {
   readonly delegates?: string[];
   readonly lifetime?: string;
   readonly scopes: string[];
@@ -16,7 +15,7 @@ export interface DataGoogleServiceAccountAccessTokenConfig extends TerraformMeta
 
 // Resource
 
-export class DataGoogleServiceAccountAccessToken extends TerraformDataSource {
+export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class DataGoogleServiceAccountAccessToken extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      delegates: this._delegates,
-      lifetime: this._lifetime,
-      scopes: this._scopes,
-      target_service_account: this._targetServiceAccount,
+      delegates: cdktf.listMapper(cdktf.stringToTerraform)(this._delegates),
+      lifetime: cdktf.stringToTerraform(this._lifetime),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),
     };
   }
 }

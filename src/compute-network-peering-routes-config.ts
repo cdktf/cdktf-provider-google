@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNetworkPeeringRoutesConfigConfig extends TerraformMetaArguments {
+export interface ComputeNetworkPeeringRoutesConfigConfig extends cdktf.TerraformMetaArguments {
   /** Whether to export the custom routes to the peer network. */
   readonly exportCustomRoutes: boolean;
   /** Whether to import the custom routes to the peer network. */
@@ -26,9 +25,19 @@ export interface ComputeNetworkPeeringRoutesConfigTimeouts {
   readonly update?: string;
 }
 
+function computeNetworkPeeringRoutesConfigTimeoutsToTerraform(struct?: ComputeNetworkPeeringRoutesConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeNetworkPeeringRoutesConfig extends TerraformResource {
+export class ComputeNetworkPeeringRoutesConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +161,12 @@ export class ComputeNetworkPeeringRoutesConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      export_custom_routes: this._exportCustomRoutes,
-      import_custom_routes: this._importCustomRoutes,
-      network: this._network,
-      peering: this._peering,
-      project: this._project,
-      timeouts: this._timeouts,
+      export_custom_routes: cdktf.booleanToTerraform(this._exportCustomRoutes),
+      import_custom_routes: cdktf.booleanToTerraform(this._importCustomRoutes),
+      network: cdktf.stringToTerraform(this._network),
+      peering: cdktf.stringToTerraform(this._peering),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeNetworkPeeringRoutesConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

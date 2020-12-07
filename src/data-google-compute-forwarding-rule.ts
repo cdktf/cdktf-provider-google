@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeForwardingRuleConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -24,7 +23,7 @@ This field is not applicable to global forwarding rules. */
 
 // Resource
 
-export class DataGoogleComputeForwardingRule extends TerraformDataSource {
+export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -191,9 +190,9 @@ export class DataGoogleComputeForwardingRule extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

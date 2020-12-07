@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeForwardingRuleConfig extends TerraformMetaArguments {
+export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /** For internal TCP/UDP load balancing (i.e. load balancing scheme is
 INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
@@ -145,9 +144,19 @@ export interface ComputeForwardingRuleTimeouts {
   readonly update?: string;
 }
 
+function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeForwardingRule extends TerraformResource {
+export class ComputeForwardingRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -499,24 +508,24 @@ export class ComputeForwardingRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      all_ports: this._allPorts,
-      allow_global_access: this._allowGlobalAccess,
-      backend_service: this._backendService,
-      description: this._description,
-      ip_address: this._ipAddress,
-      ip_protocol: this._ipProtocol,
-      load_balancing_scheme: this._loadBalancingScheme,
-      name: this._name,
-      network: this._network,
-      network_tier: this._networkTier,
-      port_range: this._portRange,
-      ports: this._ports,
-      project: this._project,
-      region: this._region,
-      service_label: this._serviceLabel,
-      subnetwork: this._subnetwork,
-      target: this._target,
-      timeouts: this._timeouts,
+      all_ports: cdktf.booleanToTerraform(this._allPorts),
+      allow_global_access: cdktf.booleanToTerraform(this._allowGlobalAccess),
+      backend_service: cdktf.stringToTerraform(this._backendService),
+      description: cdktf.stringToTerraform(this._description),
+      ip_address: cdktf.stringToTerraform(this._ipAddress),
+      ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
+      load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      network_tier: cdktf.stringToTerraform(this._networkTier),
+      port_range: cdktf.stringToTerraform(this._portRange),
+      ports: cdktf.listMapper(cdktf.stringToTerraform)(this._ports),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      service_label: cdktf.stringToTerraform(this._serviceLabel),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
+      target: cdktf.stringToTerraform(this._target),
+      timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

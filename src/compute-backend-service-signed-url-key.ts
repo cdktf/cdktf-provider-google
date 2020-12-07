@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeBackendServiceSignedUrlKeyConfig extends TerraformMetaArguments {
+export interface ComputeBackendServiceSignedUrlKeyConfig extends cdktf.TerraformMetaArguments {
   /** The backend service this signed URL key belongs. */
   readonly backendService: string;
   /** 128-bit key value used for signing the URL. The key value must be a
@@ -24,9 +23,18 @@ export interface ComputeBackendServiceSignedUrlKeyTimeouts {
   readonly delete?: string;
 }
 
+function computeBackendServiceSignedUrlKeyTimeoutsToTerraform(struct?: ComputeBackendServiceSignedUrlKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeBackendServiceSignedUrlKey extends TerraformResource {
+export class ComputeBackendServiceSignedUrlKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -136,11 +144,11 @@ export class ComputeBackendServiceSignedUrlKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_service: this._backendService,
-      key_value: this._keyValue,
-      name: this._name,
-      project: this._project,
-      timeouts: this._timeouts,
+      backend_service: cdktf.stringToTerraform(this._backendService),
+      key_value: cdktf.stringToTerraform(this._keyValue),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeBackendServiceSignedUrlKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

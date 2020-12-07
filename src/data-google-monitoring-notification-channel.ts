@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleMonitoringNotificationChannelConfig extends TerraformMetaArguments {
+export interface DataGoogleMonitoringNotificationChannelConfig extends cdktf.TerraformMetaArguments {
   /** An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters. */
   readonly displayName?: string;
   /** Configuration fields that define the channel and its behavior. The
@@ -25,7 +23,7 @@ the sensitive_labels block, but cannot be configured in both places. */
   /** User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter. */
   readonly userLabels?: { [key: string]: string };
 }
-export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends ComplexComputedList {
+export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends cdktf.ComplexComputedList {
 
   // auth_token - computed: true, optional: false, required: false
   public get authToken() {
@@ -45,7 +43,7 @@ export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends Comp
 
 // Resource
 
-export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource {
+export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -189,11 +187,11 @@ export class DataGoogleMonitoringNotificationChannel extends TerraformDataSource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      labels: this._labels,
-      project: this._project,
-      type: this._type,
-      user_labels: this._userLabels,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      project: cdktf.stringToTerraform(this._project),
+      type: cdktf.stringToTerraform(this._type),
+      user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
     };
   }
 }

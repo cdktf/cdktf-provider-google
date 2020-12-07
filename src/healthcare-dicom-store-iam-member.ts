@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareDicomStoreIamMemberConfig extends TerraformMetaArguments {
+export interface HealthcareDicomStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly dicomStoreId: string;
   readonly member: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface HealthcareDicomStoreIamMemberCondition {
   readonly title: string;
 }
 
+function healthcareDicomStoreIamMemberConditionToTerraform(struct?: HealthcareDicomStoreIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class HealthcareDicomStoreIamMember extends TerraformResource {
+export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class HealthcareDicomStoreIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dicom_store_id: this._dicomStoreId,
-      member: this._member,
-      role: this._role,
-      condition: this._condition,
+      dicom_store_id: cdktf.stringToTerraform(this._dicomStoreId),
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(healthcareDicomStoreIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

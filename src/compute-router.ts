@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRouterConfig extends TerraformMetaArguments {
+export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Name of the resource. The name must be 1-63 characters long, and
@@ -34,6 +33,15 @@ export interface ComputeRouterBgpAdvertisedIpRanges {
 CIDR-formatted string. */
   readonly range: string;
 }
+
+function computeRouterBgpAdvertisedIpRangesToTerraform(struct?: ComputeRouterBgpAdvertisedIpRanges): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    range: cdktf.stringToTerraform(struct!.range),
+  }
+}
+
 export interface ComputeRouterBgp {
   /** User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"] */
   readonly advertiseMode?: string;
@@ -53,15 +61,36 @@ will have the same local ASN. */
   /** advertised_ip_ranges block */
   readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[];
 }
+
+function computeRouterBgpToTerraform(struct?: ComputeRouterBgp): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    advertise_mode: cdktf.stringToTerraform(struct!.advertiseMode),
+    advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.advertisedGroups),
+    asn: cdktf.numberToTerraform(struct!.asn),
+    advertised_ip_ranges: cdktf.listMapper(computeRouterBgpAdvertisedIpRangesToTerraform)(struct!.advertisedIpRanges),
+  }
+}
+
 export interface ComputeRouterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRouter extends TerraformResource {
+export class ComputeRouter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -218,13 +247,13 @@ export class ComputeRouter extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      network: this._network,
-      project: this._project,
-      region: this._region,
-      bgp: this._bgp,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      bgp: cdktf.listMapper(computeRouterBgpToTerraform)(this._bgp),
+      timeouts: computeRouterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

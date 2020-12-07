@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FolderOrganizationPolicyConfig extends TerraformMetaArguments {
+export interface FolderOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
   readonly constraint: string;
   /** The resource name of the folder to set the policy for. Its format is folders/{folder_id}. */
@@ -27,18 +26,44 @@ export interface FolderOrganizationPolicyBooleanPolicy {
   /** If true, then the Policy is enforced. If false, then any configuration is acceptable. */
   readonly enforced: boolean;
 }
+
+function folderOrganizationPolicyBooleanPolicyToTerraform(struct?: FolderOrganizationPolicyBooleanPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enforced: cdktf.booleanToTerraform(struct!.enforced),
+  }
+}
+
 export interface FolderOrganizationPolicyListPolicyAllow {
   /** The policy allows or denies all values. */
   readonly all?: boolean;
   /** The policy can define specific values that are allowed or denied. */
   readonly values?: string[];
 }
+
+function folderOrganizationPolicyListPolicyAllowToTerraform(struct?: FolderOrganizationPolicyListPolicyAllow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    all: cdktf.booleanToTerraform(struct!.all),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface FolderOrganizationPolicyListPolicyDeny {
   /** The policy allows or denies all values. */
   readonly all?: boolean;
   /** The policy can define specific values that are allowed or denied. */
   readonly values?: string[];
 }
+
+function folderOrganizationPolicyListPolicyDenyToTerraform(struct?: FolderOrganizationPolicyListPolicyDeny): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    all: cdktf.booleanToTerraform(struct!.all),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface FolderOrganizationPolicyListPolicy {
   /** If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. */
   readonly inheritFromParent?: boolean;
@@ -49,10 +74,29 @@ export interface FolderOrganizationPolicyListPolicy {
   /** deny block */
   readonly deny?: FolderOrganizationPolicyListPolicyDeny[];
 }
+
+function folderOrganizationPolicyListPolicyToTerraform(struct?: FolderOrganizationPolicyListPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    inherit_from_parent: cdktf.booleanToTerraform(struct!.inheritFromParent),
+    suggested_value: cdktf.stringToTerraform(struct!.suggestedValue),
+    allow: cdktf.listMapper(folderOrganizationPolicyListPolicyAllowToTerraform)(struct!.allow),
+    deny: cdktf.listMapper(folderOrganizationPolicyListPolicyDenyToTerraform)(struct!.deny),
+  }
+}
+
 export interface FolderOrganizationPolicyRestorePolicy {
   /** May only be set to true. If set, then the default Policy is restored. */
   readonly default: boolean;
 }
+
+function folderOrganizationPolicyRestorePolicyToTerraform(struct?: FolderOrganizationPolicyRestorePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default: cdktf.booleanToTerraform(struct!.default),
+  }
+}
+
 export interface FolderOrganizationPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -60,9 +104,20 @@ export interface FolderOrganizationPolicyTimeouts {
   readonly update?: string;
 }
 
+function folderOrganizationPolicyTimeoutsToTerraform(struct?: FolderOrganizationPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FolderOrganizationPolicy extends TerraformResource {
+export class FolderOrganizationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -219,13 +274,13 @@ export class FolderOrganizationPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      constraint: this._constraint,
-      folder: this._folder,
-      version: this._version,
-      boolean_policy: this._booleanPolicy,
-      list_policy: this._listPolicy,
-      restore_policy: this._restorePolicy,
-      timeouts: this._timeouts,
+      constraint: cdktf.stringToTerraform(this._constraint),
+      folder: cdktf.stringToTerraform(this._folder),
+      version: cdktf.numberToTerraform(this._version),
+      boolean_policy: cdktf.listMapper(folderOrganizationPolicyBooleanPolicyToTerraform)(this._booleanPolicy),
+      list_policy: cdktf.listMapper(folderOrganizationPolicyListPolicyToTerraform)(this._listPolicy),
+      restore_policy: cdktf.listMapper(folderOrganizationPolicyRestorePolicyToTerraform)(this._restorePolicy),
+      timeouts: folderOrganizationPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

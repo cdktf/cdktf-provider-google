@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleActiveFolderConfig extends TerraformMetaArguments {
+export interface DataGoogleActiveFolderConfig extends cdktf.TerraformMetaArguments {
   readonly displayName: string;
   readonly parent: string;
 }
 
 // Resource
 
-export class DataGoogleActiveFolder extends TerraformDataSource {
+export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class DataGoogleActiveFolder extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      parent: this._parent,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      parent: cdktf.stringToTerraform(this._parent),
     };
   }
 }

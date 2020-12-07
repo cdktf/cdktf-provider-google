@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNetworkConfig extends TerraformMetaArguments {
+export interface ComputeNetworkConfig extends cdktf.TerraformMetaArguments {
   /** When set to 'true', the network is created in "auto subnet mode" and
 it will create a subnet for each region automatically across the
 '10.128.0.0/9' address range.
@@ -46,9 +45,19 @@ export interface ComputeNetworkTimeouts {
   readonly update?: string;
 }
 
+function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeNetwork extends TerraformResource {
+export class ComputeNetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -225,14 +234,14 @@ export class ComputeNetwork extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_create_subnetworks: this._autoCreateSubnetworks,
-      delete_default_routes_on_create: this._deleteDefaultRoutesOnCreate,
-      description: this._description,
-      mtu: this._mtu,
-      name: this._name,
-      project: this._project,
-      routing_mode: this._routingMode,
-      timeouts: this._timeouts,
+      auto_create_subnetworks: cdktf.booleanToTerraform(this._autoCreateSubnetworks),
+      delete_default_routes_on_create: cdktf.booleanToTerraform(this._deleteDefaultRoutesOnCreate),
+      description: cdktf.stringToTerraform(this._description),
+      mtu: cdktf.numberToTerraform(this._mtu),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      routing_mode: cdktf.stringToTerraform(this._routingMode),
+      timeouts: computeNetworkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,19 +2,16 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGooglePubsubTopicConfig extends TerraformMetaArguments {
+export interface DataGooglePubsubTopicConfig extends cdktf.TerraformMetaArguments {
   /** Name of the topic. */
   readonly name: string;
   readonly project?: string;
 }
-export class DataGooglePubsubTopicMessageStoragePolicy extends ComplexComputedList {
+export class DataGooglePubsubTopicMessageStoragePolicy extends cdktf.ComplexComputedList {
 
   // allowed_persistence_regions - computed: true, optional: false, required: false
   public get allowedPersistenceRegions() {
@@ -24,7 +21,7 @@ export class DataGooglePubsubTopicMessageStoragePolicy extends ComplexComputedLi
 
 // Resource
 
-export class DataGooglePubsubTopic extends TerraformDataSource {
+export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -61,7 +58,7 @@ export class DataGooglePubsubTopic extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // message_storage_policy - computed: true, optional: false, required: false
@@ -104,8 +101,8 @@ export class DataGooglePubsubTopic extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

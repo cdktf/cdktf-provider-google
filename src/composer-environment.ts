@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComposerEnvironmentConfig extends TerraformMetaArguments {
+export interface ComposerEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /** User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be <= 128 bytes in size. */
   readonly labels?: { [key: string]: string };
   /** Name of the environment. */
@@ -28,6 +27,18 @@ export interface ComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
   readonly servicesSecondaryRangeName?: string;
   readonly useIpAliases?: boolean;
 }
+
+function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cluster_ipv4_cidr_block: cdktf.stringToTerraform(struct!.clusterIpv4CidrBlock),
+    cluster_secondary_range_name: cdktf.stringToTerraform(struct!.clusterSecondaryRangeName),
+    services_ipv4_cidr_block: cdktf.stringToTerraform(struct!.servicesIpv4CidrBlock),
+    services_secondary_range_name: cdktf.stringToTerraform(struct!.servicesSecondaryRangeName),
+    use_ip_aliases: cdktf.booleanToTerraform(struct!.useIpAliases),
+  }
+}
+
 export interface ComposerEnvironmentConfigNodeConfig {
   /** The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. */
   readonly diskSizeGb?: number;
@@ -48,6 +59,22 @@ export interface ComposerEnvironmentConfigNodeConfig {
   /** The Compute Engine zone in which to deploy the VMs running the Apache Airflow software, specified as the zone name or relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project and region. */
   readonly zone: string;
 }
+
+function composerEnvironmentConfigNodeConfigToTerraform(struct?: ComposerEnvironmentConfigNodeConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    ip_allocation_policy: cdktf.listMapper(composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform)(struct!.ipAllocationPolicy),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    network: cdktf.stringToTerraform(struct!.network),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
+    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    zone: cdktf.stringToTerraform(struct!.zone),
+  }
+}
+
 export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   /** The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block. */
   readonly cloudSqlIpv4CidrBlock?: string;
@@ -58,6 +85,17 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   /** The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. */
   readonly webServerIpv4CidrBlock?: string;
 }
+
+function composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct?: ComposerEnvironmentConfigPrivateEnvironmentConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloud_sql_ipv4_cidr_block: cdktf.stringToTerraform(struct!.cloudSqlIpv4CidrBlock),
+    enable_private_endpoint: cdktf.booleanToTerraform(struct!.enablePrivateEndpoint),
+    master_ipv4_cidr_block: cdktf.stringToTerraform(struct!.masterIpv4CidrBlock),
+    web_server_ipv4_cidr_block: cdktf.stringToTerraform(struct!.webServerIpv4CidrBlock),
+  }
+}
+
 export interface ComposerEnvironmentConfigSoftwareConfig {
   /** Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and cannot contain "=" or ";". Section and property names cannot contain characters: "." Apache Airflow configuration property names must be written in snake_case. Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are blacklisted, and cannot be overridden. */
   readonly airflowConfigOverrides?: { [key: string]: string };
@@ -70,6 +108,18 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   /** The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated. */
   readonly pythonVersion?: string;
 }
+
+function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: ComposerEnvironmentConfigSoftwareConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    airflow_config_overrides: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.airflowConfigOverrides),
+    env_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.envVariables),
+    image_version: cdktf.stringToTerraform(struct!.imageVersion),
+    pypi_packages: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.pypiPackages),
+    python_version: cdktf.stringToTerraform(struct!.pythonVersion),
+  }
+}
+
 export interface ComposerEnvironmentConfigA {
   /** The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. */
   readonly nodeCount?: number;
@@ -80,15 +130,36 @@ export interface ComposerEnvironmentConfigA {
   /** software_config block */
   readonly softwareConfig?: ComposerEnvironmentConfigSoftwareConfig[];
 }
+
+function composerEnvironmentConfigAToTerraform(struct?: ComposerEnvironmentConfigA): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    node_count: cdktf.numberToTerraform(struct!.nodeCount),
+    node_config: cdktf.listMapper(composerEnvironmentConfigNodeConfigToTerraform)(struct!.nodeConfig),
+    private_environment_config: cdktf.listMapper(composerEnvironmentConfigPrivateEnvironmentConfigToTerraform)(struct!.privateEnvironmentConfig),
+    software_config: cdktf.listMapper(composerEnvironmentConfigSoftwareConfigToTerraform)(struct!.softwareConfig),
+  }
+}
+
 export interface ComposerEnvironmentTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComposerEnvironment extends TerraformResource {
+export class ComposerEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -221,12 +292,12 @@ export class ComposerEnvironment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      config: this._config,
-      timeouts: this._timeouts,
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      config: cdktf.listMapper(composerEnvironmentConfigAToTerraform)(this._config),
+      timeouts: composerEnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }
