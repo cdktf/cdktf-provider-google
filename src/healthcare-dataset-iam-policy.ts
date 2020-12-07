@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareDatasetIamPolicyConfig extends TerraformMetaArguments {
+export interface HealthcareDatasetIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly datasetId: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class HealthcareDatasetIamPolicy extends TerraformResource {
+export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class HealthcareDatasetIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      policy_data: this._policyData,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

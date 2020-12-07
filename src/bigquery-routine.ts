@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryRoutineConfig extends TerraformMetaArguments {
+export interface BigqueryRoutineConfig extends cdktf.TerraformMetaArguments {
   /** The ID of the dataset containing this routine */
   readonly datasetId: string;
   /** The body of the routine. For functions, this is the expression in the AS clause.
@@ -58,15 +57,36 @@ the schema as returned by the API. */
   /** The name of this argument. Can be absent for function return argument. */
   readonly name?: string;
 }
+
+function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArguments): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    argument_kind: cdktf.stringToTerraform(struct!.argumentKind),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+    mode: cdktf.stringToTerraform(struct!.mode),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface BigqueryRoutineTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BigqueryRoutine extends TerraformResource {
+export class BigqueryRoutine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -305,18 +325,18 @@ export class BigqueryRoutine extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      definition_body: this._definitionBody,
-      description: this._description,
-      determinism_level: this._determinismLevel,
-      imported_libraries: this._importedLibraries,
-      language: this._language,
-      project: this._project,
-      return_type: this._returnType,
-      routine_id: this._routineId,
-      routine_type: this._routineType,
-      arguments: this._arguments,
-      timeouts: this._timeouts,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      definition_body: cdktf.stringToTerraform(this._definitionBody),
+      description: cdktf.stringToTerraform(this._description),
+      determinism_level: cdktf.stringToTerraform(this._determinismLevel),
+      imported_libraries: cdktf.listMapper(cdktf.stringToTerraform)(this._importedLibraries),
+      language: cdktf.stringToTerraform(this._language),
+      project: cdktf.stringToTerraform(this._project),
+      return_type: cdktf.stringToTerraform(this._returnType),
+      routine_id: cdktf.stringToTerraform(this._routineId),
+      routine_type: cdktf.stringToTerraform(this._routineType),
+      arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform)(this._arguments),
+      timeouts: bigqueryRoutineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionNetworkEndpointGroupConfig extends TerraformMetaArguments {
+export interface ComputeRegionNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. */
   readonly description?: string;
@@ -52,6 +51,16 @@ The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2". */
   readonly version?: string;
 }
+
+function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeRegionNetworkEndpointGroupAppEngine): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service: cdktf.stringToTerraform(struct!.service),
+    url_mask: cdktf.stringToTerraform(struct!.urlMask),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface ComputeRegionNetworkEndpointGroupCloudFunction {
   /** A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
@@ -66,6 +75,15 @@ can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively. */
   readonly urlMask?: string;
 }
+
+function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudFunction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    function: cdktf.stringToTerraform(struct!.function),
+    url_mask: cdktf.stringToTerraform(struct!.urlMask),
+  }
+}
+
 export interface ComputeRegionNetworkEndpointGroupCloudRun {
   /** Cloud Run service is the main resource of Cloud Run.
 The service must be 1-63 characters long, and comply with RFC1035.
@@ -86,14 +104,33 @@ URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="
 and { service="bar2", tag="foo2" } respectively. */
   readonly urlMask?: string;
 }
+
+function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudRun): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service: cdktf.stringToTerraform(struct!.service),
+    tag: cdktf.stringToTerraform(struct!.tag),
+    url_mask: cdktf.stringToTerraform(struct!.urlMask),
+  }
+}
+
 export interface ComputeRegionNetworkEndpointGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionNetworkEndpointGroup extends TerraformResource {
+export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -279,15 +316,15 @@ export class ComputeRegionNetworkEndpointGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      network_endpoint_type: this._networkEndpointType,
-      project: this._project,
-      region: this._region,
-      app_engine: this._appEngine,
-      cloud_function: this._cloudFunction,
-      cloud_run: this._cloudRun,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      network_endpoint_type: cdktf.stringToTerraform(this._networkEndpointType),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      app_engine: cdktf.listMapper(computeRegionNetworkEndpointGroupAppEngineToTerraform)(this._appEngine),
+      cloud_function: cdktf.listMapper(computeRegionNetworkEndpointGroupCloudFunctionToTerraform)(this._cloudFunction),
+      cloud_run: cdktf.listMapper(computeRegionNetworkEndpointGroupCloudRunToTerraform)(this._cloudRun),
+      timeouts: computeRegionNetworkEndpointGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

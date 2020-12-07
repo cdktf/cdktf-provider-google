@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringGroupConfig extends TerraformMetaArguments {
+export interface MonitoringGroupConfig extends cdktf.TerraformMetaArguments {
   /** A user-assigned name for this group, used only for display
 purposes. */
   readonly displayName: string;
@@ -32,9 +31,19 @@ export interface MonitoringGroupTimeouts {
   readonly update?: string;
 }
 
+function monitoringGroupTimeoutsToTerraform(struct?: MonitoringGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringGroup extends TerraformResource {
+export class MonitoringGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -169,12 +178,12 @@ export class MonitoringGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      filter: this._filter,
-      is_cluster: this._isCluster,
-      parent_name: this._parentName,
-      project: this._project,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      filter: cdktf.stringToTerraform(this._filter),
+      is_cluster: cdktf.booleanToTerraform(this._isCluster),
+      parent_name: cdktf.stringToTerraform(this._parentName),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: monitoringGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

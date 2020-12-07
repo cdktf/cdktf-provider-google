@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsKeyRingConfig extends TerraformMetaArguments {
+export interface KmsKeyRingConfig extends cdktf.TerraformMetaArguments {
   /** The location for the KeyRing.
 A full list of valid locations can be found by running 'gcloud kms locations list'. */
   readonly location: string;
@@ -22,9 +21,18 @@ export interface KmsKeyRingTimeouts {
   readonly delete?: string;
 }
 
+function kmsKeyRingTimeoutsToTerraform(struct?: KmsKeyRingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class KmsKeyRing extends TerraformResource {
+export class KmsKeyRing extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -125,10 +133,10 @@ export class KmsKeyRing extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      project: this._project,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: kmsKeyRingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

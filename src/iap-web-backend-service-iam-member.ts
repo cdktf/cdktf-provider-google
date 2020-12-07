@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapWebBackendServiceIamMemberConfig extends TerraformMetaArguments {
+export interface IapWebBackendServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly member: string;
   readonly project?: string;
   readonly role: string;
@@ -21,9 +20,19 @@ export interface IapWebBackendServiceIamMemberCondition {
   readonly title: string;
 }
 
+function iapWebBackendServiceIamMemberConditionToTerraform(struct?: IapWebBackendServiceIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class IapWebBackendServiceIamMember extends TerraformResource {
+export class IapWebBackendServiceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class IapWebBackendServiceIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      web_backend_service: this._webBackendService,
-      condition: this._condition,
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      web_backend_service: cdktf.stringToTerraform(this._webBackendService),
+      condition: cdktf.listMapper(iapWebBackendServiceIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

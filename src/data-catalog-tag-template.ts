@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataCatalogTagTemplateConfig extends TerraformMetaArguments {
+export interface DataCatalogTagTemplateConfig extends cdktf.TerraformMetaArguments {
   /** The display name for this template. */
   readonly displayName?: string;
   /** This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template. */
@@ -26,10 +25,26 @@ export interface DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues {
   /** The display name of the enum value. */
   readonly displayName: string;
 }
+
+function dataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesToTerraform(struct?: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    display_name: cdktf.stringToTerraform(struct!.displayName),
+  }
+}
+
 export interface DataCatalogTagTemplateFieldsTypeEnumType {
   /** allowed_values block */
   readonly allowedValues: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues[];
 }
+
+function dataCatalogTagTemplateFieldsTypeEnumTypeToTerraform(struct?: DataCatalogTagTemplateFieldsTypeEnumType): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_values: cdktf.listMapper(dataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesToTerraform)(struct!.allowedValues),
+  }
+}
+
 export interface DataCatalogTagTemplateFieldsType {
   /** Represents primitive types - string, bool etc.
  Exactly one of 'primitive_type' or 'enum_type' must be set Possible values: ["DOUBLE", "STRING", "BOOL", "TIMESTAMP"] */
@@ -37,6 +52,15 @@ export interface DataCatalogTagTemplateFieldsType {
   /** enum_type block */
   readonly enumType?: DataCatalogTagTemplateFieldsTypeEnumType[];
 }
+
+function dataCatalogTagTemplateFieldsTypeToTerraform(struct?: DataCatalogTagTemplateFieldsType): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    primitive_type: cdktf.stringToTerraform(struct!.primitiveType),
+    enum_type: cdktf.listMapper(dataCatalogTagTemplateFieldsTypeEnumTypeToTerraform)(struct!.enumType),
+  }
+}
+
 export interface DataCatalogTagTemplateFields {
   /** The display name for this field. */
   readonly displayName?: string;
@@ -50,15 +74,37 @@ Multiple fields can have the same order, and field orders within a tag do not ha
   /** type block */
   readonly type: DataCatalogTagTemplateFieldsType[];
 }
+
+function dataCatalogTagTemplateFieldsToTerraform(struct?: DataCatalogTagTemplateFields): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    display_name: cdktf.stringToTerraform(struct!.displayName),
+    field_id: cdktf.stringToTerraform(struct!.fieldId),
+    is_required: cdktf.booleanToTerraform(struct!.isRequired),
+    order: cdktf.numberToTerraform(struct!.order),
+    type: cdktf.listMapper(dataCatalogTagTemplateFieldsTypeToTerraform)(struct!.type),
+  }
+}
+
 export interface DataCatalogTagTemplateTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dataCatalogTagTemplateTimeoutsToTerraform(struct?: DataCatalogTagTemplateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataCatalogTagTemplate extends TerraformResource {
+export class DataCatalogTagTemplate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -210,13 +256,13 @@ export class DataCatalogTagTemplate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      force_delete: this._forceDelete,
-      project: this._project,
-      region: this._region,
-      tag_template_id: this._tagTemplateId,
-      fields: this._fields,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      force_delete: cdktf.booleanToTerraform(this._forceDelete),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      tag_template_id: cdktf.stringToTerraform(this._tagTemplateId),
+      fields: cdktf.listMapper(dataCatalogTagTemplateFieldsToTerraform)(this._fields),
+      timeouts: dataCatalogTagTemplateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

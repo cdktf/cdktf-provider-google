@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PubsubTopicIamBindingConfig extends TerraformMetaArguments {
+export interface PubsubTopicIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly members: string[];
   readonly project?: string;
   readonly role: string;
@@ -21,9 +20,19 @@ export interface PubsubTopicIamBindingCondition {
   readonly title: string;
 }
 
+function pubsubTopicIamBindingConditionToTerraform(struct?: PubsubTopicIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class PubsubTopicIamBinding extends TerraformResource {
+export class PubsubTopicIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class PubsubTopicIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      members: this._members,
-      project: this._project,
-      role: this._role,
-      topic: this._topic,
-      condition: this._condition,
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      topic: cdktf.stringToTerraform(this._topic),
+      condition: cdktf.listMapper(pubsubTopicIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BillingAccountIamMemberConfig extends TerraformMetaArguments {
+export interface BillingAccountIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly billingAccountId: string;
   readonly member: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface BillingAccountIamMemberCondition {
   readonly title: string;
 }
 
+function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class BillingAccountIamMember extends TerraformResource {
+export class BillingAccountIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class BillingAccountIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      billing_account_id: this._billingAccountId,
-      member: this._member,
-      role: this._role,
-      condition: this._condition,
+      billing_account_id: cdktf.stringToTerraform(this._billingAccountId),
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(billingAccountIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

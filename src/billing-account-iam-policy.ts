@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BillingAccountIamPolicyConfig extends TerraformMetaArguments {
+export interface BillingAccountIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly billingAccountId: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class BillingAccountIamPolicy extends TerraformResource {
+export class BillingAccountIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class BillingAccountIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      billing_account_id: this._billingAccountId,
-      policy_data: this._policyData,
+      billing_account_id: cdktf.stringToTerraform(this._billingAccountId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

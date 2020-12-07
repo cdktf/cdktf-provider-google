@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EndpointsServiceIamPolicyConfig extends TerraformMetaArguments {
+export interface EndpointsServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly policyData: string;
   readonly serviceName: string;
 }
 
 // Resource
 
-export class EndpointsServiceIamPolicy extends TerraformResource {
+export class EndpointsServiceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class EndpointsServiceIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      policy_data: this._policyData,
-      service_name: this._serviceName,
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      service_name: cdktf.stringToTerraform(this._serviceName),
     };
   }
 }

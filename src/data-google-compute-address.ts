@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeAddressConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeAddressConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly project?: string;
   readonly region?: string;
@@ -15,7 +14,7 @@ export interface DataGoogleComputeAddressConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DataGoogleComputeAddress extends TerraformDataSource {
+export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -112,9 +111,9 @@ export class DataGoogleComputeAddress extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

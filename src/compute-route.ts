@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRouteConfig extends TerraformMetaArguments {
+export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property
 when you create the resource. */
   readonly description?: string;
@@ -69,9 +68,18 @@ export interface ComputeRouteTimeouts {
   readonly delete?: string;
 }
 
+function computeRouteTimeoutsToTerraform(struct?: ComputeRouteTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeRoute extends TerraformResource {
+export class ComputeRoute extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -344,20 +352,20 @@ export class ComputeRoute extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      dest_range: this._destRange,
-      name: this._name,
-      network: this._network,
-      next_hop_gateway: this._nextHopGateway,
-      next_hop_ilb: this._nextHopIlb,
-      next_hop_instance: this._nextHopInstance,
-      next_hop_instance_zone: this._nextHopInstanceZone,
-      next_hop_ip: this._nextHopIp,
-      next_hop_vpn_tunnel: this._nextHopVpnTunnel,
-      priority: this._priority,
-      project: this._project,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      dest_range: cdktf.stringToTerraform(this._destRange),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      next_hop_gateway: cdktf.stringToTerraform(this._nextHopGateway),
+      next_hop_ilb: cdktf.stringToTerraform(this._nextHopIlb),
+      next_hop_instance: cdktf.stringToTerraform(this._nextHopInstance),
+      next_hop_instance_zone: cdktf.stringToTerraform(this._nextHopInstanceZone),
+      next_hop_ip: cdktf.stringToTerraform(this._nextHopIp),
+      next_hop_vpn_tunnel: cdktf.stringToTerraform(this._nextHopVpnTunnel),
+      priority: cdktf.numberToTerraform(this._priority),
+      project: cdktf.stringToTerraform(this._project),
+      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      timeouts: computeRouteTimeoutsToTerraform(this._timeouts),
     };
   }
 }

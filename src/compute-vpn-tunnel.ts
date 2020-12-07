@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeVpnTunnelConfig extends TerraformMetaArguments {
+export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** IKE protocol version to use when establishing the VPN tunnel with
@@ -68,9 +67,18 @@ export interface ComputeVpnTunnelTimeouts {
   readonly delete?: string;
 }
 
+function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeVpnTunnel extends TerraformResource {
+export class ComputeVpnTunnel extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -412,23 +420,23 @@ export class ComputeVpnTunnel extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      ike_version: this._ikeVersion,
-      local_traffic_selector: this._localTrafficSelector,
-      name: this._name,
-      peer_external_gateway: this._peerExternalGateway,
-      peer_external_gateway_interface: this._peerExternalGatewayInterface,
-      peer_gcp_gateway: this._peerGcpGateway,
-      peer_ip: this._peerIp,
-      project: this._project,
-      region: this._region,
-      remote_traffic_selector: this._remoteTrafficSelector,
-      router: this._router,
-      shared_secret: this._sharedSecret,
-      target_vpn_gateway: this._targetVpnGateway,
-      vpn_gateway: this._vpnGateway,
-      vpn_gateway_interface: this._vpnGatewayInterface,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      ike_version: cdktf.numberToTerraform(this._ikeVersion),
+      local_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform)(this._localTrafficSelector),
+      name: cdktf.stringToTerraform(this._name),
+      peer_external_gateway: cdktf.stringToTerraform(this._peerExternalGateway),
+      peer_external_gateway_interface: cdktf.numberToTerraform(this._peerExternalGatewayInterface),
+      peer_gcp_gateway: cdktf.stringToTerraform(this._peerGcpGateway),
+      peer_ip: cdktf.stringToTerraform(this._peerIp),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      remote_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform)(this._remoteTrafficSelector),
+      router: cdktf.stringToTerraform(this._router),
+      shared_secret: cdktf.stringToTerraform(this._sharedSecret),
+      target_vpn_gateway: cdktf.stringToTerraform(this._targetVpnGateway),
+      vpn_gateway: cdktf.stringToTerraform(this._vpnGateway),
+      vpn_gateway_interface: cdktf.numberToTerraform(this._vpnGatewayInterface),
+      timeouts: computeVpnTunnelTimeoutsToTerraform(this._timeouts),
     };
   }
 }

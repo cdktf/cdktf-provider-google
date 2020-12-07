@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecretManagerSecretConfig extends TerraformMetaArguments {
+export interface SecretManagerSecretConfig extends cdktf.TerraformMetaArguments {
   /** The labels assigned to this Secret.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
@@ -33,25 +32,60 @@ export interface SecretManagerSecretReplicationUserManagedReplicas {
   /** The canonical IDs of the location to replicate data. For example: "us-east1". */
   readonly location: string;
 }
+
+function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+  }
+}
+
 export interface SecretManagerSecretReplicationUserManaged {
   /** replicas block */
   readonly replicas: SecretManagerSecretReplicationUserManagedReplicas[];
 }
+
+function secretManagerSecretReplicationUserManagedToTerraform(struct?: SecretManagerSecretReplicationUserManaged): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    replicas: cdktf.listMapper(secretManagerSecretReplicationUserManagedReplicasToTerraform)(struct!.replicas),
+  }
+}
+
 export interface SecretManagerSecretReplication {
   /** The Secret will automatically be replicated without any restrictions. */
   readonly automatic?: boolean;
   /** user_managed block */
   readonly userManaged?: SecretManagerSecretReplicationUserManaged[];
 }
+
+function secretManagerSecretReplicationToTerraform(struct?: SecretManagerSecretReplication): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    automatic: cdktf.booleanToTerraform(struct!.automatic),
+    user_managed: cdktf.listMapper(secretManagerSecretReplicationUserManagedToTerraform)(struct!.userManaged),
+  }
+}
+
 export interface SecretManagerSecretTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SecretManagerSecret extends TerraformResource {
+export class SecretManagerSecret extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -174,11 +208,11 @@ export class SecretManagerSecret extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      labels: this._labels,
-      project: this._project,
-      secret_id: this._secretId,
-      replication: this._replication,
-      timeouts: this._timeouts,
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      project: cdktf.stringToTerraform(this._project),
+      secret_id: cdktf.stringToTerraform(this._secretId),
+      replication: cdktf.listMapper(secretManagerSecretReplicationToTerraform)(this._replication),
+      timeouts: secretManagerSecretTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeInstanceGroupConfig extends TerraformMetaArguments {
+export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   /** An optional textual description of the instance group. */
   readonly description?: string;
   /** List of instances in the group. They should be given as self_link URLs. When adding instances they must all be in the same network and zone as the instance group. */
@@ -31,15 +30,34 @@ export interface ComputeInstanceGroupNamedPort {
   /** The port number to map the name to. */
   readonly port: number;
 }
+
+function computeInstanceGroupNamedPortToTerraform(struct?: ComputeInstanceGroupNamedPort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    port: cdktf.numberToTerraform(struct!.port),
+  }
+}
+
 export interface ComputeInstanceGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeInstanceGroupTimeoutsToTerraform(struct?: ComputeInstanceGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeInstanceGroup extends TerraformResource {
+export class ComputeInstanceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -216,14 +234,14 @@ export class ComputeInstanceGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      instances: this._instances,
-      name: this._name,
-      network: this._network,
-      project: this._project,
-      zone: this._zone,
-      named_port: this._namedPort,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      instances: cdktf.listMapper(cdktf.stringToTerraform)(this._instances),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
+      named_port: cdktf.listMapper(computeInstanceGroupNamedPortToTerraform)(this._namedPort),
+      timeouts: computeInstanceGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

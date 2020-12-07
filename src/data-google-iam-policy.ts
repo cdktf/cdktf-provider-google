@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleIamPolicyConfig extends TerraformMetaArguments {
+export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /** audit_config block */
   readonly auditConfig?: DataGoogleIamPolicyAuditConfig[];
   /** binding block */
@@ -17,16 +16,44 @@ export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
   readonly exemptedMembers?: string[];
   readonly logType: string;
 }
+
+function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataGoogleIamPolicyAuditConfigAuditLogConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exempted_members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exemptedMembers),
+    log_type: cdktf.stringToTerraform(struct!.logType),
+  }
+}
+
 export interface DataGoogleIamPolicyAuditConfig {
   readonly service: string;
   /** audit_log_configs block */
   readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[];
 }
+
+function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyAuditConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service: cdktf.stringToTerraform(struct!.service),
+    audit_log_configs: cdktf.listMapper(dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform)(struct!.auditLogConfigs),
+  }
+}
+
 export interface DataGoogleIamPolicyBindingCondition {
   readonly description?: string;
   readonly expression: string;
   readonly title: string;
 }
+
+function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPolicyBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
 export interface DataGoogleIamPolicyBinding {
   readonly members: string[];
   readonly role: string;
@@ -34,9 +61,19 @@ export interface DataGoogleIamPolicyBinding {
   readonly condition?: DataGoogleIamPolicyBindingCondition[];
 }
 
+function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBinding): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.members),
+    role: cdktf.stringToTerraform(struct!.role),
+    condition: cdktf.listMapper(dataGoogleIamPolicyBindingConditionToTerraform)(struct!.condition),
+  }
+}
+
+
 // Resource
 
-export class DataGoogleIamPolicy extends TerraformDataSource {
+export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -109,8 +146,8 @@ export class DataGoogleIamPolicy extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      audit_config: this._auditConfig,
-      binding: this._binding,
+      audit_config: cdktf.listMapper(dataGoogleIamPolicyAuditConfigToTerraform)(this._auditConfig),
+      binding: cdktf.listMapper(dataGoogleIamPolicyBindingToTerraform)(this._binding),
     };
   }
 }

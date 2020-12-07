@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataprocJobConfig extends TerraformMetaArguments {
+export interface DataprocJobConfig extends cdktf.TerraformMetaArguments {
   /** By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete. */
   readonly forceDelete?: boolean;
   /** Optional. The labels to associate with this job. */
@@ -38,7 +36,7 @@ export interface DataprocJobConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: DataprocJobTimeouts;
 }
-export class DataprocJobStatus extends ComplexComputedList {
+export class DataprocJobStatus extends cdktf.ComplexComputedList {
 
   // details - computed: true, optional: false, required: false
   public get details() {
@@ -64,6 +62,14 @@ export interface DataprocJobHadoopConfigLoggingConfig {
   /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
   readonly driverLogLevels: { [key: string]: string };
 }
+
+function dataprocJobHadoopConfigLoggingConfigToTerraform(struct?: DataprocJobHadoopConfigLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    driver_log_levels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.driverLogLevels),
+  }
+}
+
 export interface DataprocJobHadoopConfig {
   /** HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip. */
   readonly archiveUris?: string[];
@@ -82,6 +88,21 @@ export interface DataprocJobHadoopConfig {
   /** logging_config block */
   readonly loggingConfig?: DataprocJobHadoopConfigLoggingConfig[];
 }
+
+function dataprocJobHadoopConfigToTerraform(struct?: DataprocJobHadoopConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    archive_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.archiveUris),
+    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    main_class: cdktf.stringToTerraform(struct!.mainClass),
+    main_jar_file_uri: cdktf.stringToTerraform(struct!.mainJarFileUri),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    logging_config: cdktf.listMapper(dataprocJobHadoopConfigLoggingConfigToTerraform)(struct!.loggingConfig),
+  }
+}
+
 export interface DataprocJobHiveConfig {
   /** Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false. */
   readonly continueOnFailure?: boolean;
@@ -96,10 +117,31 @@ export interface DataprocJobHiveConfig {
   /** Mapping of query variable names to values (equivalent to the Hive command: SET name="value";). */
   readonly scriptVariables?: { [key: string]: string };
 }
+
+function dataprocJobHiveConfigToTerraform(struct?: DataprocJobHiveConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    continue_on_failure: cdktf.booleanToTerraform(struct!.continueOnFailure),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    script_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.scriptVariables),
+  }
+}
+
 export interface DataprocJobPigConfigLoggingConfig {
   /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
   readonly driverLogLevels: { [key: string]: string };
 }
+
+function dataprocJobPigConfigLoggingConfigToTerraform(struct?: DataprocJobPigConfigLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    driver_log_levels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.driverLogLevels),
+  }
+}
+
 export interface DataprocJobPigConfig {
   /** Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false. */
   readonly continueOnFailure?: boolean;
@@ -116,14 +158,44 @@ export interface DataprocJobPigConfig {
   /** logging_config block */
   readonly loggingConfig?: DataprocJobPigConfigLoggingConfig[];
 }
+
+function dataprocJobPigConfigToTerraform(struct?: DataprocJobPigConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    continue_on_failure: cdktf.booleanToTerraform(struct!.continueOnFailure),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    script_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.scriptVariables),
+    logging_config: cdktf.listMapper(dataprocJobPigConfigLoggingConfigToTerraform)(struct!.loggingConfig),
+  }
+}
+
 export interface DataprocJobPlacement {
   /** The name of the cluster where the job will be submitted */
   readonly clusterName: string;
 }
+
+function dataprocJobPlacementToTerraform(struct?: DataprocJobPlacement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cluster_name: cdktf.stringToTerraform(struct!.clusterName),
+  }
+}
+
 export interface DataprocJobPysparkConfigLoggingConfig {
   /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
   readonly driverLogLevels: { [key: string]: string };
 }
+
+function dataprocJobPysparkConfigLoggingConfigToTerraform(struct?: DataprocJobPysparkConfigLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    driver_log_levels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.driverLogLevels),
+  }
+}
+
 export interface DataprocJobPysparkConfig {
   /** Optional. HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip */
   readonly archiveUris?: string[];
@@ -142,18 +214,57 @@ export interface DataprocJobPysparkConfig {
   /** logging_config block */
   readonly loggingConfig?: DataprocJobPysparkConfigLoggingConfig[];
 }
+
+function dataprocJobPysparkConfigToTerraform(struct?: DataprocJobPysparkConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    archive_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.archiveUris),
+    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    main_python_file_uri: cdktf.stringToTerraform(struct!.mainPythonFileUri),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    python_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pythonFileUris),
+    logging_config: cdktf.listMapper(dataprocJobPysparkConfigLoggingConfigToTerraform)(struct!.loggingConfig),
+  }
+}
+
 export interface DataprocJobReference {
   /** The job ID, which must be unique within the project. The job ID is generated by the server upon job submission or provided by the user as a means to perform retries without creating duplicate jobs */
   readonly jobId?: string;
 }
+
+function dataprocJobReferenceToTerraform(struct?: DataprocJobReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    job_id: cdktf.stringToTerraform(struct!.jobId),
+  }
+}
+
 export interface DataprocJobScheduling {
   /** Maximum number of times per hour a driver may be restarted as a result of driver terminating with non-zero code before job is reported failed. */
   readonly maxFailuresPerHour: number;
 }
+
+function dataprocJobSchedulingToTerraform(struct?: DataprocJobScheduling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_failures_per_hour: cdktf.numberToTerraform(struct!.maxFailuresPerHour),
+  }
+}
+
 export interface DataprocJobSparkConfigLoggingConfig {
   /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
   readonly driverLogLevels: { [key: string]: string };
 }
+
+function dataprocJobSparkConfigLoggingConfigToTerraform(struct?: DataprocJobSparkConfigLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    driver_log_levels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.driverLogLevels),
+  }
+}
+
 export interface DataprocJobSparkConfig {
   /** HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip. */
   readonly archiveUris?: string[];
@@ -172,10 +283,33 @@ export interface DataprocJobSparkConfig {
   /** logging_config block */
   readonly loggingConfig?: DataprocJobSparkConfigLoggingConfig[];
 }
+
+function dataprocJobSparkConfigToTerraform(struct?: DataprocJobSparkConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    archive_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.archiveUris),
+    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    main_class: cdktf.stringToTerraform(struct!.mainClass),
+    main_jar_file_uri: cdktf.stringToTerraform(struct!.mainJarFileUri),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    logging_config: cdktf.listMapper(dataprocJobSparkConfigLoggingConfigToTerraform)(struct!.loggingConfig),
+  }
+}
+
 export interface DataprocJobSparksqlConfigLoggingConfig {
   /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
   readonly driverLogLevels: { [key: string]: string };
 }
+
+function dataprocJobSparksqlConfigLoggingConfigToTerraform(struct?: DataprocJobSparksqlConfigLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    driver_log_levels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.driverLogLevels),
+  }
+}
+
 export interface DataprocJobSparksqlConfig {
   /** HCFS URIs of jar files to be added to the Spark CLASSPATH. */
   readonly jarFileUris?: string[];
@@ -190,14 +324,36 @@ export interface DataprocJobSparksqlConfig {
   /** logging_config block */
   readonly loggingConfig?: DataprocJobSparksqlConfigLoggingConfig[];
 }
+
+function dataprocJobSparksqlConfigToTerraform(struct?: DataprocJobSparksqlConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    script_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.scriptVariables),
+    logging_config: cdktf.listMapper(dataprocJobSparksqlConfigLoggingConfigToTerraform)(struct!.loggingConfig),
+  }
+}
+
 export interface DataprocJobTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function dataprocJobTimeoutsToTerraform(struct?: DataprocJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class DataprocJob extends TerraformResource {
+export class DataprocJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -481,20 +637,20 @@ export class DataprocJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      force_delete: this._forceDelete,
-      labels: this._labels,
-      project: this._project,
-      region: this._region,
-      hadoop_config: this._hadoopConfig,
-      hive_config: this._hiveConfig,
-      pig_config: this._pigConfig,
-      placement: this._placement,
-      pyspark_config: this._pysparkConfig,
-      reference: this._reference,
-      scheduling: this._scheduling,
-      spark_config: this._sparkConfig,
-      sparksql_config: this._sparksqlConfig,
-      timeouts: this._timeouts,
+      force_delete: cdktf.booleanToTerraform(this._forceDelete),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      hadoop_config: cdktf.listMapper(dataprocJobHadoopConfigToTerraform)(this._hadoopConfig),
+      hive_config: cdktf.listMapper(dataprocJobHiveConfigToTerraform)(this._hiveConfig),
+      pig_config: cdktf.listMapper(dataprocJobPigConfigToTerraform)(this._pigConfig),
+      placement: cdktf.listMapper(dataprocJobPlacementToTerraform)(this._placement),
+      pyspark_config: cdktf.listMapper(dataprocJobPysparkConfigToTerraform)(this._pysparkConfig),
+      reference: cdktf.listMapper(dataprocJobReferenceToTerraform)(this._reference),
+      scheduling: cdktf.listMapper(dataprocJobSchedulingToTerraform)(this._scheduling),
+      spark_config: cdktf.listMapper(dataprocJobSparkConfigToTerraform)(this._sparkConfig),
+      sparksql_config: cdktf.listMapper(dataprocJobSparksqlConfigToTerraform)(this._sparksqlConfig),
+      timeouts: dataprocJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeGlobalNetworkEndpointGroupConfig extends TerraformMetaArguments {
+export interface ComputeGlobalNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /** The default port used if the port number is not specified in the
 network endpoint. */
   readonly defaultPort?: number;
@@ -33,9 +32,18 @@ export interface ComputeGlobalNetworkEndpointGroupTimeouts {
   readonly delete?: string;
 }
 
+function computeGlobalNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeGlobalNetworkEndpointGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeGlobalNetworkEndpointGroup extends TerraformResource {
+export class ComputeGlobalNetworkEndpointGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,12 +178,12 @@ export class ComputeGlobalNetworkEndpointGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      default_port: this._defaultPort,
-      description: this._description,
-      name: this._name,
-      network_endpoint_type: this._networkEndpointType,
-      project: this._project,
-      timeouts: this._timeouts,
+      default_port: cdktf.numberToTerraform(this._defaultPort),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      network_endpoint_type: cdktf.stringToTerraform(this._networkEndpointType),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeGlobalNetworkEndpointGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

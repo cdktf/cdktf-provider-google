@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerRegistryConfig extends TerraformMetaArguments {
+export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /** The location of the registry. One of ASIA, EU, US or not specified. See the official documentation for more information on registry locations. */
   readonly location?: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
@@ -16,7 +15,7 @@ export interface ContainerRegistryConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class ContainerRegistry extends TerraformResource {
+export class ContainerRegistry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -89,8 +88,8 @@ export class ContainerRegistry extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      project: this._project,
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

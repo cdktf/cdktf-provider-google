@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingOrganizationExclusionConfig extends TerraformMetaArguments {
+export interface LoggingOrganizationExclusionConfig extends cdktf.TerraformMetaArguments {
   /** A human-readable description. */
   readonly description?: string;
   /** Whether this exclusion rule should be disabled or not. This defaults to false. */
@@ -21,7 +20,7 @@ export interface LoggingOrganizationExclusionConfig extends TerraformMetaArgumen
 
 // Resource
 
-export class LoggingOrganizationExclusion extends TerraformResource {
+export class LoggingOrganizationExclusion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +130,11 @@ export class LoggingOrganizationExclusion extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      disabled: this._disabled,
-      filter: this._filter,
-      name: this._name,
-      org_id: this._orgId,
+      description: cdktf.stringToTerraform(this._description),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      filter: cdktf.stringToTerraform(this._filter),
+      name: cdktf.stringToTerraform(this._name),
+      org_id: cdktf.stringToTerraform(this._orgId),
     };
   }
 }

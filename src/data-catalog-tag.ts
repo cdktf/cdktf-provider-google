@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataCatalogTagConfig extends TerraformMetaArguments {
+export interface DataCatalogTagConfig extends cdktf.TerraformMetaArguments {
   /** Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 
@@ -39,15 +38,38 @@ export interface DataCatalogTagFields {
   /** Holds the value for a tag field with timestamp type. */
   readonly timestampValue?: string;
 }
+
+function dataCatalogTagFieldsToTerraform(struct?: DataCatalogTagFields): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bool_value: cdktf.booleanToTerraform(struct!.boolValue),
+    double_value: cdktf.numberToTerraform(struct!.doubleValue),
+    enum_value: cdktf.stringToTerraform(struct!.enumValue),
+    field_name: cdktf.stringToTerraform(struct!.fieldName),
+    string_value: cdktf.stringToTerraform(struct!.stringValue),
+    timestamp_value: cdktf.stringToTerraform(struct!.timestampValue),
+  }
+}
+
 export interface DataCatalogTagTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataCatalogTag extends TerraformResource {
+export class DataCatalogTag extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,11 +192,11 @@ export class DataCatalogTag extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      column: this._column,
-      parent: this._parent,
-      template: this._template,
-      fields: this._fields,
-      timeouts: this._timeouts,
+      column: cdktf.stringToTerraform(this._column),
+      parent: cdktf.stringToTerraform(this._parent),
+      template: cdktf.stringToTerraform(this._template),
+      fields: cdktf.listMapper(dataCatalogTagFieldsToTerraform)(this._fields),
+      timeouts: dataCatalogTagTimeoutsToTerraform(this._timeouts),
     };
   }
 }

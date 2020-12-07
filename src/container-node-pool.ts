@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerNodePoolConfig extends TerraformMetaArguments {
+export interface ContainerNodePoolConfig extends cdktf.TerraformMetaArguments {
   /** The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters. */
   readonly cluster: string;
   /** The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Changing this will force recreation of the resource. */
@@ -45,28 +44,82 @@ export interface ContainerNodePoolAutoscaling {
   /** Minimum number of nodes in the NodePool. Must be >=0 and <= max_node_count. */
   readonly minNodeCount: number;
 }
+
+function containerNodePoolAutoscalingToTerraform(struct?: ContainerNodePoolAutoscaling): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
+    min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
+  }
+}
+
 export interface ContainerNodePoolManagement {
   /** Whether the nodes will be automatically repaired. */
   readonly autoRepair?: boolean;
   /** Whether the nodes will be automatically upgraded. */
   readonly autoUpgrade?: boolean;
 }
+
+function containerNodePoolManagementToTerraform(struct?: ContainerNodePoolManagement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_repair: cdktf.booleanToTerraform(struct!.autoRepair),
+    auto_upgrade: cdktf.booleanToTerraform(struct!.autoUpgrade),
+  }
+}
+
 export interface ContainerNodePoolNodeConfigGuestAccelerator {
   readonly count?: number;
   readonly type?: string;
 }
+
+function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: ContainerNodePoolNodeConfigGuestAccelerator): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ContainerNodePoolNodeConfigTaint {
   readonly effect?: string;
   readonly key?: string;
   readonly value?: string;
 }
+
+function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolNodeConfigTaint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    effect: cdktf.stringToTerraform(struct!.effect),
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
   readonly enableIntegrityMonitoring?: boolean;
   readonly enableSecureBoot?: boolean;
 }
+
+function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerNodePoolNodeConfigShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+  }
+}
+
 export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
   readonly nodeMetadata: string;
 }
+
+function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerNodePoolNodeConfigWorkloadMetadataConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
+  }
+}
+
 export interface ContainerNodePoolNodeConfig {
   readonly diskSizeGb?: number;
   readonly diskType?: string;
@@ -87,11 +140,44 @@ export interface ContainerNodePoolNodeConfig {
   /** workload_metadata_config block */
   readonly workloadMetadataConfig?: ContainerNodePoolNodeConfigWorkloadMetadataConfig[];
 }
+
+function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoolNodeConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    disk_type: cdktf.stringToTerraform(struct!.diskType),
+    guest_accelerator: cdktf.listMapper(containerNodePoolNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
+    image_type: cdktf.stringToTerraform(struct!.imageType),
+    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform)(struct!.taint),
+    shielded_instance_config: cdktf.listMapper(containerNodePoolNodeConfigShieldedInstanceConfigToTerraform)(struct!.shieldedInstanceConfig),
+    workload_metadata_config: cdktf.listMapper(containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform)(struct!.workloadMetadataConfig),
+  }
+}
+
 export interface ContainerNodePoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ContainerNodePoolUpgradeSettings {
   /** The number of additional nodes that can be added to the node pool during an upgrade. Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater. */
   readonly maxSurge: number;
@@ -99,9 +185,18 @@ export interface ContainerNodePoolUpgradeSettings {
   readonly maxUnavailable: number;
 }
 
+function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNodePoolUpgradeSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_surge: cdktf.numberToTerraform(struct!.maxSurge),
+    max_unavailable: cdktf.numberToTerraform(struct!.maxUnavailable),
+  }
+}
+
+
 // Resource
 
-export class ContainerNodePool extends TerraformResource {
+export class ContainerNodePool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -392,21 +487,21 @@ export class ContainerNodePool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster: this._cluster,
-      initial_node_count: this._initialNodeCount,
-      location: this._location,
-      max_pods_per_node: this._maxPodsPerNode,
-      name: this._name,
-      name_prefix: this._namePrefix,
-      node_count: this._nodeCount,
-      node_locations: this._nodeLocations,
-      project: this._project,
-      version: this._version,
-      autoscaling: this._autoscaling,
-      management: this._management,
-      node_config: this._nodeConfig,
-      timeouts: this._timeouts,
-      upgrade_settings: this._upgradeSettings,
+      cluster: cdktf.stringToTerraform(this._cluster),
+      initial_node_count: cdktf.numberToTerraform(this._initialNodeCount),
+      location: cdktf.stringToTerraform(this._location),
+      max_pods_per_node: cdktf.numberToTerraform(this._maxPodsPerNode),
+      name: cdktf.stringToTerraform(this._name),
+      name_prefix: cdktf.stringToTerraform(this._namePrefix),
+      node_count: cdktf.numberToTerraform(this._nodeCount),
+      node_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeLocations),
+      project: cdktf.stringToTerraform(this._project),
+      version: cdktf.stringToTerraform(this._version),
+      autoscaling: cdktf.listMapper(containerNodePoolAutoscalingToTerraform)(this._autoscaling),
+      management: cdktf.listMapper(containerNodePoolManagementToTerraform)(this._management),
+      node_config: cdktf.listMapper(containerNodePoolNodeConfigToTerraform)(this._nodeConfig),
+      timeouts: containerNodePoolTimeoutsToTerraform(this._timeouts),
+      upgrade_settings: cdktf.listMapper(containerNodePoolUpgradeSettingsToTerraform)(this._upgradeSettings),
     };
   }
 }

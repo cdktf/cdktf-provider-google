@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OrganizationIamPolicyConfig extends TerraformMetaArguments {
+export interface OrganizationIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The numeric ID of the organization in which you want to manage the audit logging config. */
   readonly orgId: string;
   readonly policyData: string;
@@ -15,7 +14,7 @@ export interface OrganizationIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class OrganizationIamPolicy extends TerraformResource {
+export class OrganizationIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -82,8 +81,8 @@ export class OrganizationIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      org_id: this._orgId,
-      policy_data: this._policyData,
+      org_id: cdktf.stringToTerraform(this._orgId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

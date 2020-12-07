@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RuntimeconfigConfigConfig extends TerraformMetaArguments {
+export interface RuntimeconfigConfigConfig extends cdktf.TerraformMetaArguments {
   /** The description to associate with the runtime config. */
   readonly description?: string;
   /** The name of the runtime config. */
@@ -18,7 +17,7 @@ export interface RuntimeconfigConfigConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class RuntimeconfigConfig extends TerraformResource {
+export class RuntimeconfigConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -100,9 +99,9 @@ export class RuntimeconfigConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

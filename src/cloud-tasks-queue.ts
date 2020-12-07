@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudTasksQueueConfig extends TerraformMetaArguments {
+export interface CloudTasksQueueConfig extends cdktf.TerraformMetaArguments {
   /** The location of the queue */
   readonly location: string;
   /** The queue name. */
@@ -38,6 +37,16 @@ By default, the task is sent to the service which is the default service when th
 By default, the task is sent to the version which is the default version when the task is attempted. */
   readonly version?: string;
 }
+
+function cloudTasksQueueAppEngineRoutingOverrideToTerraform(struct?: CloudTasksQueueAppEngineRoutingOverride): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instance: cdktf.stringToTerraform(struct!.instance),
+    service: cdktf.stringToTerraform(struct!.service),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface CloudTasksQueueRateLimits {
   /** The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
@@ -49,6 +58,15 @@ concurrent requests decreases. */
 If unspecified when the queue is created, Cloud Tasks will pick the default. */
   readonly maxDispatchesPerSecond?: number;
 }
+
+function cloudTasksQueueRateLimitsToTerraform(struct?: CloudTasksQueueRateLimits): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_concurrent_dispatches: cdktf.numberToTerraform(struct!.maxConcurrentDispatches),
+    max_dispatches_per_second: cdktf.numberToTerraform(struct!.maxDispatchesPerSecond),
+  }
+}
+
 export interface CloudTasksQueueRetryConfig {
   /** Number of attempts per task.
 
@@ -84,21 +102,51 @@ maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried. */
   readonly minBackoff?: string;
 }
+
+function cloudTasksQueueRetryConfigToTerraform(struct?: CloudTasksQueueRetryConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_attempts: cdktf.numberToTerraform(struct!.maxAttempts),
+    max_backoff: cdktf.stringToTerraform(struct!.maxBackoff),
+    max_doublings: cdktf.numberToTerraform(struct!.maxDoublings),
+    max_retry_duration: cdktf.stringToTerraform(struct!.maxRetryDuration),
+    min_backoff: cdktf.stringToTerraform(struct!.minBackoff),
+  }
+}
+
 export interface CloudTasksQueueStackdriverLoggingConfig {
   /** Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged. */
   readonly samplingRatio: number;
 }
+
+function cloudTasksQueueStackdriverLoggingConfigToTerraform(struct?: CloudTasksQueueStackdriverLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    sampling_ratio: cdktf.numberToTerraform(struct!.samplingRatio),
+  }
+}
+
 export interface CloudTasksQueueTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudTasksQueue extends TerraformResource {
+export class CloudTasksQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -265,14 +313,14 @@ export class CloudTasksQueue extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      project: this._project,
-      app_engine_routing_override: this._appEngineRoutingOverride,
-      rate_limits: this._rateLimits,
-      retry_config: this._retryConfig,
-      stackdriver_logging_config: this._stackdriverLoggingConfig,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      app_engine_routing_override: cdktf.listMapper(cloudTasksQueueAppEngineRoutingOverrideToTerraform)(this._appEngineRoutingOverride),
+      rate_limits: cdktf.listMapper(cloudTasksQueueRateLimitsToTerraform)(this._rateLimits),
+      retry_config: cdktf.listMapper(cloudTasksQueueRetryConfigToTerraform)(this._retryConfig),
+      stackdriver_logging_config: cdktf.listMapper(cloudTasksQueueStackdriverLoggingConfigToTerraform)(this._stackdriverLoggingConfig),
+      timeouts: cloudTasksQueueTimeoutsToTerraform(this._timeouts),
     };
   }
 }

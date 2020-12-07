@@ -2,18 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleIamRoleConfig extends TerraformMetaArguments {
+export interface DataGoogleIamRoleConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
 }
 
 // Resource
 
-export class DataGoogleIamRole extends TerraformDataSource {
+export class DataGoogleIamRole extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -76,7 +75,7 @@ export class DataGoogleIamRole extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
+      name: cdktf.stringToTerraform(this._name),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsKeyRingImportJobConfig extends TerraformMetaArguments {
+export interface KmsKeyRingImportJobConfig extends cdktf.TerraformMetaArguments {
   /** It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63} */
   readonly importJobId: string;
   /** The wrapping method to be used for incoming key material. Possible values: ["RSA_OAEP_3072_SHA1_AES_256", "RSA_OAEP_4096_SHA1_AES_256"] */
@@ -22,7 +20,7 @@ versionTemplate on the CryptoKey you attempt to import into. Possible values: ["
   /** timeouts block */
   readonly timeouts?: KmsKeyRingImportJobTimeouts;
 }
-export class KmsKeyRingImportJobAttestation extends ComplexComputedList {
+export class KmsKeyRingImportJobAttestation extends cdktf.ComplexComputedList {
 
   // content - computed: true, optional: false, required: false
   public get content() {
@@ -34,7 +32,7 @@ export class KmsKeyRingImportJobAttestation extends ComplexComputedList {
     return this.getStringAttribute('format');
   }
 }
-export class KmsKeyRingImportJobPublicKey extends ComplexComputedList {
+export class KmsKeyRingImportJobPublicKey extends cdktf.ComplexComputedList {
 
   // pem - computed: true, optional: false, required: false
   public get pem() {
@@ -46,9 +44,18 @@ export interface KmsKeyRingImportJobTimeouts {
   readonly delete?: string;
 }
 
+function kmsKeyRingImportJobTimeoutsToTerraform(struct?: KmsKeyRingImportJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class KmsKeyRingImportJob extends TerraformResource {
+export class KmsKeyRingImportJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -180,11 +187,11 @@ export class KmsKeyRingImportJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      import_job_id: this._importJobId,
-      import_method: this._importMethod,
-      key_ring: this._keyRing,
-      protection_level: this._protectionLevel,
-      timeouts: this._timeouts,
+      import_job_id: cdktf.stringToTerraform(this._importJobId),
+      import_method: cdktf.stringToTerraform(this._importMethod),
+      key_ring: cdktf.stringToTerraform(this._keyRing),
+      protection_level: cdktf.stringToTerraform(this._protectionLevel),
+      timeouts: kmsKeyRingImportJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

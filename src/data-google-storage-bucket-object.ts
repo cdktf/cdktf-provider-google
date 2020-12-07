@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleStorageBucketObjectConfig extends TerraformMetaArguments {
+export interface DataGoogleStorageBucketObjectConfig extends cdktf.TerraformMetaArguments {
   /** The name of the containing bucket. */
   readonly bucket?: string;
   /** The name of the object. If you're interpolating the name of this object, see output_name instead. */
@@ -17,7 +15,7 @@ export interface DataGoogleStorageBucketObjectConfig extends TerraformMetaArgume
 
 // Resource
 
-export class DataGoogleStorageBucketObject extends TerraformDataSource {
+export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -115,7 +113,7 @@ export class DataGoogleStorageBucketObject extends TerraformDataSource {
 
   // metadata - computed: true, optional: false, required: false
   public metadata(key: string): string {
-    return new StringMap(this, 'metadata').lookup(key);
+    return new cdktf.StringMap(this, 'metadata').lookup(key);
   }
 
   // name - computed: false, optional: true, required: false
@@ -160,8 +158,8 @@ export class DataGoogleStorageBucketObject extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      name: this._name,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      name: cdktf.stringToTerraform(this._name),
     };
   }
 }

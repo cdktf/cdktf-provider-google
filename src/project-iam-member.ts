@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectIamMemberConfig extends TerraformMetaArguments {
+export interface ProjectIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly member: string;
   readonly project?: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface ProjectIamMemberCondition {
   readonly title: string;
 }
 
+function projectIamMemberConditionToTerraform(struct?: ProjectIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class ProjectIamMember extends TerraformResource {
+export class ProjectIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -123,10 +132,10 @@ export class ProjectIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      condition: this._condition,
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(projectIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

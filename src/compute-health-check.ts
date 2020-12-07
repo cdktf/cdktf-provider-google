@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeHealthCheckConfig extends TerraformMetaArguments {
+export interface ComputeHealthCheckConfig extends cdktf.TerraformMetaArguments {
   /** How often (in seconds) to send a health check. The default value is 5
 seconds. */
   readonly checkIntervalSec?: number;
@@ -78,6 +77,17 @@ If not specified, gRPC health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
   readonly portSpecification?: string;
 }
+
+function computeHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeHealthCheckGrpcHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    grpc_service_name: cdktf.stringToTerraform(struct!.grpcServiceName),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+  }
+}
+
 export interface ComputeHealthCheckHttp2HealthCheck {
   /** The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -115,6 +125,20 @@ The default value is /. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeHealthCheckHttp2HealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request_path: cdktf.stringToTerraform(struct!.requestPath),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeHealthCheckHttpHealthCheck {
   /** The value of the host header in the HTTP health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -152,6 +176,20 @@ The default value is /. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeHealthCheckHttpHealthCheckToTerraform(struct?: ComputeHealthCheckHttpHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request_path: cdktf.stringToTerraform(struct!.requestPath),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeHealthCheckHttpsHealthCheck {
   /** The value of the host header in the HTTPS health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -189,6 +227,20 @@ The default value is /. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHealthCheckHttpsHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request_path: cdktf.stringToTerraform(struct!.requestPath),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeHealthCheckSslHealthCheck {
   /** The TCP port number for the SSL health check request.
 The default value is 443. */
@@ -224,6 +276,19 @@ data can only be ASCII. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeHealthCheckSslHealthCheckToTerraform(struct?: ComputeHealthCheckSslHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request: cdktf.stringToTerraform(struct!.request),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeHealthCheckTcpHealthCheck {
   /** The TCP port number for the TCP health check request.
 The default value is 443. */
@@ -259,15 +324,38 @@ data can only be ASCII. */
 can only be ASCII. */
   readonly response?: string;
 }
+
+function computeHealthCheckTcpHealthCheckToTerraform(struct?: ComputeHealthCheckTcpHealthCheck): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    port_name: cdktf.stringToTerraform(struct!.portName),
+    port_specification: cdktf.stringToTerraform(struct!.portSpecification),
+    proxy_header: cdktf.stringToTerraform(struct!.proxyHeader),
+    request: cdktf.stringToTerraform(struct!.request),
+    response: cdktf.stringToTerraform(struct!.response),
+  }
+}
+
 export interface ComputeHealthCheckTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthCheckTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeHealthCheck extends TerraformResource {
+export class ComputeHealthCheck extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -551,20 +639,20 @@ export class ComputeHealthCheck extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      check_interval_sec: this._checkIntervalSec,
-      description: this._description,
-      healthy_threshold: this._healthyThreshold,
-      name: this._name,
-      project: this._project,
-      timeout_sec: this._timeoutSec,
-      unhealthy_threshold: this._unhealthyThreshold,
-      grpc_health_check: this._grpcHealthCheck,
-      http2_health_check: this._http2HealthCheck,
-      http_health_check: this._httpHealthCheck,
-      https_health_check: this._httpsHealthCheck,
-      ssl_health_check: this._sslHealthCheck,
-      tcp_health_check: this._tcpHealthCheck,
-      timeouts: this._timeouts,
+      check_interval_sec: cdktf.numberToTerraform(this._checkIntervalSec),
+      description: cdktf.stringToTerraform(this._description),
+      healthy_threshold: cdktf.numberToTerraform(this._healthyThreshold),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
+      unhealthy_threshold: cdktf.numberToTerraform(this._unhealthyThreshold),
+      grpc_health_check: cdktf.listMapper(computeHealthCheckGrpcHealthCheckToTerraform)(this._grpcHealthCheck),
+      http2_health_check: cdktf.listMapper(computeHealthCheckHttp2HealthCheckToTerraform)(this._http2HealthCheck),
+      http_health_check: cdktf.listMapper(computeHealthCheckHttpHealthCheckToTerraform)(this._httpHealthCheck),
+      https_health_check: cdktf.listMapper(computeHealthCheckHttpsHealthCheckToTerraform)(this._httpsHealthCheck),
+      ssl_health_check: cdktf.listMapper(computeHealthCheckSslHealthCheckToTerraform)(this._sslHealthCheck),
+      tcp_health_check: cdktf.listMapper(computeHealthCheckTcpHealthCheckToTerraform)(this._tcpHealthCheck),
+      timeouts: computeHealthCheckTimeoutsToTerraform(this._timeouts),
     };
   }
 }

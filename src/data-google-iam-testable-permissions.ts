@@ -2,18 +2,16 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleIamTestablePermissionsConfig extends TerraformMetaArguments {
+export interface DataGoogleIamTestablePermissionsConfig extends cdktf.TerraformMetaArguments {
   readonly customSupportLevel?: string;
   readonly fullResourceName: string;
   readonly stages?: string[];
 }
-export class DataGoogleIamTestablePermissionsPermissions extends ComplexComputedList {
+export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexComputedList {
 
   // api_disabled - computed: true, optional: false, required: false
   public get apiDisabled() {
@@ -43,7 +41,7 @@ export class DataGoogleIamTestablePermissionsPermissions extends ComplexComputed
 
 // Resource
 
-export class DataGoogleIamTestablePermissions extends TerraformDataSource {
+export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -130,9 +128,9 @@ export class DataGoogleIamTestablePermissions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      custom_support_level: this._customSupportLevel,
-      full_resource_name: this._fullResourceName,
-      stages: this._stages,
+      custom_support_level: cdktf.stringToTerraform(this._customSupportLevel),
+      full_resource_name: cdktf.stringToTerraform(this._fullResourceName),
+      stages: cdktf.listMapper(cdktf.stringToTerraform)(this._stages),
     };
   }
 }

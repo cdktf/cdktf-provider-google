@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeProjectDefaultNetworkTierConfig extends TerraformMetaArguments {
+export interface ComputeProjectDefaultNetworkTierConfig extends cdktf.TerraformMetaArguments {
   /** The default network tier to be configured for the project. This field can take the following values: PREMIUM or STANDARD. */
   readonly networkTier: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
@@ -19,9 +18,17 @@ export interface ComputeProjectDefaultNetworkTierTimeouts {
   readonly create?: string;
 }
 
+function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputeProjectDefaultNetworkTierTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+  }
+}
+
+
 // Resource
 
-export class ComputeProjectDefaultNetworkTier extends TerraformResource {
+export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -103,9 +110,9 @@ export class ComputeProjectDefaultNetworkTier extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      network_tier: this._networkTier,
-      project: this._project,
-      timeouts: this._timeouts,
+      network_tier: cdktf.stringToTerraform(this._networkTier),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeProjectDefaultNetworkTierTimeoutsToTerraform(this._timeouts),
     };
   }
 }

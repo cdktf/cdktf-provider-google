@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareFhirStoreConfig extends TerraformMetaArguments {
+export interface HealthcareFhirStoreConfig extends cdktf.TerraformMetaArguments {
   /** Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}' */
   readonly dataset: string;
@@ -78,6 +77,14 @@ project. cloud-healthcare@system.gserviceaccount.com must have publisher permiss
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail. */
   readonly pubsubTopic: string;
 }
+
+function healthcareFhirStoreNotificationConfigToTerraform(struct?: HealthcareFhirStoreNotificationConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
+  }
+}
+
 export interface HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig {
   /** The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
@@ -89,12 +96,30 @@ value 2. The maximum depth allowed is 5. */
   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. Default value: "ANALYTICS" Possible values: ["ANALYTICS"] */
   readonly schemaType?: string;
 }
+
+function healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigToTerraform(struct?: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    recursive_structure_depth: cdktf.numberToTerraform(struct!.recursiveStructureDepth),
+    schema_type: cdktf.stringToTerraform(struct!.schemaType),
+  }
+}
+
 export interface HealthcareFhirStoreStreamConfigsBigqueryDestination {
   /** BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId */
   readonly datasetUri: string;
   /** schema_config block */
   readonly schemaConfig: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig[];
 }
+
+function healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform(struct?: HealthcareFhirStoreStreamConfigsBigqueryDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_uri: cdktf.stringToTerraform(struct!.datasetUri),
+    schema_config: cdktf.listMapper(healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigToTerraform)(struct!.schemaConfig),
+  }
+}
+
 export interface HealthcareFhirStoreStreamConfigs {
   /** Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
@@ -103,15 +128,34 @@ an empty list as an intent to stream all the supported resource types in this FH
   /** bigquery_destination block */
   readonly bigqueryDestination: HealthcareFhirStoreStreamConfigsBigqueryDestination[];
 }
+
+function healthcareFhirStoreStreamConfigsToTerraform(struct?: HealthcareFhirStoreStreamConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resource_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourceTypes),
+    bigquery_destination: cdktf.listMapper(healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform)(struct!.bigqueryDestination),
+  }
+}
+
 export interface HealthcareFhirStoreTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirStoreTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HealthcareFhirStore extends TerraformResource {
+export class HealthcareFhirStore extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -328,17 +372,17 @@ export class HealthcareFhirStore extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset: this._dataset,
-      disable_referential_integrity: this._disableReferentialIntegrity,
-      disable_resource_versioning: this._disableResourceVersioning,
-      enable_history_import: this._enableHistoryImport,
-      enable_update_create: this._enableUpdateCreate,
-      labels: this._labels,
-      name: this._name,
-      version: this._version,
-      notification_config: this._notificationConfig,
-      stream_configs: this._streamConfigs,
-      timeouts: this._timeouts,
+      dataset: cdktf.stringToTerraform(this._dataset),
+      disable_referential_integrity: cdktf.booleanToTerraform(this._disableReferentialIntegrity),
+      disable_resource_versioning: cdktf.booleanToTerraform(this._disableResourceVersioning),
+      enable_history_import: cdktf.booleanToTerraform(this._enableHistoryImport),
+      enable_update_create: cdktf.booleanToTerraform(this._enableUpdateCreate),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      version: cdktf.stringToTerraform(this._version),
+      notification_config: cdktf.listMapper(healthcareFhirStoreNotificationConfigToTerraform)(this._notificationConfig),
+      stream_configs: cdktf.listMapper(healthcareFhirStoreStreamConfigsToTerraform)(this._streamConfigs),
+      timeouts: healthcareFhirStoreTimeoutsToTerraform(this._timeouts),
     };
   }
 }

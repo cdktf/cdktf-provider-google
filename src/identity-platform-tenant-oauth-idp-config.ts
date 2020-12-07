@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IdentityPlatformTenantOauthIdpConfigConfig extends TerraformMetaArguments {
+export interface IdentityPlatformTenantOauthIdpConfigConfig extends cdktf.TerraformMetaArguments {
   /** The client id of an OAuth client. */
   readonly clientId: string;
   /** The client secret of the OAuth client, to enable OIDC code flow. */
@@ -32,9 +31,19 @@ export interface IdentityPlatformTenantOauthIdpConfigTimeouts {
   readonly update?: string;
 }
 
+function identityPlatformTenantOauthIdpConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantOauthIdpConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IdentityPlatformTenantOauthIdpConfig extends TerraformResource {
+export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -206,15 +215,15 @@ export class IdentityPlatformTenantOauthIdpConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      display_name: this._displayName,
-      enabled: this._enabled,
-      issuer: this._issuer,
-      name: this._name,
-      project: this._project,
-      tenant: this._tenant,
-      timeouts: this._timeouts,
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      issuer: cdktf.stringToTerraform(this._issuer),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      tenant: cdktf.stringToTerraform(this._tenant),
+      timeouts: identityPlatformTenantOauthIdpConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

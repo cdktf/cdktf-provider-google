@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringDashboardConfig extends TerraformMetaArguments {
+export interface MonitoringDashboardConfig extends cdktf.TerraformMetaArguments {
   /** The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards. */
   readonly dashboardJson: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
@@ -21,9 +20,19 @@ export interface MonitoringDashboardTimeouts {
   readonly update?: string;
 }
 
+function monitoringDashboardTimeoutsToTerraform(struct?: MonitoringDashboardTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringDashboard extends TerraformResource {
+export class MonitoringDashboard extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -105,9 +114,9 @@ export class MonitoringDashboard extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dashboard_json: this._dashboardJson,
-      project: this._project,
-      timeouts: this._timeouts,
+      dashboard_json: cdktf.stringToTerraform(this._dashboardJson),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: monitoringDashboardTimeoutsToTerraform(this._timeouts),
     };
   }
 }

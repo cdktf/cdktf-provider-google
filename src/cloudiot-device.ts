@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudiotDeviceConfig extends TerraformMetaArguments {
+export interface CloudiotDeviceConfig extends cdktf.TerraformMetaArguments {
   /** If a device is blocked, connections or requests from this device will fail. */
   readonly blocked?: boolean;
   /** The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"] */
@@ -26,7 +24,7 @@ export interface CloudiotDeviceConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: CloudiotDeviceTimeouts;
 }
-export class CloudiotDeviceConfigA extends ComplexComputedList {
+export class CloudiotDeviceConfigA extends cdktf.ComplexComputedList {
 
   // binary_data - computed: true, optional: false, required: false
   public get binaryData() {
@@ -48,7 +46,7 @@ export class CloudiotDeviceConfigA extends ComplexComputedList {
     return this.getStringAttribute('version');
   }
 }
-export class CloudiotDeviceLastErrorStatus extends ComplexComputedList {
+export class CloudiotDeviceLastErrorStatus extends cdktf.ComplexComputedList {
 
   // details - computed: true, optional: false, required: false
   public get details() {
@@ -65,7 +63,7 @@ export class CloudiotDeviceLastErrorStatus extends ComplexComputedList {
     return this.getNumberAttribute('number');
   }
 }
-export class CloudiotDeviceState extends ComplexComputedList {
+export class CloudiotDeviceState extends cdktf.ComplexComputedList {
 
   // binary_data - computed: true, optional: false, required: false
   public get binaryData() {
@@ -83,27 +81,64 @@ export interface CloudiotDeviceCredentialsPublicKey {
   /** The key data. */
   readonly key: string;
 }
+
+function cloudiotDeviceCredentialsPublicKeyToTerraform(struct?: CloudiotDeviceCredentialsPublicKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    format: cdktf.stringToTerraform(struct!.format),
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
 export interface CloudiotDeviceCredentials {
   /** The time at which this credential becomes invalid. */
   readonly expirationTime?: string;
   /** public_key block */
   readonly publicKey: CloudiotDeviceCredentialsPublicKey[];
 }
+
+function cloudiotDeviceCredentialsToTerraform(struct?: CloudiotDeviceCredentials): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiration_time: cdktf.stringToTerraform(struct!.expirationTime),
+    public_key: cdktf.listMapper(cloudiotDeviceCredentialsPublicKeyToTerraform)(struct!.publicKey),
+  }
+}
+
 export interface CloudiotDeviceGatewayConfig {
   /** Indicates whether the device is a gateway. Possible values: ["ASSOCIATION_ONLY", "DEVICE_AUTH_TOKEN_ONLY", "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"] */
   readonly gatewayAuthMethod?: string;
   /** Indicates whether the device is a gateway. Default value: "NON_GATEWAY" Possible values: ["GATEWAY", "NON_GATEWAY"] */
   readonly gatewayType?: string;
 }
+
+function cloudiotDeviceGatewayConfigToTerraform(struct?: CloudiotDeviceGatewayConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    gateway_auth_method: cdktf.stringToTerraform(struct!.gatewayAuthMethod),
+    gateway_type: cdktf.stringToTerraform(struct!.gatewayType),
+  }
+}
+
 export interface CloudiotDeviceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudiotDeviceTimeoutsToTerraform(struct?: CloudiotDeviceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudiotDevice extends TerraformResource {
+export class CloudiotDevice extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -317,14 +352,14 @@ export class CloudiotDevice extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      blocked: this._blocked,
-      log_level: this._logLevel,
-      metadata: this._metadata,
-      name: this._name,
-      registry: this._registry,
-      credentials: this._credentials,
-      gateway_config: this._gatewayConfig,
-      timeouts: this._timeouts,
+      blocked: cdktf.booleanToTerraform(this._blocked),
+      log_level: cdktf.stringToTerraform(this._logLevel),
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      registry: cdktf.stringToTerraform(this._registry),
+      credentials: cdktf.listMapper(cloudiotDeviceCredentialsToTerraform)(this._credentials),
+      gateway_config: cdktf.listMapper(cloudiotDeviceGatewayConfigToTerraform)(this._gatewayConfig),
+      timeouts: cloudiotDeviceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

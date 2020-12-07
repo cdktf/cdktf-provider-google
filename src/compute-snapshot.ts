@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSnapshotConfig extends TerraformMetaArguments {
+export interface ComputeSnapshotConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Labels to apply to this Snapshot. */
@@ -44,6 +43,16 @@ If absent, the Compute Engine Service Agent service account is used. */
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeSnapshotSnapshotEncryptionKeyToTerraform(struct?: ComputeSnapshotSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeSnapshotSourceDiskEncryptionKey {
   /** The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used. */
@@ -52,15 +61,34 @@ If absent, the Compute Engine Service Agent service account is used. */
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeSnapshotSourceDiskEncryptionKeyToTerraform(struct?: ComputeSnapshotSourceDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeSnapshotTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeSnapshotTimeoutsToTerraform(struct?: ComputeSnapshotTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeSnapshot extends TerraformResource {
+export class ComputeSnapshot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -298,16 +326,16 @@ export class ComputeSnapshot extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      source_disk: this._sourceDisk,
-      storage_locations: this._storageLocations,
-      zone: this._zone,
-      snapshot_encryption_key: this._snapshotEncryptionKey,
-      source_disk_encryption_key: this._sourceDiskEncryptionKey,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      source_disk: cdktf.stringToTerraform(this._sourceDisk),
+      storage_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._storageLocations),
+      zone: cdktf.stringToTerraform(this._zone),
+      snapshot_encryption_key: cdktf.listMapper(computeSnapshotSnapshotEncryptionKeyToTerraform)(this._snapshotEncryptionKey),
+      source_disk_encryption_key: cdktf.listMapper(computeSnapshotSourceDiskEncryptionKeyToTerraform)(this._sourceDiskEncryptionKey),
+      timeouts: computeSnapshotTimeoutsToTerraform(this._timeouts),
     };
   }
 }

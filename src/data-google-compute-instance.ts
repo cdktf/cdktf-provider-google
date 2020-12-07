@@ -2,14 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeInstanceConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The name of the instance. One of name or self_link must be provided. */
   readonly name?: string;
   /** The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used. */
@@ -19,7 +16,7 @@ export interface DataGoogleComputeInstanceConfig extends TerraformMetaArguments 
   /** The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used. */
   readonly zone?: string;
 }
-export class DataGoogleComputeInstanceAttachedDisk extends ComplexComputedList {
+export class DataGoogleComputeInstanceAttachedDisk extends cdktf.ComplexComputedList {
 
   // device_name - computed: true, optional: false, required: false
   public get deviceName() {
@@ -51,7 +48,7 @@ export class DataGoogleComputeInstanceAttachedDisk extends ComplexComputedList {
     return this.getStringAttribute('source');
   }
 }
-export class DataGoogleComputeInstanceBootDiskInitializeParams extends ComplexComputedList {
+export class DataGoogleComputeInstanceBootDiskInitializeParams extends cdktf.ComplexComputedList {
 
   // image - computed: true, optional: false, required: false
   public get image() {
@@ -73,7 +70,7 @@ export class DataGoogleComputeInstanceBootDiskInitializeParams extends ComplexCo
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleComputeInstanceBootDisk extends ComplexComputedList {
+export class DataGoogleComputeInstanceBootDisk extends cdktf.ComplexComputedList {
 
   // auto_delete - computed: true, optional: false, required: false
   public get autoDelete() {
@@ -115,7 +112,7 @@ export class DataGoogleComputeInstanceBootDisk extends ComplexComputedList {
     return this.getStringAttribute('source');
   }
 }
-export class DataGoogleComputeInstanceGuestAccelerator extends ComplexComputedList {
+export class DataGoogleComputeInstanceGuestAccelerator extends cdktf.ComplexComputedList {
 
   // count - computed: true, optional: false, required: false
   public get count() {
@@ -127,7 +124,7 @@ export class DataGoogleComputeInstanceGuestAccelerator extends ComplexComputedLi
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleComputeInstanceNetworkInterfaceAccessConfig extends ComplexComputedList {
+export class DataGoogleComputeInstanceNetworkInterfaceAccessConfig extends cdktf.ComplexComputedList {
 
   // nat_ip - computed: true, optional: false, required: false
   public get natIp() {
@@ -144,7 +141,7 @@ export class DataGoogleComputeInstanceNetworkInterfaceAccessConfig extends Compl
     return this.getStringAttribute('public_ptr_domain_name');
   }
 }
-export class DataGoogleComputeInstanceNetworkInterfaceAliasIpRange extends ComplexComputedList {
+export class DataGoogleComputeInstanceNetworkInterfaceAliasIpRange extends cdktf.ComplexComputedList {
 
   // ip_cidr_range - computed: true, optional: false, required: false
   public get ipCidrRange() {
@@ -156,7 +153,7 @@ export class DataGoogleComputeInstanceNetworkInterfaceAliasIpRange extends Compl
     return this.getStringAttribute('subnetwork_range_name');
   }
 }
-export class DataGoogleComputeInstanceNetworkInterface extends ComplexComputedList {
+export class DataGoogleComputeInstanceNetworkInterface extends cdktf.ComplexComputedList {
 
   // access_config - computed: true, optional: false, required: false
   public get accessConfig() {
@@ -193,7 +190,7 @@ export class DataGoogleComputeInstanceNetworkInterface extends ComplexComputedLi
     return this.getStringAttribute('subnetwork_project');
   }
 }
-export class DataGoogleComputeInstanceSchedulingNodeAffinities extends ComplexComputedList {
+export class DataGoogleComputeInstanceSchedulingNodeAffinities extends cdktf.ComplexComputedList {
 
   // key - computed: true, optional: false, required: false
   public get key() {
@@ -210,7 +207,7 @@ export class DataGoogleComputeInstanceSchedulingNodeAffinities extends ComplexCo
     return this.getListAttribute('values');
   }
 }
-export class DataGoogleComputeInstanceScheduling extends ComplexComputedList {
+export class DataGoogleComputeInstanceScheduling extends cdktf.ComplexComputedList {
 
   // automatic_restart - computed: true, optional: false, required: false
   public get automaticRestart() {
@@ -232,14 +229,14 @@ export class DataGoogleComputeInstanceScheduling extends ComplexComputedList {
     return this.getBooleanAttribute('preemptible');
   }
 }
-export class DataGoogleComputeInstanceScratchDisk extends ComplexComputedList {
+export class DataGoogleComputeInstanceScratchDisk extends cdktf.ComplexComputedList {
 
   // interface - computed: true, optional: false, required: false
   public get interface() {
     return this.getStringAttribute('interface');
   }
 }
-export class DataGoogleComputeInstanceServiceAccount extends ComplexComputedList {
+export class DataGoogleComputeInstanceServiceAccount extends cdktf.ComplexComputedList {
 
   // email - computed: true, optional: false, required: false
   public get email() {
@@ -251,7 +248,7 @@ export class DataGoogleComputeInstanceServiceAccount extends ComplexComputedList
     return this.getListAttribute('scopes');
   }
 }
-export class DataGoogleComputeInstanceShieldedInstanceConfig extends ComplexComputedList {
+export class DataGoogleComputeInstanceShieldedInstanceConfig extends cdktf.ComplexComputedList {
 
   // enable_integrity_monitoring - computed: true, optional: false, required: false
   public get enableIntegrityMonitoring() {
@@ -271,7 +268,7 @@ export class DataGoogleComputeInstanceShieldedInstanceConfig extends ComplexComp
 
 // Resource
 
-export class DataGoogleComputeInstance extends TerraformDataSource {
+export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -375,7 +372,7 @@ export class DataGoogleComputeInstance extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // machine_type - computed: true, optional: false, required: false
@@ -385,7 +382,7 @@ export class DataGoogleComputeInstance extends TerraformDataSource {
 
   // metadata - computed: true, optional: false, required: false
   public metadata(key: string): string {
-    return new StringMap(this, 'metadata').lookup(key);
+    return new cdktf.StringMap(this, 'metadata').lookup(key);
   }
 
   // metadata_fingerprint - computed: true, optional: false, required: false
@@ -513,10 +510,10 @@ export class DataGoogleComputeInstance extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      self_link: this._selfLink,
-      zone: this._zone,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      self_link: cdktf.stringToTerraform(this._selfLink),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

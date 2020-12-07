@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryJobConfig extends TerraformMetaArguments {
+export interface BigqueryJobConfig extends cdktf.TerraformMetaArguments {
   /** The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters. */
   readonly jobId: string;
   /** Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job. */
@@ -33,6 +32,14 @@ export interface BigqueryJobCopyDestinationEncryptionConfiguration {
 The BigQuery Service Account associated with your project requires access to this encryption key. */
   readonly kmsKeyName: string;
 }
+
+function bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobCopyDestinationEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface BigqueryJobCopyDestinationTable {
   /** The ID of the dataset containing this table. */
   readonly datasetId?: string;
@@ -42,6 +49,16 @@ export interface BigqueryJobCopyDestinationTable {
 or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}' if not. */
   readonly tableId: string;
 }
+
+function bigqueryJobCopyDestinationTableToTerraform(struct?: BigqueryJobCopyDestinationTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface BigqueryJobCopySourceTables {
   /** The ID of the dataset containing this table. */
   readonly datasetId?: string;
@@ -51,6 +68,16 @@ export interface BigqueryJobCopySourceTables {
 or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}' if not. */
   readonly tableId: string;
 }
+
+function bigqueryJobCopySourceTablesToTerraform(struct?: BigqueryJobCopySourceTables): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface BigqueryJobCopy {
   /** Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -71,6 +98,18 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   /** source_tables block */
   readonly sourceTables: BigqueryJobCopySourceTables[];
 }
+
+function bigqueryJobCopyToTerraform(struct?: BigqueryJobCopy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create_disposition: cdktf.stringToTerraform(struct!.createDisposition),
+    write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
+    destination_encryption_configuration: cdktf.listMapper(bigqueryJobCopyDestinationEncryptionConfigurationToTerraform)(struct!.destinationEncryptionConfiguration),
+    destination_table: cdktf.listMapper(bigqueryJobCopyDestinationTableToTerraform)(struct!.destinationTable),
+    source_tables: cdktf.listMapper(bigqueryJobCopySourceTablesToTerraform)(struct!.sourceTables),
+  }
+}
+
 export interface BigqueryJobExtractSourceModel {
   /** The ID of the dataset containing this model. */
   readonly datasetId: string;
@@ -79,6 +118,16 @@ export interface BigqueryJobExtractSourceModel {
   /** The ID of the project containing this model. */
   readonly projectId: string;
 }
+
+function bigqueryJobExtractSourceModelToTerraform(struct?: BigqueryJobExtractSourceModel): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    model_id: cdktf.stringToTerraform(struct!.modelId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
 export interface BigqueryJobExtractSourceTable {
   /** The ID of the dataset containing this table. */
   readonly datasetId?: string;
@@ -88,6 +137,16 @@ export interface BigqueryJobExtractSourceTable {
 or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}' if not. */
   readonly tableId: string;
 }
+
+function bigqueryJobExtractSourceTableToTerraform(struct?: BigqueryJobExtractSourceTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface BigqueryJobExtract {
   /** The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. */
@@ -110,11 +169,34 @@ Default is ',' */
   /** source_table block */
   readonly sourceTable?: BigqueryJobExtractSourceTable[];
 }
+
+function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtract): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    compression: cdktf.stringToTerraform(struct!.compression),
+    destination_format: cdktf.stringToTerraform(struct!.destinationFormat),
+    destination_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationUris),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    print_header: cdktf.booleanToTerraform(struct!.printHeader),
+    use_avro_logical_types: cdktf.booleanToTerraform(struct!.useAvroLogicalTypes),
+    source_model: cdktf.listMapper(bigqueryJobExtractSourceModelToTerraform)(struct!.sourceModel),
+    source_table: cdktf.listMapper(bigqueryJobExtractSourceTableToTerraform)(struct!.sourceTable),
+  }
+}
+
 export interface BigqueryJobLoadDestinationEncryptionConfiguration {
   /** Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key. */
   readonly kmsKeyName: string;
 }
+
+function bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobLoadDestinationEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface BigqueryJobLoadDestinationTable {
   /** The ID of the dataset containing this table. */
   readonly datasetId?: string;
@@ -124,6 +206,16 @@ export interface BigqueryJobLoadDestinationTable {
 or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}' if not. */
   readonly tableId: string;
 }
+
+function bigqueryJobLoadDestinationTableToTerraform(struct?: BigqueryJobLoadDestinationTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface BigqueryJobLoadTimePartitioning {
   /** Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value. */
   readonly expirationMs?: string;
@@ -135,6 +227,16 @@ A wrapper is used here because an empty string is an invalid value. */
 but in OnePlatform the field will be treated as unset. */
   readonly type: string;
 }
+
+function bigqueryJobLoadTimePartitioningToTerraform(struct?: BigqueryJobLoadTimePartitioning): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiration_ms: cdktf.stringToTerraform(struct!.expirationMs),
+    field: cdktf.stringToTerraform(struct!.field),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface BigqueryJobLoad {
   /** Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
@@ -225,6 +327,32 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   /** time_partitioning block */
   readonly timePartitioning?: BigqueryJobLoadTimePartitioning[];
 }
+
+function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoad): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_jagged_rows: cdktf.booleanToTerraform(struct!.allowJaggedRows),
+    allow_quoted_newlines: cdktf.booleanToTerraform(struct!.allowQuotedNewlines),
+    autodetect: cdktf.booleanToTerraform(struct!.autodetect),
+    create_disposition: cdktf.stringToTerraform(struct!.createDisposition),
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    ignore_unknown_values: cdktf.booleanToTerraform(struct!.ignoreUnknownValues),
+    max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
+    null_marker: cdktf.stringToTerraform(struct!.nullMarker),
+    projection_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.projectionFields),
+    quote: cdktf.stringToTerraform(struct!.quote),
+    schema_update_options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.schemaUpdateOptions),
+    skip_leading_rows: cdktf.numberToTerraform(struct!.skipLeadingRows),
+    source_format: cdktf.stringToTerraform(struct!.sourceFormat),
+    source_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceUris),
+    write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
+    destination_encryption_configuration: cdktf.listMapper(bigqueryJobLoadDestinationEncryptionConfigurationToTerraform)(struct!.destinationEncryptionConfiguration),
+    destination_table: cdktf.listMapper(bigqueryJobLoadDestinationTableToTerraform)(struct!.destinationTable),
+    time_partitioning: cdktf.listMapper(bigqueryJobLoadTimePartitioningToTerraform)(struct!.timePartitioning),
+  }
+}
+
 export interface BigqueryJobQueryDefaultDataset {
   /** The dataset. Can be specified '{{dataset_id}}' if 'project_id' is also set,
 or of the form 'projects/{{project}}/datasets/{{dataset_id}}' if not. */
@@ -232,11 +360,28 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}' if not. */
   /** The ID of the project containing this table. */
   readonly projectId?: string;
 }
+
+function bigqueryJobQueryDefaultDatasetToTerraform(struct?: BigqueryJobQueryDefaultDataset): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
 export interface BigqueryJobQueryDestinationEncryptionConfiguration {
   /** Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key. */
   readonly kmsKeyName: string;
 }
+
+function bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobQueryDestinationEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface BigqueryJobQueryDestinationTable {
   /** The ID of the dataset containing this table. */
   readonly datasetId?: string;
@@ -246,6 +391,16 @@ export interface BigqueryJobQueryDestinationTable {
 or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}' if not. */
   readonly tableId: string;
 }
+
+function bigqueryJobQueryDestinationTableToTerraform(struct?: BigqueryJobQueryDestinationTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface BigqueryJobQueryScriptOptions {
   /** Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job. Possible values: ["LAST", "FIRST_SELECT"] */
@@ -255,6 +410,16 @@ used to populate the schema and query results of the script job. Possible values
   /** Timeout period for each statement in a script. */
   readonly statementTimeoutMs?: string;
 }
+
+function bigqueryJobQueryScriptOptionsToTerraform(struct?: BigqueryJobQueryScriptOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_result_statement: cdktf.stringToTerraform(struct!.keyResultStatement),
+    statement_byte_budget: cdktf.stringToTerraform(struct!.statementByteBudget),
+    statement_timeout_ms: cdktf.stringToTerraform(struct!.statementTimeoutMs),
+  }
+}
+
 export interface BigqueryJobQueryUserDefinedFunctionResources {
   /** An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code. */
@@ -262,6 +427,15 @@ Providing a inline code resource is equivalent to providing a URI for a file con
   /** A code resource to load from a Google Cloud Storage URI (gs://bucket/path). */
   readonly resourceUri?: string;
 }
+
+function bigqueryJobQueryUserDefinedFunctionResourcesToTerraform(struct?: BigqueryJobQueryUserDefinedFunctionResources): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    inline_code: cdktf.stringToTerraform(struct!.inlineCode),
+    resource_uri: cdktf.stringToTerraform(struct!.resourceUri),
+  }
+}
+
 export interface BigqueryJobQuery {
   /** If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
@@ -322,14 +496,47 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   /** user_defined_function_resources block */
   readonly userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[];
 }
+
+function bigqueryJobQueryToTerraform(struct?: BigqueryJobQuery): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_large_results: cdktf.booleanToTerraform(struct!.allowLargeResults),
+    create_disposition: cdktf.stringToTerraform(struct!.createDisposition),
+    flatten_results: cdktf.booleanToTerraform(struct!.flattenResults),
+    maximum_billing_tier: cdktf.numberToTerraform(struct!.maximumBillingTier),
+    maximum_bytes_billed: cdktf.stringToTerraform(struct!.maximumBytesBilled),
+    parameter_mode: cdktf.stringToTerraform(struct!.parameterMode),
+    priority: cdktf.stringToTerraform(struct!.priority),
+    query: cdktf.stringToTerraform(struct!.query),
+    schema_update_options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.schemaUpdateOptions),
+    use_legacy_sql: cdktf.booleanToTerraform(struct!.useLegacySql),
+    use_query_cache: cdktf.booleanToTerraform(struct!.useQueryCache),
+    write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
+    default_dataset: cdktf.listMapper(bigqueryJobQueryDefaultDatasetToTerraform)(struct!.defaultDataset),
+    destination_encryption_configuration: cdktf.listMapper(bigqueryJobQueryDestinationEncryptionConfigurationToTerraform)(struct!.destinationEncryptionConfiguration),
+    destination_table: cdktf.listMapper(bigqueryJobQueryDestinationTableToTerraform)(struct!.destinationTable),
+    script_options: cdktf.listMapper(bigqueryJobQueryScriptOptionsToTerraform)(struct!.scriptOptions),
+    user_defined_function_resources: cdktf.listMapper(bigqueryJobQueryUserDefinedFunctionResourcesToTerraform)(struct!.userDefinedFunctionResources),
+  }
+}
+
 export interface BigqueryJobTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class BigqueryJob extends TerraformResource {
+export class BigqueryJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -540,16 +747,16 @@ export class BigqueryJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      job_id: this._jobId,
-      job_timeout_ms: this._jobTimeoutMs,
-      labels: this._labels,
-      location: this._location,
-      project: this._project,
-      copy: this._copy,
-      extract: this._extract,
-      load: this._load,
-      query: this._query,
-      timeouts: this._timeouts,
+      job_id: cdktf.stringToTerraform(this._jobId),
+      job_timeout_ms: cdktf.stringToTerraform(this._jobTimeoutMs),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      copy: cdktf.listMapper(bigqueryJobCopyToTerraform)(this._copy),
+      extract: cdktf.listMapper(bigqueryJobExtractToTerraform)(this._extract),
+      load: cdktf.listMapper(bigqueryJobLoadToTerraform)(this._load),
+      query: cdktf.listMapper(bigqueryJobQueryToTerraform)(this._query),
+      timeouts: bigqueryJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

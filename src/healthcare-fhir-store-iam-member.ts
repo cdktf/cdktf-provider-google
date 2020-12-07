@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareFhirStoreIamMemberConfig extends TerraformMetaArguments {
+export interface HealthcareFhirStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly fhirStoreId: string;
   readonly member: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface HealthcareFhirStoreIamMemberCondition {
   readonly title: string;
 }
 
+function healthcareFhirStoreIamMemberConditionToTerraform(struct?: HealthcareFhirStoreIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class HealthcareFhirStoreIamMember extends TerraformResource {
+export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class HealthcareFhirStoreIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      fhir_store_id: this._fhirStoreId,
-      member: this._member,
-      role: this._role,
-      condition: this._condition,
+      fhir_store_id: cdktf.stringToTerraform(this._fhirStoreId),
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(healthcareFhirStoreIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface GameServicesRealmConfig extends TerraformMetaArguments {
+export interface GameServicesRealmConfig extends cdktf.TerraformMetaArguments {
   /** Human readable description of the realm. */
   readonly description?: string;
   /** The labels associated with this realm. Each label is a key-value pair. */
@@ -30,9 +29,19 @@ export interface GameServicesRealmTimeouts {
   readonly update?: string;
 }
 
+function gameServicesRealmTimeoutsToTerraform(struct?: GameServicesRealmTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class GameServicesRealm extends TerraformResource {
+export class GameServicesRealm extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -189,13 +198,13 @@ export class GameServicesRealm extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      labels: this._labels,
-      location: this._location,
-      project: this._project,
-      realm_id: this._realmId,
-      time_zone: this._timeZone,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      project: cdktf.stringToTerraform(this._project),
+      realm_id: cdktf.stringToTerraform(this._realmId),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
+      timeouts: gameServicesRealmTimeoutsToTerraform(this._timeouts),
     };
   }
 }

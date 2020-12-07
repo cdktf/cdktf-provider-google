@@ -2,17 +2,15 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleKmsCryptoKeyVersionConfig extends TerraformMetaArguments {
+export interface DataGoogleKmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments {
   readonly cryptoKey: string;
   readonly version?: number;
 }
-export class DataGoogleKmsCryptoKeyVersionPublicKey extends ComplexComputedList {
+export class DataGoogleKmsCryptoKeyVersionPublicKey extends cdktf.ComplexComputedList {
 
   // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
@@ -27,7 +25,7 @@ export class DataGoogleKmsCryptoKeyVersionPublicKey extends ComplexComputedList 
 
 // Resource
 
-export class DataGoogleKmsCryptoKeyVersion extends TerraformDataSource {
+export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -112,8 +110,8 @@ export class DataGoogleKmsCryptoKeyVersion extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      crypto_key: this._cryptoKey,
-      version: this._version,
+      crypto_key: cdktf.stringToTerraform(this._cryptoKey),
+      version: cdktf.numberToTerraform(this._version),
     };
   }
 }

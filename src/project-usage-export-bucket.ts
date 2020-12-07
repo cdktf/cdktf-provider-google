@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectUsageExportBucketConfig extends TerraformMetaArguments {
+export interface ProjectUsageExportBucketConfig extends cdktf.TerraformMetaArguments {
   /** The bucket to store reports in. */
   readonly bucketName: string;
   /** A prefix for the reports, for instance, the project name. */
@@ -22,9 +21,18 @@ export interface ProjectUsageExportBucketTimeouts {
   readonly delete?: string;
 }
 
+function projectUsageExportBucketTimeoutsToTerraform(struct?: ProjectUsageExportBucketTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ProjectUsageExportBucket extends TerraformResource {
+export class ProjectUsageExportBucket extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -123,10 +131,10 @@ export class ProjectUsageExportBucket extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket_name: this._bucketName,
-      prefix: this._prefix,
-      project: this._project,
-      timeouts: this._timeouts,
+      bucket_name: cdktf.stringToTerraform(this._bucketName),
+      prefix: cdktf.stringToTerraform(this._prefix),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: projectUsageExportBucketTimeoutsToTerraform(this._timeouts),
     };
   }
 }

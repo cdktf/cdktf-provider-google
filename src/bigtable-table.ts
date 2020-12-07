@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigtableTableConfig extends TerraformMetaArguments {
+export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Bigtable instance. */
   readonly instanceName: string;
   /** The name of the table. */
@@ -24,9 +23,17 @@ export interface BigtableTableColumnFamily {
   readonly family: string;
 }
 
+function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    family: cdktf.stringToTerraform(struct!.family),
+  }
+}
+
+
 // Resource
 
-export class BigtableTable extends TerraformResource {
+export class BigtableTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -139,11 +146,11 @@ export class BigtableTable extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance_name: this._instanceName,
-      name: this._name,
-      project: this._project,
-      split_keys: this._splitKeys,
-      column_family: this._columnFamily,
+      instance_name: cdktf.stringToTerraform(this._instanceName),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      split_keys: cdktf.listMapper(cdktf.stringToTerraform)(this._splitKeys),
+      column_family: cdktf.listMapper(bigtableTableColumnFamilyToTerraform)(this._columnFamily),
     };
   }
 }

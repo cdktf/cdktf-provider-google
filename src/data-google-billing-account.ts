@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleBillingAccountConfig extends TerraformMetaArguments {
+export interface DataGoogleBillingAccountConfig extends cdktf.TerraformMetaArguments {
   readonly billingAccount?: string;
   readonly displayName?: string;
   readonly open?: boolean;
@@ -15,7 +14,7 @@ export interface DataGoogleBillingAccountConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DataGoogleBillingAccount extends TerraformDataSource {
+export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -110,9 +109,9 @@ export class DataGoogleBillingAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      billing_account: this._billingAccount,
-      display_name: this._displayName,
-      open: this._open,
+      billing_account: cdktf.stringToTerraform(this._billingAccount),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      open: cdktf.booleanToTerraform(this._open),
     };
   }
 }

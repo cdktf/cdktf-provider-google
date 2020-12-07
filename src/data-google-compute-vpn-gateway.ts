@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeVpnGatewayConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly project?: string;
   readonly region?: string;
@@ -15,7 +14,7 @@ export interface DataGoogleComputeVpnGatewayConfig extends TerraformMetaArgument
 
 // Resource
 
-export class DataGoogleComputeVpnGateway extends TerraformDataSource {
+export class DataGoogleComputeVpnGateway extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -112,9 +111,9 @@ export class DataGoogleComputeVpnGateway extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

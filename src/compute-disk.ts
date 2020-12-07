@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeDiskConfig extends TerraformMetaArguments {
+export interface ComputeDiskConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. */
   readonly description?: string;
@@ -85,6 +84,16 @@ If absent, the Compute Engine Service Agent service account is used. */
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeDiskDiskEncryptionKeyToTerraform(struct?: ComputeDiskDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeDiskSourceImageEncryptionKey {
   /** The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
 in the cloud console. Your project's Compute Engine System service account
@@ -99,6 +108,16 @@ If absent, the Compute Engine Service Agent service account is used. */
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeDiskSourceImageEncryptionKeyToTerraform(struct?: ComputeDiskSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeDiskSourceSnapshotEncryptionKey {
   /** The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
 in the cloud console. Your project's Compute Engine System service account
@@ -113,15 +132,35 @@ If absent, the Compute Engine Service Agent service account is used. */
 RFC 4648 base64 to either encrypt or decrypt this resource. */
   readonly rawKey?: string;
 }
+
+function computeDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeDiskSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+  }
+}
+
 export interface ComputeDiskTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeDiskTimeoutsToTerraform(struct?: ComputeDiskTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeDisk extends TerraformResource {
+export class ComputeDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -430,20 +469,20 @@ export class ComputeDisk extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      image: this._image,
-      labels: this._labels,
-      name: this._name,
-      physical_block_size_bytes: this._physicalBlockSizeBytes,
-      project: this._project,
-      size: this._size,
-      snapshot: this._snapshot,
-      type: this._type,
-      zone: this._zone,
-      disk_encryption_key: this._diskEncryptionKey,
-      source_image_encryption_key: this._sourceImageEncryptionKey,
-      source_snapshot_encryption_key: this._sourceSnapshotEncryptionKey,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      image: cdktf.stringToTerraform(this._image),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      physical_block_size_bytes: cdktf.numberToTerraform(this._physicalBlockSizeBytes),
+      project: cdktf.stringToTerraform(this._project),
+      size: cdktf.numberToTerraform(this._size),
+      snapshot: cdktf.stringToTerraform(this._snapshot),
+      type: cdktf.stringToTerraform(this._type),
+      zone: cdktf.stringToTerraform(this._zone),
+      disk_encryption_key: cdktf.listMapper(computeDiskDiskEncryptionKeyToTerraform)(this._diskEncryptionKey),
+      source_image_encryption_key: cdktf.listMapper(computeDiskSourceImageEncryptionKeyToTerraform)(this._sourceImageEncryptionKey),
+      source_snapshot_encryption_key: cdktf.listMapper(computeDiskSourceSnapshotEncryptionKeyToTerraform)(this._sourceSnapshotEncryptionKey),
+      timeouts: computeDiskTimeoutsToTerraform(this._timeouts),
     };
   }
 }

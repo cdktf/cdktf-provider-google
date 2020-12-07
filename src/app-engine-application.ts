@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppEngineApplicationConfig extends TerraformMetaArguments {
+export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments {
   /** The domain to authenticate users with when using App Engine's User API. */
   readonly authDomain?: string;
   readonly databaseType?: string;
@@ -25,7 +23,7 @@ export interface AppEngineApplicationConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: AppEngineApplicationTimeouts;
 }
-export class AppEngineApplicationUrlDispatchRule extends ComplexComputedList {
+export class AppEngineApplicationUrlDispatchRule extends cdktf.ComplexComputedList {
 
   // domain - computed: true, optional: false, required: false
   public get domain() {
@@ -45,6 +43,14 @@ export class AppEngineApplicationUrlDispatchRule extends ComplexComputedList {
 export interface AppEngineApplicationFeatureSettings {
   readonly splitHealthChecks: boolean;
 }
+
+function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    split_health_checks: cdktf.booleanToTerraform(struct!.splitHealthChecks),
+  }
+}
+
 export interface AppEngineApplicationIap {
   /** Adapted for use with the app */
   readonly enabled?: boolean;
@@ -53,14 +59,33 @@ export interface AppEngineApplicationIap {
   /** OAuth2 client secret to use for the authentication flow. The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. */
   readonly oauth2ClientSecret: string;
 }
+
+function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIap): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    oauth2_client_id: cdktf.stringToTerraform(struct!.oauth2ClientId),
+    oauth2_client_secret: cdktf.stringToTerraform(struct!.oauth2ClientSecret),
+  }
+}
+
 export interface AppEngineApplicationTimeouts {
   readonly create?: string;
   readonly update?: string;
 }
 
+function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppEngineApplication extends TerraformResource {
+export class AppEngineApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -262,14 +287,14 @@ export class AppEngineApplication extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auth_domain: this._authDomain,
-      database_type: this._databaseType,
-      location_id: this._locationId,
-      project: this._project,
-      serving_status: this._servingStatus,
-      feature_settings: this._featureSettings,
-      iap: this._iap,
-      timeouts: this._timeouts,
+      auth_domain: cdktf.stringToTerraform(this._authDomain),
+      database_type: cdktf.stringToTerraform(this._databaseType),
+      location_id: cdktf.stringToTerraform(this._locationId),
+      project: cdktf.stringToTerraform(this._project),
+      serving_status: cdktf.stringToTerraform(this._servingStatus),
+      feature_settings: cdktf.listMapper(appEngineApplicationFeatureSettingsToTerraform)(this._featureSettings),
+      iap: cdktf.listMapper(appEngineApplicationIapToTerraform)(this._iap),
+      timeouts: appEngineApplicationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

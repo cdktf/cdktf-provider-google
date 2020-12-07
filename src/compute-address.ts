@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeAddressConfig extends TerraformMetaArguments {
+export interface ComputeAddressConfig extends cdktf.TerraformMetaArguments {
   /** The static external IP address represented by this resource. Only
 IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
@@ -50,9 +49,18 @@ export interface ComputeAddressTimeouts {
   readonly delete?: string;
 }
 
+function computeAddressTimeoutsToTerraform(struct?: ComputeAddressTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeAddress extends TerraformResource {
+export class ComputeAddress extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -268,16 +276,16 @@ export class ComputeAddress extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address: this._address,
-      address_type: this._addressType,
-      description: this._description,
-      name: this._name,
-      network_tier: this._networkTier,
-      project: this._project,
-      purpose: this._purpose,
-      region: this._region,
-      subnetwork: this._subnetwork,
-      timeouts: this._timeouts,
+      address: cdktf.stringToTerraform(this._address),
+      address_type: cdktf.stringToTerraform(this._addressType),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      network_tier: cdktf.stringToTerraform(this._networkTier),
+      project: cdktf.stringToTerraform(this._project),
+      purpose: cdktf.stringToTerraform(this._purpose),
+      region: cdktf.stringToTerraform(this._region),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
+      timeouts: computeAddressTimeoutsToTerraform(this._timeouts),
     };
   }
 }

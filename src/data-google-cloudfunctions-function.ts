@@ -2,14 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleCloudfunctionsFunctionConfig extends TerraformMetaArguments {
+export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
   /** A user-defined name of the function. Function names must be unique globally. */
   readonly name: string;
   /** Project of the function. If it is not provided, the provider project is used. */
@@ -17,14 +14,14 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends TerraformMetaArg
   /** Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used. */
   readonly region?: string;
 }
-export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy extends ComplexComputedList {
+export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy extends cdktf.ComplexComputedList {
 
   // retry - computed: true, optional: false, required: false
   public get retry() {
     return this.getBooleanAttribute('retry');
   }
 }
-export class DataGoogleCloudfunctionsFunctionEventTrigger extends ComplexComputedList {
+export class DataGoogleCloudfunctionsFunctionEventTrigger extends cdktf.ComplexComputedList {
 
   // event_type - computed: true, optional: false, required: false
   public get eventType() {
@@ -41,7 +38,7 @@ export class DataGoogleCloudfunctionsFunctionEventTrigger extends ComplexCompute
     return this.getStringAttribute('resource');
   }
 }
-export class DataGoogleCloudfunctionsFunctionSourceRepository extends ComplexComputedList {
+export class DataGoogleCloudfunctionsFunctionSourceRepository extends cdktf.ComplexComputedList {
 
   // deployed_url - computed: true, optional: false, required: false
   public get deployedUrl() {
@@ -56,7 +53,7 @@ export class DataGoogleCloudfunctionsFunctionSourceRepository extends ComplexCom
 
 // Resource
 
-export class DataGoogleCloudfunctionsFunction extends TerraformDataSource {
+export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -89,7 +86,7 @@ export class DataGoogleCloudfunctionsFunction extends TerraformDataSource {
 
   // build_environment_variables - computed: true, optional: false, required: false
   public buildEnvironmentVariables(key: string): string {
-    return new StringMap(this, 'build_environment_variables').lookup(key);
+    return new cdktf.StringMap(this, 'build_environment_variables').lookup(key);
   }
 
   // description - computed: true, optional: false, required: false
@@ -104,7 +101,7 @@ export class DataGoogleCloudfunctionsFunction extends TerraformDataSource {
 
   // environment_variables - computed: true, optional: false, required: false
   public environmentVariables(key: string): string {
-    return new StringMap(this, 'environment_variables').lookup(key);
+    return new cdktf.StringMap(this, 'environment_variables').lookup(key);
   }
 
   // event_trigger - computed: true, optional: false, required: false
@@ -129,7 +126,7 @@ export class DataGoogleCloudfunctionsFunction extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // max_instances - computed: true, optional: false, required: false
@@ -233,9 +230,9 @@ export class DataGoogleCloudfunctionsFunction extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

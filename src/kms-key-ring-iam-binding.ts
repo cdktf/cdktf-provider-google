@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsKeyRingIamBindingConfig extends TerraformMetaArguments {
+export interface KmsKeyRingIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly keyRingId: string;
   readonly members: string[];
   readonly role: string;
@@ -20,9 +19,19 @@ export interface KmsKeyRingIamBindingCondition {
   readonly title: string;
 }
 
+function kmsKeyRingIamBindingConditionToTerraform(struct?: KmsKeyRingIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class KmsKeyRingIamBinding extends TerraformResource {
+export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class KmsKeyRingIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_ring_id: this._keyRingId,
-      members: this._members,
-      role: this._role,
-      condition: this._condition,
+      key_ring_id: cdktf.stringToTerraform(this._keyRingId),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(kmsKeyRingIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

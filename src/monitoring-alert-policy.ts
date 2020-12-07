@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringAlertPolicyConfig extends TerraformMetaArguments {
+export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArguments {
   /** How to combine the results of multiple conditions to
 determine if an incident should be opened. Possible values: ["AND", "OR", "AND_WITH_MATCHING_RESOURCE"] */
   readonly combiner: string;
@@ -41,7 +39,7 @@ must begin with a letter. */
   /** timeouts block */
   readonly timeouts?: MonitoringAlertPolicyTimeouts;
 }
-export class MonitoringAlertPolicyCreationRecord extends ComplexComputedList {
+export class MonitoringAlertPolicyCreationRecord extends cdktf.ComplexComputedList {
 
   // mutate_time - computed: true, optional: false, required: false
   public get mutateTime() {
@@ -132,6 +130,17 @@ specified; otherwise, an error is
 returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"] */
   readonly perSeriesAligner?: string;
 }
+
+function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentAggregations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    alignment_period: cdktf.stringToTerraform(struct!.alignmentPeriod),
+    cross_series_reducer: cdktf.stringToTerraform(struct!.crossSeriesReducer),
+    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByFields),
+    per_series_aligner: cdktf.stringToTerraform(struct!.perSeriesAligner),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionAbsentTrigger {
   /** The absolute number of time series
 that must fail the predicate for the
@@ -142,6 +151,15 @@ must fail the predicate for the
 condition to be triggered. */
   readonly percent?: number;
 }
+
+function monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    percent: cdktf.numberToTerraform(struct!.percent),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionAbsent {
   /** The amount of time that a time series must
 fail to report new data to be considered
@@ -167,6 +185,17 @@ in length. */
   /** trigger block */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionAbsentTrigger[];
 }
+
+function monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsent): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    duration: cdktf.stringToTerraform(struct!.duration),
+    filter: cdktf.stringToTerraform(struct!.filter),
+    aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform)(struct!.aggregations),
+    trigger: cdktf.listMapper(monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform)(struct!.trigger),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger {
   /** The absolute number of time series
 that must fail the predicate for the
@@ -177,6 +206,15 @@ must fail the predicate for the
 condition to be triggered. */
   readonly percent?: number;
 }
+
+function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    percent: cdktf.numberToTerraform(struct!.percent),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage {
   /** The amount of time that a time series must
 violate the threshold to be considered
@@ -199,6 +237,16 @@ alerted on quickly. */
   /** trigger block */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger[];
 }
+
+function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    duration: cdktf.stringToTerraform(struct!.duration),
+    query: cdktf.stringToTerraform(struct!.query),
+    trigger: cdktf.listMapper(monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerToTerraform)(struct!.trigger),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   /** The alignment period for per-time
 series alignment. If present,
@@ -278,6 +326,17 @@ specified; otherwise, an error is
 returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"] */
   readonly perSeriesAligner?: string;
 }
+
+function monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdAggregations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    alignment_period: cdktf.stringToTerraform(struct!.alignmentPeriod),
+    cross_series_reducer: cdktf.stringToTerraform(struct!.crossSeriesReducer),
+    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByFields),
+    per_series_aligner: cdktf.stringToTerraform(struct!.perSeriesAligner),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations {
   /** The alignment period for per-time
 series alignment. If present,
@@ -357,6 +416,17 @@ specified; otherwise, an error is
 returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"] */
   readonly perSeriesAligner?: string;
 }
+
+function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    alignment_period: cdktf.stringToTerraform(struct!.alignmentPeriod),
+    cross_series_reducer: cdktf.stringToTerraform(struct!.crossSeriesReducer),
+    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByFields),
+    per_series_aligner: cdktf.stringToTerraform(struct!.perSeriesAligner),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionThresholdTrigger {
   /** The absolute number of time series
 that must fail the predicate for the
@@ -367,6 +437,15 @@ must fail the predicate for the
 condition to be triggered. */
   readonly percent?: number;
 }
+
+function monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    percent: cdktf.numberToTerraform(struct!.percent),
+  }
+}
+
 export interface MonitoringAlertPolicyConditionsConditionThreshold {
   /** The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -432,6 +511,21 @@ series. */
   /** trigger block */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionThresholdTrigger[];
 }
+
+function monitoringAlertPolicyConditionsConditionThresholdToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThreshold): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    comparison: cdktf.stringToTerraform(struct!.comparison),
+    denominator_filter: cdktf.stringToTerraform(struct!.denominatorFilter),
+    duration: cdktf.stringToTerraform(struct!.duration),
+    filter: cdktf.stringToTerraform(struct!.filter),
+    threshold_value: cdktf.numberToTerraform(struct!.thresholdValue),
+    aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform)(struct!.aggregations),
+    denominator_aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform)(struct!.denominatorAggregations),
+    trigger: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraform)(struct!.trigger),
+  }
+}
+
 export interface MonitoringAlertPolicyConditions {
   /** A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -446,6 +540,17 @@ policy. */
   /** condition_threshold block */
   readonly conditionThreshold?: MonitoringAlertPolicyConditionsConditionThreshold[];
 }
+
+function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAlertPolicyConditions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    display_name: cdktf.stringToTerraform(struct!.displayName),
+    condition_absent: cdktf.listMapper(monitoringAlertPolicyConditionsConditionAbsentToTerraform)(struct!.conditionAbsent),
+    condition_monitoring_query_language: cdktf.listMapper(monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform)(struct!.conditionMonitoringQueryLanguage),
+    condition_threshold: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdToTerraform)(struct!.conditionThreshold),
+  }
+}
+
 export interface MonitoringAlertPolicyDocumentation {
   /** The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
@@ -456,15 +561,34 @@ whichever is smaller. */
 "text/markdown" is supported. */
   readonly mimeType?: string;
 }
+
+function monitoringAlertPolicyDocumentationToTerraform(struct?: MonitoringAlertPolicyDocumentation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    mime_type: cdktf.stringToTerraform(struct!.mimeType),
+  }
+}
+
 export interface MonitoringAlertPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAlertPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringAlertPolicy extends TerraformResource {
+export class MonitoringAlertPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -652,15 +776,15 @@ export class MonitoringAlertPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      combiner: this._combiner,
-      display_name: this._displayName,
-      enabled: this._enabled,
-      notification_channels: this._notificationChannels,
-      project: this._project,
-      user_labels: this._userLabels,
-      conditions: this._conditions,
-      documentation: this._documentation,
-      timeouts: this._timeouts,
+      combiner: cdktf.stringToTerraform(this._combiner),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      notification_channels: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationChannels),
+      project: cdktf.stringToTerraform(this._project),
+      user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
+      conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions),
+      documentation: cdktf.listMapper(monitoringAlertPolicyDocumentationToTerraform)(this._documentation),
+      timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

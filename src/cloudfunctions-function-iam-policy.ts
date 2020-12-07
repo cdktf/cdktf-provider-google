@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudfunctionsFunctionIamPolicyConfig extends TerraformMetaArguments {
+export interface CloudfunctionsFunctionIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly cloudFunction: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface CloudfunctionsFunctionIamPolicyConfig extends TerraformMetaArgu
 
 // Resource
 
-export class CloudfunctionsFunctionIamPolicy extends TerraformResource {
+export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class CloudfunctionsFunctionIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cloud_function: this._cloudFunction,
-      policy_data: this._policyData,
-      project: this._project,
-      region: this._region,
+      cloud_function: cdktf.stringToTerraform(this._cloudFunction),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

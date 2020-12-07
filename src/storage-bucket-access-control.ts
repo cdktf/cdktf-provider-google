@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageBucketAccessControlConfig extends TerraformMetaArguments {
+export interface StorageBucketAccessControlConfig extends cdktf.TerraformMetaArguments {
   /** The name of the bucket. */
   readonly bucket: string;
   /** The entity holding the permission, in one of the following forms:
@@ -37,9 +36,19 @@ export interface StorageBucketAccessControlTimeouts {
   readonly update?: string;
 }
 
+function storageBucketAccessControlTimeoutsToTerraform(struct?: StorageBucketAccessControlTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageBucketAccessControl extends TerraformResource {
+export class StorageBucketAccessControl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -145,10 +154,10 @@ export class StorageBucketAccessControl extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      entity: this._entity,
-      role: this._role,
-      timeouts: this._timeouts,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      entity: cdktf.stringToTerraform(this._entity),
+      role: cdktf.stringToTerraform(this._role),
+      timeouts: storageBucketAccessControlTimeoutsToTerraform(this._timeouts),
     };
   }
 }

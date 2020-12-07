@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeUrlMapConfig extends TerraformMetaArguments {
+export interface ComputeUrlMapConfig extends cdktf.TerraformMetaArguments {
   /** The backend service or backend bucket to use when none of the given rules match. */
   readonly defaultService?: string;
   /** An optional description of this resource. Provide this property when you create
@@ -59,6 +58,21 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 This translates to the Access-Control-Max-Age header. */
   readonly maxAge?: number;
 }
+
+function computeUrlMapDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionCorsPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    max_age: cdktf.numberToTerraform(struct!.maxAge),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort {
   /** The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive. */
@@ -67,6 +81,15 @@ The value must be between 200 and 599 inclusive. */
 The value must be between 0.0 and 100.0 inclusive. */
   readonly percentage?: number;
 }
+
+function computeUrlMapDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    http_status: cdktf.numberToTerraform(struct!.httpStatus),
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive. */
@@ -75,6 +98,15 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years */
   readonly seconds?: string;
 }
+
+function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay {
   /** The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive. */
@@ -82,16 +114,42 @@ The value must be between 0.0 and 100.0 inclusive. */
   /** fixed_delay block */
   readonly fixedDelay?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay[];
 }
+
+function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+    fixed_delay: cdktf.listMapper(computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform)(struct!.fixedDelay),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicy {
   /** abort block */
   readonly abort?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort[];
   /** delay block */
   readonly delay?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay[];
 }
+
+function computeUrlMapDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    abort: cdktf.listMapper(computeUrlMapDefaultRouteActionFaultInjectionPolicyAbortToTerraform)(struct!.abort),
+    delay: cdktf.listMapper(computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayToTerraform)(struct!.delay),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionRequestMirrorPolicy {
   /** The full or partial URL to the BackendService resource being mirrored to. */
   readonly backendService: string;
 }
+
+function computeUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRequestMirrorPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive. */
@@ -100,6 +158,15 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years */
   readonly seconds?: string;
 }
+
+function computeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionRetryPolicy {
   /** Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1. */
   readonly numRetries?: number;
@@ -123,6 +190,16 @@ export interface ComputeUrlMapDefaultRouteActionRetryPolicy {
   /** per_try_timeout block */
   readonly perTryTimeout?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout[];
 }
+
+function computeUrlMapDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    num_retries: cdktf.numberToTerraform(struct!.numRetries),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    per_try_timeout: cdktf.listMapper(computeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform)(struct!.perTryTimeout),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive. */
@@ -131,6 +208,15 @@ with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years */
   readonly seconds?: string;
 }
+
+function computeUrlMapDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionUrlRewrite {
   /** Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -143,6 +229,15 @@ request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters. */
   readonly pathPrefixRewrite?: string;
 }
+
+function computeUrlMapDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapDefaultRouteActionUrlRewrite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
+    path_prefix_rewrite: cdktf.stringToTerraform(struct!.pathPrefixRewrite),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /** The name of the header to add. */
   readonly headerName?: string;
@@ -152,6 +247,16 @@ export interface ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAct
 If true, headerValue is set for the header, discarding any values that were set for that header. */
   readonly replace?: boolean;
 }
+
+function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /** The name of the header to add. */
   readonly headerName?: string;
@@ -161,6 +266,16 @@ export interface ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAct
 If true, headerValue is set for the header, discarding any values that were set for that header. */
   readonly replace?: boolean;
 }
+
+function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction {
   /** A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService. */
@@ -173,6 +288,17 @@ response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteActionWeightedBackendServices {
   /** The full or partial URL to the default BackendService resource. Before forwarding the
 request to backendService, the loadbalancer applies any relevant headerActions
@@ -190,6 +316,16 @@ The value must be between 0 and 1000 */
   /** header_action block */
   readonly headerAction?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction[];
 }
+
+function computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+    weight: cdktf.numberToTerraform(struct!.weight),
+    header_action: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform)(struct!.headerAction),
+  }
+}
+
 export interface ComputeUrlMapDefaultRouteAction {
   /** cors_policy block */
   readonly corsPolicy?: ComputeUrlMapDefaultRouteActionCorsPolicy[];
@@ -206,6 +342,20 @@ export interface ComputeUrlMapDefaultRouteAction {
   /** weighted_backend_services block */
   readonly weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[];
 }
+
+function computeUrlMapDefaultRouteActionToTerraform(struct?: ComputeUrlMapDefaultRouteAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_policy: cdktf.listMapper(computeUrlMapDefaultRouteActionCorsPolicyToTerraform)(struct!.corsPolicy),
+    fault_injection_policy: cdktf.listMapper(computeUrlMapDefaultRouteActionFaultInjectionPolicyToTerraform)(struct!.faultInjectionPolicy),
+    request_mirror_policy: cdktf.listMapper(computeUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform)(struct!.requestMirrorPolicy),
+    retry_policy: cdktf.listMapper(computeUrlMapDefaultRouteActionRetryPolicyToTerraform)(struct!.retryPolicy),
+    timeout: cdktf.listMapper(computeUrlMapDefaultRouteActionTimeoutToTerraform)(struct!.timeout),
+    url_rewrite: cdktf.listMapper(computeUrlMapDefaultRouteActionUrlRewriteToTerraform)(struct!.urlRewrite),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+  }
+}
+
 export interface ComputeUrlMapDefaultUrlRedirect {
   /** The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters. */
@@ -247,6 +397,19 @@ retained. The default is set to false.
  This field is required to ensure an empty block is not set. The normal default value is false. */
   readonly stripQuery: boolean;
 }
+
+function computeUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapDefaultUrlRedirect): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
+    https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
+    path_redirect: cdktf.stringToTerraform(struct!.pathRedirect),
+    prefix_redirect: cdktf.stringToTerraform(struct!.prefixRedirect),
+    redirect_response_code: cdktf.stringToTerraform(struct!.redirectResponseCode),
+    strip_query: cdktf.booleanToTerraform(struct!.stripQuery),
+  }
+}
+
 export interface ComputeUrlMapHeaderActionRequestHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -257,6 +420,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapHeaderActionResponseHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -267,6 +440,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapHeaderAction {
   /** A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService. */
@@ -279,6 +462,17 @@ prior to sending the response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapHeaderActionToTerraform(struct?: ComputeUrlMapHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapHostRule {
   /** An optional description of this resource. Provide this property when you create
 the resource. */
@@ -291,6 +485,16 @@ and must be followed in the pattern by either - or .. */
 hostRule matches the URL's host portion. */
   readonly pathMatcher: string;
 }
+
+function computeUrlMapHostRuleToTerraform(struct?: ComputeUrlMapHostRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    hosts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hosts),
+    path_matcher: cdktf.stringToTerraform(struct!.pathMatcher),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy {
   /** In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header. */
@@ -314,6 +518,21 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 This translates to the Access-Control-Max-Age header. */
   readonly maxAge?: number;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    max_age: cdktf.numberToTerraform(struct!.maxAge),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort {
   /** The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive. */
@@ -322,6 +541,15 @@ The value must be between 200 and 599 inclusive. */
 The value must be between 0.0 and 100.0 inclusive. */
   readonly percentage?: number;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    http_status: cdktf.numberToTerraform(struct!.httpStatus),
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive. */
@@ -330,6 +558,15 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years */
   readonly seconds?: string;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay {
   /** The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive. */
@@ -337,16 +574,42 @@ The value must be between 0.0 and 100.0 inclusive. */
   /** fixed_delay block */
   readonly fixedDelay?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay[];
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+    fixed_delay: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform)(struct!.fixedDelay),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
   /** abort block */
   readonly abort?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort[];
   /** delay block */
   readonly delay?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay[];
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    abort: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortToTerraform)(struct!.abort),
+    delay: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayToTerraform)(struct!.delay),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy {
   /** The full or partial URL to the BackendService resource being mirrored to. */
   readonly backendService: string;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive. */
@@ -355,6 +618,15 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years */
   readonly seconds?: string;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy {
   /** Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1. */
   readonly numRetries?: number;
@@ -378,6 +650,16 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy {
   /** per_try_timeout block */
   readonly perTryTimeout?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout[];
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    num_retries: cdktf.numberToTerraform(struct!.numRetries),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    per_try_timeout: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform)(struct!.perTryTimeout),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive. */
@@ -386,6 +668,15 @@ with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years */
   readonly seconds?: string;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite {
   /** Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -398,6 +689,15 @@ request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters. */
   readonly pathPrefixRewrite?: string;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
+    path_prefix_rewrite: cdktf.stringToTerraform(struct!.pathPrefixRewrite),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /** The name of the header to add. */
   readonly headerName?: string;
@@ -407,6 +707,16 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServic
 If true, headerValue is set for the header, discarding any values that were set for that header. */
   readonly replace?: boolean;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /** The name of the header to add. */
   readonly headerName?: string;
@@ -416,6 +726,16 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServic
 If true, headerValue is set for the header, discarding any values that were set for that header. */
   readonly replace?: boolean;
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction {
   /** A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService. */
@@ -428,6 +748,17 @@ response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices {
   /** The full or partial URL to the default BackendService resource. Before forwarding the
 request to backendService, the loadbalancer applies any relevant headerActions
@@ -445,6 +776,16 @@ The value must be between 0 and 1000 */
   /** header_action block */
   readonly headerAction?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction[];
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+    weight: cdktf.numberToTerraform(struct!.weight),
+    header_action: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform)(struct!.headerAction),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultRouteAction {
   /** cors_policy block */
   readonly corsPolicy?: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy[];
@@ -461,6 +802,20 @@ export interface ComputeUrlMapPathMatcherDefaultRouteAction {
   /** weighted_backend_services block */
   readonly weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[];
 }
+
+function computeUrlMapPathMatcherDefaultRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_policy: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionCorsPolicyToTerraform)(struct!.corsPolicy),
+    fault_injection_policy: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyToTerraform)(struct!.faultInjectionPolicy),
+    request_mirror_policy: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyToTerraform)(struct!.requestMirrorPolicy),
+    retry_policy: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform)(struct!.retryPolicy),
+    timeout: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionTimeoutToTerraform)(struct!.timeout),
+    url_rewrite: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionUrlRewriteToTerraform)(struct!.urlRewrite),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherDefaultUrlRedirect {
   /** The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters. */
@@ -502,6 +857,19 @@ retained.
  This field is required to ensure an empty block is not set. The normal default value is false. */
   readonly stripQuery: boolean;
 }
+
+function computeUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherDefaultUrlRedirect): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
+    https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
+    path_redirect: cdktf.stringToTerraform(struct!.pathRedirect),
+    prefix_redirect: cdktf.stringToTerraform(struct!.prefixRedirect),
+    redirect_response_code: cdktf.stringToTerraform(struct!.redirectResponseCode),
+    strip_query: cdktf.booleanToTerraform(struct!.stripQuery),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -512,6 +880,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -522,6 +900,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherHeaderAction {
   /** A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService. */
@@ -534,6 +922,17 @@ prior to sending the response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapPathMatcherHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
   /** In response to a preflight request, setting this to true indicates that the
 actual request can include user credentials. This translates to the Access-
@@ -558,6 +957,21 @@ origin is allowed if it matches either allow_origins or allow_origin_regex. */
 translates to the content for the Access-Control-Max-Age header. */
   readonly maxAge?: number;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    max_age: cdktf.numberToTerraform(struct!.maxAge),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
   /** The HTTP status code used to abort the request. The value must be between 200
 and 599 inclusive. */
@@ -567,6 +981,15 @@ aborted as part of fault injection. The value must be between 0.0 and 100.0
 inclusive. */
   readonly percentage: number;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    http_status: cdktf.numberToTerraform(struct!.httpStatus),
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -576,6 +999,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: string;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
   /** The percentage of traffic (connections/operations/requests) on which delay will
 be introduced as part of fault injection. The value must be between 0.0 and
@@ -584,16 +1016,42 @@ be introduced as part of fault injection. The value must be between 0.0 and
   /** fixed_delay block */
   readonly fixedDelay: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay[];
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+    fixed_delay: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform)(struct!.fixedDelay),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
   /** abort block */
   readonly abort?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort[];
   /** delay block */
   readonly delay?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay[];
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    abort: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform)(struct!.abort),
+    delay: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform)(struct!.delay),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
   /** The BackendService resource being mirrored to. */
   readonly backendService: string;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -603,6 +1061,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: string;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
   /** Specifies the allowed number retries. This number must be > 0. */
   readonly numRetries?: number;
@@ -632,6 +1099,16 @@ the gRPC status code in the response header is set to unavailable */
   /** per_try_timeout block */
   readonly perTryTimeout?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout[];
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    num_retries: cdktf.numberToTerraform(struct!.numRetries),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    per_try_timeout: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform)(struct!.perTryTimeout),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -641,6 +1118,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: string;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
   /** Prior to forwarding the request to the selected service, the request's host
 header is replaced with contents of hostRewrite. The value must be between 1 and
@@ -651,6 +1137,15 @@ portion of the request's path is replaced by pathPrefixRewrite. The value must
 be between 1 and 1024 characters. */
   readonly pathPrefixRewrite?: string;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
+    path_prefix_rewrite: cdktf.stringToTerraform(struct!.pathPrefixRewrite),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -661,6 +1156,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -671,6 +1176,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction {
   /** A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService. */
@@ -683,6 +1198,17 @@ prior to sending the response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices {
   /** The default BackendService resource. Before
 forwarding the request to backendService, the loadbalancer applies any relevant
@@ -698,6 +1224,16 @@ The value must be between 0 and 1000 */
   /** header_action block */
   readonly headerAction?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction[];
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+    weight: cdktf.numberToTerraform(struct!.weight),
+    header_action: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform)(struct!.headerAction),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleRouteAction {
   /** cors_policy block */
   readonly corsPolicy?: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy[];
@@ -714,6 +1250,20 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteAction {
   /** weighted_backend_services block */
   readonly weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[];
 }
+
+function computeUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_policy: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform)(struct!.corsPolicy),
+    fault_injection_policy: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform)(struct!.faultInjectionPolicy),
+    request_mirror_policy: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform)(struct!.requestMirrorPolicy),
+    retry_policy: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform)(struct!.retryPolicy),
+    timeout: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform)(struct!.timeout),
+    url_rewrite: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform)(struct!.urlRewrite),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRuleUrlRedirect {
   /** The host that will be used in the redirect response instead of the one
 that was supplied in the request. The value must be between 1 and 255
@@ -758,6 +1308,19 @@ portion of the original URL is retained.
  This field is required to ensure an empty block is not set. The normal default value is false. */
   readonly stripQuery: boolean;
 }
+
+function computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleUrlRedirect): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
+    https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
+    path_redirect: cdktf.stringToTerraform(struct!.pathRedirect),
+    prefix_redirect: cdktf.stringToTerraform(struct!.prefixRedirect),
+    redirect_response_code: cdktf.stringToTerraform(struct!.redirectResponseCode),
+    strip_query: cdktf.booleanToTerraform(struct!.stripQuery),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherPathRule {
   /** The list of path patterns to match. Each must start with / and the only place a
 * is allowed is at the end following a /. The string fed to the path matcher
@@ -771,6 +1334,17 @@ allowed here. */
   /** url_redirect block */
   readonly urlRedirect?: ComputeUrlMapPathMatcherPathRuleUrlRedirect[];
 }
+
+function computeUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeUrlMapPathMatcherPathRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    service: cdktf.stringToTerraform(struct!.service),
+    route_action: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionToTerraform)(struct!.routeAction),
+    url_redirect: cdktf.listMapper(computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform)(struct!.urlRedirect),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -781,6 +1355,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -791,6 +1375,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesHeaderAction {
   /** A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService. */
@@ -803,12 +1397,32 @@ prior to sending the response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
   /** The end of the range (exclusive). */
   readonly rangeEnd: number;
   /** The start of the range (inclusive). */
   readonly rangeStart: number;
 }
+
+function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    range_end: cdktf.numberToTerraform(struct!.rangeEnd),
+    range_start: cdktf.numberToTerraform(struct!.rangeStart),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches {
   /** The value should exactly match contents of exactMatch. Only one of exactMatch,
 prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. */
@@ -844,6 +1458,21 @@ must be set. */
   /** range_match block */
   readonly rangeMatch?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch[];
 }
+
+function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exact_match: cdktf.stringToTerraform(struct!.exactMatch),
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    invert_match: cdktf.booleanToTerraform(struct!.invertMatch),
+    prefix_match: cdktf.stringToTerraform(struct!.prefixMatch),
+    present_match: cdktf.booleanToTerraform(struct!.presentMatch),
+    regex_match: cdktf.stringToTerraform(struct!.regexMatch),
+    suffix_match: cdktf.stringToTerraform(struct!.suffixMatch),
+    range_match: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform)(struct!.rangeMatch),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels {
   /** Name of metadata label. The name can have a maximum length of 1024 characters
 and must be at least 1 character long. */
@@ -852,6 +1481,15 @@ and must be at least 1 character long. */
 length of 1024 characters. */
   readonly value: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters {
   /** Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
@@ -863,6 +1501,15 @@ the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"] */
   /** filter_labels block */
   readonly filterLabels: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[];
 }
+
+function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filter_match_criteria: cdktf.stringToTerraform(struct!.filterMatchCriteria),
+    filter_labels: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform)(struct!.filterLabels),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches {
   /** The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
@@ -881,6 +1528,17 @@ please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set. */
   readonly regexMatch?: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exact_match: cdktf.stringToTerraform(struct!.exactMatch),
+    name: cdktf.stringToTerraform(struct!.name),
+    present_match: cdktf.booleanToTerraform(struct!.presentMatch),
+    regex_match: cdktf.stringToTerraform(struct!.regexMatch),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRules {
   /** For satifying the matchRule condition, the path of the request must exactly
 match the value specified in fullPathMatch after removing any query parameters
@@ -909,6 +1567,20 @@ fullPathMatch or regexMatch must be specified. */
   /** query_parameter_matches block */
   readonly queryParameterMatches?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[];
 }
+
+function computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    full_path_match: cdktf.stringToTerraform(struct!.fullPathMatch),
+    ignore_case: cdktf.booleanToTerraform(struct!.ignoreCase),
+    prefix_match: cdktf.stringToTerraform(struct!.prefixMatch),
+    regex_match: cdktf.stringToTerraform(struct!.regexMatch),
+    header_matches: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform)(struct!.headerMatches),
+    metadata_filters: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform)(struct!.metadataFilters),
+    query_parameter_matches: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform)(struct!.queryParameterMatches),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy {
   /** In response to a preflight request, setting this to true indicates that the
 actual request can include user credentials. This translates to the Access-
@@ -934,6 +1606,21 @@ which indicates that the CORS policy is in effect. Defaults to false. */
 translates to the content for the Access-Control-Max-Age header. */
   readonly maxAge?: number;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    max_age: cdktf.numberToTerraform(struct!.maxAge),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort {
   /** The HTTP status code used to abort the request. The value must be between 200
 and 599 inclusive. */
@@ -943,6 +1630,15 @@ aborted as part of fault injection. The value must be between 0.0 and 100.0
 inclusive. */
   readonly percentage?: number;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    http_status: cdktf.numberToTerraform(struct!.httpStatus),
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -952,6 +1648,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay {
   /** The percentage of traffic (connections/operations/requests) on which delay will
 be introduced as part of fault injection. The value must be between 0.0 and
@@ -960,16 +1665,42 @@ be introduced as part of fault injection. The value must be between 0.0 and
   /** fixed_delay block */
   readonly fixedDelay?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay[];
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+    fixed_delay: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform)(struct!.fixedDelay),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
   /** abort block */
   readonly abort?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort[];
   /** delay block */
   readonly delay?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay[];
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    abort: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform)(struct!.abort),
+    delay: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform)(struct!.delay),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
   /** The BackendService resource being mirrored to. */
   readonly backendService: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -979,6 +1710,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
   /** Specifies the allowed number retries. This number must be > 0. */
   readonly numRetries: number;
@@ -1008,6 +1748,16 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
   /** per_try_timeout block */
   readonly perTryTimeout?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout[];
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    num_retries: cdktf.numberToTerraform(struct!.numRetries),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    per_try_timeout: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform)(struct!.perTryTimeout),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -1017,6 +1767,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite {
   /** Prior to forwarding the request to the selected service, the request's host
 header is replaced with contents of hostRewrite. The value must be between 1 and
@@ -1027,6 +1786,15 @@ portion of the request's path is replaced by pathPrefixRewrite. The value must
 be between 1 and 1024 characters. */
   readonly pathPrefixRewrite?: string;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
+    path_prefix_rewrite: cdktf.stringToTerraform(struct!.pathPrefixRewrite),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -1037,6 +1805,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /** The name of the header. */
   readonly headerName: string;
@@ -1047,6 +1825,16 @@ header. If true, headerValue is set for the header, discarding any values that
 were set for that header. */
   readonly replace: boolean;
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction {
   /** A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService. */
@@ -1059,6 +1847,17 @@ prior to sending the response back to the client. */
   /** response_headers_to_add block */
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices {
   /** The default BackendService resource. Before
 forwarding the request to backendService, the loadbalancer applies any relevant
@@ -1074,6 +1873,16 @@ The value must be between 0 and 1000 */
   /** header_action block */
   readonly headerAction?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction[];
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+    weight: cdktf.numberToTerraform(struct!.weight),
+    header_action: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform)(struct!.headerAction),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesRouteAction {
   /** cors_policy block */
   readonly corsPolicy?: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy[];
@@ -1090,6 +1899,20 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteAction {
   /** weighted_backend_services block */
   readonly weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[];
 }
+
+function computeUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_policy: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform)(struct!.corsPolicy),
+    fault_injection_policy: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform)(struct!.faultInjectionPolicy),
+    request_mirror_policy: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform)(struct!.requestMirrorPolicy),
+    retry_policy: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform)(struct!.retryPolicy),
+    timeout: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform)(struct!.timeout),
+    url_rewrite: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform)(struct!.urlRewrite),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRulesUrlRedirect {
   /** The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters. */
@@ -1123,6 +1946,19 @@ prior to redirecting the request. If set to false, the query portion of the
 original URL is retained. Defaults to false. */
   readonly stripQuery?: boolean;
 }
+
+function computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesUrlRedirect): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
+    https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
+    path_redirect: cdktf.stringToTerraform(struct!.pathRedirect),
+    prefix_redirect: cdktf.stringToTerraform(struct!.prefixRedirect),
+    redirect_response_code: cdktf.stringToTerraform(struct!.redirectResponseCode),
+    strip_query: cdktf.booleanToTerraform(struct!.stripQuery),
+  }
+}
+
 export interface ComputeUrlMapPathMatcherRouteRules {
   /** For routeRules within a given pathMatcher, priority determines the order
 in which load balancer will interpret routeRules. RouteRules are evaluated
@@ -1157,6 +1993,19 @@ service or routeAction.weightedBackendService must be set. */
   /** url_redirect block */
   readonly urlRedirect?: ComputeUrlMapPathMatcherRouteRulesUrlRedirect[];
 }
+
+function computeUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    priority: cdktf.numberToTerraform(struct!.priority),
+    service: cdktf.stringToTerraform(struct!.service),
+    header_action: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform)(struct!.headerAction),
+    match_rules: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform)(struct!.matchRules),
+    route_action: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionToTerraform)(struct!.routeAction),
+    url_redirect: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform)(struct!.urlRedirect),
+  }
+}
+
 export interface ComputeUrlMapPathMatcher {
   /** The backend service or backend bucket to use when none of the given paths match. */
   readonly defaultService?: string;
@@ -1176,6 +2025,21 @@ the resource. */
   /** route_rules block */
   readonly routeRules?: ComputeUrlMapPathMatcherRouteRules[];
 }
+
+function computeUrlMapPathMatcherToTerraform(struct?: ComputeUrlMapPathMatcher): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_service: cdktf.stringToTerraform(struct!.defaultService),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    default_route_action: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionToTerraform)(struct!.defaultRouteAction),
+    default_url_redirect: cdktf.listMapper(computeUrlMapPathMatcherDefaultUrlRedirectToTerraform)(struct!.defaultUrlRedirect),
+    header_action: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionToTerraform)(struct!.headerAction),
+    path_rule: cdktf.listMapper(computeUrlMapPathMatcherPathRuleToTerraform)(struct!.pathRule),
+    route_rules: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesToTerraform)(struct!.routeRules),
+  }
+}
+
 export interface ComputeUrlMapTest {
   /** Description of this test case. */
   readonly description?: string;
@@ -1186,15 +2050,36 @@ export interface ComputeUrlMapTest {
   /** The backend service or backend bucket link that should be matched by this test. */
   readonly service: string;
 }
+
+function computeUrlMapTestToTerraform(struct?: ComputeUrlMapTest): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    host: cdktf.stringToTerraform(struct!.host),
+    path: cdktf.stringToTerraform(struct!.path),
+    service: cdktf.stringToTerraform(struct!.service),
+  }
+}
+
 export interface ComputeUrlMapTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeUrlMapTimeoutsToTerraform(struct?: ComputeUrlMapTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeUrlMap extends TerraformResource {
+export class ComputeUrlMap extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -1432,17 +2317,17 @@ export class ComputeUrlMap extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      default_service: this._defaultService,
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      default_route_action: this._defaultRouteAction,
-      default_url_redirect: this._defaultUrlRedirect,
-      header_action: this._headerAction,
-      host_rule: this._hostRule,
-      path_matcher: this._pathMatcher,
-      test: this._test,
-      timeouts: this._timeouts,
+      default_service: cdktf.stringToTerraform(this._defaultService),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      default_route_action: cdktf.listMapper(computeUrlMapDefaultRouteActionToTerraform)(this._defaultRouteAction),
+      default_url_redirect: cdktf.listMapper(computeUrlMapDefaultUrlRedirectToTerraform)(this._defaultUrlRedirect),
+      header_action: cdktf.listMapper(computeUrlMapHeaderActionToTerraform)(this._headerAction),
+      host_rule: cdktf.listMapper(computeUrlMapHostRuleToTerraform)(this._hostRule),
+      path_matcher: cdktf.listMapper(computeUrlMapPathMatcherToTerraform)(this._pathMatcher),
+      test: cdktf.listMapper(computeUrlMapTestToTerraform)(this._test),
+      timeouts: computeUrlMapTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectAccessApprovalSettingsConfig extends TerraformMetaArguments {
+export interface ProjectAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
   /** A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed. */
@@ -36,15 +35,34 @@ export interface ProjectAccessApprovalSettingsEnrolledServices {
   /** The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"] */
   readonly enrollmentLevel?: string;
 }
+
+function projectAccessApprovalSettingsEnrolledServicesToTerraform(struct?: ProjectAccessApprovalSettingsEnrolledServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloud_product: cdktf.stringToTerraform(struct!.cloudProduct),
+    enrollment_level: cdktf.stringToTerraform(struct!.enrollmentLevel),
+  }
+}
+
 export interface ProjectAccessApprovalSettingsTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccessApprovalSettingsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ProjectAccessApprovalSettings extends TerraformResource {
+export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,11 +185,11 @@ export class ProjectAccessApprovalSettings extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      notification_emails: this._notificationEmails,
-      project: this._project,
-      project_id: this._projectId,
-      enrolled_services: this._enrolledServices,
-      timeouts: this._timeouts,
+      notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
+      project: cdktf.stringToTerraform(this._project),
+      project_id: cdktf.stringToTerraform(this._projectId),
+      enrolled_services: cdktf.listMapper(projectAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),
+      timeouts: projectAccessApprovalSettingsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

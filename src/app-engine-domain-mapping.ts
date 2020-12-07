@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppEngineDomainMappingConfig extends TerraformMetaArguments {
+export interface AppEngineDomainMappingConfig extends cdktf.TerraformMetaArguments {
   /** Relative name of the domain serving the application. Example: example.com. */
   readonly domainName: string;
   /** Whether the domain creation should override any existing mappings for this domain.
@@ -20,7 +18,7 @@ By default, overrides are rejected. Default value: "STRICT" Possible values: ["S
   /** timeouts block */
   readonly timeouts?: AppEngineDomainMappingTimeouts;
 }
-export class AppEngineDomainMappingResourceRecords extends ComplexComputedList {
+export class AppEngineDomainMappingResourceRecords extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -49,15 +47,34 @@ Example: 12345. */
 If 'MANUAL', 'certificateId' must be manually specified in order to configure SSL for this domain. Possible values: ["AUTOMATIC", "MANUAL"] */
   readonly sslManagementType: string;
 }
+
+function appEngineDomainMappingSslSettingsToTerraform(struct?: AppEngineDomainMappingSslSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_id: cdktf.stringToTerraform(struct!.certificateId),
+    ssl_management_type: cdktf.stringToTerraform(struct!.sslManagementType),
+  }
+}
+
 export interface AppEngineDomainMappingTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppEngineDomainMapping extends TerraformResource {
+export class AppEngineDomainMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -183,11 +200,11 @@ export class AppEngineDomainMapping extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      domain_name: this._domainName,
-      override_strategy: this._overrideStrategy,
-      project: this._project,
-      ssl_settings: this._sslSettings,
-      timeouts: this._timeouts,
+      domain_name: cdktf.stringToTerraform(this._domainName),
+      override_strategy: cdktf.stringToTerraform(this._overrideStrategy),
+      project: cdktf.stringToTerraform(this._project),
+      ssl_settings: cdktf.listMapper(appEngineDomainMappingSslSettingsToTerraform)(this._sslSettings),
+      timeouts: appEngineDomainMappingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

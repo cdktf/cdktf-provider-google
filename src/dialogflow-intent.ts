@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DialogflowIntentConfig extends TerraformMetaArguments {
+export interface DialogflowIntentConfig extends cdktf.TerraformMetaArguments {
   /** The name of the action associated with the intent.
 Note: The action name must not contain whitespaces. */
   readonly action?: string;
@@ -49,7 +47,7 @@ filling prompt is forwarded to the webhook. Possible values: ["WEBHOOK_STATE_ENA
   /** timeouts block */
   readonly timeouts?: DialogflowIntentTimeouts;
 }
-export class DialogflowIntentFollowupIntentInfo extends ComplexComputedList {
+export class DialogflowIntentFollowupIntentInfo extends cdktf.ComplexComputedList {
 
   // followup_intent_name - computed: true, optional: false, required: false
   public get followupIntentName() {
@@ -67,9 +65,19 @@ export interface DialogflowIntentTimeouts {
   readonly update?: string;
 }
 
+function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DialogflowIntent extends TerraformResource {
+export class DialogflowIntent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -336,19 +344,19 @@ export class DialogflowIntent extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      action: this._action,
-      default_response_platforms: this._defaultResponsePlatforms,
-      display_name: this._displayName,
-      events: this._events,
-      input_context_names: this._inputContextNames,
-      is_fallback: this._isFallback,
-      ml_disabled: this._mlDisabled,
-      parent_followup_intent_name: this._parentFollowupIntentName,
-      priority: this._priority,
-      project: this._project,
-      reset_contexts: this._resetContexts,
-      webhook_state: this._webhookState,
-      timeouts: this._timeouts,
+      action: cdktf.stringToTerraform(this._action),
+      default_response_platforms: cdktf.listMapper(cdktf.stringToTerraform)(this._defaultResponsePlatforms),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      events: cdktf.listMapper(cdktf.stringToTerraform)(this._events),
+      input_context_names: cdktf.listMapper(cdktf.stringToTerraform)(this._inputContextNames),
+      is_fallback: cdktf.booleanToTerraform(this._isFallback),
+      ml_disabled: cdktf.booleanToTerraform(this._mlDisabled),
+      parent_followup_intent_name: cdktf.stringToTerraform(this._parentFollowupIntentName),
+      priority: cdktf.numberToTerraform(this._priority),
+      project: cdktf.stringToTerraform(this._project),
+      reset_contexts: cdktf.booleanToTerraform(this._resetContexts),
+      webhook_state: cdktf.stringToTerraform(this._webhookState),
+      timeouts: dialogflowIntentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DeploymentManagerDeploymentConfig extends TerraformMetaArguments {
+export interface DeploymentManagerDeploymentConfig extends cdktf.TerraformMetaArguments {
   /** Set the policy to use for creating new resources. Only used on
 create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or
 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist,
@@ -48,10 +47,27 @@ export interface DeploymentManagerDeploymentLabels {
   /** Value of label. */
   readonly value?: string;
 }
+
+function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManagerDeploymentLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface DeploymentManagerDeploymentTargetConfig {
   /** The full YAML contents of your configuration file. */
   readonly content: string;
 }
+
+function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentManagerDeploymentTargetConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+  }
+}
+
 export interface DeploymentManagerDeploymentTargetImports {
   /** The full contents of the template that you want to import. */
   readonly content?: string;
@@ -59,21 +75,49 @@ export interface DeploymentManagerDeploymentTargetImports {
 configuration. */
   readonly name?: string;
 }
+
+function deploymentManagerDeploymentTargetImportsToTerraform(struct?: DeploymentManagerDeploymentTargetImports): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface DeploymentManagerDeploymentTarget {
   /** config block */
   readonly config: DeploymentManagerDeploymentTargetConfig[];
   /** imports block */
   readonly imports?: DeploymentManagerDeploymentTargetImports[];
 }
+
+function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManagerDeploymentTarget): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    config: cdktf.listMapper(deploymentManagerDeploymentTargetConfigToTerraform)(struct!.config),
+    imports: cdktf.listMapper(deploymentManagerDeploymentTargetImportsToTerraform)(struct!.imports),
+  }
+}
+
 export interface DeploymentManagerDeploymentTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DeploymentManagerDeployment extends TerraformResource {
+export class DeploymentManagerDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -269,15 +313,15 @@ export class DeploymentManagerDeployment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      create_policy: this._createPolicy,
-      delete_policy: this._deletePolicy,
-      description: this._description,
-      name: this._name,
-      preview: this._preview,
-      project: this._project,
-      labels: this._labels,
-      target: this._target,
-      timeouts: this._timeouts,
+      create_policy: cdktf.stringToTerraform(this._createPolicy),
+      delete_policy: cdktf.stringToTerraform(this._deletePolicy),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      preview: cdktf.booleanToTerraform(this._preview),
+      project: cdktf.stringToTerraform(this._project),
+      labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform)(this._labels),
+      target: cdktf.listMapper(deploymentManagerDeploymentTargetToTerraform)(this._target),
+      timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

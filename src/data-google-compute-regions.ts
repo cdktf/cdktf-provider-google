@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeRegionsConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeRegionsConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   readonly status?: string;
 }
 
 // Resource
 
-export class DataGoogleComputeRegions extends TerraformDataSource {
+export class DataGoogleComputeRegions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -87,8 +86,8 @@ export class DataGoogleComputeRegions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
-      status: this._status,
+      project: cdktf.stringToTerraform(this._project),
+      status: cdktf.stringToTerraform(this._status),
     };
   }
 }

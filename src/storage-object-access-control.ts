@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageObjectAccessControlConfig extends TerraformMetaArguments {
+export interface StorageObjectAccessControlConfig extends cdktf.TerraformMetaArguments {
   /** The name of the bucket. */
   readonly bucket: string;
   /** The entity holding the permission, in one of the following forms:
@@ -28,7 +26,7 @@ export interface StorageObjectAccessControlConfig extends TerraformMetaArguments
   /** timeouts block */
   readonly timeouts?: StorageObjectAccessControlTimeouts;
 }
-export class StorageObjectAccessControlProjectTeam extends ComplexComputedList {
+export class StorageObjectAccessControlProjectTeam extends cdktf.ComplexComputedList {
 
   // project_number - computed: true, optional: false, required: false
   public get projectNumber() {
@@ -46,9 +44,19 @@ export interface StorageObjectAccessControlTimeouts {
   readonly update?: string;
 }
 
+function storageObjectAccessControlTimeoutsToTerraform(struct?: StorageObjectAccessControlTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageObjectAccessControl extends TerraformResource {
+export class StorageObjectAccessControl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -180,11 +188,11 @@ export class StorageObjectAccessControl extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      entity: this._entity,
-      object: this._object,
-      role: this._role,
-      timeouts: this._timeouts,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      entity: cdktf.stringToTerraform(this._entity),
+      object: cdktf.stringToTerraform(this._object),
+      role: cdktf.stringToTerraform(this._role),
+      timeouts: storageObjectAccessControlTimeoutsToTerraform(this._timeouts),
     };
   }
 }

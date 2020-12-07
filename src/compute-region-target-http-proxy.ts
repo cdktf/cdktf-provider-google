@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionTargetHttpProxyConfig extends TerraformMetaArguments {
+export interface ComputeRegionTargetHttpProxyConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Name of the resource. Provided by the client when the resource is
@@ -34,9 +33,19 @@ export interface ComputeRegionTargetHttpProxyTimeouts {
   readonly update?: string;
 }
 
+function computeRegionTargetHttpProxyTimeoutsToTerraform(struct?: ComputeRegionTargetHttpProxyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionTargetHttpProxy extends TerraformResource {
+export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -181,12 +190,12 @@ export class ComputeRegionTargetHttpProxy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      url_map: this._urlMap,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      url_map: cdktf.stringToTerraform(this._urlMap),
+      timeouts: computeRegionTargetHttpProxyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

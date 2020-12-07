@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeTargetPoolConfig extends TerraformMetaArguments {
+export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
   /** URL to the backup target pool. Must also set failover_ratio. */
   readonly backupPool?: string;
   /** Textual description field. */
@@ -35,9 +34,19 @@ export interface ComputeTargetPoolTimeouts {
   readonly update?: string;
 }
 
+function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeTargetPool extends TerraformResource {
+export class ComputeTargetPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -243,16 +252,16 @@ export class ComputeTargetPool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backup_pool: this._backupPool,
-      description: this._description,
-      failover_ratio: this._failoverRatio,
-      health_checks: this._healthChecks,
-      instances: this._instances,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      session_affinity: this._sessionAffinity,
-      timeouts: this._timeouts,
+      backup_pool: cdktf.stringToTerraform(this._backupPool),
+      description: cdktf.stringToTerraform(this._description),
+      failover_ratio: cdktf.numberToTerraform(this._failoverRatio),
+      health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
+      instances: cdktf.listMapper(cdktf.stringToTerraform)(this._instances),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
+      timeouts: computeTargetPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,18 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleNetblockIpRangesConfig extends TerraformMetaArguments {
+export interface DataGoogleNetblockIpRangesConfig extends cdktf.TerraformMetaArguments {
   readonly rangeType?: string;
 }
 
 // Resource
 
-export class DataGoogleNetblockIpRanges extends TerraformDataSource {
+export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -79,7 +78,7 @@ export class DataGoogleNetblockIpRanges extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      range_type: this._rangeType,
+      range_type: cdktf.stringToTerraform(this._rangeType),
     };
   }
 }

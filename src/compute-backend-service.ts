@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeBackendServiceConfig extends TerraformMetaArguments {
+export interface ComputeBackendServiceConfig extends cdktf.TerraformMetaArguments {
   /** Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
 only until the end of the browser session (or equivalent). The
@@ -194,6 +193,24 @@ CPU utilization target for the group. The default is 0.8. Valid
 range is [0.0, 1.0]. */
   readonly maxUtilization?: number;
 }
+
+function computeBackendServiceBackendToTerraform(struct?: ComputeBackendServiceBackend): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    balancing_mode: cdktf.stringToTerraform(struct!.balancingMode),
+    capacity_scaler: cdktf.numberToTerraform(struct!.capacityScaler),
+    description: cdktf.stringToTerraform(struct!.description),
+    group: cdktf.stringToTerraform(struct!.group),
+    max_connections: cdktf.numberToTerraform(struct!.maxConnections),
+    max_connections_per_endpoint: cdktf.numberToTerraform(struct!.maxConnectionsPerEndpoint),
+    max_connections_per_instance: cdktf.numberToTerraform(struct!.maxConnectionsPerInstance),
+    max_rate: cdktf.numberToTerraform(struct!.maxRate),
+    max_rate_per_endpoint: cdktf.numberToTerraform(struct!.maxRatePerEndpoint),
+    max_rate_per_instance: cdktf.numberToTerraform(struct!.maxRatePerInstance),
+    max_utilization: cdktf.numberToTerraform(struct!.maxUtilization),
+  }
+}
+
 export interface ComputeBackendServiceCdnPolicyCacheKeyPolicy {
   /** If true requests to different hosts will be cached separately. */
   readonly includeHost?: boolean;
@@ -222,6 +239,18 @@ query_string_whitelist or query_string_blacklist, not both.
 delimiters. */
   readonly queryStringWhitelist?: string[];
 }
+
+function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyCacheKeyPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    include_host: cdktf.booleanToTerraform(struct!.includeHost),
+    include_protocol: cdktf.booleanToTerraform(struct!.includeProtocol),
+    include_query_string: cdktf.booleanToTerraform(struct!.includeQueryString),
+    query_string_blacklist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringBlacklist),
+    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringWhitelist),
+  }
+}
+
 export interface ComputeBackendServiceCdnPolicy {
   /** Maximum number of seconds the response to a signed URL request
 will be considered fresh, defaults to 1hr (3600s). After this
@@ -237,6 +266,15 @@ responses will not be altered. */
   /** cache_key_policy block */
   readonly cacheKeyPolicy?: ComputeBackendServiceCdnPolicyCacheKeyPolicy[];
 }
+
+function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
+    cache_key_policy: cdktf.listMapper(computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform)(struct!.cacheKeyPolicy),
+  }
+}
+
 export interface ComputeBackendServiceCircuitBreakers {
   /** The maximum number of connections to the backend cluster.
 Defaults to 1024. */
@@ -256,6 +294,18 @@ will effectively disable keep alive. */
 Defaults to 3. */
   readonly maxRetries?: number;
 }
+
+function computeBackendServiceCircuitBreakersToTerraform(struct?: ComputeBackendServiceCircuitBreakers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_connections: cdktf.numberToTerraform(struct!.maxConnections),
+    max_pending_requests: cdktf.numberToTerraform(struct!.maxPendingRequests),
+    max_requests: cdktf.numberToTerraform(struct!.maxRequests),
+    max_requests_per_connection: cdktf.numberToTerraform(struct!.maxRequestsPerConnection),
+    max_retries: cdktf.numberToTerraform(struct!.maxRetries),
+  }
+}
+
 export interface ComputeBackendServiceConsistentHashHttpCookieTtl {
   /** Span of time that's a fraction of a second at nanosecond
 resolution. Durations less than one second are represented
@@ -266,6 +316,15 @@ be from 0 to 999,999,999 inclusive. */
 Must be from 0 to 315,576,000,000 inclusive. */
   readonly seconds: number;
 }
+
+function computeBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieTtl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeBackendServiceConsistentHashHttpCookie {
   /** Name of the cookie. */
   readonly name?: string;
@@ -274,6 +333,16 @@ export interface ComputeBackendServiceConsistentHashHttpCookie {
   /** ttl block */
   readonly ttl?: ComputeBackendServiceConsistentHashHttpCookieTtl[];
 }
+
+function computeBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookie): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    path: cdktf.stringToTerraform(struct!.path),
+    ttl: cdktf.listMapper(computeBackendServiceConsistentHashHttpCookieTtlToTerraform)(struct!.ttl),
+  }
+}
+
 export interface ComputeBackendServiceConsistentHash {
   /** The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD. */
@@ -288,12 +357,31 @@ Defaults to 1024. */
   /** http_cookie block */
   readonly httpCookie?: ComputeBackendServiceConsistentHashHttpCookie[];
 }
+
+function computeBackendServiceConsistentHashToTerraform(struct?: ComputeBackendServiceConsistentHash): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    http_header_name: cdktf.stringToTerraform(struct!.httpHeaderName),
+    minimum_ring_size: cdktf.numberToTerraform(struct!.minimumRingSize),
+    http_cookie: cdktf.listMapper(computeBackendServiceConsistentHashHttpCookieToTerraform)(struct!.httpCookie),
+  }
+}
+
 export interface ComputeBackendServiceIap {
   /** OAuth2 Client ID for IAP */
   readonly oauth2ClientId: string;
   /** OAuth2 Client Secret for IAP */
   readonly oauth2ClientSecret: string;
 }
+
+function computeBackendServiceIapToTerraform(struct?: ComputeBackendServiceIap): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    oauth2_client_id: cdktf.stringToTerraform(struct!.oauth2ClientId),
+    oauth2_client_secret: cdktf.stringToTerraform(struct!.oauth2ClientSecret),
+  }
+}
+
 export interface ComputeBackendServiceLogConfig {
   /** Whether to enable logging for the load balancer traffic served by this backend service. */
   readonly enable?: boolean;
@@ -303,6 +391,15 @@ where 1.0 means all logged requests are reported and 0.0 means no logged request
 The default value is 1.0. */
   readonly sampleRate?: number;
 }
+
+function computeBackendServiceLogConfigToTerraform(struct?: ComputeBackendServiceLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable: cdktf.booleanToTerraform(struct!.enable),
+    sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
+  }
+}
+
 export interface ComputeBackendServiceOutlierDetectionBaseEjectionTime {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -312,6 +409,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: number;
 }
+
+function computeBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeBackendServiceOutlierDetectionBaseEjectionTime): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeBackendServiceOutlierDetectionInterval {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -321,6 +427,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: number;
 }
+
+function computeBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeBackendServiceOutlierDetectionInterval): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeBackendServiceOutlierDetection {
   /** Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
@@ -368,15 +483,43 @@ runtime value should be 1900. Defaults to 1900. */
   /** interval block */
   readonly interval?: ComputeBackendServiceOutlierDetectionInterval[];
 }
+
+function computeBackendServiceOutlierDetectionToTerraform(struct?: ComputeBackendServiceOutlierDetection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    consecutive_errors: cdktf.numberToTerraform(struct!.consecutiveErrors),
+    consecutive_gateway_failure: cdktf.numberToTerraform(struct!.consecutiveGatewayFailure),
+    enforcing_consecutive_errors: cdktf.numberToTerraform(struct!.enforcingConsecutiveErrors),
+    enforcing_consecutive_gateway_failure: cdktf.numberToTerraform(struct!.enforcingConsecutiveGatewayFailure),
+    enforcing_success_rate: cdktf.numberToTerraform(struct!.enforcingSuccessRate),
+    max_ejection_percent: cdktf.numberToTerraform(struct!.maxEjectionPercent),
+    success_rate_minimum_hosts: cdktf.numberToTerraform(struct!.successRateMinimumHosts),
+    success_rate_request_volume: cdktf.numberToTerraform(struct!.successRateRequestVolume),
+    success_rate_stdev_factor: cdktf.numberToTerraform(struct!.successRateStdevFactor),
+    base_ejection_time: cdktf.listMapper(computeBackendServiceOutlierDetectionBaseEjectionTimeToTerraform)(struct!.baseEjectionTime),
+    interval: cdktf.listMapper(computeBackendServiceOutlierDetectionIntervalToTerraform)(struct!.interval),
+  }
+}
+
 export interface ComputeBackendServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeBackendService extends TerraformResource {
+export class ComputeBackendService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -830,30 +973,30 @@ export class ComputeBackendService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      affinity_cookie_ttl_sec: this._affinityCookieTtlSec,
-      connection_draining_timeout_sec: this._connectionDrainingTimeoutSec,
-      custom_request_headers: this._customRequestHeaders,
-      custom_response_headers: this._customResponseHeaders,
-      description: this._description,
-      enable_cdn: this._enableCdn,
-      health_checks: this._healthChecks,
-      load_balancing_scheme: this._loadBalancingScheme,
-      locality_lb_policy: this._localityLbPolicy,
-      name: this._name,
-      port_name: this._portName,
-      project: this._project,
-      protocol: this._protocol,
-      security_policy: this._securityPolicy,
-      session_affinity: this._sessionAffinity,
-      timeout_sec: this._timeoutSec,
-      backend: this._backend,
-      cdn_policy: this._cdnPolicy,
-      circuit_breakers: this._circuitBreakers,
-      consistent_hash: this._consistentHash,
-      iap: this._iap,
-      log_config: this._logConfig,
-      outlier_detection: this._outlierDetection,
-      timeouts: this._timeouts,
+      affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
+      connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
+      custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customRequestHeaders),
+      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customResponseHeaders),
+      description: cdktf.stringToTerraform(this._description),
+      enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
+      health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
+      load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
+      locality_lb_policy: cdktf.stringToTerraform(this._localityLbPolicy),
+      name: cdktf.stringToTerraform(this._name),
+      port_name: cdktf.stringToTerraform(this._portName),
+      project: cdktf.stringToTerraform(this._project),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      security_policy: cdktf.stringToTerraform(this._securityPolicy),
+      session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
+      timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
+      backend: cdktf.listMapper(computeBackendServiceBackendToTerraform)(this._backend),
+      cdn_policy: cdktf.listMapper(computeBackendServiceCdnPolicyToTerraform)(this._cdnPolicy),
+      circuit_breakers: cdktf.listMapper(computeBackendServiceCircuitBreakersToTerraform)(this._circuitBreakers),
+      consistent_hash: cdktf.listMapper(computeBackendServiceConsistentHashToTerraform)(this._consistentHash),
+      iap: cdktf.listMapper(computeBackendServiceIapToTerraform)(this._iap),
+      log_config: cdktf.listMapper(computeBackendServiceLogConfigToTerraform)(this._logConfig),
+      outlier_detection: cdktf.listMapper(computeBackendServiceOutlierDetectionToTerraform)(this._outlierDetection),
+      timeouts: computeBackendServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

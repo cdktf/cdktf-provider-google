@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsCryptoKeyIamBindingConfig extends TerraformMetaArguments {
+export interface KmsCryptoKeyIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly cryptoKeyId: string;
   readonly members: string[];
   readonly role: string;
@@ -20,9 +19,19 @@ export interface KmsCryptoKeyIamBindingCondition {
   readonly title: string;
 }
 
+function kmsCryptoKeyIamBindingConditionToTerraform(struct?: KmsCryptoKeyIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class KmsCryptoKeyIamBinding extends TerraformResource {
+export class KmsCryptoKeyIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class KmsCryptoKeyIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      crypto_key_id: this._cryptoKeyId,
-      members: this._members,
-      role: this._role,
-      condition: this._condition,
+      crypto_key_id: cdktf.stringToTerraform(this._cryptoKeyId),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(kmsCryptoKeyIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectOrganizationPolicyConfig extends TerraformMetaArguments {
+export interface ProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
   readonly constraint: string;
   /** The project ID. */
@@ -27,18 +26,44 @@ export interface ProjectOrganizationPolicyBooleanPolicy {
   /** If true, then the Policy is enforced. If false, then any configuration is acceptable. */
   readonly enforced: boolean;
 }
+
+function projectOrganizationPolicyBooleanPolicyToTerraform(struct?: ProjectOrganizationPolicyBooleanPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enforced: cdktf.booleanToTerraform(struct!.enforced),
+  }
+}
+
 export interface ProjectOrganizationPolicyListPolicyAllow {
   /** The policy allows or denies all values. */
   readonly all?: boolean;
   /** The policy can define specific values that are allowed or denied. */
   readonly values?: string[];
 }
+
+function projectOrganizationPolicyListPolicyAllowToTerraform(struct?: ProjectOrganizationPolicyListPolicyAllow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    all: cdktf.booleanToTerraform(struct!.all),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ProjectOrganizationPolicyListPolicyDeny {
   /** The policy allows or denies all values. */
   readonly all?: boolean;
   /** The policy can define specific values that are allowed or denied. */
   readonly values?: string[];
 }
+
+function projectOrganizationPolicyListPolicyDenyToTerraform(struct?: ProjectOrganizationPolicyListPolicyDeny): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    all: cdktf.booleanToTerraform(struct!.all),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ProjectOrganizationPolicyListPolicy {
   /** If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. */
   readonly inheritFromParent?: boolean;
@@ -49,10 +74,29 @@ export interface ProjectOrganizationPolicyListPolicy {
   /** deny block */
   readonly deny?: ProjectOrganizationPolicyListPolicyDeny[];
 }
+
+function projectOrganizationPolicyListPolicyToTerraform(struct?: ProjectOrganizationPolicyListPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    inherit_from_parent: cdktf.booleanToTerraform(struct!.inheritFromParent),
+    suggested_value: cdktf.stringToTerraform(struct!.suggestedValue),
+    allow: cdktf.listMapper(projectOrganizationPolicyListPolicyAllowToTerraform)(struct!.allow),
+    deny: cdktf.listMapper(projectOrganizationPolicyListPolicyDenyToTerraform)(struct!.deny),
+  }
+}
+
 export interface ProjectOrganizationPolicyRestorePolicy {
   /** May only be set to true. If set, then the default Policy is restored. */
   readonly default: boolean;
 }
+
+function projectOrganizationPolicyRestorePolicyToTerraform(struct?: ProjectOrganizationPolicyRestorePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default: cdktf.booleanToTerraform(struct!.default),
+  }
+}
+
 export interface ProjectOrganizationPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -60,9 +104,20 @@ export interface ProjectOrganizationPolicyTimeouts {
   readonly update?: string;
 }
 
+function projectOrganizationPolicyTimeoutsToTerraform(struct?: ProjectOrganizationPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ProjectOrganizationPolicy extends TerraformResource {
+export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -219,13 +274,13 @@ export class ProjectOrganizationPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      constraint: this._constraint,
-      project: this._project,
-      version: this._version,
-      boolean_policy: this._booleanPolicy,
-      list_policy: this._listPolicy,
-      restore_policy: this._restorePolicy,
-      timeouts: this._timeouts,
+      constraint: cdktf.stringToTerraform(this._constraint),
+      project: cdktf.stringToTerraform(this._project),
+      version: cdktf.numberToTerraform(this._version),
+      boolean_policy: cdktf.listMapper(projectOrganizationPolicyBooleanPolicyToTerraform)(this._booleanPolicy),
+      list_policy: cdktf.listMapper(projectOrganizationPolicyListPolicyToTerraform)(this._listPolicy),
+      restore_policy: cdktf.listMapper(projectOrganizationPolicyRestorePolicyToTerraform)(this._restorePolicy),
+      timeouts: projectOrganizationPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

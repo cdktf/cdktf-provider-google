@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BinaryAuthorizationAttestorIamMemberConfig extends TerraformMetaArguments {
+export interface BinaryAuthorizationAttestorIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly attestor: string;
   readonly member: string;
   readonly project?: string;
@@ -21,9 +20,19 @@ export interface BinaryAuthorizationAttestorIamMemberCondition {
   readonly title: string;
 }
 
+function binaryAuthorizationAttestorIamMemberConditionToTerraform(struct?: BinaryAuthorizationAttestorIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class BinaryAuthorizationAttestorIamMember extends TerraformResource {
+export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class BinaryAuthorizationAttestorIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      attestor: this._attestor,
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      condition: this._condition,
+      attestor: cdktf.stringToTerraform(this._attestor),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(binaryAuthorizationAttestorIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

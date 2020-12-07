@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageBucketConfig extends TerraformMetaArguments {
+export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   /** Enables Bucket Policy Only access to a bucket. */
   readonly bucketPolicyOnly?: boolean;
   readonly defaultEventBasedHold?: boolean;
@@ -52,16 +51,44 @@ export interface StorageBucketCors {
   /** The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains. */
   readonly responseHeader?: string[];
 }
+
+function storageBucketCorsToTerraform(struct?: StorageBucketCors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_age_seconds: cdktf.numberToTerraform(struct!.maxAgeSeconds),
+    method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
+    origin: cdktf.listMapper(cdktf.stringToTerraform)(struct!.origin),
+    response_header: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeader),
+  }
+}
+
 export interface StorageBucketEncryption {
   /** A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified. You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details. */
   readonly defaultKmsKeyName: string;
 }
+
+function storageBucketEncryptionToTerraform(struct?: StorageBucketEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_kms_key_name: cdktf.stringToTerraform(struct!.defaultKmsKeyName),
+  }
+}
+
 export interface StorageBucketLifecycleRuleAction {
   /** The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. */
   readonly storageClass?: string;
   /** The type of the action of this Lifecycle Rule. Supported values include: Delete and SetStorageClass. */
   readonly type: string;
 }
+
+function storageBucketLifecycleRuleActionToTerraform(struct?: StorageBucketLifecycleRuleAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    storage_class: cdktf.stringToTerraform(struct!.storageClass),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StorageBucketLifecycleRuleCondition {
   /** Minimum age of an object in days to satisfy this condition. */
   readonly age?: number;
@@ -74,28 +101,75 @@ export interface StorageBucketLifecycleRuleCondition {
   /** Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY". */
   readonly withState?: string;
 }
+
+function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLifecycleRuleCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    age: cdktf.numberToTerraform(struct!.age),
+    created_before: cdktf.stringToTerraform(struct!.createdBefore),
+    matches_storage_class: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchesStorageClass),
+    num_newer_versions: cdktf.numberToTerraform(struct!.numNewerVersions),
+    with_state: cdktf.stringToTerraform(struct!.withState),
+  }
+}
+
 export interface StorageBucketLifecycleRule {
   /** action block */
   readonly action: StorageBucketLifecycleRuleAction[];
   /** condition block */
   readonly condition: StorageBucketLifecycleRuleCondition[];
 }
+
+function storageBucketLifecycleRuleToTerraform(struct?: StorageBucketLifecycleRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.listMapper(storageBucketLifecycleRuleActionToTerraform)(struct!.action),
+    condition: cdktf.listMapper(storageBucketLifecycleRuleConditionToTerraform)(struct!.condition),
+  }
+}
+
 export interface StorageBucketLogging {
   /** The bucket that will receive log objects. */
   readonly logBucket: string;
   /** The object prefix for log objects. If it's not provided, by default Google Cloud Storage sets this to this bucket's name. */
   readonly logObjectPrefix?: string;
 }
+
+function storageBucketLoggingToTerraform(struct?: StorageBucketLogging): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    log_bucket: cdktf.stringToTerraform(struct!.logBucket),
+    log_object_prefix: cdktf.stringToTerraform(struct!.logObjectPrefix),
+  }
+}
+
 export interface StorageBucketRetentionPolicy {
   /** If set to true, the bucket will be locked and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action. */
   readonly isLocked?: boolean;
   /** The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds. */
   readonly retentionPeriod: number;
 }
+
+function storageBucketRetentionPolicyToTerraform(struct?: StorageBucketRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    is_locked: cdktf.booleanToTerraform(struct!.isLocked),
+    retention_period: cdktf.numberToTerraform(struct!.retentionPeriod),
+  }
+}
+
 export interface StorageBucketVersioning {
   /** While set to true, versioning is fully enabled for this bucket. */
   readonly enabled: boolean;
 }
+
+function storageBucketVersioningToTerraform(struct?: StorageBucketVersioning): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface StorageBucketWebsite {
   /** Behaves as the bucket's directory index where missing objects are treated as potential directories. */
   readonly mainPageSuffix?: string;
@@ -103,9 +177,18 @@ export interface StorageBucketWebsite {
   readonly notFoundPage?: string;
 }
 
+function storageBucketWebsiteToTerraform(struct?: StorageBucketWebsite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    main_page_suffix: cdktf.stringToTerraform(struct!.mainPageSuffix),
+    not_found_page: cdktf.stringToTerraform(struct!.notFoundPage),
+  }
+}
+
+
 // Resource
 
-export class StorageBucket extends TerraformResource {
+export class StorageBucket extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -435,23 +518,23 @@ export class StorageBucket extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket_policy_only: this._bucketPolicyOnly,
-      default_event_based_hold: this._defaultEventBasedHold,
-      force_destroy: this._forceDestroy,
-      labels: this._labels,
-      location: this._location,
-      name: this._name,
-      project: this._project,
-      requester_pays: this._requesterPays,
-      storage_class: this._storageClass,
-      uniform_bucket_level_access: this._uniformBucketLevelAccess,
-      cors: this._cors,
-      encryption: this._encryption,
-      lifecycle_rule: this._lifecycleRule,
-      logging: this._logging,
-      retention_policy: this._retentionPolicy,
-      versioning: this._versioning,
-      website: this._website,
+      bucket_policy_only: cdktf.booleanToTerraform(this._bucketPolicyOnly),
+      default_event_based_hold: cdktf.booleanToTerraform(this._defaultEventBasedHold),
+      force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      requester_pays: cdktf.booleanToTerraform(this._requesterPays),
+      storage_class: cdktf.stringToTerraform(this._storageClass),
+      uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),
+      cors: cdktf.listMapper(storageBucketCorsToTerraform)(this._cors),
+      encryption: cdktf.listMapper(storageBucketEncryptionToTerraform)(this._encryption),
+      lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform)(this._lifecycleRule),
+      logging: cdktf.listMapper(storageBucketLoggingToTerraform)(this._logging),
+      retention_policy: cdktf.listMapper(storageBucketRetentionPolicyToTerraform)(this._retentionPolicy),
+      versioning: cdktf.listMapper(storageBucketVersioningToTerraform)(this._versioning),
+      website: cdktf.listMapper(storageBucketWebsiteToTerraform)(this._website),
     };
   }
 }

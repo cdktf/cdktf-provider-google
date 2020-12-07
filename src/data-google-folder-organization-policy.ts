@@ -2,26 +2,24 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleFolderOrganizationPolicyConfig extends TerraformMetaArguments {
+export interface DataGoogleFolderOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
   readonly constraint: string;
   /** The resource name of the folder to set the policy for. Its format is folders/{folder_id}. */
   readonly folder: string;
 }
-export class DataGoogleFolderOrganizationPolicyBooleanPolicy extends ComplexComputedList {
+export class DataGoogleFolderOrganizationPolicyBooleanPolicy extends cdktf.ComplexComputedList {
 
   // enforced - computed: true, optional: false, required: false
   public get enforced() {
     return this.getBooleanAttribute('enforced');
   }
 }
-export class DataGoogleFolderOrganizationPolicyListPolicyAllow extends ComplexComputedList {
+export class DataGoogleFolderOrganizationPolicyListPolicyAllow extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
@@ -33,7 +31,7 @@ export class DataGoogleFolderOrganizationPolicyListPolicyAllow extends ComplexCo
     return this.getListAttribute('values');
   }
 }
-export class DataGoogleFolderOrganizationPolicyListPolicyDeny extends ComplexComputedList {
+export class DataGoogleFolderOrganizationPolicyListPolicyDeny extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
@@ -45,7 +43,7 @@ export class DataGoogleFolderOrganizationPolicyListPolicyDeny extends ComplexCom
     return this.getListAttribute('values');
   }
 }
-export class DataGoogleFolderOrganizationPolicyListPolicy extends ComplexComputedList {
+export class DataGoogleFolderOrganizationPolicyListPolicy extends cdktf.ComplexComputedList {
 
   // allow - computed: true, optional: false, required: false
   public get allow() {
@@ -67,7 +65,7 @@ export class DataGoogleFolderOrganizationPolicyListPolicy extends ComplexCompute
     return this.getStringAttribute('suggested_value');
   }
 }
-export class DataGoogleFolderOrganizationPolicyRestorePolicy extends ComplexComputedList {
+export class DataGoogleFolderOrganizationPolicyRestorePolicy extends cdktf.ComplexComputedList {
 
   // default - computed: true, optional: false, required: false
   public get default() {
@@ -77,7 +75,7 @@ export class DataGoogleFolderOrganizationPolicyRestorePolicy extends ComplexComp
 
 // Resource
 
-export class DataGoogleFolderOrganizationPolicy extends TerraformDataSource {
+export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -169,8 +167,8 @@ export class DataGoogleFolderOrganizationPolicy extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      constraint: this._constraint,
-      folder: this._folder,
+      constraint: cdktf.stringToTerraform(this._constraint),
+      folder: cdktf.stringToTerraform(this._folder),
     };
   }
 }

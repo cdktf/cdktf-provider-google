@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionDiskIamBindingConfig extends TerraformMetaArguments {
+export interface ComputeRegionDiskIamBindingConfig extends cdktf.TerraformMetaArguments {
   readonly members: string[];
   readonly name: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface ComputeRegionDiskIamBindingCondition {
   readonly title: string;
 }
 
+function computeRegionDiskIamBindingConditionToTerraform(struct?: ComputeRegionDiskIamBindingCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionDiskIamBinding extends TerraformResource {
+export class ComputeRegionDiskIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class ComputeRegionDiskIamBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      members: this._members,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      role: this._role,
-      condition: this._condition,
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(computeRegionDiskIamBindingConditionToTerraform)(this._condition),
     };
   }
 }

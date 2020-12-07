@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareDicomStoreIamPolicyConfig extends TerraformMetaArguments {
+export interface HealthcareDicomStoreIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly dicomStoreId: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class HealthcareDicomStoreIamPolicy extends TerraformResource {
+export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class HealthcareDicomStoreIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dicom_store_id: this._dicomStoreId,
-      policy_data: this._policyData,
+      dicom_store_id: cdktf.stringToTerraform(this._dicomStoreId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

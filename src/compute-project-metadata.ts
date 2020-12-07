@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeProjectMetadataConfig extends TerraformMetaArguments {
+export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArguments {
   /** A series of key value pairs. */
   readonly metadata: { [key: string]: string };
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
@@ -20,9 +19,18 @@ export interface ComputeProjectMetadataTimeouts {
   readonly delete?: string;
 }
 
+function computeProjectMetadataTimeoutsToTerraform(struct?: ComputeProjectMetadataTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeProjectMetadata extends TerraformResource {
+export class ComputeProjectMetadata extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -104,9 +112,9 @@ export class ComputeProjectMetadata extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: this._metadata,
-      project: this._project,
-      timeouts: this._timeouts,
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeProjectMetadataTimeoutsToTerraform(this._timeouts),
     };
   }
 }

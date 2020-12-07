@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface GameServicesGameServerDeploymentRolloutConfig extends TerraformMetaArguments {
+export interface GameServicesGameServerDeploymentRolloutConfig extends cdktf.TerraformMetaArguments {
   /** This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 
@@ -25,21 +24,48 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   /** List of realms to match against. */
   readonly realms?: string[];
 }
+
+function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    realms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.realms),
+  }
+}
+
 export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverrides {
   /** Version of the configuration. */
   readonly configVersion?: string;
   /** realms_selector block */
   readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector[];
 }
+
+function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    config_version: cdktf.stringToTerraform(struct!.configVersion),
+    realms_selector: cdktf.listMapper(gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform)(struct!.realmsSelector),
+  }
+}
+
 export interface GameServicesGameServerDeploymentRolloutTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class GameServicesGameServerDeploymentRollout extends TerraformResource {
+export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -157,11 +183,11 @@ export class GameServicesGameServerDeploymentRollout extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      default_game_server_config: this._defaultGameServerConfig,
-      deployment_id: this._deploymentId,
-      project: this._project,
-      game_server_config_overrides: this._gameServerConfigOverrides,
-      timeouts: this._timeouts,
+      default_game_server_config: cdktf.stringToTerraform(this._defaultGameServerConfig),
+      deployment_id: cdktf.stringToTerraform(this._deploymentId),
+      project: cdktf.stringToTerraform(this._project),
+      game_server_config_overrides: cdktf.listMapper(gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform)(this._gameServerConfigOverrides),
+      timeouts: gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(this._timeouts),
     };
   }
 }

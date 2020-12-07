@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DnsPolicyConfig extends TerraformMetaArguments {
+export interface DnsPolicyConfig extends cdktf.TerraformMetaArguments {
   /** A textual description field. Defaults to 'Managed by Terraform'. */
   readonly description?: string;
   /** Allows networks bound to this policy to receive DNS queries sent
@@ -36,25 +35,60 @@ to the Internet. When set to 'private', Cloud DNS will always send queries throu
   /** IPv4 address to forward to. */
   readonly ipv4Address: string;
 }
+
+function dnsPolicyAlternativeNameServerConfigTargetNameServersToTerraform(struct?: DnsPolicyAlternativeNameServerConfigTargetNameServers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    forwarding_path: cdktf.stringToTerraform(struct!.forwardingPath),
+    ipv4_address: cdktf.stringToTerraform(struct!.ipv4Address),
+  }
+}
+
 export interface DnsPolicyAlternativeNameServerConfig {
   /** target_name_servers block */
   readonly targetNameServers: DnsPolicyAlternativeNameServerConfigTargetNameServers[];
 }
+
+function dnsPolicyAlternativeNameServerConfigToTerraform(struct?: DnsPolicyAlternativeNameServerConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_name_servers: cdktf.listMapper(dnsPolicyAlternativeNameServerConfigTargetNameServersToTerraform)(struct!.targetNameServers),
+  }
+}
+
 export interface DnsPolicyNetworks {
   /** The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}' */
   readonly networkUrl: string;
 }
+
+function dnsPolicyNetworksToTerraform(struct?: DnsPolicyNetworks): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_url: cdktf.stringToTerraform(struct!.networkUrl),
+  }
+}
+
 export interface DnsPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DnsPolicy extends TerraformResource {
+export class DnsPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -221,14 +255,14 @@ export class DnsPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      enable_inbound_forwarding: this._enableInboundForwarding,
-      enable_logging: this._enableLogging,
-      name: this._name,
-      project: this._project,
-      alternative_name_server_config: this._alternativeNameServerConfig,
-      networks: this._networks,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      enable_inbound_forwarding: cdktf.booleanToTerraform(this._enableInboundForwarding),
+      enable_logging: cdktf.booleanToTerraform(this._enableLogging),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      alternative_name_server_config: cdktf.listMapper(dnsPolicyAlternativeNameServerConfigToTerraform)(this._alternativeNameServerConfig),
+      networks: cdktf.listMapper(dnsPolicyNetworksToTerraform)(this._networks),
+      timeouts: dnsPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

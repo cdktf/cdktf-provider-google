@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServiceNetworkingConnectionConfig extends TerraformMetaArguments {
+export interface ServiceNetworkingConnectionConfig extends cdktf.TerraformMetaArguments {
   /** Name of VPC network connected with service producers using VPC peering. */
   readonly network: string;
   /** Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks. */
@@ -23,9 +22,19 @@ export interface ServiceNetworkingConnectionTimeouts {
   readonly update?: string;
 }
 
+function serviceNetworkingConnectionTimeoutsToTerraform(struct?: ServiceNetworkingConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServiceNetworkingConnection extends TerraformResource {
+export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -123,10 +132,10 @@ export class ServiceNetworkingConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      network: this._network,
-      reserved_peering_ranges: this._reservedPeeringRanges,
-      service: this._service,
-      timeouts: this._timeouts,
+      network: cdktf.stringToTerraform(this._network),
+      reserved_peering_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._reservedPeeringRanges),
+      service: cdktf.stringToTerraform(this._service),
+      timeouts: serviceNetworkingConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

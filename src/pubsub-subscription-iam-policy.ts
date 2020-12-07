@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PubsubSubscriptionIamPolicyConfig extends TerraformMetaArguments {
+export interface PubsubSubscriptionIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly policyData: string;
   readonly project?: string;
   readonly subscription: string;
@@ -15,7 +14,7 @@ export interface PubsubSubscriptionIamPolicyConfig extends TerraformMetaArgument
 
 // Resource
 
-export class PubsubSubscriptionIamPolicy extends TerraformResource {
+export class PubsubSubscriptionIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class PubsubSubscriptionIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      policy_data: this._policyData,
-      project: this._project,
-      subscription: this._subscription,
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      subscription: cdktf.stringToTerraform(this._subscription),
     };
   }
 }

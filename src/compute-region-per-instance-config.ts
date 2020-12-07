@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionPerInstanceConfigConfig extends TerraformMetaArguments {
+export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMetaArguments {
   readonly minimalAction?: string;
   readonly mostDisruptiveAllowedAction?: string;
   /** The name for this per-instance config and its corresponding instance. */
@@ -38,21 +37,51 @@ deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER
 'projects/project-id/zones/zone/disks/disk-name'. */
   readonly source: string;
 }
+
+function computeRegionPerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputeRegionPerInstanceConfigPreservedStateDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_rule: cdktf.stringToTerraform(struct!.deleteRule),
+    device_name: cdktf.stringToTerraform(struct!.deviceName),
+    mode: cdktf.stringToTerraform(struct!.mode),
+    source: cdktf.stringToTerraform(struct!.source),
+  }
+}
+
 export interface ComputeRegionPerInstanceConfigPreservedState {
   /** Preserved metadata defined for this instance. This is a list of key->value pairs. */
   readonly metadata?: { [key: string]: string };
   /** disk block */
   readonly disk?: ComputeRegionPerInstanceConfigPreservedStateDisk[];
 }
+
+function computeRegionPerInstanceConfigPreservedStateToTerraform(struct?: ComputeRegionPerInstanceConfigPreservedState): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    disk: cdktf.listMapper(computeRegionPerInstanceConfigPreservedStateDiskToTerraform)(struct!.disk),
+  }
+}
+
 export interface ComputeRegionPerInstanceConfigTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: ComputeRegionPerInstanceConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionPerInstanceConfig extends TerraformResource {
+export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -230,15 +259,15 @@ export class ComputeRegionPerInstanceConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      minimal_action: this._minimalAction,
-      most_disruptive_allowed_action: this._mostDisruptiveAllowedAction,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      region_instance_group_manager: this._regionInstanceGroupManager,
-      remove_instance_state_on_destroy: this._removeInstanceStateOnDestroy,
-      preserved_state: this._preservedState,
-      timeouts: this._timeouts,
+      minimal_action: cdktf.stringToTerraform(this._minimalAction),
+      most_disruptive_allowed_action: cdktf.stringToTerraform(this._mostDisruptiveAllowedAction),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      region_instance_group_manager: cdktf.stringToTerraform(this._regionInstanceGroupManager),
+      remove_instance_state_on_destroy: cdktf.booleanToTerraform(this._removeInstanceStateOnDestroy),
+      preserved_state: cdktf.listMapper(computeRegionPerInstanceConfigPreservedStateToTerraform)(this._preservedState),
+      timeouts: computeRegionPerInstanceConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

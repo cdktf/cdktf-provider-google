@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleSpannerInstanceConfig extends TerraformMetaArguments {
+export interface DataGoogleSpannerInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The name of the instance's configuration (similar but not
 quite the same as a region) which defines defines the geographic placement and
 replication of your databases in this instance. It determines where your data
@@ -35,7 +34,7 @@ If not provided, a random string starting with 'tf-' will be selected. */
 
 // Resource
 
-export class DataGoogleSpannerInstance extends TerraformDataSource {
+export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -173,12 +172,12 @@ export class DataGoogleSpannerInstance extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      config: this._config,
-      display_name: this._displayName,
-      labels: this._labels,
-      name: this._name,
-      num_nodes: this._numNodes,
-      project: this._project,
+      config: cdktf.stringToTerraform(this._config),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      num_nodes: cdktf.numberToTerraform(this._numNodes),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

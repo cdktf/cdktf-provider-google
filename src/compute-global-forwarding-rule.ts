@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeGlobalForwardingRuleConfig extends TerraformMetaArguments {
+export interface ComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. Provide this property when
 you create the resource. */
   readonly description?: string;
@@ -97,6 +96,15 @@ export interface ComputeGlobalForwardingRuleMetadataFiltersFilterLabels {
 length of 1024 characters. */
   readonly value: string;
 }
+
+function computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform(struct?: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ComputeGlobalForwardingRuleMetadataFilters {
   /** Specifies how individual filterLabel matches within the list of
 filterLabels contribute towards the overall metadataFilter match.
@@ -109,15 +117,34 @@ provided metadata. Possible values: ["MATCH_ANY", "MATCH_ALL"] */
   /** filter_labels block */
   readonly filterLabels: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels[];
 }
+
+function computeGlobalForwardingRuleMetadataFiltersToTerraform(struct?: ComputeGlobalForwardingRuleMetadataFilters): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filter_match_criteria: cdktf.stringToTerraform(struct!.filterMatchCriteria),
+    filter_labels: cdktf.listMapper(computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform)(struct!.filterLabels),
+  }
+}
+
 export interface ComputeGlobalForwardingRuleTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeGlobalForwardingRuleTimeoutsToTerraform(struct?: ComputeGlobalForwardingRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeGlobalForwardingRule extends TerraformResource {
+export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -337,17 +364,17 @@ export class ComputeGlobalForwardingRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      ip_address: this._ipAddress,
-      ip_protocol: this._ipProtocol,
-      ip_version: this._ipVersion,
-      load_balancing_scheme: this._loadBalancingScheme,
-      name: this._name,
-      port_range: this._portRange,
-      project: this._project,
-      target: this._target,
-      metadata_filters: this._metadataFilters,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      ip_address: cdktf.stringToTerraform(this._ipAddress),
+      ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
+      ip_version: cdktf.stringToTerraform(this._ipVersion),
+      load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
+      name: cdktf.stringToTerraform(this._name),
+      port_range: cdktf.stringToTerraform(this._portRange),
+      project: cdktf.stringToTerraform(this._project),
+      target: cdktf.stringToTerraform(this._target),
+      metadata_filters: cdktf.listMapper(computeGlobalForwardingRuleMetadataFiltersToTerraform)(this._metadataFilters),
+      timeouts: computeGlobalForwardingRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

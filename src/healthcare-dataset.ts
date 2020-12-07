@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareDatasetConfig extends TerraformMetaArguments {
+export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   /** The location for the Dataset. */
   readonly location: string;
   /** The resource name for the Dataset. */
@@ -26,9 +25,19 @@ export interface HealthcareDatasetTimeouts {
   readonly update?: string;
 }
 
+function healthcareDatasetTimeoutsToTerraform(struct?: HealthcareDatasetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HealthcareDataset extends TerraformResource {
+export class HealthcareDataset extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,11 +155,11 @@ export class HealthcareDataset extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      project: this._project,
-      time_zone: this._timeZone,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
+      timeouts: healthcareDatasetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

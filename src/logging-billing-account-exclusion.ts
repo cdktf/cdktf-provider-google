@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingBillingAccountExclusionConfig extends TerraformMetaArguments {
+export interface LoggingBillingAccountExclusionConfig extends cdktf.TerraformMetaArguments {
   readonly billingAccount: string;
   /** A human-readable description. */
   readonly description?: string;
@@ -21,7 +20,7 @@ export interface LoggingBillingAccountExclusionConfig extends TerraformMetaArgum
 
 // Resource
 
-export class LoggingBillingAccountExclusion extends TerraformResource {
+export class LoggingBillingAccountExclusion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +130,11 @@ export class LoggingBillingAccountExclusion extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      billing_account: this._billingAccount,
-      description: this._description,
-      disabled: this._disabled,
-      filter: this._filter,
-      name: this._name,
+      billing_account: cdktf.stringToTerraform(this._billingAccount),
+      description: cdktf.stringToTerraform(this._description),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      filter: cdktf.stringToTerraform(this._filter),
+      name: cdktf.stringToTerraform(this._name),
     };
   }
 }

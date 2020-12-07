@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RuntimeconfigConfigIamPolicyConfig extends TerraformMetaArguments {
+export interface RuntimeconfigConfigIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly config: string;
   readonly policyData: string;
   readonly project?: string;
@@ -15,7 +14,7 @@ export interface RuntimeconfigConfigIamPolicyConfig extends TerraformMetaArgumen
 
 // Resource
 
-export class RuntimeconfigConfigIamPolicy extends TerraformResource {
+export class RuntimeconfigConfigIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class RuntimeconfigConfigIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      config: this._config,
-      policy_data: this._policyData,
-      project: this._project,
+      config: cdktf.stringToTerraform(this._config),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

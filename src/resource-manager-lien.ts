@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ResourceManagerLienConfig extends TerraformMetaArguments {
+export interface ResourceManagerLienConfig extends cdktf.TerraformMetaArguments {
   /** A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters. */
@@ -34,9 +33,18 @@ export interface ResourceManagerLienTimeouts {
   readonly delete?: string;
 }
 
+function resourceManagerLienTimeoutsToTerraform(struct?: ResourceManagerLienTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ResourceManagerLien extends TerraformResource {
+export class ResourceManagerLien extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -153,11 +161,11 @@ export class ResourceManagerLien extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      origin: this._origin,
-      parent: this._parent,
-      reason: this._reason,
-      restrictions: this._restrictions,
-      timeouts: this._timeouts,
+      origin: cdktf.stringToTerraform(this._origin),
+      parent: cdktf.stringToTerraform(this._parent),
+      reason: cdktf.stringToTerraform(this._reason),
+      restrictions: cdktf.listMapper(cdktf.stringToTerraform)(this._restrictions),
+      timeouts: resourceManagerLienTimeoutsToTerraform(this._timeouts),
     };
   }
 }

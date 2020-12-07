@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataCatalogEntryGroupIamPolicyConfig extends TerraformMetaArguments {
+export interface DataCatalogEntryGroupIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly entryGroup: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface DataCatalogEntryGroupIamPolicyConfig extends TerraformMetaArgum
 
 // Resource
 
-export class DataCatalogEntryGroupIamPolicy extends TerraformResource {
+export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -117,10 +116,10 @@ export class DataCatalogEntryGroupIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      entry_group: this._entryGroup,
-      policy_data: this._policyData,
-      project: this._project,
-      region: this._region,
+      entry_group: cdktf.stringToTerraform(this._entryGroup),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KmsSecretCiphertextConfig extends TerraformMetaArguments {
+export interface KmsSecretCiphertextConfig extends cdktf.TerraformMetaArguments {
   /** The additional authenticated data used for integrity checks during encryption and decryption. */
   readonly additionalAuthenticatedData?: string;
   /** The full name of the CryptoKey that will be used to encrypt the provided plaintext.
@@ -23,9 +22,18 @@ export interface KmsSecretCiphertextTimeouts {
   readonly delete?: string;
 }
 
+function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class KmsSecretCiphertext extends TerraformResource {
+export class KmsSecretCiphertext extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -126,10 +134,10 @@ export class KmsSecretCiphertext extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_authenticated_data: this._additionalAuthenticatedData,
-      crypto_key: this._cryptoKey,
-      plaintext: this._plaintext,
-      timeouts: this._timeouts,
+      additional_authenticated_data: cdktf.stringToTerraform(this._additionalAuthenticatedData),
+      crypto_key: cdktf.stringToTerraform(this._cryptoKey),
+      plaintext: cdktf.stringToTerraform(this._plaintext),
+      timeouts: kmsSecretCiphertextTimeoutsToTerraform(this._timeouts),
     };
   }
 }

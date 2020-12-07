@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServiceAccountConfig extends TerraformMetaArguments {
+export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /** The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created. */
   readonly accountId: string;
   /** A text description of the service account. Must be less than or equal to 256 UTF-8 bytes. */
@@ -23,9 +22,17 @@ export interface ServiceAccountTimeouts {
   readonly create?: string;
 }
 
+function serviceAccountTimeoutsToTerraform(struct?: ServiceAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+  }
+}
+
+
 // Resource
 
-export class ServiceAccount extends TerraformResource {
+export class ServiceAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,11 +163,11 @@ export class ServiceAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_id: this._accountId,
-      description: this._description,
-      display_name: this._displayName,
-      project: this._project,
-      timeouts: this._timeouts,
+      account_id: cdktf.stringToTerraform(this._accountId),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: serviceAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

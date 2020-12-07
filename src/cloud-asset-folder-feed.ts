@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudAssetFolderFeedConfig extends TerraformMetaArguments {
+export interface CloudAssetFolderFeedConfig extends cdktf.TerraformMetaArguments {
   /** A list of the full names of the assets to receive updates. You must specify either or both of 
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
@@ -49,23 +48,60 @@ name and a position in the file. */
 This can be used e.g. in UIs which allow to enter the expression. */
   readonly title?: string;
 }
+
+function cloudAssetFolderFeedConditionToTerraform(struct?: CloudAssetFolderFeedCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    location: cdktf.stringToTerraform(struct!.location),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
 export interface CloudAssetFolderFeedFeedOutputConfigPubsubDestination {
   /** Destination on Cloud Pubsub topic. */
   readonly topic: string;
 }
+
+function cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfigPubsubDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
 export interface CloudAssetFolderFeedFeedOutputConfig {
   /** pubsub_destination block */
   readonly pubsubDestination: CloudAssetFolderFeedFeedOutputConfigPubsubDestination[];
 }
+
+function cloudAssetFolderFeedFeedOutputConfigToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_destination: cdktf.listMapper(cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform)(struct!.pubsubDestination),
+  }
+}
+
 export interface CloudAssetFolderFeedTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudAssetFolderFeed extends TerraformResource {
+export class CloudAssetFolderFeed extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -250,15 +286,15 @@ export class CloudAssetFolderFeed extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      asset_names: this._assetNames,
-      asset_types: this._assetTypes,
-      billing_project: this._billingProject,
-      content_type: this._contentType,
-      feed_id: this._feedId,
-      folder: this._folder,
-      condition: this._condition,
-      feed_output_config: this._feedOutputConfig,
-      timeouts: this._timeouts,
+      asset_names: cdktf.listMapper(cdktf.stringToTerraform)(this._assetNames),
+      asset_types: cdktf.listMapper(cdktf.stringToTerraform)(this._assetTypes),
+      billing_project: cdktf.stringToTerraform(this._billingProject),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      feed_id: cdktf.stringToTerraform(this._feedId),
+      folder: cdktf.stringToTerraform(this._folder),
+      condition: cdktf.listMapper(cloudAssetFolderFeedConditionToTerraform)(this._condition),
+      feed_output_config: cdktf.listMapper(cloudAssetFolderFeedFeedOutputConfigToTerraform)(this._feedOutputConfig),
+      timeouts: cloudAssetFolderFeedTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeTargetTcpProxyConfig extends TerraformMetaArguments {
+export interface ComputeTargetTcpProxyConfig extends cdktf.TerraformMetaArguments {
   /** A reference to the BackendService resource. */
   readonly backendService: string;
   /** An optional description of this resource. */
@@ -33,9 +32,19 @@ export interface ComputeTargetTcpProxyTimeouts {
   readonly update?: string;
 }
 
+function computeTargetTcpProxyTimeoutsToTerraform(struct?: ComputeTargetTcpProxyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeTargetTcpProxy extends TerraformResource {
+export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -180,12 +189,12 @@ export class ComputeTargetTcpProxy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_service: this._backendService,
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      proxy_header: this._proxyHeader,
-      timeouts: this._timeouts,
+      backend_service: cdktf.stringToTerraform(this._backendService),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      proxy_header: cdktf.stringToTerraform(this._proxyHeader),
+      timeouts: computeTargetTcpProxyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

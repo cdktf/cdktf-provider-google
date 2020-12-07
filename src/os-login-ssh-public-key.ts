@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OsLoginSshPublicKeyConfig extends TerraformMetaArguments {
+export interface OsLoginSshPublicKeyConfig extends cdktf.TerraformMetaArguments {
   /** An expiration time in microseconds since epoch. */
   readonly expirationTimeUsec?: string;
   /** Public key text in SSH format, defined by RFC4253 section 6.6. */
@@ -25,9 +24,19 @@ export interface OsLoginSshPublicKeyTimeouts {
   readonly update?: string;
 }
 
+function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class OsLoginSshPublicKey extends TerraformResource {
+export class OsLoginSshPublicKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -145,11 +154,11 @@ export class OsLoginSshPublicKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      expiration_time_usec: this._expirationTimeUsec,
-      key: this._key,
-      project: this._project,
-      user: this._user,
-      timeouts: this._timeouts,
+      expiration_time_usec: cdktf.stringToTerraform(this._expirationTimeUsec),
+      key: cdktf.stringToTerraform(this._key),
+      project: cdktf.stringToTerraform(this._project),
+      user: cdktf.stringToTerraform(this._user),
+      timeouts: osLoginSshPublicKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

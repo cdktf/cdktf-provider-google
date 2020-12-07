@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudAssetOrganizationFeedConfig extends TerraformMetaArguments {
+export interface CloudAssetOrganizationFeedConfig extends cdktf.TerraformMetaArguments {
   /** A list of the full names of the assets to receive updates. You must specify either or both of 
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
@@ -49,23 +48,60 @@ name and a position in the file. */
 This can be used e.g. in UIs which allow to enter the expression. */
   readonly title?: string;
 }
+
+function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrganizationFeedCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    location: cdktf.stringToTerraform(struct!.location),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
 export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
   /** Destination on Cloud Pubsub topic. */
   readonly topic: string;
 }
+
+function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
 export interface CloudAssetOrganizationFeedFeedOutputConfig {
   /** pubsub_destination block */
   readonly pubsubDestination: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination[];
 }
+
+function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_destination: cdktf.listMapper(cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform)(struct!.pubsubDestination),
+  }
+}
+
 export interface CloudAssetOrganizationFeedTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrganizationFeedTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CloudAssetOrganizationFeed extends TerraformResource {
+export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -245,15 +281,15 @@ export class CloudAssetOrganizationFeed extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      asset_names: this._assetNames,
-      asset_types: this._assetTypes,
-      billing_project: this._billingProject,
-      content_type: this._contentType,
-      feed_id: this._feedId,
-      org_id: this._orgId,
-      condition: this._condition,
-      feed_output_config: this._feedOutputConfig,
-      timeouts: this._timeouts,
+      asset_names: cdktf.listMapper(cdktf.stringToTerraform)(this._assetNames),
+      asset_types: cdktf.listMapper(cdktf.stringToTerraform)(this._assetTypes),
+      billing_project: cdktf.stringToTerraform(this._billingProject),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      feed_id: cdktf.stringToTerraform(this._feedId),
+      org_id: cdktf.stringToTerraform(this._orgId),
+      condition: cdktf.listMapper(cloudAssetOrganizationFeedConditionToTerraform)(this._condition),
+      feed_output_config: cdktf.listMapper(cloudAssetOrganizationFeedFeedOutputConfigToTerraform)(this._feedOutputConfig),
+      timeouts: cloudAssetOrganizationFeedTimeoutsToTerraform(this._timeouts),
     };
   }
 }

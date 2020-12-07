@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppEngineApplicationUrlDispatchRulesConfig extends TerraformMetaArguments {
+export interface AppEngineApplicationUrlDispatchRulesConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /** dispatch_rules block */
   readonly dispatchRules: AppEngineApplicationUrlDispatchRulesDispatchRules[];
@@ -25,15 +24,35 @@ The sum of the lengths of the domain and path may not exceed 100 characters. */
 The sum of the lengths of the domain and path may not exceed 100 characters. */
   readonly service: string;
 }
+
+function appEngineApplicationUrlDispatchRulesDispatchRulesToTerraform(struct?: AppEngineApplicationUrlDispatchRulesDispatchRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    domain: cdktf.stringToTerraform(struct!.domain),
+    path: cdktf.stringToTerraform(struct!.path),
+    service: cdktf.stringToTerraform(struct!.service),
+  }
+}
+
 export interface AppEngineApplicationUrlDispatchRulesTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(struct?: AppEngineApplicationUrlDispatchRulesTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppEngineApplicationUrlDispatchRules extends TerraformResource {
+export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -115,9 +134,9 @@ export class AppEngineApplicationUrlDispatchRules extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
-      dispatch_rules: this._dispatchRules,
-      timeouts: this._timeouts,
+      project: cdktf.stringToTerraform(this._project),
+      dispatch_rules: cdktf.listMapper(appEngineApplicationUrlDispatchRulesDispatchRulesToTerraform)(this._dispatchRules),
+      timeouts: appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeNetworkPeeringConfig extends TerraformMetaArguments {
+export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArguments {
   /** Whether to export the custom routes to the peer network. Defaults to false. */
   readonly exportCustomRoutes?: boolean;
   readonly exportSubnetRoutesWithPublicIp?: boolean;
@@ -29,9 +28,19 @@ export interface ComputeNetworkPeeringTimeouts {
   readonly update?: string;
 }
 
+function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeeringTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeNetworkPeering extends TerraformResource {
+export class ComputeNetworkPeering extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -202,14 +211,14 @@ export class ComputeNetworkPeering extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      export_custom_routes: this._exportCustomRoutes,
-      export_subnet_routes_with_public_ip: this._exportSubnetRoutesWithPublicIp,
-      import_custom_routes: this._importCustomRoutes,
-      import_subnet_routes_with_public_ip: this._importSubnetRoutesWithPublicIp,
-      name: this._name,
-      network: this._network,
-      peer_network: this._peerNetwork,
-      timeouts: this._timeouts,
+      export_custom_routes: cdktf.booleanToTerraform(this._exportCustomRoutes),
+      export_subnet_routes_with_public_ip: cdktf.booleanToTerraform(this._exportSubnetRoutesWithPublicIp),
+      import_custom_routes: cdktf.booleanToTerraform(this._importCustomRoutes),
+      import_subnet_routes_with_public_ip: cdktf.booleanToTerraform(this._importSubnetRoutesWithPublicIp),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      peer_network: cdktf.stringToTerraform(this._peerNetwork),
+      timeouts: computeNetworkPeeringTimeoutsToTerraform(this._timeouts),
     };
   }
 }

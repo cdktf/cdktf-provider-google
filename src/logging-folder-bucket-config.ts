@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingFolderBucketConfigConfig extends TerraformMetaArguments {
+export interface LoggingFolderBucketConfigConfig extends cdktf.TerraformMetaArguments {
   /** The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default. */
   readonly bucketId: string;
   /** An optional description for this bucket. */
@@ -22,7 +21,7 @@ export interface LoggingFolderBucketConfigConfig extends TerraformMetaArguments 
 
 // Resource
 
-export class LoggingFolderBucketConfig extends TerraformResource {
+export class LoggingFolderBucketConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -142,11 +141,11 @@ export class LoggingFolderBucketConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket_id: this._bucketId,
-      description: this._description,
-      folder: this._folder,
-      location: this._location,
-      retention_days: this._retentionDays,
+      bucket_id: cdktf.stringToTerraform(this._bucketId),
+      description: cdktf.stringToTerraform(this._description),
+      folder: cdktf.stringToTerraform(this._folder),
+      location: cdktf.stringToTerraform(this._location),
+      retention_days: cdktf.numberToTerraform(this._retentionDays),
     };
   }
 }

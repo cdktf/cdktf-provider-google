@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeNetworkEndpointGroupConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -24,7 +23,7 @@ character, which cannot be a dash. */
 
 // Resource
 
-export class DataGoogleComputeNetworkEndpointGroup extends TerraformDataSource {
+export class DataGoogleComputeNetworkEndpointGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -156,10 +155,10 @@ export class DataGoogleComputeNetworkEndpointGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      self_link: this._selfLink,
-      zone: this._zone,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      self_link: cdktf.stringToTerraform(this._selfLink),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

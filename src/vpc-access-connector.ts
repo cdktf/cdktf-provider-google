@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VpcAccessConnectorConfig extends TerraformMetaArguments {
+export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   /** The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'. */
   readonly ipCidrRange: string;
   /** Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000. */
@@ -29,9 +28,18 @@ export interface VpcAccessConnectorTimeouts {
   readonly delete?: string;
 }
 
+function vpcAccessConnectorTimeoutsToTerraform(struct?: VpcAccessConnectorTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class VpcAccessConnector extends TerraformResource {
+export class VpcAccessConnector extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -199,14 +207,14 @@ export class VpcAccessConnector extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      ip_cidr_range: this._ipCidrRange,
-      max_throughput: this._maxThroughput,
-      min_throughput: this._minThroughput,
-      name: this._name,
-      network: this._network,
-      project: this._project,
-      region: this._region,
-      timeouts: this._timeouts,
+      ip_cidr_range: cdktf.stringToTerraform(this._ipCidrRange),
+      max_throughput: cdktf.numberToTerraform(this._maxThroughput),
+      min_throughput: cdktf.numberToTerraform(this._minThroughput),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      timeouts: vpcAccessConnectorTimeoutsToTerraform(this._timeouts),
     };
   }
 }

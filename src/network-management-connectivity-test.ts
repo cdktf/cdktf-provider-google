@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkManagementConnectivityTestConfig extends TerraformMetaArguments {
+export interface NetworkManagementConnectivityTestConfig extends cdktf.TerraformMetaArguments {
   /** The user-supplied description of the Connectivity Test.
 Maximum of 512 characters. */
   readonly description?: string;
@@ -51,6 +50,18 @@ network that the IP address resides in is defined in the host
 project. */
   readonly projectId?: string;
 }
+
+function networkManagementConnectivityTestDestinationToTerraform(struct?: NetworkManagementConnectivityTestDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instance: cdktf.stringToTerraform(struct!.instance),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    network: cdktf.stringToTerraform(struct!.network),
+    port: cdktf.numberToTerraform(struct!.port),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
 export interface NetworkManagementConnectivityTestSource {
   /** A Compute Engine instance URI. */
   readonly instance?: string;
@@ -77,15 +88,38 @@ The following are two cases where you must provide the project ID:
    host project. */
   readonly projectId?: string;
 }
+
+function networkManagementConnectivityTestSourceToTerraform(struct?: NetworkManagementConnectivityTestSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instance: cdktf.stringToTerraform(struct!.instance),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    network: cdktf.stringToTerraform(struct!.network),
+    network_type: cdktf.stringToTerraform(struct!.networkType),
+    port: cdktf.numberToTerraform(struct!.port),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
 export interface NetworkManagementConnectivityTestTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkManagementConnectivityTestTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkManagementConnectivityTest extends TerraformResource {
+export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -263,15 +297,15 @@ export class NetworkManagementConnectivityTest extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      protocol: this._protocol,
-      related_projects: this._relatedProjects,
-      destination: this._destination,
-      source: this._source,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      related_projects: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedProjects),
+      destination: cdktf.listMapper(networkManagementConnectivityTestDestinationToTerraform)(this._destination),
+      source: cdktf.listMapper(networkManagementConnectivityTestSourceToTerraform)(this._source),
+      timeouts: networkManagementConnectivityTestTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PubsubSubscriptionIamMemberConfig extends TerraformMetaArguments {
+export interface PubsubSubscriptionIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly member: string;
   readonly project?: string;
   readonly role: string;
@@ -21,9 +20,19 @@ export interface PubsubSubscriptionIamMemberCondition {
   readonly title: string;
 }
 
+function pubsubSubscriptionIamMemberConditionToTerraform(struct?: PubsubSubscriptionIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class PubsubSubscriptionIamMember extends TerraformResource {
+export class PubsubSubscriptionIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class PubsubSubscriptionIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      subscription: this._subscription,
-      condition: this._condition,
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      subscription: cdktf.stringToTerraform(this._subscription),
+      condition: cdktf.listMapper(pubsubSubscriptionIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

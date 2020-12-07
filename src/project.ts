@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectConfig extends TerraformMetaArguments {
+export interface ProjectConfig extends cdktf.TerraformMetaArguments {
   /** Create the 'default' network automatically.  Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily. */
   readonly autoCreateNetwork?: boolean;
   /** The alphanumeric ID of the billing account this project belongs to. The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details. */
@@ -34,9 +33,20 @@ export interface ProjectTimeouts {
   readonly update?: string;
 }
 
+function projectTimeoutsToTerraform(struct?: ProjectTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Project extends TerraformResource {
+export class Project extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -222,15 +232,15 @@ export class Project extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_create_network: this._autoCreateNetwork,
-      billing_account: this._billingAccount,
-      folder_id: this._folderId,
-      labels: this._labels,
-      name: this._name,
-      org_id: this._orgId,
-      project_id: this._projectId,
-      skip_delete: this._skipDelete,
-      timeouts: this._timeouts,
+      auto_create_network: cdktf.booleanToTerraform(this._autoCreateNetwork),
+      billing_account: cdktf.stringToTerraform(this._billingAccount),
+      folder_id: cdktf.stringToTerraform(this._folderId),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      org_id: cdktf.stringToTerraform(this._orgId),
+      project_id: cdktf.stringToTerraform(this._projectId),
+      skip_delete: cdktf.booleanToTerraform(this._skipDelete),
+      timeouts: projectTimeoutsToTerraform(this._timeouts),
     };
   }
 }

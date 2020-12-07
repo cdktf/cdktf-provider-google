@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpannerDatabaseIamMemberConfig extends TerraformMetaArguments {
+export interface SpannerDatabaseIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly database: string;
   readonly instance: string;
   readonly member: string;
@@ -22,9 +21,19 @@ export interface SpannerDatabaseIamMemberCondition {
   readonly title: string;
 }
 
+function spannerDatabaseIamMemberConditionToTerraform(struct?: SpannerDatabaseIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class SpannerDatabaseIamMember extends TerraformResource {
+export class SpannerDatabaseIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -153,12 +162,12 @@ export class SpannerDatabaseIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      database: this._database,
-      instance: this._instance,
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      condition: this._condition,
+      database: cdktf.stringToTerraform(this._database),
+      instance: cdktf.stringToTerraform(this._instance),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(spannerDatabaseIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

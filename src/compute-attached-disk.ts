@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeAttachedDiskConfig extends TerraformMetaArguments {
+export interface ComputeAttachedDiskConfig extends cdktf.TerraformMetaArguments {
   /** Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disks-x, where x is a number assigned by Google Compute Engine. */
   readonly deviceName?: string;
   /** name or self_link of the disk that will be attached. */
@@ -28,9 +27,18 @@ export interface ComputeAttachedDiskTimeouts {
   readonly delete?: string;
 }
 
+function computeAttachedDiskTimeoutsToTerraform(struct?: ComputeAttachedDiskTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeAttachedDisk extends TerraformResource {
+export class ComputeAttachedDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -177,13 +185,13 @@ export class ComputeAttachedDisk extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      device_name: this._deviceName,
-      disk: this._disk,
-      instance: this._instance,
-      mode: this._mode,
-      project: this._project,
-      zone: this._zone,
-      timeouts: this._timeouts,
+      device_name: cdktf.stringToTerraform(this._deviceName),
+      disk: cdktf.stringToTerraform(this._disk),
+      instance: cdktf.stringToTerraform(this._instance),
+      mode: cdktf.stringToTerraform(this._mode),
+      project: cdktf.stringToTerraform(this._project),
+      zone: cdktf.stringToTerraform(this._zone),
+      timeouts: computeAttachedDiskTimeoutsToTerraform(this._timeouts),
     };
   }
 }

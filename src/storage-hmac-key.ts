@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageHmacKeyConfig extends TerraformMetaArguments {
+export interface StorageHmacKeyConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /** The email address of the key's associated service account. */
   readonly serviceAccountEmail: string;
@@ -22,9 +21,19 @@ export interface StorageHmacKeyTimeouts {
   readonly update?: string;
 }
 
+function storageHmacKeyTimeoutsToTerraform(struct?: StorageHmacKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageHmacKey extends TerraformResource {
+export class StorageHmacKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -143,10 +152,10 @@ export class StorageHmacKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project: this._project,
-      service_account_email: this._serviceAccountEmail,
-      state: this._state,
-      timeouts: this._timeouts,
+      project: cdktf.stringToTerraform(this._project),
+      service_account_email: cdktf.stringToTerraform(this._serviceAccountEmail),
+      state: cdktf.stringToTerraform(this._state),
+      timeouts: storageHmacKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

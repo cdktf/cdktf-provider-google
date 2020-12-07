@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataprocJobIamMemberConfig extends TerraformMetaArguments {
+export interface DataprocJobIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly jobId: string;
   readonly member: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface DataprocJobIamMemberCondition {
   readonly title: string;
 }
 
+function dataprocJobIamMemberConditionToTerraform(struct?: DataprocJobIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class DataprocJobIamMember extends TerraformResource {
+export class DataprocJobIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +165,12 @@ export class DataprocJobIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      job_id: this._jobId,
-      member: this._member,
-      project: this._project,
-      region: this._region,
-      role: this._role,
-      condition: this._condition,
+      job_id: cdktf.stringToTerraform(this._jobId),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(dataprocJobIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

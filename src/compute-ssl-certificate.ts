@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSslCertificateConfig extends TerraformMetaArguments {
+export interface ComputeSslCertificateConfig extends cdktf.TerraformMetaArguments {
   /** The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
 The chain must include at least one intermediate cert. */
@@ -37,9 +36,18 @@ export interface ComputeSslCertificateTimeouts {
   readonly delete?: string;
 }
 
+function computeSslCertificateTimeoutsToTerraform(struct?: ComputeSslCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeSslCertificate extends TerraformResource {
+export class ComputeSslCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -201,13 +209,13 @@ export class ComputeSslCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      certificate: this._certificate,
-      description: this._description,
-      name: this._name,
-      name_prefix: this._namePrefix,
-      private_key: this._privateKey,
-      project: this._project,
-      timeouts: this._timeouts,
+      certificate: cdktf.stringToTerraform(this._certificate),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      name_prefix: cdktf.stringToTerraform(this._namePrefix),
+      private_key: cdktf.stringToTerraform(this._privateKey),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeSslCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

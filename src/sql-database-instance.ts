@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlDatabaseInstanceConfig extends TerraformMetaArguments {
+export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, POSTGRES_9_6,POSTGRES_11, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions. */
   readonly databaseVersion?: string;
   /** Used to block Terraform from deleting a SQL Instance. */
@@ -30,7 +28,7 @@ export interface SqlDatabaseInstanceConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: SqlDatabaseInstanceTimeouts;
 }
-export class SqlDatabaseInstanceIpAddress extends ComplexComputedList {
+export class SqlDatabaseInstanceIpAddress extends cdktf.ComplexComputedList {
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -47,7 +45,7 @@ export class SqlDatabaseInstanceIpAddress extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class SqlDatabaseInstanceServerCaCert extends ComplexComputedList {
+export class SqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -98,6 +96,24 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   /** True if the master's common name value is checked during the SSL handshake. */
   readonly verifyServerCertificate?: boolean;
 }
+
+function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlDatabaseInstanceReplicaConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ca_certificate: cdktf.stringToTerraform(struct!.caCertificate),
+    client_certificate: cdktf.stringToTerraform(struct!.clientCertificate),
+    client_key: cdktf.stringToTerraform(struct!.clientKey),
+    connect_retry_interval: cdktf.numberToTerraform(struct!.connectRetryInterval),
+    dump_file_path: cdktf.stringToTerraform(struct!.dumpFilePath),
+    failover_target: cdktf.booleanToTerraform(struct!.failoverTarget),
+    master_heartbeat_period: cdktf.numberToTerraform(struct!.masterHeartbeatPeriod),
+    password: cdktf.stringToTerraform(struct!.password),
+    ssl_cipher: cdktf.stringToTerraform(struct!.sslCipher),
+    username: cdktf.stringToTerraform(struct!.username),
+    verify_server_certificate: cdktf.booleanToTerraform(struct!.verifyServerCertificate),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   /** True if binary logging is enabled. If settings.backup_configuration.enabled is false, this must be as well. Cannot be used with Postgres. */
   readonly binaryLogEnabled?: boolean;
@@ -110,17 +126,48 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   /** HH:MM format time indicating when backup configuration starts. */
   readonly startTime?: string;
 }
+
+function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    binary_log_enabled: cdktf.booleanToTerraform(struct!.binaryLogEnabled),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    location: cdktf.stringToTerraform(struct!.location),
+    point_in_time_recovery_enabled: cdktf.booleanToTerraform(struct!.pointInTimeRecoveryEnabled),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsDatabaseFlags {
   /** Name of the flag. */
   readonly name: string;
   /** Value of the flag. */
   readonly value: string;
 }
+
+function sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: SqlDatabaseInstanceSettingsDatabaseFlags): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
   readonly expirationTime?: string;
   readonly name?: string;
   readonly value: string;
 }
+
+function sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiration_time: cdktf.stringToTerraform(struct!.expirationTime),
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsIpConfiguration {
   /** Whether this Cloud SQL instance should be assigned a public IPV4 address. Either ipv4_enabled must be enabled or a private_network must be configured. */
   readonly ipv4Enabled?: boolean;
@@ -130,12 +177,32 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   /** authorized_networks block */
   readonly authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[];
 }
+
+function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ipv4_enabled: cdktf.booleanToTerraform(struct!.ipv4Enabled),
+    private_network: cdktf.stringToTerraform(struct!.privateNetwork),
+    require_ssl: cdktf.booleanToTerraform(struct!.requireSsl),
+    authorized_networks: cdktf.listMapper(sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform)(struct!.authorizedNetworks),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsLocationPreference {
   /** A Google App Engine application whose zone to remain in. Must be in the same region as this instance. */
   readonly followGaeApplication?: string;
   /** The preferred compute engine zone. */
   readonly zone?: string;
 }
+
+function sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct?: SqlDatabaseInstanceSettingsLocationPreference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    follow_gae_application: cdktf.stringToTerraform(struct!.followGaeApplication),
+    zone: cdktf.stringToTerraform(struct!.zone),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
   /** Day of week (1-7), starting on Monday */
   readonly day?: number;
@@ -144,6 +211,16 @@ export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
   /** Receive updates earlier (canary) or later (stable) */
   readonly updateTrack?: string;
 }
+
+function sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct?: SqlDatabaseInstanceSettingsMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day: cdktf.numberToTerraform(struct!.day),
+    hour: cdktf.numberToTerraform(struct!.hour),
+    update_track: cdktf.stringToTerraform(struct!.updateTrack),
+  }
+}
+
 export interface SqlDatabaseInstanceSettings {
   /** This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND. */
   readonly activationPolicy?: string;
@@ -181,15 +258,48 @@ settings.backup_configuration.binary_log_enabled are both set to true. */
   /** maintenance_window block */
   readonly maintenanceWindow?: SqlDatabaseInstanceSettingsMaintenanceWindow[];
 }
+
+function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    activation_policy: cdktf.stringToTerraform(struct!.activationPolicy),
+    authorized_gae_applications: cdktf.listMapper(cdktf.stringToTerraform)(struct!.authorizedGaeApplications),
+    availability_type: cdktf.stringToTerraform(struct!.availabilityType),
+    crash_safe_replication: cdktf.booleanToTerraform(struct!.crashSafeReplication),
+    disk_autoresize: cdktf.booleanToTerraform(struct!.diskAutoresize),
+    disk_size: cdktf.numberToTerraform(struct!.diskSize),
+    disk_type: cdktf.stringToTerraform(struct!.diskType),
+    pricing_plan: cdktf.stringToTerraform(struct!.pricingPlan),
+    replication_type: cdktf.stringToTerraform(struct!.replicationType),
+    tier: cdktf.stringToTerraform(struct!.tier),
+    user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.userLabels),
+    backup_configuration: cdktf.listMapper(sqlDatabaseInstanceSettingsBackupConfigurationToTerraform)(struct!.backupConfiguration),
+    database_flags: cdktf.listMapper(sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform)(struct!.databaseFlags),
+    ip_configuration: cdktf.listMapper(sqlDatabaseInstanceSettingsIpConfigurationToTerraform)(struct!.ipConfiguration),
+    location_preference: cdktf.listMapper(sqlDatabaseInstanceSettingsLocationPreferenceToTerraform)(struct!.locationPreference),
+    maintenance_window: cdktf.listMapper(sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform)(struct!.maintenanceWindow),
+  }
+}
+
 export interface SqlDatabaseInstanceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInstanceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlDatabaseInstance extends TerraformResource {
+export class SqlDatabaseInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -430,16 +540,16 @@ export class SqlDatabaseInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      database_version: this._databaseVersion,
-      deletion_protection: this._deletionProtection,
-      master_instance_name: this._masterInstanceName,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      root_password: this._rootPassword,
-      replica_configuration: this._replicaConfiguration,
-      settings: this._settings,
-      timeouts: this._timeouts,
+      database_version: cdktf.stringToTerraform(this._databaseVersion),
+      deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
+      master_instance_name: cdktf.stringToTerraform(this._masterInstanceName),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      root_password: cdktf.stringToTerraform(this._rootPassword),
+      replica_configuration: cdktf.listMapper(sqlDatabaseInstanceReplicaConfigurationToTerraform)(this._replicaConfiguration),
+      settings: cdktf.listMapper(sqlDatabaseInstanceSettingsToTerraform)(this._settings),
+      timeouts: sqlDatabaseInstanceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

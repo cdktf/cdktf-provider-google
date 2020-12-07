@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeReservationConfig extends TerraformMetaArguments {
+export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
   /** An optional description of this resource. */
   readonly description?: string;
   /** Name of the resource. Provided by the client when the resource is
@@ -41,12 +40,30 @@ attach to this instance. For example:
 If you are creating an instance template, specify only the accelerator name. */
   readonly acceleratorType: string;
 }
+
+function computeReservationSpecificReservationInstancePropertiesGuestAcceleratorsToTerraform(struct?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    accelerator_count: cdktf.numberToTerraform(struct!.acceleratorCount),
+    accelerator_type: cdktf.stringToTerraform(struct!.acceleratorType),
+  }
+}
+
 export interface ComputeReservationSpecificReservationInstancePropertiesLocalSsds {
   /** The size of the disk in base-2 GB. */
   readonly diskSizeGb: number;
   /** The disk interface to use for attaching this disk. Default value: "SCSI" Possible values: ["SCSI", "NVME"] */
   readonly interface?: string;
 }
+
+function computeReservationSpecificReservationInstancePropertiesLocalSsdsToTerraform(struct?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    interface: cdktf.stringToTerraform(struct!.interface),
+  }
+}
+
 export interface ComputeReservationSpecificReservationInstanceProperties {
   /** The name of the machine type to reserve. */
   readonly machineType: string;
@@ -60,21 +77,51 @@ for information on available CPU platforms. */
   /** local_ssds block */
   readonly localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[];
 }
+
+function computeReservationSpecificReservationInstancePropertiesToTerraform(struct?: ComputeReservationSpecificReservationInstanceProperties): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    machine_type: cdktf.stringToTerraform(struct!.machineType),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    guest_accelerators: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesGuestAcceleratorsToTerraform)(struct!.guestAccelerators),
+    local_ssds: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesLocalSsdsToTerraform)(struct!.localSsds),
+  }
+}
+
 export interface ComputeReservationSpecificReservation {
   /** The number of resources that are allocated. */
   readonly count: number;
   /** instance_properties block */
   readonly instanceProperties: ComputeReservationSpecificReservationInstanceProperties[];
 }
+
+function computeReservationSpecificReservationToTerraform(struct?: ComputeReservationSpecificReservation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    instance_properties: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesToTerraform)(struct!.instanceProperties),
+  }
+}
+
 export interface ComputeReservationTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeReservationTimeoutsToTerraform(struct?: ComputeReservationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeReservation extends TerraformResource {
+export class ComputeReservation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -238,13 +285,13 @@ export class ComputeReservation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      specific_reservation_required: this._specificReservationRequired,
-      zone: this._zone,
-      specific_reservation: this._specificReservation,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      specific_reservation_required: cdktf.booleanToTerraform(this._specificReservationRequired),
+      zone: cdktf.stringToTerraform(this._zone),
+      specific_reservation: cdktf.listMapper(computeReservationSpecificReservationToTerraform)(this._specificReservation),
+      timeouts: computeReservationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

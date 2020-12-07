@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareDatasetIamMemberConfig extends TerraformMetaArguments {
+export interface HealthcareDatasetIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly datasetId: string;
   readonly member: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface HealthcareDatasetIamMemberCondition {
   readonly title: string;
 }
 
+function healthcareDatasetIamMemberConditionToTerraform(struct?: HealthcareDatasetIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class HealthcareDatasetIamMember extends TerraformResource {
+export class HealthcareDatasetIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class HealthcareDatasetIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      member: this._member,
-      role: this._role,
-      condition: this._condition,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(healthcareDatasetIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

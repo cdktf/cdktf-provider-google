@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OrganizationIamAuditConfigConfig extends TerraformMetaArguments {
+export interface OrganizationIamAuditConfigConfig extends cdktf.TerraformMetaArguments {
   /** The numeric ID of the organization in which you want to manage the audit logging config. */
   readonly orgId: string;
   /** Service which will be enabled for audit logging. The special value allServices covers all services. */
@@ -22,9 +21,18 @@ export interface OrganizationIamAuditConfigAuditLogConfig {
   readonly logType: string;
 }
 
+function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exempted_members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exemptedMembers),
+    log_type: cdktf.stringToTerraform(struct!.logType),
+  }
+}
+
+
 // Resource
 
-export class OrganizationIamAuditConfig extends TerraformResource {
+export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -105,9 +113,9 @@ export class OrganizationIamAuditConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      org_id: this._orgId,
-      service: this._service,
-      audit_log_config: this._auditLogConfig,
+      org_id: cdktf.stringToTerraform(this._orgId),
+      service: cdktf.stringToTerraform(this._service),
+      audit_log_config: cdktf.listMapper(organizationIamAuditConfigAuditLogConfigToTerraform)(this._auditLogConfig),
     };
   }
 }

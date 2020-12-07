@@ -2,24 +2,22 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends TerraformMetaArguments {
+export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends cdktf.TerraformMetaArguments {
   /** The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment. */
   readonly deploymentId: string;
 }
-export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector extends ComplexComputedList {
+export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector extends cdktf.ComplexComputedList {
 
   // realms - computed: true, optional: false, required: false
   public get realms() {
     return this.getListAttribute('realms');
   }
 }
-export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides extends ComplexComputedList {
+export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides extends cdktf.ComplexComputedList {
 
   // config_version - computed: true, optional: false, required: false
   public get configVersion() {
@@ -34,7 +32,7 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
 
 // Resource
 
-export class DataGoogleGameServicesGameServerDeploymentRollout extends TerraformDataSource {
+export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -102,7 +100,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends Terraform
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      deployment_id: this._deploymentId,
+      deployment_id: cdktf.stringToTerraform(this._deploymentId),
     };
   }
 }

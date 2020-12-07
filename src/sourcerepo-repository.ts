@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SourcerepoRepositoryConfig extends TerraformMetaArguments {
+export interface SourcerepoRepositoryConfig extends cdktf.TerraformMetaArguments {
   /** Resource name of the repository, of the form '{{repo}}'.
 The repo name may contain slashes. eg, 'name/with/slash' */
   readonly name: string;
@@ -29,15 +28,35 @@ If unspecified, it defaults to the compute engine default service account. */
   readonly serviceAccountEmail?: string;
   readonly topic: string;
 }
+
+function sourcerepoRepositoryPubsubConfigsToTerraform(struct?: SourcerepoRepositoryPubsubConfigs): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    message_format: cdktf.stringToTerraform(struct!.messageFormat),
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
 export interface SourcerepoRepositoryTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function sourcerepoRepositoryTimeoutsToTerraform(struct?: SourcerepoRepositoryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SourcerepoRepository extends TerraformResource {
+export class SourcerepoRepository extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,10 +165,10 @@ export class SourcerepoRepository extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      pubsub_configs: this._pubsubConfigs,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      pubsub_configs: cdktf.listMapper(sourcerepoRepositoryPubsubConfigsToTerraform)(this._pubsubConfigs),
+      timeouts: sourcerepoRepositoryTimeoutsToTerraform(this._timeouts),
     };
   }
 }

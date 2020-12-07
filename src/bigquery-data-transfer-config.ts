@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryDataTransferConfigConfig extends TerraformMetaArguments {
+export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArguments {
   /** The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
@@ -57,6 +56,14 @@ export interface BigqueryDataTransferConfigEmailPreferences {
   /** If true, email notifications will be sent on transfer run failures. */
   readonly enableFailureEmail: boolean;
 }
+
+function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: BigqueryDataTransferConfigEmailPreferences): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_failure_email: cdktf.booleanToTerraform(struct!.enableFailureEmail),
+  }
+}
+
 export interface BigqueryDataTransferConfigScheduleOptions {
   /** If true, automatic scheduling of data transfer runs for this
 configuration will be disabled. The runs can be started on ad-hoc
@@ -76,19 +83,47 @@ moment. The time when a data transfer can be triggered manually is not
 limited by this option. */
   readonly startTime?: string;
 }
+
+function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: BigqueryDataTransferConfigScheduleOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disable_auto_scheduling: cdktf.booleanToTerraform(struct!.disableAutoScheduling),
+    end_time: cdktf.stringToTerraform(struct!.endTime),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface BigqueryDataTransferConfigSensitiveParams {
   /** The Secret Access Key of the AWS account transferring data from. */
   readonly secretAccessKey: string;
 }
+
+function bigqueryDataTransferConfigSensitiveParamsToTerraform(struct?: BigqueryDataTransferConfigSensitiveParams): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    secret_access_key: cdktf.stringToTerraform(struct!.secretAccessKey),
+  }
+}
+
 export interface BigqueryDataTransferConfigTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTransferConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BigqueryDataTransferConfig extends TerraformResource {
+export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -370,21 +405,21 @@ export class BigqueryDataTransferConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_refresh_window_days: this._dataRefreshWindowDays,
-      data_source_id: this._dataSourceId,
-      destination_dataset_id: this._destinationDatasetId,
-      disabled: this._disabled,
-      display_name: this._displayName,
-      location: this._location,
-      notification_pubsub_topic: this._notificationPubsubTopic,
-      params: this._params,
-      project: this._project,
-      schedule: this._schedule,
-      service_account_name: this._serviceAccountName,
-      email_preferences: this._emailPreferences,
-      schedule_options: this._scheduleOptions,
-      sensitive_params: this._sensitiveParams,
-      timeouts: this._timeouts,
+      data_refresh_window_days: cdktf.numberToTerraform(this._dataRefreshWindowDays),
+      data_source_id: cdktf.stringToTerraform(this._dataSourceId),
+      destination_dataset_id: cdktf.stringToTerraform(this._destinationDatasetId),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      location: cdktf.stringToTerraform(this._location),
+      notification_pubsub_topic: cdktf.stringToTerraform(this._notificationPubsubTopic),
+      params: cdktf.hashMapper(cdktf.anyToTerraform)(this._params),
+      project: cdktf.stringToTerraform(this._project),
+      schedule: cdktf.stringToTerraform(this._schedule),
+      service_account_name: cdktf.stringToTerraform(this._serviceAccountName),
+      email_preferences: cdktf.listMapper(bigqueryDataTransferConfigEmailPreferencesToTerraform)(this._emailPreferences),
+      schedule_options: cdktf.listMapper(bigqueryDataTransferConfigScheduleOptionsToTerraform)(this._scheduleOptions),
+      sensitive_params: cdktf.listMapper(bigqueryDataTransferConfigSensitiveParamsToTerraform)(this._sensitiveParams),
+      timeouts: bigqueryDataTransferConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

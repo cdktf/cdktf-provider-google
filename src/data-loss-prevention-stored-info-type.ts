@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataLossPreventionStoredInfoTypeConfig extends TerraformMetaArguments {
+export interface DataLossPreventionStoredInfoTypeConfig extends cdktf.TerraformMetaArguments {
   /** A description of the info type. */
   readonly description?: string;
   /** User set display name of the info type. */
@@ -32,21 +31,54 @@ export interface DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath {
   /** A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt' */
   readonly path: string;
 }
+
+function dataLossPreventionStoredInfoTypeDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeDictionaryWordList {
   /** Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits. */
   readonly words: string[];
 }
+
+function dataLossPreventionStoredInfoTypeDictionaryWordListToTerraform(struct?: DataLossPreventionStoredInfoTypeDictionaryWordList): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    words: cdktf.listMapper(cdktf.stringToTerraform)(struct!.words),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeDictionary {
   /** cloud_storage_path block */
   readonly cloudStoragePath?: DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath[];
   /** word_list block */
   readonly wordList?: DataLossPreventionStoredInfoTypeDictionaryWordList[];
 }
+
+function dataLossPreventionStoredInfoTypeDictionaryToTerraform(struct?: DataLossPreventionStoredInfoTypeDictionary): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cloud_storage_path: cdktf.listMapper(dataLossPreventionStoredInfoTypeDictionaryCloudStoragePathToTerraform)(struct!.cloudStoragePath),
+    word_list: cdktf.listMapper(dataLossPreventionStoredInfoTypeDictionaryWordListToTerraform)(struct!.wordList),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField {
   /** Name describing the field. */
   readonly name: string;
 }
+
+function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable {
   /** The dataset ID of the table. */
   readonly datasetId: string;
@@ -55,20 +87,55 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFi
   /** The name of the table. */
   readonly tableId: string;
 }
+
+function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    table_id: cdktf.stringToTerraform(struct!.tableId),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
   /** field block */
   readonly field: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField[];
   /** table block */
   readonly table: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable[];
 }
+
+function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    field: cdktf.listMapper(dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldToTerraform)(struct!.field),
+    table: cdktf.listMapper(dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableToTerraform)(struct!.table),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet {
   /** The url, in the format 'gs://<bucket>/<path>'. Trailing wildcard in the path is allowed. */
   readonly url: string;
 }
+
+function dataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath {
   /** A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt' */
   readonly path: string;
 }
+
+function dataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeLargeCustomDictionary {
   /** big_query_field block */
   readonly bigQueryField?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField[];
@@ -77,6 +144,16 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionary {
   /** output_path block */
   readonly outputPath: DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath[];
 }
+
+function dataLossPreventionStoredInfoTypeLargeCustomDictionaryToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionary): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    big_query_field: cdktf.listMapper(dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldToTerraform)(struct!.bigQueryField),
+    cloud_storage_file_set: cdktf.listMapper(dataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetToTerraform)(struct!.cloudStorageFileSet),
+    output_path: cdktf.listMapper(dataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathToTerraform)(struct!.outputPath),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeRegex {
   /** The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included. */
   readonly groupIndexes?: number[];
@@ -84,15 +161,34 @@ export interface DataLossPreventionStoredInfoTypeRegex {
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub. */
   readonly pattern: string;
 }
+
+function dataLossPreventionStoredInfoTypeRegexToTerraform(struct?: DataLossPreventionStoredInfoTypeRegex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    group_indexes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.groupIndexes),
+    pattern: cdktf.stringToTerraform(struct!.pattern),
+  }
+}
+
 export interface DataLossPreventionStoredInfoTypeTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function dataLossPreventionStoredInfoTypeTimeoutsToTerraform(struct?: DataLossPreventionStoredInfoTypeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataLossPreventionStoredInfoType extends TerraformResource {
+export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -247,13 +343,13 @@ export class DataLossPreventionStoredInfoType extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      parent: this._parent,
-      dictionary: this._dictionary,
-      large_custom_dictionary: this._largeCustomDictionary,
-      regex: this._regex,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      parent: cdktf.stringToTerraform(this._parent),
+      dictionary: cdktf.listMapper(dataLossPreventionStoredInfoTypeDictionaryToTerraform)(this._dictionary),
+      large_custom_dictionary: cdktf.listMapper(dataLossPreventionStoredInfoTypeLargeCustomDictionaryToTerraform)(this._largeCustomDictionary),
+      regex: cdktf.listMapper(dataLossPreventionStoredInfoTypeRegexToTerraform)(this._regex),
+      timeouts: dataLossPreventionStoredInfoTypeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

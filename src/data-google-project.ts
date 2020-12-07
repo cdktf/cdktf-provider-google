@@ -2,20 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleProjectConfig extends TerraformMetaArguments {
+export interface DataGoogleProjectConfig extends cdktf.TerraformMetaArguments {
   /** The project ID. Changing this forces a new project to be created. */
   readonly projectId?: string;
 }
 
 // Resource
 
-export class DataGoogleProject extends TerraformDataSource {
+export class DataGoogleProject extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -61,7 +59,7 @@ export class DataGoogleProject extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // name - computed: true, optional: false, required: false
@@ -106,7 +104,7 @@ export class DataGoogleProject extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      project_id: this._projectId,
+      project_id: cdktf.stringToTerraform(this._projectId),
     };
   }
 }

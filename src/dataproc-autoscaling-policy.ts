@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataprocAutoscalingPolicyConfig extends TerraformMetaArguments {
+export interface DataprocAutoscalingPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The  location where the autoscaling poicy should reside.
 The default value is 'global'. */
   readonly location?: string;
@@ -63,6 +62,18 @@ must recommend at least a 2-worker scale-up for the cluster to scale. A threshol
 Bounds: [0.0, 1.0]. Default: 0.0. */
   readonly scaleUpMinWorkerFraction?: number;
 }
+
+function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    graceful_decommission_timeout: cdktf.stringToTerraform(struct!.gracefulDecommissionTimeout),
+    scale_down_factor: cdktf.numberToTerraform(struct!.scaleDownFactor),
+    scale_down_min_worker_fraction: cdktf.numberToTerraform(struct!.scaleDownMinWorkerFraction),
+    scale_up_factor: cdktf.numberToTerraform(struct!.scaleUpFactor),
+    scale_up_min_worker_fraction: cdktf.numberToTerraform(struct!.scaleUpMinWorkerFraction),
+  }
+}
+
 export interface DataprocAutoscalingPolicyBasicAlgorithm {
   /** Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
@@ -72,6 +83,15 @@ Bounds: [2m, 1d]. Default: 2m. */
   /** yarn_config block */
   readonly yarnConfig: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig[];
 }
+
+function dataprocAutoscalingPolicyBasicAlgorithmToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithm): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cooldown_period: cdktf.stringToTerraform(struct!.cooldownPeriod),
+    yarn_config: cdktf.listMapper(dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform)(struct!.yarnConfig),
+  }
+}
+
 export interface DataprocAutoscalingPolicySecondaryWorkerConfig {
   /** Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -95,11 +115,31 @@ the cluster will default to zero weight on the unset group. For example if weigh
 only on primary workers, the cluster will use primary workers only and no secondary workers. */
   readonly weight?: number;
 }
+
+function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicySecondaryWorkerConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_instances: cdktf.numberToTerraform(struct!.maxInstances),
+    min_instances: cdktf.numberToTerraform(struct!.minInstances),
+    weight: cdktf.numberToTerraform(struct!.weight),
+  }
+}
+
 export interface DataprocAutoscalingPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscalingPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface DataprocAutoscalingPolicyWorkerConfig {
   /** Maximum number of instances for this group. */
   readonly maxInstances: number;
@@ -122,9 +162,19 @@ only on primary workers, the cluster will use primary workers only and no second
   readonly weight?: number;
 }
 
+function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicyWorkerConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_instances: cdktf.numberToTerraform(struct!.maxInstances),
+    min_instances: cdktf.numberToTerraform(struct!.minInstances),
+    weight: cdktf.numberToTerraform(struct!.weight),
+  }
+}
+
+
 // Resource
 
-export class DataprocAutoscalingPolicy extends TerraformResource {
+export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -279,13 +329,13 @@ export class DataprocAutoscalingPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      policy_id: this._policyId,
-      project: this._project,
-      basic_algorithm: this._basicAlgorithm,
-      secondary_worker_config: this._secondaryWorkerConfig,
-      timeouts: this._timeouts,
-      worker_config: this._workerConfig,
+      location: cdktf.stringToTerraform(this._location),
+      policy_id: cdktf.stringToTerraform(this._policyId),
+      project: cdktf.stringToTerraform(this._project),
+      basic_algorithm: cdktf.listMapper(dataprocAutoscalingPolicyBasicAlgorithmToTerraform)(this._basicAlgorithm),
+      secondary_worker_config: cdktf.listMapper(dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform)(this._secondaryWorkerConfig),
+      timeouts: dataprocAutoscalingPolicyTimeoutsToTerraform(this._timeouts),
+      worker_config: cdktf.listMapper(dataprocAutoscalingPolicyWorkerConfigToTerraform)(this._workerConfig),
     };
   }
 }

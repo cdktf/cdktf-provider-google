@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSslPolicyConfig extends TerraformMetaArguments {
+export interface ComputeSslPolicyConfig extends cdktf.TerraformMetaArguments {
   /** Profile specifies the set of SSL features that can be used by the
 load balancer when negotiating SSL with clients. This can be one of
 'COMPATIBLE', 'MODERN', 'RESTRICTED', or 'CUSTOM'. If using 'CUSTOM',
@@ -51,9 +50,19 @@ export interface ComputeSslPolicyTimeouts {
   readonly update?: string;
 }
 
+function computeSslPolicyTimeoutsToTerraform(struct?: ComputeSslPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeSslPolicy extends TerraformResource {
+export class ComputeSslPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -223,13 +232,13 @@ export class ComputeSslPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      custom_features: this._customFeatures,
-      description: this._description,
-      min_tls_version: this._minTlsVersion,
-      name: this._name,
-      profile: this._profile,
-      project: this._project,
-      timeouts: this._timeouts,
+      custom_features: cdktf.listMapper(cdktf.stringToTerraform)(this._customFeatures),
+      description: cdktf.stringToTerraform(this._description),
+      min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
+      name: cdktf.stringToTerraform(this._name),
+      profile: cdktf.stringToTerraform(this._profile),
+      project: cdktf.stringToTerraform(this._project),
+      timeouts: computeSslPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeImageIamPolicyConfig extends TerraformMetaArguments {
+export interface ComputeImageIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly image: string;
   readonly policyData: string;
   readonly project?: string;
@@ -15,7 +14,7 @@ export interface ComputeImageIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class ComputeImageIamPolicy extends TerraformResource {
+export class ComputeImageIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -99,9 +98,9 @@ export class ComputeImageIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      image: this._image,
-      policy_data: this._policyData,
-      project: this._project,
+      image: cdktf.stringToTerraform(this._image),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

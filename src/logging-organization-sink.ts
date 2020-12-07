@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingOrganizationSinkConfig extends TerraformMetaArguments {
+export interface LoggingOrganizationSinkConfig extends cdktf.TerraformMetaArguments {
   /** A description of this sink. The maximum length of the description is 8000 characters. */
   readonly description?: string;
   /** The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource. */
@@ -31,6 +30,14 @@ export interface LoggingOrganizationSinkBigqueryOptions {
   /** Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone. */
   readonly usePartitionedTables: boolean;
 }
+
+function loggingOrganizationSinkBigqueryOptionsToTerraform(struct?: LoggingOrganizationSinkBigqueryOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    use_partitioned_tables: cdktf.booleanToTerraform(struct!.usePartitionedTables),
+  }
+}
+
 export interface LoggingOrganizationSinkExclusions {
   /** A description of this exclusion. */
   readonly description?: string;
@@ -42,9 +49,20 @@ export interface LoggingOrganizationSinkExclusions {
   readonly name: string;
 }
 
+function loggingOrganizationSinkExclusionsToTerraform(struct?: LoggingOrganizationSinkExclusions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    filter: cdktf.stringToTerraform(struct!.filter),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
 // Resource
 
-export class LoggingOrganizationSink extends TerraformResource {
+export class LoggingOrganizationSink extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -227,15 +245,15 @@ export class LoggingOrganizationSink extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      destination: this._destination,
-      disabled: this._disabled,
-      filter: this._filter,
-      include_children: this._includeChildren,
-      name: this._name,
-      org_id: this._orgId,
-      bigquery_options: this._bigqueryOptions,
-      exclusions: this._exclusions,
+      description: cdktf.stringToTerraform(this._description),
+      destination: cdktf.stringToTerraform(this._destination),
+      disabled: cdktf.booleanToTerraform(this._disabled),
+      filter: cdktf.stringToTerraform(this._filter),
+      include_children: cdktf.booleanToTerraform(this._includeChildren),
+      name: cdktf.stringToTerraform(this._name),
+      org_id: cdktf.stringToTerraform(this._orgId),
+      bigquery_options: cdktf.listMapper(loggingOrganizationSinkBigqueryOptionsToTerraform)(this._bigqueryOptions),
+      exclusions: cdktf.listMapper(loggingOrganizationSinkExclusionsToTerraform)(this._exclusions),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingMetricConfig extends TerraformMetaArguments {
+export interface LoggingMetricConfig extends cdktf.TerraformMetaArguments {
   /** A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters. */
   readonly description?: string;
@@ -45,6 +44,14 @@ export interface LoggingMetricBucketOptionsExplicitBuckets {
   /** The values must be monotonically increasing. */
   readonly bounds: number[];
 }
+
+function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: LoggingMetricBucketOptionsExplicitBuckets): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bounds: cdktf.listMapper(cdktf.numberToTerraform)(struct!.bounds),
+  }
+}
+
 export interface LoggingMetricBucketOptionsExponentialBuckets {
   /** Must be greater than 1. */
   readonly growthFactor?: number;
@@ -53,6 +60,16 @@ export interface LoggingMetricBucketOptionsExponentialBuckets {
   /** Must be greater than 0. */
   readonly scale?: number;
 }
+
+function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?: LoggingMetricBucketOptionsExponentialBuckets): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    growth_factor: cdktf.numberToTerraform(struct!.growthFactor),
+    num_finite_buckets: cdktf.numberToTerraform(struct!.numFiniteBuckets),
+    scale: cdktf.numberToTerraform(struct!.scale),
+  }
+}
+
 export interface LoggingMetricBucketOptionsLinearBuckets {
   /** Must be greater than 0. */
   readonly numFiniteBuckets?: number;
@@ -61,6 +78,16 @@ export interface LoggingMetricBucketOptionsLinearBuckets {
   /** Must be greater than 0. */
   readonly width?: number;
 }
+
+function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: LoggingMetricBucketOptionsLinearBuckets): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    num_finite_buckets: cdktf.numberToTerraform(struct!.numFiniteBuckets),
+    offset: cdktf.numberToTerraform(struct!.offset),
+    width: cdktf.numberToTerraform(struct!.width),
+  }
+}
+
 export interface LoggingMetricBucketOptions {
   /** explicit_buckets block */
   readonly explicitBuckets?: LoggingMetricBucketOptionsExplicitBuckets[];
@@ -69,6 +96,16 @@ export interface LoggingMetricBucketOptions {
   /** linear_buckets block */
   readonly linearBuckets?: LoggingMetricBucketOptionsLinearBuckets[];
 }
+
+function loggingMetricBucketOptionsToTerraform(struct?: LoggingMetricBucketOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    explicit_buckets: cdktf.listMapper(loggingMetricBucketOptionsExplicitBucketsToTerraform)(struct!.explicitBuckets),
+    exponential_buckets: cdktf.listMapper(loggingMetricBucketOptionsExponentialBucketsToTerraform)(struct!.exponentialBuckets),
+    linear_buckets: cdktf.listMapper(loggingMetricBucketOptionsLinearBucketsToTerraform)(struct!.linearBuckets),
+  }
+}
+
 export interface LoggingMetricMetricDescriptorLabels {
   /** A human-readable description for the label. */
   readonly description?: string;
@@ -77,6 +114,16 @@ export interface LoggingMetricMetricDescriptorLabels {
   /** The type of data that can be assigned to the label. Default value: "STRING" Possible values: ["BOOL", "INT64", "STRING"] */
   readonly valueType?: string;
 }
+
+function loggingMetricMetricDescriptorLabelsToTerraform(struct?: LoggingMetricMetricDescriptorLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    key: cdktf.stringToTerraform(struct!.key),
+    value_type: cdktf.stringToTerraform(struct!.valueType),
+  }
+}
+
 export interface LoggingMetricMetricDescriptor {
   /** A concise name for the metric, which can be displayed in user interfaces. Use sentence case 
 without an ending period, for example "Request count". This field is optional but it is 
@@ -97,15 +144,37 @@ For counter metrics, set this to INT64. Possible values: ["BOOL", "INT64", "DOUB
   /** labels block */
   readonly labels?: LoggingMetricMetricDescriptorLabels[];
 }
+
+function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricMetricDescriptor): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    display_name: cdktf.stringToTerraform(struct!.displayName),
+    metric_kind: cdktf.stringToTerraform(struct!.metricKind),
+    unit: cdktf.stringToTerraform(struct!.unit),
+    value_type: cdktf.stringToTerraform(struct!.valueType),
+    labels: cdktf.listMapper(loggingMetricMetricDescriptorLabelsToTerraform)(struct!.labels),
+  }
+}
+
 export interface LoggingMetricTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LoggingMetric extends TerraformResource {
+export class LoggingMetric extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -283,15 +352,15 @@ export class LoggingMetric extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      filter: this._filter,
-      label_extractors: this._labelExtractors,
-      name: this._name,
-      project: this._project,
-      value_extractor: this._valueExtractor,
-      bucket_options: this._bucketOptions,
-      metric_descriptor: this._metricDescriptor,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      filter: cdktf.stringToTerraform(this._filter),
+      label_extractors: cdktf.hashMapper(cdktf.anyToTerraform)(this._labelExtractors),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      value_extractor: cdktf.stringToTerraform(this._valueExtractor),
+      bucket_options: cdktf.listMapper(loggingMetricBucketOptionsToTerraform)(this._bucketOptions),
+      metric_descriptor: cdktf.listMapper(loggingMetricMetricDescriptorToTerraform)(this._metricDescriptor),
+      timeouts: loggingMetricTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRegionBackendServiceConfig extends TerraformMetaArguments {
+export interface ComputeRegionBackendServiceConfig extends cdktf.TerraformMetaArguments {
   /** Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
 only until the end of the browser session (or equivalent). The
@@ -201,6 +200,25 @@ CPU utilization target for the group. Valid range is [0.0, 1.0].
 Cannot be set for INTERNAL backend services. */
   readonly maxUtilization?: number;
 }
+
+function computeRegionBackendServiceBackendToTerraform(struct?: ComputeRegionBackendServiceBackend): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    balancing_mode: cdktf.stringToTerraform(struct!.balancingMode),
+    capacity_scaler: cdktf.numberToTerraform(struct!.capacityScaler),
+    description: cdktf.stringToTerraform(struct!.description),
+    failover: cdktf.booleanToTerraform(struct!.failover),
+    group: cdktf.stringToTerraform(struct!.group),
+    max_connections: cdktf.numberToTerraform(struct!.maxConnections),
+    max_connections_per_endpoint: cdktf.numberToTerraform(struct!.maxConnectionsPerEndpoint),
+    max_connections_per_instance: cdktf.numberToTerraform(struct!.maxConnectionsPerInstance),
+    max_rate: cdktf.numberToTerraform(struct!.maxRate),
+    max_rate_per_endpoint: cdktf.numberToTerraform(struct!.maxRatePerEndpoint),
+    max_rate_per_instance: cdktf.numberToTerraform(struct!.maxRatePerInstance),
+    max_utilization: cdktf.numberToTerraform(struct!.maxUtilization),
+  }
+}
+
 export interface ComputeRegionBackendServiceCircuitBreakers {
   /** The maximum number of connections to the backend cluster.
 Defaults to 1024. */
@@ -220,6 +238,18 @@ will effectively disable keep alive. */
 Defaults to 3. */
   readonly maxRetries?: number;
 }
+
+function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: ComputeRegionBackendServiceCircuitBreakers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_connections: cdktf.numberToTerraform(struct!.maxConnections),
+    max_pending_requests: cdktf.numberToTerraform(struct!.maxPendingRequests),
+    max_requests: cdktf.numberToTerraform(struct!.maxRequests),
+    max_requests_per_connection: cdktf.numberToTerraform(struct!.maxRequestsPerConnection),
+    max_retries: cdktf.numberToTerraform(struct!.maxRetries),
+  }
+}
+
 export interface ComputeRegionBackendServiceConsistentHashHttpCookieTtl {
   /** Span of time that's a fraction of a second at nanosecond
 resolution. Durations less than one second are represented
@@ -230,6 +260,15 @@ be from 0 to 999,999,999 inclusive. */
 Must be from 0 to 315,576,000,000 inclusive. */
   readonly seconds: number;
 }
+
+function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeRegionBackendServiceConsistentHashHttpCookie {
   /** Name of the cookie. */
   readonly name?: string;
@@ -238,6 +277,16 @@ export interface ComputeRegionBackendServiceConsistentHashHttpCookie {
   /** ttl block */
   readonly ttl?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl[];
 }
+
+function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookie): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    path: cdktf.stringToTerraform(struct!.path),
+    ttl: cdktf.listMapper(computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform)(struct!.ttl),
+  }
+}
+
 export interface ComputeRegionBackendServiceConsistentHash {
   /** The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD. */
@@ -252,6 +301,16 @@ Defaults to 1024. */
   /** http_cookie block */
   readonly httpCookie?: ComputeRegionBackendServiceConsistentHashHttpCookie[];
 }
+
+function computeRegionBackendServiceConsistentHashToTerraform(struct?: ComputeRegionBackendServiceConsistentHash): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    http_header_name: cdktf.stringToTerraform(struct!.httpHeaderName),
+    minimum_ring_size: cdktf.numberToTerraform(struct!.minimumRingSize),
+    http_cookie: cdktf.listMapper(computeRegionBackendServiceConsistentHashHttpCookieToTerraform)(struct!.httpCookie),
+  }
+}
+
 export interface ComputeRegionBackendServiceFailoverPolicy {
   /** On failover or failback, this field indicates whether connection drain
 will be honored. Setting this to true has the following effect: connections
@@ -277,6 +336,16 @@ VMs with the best effort, or to all VMs when no VM is healthy.
 This field is only used with l4 load balancing. */
   readonly failoverRatio?: number;
 }
+
+function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRegionBackendServiceFailoverPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disable_connection_drain_on_failover: cdktf.booleanToTerraform(struct!.disableConnectionDrainOnFailover),
+    drop_traffic_if_unhealthy: cdktf.booleanToTerraform(struct!.dropTrafficIfUnhealthy),
+    failover_ratio: cdktf.numberToTerraform(struct!.failoverRatio),
+  }
+}
+
 export interface ComputeRegionBackendServiceLogConfig {
   /** Whether to enable logging for the load balancer traffic served by this backend service. */
   readonly enable?: boolean;
@@ -286,6 +355,15 @@ where 1.0 means all logged requests are reported and 0.0 means no logged request
 The default value is 1.0. */
   readonly sampleRate?: number;
 }
+
+function computeRegionBackendServiceLogConfigToTerraform(struct?: ComputeRegionBackendServiceLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable: cdktf.booleanToTerraform(struct!.enable),
+    sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
+  }
+}
+
 export interface ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -295,6 +373,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: number;
 }
+
+function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeRegionBackendServiceOutlierDetectionInterval {
   /** Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
@@ -304,6 +391,15 @@ less than one second are represented with a 0 'seconds' field and a positive
 inclusive. */
   readonly seconds: number;
 }
+
+function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionInterval): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
 export interface ComputeRegionBackendServiceOutlierDetection {
   /** Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
@@ -351,15 +447,43 @@ runtime value should be 1900. Defaults to 1900. */
   /** interval block */
   readonly interval?: ComputeRegionBackendServiceOutlierDetectionInterval[];
 }
+
+function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: ComputeRegionBackendServiceOutlierDetection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    consecutive_errors: cdktf.numberToTerraform(struct!.consecutiveErrors),
+    consecutive_gateway_failure: cdktf.numberToTerraform(struct!.consecutiveGatewayFailure),
+    enforcing_consecutive_errors: cdktf.numberToTerraform(struct!.enforcingConsecutiveErrors),
+    enforcing_consecutive_gateway_failure: cdktf.numberToTerraform(struct!.enforcingConsecutiveGatewayFailure),
+    enforcing_success_rate: cdktf.numberToTerraform(struct!.enforcingSuccessRate),
+    max_ejection_percent: cdktf.numberToTerraform(struct!.maxEjectionPercent),
+    success_rate_minimum_hosts: cdktf.numberToTerraform(struct!.successRateMinimumHosts),
+    success_rate_request_volume: cdktf.numberToTerraform(struct!.successRateRequestVolume),
+    success_rate_stdev_factor: cdktf.numberToTerraform(struct!.successRateStdevFactor),
+    base_ejection_time: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform)(struct!.baseEjectionTime),
+    interval: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionIntervalToTerraform)(struct!.interval),
+  }
+}
+
 export interface ComputeRegionBackendServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBackendServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRegionBackendService extends TerraformResource {
+export class ComputeRegionBackendService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -762,27 +886,27 @@ export class ComputeRegionBackendService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      affinity_cookie_ttl_sec: this._affinityCookieTtlSec,
-      connection_draining_timeout_sec: this._connectionDrainingTimeoutSec,
-      description: this._description,
-      health_checks: this._healthChecks,
-      load_balancing_scheme: this._loadBalancingScheme,
-      locality_lb_policy: this._localityLbPolicy,
-      name: this._name,
-      network: this._network,
-      port_name: this._portName,
-      project: this._project,
-      protocol: this._protocol,
-      region: this._region,
-      session_affinity: this._sessionAffinity,
-      timeout_sec: this._timeoutSec,
-      backend: this._backend,
-      circuit_breakers: this._circuitBreakers,
-      consistent_hash: this._consistentHash,
-      failover_policy: this._failoverPolicy,
-      log_config: this._logConfig,
-      outlier_detection: this._outlierDetection,
-      timeouts: this._timeouts,
+      affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
+      connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
+      description: cdktf.stringToTerraform(this._description),
+      health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
+      load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
+      locality_lb_policy: cdktf.stringToTerraform(this._localityLbPolicy),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      port_name: cdktf.stringToTerraform(this._portName),
+      project: cdktf.stringToTerraform(this._project),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      region: cdktf.stringToTerraform(this._region),
+      session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
+      timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
+      backend: cdktf.listMapper(computeRegionBackendServiceBackendToTerraform)(this._backend),
+      circuit_breakers: cdktf.listMapper(computeRegionBackendServiceCircuitBreakersToTerraform)(this._circuitBreakers),
+      consistent_hash: cdktf.listMapper(computeRegionBackendServiceConsistentHashToTerraform)(this._consistentHash),
+      failover_policy: cdktf.listMapper(computeRegionBackendServiceFailoverPolicyToTerraform)(this._failoverPolicy),
+      log_config: cdktf.listMapper(computeRegionBackendServiceLogConfigToTerraform)(this._logConfig),
+      outlier_detection: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionToTerraform)(this._outlierDetection),
+      timeouts: computeRegionBackendServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ProjectDefaultServiceAccountsConfig extends TerraformMetaArguments {
+export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMetaArguments {
   /** The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE.
 				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy. */
   readonly action: string;
@@ -26,9 +24,19 @@ export interface ProjectDefaultServiceAccountsTimeouts {
   readonly read?: string;
 }
 
+function projectDefaultServiceAccountsTimeoutsToTerraform(struct?: ProjectDefaultServiceAccountsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class ProjectDefaultServiceAccounts extends TerraformResource {
+export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -104,7 +112,7 @@ export class ProjectDefaultServiceAccounts extends TerraformResource {
 
   // service_accounts - computed: true, optional: false, required: false
   public serviceAccounts(key: string): string {
-    return new StringMap(this, 'service_accounts').lookup(key);
+    return new cdktf.StringMap(this, 'service_accounts').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -129,10 +137,10 @@ export class ProjectDefaultServiceAccounts extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      action: this._action,
-      project: this._project,
-      restore_policy: this._restorePolicy,
-      timeouts: this._timeouts,
+      action: cdktf.stringToTerraform(this._action),
+      project: cdktf.stringToTerraform(this._project),
+      restore_policy: cdktf.stringToTerraform(this._restorePolicy),
+      timeouts: projectDefaultServiceAccountsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CloudSchedulerJobConfig extends TerraformMetaArguments {
+export interface CloudSchedulerJobConfig extends cdktf.TerraformMetaArguments {
   /** The deadline for job attempts. If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
 execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
@@ -52,6 +51,16 @@ By default, the job is sent to the service which is the default service when the
 By default, the job is sent to the version which is the default version when the job is attempted. */
   readonly version?: string;
 }
+
+function cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instance: cdktf.stringToTerraform(struct!.instance),
+    service: cdktf.stringToTerraform(struct!.service),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface CloudSchedulerJobAppEngineHttpTarget {
   /** HTTP request body. 
 A request body is allowed only if the HTTP method is POST or PUT. 
@@ -72,6 +81,18 @@ No spaces are allowed, and the maximum length allowed is 2083 characters */
   /** app_engine_routing block */
   readonly appEngineRouting?: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting[];
 }
+
+function cloudSchedulerJobAppEngineHttpTargetToTerraform(struct?: CloudSchedulerJobAppEngineHttpTarget): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body: cdktf.stringToTerraform(struct!.body),
+    headers: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.headers),
+    http_method: cdktf.stringToTerraform(struct!.httpMethod),
+    relative_uri: cdktf.stringToTerraform(struct!.relativeUri),
+    app_engine_routing: cdktf.listMapper(cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform)(struct!.appEngineRouting),
+  }
+}
+
 export interface CloudSchedulerJobHttpTargetOauthToken {
   /** OAuth scope to be used for generating OAuth access token. If not specified,
 "https://www.googleapis.com/auth/cloud-platform" will be used. */
@@ -80,6 +101,15 @@ export interface CloudSchedulerJobHttpTargetOauthToken {
 The service account must be within the same project as the job. */
   readonly serviceAccountEmail: string;
 }
+
+function cloudSchedulerJobHttpTargetOauthTokenToTerraform(struct?: CloudSchedulerJobHttpTargetOauthToken): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    scope: cdktf.stringToTerraform(struct!.scope),
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+  }
+}
+
 export interface CloudSchedulerJobHttpTargetOidcToken {
   /** Audience to be used when generating OIDC token. If not specified,
 the URI specified in target will be used. */
@@ -88,6 +118,15 @@ the URI specified in target will be used. */
 The service account must be within the same project as the job. */
   readonly serviceAccountEmail: string;
 }
+
+function cloudSchedulerJobHttpTargetOidcTokenToTerraform(struct?: CloudSchedulerJobHttpTargetOidcToken): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    audience: cdktf.stringToTerraform(struct!.audience),
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+  }
+}
+
 export interface CloudSchedulerJobHttpTarget {
   /** HTTP request body. 
 A request body is allowed only if the HTTP method is POST, PUT, or PATCH. 
@@ -105,6 +144,19 @@ Repeated headers are not supported, but a header value can contain commas. */
   /** oidc_token block */
   readonly oidcToken?: CloudSchedulerJobHttpTargetOidcToken[];
 }
+
+function cloudSchedulerJobHttpTargetToTerraform(struct?: CloudSchedulerJobHttpTarget): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body: cdktf.stringToTerraform(struct!.body),
+    headers: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.headers),
+    http_method: cdktf.stringToTerraform(struct!.httpMethod),
+    uri: cdktf.stringToTerraform(struct!.uri),
+    oauth_token: cdktf.listMapper(cloudSchedulerJobHttpTargetOauthTokenToTerraform)(struct!.oauthToken),
+    oidc_token: cdktf.listMapper(cloudSchedulerJobHttpTargetOidcTokenToTerraform)(struct!.oidcToken),
+  }
+}
+
 export interface CloudSchedulerJobPubsubTarget {
   /** Attributes for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute. */
@@ -118,6 +170,16 @@ The topic name must be in the same format as required by PubSub's
 PublishRequest.name, e.g. 'projects/my-project/topics/my-topic'. */
   readonly topicName: string;
 }
+
+function cloudSchedulerJobPubsubTargetToTerraform(struct?: CloudSchedulerJobPubsubTarget): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    attributes: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.attributes),
+    data: cdktf.stringToTerraform(struct!.data),
+    topic_name: cdktf.stringToTerraform(struct!.topicName),
+  }
+}
+
 export interface CloudSchedulerJobRetryConfig {
   /** The maximum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by 's'. */
@@ -139,14 +201,35 @@ job using the exponential backoff procedure described by maxDoublings.
 Values greater than 5 and negative values are not allowed. */
   readonly retryCount?: number;
 }
+
+function cloudSchedulerJobRetryConfigToTerraform(struct?: CloudSchedulerJobRetryConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_backoff_duration: cdktf.stringToTerraform(struct!.maxBackoffDuration),
+    max_doublings: cdktf.numberToTerraform(struct!.maxDoublings),
+    max_retry_duration: cdktf.stringToTerraform(struct!.maxRetryDuration),
+    min_backoff_duration: cdktf.stringToTerraform(struct!.minBackoffDuration),
+    retry_count: cdktf.numberToTerraform(struct!.retryCount),
+  }
+}
+
 export interface CloudSchedulerJobTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class CloudSchedulerJob extends TerraformResource {
+export class CloudSchedulerJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -381,18 +464,18 @@ export class CloudSchedulerJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      attempt_deadline: this._attemptDeadline,
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      schedule: this._schedule,
-      time_zone: this._timeZone,
-      app_engine_http_target: this._appEngineHttpTarget,
-      http_target: this._httpTarget,
-      pubsub_target: this._pubsubTarget,
-      retry_config: this._retryConfig,
-      timeouts: this._timeouts,
+      attempt_deadline: cdktf.stringToTerraform(this._attemptDeadline),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      schedule: cdktf.stringToTerraform(this._schedule),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
+      app_engine_http_target: cdktf.listMapper(cloudSchedulerJobAppEngineHttpTargetToTerraform)(this._appEngineHttpTarget),
+      http_target: cdktf.listMapper(cloudSchedulerJobHttpTargetToTerraform)(this._httpTarget),
+      pubsub_target: cdktf.listMapper(cloudSchedulerJobPubsubTargetToTerraform)(this._pubsubTarget),
+      retry_config: cdktf.listMapper(cloudSchedulerJobRetryConfigToTerraform)(this._retryConfig),
+      timeouts: cloudSchedulerJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

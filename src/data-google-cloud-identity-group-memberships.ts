@@ -2,17 +2,15 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleCloudIdentityGroupMembershipsConfig extends TerraformMetaArguments {
+export interface DataGoogleCloudIdentityGroupMembershipsConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Group to get memberships from. */
   readonly group: string;
 }
-export class DataGoogleCloudIdentityGroupMembershipsMembershipsPreferredMemberKey extends ComplexComputedList {
+export class DataGoogleCloudIdentityGroupMembershipsMembershipsPreferredMemberKey extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -24,14 +22,14 @@ export class DataGoogleCloudIdentityGroupMembershipsMembershipsPreferredMemberKe
     return this.getStringAttribute('namespace');
   }
 }
-export class DataGoogleCloudIdentityGroupMembershipsMembershipsRoles extends ComplexComputedList {
+export class DataGoogleCloudIdentityGroupMembershipsMembershipsRoles extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataGoogleCloudIdentityGroupMembershipsMemberships extends ComplexComputedList {
+export class DataGoogleCloudIdentityGroupMembershipsMemberships extends cdktf.ComplexComputedList {
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -71,7 +69,7 @@ export class DataGoogleCloudIdentityGroupMembershipsMemberships extends ComplexC
 
 // Resource
 
-export class DataGoogleCloudIdentityGroupMemberships extends TerraformDataSource {
+export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -124,7 +122,7 @@ export class DataGoogleCloudIdentityGroupMemberships extends TerraformDataSource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      group: this._group,
+      group: cdktf.stringToTerraform(this._group),
     };
   }
 }

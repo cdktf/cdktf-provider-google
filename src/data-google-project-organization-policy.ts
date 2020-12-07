@@ -2,26 +2,24 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleProjectOrganizationPolicyConfig extends TerraformMetaArguments {
+export interface DataGoogleProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
   readonly constraint: string;
   /** The project ID. */
   readonly project: string;
 }
-export class DataGoogleProjectOrganizationPolicyBooleanPolicy extends ComplexComputedList {
+export class DataGoogleProjectOrganizationPolicyBooleanPolicy extends cdktf.ComplexComputedList {
 
   // enforced - computed: true, optional: false, required: false
   public get enforced() {
     return this.getBooleanAttribute('enforced');
   }
 }
-export class DataGoogleProjectOrganizationPolicyListPolicyAllow extends ComplexComputedList {
+export class DataGoogleProjectOrganizationPolicyListPolicyAllow extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
@@ -33,7 +31,7 @@ export class DataGoogleProjectOrganizationPolicyListPolicyAllow extends ComplexC
     return this.getListAttribute('values');
   }
 }
-export class DataGoogleProjectOrganizationPolicyListPolicyDeny extends ComplexComputedList {
+export class DataGoogleProjectOrganizationPolicyListPolicyDeny extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
@@ -45,7 +43,7 @@ export class DataGoogleProjectOrganizationPolicyListPolicyDeny extends ComplexCo
     return this.getListAttribute('values');
   }
 }
-export class DataGoogleProjectOrganizationPolicyListPolicy extends ComplexComputedList {
+export class DataGoogleProjectOrganizationPolicyListPolicy extends cdktf.ComplexComputedList {
 
   // allow - computed: true, optional: false, required: false
   public get allow() {
@@ -67,7 +65,7 @@ export class DataGoogleProjectOrganizationPolicyListPolicy extends ComplexComput
     return this.getStringAttribute('suggested_value');
   }
 }
-export class DataGoogleProjectOrganizationPolicyRestorePolicy extends ComplexComputedList {
+export class DataGoogleProjectOrganizationPolicyRestorePolicy extends cdktf.ComplexComputedList {
 
   // default - computed: true, optional: false, required: false
   public get default() {
@@ -77,7 +75,7 @@ export class DataGoogleProjectOrganizationPolicyRestorePolicy extends ComplexCom
 
 // Resource
 
-export class DataGoogleProjectOrganizationPolicy extends TerraformDataSource {
+export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -169,8 +167,8 @@ export class DataGoogleProjectOrganizationPolicy extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      constraint: this._constraint,
-      project: this._project,
+      constraint: cdktf.stringToTerraform(this._constraint),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

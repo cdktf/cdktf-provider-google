@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeRouterPeerConfig extends TerraformMetaArguments {
+export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   /** User-specified flag to indicate which mode to use for advertisement.
 Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"] */
   readonly advertiseMode?: string;
@@ -61,15 +60,34 @@ export interface ComputeRouterPeerAdvertisedIpRanges {
 CIDR-formatted string. */
   readonly range: string;
 }
+
+function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeRouterPeerAdvertisedIpRanges): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    range: cdktf.stringToTerraform(struct!.range),
+  }
+}
+
 export interface ComputeRouterPeerTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ComputeRouterPeer extends TerraformResource {
+export class ComputeRouterPeer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -302,18 +320,18 @@ export class ComputeRouterPeer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      advertise_mode: this._advertiseMode,
-      advertised_groups: this._advertisedGroups,
-      advertised_route_priority: this._advertisedRoutePriority,
-      interface: this._interface,
-      name: this._name,
-      peer_asn: this._peerAsn,
-      peer_ip_address: this._peerIpAddress,
-      project: this._project,
-      region: this._region,
-      router: this._router,
-      advertised_ip_ranges: this._advertisedIpRanges,
-      timeouts: this._timeouts,
+      advertise_mode: cdktf.stringToTerraform(this._advertiseMode),
+      advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._advertisedGroups),
+      advertised_route_priority: cdktf.numberToTerraform(this._advertisedRoutePriority),
+      interface: cdktf.stringToTerraform(this._interface),
+      name: cdktf.stringToTerraform(this._name),
+      peer_asn: cdktf.numberToTerraform(this._peerAsn),
+      peer_ip_address: cdktf.stringToTerraform(this._peerIpAddress),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      router: cdktf.stringToTerraform(this._router),
+      advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform)(this._advertisedIpRanges),
+      timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitoringNotificationChannelConfig extends TerraformMetaArguments {
+export interface MonitoringNotificationChannelConfig extends cdktf.TerraformMetaArguments {
   /** An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters. */
   readonly description?: string;
   /** An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters. */
@@ -40,15 +39,35 @@ export interface MonitoringNotificationChannelSensitiveLabels {
   /** An servicekey token for a notification channel. Channel types that support this field include: pagerduty */
   readonly serviceKey?: string;
 }
+
+function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: MonitoringNotificationChannelSensitiveLabels): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auth_token: cdktf.stringToTerraform(struct!.authToken),
+    password: cdktf.stringToTerraform(struct!.password),
+    service_key: cdktf.stringToTerraform(struct!.serviceKey),
+  }
+}
+
 export interface MonitoringNotificationChannelTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitoringNotificationChannel extends TerraformResource {
+export class MonitoringNotificationChannel extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -242,15 +261,15 @@ export class MonitoringNotificationChannel extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      enabled: this._enabled,
-      labels: this._labels,
-      project: this._project,
-      type: this._type,
-      user_labels: this._userLabels,
-      sensitive_labels: this._sensitiveLabels,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      project: cdktf.stringToTerraform(this._project),
+      type: cdktf.stringToTerraform(this._type),
+      user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
+      sensitive_labels: cdktf.listMapper(monitoringNotificationChannelSensitiveLabelsToTerraform)(this._sensitiveLabels),
+      timeouts: monitoringNotificationChannelTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DnsRecordSetConfig extends TerraformMetaArguments {
+export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /** The name of the zone in which this record set will reside. */
   readonly managedZone: string;
   /** The DNS name this record set will apply to. */
@@ -24,7 +23,7 @@ export interface DnsRecordSetConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DnsRecordSet extends TerraformResource {
+export class DnsRecordSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -145,12 +144,12 @@ export class DnsRecordSet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      managed_zone: this._managedZone,
-      name: this._name,
-      project: this._project,
-      rrdatas: this._rrdatas,
-      ttl: this._ttl,
-      type: this._type,
+      managed_zone: cdktf.stringToTerraform(this._managedZone),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      rrdatas: cdktf.listMapper(cdktf.stringToTerraform)(this._rrdatas),
+      ttl: cdktf.numberToTerraform(this._ttl),
+      type: cdktf.stringToTerraform(this._type),
     };
   }
 }

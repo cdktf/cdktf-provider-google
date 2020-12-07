@@ -2,17 +2,15 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleSqlCaCertsConfig extends TerraformMetaArguments {
+export interface DataGoogleSqlCaCertsConfig extends cdktf.TerraformMetaArguments {
   readonly instance: string;
   readonly project?: string;
 }
-export class DataGoogleSqlCaCertsCerts extends ComplexComputedList {
+export class DataGoogleSqlCaCertsCerts extends cdktf.ComplexComputedList {
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -42,7 +40,7 @@ export class DataGoogleSqlCaCertsCerts extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleSqlCaCerts extends TerraformDataSource {
+export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -117,8 +115,8 @@ export class DataGoogleSqlCaCerts extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance: this._instance,
-      project: this._project,
+      instance: cdktf.stringToTerraform(this._instance),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

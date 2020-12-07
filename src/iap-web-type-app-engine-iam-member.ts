@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IapWebTypeAppEngineIamMemberConfig extends TerraformMetaArguments {
+export interface IapWebTypeAppEngineIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly appId: string;
   readonly member: string;
   readonly project?: string;
@@ -21,9 +20,19 @@ export interface IapWebTypeAppEngineIamMemberCondition {
   readonly title: string;
 }
 
+function iapWebTypeAppEngineIamMemberConditionToTerraform(struct?: IapWebTypeAppEngineIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class IapWebTypeAppEngineIamMember extends TerraformResource {
+export class IapWebTypeAppEngineIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +147,11 @@ export class IapWebTypeAppEngineIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_id: this._appId,
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      condition: this._condition,
+      app_id: cdktf.stringToTerraform(this._appId),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(iapWebTypeAppEngineIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

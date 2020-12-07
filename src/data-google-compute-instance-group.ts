@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeInstanceGroupConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   readonly name?: string;
   readonly project?: string;
   readonly selfLink?: string;
   readonly zone?: string;
 }
-export class DataGoogleComputeInstanceGroupNamedPort extends ComplexComputedList {
+export class DataGoogleComputeInstanceGroupNamedPort extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -29,7 +27,7 @@ export class DataGoogleComputeInstanceGroupNamedPort extends ComplexComputedList
 
 // Resource
 
-export class DataGoogleComputeInstanceGroup extends TerraformDataSource {
+export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -156,10 +154,10 @@ export class DataGoogleComputeInstanceGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      self_link: this._selfLink,
-      zone: this._zone,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      self_link: cdktf.stringToTerraform(this._selfLink),
+      zone: cdktf.stringToTerraform(this._zone),
     };
   }
 }

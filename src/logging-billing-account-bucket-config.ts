@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LoggingBillingAccountBucketConfigConfig extends TerraformMetaArguments {
+export interface LoggingBillingAccountBucketConfigConfig extends cdktf.TerraformMetaArguments {
   /** The parent resource that contains the logging bucket. */
   readonly billingAccount: string;
   /** The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default. */
@@ -22,7 +21,7 @@ export interface LoggingBillingAccountBucketConfigConfig extends TerraformMetaAr
 
 // Resource
 
-export class LoggingBillingAccountBucketConfig extends TerraformResource {
+export class LoggingBillingAccountBucketConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -142,11 +141,11 @@ export class LoggingBillingAccountBucketConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      billing_account: this._billingAccount,
-      bucket_id: this._bucketId,
-      description: this._description,
-      location: this._location,
-      retention_days: this._retentionDays,
+      billing_account: cdktf.stringToTerraform(this._billingAccount),
+      bucket_id: cdktf.stringToTerraform(this._bucketId),
+      description: cdktf.stringToTerraform(this._description),
+      location: cdktf.stringToTerraform(this._location),
+      retention_days: cdktf.numberToTerraform(this._retentionDays),
     };
   }
 }

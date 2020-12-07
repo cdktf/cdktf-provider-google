@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeSharedVpcServiceProjectConfig extends TerraformMetaArguments {
+export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMetaArguments {
   /** The ID of a host project to associate. */
   readonly hostProject: string;
   /** The ID of the project that will serve as a Shared VPC service project. */
@@ -20,9 +19,18 @@ export interface ComputeSharedVpcServiceProjectTimeouts {
   readonly delete?: string;
 }
 
+function computeSharedVpcServiceProjectTimeoutsToTerraform(struct?: ComputeSharedVpcServiceProjectTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeSharedVpcServiceProject extends TerraformResource {
+export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +109,9 @@ export class ComputeSharedVpcServiceProject extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      host_project: this._hostProject,
-      service_project: this._serviceProject,
-      timeouts: this._timeouts,
+      host_project: cdktf.stringToTerraform(this._hostProject),
+      service_project: cdktf.stringToTerraform(this._serviceProject),
+      timeouts: computeSharedVpcServiceProjectTimeoutsToTerraform(this._timeouts),
     };
   }
 }

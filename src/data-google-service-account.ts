@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleServiceAccountConfig extends TerraformMetaArguments {
+export interface DataGoogleServiceAccountConfig extends cdktf.TerraformMetaArguments {
   readonly accountId: string;
   readonly project?: string;
 }
 
 // Resource
 
-export class DataGoogleServiceAccount extends TerraformDataSource {
+export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -99,8 +98,8 @@ export class DataGoogleServiceAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_id: this._accountId,
-      project: this._project,
+      account_id: cdktf.stringToTerraform(this._accountId),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageBucketIamMemberConfig extends TerraformMetaArguments {
+export interface StorageBucketIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly bucket: string;
   readonly member: string;
   readonly role: string;
@@ -20,9 +19,19 @@ export interface StorageBucketIamMemberCondition {
   readonly title: string;
 }
 
+function storageBucketIamMemberConditionToTerraform(struct?: StorageBucketIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class StorageBucketIamMember extends TerraformResource {
+export class StorageBucketIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -120,10 +129,10 @@ export class StorageBucketIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      member: this._member,
-      role: this._role,
-      condition: this._condition,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      member: cdktf.stringToTerraform(this._member),
+      role: cdktf.stringToTerraform(this._role),
+      condition: cdktf.listMapper(storageBucketIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

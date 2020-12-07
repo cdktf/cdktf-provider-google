@@ -2,20 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleMonitoringAppEngineServiceConfig extends TerraformMetaArguments {
+export interface DataGoogleMonitoringAppEngineServiceConfig extends cdktf.TerraformMetaArguments {
   /** The ID of the App Engine module underlying this service. 
 Corresponds to the 'moduleId' resource label for a 'gae_app'
 monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app) */
   readonly moduleId: string;
   readonly project?: string;
 }
-export class DataGoogleMonitoringAppEngineServiceTelemetry extends ComplexComputedList {
+export class DataGoogleMonitoringAppEngineServiceTelemetry extends cdktf.ComplexComputedList {
 
   // resource_name - computed: true, optional: false, required: false
   public get resourceName() {
@@ -25,7 +23,7 @@ export class DataGoogleMonitoringAppEngineServiceTelemetry extends ComplexComput
 
 // Resource
 
-export class DataGoogleMonitoringAppEngineService extends TerraformDataSource {
+export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -110,8 +108,8 @@ export class DataGoogleMonitoringAppEngineService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      module_id: this._moduleId,
-      project: this._project,
+      module_id: cdktf.stringToTerraform(this._moduleId),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigqueryTableIamPolicyConfig extends TerraformMetaArguments {
+export interface BigqueryTableIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly datasetId: string;
   readonly policyData: string;
   readonly project?: string;
@@ -16,7 +15,7 @@ export interface BigqueryTableIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class BigqueryTableIamPolicy extends TerraformResource {
+export class BigqueryTableIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -114,10 +113,10 @@ export class BigqueryTableIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset_id: this._datasetId,
-      policy_data: this._policyData,
-      project: this._project,
-      table_id: this._tableId,
+      dataset_id: cdktf.stringToTerraform(this._datasetId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
+      table_id: cdktf.stringToTerraform(this._tableId),
     };
   }
 }

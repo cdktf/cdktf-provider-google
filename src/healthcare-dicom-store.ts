@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareDicomStoreConfig extends TerraformMetaArguments {
+export interface HealthcareDicomStoreConfig extends cdktf.TerraformMetaArguments {
   /** Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}' */
   readonly dataset: string;
@@ -42,15 +41,33 @@ project. cloud-healthcare@system.gserviceaccount.com must have publisher permiss
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail. */
   readonly pubsubTopic: string;
 }
+
+function healthcareDicomStoreNotificationConfigToTerraform(struct?: HealthcareDicomStoreNotificationConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
+  }
+}
+
 export interface HealthcareDicomStoreTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function healthcareDicomStoreTimeoutsToTerraform(struct?: HealthcareDicomStoreTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HealthcareDicomStore extends TerraformResource {
+export class HealthcareDicomStore extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -168,11 +185,11 @@ export class HealthcareDicomStore extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dataset: this._dataset,
-      labels: this._labels,
-      name: this._name,
-      notification_config: this._notificationConfig,
-      timeouts: this._timeouts,
+      dataset: cdktf.stringToTerraform(this._dataset),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      notification_config: cdktf.listMapper(healthcareDicomStoreNotificationConfigToTerraform)(this._notificationConfig),
+      timeouts: healthcareDicomStoreTimeoutsToTerraform(this._timeouts),
     };
   }
 }

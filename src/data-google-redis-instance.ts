@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleRedisInstanceConfig extends TerraformMetaArguments {
+export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArguments {
   /** The ID of the instance or a fully qualified identifier for the instance. */
   readonly name: string;
   readonly project?: string;
@@ -18,7 +16,7 @@ export interface DataGoogleRedisInstanceConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class DataGoogleRedisInstance extends TerraformDataSource {
+export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -86,7 +84,7 @@ export class DataGoogleRedisInstance extends TerraformDataSource {
 
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string {
-    return new StringMap(this, 'labels').lookup(key);
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // location_id - computed: true, optional: false, required: false
@@ -140,7 +138,7 @@ export class DataGoogleRedisInstance extends TerraformDataSource {
 
   // redis_configs - computed: true, optional: false, required: false
   public redisConfigs(key: string): string {
-    return new StringMap(this, 'redis_configs').lookup(key);
+    return new cdktf.StringMap(this, 'redis_configs').lookup(key);
   }
 
   // redis_version - computed: true, optional: false, required: false
@@ -180,9 +178,9 @@ export class DataGoogleRedisInstance extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
     };
   }
 }

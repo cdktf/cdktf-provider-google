@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeSubnetworkConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   readonly name?: string;
   readonly project?: string;
   readonly region?: string;
   readonly selfLink?: string;
 }
-export class DataGoogleComputeSubnetworkSecondaryIpRange extends ComplexComputedList {
+export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexComputedList {
 
   // ip_cidr_range - computed: true, optional: false, required: false
   public get ipCidrRange() {
@@ -29,7 +27,7 @@ export class DataGoogleComputeSubnetworkSecondaryIpRange extends ComplexComputed
 
 // Resource
 
-export class DataGoogleComputeSubnetwork extends TerraformDataSource {
+export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -161,10 +159,10 @@ export class DataGoogleComputeSubnetwork extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
-      region: this._region,
-      self_link: this._selfLink,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
+      self_link: cdktf.stringToTerraform(this._selfLink),
     };
   }
 }

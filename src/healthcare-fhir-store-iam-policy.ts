@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareFhirStoreIamPolicyConfig extends TerraformMetaArguments {
+export interface HealthcareFhirStoreIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly fhirStoreId: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class HealthcareFhirStoreIamPolicy extends TerraformResource {
+export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class HealthcareFhirStoreIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      fhir_store_id: this._fhirStoreId,
-      policy_data: this._policyData,
+      fhir_store_id: cdktf.stringToTerraform(this._fhirStoreId),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

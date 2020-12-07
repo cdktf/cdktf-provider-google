@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DatastoreIndexConfig extends TerraformMetaArguments {
+export interface DatastoreIndexConfig extends cdktf.TerraformMetaArguments {
   /** Policy for including ancestors in the index. Default value: "NONE" Possible values: ["NONE", "ALL_ANCESTORS"] */
   readonly ancestor?: string;
   /** The entity kind which the index applies to. */
@@ -24,14 +23,32 @@ export interface DatastoreIndexProperties {
   /** The property name to index. */
   readonly name: string;
 }
+
+function datastoreIndexPropertiesToTerraform(struct?: DatastoreIndexProperties): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    direction: cdktf.stringToTerraform(struct!.direction),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface DatastoreIndexTimeouts {
   readonly create?: string;
   readonly delete?: string;
 }
 
+function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class DatastoreIndex extends TerraformResource {
+export class DatastoreIndex extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,11 +169,11 @@ export class DatastoreIndex extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      ancestor: this._ancestor,
-      kind: this._kind,
-      project: this._project,
-      properties: this._properties,
-      timeouts: this._timeouts,
+      ancestor: cdktf.stringToTerraform(this._ancestor),
+      kind: cdktf.stringToTerraform(this._kind),
+      project: cdktf.stringToTerraform(this._project),
+      properties: cdktf.listMapper(datastoreIndexPropertiesToTerraform)(this._properties),
+      timeouts: datastoreIndexTimeoutsToTerraform(this._timeouts),
     };
   }
 }

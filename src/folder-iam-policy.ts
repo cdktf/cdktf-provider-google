@@ -2,19 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FolderIamPolicyConfig extends TerraformMetaArguments {
+export interface FolderIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly folder: string;
   readonly policyData: string;
 }
 
 // Resource
 
-export class FolderIamPolicy extends TerraformResource {
+export class FolderIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -81,8 +80,8 @@ export class FolderIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      folder: this._folder,
-      policy_data: this._policyData,
+      folder: cdktf.stringToTerraform(this._folder),
+      policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
 }

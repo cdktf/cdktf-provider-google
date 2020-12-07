@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleComputeGlobalForwardingRuleConfig extends TerraformMetaArguments {
+export interface DataGoogleComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /** Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -19,7 +17,7 @@ character, which cannot be a dash. */
   readonly name: string;
   readonly project?: string;
 }
-export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels extends ComplexComputedList {
+export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -31,7 +29,7 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels ex
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends ComplexComputedList {
+export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends cdktf.ComplexComputedList {
 
   // filter_labels - computed: true, optional: false, required: false
   public get filterLabels() {
@@ -46,7 +44,7 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends Comple
 
 // Resource
 
-export class DataGoogleComputeGlobalForwardingRule extends TerraformDataSource {
+export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -156,8 +154,8 @@ export class DataGoogleComputeGlobalForwardingRule extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      project: this._project,
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

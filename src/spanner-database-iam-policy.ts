@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpannerDatabaseIamPolicyConfig extends TerraformMetaArguments {
+export interface SpannerDatabaseIamPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly database: string;
   readonly instance: string;
   readonly policyData: string;
@@ -16,7 +15,7 @@ export interface SpannerDatabaseIamPolicyConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class SpannerDatabaseIamPolicy extends TerraformResource {
+export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -114,10 +113,10 @@ export class SpannerDatabaseIamPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      database: this._database,
-      instance: this._instance,
-      policy_data: this._policyData,
-      project: this._project,
+      database: cdktf.stringToTerraform(this._database),
+      instance: cdktf.stringToTerraform(this._instance),
+      policy_data: cdktf.stringToTerraform(this._policyData),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }

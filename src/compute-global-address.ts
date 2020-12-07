@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeGlobalAddressConfig extends TerraformMetaArguments {
+export interface ComputeGlobalAddressConfig extends cdktf.TerraformMetaArguments {
   /** The IP address or beginning of the address range represented by this
 resource. This can be supplied as an input to reserve a specific
 address or omitted to allow GCP to choose a valid one for you. */
@@ -55,9 +54,18 @@ export interface ComputeGlobalAddressTimeouts {
   readonly delete?: string;
 }
 
+function computeGlobalAddressTimeoutsToTerraform(struct?: ComputeGlobalAddressTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
 // Resource
 
-export class ComputeGlobalAddress extends TerraformResource {
+export class ComputeGlobalAddress extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -268,16 +276,16 @@ export class ComputeGlobalAddress extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address: this._address,
-      address_type: this._addressType,
-      description: this._description,
-      ip_version: this._ipVersion,
-      name: this._name,
-      network: this._network,
-      prefix_length: this._prefixLength,
-      project: this._project,
-      purpose: this._purpose,
-      timeouts: this._timeouts,
+      address: cdktf.stringToTerraform(this._address),
+      address_type: cdktf.stringToTerraform(this._addressType),
+      description: cdktf.stringToTerraform(this._description),
+      ip_version: cdktf.stringToTerraform(this._ipVersion),
+      name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
+      prefix_length: cdktf.numberToTerraform(this._prefixLength),
+      project: cdktf.stringToTerraform(this._project),
+      purpose: cdktf.stringToTerraform(this._purpose),
+      timeouts: computeGlobalAddressTimeoutsToTerraform(this._timeouts),
     };
   }
 }

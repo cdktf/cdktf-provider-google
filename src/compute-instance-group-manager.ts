@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ComputeInstanceGroupManagerConfig extends TerraformMetaArguments {
+export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaArguments {
   /** The base instance name to use for instances in this group. The value must be a valid RFC1035 name. Supported characters are lowercase letters, numbers, and hyphens (-). Instances are named by appending a hyphen and a random four-character string to the base instance name. */
   readonly baseInstanceName: string;
   /** An optional textual description of the instance group manager. */
@@ -43,23 +42,60 @@ export interface ComputeInstanceGroupManagerAutoHealingPolicies {
   /** The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600. */
   readonly initialDelaySec: number;
 }
+
+function computeInstanceGroupManagerAutoHealingPoliciesToTerraform(struct?: ComputeInstanceGroupManagerAutoHealingPolicies): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    health_check: cdktf.stringToTerraform(struct!.healthCheck),
+    initial_delay_sec: cdktf.numberToTerraform(struct!.initialDelaySec),
+  }
+}
+
 export interface ComputeInstanceGroupManagerNamedPort {
   /** The name of the port. */
   readonly name: string;
   /** The port number. */
   readonly port: number;
 }
+
+function computeInstanceGroupManagerNamedPortToTerraform(struct?: ComputeInstanceGroupManagerNamedPort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    port: cdktf.numberToTerraform(struct!.port),
+  }
+}
+
 export interface ComputeInstanceGroupManagerStatefulDisk {
   /** A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER. */
   readonly deleteRule?: string;
   /** The device name of the disk to be attached. */
   readonly deviceName: string;
 }
+
+function computeInstanceGroupManagerStatefulDiskToTerraform(struct?: ComputeInstanceGroupManagerStatefulDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_rule: cdktf.stringToTerraform(struct!.deleteRule),
+    device_name: cdktf.stringToTerraform(struct!.deviceName),
+  }
+}
+
 export interface ComputeInstanceGroupManagerTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
+
+function computeInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeInstanceGroupManagerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ComputeInstanceGroupManagerUpdatePolicy {
   /** The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. If neither is set, defaults to 1 */
   readonly maxSurgeFixed?: number;
@@ -76,12 +112,35 @@ export interface ComputeInstanceGroupManagerUpdatePolicy {
   /** The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls). */
   readonly type: string;
 }
+
+function computeInstanceGroupManagerUpdatePolicyToTerraform(struct?: ComputeInstanceGroupManagerUpdatePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_surge_fixed: cdktf.numberToTerraform(struct!.maxSurgeFixed),
+    max_surge_percent: cdktf.numberToTerraform(struct!.maxSurgePercent),
+    max_unavailable_fixed: cdktf.numberToTerraform(struct!.maxUnavailableFixed),
+    max_unavailable_percent: cdktf.numberToTerraform(struct!.maxUnavailablePercent),
+    min_ready_sec: cdktf.numberToTerraform(struct!.minReadySec),
+    minimal_action: cdktf.stringToTerraform(struct!.minimalAction),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ComputeInstanceGroupManagerVersionTargetSize {
   /** The number of instances which are managed for this version. Conflicts with percent. */
   readonly fixed?: number;
   /** The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version. */
   readonly percent?: number;
 }
+
+function computeInstanceGroupManagerVersionTargetSizeToTerraform(struct?: ComputeInstanceGroupManagerVersionTargetSize): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fixed: cdktf.numberToTerraform(struct!.fixed),
+    percent: cdktf.numberToTerraform(struct!.percent),
+  }
+}
+
 export interface ComputeInstanceGroupManagerVersion {
   /** The full URL to an instance template from which all new instances of this version will be created. */
   readonly instanceTemplate: string;
@@ -91,9 +150,19 @@ export interface ComputeInstanceGroupManagerVersion {
   readonly targetSize?: ComputeInstanceGroupManagerVersionTargetSize[];
 }
 
+function computeInstanceGroupManagerVersionToTerraform(struct?: ComputeInstanceGroupManagerVersion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instance_template: cdktf.stringToTerraform(struct!.instanceTemplate),
+    name: cdktf.stringToTerraform(struct!.name),
+    target_size: cdktf.listMapper(computeInstanceGroupManagerVersionTargetSizeToTerraform)(struct!.targetSize),
+  }
+}
+
+
 // Resource
 
-export class ComputeInstanceGroupManager extends TerraformResource {
+export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -376,20 +445,20 @@ export class ComputeInstanceGroupManager extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      base_instance_name: this._baseInstanceName,
-      description: this._description,
-      name: this._name,
-      project: this._project,
-      target_pools: this._targetPools,
-      target_size: this._targetSize,
-      wait_for_instances: this._waitForInstances,
-      zone: this._zone,
-      auto_healing_policies: this._autoHealingPolicies,
-      named_port: this._namedPort,
-      stateful_disk: this._statefulDisk,
-      timeouts: this._timeouts,
-      update_policy: this._updatePolicy,
-      version: this._version,
+      base_instance_name: cdktf.stringToTerraform(this._baseInstanceName),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      target_pools: cdktf.listMapper(cdktf.stringToTerraform)(this._targetPools),
+      target_size: cdktf.numberToTerraform(this._targetSize),
+      wait_for_instances: cdktf.booleanToTerraform(this._waitForInstances),
+      zone: cdktf.stringToTerraform(this._zone),
+      auto_healing_policies: cdktf.listMapper(computeInstanceGroupManagerAutoHealingPoliciesToTerraform)(this._autoHealingPolicies),
+      named_port: cdktf.listMapper(computeInstanceGroupManagerNamedPortToTerraform)(this._namedPort),
+      stateful_disk: cdktf.listMapper(computeInstanceGroupManagerStatefulDiskToTerraform)(this._statefulDisk),
+      timeouts: computeInstanceGroupManagerTimeoutsToTerraform(this._timeouts),
+      update_policy: cdktf.listMapper(computeInstanceGroupManagerUpdatePolicyToTerraform)(this._updatePolicy),
+      version: cdktf.listMapper(computeInstanceGroupManagerVersionToTerraform)(this._version),
     };
   }
 }

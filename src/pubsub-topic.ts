@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PubsubTopicConfig extends TerraformMetaArguments {
+export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
   /** The resource name of the Cloud KMS CryptoKey to be used to protect access
 to messages published on this topic. Your project's PubSub service account
 ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
@@ -33,15 +32,33 @@ allowed regions. An empty list means that no regions are allowed,
 and is not a valid configuration. */
   readonly allowedPersistenceRegions: string[];
 }
+
+function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicMessageStoragePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_persistence_regions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedPersistenceRegions),
+  }
+}
+
 export interface PubsubTopicTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly update?: string;
 }
 
+function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PubsubTopic extends TerraformResource {
+export class PubsubTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -174,12 +191,12 @@ export class PubsubTopic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      kms_key_name: this._kmsKeyName,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      message_storage_policy: this._messageStoragePolicy,
-      timeouts: this._timeouts,
+      kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      message_storage_policy: cdktf.listMapper(pubsubTopicMessageStoragePolicyToTerraform)(this._messageStoragePolicy),
+      timeouts: pubsubTopicTimeoutsToTerraform(this._timeouts),
     };
   }
 }

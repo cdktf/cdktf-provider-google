@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageObjectAclConfig extends TerraformMetaArguments {
+export interface StorageObjectAclConfig extends cdktf.TerraformMetaArguments {
   readonly bucket: string;
   readonly object: string;
   readonly predefinedAcl?: string;
@@ -16,7 +15,7 @@ export interface StorageObjectAclConfig extends TerraformMetaArguments {
 
 // Resource
 
-export class StorageObjectAcl extends TerraformResource {
+export class StorageObjectAcl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -112,10 +111,10 @@ export class StorageObjectAcl extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket: this._bucket,
-      object: this._object,
-      predefined_acl: this._predefinedAcl,
-      role_entity: this._roleEntity,
+      bucket: cdktf.stringToTerraform(this._bucket),
+      object: cdktf.stringToTerraform(this._object),
+      predefined_acl: cdktf.stringToTerraform(this._predefinedAcl),
+      role_entity: cdktf.listMapper(cdktf.stringToTerraform)(this._roleEntity),
     };
   }
 }

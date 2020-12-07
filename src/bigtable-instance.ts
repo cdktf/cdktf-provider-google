@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigtableInstanceConfig extends TerraformMetaArguments {
+export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   /** Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail. */
   readonly deletionProtection?: boolean;
   /** The human-readable display name of the Bigtable instance. Defaults to the instance name. */
@@ -34,9 +33,20 @@ export interface BigtableInstanceCluster {
   readonly zone: string;
 }
 
+function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cluster_id: cdktf.stringToTerraform(struct!.clusterId),
+    num_nodes: cdktf.numberToTerraform(struct!.numNodes),
+    storage_type: cdktf.stringToTerraform(struct!.storageType),
+    zone: cdktf.stringToTerraform(struct!.zone),
+  }
+}
+
+
 // Resource
 
-export class BigtableInstance extends TerraformResource {
+export class BigtableInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -186,13 +196,13 @@ export class BigtableInstance extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      deletion_protection: this._deletionProtection,
-      display_name: this._displayName,
-      instance_type: this._instanceType,
-      labels: this._labels,
-      name: this._name,
-      project: this._project,
-      cluster: this._cluster,
+      deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      instance_type: cdktf.stringToTerraform(this._instanceType),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      project: cdktf.stringToTerraform(this._project),
+      cluster: cdktf.listMapper(bigtableInstanceClusterToTerraform)(this._cluster),
     };
   }
 }

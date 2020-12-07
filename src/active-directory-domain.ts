@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ActiveDirectoryDomainConfig extends TerraformMetaArguments {
+export interface ActiveDirectoryDomainConfig extends cdktf.TerraformMetaArguments {
   /** The name of delegated administrator account used to perform Active Directory operations. 
 If not specified, setupadmin will be used. */
   readonly admin?: string;
@@ -35,9 +34,19 @@ export interface ActiveDirectoryDomainTimeouts {
   readonly update?: string;
 }
 
+function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomainTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ActiveDirectoryDomain extends TerraformResource {
+export class ActiveDirectoryDomain extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,14 +217,14 @@ export class ActiveDirectoryDomain extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin: this._admin,
-      authorized_networks: this._authorizedNetworks,
-      domain_name: this._domainName,
-      labels: this._labels,
-      locations: this._locations,
-      project: this._project,
-      reserved_ip_range: this._reservedIpRange,
-      timeouts: this._timeouts,
+      admin: cdktf.stringToTerraform(this._admin),
+      authorized_networks: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedNetworks),
+      domain_name: cdktf.stringToTerraform(this._domainName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      locations: cdktf.listMapper(cdktf.stringToTerraform)(this._locations),
+      project: cdktf.stringToTerraform(this._project),
+      reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),
+      timeouts: activeDirectoryDomainTimeoutsToTerraform(this._timeouts),
     };
   }
 }

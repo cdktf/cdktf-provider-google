@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BigtableTableIamMemberConfig extends TerraformMetaArguments {
+export interface BigtableTableIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly instance: string;
   readonly member: string;
   readonly project?: string;
@@ -22,9 +21,19 @@ export interface BigtableTableIamMemberCondition {
   readonly title: string;
 }
 
+function bigtableTableIamMemberConditionToTerraform(struct?: BigtableTableIamMemberCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    expression: cdktf.stringToTerraform(struct!.expression),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
 // Resource
 
-export class BigtableTableIamMember extends TerraformResource {
+export class BigtableTableIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -153,12 +162,12 @@ export class BigtableTableIamMember extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      instance: this._instance,
-      member: this._member,
-      project: this._project,
-      role: this._role,
-      table: this._table,
-      condition: this._condition,
+      instance: cdktf.stringToTerraform(this._instance),
+      member: cdktf.stringToTerraform(this._member),
+      project: cdktf.stringToTerraform(this._project),
+      role: cdktf.stringToTerraform(this._role),
+      table: cdktf.stringToTerraform(this._table),
+      condition: cdktf.listMapper(bigtableTableIamMemberConditionToTerraform)(this._condition),
     };
   }
 }

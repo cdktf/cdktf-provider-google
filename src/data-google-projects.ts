@@ -2,16 +2,14 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleProjectsConfig extends TerraformMetaArguments {
+export interface DataGoogleProjectsConfig extends cdktf.TerraformMetaArguments {
   readonly filter: string;
 }
-export class DataGoogleProjectsProjects extends ComplexComputedList {
+export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -51,7 +49,7 @@ export class DataGoogleProjectsProjects extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleProjects extends TerraformDataSource {
+export class DataGoogleProjects extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -104,7 +102,7 @@ export class DataGoogleProjects extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      filter: this._filter,
+      filter: cdktf.stringToTerraform(this._filter),
     };
   }
 }

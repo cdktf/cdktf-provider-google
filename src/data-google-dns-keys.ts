@@ -2,17 +2,15 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataGoogleDnsKeysConfig extends TerraformMetaArguments {
+export interface DataGoogleDnsKeysConfig extends cdktf.TerraformMetaArguments {
   readonly managedZone: string;
   readonly project?: string;
 }
-export class DataGoogleDnsKeysKeySigningKeysDigests extends ComplexComputedList {
+export class DataGoogleDnsKeysKeySigningKeysDigests extends cdktf.ComplexComputedList {
 
   // digest - computed: true, optional: false, required: false
   public get digest() {
@@ -24,7 +22,7 @@ export class DataGoogleDnsKeysKeySigningKeysDigests extends ComplexComputedList 
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleDnsKeysKeySigningKeys extends ComplexComputedList {
+export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
 
   // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
@@ -76,7 +74,7 @@ export class DataGoogleDnsKeysKeySigningKeys extends ComplexComputedList {
     return this.getStringAttribute('public_key');
   }
 }
-export class DataGoogleDnsKeysZoneSigningKeysDigests extends ComplexComputedList {
+export class DataGoogleDnsKeysZoneSigningKeysDigests extends cdktf.ComplexComputedList {
 
   // digest - computed: true, optional: false, required: false
   public get digest() {
@@ -88,7 +86,7 @@ export class DataGoogleDnsKeysZoneSigningKeysDigests extends ComplexComputedList
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleDnsKeysZoneSigningKeys extends ComplexComputedList {
+export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList {
 
   // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
@@ -138,7 +136,7 @@ export class DataGoogleDnsKeysZoneSigningKeys extends ComplexComputedList {
 
 // Resource
 
-export class DataGoogleDnsKeys extends TerraformDataSource {
+export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -213,8 +211,8 @@ export class DataGoogleDnsKeys extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      managed_zone: this._managedZone,
-      project: this._project,
+      managed_zone: cdktf.stringToTerraform(this._managedZone),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }
