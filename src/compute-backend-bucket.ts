@@ -37,7 +37,7 @@ Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered. */
-  readonly signedUrlCacheMaxAgeSec: number;
+  readonly signedUrlCacheMaxAgeSec?: number;
 }
 
 function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicy): any {

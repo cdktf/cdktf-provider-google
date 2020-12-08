@@ -181,7 +181,7 @@ Control-Allow-Credentials header. Defaults to false. */
   readonly allowHeaders?: string[];
   /** Specifies the content for the Access-Control-Allow-Methods header. */
   readonly allowMethods?: string[];
-  /** Specifies the regualar expression patterns that match allowed origins. For
+  /** Specifies the regular expression patterns that match allowed origins. For
 regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either allow_origins or allow_origin_regex. */
   readonly allowOriginRegexes?: string[];
@@ -688,7 +688,7 @@ must be set. */
 whether or not the request's header has a value or not. Only one of exactMatch,
 prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. */
   readonly presentMatch?: boolean;
-  /** The value of the header must match the regualar expression specified in
+  /** The value of the header must match the regular expression specified in
 regexMatch. For regular expression grammar, please see:
 en.cppreference.com/w/cpp/regex/ecmascript  For matching against a port
 specified in the HTTP request, use a headerMatch with headerName set to PORT and
@@ -786,7 +786,7 @@ function computeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches
 }
 
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRules {
-  /** For satifying the matchRule condition, the path of the request must exactly
+  /** For satisfying the matchRule condition, the path of the request must exactly
 match the value specified in fullPathMatch after removing any query parameters
 and anchor that may be part of the original URL. FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
@@ -795,12 +795,12 @@ be specified. */
   /** Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false. */
   readonly ignoreCase?: boolean;
-  /** For satifying the matchRule condition, the request's path must begin with the
+  /** For satisfying the matchRule condition, the request's path must begin with the
 specified prefixMatch. prefixMatch must begin with a /. The value must be
 between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or
 regexMatch must be specified. */
   readonly prefixMatch?: string;
-  /** For satifying the matchRule condition, the path of the request must satisfy the
+  /** For satisfying the matchRule condition, the path of the request must satisfy the
 regular expression specified in regexMatch after removing any query parameters
 and anchor supplied with the original URL. For regular expression grammar please
 see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch,
@@ -836,7 +836,7 @@ Control-Allow-Credentials header. Defaults to false. */
   readonly allowHeaders?: string[];
   /** Specifies the content for the Access-Control-Allow-Methods header. */
   readonly allowMethods?: string[];
-  /** Specifies the regualar expression patterns that match allowed origins. For
+  /** Specifies the regular expression patterns that match allowed origins. For
 regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either allow_origins or allow_origin_regex. */
   readonly allowOriginRegexes?: string[];
@@ -968,7 +968,7 @@ function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTim
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
   /** Specifies the allowed number retries. This number must be > 0. */
   readonly numRetries: number;
-  /** Specfies one or more conditions when this retry rule applies. Valid values are:
+  /** Specifies one or more conditions when this retry rule applies. Valid values are:
 
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with
   any 5xx response code, or if the backend service does not respond at all,

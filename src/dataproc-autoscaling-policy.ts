@@ -7,7 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocAutoscalingPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The  location where the autoscaling poicy should reside.
+  /** The  location where the autoscaling policy should reside.
 The default value is 'global'. */
   readonly location?: string;
   /** The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),

@@ -13,7 +13,7 @@ export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMeta
   /** The project ID where service accounts are created. */
   readonly project: string;
   /** The action to be performed in the default service accounts on the resource destroy.
-				Valid values are NONE and REVERT. If set to REVERT it will attempt to restore all default SAs but in the DEPRIVILEGE action. */
+				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE. */
   readonly restorePolicy?: string;
   /** timeouts block */
   readonly timeouts?: ProjectDefaultServiceAccountsTimeouts;
