@@ -364,11 +364,6 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
     return this.getListAttribute('custom_request_headers');
   }
 
-  // custom_response_headers - computed: true, optional: false, required: false
-  public get customResponseHeaders() {
-    return this.getListAttribute('custom_response_headers');
-  }
-
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');

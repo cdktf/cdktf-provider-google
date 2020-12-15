@@ -94,8 +94,17 @@ export interface StorageBucketLifecycleRuleCondition {
   readonly age?: number;
   /** Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. */
   readonly createdBefore?: string;
+  /** Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. */
+  readonly customTimeBefore?: string;
+  /** Number of days elapsed since the user-specified timestamp set on an object. */
+  readonly daysSinceCustomTime?: number;
+  /** Number of days elapsed since the noncurrent timestamp of an object. This
+										condition is relevant only for versioned objects. */
+  readonly daysSinceNoncurrentTime?: number;
   /** Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY. */
   readonly matchesStorageClass?: string[];
+  /** Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. */
+  readonly noncurrentTimeBefore?: string;
   /** Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. */
   readonly numNewerVersions?: number;
   /** Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY". */
@@ -107,7 +116,11 @@ function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLi
   return {
     age: cdktf.numberToTerraform(struct!.age),
     created_before: cdktf.stringToTerraform(struct!.createdBefore),
+    custom_time_before: cdktf.stringToTerraform(struct!.customTimeBefore),
+    days_since_custom_time: cdktf.numberToTerraform(struct!.daysSinceCustomTime),
+    days_since_noncurrent_time: cdktf.numberToTerraform(struct!.daysSinceNoncurrentTime),
     matches_storage_class: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchesStorageClass),
+    noncurrent_time_before: cdktf.stringToTerraform(struct!.noncurrentTimeBefore),
     num_newer_versions: cdktf.numberToTerraform(struct!.numNewerVersions),
     with_state: cdktf.stringToTerraform(struct!.withState),
   }

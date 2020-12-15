@@ -20,9 +20,6 @@ connections, but still work to finish started). */
   /** Headers that the HTTP/S load balancer should add to proxied
 requests. */
   readonly customRequestHeaders?: string[];
-  /** Headers that the HTTP/S load balancer should add to proxied
-responses. */
-  readonly customResponseHeaders?: string[];
   /** An optional description of this resource. */
   readonly description?: string;
   /** If true, enable Cloud CDN for this BackendService. */
@@ -539,7 +536,6 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     this._affinityCookieTtlSec = config.affinityCookieTtlSec;
     this._connectionDrainingTimeoutSec = config.connectionDrainingTimeoutSec;
     this._customRequestHeaders = config.customRequestHeaders;
-    this._customResponseHeaders = config.customResponseHeaders;
     this._description = config.description;
     this._enableCdn = config.enableCdn;
     this._healthChecks = config.healthChecks;
@@ -617,22 +613,6 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customRequestHeadersInput() {
     return this._customRequestHeaders
-  }
-
-  // custom_response_headers - computed: false, optional: true, required: false
-  private _customResponseHeaders?: string[];
-  public get customResponseHeaders() {
-    return this.getListAttribute('custom_response_headers');
-  }
-  public set customResponseHeaders(value: string[] ) {
-    this._customResponseHeaders = value;
-  }
-  public resetCustomResponseHeaders() {
-    this._customResponseHeaders = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get customResponseHeadersInput() {
-    return this._customResponseHeaders
   }
 
   // description - computed: false, optional: true, required: false
@@ -976,7 +956,6 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
       connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
       custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customRequestHeaders),
-      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
       health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),

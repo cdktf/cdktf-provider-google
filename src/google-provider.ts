@@ -58,6 +58,7 @@ export interface GoogleProviderConfig {
   readonly mlEngineCustomEndpoint?: string;
   readonly monitoringCustomEndpoint?: string;
   readonly networkManagementCustomEndpoint?: string;
+  readonly notebooksCustomEndpoint?: string;
   readonly osConfigCustomEndpoint?: string;
   readonly osLoginCustomEndpoint?: string;
   readonly project?: string;
@@ -171,6 +172,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._mlEngineCustomEndpoint = config.mlEngineCustomEndpoint;
     this._monitoringCustomEndpoint = config.monitoringCustomEndpoint;
     this._networkManagementCustomEndpoint = config.networkManagementCustomEndpoint;
+    this._notebooksCustomEndpoint = config.notebooksCustomEndpoint;
     this._osConfigCustomEndpoint = config.osConfigCustomEndpoint;
     this._osLoginCustomEndpoint = config.osLoginCustomEndpoint;
     this._project = config.project;
@@ -1021,6 +1023,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._networkManagementCustomEndpoint
   }
 
+  // notebooks_custom_endpoint - computed: false, optional: true, required: false
+  private _notebooksCustomEndpoint?: string;
+  public get notebooksCustomEndpoint() {
+    return this._notebooksCustomEndpoint;
+  }
+  public set notebooksCustomEndpoint(value: string  | undefined) {
+    this._notebooksCustomEndpoint = value;
+  }
+  public resetNotebooksCustomEndpoint() {
+    this._notebooksCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notebooksCustomEndpointInput() {
+    return this._notebooksCustomEndpoint
+  }
+
   // os_config_custom_endpoint - computed: false, optional: true, required: false
   private _osConfigCustomEndpoint?: string;
   public get osConfigCustomEndpoint() {
@@ -1526,6 +1544,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       ml_engine_custom_endpoint: cdktf.stringToTerraform(this._mlEngineCustomEndpoint),
       monitoring_custom_endpoint: cdktf.stringToTerraform(this._monitoringCustomEndpoint),
       network_management_custom_endpoint: cdktf.stringToTerraform(this._networkManagementCustomEndpoint),
+      notebooks_custom_endpoint: cdktf.stringToTerraform(this._notebooksCustomEndpoint),
       os_config_custom_endpoint: cdktf.stringToTerraform(this._osConfigCustomEndpoint),
       os_login_custom_endpoint: cdktf.stringToTerraform(this._osLoginCustomEndpoint),
       project: cdktf.stringToTerraform(this._project),

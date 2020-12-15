@@ -19,6 +19,8 @@ connections, but still work to finish started). */
   readonly connectionDrainingTimeoutSec?: number;
   /** An optional description of this resource. */
   readonly description?: string;
+  /** If true, enable Cloud CDN for this RegionBackendService. */
+  readonly enableCdn?: boolean;
   /** The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
 check can be specified. 
@@ -95,6 +97,8 @@ failed request. Default is 30 seconds. Valid range is [1, 86400]. */
   readonly timeoutSec?: number;
   /** backend block */
   readonly backend?: ComputeRegionBackendServiceBackend[];
+  /** cdn_policy block */
+  readonly cdnPolicy?: ComputeRegionBackendServiceCdnPolicy[];
   /** circuit_breakers block */
   readonly circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers[];
   /** consistent_hash block */
@@ -216,6 +220,70 @@ function computeRegionBackendServiceBackendToTerraform(struct?: ComputeRegionBac
     max_rate_per_endpoint: cdktf.numberToTerraform(struct!.maxRatePerEndpoint),
     max_rate_per_instance: cdktf.numberToTerraform(struct!.maxRatePerInstance),
     max_utilization: cdktf.numberToTerraform(struct!.maxUtilization),
+  }
+}
+
+export interface ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy {
+  /** If true requests to different hosts will be cached separately. */
+  readonly includeHost?: boolean;
+  /** If true, http and https requests will be cached separately. */
+  readonly includeProtocol?: boolean;
+  /** If true, include query string parameters in the cache key
+according to query_string_whitelist and
+query_string_blacklist. If neither is set, the entire query
+string will be included.
+
+If false, the query string will be excluded from the cache
+key entirely. */
+  readonly includeQueryString?: boolean;
+  /** Names of query string parameters to exclude in cache keys.
+
+All other parameters will be included. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters. */
+  readonly queryStringBlacklist?: string[];
+  /** Names of query string parameters to include in cache keys.
+
+All other parameters will be excluded. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters. */
+  readonly queryStringWhitelist?: string[];
+}
+
+function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    include_host: cdktf.booleanToTerraform(struct!.includeHost),
+    include_protocol: cdktf.booleanToTerraform(struct!.includeProtocol),
+    include_query_string: cdktf.booleanToTerraform(struct!.includeQueryString),
+    query_string_blacklist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringBlacklist),
+    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringWhitelist),
+  }
+}
+
+export interface ComputeRegionBackendServiceCdnPolicy {
+  /** Maximum number of seconds the response to a signed URL request
+will be considered fresh, defaults to 1hr (3600s). After this
+time period, the response will be revalidated before
+being served.
+
+When serving responses to signed URL requests, Cloud CDN will
+internally behave as though all responses from this backend had a
+"Cache-Control: public, max-age=[TTL]" header, regardless of any
+existing Cache-Control header. The actual headers served in
+responses will not be altered. */
+  readonly signedUrlCacheMaxAgeSec?: number;
+  /** cache_key_policy block */
+  readonly cacheKeyPolicy?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy[];
+}
+
+function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
+    cache_key_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform)(struct!.cacheKeyPolicy),
   }
 }
 
@@ -503,6 +571,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     this._affinityCookieTtlSec = config.affinityCookieTtlSec;
     this._connectionDrainingTimeoutSec = config.connectionDrainingTimeoutSec;
     this._description = config.description;
+    this._enableCdn = config.enableCdn;
     this._healthChecks = config.healthChecks;
     this._loadBalancingScheme = config.loadBalancingScheme;
     this._localityLbPolicy = config.localityLbPolicy;
@@ -515,6 +584,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     this._sessionAffinity = config.sessionAffinity;
     this._timeoutSec = config.timeoutSec;
     this._backend = config.backend;
+    this._cdnPolicy = config.cdnPolicy;
     this._circuitBreakers = config.circuitBreakers;
     this._consistentHash = config.consistentHash;
     this._failoverPolicy = config.failoverPolicy;
@@ -578,6 +648,22 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description
+  }
+
+  // enable_cdn - computed: false, optional: true, required: false
+  private _enableCdn?: boolean;
+  public get enableCdn() {
+    return this.getBooleanAttribute('enable_cdn');
+  }
+  public set enableCdn(value: boolean ) {
+    this._enableCdn = value;
+  }
+  public resetEnableCdn() {
+    this._enableCdn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableCdnInput() {
+    return this._enableCdn
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -784,6 +870,22 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     return this._backend
   }
 
+  // cdn_policy - computed: false, optional: true, required: false
+  private _cdnPolicy?: ComputeRegionBackendServiceCdnPolicy[];
+  public get cdnPolicy() {
+    return this.interpolationForAttribute('cdn_policy') as any;
+  }
+  public set cdnPolicy(value: ComputeRegionBackendServiceCdnPolicy[] ) {
+    this._cdnPolicy = value;
+  }
+  public resetCdnPolicy() {
+    this._cdnPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cdnPolicyInput() {
+    return this._cdnPolicy
+  }
+
   // circuit_breakers - computed: false, optional: true, required: false
   private _circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers[];
   public get circuitBreakers() {
@@ -889,6 +991,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
       connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
       description: cdktf.stringToTerraform(this._description),
+      enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
       health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
       load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
       locality_lb_policy: cdktf.stringToTerraform(this._localityLbPolicy),
@@ -901,6 +1004,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
       backend: cdktf.listMapper(computeRegionBackendServiceBackendToTerraform)(this._backend),
+      cdn_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyToTerraform)(this._cdnPolicy),
       circuit_breakers: cdktf.listMapper(computeRegionBackendServiceCircuitBreakersToTerraform)(this._circuitBreakers),
       consistent_hash: cdktf.listMapper(computeRegionBackendServiceConsistentHashToTerraform)(this._consistentHash),
       failover_policy: cdktf.listMapper(computeRegionBackendServiceFailoverPolicyToTerraform)(this._failoverPolicy),
