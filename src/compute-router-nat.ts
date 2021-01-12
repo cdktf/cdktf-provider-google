@@ -10,6 +10,9 @@ export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   /** A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT. */
   readonly drainNatIps?: string[];
+  /** Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs). */
+  readonly enableEndpointIndependentMapping?: boolean;
   /** Timeout (in seconds) for ICMP connections. Defaults to 30s if not set. */
   readonly icmpIdleTimeoutSec?: number;
   /** Minimum number of ports allocated to a VM from this NAT. */
@@ -130,6 +133,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._drainNatIps = config.drainNatIps;
+    this._enableEndpointIndependentMapping = config.enableEndpointIndependentMapping;
     this._icmpIdleTimeoutSec = config.icmpIdleTimeoutSec;
     this._minPortsPerVm = config.minPortsPerVm;
     this._name = config.name;
@@ -165,6 +169,22 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get drainNatIpsInput() {
     return this._drainNatIps
+  }
+
+  // enable_endpoint_independent_mapping - computed: false, optional: true, required: false
+  private _enableEndpointIndependentMapping?: boolean;
+  public get enableEndpointIndependentMapping() {
+    return this.getBooleanAttribute('enable_endpoint_independent_mapping');
+  }
+  public set enableEndpointIndependentMapping(value: boolean ) {
+    this._enableEndpointIndependentMapping = value;
+  }
+  public resetEnableEndpointIndependentMapping() {
+    this._enableEndpointIndependentMapping = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableEndpointIndependentMappingInput() {
+    return this._enableEndpointIndependentMapping
   }
 
   // icmp_idle_timeout_sec - computed: false, optional: true, required: false
@@ -407,6 +427,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       drain_nat_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._drainNatIps),
+      enable_endpoint_independent_mapping: cdktf.booleanToTerraform(this._enableEndpointIndependentMapping),
       icmp_idle_timeout_sec: cdktf.numberToTerraform(this._icmpIdleTimeoutSec),
       min_ports_per_vm: cdktf.numberToTerraform(this._minPortsPerVm),
       name: cdktf.stringToTerraform(this._name),

@@ -47,6 +47,16 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
     return this.getStringAttribute('alternative_location_id');
   }
 
+  // auth_enabled - computed: true, optional: false, required: false
+  public get authEnabled() {
+    return this.getBooleanAttribute('auth_enabled');
+  }
+
+  // auth_string - computed: true, optional: false, required: false
+  public get authString() {
+    return this.getStringAttribute('auth_string');
+  }
+
   // authorized_network - computed: true, optional: false, required: false
   public get authorizedNetwork() {
     return this.getStringAttribute('authorized_network');

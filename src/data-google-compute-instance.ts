@@ -112,6 +112,13 @@ export class DataGoogleComputeInstanceBootDisk extends cdktf.ComplexComputedList
     return this.getStringAttribute('source');
   }
 }
+export class DataGoogleComputeInstanceConfidentialInstanceConfig extends cdktf.ComplexComputedList {
+
+  // enable_confidential_compute - computed: true, optional: false, required: false
+  public get enableConfidentialCompute() {
+    return this.getBooleanAttribute('enable_confidential_compute');
+  }
+}
 export class DataGoogleComputeInstanceGuestAccelerator extends cdktf.ComplexComputedList {
 
   // count - computed: true, optional: false, required: false
@@ -313,6 +320,11 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   // can_ip_forward - computed: true, optional: false, required: false
   public get canIpForward() {
     return this.getBooleanAttribute('can_ip_forward');
+  }
+
+  // confidential_instance_config - computed: true, optional: false, required: false
+  public confidentialInstanceConfig(index: string) {
+    return new DataGoogleComputeInstanceConfidentialInstanceConfig(this, 'confidential_instance_config', index);
   }
 
   // cpu_platform - computed: true, optional: false, required: false

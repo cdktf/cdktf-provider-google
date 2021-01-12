@@ -89,6 +89,11 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
     return this.getStringAttribute('ip_protocol');
   }
 
+  // is_mirroring_collector - computed: true, optional: false, required: false
+  public get isMirroringCollector() {
+    return this.getBooleanAttribute('is_mirroring_collector');
+  }
+
   // load_balancing_scheme - computed: true, optional: false, required: false
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');

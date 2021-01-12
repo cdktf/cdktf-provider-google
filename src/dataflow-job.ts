@@ -11,6 +11,8 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   readonly additionalExperiments?: string[];
   /** The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE". */
   readonly ipConfiguration?: string;
+  /** The name for the Cloud KMS key for the job. Key format is: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY */
+  readonly kmsKeyName?: string;
   /** User labels to be specified for the job. Keys and values should follow the restrictions specified in the labeling restrictions page. NOTE: Google-provided Dataflow templates often provide default labels that begin with goog-dataflow-provided. Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply. */
   readonly labels?: { [key: string]: string };
   /** The machine type to use for the job. */
@@ -77,6 +79,7 @@ export class DataflowJob extends cdktf.TerraformResource {
     });
     this._additionalExperiments = config.additionalExperiments;
     this._ipConfiguration = config.ipConfiguration;
+    this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
     this._machineType = config.machineType;
     this._maxWorkers = config.maxWorkers;
@@ -139,6 +142,22 @@ export class DataflowJob extends cdktf.TerraformResource {
   // job_id - computed: true, optional: false, required: false
   public get jobId() {
     return this.getStringAttribute('job_id');
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string;
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string ) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
   }
 
   // labels - computed: false, optional: true, required: false
@@ -406,6 +425,7 @@ export class DataflowJob extends cdktf.TerraformResource {
     return {
       additional_experiments: cdktf.listMapper(cdktf.stringToTerraform)(this._additionalExperiments),
       ip_configuration: cdktf.stringToTerraform(this._ipConfiguration),
+      kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       machine_type: cdktf.stringToTerraform(this._machineType),
       max_workers: cdktf.numberToTerraform(this._maxWorkers),

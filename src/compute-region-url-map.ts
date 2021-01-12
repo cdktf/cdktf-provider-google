@@ -1266,7 +1266,7 @@ export interface ComputeRegionUrlMapPathMatcher {
   /** A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion. */
-  readonly defaultService: string;
+  readonly defaultService?: string;
   /** An optional description of this resource. */
   readonly description?: string;
   /** The name to which this PathMatcher is referred by the HostRule. */

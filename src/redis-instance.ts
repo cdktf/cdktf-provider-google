@@ -12,6 +12,11 @@ against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId]. */
   readonly alternativeLocationId?: string;
+  /** Optional. Indicates whether OSS Redis AUTH is enabled for the
+instance. If set to "true" AUTH is enabled on the instance.
+Default value is "false" meaning AUTH is disabled. */
+  readonly authEnabled?: boolean;
+  readonly authString?: string;
   /** The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used. */
@@ -96,6 +101,8 @@ export class RedisInstance extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._alternativeLocationId = config.alternativeLocationId;
+    this._authEnabled = config.authEnabled;
+    this._authString = config.authString;
     this._authorizedNetwork = config.authorizedNetwork;
     this._connectMode = config.connectMode;
     this._displayName = config.displayName;
@@ -130,6 +137,38 @@ export class RedisInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get alternativeLocationIdInput() {
     return this._alternativeLocationId
+  }
+
+  // auth_enabled - computed: false, optional: true, required: false
+  private _authEnabled?: boolean;
+  public get authEnabled() {
+    return this.getBooleanAttribute('auth_enabled');
+  }
+  public set authEnabled(value: boolean ) {
+    this._authEnabled = value;
+  }
+  public resetAuthEnabled() {
+    this._authEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authEnabledInput() {
+    return this._authEnabled
+  }
+
+  // auth_string - computed: true, optional: true, required: false
+  private _authString?: string;
+  public get authString() {
+    return this.getStringAttribute('auth_string');
+  }
+  public set authString(value: string) {
+    this._authString = value;
+  }
+  public resetAuthString() {
+    this._authString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authStringInput() {
+    return this._authString
   }
 
   // authorized_network - computed: true, optional: true, required: false
@@ -387,6 +426,8 @@ export class RedisInstance extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       alternative_location_id: cdktf.stringToTerraform(this._alternativeLocationId),
+      auth_enabled: cdktf.booleanToTerraform(this._authEnabled),
+      auth_string: cdktf.stringToTerraform(this._authString),
       authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
       connect_mode: cdktf.stringToTerraform(this._connectMode),
       display_name: cdktf.stringToTerraform(this._displayName),

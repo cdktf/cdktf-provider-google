@@ -17,10 +17,14 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   readonly instance: string;
   /** The name of the user. Changing this forces a new resource to be created. */
   readonly name: string;
-  /** The password for the user. Can be updated. For Postgres instances this is a Required field. */
+  /** The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to
+                either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. */
   readonly password?: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
+  /** The user type. It determines the method to authenticate the user during login.
+                The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT". */
+  readonly type?: string;
   /** timeouts block */
   readonly timeouts?: SqlUserTimeouts;
 }
@@ -65,6 +69,7 @@ export class SqlUser extends cdktf.TerraformResource {
     this._name = config.name;
     this._password = config.password;
     this._project = config.project;
+    this._type = config.type;
     this._timeouts = config.timeouts;
   }
 
@@ -167,6 +172,22 @@ export class SqlUser extends cdktf.TerraformResource {
     return this._project
   }
 
+  // type - computed: false, optional: true, required: false
+  private _type?: string;
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string ) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlUserTimeouts;
   public get timeouts() {
@@ -195,6 +216,7 @@ export class SqlUser extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       password: cdktf.stringToTerraform(this._password),
       project: cdktf.stringToTerraform(this._project),
+      type: cdktf.stringToTerraform(this._type),
       timeouts: sqlUserTimeoutsToTerraform(this._timeouts),
     };
   }

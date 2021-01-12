@@ -24,13 +24,16 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
 }
 export interface BigtableGcPolicyMaxAge {
   /** Number of days before applying GC policy. */
-  readonly days: number;
+  readonly days?: number;
+  /** Duration before applying GC policy */
+  readonly duration?: string;
 }
 
 function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAge): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     days: cdktf.numberToTerraform(struct!.days),
+    duration: cdktf.stringToTerraform(struct!.duration),
   }
 }
 

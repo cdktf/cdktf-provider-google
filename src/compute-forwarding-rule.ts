@@ -52,6 +52,13 @@ or unnecessary diffs. */
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"] */
   readonly ipProtocol?: string;
+  /** Indicates whether or not this load balancer can be used
+as a collector for packet mirroring. To prevent mirroring loops,
+instances behind this load balancer will not have their traffic
+mirrored even if a PacketMirroring rule applies to them. This
+can only be set to true for load balancers that have their
+loadBalancingScheme set to INTERNAL. */
+  readonly isMirroringCollector?: boolean;
   /** This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
 Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
@@ -179,6 +186,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     this._description = config.description;
     this._ipAddress = config.ipAddress;
     this._ipProtocol = config.ipProtocol;
+    this._isMirroringCollector = config.isMirroringCollector;
     this._loadBalancingScheme = config.loadBalancingScheme;
     this._name = config.name;
     this._network = config.network;
@@ -301,6 +309,22 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ipProtocolInput() {
     return this._ipProtocol
+  }
+
+  // is_mirroring_collector - computed: false, optional: true, required: false
+  private _isMirroringCollector?: boolean;
+  public get isMirroringCollector() {
+    return this.getBooleanAttribute('is_mirroring_collector');
+  }
+  public set isMirroringCollector(value: boolean ) {
+    this._isMirroringCollector = value;
+  }
+  public resetIsMirroringCollector() {
+    this._isMirroringCollector = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isMirroringCollectorInput() {
+    return this._isMirroringCollector
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
@@ -514,6 +538,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
+      is_mirroring_collector: cdktf.booleanToTerraform(this._isMirroringCollector),
       load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),

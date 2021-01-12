@@ -47,6 +47,8 @@ export interface ComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   readonly attachedDisk?: ComputeInstanceAttachedDisk[];
   /** boot_disk block */
   readonly bootDisk: ComputeInstanceBootDisk[];
+  /** confidential_instance_config block */
+  readonly confidentialInstanceConfig?: ComputeInstanceConfidentialInstanceConfig[];
   /** network_interface block */
   readonly networkInterface: ComputeInstanceNetworkInterface[];
   /** scheduling block */
@@ -145,6 +147,18 @@ function computeInstanceBootDiskToTerraform(struct?: ComputeInstanceBootDisk): a
     mode: cdktf.stringToTerraform(struct!.mode),
     source: cdktf.stringToTerraform(struct!.source),
     initialize_params: cdktf.listMapper(computeInstanceBootDiskInitializeParamsToTerraform)(struct!.initializeParams),
+  }
+}
+
+export interface ComputeInstanceConfidentialInstanceConfig {
+  /** Defines whether the instance should have confidential compute enabled. */
+  readonly enableConfidentialCompute: boolean;
+}
+
+function computeInstanceConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceConfidentialInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_confidential_compute: cdktf.booleanToTerraform(struct!.enableConfidentialCompute),
   }
 }
 
@@ -344,6 +358,7 @@ export class ComputeInstance extends cdktf.TerraformResource {
     this._zone = config.zone;
     this._attachedDisk = config.attachedDisk;
     this._bootDisk = config.bootDisk;
+    this._confidentialInstanceConfig = config.confidentialInstanceConfig;
     this._networkInterface = config.networkInterface;
     this._scheduling = config.scheduling;
     this._scratchDisk = config.scratchDisk;
@@ -707,6 +722,22 @@ export class ComputeInstance extends cdktf.TerraformResource {
     return this._bootDisk
   }
 
+  // confidential_instance_config - computed: false, optional: true, required: false
+  private _confidentialInstanceConfig?: ComputeInstanceConfidentialInstanceConfig[];
+  public get confidentialInstanceConfig() {
+    return this.interpolationForAttribute('confidential_instance_config') as any;
+  }
+  public set confidentialInstanceConfig(value: ComputeInstanceConfidentialInstanceConfig[] ) {
+    this._confidentialInstanceConfig = value;
+  }
+  public resetConfidentialInstanceConfig() {
+    this._confidentialInstanceConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get confidentialInstanceConfigInput() {
+    return this._confidentialInstanceConfig
+  }
+
   // network_interface - computed: false, optional: false, required: true
   private _networkInterface: ComputeInstanceNetworkInterface[];
   public get networkInterface() {
@@ -826,6 +857,7 @@ export class ComputeInstance extends cdktf.TerraformResource {
       zone: cdktf.stringToTerraform(this._zone),
       attached_disk: cdktf.listMapper(computeInstanceAttachedDiskToTerraform)(this._attachedDisk),
       boot_disk: cdktf.listMapper(computeInstanceBootDiskToTerraform)(this._bootDisk),
+      confidential_instance_config: cdktf.listMapper(computeInstanceConfidentialInstanceConfigToTerraform)(this._confidentialInstanceConfig),
       network_interface: cdktf.listMapper(computeInstanceNetworkInterfaceToTerraform)(this._networkInterface),
       scheduling: cdktf.listMapper(computeInstanceSchedulingToTerraform)(this._scheduling),
       scratch_disk: cdktf.listMapper(computeInstanceScratchDiskToTerraform)(this._scratchDisk),

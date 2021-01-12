@@ -7,138 +7,173 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMetaArguments {
-  /** User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be <= 128 bytes in size. */
-  readonly labels?: { [key: string]: string };
   /** Name of the environment. */
   readonly name: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
   /** The location or Compute Engine region for the environment. */
   readonly region?: string;
-  /** config block */
-  readonly config?: DataGoogleComposerEnvironmentConfigA[];
 }
-export interface DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
-  readonly clusterIpv4CidrBlock?: string;
-  readonly clusterSecondaryRangeName?: string;
-  readonly servicesIpv4CidrBlock?: string;
-  readonly servicesSecondaryRangeName?: string;
-  readonly useIpAliases?: boolean;
-}
+export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy extends cdktf.ComplexComputedList {
 
-function dataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    cluster_ipv4_cidr_block: cdktf.stringToTerraform(struct!.clusterIpv4CidrBlock),
-    cluster_secondary_range_name: cdktf.stringToTerraform(struct!.clusterSecondaryRangeName),
-    services_ipv4_cidr_block: cdktf.stringToTerraform(struct!.servicesIpv4CidrBlock),
-    services_secondary_range_name: cdktf.stringToTerraform(struct!.servicesSecondaryRangeName),
-    use_ip_aliases: cdktf.booleanToTerraform(struct!.useIpAliases),
+  // cluster_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get clusterIpv4CidrBlock() {
+    return this.getStringAttribute('cluster_ipv4_cidr_block');
+  }
+
+  // cluster_secondary_range_name - computed: true, optional: false, required: false
+  public get clusterSecondaryRangeName() {
+    return this.getStringAttribute('cluster_secondary_range_name');
+  }
+
+  // services_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get servicesIpv4CidrBlock() {
+    return this.getStringAttribute('services_ipv4_cidr_block');
+  }
+
+  // services_secondary_range_name - computed: true, optional: false, required: false
+  public get servicesSecondaryRangeName() {
+    return this.getStringAttribute('services_secondary_range_name');
+  }
+
+  // use_ip_aliases - computed: true, optional: false, required: false
+  public get useIpAliases() {
+    return this.getBooleanAttribute('use_ip_aliases');
   }
 }
+export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.ComplexComputedList {
 
-export interface DataGoogleComposerEnvironmentConfigNodeConfig {
-  /** The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. */
-  readonly diskSizeGb?: number;
-  /** Configuration for controlling how IPs are allocated in the GKE cluster. Cannot be updated. */
-  readonly ipAllocationPolicy?: DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy[];
-  /** The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone. */
-  readonly machineType?: string;
-  /** The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone. The network must belong to the environment's project. If unspecified, the "default" network ID in the environment's project is used. If a Custom Subnet Network is provided, subnetwork must also be provided. */
-  readonly network?: string;
-  /** The set of Google API scopes to be made available on all node VMs. Cannot be updated. If empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. */
-  readonly oauthScopes?: string[];
-  /** The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated. If given, note that the service account must have roles/composer.worker for any GCP resources created under the Cloud Composer Environment. */
-  readonly serviceAccount?: string;
-  /** The Compute Engine subnetwork to be used for machine communications, , specified as a self-link, relative resource name (e.g. "projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided, network must also be provided and the subnetwork must belong to the enclosing environment's project and region. */
-  readonly subnetwork?: string;
-  /** The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with RFC1035. Cannot be updated. */
-  readonly tags?: string[];
-  /** The Compute Engine zone in which to deploy the VMs running the Apache Airflow software, specified as the zone name or relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project and region. */
-  readonly zone: string;
-}
+  // disk_size_gb - computed: true, optional: false, required: false
+  public get diskSizeGb() {
+    return this.getNumberAttribute('disk_size_gb');
+  }
 
-function dataGoogleComposerEnvironmentConfigNodeConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigNodeConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
-    ip_allocation_policy: cdktf.listMapper(dataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform)(struct!.ipAllocationPolicy),
-    machine_type: cdktf.stringToTerraform(struct!.machineType),
-    network: cdktf.stringToTerraform(struct!.network),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
-    service_account: cdktf.stringToTerraform(struct!.serviceAccount),
-    subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
-    zone: cdktf.stringToTerraform(struct!.zone),
+  // ip_allocation_policy - computed: true, optional: false, required: false
+  public get ipAllocationPolicy() {
+    return this.interpolationForAttribute('ip_allocation_policy') as any;
+  }
+
+  // machine_type - computed: true, optional: false, required: false
+  public get machineType() {
+    return this.getStringAttribute('machine_type');
+  }
+
+  // network - computed: true, optional: false, required: false
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+
+  // oauth_scopes - computed: true, optional: false, required: false
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+
+  // service_account - computed: true, optional: false, required: false
+  public get serviceAccount() {
+    return this.getStringAttribute('service_account');
+  }
+
+  // subnetwork - computed: true, optional: false, required: false
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+
+  // tags - computed: true, optional: false, required: false
+  public get tags() {
+    return this.getListAttribute('tags');
+  }
+
+  // zone - computed: true, optional: false, required: false
+  public get zone() {
+    return this.getStringAttribute('zone');
   }
 }
+export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig extends cdktf.ComplexComputedList {
 
-export interface DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig {
-  /** The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block. */
-  readonly cloudSqlIpv4CidrBlock?: string;
-  /** If true, access to the public endpoint of the GKE cluster is denied. */
-  readonly enablePrivateEndpoint?: boolean;
-  /** The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network. If left blank, the default value of '172.16.0.0/28' is used. */
-  readonly masterIpv4CidrBlock?: string;
-  /** The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. */
-  readonly webServerIpv4CidrBlock?: string;
-}
+  // cloud_sql_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get cloudSqlIpv4CidrBlock() {
+    return this.getStringAttribute('cloud_sql_ipv4_cidr_block');
+  }
 
-function dataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    cloud_sql_ipv4_cidr_block: cdktf.stringToTerraform(struct!.cloudSqlIpv4CidrBlock),
-    enable_private_endpoint: cdktf.booleanToTerraform(struct!.enablePrivateEndpoint),
-    master_ipv4_cidr_block: cdktf.stringToTerraform(struct!.masterIpv4CidrBlock),
-    web_server_ipv4_cidr_block: cdktf.stringToTerraform(struct!.webServerIpv4CidrBlock),
+  // enable_private_endpoint - computed: true, optional: false, required: false
+  public get enablePrivateEndpoint() {
+    return this.getBooleanAttribute('enable_private_endpoint');
+  }
+
+  // master_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get masterIpv4CidrBlock() {
+    return this.getStringAttribute('master_ipv4_cidr_block');
+  }
+
+  // web_server_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get webServerIpv4CidrBlock() {
+    return this.getStringAttribute('web_server_ipv4_cidr_block');
   }
 }
+export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.ComplexComputedList {
 
-export interface DataGoogleComposerEnvironmentConfigSoftwareConfig {
-  /** Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and cannot contain "=" or ";". Section and property names cannot contain characters: "." Apache Airflow configuration property names must be written in snake_case. Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are blacklisted, and cannot be overridden. */
-  readonly airflowConfigOverrides?: { [key: string]: string };
-  /** Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER. */
-  readonly envVariables?: { [key: string]: string };
-  /** The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?. The Cloud Composer portion of the version is a semantic version. The portion of the image version following 'airflow-' is an official Apache Airflow repository release name. See documentation for allowed release names. */
-  readonly imageVersion?: string;
-  /** Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without pinning it to a version specifier, use the empty string as the value. */
-  readonly pypiPackages?: { [key: string]: string };
-  /** The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated. */
-  readonly pythonVersion?: string;
-}
+  // airflow_config_overrides - computed: true, optional: false, required: false
+  public get airflowConfigOverrides() {
+    return this.interpolationForAttribute('airflow_config_overrides') as any;
+  }
 
-function dataGoogleComposerEnvironmentConfigSoftwareConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigSoftwareConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    airflow_config_overrides: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.airflowConfigOverrides),
-    env_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.envVariables),
-    image_version: cdktf.stringToTerraform(struct!.imageVersion),
-    pypi_packages: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.pypiPackages),
-    python_version: cdktf.stringToTerraform(struct!.pythonVersion),
+  // env_variables - computed: true, optional: false, required: false
+  public get envVariables() {
+    return this.interpolationForAttribute('env_variables') as any;
+  }
+
+  // image_version - computed: true, optional: false, required: false
+  public get imageVersion() {
+    return this.getStringAttribute('image_version');
+  }
+
+  // pypi_packages - computed: true, optional: false, required: false
+  public get pypiPackages() {
+    return this.interpolationForAttribute('pypi_packages') as any;
+  }
+
+  // python_version - computed: true, optional: false, required: false
+  public get pythonVersion() {
+    return this.getStringAttribute('python_version');
   }
 }
+export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedList {
 
-export interface DataGoogleComposerEnvironmentConfigA {
-  /** The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. */
-  readonly nodeCount?: number;
-  /** node_config block */
-  readonly nodeConfig?: DataGoogleComposerEnvironmentConfigNodeConfig[];
-  /** private_environment_config block */
-  readonly privateEnvironmentConfig?: DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig[];
-  /** software_config block */
-  readonly softwareConfig?: DataGoogleComposerEnvironmentConfigSoftwareConfig[];
-}
+  // airflow_uri - computed: true, optional: false, required: false
+  public get airflowUri() {
+    return this.getStringAttribute('airflow_uri');
+  }
 
-function dataGoogleComposerEnvironmentConfigAToTerraform(struct?: DataGoogleComposerEnvironmentConfigA): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    node_count: cdktf.numberToTerraform(struct!.nodeCount),
-    node_config: cdktf.listMapper(dataGoogleComposerEnvironmentConfigNodeConfigToTerraform)(struct!.nodeConfig),
-    private_environment_config: cdktf.listMapper(dataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigToTerraform)(struct!.privateEnvironmentConfig),
-    software_config: cdktf.listMapper(dataGoogleComposerEnvironmentConfigSoftwareConfigToTerraform)(struct!.softwareConfig),
+  // dag_gcs_prefix - computed: true, optional: false, required: false
+  public get dagGcsPrefix() {
+    return this.getStringAttribute('dag_gcs_prefix');
+  }
+
+  // gke_cluster - computed: true, optional: false, required: false
+  public get gkeCluster() {
+    return this.getStringAttribute('gke_cluster');
+  }
+
+  // node_config - computed: true, optional: false, required: false
+  public get nodeConfig() {
+    return this.interpolationForAttribute('node_config') as any;
+  }
+
+  // node_count - computed: true, optional: false, required: false
+  public get nodeCount() {
+    return this.getNumberAttribute('node_count');
+  }
+
+  // private_environment_config - computed: true, optional: false, required: false
+  public get privateEnvironmentConfig() {
+    return this.interpolationForAttribute('private_environment_config') as any;
+  }
+
+  // software_config - computed: true, optional: false, required: false
+  public get softwareConfig() {
+    return this.interpolationForAttribute('software_config') as any;
   }
 }
-
 
 // Resource
 
@@ -159,36 +194,28 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
-    this._config = config.config;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
 
+  // config - computed: true, optional: false, required: false
+  public config(index: string) {
+    return new DataGoogleComposerEnvironmentConfigA(this, 'config', index);
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
-  public get labels() {
-    return this.interpolationForAttribute('labels') as any;
-  }
-  public set labels(value: { [key: string]: string } ) {
-    this._labels = value;
-  }
-  public resetLabels() {
-    this._labels = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get labelsInput() {
-    return this._labels
+  // labels - computed: true, optional: false, required: false
+  public labels(key: string): string {
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // name - computed: false, optional: false, required: true
@@ -204,12 +231,12 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
     return this._name
   }
 
-  // project - computed: true, optional: true, required: false
+  // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string ) {
     this._project = value;
   }
   public resetProject() {
@@ -236,33 +263,15 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
     return this._region
   }
 
-  // config - computed: false, optional: true, required: false
-  private _config?: DataGoogleComposerEnvironmentConfigA[];
-  public get config() {
-    return this.interpolationForAttribute('config') as any;
-  }
-  public set config(value: DataGoogleComposerEnvironmentConfigA[] ) {
-    this._config = value;
-  }
-  public resetConfig() {
-    this._config = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get configInput() {
-    return this._config
-  }
-
   // =========
   // SYNTHESIS
   // =========
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      config: cdktf.listMapper(dataGoogleComposerEnvironmentConfigAToTerraform)(this._config),
     };
   }
 }

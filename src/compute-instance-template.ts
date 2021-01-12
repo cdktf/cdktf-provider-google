@@ -35,6 +35,8 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   readonly region?: string;
   /** Tags to attach to the instance. */
   readonly tags?: string[];
+  /** confidential_instance_config block */
+  readonly confidentialInstanceConfig?: ComputeInstanceTemplateConfidentialInstanceConfig[];
   /** disk block */
   readonly disk: ComputeInstanceTemplateDisk[];
   /** guest_accelerator block */
@@ -50,6 +52,18 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   /** timeouts block */
   readonly timeouts?: ComputeInstanceTemplateTimeouts;
 }
+export interface ComputeInstanceTemplateConfidentialInstanceConfig {
+  /** Defines whether the instance should have confidential compute enabled. */
+  readonly enableConfidentialCompute: boolean;
+}
+
+function computeInstanceTemplateConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceTemplateConfidentialInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_confidential_compute: cdktf.booleanToTerraform(struct!.enableConfidentialCompute),
+  }
+}
+
 export interface ComputeInstanceTemplateDiskDiskEncryptionKey {
   /** The self link of the encryption key that is stored in Google Cloud KMS. */
   readonly kmsKeySelfLink: string;
@@ -298,6 +312,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._tags = config.tags;
+    this._confidentialInstanceConfig = config.confidentialInstanceConfig;
     this._disk = config.disk;
     this._guestAccelerator = config.guestAccelerator;
     this._networkInterface = config.networkInterface;
@@ -552,6 +567,22 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     return this.getStringAttribute('tags_fingerprint');
   }
 
+  // confidential_instance_config - computed: false, optional: true, required: false
+  private _confidentialInstanceConfig?: ComputeInstanceTemplateConfidentialInstanceConfig[];
+  public get confidentialInstanceConfig() {
+    return this.interpolationForAttribute('confidential_instance_config') as any;
+  }
+  public set confidentialInstanceConfig(value: ComputeInstanceTemplateConfidentialInstanceConfig[] ) {
+    this._confidentialInstanceConfig = value;
+  }
+  public resetConfidentialInstanceConfig() {
+    this._confidentialInstanceConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get confidentialInstanceConfigInput() {
+    return this._confidentialInstanceConfig
+  }
+
   // disk - computed: false, optional: false, required: true
   private _disk: ComputeInstanceTemplateDisk[];
   public get disk() {
@@ -681,6 +712,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      confidential_instance_config: cdktf.listMapper(computeInstanceTemplateConfidentialInstanceConfigToTerraform)(this._confidentialInstanceConfig),
       disk: cdktf.listMapper(computeInstanceTemplateDiskToTerraform)(this._disk),
       guest_accelerator: cdktf.listMapper(computeInstanceTemplateGuestAcceleratorToTerraform)(this._guestAccelerator),
       network_interface: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceToTerraform)(this._networkInterface),

@@ -14,7 +14,9 @@ export interface GoogleProviderConfig {
   readonly appEngineCustomEndpoint?: string;
   readonly bigQueryCustomEndpoint?: string;
   readonly bigqueryDataTransferCustomEndpoint?: string;
+  readonly bigqueryReservationCustomEndpoint?: string;
   readonly bigtableCustomEndpoint?: string;
+  readonly billingCustomEndpoint?: string;
   readonly billingProject?: string;
   readonly binaryAuthorizationCustomEndpoint?: string;
   readonly cloudAssetCustomEndpoint?: string;
@@ -63,6 +65,7 @@ export interface GoogleProviderConfig {
   readonly osLoginCustomEndpoint?: string;
   readonly project?: string;
   readonly pubsubCustomEndpoint?: string;
+  readonly pubsubLiteCustomEndpoint?: string;
   readonly redisCustomEndpoint?: string;
   readonly region?: string;
   readonly requestTimeout?: string;
@@ -128,7 +131,9 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._appEngineCustomEndpoint = config.appEngineCustomEndpoint;
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
     this._bigqueryDataTransferCustomEndpoint = config.bigqueryDataTransferCustomEndpoint;
+    this._bigqueryReservationCustomEndpoint = config.bigqueryReservationCustomEndpoint;
     this._bigtableCustomEndpoint = config.bigtableCustomEndpoint;
+    this._billingCustomEndpoint = config.billingCustomEndpoint;
     this._billingProject = config.billingProject;
     this._binaryAuthorizationCustomEndpoint = config.binaryAuthorizationCustomEndpoint;
     this._cloudAssetCustomEndpoint = config.cloudAssetCustomEndpoint;
@@ -177,6 +182,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._osLoginCustomEndpoint = config.osLoginCustomEndpoint;
     this._project = config.project;
     this._pubsubCustomEndpoint = config.pubsubCustomEndpoint;
+    this._pubsubLiteCustomEndpoint = config.pubsubLiteCustomEndpoint;
     this._redisCustomEndpoint = config.redisCustomEndpoint;
     this._region = config.region;
     this._requestTimeout = config.requestTimeout;
@@ -319,6 +325,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._bigqueryDataTransferCustomEndpoint
   }
 
+  // bigquery_reservation_custom_endpoint - computed: false, optional: true, required: false
+  private _bigqueryReservationCustomEndpoint?: string;
+  public get bigqueryReservationCustomEndpoint() {
+    return this._bigqueryReservationCustomEndpoint;
+  }
+  public set bigqueryReservationCustomEndpoint(value: string  | undefined) {
+    this._bigqueryReservationCustomEndpoint = value;
+  }
+  public resetBigqueryReservationCustomEndpoint() {
+    this._bigqueryReservationCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryReservationCustomEndpointInput() {
+    return this._bigqueryReservationCustomEndpoint
+  }
+
   // bigtable_custom_endpoint - computed: false, optional: true, required: false
   private _bigtableCustomEndpoint?: string;
   public get bigtableCustomEndpoint() {
@@ -333,6 +355,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get bigtableCustomEndpointInput() {
     return this._bigtableCustomEndpoint
+  }
+
+  // billing_custom_endpoint - computed: false, optional: true, required: false
+  private _billingCustomEndpoint?: string;
+  public get billingCustomEndpoint() {
+    return this._billingCustomEndpoint;
+  }
+  public set billingCustomEndpoint(value: string  | undefined) {
+    this._billingCustomEndpoint = value;
+  }
+  public resetBillingCustomEndpoint() {
+    this._billingCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingCustomEndpointInput() {
+    return this._billingCustomEndpoint
   }
 
   // billing_project - computed: false, optional: true, required: false
@@ -1103,6 +1141,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._pubsubCustomEndpoint
   }
 
+  // pubsub_lite_custom_endpoint - computed: false, optional: true, required: false
+  private _pubsubLiteCustomEndpoint?: string;
+  public get pubsubLiteCustomEndpoint() {
+    return this._pubsubLiteCustomEndpoint;
+  }
+  public set pubsubLiteCustomEndpoint(value: string  | undefined) {
+    this._pubsubLiteCustomEndpoint = value;
+  }
+  public resetPubsubLiteCustomEndpoint() {
+    this._pubsubLiteCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubLiteCustomEndpointInput() {
+    return this._pubsubLiteCustomEndpoint
+  }
+
   // redis_custom_endpoint - computed: false, optional: true, required: false
   private _redisCustomEndpoint?: string;
   public get redisCustomEndpoint() {
@@ -1500,7 +1554,9 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       app_engine_custom_endpoint: cdktf.stringToTerraform(this._appEngineCustomEndpoint),
       big_query_custom_endpoint: cdktf.stringToTerraform(this._bigQueryCustomEndpoint),
       bigquery_data_transfer_custom_endpoint: cdktf.stringToTerraform(this._bigqueryDataTransferCustomEndpoint),
+      bigquery_reservation_custom_endpoint: cdktf.stringToTerraform(this._bigqueryReservationCustomEndpoint),
       bigtable_custom_endpoint: cdktf.stringToTerraform(this._bigtableCustomEndpoint),
+      billing_custom_endpoint: cdktf.stringToTerraform(this._billingCustomEndpoint),
       billing_project: cdktf.stringToTerraform(this._billingProject),
       binary_authorization_custom_endpoint: cdktf.stringToTerraform(this._binaryAuthorizationCustomEndpoint),
       cloud_asset_custom_endpoint: cdktf.stringToTerraform(this._cloudAssetCustomEndpoint),
@@ -1549,6 +1605,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       os_login_custom_endpoint: cdktf.stringToTerraform(this._osLoginCustomEndpoint),
       project: cdktf.stringToTerraform(this._project),
       pubsub_custom_endpoint: cdktf.stringToTerraform(this._pubsubCustomEndpoint),
+      pubsub_lite_custom_endpoint: cdktf.stringToTerraform(this._pubsubLiteCustomEndpoint),
       redis_custom_endpoint: cdktf.stringToTerraform(this._redisCustomEndpoint),
       region: cdktf.stringToTerraform(this._region),
       request_timeout: cdktf.stringToTerraform(this._requestTimeout),
