@@ -11,6 +11,7 @@ export interface ProjectAccessApprovalSettingsConfig extends cdktf.TerraformMeta
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed. */
   readonly notificationEmails?: string[];
+  /** Deprecated in favor of 'project_id' */
   readonly project?: string;
   /** ID of the project of the access approval settings. */
   readonly projectId: string;
@@ -121,12 +122,12 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
     return this._notificationEmails
   }
 
-  // project - computed: true, optional: true, required: false
+  // project - computed: false, optional: true, required: false
   private _project?: string;
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string ) {
     this._project = value;
   }
   public resetProject() {

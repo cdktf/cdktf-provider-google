@@ -7,7 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The MySQL version running on your source database server. Possible values: ["MYSQL_5_6", "MYSQL_5_7"] */
+  /** The MySQL version running on your source database server. Possible values: ["MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0"] */
   readonly databaseVersion: string;
   /** The externally accessible IPv4 address for the source database server. */
   readonly host: string;

@@ -38,8 +38,8 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled. */
   readonly useServiceNetworking?: boolean;
-  /** The GCP location for the TPU. */
-  readonly zone: string;
+  /** The GCP location for the TPU. If it is not provided, the provider zone is used. */
+  readonly zone?: string;
   /** scheduling_config block */
   readonly schedulingConfig?: TpuNodeSchedulingConfig[];
   /** timeouts block */
@@ -272,13 +272,16 @@ export class TpuNode extends cdktf.TerraformResource {
     return this._useServiceNetworking
   }
 
-  // zone - computed: false, optional: false, required: true
-  private _zone: string;
+  // zone - computed: true, optional: true, required: false
+  private _zone?: string;
   public get zone() {
     return this.getStringAttribute('zone');
   }
   public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {

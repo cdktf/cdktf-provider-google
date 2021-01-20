@@ -86,6 +86,23 @@ export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends cdktf.Com
     return this.getBooleanAttribute('verify_server_certificate');
   }
 }
+export class DataGoogleSqlDatabaseInstanceRestoreBackupContext extends cdktf.ComplexComputedList {
+
+  // backup_run_id - computed: true, optional: false, required: false
+  public get backupRunId() {
+    return this.getNumberAttribute('backup_run_id');
+  }
+
+  // instance_id - computed: true, optional: false, required: false
+  public get instanceId() {
+    return this.getStringAttribute('instance_id');
+  }
+
+  // project - computed: true, optional: false, required: false
+  public get project() {
+    return this.getStringAttribute('project');
+  }
+}
 export class DataGoogleSqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
 
   // cert - computed: true, optional: false, required: false
@@ -417,6 +434,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // replica_configuration - computed: true, optional: false, required: false
   public replicaConfiguration(index: string) {
     return new DataGoogleSqlDatabaseInstanceReplicaConfiguration(this, 'replica_configuration', index);
+  }
+
+  // restore_backup_context - computed: true, optional: false, required: false
+  public restoreBackupContext(index: string) {
+    return new DataGoogleSqlDatabaseInstanceRestoreBackupContext(this, 'restore_backup_context', index);
   }
 
   // root_password - computed: true, optional: false, required: false

@@ -11,6 +11,7 @@ export interface GoogleProviderConfig {
   readonly accessContextManagerCustomEndpoint?: string;
   readonly accessToken?: string;
   readonly activeDirectoryCustomEndpoint?: string;
+  readonly apigeeCustomEndpoint?: string;
   readonly appEngineCustomEndpoint?: string;
   readonly bigQueryCustomEndpoint?: string;
   readonly bigqueryDataTransferCustomEndpoint?: string;
@@ -128,6 +129,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._accessContextManagerCustomEndpoint = config.accessContextManagerCustomEndpoint;
     this._accessToken = config.accessToken;
     this._activeDirectoryCustomEndpoint = config.activeDirectoryCustomEndpoint;
+    this._apigeeCustomEndpoint = config.apigeeCustomEndpoint;
     this._appEngineCustomEndpoint = config.appEngineCustomEndpoint;
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
     this._bigqueryDataTransferCustomEndpoint = config.bigqueryDataTransferCustomEndpoint;
@@ -275,6 +277,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get activeDirectoryCustomEndpointInput() {
     return this._activeDirectoryCustomEndpoint
+  }
+
+  // apigee_custom_endpoint - computed: false, optional: true, required: false
+  private _apigeeCustomEndpoint?: string;
+  public get apigeeCustomEndpoint() {
+    return this._apigeeCustomEndpoint;
+  }
+  public set apigeeCustomEndpoint(value: string  | undefined) {
+    this._apigeeCustomEndpoint = value;
+  }
+  public resetApigeeCustomEndpoint() {
+    this._apigeeCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apigeeCustomEndpointInput() {
+    return this._apigeeCustomEndpoint
   }
 
   // app_engine_custom_endpoint - computed: false, optional: true, required: false
@@ -1551,6 +1569,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       access_context_manager_custom_endpoint: cdktf.stringToTerraform(this._accessContextManagerCustomEndpoint),
       access_token: cdktf.stringToTerraform(this._accessToken),
       active_directory_custom_endpoint: cdktf.stringToTerraform(this._activeDirectoryCustomEndpoint),
+      apigee_custom_endpoint: cdktf.stringToTerraform(this._apigeeCustomEndpoint),
       app_engine_custom_endpoint: cdktf.stringToTerraform(this._appEngineCustomEndpoint),
       big_query_custom_endpoint: cdktf.stringToTerraform(this._bigQueryCustomEndpoint),
       bigquery_data_transfer_custom_endpoint: cdktf.stringToTerraform(this._bigqueryDataTransferCustomEndpoint),

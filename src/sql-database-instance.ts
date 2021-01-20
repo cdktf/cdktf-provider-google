@@ -7,7 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, POSTGRES_9_6,POSTGRES_11, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions. */
+  /** The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6,POSTGRES_11, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions. */
   readonly databaseVersion?: string;
   /** Used to block Terraform from deleting a SQL Instance. */
   readonly deletionProtection?: boolean;
@@ -23,6 +23,8 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   readonly rootPassword?: string;
   /** replica_configuration block */
   readonly replicaConfiguration?: SqlDatabaseInstanceReplicaConfiguration[];
+  /** restore_backup_context block */
+  readonly restoreBackupContext?: SqlDatabaseInstanceRestoreBackupContext[];
   /** settings block */
   readonly settings: SqlDatabaseInstanceSettings[];
   /** timeouts block */
@@ -111,6 +113,24 @@ function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlDatabase
     ssl_cipher: cdktf.stringToTerraform(struct!.sslCipher),
     username: cdktf.stringToTerraform(struct!.username),
     verify_server_certificate: cdktf.booleanToTerraform(struct!.verifyServerCertificate),
+  }
+}
+
+export interface SqlDatabaseInstanceRestoreBackupContext {
+  /** The ID of the backup run to restore from. */
+  readonly backupRunId: number;
+  /** The ID of the instance that the backup was taken from. */
+  readonly instanceId?: string;
+  /** The full project ID of the source instance. */
+  readonly project?: string;
+}
+
+function sqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: SqlDatabaseInstanceRestoreBackupContext): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backup_run_id: cdktf.numberToTerraform(struct!.backupRunId),
+    instance_id: cdktf.stringToTerraform(struct!.instanceId),
+    project: cdktf.stringToTerraform(struct!.project),
   }
 }
 
@@ -324,6 +344,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     this._region = config.region;
     this._rootPassword = config.rootPassword;
     this._replicaConfiguration = config.replicaConfiguration;
+    this._restoreBackupContext = config.restoreBackupContext;
     this._settings = config.settings;
     this._timeouts = config.timeouts;
   }
@@ -505,6 +526,22 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     return this._replicaConfiguration
   }
 
+  // restore_backup_context - computed: false, optional: true, required: false
+  private _restoreBackupContext?: SqlDatabaseInstanceRestoreBackupContext[];
+  public get restoreBackupContext() {
+    return this.interpolationForAttribute('restore_backup_context') as any;
+  }
+  public set restoreBackupContext(value: SqlDatabaseInstanceRestoreBackupContext[] ) {
+    this._restoreBackupContext = value;
+  }
+  public resetRestoreBackupContext() {
+    this._restoreBackupContext = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreBackupContextInput() {
+    return this._restoreBackupContext
+  }
+
   // settings - computed: false, optional: false, required: true
   private _settings: SqlDatabaseInstanceSettings[];
   public get settings() {
@@ -548,6 +585,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       root_password: cdktf.stringToTerraform(this._rootPassword),
       replica_configuration: cdktf.listMapper(sqlDatabaseInstanceReplicaConfigurationToTerraform)(this._replicaConfiguration),
+      restore_backup_context: cdktf.listMapper(sqlDatabaseInstanceRestoreBackupContextToTerraform)(this._restoreBackupContext),
       settings: cdktf.listMapper(sqlDatabaseInstanceSettingsToTerraform)(this._settings),
       timeouts: sqlDatabaseInstanceTimeoutsToTerraform(this._timeouts),
     };

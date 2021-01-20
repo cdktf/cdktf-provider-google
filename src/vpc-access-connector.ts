@@ -18,8 +18,8 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   /** Name of a VPC network. */
   readonly network: string;
   readonly project?: string;
-  /** Region where the VPC Access connector resides */
-  readonly region: string;
+  /** Region where the VPC Access connector resides. If it is not provided, the provider region is used. */
+  readonly region?: string;
   /** timeouts block */
   readonly timeouts?: VpcAccessConnectorTimeouts;
 }
@@ -162,13 +162,16 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     return this._project
   }
 
-  // region - computed: false, optional: false, required: true
-  private _region: string;
+  // region - computed: true, optional: true, required: false
+  private _region?: string;
   public get region() {
     return this.getStringAttribute('region');
   }
   public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {

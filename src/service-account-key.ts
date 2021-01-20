@@ -7,6 +7,8 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
+  /** Arbitrary map of values that, when changed, will trigger recreation of resource. */
+  readonly keepers?: { [key: string]: string };
   /** The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048". */
   readonly keyAlgorithm?: string;
   readonly privateKeyType?: string;
@@ -36,6 +38,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._keepers = config.keepers;
     this._keyAlgorithm = config.keyAlgorithm;
     this._privateKeyType = config.privateKeyType;
     this._publicKeyData = config.publicKeyData;
@@ -50,6 +53,22 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // keepers - computed: false, optional: true, required: false
+  private _keepers?: { [key: string]: string };
+  public get keepers() {
+    return this.interpolationForAttribute('keepers') as any;
+  }
+  public set keepers(value: { [key: string]: string } ) {
+    this._keepers = value;
+  }
+  public resetKeepers() {
+    this._keepers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keepersInput() {
+    return this._keepers
   }
 
   // key_algorithm - computed: false, optional: true, required: false
@@ -160,6 +179,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      keepers: cdktf.hashMapper(cdktf.anyToTerraform)(this._keepers),
       key_algorithm: cdktf.stringToTerraform(this._keyAlgorithm),
       private_key_type: cdktf.stringToTerraform(this._privateKeyType),
       public_key_data: cdktf.stringToTerraform(this._publicKeyData),

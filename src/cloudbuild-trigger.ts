@@ -44,6 +44,8 @@ a build. */
   readonly tags?: string[];
   /** build block */
   readonly buildAttribute?: CloudbuildTriggerBuild[];
+  /** github block */
+  readonly github?: CloudbuildTriggerGithub[];
   /** timeouts block */
   readonly timeouts?: CloudbuildTriggerTimeouts;
   /** trigger_template block */
@@ -428,6 +430,65 @@ function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuild): any
   }
 }
 
+export interface CloudbuildTriggerGithubPullRequest {
+  /** Regex of branches to match. */
+  readonly branch: string;
+  /** Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator. Possible values: ["COMMENTS_DISABLED", "COMMENTS_ENABLED", "COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY"] */
+  readonly commentControl?: string;
+  /** If true, branches that do NOT match the git_ref will trigger a build. */
+  readonly invertRegex?: boolean;
+}
+
+function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTriggerGithubPullRequest): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    branch: cdktf.stringToTerraform(struct!.branch),
+    comment_control: cdktf.stringToTerraform(struct!.commentControl),
+    invert_regex: cdktf.booleanToTerraform(struct!.invertRegex),
+  }
+}
+
+export interface CloudbuildTriggerGithubPush {
+  /** Regex of branches to match.  Specify only one of branch or tag. */
+  readonly branch?: string;
+  /** When true, only trigger a build if the revision regex does NOT match the git_ref regex. */
+  readonly invertRegex?: boolean;
+  /** Regex of tags to match.  Specify only one of branch or tag. */
+  readonly tag?: string;
+}
+
+function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTriggerGithubPush): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    branch: cdktf.stringToTerraform(struct!.branch),
+    invert_regex: cdktf.booleanToTerraform(struct!.invertRegex),
+    tag: cdktf.stringToTerraform(struct!.tag),
+  }
+}
+
+export interface CloudbuildTriggerGithub {
+  /** Name of the repository. For example: The name for
+https://github.com/googlecloudplatform/cloud-builders is "cloud-builders". */
+  readonly name?: string;
+  /** Owner of the repository. For example: The owner for
+https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform". */
+  readonly owner?: string;
+  /** pull_request block */
+  readonly pullRequest?: CloudbuildTriggerGithubPullRequest[];
+  /** push block */
+  readonly push?: CloudbuildTriggerGithubPush[];
+}
+
+function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGithub): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    owner: cdktf.stringToTerraform(struct!.owner),
+    pull_request: cdktf.listMapper(cloudbuildTriggerGithubPullRequestToTerraform)(struct!.pullRequest),
+    push: cdktf.listMapper(cloudbuildTriggerGithubPushToTerraform)(struct!.push),
+  }
+}
+
 export interface CloudbuildTriggerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -510,6 +571,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._substitutions = config.substitutions;
     this._tags = config.tags;
     this._build = config.buildAttribute;
+    this._github = config.github;
     this._timeouts = config.timeouts;
     this._triggerTemplate = config.triggerTemplate;
   }
@@ -693,6 +755,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     return this._build
   }
 
+  // github - computed: false, optional: true, required: false
+  private _github?: CloudbuildTriggerGithub[];
+  public get github() {
+    return this.interpolationForAttribute('github') as any;
+  }
+  public set github(value: CloudbuildTriggerGithub[] ) {
+    this._github = value;
+  }
+  public resetGithub() {
+    this._github = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get githubInput() {
+    return this._github
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudbuildTriggerTimeouts;
   public get timeouts() {
@@ -741,6 +819,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(this._substitutions),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       build: cdktf.listMapper(cloudbuildTriggerBuildToTerraform)(this._build),
+      github: cdktf.listMapper(cloudbuildTriggerGithubToTerraform)(this._github),
       timeouts: cloudbuildTriggerTimeoutsToTerraform(this._timeouts),
       trigger_template: cdktf.listMapper(cloudbuildTriggerTriggerTemplateToTerraform)(this._triggerTemplate),
     };
