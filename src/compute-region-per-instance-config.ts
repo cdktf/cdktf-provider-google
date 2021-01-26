@@ -13,7 +13,7 @@ export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMet
   readonly name: string;
   readonly project?: string;
   /** Region where the containing instance group manager is located */
-  readonly region: string;
+  readonly region?: string;
   /** The region instance group manager this instance config is part of. */
   readonly regionInstanceGroupManager: string;
   readonly removeInstanceStateOnDestroy?: boolean;
@@ -179,13 +179,16 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
     return this._project
   }
 
-  // region - computed: false, optional: false, required: true
-  private _region: string;
+  // region - computed: true, optional: true, required: false
+  private _region?: string;
   public get region() {
     return this.getStringAttribute('region');
   }
   public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {

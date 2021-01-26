@@ -393,6 +393,7 @@ export * from './data-google-client-config';
 export * from './data-google-client-openid-userinfo';
 export * from './data-google-cloud-identity-group-memberships';
 export * from './data-google-cloud-identity-groups';
+export * from './data-google-cloud-run-locations';
 export * from './data-google-cloud-run-service';
 export * from './data-google-cloudfunctions-function';
 export * from './data-google-composer-environment';

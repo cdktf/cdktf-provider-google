@@ -220,6 +220,7 @@ function cloudSchedulerJobRetryConfigToTerraform(struct?: CloudSchedulerJobRetry
 export interface CloudSchedulerJobTimeouts {
   readonly create?: string;
   readonly delete?: string;
+  readonly update?: string;
 }
 
 function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobTimeouts): any {
@@ -227,6 +228,7 @@ function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobTimeouts
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 

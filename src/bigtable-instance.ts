@@ -30,7 +30,7 @@ export interface BigtableInstanceCluster {
   /** The storage type to use. One of "SSD" or "HDD". Defaults to "SSD". */
   readonly storageType?: string;
   /** The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page. */
-  readonly zone: string;
+  readonly zone?: string;
 }
 
 function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): any {

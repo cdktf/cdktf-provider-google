@@ -16,7 +16,7 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   readonly project?: string;
   readonly removeInstanceStateOnDestroy?: boolean;
   /** Zone where the containing instance group manager is located */
-  readonly zone: string;
+  readonly zone?: string;
   /** preserved_state block */
   readonly preservedState?: ComputePerInstanceConfigPreservedState[];
   /** timeouts block */
@@ -208,13 +208,16 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
     return this._removeInstanceStateOnDestroy
   }
 
-  // zone - computed: false, optional: false, required: true
-  private _zone: string;
+  // zone - computed: false, optional: true, required: false
+  private _zone?: string;
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string) {
+  public set zone(value: string ) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {

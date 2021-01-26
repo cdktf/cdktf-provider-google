@@ -18,7 +18,7 @@ export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.Terraform
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
   /** The region where the managed instance group resides. */
-  readonly region: string;
+  readonly region?: string;
   /** The full URL of all target pools to which new instances in the group are added. Updating the target pools attribute does not affect existing instances. */
   readonly targetPools?: string[];
   /** The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0. */
@@ -297,13 +297,16 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
     return this._project
   }
 
-  // region - computed: false, optional: false, required: true
-  private _region: string;
+  // region - computed: true, optional: true, required: false
+  private _region?: string;
   public get region() {
     return this.getStringAttribute('region');
   }
   public set region(value: string) {
     this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
