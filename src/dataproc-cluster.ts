@@ -337,6 +337,8 @@ function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: DataprocCl
 export interface DataprocClusterClusterConfig {
   /** The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster. Note: If you don't explicitly specify a staging_bucket then GCP will auto create / assign one for you. However, you are not guaranteed an auto generated bucket which is solely dedicated to your cluster; it may be shared with other clusters in the same region/zone also choosing to use the auto generation option. */
   readonly stagingBucket?: string;
+  /** The Cloud Storage temp bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. Note: If you don't explicitly specify a temp_bucket then GCP will auto create / assign one for you. */
+  readonly tempBucket?: string;
   /** autoscaling_config block */
   readonly autoscalingConfig?: DataprocClusterClusterConfigAutoscalingConfig[];
   /** encryption_config block */
@@ -361,6 +363,7 @@ function dataprocClusterClusterConfigToTerraform(struct?: DataprocClusterCluster
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     staging_bucket: cdktf.stringToTerraform(struct!.stagingBucket),
+    temp_bucket: cdktf.stringToTerraform(struct!.tempBucket),
     autoscaling_config: cdktf.listMapper(dataprocClusterClusterConfigAutoscalingConfigToTerraform)(struct!.autoscalingConfig),
     encryption_config: cdktf.listMapper(dataprocClusterClusterConfigEncryptionConfigToTerraform)(struct!.encryptionConfig),
     gce_cluster_config: cdktf.listMapper(dataprocClusterClusterConfigGceClusterConfigToTerraform)(struct!.gceClusterConfig),

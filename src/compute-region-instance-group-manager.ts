@@ -11,6 +11,8 @@ export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.Terraform
   readonly baseInstanceName: string;
   /** An optional textual description of the instance group manager. */
   readonly description?: string;
+  /** The shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType). */
+  readonly distributionPolicyTargetShape?: string;
   /** The distribution policy for this managed instance group. You can specify one or more values. */
   readonly distributionPolicyZones?: string[];
   /** The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens. */
@@ -189,6 +191,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
     });
     this._baseInstanceName = config.baseInstanceName;
     this._description = config.description;
+    this._distributionPolicyTargetShape = config.distributionPolicyTargetShape;
     this._distributionPolicyZones = config.distributionPolicyZones;
     this._name = config.name;
     this._project = config.project;
@@ -235,6 +238,22 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description
+  }
+
+  // distribution_policy_target_shape - computed: true, optional: true, required: false
+  private _distributionPolicyTargetShape?: string;
+  public get distributionPolicyTargetShape() {
+    return this.getStringAttribute('distribution_policy_target_shape');
+  }
+  public set distributionPolicyTargetShape(value: string) {
+    this._distributionPolicyTargetShape = value;
+  }
+  public resetDistributionPolicyTargetShape() {
+    this._distributionPolicyTargetShape = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get distributionPolicyTargetShapeInput() {
+    return this._distributionPolicyTargetShape
   }
 
   // distribution_policy_zones - computed: true, optional: true, required: false
@@ -467,6 +486,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
     return {
       base_instance_name: cdktf.stringToTerraform(this._baseInstanceName),
       description: cdktf.stringToTerraform(this._description),
+      distribution_policy_target_shape: cdktf.stringToTerraform(this._distributionPolicyTargetShape),
       distribution_policy_zones: cdktf.listMapper(cdktf.stringToTerraform)(this._distributionPolicyZones),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

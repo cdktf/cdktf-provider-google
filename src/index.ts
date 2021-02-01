@@ -453,6 +453,7 @@ export * from './data-google-project-organization-policy';
 export * from './data-google-projects';
 export * from './data-google-pubsub-topic';
 export * from './data-google-redis-instance';
+export * from './data-google-runtimeconfig-config';
 export * from './data-google-secret-manager-secret-version';
 export * from './data-google-service-account';
 export * from './data-google-service-account-access-token';
