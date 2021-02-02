@@ -134,6 +134,13 @@ export class DataGoogleContainerClusterDatabaseEncryption extends cdktf.ComplexC
     return this.getStringAttribute('state');
   }
 }
+export class DataGoogleContainerClusterDefaultSnatStatus extends cdktf.ComplexComputedList {
+
+  // disabled - computed: true, optional: false, required: false
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+}
 export class DataGoogleContainerClusterIpAllocationPolicy extends cdktf.ComplexComputedList {
 
   // cluster_ipv4_cidr_block - computed: true, optional: false, required: false
@@ -654,6 +661,13 @@ export class DataGoogleContainerClusterPodSecurityPolicyConfig extends cdktf.Com
     return this.getBooleanAttribute('enabled');
   }
 }
+export class DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig extends cdktf.ComplexComputedList {
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
 export class DataGoogleContainerClusterPrivateClusterConfig extends cdktf.ComplexComputedList {
 
   // enable_private_endpoint - computed: true, optional: false, required: false
@@ -664,6 +678,11 @@ export class DataGoogleContainerClusterPrivateClusterConfig extends cdktf.Comple
   // enable_private_nodes - computed: true, optional: false, required: false
   public get enablePrivateNodes() {
     return this.getBooleanAttribute('enable_private_nodes');
+  }
+
+  // master_global_access_config - computed: true, optional: false, required: false
+  public get masterGlobalAccessConfig() {
+    return this.interpolationForAttribute('master_global_access_config') as any;
   }
 
   // master_ipv4_cidr_block - computed: true, optional: false, required: false
@@ -785,9 +804,19 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
     return new DataGoogleContainerClusterDatabaseEncryption(this, 'database_encryption', index);
   }
 
+  // datapath_provider - computed: true, optional: false, required: false
+  public get datapathProvider() {
+    return this.getStringAttribute('datapath_provider');
+  }
+
   // default_max_pods_per_node - computed: true, optional: false, required: false
   public get defaultMaxPodsPerNode() {
     return this.getNumberAttribute('default_max_pods_per_node');
+  }
+
+  // default_snat_status - computed: true, optional: false, required: false
+  public defaultSnatStatus(index: string) {
+    return new DataGoogleContainerClusterDefaultSnatStatus(this, 'default_snat_status', index);
   }
 
   // description - computed: true, optional: false, required: false
@@ -1013,6 +1042,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // subnetwork - computed: true, optional: false, required: false
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
+  }
+
+  // tpu_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get tpuIpv4CidrBlock() {
+    return this.getStringAttribute('tpu_ipv4_cidr_block');
   }
 
   // vertical_pod_autoscaling - computed: true, optional: false, required: false

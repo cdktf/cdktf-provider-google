@@ -55,9 +55,9 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   /** The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id} */
   readonly network?: string;
-  /** the notebook instance will not register with the proxy.. */
+  /** The notebook instance will not register with the proxy.. */
   readonly noProxyAccess?: boolean;
-  /** no public IP will be assigned to this instance. */
+  /** No public IP will be assigned to this instance. */
   readonly noPublicIp?: boolean;
   /** If true, the data disk will not be auto deleted when deleting the instance. */
   readonly noRemoveDataDisk?: boolean;
@@ -72,15 +72,24 @@ the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used. */
   readonly serviceAccount?: string;
+  /** Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email */
+  readonly serviceAccountScopes?: string[];
   /** The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id} */
   readonly subnet?: string;
+  /** The Compute Engine tags to add to runtime. */
+  readonly tags?: string[];
   /** Instance update time. */
   readonly updateTime?: string;
   /** accelerator_config block */
   readonly acceleratorConfig?: NotebooksInstanceAcceleratorConfig[];
   /** container_image block */
   readonly containerImage?: NotebooksInstanceContainerImage[];
+  /** shielded_instance_config block */
+  readonly shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig[];
   /** timeouts block */
   readonly timeouts?: NotebooksInstanceTimeouts;
   /** vm_image block */
@@ -89,7 +98,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id} */
 export interface NotebooksInstanceAcceleratorConfig {
   /** Count of cores of this accelerator. */
   readonly coreCount: number;
-  /** Type of this accelerator. Possible values: ["ACCELERATOR_TYPE_UNSPECIFIED", "NVIDIA_TESLA_K80", "NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS", "TPU_V2", "TPU_V3"] */
+  /** Type of this accelerator. Possible values: ["ACCELERATOR_TYPE_UNSPECIFIED", "NVIDIA_TESLA_K80", "NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS", "NVIDIA_TESLA_A100", "TPU_V2", "TPU_V3"] */
   readonly type: string;
 }
 
@@ -114,6 +123,31 @@ function notebooksInstanceContainerImageToTerraform(struct?: NotebooksInstanceCo
   return {
     repository: cdktf.stringToTerraform(struct!.repository),
     tag: cdktf.stringToTerraform(struct!.tag),
+  }
+}
+
+export interface NotebooksInstanceShieldedInstanceConfig {
+  /** Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+Enabled by default. */
+  readonly enableIntegrityMonitoring?: boolean;
+  /** Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+authentic software by verifying the digital signature of all boot components, and halting the boot process
+if signature verification fails.
+Disabled by default. */
+  readonly enableSecureBoot?: boolean;
+  /** Defines whether the instance has the vTPM enabled.
+Enabled by default. */
+  readonly enableVtpm?: boolean;
+}
+
+function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksInstanceShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+    enable_vtpm: cdktf.booleanToTerraform(struct!.enableVtpm),
   }
 }
 
@@ -193,10 +227,13 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     this._postStartupScript = config.postStartupScript;
     this._project = config.project;
     this._serviceAccount = config.serviceAccount;
+    this._serviceAccountScopes = config.serviceAccountScopes;
     this._subnet = config.subnet;
+    this._tags = config.tags;
     this._updateTime = config.updateTime;
     this._acceleratorConfig = config.acceleratorConfig;
     this._containerImage = config.containerImage;
+    this._shieldedInstanceConfig = config.shieldedInstanceConfig;
     this._timeouts = config.timeouts;
     this._vmImage = config.vmImage;
   }
@@ -558,6 +595,22 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     return this._serviceAccount
   }
 
+  // service_account_scopes - computed: false, optional: true, required: false
+  private _serviceAccountScopes?: string[];
+  public get serviceAccountScopes() {
+    return this.getListAttribute('service_account_scopes');
+  }
+  public set serviceAccountScopes(value: string[] ) {
+    this._serviceAccountScopes = value;
+  }
+  public resetServiceAccountScopes() {
+    this._serviceAccountScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountScopesInput() {
+    return this._serviceAccountScopes
+  }
+
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
@@ -577,6 +630,22 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get subnetInput() {
     return this._subnet
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: string[];
+  public get tags() {
+    return this.getListAttribute('tags');
+  }
+  public set tags(value: string[] ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // update_time - computed: true, optional: true, required: false
@@ -625,6 +694,22 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get containerImageInput() {
     return this._containerImage
+  }
+
+  // shielded_instance_config - computed: false, optional: true, required: false
+  private _shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig[];
+  public get shieldedInstanceConfig() {
+    return this.interpolationForAttribute('shielded_instance_config') as any;
+  }
+  public set shieldedInstanceConfig(value: NotebooksInstanceShieldedInstanceConfig[] ) {
+    this._shieldedInstanceConfig = value;
+  }
+  public resetShieldedInstanceConfig() {
+    this._shieldedInstanceConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shieldedInstanceConfigInput() {
+    return this._shieldedInstanceConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -687,10 +772,13 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       post_startup_script: cdktf.stringToTerraform(this._postStartupScript),
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
+      service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceAccountScopes),
       subnet: cdktf.stringToTerraform(this._subnet),
+      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       update_time: cdktf.stringToTerraform(this._updateTime),
       accelerator_config: cdktf.listMapper(notebooksInstanceAcceleratorConfigToTerraform)(this._acceleratorConfig),
       container_image: cdktf.listMapper(notebooksInstanceContainerImageToTerraform)(this._containerImage),
+      shielded_instance_config: cdktf.listMapper(notebooksInstanceShieldedInstanceConfigToTerraform)(this._shieldedInstanceConfig),
       timeouts: notebooksInstanceTimeoutsToTerraform(this._timeouts),
       vm_image: cdktf.listMapper(notebooksInstanceVmImageToTerraform)(this._vmImage),
     };

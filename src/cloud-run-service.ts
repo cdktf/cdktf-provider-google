@@ -77,7 +77,11 @@ export class CloudRunServiceStatus extends cdktf.ComplexComputedList {
 export interface CloudRunServiceMetadata {
   /** Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations */
+info: http://kubernetes.io/docs/user-guide/annotations
+
+**Note**: The Cloud Run API may add additional annotations that were not provided in your config.
+If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
+or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field. */
   readonly annotations?: { [key: string]: string };
   /** Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -101,7 +105,11 @@ function cloudRunServiceMetadataToTerraform(struct?: CloudRunServiceMetadata): a
 export interface CloudRunServiceTemplateMetadata {
   /** Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations */
+info: http://kubernetes.io/docs/user-guide/annotations
+
+**Note**: The Cloud Run API may add additional annotations that were not provided in your config.
+If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
+or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field. */
   readonly annotations?: { [key: string]: string };
   /** Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers

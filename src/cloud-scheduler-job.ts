@@ -166,7 +166,9 @@ export interface CloudSchedulerJobPubsubTarget {
 Pubsub message must contain either non-empty data, or at least one attribute. */
   readonly attributes?: { [key: string]: string };
   /** The message payload for PubsubMessage.
-Pubsub message must contain either non-empty data, or at least one attribute. */
+Pubsub message must contain either non-empty data, or at least one attribute.
+
+ A base64-encoded string. */
   readonly data?: string;
   /** The full resource name for the Cloud Pub/Sub topic to which
 messages will be published when a job is delivered. ~>**NOTE:**

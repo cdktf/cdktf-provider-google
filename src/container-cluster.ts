@@ -9,6 +9,8 @@ import * as cdktf from 'cdktf';
 export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   /** The IP address range of the Kubernetes pods in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only work for routes-based clusters, where ip_allocation_policy is not defined. */
   readonly clusterIpv4Cidr?: string;
+  /** The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation. */
+  readonly datapathProvider?: string;
   /** The default maximum number of pods per node in this cluster. This doesn't work on "routes-based" clusters, clusters that don't have IP Aliasing enabled. */
   readonly defaultMaxPodsPerNode?: number;
   /**  Description of the cluster. */
@@ -59,6 +61,8 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   readonly clusterAutoscaling?: ContainerClusterClusterAutoscaling[];
   /** database_encryption block */
   readonly databaseEncryption?: ContainerClusterDatabaseEncryption[];
+  /** default_snat_status block */
+  readonly defaultSnatStatus?: ContainerClusterDefaultSnatStatus[];
   /** ip_allocation_policy block */
   readonly ipAllocationPolicy?: ContainerClusterIpAllocationPolicy[];
   /** maintenance_policy block */
@@ -230,6 +234,18 @@ function containerClusterDatabaseEncryptionToTerraform(struct?: ContainerCluster
   return {
     key_name: cdktf.stringToTerraform(struct!.keyName),
     state: cdktf.stringToTerraform(struct!.state),
+  }
+}
+
+export interface ContainerClusterDefaultSnatStatus {
+  /** When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic. */
+  readonly disabled: boolean;
+}
+
+function containerClusterDefaultSnatStatusToTerraform(struct?: ContainerClusterDefaultSnatStatus): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
   }
 }
 
@@ -674,6 +690,18 @@ function containerClusterPodSecurityPolicyConfigToTerraform(struct?: ContainerCl
   }
 }
 
+export interface ContainerClusterPrivateClusterConfigMasterGlobalAccessConfig {
+  /** Whether the cluster master is accessible globally or not. */
+  readonly enabled: boolean;
+}
+
+function containerClusterPrivateClusterConfigMasterGlobalAccessConfigToTerraform(struct?: ContainerClusterPrivateClusterConfigMasterGlobalAccessConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ContainerClusterPrivateClusterConfig {
   /** Enables the private cluster feature, creating a private endpoint on the cluster. In a private cluster, nodes only have RFC 1918 private addresses and communicate with the master's private endpoint via private networking. */
   readonly enablePrivateEndpoint: boolean;
@@ -681,6 +709,8 @@ export interface ContainerClusterPrivateClusterConfig {
   readonly enablePrivateNodes?: boolean;
   /** The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning private IP addresses to the cluster master(s) and the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network, and it must be a /28 subnet. See Private Cluster Limitations for more details. This field only applies to private clusters, when enable_private_nodes is true. */
   readonly masterIpv4CidrBlock?: string;
+  /** master_global_access_config block */
+  readonly masterGlobalAccessConfig?: ContainerClusterPrivateClusterConfigMasterGlobalAccessConfig[];
 }
 
 function containerClusterPrivateClusterConfigToTerraform(struct?: ContainerClusterPrivateClusterConfig): any {
@@ -689,6 +719,7 @@ function containerClusterPrivateClusterConfigToTerraform(struct?: ContainerClust
     enable_private_endpoint: cdktf.booleanToTerraform(struct!.enablePrivateEndpoint),
     enable_private_nodes: cdktf.booleanToTerraform(struct!.enablePrivateNodes),
     master_ipv4_cidr_block: cdktf.stringToTerraform(struct!.masterIpv4CidrBlock),
+    master_global_access_config: cdktf.listMapper(containerClusterPrivateClusterConfigMasterGlobalAccessConfigToTerraform)(struct!.masterGlobalAccessConfig),
   }
 }
 
@@ -799,6 +830,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._clusterIpv4Cidr = config.clusterIpv4Cidr;
+    this._datapathProvider = config.datapathProvider;
     this._defaultMaxPodsPerNode = config.defaultMaxPodsPerNode;
     this._description = config.description;
     this._enableBinaryAuthorization = config.enableBinaryAuthorization;
@@ -824,6 +856,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._authenticatorGroupsConfig = config.authenticatorGroupsConfig;
     this._clusterAutoscaling = config.clusterAutoscaling;
     this._databaseEncryption = config.databaseEncryption;
+    this._defaultSnatStatus = config.defaultSnatStatus;
     this._ipAllocationPolicy = config.ipAllocationPolicy;
     this._maintenancePolicy = config.maintenancePolicy;
     this._masterAuth = config.masterAuth;
@@ -858,6 +891,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clusterIpv4CidrInput() {
     return this._clusterIpv4Cidr
+  }
+
+  // datapath_provider - computed: true, optional: true, required: false
+  private _datapathProvider?: string;
+  public get datapathProvider() {
+    return this.getStringAttribute('datapath_provider');
+  }
+  public set datapathProvider(value: string) {
+    this._datapathProvider = value;
+  }
+  public resetDatapathProvider() {
+    this._datapathProvider = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datapathProviderInput() {
+    return this._datapathProvider
   }
 
   // default_max_pods_per_node - computed: true, optional: true, required: false
@@ -1233,6 +1282,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._subnetwork
   }
 
+  // tpu_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get tpuIpv4CidrBlock() {
+    return this.getStringAttribute('tpu_ipv4_cidr_block');
+  }
+
   // addons_config - computed: false, optional: true, required: false
   private _addonsConfig?: ContainerClusterAddonsConfig[];
   public get addonsConfig() {
@@ -1295,6 +1349,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get databaseEncryptionInput() {
     return this._databaseEncryption
+  }
+
+  // default_snat_status - computed: false, optional: true, required: false
+  private _defaultSnatStatus?: ContainerClusterDefaultSnatStatus[];
+  public get defaultSnatStatus() {
+    return this.interpolationForAttribute('default_snat_status') as any;
+  }
+  public set defaultSnatStatus(value: ContainerClusterDefaultSnatStatus[] ) {
+    this._defaultSnatStatus = value;
+  }
+  public resetDefaultSnatStatus() {
+    this._defaultSnatStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultSnatStatusInput() {
+    return this._defaultSnatStatus
   }
 
   // ip_allocation_policy - computed: false, optional: true, required: false
@@ -1528,6 +1598,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_ipv4_cidr: cdktf.stringToTerraform(this._clusterIpv4Cidr),
+      datapath_provider: cdktf.stringToTerraform(this._datapathProvider),
       default_max_pods_per_node: cdktf.numberToTerraform(this._defaultMaxPodsPerNode),
       description: cdktf.stringToTerraform(this._description),
       enable_binary_authorization: cdktf.booleanToTerraform(this._enableBinaryAuthorization),
@@ -1553,6 +1624,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       authenticator_groups_config: cdktf.listMapper(containerClusterAuthenticatorGroupsConfigToTerraform)(this._authenticatorGroupsConfig),
       cluster_autoscaling: cdktf.listMapper(containerClusterClusterAutoscalingToTerraform)(this._clusterAutoscaling),
       database_encryption: cdktf.listMapper(containerClusterDatabaseEncryptionToTerraform)(this._databaseEncryption),
+      default_snat_status: cdktf.listMapper(containerClusterDefaultSnatStatusToTerraform)(this._defaultSnatStatus),
       ip_allocation_policy: cdktf.listMapper(containerClusterIpAllocationPolicyToTerraform)(this._ipAllocationPolicy),
       maintenance_policy: cdktf.listMapper(containerClusterMaintenancePolicyToTerraform)(this._maintenancePolicy),
       master_auth: cdktf.listMapper(containerClusterMasterAuthToTerraform)(this._masterAuth),
