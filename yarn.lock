@@ -271,9 +271,9 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@cdktf/provider-project@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.1.9.tgz#ef5e661d4b0c5cee8f598b50936e6a8544dba5a8"
-  integrity sha512-p+SMFcZPW+/DE02v9YQ2a+6+aEZi8qeVaifz9vm764QDdyEo/Lrx/qTvfMHVVxEngCREBsSZ88q16xkOpOpbew==
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.1.10.tgz#cbee76884b9a6f9e5dd496112d4ce6819eab9161"
+  integrity sha512-AsZxOXFIU7ODaUqcyy1K1sZCcQ3vVUvHirUg2jtSdXSWdwFbZCtXiooqWWesZb3EtzZ8vnZUODVJzw1tHezqeQ==
   dependencies:
     change-case "^4.1.2"
 
@@ -477,7 +477,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jsii/spec@^1.16.0", "@jsii/spec@^1.20.0", "@jsii/spec@^1.20.1":
+"@jsii/spec@^1.16.0", "@jsii/spec@^1.20.1":
   version "1.20.1"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.20.1.tgz#931a4e8280ab2f2314452a92fb91f0b40d5e8f77"
   integrity sha512-+ot9SPb/lFnRiPlhWUGLMp8owpr/pnpFX0/iIUhZ0kJ1LIAUde7TSuaz70mV6x+ES2wvVXKsgfu2WTMFHIAwZQ==
@@ -3717,7 +3717,7 @@ jsii-pacmak@^1.12.0, jsii-pacmak@^1.19.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.16.0, jsii-reflect@^1.20.0, jsii-reflect@^1.20.1:
+jsii-reflect@^1.16.0, jsii-reflect@^1.20.1:
   version "1.20.1"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.20.1.tgz#25b3146e923e728202c8fcac1c611eb261fa3a6c"
   integrity sha512-TkimkYu25H6YtfKRz7D/ZXbquXbhylS60TxgSPZC85iItCpZMwTlbIdvnpBKasx8e7MtJO6xYoAHEYHRhs8djQ==
