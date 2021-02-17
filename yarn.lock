@@ -271,9 +271,9 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@cdktf/provider-project@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.1.9.tgz#ef5e661d4b0c5cee8f598b50936e6a8544dba5a8"
-  integrity sha512-p+SMFcZPW+/DE02v9YQ2a+6+aEZi8qeVaifz9vm764QDdyEo/Lrx/qTvfMHVVxEngCREBsSZ88q16xkOpOpbew==
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.1.14.tgz#e4d1a8960d4ad008369c4d2f6891711d8b15daaa"
+  integrity sha512-OnJsgDReSbYlQs4vx/cEO4fsV+/TxgjkqjfggmlExXMVYD1Og+V4wihtaVSNtJZI7Lo4OSbkihfstp1ty15wKA==
   dependencies:
     change-case "^4.1.2"
 
@@ -477,7 +477,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jsii/spec@^1.16.0", "@jsii/spec@^1.20.1", "@jsii/spec@^1.21.0":
+"@jsii/spec@^1.16.0", "@jsii/spec@^1.21.0":
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.21.0.tgz#363c740567747aa03083d2f7bf9ef14e55d8ae9d"
   integrity sha512-MWQpJKciYytEmYzuwsT+4UM1JPiQyCAqr3PfkZxuosoPUaF7vBrWSs2+TXDb5dcCwpSnSim9iKZrM/Uc2ppUzA==
@@ -3712,7 +3712,7 @@ jsii-pacmak@^1.12.0, jsii-pacmak@^1.19.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.16.0, jsii-reflect@^1.20.1, jsii-reflect@^1.21.0:
+jsii-reflect@^1.16.0, jsii-reflect@^1.21.0:
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.21.0.tgz#2f6f7835d7428c5cc9d2c81f1c881e613710bc78"
   integrity sha512-OwXhVhe+NRv/e6jaGBdIpm3S1KQcEXTZN+USiBd+c4kROLqxw+ubpMBsEVSKEZ7t+4WksLTWWNot31VZkJrZ5g==
@@ -6059,7 +6059,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.9.5, typescript@~3.9.7, typescript@~3.9.9:
+typescript@^3.9.5, typescript@~3.9.9:
   version "3.9.9"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.9.tgz#e69905c54bc0681d0518bd4d587cc6f2d0b1a674"
   integrity sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==
