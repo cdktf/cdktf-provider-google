@@ -11,6 +11,8 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   readonly clustering?: string[];
   /** The dataset ID to create the table in. Changing this forces a new resource to be created. */
   readonly datasetId: string;
+  /** Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail. */
+  readonly deletionProtection?: boolean;
   /** The field description. */
   readonly description?: string;
   /** The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. */
@@ -255,6 +257,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
     });
     this._clustering = config.clustering;
     this._datasetId = config.datasetId;
+    this._deletionProtection = config.deletionProtection;
     this._description = config.description;
     this._expirationTime = config.expirationTime;
     this._friendlyName = config.friendlyName;
@@ -306,6 +309,22 @@ export class BigqueryTable extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get datasetIdInput() {
     return this._datasetId
+  }
+
+  // deletion_protection - computed: false, optional: true, required: false
+  private _deletionProtection?: boolean;
+  public get deletionProtection() {
+    return this.getBooleanAttribute('deletion_protection');
+  }
+  public set deletionProtection(value: boolean ) {
+    this._deletionProtection = value;
+  }
+  public resetDeletionProtection() {
+    this._deletionProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionInput() {
+    return this._deletionProtection
   }
 
   // description - computed: false, optional: true, required: false
@@ -566,6 +585,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
     return {
       clustering: cdktf.listMapper(cdktf.stringToTerraform)(this._clustering),
       dataset_id: cdktf.stringToTerraform(this._datasetId),
+      deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       description: cdktf.stringToTerraform(this._description),
       expiration_time: cdktf.numberToTerraform(this._expirationTime),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),

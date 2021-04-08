@@ -27,6 +27,57 @@ export interface BigqueryJobConfig extends cdktf.TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: BigqueryJobTimeouts;
 }
+export class BigqueryJobStatusErrorResult extends cdktf.ComplexComputedList {
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+
+  // message - computed: true, optional: false, required: false
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+
+  // reason - computed: true, optional: false, required: false
+  public get reason() {
+    return this.getStringAttribute('reason');
+  }
+}
+export class BigqueryJobStatusErrors extends cdktf.ComplexComputedList {
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+
+  // message - computed: true, optional: false, required: false
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+
+  // reason - computed: true, optional: false, required: false
+  public get reason() {
+    return this.getStringAttribute('reason');
+  }
+}
+export class BigqueryJobStatus extends cdktf.ComplexComputedList {
+
+  // error_result - computed: true, optional: false, required: false
+  public get errorResult() {
+    return this.interpolationForAttribute('error_result') as any;
+  }
+
+  // errors - computed: true, optional: false, required: false
+  public get errors() {
+    return this.interpolationForAttribute('errors') as any;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+}
 export interface BigqueryJobCopyDestinationEncryptionConfiguration {
   /** Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key. */
@@ -654,6 +705,11 @@ export class BigqueryJob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project
+  }
+
+  // status - computed: true, optional: false, required: false
+  public status(index: string) {
+    return new BigqueryJobStatus(this, 'status', index);
   }
 
   // user_email - computed: true, optional: false, required: false

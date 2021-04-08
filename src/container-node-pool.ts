@@ -97,7 +97,9 @@ function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolN
 }
 
 export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
+  /** Defines whether the instance has integrity monitoring enabled. */
   readonly enableIntegrityMonitoring?: boolean;
+  /** Defines whether the instance has Secure Boot enabled. */
   readonly enableSecureBoot?: boolean;
 }
 
@@ -110,6 +112,7 @@ function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: C
 }
 
 export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
+  /** NodeMetadata is the configuration for how to expose metadata to the workloads running on the node. */
   readonly nodeMetadata: string;
 }
 
@@ -121,19 +124,33 @@ function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: C
 }
 
 export interface ContainerNodePoolNodeConfig {
+  /** Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. */
   readonly diskSizeGb?: number;
+  /** Type of the disk attached to each node. */
   readonly diskType?: string;
+  /** List of the type and count of accelerator cards attached to the instance. */
   readonly guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[];
+  /** The image type to use for this node. Note that for a given image type, the latest version of it will be used. */
   readonly imageType?: string;
+  /** The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. */
   readonly labels?: { [key: string]: string };
+  /** The number of local SSD disks to be attached to the node. */
   readonly localSsdCount?: number;
+  /** The name of a Google Compute Engine machine type. */
   readonly machineType?: string;
+  /** The metadata key/value pairs assigned to instances in the cluster. */
   readonly metadata?: { [key: string]: string };
+  /** Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. */
   readonly minCpuPlatform?: string;
+  /** The set of Google API scopes to be made available on all of the node VMs. */
   readonly oauthScopes?: string[];
+  /** Whether the nodes are created as preemptible VM instances. */
   readonly preemptible?: boolean;
+  /** The Google Cloud Platform Service Account to be used by the node VMs. */
   readonly serviceAccount?: string;
+  /** The list of instance tags applied to all nodes. */
   readonly tags?: string[];
+  /** List of Kubernetes taints to be applied to each node. */
   readonly taint?: ContainerNodePoolNodeConfigTaint[];
   /** shielded_instance_config block */
   readonly shieldedInstanceConfig?: ContainerNodePoolNodeConfigShieldedInstanceConfig[];
@@ -367,6 +384,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nodeLocationsInput() {
     return this._nodeLocations
+  }
+
+  // operation - computed: true, optional: false, required: false
+  public get operation() {
+    return this.getStringAttribute('operation');
   }
 
   // project - computed: true, optional: true, required: false

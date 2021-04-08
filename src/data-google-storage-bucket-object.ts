@@ -101,6 +101,11 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // kms_key_name - computed: true, optional: false, required: false
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+
   // md5hash - computed: true, optional: false, required: false
   public get md5Hash() {
     return this.getStringAttribute('md5hash');

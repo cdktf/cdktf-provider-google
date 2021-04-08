@@ -80,6 +80,11 @@ export class DataGoogleComputeInstanceTemplateDisk extends cdktf.ComplexComputed
     return this.getStringAttribute('mode');
   }
 
+  // resource_policies - computed: true, optional: false, required: false
+  public get resourcePolicies() {
+    return this.getListAttribute('resource_policies');
+  }
+
   // source - computed: true, optional: false, required: false
   public get source() {
     return this.getStringAttribute('source');

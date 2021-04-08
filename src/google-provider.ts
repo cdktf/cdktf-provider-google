@@ -44,8 +44,8 @@ export interface GoogleProviderConfig {
   readonly datastoreCustomEndpoint?: string;
   readonly deploymentManagerCustomEndpoint?: string;
   readonly dialogflowCustomEndpoint?: string;
-  readonly dnsBetaCustomEndpoint?: string;
   readonly dnsCustomEndpoint?: string;
+  readonly eventarcCustomEndpoint?: string;
   readonly filestoreCustomEndpoint?: string;
   readonly firestoreCustomEndpoint?: string;
   readonly gameServicesCustomEndpoint?: string;
@@ -71,7 +71,7 @@ export interface GoogleProviderConfig {
   readonly region?: string;
   readonly requestTimeout?: string;
   readonly resourceManagerCustomEndpoint?: string;
-  readonly resourceManagerV2Beta1CustomEndpoint?: string;
+  readonly resourceManagerV2CustomEndpoint?: string;
   readonly runtimeConfigCustomEndpoint?: string;
   readonly runtimeconfigCustomEndpoint?: string;
   readonly scopes?: string[];
@@ -88,6 +88,7 @@ export interface GoogleProviderConfig {
   readonly tpuCustomEndpoint?: string;
   readonly userProjectOverride?: boolean;
   readonly vpcAccessCustomEndpoint?: string;
+  readonly workflowsCustomEndpoint?: string;
   readonly zone?: string;
   /** Alias name */
   readonly alias?: string;
@@ -162,8 +163,8 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._datastoreCustomEndpoint = config.datastoreCustomEndpoint;
     this._deploymentManagerCustomEndpoint = config.deploymentManagerCustomEndpoint;
     this._dialogflowCustomEndpoint = config.dialogflowCustomEndpoint;
-    this._dnsBetaCustomEndpoint = config.dnsBetaCustomEndpoint;
     this._dnsCustomEndpoint = config.dnsCustomEndpoint;
+    this._eventarcCustomEndpoint = config.eventarcCustomEndpoint;
     this._filestoreCustomEndpoint = config.filestoreCustomEndpoint;
     this._firestoreCustomEndpoint = config.firestoreCustomEndpoint;
     this._gameServicesCustomEndpoint = config.gameServicesCustomEndpoint;
@@ -189,7 +190,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._region = config.region;
     this._requestTimeout = config.requestTimeout;
     this._resourceManagerCustomEndpoint = config.resourceManagerCustomEndpoint;
-    this._resourceManagerV2Beta1CustomEndpoint = config.resourceManagerV2Beta1CustomEndpoint;
+    this._resourceManagerV2CustomEndpoint = config.resourceManagerV2CustomEndpoint;
     this._runtimeConfigCustomEndpoint = config.runtimeConfigCustomEndpoint;
     this._runtimeconfigCustomEndpoint = config.runtimeconfigCustomEndpoint;
     this._scopes = config.scopes;
@@ -206,6 +207,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._tpuCustomEndpoint = config.tpuCustomEndpoint;
     this._userProjectOverride = config.userProjectOverride;
     this._vpcAccessCustomEndpoint = config.vpcAccessCustomEndpoint;
+    this._workflowsCustomEndpoint = config.workflowsCustomEndpoint;
     this._zone = config.zone;
     this._alias = config.alias;
     this._batching = config.batching;
@@ -807,22 +809,6 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._dialogflowCustomEndpoint
   }
 
-  // dns_beta_custom_endpoint - computed: false, optional: true, required: false
-  private _dnsBetaCustomEndpoint?: string;
-  public get dnsBetaCustomEndpoint() {
-    return this._dnsBetaCustomEndpoint;
-  }
-  public set dnsBetaCustomEndpoint(value: string  | undefined) {
-    this._dnsBetaCustomEndpoint = value;
-  }
-  public resetDnsBetaCustomEndpoint() {
-    this._dnsBetaCustomEndpoint = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dnsBetaCustomEndpointInput() {
-    return this._dnsBetaCustomEndpoint
-  }
-
   // dns_custom_endpoint - computed: false, optional: true, required: false
   private _dnsCustomEndpoint?: string;
   public get dnsCustomEndpoint() {
@@ -837,6 +823,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get dnsCustomEndpointInput() {
     return this._dnsCustomEndpoint
+  }
+
+  // eventarc_custom_endpoint - computed: false, optional: true, required: false
+  private _eventarcCustomEndpoint?: string;
+  public get eventarcCustomEndpoint() {
+    return this._eventarcCustomEndpoint;
+  }
+  public set eventarcCustomEndpoint(value: string  | undefined) {
+    this._eventarcCustomEndpoint = value;
+  }
+  public resetEventarcCustomEndpoint() {
+    this._eventarcCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventarcCustomEndpointInput() {
+    return this._eventarcCustomEndpoint
   }
 
   // filestore_custom_endpoint - computed: false, optional: true, required: false
@@ -1239,20 +1241,20 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._resourceManagerCustomEndpoint
   }
 
-  // resource_manager_v2beta1_custom_endpoint - computed: false, optional: true, required: false
-  private _resourceManagerV2Beta1CustomEndpoint?: string;
-  public get resourceManagerV2Beta1CustomEndpoint() {
-    return this._resourceManagerV2Beta1CustomEndpoint;
+  // resource_manager_v2_custom_endpoint - computed: false, optional: true, required: false
+  private _resourceManagerV2CustomEndpoint?: string;
+  public get resourceManagerV2CustomEndpoint() {
+    return this._resourceManagerV2CustomEndpoint;
   }
-  public set resourceManagerV2Beta1CustomEndpoint(value: string  | undefined) {
-    this._resourceManagerV2Beta1CustomEndpoint = value;
+  public set resourceManagerV2CustomEndpoint(value: string  | undefined) {
+    this._resourceManagerV2CustomEndpoint = value;
   }
-  public resetResourceManagerV2Beta1CustomEndpoint() {
-    this._resourceManagerV2Beta1CustomEndpoint = undefined;
+  public resetResourceManagerV2CustomEndpoint() {
+    this._resourceManagerV2CustomEndpoint = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get resourceManagerV2Beta1CustomEndpointInput() {
-    return this._resourceManagerV2Beta1CustomEndpoint
+  public get resourceManagerV2CustomEndpointInput() {
+    return this._resourceManagerV2CustomEndpoint
   }
 
   // runtime_config_custom_endpoint - computed: false, optional: true, required: false
@@ -1511,6 +1513,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._vpcAccessCustomEndpoint
   }
 
+  // workflows_custom_endpoint - computed: false, optional: true, required: false
+  private _workflowsCustomEndpoint?: string;
+  public get workflowsCustomEndpoint() {
+    return this._workflowsCustomEndpoint;
+  }
+  public set workflowsCustomEndpoint(value: string  | undefined) {
+    this._workflowsCustomEndpoint = value;
+  }
+  public resetWorkflowsCustomEndpoint() {
+    this._workflowsCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workflowsCustomEndpointInput() {
+    return this._workflowsCustomEndpoint
+  }
+
   // zone - computed: false, optional: true, required: false
   private _zone?: string;
   public get zone() {
@@ -1602,8 +1620,8 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       datastore_custom_endpoint: cdktf.stringToTerraform(this._datastoreCustomEndpoint),
       deployment_manager_custom_endpoint: cdktf.stringToTerraform(this._deploymentManagerCustomEndpoint),
       dialogflow_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCustomEndpoint),
-      dns_beta_custom_endpoint: cdktf.stringToTerraform(this._dnsBetaCustomEndpoint),
       dns_custom_endpoint: cdktf.stringToTerraform(this._dnsCustomEndpoint),
+      eventarc_custom_endpoint: cdktf.stringToTerraform(this._eventarcCustomEndpoint),
       filestore_custom_endpoint: cdktf.stringToTerraform(this._filestoreCustomEndpoint),
       firestore_custom_endpoint: cdktf.stringToTerraform(this._firestoreCustomEndpoint),
       game_services_custom_endpoint: cdktf.stringToTerraform(this._gameServicesCustomEndpoint),
@@ -1629,7 +1647,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       region: cdktf.stringToTerraform(this._region),
       request_timeout: cdktf.stringToTerraform(this._requestTimeout),
       resource_manager_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerCustomEndpoint),
-      resource_manager_v2beta1_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerV2Beta1CustomEndpoint),
+      resource_manager_v2_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerV2CustomEndpoint),
       runtime_config_custom_endpoint: cdktf.stringToTerraform(this._runtimeConfigCustomEndpoint),
       runtimeconfig_custom_endpoint: cdktf.stringToTerraform(this._runtimeconfigCustomEndpoint),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
@@ -1646,6 +1664,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       tpu_custom_endpoint: cdktf.stringToTerraform(this._tpuCustomEndpoint),
       user_project_override: cdktf.booleanToTerraform(this._userProjectOverride),
       vpc_access_custom_endpoint: cdktf.stringToTerraform(this._vpcAccessCustomEndpoint),
+      workflows_custom_endpoint: cdktf.stringToTerraform(this._workflowsCustomEndpoint),
       zone: cdktf.stringToTerraform(this._zone),
       alias: cdktf.stringToTerraform(this._alias),
       batching: cdktf.listMapper(googleProviderBatchingToTerraform)(this._batching),

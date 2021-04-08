@@ -48,14 +48,14 @@ consecutive failures. The default value is 2. */
   readonly timeouts?: ComputeHealthCheckTimeouts;
 }
 export interface ComputeHealthCheckGrpcHealthCheck {
-  /** The gRPC service name for the health check. 
+  /** The gRPC service name for the health check.
 The value of grpcServiceName has the following meanings by convention:
   - Empty serviceName means the overall status of all services at the backend.
   - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
 The grpcServiceName can only be ASCII. */
   readonly grpcServiceName?: string;
-  /** The port number for the health check request. 
-Must be specified if portName and portSpecification are not set 
+  /** The port number for the health check request.
+Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535. */
   readonly port?: number;
   /** Port name as defined in InstanceGroup#NamedPort#name. If both port and

@@ -18,6 +18,9 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. */
   readonly name: string;
   readonly project?: string;
+  /** This field only applies when the forwarding rule that references
+this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. */
+  readonly proxyBind?: boolean;
   /** Specifies the QUIC override policy for this resource. This determines
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
@@ -76,6 +79,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._project = config.project;
+    this._proxyBind = config.proxyBind;
     this._quicOverride = config.quicOverride;
     this._sslCertificates = config.sslCertificates;
     this._sslPolicy = config.sslPolicy;
@@ -140,6 +144,22 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project
+  }
+
+  // proxy_bind - computed: true, optional: true, required: false
+  private _proxyBind?: boolean;
+  public get proxyBind() {
+    return this.getBooleanAttribute('proxy_bind');
+  }
+  public set proxyBind(value: boolean) {
+    this._proxyBind = value;
+  }
+  public resetProxyBind() {
+    this._proxyBind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyBindInput() {
+    return this._proxyBind
   }
 
   // proxy_id - computed: true, optional: false, required: false
@@ -235,6 +255,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      proxy_bind: cdktf.booleanToTerraform(this._proxyBind),
       quic_override: cdktf.stringToTerraform(this._quicOverride),
       ssl_certificates: cdktf.listMapper(cdktf.stringToTerraform)(this._sslCertificates),
       ssl_policy: cdktf.stringToTerraform(this._sslPolicy),
