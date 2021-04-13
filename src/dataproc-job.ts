@@ -242,14 +242,17 @@ function dataprocJobReferenceToTerraform(struct?: DataprocJobReference): any {
 }
 
 export interface DataprocJobScheduling {
-  /** Maximum number of times per hour a driver may be restarted as a result of driver terminating with non-zero code before job is reported failed. */
+  /** Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. */
   readonly maxFailuresPerHour: number;
+  /** Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. */
+  readonly maxFailuresTotal: number;
 }
 
 function dataprocJobSchedulingToTerraform(struct?: DataprocJobScheduling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     max_failures_per_hour: cdktf.numberToTerraform(struct!.maxFailuresPerHour),
+    max_failures_total: cdktf.numberToTerraform(struct!.maxFailuresTotal),
   }
 }
 

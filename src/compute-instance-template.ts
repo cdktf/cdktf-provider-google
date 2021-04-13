@@ -95,6 +95,8 @@ export interface ComputeInstanceTemplateDisk {
   readonly labels?: { [key: string]: string };
   /** The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode. */
   readonly mode?: string;
+  /** A list (short name or id) of resource policies to attach to this disk. Currently a max of 1 resource policy is supported. */
+  readonly resourcePolicies?: string[];
   /** The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. */
   readonly source?: string;
   /** The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. */
@@ -117,6 +119,7 @@ function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceTemplate
     interface: cdktf.stringToTerraform(struct!.interface),
     labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
     mode: cdktf.stringToTerraform(struct!.mode),
+    resource_policies: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourcePolicies),
     source: cdktf.stringToTerraform(struct!.source),
     source_image: cdktf.stringToTerraform(struct!.sourceImage),
     type: cdktf.stringToTerraform(struct!.type),

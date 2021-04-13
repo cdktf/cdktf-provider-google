@@ -824,6 +824,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
     return this.getStringAttribute('description');
   }
 
+  // enable_autopilot - computed: true, optional: false, required: false
+  public get enableAutopilot() {
+    return this.getBooleanAttribute('enable_autopilot');
+  }
+
   // enable_binary_authorization - computed: true, optional: false, required: false
   public get enableBinaryAuthorization() {
     return this.getBooleanAttribute('enable_binary_authorization');
@@ -958,6 +963,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
     return new DataGoogleContainerClusterNetworkPolicy(this, 'network_policy', index);
   }
 
+  // networking_mode - computed: true, optional: false, required: false
+  public get networkingMode() {
+    return this.getStringAttribute('networking_mode');
+  }
+
   // node_config - computed: true, optional: false, required: false
   public nodeConfig(index: string) {
     return new DataGoogleContainerClusterNodeConfig(this, 'node_config', index);
@@ -991,6 +1001,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // private_cluster_config - computed: true, optional: false, required: false
   public privateClusterConfig(index: string) {
     return new DataGoogleContainerClusterPrivateClusterConfig(this, 'private_cluster_config', index);
+  }
+
+  // private_ipv6_google_access - computed: true, optional: false, required: false
+  public get privateIpv6GoogleAccess() {
+    return this.getStringAttribute('private_ipv6_google_access');
   }
 
   // project - computed: false, optional: true, required: false

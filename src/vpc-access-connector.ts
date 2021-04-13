@@ -8,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   /** The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'. */
-  readonly ipCidrRange: string;
+  readonly ipCidrRange?: string;
   /** Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000. */
   readonly maxThroughput?: number;
   /** Minimum throughput of the connector in Mbps. Default and min is 200. */
   readonly minThroughput?: number;
   /** The name of the resource (Max 25 characters). */
   readonly name: string;
-  /** Name of a VPC network. */
-  readonly network: string;
+  /** Name of the VPC network. Required if 'ip_cidr_range' is set. */
+  readonly network?: string;
   readonly project?: string;
   /** Region where the VPC Access connector resides. If it is not provided, the provider region is used. */
   readonly region?: string;
@@ -75,13 +75,16 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // ip_cidr_range - computed: false, optional: false, required: true
-  private _ipCidrRange: string;
+  // ip_cidr_range - computed: false, optional: true, required: false
+  private _ipCidrRange?: string;
   public get ipCidrRange() {
     return this.getStringAttribute('ip_cidr_range');
   }
-  public set ipCidrRange(value: string) {
+  public set ipCidrRange(value: string ) {
     this._ipCidrRange = value;
+  }
+  public resetIpCidrRange() {
+    this._ipCidrRange = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipCidrRangeInput() {
@@ -133,13 +136,16 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     return this._name
   }
 
-  // network - computed: false, optional: false, required: true
-  private _network: string;
+  // network - computed: false, optional: true, required: false
+  private _network?: string;
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string) {
+  public set network(value: string ) {
     this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {

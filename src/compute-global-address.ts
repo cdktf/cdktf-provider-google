@@ -37,14 +37,16 @@ This should only be set when using an Internal address. */
   /** The prefix length of the IP range. If not present, it means the
 address field is a single IP address.
 
-This field is not applicable to addresses with addressType=EXTERNAL. */
+This field is not applicable to addresses with addressType=EXTERNAL,
+or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT */
   readonly prefixLength?: number;
   readonly project?: string;
   /** The purpose of the resource. For global internal addresses it can be
 
 * VPC_PEERING - for peer networks
+* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
 
-This should only be set when using an Internal address. Possible values: ["VPC_PEERING"] */
+This should only be set when using an Internal address. Possible values: ["VPC_PEERING", "PRIVATE_SERVICE_CONNECT"] */
   readonly purpose?: string;
   /** timeouts block */
   readonly timeouts?: ComputeGlobalAddressTimeouts;

@@ -12,7 +12,7 @@ export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArg
   /** Secret Manager secret resource */
   readonly secret: string;
   /** The secret data. Must be no larger than 64KiB. */
-  readonly secretData?: string;
+  readonly secretData: string;
   /** timeouts block */
   readonly timeouts?: SecretManagerSecretVersionTimeouts;
 }
@@ -108,16 +108,13 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
     return this._secret
   }
 
-  // secret_data - computed: false, optional: true, required: false
-  private _secretData?: string;
+  // secret_data - computed: false, optional: false, required: true
+  private _secretData: string;
   public get secretData() {
     return this.getStringAttribute('secret_data');
   }
-  public set secretData(value: string ) {
+  public set secretData(value: string) {
     this._secretData = value;
-  }
-  public resetSecretData() {
-    this._secretData = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretDataInput() {

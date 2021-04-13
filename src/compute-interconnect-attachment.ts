@@ -37,6 +37,9 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY. */
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER. */
   readonly interconnect?: string;
+  /** Maximum Transmission Unit (MTU), in bytes, of packets passing through
+this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440. */
+  readonly mtu?: string;
   /** Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
 name must be 1-63 characters long and match the regular expression
@@ -109,6 +112,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
     this._description = config.description;
     this._edgeAvailabilityDomain = config.edgeAvailabilityDomain;
     this._interconnect = config.interconnect;
+    this._mtu = config.mtu;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
@@ -241,6 +245,22 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get interconnectInput() {
     return this._interconnect
+  }
+
+  // mtu - computed: true, optional: true, required: false
+  private _mtu?: string;
+  public get mtu() {
+    return this.getStringAttribute('mtu');
+  }
+  public set mtu(value: string) {
+    this._mtu = value;
+  }
+  public resetMtu() {
+    this._mtu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mtuInput() {
+    return this._mtu
   }
 
   // name - computed: false, optional: false, required: true
@@ -386,6 +406,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       edge_availability_domain: cdktf.stringToTerraform(this._edgeAvailabilityDomain),
       interconnect: cdktf.stringToTerraform(this._interconnect),
+      mtu: cdktf.stringToTerraform(this._mtu),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

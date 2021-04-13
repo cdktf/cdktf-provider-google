@@ -23,7 +23,7 @@ connections, but still work to finish started). */
   readonly enableCdn?: boolean;
   /** The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
-check can be specified. 
+check can be specified.
 
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend. */

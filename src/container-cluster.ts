@@ -15,6 +15,8 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   readonly defaultMaxPodsPerNode?: number;
   /**  Description of the cluster. */
   readonly description?: string;
+  /** Enable Autopilot for this cluster. */
+  readonly enableAutopilot?: boolean;
   /** Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binary Authorization. */
   readonly enableBinaryAuthorization?: boolean;
   /** Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network. */
@@ -23,7 +25,7 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   readonly enableKubernetesAlpha?: boolean;
   /** Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM. Defaults to false. */
   readonly enableLegacyAbac?: boolean;
-  /** Enable Shielded Nodes features on all nodes in this cluster. Defaults to false. */
+  /** Enable Shielded Nodes features on all nodes in this cluster. */
   readonly enableShieldedNodes?: boolean;
   /** Whether to enable Cloud TPU resources in this cluster. */
   readonly enableTpu?: boolean;
@@ -41,10 +43,14 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /** The name or self_link of the Google Compute Engine network to which the cluster is connected. For Shared VPC, set this to the self link of the shared network. */
   readonly network?: string;
+  /** Determines whether alias IPs or routes will be used for pod IPs in the cluster. */
+  readonly networkingMode?: string;
   /** The list of zones in which the cluster's nodes are located. Nodes must be in the region of their regional cluster or in the same region as their cluster's zone for zonal clusters. If this is specified for a zonal cluster, omit the cluster's zone. */
   readonly nodeLocations?: string[];
   /** The Kubernetes version on the nodes. Must either be unset or set to the same value as min_master_version on create. Defaults to the default version set by GKE which is not necessarily the latest version. This only affects nodes in the default node pool. While a fuzzy version can be specified, it's recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source's version_prefix field to approximate fuzzy versions in a Terraform-compatible way. To update nodes in other node pools, use the version attribute on the node pool. */
   readonly nodeVersion?: string;
+  /** The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4). */
+  readonly privateIpv6GoogleAccess?: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
   /** If true, deletes the default node pool upon cluster creation. If you're using google_container_node_pool resources with no default node pool, this should be set to true, alongside setting initial_node_count to at least 1. */
@@ -430,7 +436,9 @@ function containerClusterNodeConfigTaintToTerraform(struct?: ContainerClusterNod
 }
 
 export interface ContainerClusterNodeConfigShieldedInstanceConfig {
+  /** Defines whether the instance has integrity monitoring enabled. */
   readonly enableIntegrityMonitoring?: boolean;
+  /** Defines whether the instance has Secure Boot enabled. */
   readonly enableSecureBoot?: boolean;
 }
 
@@ -443,6 +451,7 @@ function containerClusterNodeConfigShieldedInstanceConfigToTerraform(struct?: Co
 }
 
 export interface ContainerClusterNodeConfigWorkloadMetadataConfig {
+  /** NodeMetadata is the configuration for how to expose metadata to the workloads running on the node. */
   readonly nodeMetadata: string;
 }
 
@@ -454,19 +463,33 @@ function containerClusterNodeConfigWorkloadMetadataConfigToTerraform(struct?: Co
 }
 
 export interface ContainerClusterNodeConfig {
+  /** Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. */
   readonly diskSizeGb?: number;
+  /** Type of the disk attached to each node. */
   readonly diskType?: string;
+  /** List of the type and count of accelerator cards attached to the instance. */
   readonly guestAccelerator?: ContainerClusterNodeConfigGuestAccelerator[];
+  /** The image type to use for this node. Note that for a given image type, the latest version of it will be used. */
   readonly imageType?: string;
+  /** The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. */
   readonly labels?: { [key: string]: string };
+  /** The number of local SSD disks to be attached to the node. */
   readonly localSsdCount?: number;
+  /** The name of a Google Compute Engine machine type. */
   readonly machineType?: string;
+  /** The metadata key/value pairs assigned to instances in the cluster. */
   readonly metadata?: { [key: string]: string };
+  /** Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. */
   readonly minCpuPlatform?: string;
+  /** The set of Google API scopes to be made available on all of the node VMs. */
   readonly oauthScopes?: string[];
+  /** Whether the nodes are created as preemptible VM instances. */
   readonly preemptible?: boolean;
+  /** The Google Cloud Platform Service Account to be used by the node VMs. */
   readonly serviceAccount?: string;
+  /** The list of instance tags applied to all nodes. */
   readonly tags?: string[];
+  /** List of Kubernetes taints to be applied to each node. */
   readonly taint?: ContainerClusterNodeConfigTaint[];
   /** shielded_instance_config block */
   readonly shieldedInstanceConfig?: ContainerClusterNodeConfigShieldedInstanceConfig[];
@@ -555,7 +578,9 @@ function containerClusterNodePoolNodeConfigTaintToTerraform(struct?: ContainerCl
 }
 
 export interface ContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
+  /** Defines whether the instance has integrity monitoring enabled. */
   readonly enableIntegrityMonitoring?: boolean;
+  /** Defines whether the instance has Secure Boot enabled. */
   readonly enableSecureBoot?: boolean;
 }
 
@@ -568,6 +593,7 @@ function containerClusterNodePoolNodeConfigShieldedInstanceConfigToTerraform(str
 }
 
 export interface ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig {
+  /** NodeMetadata is the configuration for how to expose metadata to the workloads running on the node. */
   readonly nodeMetadata: string;
 }
 
@@ -579,19 +605,33 @@ function containerClusterNodePoolNodeConfigWorkloadMetadataConfigToTerraform(str
 }
 
 export interface ContainerClusterNodePoolNodeConfig {
+  /** Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. */
   readonly diskSizeGb?: number;
+  /** Type of the disk attached to each node. */
   readonly diskType?: string;
+  /** List of the type and count of accelerator cards attached to the instance. */
   readonly guestAccelerator?: ContainerClusterNodePoolNodeConfigGuestAccelerator[];
+  /** The image type to use for this node. Note that for a given image type, the latest version of it will be used. */
   readonly imageType?: string;
+  /** The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. */
   readonly labels?: { [key: string]: string };
+  /** The number of local SSD disks to be attached to the node. */
   readonly localSsdCount?: number;
+  /** The name of a Google Compute Engine machine type. */
   readonly machineType?: string;
+  /** The metadata key/value pairs assigned to instances in the cluster. */
   readonly metadata?: { [key: string]: string };
+  /** Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. */
   readonly minCpuPlatform?: string;
+  /** The set of Google API scopes to be made available on all of the node VMs. */
   readonly oauthScopes?: string[];
+  /** Whether the nodes are created as preemptible VM instances. */
   readonly preemptible?: boolean;
+  /** The Google Cloud Platform Service Account to be used by the node VMs. */
   readonly serviceAccount?: string;
+  /** The list of instance tags applied to all nodes. */
   readonly tags?: string[];
+  /** List of Kubernetes taints to be applied to each node. */
   readonly taint?: ContainerClusterNodePoolNodeConfigTaint[];
   /** shielded_instance_config block */
   readonly shieldedInstanceConfig?: ContainerClusterNodePoolNodeConfigShieldedInstanceConfig[];
@@ -799,6 +839,7 @@ function containerClusterVerticalPodAutoscalingToTerraform(struct?: ContainerClu
 }
 
 export interface ContainerClusterWorkloadIdentityConfig {
+  /** Enables workload identity. */
   readonly identityNamespace: string;
 }
 
@@ -833,6 +874,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._datapathProvider = config.datapathProvider;
     this._defaultMaxPodsPerNode = config.defaultMaxPodsPerNode;
     this._description = config.description;
+    this._enableAutopilot = config.enableAutopilot;
     this._enableBinaryAuthorization = config.enableBinaryAuthorization;
     this._enableIntranodeVisibility = config.enableIntranodeVisibility;
     this._enableKubernetesAlpha = config.enableKubernetesAlpha;
@@ -846,8 +888,10 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._monitoringService = config.monitoringService;
     this._name = config.name;
     this._network = config.network;
+    this._networkingMode = config.networkingMode;
     this._nodeLocations = config.nodeLocations;
     this._nodeVersion = config.nodeVersion;
+    this._privateIpv6GoogleAccess = config.privateIpv6GoogleAccess;
     this._project = config.project;
     this._removeDefaultNodePool = config.removeDefaultNodePool;
     this._resourceLabels = config.resourceLabels;
@@ -941,6 +985,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._description
   }
 
+  // enable_autopilot - computed: false, optional: true, required: false
+  private _enableAutopilot?: boolean;
+  public get enableAutopilot() {
+    return this.getBooleanAttribute('enable_autopilot');
+  }
+  public set enableAutopilot(value: boolean ) {
+    this._enableAutopilot = value;
+  }
+  public resetEnableAutopilot() {
+    this._enableAutopilot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutopilotInput() {
+    return this._enableAutopilot
+  }
+
   // enable_binary_authorization - computed: false, optional: true, required: false
   private _enableBinaryAuthorization?: boolean;
   public get enableBinaryAuthorization() {
@@ -957,12 +1017,12 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._enableBinaryAuthorization
   }
 
-  // enable_intranode_visibility - computed: false, optional: true, required: false
+  // enable_intranode_visibility - computed: true, optional: true, required: false
   private _enableIntranodeVisibility?: boolean;
   public get enableIntranodeVisibility() {
     return this.getBooleanAttribute('enable_intranode_visibility');
   }
-  public set enableIntranodeVisibility(value: boolean ) {
+  public set enableIntranodeVisibility(value: boolean) {
     this._enableIntranodeVisibility = value;
   }
   public resetEnableIntranodeVisibility() {
@@ -1005,12 +1065,12 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._enableLegacyAbac
   }
 
-  // enable_shielded_nodes - computed: false, optional: true, required: false
+  // enable_shielded_nodes - computed: true, optional: true, required: false
   private _enableShieldedNodes?: boolean;
   public get enableShieldedNodes() {
     return this.getBooleanAttribute('enable_shielded_nodes');
   }
-  public set enableShieldedNodes(value: boolean ) {
+  public set enableShieldedNodes(value: boolean) {
     this._enableShieldedNodes = value;
   }
   public resetEnableShieldedNodes() {
@@ -1171,6 +1231,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._network
   }
 
+  // networking_mode - computed: true, optional: true, required: false
+  private _networkingMode?: string;
+  public get networkingMode() {
+    return this.getStringAttribute('networking_mode');
+  }
+  public set networkingMode(value: string) {
+    this._networkingMode = value;
+  }
+  public resetNetworkingMode() {
+    this._networkingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkingModeInput() {
+    return this._networkingMode
+  }
+
   // node_locations - computed: true, optional: true, required: false
   private _nodeLocations?: string[];
   public get nodeLocations() {
@@ -1206,6 +1282,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
   // operation - computed: true, optional: false, required: false
   public get operation() {
     return this.getStringAttribute('operation');
+  }
+
+  // private_ipv6_google_access - computed: true, optional: true, required: false
+  private _privateIpv6GoogleAccess?: string;
+  public get privateIpv6GoogleAccess() {
+    return this.getStringAttribute('private_ipv6_google_access');
+  }
+  public set privateIpv6GoogleAccess(value: string) {
+    this._privateIpv6GoogleAccess = value;
+  }
+  public resetPrivateIpv6GoogleAccess() {
+    this._privateIpv6GoogleAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpv6GoogleAccessInput() {
+    return this._privateIpv6GoogleAccess
   }
 
   // project - computed: true, optional: true, required: false
@@ -1601,6 +1693,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       datapath_provider: cdktf.stringToTerraform(this._datapathProvider),
       default_max_pods_per_node: cdktf.numberToTerraform(this._defaultMaxPodsPerNode),
       description: cdktf.stringToTerraform(this._description),
+      enable_autopilot: cdktf.booleanToTerraform(this._enableAutopilot),
       enable_binary_authorization: cdktf.booleanToTerraform(this._enableBinaryAuthorization),
       enable_intranode_visibility: cdktf.booleanToTerraform(this._enableIntranodeVisibility),
       enable_kubernetes_alpha: cdktf.booleanToTerraform(this._enableKubernetesAlpha),
@@ -1614,8 +1707,10 @@ export class ContainerCluster extends cdktf.TerraformResource {
       monitoring_service: cdktf.stringToTerraform(this._monitoringService),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
+      networking_mode: cdktf.stringToTerraform(this._networkingMode),
       node_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeLocations),
       node_version: cdktf.stringToTerraform(this._nodeVersion),
+      private_ipv6_google_access: cdktf.stringToTerraform(this._privateIpv6GoogleAccess),
       project: cdktf.stringToTerraform(this._project),
       remove_default_node_pool: cdktf.booleanToTerraform(this._removeDefaultNodePool),
       resource_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._resourceLabels),

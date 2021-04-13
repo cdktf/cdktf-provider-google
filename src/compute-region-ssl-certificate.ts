@@ -24,6 +24,7 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates. */
   readonly name?: string;
+  /** Creates a unique name beginning with the specified prefix. Conflicts with name. */
   readonly namePrefix?: string;
   /** The write-only private key in PEM format. */
   readonly privateKey: string;

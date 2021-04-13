@@ -24,8 +24,8 @@ character, which cannot be a dash. */
 the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
   readonly proxyHeader?: string;
   /** A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified. */
+connections between users and the load balancer. At least one
+SSL certificate must be specified. */
   readonly sslCertificates: string[];
   /** A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy

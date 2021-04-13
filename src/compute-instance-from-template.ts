@@ -76,12 +76,12 @@ export interface ComputeInstanceFromTemplateAttachedDisk {
 function computeInstanceFromTemplateAttachedDiskToTerraform(struct?: ComputeInstanceFromTemplateAttachedDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    device_name: cdktf.stringToTerraform(struct!.deviceName),
-    disk_encryption_key_raw: cdktf.stringToTerraform(struct!.diskEncryptionKeyRaw),
+    device_name: struct!.deviceName === undefined ? null : cdktf.stringToTerraform(struct!.deviceName),
+    disk_encryption_key_raw: struct!.diskEncryptionKeyRaw === undefined ? null : cdktf.stringToTerraform(struct!.diskEncryptionKeyRaw),
     disk_encryption_key_sha256: cdktf.stringToTerraform(struct!.diskEncryptionKeySha256),
-    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
-    mode: cdktf.stringToTerraform(struct!.mode),
-    source: cdktf.stringToTerraform(struct!.source),
+    kms_key_self_link: struct!.kmsKeySelfLink === undefined ? null : cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    mode: struct!.mode === undefined ? null : cdktf.stringToTerraform(struct!.mode),
+    source: struct!.source === undefined ? null : cdktf.stringToTerraform(struct!.source),
   }
 }
 
@@ -93,8 +93,8 @@ export interface ComputeInstanceFromTemplateGuestAccelerator {
 function computeInstanceFromTemplateGuestAcceleratorToTerraform(struct?: ComputeInstanceFromTemplateGuestAccelerator): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    count: cdktf.numberToTerraform(struct!.count),
-    type: cdktf.stringToTerraform(struct!.type),
+    count: struct!.count === undefined ? null : cdktf.numberToTerraform(struct!.count),
+    type: struct!.type === undefined ? null : cdktf.stringToTerraform(struct!.type),
   }
 }
 
@@ -105,7 +105,7 @@ export interface ComputeInstanceFromTemplateScratchDisk {
 function computeInstanceFromTemplateScratchDiskToTerraform(struct?: ComputeInstanceFromTemplateScratchDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    interface: cdktf.stringToTerraform(struct!.interface),
+    interface: struct!.interface === undefined ? null : cdktf.stringToTerraform(struct!.interface),
   }
 }
 
@@ -117,8 +117,8 @@ export interface ComputeInstanceFromTemplateServiceAccount {
 function computeInstanceFromTemplateServiceAccountToTerraform(struct?: ComputeInstanceFromTemplateServiceAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    email: cdktf.stringToTerraform(struct!.email),
-    scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.scopes),
+    email: struct!.email === undefined ? null : cdktf.stringToTerraform(struct!.email),
+    scopes: struct!.scopes === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.scopes),
   }
 }
 
@@ -222,6 +222,8 @@ export interface ComputeInstanceFromTemplateNetworkInterface {
   readonly network?: string;
   /** The private IP address assigned to the instance. */
   readonly networkIp?: string;
+  /** The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET */
+  readonly nicType?: string;
   /** The name or self_link of the subnetwork attached to this interface. */
   readonly subnetwork?: string;
   /** The project in which the subnetwork belongs. */
@@ -235,6 +237,7 @@ function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: Compute
     alias_ip_range: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
+    nic_type: cdktf.stringToTerraform(struct!.nicType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
   }
@@ -258,6 +261,7 @@ function computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform(struct?:
 export interface ComputeInstanceFromTemplateScheduling {
   /** Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). */
   readonly automaticRestart?: boolean;
+  readonly minNodeCpus?: number;
   /** Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE, */
   readonly onHostMaintenance?: string;
   /** Whether the instance is preemptible. */
@@ -270,6 +274,7 @@ function computeInstanceFromTemplateSchedulingToTerraform(struct?: ComputeInstan
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     automatic_restart: cdktf.booleanToTerraform(struct!.automaticRestart),
+    min_node_cpus: cdktf.numberToTerraform(struct!.minNodeCpus),
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     node_affinities: cdktf.listMapper(computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),

@@ -407,12 +407,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     return this._kmsKey
   }
 
-  // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
-  public get labels() {
-    return this.interpolationForAttribute('labels') as any;
+  // labels - computed: true, optional: true, required: false
+  private _labels?: { [key: string]: string }
+  public get labels(): { [key: string]: string } {
+    return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {

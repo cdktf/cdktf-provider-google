@@ -16,7 +16,6 @@ If provided, it must be a different zone from the one provided in
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled. */
   readonly authEnabled?: boolean;
-  readonly authString?: string;
   /** The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used. */
@@ -102,7 +101,6 @@ export class RedisInstance extends cdktf.TerraformResource {
     });
     this._alternativeLocationId = config.alternativeLocationId;
     this._authEnabled = config.authEnabled;
-    this._authString = config.authString;
     this._authorizedNetwork = config.authorizedNetwork;
     this._connectMode = config.connectMode;
     this._displayName = config.displayName;
@@ -155,20 +153,9 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._authEnabled
   }
 
-  // auth_string - computed: true, optional: true, required: false
-  private _authString?: string;
+  // auth_string - computed: true, optional: false, required: false
   public get authString() {
     return this.getStringAttribute('auth_string');
-  }
-  public set authString(value: string) {
-    this._authString = value;
-  }
-  public resetAuthString() {
-    this._authString = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get authStringInput() {
-    return this._authString
   }
 
   // authorized_network - computed: true, optional: true, required: false
@@ -427,7 +414,6 @@ export class RedisInstance extends cdktf.TerraformResource {
     return {
       alternative_location_id: cdktf.stringToTerraform(this._alternativeLocationId),
       auth_enabled: cdktf.booleanToTerraform(this._authEnabled),
-      auth_string: cdktf.stringToTerraform(this._authString),
       authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
       connect_mode: cdktf.stringToTerraform(this._connectMode),
       display_name: cdktf.stringToTerraform(this._displayName),

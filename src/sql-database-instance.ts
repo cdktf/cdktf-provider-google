@@ -17,16 +17,18 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   readonly name?: string;
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
-  /** The region the instance will sit in. Note, Cloud SQL is not available in all regions - choose from one of the options listed here. A valid region must be provided to use this resource. If a region is not provided in the resource definition, the provider region will be used instead, but this will be an apply-time error for instances if the provider region is not supported with Cloud SQL. If you choose not to provide the region argument for this resource, make sure you understand this. */
+  /** The region the instance will sit in. Note, Cloud SQL is not available in all regions. A valid region must be provided to use this resource. If a region is not provided in the resource definition, the provider region will be used instead, but this will be an apply-time error for instances if the provider region is not supported with Cloud SQL. If you choose not to provide the region argument for this resource, make sure you understand this. */
   readonly region?: string;
   /** Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL. */
   readonly rootPassword?: string;
+  /** clone block */
+  readonly clone?: SqlDatabaseInstanceClone[];
   /** replica_configuration block */
   readonly replicaConfiguration?: SqlDatabaseInstanceReplicaConfiguration[];
   /** restore_backup_context block */
   readonly restoreBackupContext?: SqlDatabaseInstanceRestoreBackupContext[];
   /** settings block */
-  readonly settings: SqlDatabaseInstanceSettings[];
+  readonly settings?: SqlDatabaseInstanceSettings[];
   /** timeouts block */
   readonly timeouts?: SqlDatabaseInstanceTimeouts;
 }
@@ -74,16 +76,31 @@ export class SqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
     return this.getStringAttribute('sha1_fingerprint');
   }
 }
+export interface SqlDatabaseInstanceClone {
+  /** The timestamp of the point in time that should be restored. */
+  readonly pointInTime: string;
+  /** The name of the instance from which the point in time should be restored. */
+  readonly sourceInstanceName: string;
+}
+
+function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstanceClone): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    point_in_time: cdktf.stringToTerraform(struct!.pointInTime),
+    source_instance_name: cdktf.stringToTerraform(struct!.sourceInstanceName),
+  }
+}
+
 export interface SqlDatabaseInstanceReplicaConfiguration {
   /** PEM representation of the trusted CA's x509 certificate. */
   readonly caCertificate?: string;
-  /** PEM representation of the slave's x509 certificate. */
+  /** PEM representation of the replica's x509 certificate. */
   readonly clientCertificate?: string;
-  /** PEM representation of the slave's private key. The corresponding public key in encoded in the client_certificate. */
+  /** PEM representation of the replica's private key. The corresponding public key in encoded in the client_certificate. */
   readonly clientKey?: string;
   /** The number of seconds between connect retries. */
   readonly connectRetryInterval?: number;
-  /** Path to a SQL file in Google Cloud Storage from which slave instances are created. Format is gs://bucket/filename. */
+  /** Path to a SQL file in Google Cloud Storage from which replica instances are created. Format is gs://bucket/filename. */
   readonly dumpFilePath?: string;
   /** Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. */
   readonly failoverTarget?: boolean;
@@ -134,6 +151,21 @@ function sqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: SqlDatabase
   }
 }
 
+export interface SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
+  /** Number of backups to retain. */
+  readonly retainedBackups: number;
+  /** The unit that 'retainedBackups' represents. Defaults to COUNT */
+  readonly retentionUnit?: string;
+}
+
+function sqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retained_backups: cdktf.numberToTerraform(struct!.retainedBackups),
+    retention_unit: cdktf.stringToTerraform(struct!.retentionUnit),
+  }
+}
+
 export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   /** True if binary logging is enabled. If settings.backup_configuration.enabled is false, this must be as well. Cannot be used with Postgres. */
   readonly binaryLogEnabled?: boolean;
@@ -145,6 +177,10 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   readonly pointInTimeRecoveryEnabled?: boolean;
   /** HH:MM format time indicating when backup configuration starts. */
   readonly startTime?: string;
+  /** The number of days of transaction logs we retain for point in time restore, from 1-7. */
+  readonly transactionLogRetentionDays?: number;
+  /** backup_retention_settings block */
+  readonly backupRetentionSettings?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings[];
 }
 
 function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfiguration): any {
@@ -155,6 +191,8 @@ function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: SqlD
     location: cdktf.stringToTerraform(struct!.location),
     point_in_time_recovery_enabled: cdktf.booleanToTerraform(struct!.pointInTimeRecoveryEnabled),
     start_time: cdktf.stringToTerraform(struct!.startTime),
+    transaction_log_retention_days: cdktf.numberToTerraform(struct!.transactionLogRetentionDays),
+    backup_retention_settings: cdktf.listMapper(sqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsToTerraform)(struct!.backupRetentionSettings),
   }
 }
 
@@ -170,6 +208,27 @@ function sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: SqlDatabas
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface SqlDatabaseInstanceSettingsInsightsConfig {
+  /** True if Query Insights feature is enabled. */
+  readonly queryInsightsEnabled?: boolean;
+  /** Maximum query length stored in bytes. Between 256 and 4500. Default to 1024. */
+  readonly queryStringLength?: number;
+  /** True if Query Insights will record application tags from query when enabled. */
+  readonly recordApplicationTags?: boolean;
+  /** True if Query Insights will record client address when enabled. */
+  readonly recordClientAddress?: boolean;
+}
+
+function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: SqlDatabaseInstanceSettingsInsightsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    query_insights_enabled: cdktf.booleanToTerraform(struct!.queryInsightsEnabled),
+    query_string_length: cdktf.numberToTerraform(struct!.queryStringLength),
+    record_application_tags: cdktf.booleanToTerraform(struct!.recordApplicationTags),
+    record_client_address: cdktf.booleanToTerraform(struct!.recordClientAddress),
   }
 }
 
@@ -271,6 +330,8 @@ settings.backup_configuration.binary_log_enabled are both set to true. */
   readonly backupConfiguration?: SqlDatabaseInstanceSettingsBackupConfiguration[];
   /** database_flags block */
   readonly databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[];
+  /** insights_config block */
+  readonly insightsConfig?: SqlDatabaseInstanceSettingsInsightsConfig[];
   /** ip_configuration block */
   readonly ipConfiguration?: SqlDatabaseInstanceSettingsIpConfiguration[];
   /** location_preference block */
@@ -295,6 +356,7 @@ function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSett
     user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.userLabels),
     backup_configuration: cdktf.listMapper(sqlDatabaseInstanceSettingsBackupConfigurationToTerraform)(struct!.backupConfiguration),
     database_flags: cdktf.listMapper(sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform)(struct!.databaseFlags),
+    insights_config: cdktf.listMapper(sqlDatabaseInstanceSettingsInsightsConfigToTerraform)(struct!.insightsConfig),
     ip_configuration: cdktf.listMapper(sqlDatabaseInstanceSettingsIpConfigurationToTerraform)(struct!.ipConfiguration),
     location_preference: cdktf.listMapper(sqlDatabaseInstanceSettingsLocationPreferenceToTerraform)(struct!.locationPreference),
     maintenance_window: cdktf.listMapper(sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform)(struct!.maintenanceWindow),
@@ -325,7 +387,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: SqlDatabaseInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: SqlDatabaseInstanceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
@@ -343,6 +405,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._rootPassword = config.rootPassword;
+    this._clone = config.clone;
     this._replicaConfiguration = config.replicaConfiguration;
     this._restoreBackupContext = config.restoreBackupContext;
     this._settings = config.settings;
@@ -510,6 +573,22 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     return this.getStringAttribute('service_account_email_address');
   }
 
+  // clone - computed: false, optional: true, required: false
+  private _clone?: SqlDatabaseInstanceClone[];
+  public get clone() {
+    return this.interpolationForAttribute('clone') as any;
+  }
+  public set clone(value: SqlDatabaseInstanceClone[] ) {
+    this._clone = value;
+  }
+  public resetClone() {
+    this._clone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloneInput() {
+    return this._clone
+  }
+
   // replica_configuration - computed: false, optional: true, required: false
   private _replicaConfiguration?: SqlDatabaseInstanceReplicaConfiguration[];
   public get replicaConfiguration() {
@@ -542,13 +621,16 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     return this._restoreBackupContext
   }
 
-  // settings - computed: false, optional: false, required: true
-  private _settings: SqlDatabaseInstanceSettings[];
+  // settings - computed: false, optional: true, required: false
+  private _settings?: SqlDatabaseInstanceSettings[];
   public get settings() {
     return this.interpolationForAttribute('settings') as any;
   }
-  public set settings(value: SqlDatabaseInstanceSettings[]) {
+  public set settings(value: SqlDatabaseInstanceSettings[] ) {
     this._settings = value;
+  }
+  public resetSettings() {
+    this._settings = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get settingsInput() {
@@ -584,6 +666,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       root_password: cdktf.stringToTerraform(this._rootPassword),
+      clone: cdktf.listMapper(sqlDatabaseInstanceCloneToTerraform)(this._clone),
       replica_configuration: cdktf.listMapper(sqlDatabaseInstanceReplicaConfigurationToTerraform)(this._replicaConfiguration),
       restore_backup_context: cdktf.listMapper(sqlDatabaseInstanceRestoreBackupContextToTerraform)(this._restoreBackupContext),
       settings: cdktf.listMapper(sqlDatabaseInstanceSettingsToTerraform)(this._settings),

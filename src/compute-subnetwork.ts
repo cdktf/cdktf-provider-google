@@ -59,8 +59,8 @@ export interface ComputeSubnetworkSecondaryIpRange {
 function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSubnetworkSecondaryIpRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    ip_cidr_range: cdktf.stringToTerraform(struct!.ipCidrRange),
-    range_name: cdktf.stringToTerraform(struct!.rangeName),
+    ip_cidr_range: struct!.ipCidrRange === undefined ? null : cdktf.stringToTerraform(struct!.ipCidrRange),
+    range_name: struct!.rangeName === undefined ? null : cdktf.stringToTerraform(struct!.rangeName),
   }
 }
 

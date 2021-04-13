@@ -12,6 +12,18 @@ export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMeta
   /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
 }
+export class DataGoogleSqlDatabaseInstanceClone extends cdktf.ComplexComputedList {
+
+  // point_in_time - computed: true, optional: false, required: false
+  public get pointInTime() {
+    return this.getStringAttribute('point_in_time');
+  }
+
+  // source_instance_name - computed: true, optional: false, required: false
+  public get sourceInstanceName() {
+    return this.getStringAttribute('source_instance_name');
+  }
+}
 export class DataGoogleSqlDatabaseInstanceIpAddress extends cdktf.ComplexComputedList {
 
   // ip_address - computed: true, optional: false, required: false
@@ -130,7 +142,24 @@ export class DataGoogleSqlDatabaseInstanceServerCaCert extends cdktf.ComplexComp
     return this.getStringAttribute('sha1_fingerprint');
   }
 }
+export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings extends cdktf.ComplexComputedList {
+
+  // retained_backups - computed: true, optional: false, required: false
+  public get retainedBackups() {
+    return this.getNumberAttribute('retained_backups');
+  }
+
+  // retention_unit - computed: true, optional: false, required: false
+  public get retentionUnit() {
+    return this.getStringAttribute('retention_unit');
+  }
+}
 export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cdktf.ComplexComputedList {
+
+  // backup_retention_settings - computed: true, optional: false, required: false
+  public get backupRetentionSettings() {
+    return this.interpolationForAttribute('backup_retention_settings') as any;
+  }
 
   // binary_log_enabled - computed: true, optional: false, required: false
   public get binaryLogEnabled() {
@@ -156,6 +185,11 @@ export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cd
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
+
+  // transaction_log_retention_days - computed: true, optional: false, required: false
+  public get transactionLogRetentionDays() {
+    return this.getNumberAttribute('transaction_log_retention_days');
+  }
 }
 export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends cdktf.ComplexComputedList {
 
@@ -167,6 +201,28 @@ export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends cdktf.Co
   // value - computed: true, optional: false, required: false
   public get value() {
     return this.getStringAttribute('value');
+  }
+}
+export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfig extends cdktf.ComplexComputedList {
+
+  // query_insights_enabled - computed: true, optional: false, required: false
+  public get queryInsightsEnabled() {
+    return this.getBooleanAttribute('query_insights_enabled');
+  }
+
+  // query_string_length - computed: true, optional: false, required: false
+  public get queryStringLength() {
+    return this.getNumberAttribute('query_string_length');
+  }
+
+  // record_application_tags - computed: true, optional: false, required: false
+  public get recordApplicationTags() {
+    return this.getBooleanAttribute('record_application_tags');
+  }
+
+  // record_client_address - computed: true, optional: false, required: false
+  public get recordClientAddress() {
+    return this.getBooleanAttribute('record_client_address');
   }
 }
 export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks extends cdktf.ComplexComputedList {
@@ -284,6 +340,11 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
     return this.getStringAttribute('disk_type');
   }
 
+  // insights_config - computed: true, optional: false, required: false
+  public get insightsConfig() {
+    return this.interpolationForAttribute('insights_config') as any;
+  }
+
   // ip_configuration - computed: true, optional: false, required: false
   public get ipConfiguration() {
     return this.interpolationForAttribute('ip_configuration') as any;
@@ -351,6 +412,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // clone - computed: true, optional: false, required: false
+  public clone(index: string) {
+    return new DataGoogleSqlDatabaseInstanceClone(this, 'clone', index);
+  }
 
   // connection_name - computed: true, optional: false, required: false
   public get connectionName() {

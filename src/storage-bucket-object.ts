@@ -22,6 +22,8 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   /** Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8". */
   readonly contentType?: string;
   readonly detectMd5Hash?: string;
+  /** Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata's kmsKeyName value, if any. */
+  readonly kmsKeyName?: string;
   /** User-provided metadata, in key/value pairs. */
   readonly metadata?: { [key: string]: string };
   /** The name of the object. If you're interpolating the name of this object, see output_name instead. */
@@ -59,6 +61,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     this._contentLanguage = config.contentLanguage;
     this._contentType = config.contentType;
     this._detectMd5Hash = config.detectMd5Hash;
+    this._kmsKeyName = config.kmsKeyName;
     this._metadata = config.metadata;
     this._name = config.name;
     this._source = config.source;
@@ -204,6 +207,22 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
+  // kms_key_name - computed: true, optional: true, required: false
+  private _kmsKeyName?: string;
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+
   // md5hash - computed: true, optional: false, required: false
   public get md5Hash() {
     return this.getStringAttribute('md5hash');
@@ -299,6 +318,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       content_language: cdktf.stringToTerraform(this._contentLanguage),
       content_type: cdktf.stringToTerraform(this._contentType),
       detect_md5hash: cdktf.stringToTerraform(this._detectMd5Hash),
+      kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       source: cdktf.stringToTerraform(this._source),

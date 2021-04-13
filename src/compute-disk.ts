@@ -44,7 +44,12 @@ persistent disk.
 
 If you specify this field along with 'image' or 'snapshot',
 the value must not be less than the size of the image
-or the size of the snapshot. */
+or the size of the snapshot.
+
+~>**NOTE** If you change the size, Terraform updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add 'lifecycle.prevent_destroy' in the config to prevent destroying
+and recreating. */
   readonly size?: number;
   /** The source snapshot used to create this disk. You can provide this as
 a partial or full URL to the resource. If the snapshot is in another
@@ -125,7 +130,7 @@ in the cloud console. Your project's Compute Engine System service account
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key. 
+  /** The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used. */
   readonly kmsKeyServiceAccount?: string;
   /** Specifies a 256-bit customer-supplied encryption key, encoded in
