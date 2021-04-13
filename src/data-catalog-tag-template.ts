@@ -62,6 +62,8 @@ function dataCatalogTagTemplateFieldsTypeToTerraform(struct?: DataCatalogTagTemp
 }
 
 export interface DataCatalogTagTemplateFields {
+  /** A description for this field. */
+  readonly description?: string;
   /** The display name for this field. */
   readonly displayName?: string;
   readonly fieldId: string;
@@ -78,6 +80,7 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 function dataCatalogTagTemplateFieldsToTerraform(struct?: DataCatalogTagTemplateFields): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    description: cdktf.stringToTerraform(struct!.description),
     display_name: cdktf.stringToTerraform(struct!.displayName),
     field_id: cdktf.stringToTerraform(struct!.fieldId),
     is_required: cdktf.booleanToTerraform(struct!.isRequired),

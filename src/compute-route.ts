@@ -44,6 +44,7 @@ You can specify this as a full or partial URL. For example:
 * 'zones/zone/instances/instance'
 * Just the instance name, with the zone in 'next_hop_instance_zone'. */
   readonly nextHopInstance?: string;
+  /** The zone of the instance specified in next_hop_instance. Omit if next_hop_instance is specified as a URL. */
   readonly nextHopInstanceZone?: string;
   /** Network IP address of an instance that should handle matching packets. */
   readonly nextHopIp?: string;

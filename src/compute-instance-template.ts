@@ -95,6 +95,8 @@ export interface ComputeInstanceTemplateDisk {
   readonly labels?: { [key: string]: string };
   /** The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode. */
   readonly mode?: string;
+  /** A list (short name or id) of resource policies to attach to this disk. Currently a max of 1 resource policy is supported. */
+  readonly resourcePolicies?: string[];
   /** The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. */
   readonly source?: string;
   /** The image from which to initialize this disk. This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. */
@@ -117,6 +119,7 @@ function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceTemplate
     interface: cdktf.stringToTerraform(struct!.interface),
     labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
     mode: cdktf.stringToTerraform(struct!.mode),
+    resource_policies: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourcePolicies),
     source: cdktf.stringToTerraform(struct!.source),
     source_image: cdktf.stringToTerraform(struct!.sourceImage),
     type: cdktf.stringToTerraform(struct!.type),
@@ -174,6 +177,8 @@ export interface ComputeInstanceTemplateNetworkInterface {
   readonly network?: string;
   /** The private IP address to assign to the instance. If empty, the address will be automatically assigned. */
   readonly networkIp?: string;
+  /** The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET */
+  readonly nicType?: string;
   /** The name of the subnetwork to attach this interface to. The subnetwork must exist in the same region this instance will be created in. Either network or subnetwork must be provided. */
   readonly subnetwork?: string;
   /** The ID of the project in which the subnetwork belongs. If it is not provided, the provider project is used. */
@@ -189,6 +194,7 @@ function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInst
   return {
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
+    nic_type: cdktf.stringToTerraform(struct!.nicType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
     access_config: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),

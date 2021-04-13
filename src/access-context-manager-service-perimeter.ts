@@ -53,6 +53,215 @@ bet set to True if any of the fields in the spec are set to non-default values. 
   /** timeouts block */
   readonly timeouts?: AccessContextManagerServicePerimeterTimeouts;
 }
+export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom {
+  /** A list of identities that are allowed access through this 'EgressPolicy'. 
+Should be in the format of email address. The email address should 
+represent individual user or service account only. */
+  readonly identities?: string[];
+  /** Specifies the type of identities that are allowed access to outside the 
+perimeter. If left unspecified, then members of 'identities' field will 
+be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  readonly identityType?: string;
+}
+
+function accessContextManagerServicePerimeterSpecEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identity_type: cdktf.stringToTerraform(struct!.identityType),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors {
+  /** Value for 'method' should be a valid method name for the corresponding 
+'serviceName' in 'ApiOperation'. If '*' used as value for method, 
+then ALL methods and permissions are allowed. */
+  readonly method?: string;
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
+  readonly permission?: string;
+}
+
+function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    method: cdktf.stringToTerraform(struct!.method),
+    permission: cdktf.stringToTerraform(struct!.permission),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations {
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName 
+field set to '*' will allow all methods AND permissions for all services. */
+  readonly serviceName?: string;
+  /** method_selectors block */
+  readonly methodSelectors?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors[];
+}
+
+function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service_name: cdktf.stringToTerraform(struct!.serviceName),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo {
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', that match this to stanza. A request matches 
+if it contains a resource in this list. If * is specified for resources, 
+then this 'EgressTo' rule will authorize access to all resources outside 
+the perimeter. */
+  readonly resources?: string[];
+  /** operations block */
+  readonly operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[];
+}
+
+function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform)(struct!.operations),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecEgressPolicies {
+  /** egress_from block */
+  readonly egressFrom?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom[];
+  /** egress_to block */
+  readonly egressTo?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo[];
+}
+
+function accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPolicies): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    egress_from: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressFromToTerraform)(struct!.egressFrom),
+    egress_to: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToToTerraform)(struct!.egressTo),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources {
+  /** An 'AccessLevel' resource name that allow resources within the 
+'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed 
+must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent
+'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, 
+resources within the perimeter can only be accessed via Google Cloud calls 
+with request origins within the perimeter. 
+Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' 
+If * is specified, then all IngressSources will be allowed. */
+  readonly accessLevel?: string;
+  /** A Google Cloud resource that is allowed to ingress the perimeter. 
+Requests from these resources will be allowed to access perimeter data. 
+Currently only projects are allowed. Format 'projects/{project_number}' 
+The project may be in any Google Cloud organization, not just the 
+organization that the perimeter is defined in. '*' is not allowed, the case 
+of allowing all Google Cloud resources only is not supported. */
+  readonly resource?: string;
+}
+
+function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access_level: cdktf.stringToTerraform(struct!.accessLevel),
+    resource: cdktf.stringToTerraform(struct!.resource),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom {
+  /** A list of identities that are allowed access through this ingress policy.
+Should be in the format of email address. The email address should represent 
+individual user or service account only. */
+  readonly identities?: string[];
+  /** Specifies the type of identities that are allowed access from outside the 
+perimeter. If left unspecified, then members of 'identities' field will be 
+allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  readonly identityType?: string;
+  /** sources block */
+  readonly sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[];
+}
+
+function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identity_type: cdktf.stringToTerraform(struct!.identityType),
+    sources: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform)(struct!.sources),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors {
+  /** Value for method should be a valid method name for the corresponding 
+serviceName in 'ApiOperation'. If '*' used as value for 'method', then 
+ALL methods and permissions are allowed. */
+  readonly method?: string;
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
+  readonly permission?: string;
+}
+
+function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    method: cdktf.stringToTerraform(struct!.method),
+    permission: cdktf.stringToTerraform(struct!.permission),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations {
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' 
+field set to '*' will allow all methods AND permissions for all services. */
+  readonly serviceName?: string;
+  /** method_selectors block */
+  readonly methodSelectors?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors[];
+}
+
+function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service_name: cdktf.stringToTerraform(struct!.serviceName),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo {
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', protected by this 'ServicePerimeter'
+that are allowed to be accessed by sources defined in the
+corresponding 'IngressFrom'. A request matches if it contains
+a resource in this list. If '*' is specified for resources,
+then this 'IngressTo' rule will authorize access to all 
+resources inside the perimeter, provided that the request
+also matches the 'operations' field. */
+  readonly resources?: string[];
+  /** operations block */
+  readonly operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[];
+}
+
+function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform)(struct!.operations),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterSpecIngressPolicies {
+  /** ingress_from block */
+  readonly ingressFrom?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom[];
+  /** ingress_to block */
+  readonly ingressTo?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo[];
+}
+
+function accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPolicies): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ingress_from: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromToTerraform)(struct!.ingressFrom),
+    ingress_to: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToToTerraform)(struct!.ingressTo),
+  }
+}
+
 export interface AccessContextManagerServicePerimeterSpecVpcAccessibleServices {
   /** The list of APIs usable within the Service Perimeter.
 Must be empty unless 'enableRestriction' is True. */
@@ -92,6 +301,10 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions. */
   readonly restrictedServices?: string[];
+  /** egress_policies block */
+  readonly egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[];
+  /** ingress_policies block */
+  readonly ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[];
   /** vpc_accessible_services block */
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimeterSpecVpcAccessibleServices[];
 }
@@ -102,7 +315,218 @@ function accessContextManagerServicePerimeterSpecToTerraform(struct?: AccessCont
     access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.accessLevels),
     resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
     restricted_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.restrictedServices),
+    egress_policies: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform)(struct!.egressPolicies),
+    ingress_policies: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform)(struct!.ingressPolicies),
     vpc_accessible_services: cdktf.listMapper(accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform)(struct!.vpcAccessibleServices),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom {
+  /** A list of identities that are allowed access through this 'EgressPolicy'. 
+Should be in the format of email address. The email address should 
+represent individual user or service account only. */
+  readonly identities?: string[];
+  /** Specifies the type of identities that are allowed access to outside the 
+perimeter. If left unspecified, then members of 'identities' field will 
+be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  readonly identityType?: string;
+}
+
+function accessContextManagerServicePerimeterStatusEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identity_type: cdktf.stringToTerraform(struct!.identityType),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors {
+  /** Value for 'method' should be a valid method name for the corresponding 
+'serviceName' in 'ApiOperation'. If '*' used as value for method, 
+then ALL methods and permissions are allowed. */
+  readonly method?: string;
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
+  readonly permission?: string;
+}
+
+function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    method: cdktf.stringToTerraform(struct!.method),
+    permission: cdktf.stringToTerraform(struct!.permission),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations {
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName 
+field set to '*' will allow all methods AND permissions for all services. */
+  readonly serviceName?: string;
+  /** method_selectors block */
+  readonly methodSelectors?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors[];
+}
+
+function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service_name: cdktf.stringToTerraform(struct!.serviceName),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo {
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', that match this to stanza. A request matches 
+if it contains a resource in this list. If * is specified for resources, 
+then this 'EgressTo' rule will authorize access to all resources outside 
+the perimeter. */
+  readonly resources?: string[];
+  /** operations block */
+  readonly operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[];
+}
+
+function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform)(struct!.operations),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusEgressPolicies {
+  /** egress_from block */
+  readonly egressFrom?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom[];
+  /** egress_to block */
+  readonly egressTo?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo[];
+}
+
+function accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPolicies): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    egress_from: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressFromToTerraform)(struct!.egressFrom),
+    egress_to: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToToTerraform)(struct!.egressTo),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources {
+  /** An 'AccessLevel' resource name that allow resources within the 
+'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed 
+must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent
+'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, 
+resources within the perimeter can only be accessed via Google Cloud calls 
+with request origins within the perimeter. 
+Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' 
+If * is specified, then all IngressSources will be allowed. */
+  readonly accessLevel?: string;
+  /** A Google Cloud resource that is allowed to ingress the perimeter. 
+Requests from these resources will be allowed to access perimeter data. 
+Currently only projects are allowed. Format 'projects/{project_number}' 
+The project may be in any Google Cloud organization, not just the 
+organization that the perimeter is defined in. '*' is not allowed, the case 
+of allowing all Google Cloud resources only is not supported. */
+  readonly resource?: string;
+}
+
+function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access_level: cdktf.stringToTerraform(struct!.accessLevel),
+    resource: cdktf.stringToTerraform(struct!.resource),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom {
+  /** A list of identities that are allowed access through this ingress policy.
+Should be in the format of email address. The email address should represent 
+individual user or service account only. */
+  readonly identities?: string[];
+  /** Specifies the type of identities that are allowed access from outside the 
+perimeter. If left unspecified, then members of 'identities' field will be 
+allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  readonly identityType?: string;
+  /** sources block */
+  readonly sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[];
+}
+
+function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identity_type: cdktf.stringToTerraform(struct!.identityType),
+    sources: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform)(struct!.sources),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors {
+  /** Value for method should be a valid method name for the corresponding 
+serviceName in 'ApiOperation'. If '*' used as value for 'method', then 
+ALL methods and permissions are allowed. */
+  readonly method?: string;
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
+  readonly permission?: string;
+}
+
+function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    method: cdktf.stringToTerraform(struct!.method),
+    permission: cdktf.stringToTerraform(struct!.permission),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations {
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' 
+field set to '*' will allow all methods AND permissions for all services. */
+  readonly serviceName?: string;
+  /** method_selectors block */
+  readonly methodSelectors?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors[];
+}
+
+function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service_name: cdktf.stringToTerraform(struct!.serviceName),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo {
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', protected by this 'ServicePerimeter'
+that are allowed to be accessed by sources defined in the
+corresponding 'IngressFrom'. A request matches if it contains
+a resource in this list. If '*' is specified for resources,
+then this 'IngressTo' rule will authorize access to all 
+resources inside the perimeter, provided that the request
+also matches the 'operations' field. */
+  readonly resources?: string[];
+  /** operations block */
+  readonly operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[];
+}
+
+function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform)(struct!.operations),
+  }
+}
+
+export interface AccessContextManagerServicePerimeterStatusIngressPolicies {
+  /** ingress_from block */
+  readonly ingressFrom?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom[];
+  /** ingress_to block */
+  readonly ingressTo?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo[];
+}
+
+function accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPolicies): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ingress_from: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromToTerraform)(struct!.ingressFrom),
+    ingress_to: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToToTerraform)(struct!.ingressTo),
   }
 }
 
@@ -145,6 +569,10 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions. */
   readonly restrictedServices?: string[];
+  /** egress_policies block */
+  readonly egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[];
+  /** ingress_policies block */
+  readonly ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[];
   /** vpc_accessible_services block */
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimeterStatusVpcAccessibleServices[];
 }
@@ -155,6 +583,8 @@ function accessContextManagerServicePerimeterStatusToTerraform(struct?: AccessCo
     access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.accessLevels),
     resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
     restricted_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.restrictedServices),
+    egress_policies: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform)(struct!.egressPolicies),
+    ingress_policies: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform)(struct!.ingressPolicies),
     vpc_accessible_services: cdktf.listMapper(accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform)(struct!.vpcAccessibleServices),
   }
 }

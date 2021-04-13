@@ -187,6 +187,11 @@ export class DataGoogleComputeInstanceNetworkInterface extends cdktf.ComplexComp
     return this.getStringAttribute('network_ip');
   }
 
+  // nic_type - computed: true, optional: false, required: false
+  public get nicType() {
+    return this.getStringAttribute('nic_type');
+  }
+
   // subnetwork - computed: true, optional: false, required: false
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
@@ -219,6 +224,11 @@ export class DataGoogleComputeInstanceScheduling extends cdktf.ComplexComputedLi
   // automatic_restart - computed: true, optional: false, required: false
   public get automaticRestart() {
     return this.getBooleanAttribute('automatic_restart');
+  }
+
+  // min_node_cpus - computed: true, optional: false, required: false
+  public get minNodeCpus() {
+    return this.getNumberAttribute('min_node_cpus');
   }
 
   // node_affinities - computed: true, optional: false, required: false

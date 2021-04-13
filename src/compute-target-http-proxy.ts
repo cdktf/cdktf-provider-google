@@ -18,6 +18,9 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. */
   readonly name: string;
   readonly project?: string;
+  /** This field only applies when the forwarding rule that references
+this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. */
+  readonly proxyBind?: boolean;
   /** A reference to the UrlMap resource that defines the mapping from URL
 to the BackendService. */
   readonly urlMap: string;
@@ -62,6 +65,7 @@ export class ComputeTargetHttpProxy extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._project = config.project;
+    this._proxyBind = config.proxyBind;
     this._urlMap = config.urlMap;
     this._timeouts = config.timeouts;
   }
@@ -125,6 +129,22 @@ export class ComputeTargetHttpProxy extends cdktf.TerraformResource {
     return this._project
   }
 
+  // proxy_bind - computed: true, optional: true, required: false
+  private _proxyBind?: boolean;
+  public get proxyBind() {
+    return this.getBooleanAttribute('proxy_bind');
+  }
+  public set proxyBind(value: boolean) {
+    this._proxyBind = value;
+  }
+  public resetProxyBind() {
+    this._proxyBind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyBindInput() {
+    return this._proxyBind
+  }
+
   // proxy_id - computed: true, optional: false, required: false
   public get proxyId() {
     return this.getNumberAttribute('proxy_id');
@@ -173,6 +193,7 @@ export class ComputeTargetHttpProxy extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      proxy_bind: cdktf.booleanToTerraform(this._proxyBind),
       url_map: cdktf.stringToTerraform(this._urlMap),
       timeouts: computeTargetHttpProxyTimeoutsToTerraform(this._timeouts),
     };

@@ -7,6 +7,8 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNodeTemplateConfig extends cdktf.TerraformMetaArguments {
+  /** CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"] */
+  readonly cpuOvercommitType?: string;
   /** An optional textual description of the resource. */
   readonly description?: string;
   /** Name of the resource. */
@@ -23,6 +25,8 @@ If it is not provided, the provider region is used. */
   readonly region?: string;
   /** node_type_flexibility block */
   readonly nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility[];
+  /** server_binding block */
+  readonly serverBinding?: ComputeNodeTemplateServerBinding[];
   /** timeouts block */
   readonly timeouts?: ComputeNodeTemplateTimeouts;
 }
@@ -38,6 +42,29 @@ function computeNodeTemplateNodeTypeFlexibilityToTerraform(struct?: ComputeNodeT
   return {
     cpus: cdktf.stringToTerraform(struct!.cpus),
     memory: cdktf.stringToTerraform(struct!.memory),
+  }
+}
+
+export interface ComputeNodeTemplateServerBinding {
+  /** Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER',
+nodes using this template will restart on any physical server
+following a maintenance event.
+
+If 'RESTART_NODE_ON_MINIMAL_SERVER', nodes using this template
+will restart on the same physical server following a maintenance
+event, instead of being live migrated to or restarted on a new
+physical server. This option may be useful if you are using
+software licenses tied to the underlying server characteristics
+such as physical sockets or cores, to avoid the need for
+additional licenses when maintenance occurs. However, VMs on such
+nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"] */
+  readonly type: string;
+}
+
+function computeNodeTemplateServerBindingToTerraform(struct?: ComputeNodeTemplateServerBinding): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
@@ -74,6 +101,7 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._cpuOvercommitType = config.cpuOvercommitType;
     this._description = config.description;
     this._name = config.name;
     this._nodeAffinityLabels = config.nodeAffinityLabels;
@@ -81,12 +109,29 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._nodeTypeFlexibility = config.nodeTypeFlexibility;
+    this._serverBinding = config.serverBinding;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cpu_overcommit_type - computed: false, optional: true, required: false
+  private _cpuOvercommitType?: string;
+  public get cpuOvercommitType() {
+    return this.getStringAttribute('cpu_overcommit_type');
+  }
+  public set cpuOvercommitType(value: string ) {
+    this._cpuOvercommitType = value;
+  }
+  public resetCpuOvercommitType() {
+    this._cpuOvercommitType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuOvercommitTypeInput() {
+    return this._cpuOvercommitType
+  }
 
   // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
@@ -215,6 +260,22 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
     return this._nodeTypeFlexibility
   }
 
+  // server_binding - computed: false, optional: true, required: false
+  private _serverBinding?: ComputeNodeTemplateServerBinding[];
+  public get serverBinding() {
+    return this.interpolationForAttribute('server_binding') as any;
+  }
+  public set serverBinding(value: ComputeNodeTemplateServerBinding[] ) {
+    this._serverBinding = value;
+  }
+  public resetServerBinding() {
+    this._serverBinding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverBindingInput() {
+    return this._serverBinding
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNodeTemplateTimeouts;
   public get timeouts() {
@@ -237,6 +298,7 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cpu_overcommit_type: cdktf.stringToTerraform(this._cpuOvercommitType),
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       node_affinity_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._nodeAffinityLabels),
@@ -244,6 +306,7 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       node_type_flexibility: cdktf.listMapper(computeNodeTemplateNodeTypeFlexibilityToTerraform)(this._nodeTypeFlexibility),
+      server_binding: cdktf.listMapper(computeNodeTemplateServerBindingToTerraform)(this._serverBinding),
       timeouts: computeNodeTemplateTimeoutsToTerraform(this._timeouts),
     };
   }

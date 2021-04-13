@@ -20,6 +20,9 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. */
   readonly name: string;
   readonly project?: string;
+  /** This field only applies when the forwarding rule that references
+this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. */
+  readonly proxyBind?: boolean;
   /** Specifies the type of proxy header to append before sending data to
 the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
   readonly proxyHeader?: string;
@@ -65,6 +68,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._project = config.project;
+    this._proxyBind = config.proxyBind;
     this._proxyHeader = config.proxyHeader;
     this._timeouts = config.timeouts;
   }
@@ -141,6 +145,22 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
     return this._project
   }
 
+  // proxy_bind - computed: true, optional: true, required: false
+  private _proxyBind?: boolean;
+  public get proxyBind() {
+    return this.getBooleanAttribute('proxy_bind');
+  }
+  public set proxyBind(value: boolean) {
+    this._proxyBind = value;
+  }
+  public resetProxyBind() {
+    this._proxyBind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyBindInput() {
+    return this._proxyBind
+  }
+
   // proxy_header - computed: false, optional: true, required: false
   private _proxyHeader?: string;
   public get proxyHeader() {
@@ -193,6 +213,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      proxy_bind: cdktf.booleanToTerraform(this._proxyBind),
       proxy_header: cdktf.stringToTerraform(this._proxyHeader),
       timeouts: computeTargetTcpProxyTimeoutsToTerraform(this._timeouts),
     };

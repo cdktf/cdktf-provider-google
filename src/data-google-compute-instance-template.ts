@@ -80,6 +80,11 @@ export class DataGoogleComputeInstanceTemplateDisk extends cdktf.ComplexComputed
     return this.getStringAttribute('mode');
   }
 
+  // resource_policies - computed: true, optional: false, required: false
+  public get resourcePolicies() {
+    return this.getListAttribute('resource_policies');
+  }
+
   // source - computed: true, optional: false, required: false
   public get source() {
     return this.getStringAttribute('source');
@@ -161,6 +166,11 @@ export class DataGoogleComputeInstanceTemplateNetworkInterface extends cdktf.Com
   // network_ip - computed: true, optional: false, required: false
   public get networkIp() {
     return this.getStringAttribute('network_ip');
+  }
+
+  // nic_type - computed: true, optional: false, required: false
+  public get nicType() {
+    return this.getStringAttribute('nic_type');
   }
 
   // subnetwork - computed: true, optional: false, required: false

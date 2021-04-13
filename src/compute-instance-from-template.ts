@@ -222,6 +222,8 @@ export interface ComputeInstanceFromTemplateNetworkInterface {
   readonly network?: string;
   /** The private IP address assigned to the instance. */
   readonly networkIp?: string;
+  /** The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET */
+  readonly nicType?: string;
   /** The name or self_link of the subnetwork attached to this interface. */
   readonly subnetwork?: string;
   /** The project in which the subnetwork belongs. */
@@ -235,6 +237,7 @@ function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: Compute
     alias_ip_range: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
+    nic_type: cdktf.stringToTerraform(struct!.nicType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
   }
@@ -258,6 +261,7 @@ function computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform(struct?:
 export interface ComputeInstanceFromTemplateScheduling {
   /** Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). */
   readonly automaticRestart?: boolean;
+  readonly minNodeCpus?: number;
   /** Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE, */
   readonly onHostMaintenance?: string;
   /** Whether the instance is preemptible. */
@@ -270,6 +274,7 @@ function computeInstanceFromTemplateSchedulingToTerraform(struct?: ComputeInstan
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     automatic_restart: cdktf.booleanToTerraform(struct!.automaticRestart),
+    min_node_cpus: cdktf.numberToTerraform(struct!.minNodeCpus),
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     node_affinities: cdktf.listMapper(computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),

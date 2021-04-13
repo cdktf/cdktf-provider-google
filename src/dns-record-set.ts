@@ -7,19 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the zone in which this record set will reside. */
+  /** Identifies the managed zone addressed by this request. */
   readonly managedZone: string;
-  /** The DNS name this record set will apply to. */
+  /** For example, www.example.com. */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
   readonly project?: string;
-  /** The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters"). */
-  readonly rrdatas: string[];
-  /** The time-to-live of this record set (seconds). */
-  readonly ttl: number;
-  /** The DNS record set type. */
+  /** The string data for the records in this record set whose meaning depends on the DNS type. 
+For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get
+split on spaces. To specify a single record value longer than 255 characters such as a TXT record for 
+DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters"). */
+  readonly rrdatas?: string[];
+  /** Number of seconds that this ResourceRecordSet can be cached by
+resolvers. */
+  readonly ttl?: number;
+  /** One of valid DNS resource types. Possible values: ["A", "AAAA", "CAA", "CNAME", "MX", "NAPTR", "NS", "PTR", "SOA", "SPF", "SRV", "TLSA", "TXT"] */
   readonly type: string;
+  /** timeouts block */
+  readonly timeouts?: DnsRecordSetTimeouts;
 }
+export interface DnsRecordSetTimeouts {
+  readonly create?: string;
+  readonly delete?: string;
+  readonly update?: string;
+}
+
+function dnsRecordSetTimeoutsToTerraform(struct?: DnsRecordSetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 
 // Resource
 
@@ -46,6 +66,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     this._rrdatas = config.rrdatas;
     this._ttl = config.ttl;
     this._type = config.type;
+    this._timeouts = config.timeouts;
   }
 
   // ==========
@@ -99,26 +120,32 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     return this._project
   }
 
-  // rrdatas - computed: false, optional: false, required: true
-  private _rrdatas: string[];
+  // rrdatas - computed: false, optional: true, required: false
+  private _rrdatas?: string[];
   public get rrdatas() {
     return this.getListAttribute('rrdatas');
   }
-  public set rrdatas(value: string[]) {
+  public set rrdatas(value: string[] ) {
     this._rrdatas = value;
+  }
+  public resetRrdatas() {
+    this._rrdatas = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rrdatasInput() {
     return this._rrdatas
   }
 
-  // ttl - computed: false, optional: false, required: true
-  private _ttl: number;
+  // ttl - computed: false, optional: true, required: false
+  private _ttl?: number;
   public get ttl() {
     return this.getNumberAttribute('ttl');
   }
-  public set ttl(value: number) {
+  public set ttl(value: number ) {
     this._ttl = value;
+  }
+  public resetTtl() {
+    this._ttl = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
@@ -138,6 +165,22 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     return this._type
   }
 
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: DnsRecordSetTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: DnsRecordSetTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -150,6 +193,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
       rrdatas: cdktf.listMapper(cdktf.stringToTerraform)(this._rrdatas),
       ttl: cdktf.numberToTerraform(this._ttl),
       type: cdktf.stringToTerraform(this._type),
+      timeouts: dnsRecordSetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

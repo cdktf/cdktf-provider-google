@@ -9,6 +9,8 @@ import * as cdktf from 'cdktf';
 export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   /** List of experiments that should be used by the job. An example value is ["enable_stackdriver_agent_metrics"]. */
   readonly additionalExperiments?: string[];
+  /** Indicates if the job should use the streaming engine feature. */
+  readonly enableStreamingEngine?: boolean;
   /** The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE". */
   readonly ipConfiguration?: string;
   /** The name for the Cloud KMS key for the job. Key format is: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY */
@@ -78,6 +80,7 @@ export class DataflowJob extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._additionalExperiments = config.additionalExperiments;
+    this._enableStreamingEngine = config.enableStreamingEngine;
     this._ipConfiguration = config.ipConfiguration;
     this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
@@ -116,6 +119,22 @@ export class DataflowJob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get additionalExperimentsInput() {
     return this._additionalExperiments
+  }
+
+  // enable_streaming_engine - computed: false, optional: true, required: false
+  private _enableStreamingEngine?: boolean;
+  public get enableStreamingEngine() {
+    return this.getBooleanAttribute('enable_streaming_engine');
+  }
+  public set enableStreamingEngine(value: boolean ) {
+    this._enableStreamingEngine = value;
+  }
+  public resetEnableStreamingEngine() {
+    this._enableStreamingEngine = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableStreamingEngineInput() {
+    return this._enableStreamingEngine
   }
 
   // id - computed: true, optional: true, required: false
@@ -424,6 +443,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_experiments: cdktf.listMapper(cdktf.stringToTerraform)(this._additionalExperiments),
+      enable_streaming_engine: cdktf.booleanToTerraform(this._enableStreamingEngine),
       ip_configuration: cdktf.stringToTerraform(this._ipConfiguration),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),

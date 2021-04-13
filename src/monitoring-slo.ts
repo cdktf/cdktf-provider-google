@@ -32,6 +32,18 @@ Must be between 1 to 30 days, inclusive. */
   /** windows_based_sli block */
   readonly windowsBasedSli?: MonitoringSloWindowsBasedSli[];
 }
+export interface MonitoringSloBasicSliAvailability {
+  /** Whether an availability SLI is enabled or not. Must be set to true. Defaults to 'true'. */
+  readonly enabled?: boolean;
+}
+
+function monitoringSloBasicSliAvailabilityToTerraform(struct?: MonitoringSloBasicSliAvailability): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface MonitoringSloBasicSliLatency {
   /** A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -68,8 +80,10 @@ this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error. */
   readonly version?: string[];
+  /** availability block */
+  readonly availability?: MonitoringSloBasicSliAvailability[];
   /** latency block */
-  readonly latency: MonitoringSloBasicSliLatency[];
+  readonly latency?: MonitoringSloBasicSliLatency[];
 }
 
 function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSli): any {
@@ -78,6 +92,7 @@ function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSli): any {
     location: cdktf.listMapper(cdktf.stringToTerraform)(struct!.location),
     method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
     version: cdktf.listMapper(cdktf.stringToTerraform)(struct!.version),
+    availability: cdktf.listMapper(monitoringSloBasicSliAvailabilityToTerraform)(struct!.availability),
     latency: cdktf.listMapper(monitoringSloBasicSliLatencyToTerraform)(struct!.latency),
   }
 }
@@ -190,6 +205,18 @@ function monitoringSloTimeoutsToTerraform(struct?: MonitoringSloTimeouts): any {
   }
 }
 
+export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability {
+  /** Whether an availability SLI is enabled or not. Must be set to 'true. Defaults to 'true'. */
+  readonly enabled?: boolean;
+}
+
+function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
   /** A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -226,8 +253,10 @@ this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error. */
   readonly version?: string[];
+  /** availability block */
+  readonly availability?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability[];
   /** latency block */
-  readonly latency: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency[];
+  readonly latency?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency[];
 }
 
 function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance): any {
@@ -236,6 +265,7 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceT
     location: cdktf.listMapper(cdktf.stringToTerraform)(struct!.location),
     method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
     version: cdktf.listMapper(cdktf.stringToTerraform)(struct!.version),
+    availability: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityToTerraform)(struct!.availability),
     latency: cdktf.listMapper(monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyToTerraform)(struct!.latency),
   }
 }
