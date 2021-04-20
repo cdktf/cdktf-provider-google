@@ -22,6 +22,8 @@ export interface ComputeNodeGroupConfig extends cdktf.TerraformMetaArguments {
   readonly zone?: string;
   /** autoscaling_policy block */
   readonly autoscalingPolicy?: ComputeNodeGroupAutoscalingPolicy[];
+  /** maintenance_window block */
+  readonly maintenanceWindow?: ComputeNodeGroupMaintenanceWindow[];
   /** timeouts block */
   readonly timeouts?: ComputeNodeGroupTimeouts;
 }
@@ -47,6 +49,18 @@ function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNodeGroupA
     max_nodes: cdktf.numberToTerraform(struct!.maxNodes),
     min_nodes: cdktf.numberToTerraform(struct!.minNodes),
     mode: cdktf.stringToTerraform(struct!.mode),
+  }
+}
+
+export interface ComputeNodeGroupMaintenanceWindow {
+  /** instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid. */
+  readonly startTime: string;
+}
+
+function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNodeGroupMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    start_time: cdktf.stringToTerraform(struct!.startTime),
   }
 }
 
@@ -93,6 +107,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
     this._size = config.size;
     this._zone = config.zone;
     this._autoscalingPolicy = config.autoscalingPolicy;
+    this._maintenanceWindow = config.maintenanceWindow;
     this._timeouts = config.timeouts;
   }
 
@@ -237,6 +252,22 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
     return this._autoscalingPolicy
   }
 
+  // maintenance_window - computed: false, optional: true, required: false
+  private _maintenanceWindow?: ComputeNodeGroupMaintenanceWindow[];
+  public get maintenanceWindow() {
+    return this.interpolationForAttribute('maintenance_window') as any;
+  }
+  public set maintenanceWindow(value: ComputeNodeGroupMaintenanceWindow[] ) {
+    this._maintenanceWindow = value;
+  }
+  public resetMaintenanceWindow() {
+    this._maintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowInput() {
+    return this._maintenanceWindow
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeNodeGroupTimeouts;
   public get timeouts() {
@@ -267,6 +298,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
       size: cdktf.numberToTerraform(this._size),
       zone: cdktf.stringToTerraform(this._zone),
       autoscaling_policy: cdktf.listMapper(computeNodeGroupAutoscalingPolicyToTerraform)(this._autoscalingPolicy),
+      maintenance_window: cdktf.listMapper(computeNodeGroupMaintenanceWindowToTerraform)(this._maintenanceWindow),
       timeouts: computeNodeGroupTimeoutsToTerraform(this._timeouts),
     };
   }

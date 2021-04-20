@@ -16,9 +16,13 @@ Format: accessPolicies/{policy_id} */
   readonly timeouts?: AccessContextManagerServicePerimetersTimeouts;
 }
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressFrom {
-  /** / A list of identities that are allowed access through this 'EgressPolicy'. Should be in the format of email address. The email address should represent individual user or service account only. */
+  /** A list of identities that are allowed access through this 'EgressPolicy'. 
+Should be in the format of email address. The email address should 
+represent individual user or service account only. */
   readonly identities?: string[];
-  /** / Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of 'identities' field will be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  /** Specifies the type of identities that are allowed access to outside the 
+perimeter. If left unspecified, then members of 'identities' field will 
+be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
   readonly identityType?: string;
 }
 
@@ -31,9 +35,12 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperationsMethodSelectors {
-  /** / Value for 'method' should be a valid method name for the corresponding 'serviceName' in 'ApiOperation'. If '*' used as value for method, then ALL methods and permissions are allowed. */
+  /** Value for 'method' should be a valid method name for the corresponding 
+'serviceName' in 'ApiOperation'. If '*' used as value for method, 
+then ALL methods and permissions are allowed. */
   readonly method?: string;
-  /** / Value for permission should be a valid Cloud IAM permission for the corresponding 'serviceName' in 'ApiOperation'. */
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
   readonly permission?: string;
 }
 
@@ -46,7 +53,9 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperations {
-  /** / The name of the API whose methods or permissions the 'IngressPolicy' or 'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName field set to '*' will allow all methods AND permissions for all services. */
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName 
+field set to '*' will allow all methods AND permissions for all services. */
   readonly serviceName?: string;
   /** method_selectors block */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperationsMethodSelectors[];
@@ -61,7 +70,11 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo {
-  /** / A list of resources, currently only projects in the form 'projects/<projectnumber>', that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this 'EgressTo' rule will authorize access to all resources outside the perimeter. */
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', that match this to stanza. A request matches 
+if it contains a resource in this list. If * is specified for resources, 
+then this 'EgressTo' rule will authorize access to all resources outside 
+the perimeter. */
   readonly resources?: string[];
   /** operations block */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperations[];
@@ -91,9 +104,21 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFromSources {
-  /** / An 'AccessLevel' resource name that allow resources within the 'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent 'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' If * is specified, then all IngressSources will be allowed. */
+  /** An 'AccessLevel' resource name that allow resources within the 
+'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed 
+must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent
+'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, 
+resources within the perimeter can only be accessed via Google Cloud calls 
+with request origins within the perimeter. 
+Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' 
+If * is specified, then all IngressSources will be allowed. */
   readonly accessLevel?: string;
-  /** / A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format 'projects/{project_number}' The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. '*' is not allowed, the case of allowing all Google Cloud resources only is not supported. */
+  /** A Google Cloud resource that is allowed to ingress the perimeter. 
+Requests from these resources will be allowed to access perimeter data. 
+Currently only projects are allowed. Format 'projects/{project_number}' 
+The project may be in any Google Cloud organization, not just the 
+organization that the perimeter is defined in. '*' is not allowed, the case 
+of allowing all Google Cloud resources only is not supported. */
   readonly resource?: string;
 }
 
@@ -106,9 +131,13 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFrom {
-  /** / A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only. */
+  /** A list of identities that are allowed access through this ingress policy.
+Should be in the format of email address. The email address should represent 
+individual user or service account only. */
   readonly identities?: string[];
-  /** / Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of 'identities' field will be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  /** Specifies the type of identities that are allowed access from outside the 
+perimeter. If left unspecified, then members of 'identities' field will be 
+allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
   readonly identityType?: string;
   /** sources block */
   readonly sources?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFromSources[];
@@ -124,9 +153,12 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperationsMethodSelectors {
-  /** / Value for method should be a valid method name for the corresponding serviceName in 'ApiOperation'. If '*' used as value for 'method', then ALL methods and permissions are allowed. */
+  /** Value for method should be a valid method name for the corresponding 
+serviceName in 'ApiOperation'. If '*' used as value for 'method', then 
+ALL methods and permissions are allowed. */
   readonly method?: string;
-  /** / Value for permission should be a valid Cloud IAM permission for the corresponding 'serviceName' in 'ApiOperation'. */
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
   readonly permission?: string;
 }
 
@@ -139,7 +171,9 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperations {
-  /** / The name of the API whose methods or permissions the 'IngressPolicy' or 'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' field set to '*' will allow all methods AND permissions for all services. */
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' 
+field set to '*' will allow all methods AND permissions for all services. */
   readonly serviceName?: string;
   /** method_selectors block */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperationsMethodSelectors[];
@@ -154,7 +188,14 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressTo {
-  /** / A list of resources, currently only projects in the form 'projects/<projectnumber>', protected by this 'ServicePerimeter' that are allowed to be accessed by sources defined in the corresponding 'IngressFrom'. A request matches if it contains a resource in this list. If '*' is specified for resources, then this 'IngressTo' rule will authorize access to all resources inside the perimeter, provided that the request also matches the 'operations' field. */
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', protected by this 'ServicePerimeter'
+that are allowed to be accessed by sources defined in the
+corresponding 'IngressFrom'. A request matches if it contains
+a resource in this list. If '*' is specified for resources,
+then this 'IngressTo' rule will authorize access to all 
+resources inside the perimeter, provided that the request
+also matches the 'operations' field. */
   readonly resources?: string[];
   /** operations block */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperations[];
@@ -243,9 +284,13 @@ function accessContextManagerServicePerimetersServicePerimetersSpecToTerraform(s
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressFrom {
-  /** / A list of identities that are allowed access through this 'EgressPolicy'. Should be in the format of email address. The email address should represent individual user or service account only. */
+  /** A list of identities that are allowed access through this 'EgressPolicy'. 
+Should be in the format of email address. The email address should 
+represent individual user or service account only. */
   readonly identities?: string[];
-  /** / Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of 'identities' field will be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  /** Specifies the type of identities that are allowed access to outside the 
+perimeter. If left unspecified, then members of 'identities' field will 
+be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
   readonly identityType?: string;
 }
 
@@ -258,9 +303,12 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperationsMethodSelectors {
-  /** / Value for 'method' should be a valid method name for the corresponding 'serviceName' in 'ApiOperation'. If '*' used as value for method, then ALL methods and permissions are allowed. */
+  /** Value for 'method' should be a valid method name for the corresponding 
+'serviceName' in 'ApiOperation'. If '*' used as value for method, 
+then ALL methods and permissions are allowed. */
   readonly method?: string;
-  /** / Value for permission should be a valid Cloud IAM permission for the corresponding 'serviceName' in 'ApiOperation'. */
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
   readonly permission?: string;
 }
 
@@ -273,7 +321,9 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperations {
-  /** / The name of the API whose methods or permissions the 'IngressPolicy' or 'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName field set to '*' will allow all methods AND permissions for all services. */
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName 
+field set to '*' will allow all methods AND permissions for all services. */
   readonly serviceName?: string;
   /** method_selectors block */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperationsMethodSelectors[];
@@ -288,7 +338,11 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo {
-  /** / A list of resources, currently only projects in the form 'projects/<projectnumber>', that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this 'EgressTo' rule will authorize access to all resources outside the perimeter. */
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', that match this to stanza. A request matches 
+if it contains a resource in this list. If * is specified for resources, 
+then this 'EgressTo' rule will authorize access to all resources outside 
+the perimeter. */
   readonly resources?: string[];
   /** operations block */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperations[];
@@ -318,9 +372,21 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFromSources {
-  /** / An 'AccessLevel' resource name that allow resources within the 'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent 'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' If * is specified, then all IngressSources will be allowed. */
+  /** An 'AccessLevel' resource name that allow resources within the 
+'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed 
+must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent
+'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, 
+resources within the perimeter can only be accessed via Google Cloud calls 
+with request origins within the perimeter. 
+Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' 
+If * is specified, then all IngressSources will be allowed. */
   readonly accessLevel?: string;
-  /** / A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format 'projects/{project_number}' The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. '*' is not allowed, the case of allowing all Google Cloud resources only is not supported. */
+  /** A Google Cloud resource that is allowed to ingress the perimeter. 
+Requests from these resources will be allowed to access perimeter data. 
+Currently only projects are allowed. Format 'projects/{project_number}' 
+The project may be in any Google Cloud organization, not just the 
+organization that the perimeter is defined in. '*' is not allowed, the case 
+of allowing all Google Cloud resources only is not supported. */
   readonly resource?: string;
 }
 
@@ -333,9 +399,13 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFrom {
-  /** / A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only. */
+  /** A list of identities that are allowed access through this ingress policy.
+Should be in the format of email address. The email address should represent 
+individual user or service account only. */
   readonly identities?: string[];
-  /** / Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of 'identities' field will be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+  /** Specifies the type of identities that are allowed access from outside the 
+perimeter. If left unspecified, then members of 'identities' field will be 
+allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
   readonly identityType?: string;
   /** sources block */
   readonly sources?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFromSources[];
@@ -351,9 +421,12 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperationsMethodSelectors {
-  /** / Value for method should be a valid method name for the corresponding serviceName in 'ApiOperation'. If '*' used as value for 'method', then ALL methods and permissions are allowed. */
+  /** Value for method should be a valid method name for the corresponding 
+serviceName in 'ApiOperation'. If '*' used as value for 'method', then 
+ALL methods and permissions are allowed. */
   readonly method?: string;
-  /** / Value for permission should be a valid Cloud IAM permission for the corresponding 'serviceName' in 'ApiOperation'. */
+  /** Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'. */
   readonly permission?: string;
 }
 
@@ -366,7 +439,9 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperations {
-  /** / The name of the API whose methods or permissions the 'IngressPolicy' or 'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' field set to '*' will allow all methods AND permissions for all services. */
+  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' 
+field set to '*' will allow all methods AND permissions for all services. */
   readonly serviceName?: string;
   /** method_selectors block */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperationsMethodSelectors[];
@@ -381,7 +456,14 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressTo {
-  /** / A list of resources, currently only projects in the form 'projects/<projectnumber>', protected by this 'ServicePerimeter' that are allowed to be accessed by sources defined in the corresponding 'IngressFrom'. A request matches if it contains a resource in this list. If '*' is specified for resources, then this 'IngressTo' rule will authorize access to all resources inside the perimeter, provided that the request also matches the 'operations' field. */
+  /** A list of resources, currently only projects in the form 
+'projects/<projectnumber>', protected by this 'ServicePerimeter'
+that are allowed to be accessed by sources defined in the
+corresponding 'IngressFrom'. A request matches if it contains
+a resource in this list. If '*' is specified for resources,
+then this 'IngressTo' rule will authorize access to all 
+resources inside the perimeter, provided that the request
+also matches the 'operations' field. */
   readonly resources?: string[];
   /** operations block */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperations[];

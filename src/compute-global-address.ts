@@ -41,12 +41,11 @@ This field is not applicable to addresses with addressType=EXTERNAL,
 or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT */
   readonly prefixLength?: number;
   readonly project?: string;
-  /** The purpose of the resource. For global internal addresses it can be
+  /** The purpose of the resource. Possible values include:
 
 * VPC_PEERING - for peer networks
-* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
 
-This should only be set when using an Internal address. Possible values: ["VPC_PEERING", "PRIVATE_SERVICE_CONNECT"] */
+* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks */
   readonly purpose?: string;
   /** timeouts block */
   readonly timeouts?: ComputeGlobalAddressTimeouts;
