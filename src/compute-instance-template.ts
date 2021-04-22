@@ -177,6 +177,8 @@ export interface ComputeInstanceTemplateNetworkInterface {
   readonly network?: string;
   /** The private IP address to assign to the instance. If empty, the address will be automatically assigned. */
   readonly networkIp?: string;
+  /** The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET */
+  readonly nicType?: string;
   /** The name of the subnetwork to attach this interface to. The subnetwork must exist in the same region this instance will be created in. Either network or subnetwork must be provided. */
   readonly subnetwork?: string;
   /** The ID of the project in which the subnetwork belongs. If it is not provided, the provider project is used. */
@@ -192,6 +194,7 @@ function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInst
   return {
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
+    nic_type: cdktf.stringToTerraform(struct!.nicType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
     access_config: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),
@@ -217,6 +220,8 @@ function computeInstanceTemplateSchedulingNodeAffinitiesToTerraform(struct?: Com
 export interface ComputeInstanceTemplateScheduling {
   /** Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true. */
   readonly automaticRestart?: boolean;
+  /** Minimum number of cpus for the instance. */
+  readonly minNodeCpus?: number;
   /** Defines the maintenance behavior for this instance. */
   readonly onHostMaintenance?: string;
   /** Allows instance to be preempted. This defaults to false. */
@@ -229,6 +234,7 @@ function computeInstanceTemplateSchedulingToTerraform(struct?: ComputeInstanceTe
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     automatic_restart: cdktf.booleanToTerraform(struct!.automaticRestart),
+    min_node_cpus: cdktf.numberToTerraform(struct!.minNodeCpus),
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     node_affinities: cdktf.listMapper(computeInstanceTemplateSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),

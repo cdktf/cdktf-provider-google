@@ -27,15 +27,13 @@ except the last character, which cannot be a dash. */
 specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"] */
   readonly networkTier?: string;
   readonly project?: string;
-  /** The purpose of this resource, which can be one of the following values:
+  /** The purpose of this resource. Possible values include:
 
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 
-* VPC_PEERING for addresses that are reserved for VPC peer networks.
-
-This should only be set when using an Internal address. Possible values: ["GCE_ENDPOINT", "VPC_PEERING", "SHARED_LOADBALANCER_VIP"] */
+* VPC_PEERING for addresses that are reserved for VPC peer networks. */
   readonly purpose?: string;
   /** The Region in which the created address should reside.
 If it is not provided, the provider region is used. */

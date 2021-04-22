@@ -97,6 +97,8 @@ function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(st
 export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
   /** When set, what mode of hive partitioning to use when reading data. */
   readonly mode?: string;
+  /** If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. */
+  readonly requirePartitionFilter?: boolean;
   /** When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins. */
   readonly sourceUriPrefix?: string;
 }
@@ -105,6 +107,7 @@ function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerrafor
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     mode: cdktf.stringToTerraform(struct!.mode),
+    require_partition_filter: cdktf.booleanToTerraform(struct!.requirePartitionFilter),
     source_uri_prefix: cdktf.stringToTerraform(struct!.sourceUriPrefix),
   }
 }

@@ -132,7 +132,7 @@ The elements are of the form "KEY=VALUE" for the environment variable "KEY" bein
   readonly logStreamingOption?: string;
   /** Option to specify the logging mode, which determines if and where build logs are stored. Possible values: ["LOGGING_UNSPECIFIED", "LEGACY", "GCS_ONLY", "STACKDRIVER_ONLY", "NONE"] */
   readonly logging?: string;
-  /** Compute Engine machine type on which to run the build. Possible values: ["UNSPECIFIED", "N1_HIGHCPU_8", "N1_HIGHCPU_32"] */
+  /** Compute Engine machine type on which to run the build. Possible values: ["UNSPECIFIED", "N1_HIGHCPU_8", "N1_HIGHCPU_32", "E2_HIGHCPU_8", "E2_HIGHCPU_32"] */
   readonly machineType?: string;
   /** Requested verifiability options. Possible values: ["NOT_VERIFIED", "VERIFIED"] */
   readonly requestedVerifyOption?: string;

@@ -85,6 +85,7 @@ export interface GoogleProviderConfig {
   readonly sqlCustomEndpoint?: string;
   readonly storageCustomEndpoint?: string;
   readonly storageTransferCustomEndpoint?: string;
+  readonly tagsCustomEndpoint?: string;
   readonly tpuCustomEndpoint?: string;
   readonly userProjectOverride?: boolean;
   readonly vpcAccessCustomEndpoint?: string;
@@ -204,6 +205,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._sqlCustomEndpoint = config.sqlCustomEndpoint;
     this._storageCustomEndpoint = config.storageCustomEndpoint;
     this._storageTransferCustomEndpoint = config.storageTransferCustomEndpoint;
+    this._tagsCustomEndpoint = config.tagsCustomEndpoint;
     this._tpuCustomEndpoint = config.tpuCustomEndpoint;
     this._userProjectOverride = config.userProjectOverride;
     this._vpcAccessCustomEndpoint = config.vpcAccessCustomEndpoint;
@@ -1465,6 +1467,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._storageTransferCustomEndpoint
   }
 
+  // tags_custom_endpoint - computed: false, optional: true, required: false
+  private _tagsCustomEndpoint?: string;
+  public get tagsCustomEndpoint() {
+    return this._tagsCustomEndpoint;
+  }
+  public set tagsCustomEndpoint(value: string  | undefined) {
+    this._tagsCustomEndpoint = value;
+  }
+  public resetTagsCustomEndpoint() {
+    this._tagsCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsCustomEndpointInput() {
+    return this._tagsCustomEndpoint
+  }
+
   // tpu_custom_endpoint - computed: false, optional: true, required: false
   private _tpuCustomEndpoint?: string;
   public get tpuCustomEndpoint() {
@@ -1661,6 +1679,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       sql_custom_endpoint: cdktf.stringToTerraform(this._sqlCustomEndpoint),
       storage_custom_endpoint: cdktf.stringToTerraform(this._storageCustomEndpoint),
       storage_transfer_custom_endpoint: cdktf.stringToTerraform(this._storageTransferCustomEndpoint),
+      tags_custom_endpoint: cdktf.stringToTerraform(this._tagsCustomEndpoint),
       tpu_custom_endpoint: cdktf.stringToTerraform(this._tpuCustomEndpoint),
       user_project_override: cdktf.booleanToTerraform(this._userProjectOverride),
       vpc_access_custom_endpoint: cdktf.stringToTerraform(this._vpcAccessCustomEndpoint),
