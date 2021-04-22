@@ -4311,12 +4311,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new AppEngineApplicationUrlDispatchRule(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new AppEngineApplicationUrlDispatchRule(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -4553,12 +4553,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new AppEngineDomainMappingResourceRecords(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new AppEngineDomainMappingResourceRecords(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -6649,12 +6649,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new BigqueryJobStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new BigqueryJobStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -6681,12 +6681,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new BigqueryJobStatusErrorResult(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new BigqueryJobStatusErrorResult(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -6713,12 +6713,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new BigqueryJobStatusErrors(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new BigqueryJobStatusErrors(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -10266,12 +10266,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudRunDomainMappingStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudRunDomainMappingStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -10299,12 +10299,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudRunDomainMappingStatusConditions(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudRunDomainMappingStatusConditions(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -10332,12 +10332,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudRunDomainMappingStatusResourceRecords(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudRunDomainMappingStatusResourceRecords(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -10820,12 +10820,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudRunServiceStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudRunServiceStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -10854,12 +10854,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudRunServiceStatusConditions(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudRunServiceStatusConditions(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -12370,12 +12370,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudiotDeviceConfigA(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudiotDeviceConfigA(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -12403,12 +12403,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudiotDeviceLastErrorStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudiotDeviceLastErrorStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -12435,12 +12435,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new CloudiotDeviceState(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new CloudiotDeviceState(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -16074,12 +16074,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new ComputeHaVpnGatewayVpnInterfaces(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new ComputeHaVpnGatewayVpnInterfaces(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -19527,12 +19527,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new ComputeInterconnectAttachmentPrivateInterconnectInfo(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new ComputeInterconnectAttachmentPrivateInterconnectInfo(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -29431,12 +29431,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataCatalogEntryBigqueryDateShardedSpec(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataCatalogEntryBigqueryDateShardedSpec(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -29463,12 +29463,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataCatalogEntryBigqueryTableSpec(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataCatalogEntryBigqueryTableSpec(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -29495,12 +29495,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataCatalogEntryBigqueryTableSpecTableSpec(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataCatalogEntryBigqueryTableSpecTableSpec(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -29525,12 +29525,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataCatalogEntryBigqueryTableSpecViewSpec(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataCatalogEntryBigqueryTableSpecViewSpec(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -30973,12 +30973,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudIdentityGroupMembershipsMemberships(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudIdentityGroupMembershipsMemberships(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31009,12 +31009,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudIdentityGroupMembershipsMembershipsPreferredMemberKey(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudIdentityGroupMembershipsMembershipsPreferredMemberKey(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31040,12 +31040,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudIdentityGroupMembershipsMembershipsRoles(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudIdentityGroupMembershipsMembershipsRoles(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31136,12 +31136,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudIdentityGroupsGroups(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudIdentityGroupsGroups(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31173,12 +31173,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudIdentityGroupsGroupsGroupKey(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudIdentityGroupsGroupsGroupKey(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31394,12 +31394,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceMetadata(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceMetadata(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31430,12 +31430,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31464,12 +31464,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceStatusConditions(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceStatusConditions(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31497,12 +31497,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplate(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplate(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31528,12 +31528,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateMetadata(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateMetadata(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31565,12 +31565,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpec(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpec(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31599,12 +31599,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainers(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainers(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31636,12 +31636,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersEnv(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersEnv(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31667,12 +31667,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31699,12 +31699,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31730,12 +31730,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31760,12 +31760,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31791,12 +31791,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31821,12 +31821,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersPorts(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersPorts(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31853,12 +31853,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTemplateSpecContainersResources(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTemplateSpecContainersResources(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -31884,12 +31884,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudRunServiceTraffic(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudRunServiceTraffic(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32078,12 +32078,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudfunctionsFunctionEventTrigger(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudfunctionsFunctionEventTrigger(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32110,12 +32110,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32140,12 +32140,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleCloudfunctionsFunctionSourceRepository(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleCloudfunctionsFunctionSourceRepository(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32280,12 +32280,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComposerEnvironmentConfigA(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComposerEnvironmentConfigA(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32316,12 +32316,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComposerEnvironmentConfigNodeConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComposerEnvironmentConfigNodeConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32354,12 +32354,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32388,12 +32388,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32421,12 +32421,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComposerEnvironmentConfigSoftwareConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComposerEnvironmentConfigSoftwareConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32548,12 +32548,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComposerImageVersionsImageVersions(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComposerImageVersionsImageVersions(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32751,12 +32751,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendBucketCdnPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendBucketCdnPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32956,12 +32956,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceBackend(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceBackend(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -32996,12 +32996,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceCdnPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceCdnPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33027,12 +33027,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33061,12 +33061,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceCircuitBreakers(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceCircuitBreakers(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33095,12 +33095,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceConsistentHash(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceConsistentHash(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33127,12 +33127,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceConsistentHashHttpCookie(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceConsistentHashHttpCookie(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33159,12 +33159,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceConsistentHashHttpCookieTtl(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceConsistentHashHttpCookieTtl(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33190,12 +33190,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceIap(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceIap(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33222,12 +33222,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceLogConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceLogConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33253,12 +33253,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceOutlierDetection(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceOutlierDetection(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33293,12 +33293,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceOutlierDetectionBaseEjectionTime(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceOutlierDetectionBaseEjectionTime(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33324,12 +33324,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeBackendServiceOutlierDetectionInterval(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeBackendServiceOutlierDetectionInterval(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33685,12 +33685,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeGlobalForwardingRuleMetadataFilters(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeGlobalForwardingRuleMetadataFilters(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33716,12 +33716,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33901,12 +33901,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeHealthCheckGrpcHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeHealthCheckGrpcHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33934,12 +33934,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeHealthCheckHttp2HealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeHealthCheckHttp2HealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -33970,12 +33970,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeHealthCheckHttpHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeHealthCheckHttpHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34006,12 +34006,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeHealthCheckHttpsHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeHealthCheckHttpsHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34042,12 +34042,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeHealthCheckSslHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeHealthCheckSslHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34077,12 +34077,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeHealthCheckTcpHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeHealthCheckTcpHealthCheck(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34520,12 +34520,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceAttachedDisk(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceAttachedDisk(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34555,12 +34555,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceBootDisk(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceBootDisk(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34592,12 +34592,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceBootDiskInitializeParams(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceBootDiskInitializeParams(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34625,12 +34625,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceConfidentialInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceConfidentialInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34782,12 +34782,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceGroupNamedPort(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceGroupNamedPort(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34813,12 +34813,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34844,12 +34844,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceNetworkInterface(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceNetworkInterface(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34881,12 +34881,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceNetworkInterfaceAccessConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceNetworkInterfaceAccessConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34913,12 +34913,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceNetworkInterfaceAliasIpRange(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceNetworkInterfaceAliasIpRange(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34944,12 +34944,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceScheduling(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceScheduling(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -34978,12 +34978,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceSchedulingNodeAffinities(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceSchedulingNodeAffinities(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35010,12 +35010,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceScratchDisk(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceScratchDisk(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35127,12 +35127,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceServiceAccount(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceServiceAccount(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35158,12 +35158,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35418,12 +35418,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateConfidentialInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateConfidentialInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35448,12 +35448,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateDisk(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateDisk(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35491,12 +35491,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateDiskDiskEncryptionKey(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateDiskDiskEncryptionKey(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35521,12 +35521,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35552,12 +35552,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateNetworkInterface(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateNetworkInterface(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35589,12 +35589,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateNetworkInterfaceAccessConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateNetworkInterfaceAccessConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35621,12 +35621,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateNetworkInterfaceAliasIpRange(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateNetworkInterfaceAliasIpRange(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35652,12 +35652,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateScheduling(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateScheduling(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35686,12 +35686,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateSchedulingNodeAffinities(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateSchedulingNodeAffinities(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35718,12 +35718,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateServiceAccount(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateServiceAccount(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -35749,12 +35749,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeInstanceTemplateShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeInstanceTemplateShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36226,12 +36226,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeRegionInstanceGroupInstances(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeRegionInstanceGroupInstances(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36258,12 +36258,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeRegionInstanceGroupInstancesNamedPorts(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeRegionInstanceGroupInstancesNamedPorts(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36570,12 +36570,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicyGroupPlacementPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicyGroupPlacementPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36602,12 +36602,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36634,12 +36634,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36665,12 +36665,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36697,12 +36697,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36728,12 +36728,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36759,12 +36759,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36789,12 +36789,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36820,12 +36820,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProperties(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProperties(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36954,12 +36954,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeRouterBgp(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeRouterBgp(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -36987,12 +36987,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeRouterBgpAdvertisedIpRanges(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeRouterBgpAdvertisedIpRanges(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -37297,12 +37297,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleComputeSubnetworkSecondaryIpRange(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleComputeSubnetworkSecondaryIpRange(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -37870,12 +37870,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterAddonsConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterAddonsConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -37903,12 +37903,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterAddonsConfigCloudrunConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterAddonsConfigCloudrunConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -37934,12 +37934,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -37964,12 +37964,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterAddonsConfigHttpLoadBalancing(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterAddonsConfigHttpLoadBalancing(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -37994,12 +37994,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38024,12 +38024,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterAuthenticatorGroupsConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterAuthenticatorGroupsConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38054,12 +38054,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterClusterAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterClusterAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38086,12 +38086,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaults(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaults(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38117,12 +38117,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterClusterAutoscalingResourceLimits(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterClusterAutoscalingResourceLimits(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38149,12 +38149,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterDatabaseEncryption(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterDatabaseEncryption(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38180,12 +38180,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterDefaultSnatStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterDefaultSnatStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38210,12 +38210,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterIpAllocationPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterIpAllocationPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38243,12 +38243,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMaintenancePolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMaintenancePolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38275,12 +38275,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38306,12 +38306,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusion(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusion(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38338,12 +38338,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMaintenancePolicyRecurringWindow(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMaintenancePolicyRecurringWindow(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38370,12 +38370,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMasterAuth(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMasterAuth(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38405,12 +38405,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMasterAuthClientCertificateConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMasterAuthClientCertificateConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38435,12 +38435,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMasterAuthorizedNetworksConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMasterAuthorizedNetworksConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38465,12 +38465,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocks(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocks(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38496,12 +38496,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNetworkPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNetworkPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38527,12 +38527,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodeConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodeConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38572,12 +38572,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodeConfigGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodeConfigGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38603,12 +38603,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodeConfigShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodeConfigShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38634,12 +38634,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodeConfigTaint(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodeConfigTaint(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38666,12 +38666,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38696,12 +38696,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePool(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePool(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38737,12 +38737,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38768,12 +38768,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolManagement(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolManagement(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38799,12 +38799,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolNodeConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolNodeConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38844,12 +38844,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38875,12 +38875,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38906,12 +38906,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolNodeConfigTaint(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolNodeConfigTaint(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38938,12 +38938,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38968,12 +38968,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterNodePoolUpgradeSettings(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterNodePoolUpgradeSettings(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -38999,12 +38999,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterPodSecurityPolicyConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterPodSecurityPolicyConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39029,12 +39029,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterPrivateClusterConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterPrivateClusterConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39065,12 +39065,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39095,12 +39095,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterReleaseChannel(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterReleaseChannel(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39125,12 +39125,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterResourceUsageExportConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterResourceUsageExportConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39157,12 +39157,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestination(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestination(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39187,12 +39187,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterVerticalPodAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterVerticalPodAutoscaling(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39217,12 +39217,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleContainerClusterWorkloadIdentityConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleContainerClusterWorkloadIdentityConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39649,12 +39649,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleDnsKeysKeySigningKeys(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleDnsKeysKeySigningKeys(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39688,12 +39688,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleDnsKeysKeySigningKeysDigests(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleDnsKeysKeySigningKeysDigests(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39719,12 +39719,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleDnsKeysZoneSigningKeys(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleDnsKeysZoneSigningKeys(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -39757,12 +39757,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleDnsKeysZoneSigningKeysDigests(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleDnsKeysZoneSigningKeysDigests(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40033,12 +40033,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleFolderOrganizationPolicyBooleanPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleFolderOrganizationPolicyBooleanPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40063,12 +40063,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleFolderOrganizationPolicyListPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleFolderOrganizationPolicyListPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40096,12 +40096,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleFolderOrganizationPolicyListPolicyAllow(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleFolderOrganizationPolicyListPolicyAllow(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40127,12 +40127,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleFolderOrganizationPolicyListPolicyDeny(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleFolderOrganizationPolicyListPolicyDeny(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40158,12 +40158,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleFolderOrganizationPolicyRestorePolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleFolderOrganizationPolicyRestorePolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40257,12 +40257,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40288,12 +40288,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40551,12 +40551,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleIamTestablePermissionsPermissions(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleIamTestablePermissionsPermissions(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40813,12 +40813,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleKmsCryptoKeyVersionPublicKey(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleKmsCryptoKeyVersionPublicKey(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -40844,12 +40844,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleKmsCryptoKeyVersionTemplate(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleKmsCryptoKeyVersionTemplate(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -41160,12 +41160,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleMonitoringAppEngineServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleMonitoringAppEngineServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -41283,12 +41283,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleMonitoringClusterIstioServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleMonitoringClusterIstioServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -41403,12 +41403,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleMonitoringIstioCanonicalServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleMonitoringIstioCanonicalServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -41523,12 +41523,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleMonitoringMeshIstioServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleMonitoringMeshIstioServiceTelemetry(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -41695,12 +41695,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleMonitoringNotificationChannelSensitiveLabels(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleMonitoringNotificationChannelSensitiveLabels(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -41790,12 +41790,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42158,12 +42158,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleProjectOrganizationPolicyBooleanPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleProjectOrganizationPolicyBooleanPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42188,12 +42188,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleProjectOrganizationPolicyListPolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleProjectOrganizationPolicyListPolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42221,12 +42221,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleProjectOrganizationPolicyListPolicyAllow(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleProjectOrganizationPolicyListPolicyAllow(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42252,12 +42252,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleProjectOrganizationPolicyListPolicyDeny(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleProjectOrganizationPolicyListPolicyDeny(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42283,12 +42283,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleProjectOrganizationPolicyRestorePolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleProjectOrganizationPolicyRestorePolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42379,12 +42379,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleProjectsProjects(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleProjectsProjects(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -42510,12 +42510,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGooglePubsubTopicMessageStoragePolicy(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGooglePubsubTopicMessageStoragePolicy(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43462,12 +43462,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlCaCertsCerts(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlCaCertsCerts(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43653,12 +43653,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceClone(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceClone(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43684,12 +43684,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceIpAddress(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceIpAddress(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43716,12 +43716,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceReplicaConfiguration(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceReplicaConfiguration(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43756,12 +43756,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceRestoreBackupContext(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceRestoreBackupContext(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43788,12 +43788,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceServerCaCert(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceServerCaCert(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43822,12 +43822,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettings(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettings(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43869,12 +43869,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43905,12 +43905,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43936,12 +43936,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -43967,12 +43967,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsInsightsConfig(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsInsightsConfig(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -44000,12 +44000,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsIpConfiguration(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsIpConfiguration(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -44033,12 +44033,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -44065,12 +44065,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsLocationPreference(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsLocationPreference(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -44096,12 +44096,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -46663,12 +46663,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DataprocJobStatus(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DataprocJobStatus(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -47549,12 +47549,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new DialogflowIntentFollowupIntentInfo(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new DialogflowIntentFollowupIntentInfo(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -48220,12 +48220,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new EndpointsServiceApis(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new EndpointsServiceApis(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -48253,12 +48253,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new EndpointsServiceApisMethods(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new EndpointsServiceApisMethods(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -48286,12 +48286,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new EndpointsServiceEndpoints(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new EndpointsServiceEndpoints(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -57034,12 +57034,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new KmsKeyRingImportJobAttestation(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new KmsKeyRingImportJobAttestation(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -57065,12 +57065,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new KmsKeyRingImportJobPublicKey(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new KmsKeyRingImportJobPublicKey(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -58996,12 +58996,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new MonitoringAlertPolicyCreationRecord(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new MonitoringAlertPolicyCreationRecord(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -67722,12 +67722,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new SqlDatabaseInstanceIpAddress(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new SqlDatabaseInstanceIpAddress(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -67754,12 +67754,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new SqlDatabaseInstanceServerCaCert(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new SqlDatabaseInstanceServerCaCert(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -69166,12 +69166,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new StorageDefaultObjectAccessControlProjectTeam(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new StorageDefaultObjectAccessControlProjectTeam(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -69567,12 +69567,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new StorageObjectAccessControlProjectTeam(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new StorageObjectAccessControlProjectTeam(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
@@ -70651,12 +70651,12 @@ __Extends__: [ComplexComputedList](#cdktf-complexcomputedlist)
 
 
 ```ts
-new TpuNodeNetworkEndpoints(terraformResource: ITerraformResource, terraformAttribute: string, index: string)
+new TpuNodeNetworkEndpoints(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
 ```
 
 * **terraformResource** (<code>[ITerraformResource](#cdktf-iterraformresource)</code>)  *No description*
 * **terraformAttribute** (<code>string</code>)  *No description*
-* **index** (<code>string</code>)  *No description*
+* **complexComputedListIndex** (<code>string</code>)  *No description*
 
 
 
