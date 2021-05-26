@@ -7,6 +7,8 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeResourcePolicyConfig extends cdktf.TerraformMetaArguments {
+  /** An optional description of this resource. Provide this property when you create the resource. */
+  readonly description?: string;
   /** The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
 with RFC1035. Specifically, the name must be 1-63 characters long and
@@ -20,6 +22,8 @@ which cannot be a dash. */
   readonly region?: string;
   /** group_placement_policy block */
   readonly groupPlacementPolicy?: ComputeResourcePolicyGroupPlacementPolicy[];
+  /** instance_schedule_policy block */
+  readonly instanceSchedulePolicy?: ComputeResourcePolicyInstanceSchedulePolicy[];
   /** snapshot_schedule_policy block */
   readonly snapshotSchedulePolicy?: ComputeResourcePolicySnapshotSchedulePolicy[];
   /** timeouts block */
@@ -44,6 +48,55 @@ function computeResourcePolicyGroupPlacementPolicyToTerraform(struct?: ComputeRe
     availability_domain_count: cdktf.numberToTerraform(struct!.availabilityDomainCount),
     collocation: cdktf.stringToTerraform(struct!.collocation),
     vm_count: cdktf.numberToTerraform(struct!.vmCount),
+  }
+}
+
+export interface ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule {
+  /** Specifies the frequency for the operation, using the unix-cron format. */
+  readonly schedule: string;
+}
+
+function computeResourcePolicyInstanceSchedulePolicyVmStartScheduleToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    schedule: cdktf.stringToTerraform(struct!.schedule),
+  }
+}
+
+export interface ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule {
+  /** Specifies the frequency for the operation, using the unix-cron format. */
+  readonly schedule: string;
+}
+
+function computeResourcePolicyInstanceSchedulePolicyVmStopScheduleToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    schedule: cdktf.stringToTerraform(struct!.schedule),
+  }
+}
+
+export interface ComputeResourcePolicyInstanceSchedulePolicy {
+  /** The expiration time of the schedule. The timestamp is an RFC3339 string. */
+  readonly expirationTime?: string;
+  /** The start time of the schedule. The timestamp is an RFC3339 string. */
+  readonly startTime?: string;
+  /** Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+from the tz database: http://en.wikipedia.org/wiki/Tz_database. */
+  readonly timeZone: string;
+  /** vm_start_schedule block */
+  readonly vmStartSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule[];
+  /** vm_stop_schedule block */
+  readonly vmStopSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule[];
+}
+
+function computeResourcePolicyInstanceSchedulePolicyToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiration_time: cdktf.stringToTerraform(struct!.expirationTime),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+    time_zone: cdktf.stringToTerraform(struct!.timeZone),
+    vm_start_schedule: cdktf.listMapper(computeResourcePolicyInstanceSchedulePolicyVmStartScheduleToTerraform)(struct!.vmStartSchedule),
+    vm_stop_schedule: cdktf.listMapper(computeResourcePolicyInstanceSchedulePolicyVmStopScheduleToTerraform)(struct!.vmStopSchedule),
   }
 }
 
@@ -214,10 +267,12 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._description = config.description;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
     this._groupPlacementPolicy = config.groupPlacementPolicy;
+    this._instanceSchedulePolicy = config.instanceSchedulePolicy;
     this._snapshotSchedulePolicy = config.snapshotSchedulePolicy;
     this._timeouts = config.timeouts;
   }
@@ -225,6 +280,22 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -297,6 +368,22 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
     return this._groupPlacementPolicy
   }
 
+  // instance_schedule_policy - computed: false, optional: true, required: false
+  private _instanceSchedulePolicy?: ComputeResourcePolicyInstanceSchedulePolicy[];
+  public get instanceSchedulePolicy() {
+    return this.interpolationForAttribute('instance_schedule_policy') as any;
+  }
+  public set instanceSchedulePolicy(value: ComputeResourcePolicyInstanceSchedulePolicy[] ) {
+    this._instanceSchedulePolicy = value;
+  }
+  public resetInstanceSchedulePolicy() {
+    this._instanceSchedulePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceSchedulePolicyInput() {
+    return this._instanceSchedulePolicy
+  }
+
   // snapshot_schedule_policy - computed: false, optional: true, required: false
   private _snapshotSchedulePolicy?: ComputeResourcePolicySnapshotSchedulePolicy[];
   public get snapshotSchedulePolicy() {
@@ -335,10 +422,12 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       group_placement_policy: cdktf.listMapper(computeResourcePolicyGroupPlacementPolicyToTerraform)(this._groupPlacementPolicy),
+      instance_schedule_policy: cdktf.listMapper(computeResourcePolicyInstanceSchedulePolicyToTerraform)(this._instanceSchedulePolicy),
       snapshot_schedule_policy: cdktf.listMapper(computeResourcePolicySnapshotSchedulePolicyToTerraform)(this._snapshotSchedulePolicy),
       timeouts: computeResourcePolicyTimeoutsToTerraform(this._timeouts),
     };

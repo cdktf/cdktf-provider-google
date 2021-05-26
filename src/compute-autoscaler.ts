@@ -26,6 +26,12 @@ character, which cannot be a dash. */
   readonly timeouts?: ComputeAutoscalerTimeouts;
 }
 export interface ComputeAutoscalerAutoscalingPolicyCpuUtilization {
+  /** Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+
+- NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+
+- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand. */
+  readonly predictiveMethod?: string;
   /** The target CPU utilization that the autoscaler should maintain.
 Must be a float value in the range (0, 1]. If not specified, the
 default is 0.6.
@@ -45,6 +51,7 @@ utilization. */
 function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyCpuUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    predictive_method: cdktf.stringToTerraform(struct!.predictiveMethod),
     target: cdktf.numberToTerraform(struct!.target),
   }
 }
@@ -126,6 +133,35 @@ function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: Co
   }
 }
 
+export interface ComputeAutoscalerAutoscalingPolicyScalingSchedules {
+  /** A description of a scaling schedule. */
+  readonly description?: string;
+  /** A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect. */
+  readonly disabled?: boolean;
+  /** The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300. */
+  readonly durationSec: number;
+  /** Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule. */
+  readonly minRequiredReplicas: number;
+  readonly name: string;
+  /** The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field). */
+  readonly schedule: string;
+  /** The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. */
+  readonly timeZone?: string;
+}
+
+function computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScalingSchedules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    duration_sec: cdktf.numberToTerraform(struct!.durationSec),
+    min_required_replicas: cdktf.numberToTerraform(struct!.minRequiredReplicas),
+    name: cdktf.stringToTerraform(struct!.name),
+    schedule: cdktf.stringToTerraform(struct!.schedule),
+    time_zone: cdktf.stringToTerraform(struct!.timeZone),
+  }
+}
+
 export interface ComputeAutoscalerAutoscalingPolicy {
   /** The number of seconds that the autoscaler should wait before it
 starts collecting information from a new instance. This prevents
@@ -158,6 +194,8 @@ allowed. */
   readonly metric?: ComputeAutoscalerAutoscalingPolicyMetric[];
   /** scale_in_control block */
   readonly scaleInControl?: ComputeAutoscalerAutoscalingPolicyScaleInControl[];
+  /** scaling_schedules block */
+  readonly scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[];
 }
 
 function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscalerAutoscalingPolicy): any {
@@ -171,6 +209,7 @@ function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscale
     load_balancing_utilization: cdktf.listMapper(computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform)(struct!.loadBalancingUtilization),
     metric: cdktf.listMapper(computeAutoscalerAutoscalingPolicyMetricToTerraform)(struct!.metric),
     scale_in_control: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScaleInControlToTerraform)(struct!.scaleInControl),
+    scaling_schedules: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform)(struct!.scalingSchedules),
   }
 }
 

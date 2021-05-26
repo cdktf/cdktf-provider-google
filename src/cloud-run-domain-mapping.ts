@@ -9,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArguments {
   /** The location of the cloud run instance. eg us-central1 */
   readonly location: string;
-  /** Name should be a verified domain */
+  /** Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain */
   readonly name: string;
   readonly project?: string;
   /** metadata block */

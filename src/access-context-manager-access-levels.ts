@@ -20,7 +20,7 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevi
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1". */
   readonly minimumVersion?: string;
-  /** The operating system type of the device. Possible values: ["OS_UNSPECIFIED", "DESKTOP_MAC", "DESKTOP_WINDOWS", "DESKTOP_LINUX", "DESKTOP_CHROME_OS"] */
+  /** The operating system type of the device. Possible values: ["OS_UNSPECIFIED", "DESKTOP_MAC", "DESKTOP_WINDOWS", "DESKTOP_LINUX", "DESKTOP_CHROME_OS", "ANDROID", "IOS"] */
   readonly osType: string;
 }
 

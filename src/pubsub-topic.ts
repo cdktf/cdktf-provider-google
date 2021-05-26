@@ -20,6 +20,8 @@ The expected format is 'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*' */
   readonly project?: string;
   /** message_storage_policy block */
   readonly messageStoragePolicy?: PubsubTopicMessageStoragePolicy[];
+  /** schema_settings block */
+  readonly schemaSettings?: PubsubTopicSchemaSettings[];
   /** timeouts block */
   readonly timeouts?: PubsubTopicTimeouts;
 }
@@ -37,6 +39,24 @@ function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicMessageS
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     allowed_persistence_regions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedPersistenceRegions),
+  }
+}
+
+export interface PubsubTopicSchemaSettings {
+  /** The encoding of messages validated against schema. Default value: "ENCODING_UNSPECIFIED" Possible values: ["ENCODING_UNSPECIFIED", "JSON", "BINARY"] */
+  readonly encoding?: string;
+  /** The name of the schema that messages published should be
+validated against. Format is projects/{project}/schemas/{schema}.
+The value of this field will be _deleted-schema_
+if the schema has been deleted. */
+  readonly schema: string;
+}
+
+function pubsubTopicSchemaSettingsToTerraform(struct?: PubsubTopicSchemaSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    schema: cdktf.stringToTerraform(struct!.schema),
   }
 }
 
@@ -80,6 +100,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._messageStoragePolicy = config.messageStoragePolicy;
+    this._schemaSettings = config.schemaSettings;
     this._timeouts = config.timeouts;
   }
 
@@ -169,6 +190,22 @@ export class PubsubTopic extends cdktf.TerraformResource {
     return this._messageStoragePolicy
   }
 
+  // schema_settings - computed: false, optional: true, required: false
+  private _schemaSettings?: PubsubTopicSchemaSettings[];
+  public get schemaSettings() {
+    return this.interpolationForAttribute('schema_settings') as any;
+  }
+  public set schemaSettings(value: PubsubTopicSchemaSettings[] ) {
+    this._schemaSettings = value;
+  }
+  public resetSchemaSettings() {
+    this._schemaSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaSettingsInput() {
+    return this._schemaSettings
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PubsubTopicTimeouts;
   public get timeouts() {
@@ -196,6 +233,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       message_storage_policy: cdktf.listMapper(pubsubTopicMessageStoragePolicyToTerraform)(this._messageStoragePolicy),
+      schema_settings: cdktf.listMapper(pubsubTopicSchemaSettingsToTerraform)(this._schemaSettings),
       timeouts: pubsubTopicTimeoutsToTerraform(this._timeouts),
     };
   }

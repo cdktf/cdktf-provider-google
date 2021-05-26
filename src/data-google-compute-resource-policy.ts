@@ -36,6 +36,47 @@ export class DataGoogleComputeResourcePolicyGroupPlacementPolicy extends cdktf.C
     return this.getNumberAttribute('vm_count');
   }
 }
+export class DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule extends cdktf.ComplexComputedList {
+
+  // schedule - computed: true, optional: false, required: false
+  public get schedule() {
+    return this.getStringAttribute('schedule');
+  }
+}
+export class DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule extends cdktf.ComplexComputedList {
+
+  // schedule - computed: true, optional: false, required: false
+  public get schedule() {
+    return this.getStringAttribute('schedule');
+  }
+}
+export class DataGoogleComputeResourcePolicyInstanceSchedulePolicy extends cdktf.ComplexComputedList {
+
+  // expiration_time - computed: true, optional: false, required: false
+  public get expirationTime() {
+    return this.getStringAttribute('expiration_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+
+  // time_zone - computed: true, optional: false, required: false
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+
+  // vm_start_schedule - computed: true, optional: false, required: false
+  public get vmStartSchedule() {
+    return this.interpolationForAttribute('vm_start_schedule') as any;
+  }
+
+  // vm_stop_schedule - computed: true, optional: false, required: false
+  public get vmStopSchedule() {
+    return this.interpolationForAttribute('vm_stop_schedule') as any;
+  }
+}
 export class DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy extends cdktf.ComplexComputedList {
 
   // max_retention_days - computed: true, optional: false, required: false
@@ -171,6 +212,11 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+
   // group_placement_policy - computed: true, optional: false, required: false
   public groupPlacementPolicy(index: string) {
     return new DataGoogleComputeResourcePolicyGroupPlacementPolicy(this, 'group_placement_policy', index);
@@ -179,6 +225,11 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // instance_schedule_policy - computed: true, optional: false, required: false
+  public instanceSchedulePolicy(index: string) {
+    return new DataGoogleComputeResourcePolicyInstanceSchedulePolicy(this, 'instance_schedule_policy', index);
   }
 
   // name - computed: false, optional: false, required: true

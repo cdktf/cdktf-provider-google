@@ -58,6 +58,7 @@ export interface GoogleProviderConfig {
   readonly impersonateServiceAccountDelegates?: string[];
   readonly kmsCustomEndpoint?: string;
   readonly loggingCustomEndpoint?: string;
+  readonly memcacheCustomEndpoint?: string;
   readonly mlEngineCustomEndpoint?: string;
   readonly monitoringCustomEndpoint?: string;
   readonly networkManagementCustomEndpoint?: string;
@@ -178,6 +179,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._impersonateServiceAccountDelegates = config.impersonateServiceAccountDelegates;
     this._kmsCustomEndpoint = config.kmsCustomEndpoint;
     this._loggingCustomEndpoint = config.loggingCustomEndpoint;
+    this._memcacheCustomEndpoint = config.memcacheCustomEndpoint;
     this._mlEngineCustomEndpoint = config.mlEngineCustomEndpoint;
     this._monitoringCustomEndpoint = config.monitoringCustomEndpoint;
     this._networkManagementCustomEndpoint = config.networkManagementCustomEndpoint;
@@ -1035,6 +1037,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._loggingCustomEndpoint
   }
 
+  // memcache_custom_endpoint - computed: false, optional: true, required: false
+  private _memcacheCustomEndpoint?: string;
+  public get memcacheCustomEndpoint() {
+    return this._memcacheCustomEndpoint;
+  }
+  public set memcacheCustomEndpoint(value: string  | undefined) {
+    this._memcacheCustomEndpoint = value;
+  }
+  public resetMemcacheCustomEndpoint() {
+    this._memcacheCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memcacheCustomEndpointInput() {
+    return this._memcacheCustomEndpoint
+  }
+
   // ml_engine_custom_endpoint - computed: false, optional: true, required: false
   private _mlEngineCustomEndpoint?: string;
   public get mlEngineCustomEndpoint() {
@@ -1652,6 +1670,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       impersonate_service_account_delegates: cdktf.listMapper(cdktf.stringToTerraform)(this._impersonateServiceAccountDelegates),
       kms_custom_endpoint: cdktf.stringToTerraform(this._kmsCustomEndpoint),
       logging_custom_endpoint: cdktf.stringToTerraform(this._loggingCustomEndpoint),
+      memcache_custom_endpoint: cdktf.stringToTerraform(this._memcacheCustomEndpoint),
       ml_engine_custom_endpoint: cdktf.stringToTerraform(this._mlEngineCustomEndpoint),
       monitoring_custom_endpoint: cdktf.stringToTerraform(this._monitoringCustomEndpoint),
       network_management_custom_endpoint: cdktf.stringToTerraform(this._networkManagementCustomEndpoint),

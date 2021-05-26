@@ -48,6 +48,11 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
     return this.interpolationForAttribute('group_key') as any;
   }
 
+  // initial_group_config - computed: true, optional: false, required: false
+  public get initialGroupConfig() {
+    return this.getStringAttribute('initial_group_config');
+  }
+
   // labels - computed: true, optional: false, required: false
   public get labels() {
     return this.interpolationForAttribute('labels') as any;

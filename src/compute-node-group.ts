@@ -9,6 +9,8 @@ import * as cdktf from 'cdktf';
 export interface ComputeNodeGroupConfig extends cdktf.TerraformMetaArguments {
   /** An optional textual description of the resource. */
   readonly description?: string;
+  /** The initial number of nodes in the node group. One of 'initial_size' or 'size' must be specified. */
+  readonly initialSize?: number;
   /** Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. */
   readonly maintenancePolicy?: string;
   /** Name of the resource. */
@@ -16,8 +18,8 @@ export interface ComputeNodeGroupConfig extends cdktf.TerraformMetaArguments {
   /** The URL of the node template to which this node group belongs. */
   readonly nodeTemplate: string;
   readonly project?: string;
-  /** The total number of nodes in the node group. */
-  readonly size: number;
+  /** The total number of nodes in the node group. One of 'initial_size' or 'size' must be specified. */
+  readonly size?: number;
   /** Zone where this node group is located */
   readonly zone?: string;
   /** autoscaling_policy block */
@@ -100,6 +102,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._initialSize = config.initialSize;
     this._maintenancePolicy = config.maintenancePolicy;
     this._name = config.name;
     this._nodeTemplate = config.nodeTemplate;
@@ -139,6 +142,22 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // initial_size - computed: false, optional: true, required: false
+  private _initialSize?: number;
+  public get initialSize() {
+    return this.getNumberAttribute('initial_size');
+  }
+  public set initialSize(value: number ) {
+    this._initialSize = value;
+  }
+  public resetInitialSize() {
+    this._initialSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initialSizeInput() {
+    return this._initialSize
   }
 
   // maintenance_policy - computed: false, optional: true, required: false
@@ -207,13 +226,16 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
-  // size - computed: false, optional: false, required: true
-  private _size: number;
+  // size - computed: true, optional: true, required: false
+  private _size?: number;
   public get size() {
     return this.getNumberAttribute('size');
   }
   public set size(value: number) {
     this._size = value;
+  }
+  public resetSize() {
+    this._size = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sizeInput() {
@@ -291,6 +313,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      initial_size: cdktf.numberToTerraform(this._initialSize),
       maintenance_policy: cdktf.stringToTerraform(this._maintenancePolicy),
       name: cdktf.stringToTerraform(this._name),
       node_template: cdktf.stringToTerraform(this._nodeTemplate),
