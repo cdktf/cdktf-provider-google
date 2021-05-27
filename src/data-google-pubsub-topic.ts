@@ -18,6 +18,18 @@ export class DataGooglePubsubTopicMessageStoragePolicy extends cdktf.ComplexComp
     return this.getListAttribute('allowed_persistence_regions');
   }
 }
+export class DataGooglePubsubTopicSchemaSettings extends cdktf.ComplexComputedList {
+
+  // encoding - computed: true, optional: false, required: false
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+
+  // schema - computed: true, optional: false, required: false
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+}
 
 // Resource
 
@@ -93,6 +105,11 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project
+  }
+
+  // schema_settings - computed: true, optional: false, required: false
+  public schemaSettings(index: string) {
+    return new DataGooglePubsubTopicSchemaSettings(this, 'schema_settings', index);
   }
 
   // =========

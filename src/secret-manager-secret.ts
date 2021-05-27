@@ -28,15 +28,30 @@ An object containing a list of "key": value pairs. Example:
   /** timeouts block */
   readonly timeouts?: SecretManagerSecretTimeouts;
 }
+export interface SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption {
+  /** Describes the Cloud KMS encryption key that will be used to protect destination secret. */
+  readonly kmsKeyName: string;
+}
+
+function secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
 export interface SecretManagerSecretReplicationUserManagedReplicas {
   /** The canonical IDs of the location to replicate data. For example: "us-east1". */
   readonly location: string;
+  /** customer_managed_encryption block */
+  readonly customerManagedEncryption?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption[];
 }
 
 function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     location: cdktf.stringToTerraform(struct!.location),
+    customer_managed_encryption: cdktf.listMapper(secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform)(struct!.customerManagedEncryption),
   }
 }
 

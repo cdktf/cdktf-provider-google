@@ -7,7 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6,POSTGRES_11, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions. */
+  /** The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions. */
   readonly databaseVersion?: string;
   /** Used to block Terraform from deleting a SQL Instance. */
   readonly deletionProtection?: boolean;
@@ -78,7 +78,7 @@ export class SqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
 }
 export interface SqlDatabaseInstanceClone {
   /** The timestamp of the point in time that should be restored. */
-  readonly pointInTime: string;
+  readonly pointInTime?: string;
   /** The name of the instance from which the point in time should be restored. */
   readonly sourceInstanceName: string;
 }
@@ -322,7 +322,7 @@ settings.backup_configuration.binary_log_enabled are both set to true. */
   readonly pricingPlan?: string;
   /** This property is only applicable to First Generation instances. First Generation instances are now deprecated, see here for information on how to upgrade to Second Generation instances. Replication type for this instance, can be one of ASYNCHRONOUS or SYNCHRONOUS. */
   readonly replicationType?: string;
-  /** The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types such as db-f1-micro, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types. */
+  /** The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types. */
   readonly tier: string;
   /** A set of key/value user label pairs to assign to the instance. */
   readonly userLabels?: { [key: string]: string };

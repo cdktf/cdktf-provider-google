@@ -24,18 +24,8 @@ character, which cannot be a dash. */
   readonly region?: string;
   /** timeouts block */
   readonly timeouts?: ComputeHaVpnGatewayTimeouts;
-}
-export class ComputeHaVpnGatewayVpnInterfaces extends cdktf.ComplexComputedList {
-
-  // id - computed: true, optional: false, required: false
-  public get id() {
-    return this.getNumberAttribute('id');
-  }
-
-  // ip_address - computed: true, optional: false, required: false
-  public get ipAddress() {
-    return this.getStringAttribute('ip_address');
-  }
+  /** vpn_interfaces block */
+  readonly vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[];
 }
 export interface ComputeHaVpnGatewayTimeouts {
   readonly create?: string;
@@ -47,6 +37,18 @@ function computeHaVpnGatewayTimeoutsToTerraform(struct?: ComputeHaVpnGatewayTime
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+export interface ComputeHaVpnGatewayVpnInterfaces {
+  /** The numeric ID of this VPN gateway interface. */
+  readonly id?: number;
+}
+
+function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVpnGatewayVpnInterfaces): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.numberToTerraform(struct!.id),
   }
 }
 
@@ -76,6 +78,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._timeouts = config.timeouts;
+    this._vpnInterfaces = config.vpnInterfaces;
   }
 
   // ==========
@@ -166,11 +169,6 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
-  // vpn_interfaces - computed: true, optional: false, required: false
-  public vpnInterfaces(index: string) {
-    return new ComputeHaVpnGatewayVpnInterfaces(this, 'vpn_interfaces', index);
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ComputeHaVpnGatewayTimeouts;
   public get timeouts() {
@@ -187,6 +185,22 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // vpn_interfaces - computed: false, optional: true, required: false
+  private _vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[];
+  public get vpnInterfaces() {
+    return this.interpolationForAttribute('vpn_interfaces') as any;
+  }
+  public set vpnInterfaces(value: ComputeHaVpnGatewayVpnInterfaces[] ) {
+    this._vpnInterfaces = value;
+  }
+  public resetVpnInterfaces() {
+    this._vpnInterfaces = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnInterfacesInput() {
+    return this._vpnInterfaces
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -199,6 +213,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       timeouts: computeHaVpnGatewayTimeoutsToTerraform(this._timeouts),
+      vpn_interfaces: cdktf.listMapper(computeHaVpnGatewayVpnInterfacesToTerraform)(this._vpnInterfaces),
     };
   }
 }

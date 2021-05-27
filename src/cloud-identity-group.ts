@@ -12,6 +12,12 @@ Must not be longer than 4,096 characters. */
   readonly description?: string;
   /** The display name of the Group. */
   readonly displayName?: string;
+  /** The initial configuration options for creating a Group.
+
+See the
+[API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig)
+for possible values. Default value: "EMPTY" Possible values: ["INITIAL_GROUP_CONFIG_UNSPECIFIED", "WITH_INITIAL_OWNER", "EMPTY"] */
+  readonly initialGroupConfig?: string;
   /** The labels that apply to the Group.
 
 Must not contain more than one entry. Must contain the entry
@@ -96,6 +102,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._displayName = config.displayName;
+    this._initialGroupConfig = config.initialGroupConfig;
     this._labels = config.labels;
     this._parent = config.parent;
     this._groupKey = config.groupKey;
@@ -146,6 +153,22 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // initial_group_config - computed: false, optional: true, required: false
+  private _initialGroupConfig?: string;
+  public get initialGroupConfig() {
+    return this.getStringAttribute('initial_group_config');
+  }
+  public set initialGroupConfig(value: string ) {
+    this._initialGroupConfig = value;
+  }
+  public resetInitialGroupConfig() {
+    this._initialGroupConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initialGroupConfigInput() {
+    return this._initialGroupConfig
   }
 
   // labels - computed: false, optional: false, required: true
@@ -221,6 +244,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      initial_group_config: cdktf.stringToTerraform(this._initialGroupConfig),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       parent: cdktf.stringToTerraform(this._parent),
       group_key: cdktf.listMapper(cloudIdentityGroupGroupKeyToTerraform)(this._groupKey),

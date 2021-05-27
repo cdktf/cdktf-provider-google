@@ -35,7 +35,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
   readonly runtimeChannel?: string;
   /** The path or name of the app's main executable. */
   readonly runtimeMainExecutablePath?: string;
-  /** AppEngine service resource */
+  /** AppEngine service resource. Can contain numbers, letters, and hyphens. */
   readonly service: string;
   /** Current serving status of this version. Only the versions with a SERVING status create instances and can be billed. Default value: "SERVING" Possible values: ["SERVING", "STOPPED"] */
   readonly servingStatus?: string;

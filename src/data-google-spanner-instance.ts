@@ -17,6 +17,7 @@ In order to obtain a valid list please consult the
   /** The descriptive name for this instance as it appears in UIs. Must be
 unique per project and between 4 and 30 characters in length. */
   readonly displayName?: string;
+  readonly forceDestroy?: boolean;
   /** An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }. */
   readonly labels?: { [key: string]: string };
@@ -53,6 +54,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     });
     this._config = config.config;
     this._displayName = config.displayName;
+    this._forceDestroy = config.forceDestroy;
     this._labels = config.labels;
     this._name = config.name;
     this._numNodes = config.numNodes;
@@ -93,6 +95,22 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName
+  }
+
+  // force_destroy - computed: false, optional: true, required: false
+  private _forceDestroy?: boolean;
+  public get forceDestroy() {
+    return this.getBooleanAttribute('force_destroy');
+  }
+  public set forceDestroy(value: boolean ) {
+    this._forceDestroy = value;
+  }
+  public resetForceDestroy() {
+    this._forceDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDestroyInput() {
+    return this._forceDestroy
   }
 
   // id - computed: true, optional: true, required: false
@@ -174,6 +192,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     return {
       config: cdktf.stringToTerraform(this._config),
       display_name: cdktf.stringToTerraform(this._displayName),
+      force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       num_nodes: cdktf.numberToTerraform(this._numNodes),
