@@ -7,25 +7,52 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LoggingBillingAccountExclusionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html#billing_account LoggingBillingAccountExclusion#billing_account}
+  */
   readonly billingAccount: string;
-  /** A human-readable description. */
+  /**
+  * A human-readable description.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html#description LoggingBillingAccountExclusion#description}
+  */
   readonly description?: string;
-  /** Whether this exclusion rule should be disabled or not. This defaults to false. */
+  /**
+  * Whether this exclusion rule should be disabled or not. This defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html#disabled LoggingBillingAccountExclusion#disabled}
+  */
   readonly disabled?: boolean;
-  /** The filter to apply when excluding logs. Only log entries that match the filter are excluded. */
+  /**
+  * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html#filter LoggingBillingAccountExclusion#filter}
+  */
   readonly filter: string;
-  /** The name of the logging exclusion. */
+  /**
+  * The name of the logging exclusion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html#name LoggingBillingAccountExclusion#name}
+  */
   readonly name: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html google_logging_billing_account_exclusion}
+*/
 export class LoggingBillingAccountExclusion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_exclusion.html google_logging_billing_account_exclusion} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LoggingBillingAccountExclusionConfig
+  */
   public constructor(scope: Construct, id: string, config: LoggingBillingAccountExclusionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_logging_billing_account_exclusion',

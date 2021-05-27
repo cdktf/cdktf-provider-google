@@ -7,30 +7,70 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ActiveDirectoryDomainConfig extends cdktf.TerraformMetaArguments {
-  /** The name of delegated administrator account used to perform Active Directory operations. 
-If not specified, setupadmin will be used. */
+  /**
+  * The name of delegated administrator account used to perform Active Directory operations. 
+If not specified, setupadmin will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#admin ActiveDirectoryDomain#admin}
+  */
   readonly admin?: string;
-  /** The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
-If CIDR subnets overlap between networks, domain creation will fail. */
+  /**
+  * The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
+If CIDR subnets overlap between networks, domain creation will fail.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#authorized_networks ActiveDirectoryDomain#authorized_networks}
+  */
   readonly authorizedNetworks?: string[];
-  /** The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
-https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains. */
+  /**
+  * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
+https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#domain_name ActiveDirectoryDomain#domain_name}
+  */
   readonly domainName: string;
-  /** Resource labels that can contain user-provided metadata */
+  /**
+  * Resource labels that can contain user-provided metadata
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#labels ActiveDirectoryDomain#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/] 
-e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block. */
+  /**
+  * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/] 
+e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#locations ActiveDirectoryDomain#locations}
+  */
   readonly locations: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#project ActiveDirectoryDomain#project}
+  */
   readonly project?: string;
-  /** The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. 
-Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks */
+  /**
+  * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. 
+Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#reserved_ip_range ActiveDirectoryDomain#reserved_ip_range}
+  */
   readonly reservedIpRange: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#timeouts ActiveDirectoryDomain#timeouts}
+  */
   readonly timeouts?: ActiveDirectoryDomainTimeouts;
 }
 export interface ActiveDirectoryDomainTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#create ActiveDirectoryDomain#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#delete ActiveDirectoryDomain#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#update ActiveDirectoryDomain#update}
+  */
   readonly update?: string;
 }
 
@@ -44,14 +84,22 @@ function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomain
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html google_active_directory_domain}
+*/
 export class ActiveDirectoryDomain extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html google_active_directory_domain} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ActiveDirectoryDomainConfig
+  */
   public constructor(scope: Construct, id: string, config: ActiveDirectoryDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'google_active_directory_domain',

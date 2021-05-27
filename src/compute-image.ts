@@ -7,43 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#description ComputeImage#description}
+  */
   readonly description?: string;
-  /** Size of the image when restored onto a persistent disk (in GB). */
+  /**
+  * Size of the image when restored onto a persistent disk (in GB).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#disk_size_gb ComputeImage#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
-  /** The name of the image family to which this image belongs. You can
+  /**
+  * The name of the image family to which this image belongs. You can
 create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
-RFC1035. */
+RFC1035.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#family ComputeImage#family}
+  */
   readonly family?: string;
-  /** Labels to apply to this Image. */
+  /**
+  * Labels to apply to this Image.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#labels ComputeImage#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Any applicable license URI. */
+  /**
+  * Any applicable license URI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#licenses ComputeImage#licenses}
+  */
   readonly licenses?: string[];
-  /** Name of the resource; provided by the client when the resource is
+  /**
+  * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash. */
+last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#name ComputeImage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#project ComputeImage#project}
+  */
   readonly project?: string;
-  /** The source disk to create this image based on.
+  /**
+  * The source disk to create this image based on.
 You must provide either this property or the
-rawDisk.source property but not both to create an image. */
+rawDisk.source property but not both to create an image.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#source_disk ComputeImage#source_disk}
+  */
   readonly sourceDisk?: string;
-  /** URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+  /**
+  * URL of the source image used to create this image. In order to create an image, you must provide the full or partial
 URL of one of the following:
 
 * The selfLink URL
 * This property
 * The rawDisk.source URL
-* The sourceDisk URL */
+* The sourceDisk URL
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#source_image ComputeImage#source_image}
+  */
   readonly sourceImage?: string;
-  /** URL of the source snapshot used to create this image.
+  /**
+  * URL of the source snapshot used to create this image.
 
 In order to create an image, you must provide the full or partial URL of one of the following:
 
@@ -51,17 +87,36 @@ In order to create an image, you must provide the full or partial URL of one of 
 * This property
 * The sourceImage URL
 * The rawDisk.source URL
-* The sourceDisk URL */
+* The sourceDisk URL
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#source_snapshot ComputeImage#source_snapshot}
+  */
   readonly sourceSnapshot?: string;
-  /** guest_os_features block */
+  /**
+  * guest_os_features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#guest_os_features ComputeImage#guest_os_features}
+  */
   readonly guestOsFeatures?: ComputeImageGuestOsFeatures[];
-  /** raw_disk block */
+  /**
+  * raw_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#raw_disk ComputeImage#raw_disk}
+  */
   readonly rawDisk?: ComputeImageRawDisk[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#timeouts ComputeImage#timeouts}
+  */
   readonly timeouts?: ComputeImageTimeouts;
 }
 export interface ComputeImageGuestOsFeatures {
-  /** The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC"] */
+  /**
+  * The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#type ComputeImage#type}
+  */
   readonly type: string;
 }
 
@@ -73,17 +128,29 @@ function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGuestOsFeat
 }
 
 export interface ComputeImageRawDisk {
-  /** The format used to encode and transmit the block device, which
+  /**
+  * The format used to encode and transmit the block device, which
 should be TAR. This is just a container and transmission format
 and not a runtime format. Provided by the client when the disk
-image is created. Default value: "TAR" Possible values: ["TAR"] */
+image is created. Default value: "TAR" Possible values: ["TAR"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#container_type ComputeImage#container_type}
+  */
   readonly containerType?: string;
-  /** An optional SHA1 checksum of the disk image before unpackaging.
-This is provided by the client when the disk image is created. */
+  /**
+  * An optional SHA1 checksum of the disk image before unpackaging.
+This is provided by the client when the disk image is created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#sha1 ComputeImage#sha1}
+  */
   readonly sha1?: string;
-  /** The full Google Cloud Storage URL where disk storage is stored
+  /**
+  * The full Google Cloud Storage URL where disk storage is stored
 You must provide either this property or the sourceDisk property
-but not both. */
+but not both.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#source ComputeImage#source}
+  */
   readonly source: string;
 }
 
@@ -97,8 +164,17 @@ function computeImageRawDiskToTerraform(struct?: ComputeImageRawDisk): any {
 }
 
 export interface ComputeImageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#create ComputeImage#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#delete ComputeImage#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#update ComputeImage#update}
+  */
   readonly update?: string;
 }
 
@@ -112,14 +188,22 @@ function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_image.html google_compute_image}
+*/
 export class ComputeImage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_image.html google_compute_image} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeImageConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeImageConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_image',

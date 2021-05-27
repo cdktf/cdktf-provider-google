@@ -7,32 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MemcacheInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The full name of the GCE network to connect the instance to.  If not provided,
-'default' will be used. */
+  /**
+  * The full name of the GCE network to connect the instance to.  If not provided,
+'default' will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#authorized_network MemcacheInstance#authorized_network}
+  */
   readonly authorizedNetwork?: string;
-  /** A user-visible name for the instance. */
+  /**
+  * A user-visible name for the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#display_name MemcacheInstance#display_name}
+  */
   readonly displayName?: string;
-  /** Resource labels to represent user-provided metadata. */
+  /**
+  * Resource labels to represent user-provided metadata.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#labels MemcacheInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The major version of Memcached software. If not provided, latest supported version will be used.
+  /**
+  * The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
-determined by our system based on the latest supported minor version. Default value: "MEMCACHE_1_5" Possible values: ["MEMCACHE_1_5"] */
+determined by our system based on the latest supported minor version. Default value: "MEMCACHE_1_5" Possible values: ["MEMCACHE_1_5"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#memcache_version MemcacheInstance#memcache_version}
+  */
   readonly memcacheVersion?: string;
-  /** The resource name of the instance. */
+  /**
+  * The resource name of the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#name MemcacheInstance#name}
+  */
   readonly name: string;
-  /** Number of nodes in the memcache instance. */
+  /**
+  * Number of nodes in the memcache instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#node_count MemcacheInstance#node_count}
+  */
   readonly nodeCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#project MemcacheInstance#project}
+  */
   readonly project?: string;
-  /** The region of the Memcache instance. If it is not provided, the provider region is used. */
+  /**
+  * The region of the Memcache instance. If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#region MemcacheInstance#region}
+  */
   readonly region?: string;
-  /** Zones where memcache nodes should be provisioned.  If not
-provided, all zones will be used. */
+  /**
+  * Zones where memcache nodes should be provisioned.  If not
+provided, all zones will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#zones MemcacheInstance#zones}
+  */
   readonly zones?: string[];
-  /** memcache_parameters block */
+  /**
+  * memcache_parameters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#memcache_parameters MemcacheInstance#memcache_parameters}
+  */
   readonly memcacheParameters?: MemcacheInstanceMemcacheParameters[];
-  /** node_config block */
+  /**
+  * node_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#node_config MemcacheInstance#node_config}
+  */
   readonly nodeConfig: MemcacheInstanceNodeConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#timeouts MemcacheInstance#timeouts}
+  */
   readonly timeouts?: MemcacheInstanceTimeouts;
 }
 export class MemcacheInstanceMemcacheNodes extends cdktf.ComplexComputedList {
@@ -63,7 +110,11 @@ export class MemcacheInstanceMemcacheNodes extends cdktf.ComplexComputedList {
   }
 }
 export interface MemcacheInstanceMemcacheParameters {
-  /** User-defined set of parameters to use in the memcache process. */
+  /**
+  * User-defined set of parameters to use in the memcache process.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#params MemcacheInstance#params}
+  */
   readonly params?: { [key: string]: string };
 }
 
@@ -75,9 +126,17 @@ function memcacheInstanceMemcacheParametersToTerraform(struct?: MemcacheInstance
 }
 
 export interface MemcacheInstanceNodeConfig {
-  /** Number of CPUs per node. */
+  /**
+  * Number of CPUs per node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#cpu_count MemcacheInstance#cpu_count}
+  */
   readonly cpuCount: number;
-  /** Memory size in Mebibytes for each memcache node. */
+  /**
+  * Memory size in Mebibytes for each memcache node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#memory_size_mb MemcacheInstance#memory_size_mb}
+  */
   readonly memorySizeMb: number;
 }
 
@@ -90,8 +149,17 @@ function memcacheInstanceNodeConfigToTerraform(struct?: MemcacheInstanceNodeConf
 }
 
 export interface MemcacheInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#create MemcacheInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#delete MemcacheInstance#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#update MemcacheInstance#update}
+  */
   readonly update?: string;
 }
 
@@ -105,14 +173,22 @@ function memcacheInstanceTimeoutsToTerraform(struct?: MemcacheInstanceTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html google_memcache_instance}
+*/
 export class MemcacheInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html google_memcache_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MemcacheInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: MemcacheInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_memcache_instance',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_service_account_key.html
+// https://www.terraform.io/docs/providers/google/d/service_account_key.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html#name DataGoogleServiceAccountKey#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html#project DataGoogleServiceAccountKey#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html#public_key_type DataGoogleServiceAccountKey#public_key_type}
+  */
   readonly publicKeyType?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html google_service_account_key}
+*/
 export class DataGoogleServiceAccountKey extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html google_service_account_key} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleServiceAccountKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleServiceAccountKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account_key',

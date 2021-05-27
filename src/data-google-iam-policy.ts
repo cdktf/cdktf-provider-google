@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_iam_policy.html
+// https://www.terraform.io/docs/providers/google/d/iam_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,27 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** audit_config block */
+  /**
+  * audit_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#audit_config DataGoogleIamPolicy#audit_config}
+  */
   readonly auditConfig?: DataGoogleIamPolicyAuditConfig[];
-  /** binding block */
+  /**
+  * binding block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#binding DataGoogleIamPolicy#binding}
+  */
   readonly binding?: DataGoogleIamPolicyBinding[];
 }
 export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#exempted_members DataGoogleIamPolicy#exempted_members}
+  */
   readonly exemptedMembers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#log_type DataGoogleIamPolicy#log_type}
+  */
   readonly logType: string;
 }
 
@@ -26,8 +40,15 @@ function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataG
 }
 
 export interface DataGoogleIamPolicyAuditConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#service DataGoogleIamPolicy#service}
+  */
   readonly service: string;
-  /** audit_log_configs block */
+  /**
+  * audit_log_configs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
+  */
   readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[];
 }
 
@@ -40,8 +61,17 @@ function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyA
 }
 
 export interface DataGoogleIamPolicyBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#description DataGoogleIamPolicy#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#expression DataGoogleIamPolicy#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#title DataGoogleIamPolicy#title}
+  */
   readonly title: string;
 }
 
@@ -55,9 +85,19 @@ function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPo
 }
 
 export interface DataGoogleIamPolicyBinding {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#members DataGoogleIamPolicy#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#role DataGoogleIamPolicy#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#condition DataGoogleIamPolicy#condition}
+  */
   readonly condition?: DataGoogleIamPolicyBindingCondition[];
 }
 
@@ -71,14 +111,22 @@ function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBindi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html google_iam_policy}
+*/
 export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html google_iam_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleIamPolicyConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleIamPolicyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_iam_policy',

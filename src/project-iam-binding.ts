@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#members ProjectIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#project ProjectIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#role ProjectIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#condition ProjectIamBinding#condition}
+  */
   readonly condition?: ProjectIamBindingCondition[];
 }
 export interface ProjectIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#description ProjectIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#expression ProjectIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html#title ProjectIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function projectIamBindingConditionToTerraform(struct?: ProjectIamBindingConditi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html google_project_iam_binding}
+*/
 export class ProjectIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding.html google_project_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_iam_binding',

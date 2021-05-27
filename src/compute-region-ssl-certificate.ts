@@ -7,13 +7,22 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRegionSslCertificateConfig extends cdktf.TerraformMetaArguments {
-  /** The certificate in PEM format.
+  /**
+  * The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert. */
+The chain must include at least one intermediate cert.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#certificate ComputeRegionSslCertificate#certificate}
+  */
   readonly certificate: string;
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#description ComputeRegionSslCertificate#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
@@ -22,21 +31,49 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
 
-These are in the same namespace as the managed SSL certificates. */
+These are in the same namespace as the managed SSL certificates.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#name ComputeRegionSslCertificate#name}
+  */
   readonly name?: string;
-  /** Creates a unique name beginning with the specified prefix. Conflicts with name. */
+  /**
+  * Creates a unique name beginning with the specified prefix. Conflicts with name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#name_prefix ComputeRegionSslCertificate#name_prefix}
+  */
   readonly namePrefix?: string;
-  /** The write-only private key in PEM format. */
+  /**
+  * The write-only private key in PEM format.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#private_key ComputeRegionSslCertificate#private_key}
+  */
   readonly privateKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#project ComputeRegionSslCertificate#project}
+  */
   readonly project?: string;
-  /** The Region in which the created regional ssl certificate should reside.
-If it is not provided, the provider region is used. */
+  /**
+  * The Region in which the created regional ssl certificate should reside.
+If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#region ComputeRegionSslCertificate#region}
+  */
   readonly region?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#timeouts ComputeRegionSslCertificate#timeouts}
+  */
   readonly timeouts?: ComputeRegionSslCertificateTimeouts;
 }
 export interface ComputeRegionSslCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#create ComputeRegionSslCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html#delete ComputeRegionSslCertificate#delete}
+  */
   readonly delete?: string;
 }
 
@@ -49,14 +86,22 @@ function computeRegionSslCertificateTimeoutsToTerraform(struct?: ComputeRegionSs
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html google_compute_region_ssl_certificate}
+*/
 export class ComputeRegionSslCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_ssl_certificate.html google_compute_region_ssl_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRegionSslCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRegionSslCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_ssl_certificate',

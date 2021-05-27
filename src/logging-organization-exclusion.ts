@@ -7,25 +7,52 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LoggingOrganizationExclusionConfig extends cdktf.TerraformMetaArguments {
-  /** A human-readable description. */
+  /**
+  * A human-readable description.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html#description LoggingOrganizationExclusion#description}
+  */
   readonly description?: string;
-  /** Whether this exclusion rule should be disabled or not. This defaults to false. */
+  /**
+  * Whether this exclusion rule should be disabled or not. This defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html#disabled LoggingOrganizationExclusion#disabled}
+  */
   readonly disabled?: boolean;
-  /** The filter to apply when excluding logs. Only log entries that match the filter are excluded. */
+  /**
+  * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html#filter LoggingOrganizationExclusion#filter}
+  */
   readonly filter: string;
-  /** The name of the logging exclusion. */
+  /**
+  * The name of the logging exclusion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html#name LoggingOrganizationExclusion#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html#org_id LoggingOrganizationExclusion#org_id}
+  */
   readonly orgId: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html google_logging_organization_exclusion}
+*/
 export class LoggingOrganizationExclusion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_organization_exclusion.html google_logging_organization_exclusion} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LoggingOrganizationExclusionConfig
+  */
   public constructor(scope: Construct, id: string, config: LoggingOrganizationExclusionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_logging_organization_exclusion',

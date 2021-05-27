@@ -7,31 +7,72 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApigeeOrganizationConfig extends cdktf.TerraformMetaArguments {
-  /** Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
+  /**
+  * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#analytics_region ApigeeOrganization#analytics_region}
+  */
   readonly analyticsRegion?: string;
-  /** Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+  /**
+  * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
-Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default". */
+Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#authorized_network ApigeeOrganization#authorized_network}
+  */
   readonly authorizedNetwork?: string;
-  /** Description of the Apigee organization. */
+  /**
+  * Description of the Apigee organization.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#description ApigeeOrganization#description}
+  */
   readonly description?: string;
-  /** The display name of the Apigee organization. */
+  /**
+  * The display name of the Apigee organization.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#display_name ApigeeOrganization#display_name}
+  */
   readonly displayName?: string;
-  /** The project ID associated with the Apigee organization. */
+  /**
+  * The project ID associated with the Apigee organization.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#project_id ApigeeOrganization#project_id}
+  */
   readonly projectId: string;
-  /** Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+  /**
+  * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
-Valid only when 'RuntimeType' is CLOUD. For example: 'projects/foo/locations/us/keyRings/bar/cryptoKeys/baz'. */
+Valid only when 'RuntimeType' is CLOUD. For example: 'projects/foo/locations/us/keyRings/bar/cryptoKeys/baz'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#runtime_database_encryption_key_name ApigeeOrganization#runtime_database_encryption_key_name}
+  */
   readonly runtimeDatabaseEncryptionKeyName?: string;
-  /** Runtime type of the Apigee organization based on the Apigee subscription purchased. Default value: "CLOUD" Possible values: ["CLOUD", "HYBRID"] */
+  /**
+  * Runtime type of the Apigee organization based on the Apigee subscription purchased. Default value: "CLOUD" Possible values: ["CLOUD", "HYBRID"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#runtime_type ApigeeOrganization#runtime_type}
+  */
   readonly runtimeType?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#timeouts ApigeeOrganization#timeouts}
+  */
   readonly timeouts?: ApigeeOrganizationTimeouts;
 }
 export interface ApigeeOrganizationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#create ApigeeOrganization#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#delete ApigeeOrganization#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html#update ApigeeOrganization#update}
+  */
   readonly update?: string;
 }
 
@@ -45,14 +86,22 @@ function apigeeOrganizationTimeoutsToTerraform(struct?: ApigeeOrganizationTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html google_apigee_organization}
+*/
 export class ApigeeOrganization extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html google_apigee_organization} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApigeeOrganizationConfig
+  */
   public constructor(scope: Construct, id: string, config: ApigeeOrganizationConfig) {
     super(scope, id, {
       terraformResourceType: 'google_apigee_organization',

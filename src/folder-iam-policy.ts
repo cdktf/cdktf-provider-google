@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FolderIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_policy.html#folder FolderIamPolicy#folder}
+  */
   readonly folder: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_policy.html#policy_data FolderIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_policy.html google_folder_iam_policy}
+*/
 export class FolderIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_iam_policy.html google_folder_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FolderIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: FolderIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_folder_iam_policy',

@@ -7,13 +7,26 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
-  /** Human-readable description of the trigger. */
+  /**
+  * Human-readable description of the trigger.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#description CloudbuildTrigger#description}
+  */
   readonly description?: string;
-  /** Whether the trigger is disabled or not. If true, the trigger will never result in a build. */
+  /**
+  * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#disabled CloudbuildTrigger#disabled}
+  */
   readonly disabled?: boolean;
-  /** Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided. */
+  /**
+  * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#filename CloudbuildTrigger#filename}
+  */
   readonly filename?: string;
-  /** ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+  /**
+  * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for '**'.
 
 If ignoredFiles and changed files are both empty, then they are not
@@ -21,9 +34,13 @@ used to determine whether or not to trigger a build.
 
 If ignoredFiles is not empty, then we ignore any files that match any
 of the ignored_file globs. If the change has no files that are outside
-of the ignoredFiles globs, then we do not trigger a build. */
+of the ignoredFiles globs, then we do not trigger a build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#ignored_files CloudbuildTrigger#ignored_files}
+  */
   readonly ignoredFiles?: string[];
-  /** ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+  /**
+  * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for '**'.
 
 If any of the files altered in the commit pass the ignoredFiles filter
@@ -33,31 +50,73 @@ should trigger the build.
 If any of the files altered in the commit pass the ignoredFiles filter
 and includedFiles is not empty, then we make sure that at least one of
 those files matches a includedFiles glob. If not, then we do not trigger
-a build. */
+a build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#included_files CloudbuildTrigger#included_files}
+  */
   readonly includedFiles?: string[];
-  /** Name of the trigger. Must be unique within the project. */
+  /**
+  * Name of the trigger. Must be unique within the project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#name CloudbuildTrigger#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#project CloudbuildTrigger#project}
+  */
   readonly project?: string;
-  /** Substitutions data for Build resource. */
+  /**
+  * Substitutions data for Build resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
+  */
   readonly substitutions?: { [key: string]: string };
-  /** Tags for annotation of a BuildTrigger */
+  /**
+  * Tags for annotation of a BuildTrigger
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#tags CloudbuildTrigger#tags}
+  */
   readonly tags?: string[];
-  /** build block */
+  /**
+  * build block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#build CloudbuildTrigger#build}
+  */
   readonly buildAttribute?: CloudbuildTriggerBuild[];
-  /** github block */
+  /**
+  * github block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#github CloudbuildTrigger#github}
+  */
   readonly github?: CloudbuildTriggerGithub[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#timeouts CloudbuildTrigger#timeouts}
+  */
   readonly timeouts?: CloudbuildTriggerTimeouts;
-  /** trigger_template block */
+  /**
+  * trigger_template block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#trigger_template CloudbuildTrigger#trigger_template}
+  */
   readonly triggerTemplate?: CloudbuildTriggerTriggerTemplate[];
 }
 export interface CloudbuildTriggerBuildArtifactsObjects {
-  /** Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+  /**
+  * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
 
 Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
-this location as a prefix. */
+this location as a prefix.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#location CloudbuildTrigger#location}
+  */
   readonly location?: string;
-  /** Path globs used to match files in the build's workspace. */
+  /**
+  * Path globs used to match files in the build's workspace.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#paths CloudbuildTrigger#paths}
+  */
   readonly paths?: string[];
 }
 
@@ -70,15 +129,23 @@ function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: CloudbuildTr
 }
 
 export interface CloudbuildTriggerBuildArtifacts {
-  /** A list of images to be pushed upon the successful completion of all build steps.
+  /**
+  * A list of images to be pushed upon the successful completion of all build steps.
 
 The images will be pushed using the builder service account's credentials.
 
 The digests of the pushed images will be stored in the Build resource's results field.
 
-If any of the images fail to be pushed, the build is marked FAILURE. */
+If any of the images fail to be pushed, the build is marked FAILURE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#images CloudbuildTrigger#images}
+  */
   readonly images?: string[];
-  /** objects block */
+  /**
+  * objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#objects CloudbuildTrigger#objects}
+  */
   readonly objects?: CloudbuildTriggerBuildArtifactsObjects[];
 }
 
@@ -91,15 +158,23 @@ function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTriggerBu
 }
 
 export interface CloudbuildTriggerBuildOptionsVolumes {
-  /** Name of the volume to mount.
+  /**
+  * Name of the volume to mount.
 
 Volume names must be unique per build step and must be valid names for Docker volumes.
-Each named volume must be used by at least two build steps. */
+Each named volume must be used by at least two build steps.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#name CloudbuildTrigger#name}
+  */
   readonly name?: string;
-  /** Path at which to mount the volume.
+  /**
+  * Path at which to mount the volume.
 
 Paths must be absolute and cannot conflict with other volume paths on the same
-build step or with certain reserved volume paths. */
+build step or with certain reserved volume paths.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#path CloudbuildTrigger#path}
+  */
   readonly path?: string;
 }
 
@@ -112,46 +187,94 @@ function cloudbuildTriggerBuildOptionsVolumesToTerraform(struct?: CloudbuildTrig
 }
 
 export interface CloudbuildTriggerBuildOptions {
-  /** Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+  /**
+  * Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
 some of the space will be used by the operating system and build utilities.
 Also note that this is the minimum disk size that will be allocated for the build --
 the build may run with a larger disk than requested. At present, the maximum disk size
-is 1000GB; builds that request more than the maximum are rejected with an error. */
+is 1000GB; builds that request more than the maximum are rejected with an error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#disk_size_gb CloudbuildTrigger#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
-  /** Option to specify whether or not to apply bash style string operations to the substitutions.
+  /**
+  * Option to specify whether or not to apply bash style string operations to the substitutions.
 
-NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file. */
+NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#dynamic_substitutions CloudbuildTrigger#dynamic_substitutions}
+  */
   readonly dynamicSubstitutions?: boolean;
-  /** A list of global environment variable definitions that will exist for all build steps
+  /**
+  * A list of global environment variable definitions that will exist for all build steps
 in this build. If a variable is defined in both globally and in a build step,
 the variable will use the build step value.
 
-The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE". */
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#env CloudbuildTrigger#env}
+  */
   readonly env?: string[];
-  /** Option to define build log streaming behavior to Google Cloud Storage. Possible values: ["STREAM_DEFAULT", "STREAM_ON", "STREAM_OFF"] */
+  /**
+  * Option to define build log streaming behavior to Google Cloud Storage. Possible values: ["STREAM_DEFAULT", "STREAM_ON", "STREAM_OFF"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#log_streaming_option CloudbuildTrigger#log_streaming_option}
+  */
   readonly logStreamingOption?: string;
-  /** Option to specify the logging mode, which determines if and where build logs are stored. Possible values: ["LOGGING_UNSPECIFIED", "LEGACY", "GCS_ONLY", "STACKDRIVER_ONLY", "NONE"] */
+  /**
+  * Option to specify the logging mode, which determines if and where build logs are stored. Possible values: ["LOGGING_UNSPECIFIED", "LEGACY", "GCS_ONLY", "STACKDRIVER_ONLY", "NONE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#logging CloudbuildTrigger#logging}
+  */
   readonly logging?: string;
-  /** Compute Engine machine type on which to run the build. Possible values: ["UNSPECIFIED", "N1_HIGHCPU_8", "N1_HIGHCPU_32", "E2_HIGHCPU_8", "E2_HIGHCPU_32"] */
+  /**
+  * Compute Engine machine type on which to run the build. Possible values: ["UNSPECIFIED", "N1_HIGHCPU_8", "N1_HIGHCPU_32", "E2_HIGHCPU_8", "E2_HIGHCPU_32"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#machine_type CloudbuildTrigger#machine_type}
+  */
   readonly machineType?: string;
-  /** Requested verifiability options. Possible values: ["NOT_VERIFIED", "VERIFIED"] */
+  /**
+  * Requested verifiability options. Possible values: ["NOT_VERIFIED", "VERIFIED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#requested_verify_option CloudbuildTrigger#requested_verify_option}
+  */
   readonly requestedVerifyOption?: string;
-  /** A list of global environment variables, which are encrypted using a Cloud Key Management
+  /**
+  * A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
-will be available to all build steps in this build. */
+will be available to all build steps in this build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#secret_env CloudbuildTrigger#secret_env}
+  */
   readonly secretEnv?: string[];
-  /** Requested hash for SourceProvenance. Possible values: ["NONE", "SHA256", "MD5"] */
+  /**
+  * Requested hash for SourceProvenance. Possible values: ["NONE", "SHA256", "MD5"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#source_provenance_hash CloudbuildTrigger#source_provenance_hash}
+  */
   readonly sourceProvenanceHash?: string[];
-  /** Option to specify behavior when there is an error in the substitution checks.
+  /**
+  * Option to specify behavior when there is an error in the substitution checks.
 
 NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
-in the build configuration file. Possible values: ["MUST_MATCH", "ALLOW_LOOSE"] */
+in the build configuration file. Possible values: ["MUST_MATCH", "ALLOW_LOOSE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitution_option CloudbuildTrigger#substitution_option}
+  */
   readonly substitutionOption?: string;
-  /** Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+  /**
+  * Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
 
-This field is experimental. */
+This field is experimental.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#worker_pool CloudbuildTrigger#worker_pool}
+  */
   readonly workerPool?: string;
-  /** volumes block */
+  /**
+  * volumes block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#volumes CloudbuildTrigger#volumes}
+  */
   readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[];
 }
 
@@ -174,12 +297,20 @@ function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTriggerBuil
 }
 
 export interface CloudbuildTriggerBuildSecret {
-  /** Cloud KMS key name to use to decrypt these envs. */
+  /**
+  * Cloud KMS key name to use to decrypt these envs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#kms_key_name CloudbuildTrigger#kms_key_name}
+  */
   readonly kmsKeyName: string;
-  /** Map of environment variable name to its encrypted value.
+  /**
+  * Map of environment variable name to its encrypted value.
 Secret environment variables must be unique across all of a build's secrets, 
 and must be used by at least one build step. Values can be at most 64 KB in size. 
-There can be at most 100 secret values across all of a build's secrets. */
+There can be at most 100 secret values across all of a build's secrets.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#secret_env CloudbuildTrigger#secret_env}
+  */
   readonly secretEnv?: { [key: string]: string };
 }
 
@@ -192,28 +323,60 @@ function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTriggerBuild
 }
 
 export interface CloudbuildTriggerBuildSourceRepoSource {
-  /** Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+  /**
+  * Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
-described at https://github.com/google/re2/wiki/Syntax */
+described at https://github.com/google/re2/wiki/Syntax
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#branch_name CloudbuildTrigger#branch_name}
+  */
   readonly branchName?: string;
-  /** Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided. */
+  /**
+  * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#commit_sha CloudbuildTrigger#commit_sha}
+  */
   readonly commitSha?: string;
-  /** Directory, relative to the source root, in which to run the build.
+  /**
+  * Directory, relative to the source root, in which to run the build.
 This must be a relative path. If a step's dir is specified and is an absolute path, 
-this value is ignored for that step's execution. */
+this value is ignored for that step's execution.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#dir CloudbuildTrigger#dir}
+  */
   readonly dir?: string;
-  /** Only trigger a build if the revision regex does NOT match the revision regex. */
+  /**
+  * Only trigger a build if the revision regex does NOT match the revision regex.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
+  */
   readonly invertRegex?: boolean;
-  /** ID of the project that owns the Cloud Source Repository. 
-If omitted, the project ID requesting the build is assumed. */
+  /**
+  * ID of the project that owns the Cloud Source Repository. 
+If omitted, the project ID requesting the build is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#project_id CloudbuildTrigger#project_id}
+  */
   readonly projectId?: string;
-  /** Name of the Cloud Source Repository. */
+  /**
+  * Name of the Cloud Source Repository.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#repo_name CloudbuildTrigger#repo_name}
+  */
   readonly repoName: string;
-  /** Substitutions to use in a triggered build. Should only be used with triggers.run */
+  /**
+  * Substitutions to use in a triggered build. Should only be used with triggers.run
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
+  */
   readonly substitutions?: { [key: string]: string };
-  /** Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+  /**
+  * Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
-described at https://github.com/google/re2/wiki/Syntax */
+described at https://github.com/google/re2/wiki/Syntax
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#tag_name CloudbuildTrigger#tag_name}
+  */
   readonly tagName?: string;
 }
 
@@ -232,13 +395,25 @@ function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: CloudbuildTr
 }
 
 export interface CloudbuildTriggerBuildSourceStorageSource {
-  /** Google Cloud Storage bucket containing the source. */
+  /**
+  * Google Cloud Storage bucket containing the source.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#bucket CloudbuildTrigger#bucket}
+  */
   readonly bucket: string;
-  /** Google Cloud Storage generation for the object. 
-If the generation is omitted, the latest generation will be used */
+  /**
+  * Google Cloud Storage generation for the object. 
+If the generation is omitted, the latest generation will be used
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#generation CloudbuildTrigger#generation}
+  */
   readonly generation?: string;
-  /** Google Cloud Storage object containing the source.
-This object must be a gzipped archive file (.tar.gz) containing source to build. */
+  /**
+  * Google Cloud Storage object containing the source.
+This object must be a gzipped archive file (.tar.gz) containing source to build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#object CloudbuildTrigger#object}
+  */
   readonly object: string;
 }
 
@@ -252,9 +427,17 @@ function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: Cloudbuil
 }
 
 export interface CloudbuildTriggerBuildSource {
-  /** repo_source block */
+  /**
+  * repo_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#repo_source CloudbuildTrigger#repo_source}
+  */
   readonly repoSource?: CloudbuildTriggerBuildSourceRepoSource[];
-  /** storage_source block */
+  /**
+  * storage_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#storage_source CloudbuildTrigger#storage_source}
+  */
   readonly storageSource?: CloudbuildTriggerBuildSourceStorageSource[];
 }
 
@@ -267,15 +450,23 @@ function cloudbuildTriggerBuildSourceToTerraform(struct?: CloudbuildTriggerBuild
 }
 
 export interface CloudbuildTriggerBuildStepVolumes {
-  /** Name of the volume to mount.
+  /**
+  * Name of the volume to mount.
 
 Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps. */
+Docker volumes. Each named volume must be used by at least two build steps.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#name CloudbuildTrigger#name}
+  */
   readonly name: string;
-  /** Path at which to mount the volume.
+  /**
+  * Path at which to mount the volume.
 
 Paths must be absolute and cannot conflict with other volume paths on
-the same build step or with certain reserved volume paths. */
+the same build step or with certain reserved volume paths.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#path CloudbuildTrigger#path}
+  */
   readonly path: string;
 }
 
@@ -288,14 +479,19 @@ function cloudbuildTriggerBuildStepVolumesToTerraform(struct?: CloudbuildTrigger
 }
 
 export interface CloudbuildTriggerBuildStep {
-  /** A list of arguments that will be presented to the step when it is started.
+  /**
+  * A list of arguments that will be presented to the step when it is started.
 
 If the image used to run the step's container has an entrypoint, the args
 are used as arguments to that entrypoint. If the image does not define an
 entrypoint, the first element in args is used as the entrypoint, and the
-remainder will be used as arguments. */
+remainder will be used as arguments.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#args CloudbuildTrigger#args}
+  */
   readonly args?: string[];
-  /** Working directory to use when running this step's container.
+  /**
+  * Working directory to use when running this step's container.
 
 If this value is a relative path, it is relative to the build's working
 directory. If this value is absolute, it may be outside the build's working
@@ -305,22 +501,38 @@ across build step executions, unless a 'volume' for that path is specified.
 If the build specifies a 'RepoSource' with 'dir' and a step with a
 'dir',
 which specifies an absolute path, the 'RepoSource' 'dir' is ignored
-for the step's execution. */
+for the step's execution.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#dir CloudbuildTrigger#dir}
+  */
   readonly dir?: string;
-  /** Entrypoint to be used instead of the build step image's
+  /**
+  * Entrypoint to be used instead of the build step image's
 default entrypoint.
-If unset, the image's default entrypoint is used */
+If unset, the image's default entrypoint is used
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#entrypoint CloudbuildTrigger#entrypoint}
+  */
   readonly entrypoint?: string;
-  /** A list of environment variable definitions to be used when
+  /**
+  * A list of environment variable definitions to be used when
 running a step.
 
 The elements are of the form "KEY=VALUE" for the environment variable
-"KEY" being given the value "VALUE". */
+"KEY" being given the value "VALUE".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#env CloudbuildTrigger#env}
+  */
   readonly env?: string[];
-  /** Unique identifier for this build step, used in 'wait_for' to
-reference this build step as a dependency. */
+  /**
+  * Unique identifier for this build step, used in 'wait_for' to
+reference this build step as a dependency.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#id CloudbuildTrigger#id}
+  */
   readonly id?: string;
-  /** The name of the container image that will run this particular build step.
+  /**
+  * The name of the container image that will run this particular build step.
 
 If the image is available in the host's Docker daemon's cache, it will be
 run directly. If not, the host will attempt to pull the image first, using
@@ -335,29 +547,52 @@ you attempt to use them.
 
 If you built an image in a previous build step, it will be stored in the
 host's Docker daemon's cache and is available to use as the name for a
-later build step. */
+later build step.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#name CloudbuildTrigger#name}
+  */
   readonly name: string;
-  /** A list of environment variables which are encrypted using
+  /**
+  * A list of environment variables which are encrypted using
 a Cloud Key
 Management Service crypto key. These values must be specified in
-the build's 'Secret'. */
+the build's 'Secret'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#secret_env CloudbuildTrigger#secret_env}
+  */
   readonly secretEnv?: string[];
-  /** Time limit for executing this build step. If not defined,
+  /**
+  * Time limit for executing this build step. If not defined,
 the step has no
 time limit and will be allowed to continue to run until either it
-completes or the build itself times out. */
+completes or the build itself times out.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#timeout CloudbuildTrigger#timeout}
+  */
   readonly timeout?: string;
-  /** Output only. Stores timing information for executing this
-build step. */
+  /**
+  * Output only. Stores timing information for executing this
+build step.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#timing CloudbuildTrigger#timing}
+  */
   readonly timing?: string;
-  /** The ID(s) of the step(s) that this build step depends on.
+  /**
+  * The ID(s) of the step(s) that this build step depends on.
 
 This build step will not start until all the build steps in 'wait_for'
 have completed successfully. If 'wait_for' is empty, this build step
 will start when all previous build steps in the 'Build.Steps' list
-have completed successfully. */
+have completed successfully.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#wait_for CloudbuildTrigger#wait_for}
+  */
   readonly waitFor?: string[];
-  /** volumes block */
+  /**
+  * volumes block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#volumes CloudbuildTrigger#volumes}
+  */
   readonly volumes?: CloudbuildTriggerBuildStepVolumes[];
 }
 
@@ -379,38 +614,82 @@ function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTriggerBuildSt
 }
 
 export interface CloudbuildTriggerBuild {
-  /** A list of images to be pushed upon the successful completion of all build steps.
+  /**
+  * A list of images to be pushed upon the successful completion of all build steps.
 The images are pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
-If any of the images fail to be pushed, the build status is marked FAILURE. */
+If any of the images fail to be pushed, the build status is marked FAILURE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#images CloudbuildTrigger#images}
+  */
   readonly images?: string[];
-  /** Google Cloud Storage bucket where logs should be written. 
-Logs file names will be of the format ${logsBucket}/log-${build_id}.txt. */
+  /**
+  * Google Cloud Storage bucket where logs should be written. 
+Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#logs_bucket CloudbuildTrigger#logs_bucket}
+  */
   readonly logsBucket?: string;
-  /** TTL in queue for this build. If provided and the build is enqueued longer than this value, 
+  /**
+  * TTL in queue for this build. If provided and the build is enqueued longer than this value, 
 the build will expire and the build status will be EXPIRED.
 The TTL starts ticking from createTime.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#queue_ttl CloudbuildTrigger#queue_ttl}
+  */
   readonly queueTtl?: string;
-  /** Substitutions data for Build resource. */
+  /**
+  * Substitutions data for Build resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
+  */
   readonly substitutions?: { [key: string]: string };
-  /** Tags for annotation of a Build. These are not docker tags. */
+  /**
+  * Tags for annotation of a Build. These are not docker tags.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#tags CloudbuildTrigger#tags}
+  */
   readonly tags?: string[];
-  /** Amount of time that this build should be allowed to run, to second granularity.
+  /**
+  * Amount of time that this build should be allowed to run, to second granularity.
 If this amount of time elapses, work on the build will cease and the build status will be TIMEOUT.
 This timeout must be equal to or greater than the sum of the timeouts for build steps within the build.
 The expected format is the number of seconds followed by s.
-Default time is ten minutes (600s). */
+Default time is ten minutes (600s).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#timeout CloudbuildTrigger#timeout}
+  */
   readonly timeout?: string;
-  /** artifacts block */
+  /**
+  * artifacts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#artifacts CloudbuildTrigger#artifacts}
+  */
   readonly artifacts?: CloudbuildTriggerBuildArtifacts[];
-  /** options block */
+  /**
+  * options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#options CloudbuildTrigger#options}
+  */
   readonly options?: CloudbuildTriggerBuildOptions[];
-  /** secret block */
+  /**
+  * secret block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#secret CloudbuildTrigger#secret}
+  */
   readonly secret?: CloudbuildTriggerBuildSecret[];
-  /** source block */
+  /**
+  * source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#source CloudbuildTrigger#source}
+  */
   readonly source?: CloudbuildTriggerBuildSource[];
-  /** step block */
+  /**
+  * step block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#step CloudbuildTrigger#step}
+  */
   readonly step: CloudbuildTriggerBuildStep[];
 }
 
@@ -432,11 +711,23 @@ function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuild): any
 }
 
 export interface CloudbuildTriggerGithubPullRequest {
-  /** Regex of branches to match. */
+  /**
+  * Regex of branches to match.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#branch CloudbuildTrigger#branch}
+  */
   readonly branch: string;
-  /** Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator. Possible values: ["COMMENTS_DISABLED", "COMMENTS_ENABLED", "COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY"] */
+  /**
+  * Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator. Possible values: ["COMMENTS_DISABLED", "COMMENTS_ENABLED", "COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#comment_control CloudbuildTrigger#comment_control}
+  */
   readonly commentControl?: string;
-  /** If true, branches that do NOT match the git_ref will trigger a build. */
+  /**
+  * If true, branches that do NOT match the git_ref will trigger a build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
+  */
   readonly invertRegex?: boolean;
 }
 
@@ -450,11 +741,23 @@ function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTrigge
 }
 
 export interface CloudbuildTriggerGithubPush {
-  /** Regex of branches to match.  Specify only one of branch or tag. */
+  /**
+  * Regex of branches to match.  Specify only one of branch or tag.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#branch CloudbuildTrigger#branch}
+  */
   readonly branch?: string;
-  /** When true, only trigger a build if the revision regex does NOT match the git_ref regex. */
+  /**
+  * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
+  */
   readonly invertRegex?: boolean;
-  /** Regex of tags to match.  Specify only one of branch or tag. */
+  /**
+  * Regex of tags to match.  Specify only one of branch or tag.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#tag CloudbuildTrigger#tag}
+  */
   readonly tag?: string;
 }
 
@@ -468,15 +771,31 @@ function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTriggerGithub
 }
 
 export interface CloudbuildTriggerGithub {
-  /** Name of the repository. For example: The name for
-https://github.com/googlecloudplatform/cloud-builders is "cloud-builders". */
+  /**
+  * Name of the repository. For example: The name for
+https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#name CloudbuildTrigger#name}
+  */
   readonly name?: string;
-  /** Owner of the repository. For example: The owner for
-https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform". */
+  /**
+  * Owner of the repository. For example: The owner for
+https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#owner CloudbuildTrigger#owner}
+  */
   readonly owner?: string;
-  /** pull_request block */
+  /**
+  * pull_request block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#pull_request CloudbuildTrigger#pull_request}
+  */
   readonly pullRequest?: CloudbuildTriggerGithubPullRequest[];
-  /** push block */
+  /**
+  * push block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#push CloudbuildTrigger#push}
+  */
   readonly push?: CloudbuildTriggerGithubPush[];
 }
 
@@ -491,8 +810,17 @@ function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGithub): a
 }
 
 export interface CloudbuildTriggerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#create CloudbuildTrigger#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#delete CloudbuildTrigger#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#update CloudbuildTrigger#update}
+  */
   readonly update?: string;
 }
 
@@ -506,26 +834,54 @@ function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeouts
 }
 
 export interface CloudbuildTriggerTriggerTemplate {
-  /** Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-This field is a regular expression. */
+  /**
+  * Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#branch_name CloudbuildTrigger#branch_name}
+  */
   readonly branchName?: string;
-  /** Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided. */
+  /**
+  * Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#commit_sha CloudbuildTrigger#commit_sha}
+  */
   readonly commitSha?: string;
-  /** Directory, relative to the source root, in which to run the build.
+  /**
+  * Directory, relative to the source root, in which to run the build.
 
 This must be a relative path. If a step's dir is specified and
 is an absolute path, this value is ignored for that step's
-execution. */
+execution.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#dir CloudbuildTrigger#dir}
+  */
   readonly dir?: string;
-  /** Only trigger a build if the revision regex does NOT match the revision regex. */
+  /**
+  * Only trigger a build if the revision regex does NOT match the revision regex.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
+  */
   readonly invertRegex?: boolean;
-  /** ID of the project that owns the Cloud Source Repository. If
-omitted, the project ID requesting the build is assumed. */
+  /**
+  * ID of the project that owns the Cloud Source Repository. If
+omitted, the project ID requesting the build is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#project_id CloudbuildTrigger#project_id}
+  */
   readonly projectId?: string;
-  /** Name of the Cloud Source Repository. If omitted, the name "default" is assumed. */
+  /**
+  * Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#repo_name CloudbuildTrigger#repo_name}
+  */
   readonly repoName?: string;
-  /** Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
-This field is a regular expression. */
+  /**
+  * Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#tag_name CloudbuildTrigger#tag_name}
+  */
   readonly tagName?: string;
 }
 
@@ -543,14 +899,22 @@ function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerT
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html google_cloudbuild_trigger}
+*/
 export class CloudbuildTrigger extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html google_cloudbuild_trigger} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudbuildTriggerConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: CloudbuildTriggerConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_cloudbuild_trigger',

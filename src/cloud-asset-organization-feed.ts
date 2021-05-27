@@ -7,45 +7,97 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudAssetOrganizationFeedConfig extends cdktf.TerraformMetaArguments {
-  /** A list of the full names of the assets to receive updates. You must specify either or both of 
+  /**
+  * A list of the full names of the assets to receive updates. You must specify either or both of 
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
-See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info. */
+See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#asset_names CloudAssetOrganizationFeed#asset_names}
+  */
   readonly assetNames?: string[];
-  /** A list of types of the assets to receive updates. You must specify either or both of assetNames
+  /**
+  * A list of types of the assets to receive updates. You must specify either or both of assetNames
 and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
-supported asset types. */
+supported asset types.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#asset_types CloudAssetOrganizationFeed#asset_types}
+  */
   readonly assetTypes?: string[];
-  /** The project whose identity will be used when sending messages to the
+  /**
+  * The project whose identity will be used when sending messages to the
 destination pubsub topic. It also specifies the project for API 
-enablement check, quota, and billing. */
+enablement check, quota, and billing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#billing_project CloudAssetOrganizationFeed#billing_project}
+  */
   readonly billingProject: string;
-  /** Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "ACCESS_POLICY"] */
+  /**
+  * Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "ACCESS_POLICY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#content_type CloudAssetOrganizationFeed#content_type}
+  */
   readonly contentType?: string;
-  /** This is the client-assigned asset feed identifier and it needs to be unique under a specific parent. */
+  /**
+  * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#feed_id CloudAssetOrganizationFeed#feed_id}
+  */
   readonly feedId: string;
-  /** The organization this feed should be created in. */
+  /**
+  * The organization this feed should be created in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#org_id CloudAssetOrganizationFeed#org_id}
+  */
   readonly orgId: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#condition CloudAssetOrganizationFeed#condition}
+  */
   readonly condition?: CloudAssetOrganizationFeedCondition[];
-  /** feed_output_config block */
+  /**
+  * feed_output_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#feed_output_config CloudAssetOrganizationFeed#feed_output_config}
+  */
   readonly feedOutputConfig: CloudAssetOrganizationFeedFeedOutputConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#timeouts CloudAssetOrganizationFeed#timeouts}
+  */
   readonly timeouts?: CloudAssetOrganizationFeedTimeouts;
 }
 export interface CloudAssetOrganizationFeedCondition {
-  /** Description of the expression. This is a longer text which describes the expression,
-e.g. when hovered over it in a UI. */
+  /**
+  * Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#description CloudAssetOrganizationFeed#description}
+  */
   readonly description?: string;
-  /** Textual representation of an expression in Common Expression Language syntax. */
+  /**
+  * Textual representation of an expression in Common Expression Language syntax.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#expression CloudAssetOrganizationFeed#expression}
+  */
   readonly expression: string;
-  /** String indicating the location of the expression for error reporting, e.g. a file 
-name and a position in the file. */
+  /**
+  * String indicating the location of the expression for error reporting, e.g. a file 
+name and a position in the file.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#location CloudAssetOrganizationFeed#location}
+  */
   readonly location?: string;
-  /** Title for the expression, i.e. a short string describing its purpose.
-This can be used e.g. in UIs which allow to enter the expression. */
+  /**
+  * Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#title CloudAssetOrganizationFeed#title}
+  */
   readonly title?: string;
 }
 
@@ -60,7 +112,11 @@ function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrgan
 }
 
 export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
-  /** Destination on Cloud Pubsub topic. */
+  /**
+  * Destination on Cloud Pubsub topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#topic CloudAssetOrganizationFeed#topic}
+  */
   readonly topic: string;
 }
 
@@ -72,7 +128,11 @@ function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(
 }
 
 export interface CloudAssetOrganizationFeedFeedOutputConfig {
-  /** pubsub_destination block */
+  /**
+  * pubsub_destination block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#pubsub_destination CloudAssetOrganizationFeed#pubsub_destination}
+  */
   readonly pubsubDestination: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination[];
 }
 
@@ -84,8 +144,17 @@ function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: CloudAss
 }
 
 export interface CloudAssetOrganizationFeedTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#create CloudAssetOrganizationFeed#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#delete CloudAssetOrganizationFeed#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#update CloudAssetOrganizationFeed#update}
+  */
   readonly update?: string;
 }
 
@@ -99,14 +168,22 @@ function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrgani
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html google_cloud_asset_organization_feed}
+*/
 export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html google_cloud_asset_organization_feed} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudAssetOrganizationFeedConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudAssetOrganizationFeedConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_asset_organization_feed',

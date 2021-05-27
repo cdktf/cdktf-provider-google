@@ -7,26 +7,54 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LoggingProjectBucketConfigConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default. */
+  /**
+  * The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html#bucket_id LoggingProjectBucketConfig#bucket_id}
+  */
   readonly bucketId: string;
-  /** An optional description for this bucket. */
+  /**
+  * An optional description for this bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html#description LoggingProjectBucketConfig#description}
+  */
   readonly description?: string;
-  /** The location of the bucket. */
+  /**
+  * The location of the bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html#location LoggingProjectBucketConfig#location}
+  */
   readonly location: string;
-  /** The parent project that contains the logging bucket. */
+  /**
+  * The parent project that contains the logging bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html#project LoggingProjectBucketConfig#project}
+  */
   readonly project: string;
-  /** Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. */
+  /**
+  * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html#retention_days LoggingProjectBucketConfig#retention_days}
+  */
   readonly retentionDays?: number;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html google_logging_project_bucket_config}
+*/
 export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config.html google_logging_project_bucket_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LoggingProjectBucketConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: LoggingProjectBucketConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_logging_project_bucket_config',

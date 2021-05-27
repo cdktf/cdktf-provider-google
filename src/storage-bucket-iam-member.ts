@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageBucketIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#bucket StorageBucketIamMember#bucket}
+  */
   readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#member StorageBucketIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#role StorageBucketIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#condition StorageBucketIamMember#condition}
+  */
   readonly condition?: StorageBucketIamMemberCondition[];
 }
 export interface StorageBucketIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#description StorageBucketIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#expression StorageBucketIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#title StorageBucketIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function storageBucketIamMemberConditionToTerraform(struct?: StorageBucketIamMem
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html google_storage_bucket_iam_member}
+*/
 export class StorageBucketIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html google_storage_bucket_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageBucketIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageBucketIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_iam_member',

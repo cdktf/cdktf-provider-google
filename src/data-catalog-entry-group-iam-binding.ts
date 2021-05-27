@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogEntryGroupIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#entry_group DataCatalogEntryGroupIamBinding#entry_group}
+  */
   readonly entryGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#members DataCatalogEntryGroupIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#project DataCatalogEntryGroupIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#region DataCatalogEntryGroupIamBinding#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#role DataCatalogEntryGroupIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#condition DataCatalogEntryGroupIamBinding#condition}
+  */
   readonly condition?: DataCatalogEntryGroupIamBindingCondition[];
 }
 export interface DataCatalogEntryGroupIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#description DataCatalogEntryGroupIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#expression DataCatalogEntryGroupIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html#title DataCatalogEntryGroupIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function dataCatalogEntryGroupIamBindingConditionToTerraform(struct?: DataCatalo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html google_data_catalog_entry_group_iam_binding}
+*/
 export class DataCatalogEntryGroupIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_binding.html google_data_catalog_entry_group_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogEntryGroupIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogEntryGroupIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_entry_group_iam_binding',

@@ -7,22 +7,42 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RuntimeconfigConfigConfig extends cdktf.TerraformMetaArguments {
-  /** The description to associate with the runtime config. */
+  /**
+  * The description to associate with the runtime config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html#description RuntimeconfigConfig#description}
+  */
   readonly description?: string;
-  /** The name of the runtime config. */
+  /**
+  * The name of the runtime config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html#name RuntimeconfigConfig#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html#project RuntimeconfigConfig#project}
+  */
   readonly project?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html google_runtimeconfig_config}
+*/
 export class RuntimeconfigConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html google_runtimeconfig_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RuntimeconfigConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: RuntimeconfigConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_runtimeconfig_config',

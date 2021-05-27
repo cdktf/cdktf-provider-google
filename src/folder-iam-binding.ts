@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FolderIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#folder FolderIamBinding#folder}
+  */
   readonly folder: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#members FolderIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#role FolderIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#condition FolderIamBinding#condition}
+  */
   readonly condition?: FolderIamBindingCondition[];
 }
 export interface FolderIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#description FolderIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#expression FolderIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#title FolderIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function folderIamBindingConditionToTerraform(struct?: FolderIamBindingCondition
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html google_folder_iam_binding}
+*/
 export class FolderIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html google_folder_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FolderIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: FolderIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_folder_iam_binding',

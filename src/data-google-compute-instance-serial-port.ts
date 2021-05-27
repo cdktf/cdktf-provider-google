@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_instance_serial_port.html
+// https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeInstanceSerialPortConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#instance DataGoogleComputeInstanceSerialPort#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#port DataGoogleComputeInstanceSerialPort#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#project DataGoogleComputeInstanceSerialPort#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#zone DataGoogleComputeInstanceSerialPort#zone}
+  */
   readonly zone?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html google_compute_instance_serial_port}
+*/
 export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html google_compute_instance_serial_port} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeInstanceSerialPortConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeInstanceSerialPortConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_serial_port',

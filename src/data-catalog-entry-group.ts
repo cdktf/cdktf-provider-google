@@ -7,22 +7,54 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogEntryGroupConfig extends cdktf.TerraformMetaArguments {
-  /** Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. */
+  /**
+  * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#description DataCatalogEntryGroup#description}
+  */
   readonly description?: string;
-  /** A short name to identify the entry group, for example, "analytics data - jan 2011". */
+  /**
+  * A short name to identify the entry group, for example, "analytics data - jan 2011".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#display_name DataCatalogEntryGroup#display_name}
+  */
   readonly displayName?: string;
-  /** The id of the entry group to create. The id must begin with a letter or underscore,
-contain only English letters, numbers and underscores, and be at most 64 characters. */
+  /**
+  * The id of the entry group to create. The id must begin with a letter or underscore,
+contain only English letters, numbers and underscores, and be at most 64 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#entry_group_id DataCatalogEntryGroup#entry_group_id}
+  */
   readonly entryGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#project DataCatalogEntryGroup#project}
+  */
   readonly project?: string;
-  /** EntryGroup location region. */
+  /**
+  * EntryGroup location region.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#region DataCatalogEntryGroup#region}
+  */
   readonly region?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#timeouts DataCatalogEntryGroup#timeouts}
+  */
   readonly timeouts?: DataCatalogEntryGroupTimeouts;
 }
 export interface DataCatalogEntryGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#create DataCatalogEntryGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#delete DataCatalogEntryGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#update DataCatalogEntryGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +68,22 @@ function dataCatalogEntryGroupTimeoutsToTerraform(struct?: DataCatalogEntryGroup
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html google_data_catalog_entry_group}
+*/
 export class DataCatalogEntryGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html google_data_catalog_entry_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogEntryGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogEntryGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_entry_group',

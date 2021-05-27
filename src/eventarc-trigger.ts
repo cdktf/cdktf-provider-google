@@ -7,23 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#labels EventarcTrigger#labels}
+  */
   readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#location EventarcTrigger#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#name EventarcTrigger#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#project EventarcTrigger#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#service_account EventarcTrigger#service_account}
+  */
   readonly serviceAccount?: string;
-  /** destination block */
+  /**
+  * destination block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#destination EventarcTrigger#destination}
+  */
   readonly destination: EventarcTriggerDestination[];
-  /** matching_criteria block */
+  /**
+  * matching_criteria block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#matching_criteria EventarcTrigger#matching_criteria}
+  */
   readonly matchingCriteria: EventarcTriggerMatchingCriteria[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#timeouts EventarcTrigger#timeouts}
+  */
   readonly timeouts?: EventarcTriggerTimeouts;
-  /** transport block */
+  /**
+  * transport block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#transport EventarcTrigger#transport}
+  */
   readonly transport?: EventarcTriggerTransport[];
 }
 export interface EventarcTriggerDestinationCloudRunService {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#path EventarcTrigger#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#region EventarcTrigger#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#service EventarcTrigger#service}
+  */
   readonly service: string;
 }
 
@@ -37,8 +77,15 @@ function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: EventarcT
 }
 
 export interface EventarcTriggerDestination {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#cloud_function EventarcTrigger#cloud_function}
+  */
   readonly cloudFunction?: string;
-  /** cloud_run_service block */
+  /**
+  * cloud_run_service block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#cloud_run_service EventarcTrigger#cloud_run_service}
+  */
   readonly cloudRunService?: EventarcTriggerDestinationCloudRunService[];
 }
 
@@ -51,7 +98,13 @@ function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDestinati
 }
 
 export interface EventarcTriggerMatchingCriteria {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#attribute EventarcTrigger#attribute}
+  */
   readonly attribute: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#value EventarcTrigger#value}
+  */
   readonly value: string;
 }
 
@@ -64,8 +117,17 @@ function eventarcTriggerMatchingCriteriaToTerraform(struct?: EventarcTriggerMatc
 }
 
 export interface EventarcTriggerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#create EventarcTrigger#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#delete EventarcTrigger#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#update EventarcTrigger#update}
+  */
   readonly update?: string;
 }
 
@@ -79,6 +141,9 @@ function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeouts): a
 }
 
 export interface EventarcTriggerTransportPubsub {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#topic EventarcTrigger#topic}
+  */
   readonly topic?: string;
 }
 
@@ -90,7 +155,11 @@ function eventarcTriggerTransportPubsubToTerraform(struct?: EventarcTriggerTrans
 }
 
 export interface EventarcTriggerTransport {
-  /** pubsub block */
+  /**
+  * pubsub block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#pubsub EventarcTrigger#pubsub}
+  */
   readonly pubsub?: EventarcTriggerTransportPubsub[];
 }
 
@@ -102,14 +171,22 @@ function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTransport):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html google_eventarc_trigger}
+*/
 export class EventarcTrigger extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html google_eventarc_trigger} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventarcTriggerConfig
+  */
   public constructor(scope: Construct, id: string, config: EventarcTriggerConfig) {
     super(scope, id, {
       terraformResourceType: 'google_eventarc_trigger',

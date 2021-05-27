@@ -7,24 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArguments {
-  /** Whether to export the custom routes to the peer network. Defaults to false. */
+  /**
+  * Whether to export the custom routes to the peer network. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#export_custom_routes ComputeNetworkPeering#export_custom_routes}
+  */
   readonly exportCustomRoutes?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#export_subnet_routes_with_public_ip ComputeNetworkPeering#export_subnet_routes_with_public_ip}
+  */
   readonly exportSubnetRoutesWithPublicIp?: boolean;
-  /** Whether to export the custom routes from the peer network. Defaults to false. */
+  /**
+  * Whether to export the custom routes from the peer network. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#import_custom_routes ComputeNetworkPeering#import_custom_routes}
+  */
   readonly importCustomRoutes?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#import_subnet_routes_with_public_ip ComputeNetworkPeering#import_subnet_routes_with_public_ip}
+  */
   readonly importSubnetRoutesWithPublicIp?: boolean;
-  /** Name of the peering. */
+  /**
+  * Name of the peering.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#name ComputeNetworkPeering#name}
+  */
   readonly name: string;
-  /** The primary network of the peering. */
+  /**
+  * The primary network of the peering.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#network ComputeNetworkPeering#network}
+  */
   readonly network: string;
-  /** The peer network in the peering. The peer network may belong to a different project. */
+  /**
+  * The peer network in the peering. The peer network may belong to a different project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#peer_network ComputeNetworkPeering#peer_network}
+  */
   readonly peerNetwork: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#timeouts ComputeNetworkPeering#timeouts}
+  */
   readonly timeouts?: ComputeNetworkPeeringTimeouts;
 }
 export interface ComputeNetworkPeeringTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#create ComputeNetworkPeering#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#delete ComputeNetworkPeering#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#update ComputeNetworkPeering#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +77,22 @@ function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeering
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html google_compute_network_peering}
+*/
 export class ComputeNetworkPeering extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html google_compute_network_peering} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeNetworkPeeringConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeNetworkPeeringConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_network_peering',

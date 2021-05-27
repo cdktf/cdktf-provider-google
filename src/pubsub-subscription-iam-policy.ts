@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubSubscriptionIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_policy.html#policy_data PubsubSubscriptionIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_policy.html#project PubsubSubscriptionIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_policy.html#subscription PubsubSubscriptionIamPolicy#subscription}
+  */
   readonly subscription: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_policy.html google_pubsub_subscription_iam_policy}
+*/
 export class PubsubSubscriptionIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_policy.html google_pubsub_subscription_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubSubscriptionIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubSubscriptionIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_subscription_iam_policy',

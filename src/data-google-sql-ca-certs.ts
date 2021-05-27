@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_sql_ca_certs.html
+// https://www.terraform.io/docs/providers/google/d/sql_ca_certs.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,7 +7,13 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleSqlCaCertsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_ca_certs.html#instance DataGoogleSqlCaCerts#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_ca_certs.html#project DataGoogleSqlCaCerts#project}
+  */
   readonly project?: string;
 }
 export class DataGoogleSqlCaCertsCerts extends cdktf.ComplexComputedList {
@@ -38,14 +44,22 @@ export class DataGoogleSqlCaCertsCerts extends cdktf.ComplexComputedList {
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_ca_certs.html google_sql_ca_certs}
+*/
 export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_ca_certs.html google_sql_ca_certs} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleSqlCaCertsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleSqlCaCertsConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_ca_certs',

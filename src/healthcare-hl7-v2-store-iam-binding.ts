@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareHl7V2StoreIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#hl7_v2_store_id HealthcareHl7V2StoreIamBinding#hl7_v2_store_id}
+  */
   readonly hl7V2StoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#members HealthcareHl7V2StoreIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#role HealthcareHl7V2StoreIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#condition HealthcareHl7V2StoreIamBinding#condition}
+  */
   readonly condition?: HealthcareHl7V2StoreIamBindingCondition[];
 }
 export interface HealthcareHl7V2StoreIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#description HealthcareHl7V2StoreIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#expression HealthcareHl7V2StoreIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html#title HealthcareHl7V2StoreIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function healthcareHl7V2StoreIamBindingConditionToTerraform(struct?: HealthcareH
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html google_healthcare_hl7_v2_store_iam_binding}
+*/
 export class HealthcareHl7V2StoreIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_binding.html google_healthcare_hl7_v2_store_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareHl7V2StoreIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareHl7V2StoreIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_hl7_v2_store_iam_binding',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TagsTagValueIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#members TagsTagValueIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#role TagsTagValueIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#tag_value TagsTagValueIamBinding#tag_value}
+  */
   readonly tagValue: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#condition TagsTagValueIamBinding#condition}
+  */
   readonly condition?: TagsTagValueIamBindingCondition[];
 }
 export interface TagsTagValueIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#description TagsTagValueIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#expression TagsTagValueIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html#title TagsTagValueIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function tagsTagValueIamBindingConditionToTerraform(struct?: TagsTagValueIamBind
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html google_tags_tag_value_iam_binding}
+*/
 export class TagsTagValueIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding.html google_tags_tag_value_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TagsTagValueIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: TagsTagValueIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_value_iam_binding',

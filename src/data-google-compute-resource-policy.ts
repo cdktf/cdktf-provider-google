@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_resource_policy.html
+// https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,16 +7,27 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeResourcePolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the resource, provided by the client when initially creating
+  /**
+  * The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
 with RFC1035. Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
-which cannot be a dash. */
+which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html#name DataGoogleComputeResourcePolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html#project DataGoogleComputeResourcePolicy#project}
+  */
   readonly project?: string;
-  /** Region where resource policy resides. */
+  /**
+  * Region where resource policy resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html#region DataGoogleComputeResourcePolicy#region}
+  */
   readonly region?: string;
 }
 export class DataGoogleComputeResourcePolicyGroupPlacementPolicy extends cdktf.ComplexComputedList {
@@ -184,14 +195,22 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicy extends cdktf
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html google_compute_resource_policy}
+*/
 export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html google_compute_resource_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeResourcePolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeResourcePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_resource_policy',

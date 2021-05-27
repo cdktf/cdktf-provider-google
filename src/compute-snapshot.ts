@@ -7,40 +7,91 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeSnapshotConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#description ComputeSnapshot#description}
+  */
   readonly description?: string;
-  /** Labels to apply to this Snapshot. */
+  /**
+  * Labels to apply to this Snapshot.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#labels ComputeSnapshot#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Name of the resource; provided by the client when the resource is
+  /**
+  * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#name ComputeSnapshot#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#project ComputeSnapshot#project}
+  */
   readonly project?: string;
-  /** A reference to the disk used to create this snapshot. */
+  /**
+  * A reference to the disk used to create this snapshot.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#source_disk ComputeSnapshot#source_disk}
+  */
   readonly sourceDisk: string;
-  /** Cloud Storage bucket storage location of the snapshot (regional or multi-regional). */
+  /**
+  * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#storage_locations ComputeSnapshot#storage_locations}
+  */
   readonly storageLocations?: string[];
-  /** A reference to the zone where the disk is hosted. */
+  /**
+  * A reference to the zone where the disk is hosted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#zone ComputeSnapshot#zone}
+  */
   readonly zone?: string;
-  /** snapshot_encryption_key block */
+  /**
+  * snapshot_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#snapshot_encryption_key ComputeSnapshot#snapshot_encryption_key}
+  */
   readonly snapshotEncryptionKey?: ComputeSnapshotSnapshotEncryptionKey[];
-  /** source_disk_encryption_key block */
+  /**
+  * source_disk_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#source_disk_encryption_key ComputeSnapshot#source_disk_encryption_key}
+  */
   readonly sourceDiskEncryptionKey?: ComputeSnapshotSourceDiskEncryptionKey[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#timeouts ComputeSnapshot#timeouts}
+  */
   readonly timeouts?: ComputeSnapshotTimeouts;
 }
 export interface ComputeSnapshotSnapshotEncryptionKey {
-  /** The name of the encryption key that is stored in Google Cloud KMS. */
+  /**
+  * The name of the encryption key that is stored in Google Cloud KMS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#kms_key_self_link ComputeSnapshot#kms_key_self_link}
+  */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used. */
+  /**
+  * The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#kms_key_service_account ComputeSnapshot#kms_key_service_account}
+  */
   readonly kmsKeyServiceAccount?: string;
-  /** Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource. */
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#raw_key ComputeSnapshot#raw_key}
+  */
   readonly rawKey?: string;
 }
 
@@ -54,11 +105,19 @@ function computeSnapshotSnapshotEncryptionKeyToTerraform(struct?: ComputeSnapsho
 }
 
 export interface ComputeSnapshotSourceDiskEncryptionKey {
-  /** The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used. */
+  /**
+  * The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#kms_key_service_account ComputeSnapshot#kms_key_service_account}
+  */
   readonly kmsKeyServiceAccount?: string;
-  /** Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource. */
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#raw_key ComputeSnapshot#raw_key}
+  */
   readonly rawKey?: string;
 }
 
@@ -71,8 +130,17 @@ function computeSnapshotSourceDiskEncryptionKeyToTerraform(struct?: ComputeSnaps
 }
 
 export interface ComputeSnapshotTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#create ComputeSnapshot#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#delete ComputeSnapshot#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html#update ComputeSnapshot#update}
+  */
   readonly update?: string;
 }
 
@@ -86,14 +154,22 @@ function computeSnapshotTimeoutsToTerraform(struct?: ComputeSnapshotTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html google_compute_snapshot}
+*/
 export class ComputeSnapshot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot.html google_compute_snapshot} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeSnapshotConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_snapshot',

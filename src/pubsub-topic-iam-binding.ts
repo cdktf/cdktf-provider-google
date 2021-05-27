@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubTopicIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#members PubsubTopicIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#project PubsubTopicIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#role PubsubTopicIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#topic PubsubTopicIamBinding#topic}
+  */
   readonly topic: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#condition PubsubTopicIamBinding#condition}
+  */
   readonly condition?: PubsubTopicIamBindingCondition[];
 }
 export interface PubsubTopicIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#description PubsubTopicIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#expression PubsubTopicIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#title PubsubTopicIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function pubsubTopicIamBindingConditionToTerraform(struct?: PubsubTopicIamBindin
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html google_pubsub_topic_iam_binding}
+*/
 export class PubsubTopicIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html google_pubsub_topic_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubTopicIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubTopicIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_topic_iam_binding',

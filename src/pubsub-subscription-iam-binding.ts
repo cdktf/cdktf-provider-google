@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubSubscriptionIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#members PubsubSubscriptionIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#project PubsubSubscriptionIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#role PubsubSubscriptionIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#subscription PubsubSubscriptionIamBinding#subscription}
+  */
   readonly subscription: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#condition PubsubSubscriptionIamBinding#condition}
+  */
   readonly condition?: PubsubSubscriptionIamBindingCondition[];
 }
 export interface PubsubSubscriptionIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#description PubsubSubscriptionIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#expression PubsubSubscriptionIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html#title PubsubSubscriptionIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function pubsubSubscriptionIamBindingConditionToTerraform(struct?: PubsubSubscri
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html google_pubsub_subscription_iam_binding}
+*/
 export class PubsubSubscriptionIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_binding.html google_pubsub_subscription_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubSubscriptionIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubSubscriptionIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_subscription_iam_binding',

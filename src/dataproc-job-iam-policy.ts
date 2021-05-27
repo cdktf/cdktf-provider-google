@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocJobIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#job_id DataprocJobIamPolicy#job_id}
+  */
   readonly jobId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#policy_data DataprocJobIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#project DataprocJobIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#region DataprocJobIamPolicy#region}
+  */
   readonly region?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html google_dataproc_job_iam_policy}
+*/
 export class DataprocJobIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html google_dataproc_job_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocJobIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocJobIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_job_iam_policy',

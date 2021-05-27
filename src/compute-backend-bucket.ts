@@ -7,36 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeBackendBucketConfig extends cdktf.TerraformMetaArguments {
-  /** Cloud Storage bucket name. */
+  /**
+  * Cloud Storage bucket name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#bucket_name ComputeBackendBucket#bucket_name}
+  */
   readonly bucketName: string;
-  /** An optional textual description of the resource; provided by the
-client when the resource is created. */
+  /**
+  * An optional textual description of the resource; provided by the
+client when the resource is created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#description ComputeBackendBucket#description}
+  */
   readonly description?: string;
-  /** If true, enable Cloud CDN for this BackendBucket. */
+  /**
+  * If true, enable Cloud CDN for this BackendBucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#enable_cdn ComputeBackendBucket#enable_cdn}
+  */
   readonly enableCdn?: boolean;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash. */
+last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#name ComputeBackendBucket#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#project ComputeBackendBucket#project}
+  */
   readonly project?: string;
-  /** cdn_policy block */
+  /**
+  * cdn_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#cdn_policy ComputeBackendBucket#cdn_policy}
+  */
   readonly cdnPolicy?: ComputeBackendBucketCdnPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#timeouts ComputeBackendBucket#timeouts}
+  */
   readonly timeouts?: ComputeBackendBucketTimeouts;
 }
 export interface ComputeBackendBucketCdnPolicy {
-  /** Maximum number of seconds the response to a signed URL request will
+  /**
+  * Maximum number of seconds the response to a signed URL request will
 be considered fresh. After this time period,
 the response will be revalidated before being served.
 When serving responses to signed URL requests,
 Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
-header. The actual headers served in responses will not be altered. */
+header. The actual headers served in responses will not be altered.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#signed_url_cache_max_age_sec ComputeBackendBucket#signed_url_cache_max_age_sec}
+  */
   readonly signedUrlCacheMaxAgeSec?: number;
 }
 
@@ -48,8 +79,17 @@ function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketC
 }
 
 export interface ComputeBackendBucketTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#create ComputeBackendBucket#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#delete ComputeBackendBucket#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#update ComputeBackendBucket#update}
+  */
   readonly update?: string;
 }
 
@@ -63,14 +103,22 @@ function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html google_compute_backend_bucket}
+*/
 export class ComputeBackendBucket extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html google_compute_backend_bucket} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeBackendBucketConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeBackendBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_backend_bucket',

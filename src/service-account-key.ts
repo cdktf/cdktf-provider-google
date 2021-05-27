@@ -7,26 +7,56 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
-  /** Arbitrary map of values that, when changed, will trigger recreation of resource. */
+  /**
+  * Arbitrary map of values that, when changed, will trigger recreation of resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html#keepers ServiceAccountKey#keepers}
+  */
   readonly keepers?: { [key: string]: string };
-  /** The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048". */
+  /**
+  * The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html#key_algorithm ServiceAccountKey#key_algorithm}
+  */
   readonly keyAlgorithm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html#private_key_type ServiceAccountKey#private_key_type}
+  */
   readonly privateKeyType?: string;
-  /** A field that allows clients to upload their own public key. If set, use this public key data to create a service account key for given service account. Please note, the expected format for this field is a base64 encoded X509_PEM. */
+  /**
+  * A field that allows clients to upload their own public key. If set, use this public key data to create a service account key for given service account. Please note, the expected format for this field is a base64 encoded X509_PEM.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html#public_key_data ServiceAccountKey#public_key_data}
+  */
   readonly publicKeyData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html#public_key_type ServiceAccountKey#public_key_type}
+  */
   readonly publicKeyType?: string;
-  /** The ID of the parent service account of the key. This can be a string in the format {ACCOUNT} or projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}, where {ACCOUNT} is the email address or unique id of the service account. If the {ACCOUNT} syntax is used, the project will be inferred from the provider's configuration. */
+  /**
+  * The ID of the parent service account of the key. This can be a string in the format {ACCOUNT} or projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}, where {ACCOUNT} is the email address or unique id of the service account. If the {ACCOUNT} syntax is used, the project will be inferred from the provider's configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html#service_account_id ServiceAccountKey#service_account_id}
+  */
   readonly serviceAccountId: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html google_service_account_key}
+*/
 export class ServiceAccountKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_key.html google_service_account_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceAccountKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceAccountKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account_key',

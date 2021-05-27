@@ -7,27 +7,66 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArguments {
-  /** Time of expiration for this note. Leave empty if note does not expire. */
+  /**
+  * Time of expiration for this note. Leave empty if note does not expire.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#expiration_time ContainerAnalysisNote#expiration_time}
+  */
   readonly expirationTime?: string;
-  /** A detailed description of the note */
+  /**
+  * A detailed description of the note
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#long_description ContainerAnalysisNote#long_description}
+  */
   readonly longDescription?: string;
-  /** The name of the note. */
+  /**
+  * The name of the note.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#name ContainerAnalysisNote#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#project ContainerAnalysisNote#project}
+  */
   readonly project?: string;
-  /** Names of other notes related to this note. */
+  /**
+  * Names of other notes related to this note.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#related_note_names ContainerAnalysisNote#related_note_names}
+  */
   readonly relatedNoteNames?: string[];
-  /** A one sentence description of the note. */
+  /**
+  * A one sentence description of the note.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#short_description ContainerAnalysisNote#short_description}
+  */
   readonly shortDescription?: string;
-  /** attestation_authority block */
+  /**
+  * attestation_authority block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#attestation_authority ContainerAnalysisNote#attestation_authority}
+  */
   readonly attestationAuthority: ContainerAnalysisNoteAttestationAuthority[];
-  /** related_url block */
+  /**
+  * related_url block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#related_url ContainerAnalysisNote#related_url}
+  */
   readonly relatedUrl?: ContainerAnalysisNoteRelatedUrl[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#timeouts ContainerAnalysisNote#timeouts}
+  */
   readonly timeouts?: ContainerAnalysisNoteTimeouts;
 }
 export interface ContainerAnalysisNoteAttestationAuthorityHint {
-  /** The human readable name of this Attestation Authority, for
-example "qa". */
+  /**
+  * The human readable name of this Attestation Authority, for
+example "qa".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#human_readable_name ContainerAnalysisNote#human_readable_name}
+  */
   readonly humanReadableName: string;
 }
 
@@ -39,7 +78,11 @@ function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: Conta
 }
 
 export interface ContainerAnalysisNoteAttestationAuthority {
-  /** hint block */
+  /**
+  * hint block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#hint ContainerAnalysisNote#hint}
+  */
   readonly hint: ContainerAnalysisNoteAttestationAuthorityHint[];
 }
 
@@ -51,9 +94,17 @@ function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: Container
 }
 
 export interface ContainerAnalysisNoteRelatedUrl {
-  /** Label to describe usage of the URL */
+  /**
+  * Label to describe usage of the URL
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#label ContainerAnalysisNote#label}
+  */
   readonly label?: string;
-  /** Specific URL associated with the resource. */
+  /**
+  * Specific URL associated with the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#url ContainerAnalysisNote#url}
+  */
   readonly url: string;
 }
 
@@ -66,8 +117,17 @@ function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNo
 }
 
 export interface ContainerAnalysisNoteTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#create ContainerAnalysisNote#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#delete ContainerAnalysisNote#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#update ContainerAnalysisNote#update}
+  */
   readonly update?: string;
 }
 
@@ -81,14 +141,22 @@ function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNote
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html google_container_analysis_note}
+*/
 export class ContainerAnalysisNote extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html google_container_analysis_note} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerAnalysisNoteConfig
+  */
   public constructor(scope: Construct, id: string, config: ContainerAnalysisNoteConfig) {
     super(scope, id, {
       terraformResourceType: 'google_container_analysis_note',

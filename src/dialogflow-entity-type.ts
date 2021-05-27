@@ -7,34 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DialogflowEntityTypeConfig extends cdktf.TerraformMetaArguments {
-  /** The name of this entity type to be displayed on the console. */
+  /**
+  * The name of this entity type to be displayed on the console.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#display_name DialogflowEntityType#display_name}
+  */
   readonly displayName: string;
-  /** Enables fuzzy entity extraction during classification. */
+  /**
+  * Enables fuzzy entity extraction during classification.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#enable_fuzzy_extraction DialogflowEntityType#enable_fuzzy_extraction}
+  */
   readonly enableFuzzyExtraction?: boolean;
-  /** Indicates the kind of entity type.
+  /**
+  * Indicates the kind of entity type.
 * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
 * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
 types can contain references to other entity types (with or without aliases).
-* KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"] */
+* KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#kind DialogflowEntityType#kind}
+  */
   readonly kind: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#project DialogflowEntityType#project}
+  */
   readonly project?: string;
-  /** entities block */
+  /**
+  * entities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#entities DialogflowEntityType#entities}
+  */
   readonly entities?: DialogflowEntityTypeEntities[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#timeouts DialogflowEntityType#timeouts}
+  */
   readonly timeouts?: DialogflowEntityTypeTimeouts;
 }
 export interface DialogflowEntityTypeEntities {
-  /** A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+  /**
+  * A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
 could be green onions.
 For KIND_LIST entity types:
-* This collection must contain exactly one synonym equal to value. */
+* This collection must contain exactly one synonym equal to value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#synonyms DialogflowEntityType#synonyms}
+  */
   readonly synonyms: string[];
-  /** The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+  /**
+  * The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
 could be scallions.
 For KIND_MAP entity types:
 * A reference value to be used in place of synonyms.
 For KIND_LIST entity types:
-* A string that can contain references to other entity types (with or without aliases). */
+* A string that can contain references to other entity types (with or without aliases).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#value DialogflowEntityType#value}
+  */
   readonly value: string;
 }
 
@@ -47,8 +78,17 @@ function dialogflowEntityTypeEntitiesToTerraform(struct?: DialogflowEntityTypeEn
 }
 
 export interface DialogflowEntityTypeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#create DialogflowEntityType#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#delete DialogflowEntityType#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#update DialogflowEntityType#update}
+  */
   readonly update?: string;
 }
 
@@ -62,14 +102,22 @@ function dialogflowEntityTypeTimeoutsToTerraform(struct?: DialogflowEntityTypeTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html google_dialogflow_entity_type}
+*/
 export class DialogflowEntityType extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html google_dialogflow_entity_type} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DialogflowEntityTypeConfig
+  */
   public constructor(scope: Construct, id: string, config: DialogflowEntityTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dialogflow_entity_type',

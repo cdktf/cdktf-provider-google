@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotebooksInstanceIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_policy.html#instance_name NotebooksInstanceIamPolicy#instance_name}
+  */
   readonly instanceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_policy.html#location NotebooksInstanceIamPolicy#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_policy.html#policy_data NotebooksInstanceIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_policy.html#project NotebooksInstanceIamPolicy#project}
+  */
   readonly project?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_policy.html google_notebooks_instance_iam_policy}
+*/
 export class NotebooksInstanceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_policy.html google_notebooks_instance_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotebooksInstanceIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: NotebooksInstanceIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_notebooks_instance_iam_policy',

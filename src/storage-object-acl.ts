@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageObjectAclConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_acl.html#bucket StorageObjectAcl#bucket}
+  */
   readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_acl.html#object StorageObjectAcl#object}
+  */
   readonly object: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_acl.html#predefined_acl StorageObjectAcl#predefined_acl}
+  */
   readonly predefinedAcl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_acl.html#role_entity StorageObjectAcl#role_entity}
+  */
   readonly roleEntity?: string[];
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_object_acl.html google_storage_object_acl}
+*/
 export class StorageObjectAcl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_object_acl.html google_storage_object_acl} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageObjectAclConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageObjectAclConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_object_acl',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_cloudfunctions_function.html
+// https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
-  /** A user-defined name of the function. Function names must be unique globally. */
+  /**
+  * A user-defined name of the function. Function names must be unique globally.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#name DataGoogleCloudfunctionsFunction#name}
+  */
   readonly name: string;
-  /** Project of the function. If it is not provided, the provider project is used. */
+  /**
+  * Project of the function. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#project DataGoogleCloudfunctionsFunction#project}
+  */
   readonly project?: string;
-  /** Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used. */
+  /**
+  * Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#region DataGoogleCloudfunctionsFunction#region}
+  */
   readonly region?: string;
 }
 export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy extends cdktf.ComplexComputedList {
@@ -51,14 +63,22 @@ export class DataGoogleCloudfunctionsFunctionSourceRepository extends cdktf.Comp
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html google_cloudfunctions_function}
+*/
 export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html google_cloudfunctions_function} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleCloudfunctionsFunctionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleCloudfunctionsFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function',

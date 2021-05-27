@@ -7,17 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsKeyRingImportJobConfig extends cdktf.TerraformMetaArguments {
-  /** It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63} */
+  /**
+  * It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#import_job_id KmsKeyRingImportJob#import_job_id}
+  */
   readonly importJobId: string;
-  /** The wrapping method to be used for incoming key material. Possible values: ["RSA_OAEP_3072_SHA1_AES_256", "RSA_OAEP_4096_SHA1_AES_256"] */
+  /**
+  * The wrapping method to be used for incoming key material. Possible values: ["RSA_OAEP_3072_SHA1_AES_256", "RSA_OAEP_4096_SHA1_AES_256"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#import_method KmsKeyRingImportJob#import_method}
+  */
   readonly importMethod: string;
-  /** The KeyRing that this import job belongs to.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''. */
+  /**
+  * The KeyRing that this import job belongs to.
+Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#key_ring KmsKeyRingImportJob#key_ring}
+  */
   readonly keyRing: string;
-  /** The protection level of the ImportJob. This must match the protectionLevel of the
-versionTemplate on the CryptoKey you attempt to import into. Possible values: ["SOFTWARE", "HSM", "EXTERNAL"] */
+  /**
+  * The protection level of the ImportJob. This must match the protectionLevel of the
+versionTemplate on the CryptoKey you attempt to import into. Possible values: ["SOFTWARE", "HSM", "EXTERNAL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#protection_level KmsKeyRingImportJob#protection_level}
+  */
   readonly protectionLevel: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#timeouts KmsKeyRingImportJob#timeouts}
+  */
   readonly timeouts?: KmsKeyRingImportJobTimeouts;
 }
 export class KmsKeyRingImportJobAttestation extends cdktf.ComplexComputedList {
@@ -40,7 +60,13 @@ export class KmsKeyRingImportJobPublicKey extends cdktf.ComplexComputedList {
   }
 }
 export interface KmsKeyRingImportJobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#create KmsKeyRingImportJob#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html#delete KmsKeyRingImportJob#delete}
+  */
   readonly delete?: string;
 }
 
@@ -53,14 +79,22 @@ function kmsKeyRingImportJobTimeoutsToTerraform(struct?: KmsKeyRingImportJobTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html google_kms_key_ring_import_job}
+*/
 export class KmsKeyRingImportJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job.html google_kms_key_ring_import_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsKeyRingImportJobConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsKeyRingImportJobConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_key_ring_import_job',

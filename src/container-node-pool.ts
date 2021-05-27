@@ -7,41 +7,109 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerNodePoolConfig extends cdktf.TerraformMetaArguments {
-  /** The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters. */
+  /**
+  * The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#cluster ContainerNodePool#cluster}
+  */
   readonly cluster: string;
-  /** The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Changing this will force recreation of the resource. */
+  /**
+  * The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Changing this will force recreation of the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#initial_node_count ContainerNodePool#initial_node_count}
+  */
   readonly initialNodeCount?: number;
-  /** The location (region or zone) of the cluster. */
+  /**
+  * The location (region or zone) of the cluster.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#location ContainerNodePool#location}
+  */
   readonly location?: string;
-  /** The maximum number of pods per node in this node pool. Note that this does not work on node pools which are "route-based" - that is, node pools belonging to clusters that do not have IP Aliasing enabled. */
+  /**
+  * The maximum number of pods per node in this node pool. Note that this does not work on node pools which are "route-based" - that is, node pools belonging to clusters that do not have IP Aliasing enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#max_pods_per_node ContainerNodePool#max_pods_per_node}
+  */
   readonly maxPodsPerNode?: number;
-  /** The name of the node pool. If left blank, Terraform will auto-generate a unique name. */
+  /**
+  * The name of the node pool. If left blank, Terraform will auto-generate a unique name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#name ContainerNodePool#name}
+  */
   readonly name?: string;
-  /** Creates a unique name for the node pool beginning with the specified prefix. Conflicts with name. */
+  /**
+  * Creates a unique name for the node pool beginning with the specified prefix. Conflicts with name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#name_prefix ContainerNodePool#name_prefix}
+  */
   readonly namePrefix?: string;
-  /** The number of nodes per instance group. This field can be used to update the number of nodes per instance group but should not be used alongside autoscaling. */
+  /**
+  * The number of nodes per instance group. This field can be used to update the number of nodes per instance group but should not be used alongside autoscaling.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#node_count ContainerNodePool#node_count}
+  */
   readonly nodeCount?: number;
-  /** The list of zones in which the node pool's nodes should be located. Nodes must be in the region of their regional cluster or in the same region as their cluster's zone for zonal clusters. If unspecified, the cluster-level node_locations will be used. */
+  /**
+  * The list of zones in which the node pool's nodes should be located. Nodes must be in the region of their regional cluster or in the same region as their cluster's zone for zonal clusters. If unspecified, the cluster-level node_locations will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#node_locations ContainerNodePool#node_locations}
+  */
   readonly nodeLocations?: string[];
-  /** The ID of the project in which to create the node pool. If blank, the provider-configured project will be used. */
+  /**
+  * The ID of the project in which to create the node pool. If blank, the provider-configured project will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#project ContainerNodePool#project}
+  */
   readonly project?: string;
-  /** The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged. While a fuzzy version can be specified, it's recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source's version_prefix field to approximate fuzzy versions in a Terraform-compatible way. */
+  /**
+  * The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged. While a fuzzy version can be specified, it's recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source's version_prefix field to approximate fuzzy versions in a Terraform-compatible way.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#version ContainerNodePool#version}
+  */
   readonly version?: string;
-  /** autoscaling block */
+  /**
+  * autoscaling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#autoscaling ContainerNodePool#autoscaling}
+  */
   readonly autoscaling?: ContainerNodePoolAutoscaling[];
-  /** management block */
+  /**
+  * management block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#management ContainerNodePool#management}
+  */
   readonly management?: ContainerNodePoolManagement[];
-  /** node_config block */
+  /**
+  * node_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#node_config ContainerNodePool#node_config}
+  */
   readonly nodeConfig?: ContainerNodePoolNodeConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#timeouts ContainerNodePool#timeouts}
+  */
   readonly timeouts?: ContainerNodePoolTimeouts;
-  /** upgrade_settings block */
+  /**
+  * upgrade_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#upgrade_settings ContainerNodePool#upgrade_settings}
+  */
   readonly upgradeSettings?: ContainerNodePoolUpgradeSettings[];
 }
 export interface ContainerNodePoolAutoscaling {
-  /** Maximum number of nodes in the NodePool. Must be >= min_node_count. */
+  /**
+  * Maximum number of nodes in the NodePool. Must be >= min_node_count.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#max_node_count ContainerNodePool#max_node_count}
+  */
   readonly maxNodeCount: number;
-  /** Minimum number of nodes in the NodePool. Must be >=0 and <= max_node_count. */
+  /**
+  * Minimum number of nodes in the NodePool. Must be >=0 and <= max_node_count.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#min_node_count ContainerNodePool#min_node_count}
+  */
   readonly minNodeCount: number;
 }
 
@@ -54,9 +122,17 @@ function containerNodePoolAutoscalingToTerraform(struct?: ContainerNodePoolAutos
 }
 
 export interface ContainerNodePoolManagement {
-  /** Whether the nodes will be automatically repaired. */
+  /**
+  * Whether the nodes will be automatically repaired.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#auto_repair ContainerNodePool#auto_repair}
+  */
   readonly autoRepair?: boolean;
-  /** Whether the nodes will be automatically upgraded. */
+  /**
+  * Whether the nodes will be automatically upgraded.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#auto_upgrade ContainerNodePool#auto_upgrade}
+  */
   readonly autoUpgrade?: boolean;
 }
 
@@ -69,7 +145,13 @@ function containerNodePoolManagementToTerraform(struct?: ContainerNodePoolManage
 }
 
 export interface ContainerNodePoolNodeConfigGuestAccelerator {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#count ContainerNodePool#count}
+  */
   readonly count?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#type ContainerNodePool#type}
+  */
   readonly type?: string;
 }
 
@@ -82,8 +164,17 @@ function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: Contain
 }
 
 export interface ContainerNodePoolNodeConfigTaint {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#effect ContainerNodePool#effect}
+  */
   readonly effect?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#key ContainerNodePool#key}
+  */
   readonly key?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#value ContainerNodePool#value}
+  */
   readonly value?: string;
 }
 
@@ -97,9 +188,17 @@ function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolN
 }
 
 export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
-  /** Defines whether the instance has integrity monitoring enabled. */
+  /**
+  * Defines whether the instance has integrity monitoring enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#enable_integrity_monitoring ContainerNodePool#enable_integrity_monitoring}
+  */
   readonly enableIntegrityMonitoring?: boolean;
-  /** Defines whether the instance has Secure Boot enabled. */
+  /**
+  * Defines whether the instance has Secure Boot enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#enable_secure_boot ContainerNodePool#enable_secure_boot}
+  */
   readonly enableSecureBoot?: boolean;
 }
 
@@ -112,7 +211,11 @@ function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: C
 }
 
 export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
-  /** NodeMetadata is the configuration for how to expose metadata to the workloads running on the node. */
+  /**
+  * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#node_metadata ContainerNodePool#node_metadata}
+  */
   readonly nodeMetadata: string;
 }
 
@@ -124,37 +227,101 @@ function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: C
 }
 
 export interface ContainerNodePoolNodeConfig {
-  /** Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. */
+  /**
+  * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#disk_size_gb ContainerNodePool#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
-  /** Type of the disk attached to each node. */
+  /**
+  * Type of the disk attached to each node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#disk_type ContainerNodePool#disk_type}
+  */
   readonly diskType?: string;
-  /** List of the type and count of accelerator cards attached to the instance. */
+  /**
+  * List of the type and count of accelerator cards attached to the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#guest_accelerator ContainerNodePool#guest_accelerator}
+  */
   readonly guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[];
-  /** The image type to use for this node. Note that for a given image type, the latest version of it will be used. */
+  /**
+  * The image type to use for this node. Note that for a given image type, the latest version of it will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#image_type ContainerNodePool#image_type}
+  */
   readonly imageType?: string;
-  /** The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. */
+  /**
+  * The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#labels ContainerNodePool#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The number of local SSD disks to be attached to the node. */
+  /**
+  * The number of local SSD disks to be attached to the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#local_ssd_count ContainerNodePool#local_ssd_count}
+  */
   readonly localSsdCount?: number;
-  /** The name of a Google Compute Engine machine type. */
+  /**
+  * The name of a Google Compute Engine machine type.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#machine_type ContainerNodePool#machine_type}
+  */
   readonly machineType?: string;
-  /** The metadata key/value pairs assigned to instances in the cluster. */
+  /**
+  * The metadata key/value pairs assigned to instances in the cluster.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#metadata ContainerNodePool#metadata}
+  */
   readonly metadata?: { [key: string]: string };
-  /** Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. */
+  /**
+  * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#min_cpu_platform ContainerNodePool#min_cpu_platform}
+  */
   readonly minCpuPlatform?: string;
-  /** The set of Google API scopes to be made available on all of the node VMs. */
+  /**
+  * The set of Google API scopes to be made available on all of the node VMs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#oauth_scopes ContainerNodePool#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
-  /** Whether the nodes are created as preemptible VM instances. */
+  /**
+  * Whether the nodes are created as preemptible VM instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#preemptible ContainerNodePool#preemptible}
+  */
   readonly preemptible?: boolean;
-  /** The Google Cloud Platform Service Account to be used by the node VMs. */
+  /**
+  * The Google Cloud Platform Service Account to be used by the node VMs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#service_account ContainerNodePool#service_account}
+  */
   readonly serviceAccount?: string;
-  /** The list of instance tags applied to all nodes. */
+  /**
+  * The list of instance tags applied to all nodes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#tags ContainerNodePool#tags}
+  */
   readonly tags?: string[];
-  /** List of Kubernetes taints to be applied to each node. */
+  /**
+  * List of Kubernetes taints to be applied to each node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#taint ContainerNodePool#taint}
+  */
   readonly taint?: ContainerNodePoolNodeConfigTaint[];
-  /** shielded_instance_config block */
+  /**
+  * shielded_instance_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#shielded_instance_config ContainerNodePool#shielded_instance_config}
+  */
   readonly shieldedInstanceConfig?: ContainerNodePoolNodeConfigShieldedInstanceConfig[];
-  /** workload_metadata_config block */
+  /**
+  * workload_metadata_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#workload_metadata_config ContainerNodePool#workload_metadata_config}
+  */
   readonly workloadMetadataConfig?: ContainerNodePoolNodeConfigWorkloadMetadataConfig[];
 }
 
@@ -181,8 +348,17 @@ function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoolNodeCo
 }
 
 export interface ContainerNodePoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#create ContainerNodePool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#delete ContainerNodePool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#update ContainerNodePool#update}
+  */
   readonly update?: string;
 }
 
@@ -196,9 +372,17 @@ function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolTimeouts
 }
 
 export interface ContainerNodePoolUpgradeSettings {
-  /** The number of additional nodes that can be added to the node pool during an upgrade. Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater. */
+  /**
+  * The number of additional nodes that can be added to the node pool during an upgrade. Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#max_surge ContainerNodePool#max_surge}
+  */
   readonly maxSurge: number;
-  /** The number of nodes that can be simultaneously unavailable during an upgrade. Increasing max_unavailable raises the number of nodes that can be upgraded in parallel. Can be set to 0 or greater. */
+  /**
+  * The number of nodes that can be simultaneously unavailable during an upgrade. Increasing max_unavailable raises the number of nodes that can be upgraded in parallel. Can be set to 0 or greater.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#max_unavailable ContainerNodePool#max_unavailable}
+  */
   readonly maxUnavailable: number;
 }
 
@@ -211,14 +395,22 @@ function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNodePoolU
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html google_container_node_pool}
+*/
 export class ContainerNodePool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html google_container_node_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerNodePoolConfig
+  */
   public constructor(scope: Construct, id: string, config: ContainerNodePoolConfig) {
     super(scope, id, {
       terraformResourceType: 'google_container_node_pool',

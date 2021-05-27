@@ -7,30 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
-  /** The deletion policy for the user. Setting ABANDON allows the resource
+  /**
+  * The deletion policy for the user. Setting ABANDON allows the resource
 				to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
-				have been granted SQL roles. Possible values are: "ABANDON". */
+				have been granted SQL roles. Possible values are: "ABANDON".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#deletion_policy SqlUser#deletion_policy}
+  */
   readonly deletionPolicy?: string;
-  /** The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created. */
+  /**
+  * The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#host SqlUser#host}
+  */
   readonly host?: string;
-  /** The name of the Cloud SQL instance. Changing this forces a new resource to be created. */
+  /**
+  * The name of the Cloud SQL instance. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#instance SqlUser#instance}
+  */
   readonly instance: string;
-  /** The name of the user. Changing this forces a new resource to be created. */
+  /**
+  * The name of the user. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#name SqlUser#name}
+  */
   readonly name: string;
-  /** The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to
-                either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. */
+  /**
+  * The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to
+                either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#password SqlUser#password}
+  */
   readonly password?: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#project SqlUser#project}
+  */
   readonly project?: string;
-  /** The user type. It determines the method to authenticate the user during login.
-                The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT". */
+  /**
+  * The user type. It determines the method to authenticate the user during login.
+                The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#type SqlUser#type}
+  */
   readonly type?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#timeouts SqlUser#timeouts}
+  */
   readonly timeouts?: SqlUserTimeouts;
 }
 export interface SqlUserTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#create SqlUser#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#delete SqlUser#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user.html#update SqlUser#update}
+  */
   readonly update?: string;
 }
 
@@ -44,14 +85,22 @@ function sqlUserTimeoutsToTerraform(struct?: SqlUserTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_user.html google_sql_user}
+*/
 export class SqlUser extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_user.html google_sql_user} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlUserConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlUserConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_user',

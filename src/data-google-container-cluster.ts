@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_container_cluster.html
+// https://www.terraform.io/docs/providers/google/d/container_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleContainerClusterConfig extends cdktf.TerraformMetaArguments {
-  /** The location (region or zone) in which the cluster master will be created, as well as the default node location. If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well. */
+  /**
+  * The location (region or zone) in which the cluster master will be created, as well as the default node location. If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_cluster.html#location DataGoogleContainerCluster#location}
+  */
   readonly location?: string;
-  /** The name of the cluster, unique within the project and location. */
+  /**
+  * The name of the cluster, unique within the project and location.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_cluster.html#name DataGoogleContainerCluster#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_cluster.html#project DataGoogleContainerCluster#project}
+  */
   readonly project?: string;
 }
 export class DataGoogleContainerClusterAddonsConfigCloudrunConfig extends cdktf.ComplexComputedList {
@@ -751,14 +763,22 @@ export class DataGoogleContainerClusterWorkloadIdentityConfig extends cdktf.Comp
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_cluster.html google_container_cluster}
+*/
 export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_cluster.html google_container_cluster} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleContainerClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleContainerClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'google_container_cluster',

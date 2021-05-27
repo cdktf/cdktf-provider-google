@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_monitoring_cluster_istio_service.html
+// https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,18 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Kubernetes cluster in which this Istio service is defined. 
-                        Corresponds to the clusterName resource label in k8s_cluster resources. */
+  /**
+  * The name of the Kubernetes cluster in which this Istio service is defined. 
+                        Corresponds to the clusterName resource label in k8s_cluster resources.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html#cluster_name DataGoogleMonitoringClusterIstioService#cluster_name}
+  */
   readonly clusterName: string;
-  /** The location of the Kubernetes cluster in which this Istio service is defined. 
-                        Corresponds to the location resource label in k8s_cluster resources. */
+  /**
+  * The location of the Kubernetes cluster in which this Istio service is defined. 
+                        Corresponds to the location resource label in k8s_cluster resources.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html#location DataGoogleMonitoringClusterIstioService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html#project DataGoogleMonitoringClusterIstioService#project}
+  */
   readonly project?: string;
-  /** The name of the Istio service underlying this service. 
-                        Corresponds to the destination_service_name metric label in Istio metrics. */
+  /**
+  * The name of the Istio service underlying this service. 
+                        Corresponds to the destination_service_name metric label in Istio metrics.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html#service_name DataGoogleMonitoringClusterIstioService#service_name}
+  */
   readonly serviceName: string;
-  /** The namespace of the Istio service underlying this service. 
-                        Corresponds to the destination_service_namespace metric label in Istio metrics. */
+  /**
+  * The namespace of the Istio service underlying this service. 
+                        Corresponds to the destination_service_namespace metric label in Istio metrics.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html#service_namespace DataGoogleMonitoringClusterIstioService#service_namespace}
+  */
   readonly serviceNamespace: string;
 }
 export class DataGoogleMonitoringClusterIstioServiceTelemetry extends cdktf.ComplexComputedList {
@@ -29,14 +48,22 @@ export class DataGoogleMonitoringClusterIstioServiceTelemetry extends cdktf.Comp
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html google_monitoring_cluster_istio_service}
+*/
 export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service.html google_monitoring_cluster_istio_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleMonitoringClusterIstioServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleMonitoringClusterIstioServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_cluster_istio_service',

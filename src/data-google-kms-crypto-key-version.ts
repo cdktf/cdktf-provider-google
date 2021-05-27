@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_kms_crypto_key_version.html
+// https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,7 +7,13 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleKmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html#crypto_key DataGoogleKmsCryptoKeyVersion#crypto_key}
+  */
   readonly cryptoKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html#version DataGoogleKmsCryptoKeyVersion#version}
+  */
   readonly version?: number;
 }
 export class DataGoogleKmsCryptoKeyVersionPublicKey extends cdktf.ComplexComputedList {
@@ -23,14 +29,22 @@ export class DataGoogleKmsCryptoKeyVersionPublicKey extends cdktf.ComplexCompute
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html google_kms_crypto_key_version}
+*/
 export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html google_kms_crypto_key_version} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleKmsCryptoKeyVersionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleKmsCryptoKeyVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_crypto_key_version',

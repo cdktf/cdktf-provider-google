@@ -7,36 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpannerInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the instance's configuration (similar but not
+  /**
+  * The name of the instance's configuration (similar but not
 quite the same as a region) which defines defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form 'regional-europe-west1' , 'us-central' etc.
 In order to obtain a valid list please consult the
-[Configuration section of the docs](https://cloud.google.com/spanner/docs/instances). */
+[Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#config SpannerInstance#config}
+  */
   readonly config: string;
-  /** The descriptive name for this instance as it appears in UIs. Must be
-unique per project and between 4 and 30 characters in length. */
+  /**
+  * The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#display_name SpannerInstance#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#force_destroy SpannerInstance#force_destroy}
+  */
   readonly forceDestroy?: boolean;
-  /** An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }. */
+  /**
+  * An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#labels SpannerInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** A unique identifier for the instance, which cannot be changed after
+  /**
+  * A unique identifier for the instance, which cannot be changed after
 the instance is created. The name must be between 6 and 30 characters
 in length.
 
 
-If not provided, a random string starting with 'tf-' will be selected. */
+If not provided, a random string starting with 'tf-' will be selected.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#name SpannerInstance#name}
+  */
   readonly name?: string;
-  /** The number of nodes allocated to this instance. */
+  /**
+  * The number of nodes allocated to this instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#num_nodes SpannerInstance#num_nodes}
+  */
   readonly numNodes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#project SpannerInstance#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#timeouts SpannerInstance#timeouts}
+  */
   readonly timeouts?: SpannerInstanceTimeouts;
 }
 export interface SpannerInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#create SpannerInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#delete SpannerInstance#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#update SpannerInstance#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +89,22 @@ function spannerInstanceTimeoutsToTerraform(struct?: SpannerInstanceTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html google_spanner_instance}
+*/
 export class SpannerInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html google_spanner_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpannerInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: SpannerInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_spanner_instance',

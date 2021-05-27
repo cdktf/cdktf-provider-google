@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_service_account_access_token.html
+// https://www.terraform.io/docs/providers/google/d/service_account_access_token.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleServiceAccountAccessTokenConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#delegates DataGoogleServiceAccountAccessToken#delegates}
+  */
   readonly delegates?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#lifetime DataGoogleServiceAccountAccessToken#lifetime}
+  */
   readonly lifetime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#scopes DataGoogleServiceAccountAccessToken#scopes}
+  */
   readonly scopes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#target_service_account DataGoogleServiceAccountAccessToken#target_service_account}
+  */
   readonly targetServiceAccount: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html google_service_account_access_token}
+*/
 export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html google_service_account_access_token} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleServiceAccountAccessTokenConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleServiceAccountAccessTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account_access_token',

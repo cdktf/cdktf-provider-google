@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_region_instance_group.html
+// https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeRegionInstanceGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#name DataGoogleComputeRegionInstanceGroup#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#project DataGoogleComputeRegionInstanceGroup#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#region DataGoogleComputeRegionInstanceGroup#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#self_link DataGoogleComputeRegionInstanceGroup#self_link}
+  */
   readonly selfLink?: string;
 }
 export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends cdktf.ComplexComputedList {
@@ -42,14 +54,22 @@ export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.Complex
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html google_compute_region_instance_group}
+*/
 export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html google_compute_region_instance_group} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeRegionInstanceGroupConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeRegionInstanceGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_instance_group',

@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogTagTemplateIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#members DataCatalogTagTemplateIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#project DataCatalogTagTemplateIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#region DataCatalogTagTemplateIamBinding#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#role DataCatalogTagTemplateIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#tag_template DataCatalogTagTemplateIamBinding#tag_template}
+  */
   readonly tagTemplate: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#condition DataCatalogTagTemplateIamBinding#condition}
+  */
   readonly condition?: DataCatalogTagTemplateIamBindingCondition[];
 }
 export interface DataCatalogTagTemplateIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#description DataCatalogTagTemplateIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#expression DataCatalogTagTemplateIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#title DataCatalogTagTemplateIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function dataCatalogTagTemplateIamBindingConditionToTerraform(struct?: DataCatal
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html google_data_catalog_tag_template_iam_binding}
+*/
 export class DataCatalogTagTemplateIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html google_data_catalog_tag_template_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogTagTemplateIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogTagTemplateIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_tag_template_iam_binding',

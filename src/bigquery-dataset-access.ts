@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access_a.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,27 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryDatasetAccessAConfig extends cdktf.TerraformMetaArguments {
-  /** A unique ID for this dataset, without the project name. The ID
+  /**
+  * A unique ID for this dataset, without the project name. The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters. */
+underscores (_). The maximum length is 1,024 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#dataset_id BigqueryDatasetAccessA#dataset_id}
+  */
   readonly datasetId: string;
-  /** A domain to grant access to. Any users signed in with the
-domain specified will be granted the specified access */
+  /**
+  * A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#domain BigqueryDatasetAccessA#domain}
+  */
   readonly domain?: string;
-  /** An email address of a Google Group to grant access to. */
+  /**
+  * An email address of a Google Group to grant access to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#group_by_email BigqueryDatasetAccessA#group_by_email}
+  */
   readonly groupByEmail?: string;
-  /** Some other type of member that appears in the IAM Policy but isn't a user,
-group, domain, or special group. For example: 'allUsers' */
+  /**
+  * Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: 'allUsers'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#iam_member BigqueryDatasetAccessA#iam_member}
+  */
   readonly iamMember?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#project BigqueryDatasetAccessA#project}
+  */
   readonly project?: string;
-  /** Describes the rights granted to the user specified by the other
+  /**
+  * Describes the rights granted to the user specified by the other
 member of the access object. Basic, predefined, and custom roles are
 supported. Predefined roles that have equivalent basic roles are
 swapped by the API to their basic counterparts, and will show a diff
 post-create. See
-[official docs](https://cloud.google.com/bigquery/docs/access-control). */
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#role BigqueryDatasetAccessA#role}
+  */
   readonly role?: string;
-  /** A special group to grant access to. Possible values include:
+  /**
+  * A special group to grant access to. Possible values include:
 
 
 * 'projectOwners': Owners of the enclosing project.
@@ -39,18 +63,39 @@ post-create. See
 * 'projectWriters': Writers of the enclosing project.
 
 
-* 'allAuthenticatedUsers': All authenticated BigQuery users. */
+* 'allAuthenticatedUsers': All authenticated BigQuery users.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#special_group BigqueryDatasetAccessA#special_group}
+  */
   readonly specialGroup?: string;
-  /** An email address of a user to grant access to. For example:
-fred@example.com */
+  /**
+  * An email address of a user to grant access to. For example:
+fred@example.com
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#user_by_email BigqueryDatasetAccessA#user_by_email}
+  */
   readonly userByEmail?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#timeouts BigqueryDatasetAccessA#timeouts}
+  */
   readonly timeouts?: BigqueryDatasetAccessTimeouts;
-  /** view block */
+  /**
+  * view block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#view BigqueryDatasetAccessA#view}
+  */
   readonly view?: BigqueryDatasetAccessViewA[];
 }
 export interface BigqueryDatasetAccessTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#create BigqueryDatasetAccessA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#delete BigqueryDatasetAccessA#delete}
+  */
   readonly delete?: string;
 }
 
@@ -63,13 +108,25 @@ function bigqueryDatasetAccessTimeoutsToTerraform(struct?: BigqueryDatasetAccess
 }
 
 export interface BigqueryDatasetAccessViewA {
-  /** The ID of the dataset containing this table. */
+  /**
+  * The ID of the dataset containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#dataset_id BigqueryDatasetAccessA#dataset_id}
+  */
   readonly datasetId: string;
-  /** The ID of the project containing this table. */
+  /**
+  * The ID of the project containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#project_id BigqueryDatasetAccessA#project_id}
+  */
   readonly projectId: string;
-  /** The ID of the table. The ID must contain only letters (a-z,
+  /**
+  * The ID of the table. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
-is 1,024 characters. */
+is 1,024 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html#table_id BigqueryDatasetAccessA#table_id}
+  */
   readonly tableId: string;
 }
 
@@ -83,14 +140,22 @@ function bigqueryDatasetAccessViewAToTerraform(struct?: BigqueryDatasetAccessVie
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html google_bigquery_dataset_access}
+*/
 export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access.html google_bigquery_dataset_access} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryDatasetAccessAConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryDatasetAccessAConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_dataset_access',

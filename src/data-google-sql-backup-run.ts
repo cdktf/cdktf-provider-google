@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_sql_backup_run.html
+// https://www.terraform.io/docs/providers/google/d/sql_backup_run.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,22 +7,42 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArguments {
-  /** The identifier for this backup run. Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true. */
+  /**
+  * The identifier for this backup run. Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#backup_id DataGoogleSqlBackupRun#backup_id}
+  */
   readonly backupId?: number;
-  /** Name of the database instance. */
+  /**
+  * Name of the database instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#instance DataGoogleSqlBackupRun#instance}
+  */
   readonly instance: string;
-  /** Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance. */
+  /**
+  * Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#most_recent DataGoogleSqlBackupRun#most_recent}
+  */
   readonly mostRecent?: boolean;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html google_sql_backup_run}
+*/
 export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html google_sql_backup_run} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleSqlBackupRunConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleSqlBackupRunConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_backup_run',

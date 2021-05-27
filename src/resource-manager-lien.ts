@@ -7,29 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ResourceManagerLienConfig extends cdktf.TerraformMetaArguments {
-  /** A stable, user-visible/meaningful string identifying the origin
+  /**
+  * A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
-200 characters. */
+200 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#origin ResourceManagerLien#origin}
+  */
   readonly origin: string;
-  /** A reference to the resource this Lien is attached to.
+  /**
+  * A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
-prefix (e.g. "projects/my-project-name"). */
+prefix (e.g. "projects/my-project-name").
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#parent ResourceManagerLien#parent}
+  */
   readonly parent: string;
-  /** Concise user-visible strings indicating why an action cannot be performed
-on a resource. Maximum length of 200 characters. */
+  /**
+  * Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#reason ResourceManagerLien#reason}
+  */
   readonly reason: string;
-  /** The types of operations which should be blocked as a result of this Lien.
+  /**
+  * The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
 the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
-e.g. ['resourcemanager.projects.delete'] */
+e.g. ['resourcemanager.projects.delete']
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#restrictions ResourceManagerLien#restrictions}
+  */
   readonly restrictions: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#timeouts ResourceManagerLien#timeouts}
+  */
   readonly timeouts?: ResourceManagerLienTimeouts;
 }
 export interface ResourceManagerLienTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#create ResourceManagerLien#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#delete ResourceManagerLien#delete}
+  */
   readonly delete?: string;
 }
 
@@ -42,14 +68,22 @@ function resourceManagerLienTimeoutsToTerraform(struct?: ResourceManagerLienTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html google_resource_manager_lien}
+*/
 export class ResourceManagerLien extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html google_resource_manager_lien} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ResourceManagerLienConfig
+  */
   public constructor(scope: Construct, id: string, config: ResourceManagerLienConfig) {
     super(scope, id, {
       terraformResourceType: 'google_resource_manager_lien',

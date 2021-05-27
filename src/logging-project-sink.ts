@@ -7,27 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LoggingProjectSinkConfig extends cdktf.TerraformMetaArguments {
-  /** A description of this sink. The maximum length of the description is 8000 characters. */
+  /**
+  * A description of this sink. The maximum length of the description is 8000 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#description LoggingProjectSink#description}
+  */
   readonly description?: string;
-  /** The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource. */
+  /**
+  * The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#destination LoggingProjectSink#destination}
+  */
   readonly destination: string;
-  /** If set to True, then this sink is disabled and it does not export any log entries. */
+  /**
+  * If set to True, then this sink is disabled and it does not export any log entries.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#disabled LoggingProjectSink#disabled}
+  */
   readonly disabled?: boolean;
-  /** The filter to apply when exporting logs. Only log entries that match the filter are exported. */
+  /**
+  * The filter to apply when exporting logs. Only log entries that match the filter are exported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#filter LoggingProjectSink#filter}
+  */
   readonly filter?: string;
-  /** The name of the logging sink. */
+  /**
+  * The name of the logging sink.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#name LoggingProjectSink#name}
+  */
   readonly name: string;
-  /** The ID of the project to create the sink in. If omitted, the project associated with the provider is used. */
+  /**
+  * The ID of the project to create the sink in. If omitted, the project associated with the provider is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#project LoggingProjectSink#project}
+  */
   readonly project?: string;
-  /** Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. */
+  /**
+  * Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#unique_writer_identity LoggingProjectSink#unique_writer_identity}
+  */
   readonly uniqueWriterIdentity?: boolean;
-  /** bigquery_options block */
+  /**
+  * bigquery_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#bigquery_options LoggingProjectSink#bigquery_options}
+  */
   readonly bigqueryOptions?: LoggingProjectSinkBigqueryOptions[];
-  /** exclusions block */
+  /**
+  * exclusions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#exclusions LoggingProjectSink#exclusions}
+  */
   readonly exclusions?: LoggingProjectSinkExclusions[];
 }
 export interface LoggingProjectSinkBigqueryOptions {
-  /** Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone. */
+  /**
+  * Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#use_partitioned_tables LoggingProjectSink#use_partitioned_tables}
+  */
   readonly usePartitionedTables: boolean;
 }
 
@@ -39,13 +79,29 @@ function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingProjectSin
 }
 
 export interface LoggingProjectSinkExclusions {
-  /** A description of this exclusion. */
+  /**
+  * A description of this exclusion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#description LoggingProjectSink#description}
+  */
   readonly description?: string;
-  /** If set to True, then this exclusion is disabled and it does not exclude any log entries */
+  /**
+  * If set to True, then this exclusion is disabled and it does not exclude any log entries
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#disabled LoggingProjectSink#disabled}
+  */
   readonly disabled?: boolean;
-  /** An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries */
+  /**
+  * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#filter LoggingProjectSink#filter}
+  */
   readonly filter: string;
-  /** A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric. */
+  /**
+  * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#name LoggingProjectSink#name}
+  */
   readonly name: string;
 }
 
@@ -60,14 +116,22 @@ function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectSinkExcl
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html google_logging_project_sink}
+*/
 export class LoggingProjectSink extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html google_logging_project_sink} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LoggingProjectSinkConfig
+  */
   public constructor(scope: Construct, id: string, config: LoggingProjectSinkConfig) {
     super(scope, id, {
       terraformResourceType: 'google_logging_project_sink',

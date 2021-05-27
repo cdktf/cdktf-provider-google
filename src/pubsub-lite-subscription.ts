@@ -7,22 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubLiteSubscriptionConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the subscription. */
+  /**
+  * Name of the subscription.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#name PubsubLiteSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#project PubsubLiteSubscription#project}
+  */
   readonly project?: string;
-  /** The region of the pubsub lite topic. */
+  /**
+  * The region of the pubsub lite topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#region PubsubLiteSubscription#region}
+  */
   readonly region?: string;
-  /** A reference to a Topic resource. */
+  /**
+  * A reference to a Topic resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#topic PubsubLiteSubscription#topic}
+  */
   readonly topic: string;
-  /** The zone of the pubsub lite topic. */
+  /**
+  * The zone of the pubsub lite topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#zone PubsubLiteSubscription#zone}
+  */
   readonly zone?: string;
-  /** delivery_config block */
+  /**
+  * delivery_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#delivery_config PubsubLiteSubscription#delivery_config}
+  */
   readonly deliveryConfig?: PubsubLiteSubscriptionDeliveryConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#timeouts PubsubLiteSubscription#timeouts}
+  */
   readonly timeouts?: PubsubLiteSubscriptionTimeouts;
 }
 export interface PubsubLiteSubscriptionDeliveryConfig {
-  /** When this subscription should send messages to subscribers relative to messages persistence in storage. Possible values: ["DELIVER_IMMEDIATELY", "DELIVER_AFTER_STORED", "DELIVERY_REQUIREMENT_UNSPECIFIED"] */
+  /**
+  * When this subscription should send messages to subscribers relative to messages persistence in storage. Possible values: ["DELIVER_IMMEDIATELY", "DELIVER_AFTER_STORED", "DELIVERY_REQUIREMENT_UNSPECIFIED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#delivery_requirement PubsubLiteSubscription#delivery_requirement}
+  */
   readonly deliveryRequirement: string;
 }
 
@@ -34,8 +65,17 @@ function pubsubLiteSubscriptionDeliveryConfigToTerraform(struct?: PubsubLiteSubs
 }
 
 export interface PubsubLiteSubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#create PubsubLiteSubscription#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#delete PubsubLiteSubscription#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html#update PubsubLiteSubscription#update}
+  */
   readonly update?: string;
 }
 
@@ -49,14 +89,22 @@ function pubsubLiteSubscriptionTimeoutsToTerraform(struct?: PubsubLiteSubscripti
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html google_pubsub_lite_subscription}
+*/
 export class PubsubLiteSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_subscription.html google_pubsub_lite_subscription} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubLiteSubscriptionConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubLiteSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_lite_subscription',

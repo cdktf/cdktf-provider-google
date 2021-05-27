@@ -7,24 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the topic. */
+  /**
+  * Name of the topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#name PubsubLiteTopic#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#project PubsubLiteTopic#project}
+  */
   readonly project?: string;
-  /** The region of the pubsub lite topic. */
+  /**
+  * The region of the pubsub lite topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#region PubsubLiteTopic#region}
+  */
   readonly region?: string;
-  /** The zone of the pubsub lite topic. */
+  /**
+  * The zone of the pubsub lite topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#zone PubsubLiteTopic#zone}
+  */
   readonly zone?: string;
-  /** partition_config block */
+  /**
+  * partition_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#partition_config PubsubLiteTopic#partition_config}
+  */
   readonly partitionConfig?: PubsubLiteTopicPartitionConfig[];
-  /** retention_config block */
+  /**
+  * retention_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#retention_config PubsubLiteTopic#retention_config}
+  */
   readonly retentionConfig?: PubsubLiteTopicRetentionConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#timeouts PubsubLiteTopic#timeouts}
+  */
   readonly timeouts?: PubsubLiteTopicTimeouts;
 }
 export interface PubsubLiteTopicPartitionConfigCapacity {
-  /** Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16. */
+  /**
+  * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#publish_mib_per_sec PubsubLiteTopic#publish_mib_per_sec}
+  */
   readonly publishMibPerSec: number;
-  /** Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16. */
+  /**
+  * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#subscribe_mib_per_sec PubsubLiteTopic#subscribe_mib_per_sec}
+  */
   readonly subscribeMibPerSec: number;
 }
 
@@ -37,9 +72,17 @@ function pubsubLiteTopicPartitionConfigCapacityToTerraform(struct?: PubsubLiteTo
 }
 
 export interface PubsubLiteTopicPartitionConfig {
-  /** The number of partitions in the topic. Must be at least 1. */
+  /**
+  * The number of partitions in the topic. Must be at least 1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#count PubsubLiteTopic#count}
+  */
   readonly count: number;
-  /** capacity block */
+  /**
+  * capacity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#capacity PubsubLiteTopic#capacity}
+  */
   readonly capacity?: PubsubLiteTopicPartitionConfigCapacity[];
 }
 
@@ -52,12 +95,20 @@ function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTopicParti
 }
 
 export interface PubsubLiteTopicRetentionConfig {
-  /** The provisioned storage, in bytes, per partition. If the number of bytes stored
+  /**
+  * The provisioned storage, in bytes, per partition. If the number of bytes stored
 in any of the topic's partitions grows beyond this value, older messages will be
-dropped to make room for newer ones, regardless of the value of period. */
+dropped to make room for newer ones, regardless of the value of period.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#per_partition_bytes PubsubLiteTopic#per_partition_bytes}
+  */
   readonly perPartitionBytes: string;
-  /** How long a published message is retained. If unset, messages will be retained as
-long as the bytes retained for each partition is below perPartitionBytes. */
+  /**
+  * How long a published message is retained. If unset, messages will be retained as
+long as the bytes retained for each partition is below perPartitionBytes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#period PubsubLiteTopic#period}
+  */
   readonly period?: string;
 }
 
@@ -70,8 +121,17 @@ function pubsubLiteTopicRetentionConfigToTerraform(struct?: PubsubLiteTopicReten
 }
 
 export interface PubsubLiteTopicTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#create PubsubLiteTopic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#delete PubsubLiteTopic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#update PubsubLiteTopic#update}
+  */
   readonly update?: string;
 }
 
@@ -85,14 +145,22 @@ function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html google_pubsub_lite_topic}
+*/
 export class PubsubLiteTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html google_pubsub_lite_topic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubLiteTopicConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubLiteTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_lite_topic',

@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryDatasetIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#dataset_id BigqueryDatasetIamMember#dataset_id}
+  */
   readonly datasetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#member BigqueryDatasetIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#project BigqueryDatasetIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#role BigqueryDatasetIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#condition BigqueryDatasetIamMember#condition}
+  */
   readonly condition?: BigqueryDatasetIamMemberCondition[];
 }
 export interface BigqueryDatasetIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#description BigqueryDatasetIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#expression BigqueryDatasetIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#title BigqueryDatasetIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function bigqueryDatasetIamMemberConditionToTerraform(struct?: BigqueryDatasetIa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html google_bigquery_dataset_iam_member}
+*/
 export class BigqueryDatasetIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html google_bigquery_dataset_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryDatasetIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryDatasetIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_dataset_iam_member',

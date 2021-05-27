@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapWebBackendServiceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#members IapWebBackendServiceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#project IapWebBackendServiceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#role IapWebBackendServiceIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#web_backend_service IapWebBackendServiceIamBinding#web_backend_service}
+  */
   readonly webBackendService: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#condition IapWebBackendServiceIamBinding#condition}
+  */
   readonly condition?: IapWebBackendServiceIamBindingCondition[];
 }
 export interface IapWebBackendServiceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#description IapWebBackendServiceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#expression IapWebBackendServiceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html#title IapWebBackendServiceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function iapWebBackendServiceIamBindingConditionToTerraform(struct?: IapWebBacke
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html google_iap_web_backend_service_iam_binding}
+*/
 export class IapWebBackendServiceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_binding.html google_iap_web_backend_service_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapWebBackendServiceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: IapWebBackendServiceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_web_backend_service_iam_binding',

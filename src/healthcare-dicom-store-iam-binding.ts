@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareDicomStoreIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}
+  */
   readonly dicomStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#members HealthcareDicomStoreIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#role HealthcareDicomStoreIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#condition HealthcareDicomStoreIamBinding#condition}
+  */
   readonly condition?: HealthcareDicomStoreIamBindingCondition[];
 }
 export interface HealthcareDicomStoreIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#description HealthcareDicomStoreIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#expression HealthcareDicomStoreIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#title HealthcareDicomStoreIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function healthcareDicomStoreIamBindingConditionToTerraform(struct?: HealthcareD
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html google_healthcare_dicom_store_iam_binding}
+*/
 export class HealthcareDicomStoreIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html google_healthcare_dicom_store_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareDicomStoreIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareDicomStoreIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dicom_store_iam_binding',

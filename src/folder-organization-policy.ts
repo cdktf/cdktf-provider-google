@@ -7,23 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FolderOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
+  /**
+  * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#constraint FolderOrganizationPolicy#constraint}
+  */
   readonly constraint: string;
-  /** The resource name of the folder to set the policy for. Its format is folders/{folder_id}. */
+  /**
+  * The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#folder FolderOrganizationPolicy#folder}
+  */
   readonly folder: string;
-  /** Version of the Policy. Default version is 0. */
+  /**
+  * Version of the Policy. Default version is 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#version FolderOrganizationPolicy#version}
+  */
   readonly version?: number;
-  /** boolean_policy block */
+  /**
+  * boolean_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#boolean_policy FolderOrganizationPolicy#boolean_policy}
+  */
   readonly booleanPolicy?: FolderOrganizationPolicyBooleanPolicy[];
-  /** list_policy block */
+  /**
+  * list_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#list_policy FolderOrganizationPolicy#list_policy}
+  */
   readonly listPolicy?: FolderOrganizationPolicyListPolicy[];
-  /** restore_policy block */
+  /**
+  * restore_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#restore_policy FolderOrganizationPolicy#restore_policy}
+  */
   readonly restorePolicy?: FolderOrganizationPolicyRestorePolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#timeouts FolderOrganizationPolicy#timeouts}
+  */
   readonly timeouts?: FolderOrganizationPolicyTimeouts;
 }
 export interface FolderOrganizationPolicyBooleanPolicy {
-  /** If true, then the Policy is enforced. If false, then any configuration is acceptable. */
+  /**
+  * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#enforced FolderOrganizationPolicy#enforced}
+  */
   readonly enforced: boolean;
 }
 
@@ -35,9 +67,17 @@ function folderOrganizationPolicyBooleanPolicyToTerraform(struct?: FolderOrganiz
 }
 
 export interface FolderOrganizationPolicyListPolicyAllow {
-  /** The policy allows or denies all values. */
+  /**
+  * The policy allows or denies all values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#all FolderOrganizationPolicy#all}
+  */
   readonly all?: boolean;
-  /** The policy can define specific values that are allowed or denied. */
+  /**
+  * The policy can define specific values that are allowed or denied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#values FolderOrganizationPolicy#values}
+  */
   readonly values?: string[];
 }
 
@@ -50,9 +90,17 @@ function folderOrganizationPolicyListPolicyAllowToTerraform(struct?: FolderOrgan
 }
 
 export interface FolderOrganizationPolicyListPolicyDeny {
-  /** The policy allows or denies all values. */
+  /**
+  * The policy allows or denies all values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#all FolderOrganizationPolicy#all}
+  */
   readonly all?: boolean;
-  /** The policy can define specific values that are allowed or denied. */
+  /**
+  * The policy can define specific values that are allowed or denied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#values FolderOrganizationPolicy#values}
+  */
   readonly values?: string[];
 }
 
@@ -65,13 +113,29 @@ function folderOrganizationPolicyListPolicyDenyToTerraform(struct?: FolderOrgani
 }
 
 export interface FolderOrganizationPolicyListPolicy {
-  /** If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. */
+  /**
+  * If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#inherit_from_parent FolderOrganizationPolicy#inherit_from_parent}
+  */
   readonly inheritFromParent?: boolean;
-  /** The Google Cloud Console will try to default to a configuration that matches the value specified in this field. */
+  /**
+  * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#suggested_value FolderOrganizationPolicy#suggested_value}
+  */
   readonly suggestedValue?: string;
-  /** allow block */
+  /**
+  * allow block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#allow FolderOrganizationPolicy#allow}
+  */
   readonly allow?: FolderOrganizationPolicyListPolicyAllow[];
-  /** deny block */
+  /**
+  * deny block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#deny FolderOrganizationPolicy#deny}
+  */
   readonly deny?: FolderOrganizationPolicyListPolicyDeny[];
 }
 
@@ -86,7 +150,11 @@ function folderOrganizationPolicyListPolicyToTerraform(struct?: FolderOrganizati
 }
 
 export interface FolderOrganizationPolicyRestorePolicy {
-  /** May only be set to true. If set, then the default Policy is restored. */
+  /**
+  * May only be set to true. If set, then the default Policy is restored.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#default FolderOrganizationPolicy#default}
+  */
   readonly default: boolean;
 }
 
@@ -98,9 +166,21 @@ function folderOrganizationPolicyRestorePolicyToTerraform(struct?: FolderOrganiz
 }
 
 export interface FolderOrganizationPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#create FolderOrganizationPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#delete FolderOrganizationPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#read FolderOrganizationPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#update FolderOrganizationPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -115,14 +195,22 @@ function folderOrganizationPolicyTimeoutsToTerraform(struct?: FolderOrganization
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html google_folder_organization_policy}
+*/
 export class FolderOrganizationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html google_folder_organization_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FolderOrganizationPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: FolderOrganizationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_folder_organization_policy',

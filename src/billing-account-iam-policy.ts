@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BillingAccountIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_policy.html#billing_account_id BillingAccountIamPolicy#billing_account_id}
+  */
   readonly billingAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_policy.html#policy_data BillingAccountIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_policy.html google_billing_account_iam_policy}
+*/
 export class BillingAccountIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_policy.html google_billing_account_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BillingAccountIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: BillingAccountIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_billing_account_iam_policy',

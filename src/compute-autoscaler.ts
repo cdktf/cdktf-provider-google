@@ -7,32 +7,64 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeAutoscalerConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#description ComputeAutoscaler#description}
+  */
   readonly description?: string;
-  /** Name of the resource. The name must be 1-63 characters long and match
+  /**
+  * Name of the resource. The name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#name ComputeAutoscaler#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#project ComputeAutoscaler#project}
+  */
   readonly project?: string;
-  /** URL of the managed instance group that this autoscaler will scale. */
+  /**
+  * URL of the managed instance group that this autoscaler will scale.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#target ComputeAutoscaler#target}
+  */
   readonly target: string;
-  /** URL of the zone where the instance group resides. */
+  /**
+  * URL of the zone where the instance group resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#zone ComputeAutoscaler#zone}
+  */
   readonly zone?: string;
-  /** autoscaling_policy block */
+  /**
+  * autoscaling_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#autoscaling_policy ComputeAutoscaler#autoscaling_policy}
+  */
   readonly autoscalingPolicy: ComputeAutoscalerAutoscalingPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#timeouts ComputeAutoscaler#timeouts}
+  */
   readonly timeouts?: ComputeAutoscalerTimeouts;
 }
 export interface ComputeAutoscalerAutoscalingPolicyCpuUtilization {
-  /** Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+  /**
+  * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
 - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
 
-- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand. */
+- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#predictive_method ComputeAutoscaler#predictive_method}
+  */
   readonly predictiveMethod?: string;
-  /** The target CPU utilization that the autoscaler should maintain.
+  /**
+  * The target CPU utilization that the autoscaler should maintain.
 Must be a float value in the range (0, 1]. If not specified, the
 default is 0.6.
 
@@ -44,7 +76,10 @@ your instances reaches the target utilization.
 If the average CPU is above the target utilization, the autoscaler
 scales up until it reaches the maximum number of instances you
 specified or until the average utilization reaches the target
-utilization. */
+utilization.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#target ComputeAutoscaler#target}
+  */
   readonly target: number;
 }
 
@@ -57,9 +92,13 @@ function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: Co
 }
 
 export interface ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization {
-  /** Fraction of backend capacity utilization (set in HTTP(s) load
+  /**
+  * Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
-be a positive float value. If not defined, the default is 0.8. */
+be a positive float value. If not defined, the default is 0.8.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#target ComputeAutoscaler#target}
+  */
   readonly target: number;
 }
 
@@ -71,12 +110,17 @@ function computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(s
 }
 
 export interface ComputeAutoscalerAutoscalingPolicyMetric {
-  /** The identifier (type) of the Stackdriver Monitoring metric.
+  /**
+  * The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 
-The metric must have a value type of INT64 or DOUBLE. */
+The metric must have a value type of INT64 or DOUBLE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#name ComputeAutoscaler#name}
+  */
   readonly name: string;
-  /** The target value of the metric that autoscaler should
+  /**
+  * The target value of the metric that autoscaler should
 maintain. This must be a positive value. A utilization
 metric scales number of virtual machines handling requests
 to increase or decrease proportionally to the metric.
@@ -84,10 +128,17 @@ to increase or decrease proportionally to the metric.
 For example, a good metric to use as a utilizationTarget is
 www.googleapis.com/compute/instance/network/received_bytes_count.
 The autoscaler will work to keep this value constant for each
-of the instances. */
+of the instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#target ComputeAutoscaler#target}
+  */
   readonly target?: number;
-  /** Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"] */
+  /**
+  * Defines how target utilization value is expressed for a
+Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#type ComputeAutoscaler#type}
+  */
   readonly type?: string;
 }
 
@@ -101,11 +152,19 @@ function computeAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeAut
 }
 
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
-  /** Specifies a fixed number of VM instances. This must be a positive
-integer. */
+  /**
+  * Specifies a fixed number of VM instances. This must be a positive
+integer.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#fixed ComputeAutoscaler#fixed}
+  */
   readonly fixed?: number;
-  /** Specifies a percentage of instances between 0 to 100%, inclusive.
-For example, specify 80 for 80%. */
+  /**
+  * Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#percent ComputeAutoscaler#percent}
+  */
   readonly percent?: number;
 }
 
@@ -118,10 +177,18 @@ function computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTe
 }
 
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControl {
-  /** How long back autoscaling should look when computing recommendations
-to include directives regarding slower scale down, as described above. */
+  /**
+  * How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#time_window_sec ComputeAutoscaler#time_window_sec}
+  */
   readonly timeWindowSec?: number;
-  /** max_scaled_in_replicas block */
+  /**
+  * max_scaled_in_replicas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#max_scaled_in_replicas ComputeAutoscaler#max_scaled_in_replicas}
+  */
   readonly maxScaledInReplicas?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas[];
 }
 
@@ -134,18 +201,45 @@ function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: Co
 }
 
 export interface ComputeAutoscalerAutoscalingPolicyScalingSchedules {
-  /** A description of a scaling schedule. */
+  /**
+  * A description of a scaling schedule.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#description ComputeAutoscaler#description}
+  */
   readonly description?: string;
-  /** A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect. */
+  /**
+  * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#disabled ComputeAutoscaler#disabled}
+  */
   readonly disabled?: boolean;
-  /** The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300. */
+  /**
+  * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#duration_sec ComputeAutoscaler#duration_sec}
+  */
   readonly durationSec: number;
-  /** Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule. */
+  /**
+  * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#min_required_replicas ComputeAutoscaler#min_required_replicas}
+  */
   readonly minRequiredReplicas: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#name ComputeAutoscaler#name}
+  */
   readonly name: string;
-  /** The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field). */
+  /**
+  * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#schedule ComputeAutoscaler#schedule}
+  */
   readonly schedule: string;
-  /** The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. */
+  /**
+  * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#time_zone ComputeAutoscaler#time_zone}
+  */
   readonly timeZone?: string;
 }
 
@@ -163,7 +257,8 @@ function computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: 
 }
 
 export interface ComputeAutoscalerAutoscalingPolicy {
-  /** The number of seconds that the autoscaler should wait before it
+  /**
+  * The number of seconds that the autoscaler should wait before it
 starts collecting information from a new instance. This prevents
 the autoscaler from collecting information when the instance is
 initializing, during which the collected usage would not be
@@ -172,29 +267,64 @@ reliable. The default time autoscaler waits is 60 seconds.
 Virtual machine initialization times might vary because of
 numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
-and time the startup process. */
+and time the startup process.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#cooldown_period ComputeAutoscaler#cooldown_period}
+  */
   readonly cooldownPeriod?: number;
-  /** The maximum number of instances that the autoscaler can scale up
+  /**
+  * The maximum number of instances that the autoscaler can scale up
 to. This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
-of replicas. */
+of replicas.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#max_replicas ComputeAutoscaler#max_replicas}
+  */
   readonly maxReplicas: number;
-  /** The minimum number of replicas that the autoscaler can scale down
+  /**
+  * The minimum number of replicas that the autoscaler can scale down
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
-allowed. */
+allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#min_replicas ComputeAutoscaler#min_replicas}
+  */
   readonly minReplicas: number;
-  /** Defines operating mode for this policy. Default value: "ON" Possible values: ["OFF", "ONLY_UP", "ON"] */
+  /**
+  * Defines operating mode for this policy. Default value: "ON" Possible values: ["OFF", "ONLY_UP", "ON"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#mode ComputeAutoscaler#mode}
+  */
   readonly mode?: string;
-  /** cpu_utilization block */
+  /**
+  * cpu_utilization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#cpu_utilization ComputeAutoscaler#cpu_utilization}
+  */
   readonly cpuUtilization?: ComputeAutoscalerAutoscalingPolicyCpuUtilization[];
-  /** load_balancing_utilization block */
+  /**
+  * load_balancing_utilization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#load_balancing_utilization ComputeAutoscaler#load_balancing_utilization}
+  */
   readonly loadBalancingUtilization?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization[];
-  /** metric block */
+  /**
+  * metric block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#metric ComputeAutoscaler#metric}
+  */
   readonly metric?: ComputeAutoscalerAutoscalingPolicyMetric[];
-  /** scale_in_control block */
+  /**
+  * scale_in_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#scale_in_control ComputeAutoscaler#scale_in_control}
+  */
   readonly scaleInControl?: ComputeAutoscalerAutoscalingPolicyScaleInControl[];
-  /** scaling_schedules block */
+  /**
+  * scaling_schedules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#scaling_schedules ComputeAutoscaler#scaling_schedules}
+  */
   readonly scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[];
 }
 
@@ -214,8 +344,17 @@ function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscale
 }
 
 export interface ComputeAutoscalerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#create ComputeAutoscaler#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#delete ComputeAutoscaler#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#update ComputeAutoscaler#update}
+  */
   readonly update?: string;
 }
 
@@ -229,14 +368,22 @@ function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html google_compute_autoscaler}
+*/
 export class ComputeAutoscaler extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html google_compute_autoscaler} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeAutoscalerConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeAutoscalerConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_autoscaler',

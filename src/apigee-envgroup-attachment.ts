@@ -7,16 +7,34 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApigeeEnvgroupAttachmentConfig extends cdktf.TerraformMetaArguments {
-  /** The Apigee environment group associated with the Apigee environment,
-in the format 'organizations/{{org_name}}/envgroups/{{envgroup_name}}'. */
+  /**
+  * The Apigee environment group associated with the Apigee environment,
+in the format 'organizations/{{org_name}}/envgroups/{{envgroup_name}}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html#envgroup_id ApigeeEnvgroupAttachment#envgroup_id}
+  */
   readonly envgroupId: string;
-  /** The resource ID of the environment. */
+  /**
+  * The resource ID of the environment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html#environment ApigeeEnvgroupAttachment#environment}
+  */
   readonly environment: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html#timeouts ApigeeEnvgroupAttachment#timeouts}
+  */
   readonly timeouts?: ApigeeEnvgroupAttachmentTimeouts;
 }
 export interface ApigeeEnvgroupAttachmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html#create ApigeeEnvgroupAttachment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html#delete ApigeeEnvgroupAttachment#delete}
+  */
   readonly delete?: string;
 }
 
@@ -29,14 +47,22 @@ function apigeeEnvgroupAttachmentTimeoutsToTerraform(struct?: ApigeeEnvgroupAtta
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html google_apigee_envgroup_attachment}
+*/
 export class ApigeeEnvgroupAttachment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_envgroup_attachment.html google_apigee_envgroup_attachment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApigeeEnvgroupAttachmentConfig
+  */
   public constructor(scope: Construct, id: string, config: ApigeeEnvgroupAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_apigee_envgroup_attachment',

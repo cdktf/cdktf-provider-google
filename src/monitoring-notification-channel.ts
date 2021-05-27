@@ -7,36 +7,83 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitoringNotificationChannelConfig extends cdktf.TerraformMetaArguments {
-  /** An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters. */
+  /**
+  * An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#description MonitoringNotificationChannel#description}
+  */
   readonly description?: string;
-  /** An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters. */
+  /**
+  * An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#display_name MonitoringNotificationChannel#display_name}
+  */
   readonly displayName?: string;
-  /** Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future. */
+  /**
+  * Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#enabled MonitoringNotificationChannel#enabled}
+  */
   readonly enabled?: boolean;
-  /** Configuration fields that define the channel and its behavior. The
+  /**
+  * Configuration fields that define the channel and its behavior. The
 permissible and required labels are specified in the
 NotificationChannelDescriptor corresponding to the type field.
 
 Labels with sensitive data are obfuscated by the API and therefore Terraform cannot
 determine if there are upstream changes to these fields. They can also be configured via
-the sensitive_labels block, but cannot be configured in both places. */
+the sensitive_labels block, but cannot be configured in both places.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#labels MonitoringNotificationChannel#labels}
+  */
   readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#project MonitoringNotificationChannel#project}
+  */
   readonly project?: string;
-  /** The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc... */
+  /**
+  * The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc...
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#type MonitoringNotificationChannel#type}
+  */
   readonly type: string;
-  /** User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter. */
+  /**
+  * User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#user_labels MonitoringNotificationChannel#user_labels}
+  */
   readonly userLabels?: { [key: string]: string };
-  /** sensitive_labels block */
+  /**
+  * sensitive_labels block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#sensitive_labels MonitoringNotificationChannel#sensitive_labels}
+  */
   readonly sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#timeouts MonitoringNotificationChannel#timeouts}
+  */
   readonly timeouts?: MonitoringNotificationChannelTimeouts;
 }
 export interface MonitoringNotificationChannelSensitiveLabels {
-  /** An authorization token for a notification channel. Channel types that support this field include: slack */
+  /**
+  * An authorization token for a notification channel. Channel types that support this field include: slack
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#auth_token MonitoringNotificationChannel#auth_token}
+  */
   readonly authToken?: string;
-  /** An password for a notification channel. Channel types that support this field include: webhook_basicauth */
+  /**
+  * An password for a notification channel. Channel types that support this field include: webhook_basicauth
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#password MonitoringNotificationChannel#password}
+  */
   readonly password?: string;
-  /** An servicekey token for a notification channel. Channel types that support this field include: pagerduty */
+  /**
+  * An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#service_key MonitoringNotificationChannel#service_key}
+  */
   readonly serviceKey?: string;
 }
 
@@ -50,8 +97,17 @@ function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: Monito
 }
 
 export interface MonitoringNotificationChannelTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#create MonitoringNotificationChannel#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#delete MonitoringNotificationChannel#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#update MonitoringNotificationChannel#update}
+  */
   readonly update?: string;
 }
 
@@ -65,14 +121,22 @@ function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNot
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html google_monitoring_notification_channel}
+*/
 export class MonitoringNotificationChannel extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html google_monitoring_notification_channel} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitoringNotificationChannelConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitoringNotificationChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_notification_channel',

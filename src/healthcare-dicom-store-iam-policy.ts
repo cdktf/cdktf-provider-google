@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareDicomStoreIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_policy.html#dicom_store_id HealthcareDicomStoreIamPolicy#dicom_store_id}
+  */
   readonly dicomStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_policy.html#policy_data HealthcareDicomStoreIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_policy.html google_healthcare_dicom_store_iam_policy}
+*/
 export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_policy.html google_healthcare_dicom_store_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareDicomStoreIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareDicomStoreIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dicom_store_iam_policy',

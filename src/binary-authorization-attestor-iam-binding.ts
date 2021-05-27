@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BinaryAuthorizationAttestorIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#attestor BinaryAuthorizationAttestorIamBinding#attestor}
+  */
   readonly attestor: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#members BinaryAuthorizationAttestorIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#project BinaryAuthorizationAttestorIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#role BinaryAuthorizationAttestorIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#condition BinaryAuthorizationAttestorIamBinding#condition}
+  */
   readonly condition?: BinaryAuthorizationAttestorIamBindingCondition[];
 }
 export interface BinaryAuthorizationAttestorIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#description BinaryAuthorizationAttestorIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#expression BinaryAuthorizationAttestorIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html#title BinaryAuthorizationAttestorIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function binaryAuthorizationAttestorIamBindingConditionToTerraform(struct?: Bina
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html google_binary_authorization_attestor_iam_binding}
+*/
 export class BinaryAuthorizationAttestorIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_binding.html google_binary_authorization_attestor_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BinaryAuthorizationAttestorIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: BinaryAuthorizationAttestorIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_binary_authorization_attestor_iam_binding',

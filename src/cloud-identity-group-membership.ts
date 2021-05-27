@@ -7,17 +7,34 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Group to create this membership in. */
+  /**
+  * The name of the Group to create this membership in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#group CloudIdentityGroupMembership#group}
+  */
   readonly group: string;
-  /** preferred_member_key block */
+  /**
+  * preferred_member_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
+  */
   readonly preferredMemberKey?: CloudIdentityGroupMembershipPreferredMemberKey[];
-  /** roles block */
+  /**
+  * roles block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#roles CloudIdentityGroupMembership#roles}
+  */
   readonly roles: CloudIdentityGroupMembershipRoles[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#timeouts CloudIdentityGroupMembership#timeouts}
+  */
   readonly timeouts?: CloudIdentityGroupMembershipTimeouts;
 }
 export interface CloudIdentityGroupMembershipPreferredMemberKey {
-  /** The ID of the entity.
+  /**
+  * The ID of the entity.
 
 For Google-managed entities, the id must be the email address of an existing
 group or user.
@@ -25,16 +42,23 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 
-Must be unique within a namespace. */
+Must be unique within a namespace.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#id CloudIdentityGroupMembership#id}
+  */
   readonly id: string;
-  /** The namespace in which the entity exists.
+  /**
+  * The namespace in which the entity exists.
 
 If not specified, the EntityKey represents a Google-managed entity
 such as a Google user or a Google Group.
 
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
-and must be in the form of 'identitysources/{identity_source_id}'. */
+and must be in the form of 'identitysources/{identity_source_id}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#namespace CloudIdentityGroupMembership#namespace}
+  */
   readonly namespace?: string;
 }
 
@@ -47,7 +71,11 @@ function cloudIdentityGroupMembershipPreferredMemberKeyToTerraform(struct?: Clou
 }
 
 export interface CloudIdentityGroupMembershipRoles {
-  /** The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: ["OWNER", "MANAGER", "MEMBER"] */
+  /**
+  * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: ["OWNER", "MANAGER", "MEMBER"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#name CloudIdentityGroupMembership#name}
+  */
   readonly name: string;
 }
 
@@ -59,8 +87,17 @@ function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdentityGrou
 }
 
 export interface CloudIdentityGroupMembershipTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#create CloudIdentityGroupMembership#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#delete CloudIdentityGroupMembership#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#update CloudIdentityGroupMembership#update}
+  */
   readonly update?: string;
 }
 
@@ -74,14 +111,22 @@ function cloudIdentityGroupMembershipTimeoutsToTerraform(struct?: CloudIdentityG
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html google_cloud_identity_group_membership}
+*/
 export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html google_cloud_identity_group_membership} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudIdentityGroupMembershipConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudIdentityGroupMembershipConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_identity_group_membership',

@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpannerDatabaseIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#database SpannerDatabaseIamMember#database}
+  */
   readonly database: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#instance SpannerDatabaseIamMember#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#member SpannerDatabaseIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#project SpannerDatabaseIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#role SpannerDatabaseIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#condition SpannerDatabaseIamMember#condition}
+  */
   readonly condition?: SpannerDatabaseIamMemberCondition[];
 }
 export interface SpannerDatabaseIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#description SpannerDatabaseIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#expression SpannerDatabaseIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html#title SpannerDatabaseIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function spannerDatabaseIamMemberConditionToTerraform(struct?: SpannerDatabaseIa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html google_spanner_database_iam_member}
+*/
 export class SpannerDatabaseIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member.html google_spanner_database_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpannerDatabaseIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: SpannerDatabaseIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_spanner_database_iam_member',

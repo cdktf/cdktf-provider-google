@@ -7,27 +7,66 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
-  /** The description specified for the model when it was created. */
+  /**
+  * The description specified for the model when it was created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#description MlEngineModel#description}
+  */
   readonly description?: string;
-  /** One or more labels that you can add, to organize your models. */
+  /**
+  * One or more labels that you can add, to organize your models.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#labels MlEngineModel#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The name specified for the model. */
+  /**
+  * The name specified for the model.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#name MlEngineModel#name}
+  */
   readonly name: string;
-  /** If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging */
+  /**
+  * If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#online_prediction_console_logging MlEngineModel#online_prediction_console_logging}
+  */
   readonly onlinePredictionConsoleLogging?: boolean;
-  /** If true, online prediction access logs are sent to StackDriver Logging. */
+  /**
+  * If true, online prediction access logs are sent to StackDriver Logging.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#online_prediction_logging MlEngineModel#online_prediction_logging}
+  */
   readonly onlinePredictionLogging?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#project MlEngineModel#project}
+  */
   readonly project?: string;
-  /** The list of regions where the model is going to be deployed.
-Currently only one region per model is supported */
+  /**
+  * The list of regions where the model is going to be deployed.
+Currently only one region per model is supported
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#regions MlEngineModel#regions}
+  */
   readonly regions?: string[];
-  /** default_version block */
+  /**
+  * default_version block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#default_version MlEngineModel#default_version}
+  */
   readonly defaultVersion?: MlEngineModelDefaultVersion[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#timeouts MlEngineModel#timeouts}
+  */
   readonly timeouts?: MlEngineModelTimeouts;
 }
 export interface MlEngineModelDefaultVersion {
-  /** The name specified for the version when it was created. */
+  /**
+  * The name specified for the version when it was created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#name MlEngineModel#name}
+  */
   readonly name: string;
 }
 
@@ -39,7 +78,13 @@ function mlEngineModelDefaultVersionToTerraform(struct?: MlEngineModelDefaultVer
 }
 
 export interface MlEngineModelTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#create MlEngineModel#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#delete MlEngineModel#delete}
+  */
   readonly delete?: string;
 }
 
@@ -52,14 +97,22 @@ function mlEngineModelTimeoutsToTerraform(struct?: MlEngineModelTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html google_ml_engine_model}
+*/
 export class MlEngineModel extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html google_ml_engine_model} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MlEngineModelConfig
+  */
   public constructor(scope: Construct, id: string, config: MlEngineModelConfig) {
     super(scope, id, {
       terraformResourceType: 'google_ml_engine_model',

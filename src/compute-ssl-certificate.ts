@@ -7,13 +7,22 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeSslCertificateConfig extends cdktf.TerraformMetaArguments {
-  /** The certificate in PEM format.
+  /**
+  * The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert. */
+The chain must include at least one intermediate cert.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#certificate ComputeSslCertificate#certificate}
+  */
   readonly certificate: string;
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#description ComputeSslCertificate#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
@@ -22,18 +31,42 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
 
-These are in the same namespace as the managed SSL certificates. */
+These are in the same namespace as the managed SSL certificates.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#name ComputeSslCertificate#name}
+  */
   readonly name?: string;
-  /** Creates a unique name beginning with the specified prefix. Conflicts with name. */
+  /**
+  * Creates a unique name beginning with the specified prefix. Conflicts with name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#name_prefix ComputeSslCertificate#name_prefix}
+  */
   readonly namePrefix?: string;
-  /** The write-only private key in PEM format. */
+  /**
+  * The write-only private key in PEM format.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#private_key ComputeSslCertificate#private_key}
+  */
   readonly privateKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#project ComputeSslCertificate#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#timeouts ComputeSslCertificate#timeouts}
+  */
   readonly timeouts?: ComputeSslCertificateTimeouts;
 }
 export interface ComputeSslCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#create ComputeSslCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#delete ComputeSslCertificate#delete}
+  */
   readonly delete?: string;
 }
 
@@ -46,14 +79,22 @@ function computeSslCertificateTimeoutsToTerraform(struct?: ComputeSslCertificate
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html google_compute_ssl_certificate}
+*/
 export class ComputeSslCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html google_compute_ssl_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeSslCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeSslCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_ssl_certificate',

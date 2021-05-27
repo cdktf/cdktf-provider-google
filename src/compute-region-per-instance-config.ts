@@ -7,34 +7,82 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#minimal_action ComputeRegionPerInstanceConfig#minimal_action}
+  */
   readonly minimalAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#most_disruptive_allowed_action ComputeRegionPerInstanceConfig#most_disruptive_allowed_action}
+  */
   readonly mostDisruptiveAllowedAction?: string;
-  /** The name for this per-instance config and its corresponding instance. */
+  /**
+  * The name for this per-instance config and its corresponding instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#name ComputeRegionPerInstanceConfig#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#project ComputeRegionPerInstanceConfig#project}
+  */
   readonly project?: string;
-  /** Region where the containing instance group manager is located */
+  /**
+  * Region where the containing instance group manager is located
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#region ComputeRegionPerInstanceConfig#region}
+  */
   readonly region?: string;
-  /** The region instance group manager this instance config is part of. */
+  /**
+  * The region instance group manager this instance config is part of.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#region_instance_group_manager ComputeRegionPerInstanceConfig#region_instance_group_manager}
+  */
   readonly regionInstanceGroupManager: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#remove_instance_state_on_destroy ComputeRegionPerInstanceConfig#remove_instance_state_on_destroy}
+  */
   readonly removeInstanceStateOnDestroy?: boolean;
-  /** preserved_state block */
+  /**
+  * preserved_state block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#preserved_state ComputeRegionPerInstanceConfig#preserved_state}
+  */
   readonly preservedState?: ComputeRegionPerInstanceConfigPreservedState[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#timeouts ComputeRegionPerInstanceConfig#timeouts}
+  */
   readonly timeouts?: ComputeRegionPerInstanceConfigTimeouts;
 }
 export interface ComputeRegionPerInstanceConfigPreservedStateDisk {
-  /** A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
+  /**
+  * A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
 The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'.
 'NEVER' - detach the disk when the VM is deleted, but do not delete the disk.
 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently
-deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"] */
+deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#delete_rule ComputeRegionPerInstanceConfig#delete_rule}
+  */
   readonly deleteRule?: string;
-  /** A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance. */
+  /**
+  * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#device_name ComputeRegionPerInstanceConfig#device_name}
+  */
   readonly deviceName: string;
-  /** The mode of the disk. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"] */
+  /**
+  * The mode of the disk. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#mode ComputeRegionPerInstanceConfig#mode}
+  */
   readonly mode?: string;
-  /** The URI of an existing persistent disk to attach under the specified device-name in the format
-'projects/project-id/zones/zone/disks/disk-name'. */
+  /**
+  * The URI of an existing persistent disk to attach under the specified device-name in the format
+'projects/project-id/zones/zone/disks/disk-name'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#source ComputeRegionPerInstanceConfig#source}
+  */
   readonly source: string;
 }
 
@@ -49,9 +97,17 @@ function computeRegionPerInstanceConfigPreservedStateDiskToTerraform(struct?: Co
 }
 
 export interface ComputeRegionPerInstanceConfigPreservedState {
-  /** Preserved metadata defined for this instance. This is a list of key->value pairs. */
+  /**
+  * Preserved metadata defined for this instance. This is a list of key->value pairs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#metadata ComputeRegionPerInstanceConfig#metadata}
+  */
   readonly metadata?: { [key: string]: string };
-  /** disk block */
+  /**
+  * disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#disk ComputeRegionPerInstanceConfig#disk}
+  */
   readonly disk?: ComputeRegionPerInstanceConfigPreservedStateDisk[];
 }
 
@@ -64,8 +120,17 @@ function computeRegionPerInstanceConfigPreservedStateToTerraform(struct?: Comput
 }
 
 export interface ComputeRegionPerInstanceConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#create ComputeRegionPerInstanceConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#delete ComputeRegionPerInstanceConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#update ComputeRegionPerInstanceConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -79,14 +144,22 @@ function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: ComputeRegio
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html google_compute_region_per_instance_config}
+*/
 export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html google_compute_region_per_instance_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRegionPerInstanceConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRegionPerInstanceConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_per_instance_config',

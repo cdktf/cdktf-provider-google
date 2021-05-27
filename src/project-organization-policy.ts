@@ -7,23 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
+  /**
+  * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#constraint ProjectOrganizationPolicy#constraint}
+  */
   readonly constraint: string;
-  /** The project ID. */
+  /**
+  * The project ID.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#project ProjectOrganizationPolicy#project}
+  */
   readonly project: string;
-  /** Version of the Policy. Default version is 0. */
+  /**
+  * Version of the Policy. Default version is 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#version ProjectOrganizationPolicy#version}
+  */
   readonly version?: number;
-  /** boolean_policy block */
+  /**
+  * boolean_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#boolean_policy ProjectOrganizationPolicy#boolean_policy}
+  */
   readonly booleanPolicy?: ProjectOrganizationPolicyBooleanPolicy[];
-  /** list_policy block */
+  /**
+  * list_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#list_policy ProjectOrganizationPolicy#list_policy}
+  */
   readonly listPolicy?: ProjectOrganizationPolicyListPolicy[];
-  /** restore_policy block */
+  /**
+  * restore_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#restore_policy ProjectOrganizationPolicy#restore_policy}
+  */
   readonly restorePolicy?: ProjectOrganizationPolicyRestorePolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#timeouts ProjectOrganizationPolicy#timeouts}
+  */
   readonly timeouts?: ProjectOrganizationPolicyTimeouts;
 }
 export interface ProjectOrganizationPolicyBooleanPolicy {
-  /** If true, then the Policy is enforced. If false, then any configuration is acceptable. */
+  /**
+  * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#enforced ProjectOrganizationPolicy#enforced}
+  */
   readonly enforced: boolean;
 }
 
@@ -35,9 +67,17 @@ function projectOrganizationPolicyBooleanPolicyToTerraform(struct?: ProjectOrgan
 }
 
 export interface ProjectOrganizationPolicyListPolicyAllow {
-  /** The policy allows or denies all values. */
+  /**
+  * The policy allows or denies all values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#all ProjectOrganizationPolicy#all}
+  */
   readonly all?: boolean;
-  /** The policy can define specific values that are allowed or denied. */
+  /**
+  * The policy can define specific values that are allowed or denied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#values ProjectOrganizationPolicy#values}
+  */
   readonly values?: string[];
 }
 
@@ -50,9 +90,17 @@ function projectOrganizationPolicyListPolicyAllowToTerraform(struct?: ProjectOrg
 }
 
 export interface ProjectOrganizationPolicyListPolicyDeny {
-  /** The policy allows or denies all values. */
+  /**
+  * The policy allows or denies all values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#all ProjectOrganizationPolicy#all}
+  */
   readonly all?: boolean;
-  /** The policy can define specific values that are allowed or denied. */
+  /**
+  * The policy can define specific values that are allowed or denied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#values ProjectOrganizationPolicy#values}
+  */
   readonly values?: string[];
 }
 
@@ -65,13 +113,29 @@ function projectOrganizationPolicyListPolicyDenyToTerraform(struct?: ProjectOrga
 }
 
 export interface ProjectOrganizationPolicyListPolicy {
-  /** If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. */
+  /**
+  * If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
+  */
   readonly inheritFromParent?: boolean;
-  /** The Google Cloud Console will try to default to a configuration that matches the value specified in this field. */
+  /**
+  * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#suggested_value ProjectOrganizationPolicy#suggested_value}
+  */
   readonly suggestedValue?: string;
-  /** allow block */
+  /**
+  * allow block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#allow ProjectOrganizationPolicy#allow}
+  */
   readonly allow?: ProjectOrganizationPolicyListPolicyAllow[];
-  /** deny block */
+  /**
+  * deny block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#deny ProjectOrganizationPolicy#deny}
+  */
   readonly deny?: ProjectOrganizationPolicyListPolicyDeny[];
 }
 
@@ -86,7 +150,11 @@ function projectOrganizationPolicyListPolicyToTerraform(struct?: ProjectOrganiza
 }
 
 export interface ProjectOrganizationPolicyRestorePolicy {
-  /** May only be set to true. If set, then the default Policy is restored. */
+  /**
+  * May only be set to true. If set, then the default Policy is restored.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#default ProjectOrganizationPolicy#default}
+  */
   readonly default: boolean;
 }
 
@@ -98,9 +166,21 @@ function projectOrganizationPolicyRestorePolicyToTerraform(struct?: ProjectOrgan
 }
 
 export interface ProjectOrganizationPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#create ProjectOrganizationPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#delete ProjectOrganizationPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#read ProjectOrganizationPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#update ProjectOrganizationPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -115,14 +195,22 @@ function projectOrganizationPolicyTimeoutsToTerraform(struct?: ProjectOrganizati
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html google_project_organization_policy}
+*/
 export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html google_project_organization_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectOrganizationPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectOrganizationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_organization_policy',

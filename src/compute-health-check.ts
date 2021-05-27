@@ -7,61 +7,129 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeHealthCheckConfig extends cdktf.TerraformMetaArguments {
-  /** How often (in seconds) to send a health check. The default value is 5
-seconds. */
+  /**
+  * How often (in seconds) to send a health check. The default value is 5
+seconds.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#check_interval_sec ComputeHealthCheck#check_interval_sec}
+  */
   readonly checkIntervalSec?: number;
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#description ComputeHealthCheck#description}
+  */
   readonly description?: string;
-  /** A so-far unhealthy instance will be marked healthy after this many
-consecutive successes. The default value is 2. */
+  /**
+  * A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#healthy_threshold ComputeHealthCheck#healthy_threshold}
+  */
   readonly healthyThreshold?: number;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash. */
+last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#name ComputeHealthCheck#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#project ComputeHealthCheck#project}
+  */
   readonly project?: string;
-  /** How long (in seconds) to wait before claiming failure.
+  /**
+  * How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
-greater value than checkIntervalSec. */
+greater value than checkIntervalSec.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#timeout_sec ComputeHealthCheck#timeout_sec}
+  */
   readonly timeoutSec?: number;
-  /** A so-far healthy instance will be marked unhealthy after this many
-consecutive failures. The default value is 2. */
+  /**
+  * A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#unhealthy_threshold ComputeHealthCheck#unhealthy_threshold}
+  */
   readonly unhealthyThreshold?: number;
-  /** grpc_health_check block */
+  /**
+  * grpc_health_check block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#grpc_health_check ComputeHealthCheck#grpc_health_check}
+  */
   readonly grpcHealthCheck?: ComputeHealthCheckGrpcHealthCheck[];
-  /** http2_health_check block */
+  /**
+  * http2_health_check block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#http2_health_check ComputeHealthCheck#http2_health_check}
+  */
   readonly http2HealthCheck?: ComputeHealthCheckHttp2HealthCheck[];
-  /** http_health_check block */
+  /**
+  * http_health_check block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#http_health_check ComputeHealthCheck#http_health_check}
+  */
   readonly httpHealthCheck?: ComputeHealthCheckHttpHealthCheck[];
-  /** https_health_check block */
+  /**
+  * https_health_check block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#https_health_check ComputeHealthCheck#https_health_check}
+  */
   readonly httpsHealthCheck?: ComputeHealthCheckHttpsHealthCheck[];
-  /** ssl_health_check block */
+  /**
+  * ssl_health_check block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#ssl_health_check ComputeHealthCheck#ssl_health_check}
+  */
   readonly sslHealthCheck?: ComputeHealthCheckSslHealthCheck[];
-  /** tcp_health_check block */
+  /**
+  * tcp_health_check block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#tcp_health_check ComputeHealthCheck#tcp_health_check}
+  */
   readonly tcpHealthCheck?: ComputeHealthCheckTcpHealthCheck[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#timeouts ComputeHealthCheck#timeouts}
+  */
   readonly timeouts?: ComputeHealthCheckTimeouts;
 }
 export interface ComputeHealthCheckGrpcHealthCheck {
-  /** The gRPC service name for the health check.
+  /**
+  * The gRPC service name for the health check.
 The value of grpcServiceName has the following meanings by convention:
   - Empty serviceName means the overall status of all services at the backend.
   - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
-The grpcServiceName can only be ASCII. */
+The grpcServiceName can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#grpc_service_name ComputeHealthCheck#grpc_service_name}
+  */
   readonly grpcServiceName?: string;
-  /** The port number for the health check request.
+  /**
+  * The port number for the health check request.
 Must be specified if portName and portSpecification are not set
-or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535. */
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port ComputeHealthCheck#port}
+  */
   readonly port?: number;
-  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
-port_name are defined, port takes precedence. */
+  /**
+  * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_name ComputeHealthCheck#port_name}
+  */
   readonly portName?: string;
-  /** Specifies how port is selected for health checking, can be one of the
+  /**
+  * Specifies how port is selected for health checking, can be one of the
 following values:
 
   * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
@@ -74,7 +142,10 @@ following values:
   checking.
 
 If not specified, gRPC health check follows behavior specified in 'port' and
-'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_specification ComputeHealthCheck#port_specification}
+  */
   readonly portSpecification?: string;
 }
 
@@ -89,17 +160,30 @@ function computeHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeHealthChec
 }
 
 export interface ComputeHealthCheckHttp2HealthCheck {
-  /** The value of the host header in the HTTP2 health check request.
+  /**
+  * The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
-check is performed will be used. */
+check is performed will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#host ComputeHealthCheck#host}
+  */
   readonly host?: string;
-  /** The TCP port number for the HTTP2 health check request.
-The default value is 443. */
+  /**
+  * The TCP port number for the HTTP2 health check request.
+The default value is 443.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port ComputeHealthCheck#port}
+  */
   readonly port?: number;
-  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
-port_name are defined, port takes precedence. */
+  /**
+  * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_name ComputeHealthCheck#port_name}
+  */
   readonly portName?: string;
-  /** Specifies how port is selected for health checking, can be one of the
+  /**
+  * Specifies how port is selected for health checking, can be one of the
 following values:
 
   * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
@@ -112,17 +196,32 @@ following values:
   checking.
 
 If not specified, HTTP2 health check follows behavior specified in 'port' and
-'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_specification ComputeHealthCheck#port_specification}
+  */
   readonly portSpecification?: string;
-  /** Specifies the type of proxy header to append before sending data to the
-backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
+  /**
+  * Specifies the type of proxy header to append before sending data to the
+backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#proxy_header ComputeHealthCheck#proxy_header}
+  */
   readonly proxyHeader?: string;
-  /** The request path of the HTTP2 health check request.
-The default value is /. */
+  /**
+  * The request path of the HTTP2 health check request.
+The default value is /.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#request_path ComputeHealthCheck#request_path}
+  */
   readonly requestPath?: string;
-  /** The bytes to match against the beginning of the response data. If left empty
+  /**
+  * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
-can only be ASCII. */
+can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#response ComputeHealthCheck#response}
+  */
   readonly response?: string;
 }
 
@@ -140,17 +239,30 @@ function computeHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeHealthChe
 }
 
 export interface ComputeHealthCheckHttpHealthCheck {
-  /** The value of the host header in the HTTP health check request.
+  /**
+  * The value of the host header in the HTTP health check request.
 If left empty (default value), the public IP on behalf of which this health
-check is performed will be used. */
+check is performed will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#host ComputeHealthCheck#host}
+  */
   readonly host?: string;
-  /** The TCP port number for the HTTP health check request.
-The default value is 80. */
+  /**
+  * The TCP port number for the HTTP health check request.
+The default value is 80.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port ComputeHealthCheck#port}
+  */
   readonly port?: number;
-  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
-port_name are defined, port takes precedence. */
+  /**
+  * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_name ComputeHealthCheck#port_name}
+  */
   readonly portName?: string;
-  /** Specifies how port is selected for health checking, can be one of the
+  /**
+  * Specifies how port is selected for health checking, can be one of the
 following values:
 
   * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
@@ -163,17 +275,32 @@ following values:
   checking.
 
 If not specified, HTTP health check follows behavior specified in 'port' and
-'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_specification ComputeHealthCheck#port_specification}
+  */
   readonly portSpecification?: string;
-  /** Specifies the type of proxy header to append before sending data to the
-backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
+  /**
+  * Specifies the type of proxy header to append before sending data to the
+backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#proxy_header ComputeHealthCheck#proxy_header}
+  */
   readonly proxyHeader?: string;
-  /** The request path of the HTTP health check request.
-The default value is /. */
+  /**
+  * The request path of the HTTP health check request.
+The default value is /.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#request_path ComputeHealthCheck#request_path}
+  */
   readonly requestPath?: string;
-  /** The bytes to match against the beginning of the response data. If left empty
+  /**
+  * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
-can only be ASCII. */
+can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#response ComputeHealthCheck#response}
+  */
   readonly response?: string;
 }
 
@@ -191,17 +318,30 @@ function computeHealthCheckHttpHealthCheckToTerraform(struct?: ComputeHealthChec
 }
 
 export interface ComputeHealthCheckHttpsHealthCheck {
-  /** The value of the host header in the HTTPS health check request.
+  /**
+  * The value of the host header in the HTTPS health check request.
 If left empty (default value), the public IP on behalf of which this health
-check is performed will be used. */
+check is performed will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#host ComputeHealthCheck#host}
+  */
   readonly host?: string;
-  /** The TCP port number for the HTTPS health check request.
-The default value is 443. */
+  /**
+  * The TCP port number for the HTTPS health check request.
+The default value is 443.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port ComputeHealthCheck#port}
+  */
   readonly port?: number;
-  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
-port_name are defined, port takes precedence. */
+  /**
+  * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_name ComputeHealthCheck#port_name}
+  */
   readonly portName?: string;
-  /** Specifies how port is selected for health checking, can be one of the
+  /**
+  * Specifies how port is selected for health checking, can be one of the
 following values:
 
   * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
@@ -214,17 +354,32 @@ following values:
   checking.
 
 If not specified, HTTPS health check follows behavior specified in 'port' and
-'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_specification ComputeHealthCheck#port_specification}
+  */
   readonly portSpecification?: string;
-  /** Specifies the type of proxy header to append before sending data to the
-backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
+  /**
+  * Specifies the type of proxy header to append before sending data to the
+backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#proxy_header ComputeHealthCheck#proxy_header}
+  */
   readonly proxyHeader?: string;
-  /** The request path of the HTTPS health check request.
-The default value is /. */
+  /**
+  * The request path of the HTTPS health check request.
+The default value is /.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#request_path ComputeHealthCheck#request_path}
+  */
   readonly requestPath?: string;
-  /** The bytes to match against the beginning of the response data. If left empty
+  /**
+  * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
-can only be ASCII. */
+can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#response ComputeHealthCheck#response}
+  */
   readonly response?: string;
 }
 
@@ -242,13 +397,22 @@ function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHealthChe
 }
 
 export interface ComputeHealthCheckSslHealthCheck {
-  /** The TCP port number for the SSL health check request.
-The default value is 443. */
+  /**
+  * The TCP port number for the SSL health check request.
+The default value is 443.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port ComputeHealthCheck#port}
+  */
   readonly port?: number;
-  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
-port_name are defined, port takes precedence. */
+  /**
+  * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_name ComputeHealthCheck#port_name}
+  */
   readonly portName?: string;
-  /** Specifies how port is selected for health checking, can be one of the
+  /**
+  * Specifies how port is selected for health checking, can be one of the
 following values:
 
   * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
@@ -261,19 +425,34 @@ following values:
   checking.
 
 If not specified, SSL health check follows behavior specified in 'port' and
-'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_specification ComputeHealthCheck#port_specification}
+  */
   readonly portSpecification?: string;
-  /** Specifies the type of proxy header to append before sending data to the
-backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
+  /**
+  * Specifies the type of proxy header to append before sending data to the
+backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#proxy_header ComputeHealthCheck#proxy_header}
+  */
   readonly proxyHeader?: string;
-  /** The application data to send once the SSL connection has been
+  /**
+  * The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
-data can only be ASCII. */
+data can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#request ComputeHealthCheck#request}
+  */
   readonly request?: string;
-  /** The bytes to match against the beginning of the response data. If left empty
+  /**
+  * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
-can only be ASCII. */
+can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#response ComputeHealthCheck#response}
+  */
   readonly response?: string;
 }
 
@@ -290,13 +469,22 @@ function computeHealthCheckSslHealthCheckToTerraform(struct?: ComputeHealthCheck
 }
 
 export interface ComputeHealthCheckTcpHealthCheck {
-  /** The TCP port number for the TCP health check request.
-The default value is 443. */
+  /**
+  * The TCP port number for the TCP health check request.
+The default value is 443.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port ComputeHealthCheck#port}
+  */
   readonly port?: number;
-  /** Port name as defined in InstanceGroup#NamedPort#name. If both port and
-port_name are defined, port takes precedence. */
+  /**
+  * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_name ComputeHealthCheck#port_name}
+  */
   readonly portName?: string;
-  /** Specifies how port is selected for health checking, can be one of the
+  /**
+  * Specifies how port is selected for health checking, can be one of the
 following values:
 
   * 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
@@ -309,19 +497,34 @@ following values:
   checking.
 
 If not specified, TCP health check follows behavior specified in 'port' and
-'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"] */
+'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#port_specification ComputeHealthCheck#port_specification}
+  */
   readonly portSpecification?: string;
-  /** Specifies the type of proxy header to append before sending data to the
-backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
+  /**
+  * Specifies the type of proxy header to append before sending data to the
+backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#proxy_header ComputeHealthCheck#proxy_header}
+  */
   readonly proxyHeader?: string;
-  /** The application data to send once the TCP connection has been
+  /**
+  * The application data to send once the TCP connection has been
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
-data can only be ASCII. */
+data can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#request ComputeHealthCheck#request}
+  */
   readonly request?: string;
-  /** The bytes to match against the beginning of the response data. If left empty
+  /**
+  * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
-can only be ASCII. */
+can only be ASCII.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#response ComputeHealthCheck#response}
+  */
   readonly response?: string;
 }
 
@@ -338,8 +541,17 @@ function computeHealthCheckTcpHealthCheckToTerraform(struct?: ComputeHealthCheck
 }
 
 export interface ComputeHealthCheckTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#create ComputeHealthCheck#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#delete ComputeHealthCheck#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#update ComputeHealthCheck#update}
+  */
   readonly update?: string;
 }
 
@@ -353,14 +565,22 @@ function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthCheckTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html google_compute_health_check}
+*/
 export class ComputeHealthCheck extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html google_compute_health_check} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeHealthCheckConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeHealthCheckConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_health_check',

@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArguments {
-  /** The location of the cloud run instance. eg us-central1 */
+  /**
+  * The location of the cloud run instance. eg us-central1
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#location CloudRunDomainMapping#location}
+  */
   readonly location: string;
-  /** Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain */
+  /**
+  * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#name CloudRunDomainMapping#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#project CloudRunDomainMapping#project}
+  */
   readonly project?: string;
-  /** metadata block */
+  /**
+  * metadata block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#metadata CloudRunDomainMapping#metadata}
+  */
   readonly metadata: CloudRunDomainMappingMetadata[];
-  /** spec block */
+  /**
+  * spec block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#spec CloudRunDomainMapping#spec}
+  */
   readonly spec: CloudRunDomainMappingSpec[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#timeouts CloudRunDomainMapping#timeouts}
+  */
   readonly timeouts?: CloudRunDomainMappingTimeouts;
 }
 export class CloudRunDomainMappingStatusConditions extends cdktf.ComplexComputedList {
@@ -81,21 +104,33 @@ export class CloudRunDomainMappingStatus extends cdktf.ComplexComputedList {
   }
 }
 export interface CloudRunDomainMappingMetadata {
-  /** Annotations is a key value map stored with a resource that
+  /**
+  * Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
 info: http://kubernetes.io/docs/user-guide/annotations
 
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
-or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field. */
+or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#annotations CloudRunDomainMapping#annotations}
+  */
   readonly annotations?: { [key: string]: string };
-  /** Map of string keys and values that can be used to organize and categorize
+  /**
+  * Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
 and routes.
-More info: http://kubernetes.io/docs/user-guide/labels */
+More info: http://kubernetes.io/docs/user-guide/labels
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#labels CloudRunDomainMapping#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** In Cloud Run the namespace must be equal to either the
-project ID or project number. */
+  /**
+  * In Cloud Run the namespace must be equal to either the
+project ID or project number.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#namespace CloudRunDomainMapping#namespace}
+  */
   readonly namespace: string;
 }
 
@@ -109,15 +144,27 @@ function cloudRunDomainMappingMetadataToTerraform(struct?: CloudRunDomainMapping
 }
 
 export interface CloudRunDomainMappingSpec {
-  /** The mode of the certificate. Default value: "AUTOMATIC" Possible values: ["NONE", "AUTOMATIC"] */
+  /**
+  * The mode of the certificate. Default value: "AUTOMATIC" Possible values: ["NONE", "AUTOMATIC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#certificate_mode CloudRunDomainMapping#certificate_mode}
+  */
   readonly certificateMode?: string;
-  /** If set, the mapping will override any mapping set before this spec was set.
+  /**
+  * If set, the mapping will override any mapping set before this spec was set.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
-has given such a warning. */
+has given such a warning.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#force_override CloudRunDomainMapping#force_override}
+  */
   readonly forceOverride?: boolean;
-  /** The name of the Cloud Run Service that this DomainMapping applies to.
-The route must exist. */
+  /**
+  * The name of the Cloud Run Service that this DomainMapping applies to.
+The route must exist.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#route_name CloudRunDomainMapping#route_name}
+  */
   readonly routeName: string;
 }
 
@@ -131,7 +178,13 @@ function cloudRunDomainMappingSpecToTerraform(struct?: CloudRunDomainMappingSpec
 }
 
 export interface CloudRunDomainMappingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#create CloudRunDomainMapping#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#delete CloudRunDomainMapping#delete}
+  */
   readonly delete?: string;
 }
 
@@ -144,14 +197,22 @@ function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomainMapping
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html google_cloud_run_domain_mapping}
+*/
 export class CloudRunDomainMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html google_cloud_run_domain_mapping} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudRunDomainMappingConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudRunDomainMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_run_domain_mapping',

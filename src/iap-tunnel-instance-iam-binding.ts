@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapTunnelInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#instance IapTunnelInstanceIamBinding#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#members IapTunnelInstanceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#project IapTunnelInstanceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#role IapTunnelInstanceIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#zone IapTunnelInstanceIamBinding#zone}
+  */
   readonly zone?: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#condition IapTunnelInstanceIamBinding#condition}
+  */
   readonly condition?: IapTunnelInstanceIamBindingCondition[];
 }
 export interface IapTunnelInstanceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#description IapTunnelInstanceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#expression IapTunnelInstanceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#title IapTunnelInstanceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function iapTunnelInstanceIamBindingConditionToTerraform(struct?: IapTunnelInsta
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html google_iap_tunnel_instance_iam_binding}
+*/
 export class IapTunnelInstanceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html google_iap_tunnel_instance_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapTunnelInstanceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: IapTunnelInstanceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_tunnel_instance_iam_binding',

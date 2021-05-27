@@ -7,21 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocWorkflowTemplateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#labels DataprocWorkflowTemplate#labels}
+  */
   readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#location DataprocWorkflowTemplate#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#name DataprocWorkflowTemplate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#project DataprocWorkflowTemplate#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#version DataprocWorkflowTemplate#version}
+  */
   readonly version?: number;
-  /** jobs block */
+  /**
+  * jobs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jobs DataprocWorkflowTemplate#jobs}
+  */
   readonly jobs: DataprocWorkflowTemplateJobs[];
-  /** parameters block */
+  /**
+  * parameters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#parameters DataprocWorkflowTemplate#parameters}
+  */
   readonly parameters?: DataprocWorkflowTemplateParameters[];
-  /** placement block */
+  /**
+  * placement block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#placement DataprocWorkflowTemplate#placement}
+  */
   readonly placement: DataprocWorkflowTemplatePlacement[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#timeouts DataprocWorkflowTemplate#timeouts}
+  */
   readonly timeouts?: DataprocWorkflowTemplateTimeouts;
 }
 export interface DataprocWorkflowTemplateJobsHadoopJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -33,14 +67,39 @@ function dataprocWorkflowTemplateJobsHadoopJobLoggingConfigToTerraform(struct?: 
 }
 
 export interface DataprocWorkflowTemplateJobsHadoopJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
+  */
   readonly archiveUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
+  */
   readonly args?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
+  */
   readonly fileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_class DataprocWorkflowTemplate#main_class}
+  */
   readonly mainClass?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
+  */
   readonly mainJarFileUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig[];
 }
 
@@ -59,6 +118,9 @@ function dataprocWorkflowTemplateJobsHadoopJobToTerraform(struct?: DataprocWorkf
 }
 
 export interface DataprocWorkflowTemplateJobsHiveJobQueryList {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
+  */
   readonly queries: string[];
 }
 
@@ -70,12 +132,31 @@ function dataprocWorkflowTemplateJobsHiveJobQueryListToTerraform(struct?: Datapr
 }
 
 export interface DataprocWorkflowTemplateJobsHiveJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+  */
   readonly continueOnFailure?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+  */
   readonly queryFileUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#script_variables DataprocWorkflowTemplate#script_variables}
+  */
   readonly scriptVariables?: { [key: string]: string };
-  /** query_list block */
+  /**
+  * query_list block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_list DataprocWorkflowTemplate#query_list}
+  */
   readonly queryList?: DataprocWorkflowTemplateJobsHiveJobQueryList[];
 }
 
@@ -92,6 +173,9 @@ function dataprocWorkflowTemplateJobsHiveJobToTerraform(struct?: DataprocWorkflo
 }
 
 export interface DataprocWorkflowTemplateJobsPigJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -103,6 +187,9 @@ function dataprocWorkflowTemplateJobsPigJobLoggingConfigToTerraform(struct?: Dat
 }
 
 export interface DataprocWorkflowTemplateJobsPigJobQueryList {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
+  */
   readonly queries: string[];
 }
 
@@ -114,14 +201,37 @@ function dataprocWorkflowTemplateJobsPigJobQueryListToTerraform(struct?: Datapro
 }
 
 export interface DataprocWorkflowTemplateJobsPigJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+  */
   readonly continueOnFailure?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+  */
   readonly queryFileUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#script_variables DataprocWorkflowTemplate#script_variables}
+  */
   readonly scriptVariables?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsPigJobLoggingConfig[];
-  /** query_list block */
+  /**
+  * query_list block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_list DataprocWorkflowTemplate#query_list}
+  */
   readonly queryList?: DataprocWorkflowTemplateJobsPigJobQueryList[];
 }
 
@@ -139,6 +249,9 @@ function dataprocWorkflowTemplateJobsPigJobToTerraform(struct?: DataprocWorkflow
 }
 
 export interface DataprocWorkflowTemplateJobsPrestoJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -150,6 +263,9 @@ function dataprocWorkflowTemplateJobsPrestoJobLoggingConfigToTerraform(struct?: 
 }
 
 export interface DataprocWorkflowTemplateJobsPrestoJobQueryList {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
+  */
   readonly queries: string[];
 }
 
@@ -161,14 +277,37 @@ function dataprocWorkflowTemplateJobsPrestoJobQueryListToTerraform(struct?: Data
 }
 
 export interface DataprocWorkflowTemplateJobsPrestoJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#client_tags DataprocWorkflowTemplate#client_tags}
+  */
   readonly clientTags?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+  */
   readonly continueOnFailure?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#output_format DataprocWorkflowTemplate#output_format}
+  */
   readonly outputFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+  */
   readonly queryFileUri?: string;
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig[];
-  /** query_list block */
+  /**
+  * query_list block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_list DataprocWorkflowTemplate#query_list}
+  */
   readonly queryList?: DataprocWorkflowTemplateJobsPrestoJobQueryList[];
 }
 
@@ -186,6 +325,9 @@ function dataprocWorkflowTemplateJobsPrestoJobToTerraform(struct?: DataprocWorkf
 }
 
 export interface DataprocWorkflowTemplateJobsPysparkJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -197,14 +339,39 @@ function dataprocWorkflowTemplateJobsPysparkJobLoggingConfigToTerraform(struct?:
 }
 
 export interface DataprocWorkflowTemplateJobsPysparkJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
+  */
   readonly archiveUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
+  */
   readonly args?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
+  */
   readonly fileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_python_file_uri DataprocWorkflowTemplate#main_python_file_uri}
+  */
   readonly mainPythonFileUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#python_file_uris DataprocWorkflowTemplate#python_file_uris}
+  */
   readonly pythonFileUris?: string[];
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig[];
 }
 
@@ -223,7 +390,13 @@ function dataprocWorkflowTemplateJobsPysparkJobToTerraform(struct?: DataprocWork
 }
 
 export interface DataprocWorkflowTemplateJobsScheduling {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#max_failures_per_hour DataprocWorkflowTemplate#max_failures_per_hour}
+  */
   readonly maxFailuresPerHour?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#max_failures_total DataprocWorkflowTemplate#max_failures_total}
+  */
   readonly maxFailuresTotal?: number;
 }
 
@@ -236,6 +409,9 @@ function dataprocWorkflowTemplateJobsSchedulingToTerraform(struct?: DataprocWork
 }
 
 export interface DataprocWorkflowTemplateJobsSparkJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -247,14 +423,39 @@ function dataprocWorkflowTemplateJobsSparkJobLoggingConfigToTerraform(struct?: D
 }
 
 export interface DataprocWorkflowTemplateJobsSparkJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
+  */
   readonly archiveUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
+  */
   readonly args?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
+  */
   readonly fileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_class DataprocWorkflowTemplate#main_class}
+  */
   readonly mainClass?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
+  */
   readonly mainJarFileUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsSparkJobLoggingConfig[];
 }
 
@@ -273,6 +474,9 @@ function dataprocWorkflowTemplateJobsSparkJobToTerraform(struct?: DataprocWorkfl
 }
 
 export interface DataprocWorkflowTemplateJobsSparkRJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -284,12 +488,31 @@ function dataprocWorkflowTemplateJobsSparkRJobLoggingConfigToTerraform(struct?: 
 }
 
 export interface DataprocWorkflowTemplateJobsSparkRJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
+  */
   readonly archiveUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
+  */
   readonly args?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
+  */
   readonly fileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_r_file_uri DataprocWorkflowTemplate#main_r_file_uri}
+  */
   readonly mainRFileUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig[];
 }
 
@@ -306,6 +529,9 @@ function dataprocWorkflowTemplateJobsSparkRJobToTerraform(struct?: DataprocWorkf
 }
 
 export interface DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+  */
   readonly driverLogLevels?: { [key: string]: string };
 }
 
@@ -317,6 +543,9 @@ function dataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigToTerraform(struct?
 }
 
 export interface DataprocWorkflowTemplateJobsSparkSqlJobQueryList {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
+  */
   readonly queries: string[];
 }
 
@@ -328,13 +557,33 @@ function dataprocWorkflowTemplateJobsSparkSqlJobQueryListToTerraform(struct?: Da
 }
 
 export interface DataprocWorkflowTemplateJobsSparkSqlJob {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+  */
   readonly queryFileUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#script_variables DataprocWorkflowTemplate#script_variables}
+  */
   readonly scriptVariables?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#logging_config DataprocWorkflowTemplate#logging_config}
+  */
   readonly loggingConfig?: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig[];
-  /** query_list block */
+  /**
+  * query_list block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_list DataprocWorkflowTemplate#query_list}
+  */
   readonly queryList?: DataprocWorkflowTemplateJobsSparkSqlJobQueryList[];
 }
 
@@ -351,26 +600,71 @@ function dataprocWorkflowTemplateJobsSparkSqlJobToTerraform(struct?: DataprocWor
 }
 
 export interface DataprocWorkflowTemplateJobs {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#labels DataprocWorkflowTemplate#labels}
+  */
   readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#prerequisite_step_ids DataprocWorkflowTemplate#prerequisite_step_ids}
+  */
   readonly prerequisiteStepIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#step_id DataprocWorkflowTemplate#step_id}
+  */
   readonly stepId: string;
-  /** hadoop_job block */
+  /**
+  * hadoop_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#hadoop_job DataprocWorkflowTemplate#hadoop_job}
+  */
   readonly hadoopJob?: DataprocWorkflowTemplateJobsHadoopJob[];
-  /** hive_job block */
+  /**
+  * hive_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#hive_job DataprocWorkflowTemplate#hive_job}
+  */
   readonly hiveJob?: DataprocWorkflowTemplateJobsHiveJob[];
-  /** pig_job block */
+  /**
+  * pig_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#pig_job DataprocWorkflowTemplate#pig_job}
+  */
   readonly pigJob?: DataprocWorkflowTemplateJobsPigJob[];
-  /** presto_job block */
+  /**
+  * presto_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#presto_job DataprocWorkflowTemplate#presto_job}
+  */
   readonly prestoJob?: DataprocWorkflowTemplateJobsPrestoJob[];
-  /** pyspark_job block */
+  /**
+  * pyspark_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#pyspark_job DataprocWorkflowTemplate#pyspark_job}
+  */
   readonly pysparkJob?: DataprocWorkflowTemplateJobsPysparkJob[];
-  /** scheduling block */
+  /**
+  * scheduling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#scheduling DataprocWorkflowTemplate#scheduling}
+  */
   readonly scheduling?: DataprocWorkflowTemplateJobsScheduling[];
-  /** spark_job block */
+  /**
+  * spark_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#spark_job DataprocWorkflowTemplate#spark_job}
+  */
   readonly sparkJob?: DataprocWorkflowTemplateJobsSparkJob[];
-  /** spark_r_job block */
+  /**
+  * spark_r_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#spark_r_job DataprocWorkflowTemplate#spark_r_job}
+  */
   readonly sparkRJob?: DataprocWorkflowTemplateJobsSparkRJob[];
-  /** spark_sql_job block */
+  /**
+  * spark_sql_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#spark_sql_job DataprocWorkflowTemplate#spark_sql_job}
+  */
   readonly sparkSqlJob?: DataprocWorkflowTemplateJobsSparkSqlJob[];
 }
 
@@ -393,6 +687,9 @@ function dataprocWorkflowTemplateJobsToTerraform(struct?: DataprocWorkflowTempla
 }
 
 export interface DataprocWorkflowTemplateParametersValidationRegex {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#regexes DataprocWorkflowTemplate#regexes}
+  */
   readonly regexes: string[];
 }
 
@@ -404,6 +701,9 @@ function dataprocWorkflowTemplateParametersValidationRegexToTerraform(struct?: D
 }
 
 export interface DataprocWorkflowTemplateParametersValidationValues {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#values DataprocWorkflowTemplate#values}
+  */
   readonly values: string[];
 }
 
@@ -415,9 +715,17 @@ function dataprocWorkflowTemplateParametersValidationValuesToTerraform(struct?: 
 }
 
 export interface DataprocWorkflowTemplateParametersValidation {
-  /** regex block */
+  /**
+  * regex block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#regex DataprocWorkflowTemplate#regex}
+  */
   readonly regex?: DataprocWorkflowTemplateParametersValidationRegex[];
-  /** values block */
+  /**
+  * values block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#values DataprocWorkflowTemplate#values}
+  */
   readonly values?: DataprocWorkflowTemplateParametersValidationValues[];
 }
 
@@ -430,10 +738,23 @@ function dataprocWorkflowTemplateParametersValidationToTerraform(struct?: Datapr
 }
 
 export interface DataprocWorkflowTemplateParameters {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#description DataprocWorkflowTemplate#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#fields DataprocWorkflowTemplate#fields}
+  */
   readonly fields: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#name DataprocWorkflowTemplate#name}
+  */
   readonly name: string;
-  /** validation block */
+  /**
+  * validation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#validation DataprocWorkflowTemplate#validation}
+  */
   readonly validation?: DataprocWorkflowTemplateParametersValidation[];
 }
 
@@ -448,7 +769,13 @@ function dataprocWorkflowTemplateParametersToTerraform(struct?: DataprocWorkflow
 }
 
 export interface DataprocWorkflowTemplatePlacementClusterSelector {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cluster_labels DataprocWorkflowTemplate#cluster_labels}
+  */
   readonly clusterLabels: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#zone DataprocWorkflowTemplate#zone}
+  */
   readonly zone?: string;
 }
 
@@ -461,6 +788,9 @@ function dataprocWorkflowTemplatePlacementClusterSelectorToTerraform(struct?: Da
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#policy DataprocWorkflowTemplate#policy}
+  */
   readonly policy?: string;
 }
 
@@ -472,6 +802,9 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigT
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#gce_pd_kms_key_name DataprocWorkflowTemplate#gce_pd_kms_key_name}
+  */
   readonly gcePdKmsKeyName?: string;
 }
 
@@ -483,6 +816,9 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigTo
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#enable_http_port_access DataprocWorkflowTemplate#enable_http_port_access}
+  */
   readonly enableHttpPortAccess?: boolean;
 }
 
@@ -494,6 +830,9 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigToTe
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#node_group DataprocWorkflowTemplate#node_group}
+  */
   readonly nodeGroup: string;
 }
 
@@ -505,8 +844,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNo
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#consume_reservation_type DataprocWorkflowTemplate#consume_reservation_type}
+  */
   readonly consumeReservationType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#key DataprocWorkflowTemplate#key}
+  */
   readonly key?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#values DataprocWorkflowTemplate#values}
+  */
   readonly values?: string[];
 }
 
@@ -520,18 +868,53 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigRe
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#internal_ip_only DataprocWorkflowTemplate#internal_ip_only}
+  */
   readonly internalIpOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#metadata DataprocWorkflowTemplate#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#network DataprocWorkflowTemplate#network}
+  */
   readonly network?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#private_ipv6_google_access DataprocWorkflowTemplate#private_ipv6_google_access}
+  */
   readonly privateIpv6GoogleAccess?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#service_account DataprocWorkflowTemplate#service_account}
+  */
   readonly serviceAccount?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#service_account_scopes DataprocWorkflowTemplate#service_account_scopes}
+  */
   readonly serviceAccountScopes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#subnetwork DataprocWorkflowTemplate#subnetwork}
+  */
   readonly subnetwork?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#tags DataprocWorkflowTemplate#tags}
+  */
   readonly tags?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#zone DataprocWorkflowTemplate#zone}
+  */
   readonly zone?: string;
-  /** node_group_affinity block */
+  /**
+  * node_group_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#node_group_affinity DataprocWorkflowTemplate#node_group_affinity}
+  */
   readonly nodeGroupAffinity?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity[];
-  /** reservation_affinity block */
+  /**
+  * reservation_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#reservation_affinity DataprocWorkflowTemplate#reservation_affinity}
+  */
   readonly reservationAffinity?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity[];
 }
 
@@ -553,7 +936,13 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigTo
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#executable_file DataprocWorkflowTemplate#executable_file}
+  */
   readonly executableFile?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#execution_timeout DataprocWorkflowTemplate#execution_timeout}
+  */
   readonly executionTimeout?: string;
 }
 
@@ -566,8 +955,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActi
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#auto_delete_time DataprocWorkflowTemplate#auto_delete_time}
+  */
   readonly autoDeleteTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#auto_delete_ttl DataprocWorkflowTemplate#auto_delete_ttl}
+  */
   readonly autoDeleteTtl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#idle_delete_ttl DataprocWorkflowTemplate#idle_delete_ttl}
+  */
   readonly idleDeleteTtl?: string;
 }
 
@@ -581,7 +979,13 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigToT
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_count DataprocWorkflowTemplate#accelerator_count}
+  */
   readonly acceleratorCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_type DataprocWorkflowTemplate#accelerator_type}
+  */
   readonly acceleratorType?: string;
 }
 
@@ -594,8 +998,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccele
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+  */
   readonly bootDiskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+  */
   readonly bootDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+  */
   readonly numLocalSsds?: number;
 }
 
@@ -609,14 +1022,37 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskCo
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image DataprocWorkflowTemplate#image}
+  */
   readonly image?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#machine_type DataprocWorkflowTemplate#machine_type}
+  */
   readonly machineType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+  */
   readonly minCpuPlatform?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_instances DataprocWorkflowTemplate#num_instances}
+  */
   readonly numInstances?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#preemptibility DataprocWorkflowTemplate#preemptibility}
+  */
   readonly preemptibility?: string;
-  /** accelerators block */
+  /**
+  * accelerators block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerators DataprocWorkflowTemplate#accelerators}
+  */
   readonly accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators[];
-  /** disk_config block */
+  /**
+  * disk_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#disk_config DataprocWorkflowTemplate#disk_config}
+  */
   readonly diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig[];
 }
 
@@ -634,7 +1070,13 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigToTerr
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_count DataprocWorkflowTemplate#accelerator_count}
+  */
   readonly acceleratorCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_type DataprocWorkflowTemplate#accelerator_type}
+  */
   readonly acceleratorType?: string;
 }
 
@@ -647,8 +1089,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerCon
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+  */
   readonly bootDiskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+  */
   readonly bootDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+  */
   readonly numLocalSsds?: number;
 }
 
@@ -662,14 +1113,37 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerCon
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image DataprocWorkflowTemplate#image}
+  */
   readonly image?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#machine_type DataprocWorkflowTemplate#machine_type}
+  */
   readonly machineType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+  */
   readonly minCpuPlatform?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_instances DataprocWorkflowTemplate#num_instances}
+  */
   readonly numInstances?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#preemptibility DataprocWorkflowTemplate#preemptibility}
+  */
   readonly preemptibility?: string;
-  /** accelerators block */
+  /**
+  * accelerators block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerators DataprocWorkflowTemplate#accelerators}
+  */
   readonly accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators[];
-  /** disk_config block */
+  /**
+  * disk_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#disk_config DataprocWorkflowTemplate#disk_config}
+  */
   readonly diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig[];
 }
 
@@ -687,20 +1161,65 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerCon
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_admin_server DataprocWorkflowTemplate#cross_realm_trust_admin_server}
+  */
   readonly crossRealmTrustAdminServer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_kdc DataprocWorkflowTemplate#cross_realm_trust_kdc}
+  */
   readonly crossRealmTrustKdc?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_realm DataprocWorkflowTemplate#cross_realm_trust_realm}
+  */
   readonly crossRealmTrustRealm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_shared_password DataprocWorkflowTemplate#cross_realm_trust_shared_password}
+  */
   readonly crossRealmTrustSharedPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#enable_kerberos DataprocWorkflowTemplate#enable_kerberos}
+  */
   readonly enableKerberos?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#kdc_db_key DataprocWorkflowTemplate#kdc_db_key}
+  */
   readonly kdcDbKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#key_password DataprocWorkflowTemplate#key_password}
+  */
   readonly keyPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#keystore DataprocWorkflowTemplate#keystore}
+  */
   readonly keystore?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#keystore_password DataprocWorkflowTemplate#keystore_password}
+  */
   readonly keystorePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#kms_key DataprocWorkflowTemplate#kms_key}
+  */
   readonly kmsKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#realm DataprocWorkflowTemplate#realm}
+  */
   readonly realm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#root_principal_password DataprocWorkflowTemplate#root_principal_password}
+  */
   readonly rootPrincipalPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#tgt_lifetime_hours DataprocWorkflowTemplate#tgt_lifetime_hours}
+  */
   readonly tgtLifetimeHours?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#truststore DataprocWorkflowTemplate#truststore}
+  */
   readonly truststore?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#truststore_password DataprocWorkflowTemplate#truststore_password}
+  */
   readonly truststorePassword?: string;
 }
 
@@ -726,7 +1245,11 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerb
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
-  /** kerberos_config block */
+  /**
+  * kerberos_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#kerberos_config DataprocWorkflowTemplate#kerberos_config}
+  */
   readonly kerberosConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig[];
 }
 
@@ -738,7 +1261,13 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigToTe
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image_version DataprocWorkflowTemplate#image_version}
+  */
   readonly imageVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
+  */
   readonly properties?: { [key: string]: string };
 }
 
@@ -751,7 +1280,13 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigToTe
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_count DataprocWorkflowTemplate#accelerator_count}
+  */
   readonly acceleratorCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_type DataprocWorkflowTemplate#accelerator_type}
+  */
   readonly acceleratorType?: string;
 }
 
@@ -764,8 +1299,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccele
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+  */
   readonly bootDiskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+  */
   readonly bootDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+  */
   readonly numLocalSsds?: number;
 }
 
@@ -779,14 +1323,37 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskCo
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image DataprocWorkflowTemplate#image}
+  */
   readonly image?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#machine_type DataprocWorkflowTemplate#machine_type}
+  */
   readonly machineType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+  */
   readonly minCpuPlatform?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_instances DataprocWorkflowTemplate#num_instances}
+  */
   readonly numInstances?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#preemptibility DataprocWorkflowTemplate#preemptibility}
+  */
   readonly preemptibility?: string;
-  /** accelerators block */
+  /**
+  * accelerators block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerators DataprocWorkflowTemplate#accelerators}
+  */
   readonly accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators[];
-  /** disk_config block */
+  /**
+  * disk_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#disk_config DataprocWorkflowTemplate#disk_config}
+  */
   readonly diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig[];
 }
 
@@ -804,29 +1371,79 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigToTerr
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#staging_bucket DataprocWorkflowTemplate#staging_bucket}
+  */
   readonly stagingBucket?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#temp_bucket DataprocWorkflowTemplate#temp_bucket}
+  */
   readonly tempBucket?: string;
-  /** autoscaling_config block */
+  /**
+  * autoscaling_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#autoscaling_config DataprocWorkflowTemplate#autoscaling_config}
+  */
   readonly autoscalingConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig[];
-  /** encryption_config block */
+  /**
+  * encryption_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#encryption_config DataprocWorkflowTemplate#encryption_config}
+  */
   readonly encryptionConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig[];
-  /** endpoint_config block */
+  /**
+  * endpoint_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#endpoint_config DataprocWorkflowTemplate#endpoint_config}
+  */
   readonly endpointConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig[];
-  /** gce_cluster_config block */
+  /**
+  * gce_cluster_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#gce_cluster_config DataprocWorkflowTemplate#gce_cluster_config}
+  */
   readonly gceClusterConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig[];
-  /** initialization_actions block */
+  /**
+  * initialization_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#initialization_actions DataprocWorkflowTemplate#initialization_actions}
+  */
   readonly initializationActions?: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions[];
-  /** lifecycle_config block */
+  /**
+  * lifecycle_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#lifecycle_config DataprocWorkflowTemplate#lifecycle_config}
+  */
   readonly lifecycleConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig[];
-  /** master_config block */
+  /**
+  * master_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#master_config DataprocWorkflowTemplate#master_config}
+  */
   readonly masterConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig[];
-  /** secondary_worker_config block */
+  /**
+  * secondary_worker_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#secondary_worker_config DataprocWorkflowTemplate#secondary_worker_config}
+  */
   readonly secondaryWorkerConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig[];
-  /** security_config block */
+  /**
+  * security_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#security_config DataprocWorkflowTemplate#security_config}
+  */
   readonly securityConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig[];
-  /** software_config block */
+  /**
+  * software_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#software_config DataprocWorkflowTemplate#software_config}
+  */
   readonly softwareConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig[];
-  /** worker_config block */
+  /**
+  * worker_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#worker_config DataprocWorkflowTemplate#worker_config}
+  */
   readonly workerConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig[];
 }
 
@@ -850,9 +1467,19 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigToTerraform(struct
 }
 
 export interface DataprocWorkflowTemplatePlacementManagedCluster {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cluster_name DataprocWorkflowTemplate#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#labels DataprocWorkflowTemplate#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** config block */
+  /**
+  * config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#config DataprocWorkflowTemplate#config}
+  */
   readonly config: DataprocWorkflowTemplatePlacementManagedClusterConfig[];
 }
 
@@ -866,9 +1493,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterToTerraform(struct?: Dat
 }
 
 export interface DataprocWorkflowTemplatePlacement {
-  /** cluster_selector block */
+  /**
+  * cluster_selector block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cluster_selector DataprocWorkflowTemplate#cluster_selector}
+  */
   readonly clusterSelector?: DataprocWorkflowTemplatePlacementClusterSelector[];
-  /** managed_cluster block */
+  /**
+  * managed_cluster block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#managed_cluster DataprocWorkflowTemplate#managed_cluster}
+  */
   readonly managedCluster?: DataprocWorkflowTemplatePlacementManagedCluster[];
 }
 
@@ -881,7 +1516,13 @@ function dataprocWorkflowTemplatePlacementToTerraform(struct?: DataprocWorkflowT
 }
 
 export interface DataprocWorkflowTemplateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#create DataprocWorkflowTemplate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#delete DataprocWorkflowTemplate#delete}
+  */
   readonly delete?: string;
 }
 
@@ -894,14 +1535,22 @@ function dataprocWorkflowTemplateTimeoutsToTerraform(struct?: DataprocWorkflowTe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html google_dataproc_workflow_template}
+*/
 export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html google_dataproc_workflow_template} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocWorkflowTemplateConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocWorkflowTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_workflow_template',

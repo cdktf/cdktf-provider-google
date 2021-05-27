@@ -7,24 +7,48 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLossPreventionDeidentifyTemplateConfig extends cdktf.TerraformMetaArguments {
-  /** A description of the template. */
+  /**
+  * A description of the template.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#description DataLossPreventionDeidentifyTemplate#description}
+  */
   readonly description?: string;
-  /** User set display name of the template. */
+  /**
+  * User set display name of the template.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#display_name DataLossPreventionDeidentifyTemplate#display_name}
+  */
   readonly displayName?: string;
-  /** The parent of the template in any of the following formats:
+  /**
+  * The parent of the template in any of the following formats:
 
 * 'projects/{{project}}'
 * 'projects/{{project}}/locations/{{location}}'
 * 'organizations/{{organization_id}}'
-* 'organizations/{{organization_id}}/locations/{{location}}' */
+* 'organizations/{{organization_id}}/locations/{{location}}'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#parent DataLossPreventionDeidentifyTemplate#parent}
+  */
   readonly parent: string;
-  /** deidentify_config block */
+  /**
+  * deidentify_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#deidentify_config DataLossPreventionDeidentifyTemplate#deidentify_config}
+  */
   readonly deidentifyConfig: DataLossPreventionDeidentifyTemplateDeidentifyConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#timeouts DataLossPreventionDeidentifyTemplate#timeouts}
+  */
   readonly timeouts?: DataLossPreventionDeidentifyTemplateTimeouts;
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes {
-  /** Name of the information type. */
+  /**
+  * Name of the information type.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#name DataLossPreventionDeidentifyTemplate#name}
+  */
   readonly name: string;
 }
 
@@ -36,9 +60,17 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore {
-  /** Characters to not transform when masking. */
+  /**
+  * Characters to not transform when masking.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#character_to_skip DataLossPreventionDeidentifyTemplate#character_to_skip}
+  */
   readonly characterToSkip?: string;
-  /** Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: ["NUMERIC", "ALPHA_UPPER_CASE", "ALPHA_LOWER_CASE", "PUNCTUATION", "WHITESPACE"] */
+  /**
+  * Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: ["NUMERIC", "ALPHA_UPPER_CASE", "ALPHA_LOWER_CASE", "PUNCTUATION", "WHITESPACE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#common_characters_to_ignore DataLossPreventionDeidentifyTemplate#common_characters_to_ignore}
+  */
   readonly commonCharactersToIgnore?: string;
 }
 
@@ -51,16 +83,32 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig {
-  /** Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
+  /**
+  * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
-strings, and 0 for digits. */
+strings, and 0 for digits.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#masking_character DataLossPreventionDeidentifyTemplate#masking_character}
+  */
   readonly maskingCharacter?: string;
-  /** Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally. */
+  /**
+  * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#number_to_mask DataLossPreventionDeidentifyTemplate#number_to_mask}
+  */
   readonly numberToMask?: number;
-  /** Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is 'false', then the
-input string '1234-5678-9012-3456' is masked as '00000000000000-3456'. */
+  /**
+  * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is 'false', then the
+input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
+  */
   readonly reverseOrder?: boolean;
-  /** characters_to_ignore block */
+  /**
+  * characters_to_ignore block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#characters_to_ignore DataLossPreventionDeidentifyTemplate#characters_to_ignore}
+  */
   readonly charactersToIgnore?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore[];
 }
 
@@ -75,12 +123,24 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue {
-  /** Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-year by itself or a year and month where the day is not significant. */
+  /**
+  * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+year by itself or a year and month where the day is not significant.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#day DataLossPreventionDeidentifyTemplate#day}
+  */
   readonly day?: number;
-  /** Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day. */
+  /**
+  * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#month DataLossPreventionDeidentifyTemplate#month}
+  */
   readonly month?: number;
-  /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
+  /**
+  * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#year DataLossPreventionDeidentifyTemplate#year}
+  */
   readonly year?: number;
 }
 
@@ -94,13 +154,29 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue {
-  /** Hours of day in 24 hour format. Should be from 0 to 23. */
+  /**
+  * Hours of day in 24 hour format. Should be from 0 to 23.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#hours DataLossPreventionDeidentifyTemplate#hours}
+  */
   readonly hours?: number;
-  /** Minutes of hour of day. Must be from 0 to 59. */
+  /**
+  * Minutes of hour of day. Must be from 0 to 59.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#minutes DataLossPreventionDeidentifyTemplate#minutes}
+  */
   readonly minutes?: number;
-  /** Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+  /**
+  * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#nanos DataLossPreventionDeidentifyTemplate#nanos}
+  */
   readonly nanos?: number;
-  /** Seconds of minutes of the time. Must normally be from 0 to 59. */
+  /**
+  * Seconds of minutes of the time. Must normally be from 0 to 59.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#seconds DataLossPreventionDeidentifyTemplate#seconds}
+  */
   readonly seconds?: number;
 }
 
@@ -115,22 +191,54 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue {
-  /** A boolean value. */
+  /**
+  * A boolean value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+  */
   readonly booleanValue?: boolean;
-  /** Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"] */
+  /**
+  * Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+  */
   readonly dayOfWeekValue?: string;
-  /** A float value. */
+  /**
+  * A float value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#float_value DataLossPreventionDeidentifyTemplate#float_value}
+  */
   readonly floatValue?: number;
-  /** An integer value. */
+  /**
+  * An integer value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+  */
   readonly integerValue?: number;
-  /** A string value. */
+  /**
+  * A string value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#string_value DataLossPreventionDeidentifyTemplate#string_value}
+  */
   readonly stringValue?: string;
-  /** A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
-Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z". */
+  /**
+  * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
+Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+  */
   readonly timestampValue?: string;
-  /** date_value block */
+  /**
+  * date_value block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#date_value DataLossPreventionDeidentifyTemplate#date_value}
+  */
   readonly dateValue?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue[];
-  /** time_value block */
+  /**
+  * time_value block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#time_value DataLossPreventionDeidentifyTemplate#time_value}
+  */
   readonly timeValue?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue[];
 }
 
@@ -149,7 +257,11 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig {
-  /** new_value block */
+  /**
+  * new_value block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#new_value DataLossPreventionDeidentifyTemplate#new_value}
+  */
   readonly newValue: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue[];
 }
 
@@ -161,9 +273,17 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation {
-  /** character_mask_config block */
+  /**
+  * character_mask_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#character_mask_config DataLossPreventionDeidentifyTemplate#character_mask_config}
+  */
   readonly characterMaskConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig[];
-  /** replace_config block */
+  /**
+  * replace_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#replace_config DataLossPreventionDeidentifyTemplate#replace_config}
+  */
   readonly replaceConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig[];
 }
 
@@ -176,9 +296,17 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations {
-  /** info_types block */
+  /**
+  * info_types block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#info_types DataLossPreventionDeidentifyTemplate#info_types}
+  */
   readonly infoTypes?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes[];
-  /** primitive_transformation block */
+  /**
+  * primitive_transformation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#primitive_transformation DataLossPreventionDeidentifyTemplate#primitive_transformation}
+  */
   readonly primitiveTransformation: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation[];
 }
 
@@ -191,7 +319,11 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations {
-  /** transformations block */
+  /**
+  * transformations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#transformations DataLossPreventionDeidentifyTemplate#transformations}
+  */
   readonly transformations: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations[];
 }
 
@@ -203,7 +335,11 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 }
 
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfig {
-  /** info_type_transformations block */
+  /**
+  * info_type_transformations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#info_type_transformations DataLossPreventionDeidentifyTemplate#info_type_transformations}
+  */
   readonly infoTypeTransformations: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations[];
 }
 
@@ -215,8 +351,17 @@ function dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(struct?
 }
 
 export interface DataLossPreventionDeidentifyTemplateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#create DataLossPreventionDeidentifyTemplate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#delete DataLossPreventionDeidentifyTemplate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#update DataLossPreventionDeidentifyTemplate#update}
+  */
   readonly update?: string;
 }
 
@@ -230,14 +375,22 @@ function dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(struct?: DataLo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html google_data_loss_prevention_deidentify_template}
+*/
 export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html google_data_loss_prevention_deidentify_template} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLossPreventionDeidentifyTemplateConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLossPreventionDeidentifyTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_loss_prevention_deidentify_template',

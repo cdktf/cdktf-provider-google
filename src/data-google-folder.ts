@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_folder.html
+// https://www.terraform.io/docs/providers/google/d/folder.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleFolderConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder.html#folder DataGoogleFolder#folder}
+  */
   readonly folder: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder.html#lookup_organization DataGoogleFolder#lookup_organization}
+  */
   readonly lookupOrganization?: boolean;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/folder.html google_folder}
+*/
 export class DataGoogleFolder extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/folder.html google_folder} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleFolderConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleFolderConfig) {
     super(scope, id, {
       terraformResourceType: 'google_folder',

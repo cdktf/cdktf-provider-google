@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_cloud_identity_groups.html
+// https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleCloudIdentityGroupsConfig extends cdktf.TerraformMetaArguments {
-  /** The resource name of the entity under which this Group resides in the
+  /**
+  * The resource name of the entity under which this Group resides in the
 Cloud Identity resource hierarchy.
 
 Must be of the form identitysources/{identity_source_id} for external-identity-mapped
-groups or customers/{customer_id} for Google Groups. */
+groups or customers/{customer_id} for Google Groups.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html#parent DataGoogleCloudIdentityGroups#parent}
+  */
   readonly parent: string;
 }
 export class DataGoogleCloudIdentityGroupsGroupsGroupKey extends cdktf.ComplexComputedList {
@@ -74,14 +78,22 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html google_cloud_identity_groups}
+*/
 export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html google_cloud_identity_groups} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleCloudIdentityGroupsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleCloudIdentityGroupsConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_identity_groups',

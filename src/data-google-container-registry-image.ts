@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_container_registry_image.html
+// https://www.terraform.io/docs/providers/google/d/container_registry_image.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,21 +7,44 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleContainerRegistryImageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#digest DataGoogleContainerRegistryImage#digest}
+  */
   readonly digest?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#name DataGoogleContainerRegistryImage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#project DataGoogleContainerRegistryImage#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#region DataGoogleContainerRegistryImage#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#tag DataGoogleContainerRegistryImage#tag}
+  */
   readonly tag?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html google_container_registry_image}
+*/
 export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html google_container_registry_image} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleContainerRegistryImageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleContainerRegistryImageConfig) {
     super(scope, id, {
       terraformResourceType: 'google_container_registry_image',

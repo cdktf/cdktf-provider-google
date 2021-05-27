@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubSubscriptionIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#member PubsubSubscriptionIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#project PubsubSubscriptionIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#role PubsubSubscriptionIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#subscription PubsubSubscriptionIamMember#subscription}
+  */
   readonly subscription: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#condition PubsubSubscriptionIamMember#condition}
+  */
   readonly condition?: PubsubSubscriptionIamMemberCondition[];
 }
 export interface PubsubSubscriptionIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#description PubsubSubscriptionIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#expression PubsubSubscriptionIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html#title PubsubSubscriptionIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function pubsubSubscriptionIamMemberConditionToTerraform(struct?: PubsubSubscrip
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html google_pubsub_subscription_iam_member}
+*/
 export class PubsubSubscriptionIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription_iam_member.html google_pubsub_subscription_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubSubscriptionIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubSubscriptionIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_subscription_iam_member',

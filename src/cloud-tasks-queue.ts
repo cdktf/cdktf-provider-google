@@ -7,34 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudTasksQueueConfig extends cdktf.TerraformMetaArguments {
-  /** The location of the queue */
+  /**
+  * The location of the queue
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#location CloudTasksQueue#location}
+  */
   readonly location: string;
-  /** The queue name. */
+  /**
+  * The queue name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#name CloudTasksQueue#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#project CloudTasksQueue#project}
+  */
   readonly project?: string;
-  /** app_engine_routing_override block */
+  /**
+  * app_engine_routing_override block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
+  */
   readonly appEngineRoutingOverride?: CloudTasksQueueAppEngineRoutingOverride[];
-  /** rate_limits block */
+  /**
+  * rate_limits block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#rate_limits CloudTasksQueue#rate_limits}
+  */
   readonly rateLimits?: CloudTasksQueueRateLimits[];
-  /** retry_config block */
+  /**
+  * retry_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#retry_config CloudTasksQueue#retry_config}
+  */
   readonly retryConfig?: CloudTasksQueueRetryConfig[];
-  /** stackdriver_logging_config block */
+  /**
+  * stackdriver_logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
+  */
   readonly stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#timeouts CloudTasksQueue#timeouts}
+  */
   readonly timeouts?: CloudTasksQueueTimeouts;
 }
 export interface CloudTasksQueueAppEngineRoutingOverride {
-  /** App instance.
+  /**
+  * App instance.
 
-By default, the task is sent to an instance which is available when the task is attempted. */
+By default, the task is sent to an instance which is available when the task is attempted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#instance CloudTasksQueue#instance}
+  */
   readonly instance?: string;
-  /** App service.
+  /**
+  * App service.
 
-By default, the task is sent to the service which is the default service when the task is attempted. */
+By default, the task is sent to the service which is the default service when the task is attempted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#service CloudTasksQueue#service}
+  */
   readonly service?: string;
-  /** App version.
+  /**
+  * App version.
 
-By default, the task is sent to the version which is the default version when the task is attempted. */
+By default, the task is sent to the version which is the default version when the task is attempted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#version CloudTasksQueue#version}
+  */
   readonly version?: string;
 }
 
@@ -48,14 +91,22 @@ function cloudTasksQueueAppEngineRoutingOverrideToTerraform(struct?: CloudTasksQ
 }
 
 export interface CloudTasksQueueRateLimits {
-  /** The maximum number of concurrent tasks that Cloud Tasks allows to
+  /**
+  * The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
-concurrent requests decreases. */
+concurrent requests decreases.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
+  */
   readonly maxConcurrentDispatches?: number;
-  /** The maximum rate at which tasks are dispatched from this queue.
+  /**
+  * The maximum rate at which tasks are dispatched from this queue.
 
-If unspecified when the queue is created, Cloud Tasks will pick the default. */
+If unspecified when the queue is created, Cloud Tasks will pick the default.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
+  */
   readonly maxDispatchesPerSecond?: number;
 }
 
@@ -68,7 +119,8 @@ function cloudTasksQueueRateLimitsToTerraform(struct?: CloudTasksQueueRateLimits
 }
 
 export interface CloudTasksQueueRetryConfig {
-  /** Number of attempts per task.
+  /**
+  * Number of attempts per task.
 
 Cloud Tasks will attempt the task maxAttempts times (that is, if
 the first attempt fails, then there will be maxAttempts - 1
@@ -77,29 +129,48 @@ retries). Must be >= -1.
 If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 
--1 indicates unlimited attempts. */
+-1 indicates unlimited attempts.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#max_attempts CloudTasksQueue#max_attempts}
+  */
   readonly maxAttempts?: number;
-  /** A task will be scheduled for retry between minBackoff and
+  /**
+  * A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
-specifies that the task should be retried. */
+specifies that the task should be retried.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#max_backoff CloudTasksQueue#max_backoff}
+  */
   readonly maxBackoff?: string;
-  /** The time between retries will double maxDoublings times.
+  /**
+  * The time between retries will double maxDoublings times.
 
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
-up to maxAttempts times. */
+up to maxAttempts times.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#max_doublings CloudTasksQueue#max_doublings}
+  */
   readonly maxDoublings?: number;
-  /** If positive, maxRetryDuration specifies the time limit for
+  /**
+  * If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
 attempted. Once maxRetryDuration time has passed and the task has
 been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 
-If zero, then the task age is unlimited. */
+If zero, then the task age is unlimited.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#max_retry_duration CloudTasksQueue#max_retry_duration}
+  */
   readonly maxRetryDuration?: string;
-  /** A task will be scheduled for retry between minBackoff and
+  /**
+  * A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
-specifies that the task should be retried. */
+specifies that the task should be retried.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#min_backoff CloudTasksQueue#min_backoff}
+  */
   readonly minBackoff?: string;
 }
 
@@ -115,9 +186,13 @@ function cloudTasksQueueRetryConfigToTerraform(struct?: CloudTasksQueueRetryConf
 }
 
 export interface CloudTasksQueueStackdriverLoggingConfig {
-  /** Specifies the fraction of operations to write to Stackdriver Logging.
+  /**
+  * Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
-default and means that no operations are logged. */
+default and means that no operations are logged.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#sampling_ratio CloudTasksQueue#sampling_ratio}
+  */
   readonly samplingRatio: number;
 }
 
@@ -129,8 +204,17 @@ function cloudTasksQueueStackdriverLoggingConfigToTerraform(struct?: CloudTasksQ
 }
 
 export interface CloudTasksQueueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#create CloudTasksQueue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#delete CloudTasksQueue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html#update CloudTasksQueue#update}
+  */
   readonly update?: string;
 }
 
@@ -144,14 +228,22 @@ function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html google_cloud_tasks_queue}
+*/
 export class CloudTasksQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue.html google_cloud_tasks_queue} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudTasksQueueConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudTasksQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_tasks_queue',

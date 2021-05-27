@@ -7,20 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMetaArguments {
-  /** The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE.
-				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy. */
+  /**
+  * The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE.
+				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#action ProjectDefaultServiceAccounts#action}
+  */
   readonly action: string;
-  /** The project ID where service accounts are created. */
+  /**
+  * The project ID where service accounts are created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#project ProjectDefaultServiceAccounts#project}
+  */
   readonly project: string;
-  /** The action to be performed in the default service accounts on the resource destroy.
-				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE. */
+  /**
+  * The action to be performed in the default service accounts on the resource destroy.
+				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#restore_policy ProjectDefaultServiceAccounts#restore_policy}
+  */
   readonly restorePolicy?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#timeouts ProjectDefaultServiceAccounts#timeouts}
+  */
   readonly timeouts?: ProjectDefaultServiceAccountsTimeouts;
 }
 export interface ProjectDefaultServiceAccountsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#create ProjectDefaultServiceAccounts#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#delete ProjectDefaultServiceAccounts#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html#read ProjectDefaultServiceAccounts#read}
+  */
   readonly read?: string;
 }
 
@@ -34,14 +59,22 @@ function projectDefaultServiceAccountsTimeoutsToTerraform(struct?: ProjectDefaul
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html google_project_default_service_accounts}
+*/
 export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_default_service_accounts.html google_project_default_service_accounts} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectDefaultServiceAccountsConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectDefaultServiceAccountsConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_default_service_accounts',

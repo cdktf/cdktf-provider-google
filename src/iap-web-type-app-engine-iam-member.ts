@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapWebTypeAppEngineIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#app_id IapWebTypeAppEngineIamMember#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#member IapWebTypeAppEngineIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#project IapWebTypeAppEngineIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#role IapWebTypeAppEngineIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#condition IapWebTypeAppEngineIamMember#condition}
+  */
   readonly condition?: IapWebTypeAppEngineIamMemberCondition[];
 }
 export interface IapWebTypeAppEngineIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#description IapWebTypeAppEngineIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#expression IapWebTypeAppEngineIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html#title IapWebTypeAppEngineIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function iapWebTypeAppEngineIamMemberConditionToTerraform(struct?: IapWebTypeApp
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html google_iap_web_type_app_engine_iam_member}
+*/
 export class IapWebTypeAppEngineIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_member.html google_iap_web_type_app_engine_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapWebTypeAppEngineIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: IapWebTypeAppEngineIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_web_type_app_engine_iam_member',

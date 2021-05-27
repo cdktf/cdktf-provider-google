@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_organization.html
+// https://www.terraform.io/docs/providers/google/d/organization.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleOrganizationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/organization.html#domain DataGoogleOrganization#domain}
+  */
   readonly domain?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/organization.html#organization DataGoogleOrganization#organization}
+  */
   readonly organization?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/organization.html google_organization}
+*/
 export class DataGoogleOrganization extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/organization.html google_organization} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleOrganizationConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleOrganizationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_organization',

@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeSubnetworkIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#policy_data ComputeSubnetworkIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#project ComputeSubnetworkIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#region ComputeSubnetworkIamPolicy#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#subnetwork ComputeSubnetworkIamPolicy#subnetwork}
+  */
   readonly subnetwork: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html google_compute_subnetwork_iam_policy}
+*/
 export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html google_compute_subnetwork_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeSubnetworkIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeSubnetworkIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_subnetwork_iam_policy',

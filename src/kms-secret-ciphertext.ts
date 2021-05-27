@@ -7,18 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsSecretCiphertextConfig extends cdktf.TerraformMetaArguments {
-  /** The additional authenticated data used for integrity checks during encryption and decryption. */
+  /**
+  * The additional authenticated data used for integrity checks during encryption and decryption.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html#additional_authenticated_data KmsSecretCiphertext#additional_authenticated_data}
+  */
   readonly additionalAuthenticatedData?: string;
-  /** The full name of the CryptoKey that will be used to encrypt the provided plaintext.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'' */
+  /**
+  * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html#crypto_key KmsSecretCiphertext#crypto_key}
+  */
   readonly cryptoKey: string;
-  /** The plaintext to be encrypted. */
+  /**
+  * The plaintext to be encrypted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html#plaintext KmsSecretCiphertext#plaintext}
+  */
   readonly plaintext: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html#timeouts KmsSecretCiphertext#timeouts}
+  */
   readonly timeouts?: KmsSecretCiphertextTimeouts;
 }
 export interface KmsSecretCiphertextTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html#create KmsSecretCiphertext#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html#delete KmsSecretCiphertext#delete}
+  */
   readonly delete?: string;
 }
 
@@ -31,14 +53,22 @@ function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html google_kms_secret_ciphertext}
+*/
 export class KmsSecretCiphertext extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html google_kms_secret_ciphertext} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsSecretCiphertextConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsSecretCiphertextConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_secret_ciphertext',

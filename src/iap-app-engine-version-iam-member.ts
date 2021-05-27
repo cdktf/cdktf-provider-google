@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapAppEngineVersionIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#app_id IapAppEngineVersionIamMember#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#member IapAppEngineVersionIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#project IapAppEngineVersionIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#role IapAppEngineVersionIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#service IapAppEngineVersionIamMember#service}
+  */
   readonly service: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#version_id IapAppEngineVersionIamMember#version_id}
+  */
   readonly versionId: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#condition IapAppEngineVersionIamMember#condition}
+  */
   readonly condition?: IapAppEngineVersionIamMemberCondition[];
 }
 export interface IapAppEngineVersionIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#description IapAppEngineVersionIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#expression IapAppEngineVersionIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html#title IapAppEngineVersionIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -32,14 +63,22 @@ function iapAppEngineVersionIamMemberConditionToTerraform(struct?: IapAppEngineV
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html google_iap_app_engine_version_iam_member}
+*/
 export class IapAppEngineVersionIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_member.html google_iap_app_engine_version_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapAppEngineVersionIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: IapAppEngineVersionIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_app_engine_version_iam_member',

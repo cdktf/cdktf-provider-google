@@ -7,28 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeHaVpnGatewayConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#description ComputeHaVpnGateway#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#name ComputeHaVpnGateway#name}
+  */
   readonly name: string;
-  /** The network this VPN gateway is accepting traffic for. */
+  /**
+  * The network this VPN gateway is accepting traffic for.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#network ComputeHaVpnGateway#network}
+  */
   readonly network: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#project ComputeHaVpnGateway#project}
+  */
   readonly project?: string;
-  /** The region this gateway should sit in. */
+  /**
+  * The region this gateway should sit in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#region ComputeHaVpnGateway#region}
+  */
   readonly region?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#timeouts ComputeHaVpnGateway#timeouts}
+  */
   readonly timeouts?: ComputeHaVpnGatewayTimeouts;
-  /** vpn_interfaces block */
+  /**
+  * vpn_interfaces block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#vpn_interfaces ComputeHaVpnGateway#vpn_interfaces}
+  */
   readonly vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[];
 }
 export interface ComputeHaVpnGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#create ComputeHaVpnGateway#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#delete ComputeHaVpnGateway#delete}
+  */
   readonly delete?: string;
 }
 
@@ -41,7 +74,11 @@ function computeHaVpnGatewayTimeoutsToTerraform(struct?: ComputeHaVpnGatewayTime
 }
 
 export interface ComputeHaVpnGatewayVpnInterfaces {
-  /** The numeric ID of this VPN gateway interface. */
+  /**
+  * The numeric ID of this VPN gateway interface.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#id ComputeHaVpnGateway#id}
+  */
   readonly id?: number;
 }
 
@@ -53,14 +90,22 @@ function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVpnGatewa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html google_compute_ha_vpn_gateway}
+*/
 export class ComputeHaVpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html google_compute_ha_vpn_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeHaVpnGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeHaVpnGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_ha_vpn_gateway',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_monitoring_uptime_check_ips.html
+// https://www.terraform.io/docs/providers/google/d/monitoring_uptime_check_ips.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -26,14 +26,22 @@ export class DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps extends cdktf.Comp
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_uptime_check_ips.html google_monitoring_uptime_check_ips}
+*/
 export class DataGoogleMonitoringUptimeCheckIps extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_uptime_check_ips.html google_monitoring_uptime_check_ips} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleMonitoringUptimeCheckIpsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleMonitoringUptimeCheckIpsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_uptime_check_ips',

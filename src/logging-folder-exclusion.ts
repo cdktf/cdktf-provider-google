@@ -7,25 +7,52 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArguments {
-  /** A human-readable description. */
+  /**
+  * A human-readable description.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html#description LoggingFolderExclusion#description}
+  */
   readonly description?: string;
-  /** Whether this exclusion rule should be disabled or not. This defaults to false. */
+  /**
+  * Whether this exclusion rule should be disabled or not. This defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html#disabled LoggingFolderExclusion#disabled}
+  */
   readonly disabled?: boolean;
-  /** The filter to apply when excluding logs. Only log entries that match the filter are excluded. */
+  /**
+  * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html#filter LoggingFolderExclusion#filter}
+  */
   readonly filter: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html#folder LoggingFolderExclusion#folder}
+  */
   readonly folder: string;
-  /** The name of the logging exclusion. */
+  /**
+  * The name of the logging exclusion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html#name LoggingFolderExclusion#name}
+  */
   readonly name: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html google_logging_folder_exclusion}
+*/
 export class LoggingFolderExclusion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html google_logging_folder_exclusion} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LoggingFolderExclusionConfig
+  */
   public constructor(scope: Construct, id: string, config: LoggingFolderExclusionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_logging_folder_exclusion',

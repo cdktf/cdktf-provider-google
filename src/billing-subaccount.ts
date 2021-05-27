@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BillingSubaccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_subaccount.html#deletion_policy BillingSubaccount#deletion_policy}
+  */
   readonly deletionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_subaccount.html#display_name BillingSubaccount#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_subaccount.html#master_billing_account BillingSubaccount#master_billing_account}
+  */
   readonly masterBillingAccount: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_subaccount.html google_billing_subaccount}
+*/
 export class BillingSubaccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/billing_subaccount.html google_billing_subaccount} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BillingSubaccountConfig
+  */
   public constructor(scope: Construct, id: string, config: BillingSubaccountConfig) {
     super(scope, id, {
       terraformResourceType: 'google_billing_subaccount',

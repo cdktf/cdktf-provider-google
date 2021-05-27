@@ -7,18 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AccessContextManagerGcpUserAccessBindingConfig extends cdktf.TerraformMetaArguments {
-  /** Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted" */
+  /**
+  * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#access_levels AccessContextManagerGcpUserAccessBinding#access_levels}
+  */
   readonly accessLevels: string[];
-  /** Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht" */
+  /**
+  * Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#group_key AccessContextManagerGcpUserAccessBinding#group_key}
+  */
   readonly groupKey: string;
-  /** Required. ID of the parent organization. */
+  /**
+  * Required. ID of the parent organization.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#organization_id AccessContextManagerGcpUserAccessBinding#organization_id}
+  */
   readonly organizationId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#timeouts AccessContextManagerGcpUserAccessBinding#timeouts}
+  */
   readonly timeouts?: AccessContextManagerGcpUserAccessBindingTimeouts;
 }
 export interface AccessContextManagerGcpUserAccessBindingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#create AccessContextManagerGcpUserAccessBinding#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#delete AccessContextManagerGcpUserAccessBinding#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html#update AccessContextManagerGcpUserAccessBinding#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +57,22 @@ function accessContextManagerGcpUserAccessBindingTimeoutsToTerraform(struct?: Ac
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html google_access_context_manager_gcp_user_access_binding}
+*/
 export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding.html google_access_context_manager_gcp_user_access_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AccessContextManagerGcpUserAccessBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: AccessContextManagerGcpUserAccessBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_access_context_manager_gcp_user_access_binding',

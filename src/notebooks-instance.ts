@@ -7,98 +7,229 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotebooksInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The size of the boot disk in GB attached to this instance,
+  /**
+  * The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
-If not specified, this defaults to 100. */
+If not specified, this defaults to 100.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#boot_disk_size_gb NotebooksInstance#boot_disk_size_gb}
+  */
   readonly bootDiskSizeGb?: number;
-  /** Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED"] */
+  /**
+  * Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#boot_disk_type NotebooksInstance#boot_disk_type}
+  */
   readonly bootDiskType?: string;
-  /** Instance creation time */
+  /**
+  * Instance creation time
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#create_time NotebooksInstance#create_time}
+  */
   readonly createTime?: string;
-  /** Specify a custom Cloud Storage path where the GPU driver is stored.
-If not specified, we'll automatically choose from official GPU drivers. */
+  /**
+  * Specify a custom Cloud Storage path where the GPU driver is stored.
+If not specified, we'll automatically choose from official GPU drivers.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#custom_gpu_driver_path NotebooksInstance#custom_gpu_driver_path}
+  */
   readonly customGpuDriverPath?: string;
-  /** The size of the data disk in GB attached to this instance,
+  /**
+  * The size of the data disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
-If not specified, this defaults to 100. */
+If not specified, this defaults to 100.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#data_disk_size_gb NotebooksInstance#data_disk_size_gb}
+  */
   readonly dataDiskSizeGb?: number;
-  /** Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED"] */
+  /**
+  * Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#data_disk_type NotebooksInstance#data_disk_type}
+  */
   readonly dataDiskType?: string;
-  /** Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["DISK_ENCRYPTION_UNSPECIFIED", "GMEK", "CMEK"] */
+  /**
+  * Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["DISK_ENCRYPTION_UNSPECIFIED", "GMEK", "CMEK"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#disk_encryption NotebooksInstance#disk_encryption}
+  */
   readonly diskEncryption?: string;
-  /** Whether the end user authorizes Google Cloud to install GPU driver
+  /**
+  * Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
-won't be installed. Only applicable to instances with GPUs. */
+won't be installed. Only applicable to instances with GPUs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#install_gpu_driver NotebooksInstance#install_gpu_driver}
+  */
   readonly installGpuDriver?: boolean;
-  /** The list of owners of this instance after creation.
+  /**
+  * The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
-your VM instance's service account can use the instance. */
+your VM instance's service account can use the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#instance_owners NotebooksInstance#instance_owners}
+  */
   readonly instanceOwners?: string[];
-  /** The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
-Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id} */
+  /**
+  * The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
+Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#kms_key NotebooksInstance#kms_key}
+  */
   readonly kmsKey?: string;
-  /** Labels to apply to this instance. These can be later modified by the setLabels method.
-An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }. */
+  /**
+  * Labels to apply to this instance. These can be later modified by the setLabels method.
+An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#labels NotebooksInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** A reference to the zone where the machine resides. */
+  /**
+  * A reference to the zone where the machine resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#location NotebooksInstance#location}
+  */
   readonly location: string;
-  /** A reference to a machine type which defines VM kind. */
+  /**
+  * A reference to a machine type which defines VM kind.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#machine_type NotebooksInstance#machine_type}
+  */
   readonly machineType: string;
-  /** Custom metadata to apply to this instance.
-An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }. */
+  /**
+  * Custom metadata to apply to this instance.
+An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#metadata NotebooksInstance#metadata}
+  */
   readonly metadata?: { [key: string]: string };
-  /** The name specified for the Notebook instance. */
+  /**
+  * The name specified for the Notebook instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#name NotebooksInstance#name}
+  */
   readonly name: string;
-  /** The name of the VPC that this instance is in.
-Format: projects/{project_id}/global/networks/{network_id} */
+  /**
+  * The name of the VPC that this instance is in.
+Format: projects/{project_id}/global/networks/{network_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#network NotebooksInstance#network}
+  */
   readonly network?: string;
-  /** The notebook instance will not register with the proxy.. */
+  /**
+  * The notebook instance will not register with the proxy..
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#no_proxy_access NotebooksInstance#no_proxy_access}
+  */
   readonly noProxyAccess?: boolean;
-  /** No public IP will be assigned to this instance. */
+  /**
+  * No public IP will be assigned to this instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#no_public_ip NotebooksInstance#no_public_ip}
+  */
   readonly noPublicIp?: boolean;
-  /** If true, the data disk will not be auto deleted when deleting the instance. */
+  /**
+  * If true, the data disk will not be auto deleted when deleting the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#no_remove_data_disk NotebooksInstance#no_remove_data_disk}
+  */
   readonly noRemoveDataDisk?: boolean;
-  /** Path to a Bash script that automatically runs after a
+  /**
+  * Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
-or Cloud Storage path (gs://path-to-file/file-name). */
+or Cloud Storage path (gs://path-to-file/file-name).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#post_startup_script NotebooksInstance#post_startup_script}
+  */
   readonly postStartupScript?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#project NotebooksInstance#project}
+  */
   readonly project?: string;
-  /** The service account on this instance, giving access to other
+  /**
+  * The service account on this instance, giving access to other
 Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
-the Compute Engine default service account is used. */
+the Compute Engine default service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#service_account NotebooksInstance#service_account}
+  */
   readonly serviceAccount?: string;
-  /** Optional. The URIs of service account scopes to be included in Compute Engine instances.
+  /**
+  * Optional. The URIs of service account scopes to be included in Compute Engine instances.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
-- https://www.googleapis.com/auth/userinfo.email */
+- https://www.googleapis.com/auth/userinfo.email
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#service_account_scopes NotebooksInstance#service_account_scopes}
+  */
   readonly serviceAccountScopes?: string[];
-  /** The name of the subnet that this instance is in.
-Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id} */
+  /**
+  * The name of the subnet that this instance is in.
+Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#subnet NotebooksInstance#subnet}
+  */
   readonly subnet?: string;
-  /** The Compute Engine tags to add to runtime. */
+  /**
+  * The Compute Engine tags to add to runtime.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#tags NotebooksInstance#tags}
+  */
   readonly tags?: string[];
-  /** Instance update time. */
+  /**
+  * Instance update time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#update_time NotebooksInstance#update_time}
+  */
   readonly updateTime?: string;
-  /** accelerator_config block */
+  /**
+  * accelerator_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#accelerator_config NotebooksInstance#accelerator_config}
+  */
   readonly acceleratorConfig?: NotebooksInstanceAcceleratorConfig[];
-  /** container_image block */
+  /**
+  * container_image block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#container_image NotebooksInstance#container_image}
+  */
   readonly containerImage?: NotebooksInstanceContainerImage[];
-  /** shielded_instance_config block */
+  /**
+  * shielded_instance_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#shielded_instance_config NotebooksInstance#shielded_instance_config}
+  */
   readonly shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#timeouts NotebooksInstance#timeouts}
+  */
   readonly timeouts?: NotebooksInstanceTimeouts;
-  /** vm_image block */
+  /**
+  * vm_image block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#vm_image NotebooksInstance#vm_image}
+  */
   readonly vmImage?: NotebooksInstanceVmImage[];
 }
 export interface NotebooksInstanceAcceleratorConfig {
-  /** Count of cores of this accelerator. */
+  /**
+  * Count of cores of this accelerator.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#core_count NotebooksInstance#core_count}
+  */
   readonly coreCount: number;
-  /** Type of this accelerator. Possible values: ["ACCELERATOR_TYPE_UNSPECIFIED", "NVIDIA_TESLA_K80", "NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS", "NVIDIA_TESLA_A100", "TPU_V2", "TPU_V3"] */
+  /**
+  * Type of this accelerator. Possible values: ["ACCELERATOR_TYPE_UNSPECIFIED", "NVIDIA_TESLA_K80", "NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS", "NVIDIA_TESLA_A100", "TPU_V2", "TPU_V3"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#type NotebooksInstance#type}
+  */
   readonly type: string;
 }
 
@@ -111,10 +242,18 @@ function notebooksInstanceAcceleratorConfigToTerraform(struct?: NotebooksInstanc
 }
 
 export interface NotebooksInstanceContainerImage {
-  /** The path to the container image repository.
-For example: gcr.io/{project_id}/{imageName} */
+  /**
+  * The path to the container image repository.
+For example: gcr.io/{project_id}/{imageName}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#repository NotebooksInstance#repository}
+  */
   readonly repository: string;
-  /** The tag of the container image. If not specified, this defaults to the latest tag. */
+  /**
+  * The tag of the container image. If not specified, this defaults to the latest tag.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#tag NotebooksInstance#tag}
+  */
   readonly tag?: string;
 }
 
@@ -127,18 +266,30 @@ function notebooksInstanceContainerImageToTerraform(struct?: NotebooksInstanceCo
 }
 
 export interface NotebooksInstanceShieldedInstanceConfig {
-  /** Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+  /**
+  * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
 boot integrity of the instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image when the instance is created.
-Enabled by default. */
+Enabled by default.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#enable_integrity_monitoring NotebooksInstance#enable_integrity_monitoring}
+  */
   readonly enableIntegrityMonitoring?: boolean;
-  /** Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+  /**
+  * Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
 authentic software by verifying the digital signature of all boot components, and halting the boot process
 if signature verification fails.
-Disabled by default. */
+Disabled by default.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#enable_secure_boot NotebooksInstance#enable_secure_boot}
+  */
   readonly enableSecureBoot?: boolean;
-  /** Defines whether the instance has the vTPM enabled.
-Enabled by default. */
+  /**
+  * Defines whether the instance has the vTPM enabled.
+Enabled by default.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#enable_vtpm NotebooksInstance#enable_vtpm}
+  */
   readonly enableVtpm?: boolean;
 }
 
@@ -152,8 +303,17 @@ function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksIn
 }
 
 export interface NotebooksInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#create NotebooksInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#delete NotebooksInstance#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#update NotebooksInstance#update}
+  */
   readonly update?: string;
 }
 
@@ -167,12 +327,24 @@ function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceTimeouts
 }
 
 export interface NotebooksInstanceVmImage {
-  /** Use this VM image family to find the image; the newest image in this family will be used. */
+  /**
+  * Use this VM image family to find the image; the newest image in this family will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#image_family NotebooksInstance#image_family}
+  */
   readonly imageFamily?: string;
-  /** Use VM image name to find the image. */
+  /**
+  * Use VM image name to find the image.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#image_name NotebooksInstance#image_name}
+  */
   readonly imageName?: string;
-  /** The name of the Google Cloud project that this VM image belongs to.
-Format: projects/{project_id} */
+  /**
+  * The name of the Google Cloud project that this VM image belongs to.
+Format: projects/{project_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#project NotebooksInstance#project}
+  */
   readonly project: string;
 }
 
@@ -186,14 +358,22 @@ function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVmImage):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html google_notebooks_instance}
+*/
 export class NotebooksInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html google_notebooks_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotebooksInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: NotebooksInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_notebooks_instance',

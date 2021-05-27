@@ -7,27 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
-  /** Identifies the managed zone addressed by this request. */
+  /**
+  * Identifies the managed zone addressed by this request.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#managed_zone DnsRecordSet#managed_zone}
+  */
   readonly managedZone: string;
-  /** For example, www.example.com. */
+  /**
+  * For example, www.example.com.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#name DnsRecordSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#project DnsRecordSet#project}
+  */
   readonly project?: string;
-  /** The string data for the records in this record set whose meaning depends on the DNS type. 
+  /**
+  * The string data for the records in this record set whose meaning depends on the DNS type. 
 For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get
 split on spaces. To specify a single record value longer than 255 characters such as a TXT record for 
-DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters"). */
+DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters").
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#rrdatas DnsRecordSet#rrdatas}
+  */
   readonly rrdatas?: string[];
-  /** Number of seconds that this ResourceRecordSet can be cached by
-resolvers. */
+  /**
+  * Number of seconds that this ResourceRecordSet can be cached by
+resolvers.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#ttl DnsRecordSet#ttl}
+  */
   readonly ttl?: number;
-  /** One of valid DNS resource types. Possible values: ["A", "AAAA", "CAA", "CNAME", "DNSKEY", "DS", "IPSECVPNKEY", "MX", "NAPTR", "NS", "PTR", "SOA", "SPF", "SRV", "SSHFP", "TLSA", "TXT"] */
+  /**
+  * One of valid DNS resource types. Possible values: ["A", "AAAA", "CAA", "CNAME", "DNSKEY", "DS", "IPSECVPNKEY", "MX", "NAPTR", "NS", "PTR", "SOA", "SPF", "SRV", "SSHFP", "TLSA", "TXT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#type DnsRecordSet#type}
+  */
   readonly type: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#timeouts DnsRecordSet#timeouts}
+  */
   readonly timeouts?: DnsRecordSetTimeouts;
 }
 export interface DnsRecordSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#create DnsRecordSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#delete DnsRecordSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#update DnsRecordSet#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +77,22 @@ function dnsRecordSetTimeoutsToTerraform(struct?: DnsRecordSetTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html google_dns_record_set}
+*/
 export class DnsRecordSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html google_dns_record_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DnsRecordSetConfig
+  */
   public constructor(scope: Construct, id: string, config: DnsRecordSetConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dns_record_set',

@@ -7,48 +7,131 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
-  /** List of experiments that should be used by the job. An example value is ["enable_stackdriver_agent_metrics"]. */
+  /**
+  * List of experiments that should be used by the job. An example value is ["enable_stackdriver_agent_metrics"].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#additional_experiments DataflowJob#additional_experiments}
+  */
   readonly additionalExperiments?: string[];
-  /** Indicates if the job should use the streaming engine feature. */
+  /**
+  * Indicates if the job should use the streaming engine feature.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#enable_streaming_engine DataflowJob#enable_streaming_engine}
+  */
   readonly enableStreamingEngine?: boolean;
-  /** The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE". */
+  /**
+  * The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#ip_configuration DataflowJob#ip_configuration}
+  */
   readonly ipConfiguration?: string;
-  /** The name for the Cloud KMS key for the job. Key format is: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY */
+  /**
+  * The name for the Cloud KMS key for the job. Key format is: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#kms_key_name DataflowJob#kms_key_name}
+  */
   readonly kmsKeyName?: string;
-  /** User labels to be specified for the job. Keys and values should follow the restrictions specified in the labeling restrictions page. NOTE: Google-provided Dataflow templates often provide default labels that begin with goog-dataflow-provided. Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply. */
+  /**
+  * User labels to be specified for the job. Keys and values should follow the restrictions specified in the labeling restrictions page. NOTE: Google-provided Dataflow templates often provide default labels that begin with goog-dataflow-provided. Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#labels DataflowJob#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The machine type to use for the job. */
+  /**
+  * The machine type to use for the job.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#machine_type DataflowJob#machine_type}
+  */
   readonly machineType?: string;
-  /** The number of workers permitted to work on the job. More workers may improve processing speed at additional cost. */
+  /**
+  * The number of workers permitted to work on the job. More workers may improve processing speed at additional cost.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#max_workers DataflowJob#max_workers}
+  */
   readonly maxWorkers?: number;
-  /** A unique name for the resource, required by Dataflow. */
+  /**
+  * A unique name for the resource, required by Dataflow.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#name DataflowJob#name}
+  */
   readonly name: string;
-  /** The network to which VMs will be assigned. If it is not provided, "default" will be used. */
+  /**
+  * The network to which VMs will be assigned. If it is not provided, "default" will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#network DataflowJob#network}
+  */
   readonly network?: string;
-  /** One of "drain" or "cancel". Specifies behavior of deletion during terraform destroy. */
+  /**
+  * One of "drain" or "cancel". Specifies behavior of deletion during terraform destroy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#on_delete DataflowJob#on_delete}
+  */
   readonly onDelete?: string;
-  /** Key/Value pairs to be passed to the Dataflow job (as used in the template). */
+  /**
+  * Key/Value pairs to be passed to the Dataflow job (as used in the template).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#parameters DataflowJob#parameters}
+  */
   readonly parameters?: { [key: string]: string };
-  /** The project in which the resource belongs. */
+  /**
+  * The project in which the resource belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#project DataflowJob#project}
+  */
   readonly project?: string;
-  /** The region in which the created job should run. */
+  /**
+  * The region in which the created job should run.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#region DataflowJob#region}
+  */
   readonly region?: string;
-  /** The Service Account email used to create the job. */
+  /**
+  * The Service Account email used to create the job.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#service_account_email DataflowJob#service_account_email}
+  */
   readonly serviceAccountEmail?: string;
-  /** The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". */
+  /**
+  * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#subnetwork DataflowJob#subnetwork}
+  */
   readonly subnetwork?: string;
-  /** A writeable location on Google Cloud Storage for the Dataflow job to dump its temporary data. */
+  /**
+  * A writeable location on Google Cloud Storage for the Dataflow job to dump its temporary data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#temp_gcs_location DataflowJob#temp_gcs_location}
+  */
   readonly tempGcsLocation: string;
-  /** The Google Cloud Storage path to the Dataflow job template. */
+  /**
+  * The Google Cloud Storage path to the Dataflow job template.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#template_gcs_path DataflowJob#template_gcs_path}
+  */
   readonly templateGcsPath: string;
-  /** Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. */
+  /**
+  * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#transform_name_mapping DataflowJob#transform_name_mapping}
+  */
   readonly transformNameMapping?: { [key: string]: string };
-  /** The zone in which the created job should run. If it is not provided, the provider zone is used. */
+  /**
+  * The zone in which the created job should run. If it is not provided, the provider zone is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#zone DataflowJob#zone}
+  */
   readonly zone?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#timeouts DataflowJob#timeouts}
+  */
   readonly timeouts?: DataflowJobTimeouts;
 }
 export interface DataflowJobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#update DataflowJob#update}
+  */
   readonly update?: string;
 }
 
@@ -60,14 +143,22 @@ function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html google_dataflow_job}
+*/
 export class DataflowJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html google_dataflow_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataflowJobConfig
+  */
   public constructor(scope: Construct, id: string, config: DataflowJobConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataflow_job',

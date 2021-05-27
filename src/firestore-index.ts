@@ -7,26 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FirestoreIndexConfig extends cdktf.TerraformMetaArguments {
-  /** The collection being indexed. */
+  /**
+  * The collection being indexed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#collection FirestoreIndex#collection}
+  */
   readonly collection: string;
-  /** The Firestore database id. Defaults to '"(default)"'. */
+  /**
+  * The Firestore database id. Defaults to '"(default)"'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#database FirestoreIndex#database}
+  */
   readonly database?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#project FirestoreIndex#project}
+  */
   readonly project?: string;
-  /** The scope at which a query is run. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"] */
+  /**
+  * The scope at which a query is run. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#query_scope FirestoreIndex#query_scope}
+  */
   readonly queryScope?: string;
-  /** fields block */
+  /**
+  * fields block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#fields FirestoreIndex#fields}
+  */
   readonly fields: FirestoreIndexFields[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#timeouts FirestoreIndex#timeouts}
+  */
   readonly timeouts?: FirestoreIndexTimeouts;
 }
 export interface FirestoreIndexFields {
-  /** Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can
-be specified. Possible values: ["CONTAINS"] */
+  /**
+  * Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can
+be specified. Possible values: ["CONTAINS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#array_config FirestoreIndex#array_config}
+  */
   readonly arrayConfig?: string;
-  /** Name of the field. */
+  /**
+  * Name of the field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#field_path FirestoreIndex#field_path}
+  */
   readonly fieldPath?: string;
-  /** Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
-Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"] */
+  /**
+  * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#order FirestoreIndex#order}
+  */
   readonly order?: string;
 }
 
@@ -40,7 +75,13 @@ function firestoreIndexFieldsToTerraform(struct?: FirestoreIndexFields): any {
 }
 
 export interface FirestoreIndexTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#create FirestoreIndex#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html#delete FirestoreIndex#delete}
+  */
   readonly delete?: string;
 }
 
@@ -53,14 +94,22 @@ function firestoreIndexTimeoutsToTerraform(struct?: FirestoreIndexTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html google_firestore_index}
+*/
 export class FirestoreIndex extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html google_firestore_index} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FirestoreIndexConfig
+  */
   public constructor(scope: Construct, id: string, config: FirestoreIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'google_firestore_index',

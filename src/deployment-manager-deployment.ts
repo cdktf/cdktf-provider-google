@@ -7,44 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DeploymentManagerDeploymentConfig extends cdktf.TerraformMetaArguments {
-  /** Set the policy to use for creating new resources. Only used on
+  /**
+  * Set the policy to use for creating new resources. Only used on
 create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or
 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist,
 the deployment will fail. Note that updating this field does not
-actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"] */
+actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#create_policy DeploymentManagerDeployment#create_policy}
+  */
   readonly createPolicy?: string;
-  /** Set the policy to use for deleting new resources on update/delete.
+  /**
+  * Set the policy to use for deleting new resources on update/delete.
 Valid values are 'DELETE' (default) or 'ABANDON'. If 'DELETE',
 resource is deleted after removal from Deployment Manager. If
 'ABANDON', the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
-actually change the deployment, just how it is updated. Default value: "DELETE" Possible values: ["ABANDON", "DELETE"] */
+actually change the deployment, just how it is updated. Default value: "DELETE" Possible values: ["ABANDON", "DELETE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#delete_policy DeploymentManagerDeployment#delete_policy}
+  */
   readonly deletePolicy?: string;
-  /** Optional user-provided description of deployment. */
+  /**
+  * Optional user-provided description of deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#description DeploymentManagerDeployment#description}
+  */
   readonly description?: string;
-  /** Unique name for the deployment */
+  /**
+  * Unique name for the deployment
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#name DeploymentManagerDeployment#name}
+  */
   readonly name: string;
-  /** If set to true, a deployment is created with "shell" resources
+  /**
+  * If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
  ~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 Terraform will force-recreate deployments if either preview is updated
-to true or if other fields are updated while preview is true. */
+to true or if other fields are updated while preview is true.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#preview DeploymentManagerDeployment#preview}
+  */
   readonly preview?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#project DeploymentManagerDeployment#project}
+  */
   readonly project?: string;
-  /** labels block */
+  /**
+  * labels block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#labels DeploymentManagerDeployment#labels}
+  */
   readonly labels?: DeploymentManagerDeploymentLabels[];
-  /** target block */
+  /**
+  * target block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#target DeploymentManagerDeployment#target}
+  */
   readonly target: DeploymentManagerDeploymentTarget[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#timeouts DeploymentManagerDeployment#timeouts}
+  */
   readonly timeouts?: DeploymentManagerDeploymentTimeouts;
 }
 export interface DeploymentManagerDeploymentLabels {
-  /** Key for label. */
+  /**
+  * Key for label.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#key DeploymentManagerDeployment#key}
+  */
   readonly key?: string;
-  /** Value of label. */
+  /**
+  * Value of label.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#value DeploymentManagerDeployment#value}
+  */
   readonly value?: string;
 }
 
@@ -57,7 +100,11 @@ function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManager
 }
 
 export interface DeploymentManagerDeploymentTargetConfig {
-  /** The full YAML contents of your configuration file. */
+  /**
+  * The full YAML contents of your configuration file.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#content DeploymentManagerDeployment#content}
+  */
   readonly content: string;
 }
 
@@ -69,10 +116,18 @@ function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentM
 }
 
 export interface DeploymentManagerDeploymentTargetImports {
-  /** The full contents of the template that you want to import. */
+  /**
+  * The full contents of the template that you want to import.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#content DeploymentManagerDeployment#content}
+  */
   readonly content?: string;
-  /** The name of the template to import, as declared in the YAML
-configuration. */
+  /**
+  * The name of the template to import, as declared in the YAML
+configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#name DeploymentManagerDeployment#name}
+  */
   readonly name?: string;
 }
 
@@ -85,9 +140,17 @@ function deploymentManagerDeploymentTargetImportsToTerraform(struct?: Deployment
 }
 
 export interface DeploymentManagerDeploymentTarget {
-  /** config block */
+  /**
+  * config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#config DeploymentManagerDeployment#config}
+  */
   readonly config: DeploymentManagerDeploymentTargetConfig[];
-  /** imports block */
+  /**
+  * imports block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#imports DeploymentManagerDeployment#imports}
+  */
   readonly imports?: DeploymentManagerDeploymentTargetImports[];
 }
 
@@ -100,8 +163,17 @@ function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManager
 }
 
 export interface DeploymentManagerDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#create DeploymentManagerDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#delete DeploymentManagerDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#update DeploymentManagerDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -115,14 +187,22 @@ function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManag
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html google_deployment_manager_deployment}
+*/
 export class DeploymentManagerDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html google_deployment_manager_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DeploymentManagerDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: DeploymentManagerDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_deployment_manager_deployment',

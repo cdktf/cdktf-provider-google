@@ -7,17 +7,35 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapClientConfig extends cdktf.TerraformMetaArguments {
-  /** Identifier of the brand to which this client
+  /**
+  * Identifier of the brand to which this client
 is attached to. The format is
-'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'. */
+'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_client.html#brand IapClient#brand}
+  */
   readonly brand: string;
-  /** Human-friendly name given to the OAuth client. */
+  /**
+  * Human-friendly name given to the OAuth client.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_client.html#display_name IapClient#display_name}
+  */
   readonly displayName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_client.html#timeouts IapClient#timeouts}
+  */
   readonly timeouts?: IapClientTimeouts;
 }
 export interface IapClientTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_client.html#create IapClient#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_client.html#delete IapClient#delete}
+  */
   readonly delete?: string;
 }
 
@@ -30,14 +48,22 @@ function iapClientTimeoutsToTerraform(struct?: IapClientTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_client.html google_iap_client}
+*/
 export class IapClient extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_client.html google_iap_client} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapClientConfig
+  */
   public constructor(scope: Construct, id: string, config: IapClientConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_client',

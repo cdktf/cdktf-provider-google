@@ -7,24 +7,48 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageBucketAclConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the bucket it applies to. */
+  /**
+  * The name of the bucket it applies to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#bucket StorageBucketAcl#bucket}
+  */
   readonly bucket: string;
-  /** Configure this ACL to be the default ACL. */
+  /**
+  * Configure this ACL to be the default ACL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#default_acl StorageBucketAcl#default_acl}
+  */
   readonly defaultAcl?: string;
-  /** The canned GCS ACL to apply. Must be set if role_entity is not. */
+  /**
+  * The canned GCS ACL to apply. Must be set if role_entity is not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#predefined_acl StorageBucketAcl#predefined_acl}
+  */
   readonly predefinedAcl?: string;
-  /** List of role/entity pairs in the form ROLE:entity. See GCS Bucket ACL documentation  for more details. Must be set if predefined_acl is not. */
+  /**
+  * List of role/entity pairs in the form ROLE:entity. See GCS Bucket ACL documentation  for more details. Must be set if predefined_acl is not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#role_entity StorageBucketAcl#role_entity}
+  */
   readonly roleEntity?: string[];
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html google_storage_bucket_acl}
+*/
 export class StorageBucketAcl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html google_storage_bucket_acl} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageBucketAclConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageBucketAclConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_acl',

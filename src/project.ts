@@ -7,29 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectConfig extends cdktf.TerraformMetaArguments {
-  /** Create the 'default' network automatically.  Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily. */
+  /**
+  * Create the 'default' network automatically.  Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#auto_create_network Project#auto_create_network}
+  */
   readonly autoCreateNetwork?: boolean;
-  /** The alphanumeric ID of the billing account this project belongs to. The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details. */
+  /**
+  * The alphanumeric ID of the billing account this project belongs to. The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#billing_account Project#billing_account}
+  */
   readonly billingAccount?: string;
-  /** The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder. */
+  /**
+  * The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#folder_id Project#folder_id}
+  */
   readonly folderId?: string;
-  /** A set of key/value label pairs to assign to the project. */
+  /**
+  * A set of key/value label pairs to assign to the project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#labels Project#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The display name of the project. */
+  /**
+  * The display name of the project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#name Project#name}
+  */
   readonly name: string;
-  /** The numeric ID of the organization this project belongs to. Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization. */
+  /**
+  * The numeric ID of the organization this project belongs to. Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#org_id Project#org_id}
+  */
   readonly orgId?: string;
-  /** The project ID. Changing this forces a new project to be created. */
+  /**
+  * The project ID. Changing this forces a new project to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#project_id Project#project_id}
+  */
   readonly projectId: string;
-  /** If true, the Terraform resource can be deleted without deleting the Project via the Google API. */
+  /**
+  * If true, the Terraform resource can be deleted without deleting the Project via the Google API.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#skip_delete Project#skip_delete}
+  */
   readonly skipDelete?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#timeouts Project#timeouts}
+  */
   readonly timeouts?: ProjectTimeouts;
 }
 export interface ProjectTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#create Project#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#delete Project#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#read Project#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#update Project#update}
+  */
   readonly update?: string;
 }
 
@@ -44,14 +92,22 @@ function projectTimeoutsToTerraform(struct?: ProjectTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project.html google_project}
+*/
 export class Project extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project.html google_project} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageBucketIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#bucket StorageBucketIamBinding#bucket}
+  */
   readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#members StorageBucketIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#role StorageBucketIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#condition StorageBucketIamBinding#condition}
+  */
   readonly condition?: StorageBucketIamBindingCondition[];
 }
 export interface StorageBucketIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#description StorageBucketIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#expression StorageBucketIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#title StorageBucketIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function storageBucketIamBindingConditionToTerraform(struct?: StorageBucketIamBi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html google_storage_bucket_iam_binding}
+*/
 export class StorageBucketIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html google_storage_bucket_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageBucketIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageBucketIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_iam_binding',

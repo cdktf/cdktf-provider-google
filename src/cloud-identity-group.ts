@@ -7,36 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudIdentityGroupConfig extends cdktf.TerraformMetaArguments {
-  /** An extended description to help users determine the purpose of a Group.
-Must not be longer than 4,096 characters. */
+  /**
+  * An extended description to help users determine the purpose of a Group.
+Must not be longer than 4,096 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#description CloudIdentityGroup#description}
+  */
   readonly description?: string;
-  /** The display name of the Group. */
+  /**
+  * The display name of the Group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#display_name CloudIdentityGroup#display_name}
+  */
   readonly displayName?: string;
-  /** The initial configuration options for creating a Group.
+  /**
+  * The initial configuration options for creating a Group.
 
 See the
 [API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig)
-for possible values. Default value: "EMPTY" Possible values: ["INITIAL_GROUP_CONFIG_UNSPECIFIED", "WITH_INITIAL_OWNER", "EMPTY"] */
+for possible values. Default value: "EMPTY" Possible values: ["INITIAL_GROUP_CONFIG_UNSPECIFIED", "WITH_INITIAL_OWNER", "EMPTY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#initial_group_config CloudIdentityGroup#initial_group_config}
+  */
   readonly initialGroupConfig?: string;
-  /** The labels that apply to the Group.
+  /**
+  * The labels that apply to the Group.
 
 Must not contain more than one entry. Must contain the entry
 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
-'system/groups/external': '' if the Group is an external-identity-mapped group. */
+'system/groups/external': '' if the Group is an external-identity-mapped group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#labels CloudIdentityGroup#labels}
+  */
   readonly labels: { [key: string]: string };
-  /** The resource name of the entity under which this Group resides in the
+  /**
+  * The resource name of the entity under which this Group resides in the
 Cloud Identity resource hierarchy.
 
 Must be of the form identitysources/{identity_source_id} for external-identity-mapped
-groups or customers/{customer_id} for Google Groups. */
+groups or customers/{customer_id} for Google Groups.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#parent CloudIdentityGroup#parent}
+  */
   readonly parent: string;
-  /** group_key block */
+  /**
+  * group_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#group_key CloudIdentityGroup#group_key}
+  */
   readonly groupKey: CloudIdentityGroupGroupKey[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#timeouts CloudIdentityGroup#timeouts}
+  */
   readonly timeouts?: CloudIdentityGroupTimeouts;
 }
 export interface CloudIdentityGroupGroupKey {
-  /** The ID of the entity.
+  /**
+  * The ID of the entity.
 
 For Google-managed entities, the id must be the email address of an existing
 group or user.
@@ -44,16 +73,23 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 
-Must be unique within a namespace. */
+Must be unique within a namespace.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#id CloudIdentityGroup#id}
+  */
   readonly id: string;
-  /** The namespace in which the entity exists.
+  /**
+  * The namespace in which the entity exists.
 
 If not specified, the EntityKey represents a Google-managed entity
 such as a Google user or a Google Group.
 
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
-and must be in the form of 'identitysources/{identity_source_id}'. */
+and must be in the form of 'identitysources/{identity_source_id}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#namespace CloudIdentityGroup#namespace}
+  */
   readonly namespace?: string;
 }
 
@@ -66,8 +102,17 @@ function cloudIdentityGroupGroupKeyToTerraform(struct?: CloudIdentityGroupGroupK
 }
 
 export interface CloudIdentityGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#create CloudIdentityGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#delete CloudIdentityGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#update CloudIdentityGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -81,14 +126,22 @@ function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html google_cloud_identity_group}
+*/
 export class CloudIdentityGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html google_cloud_identity_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudIdentityGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudIdentityGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_identity_group',

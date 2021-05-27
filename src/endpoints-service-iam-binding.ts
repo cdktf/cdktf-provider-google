@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EndpointsServiceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#members EndpointsServiceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#role EndpointsServiceIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#service_name EndpointsServiceIamBinding#service_name}
+  */
   readonly serviceName: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#condition EndpointsServiceIamBinding#condition}
+  */
   readonly condition?: EndpointsServiceIamBindingCondition[];
 }
 export interface EndpointsServiceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#description EndpointsServiceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#expression EndpointsServiceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html#title EndpointsServiceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function endpointsServiceIamBindingConditionToTerraform(struct?: EndpointsServic
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html google_endpoints_service_iam_binding}
+*/
 export class EndpointsServiceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding.html google_endpoints_service_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EndpointsServiceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: EndpointsServiceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_endpoints_service_iam_binding',

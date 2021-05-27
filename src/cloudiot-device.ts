@@ -7,21 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudiotDeviceConfig extends cdktf.TerraformMetaArguments {
-  /** If a device is blocked, connections or requests from this device will fail. */
+  /**
+  * If a device is blocked, connections or requests from this device will fail.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#blocked CloudiotDevice#blocked}
+  */
   readonly blocked?: boolean;
-  /** The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"] */
+  /**
+  * The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#log_level CloudiotDevice#log_level}
+  */
   readonly logLevel?: string;
-  /** The metadata key-value pairs assigned to the device. */
+  /**
+  * The metadata key-value pairs assigned to the device.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#metadata CloudiotDevice#metadata}
+  */
   readonly metadata?: { [key: string]: string };
-  /** A unique name for the resource. */
+  /**
+  * A unique name for the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#name CloudiotDevice#name}
+  */
   readonly name: string;
-  /** The name of the device registry where this device should be created. */
+  /**
+  * The name of the device registry where this device should be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#registry CloudiotDevice#registry}
+  */
   readonly registry: string;
-  /** credentials block */
+  /**
+  * credentials block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#credentials CloudiotDevice#credentials}
+  */
   readonly credentials?: CloudiotDeviceCredentials[];
-  /** gateway_config block */
+  /**
+  * gateway_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#gateway_config CloudiotDevice#gateway_config}
+  */
   readonly gatewayConfig?: CloudiotDeviceGatewayConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#timeouts CloudiotDevice#timeouts}
+  */
   readonly timeouts?: CloudiotDeviceTimeouts;
 }
 export class CloudiotDeviceConfigA extends cdktf.ComplexComputedList {
@@ -76,9 +108,17 @@ export class CloudiotDeviceState extends cdktf.ComplexComputedList {
   }
 }
 export interface CloudiotDeviceCredentialsPublicKey {
-  /** The format of the key. Possible values: ["RSA_PEM", "RSA_X509_PEM", "ES256_PEM", "ES256_X509_PEM"] */
+  /**
+  * The format of the key. Possible values: ["RSA_PEM", "RSA_X509_PEM", "ES256_PEM", "ES256_X509_PEM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#format CloudiotDevice#format}
+  */
   readonly format: string;
-  /** The key data. */
+  /**
+  * The key data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#key CloudiotDevice#key}
+  */
   readonly key: string;
 }
 
@@ -91,9 +131,17 @@ function cloudiotDeviceCredentialsPublicKeyToTerraform(struct?: CloudiotDeviceCr
 }
 
 export interface CloudiotDeviceCredentials {
-  /** The time at which this credential becomes invalid. */
+  /**
+  * The time at which this credential becomes invalid.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#expiration_time CloudiotDevice#expiration_time}
+  */
   readonly expirationTime?: string;
-  /** public_key block */
+  /**
+  * public_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#public_key CloudiotDevice#public_key}
+  */
   readonly publicKey: CloudiotDeviceCredentialsPublicKey[];
 }
 
@@ -106,9 +154,17 @@ function cloudiotDeviceCredentialsToTerraform(struct?: CloudiotDeviceCredentials
 }
 
 export interface CloudiotDeviceGatewayConfig {
-  /** Indicates whether the device is a gateway. Possible values: ["ASSOCIATION_ONLY", "DEVICE_AUTH_TOKEN_ONLY", "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"] */
+  /**
+  * Indicates whether the device is a gateway. Possible values: ["ASSOCIATION_ONLY", "DEVICE_AUTH_TOKEN_ONLY", "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#gateway_auth_method CloudiotDevice#gateway_auth_method}
+  */
   readonly gatewayAuthMethod?: string;
-  /** Indicates whether the device is a gateway. Default value: "NON_GATEWAY" Possible values: ["GATEWAY", "NON_GATEWAY"] */
+  /**
+  * Indicates whether the device is a gateway. Default value: "NON_GATEWAY" Possible values: ["GATEWAY", "NON_GATEWAY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#gateway_type CloudiotDevice#gateway_type}
+  */
   readonly gatewayType?: string;
 }
 
@@ -121,8 +177,17 @@ function cloudiotDeviceGatewayConfigToTerraform(struct?: CloudiotDeviceGatewayCo
 }
 
 export interface CloudiotDeviceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#create CloudiotDevice#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#delete CloudiotDevice#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#update CloudiotDevice#update}
+  */
   readonly update?: string;
 }
 
@@ -136,14 +201,22 @@ function cloudiotDeviceTimeoutsToTerraform(struct?: CloudiotDeviceTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html google_cloudiot_device}
+*/
 export class CloudiotDevice extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html google_cloudiot_device} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudiotDeviceConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudiotDeviceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudiot_device',

@@ -7,17 +7,35 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AccessContextManagerServicePerimeterResourceConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Service Perimeter to add this resource to. */
+  /**
+  * The name of the Service Perimeter to add this resource to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html#perimeter_name AccessContextManagerServicePerimeterResource#perimeter_name}
+  */
   readonly perimeterName: string;
-  /** A GCP resource that is inside of the service perimeter.
+  /**
+  * A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
-Format: projects/{project_number} */
+Format: projects/{project_number}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html#resource AccessContextManagerServicePerimeterResource#resource}
+  */
   readonly resource: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html#timeouts AccessContextManagerServicePerimeterResource#timeouts}
+  */
   readonly timeouts?: AccessContextManagerServicePerimeterResourceTimeouts;
 }
 export interface AccessContextManagerServicePerimeterResourceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html#create AccessContextManagerServicePerimeterResource#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html#delete AccessContextManagerServicePerimeterResource#delete}
+  */
   readonly delete?: string;
 }
 
@@ -30,14 +48,22 @@ function accessContextManagerServicePerimeterResourceTimeoutsToTerraform(struct?
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html google_access_context_manager_service_perimeter_resource}
+*/
 export class AccessContextManagerServicePerimeterResource extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter_resource.html google_access_context_manager_service_perimeter_resource} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AccessContextManagerServicePerimeterResourceConfig
+  */
   public constructor(scope: Construct, id: string, config: AccessContextManagerServicePerimeterResourceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_access_context_manager_service_perimeter_resource',

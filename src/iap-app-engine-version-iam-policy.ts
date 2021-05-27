@@ -7,21 +7,44 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapAppEngineVersionIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html#app_id IapAppEngineVersionIamPolicy#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html#policy_data IapAppEngineVersionIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html#project IapAppEngineVersionIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html#service IapAppEngineVersionIamPolicy#service}
+  */
   readonly service: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html#version_id IapAppEngineVersionIamPolicy#version_id}
+  */
   readonly versionId: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html google_iap_app_engine_version_iam_policy}
+*/
 export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_version_iam_policy.html google_iap_app_engine_version_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapAppEngineVersionIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: IapAppEngineVersionIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_app_engine_version_iam_policy',

@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryDatasetIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#dataset_id BigqueryDatasetIamBinding#dataset_id}
+  */
   readonly datasetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#members BigqueryDatasetIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#project BigqueryDatasetIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#role BigqueryDatasetIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#condition BigqueryDatasetIamBinding#condition}
+  */
   readonly condition?: BigqueryDatasetIamBindingCondition[];
 }
 export interface BigqueryDatasetIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#description BigqueryDatasetIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#expression BigqueryDatasetIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html#title BigqueryDatasetIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function bigqueryDatasetIamBindingConditionToTerraform(struct?: BigqueryDatasetI
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html google_bigquery_dataset_iam_binding}
+*/
 export class BigqueryDatasetIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_binding.html google_bigquery_dataset_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryDatasetIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryDatasetIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_dataset_iam_binding',

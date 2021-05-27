@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_game_services_game_server_deployment_rollout.html
+// https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,7 +7,11 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends cdktf.TerraformMetaArguments {
-  /** The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment. */
+  /**
+  * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
+  */
   readonly deploymentId: string;
 }
 export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector extends cdktf.ComplexComputedList {
@@ -30,14 +34,22 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout}
+*/
 export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleGameServicesGameServerDeploymentRolloutConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleGameServicesGameServerDeploymentRolloutConfig) {
     super(scope, id, {
       terraformResourceType: 'google_game_services_game_server_deployment_rollout',

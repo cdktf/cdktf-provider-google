@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EndpointsServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#member EndpointsServiceIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#role EndpointsServiceIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#service_name EndpointsServiceIamMember#service_name}
+  */
   readonly serviceName: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#condition EndpointsServiceIamMember#condition}
+  */
   readonly condition?: EndpointsServiceIamMemberCondition[];
 }
 export interface EndpointsServiceIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#description EndpointsServiceIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#expression EndpointsServiceIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html#title EndpointsServiceIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function endpointsServiceIamMemberConditionToTerraform(struct?: EndpointsService
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html google_endpoints_service_iam_member}
+*/
 export class EndpointsServiceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_member.html google_endpoints_service_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EndpointsServiceIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: EndpointsServiceIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_endpoints_service_iam_member',

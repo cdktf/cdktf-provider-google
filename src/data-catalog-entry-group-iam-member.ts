@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogEntryGroupIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#entry_group DataCatalogEntryGroupIamMember#entry_group}
+  */
   readonly entryGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#member DataCatalogEntryGroupIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#project DataCatalogEntryGroupIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#region DataCatalogEntryGroupIamMember#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#role DataCatalogEntryGroupIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#condition DataCatalogEntryGroupIamMember#condition}
+  */
   readonly condition?: DataCatalogEntryGroupIamMemberCondition[];
 }
 export interface DataCatalogEntryGroupIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#description DataCatalogEntryGroupIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#expression DataCatalogEntryGroupIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html#title DataCatalogEntryGroupIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function dataCatalogEntryGroupIamMemberConditionToTerraform(struct?: DataCatalog
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html google_data_catalog_entry_group_iam_member}
+*/
 export class DataCatalogEntryGroupIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_member.html google_data_catalog_entry_group_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogEntryGroupIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogEntryGroupIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_entry_group_iam_member',

@@ -7,16 +7,35 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectIamAuditConfigConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html#project ProjectIamAuditConfig#project}
+  */
   readonly project?: string;
-  /** Service which will be enabled for audit logging. The special value allServices covers all services. */
+  /**
+  * Service which will be enabled for audit logging. The special value allServices covers all services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html#service ProjectIamAuditConfig#service}
+  */
   readonly service: string;
-  /** audit_log_config block */
+  /**
+  * audit_log_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html#audit_log_config ProjectIamAuditConfig#audit_log_config}
+  */
   readonly auditLogConfig: ProjectIamAuditConfigAuditLogConfig[];
 }
 export interface ProjectIamAuditConfigAuditLogConfig {
-  /** Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com. */
+  /**
+  * Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html#exempted_members ProjectIamAuditConfig#exempted_members}
+  */
   readonly exemptedMembers?: string[];
-  /** Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ. */
+  /**
+  * Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html#log_type ProjectIamAuditConfig#log_type}
+  */
   readonly logType: string;
 }
 
@@ -29,14 +48,22 @@ function projectIamAuditConfigAuditLogConfigToTerraform(struct?: ProjectIamAudit
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html google_project_iam_audit_config}
+*/
 export class ProjectIamAuditConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config.html google_project_iam_audit_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectIamAuditConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectIamAuditConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_iam_audit_config',

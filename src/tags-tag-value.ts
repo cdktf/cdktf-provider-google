@@ -7,20 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
-  /** User-assigned description of the TagValue. Must not exceed 256 characters. */
+  /**
+  * User-assigned description of the TagValue. Must not exceed 256 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#description TagsTagValue#description}
+  */
   readonly description?: string;
-  /** Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}. */
+  /**
+  * Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#parent TagsTagValue#parent}
+  */
   readonly parent: string;
-  /** Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey.
+  /**
+  * Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey.
 
-The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. */
+The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#short_name TagsTagValue#short_name}
+  */
   readonly shortName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#timeouts TagsTagValue#timeouts}
+  */
   readonly timeouts?: TagsTagValueTimeouts;
 }
 export interface TagsTagValueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#create TagsTagValue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#delete TagsTagValue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html#update TagsTagValue#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +59,22 @@ function tagsTagValueTimeoutsToTerraform(struct?: TagsTagValueTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html google_tags_tag_value}
+*/
 export class TagsTagValue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value.html google_tags_tag_value} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TagsTagValueConfig
+  */
   public constructor(scope: Construct, id: string, config: TagsTagValueConfig) {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_value',

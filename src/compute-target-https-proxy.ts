@@ -7,43 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#description ComputeTargetHttpsProxy#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#name ComputeTargetHttpsProxy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#project ComputeTargetHttpsProxy#project}
+  */
   readonly project?: string;
-  /** This field only applies when the forwarding rule that references
-this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. */
+  /**
+  * This field only applies when the forwarding rule that references
+this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#proxy_bind ComputeTargetHttpsProxy#proxy_bind}
+  */
   readonly proxyBind?: boolean;
-  /** Specifies the QUIC override policy for this resource. This determines
+  /**
+  * Specifies the QUIC override policy for this resource. This determines
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Default value: "NONE" Possible values: ["NONE", "ENABLE", "DISABLE"] */
+equivalent to DISABLE. Default value: "NONE" Possible values: ["NONE", "ENABLE", "DISABLE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#quic_override ComputeTargetHttpsProxy#quic_override}
+  */
   readonly quicOverride?: string;
-  /** A list of SslCertificate resources that are used to authenticate
+  /**
+  * A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one SSL
-certificate must be specified. */
+certificate must be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#ssl_certificates ComputeTargetHttpsProxy#ssl_certificates}
+  */
   readonly sslCertificates: string[];
-  /** A reference to the SslPolicy resource that will be associated with
+  /**
+  * A reference to the SslPolicy resource that will be associated with
 the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
-resource will not have any SSL policy configured. */
+resource will not have any SSL policy configured.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#ssl_policy ComputeTargetHttpsProxy#ssl_policy}
+  */
   readonly sslPolicy?: string;
-  /** A reference to the UrlMap resource that defines the mapping from URL
-to the BackendService. */
+  /**
+  * A reference to the UrlMap resource that defines the mapping from URL
+to the BackendService.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#url_map ComputeTargetHttpsProxy#url_map}
+  */
   readonly urlMap: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#timeouts ComputeTargetHttpsProxy#timeouts}
+  */
   readonly timeouts?: ComputeTargetHttpsProxyTimeouts;
 }
 export interface ComputeTargetHttpsProxyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#create ComputeTargetHttpsProxy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#delete ComputeTargetHttpsProxy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#update ComputeTargetHttpsProxy#update}
+  */
   readonly update?: string;
 }
 
@@ -57,14 +101,22 @@ function computeTargetHttpsProxyTimeoutsToTerraform(struct?: ComputeTargetHttpsP
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html google_compute_target_https_proxy}
+*/
 export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html google_compute_target_https_proxy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeTargetHttpsProxyConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeTargetHttpsProxyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_target_https_proxy',

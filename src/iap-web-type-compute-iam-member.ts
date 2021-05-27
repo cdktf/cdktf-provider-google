@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapWebTypeComputeIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#member IapWebTypeComputeIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#project IapWebTypeComputeIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#role IapWebTypeComputeIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#condition IapWebTypeComputeIamMember#condition}
+  */
   readonly condition?: IapWebTypeComputeIamMemberCondition[];
 }
 export interface IapWebTypeComputeIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#description IapWebTypeComputeIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#expression IapWebTypeComputeIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html#title IapWebTypeComputeIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function iapWebTypeComputeIamMemberConditionToTerraform(struct?: IapWebTypeCompu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html google_iap_web_type_compute_iam_member}
+*/
 export class IapWebTypeComputeIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_member.html google_iap_web_type_compute_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapWebTypeComputeIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: IapWebTypeComputeIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_web_type_compute_iam_member',

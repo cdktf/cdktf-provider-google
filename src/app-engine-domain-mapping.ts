@@ -7,15 +7,34 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppEngineDomainMappingConfig extends cdktf.TerraformMetaArguments {
-  /** Relative name of the domain serving the application. Example: example.com. */
+  /**
+  * Relative name of the domain serving the application. Example: example.com.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#domain_name AppEngineDomainMapping#domain_name}
+  */
   readonly domainName: string;
-  /** Whether the domain creation should override any existing mappings for this domain.
-By default, overrides are rejected. Default value: "STRICT" Possible values: ["STRICT", "OVERRIDE"] */
+  /**
+  * Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected. Default value: "STRICT" Possible values: ["STRICT", "OVERRIDE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#override_strategy AppEngineDomainMapping#override_strategy}
+  */
   readonly overrideStrategy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#project AppEngineDomainMapping#project}
+  */
   readonly project?: string;
-  /** ssl_settings block */
+  /**
+  * ssl_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#ssl_settings AppEngineDomainMapping#ssl_settings}
+  */
   readonly sslSettings?: AppEngineDomainMappingSslSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#timeouts AppEngineDomainMapping#timeouts}
+  */
   readonly timeouts?: AppEngineDomainMappingTimeouts;
 }
 export class AppEngineDomainMappingResourceRecords extends cdktf.ComplexComputedList {
@@ -36,15 +55,23 @@ export class AppEngineDomainMappingResourceRecords extends cdktf.ComplexComputed
   }
 }
 export interface AppEngineDomainMappingSslSettings {
-  /** ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
+  /**
+  * ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
 remove SSL support.
 By default, a managed certificate is automatically created for every domain mapping. To omit SSL support
 or to configure SSL manually, specify 'SslManagementType.MANUAL' on a 'CREATE' or 'UPDATE' request. You must be
 authorized to administer the 'AuthorizedCertificate' resource to manually map it to a DomainMapping resource.
-Example: 12345. */
+Example: 12345.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#certificate_id AppEngineDomainMapping#certificate_id}
+  */
   readonly certificateId?: string;
-  /** SSL management type for this domain. If 'AUTOMATIC', a managed certificate is automatically provisioned.
-If 'MANUAL', 'certificateId' must be manually specified in order to configure SSL for this domain. Possible values: ["AUTOMATIC", "MANUAL"] */
+  /**
+  * SSL management type for this domain. If 'AUTOMATIC', a managed certificate is automatically provisioned.
+If 'MANUAL', 'certificateId' must be manually specified in order to configure SSL for this domain. Possible values: ["AUTOMATIC", "MANUAL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#ssl_management_type AppEngineDomainMapping#ssl_management_type}
+  */
   readonly sslManagementType: string;
 }
 
@@ -57,8 +84,17 @@ function appEngineDomainMappingSslSettingsToTerraform(struct?: AppEngineDomainMa
 }
 
 export interface AppEngineDomainMappingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#create AppEngineDomainMapping#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#delete AppEngineDomainMapping#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html#update AppEngineDomainMapping#update}
+  */
   readonly update?: string;
 }
 
@@ -72,14 +108,22 @@ function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html google_app_engine_domain_mapping}
+*/
 export class AppEngineDomainMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_domain_mapping.html google_app_engine_domain_mapping} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppEngineDomainMappingConfig
+  */
   public constructor(scope: Construct, id: string, config: AppEngineDomainMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_domain_mapping',

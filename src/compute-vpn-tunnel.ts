@@ -7,63 +7,136 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#description ComputeVpnTunnel#description}
+  */
   readonly description?: string;
-  /** IKE protocol version to use when establishing the VPN tunnel with
+  /**
+  * IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
-Acceptable IKE versions are 1 or 2. Default version is 2. */
+Acceptable IKE versions are 1 or 2. Default version is 2.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#ike_version ComputeVpnTunnel#ike_version}
+  */
   readonly ikeVersion?: number;
-  /** Local traffic selector to use when establishing the VPN tunnel with
+  /**
+  * Local traffic selector to use when establishing the VPN tunnel with
 peer VPN gateway. The value should be a CIDR formatted string,
 for example '192.168.0.0/16'. The ranges should be disjoint.
-Only IPv4 is supported. */
+Only IPv4 is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#local_traffic_selector ComputeVpnTunnel#local_traffic_selector}
+  */
   readonly localTrafficSelector?: string[];
-  /** Name of the resource. The name must be 1-63 characters long, and
+  /**
+  * Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63
 characters long and match the regular expression
 '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
-except the last character, which cannot be a dash. */
+except the last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#name ComputeVpnTunnel#name}
+  */
   readonly name: string;
-  /** URL of the peer side external VPN gateway to which this VPN tunnel is connected. */
+  /**
+  * URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#peer_external_gateway ComputeVpnTunnel#peer_external_gateway}
+  */
   readonly peerExternalGateway?: string;
-  /** The interface ID of the external VPN gateway to which this VPN tunnel is connected. */
+  /**
+  * The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#peer_external_gateway_interface ComputeVpnTunnel#peer_external_gateway_interface}
+  */
   readonly peerExternalGatewayInterface?: number;
-  /** URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+  /**
+  * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
-This field must reference a 'google_compute_ha_vpn_gateway' resource. */
+This field must reference a 'google_compute_ha_vpn_gateway' resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#peer_gcp_gateway ComputeVpnTunnel#peer_gcp_gateway}
+  */
   readonly peerGcpGateway?: string;
-  /** IP address of the peer VPN gateway. Only IPv4 is supported. */
+  /**
+  * IP address of the peer VPN gateway. Only IPv4 is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#peer_ip ComputeVpnTunnel#peer_ip}
+  */
   readonly peerIp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#project ComputeVpnTunnel#project}
+  */
   readonly project?: string;
-  /** The region where the tunnel is located. If unset, is set to the region of 'target_vpn_gateway'. */
+  /**
+  * The region where the tunnel is located. If unset, is set to the region of 'target_vpn_gateway'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#region ComputeVpnTunnel#region}
+  */
   readonly region?: string;
-  /** Remote traffic selector to use when establishing the VPN tunnel with
+  /**
+  * Remote traffic selector to use when establishing the VPN tunnel with
 peer VPN gateway. The value should be a CIDR formatted string,
 for example '192.168.0.0/16'. The ranges should be disjoint.
-Only IPv4 is supported. */
+Only IPv4 is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#remote_traffic_selector ComputeVpnTunnel#remote_traffic_selector}
+  */
   readonly remoteTrafficSelector?: string[];
-  /** URL of router resource to be used for dynamic routing. */
+  /**
+  * URL of router resource to be used for dynamic routing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#router ComputeVpnTunnel#router}
+  */
   readonly router?: string;
-  /** Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway. */
+  /**
+  * Shared secret used to set the secure session between the Cloud VPN
+gateway and the peer VPN gateway.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#shared_secret ComputeVpnTunnel#shared_secret}
+  */
   readonly sharedSecret: string;
-  /** URL of the Target VPN gateway with which this VPN tunnel is
-associated. */
+  /**
+  * URL of the Target VPN gateway with which this VPN tunnel is
+associated.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#target_vpn_gateway ComputeVpnTunnel#target_vpn_gateway}
+  */
   readonly targetVpnGateway?: string;
-  /** URL of the VPN gateway with which this VPN tunnel is associated.
+  /**
+  * URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
-This field must reference a 'google_compute_ha_vpn_gateway' resource. */
+This field must reference a 'google_compute_ha_vpn_gateway' resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#vpn_gateway ComputeVpnTunnel#vpn_gateway}
+  */
   readonly vpnGateway?: string;
-  /** The interface ID of the VPN gateway with which this VPN tunnel is associated. */
+  /**
+  * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#vpn_gateway_interface ComputeVpnTunnel#vpn_gateway_interface}
+  */
   readonly vpnGatewayInterface?: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#timeouts ComputeVpnTunnel#timeouts}
+  */
   readonly timeouts?: ComputeVpnTunnelTimeouts;
 }
 export interface ComputeVpnTunnelTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#create ComputeVpnTunnel#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html#delete ComputeVpnTunnel#delete}
+  */
   readonly delete?: string;
 }
 
@@ -76,14 +149,22 @@ function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html google_compute_vpn_tunnel}
+*/
 export class ComputeVpnTunnel extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel.html google_compute_vpn_tunnel} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeVpnTunnelConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeVpnTunnelConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_vpn_tunnel',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsCryptoKeyIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#crypto_key_id KmsCryptoKeyIamBinding#crypto_key_id}
+  */
   readonly cryptoKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#members KmsCryptoKeyIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#role KmsCryptoKeyIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#condition KmsCryptoKeyIamBinding#condition}
+  */
   readonly condition?: KmsCryptoKeyIamBindingCondition[];
 }
 export interface KmsCryptoKeyIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#description KmsCryptoKeyIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#expression KmsCryptoKeyIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#title KmsCryptoKeyIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function kmsCryptoKeyIamBindingConditionToTerraform(struct?: KmsCryptoKeyIamBind
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html google_kms_crypto_key_iam_binding}
+*/
 export class KmsCryptoKeyIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html google_kms_crypto_key_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsCryptoKeyIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsCryptoKeyIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_crypto_key_iam_binding',

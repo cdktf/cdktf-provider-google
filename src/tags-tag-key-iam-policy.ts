@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TagsTagKeyIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_policy.html#policy_data TagsTagKeyIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_policy.html#tag_key TagsTagKeyIamPolicy#tag_key}
+  */
   readonly tagKey: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_policy.html google_tags_tag_key_iam_policy}
+*/
 export class TagsTagKeyIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_policy.html google_tags_tag_key_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TagsTagKeyIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: TagsTagKeyIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_key_iam_policy',

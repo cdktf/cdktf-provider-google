@@ -7,9 +7,14 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TpuNodeConfig extends cdktf.TerraformMetaArguments {
-  /** The type of hardware accelerators associated with this node. */
+  /**
+  * The type of hardware accelerators associated with this node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#accelerator_type TpuNode#accelerator_type}
+  */
   readonly acceleratorType: string;
-  /** The CIDR block that the TPU node will use when selecting an IP
+  /**
+  * The CIDR block that the TPU node will use when selecting an IP
 address. This CIDR block must be a /29 block; the Compute Engine
 networks API forbids a smaller block, and using a larger block would
 be wasteful (a node can only consume one IP address).
@@ -17,32 +22,74 @@ be wasteful (a node can only consume one IP address).
 Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
-is peered with another network that is using that CIDR block. */
+is peered with another network that is using that CIDR block.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#cidr_block TpuNode#cidr_block}
+  */
   readonly cidrBlock?: string;
-  /** The user-supplied description of the TPU. Maximum of 512 characters. */
+  /**
+  * The user-supplied description of the TPU. Maximum of 512 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#description TpuNode#description}
+  */
   readonly description?: string;
-  /** Resource labels to represent user provided metadata. */
+  /**
+  * Resource labels to represent user provided metadata.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#labels TpuNode#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The immutable name of the TPU. */
+  /**
+  * The immutable name of the TPU.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#name TpuNode#name}
+  */
   readonly name: string;
-  /** The name of a network to peer the TPU node to. It must be a
+  /**
+  * The name of a network to peer the TPU node to. It must be a
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
-used. */
+used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#network TpuNode#network}
+  */
   readonly network?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#project TpuNode#project}
+  */
   readonly project?: string;
-  /** The version of Tensorflow running in the Node. */
+  /**
+  * The version of Tensorflow running in the Node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#tensorflow_version TpuNode#tensorflow_version}
+  */
   readonly tensorflowVersion: string;
-  /** Whether the VPC peering for the node is set up through Service Networking API.
+  /**
+  * Whether the VPC peering for the node is set up through Service Networking API.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
-TPU Node to is a Shared VPC network, the node must be created with this this field enabled. */
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#use_service_networking TpuNode#use_service_networking}
+  */
   readonly useServiceNetworking?: boolean;
-  /** The GCP location for the TPU. If it is not provided, the provider zone is used. */
+  /**
+  * The GCP location for the TPU. If it is not provided, the provider zone is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#zone TpuNode#zone}
+  */
   readonly zone?: string;
-  /** scheduling_config block */
+  /**
+  * scheduling_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#scheduling_config TpuNode#scheduling_config}
+  */
   readonly schedulingConfig?: TpuNodeSchedulingConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#timeouts TpuNode#timeouts}
+  */
   readonly timeouts?: TpuNodeTimeouts;
 }
 export class TpuNodeNetworkEndpoints extends cdktf.ComplexComputedList {
@@ -58,7 +105,11 @@ export class TpuNodeNetworkEndpoints extends cdktf.ComplexComputedList {
   }
 }
 export interface TpuNodeSchedulingConfig {
-  /** Defines whether the TPU instance is preemptible. */
+  /**
+  * Defines whether the TPU instance is preemptible.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#preemptible TpuNode#preemptible}
+  */
   readonly preemptible: boolean;
 }
 
@@ -70,8 +121,17 @@ function tpuNodeSchedulingConfigToTerraform(struct?: TpuNodeSchedulingConfig): a
 }
 
 export interface TpuNodeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#create TpuNode#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#delete TpuNode#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#update TpuNode#update}
+  */
   readonly update?: string;
 }
 
@@ -85,14 +145,22 @@ function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html google_tpu_node}
+*/
 export class TpuNode extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html google_tpu_node} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TpuNodeConfig
+  */
   public constructor(scope: Construct, id: string, config: TpuNodeConfig) {
     super(scope, id, {
       terraformResourceType: 'google_tpu_node',

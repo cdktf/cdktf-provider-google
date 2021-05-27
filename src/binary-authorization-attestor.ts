@@ -7,26 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BinaryAuthorizationAttestorConfig extends cdktf.TerraformMetaArguments {
-  /** A descriptive comment. This field may be updated. The field may be
-displayed in chooser dialogs. */
+  /**
+  * A descriptive comment. This field may be updated. The field may be
+displayed in chooser dialogs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#description BinaryAuthorizationAttestor#description}
+  */
   readonly description?: string;
-  /** The resource name. */
+  /**
+  * The resource name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#name BinaryAuthorizationAttestor#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#project BinaryAuthorizationAttestor#project}
+  */
   readonly project?: string;
-  /** attestation_authority_note block */
+  /**
+  * attestation_authority_note block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#attestation_authority_note BinaryAuthorizationAttestor#attestation_authority_note}
+  */
   readonly attestationAuthorityNote: BinaryAuthorizationAttestorAttestationAuthorityNote[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#timeouts BinaryAuthorizationAttestor#timeouts}
+  */
   readonly timeouts?: BinaryAuthorizationAttestorTimeouts;
 }
 export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey {
-  /** A PEM-encoded public key, as described in
-'https://tools.ietf.org/html/rfc7468#section-13' */
+  /**
+  * A PEM-encoded public key, as described in
+'https://tools.ietf.org/html/rfc7468#section-13'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#public_key_pem BinaryAuthorizationAttestor#public_key_pem}
+  */
   readonly publicKeyPem?: string;
-  /** The signature algorithm used to verify a message against
+  /**
+  * The signature algorithm used to verify a message against
 a signature using this key. These signature algorithm must
 match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
-public key). */
+public key).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#signature_algorithm BinaryAuthorizationAttestor#signature_algorithm}
+  */
   readonly signatureAlgorithm?: string;
 }
 
@@ -39,7 +66,8 @@ function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublic
 }
 
 export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
-  /** ASCII-armored representation of a PGP public key, as the
+  /**
+  * ASCII-armored representation of a PGP public key, as the
 entire output by the command
 'gpg --export --armor foo@example.com' (either LF or CRLF
 line endings). When using this field, id should be left
@@ -47,18 +75,33 @@ blank. The BinAuthz API handlers will calculate the ID
 and fill it in automatically. BinAuthz computes this ID
 as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
-be overwritten by the API-calculated ID. */
+be overwritten by the API-calculated ID.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#ascii_armored_pgp_public_key BinaryAuthorizationAttestor#ascii_armored_pgp_public_key}
+  */
   readonly asciiArmoredPgpPublicKey?: string;
-  /** A descriptive comment. This field may be updated. */
+  /**
+  * A descriptive comment. This field may be updated.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#comment BinaryAuthorizationAttestor#comment}
+  */
   readonly comment?: string;
-  /** The ID of this public key. Signatures verified by BinAuthz
+  /**
+  * The ID of this public key. Signatures verified by BinAuthz
 must include the ID of the public key that can be used to
 verify them, and that ID must match the contents of this
 field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
-See the documentation on publicKey cases below for details. */
+See the documentation on publicKey cases below for details.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#id BinaryAuthorizationAttestor#id}
+  */
   readonly id?: string;
-  /** pkix_public_key block */
+  /**
+  * pkix_public_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#pkix_public_key BinaryAuthorizationAttestor#pkix_public_key}
+  */
   readonly pkixPublicKey?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey[];
 }
 
@@ -73,15 +116,23 @@ function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerrafor
 }
 
 export interface BinaryAuthorizationAttestorAttestationAuthorityNote {
-  /** The resource name of a ATTESTATION_AUTHORITY Note, created by the
+  /**
+  * The resource name of a ATTESTATION_AUTHORITY Note, created by the
 user. If the Note is in a different project from the Attestor, it
 should be specified in the format 'projects/*\/notes/*' (or the legacy
 'providers/*\/notes/*'). This field may not be updated.
 An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
-and that links to this Note. */
+and that links to this Note.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#note_reference BinaryAuthorizationAttestor#note_reference}
+  */
   readonly noteReference: string;
-  /** public_keys block */
+  /**
+  * public_keys block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#public_keys BinaryAuthorizationAttestor#public_keys}
+  */
   readonly publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[];
 }
 
@@ -94,8 +145,17 @@ function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(struct?:
 }
 
 export interface BinaryAuthorizationAttestorTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#create BinaryAuthorizationAttestor#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#delete BinaryAuthorizationAttestor#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html#update BinaryAuthorizationAttestor#update}
+  */
   readonly update?: string;
 }
 
@@ -109,14 +169,22 @@ function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthoriza
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html google_binary_authorization_attestor}
+*/
 export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor.html google_binary_authorization_attestor} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BinaryAuthorizationAttestorConfig
+  */
   public constructor(scope: Construct, id: string, config: BinaryAuthorizationAttestorConfig) {
     super(scope, id, {
       terraformResourceType: 'google_binary_authorization_attestor',

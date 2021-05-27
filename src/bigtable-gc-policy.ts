@@ -7,25 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the column family. */
+  /**
+  * The name of the column family.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#column_family BigtableGcPolicy#column_family}
+  */
   readonly columnFamily: string;
-  /** The name of the Bigtable instance. */
+  /**
+  * The name of the Bigtable instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#instance_name BigtableGcPolicy#instance_name}
+  */
   readonly instanceName: string;
-  /** If multiple policies are set, you should choose between UNION OR INTERSECTION. */
+  /**
+  * If multiple policies are set, you should choose between UNION OR INTERSECTION.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#mode BigtableGcPolicy#mode}
+  */
   readonly mode?: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#project BigtableGcPolicy#project}
+  */
   readonly project?: string;
-  /** The name of the table. */
+  /**
+  * The name of the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#table BigtableGcPolicy#table}
+  */
   readonly table: string;
-  /** max_age block */
+  /**
+  * max_age block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#max_age BigtableGcPolicy#max_age}
+  */
   readonly maxAge?: BigtableGcPolicyMaxAge[];
-  /** max_version block */
+  /**
+  * max_version block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#max_version BigtableGcPolicy#max_version}
+  */
   readonly maxVersion?: BigtableGcPolicyMaxVersion[];
 }
 export interface BigtableGcPolicyMaxAge {
-  /** Number of days before applying GC policy. */
+  /**
+  * Number of days before applying GC policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#days BigtableGcPolicy#days}
+  */
   readonly days?: number;
-  /** Duration before applying GC policy */
+  /**
+  * Duration before applying GC policy
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#duration BigtableGcPolicy#duration}
+  */
   readonly duration?: string;
 }
 
@@ -38,7 +74,11 @@ function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAge): any
 }
 
 export interface BigtableGcPolicyMaxVersion {
-  /** Number of version before applying the GC policy. */
+  /**
+  * Number of version before applying the GC policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#number BigtableGcPolicy#number}
+  */
   readonly number: number;
 }
 
@@ -50,14 +90,22 @@ function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html google_bigtable_gc_policy}
+*/
 export class BigtableGcPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html google_bigtable_gc_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigtableGcPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: BigtableGcPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_gc_policy',

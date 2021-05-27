@@ -7,10 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeDiskConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#description ComputeDisk#description}
+  */
   readonly description?: string;
-  /** The image from which to initialize this disk. This can be
+  /**
+  * The image from which to initialize this disk. This can be
 one of: the image's 'self_link', 'projects/{project}/global/images/{image}',
 'projects/{project}/global/images/family/{family}', 'global/images/{image}',
 'global/images/family/{family}', 'family/{family}', '{project}/{family}',
@@ -18,26 +23,45 @@ one of: the image's 'self_link', 'projects/{project}/global/images/{image}',
 images names must include the family name. If they don't, use the
 [google_compute_image data source](/docs/providers/google/d/compute_image.html).
 For instance, the image 'centos-6-v20180104' includes its family name 'centos-6'.
-These images can be referred by family name here. */
+These images can be referred by family name here.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#image ComputeDisk#image}
+  */
   readonly image?: string;
-  /** Labels to apply to this disk.  A list of key->value pairs. */
+  /**
+  * Labels to apply to this disk.  A list of key->value pairs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#labels ComputeDisk#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#name ComputeDisk#name}
+  */
   readonly name: string;
-  /** Physical block size of the persistent disk, in bytes. If not present
+  /**
+  * Physical block size of the persistent disk, in bytes. If not present
 in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
-the supported values for the caller's project. */
+the supported values for the caller's project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#physical_block_size_bytes ComputeDisk#physical_block_size_bytes}
+  */
   readonly physicalBlockSizeBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#project ComputeDisk#project}
+  */
   readonly project?: string;
-  /** Size of the persistent disk, specified in GB. You can specify this
+  /**
+  * Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the 'image' or
 'snapshot' parameter, or specify it alone to create an empty
 persistent disk.
@@ -49,9 +73,13 @@ or the size of the snapshot.
 ~>**NOTE** If you change the size, Terraform updates the disk size
 if upsizing is detected but recreates the disk if downsizing is requested.
 You can add 'lifecycle.prevent_destroy' in the config to prevent destroying
-and recreating. */
+and recreating.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#size ComputeDisk#size}
+  */
   readonly size?: number;
-  /** The source snapshot used to create this disk. You can provide this as
+  /**
+  * The source snapshot used to create this disk. You can provide this as
 a partial or full URL to the resource. If the snapshot is in another
 project than this disk, you must supply a full URL. For example, the
 following are valid values:
@@ -59,34 +87,73 @@ following are valid values:
 * 'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot'
 * 'projects/project/global/snapshots/snapshot'
 * 'global/snapshots/snapshot'
-* 'snapshot' */
+* 'snapshot'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#snapshot ComputeDisk#snapshot}
+  */
   readonly snapshot?: string;
-  /** URL of the disk type resource describing which disk type to use to
-create the disk. Provide this when creating the disk. */
+  /**
+  * URL of the disk type resource describing which disk type to use to
+create the disk. Provide this when creating the disk.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#type ComputeDisk#type}
+  */
   readonly type?: string;
-  /** A reference to the zone where the disk resides. */
+  /**
+  * A reference to the zone where the disk resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#zone ComputeDisk#zone}
+  */
   readonly zone?: string;
-  /** disk_encryption_key block */
+  /**
+  * disk_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#disk_encryption_key ComputeDisk#disk_encryption_key}
+  */
   readonly diskEncryptionKey?: ComputeDiskDiskEncryptionKey[];
-  /** source_image_encryption_key block */
+  /**
+  * source_image_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#source_image_encryption_key ComputeDisk#source_image_encryption_key}
+  */
   readonly sourceImageEncryptionKey?: ComputeDiskSourceImageEncryptionKey[];
-  /** source_snapshot_encryption_key block */
+  /**
+  * source_snapshot_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#source_snapshot_encryption_key ComputeDisk#source_snapshot_encryption_key}
+  */
   readonly sourceSnapshotEncryptionKey?: ComputeDiskSourceSnapshotEncryptionKey[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#timeouts ComputeDisk#timeouts}
+  */
   readonly timeouts?: ComputeDiskTimeouts;
 }
 export interface ComputeDiskDiskEncryptionKey {
-  /** The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
+  /**
+  * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
 in the cloud console. Your project's Compute Engine System service account
 ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
+See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#kms_key_self_link ComputeDisk#kms_key_self_link}
+  */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used. */
+  /**
+  * The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#kms_key_service_account ComputeDisk#kms_key_service_account}
+  */
   readonly kmsKeyServiceAccount?: string;
-  /** Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource. */
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#raw_key ComputeDisk#raw_key}
+  */
   readonly rawKey?: string;
 }
 
@@ -100,17 +167,29 @@ function computeDiskDiskEncryptionKeyToTerraform(struct?: ComputeDiskDiskEncrypt
 }
 
 export interface ComputeDiskSourceImageEncryptionKey {
-  /** The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
+  /**
+  * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
 in the cloud console. Your project's Compute Engine System service account
 ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
+See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#kms_key_self_link ComputeDisk#kms_key_self_link}
+  */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used. */
+  /**
+  * The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#kms_key_service_account ComputeDisk#kms_key_service_account}
+  */
   readonly kmsKeyServiceAccount?: string;
-  /** Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource. */
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#raw_key ComputeDisk#raw_key}
+  */
   readonly rawKey?: string;
 }
 
@@ -124,17 +203,29 @@ function computeDiskSourceImageEncryptionKeyToTerraform(struct?: ComputeDiskSour
 }
 
 export interface ComputeDiskSourceSnapshotEncryptionKey {
-  /** The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
+  /**
+  * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
 in the cloud console. Your project's Compute Engine System service account
 ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys */
+See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#kms_key_self_link ComputeDisk#kms_key_self_link}
+  */
   readonly kmsKeySelfLink?: string;
-  /** The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used. */
+  /**
+  * The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#kms_key_service_account ComputeDisk#kms_key_service_account}
+  */
   readonly kmsKeyServiceAccount?: string;
-  /** Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource. */
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#raw_key ComputeDisk#raw_key}
+  */
   readonly rawKey?: string;
 }
 
@@ -148,8 +239,17 @@ function computeDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeDiskS
 }
 
 export interface ComputeDiskTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#create ComputeDisk#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#delete ComputeDisk#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#update ComputeDisk#update}
+  */
   readonly update?: string;
 }
 
@@ -163,14 +263,22 @@ function computeDiskTimeoutsToTerraform(struct?: ComputeDiskTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html google_compute_disk}
+*/
 export class ComputeDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html google_compute_disk} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeDiskConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeDiskConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_disk',

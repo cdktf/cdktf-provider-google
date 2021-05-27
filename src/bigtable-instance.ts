@@ -7,29 +7,73 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail. */
+  /**
+  * Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#deletion_protection BigtableInstance#deletion_protection}
+  */
   readonly deletionProtection?: boolean;
-  /** The human-readable display name of the Bigtable instance. Defaults to the instance name. */
+  /**
+  * The human-readable display name of the Bigtable instance. Defaults to the instance name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#display_name BigtableInstance#display_name}
+  */
   readonly displayName?: string;
-  /** The instance type to create. One of "DEVELOPMENT" or "PRODUCTION". Defaults to "PRODUCTION". */
+  /**
+  * The instance type to create. One of "DEVELOPMENT" or "PRODUCTION". Defaults to "PRODUCTION".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#instance_type BigtableInstance#instance_type}
+  */
   readonly instanceType?: string;
-  /** A mapping of labels to assign to the resource. */
+  /**
+  * A mapping of labels to assign to the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#labels BigtableInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. */
+  /**
+  * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#name BigtableInstance#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#project BigtableInstance#project}
+  */
   readonly project?: string;
-  /** cluster block */
+  /**
+  * cluster block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#cluster BigtableInstance#cluster}
+  */
   readonly cluster?: BigtableInstanceCluster[];
 }
 export interface BigtableInstanceCluster {
-  /** The ID of the Cloud Bigtable cluster. */
+  /**
+  * The ID of the Cloud Bigtable cluster.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#cluster_id BigtableInstance#cluster_id}
+  */
   readonly clusterId: string;
-  /** The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance. */
+  /**
+  * The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#num_nodes BigtableInstance#num_nodes}
+  */
   readonly numNodes?: number;
-  /** The storage type to use. One of "SSD" or "HDD". Defaults to "SSD". */
+  /**
+  * The storage type to use. One of "SSD" or "HDD". Defaults to "SSD".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#storage_type BigtableInstance#storage_type}
+  */
   readonly storageType?: string;
-  /** The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page. */
+  /**
+  * The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#zone BigtableInstance#zone}
+  */
   readonly zone?: string;
 }
 
@@ -44,14 +88,22 @@ function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html google_bigtable_instance}
+*/
 export class BigtableInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html google_bigtable_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigtableInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: BigtableInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_instance',

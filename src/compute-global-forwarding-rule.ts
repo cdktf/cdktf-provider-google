@@ -7,10 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#description ComputeGlobalForwardingRule#description}
+  */
   readonly description?: string;
-  /** The IP address that this forwarding rule serves. When a client sends
+  /**
+  * The IP address that this forwarding rule serves. When a client sends
 traffic to this IP address, the forwarding rule directs the traffic to
 the target that you specify in the forwarding rule. The
 loadBalancingScheme and the forwarding rule's target determine the
@@ -25,33 +30,53 @@ The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
 that has validateForProxyless field set to true.
 
 For Private Service Connect forwarding rules that forward traffic to
-Google APIs, IP address must be provided. */
+Google APIs, IP address must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#ip_address ComputeGlobalForwardingRule#ip_address}
+  */
   readonly ipAddress?: string;
-  /** The IP protocol to which this rule applies. When the load balancing scheme is
+  /**
+  * The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
-and addressType of INTERNAL Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"] */
+and addressType of INTERNAL Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#ip_protocol ComputeGlobalForwardingRule#ip_protocol}
+  */
   readonly ipProtocol?: string;
-  /** The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"] */
+  /**
+  * The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#ip_version ComputeGlobalForwardingRule#ip_version}
+  */
   readonly ipVersion?: string;
-  /** This signifies what the GlobalForwardingRule will be used for.
+  /**
+  * This signifies what the GlobalForwardingRule will be used for.
 The value of INTERNAL_SELF_MANAGED means that this will be used for
 Internal Global HTTP(S) LB. The value of EXTERNAL means that this
 will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set "" if the global address is
-configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"] */
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
+  */
   readonly loadBalancingScheme?: string;
-  /** Name of the resource; provided by the client when the resource is
+  /**
+  * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#name ComputeGlobalForwardingRule#name}
+  */
   readonly name: string;
-  /** This field is used along with the target field for TargetHttpProxy,
+  /**
+  * This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
 TargetPool, TargetInstance.
 
@@ -69,28 +94,54 @@ ports:
                   1883, 5222
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
                   1883, 5222
-* TargetVpnGateway: 500, 4500 */
+* TargetVpnGateway: 500, 4500
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#port_range ComputeGlobalForwardingRule#port_range}
+  */
   readonly portRange?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#project ComputeGlobalForwardingRule#project}
+  */
   readonly project?: string;
-  /** The URL of the target resource to receive the matched traffic.
+  /**
+  * The URL of the target resource to receive the matched traffic.
 The forwarded traffic must be of a type appropriate to the target object.
 For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
 are valid.
 
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a purpose of PRIVATE_SERVICE_CONNECT and
-addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid. */
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#target ComputeGlobalForwardingRule#target}
+  */
   readonly target: string;
-  /** metadata_filters block */
+  /**
+  * metadata_filters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
+  */
   readonly metadataFilters?: ComputeGlobalForwardingRuleMetadataFilters[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#timeouts ComputeGlobalForwardingRule#timeouts}
+  */
   readonly timeouts?: ComputeGlobalForwardingRuleTimeouts;
 }
 export interface ComputeGlobalForwardingRuleMetadataFiltersFilterLabels {
-  /** Name of the metadata label. The length must be between
-1 and 1024 characters, inclusive. */
+  /**
+  * Name of the metadata label. The length must be between
+1 and 1024 characters, inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#name ComputeGlobalForwardingRule#name}
+  */
   readonly name: string;
-  /** The value that the label must match. The value has a maximum
-length of 1024 characters. */
+  /**
+  * The value that the label must match. The value has a maximum
+length of 1024 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#value ComputeGlobalForwardingRule#value}
+  */
   readonly value: string;
 }
 
@@ -103,15 +154,23 @@ function computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform(struc
 }
 
 export interface ComputeGlobalForwardingRuleMetadataFilters {
-  /** Specifies how individual filterLabel matches within the list of
+  /**
+  * Specifies how individual filterLabel matches within the list of
 filterLabels contribute towards the overall metadataFilter match.
 
 MATCH_ANY - At least one of the filterLabels must have a matching
 label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
-provided metadata. Possible values: ["MATCH_ANY", "MATCH_ALL"] */
+provided metadata. Possible values: ["MATCH_ANY", "MATCH_ALL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#filter_match_criteria ComputeGlobalForwardingRule#filter_match_criteria}
+  */
   readonly filterMatchCriteria: string;
-  /** filter_labels block */
+  /**
+  * filter_labels block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#filter_labels ComputeGlobalForwardingRule#filter_labels}
+  */
   readonly filterLabels: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels[];
 }
 
@@ -124,8 +183,17 @@ function computeGlobalForwardingRuleMetadataFiltersToTerraform(struct?: ComputeG
 }
 
 export interface ComputeGlobalForwardingRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#create ComputeGlobalForwardingRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#delete ComputeGlobalForwardingRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html#update ComputeGlobalForwardingRule#update}
+  */
   readonly update?: string;
 }
 
@@ -139,14 +207,22 @@ function computeGlobalForwardingRuleTimeoutsToTerraform(struct?: ComputeGlobalFo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html google_compute_global_forwarding_rule}
+*/
 export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule.html google_compute_global_forwarding_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeGlobalForwardingRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeGlobalForwardingRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_global_forwarding_rule',

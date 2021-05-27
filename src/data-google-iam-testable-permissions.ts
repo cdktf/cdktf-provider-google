@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_iam_testable_permissions.html
+// https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,8 +7,17 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleIamTestablePermissionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}
+  */
   readonly customSupportLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}
+  */
   readonly fullResourceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html#stages DataGoogleIamTestablePermissions#stages}
+  */
   readonly stages?: string[];
 }
 export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexComputedList {
@@ -39,14 +48,22 @@ export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexCo
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html google_iam_testable_permissions}
+*/
 export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html google_iam_testable_permissions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleIamTestablePermissionsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleIamTestablePermissionsConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iam_testable_permissions',

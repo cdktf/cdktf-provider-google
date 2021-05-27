@@ -7,10 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareDicomStoreConfig extends cdktf.TerraformMetaArguments {
-  /** Identifies the dataset addressed by this request. Must be in the format
-'projects/{project}/locations/{location}/datasets/{dataset}' */
+  /**
+  * Identifies the dataset addressed by this request. Must be in the format
+'projects/{project}/locations/{location}/datasets/{dataset}'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#dataset HealthcareDicomStore#dataset}
+  */
   readonly dataset: string;
-  /** User-supplied key-value pairs used to organize DICOM stores.
+  /**
+  * User-supplied key-value pairs used to organize DICOM stores.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
 conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
@@ -21,24 +26,43 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 
 An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }. */
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#labels HealthcareDicomStore#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The resource name for the DicomStore.
+  /**
+  * The resource name for the DicomStore.
 
-** Changing this property may recreate the Dicom store (removing all data) ** */
+** Changing this property may recreate the Dicom store (removing all data) **
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#name HealthcareDicomStore#name}
+  */
   readonly name: string;
-  /** notification_config block */
+  /**
+  * notification_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#notification_config HealthcareDicomStore#notification_config}
+  */
   readonly notificationConfig?: HealthcareDicomStoreNotificationConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#timeouts HealthcareDicomStore#timeouts}
+  */
   readonly timeouts?: HealthcareDicomStoreTimeouts;
 }
 export interface HealthcareDicomStoreNotificationConfig {
-  /** The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+  /**
+  * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
 It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
-Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail. */
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#pubsub_topic HealthcareDicomStore#pubsub_topic}
+  */
   readonly pubsubTopic: string;
 }
 
@@ -50,8 +74,17 @@ function healthcareDicomStoreNotificationConfigToTerraform(struct?: HealthcareDi
 }
 
 export interface HealthcareDicomStoreTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#create HealthcareDicomStore#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#delete HealthcareDicomStore#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html#update HealthcareDicomStore#update}
+  */
   readonly update?: string;
 }
 
@@ -65,14 +98,22 @@ function healthcareDicomStoreTimeoutsToTerraform(struct?: HealthcareDicomStoreTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html google_healthcare_dicom_store}
+*/
 export class HealthcareDicomStore extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store.html google_healthcare_dicom_store} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareDicomStoreConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareDicomStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dicom_store',

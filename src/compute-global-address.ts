@@ -7,51 +7,96 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeGlobalAddressConfig extends cdktf.TerraformMetaArguments {
-  /** The IP address or beginning of the address range represented by this
+  /**
+  * The IP address or beginning of the address range represented by this
 resource. This can be supplied as an input to reserve a specific
-address or omitted to allow GCP to choose a valid one for you. */
+address or omitted to allow GCP to choose a valid one for you.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#address ComputeGlobalAddress#address}
+  */
   readonly address?: string;
-  /** The type of the address to reserve.
+  /**
+  * The type of the address to reserve.
 
 * EXTERNAL indicates public/external single IP address.
-* INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"] */
+* INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#address_type ComputeGlobalAddress#address_type}
+  */
   readonly addressType?: string;
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#description ComputeGlobalAddress#description}
+  */
   readonly description?: string;
-  /** The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"] */
+  /**
+  * The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#ip_version ComputeGlobalAddress#ip_version}
+  */
   readonly ipVersion?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#name ComputeGlobalAddress#name}
+  */
   readonly name: string;
-  /** The URL of the network in which to reserve the IP range. The IP range
+  /**
+  * The URL of the network in which to reserve the IP range. The IP range
 must be in RFC1918 space. The network cannot be deleted if there are
 any reserved IP ranges referring to it.
 
-This should only be set when using an Internal address. */
+This should only be set when using an Internal address.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#network ComputeGlobalAddress#network}
+  */
   readonly network?: string;
-  /** The prefix length of the IP range. If not present, it means the
+  /**
+  * The prefix length of the IP range. If not present, it means the
 address field is a single IP address.
 
 This field is not applicable to addresses with addressType=EXTERNAL,
-or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT */
+or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#prefix_length ComputeGlobalAddress#prefix_length}
+  */
   readonly prefixLength?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#project ComputeGlobalAddress#project}
+  */
   readonly project?: string;
-  /** The purpose of the resource. Possible values include:
+  /**
+  * The purpose of the resource. Possible values include:
 
 * VPC_PEERING - for peer networks
 
-* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks */
+* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#purpose ComputeGlobalAddress#purpose}
+  */
   readonly purpose?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#timeouts ComputeGlobalAddress#timeouts}
+  */
   readonly timeouts?: ComputeGlobalAddressTimeouts;
 }
 export interface ComputeGlobalAddressTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#create ComputeGlobalAddress#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html#delete ComputeGlobalAddress#delete}
+  */
   readonly delete?: string;
 }
 
@@ -64,14 +109,22 @@ function computeGlobalAddressTimeoutsToTerraform(struct?: ComputeGlobalAddressTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html google_compute_global_address}
+*/
 export class ComputeGlobalAddress extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_global_address.html google_compute_global_address} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeGlobalAddressConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeGlobalAddressConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_global_address',

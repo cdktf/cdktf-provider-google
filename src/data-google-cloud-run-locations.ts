@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_cloud_run_locations.html
+// https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,17 +7,28 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleCloudRunLocationsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html#project DataGoogleCloudRunLocations#project}
+  */
   readonly project?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html google_cloud_run_locations}
+*/
 export class DataGoogleCloudRunLocations extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html google_cloud_run_locations} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleCloudRunLocationsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleCloudRunLocationsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_run_locations',

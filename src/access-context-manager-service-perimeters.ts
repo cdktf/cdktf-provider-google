@@ -7,22 +7,42 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AccessContextManagerServicePerimetersConfig extends cdktf.TerraformMetaArguments {
-  /** The AccessPolicy this ServicePerimeter lives in.
-Format: accessPolicies/{policy_id} */
+  /**
+  * The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#parent AccessContextManagerServicePerimeters#parent}
+  */
   readonly parent: string;
-  /** service_perimeters block */
+  /**
+  * service_perimeters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#service_perimeters AccessContextManagerServicePerimeters#service_perimeters}
+  */
   readonly servicePerimeters?: AccessContextManagerServicePerimetersServicePerimeters[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#timeouts AccessContextManagerServicePerimeters#timeouts}
+  */
   readonly timeouts?: AccessContextManagerServicePerimetersTimeouts;
 }
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressFrom {
-  /** A list of identities that are allowed access through this 'EgressPolicy'. 
+  /**
+  * A list of identities that are allowed access through this 'EgressPolicy'. 
 Should be in the format of email address. The email address should 
-represent individual user or service account only. */
+represent individual user or service account only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identities AccessContextManagerServicePerimeters#identities}
+  */
   readonly identities?: string[];
-  /** Specifies the type of identities that are allowed access to outside the 
+  /**
+  * Specifies the type of identities that are allowed access to outside the 
 perimeter. If left unspecified, then members of 'identities' field will 
-be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identity_type AccessContextManagerServicePerimeters#identity_type}
+  */
   readonly identityType?: string;
 }
 
@@ -35,12 +55,20 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperationsMethodSelectors {
-  /** Value for 'method' should be a valid method name for the corresponding 
+  /**
+  * Value for 'method' should be a valid method name for the corresponding 
 'serviceName' in 'ApiOperation'. If '*' used as value for method, 
-then ALL methods and permissions are allowed. */
+then ALL methods and permissions are allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method AccessContextManagerServicePerimeters#method}
+  */
   readonly method?: string;
-  /** Value for permission should be a valid Cloud IAM permission for the 
-corresponding 'serviceName' in 'ApiOperation'. */
+  /**
+  * Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#permission AccessContextManagerServicePerimeters#permission}
+  */
   readonly permission?: string;
 }
 
@@ -53,11 +81,19 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperations {
-  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+  /**
+  * The name of the API whose methods or permissions the 'IngressPolicy' or 
 'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName 
-field set to '*' will allow all methods AND permissions for all services. */
+field set to '*' will allow all methods AND permissions for all services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#service_name AccessContextManagerServicePerimeters#service_name}
+  */
   readonly serviceName?: string;
-  /** method_selectors block */
+  /**
+  * method_selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method_selectors AccessContextManagerServicePerimeters#method_selectors}
+  */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperationsMethodSelectors[];
 }
 
@@ -70,13 +106,21 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo {
-  /** A list of resources, currently only projects in the form 
+  /**
+  * A list of resources, currently only projects in the form 
 'projects/<projectnumber>', that match this to stanza. A request matches 
 if it contains a resource in this list. If * is specified for resources, 
 then this 'EgressTo' rule will authorize access to all resources outside 
-the perimeter. */
+the perimeter.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resources AccessContextManagerServicePerimeters#resources}
+  */
   readonly resources?: string[];
-  /** operations block */
+  /**
+  * operations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#operations AccessContextManagerServicePerimeters#operations}
+  */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperations[];
 }
 
@@ -89,9 +133,17 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPolicies {
-  /** egress_from block */
+  /**
+  * egress_from block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#egress_from AccessContextManagerServicePerimeters#egress_from}
+  */
   readonly egressFrom?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressFrom[];
-  /** egress_to block */
+  /**
+  * egress_to block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#egress_to AccessContextManagerServicePerimeters#egress_to}
+  */
   readonly egressTo?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo[];
 }
 
@@ -104,21 +156,29 @@ function accessContextManagerServicePerimetersServicePerimetersSpecEgressPolicie
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFromSources {
-  /** An 'AccessLevel' resource name that allow resources within the 
+  /**
+  * An 'AccessLevel' resource name that allow resources within the 
 'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed 
 must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent
 'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, 
 resources within the perimeter can only be accessed via Google Cloud calls 
 with request origins within the perimeter. 
 Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' 
-If * is specified, then all IngressSources will be allowed. */
+If * is specified, then all IngressSources will be allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#access_level AccessContextManagerServicePerimeters#access_level}
+  */
   readonly accessLevel?: string;
-  /** A Google Cloud resource that is allowed to ingress the perimeter. 
+  /**
+  * A Google Cloud resource that is allowed to ingress the perimeter. 
 Requests from these resources will be allowed to access perimeter data. 
 Currently only projects are allowed. Format 'projects/{project_number}' 
 The project may be in any Google Cloud organization, not just the 
 organization that the perimeter is defined in. '*' is not allowed, the case 
-of allowing all Google Cloud resources only is not supported. */
+of allowing all Google Cloud resources only is not supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resource AccessContextManagerServicePerimeters#resource}
+  */
   readonly resource?: string;
 }
 
@@ -131,15 +191,27 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFrom {
-  /** A list of identities that are allowed access through this ingress policy.
+  /**
+  * A list of identities that are allowed access through this ingress policy.
 Should be in the format of email address. The email address should represent 
-individual user or service account only. */
+individual user or service account only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identities AccessContextManagerServicePerimeters#identities}
+  */
   readonly identities?: string[];
-  /** Specifies the type of identities that are allowed access from outside the 
+  /**
+  * Specifies the type of identities that are allowed access from outside the 
 perimeter. If left unspecified, then members of 'identities' field will be 
-allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identity_type AccessContextManagerServicePerimeters#identity_type}
+  */
   readonly identityType?: string;
-  /** sources block */
+  /**
+  * sources block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#sources AccessContextManagerServicePerimeters#sources}
+  */
   readonly sources?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFromSources[];
 }
 
@@ -153,12 +225,20 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperationsMethodSelectors {
-  /** Value for method should be a valid method name for the corresponding 
+  /**
+  * Value for method should be a valid method name for the corresponding 
 serviceName in 'ApiOperation'. If '*' used as value for 'method', then 
-ALL methods and permissions are allowed. */
+ALL methods and permissions are allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method AccessContextManagerServicePerimeters#method}
+  */
   readonly method?: string;
-  /** Value for permission should be a valid Cloud IAM permission for the 
-corresponding 'serviceName' in 'ApiOperation'. */
+  /**
+  * Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#permission AccessContextManagerServicePerimeters#permission}
+  */
   readonly permission?: string;
 }
 
@@ -171,11 +251,19 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperations {
-  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+  /**
+  * The name of the API whose methods or permissions the 'IngressPolicy' or 
 'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' 
-field set to '*' will allow all methods AND permissions for all services. */
+field set to '*' will allow all methods AND permissions for all services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#service_name AccessContextManagerServicePerimeters#service_name}
+  */
   readonly serviceName?: string;
-  /** method_selectors block */
+  /**
+  * method_selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method_selectors AccessContextManagerServicePerimeters#method_selectors}
+  */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperationsMethodSelectors[];
 }
 
@@ -188,16 +276,24 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressTo {
-  /** A list of resources, currently only projects in the form 
+  /**
+  * A list of resources, currently only projects in the form 
 'projects/<projectnumber>', protected by this 'ServicePerimeter'
 that are allowed to be accessed by sources defined in the
 corresponding 'IngressFrom'. A request matches if it contains
 a resource in this list. If '*' is specified for resources,
 then this 'IngressTo' rule will authorize access to all 
 resources inside the perimeter, provided that the request
-also matches the 'operations' field. */
+also matches the 'operations' field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resources AccessContextManagerServicePerimeters#resources}
+  */
   readonly resources?: string[];
-  /** operations block */
+  /**
+  * operations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#operations AccessContextManagerServicePerimeters#operations}
+  */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressToOperations[];
 }
 
@@ -210,9 +306,17 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecIngressPolicies {
-  /** ingress_from block */
+  /**
+  * ingress_from block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#ingress_from AccessContextManagerServicePerimeters#ingress_from}
+  */
   readonly ingressFrom?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFrom[];
-  /** ingress_to block */
+  /**
+  * ingress_to block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#ingress_to AccessContextManagerServicePerimeters#ingress_to}
+  */
   readonly ingressTo?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressTo[];
 }
 
@@ -225,11 +329,19 @@ function accessContextManagerServicePerimetersServicePerimetersSpecIngressPolici
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServices {
-  /** The list of APIs usable within the Service Perimeter.
-Must be empty unless 'enableRestriction' is True. */
+  /**
+  * The list of APIs usable within the Service Perimeter.
+Must be empty unless 'enableRestriction' is True.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#allowed_services AccessContextManagerServicePerimeters#allowed_services}
+  */
   readonly allowedServices?: string[];
-  /** Whether to restrict API calls within the Service Perimeter to the
-list of APIs specified in 'allowedServices'. */
+  /**
+  * Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#enable_restriction AccessContextManagerServicePerimeters#enable_restriction}
+  */
   readonly enableRestriction?: boolean;
 }
 
@@ -242,7 +354,8 @@ function accessContextManagerServicePerimetersServicePerimetersSpecVpcAccessible
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersSpec {
-  /** A list of AccessLevel resource names that allow resources within
+  /**
+  * A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
 AccessLevels listed must be in the same policy as this
 ServicePerimeter. Referencing a nonexistent AccessLevel is a
@@ -251,23 +364,46 @@ the perimeter can only be accessed via GCP calls with request
 origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 
-Format: accessPolicies/{policy_id}/accessLevels/{access_level_name} */
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#access_levels AccessContextManagerServicePerimeters#access_levels}
+  */
   readonly accessLevels?: string[];
-  /** A list of GCP resources that are inside of the service perimeter.
+  /**
+  * A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
-Format: projects/{project_number} */
+Format: projects/{project_number}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resources AccessContextManagerServicePerimeters#resources}
+  */
   readonly resources?: string[];
-  /** GCP services that are subject to the Service Perimeter
+  /**
+  * GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
 'storage.googleapis.com' is specified, access to the storage
 buckets inside the perimeter must meet the perimeter's access
-restrictions. */
+restrictions.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#restricted_services AccessContextManagerServicePerimeters#restricted_services}
+  */
   readonly restrictedServices?: string[];
-  /** egress_policies block */
+  /**
+  * egress_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#egress_policies AccessContextManagerServicePerimeters#egress_policies}
+  */
   readonly egressPolicies?: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPolicies[];
-  /** ingress_policies block */
+  /**
+  * ingress_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#ingress_policies AccessContextManagerServicePerimeters#ingress_policies}
+  */
   readonly ingressPolicies?: AccessContextManagerServicePerimetersServicePerimetersSpecIngressPolicies[];
-  /** vpc_accessible_services block */
+  /**
+  * vpc_accessible_services block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#vpc_accessible_services AccessContextManagerServicePerimeters#vpc_accessible_services}
+  */
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServices[];
 }
 
@@ -284,13 +420,21 @@ function accessContextManagerServicePerimetersServicePerimetersSpecToTerraform(s
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressFrom {
-  /** A list of identities that are allowed access through this 'EgressPolicy'. 
+  /**
+  * A list of identities that are allowed access through this 'EgressPolicy'. 
 Should be in the format of email address. The email address should 
-represent individual user or service account only. */
+represent individual user or service account only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identities AccessContextManagerServicePerimeters#identities}
+  */
   readonly identities?: string[];
-  /** Specifies the type of identities that are allowed access to outside the 
+  /**
+  * Specifies the type of identities that are allowed access to outside the 
 perimeter. If left unspecified, then members of 'identities' field will 
-be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identity_type AccessContextManagerServicePerimeters#identity_type}
+  */
   readonly identityType?: string;
 }
 
@@ -303,12 +447,20 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperationsMethodSelectors {
-  /** Value for 'method' should be a valid method name for the corresponding 
+  /**
+  * Value for 'method' should be a valid method name for the corresponding 
 'serviceName' in 'ApiOperation'. If '*' used as value for method, 
-then ALL methods and permissions are allowed. */
+then ALL methods and permissions are allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method AccessContextManagerServicePerimeters#method}
+  */
   readonly method?: string;
-  /** Value for permission should be a valid Cloud IAM permission for the 
-corresponding 'serviceName' in 'ApiOperation'. */
+  /**
+  * Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#permission AccessContextManagerServicePerimeters#permission}
+  */
   readonly permission?: string;
 }
 
@@ -321,11 +473,19 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperations {
-  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+  /**
+  * The name of the API whose methods or permissions the 'IngressPolicy' or 
 'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName 
-field set to '*' will allow all methods AND permissions for all services. */
+field set to '*' will allow all methods AND permissions for all services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#service_name AccessContextManagerServicePerimeters#service_name}
+  */
   readonly serviceName?: string;
-  /** method_selectors block */
+  /**
+  * method_selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method_selectors AccessContextManagerServicePerimeters#method_selectors}
+  */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperationsMethodSelectors[];
 }
 
@@ -338,13 +498,21 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo {
-  /** A list of resources, currently only projects in the form 
+  /**
+  * A list of resources, currently only projects in the form 
 'projects/<projectnumber>', that match this to stanza. A request matches 
 if it contains a resource in this list. If * is specified for resources, 
 then this 'EgressTo' rule will authorize access to all resources outside 
-the perimeter. */
+the perimeter.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resources AccessContextManagerServicePerimeters#resources}
+  */
   readonly resources?: string[];
-  /** operations block */
+  /**
+  * operations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#operations AccessContextManagerServicePerimeters#operations}
+  */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperations[];
 }
 
@@ -357,9 +525,17 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPolicies {
-  /** egress_from block */
+  /**
+  * egress_from block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#egress_from AccessContextManagerServicePerimeters#egress_from}
+  */
   readonly egressFrom?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressFrom[];
-  /** egress_to block */
+  /**
+  * egress_to block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#egress_to AccessContextManagerServicePerimeters#egress_to}
+  */
   readonly egressTo?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo[];
 }
 
@@ -372,21 +548,29 @@ function accessContextManagerServicePerimetersServicePerimetersStatusEgressPolic
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFromSources {
-  /** An 'AccessLevel' resource name that allow resources within the 
+  /**
+  * An 'AccessLevel' resource name that allow resources within the 
 'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed 
 must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent
 'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, 
 resources within the perimeter can only be accessed via Google Cloud calls 
 with request origins within the perimeter. 
 Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' 
-If * is specified, then all IngressSources will be allowed. */
+If * is specified, then all IngressSources will be allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#access_level AccessContextManagerServicePerimeters#access_level}
+  */
   readonly accessLevel?: string;
-  /** A Google Cloud resource that is allowed to ingress the perimeter. 
+  /**
+  * A Google Cloud resource that is allowed to ingress the perimeter. 
 Requests from these resources will be allowed to access perimeter data. 
 Currently only projects are allowed. Format 'projects/{project_number}' 
 The project may be in any Google Cloud organization, not just the 
 organization that the perimeter is defined in. '*' is not allowed, the case 
-of allowing all Google Cloud resources only is not supported. */
+of allowing all Google Cloud resources only is not supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resource AccessContextManagerServicePerimeters#resource}
+  */
   readonly resource?: string;
 }
 
@@ -399,15 +583,27 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFrom {
-  /** A list of identities that are allowed access through this ingress policy.
+  /**
+  * A list of identities that are allowed access through this ingress policy.
 Should be in the format of email address. The email address should represent 
-individual user or service account only. */
+individual user or service account only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identities AccessContextManagerServicePerimeters#identities}
+  */
   readonly identities?: string[];
-  /** Specifies the type of identities that are allowed access from outside the 
+  /**
+  * Specifies the type of identities that are allowed access from outside the 
 perimeter. If left unspecified, then members of 'identities' field will be 
-allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"] */
+allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "ANY_USER_ACCOUNT", "ANY_SERVICE_ACCOUNT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#identity_type AccessContextManagerServicePerimeters#identity_type}
+  */
   readonly identityType?: string;
-  /** sources block */
+  /**
+  * sources block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#sources AccessContextManagerServicePerimeters#sources}
+  */
   readonly sources?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFromSources[];
 }
 
@@ -421,12 +617,20 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperationsMethodSelectors {
-  /** Value for method should be a valid method name for the corresponding 
+  /**
+  * Value for method should be a valid method name for the corresponding 
 serviceName in 'ApiOperation'. If '*' used as value for 'method', then 
-ALL methods and permissions are allowed. */
+ALL methods and permissions are allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method AccessContextManagerServicePerimeters#method}
+  */
   readonly method?: string;
-  /** Value for permission should be a valid Cloud IAM permission for the 
-corresponding 'serviceName' in 'ApiOperation'. */
+  /**
+  * Value for permission should be a valid Cloud IAM permission for the 
+corresponding 'serviceName' in 'ApiOperation'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#permission AccessContextManagerServicePerimeters#permission}
+  */
   readonly permission?: string;
 }
 
@@ -439,11 +643,19 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperations {
-  /** The name of the API whose methods or permissions the 'IngressPolicy' or 
+  /**
+  * The name of the API whose methods or permissions the 'IngressPolicy' or 
 'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' 
-field set to '*' will allow all methods AND permissions for all services. */
+field set to '*' will allow all methods AND permissions for all services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#service_name AccessContextManagerServicePerimeters#service_name}
+  */
   readonly serviceName?: string;
-  /** method_selectors block */
+  /**
+  * method_selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#method_selectors AccessContextManagerServicePerimeters#method_selectors}
+  */
   readonly methodSelectors?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperationsMethodSelectors[];
 }
 
@@ -456,16 +668,24 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressTo {
-  /** A list of resources, currently only projects in the form 
+  /**
+  * A list of resources, currently only projects in the form 
 'projects/<projectnumber>', protected by this 'ServicePerimeter'
 that are allowed to be accessed by sources defined in the
 corresponding 'IngressFrom'. A request matches if it contains
 a resource in this list. If '*' is specified for resources,
 then this 'IngressTo' rule will authorize access to all 
 resources inside the perimeter, provided that the request
-also matches the 'operations' field. */
+also matches the 'operations' field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resources AccessContextManagerServicePerimeters#resources}
+  */
   readonly resources?: string[];
-  /** operations block */
+  /**
+  * operations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#operations AccessContextManagerServicePerimeters#operations}
+  */
   readonly operations?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressToOperations[];
 }
 
@@ -478,9 +698,17 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusIngressPolicies {
-  /** ingress_from block */
+  /**
+  * ingress_from block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#ingress_from AccessContextManagerServicePerimeters#ingress_from}
+  */
   readonly ingressFrom?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFrom[];
-  /** ingress_to block */
+  /**
+  * ingress_to block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#ingress_to AccessContextManagerServicePerimeters#ingress_to}
+  */
   readonly ingressTo?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressTo[];
 }
 
@@ -493,11 +721,19 @@ function accessContextManagerServicePerimetersServicePerimetersStatusIngressPoli
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServices {
-  /** The list of APIs usable within the Service Perimeter.
-Must be empty unless 'enableRestriction' is True. */
+  /**
+  * The list of APIs usable within the Service Perimeter.
+Must be empty unless 'enableRestriction' is True.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#allowed_services AccessContextManagerServicePerimeters#allowed_services}
+  */
   readonly allowedServices?: string[];
-  /** Whether to restrict API calls within the Service Perimeter to the
-list of APIs specified in 'allowedServices'. */
+  /**
+  * Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#enable_restriction AccessContextManagerServicePerimeters#enable_restriction}
+  */
   readonly enableRestriction?: boolean;
 }
 
@@ -510,7 +746,8 @@ function accessContextManagerServicePerimetersServicePerimetersStatusVpcAccessib
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimetersStatus {
-  /** A list of AccessLevel resource names that allow resources within
+  /**
+  * A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
 AccessLevels listed must be in the same policy as this
 ServicePerimeter. Referencing a nonexistent AccessLevel is a
@@ -519,23 +756,46 @@ the perimeter can only be accessed via GCP calls with request
 origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 
-Format: accessPolicies/{policy_id}/accessLevels/{access_level_name} */
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#access_levels AccessContextManagerServicePerimeters#access_levels}
+  */
   readonly accessLevels?: string[];
-  /** A list of GCP resources that are inside of the service perimeter.
+  /**
+  * A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
-Format: projects/{project_number} */
+Format: projects/{project_number}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#resources AccessContextManagerServicePerimeters#resources}
+  */
   readonly resources?: string[];
-  /** GCP services that are subject to the Service Perimeter
+  /**
+  * GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
 'storage.googleapis.com' is specified, access to the storage
 buckets inside the perimeter must meet the perimeter's access
-restrictions. */
+restrictions.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#restricted_services AccessContextManagerServicePerimeters#restricted_services}
+  */
   readonly restrictedServices?: string[];
-  /** egress_policies block */
+  /**
+  * egress_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#egress_policies AccessContextManagerServicePerimeters#egress_policies}
+  */
   readonly egressPolicies?: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPolicies[];
-  /** ingress_policies block */
+  /**
+  * ingress_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#ingress_policies AccessContextManagerServicePerimeters#ingress_policies}
+  */
   readonly ingressPolicies?: AccessContextManagerServicePerimetersServicePerimetersStatusIngressPolicies[];
-  /** vpc_accessible_services block */
+  /**
+  * vpc_accessible_services block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#vpc_accessible_services AccessContextManagerServicePerimeters#vpc_accessible_services}
+  */
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServices[];
 }
 
@@ -552,14 +812,23 @@ function accessContextManagerServicePerimetersServicePerimetersStatusToTerraform
 }
 
 export interface AccessContextManagerServicePerimetersServicePerimeters {
-  /** Description of the ServicePerimeter and its use. Does not affect
-behavior. */
+  /**
+  * Description of the ServicePerimeter and its use. Does not affect
+behavior.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#description AccessContextManagerServicePerimeters#description}
+  */
   readonly description?: string;
-  /** Resource name for the ServicePerimeter. The short_name component must
+  /**
+  * Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
-Format: accessPolicies/{policy_id}/servicePerimeters/{short_name} */
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#name AccessContextManagerServicePerimeters#name}
+  */
   readonly name: string;
-  /** Specifies the type of the Perimeter. There are two types: regular and
+  /**
+  * Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
 and restricted services. Every resource can be in at most
 ONE regular Service Perimeter.
@@ -574,11 +843,19 @@ entirely by the regular perimeter that resource is in.
 Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
-themselves. Default value: "PERIMETER_TYPE_REGULAR" Possible values: ["PERIMETER_TYPE_REGULAR", "PERIMETER_TYPE_BRIDGE"] */
+themselves. Default value: "PERIMETER_TYPE_REGULAR" Possible values: ["PERIMETER_TYPE_REGULAR", "PERIMETER_TYPE_BRIDGE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#perimeter_type AccessContextManagerServicePerimeters#perimeter_type}
+  */
   readonly perimeterType?: string;
-  /** Human readable title. Must be unique within the Policy. */
+  /**
+  * Human readable title. Must be unique within the Policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#title AccessContextManagerServicePerimeters#title}
+  */
   readonly title: string;
-  /** Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+  /**
+  * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
 Service Perimeters. When this flag is set, it inhibits the generation of the
 implicit spec, thereby allowing the user to explicitly provide a
@@ -586,11 +863,22 @@ configuration ("spec") to use in a dry-run version of the Service Perimeter.
 This allows the user to test changes to the enforced config ("status") without
 actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
-bet set to True if any of the fields in the spec are set to non-default values. */
+bet set to True if any of the fields in the spec are set to non-default values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#use_explicit_dry_run_spec AccessContextManagerServicePerimeters#use_explicit_dry_run_spec}
+  */
   readonly useExplicitDryRunSpec?: boolean;
-  /** spec block */
+  /**
+  * spec block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#spec AccessContextManagerServicePerimeters#spec}
+  */
   readonly spec?: AccessContextManagerServicePerimetersServicePerimetersSpec[];
-  /** status block */
+  /**
+  * status block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#status AccessContextManagerServicePerimeters#status}
+  */
   readonly status?: AccessContextManagerServicePerimetersServicePerimetersStatus[];
 }
 
@@ -608,8 +896,17 @@ function accessContextManagerServicePerimetersServicePerimetersToTerraform(struc
 }
 
 export interface AccessContextManagerServicePerimetersTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#create AccessContextManagerServicePerimeters#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#delete AccessContextManagerServicePerimeters#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#update AccessContextManagerServicePerimeters#update}
+  */
   readonly update?: string;
 }
 
@@ -623,14 +920,22 @@ function accessContextManagerServicePerimetersTimeoutsToTerraform(struct?: Acces
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html google_access_context_manager_service_perimeters}
+*/
 export class AccessContextManagerServicePerimeters extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html google_access_context_manager_service_perimeters} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AccessContextManagerServicePerimetersConfig
+  */
   public constructor(scope: Construct, id: string, config: AccessContextManagerServicePerimetersConfig) {
     super(scope, id, {
       terraformResourceType: 'google_access_context_manager_service_perimeters',

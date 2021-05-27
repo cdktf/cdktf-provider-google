@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageDefaultObjectAclConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html#bucket StorageDefaultObjectAcl#bucket}
+  */
   readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html#role_entity StorageDefaultObjectAcl#role_entity}
+  */
   readonly roleEntity?: string[];
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html google_storage_default_object_acl}
+*/
 export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html google_storage_default_object_acl} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageDefaultObjectAclConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageDefaultObjectAclConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_default_object_acl',

@@ -7,22 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface OrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
+  /**
+  * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#constraint OrganizationPolicy#constraint}
+  */
   readonly constraint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#org_id OrganizationPolicy#org_id}
+  */
   readonly orgId: string;
-  /** Version of the Policy. Default version is 0. */
+  /**
+  * Version of the Policy. Default version is 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#version OrganizationPolicy#version}
+  */
   readonly version?: number;
-  /** boolean_policy block */
+  /**
+  * boolean_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#boolean_policy OrganizationPolicy#boolean_policy}
+  */
   readonly booleanPolicy?: OrganizationPolicyBooleanPolicy[];
-  /** list_policy block */
+  /**
+  * list_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#list_policy OrganizationPolicy#list_policy}
+  */
   readonly listPolicy?: OrganizationPolicyListPolicy[];
-  /** restore_policy block */
+  /**
+  * restore_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#restore_policy OrganizationPolicy#restore_policy}
+  */
   readonly restorePolicy?: OrganizationPolicyRestorePolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#timeouts OrganizationPolicy#timeouts}
+  */
   readonly timeouts?: OrganizationPolicyTimeouts;
 }
 export interface OrganizationPolicyBooleanPolicy {
-  /** If true, then the Policy is enforced. If false, then any configuration is acceptable. */
+  /**
+  * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#enforced OrganizationPolicy#enforced}
+  */
   readonly enforced: boolean;
 }
 
@@ -34,9 +65,17 @@ function organizationPolicyBooleanPolicyToTerraform(struct?: OrganizationPolicyB
 }
 
 export interface OrganizationPolicyListPolicyAllow {
-  /** The policy allows or denies all values. */
+  /**
+  * The policy allows or denies all values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#all OrganizationPolicy#all}
+  */
   readonly all?: boolean;
-  /** The policy can define specific values that are allowed or denied. */
+  /**
+  * The policy can define specific values that are allowed or denied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#values OrganizationPolicy#values}
+  */
   readonly values?: string[];
 }
 
@@ -49,9 +88,17 @@ function organizationPolicyListPolicyAllowToTerraform(struct?: OrganizationPolic
 }
 
 export interface OrganizationPolicyListPolicyDeny {
-  /** The policy allows or denies all values. */
+  /**
+  * The policy allows or denies all values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#all OrganizationPolicy#all}
+  */
   readonly all?: boolean;
-  /** The policy can define specific values that are allowed or denied. */
+  /**
+  * The policy can define specific values that are allowed or denied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#values OrganizationPolicy#values}
+  */
   readonly values?: string[];
 }
 
@@ -64,13 +111,29 @@ function organizationPolicyListPolicyDenyToTerraform(struct?: OrganizationPolicy
 }
 
 export interface OrganizationPolicyListPolicy {
-  /** If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. */
+  /**
+  * If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#inherit_from_parent OrganizationPolicy#inherit_from_parent}
+  */
   readonly inheritFromParent?: boolean;
-  /** The Google Cloud Console will try to default to a configuration that matches the value specified in this field. */
+  /**
+  * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#suggested_value OrganizationPolicy#suggested_value}
+  */
   readonly suggestedValue?: string;
-  /** allow block */
+  /**
+  * allow block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#allow OrganizationPolicy#allow}
+  */
   readonly allow?: OrganizationPolicyListPolicyAllow[];
-  /** deny block */
+  /**
+  * deny block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#deny OrganizationPolicy#deny}
+  */
   readonly deny?: OrganizationPolicyListPolicyDeny[];
 }
 
@@ -85,7 +148,11 @@ function organizationPolicyListPolicyToTerraform(struct?: OrganizationPolicyList
 }
 
 export interface OrganizationPolicyRestorePolicy {
-  /** May only be set to true. If set, then the default Policy is restored. */
+  /**
+  * May only be set to true. If set, then the default Policy is restored.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#default OrganizationPolicy#default}
+  */
   readonly default: boolean;
 }
 
@@ -97,9 +164,21 @@ function organizationPolicyRestorePolicyToTerraform(struct?: OrganizationPolicyR
 }
 
 export interface OrganizationPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#create OrganizationPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#delete OrganizationPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#read OrganizationPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#update OrganizationPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -114,14 +193,22 @@ function organizationPolicyTimeoutsToTerraform(struct?: OrganizationPolicyTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html google_organization_policy}
+*/
 export class OrganizationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html google_organization_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options OrganizationPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: OrganizationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_organization_policy',

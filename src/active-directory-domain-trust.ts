@@ -7,28 +7,72 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ActiveDirectoryDomainTrustConfig extends cdktf.TerraformMetaArguments {
-  /** The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
-https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains. */
+  /**
+  * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
+https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#domain ActiveDirectoryDomainTrust#domain}
+  */
   readonly domain: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#project ActiveDirectoryDomainTrust#project}
+  */
   readonly project?: string;
-  /** Whether the trusted side has forest/domain wide access or selective access to an approved set of resources. */
+  /**
+  * Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#selective_authentication ActiveDirectoryDomainTrust#selective_authentication}
+  */
   readonly selectiveAuthentication?: boolean;
-  /** The target DNS server IP addresses which can resolve the remote domain involved in the trust. */
+  /**
+  * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#target_dns_ip_addresses ActiveDirectoryDomainTrust#target_dns_ip_addresses}
+  */
   readonly targetDnsIpAddresses: string[];
-  /** The fully qualified target domain name which will be in trust with the current domain. */
+  /**
+  * The fully qualified target domain name which will be in trust with the current domain.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#target_domain_name ActiveDirectoryDomainTrust#target_domain_name}
+  */
   readonly targetDomainName: string;
-  /** The trust direction, which decides if the current domain is trusted, trusting, or both. Possible values: ["INBOUND", "OUTBOUND", "BIDIRECTIONAL"] */
+  /**
+  * The trust direction, which decides if the current domain is trusted, trusting, or both. Possible values: ["INBOUND", "OUTBOUND", "BIDIRECTIONAL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#trust_direction ActiveDirectoryDomainTrust#trust_direction}
+  */
   readonly trustDirection: string;
-  /** The trust secret used for the handshake with the target domain. This will not be stored. */
+  /**
+  * The trust secret used for the handshake with the target domain. This will not be stored.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#trust_handshake_secret ActiveDirectoryDomainTrust#trust_handshake_secret}
+  */
   readonly trustHandshakeSecret: string;
-  /** The type of trust represented by the trust resource. Possible values: ["FOREST", "EXTERNAL"] */
+  /**
+  * The type of trust represented by the trust resource. Possible values: ["FOREST", "EXTERNAL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#trust_type ActiveDirectoryDomainTrust#trust_type}
+  */
   readonly trustType: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#timeouts ActiveDirectoryDomainTrust#timeouts}
+  */
   readonly timeouts?: ActiveDirectoryDomainTrustTimeouts;
 }
 export interface ActiveDirectoryDomainTrustTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#create ActiveDirectoryDomainTrust#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#delete ActiveDirectoryDomainTrust#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#update ActiveDirectoryDomainTrust#update}
+  */
   readonly update?: string;
 }
 
@@ -42,14 +86,22 @@ function activeDirectoryDomainTrustTimeoutsToTerraform(struct?: ActiveDirectoryD
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html google_active_directory_domain_trust}
+*/
 export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html google_active_directory_domain_trust} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ActiveDirectoryDomainTrustConfig
+  */
   public constructor(scope: Construct, id: string, config: ActiveDirectoryDomainTrustConfig) {
     super(scope, id, {
       terraformResourceType: 'google_active_directory_domain_trust',

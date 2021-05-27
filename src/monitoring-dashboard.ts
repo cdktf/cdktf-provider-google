@@ -7,16 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitoringDashboardConfig extends cdktf.TerraformMetaArguments {
-  /** The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards. */
+  /**
+  * The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html#dashboard_json MonitoringDashboard#dashboard_json}
+  */
   readonly dashboardJson: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html#project MonitoringDashboard#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html#timeouts MonitoringDashboard#timeouts}
+  */
   readonly timeouts?: MonitoringDashboardTimeouts;
 }
 export interface MonitoringDashboardTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html#create MonitoringDashboard#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html#delete MonitoringDashboard#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html#update MonitoringDashboard#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +51,22 @@ function monitoringDashboardTimeoutsToTerraform(struct?: MonitoringDashboardTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html google_monitoring_dashboard}
+*/
 export class MonitoringDashboard extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_dashboard.html google_monitoring_dashboard} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitoringDashboardConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitoringDashboardConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_dashboard',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_redis_instance.html
+// https://www.terraform.io/docs/providers/google/d/redis_instance.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,21 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The ID of the instance or a fully qualified identifier for the instance. */
+  /**
+  * The ID of the instance or a fully qualified identifier for the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html#name DataGoogleRedisInstance#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html#project DataGoogleRedisInstance#project}
+  */
   readonly project?: string;
-  /** The name of the Redis region of the instance. */
+  /**
+  * The name of the Redis region of the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html#region DataGoogleRedisInstance#region}
+  */
   readonly region?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html google_redis_instance}
+*/
 export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html google_redis_instance} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleRedisInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleRedisInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_redis_instance',

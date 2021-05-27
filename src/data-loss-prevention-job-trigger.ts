@@ -7,29 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLossPreventionJobTriggerConfig extends cdktf.TerraformMetaArguments {
-  /** A description of the job trigger. */
+  /**
+  * A description of the job trigger.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#description DataLossPreventionJobTrigger#description}
+  */
   readonly description?: string;
-  /** User set display name of the job trigger. */
+  /**
+  * User set display name of the job trigger.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#display_name DataLossPreventionJobTrigger#display_name}
+  */
   readonly displayName?: string;
-  /** The parent of the trigger, either in the format 'projects/{{project}}'
-or 'projects/{{project}}/locations/{{location}}' */
+  /**
+  * The parent of the trigger, either in the format 'projects/{{project}}'
+or 'projects/{{project}}/locations/{{location}}'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#parent DataLossPreventionJobTrigger#parent}
+  */
   readonly parent: string;
-  /** Whether the trigger is currently active. Default value: "HEALTHY" Possible values: ["PAUSED", "HEALTHY", "CANCELLED"] */
+  /**
+  * Whether the trigger is currently active. Default value: "HEALTHY" Possible values: ["PAUSED", "HEALTHY", "CANCELLED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#status DataLossPreventionJobTrigger#status}
+  */
   readonly status?: string;
-  /** inspect_job block */
+  /**
+  * inspect_job block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#inspect_job DataLossPreventionJobTrigger#inspect_job}
+  */
   readonly inspectJob?: DataLossPreventionJobTriggerInspectJob[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#timeouts DataLossPreventionJobTrigger#timeouts}
+  */
   readonly timeouts?: DataLossPreventionJobTriggerTimeouts;
-  /** triggers block */
+  /**
+  * triggers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#triggers DataLossPreventionJobTrigger#triggers}
+  */
   readonly triggers: DataLossPreventionJobTriggerTriggers[];
 }
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable {
-  /** Dataset ID of the table. */
+  /**
+  * Dataset ID of the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#dataset_id DataLossPreventionJobTrigger#dataset_id}
+  */
   readonly datasetId: string;
-  /** The Google Cloud Platform project ID of the project containing the table. */
+  /**
+  * The Google Cloud Platform project ID of the project containing the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#project_id DataLossPreventionJobTrigger#project_id}
+  */
   readonly projectId: string;
-  /** Name of the table. If is not set a new one will be generated for you with the following format:
-'dlp_googleapis_yyyy_mm_dd_[dlp_job_id]'. Pacific timezone will be used for generating the date details. */
+  /**
+  * Name of the table. If is not set a new one will be generated for you with the following format:
+'dlp_googleapis_yyyy_mm_dd_[dlp_job_id]'. Pacific timezone will be used for generating the date details.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#table_id DataLossPreventionJobTrigger#table_id}
+  */
   readonly tableId?: string;
 }
 
@@ -43,16 +83,24 @@ function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTa
 }
 
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig {
-  /** Schema used for writing the findings for Inspect jobs. This field is only used for
+  /**
+  * Schema used for writing the findings for Inspect jobs. This field is only used for
 Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
 object. If appending to an existing table, any columns from the predefined schema
 that are missing will be added. No columns in the existing table will be deleted.
 
 If unspecified, then all available columns will be used for a new table or an (existing)
 table with no schema, and no changes will be made to an existing table that has a schema.
-Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLUMNS", "DATASTORE_COLUMNS", "BIG_QUERY_COLUMNS", "ALL_COLUMNS"] */
+Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLUMNS", "DATASTORE_COLUMNS", "BIG_QUERY_COLUMNS", "ALL_COLUMNS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#output_schema DataLossPreventionJobTrigger#output_schema}
+  */
   readonly outputSchema?: string;
-  /** table block */
+  /**
+  * table block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#table DataLossPreventionJobTrigger#table}
+  */
   readonly table: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable[];
 }
 
@@ -65,7 +113,11 @@ function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTo
 }
 
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindings {
-  /** output_config block */
+  /**
+  * output_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#output_config DataLossPreventionJobTrigger#output_config}
+  */
   readonly outputConfig: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig[];
 }
 
@@ -77,7 +129,11 @@ function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerraform(st
 }
 
 export interface DataLossPreventionJobTriggerInspectJobActions {
-  /** save_findings block */
+  /**
+  * save_findings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#save_findings DataLossPreventionJobTrigger#save_findings}
+  */
   readonly saveFindings: DataLossPreventionJobTriggerInspectJobActionsSaveFindings[];
 }
 
@@ -89,11 +145,23 @@ function dataLossPreventionJobTriggerInspectJobActionsToTerraform(struct?: DataL
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference {
-  /** The dataset ID of the table. */
+  /**
+  * The dataset ID of the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#dataset_id DataLossPreventionJobTrigger#dataset_id}
+  */
   readonly datasetId: string;
-  /** The Google Cloud Platform project ID of the project containing the table. */
+  /**
+  * The Google Cloud Platform project ID of the project containing the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#project_id DataLossPreventionJobTrigger#project_id}
+  */
   readonly projectId: string;
-  /** The name of the table. */
+  /**
+  * The name of the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#table_id DataLossPreventionJobTrigger#table_id}
+  */
   readonly tableId: string;
 }
 
@@ -107,7 +175,11 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTable
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
-  /** table_reference block */
+  /**
+  * table_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#table_reference DataLossPreventionJobTrigger#table_reference}
+  */
   readonly tableReference: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference[];
 }
 
@@ -119,15 +191,27 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsToTer
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
-  /** The name of a Cloud Storage bucket. */
+  /**
+  * The name of a Cloud Storage bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#bucket_name DataLossPreventionJobTrigger#bucket_name}
+  */
   readonly bucketName: string;
-  /** A list of regular expressions matching file paths to exclude. All files in the bucket that match at
-least one of these regular expressions will be excluded from the scan. */
+  /**
+  * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+least one of these regular expressions will be excluded from the scan.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#exclude_regex DataLossPreventionJobTrigger#exclude_regex}
+  */
   readonly excludeRegex?: string[];
-  /** A list of regular expressions matching file paths to include. All files in the bucket
+  /**
+  * A list of regular expressions matching file paths to include. All files in the bucket
 that match at least one of these regular expressions will be included in the set of files,
 except for those that also match an item in excludeRegex. Leaving this field empty will
-match all files by default (this is equivalent to including .* in the list) */
+match all files by default (this is equivalent to including .* in the list)
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#include_regex DataLossPreventionJobTrigger#include_regex}
+  */
   readonly includeRegex?: string[];
 }
 
@@ -141,14 +225,22 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsF
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet {
-  /** The Cloud Storage url of the file(s) to scan, in the format 'gs://<bucket>/<path>'. Trailing wildcard
+  /**
+  * The Cloud Storage url of the file(s) to scan, in the format 'gs://<bucket>/<path>'. Trailing wildcard
 in the path is allowed.
 
 If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
 non-recursively (content in sub-directories will not be scanned). This means that 'gs://mybucket/' is
-equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to 'gs://mybucket/directory/*'. */
+equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to 'gs://mybucket/directory/*'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#url DataLossPreventionJobTrigger#url}
+  */
   readonly url?: string;
-  /** regex_file_set block */
+  /**
+  * regex_file_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#regex_file_set DataLossPreventionJobTrigger#regex_file_set}
+  */
   readonly regexFileSet?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet[];
 }
 
@@ -161,23 +253,47 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsF
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions {
-  /** Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
-then the rest of the bytes are omitted. */
+  /**
+  * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
+then the rest of the bytes are omitted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#bytes_limit_per_file DataLossPreventionJobTrigger#bytes_limit_per_file}
+  */
   readonly bytesLimitPerFile?: number;
-  /** Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
-Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. */
+  /**
+  * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
+Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#bytes_limit_per_file_percent DataLossPreventionJobTrigger#bytes_limit_per_file_percent}
+  */
   readonly bytesLimitPerFilePercent?: number;
-  /** List of file type groups to include in the scan. If empty, all files are scanned and available data
+  /**
+  * List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
-Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: ["BINARY_FILE", "TEXT_FILE", "IMAGE", "WORD", "PDF", "AVRO", "CSV", "TSV"] */
+Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: ["BINARY_FILE", "TEXT_FILE", "IMAGE", "WORD", "PDF", "AVRO", "CSV", "TSV"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#file_types DataLossPreventionJobTrigger#file_types}
+  */
   readonly fileTypes?: string[];
-  /** Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
-Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. */
+  /**
+  * Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
+Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#files_limit_percent DataLossPreventionJobTrigger#files_limit_percent}
+  */
   readonly filesLimitPercent?: number;
-  /** How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
-If not specified, scanning would start from the top. Possible values: ["TOP", "RANDOM_START"] */
+  /**
+  * How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
+If not specified, scanning would start from the top. Possible values: ["TOP", "RANDOM_START"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#sample_method DataLossPreventionJobTrigger#sample_method}
+  */
   readonly sampleMethod?: string;
-  /** file_set block */
+  /**
+  * file_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#file_set DataLossPreventionJobTrigger#file_set}
+  */
   readonly fileSet: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet[];
 }
 
@@ -194,7 +310,11 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsT
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind {
-  /** The name of the Datastore kind. */
+  /**
+  * The name of the Datastore kind.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#name DataLossPreventionJobTrigger#name}
+  */
   readonly name: string;
 }
 
@@ -206,9 +326,17 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId {
-  /** If not empty, the ID of the namespace to which the entities belong. */
+  /**
+  * If not empty, the ID of the namespace to which the entities belong.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#namespace_id DataLossPreventionJobTrigger#namespace_id}
+  */
   readonly namespaceId?: string;
-  /** The ID of the project to which the entities belong. */
+  /**
+  * The ID of the project to which the entities belong.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#project_id DataLossPreventionJobTrigger#project_id}
+  */
   readonly projectId: string;
 }
 
@@ -221,9 +349,17 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPart
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
-  /** kind block */
+  /**
+  * kind block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#kind DataLossPreventionJobTrigger#kind}
+  */
   readonly kind: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind[];
-  /** partition_id block */
+  /**
+  * partition_id block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#partition_id DataLossPreventionJobTrigger#partition_id}
+  */
   readonly partitionId: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId[];
 }
 
@@ -236,14 +372,18 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsToTe
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField {
-  /** Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery.
+  /**
+  * Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery.
 
 For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was
 modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp
 field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column.
 
 For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the
-timestamp property does not exist or its value is empty or invalid. */
+timestamp property does not exist or its value is empty or invalid.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#name DataLossPreventionJobTrigger#name}
+  */
   readonly name: string;
 }
 
@@ -255,15 +395,31 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimest
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig {
-  /** When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+  /**
+  * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
 scanning files that have not been modified since the last time the JobTrigger executed. This will
-be based on the time of the execution of the last run of the JobTrigger. */
+be based on the time of the execution of the last run of the JobTrigger.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
+  */
   readonly enableAutoPopulationOfTimespanConfig?: boolean;
-  /** Exclude files or rows newer than this value. If set to zero, no upper time limit is applied. */
+  /**
+  * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#end_time DataLossPreventionJobTrigger#end_time}
+  */
   readonly endTime?: string;
-  /** Exclude files or rows older than this value. */
+  /**
+  * Exclude files or rows older than this value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#start_time DataLossPreventionJobTrigger#start_time}
+  */
   readonly startTime?: string;
-  /** timestamp_field block */
+  /**
+  * timestamp_field block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#timestamp_field DataLossPreventionJobTrigger#timestamp_field}
+  */
   readonly timestampField: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField[];
 }
 
@@ -278,13 +434,29 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigToTerr
 }
 
 export interface DataLossPreventionJobTriggerInspectJobStorageConfig {
-  /** big_query_options block */
+  /**
+  * big_query_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#big_query_options DataLossPreventionJobTrigger#big_query_options}
+  */
   readonly bigQueryOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions[];
-  /** cloud_storage_options block */
+  /**
+  * cloud_storage_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#cloud_storage_options DataLossPreventionJobTrigger#cloud_storage_options}
+  */
   readonly cloudStorageOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions[];
-  /** datastore_options block */
+  /**
+  * datastore_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#datastore_options DataLossPreventionJobTrigger#datastore_options}
+  */
   readonly datastoreOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions[];
-  /** timespan_config block */
+  /**
+  * timespan_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#timespan_config DataLossPreventionJobTrigger#timespan_config}
+  */
   readonly timespanConfig?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig[];
 }
 
@@ -299,11 +471,23 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(struct?:
 }
 
 export interface DataLossPreventionJobTriggerInspectJob {
-  /** The name of the template to run when this job is triggered. */
+  /**
+  * The name of the template to run when this job is triggered.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#inspect_template_name DataLossPreventionJobTrigger#inspect_template_name}
+  */
   readonly inspectTemplateName: string;
-  /** actions block */
+  /**
+  * actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#actions DataLossPreventionJobTrigger#actions}
+  */
   readonly actions: DataLossPreventionJobTriggerInspectJobActions[];
-  /** storage_config block */
+  /**
+  * storage_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#storage_config DataLossPreventionJobTrigger#storage_config}
+  */
   readonly storageConfig: DataLossPreventionJobTriggerInspectJobStorageConfig[];
 }
 
@@ -317,8 +501,17 @@ function dataLossPreventionJobTriggerInspectJobToTerraform(struct?: DataLossPrev
 }
 
 export interface DataLossPreventionJobTriggerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#create DataLossPreventionJobTrigger#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#delete DataLossPreventionJobTrigger#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#update DataLossPreventionJobTrigger#update}
+  */
   readonly update?: string;
 }
 
@@ -332,13 +525,17 @@ function dataLossPreventionJobTriggerTimeoutsToTerraform(struct?: DataLossPreven
 }
 
 export interface DataLossPreventionJobTriggerTriggersSchedule {
-  /** With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
+  /**
+  * With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
 
 A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
 
 This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
 
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#recurrence_period_duration DataLossPreventionJobTrigger#recurrence_period_duration}
+  */
   readonly recurrencePeriodDuration?: string;
 }
 
@@ -350,7 +547,11 @@ function dataLossPreventionJobTriggerTriggersScheduleToTerraform(struct?: DataLo
 }
 
 export interface DataLossPreventionJobTriggerTriggers {
-  /** schedule block */
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#schedule DataLossPreventionJobTrigger#schedule}
+  */
   readonly schedule?: DataLossPreventionJobTriggerTriggersSchedule[];
 }
 
@@ -362,14 +563,22 @@ function dataLossPreventionJobTriggerTriggersToTerraform(struct?: DataLossPreven
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html google_data_loss_prevention_job_trigger}
+*/
 export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html google_data_loss_prevention_job_trigger} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLossPreventionJobTriggerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLossPreventionJobTriggerConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_loss_prevention_job_trigger',

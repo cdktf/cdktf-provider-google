@@ -7,27 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface GameServicesGameServerConfigConfig extends cdktf.TerraformMetaArguments {
-  /** A unique id for the deployment config. */
+  /**
+  * A unique id for the deployment config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#config_id GameServicesGameServerConfig#config_id}
+  */
   readonly configId: string;
-  /** A unique id for the deployment. */
+  /**
+  * A unique id for the deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#deployment_id GameServicesGameServerConfig#deployment_id}
+  */
   readonly deploymentId: string;
-  /** The description of the game server config. */
+  /**
+  * The description of the game server config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#description GameServicesGameServerConfig#description}
+  */
   readonly description?: string;
-  /** The labels associated with this game server config. Each label is a
-key-value pair. */
+  /**
+  * The labels associated with this game server config. Each label is a
+key-value pair.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#labels GameServicesGameServerConfig#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Location of the Deployment. */
+  /**
+  * Location of the Deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#location GameServicesGameServerConfig#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#project GameServicesGameServerConfig#project}
+  */
   readonly project?: string;
-  /** fleet_configs block */
+  /**
+  * fleet_configs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#fleet_configs GameServicesGameServerConfig#fleet_configs}
+  */
   readonly fleetConfigs: GameServicesGameServerConfigFleetConfigs[];
-  /** scaling_configs block */
+  /**
+  * scaling_configs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#scaling_configs GameServicesGameServerConfig#scaling_configs}
+  */
   readonly scalingConfigs?: GameServicesGameServerConfigScalingConfigs[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#timeouts GameServicesGameServerConfig#timeouts}
+  */
   readonly timeouts?: GameServicesGameServerConfigTimeouts;
 }
 export interface GameServicesGameServerConfigFleetConfigs {
-  /** The fleet spec, which is sent to Agones to configure fleet.
+  /**
+  * The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
 instead. File references can contain the json or yaml format of the fleet spec. Eg:
 
@@ -35,9 +71,16 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 * fleet_spec = file("fleet_configs.json")
 
 The format of the spec can be found :
-'https://agones.dev/site/docs/reference/fleet/'. */
+'https://agones.dev/site/docs/reference/fleet/'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#fleet_spec GameServicesGameServerConfig#fleet_spec}
+  */
   readonly fleetSpec: string;
-  /** The name of the FleetConfig. */
+  /**
+  * The name of the FleetConfig.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#name GameServicesGameServerConfig#name}
+  */
   readonly name?: string;
 }
 
@@ -50,22 +93,38 @@ function gameServicesGameServerConfigFleetConfigsToTerraform(struct?: GameServic
 }
 
 export interface GameServicesGameServerConfigScalingConfigsSchedules {
-  /** The duration for the cron job event. The duration of the event is effective
+  /**
+  * The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#cron_job_duration GameServicesGameServerConfig#cron_job_duration}
+  */
   readonly cronJobDuration?: string;
-  /** The cron definition of the scheduled event. See
+  /**
+  * The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
-defined by the realm. */
+defined by the realm.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#cron_spec GameServicesGameServerConfig#cron_spec}
+  */
   readonly cronSpec?: string;
-  /** The end time of the event.
+  /**
+  * The end time of the event.
 
-A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z". */
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#end_time GameServicesGameServerConfig#end_time}
+  */
   readonly endTime?: string;
-  /** The start time of the event.
+  /**
+  * The start time of the event.
 
-A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z". */
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#start_time GameServicesGameServerConfig#start_time}
+  */
   readonly startTime?: string;
 }
 
@@ -80,7 +139,11 @@ function gameServicesGameServerConfigScalingConfigsSchedulesToTerraform(struct?:
 }
 
 export interface GameServicesGameServerConfigScalingConfigsSelectors {
-  /** Set of labels to group by. */
+  /**
+  * Set of labels to group by.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#labels GameServicesGameServerConfig#labels}
+  */
   readonly labels?: { [key: string]: string };
 }
 
@@ -92,15 +155,31 @@ function gameServicesGameServerConfigScalingConfigsSelectorsToTerraform(struct?:
 }
 
 export interface GameServicesGameServerConfigScalingConfigs {
-  /** Fleet autoscaler spec, which is sent to Agones.
+  /**
+  * Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
-https://agones.dev/site/docs/reference/fleetautoscaler/ */
+https://agones.dev/site/docs/reference/fleetautoscaler/
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#fleet_autoscaler_spec GameServicesGameServerConfig#fleet_autoscaler_spec}
+  */
   readonly fleetAutoscalerSpec: string;
-  /** The name of the ScalingConfig */
+  /**
+  * The name of the ScalingConfig
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#name GameServicesGameServerConfig#name}
+  */
   readonly name: string;
-  /** schedules block */
+  /**
+  * schedules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#schedules GameServicesGameServerConfig#schedules}
+  */
   readonly schedules?: GameServicesGameServerConfigScalingConfigsSchedules[];
-  /** selectors block */
+  /**
+  * selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#selectors GameServicesGameServerConfig#selectors}
+  */
   readonly selectors?: GameServicesGameServerConfigScalingConfigsSelectors[];
 }
 
@@ -115,7 +194,13 @@ function gameServicesGameServerConfigScalingConfigsToTerraform(struct?: GameServ
 }
 
 export interface GameServicesGameServerConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#create GameServicesGameServerConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#delete GameServicesGameServerConfig#delete}
+  */
   readonly delete?: string;
 }
 
@@ -128,14 +213,22 @@ function gameServicesGameServerConfigTimeoutsToTerraform(struct?: GameServicesGa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html google_game_services_game_server_config}
+*/
 export class GameServicesGameServerConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html google_game_services_game_server_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options GameServicesGameServerConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: GameServicesGameServerConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_game_services_game_server_config',

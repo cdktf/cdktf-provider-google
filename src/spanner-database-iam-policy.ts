@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpannerDatabaseIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_policy.html#database SpannerDatabaseIamPolicy#database}
+  */
   readonly database: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_policy.html#instance SpannerDatabaseIamPolicy#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_policy.html#policy_data SpannerDatabaseIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_policy.html#project SpannerDatabaseIamPolicy#project}
+  */
   readonly project?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_policy.html google_spanner_database_iam_policy}
+*/
 export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_policy.html google_spanner_database_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpannerDatabaseIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: SpannerDatabaseIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_spanner_database_iam_policy',

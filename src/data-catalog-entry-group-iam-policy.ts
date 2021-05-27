@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogEntryGroupIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#entry_group DataCatalogEntryGroupIamPolicy#entry_group}
+  */
   readonly entryGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#policy_data DataCatalogEntryGroupIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#project DataCatalogEntryGroupIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#region DataCatalogEntryGroupIamPolicy#region}
+  */
   readonly region?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html google_data_catalog_entry_group_iam_policy}
+*/
 export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html google_data_catalog_entry_group_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogEntryGroupIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogEntryGroupIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_entry_group_iam_policy',
