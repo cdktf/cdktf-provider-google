@@ -7,34 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeTargetInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#description ComputeTargetInstance#description}
+  */
   readonly description?: string;
-  /** The Compute instance VM handling traffic for this target instance.
+  /**
+  * The Compute instance VM handling traffic for this target instance.
 Accepts the instance self-link, relative path
 (e.g. 'projects/project/zones/zone/instances/instance') or name. If
 name is given, the zone will default to the given zone or
 the provider-default zone and the project will default to the
-provider-level project. */
+provider-level project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#instance ComputeTargetInstance#instance}
+  */
   readonly instance: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#name ComputeTargetInstance#name}
+  */
   readonly name: string;
-  /** NAT option controlling how IPs are NAT'ed to the instance.
-Currently only NO_NAT (default value) is supported. Default value: "NO_NAT" Possible values: ["NO_NAT"] */
+  /**
+  * NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported. Default value: "NO_NAT" Possible values: ["NO_NAT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#nat_policy ComputeTargetInstance#nat_policy}
+  */
   readonly natPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#project ComputeTargetInstance#project}
+  */
   readonly project?: string;
-  /** URL of the zone where the target instance resides. */
+  /**
+  * URL of the zone where the target instance resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#zone ComputeTargetInstance#zone}
+  */
   readonly zone?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#timeouts ComputeTargetInstance#timeouts}
+  */
   readonly timeouts?: ComputeTargetInstanceTimeouts;
 }
 export interface ComputeTargetInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#create ComputeTargetInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html#delete ComputeTargetInstance#delete}
+  */
   readonly delete?: string;
 }
 
@@ -47,14 +80,22 @@ function computeTargetInstanceTimeoutsToTerraform(struct?: ComputeTargetInstance
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html google_compute_target_instance}
+*/
 export class ComputeTargetInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_instance.html google_compute_target_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeTargetInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeTargetInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_target_instance',

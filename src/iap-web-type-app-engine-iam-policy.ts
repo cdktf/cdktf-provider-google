@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapWebTypeAppEngineIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_policy.html#app_id IapWebTypeAppEngineIamPolicy#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_policy.html#policy_data IapWebTypeAppEngineIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_policy.html#project IapWebTypeAppEngineIamPolicy#project}
+  */
   readonly project?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_policy.html google_iap_web_type_app_engine_iam_policy}
+*/
 export class IapWebTypeAppEngineIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_policy.html google_iap_web_type_app_engine_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapWebTypeAppEngineIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: IapWebTypeAppEngineIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_web_type_app_engine_iam_policy',

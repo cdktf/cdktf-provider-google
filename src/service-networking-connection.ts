@@ -7,18 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceNetworkingConnectionConfig extends cdktf.TerraformMetaArguments {
-  /** Name of VPC network connected with service producers using VPC peering. */
+  /**
+  * Name of VPC network connected with service producers using VPC peering.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#network ServiceNetworkingConnection#network}
+  */
   readonly network: string;
-  /** Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks. */
+  /**
+  * Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
+  */
   readonly reservedPeeringRanges: string[];
-  /** Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'. */
+  /**
+  * Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#service ServiceNetworkingConnection#service}
+  */
   readonly service: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#timeouts ServiceNetworkingConnection#timeouts}
+  */
   readonly timeouts?: ServiceNetworkingConnectionTimeouts;
 }
 export interface ServiceNetworkingConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#create ServiceNetworkingConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#delete ServiceNetworkingConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html#update ServiceNetworkingConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +57,22 @@ function serviceNetworkingConnectionTimeoutsToTerraform(struct?: ServiceNetworki
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html google_service_networking_connection}
+*/
 export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection.html google_service_networking_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceNetworkingConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceNetworkingConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_networking_connection',

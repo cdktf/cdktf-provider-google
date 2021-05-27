@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_netblock_ip_ranges.html
+// https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,17 +7,28 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleNetblockIpRangesConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html#range_type DataGoogleNetblockIpRanges#range_type}
+  */
   readonly rangeType?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html google_netblock_ip_ranges}
+*/
 export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html google_netblock_ip_ranges} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleNetblockIpRangesConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleNetblockIpRangesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_netblock_ip_ranges',

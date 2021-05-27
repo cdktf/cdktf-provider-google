@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapWebIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#members IapWebIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#project IapWebIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#role IapWebIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#condition IapWebIamBinding#condition}
+  */
   readonly condition?: IapWebIamBindingCondition[];
 }
 export interface IapWebIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#description IapWebIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#expression IapWebIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html#title IapWebIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function iapWebIamBindingConditionToTerraform(struct?: IapWebIamBindingCondition
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html google_iap_web_iam_binding}
+*/
 export class IapWebIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding.html google_iap_web_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapWebIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: IapWebIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_web_iam_binding',

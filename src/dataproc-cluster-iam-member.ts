@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocClusterIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#cluster DataprocClusterIamMember#cluster}
+  */
   readonly cluster: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#member DataprocClusterIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#project DataprocClusterIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#region DataprocClusterIamMember#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#role DataprocClusterIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#condition DataprocClusterIamMember#condition}
+  */
   readonly condition?: DataprocClusterIamMemberCondition[];
 }
 export interface DataprocClusterIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#description DataprocClusterIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#expression DataprocClusterIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html#title DataprocClusterIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function dataprocClusterIamMemberConditionToTerraform(struct?: DataprocClusterIa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html google_dataproc_cluster_iam_member}
+*/
 export class DataprocClusterIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member.html google_dataproc_cluster_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocClusterIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocClusterIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_cluster_iam_member',

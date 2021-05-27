@@ -7,20 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
-  /** The location of the registry. One of ASIA, EU, US or not specified. See the official documentation for more information on registry locations. */
+  /**
+  * The location of the registry. One of ASIA, EU, US or not specified. See the official documentation for more information on registry locations.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_registry.html#location ContainerRegistry#location}
+  */
   readonly location?: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_registry.html#project ContainerRegistry#project}
+  */
   readonly project?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/container_registry.html google_container_registry}
+*/
 export class ContainerRegistry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/container_registry.html google_container_registry} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerRegistryConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: ContainerRegistryConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_container_registry',

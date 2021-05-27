@@ -7,13 +7,26 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IdentityPlatformTenantDefaultSupportedIdpConfigConfig extends cdktf.TerraformMetaArguments {
-  /** OAuth client ID */
+  /**
+  * OAuth client ID
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#client_id IdentityPlatformTenantDefaultSupportedIdpConfig#client_id}
+  */
   readonly clientId: string;
-  /** OAuth client secret */
+  /**
+  * OAuth client secret
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#client_secret IdentityPlatformTenantDefaultSupportedIdpConfig#client_secret}
+  */
   readonly clientSecret: string;
-  /** If this IDP allows the user to sign in */
+  /**
+  * If this IDP allows the user to sign in
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#enabled IdentityPlatformTenantDefaultSupportedIdpConfig#enabled}
+  */
   readonly enabled?: boolean;
-  /** ID of the IDP. Possible values include:
+  /**
+  * ID of the IDP. Possible values include:
 
 * 'apple.com'
 
@@ -33,17 +46,40 @@ export interface IdentityPlatformTenantDefaultSupportedIdpConfigConfig extends c
 
 * 'twitter.com'
 
-* 'yahoo.com' */
+* 'yahoo.com'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#idp_id IdentityPlatformTenantDefaultSupportedIdpConfig#idp_id}
+  */
   readonly idpId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#project IdentityPlatformTenantDefaultSupportedIdpConfig#project}
+  */
   readonly project?: string;
-  /** The name of the tenant where this DefaultSupportedIdpConfig resource exists */
+  /**
+  * The name of the tenant where this DefaultSupportedIdpConfig resource exists
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#tenant IdentityPlatformTenantDefaultSupportedIdpConfig#tenant}
+  */
   readonly tenant: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#timeouts IdentityPlatformTenantDefaultSupportedIdpConfig#timeouts}
+  */
   readonly timeouts?: IdentityPlatformTenantDefaultSupportedIdpConfigTimeouts;
 }
 export interface IdentityPlatformTenantDefaultSupportedIdpConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#create IdentityPlatformTenantDefaultSupportedIdpConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#delete IdentityPlatformTenantDefaultSupportedIdpConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html#update IdentityPlatformTenantDefaultSupportedIdpConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -57,14 +93,22 @@ function identityPlatformTenantDefaultSupportedIdpConfigTimeoutsToTerraform(stru
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html google_identity_platform_tenant_default_supported_idp_config}
+*/
 export class IdentityPlatformTenantDefaultSupportedIdpConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_default_supported_idp_config.html google_identity_platform_tenant_default_supported_idp_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IdentityPlatformTenantDefaultSupportedIdpConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: IdentityPlatformTenantDefaultSupportedIdpConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_identity_platform_tenant_default_supported_idp_config',

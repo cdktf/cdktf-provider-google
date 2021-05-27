@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudfunctionsFunctionIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#cloud_function CloudfunctionsFunctionIamMember#cloud_function}
+  */
   readonly cloudFunction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#member CloudfunctionsFunctionIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#project CloudfunctionsFunctionIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#region CloudfunctionsFunctionIamMember#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#role CloudfunctionsFunctionIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#condition CloudfunctionsFunctionIamMember#condition}
+  */
   readonly condition?: CloudfunctionsFunctionIamMemberCondition[];
 }
 export interface CloudfunctionsFunctionIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#description CloudfunctionsFunctionIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#expression CloudfunctionsFunctionIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#title CloudfunctionsFunctionIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function cloudfunctionsFunctionIamMemberConditionToTerraform(struct?: Cloudfunct
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html google_cloudfunctions_function_iam_member}
+*/
 export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html google_cloudfunctions_function_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudfunctionsFunctionIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudfunctionsFunctionIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function_iam_member',

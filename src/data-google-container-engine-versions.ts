@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_container_engine_versions.html
+// https://www.terraform.io/docs/providers/google/d/container_engine_versions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleContainerEngineVersionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html#location DataGoogleContainerEngineVersions#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html#project DataGoogleContainerEngineVersions#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html#version_prefix DataGoogleContainerEngineVersions#version_prefix}
+  */
   readonly versionPrefix?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html google_container_engine_versions}
+*/
 export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html google_container_engine_versions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleContainerEngineVersionsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleContainerEngineVersionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_container_engine_versions',

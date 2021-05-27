@@ -7,20 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppEngineServiceSplitTrafficConfig extends cdktf.TerraformMetaArguments {
-  /** If set to true traffic will be migrated to this version. */
+  /**
+  * If set to true traffic will be migrated to this version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#migrate_traffic AppEngineServiceSplitTraffic#migrate_traffic}
+  */
   readonly migrateTraffic?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#project AppEngineServiceSplitTraffic#project}
+  */
   readonly project?: string;
-  /** The name of the service these settings apply to. */
+  /**
+  * The name of the service these settings apply to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#service AppEngineServiceSplitTraffic#service}
+  */
   readonly service: string;
-  /** split block */
+  /**
+  * split block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#split AppEngineServiceSplitTraffic#split}
+  */
   readonly split: AppEngineServiceSplitTrafficSplit[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#timeouts AppEngineServiceSplitTraffic#timeouts}
+  */
   readonly timeouts?: AppEngineServiceSplitTrafficTimeouts;
 }
 export interface AppEngineServiceSplitTrafficSplit {
-  /** Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits. */
+  /**
+  * Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#allocations AppEngineServiceSplitTraffic#allocations}
+  */
   readonly allocations: { [key: string]: string };
-  /** Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: ["UNSPECIFIED", "COOKIE", "IP", "RANDOM"] */
+  /**
+  * Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: ["UNSPECIFIED", "COOKIE", "IP", "RANDOM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#shard_by AppEngineServiceSplitTraffic#shard_by}
+  */
   readonly shardBy?: string;
 }
 
@@ -33,8 +60,17 @@ function appEngineServiceSplitTrafficSplitToTerraform(struct?: AppEngineServiceS
 }
 
 export interface AppEngineServiceSplitTrafficTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#create AppEngineServiceSplitTraffic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#delete AppEngineServiceSplitTraffic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#update AppEngineServiceSplitTraffic#update}
+  */
   readonly update?: string;
 }
 
@@ -48,14 +84,22 @@ function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html google_app_engine_service_split_traffic}
+*/
 export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html google_app_engine_service_split_traffic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppEngineServiceSplitTrafficConfig
+  */
   public constructor(scope: Construct, id: string, config: AppEngineServiceSplitTrafficConfig) {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_service_split_traffic',

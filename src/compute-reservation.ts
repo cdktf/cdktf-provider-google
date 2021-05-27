@@ -7,37 +7,72 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#description ComputeReservation#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#name ComputeReservation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#project ComputeReservation#project}
+  */
   readonly project?: string;
-  /** When set to true, only VMs that target this reservation by name can
+  /**
+  * When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
-affinity for any reservation. Defaults to false. */
+affinity for any reservation. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#specific_reservation_required ComputeReservation#specific_reservation_required}
+  */
   readonly specificReservationRequired?: boolean;
-  /** The zone where the reservation is made. */
+  /**
+  * The zone where the reservation is made.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#zone ComputeReservation#zone}
+  */
   readonly zone: string;
-  /** specific_reservation block */
+  /**
+  * specific_reservation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#specific_reservation ComputeReservation#specific_reservation}
+  */
   readonly specificReservation: ComputeReservationSpecificReservation[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#timeouts ComputeReservation#timeouts}
+  */
   readonly timeouts?: ComputeReservationTimeouts;
 }
 export interface ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators {
-  /** The number of the guest accelerator cards exposed to
-this instance. */
+  /**
+  * The number of the guest accelerator cards exposed to
+this instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#accelerator_count ComputeReservation#accelerator_count}
+  */
   readonly acceleratorCount: number;
-  /** The full or partial URL of the accelerator type to
+  /**
+  * The full or partial URL of the accelerator type to
 attach to this instance. For example:
 'projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100'
 
-If you are creating an instance template, specify only the accelerator name. */
+If you are creating an instance template, specify only the accelerator name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#accelerator_type ComputeReservation#accelerator_type}
+  */
   readonly acceleratorType: string;
 }
 
@@ -50,9 +85,17 @@ function computeReservationSpecificReservationInstancePropertiesGuestAccelerator
 }
 
 export interface ComputeReservationSpecificReservationInstancePropertiesLocalSsds {
-  /** The size of the disk in base-2 GB. */
+  /**
+  * The size of the disk in base-2 GB.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#disk_size_gb ComputeReservation#disk_size_gb}
+  */
   readonly diskSizeGb: number;
-  /** The disk interface to use for attaching this disk. Default value: "SCSI" Possible values: ["SCSI", "NVME"] */
+  /**
+  * The disk interface to use for attaching this disk. Default value: "SCSI" Possible values: ["SCSI", "NVME"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#interface ComputeReservation#interface}
+  */
   readonly interface?: string;
 }
 
@@ -65,16 +108,32 @@ function computeReservationSpecificReservationInstancePropertiesLocalSsdsToTerra
 }
 
 export interface ComputeReservationSpecificReservationInstanceProperties {
-  /** The name of the machine type to reserve. */
+  /**
+  * The name of the machine type to reserve.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#machine_type ComputeReservation#machine_type}
+  */
   readonly machineType: string;
-  /** The minimum CPU platform for the reservation. For example,
+  /**
+  * The minimum CPU platform for the reservation. For example,
 '"Intel Skylake"'. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-for information on available CPU platforms. */
+for information on available CPU platforms.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#min_cpu_platform ComputeReservation#min_cpu_platform}
+  */
   readonly minCpuPlatform?: string;
-  /** guest_accelerators block */
+  /**
+  * guest_accelerators block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#guest_accelerators ComputeReservation#guest_accelerators}
+  */
   readonly guestAccelerators?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[];
-  /** local_ssds block */
+  /**
+  * local_ssds block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#local_ssds ComputeReservation#local_ssds}
+  */
   readonly localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[];
 }
 
@@ -89,9 +148,17 @@ function computeReservationSpecificReservationInstancePropertiesToTerraform(stru
 }
 
 export interface ComputeReservationSpecificReservation {
-  /** The number of resources that are allocated. */
+  /**
+  * The number of resources that are allocated.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#count ComputeReservation#count}
+  */
   readonly count: number;
-  /** instance_properties block */
+  /**
+  * instance_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#instance_properties ComputeReservation#instance_properties}
+  */
   readonly instanceProperties: ComputeReservationSpecificReservationInstanceProperties[];
 }
 
@@ -104,8 +171,17 @@ function computeReservationSpecificReservationToTerraform(struct?: ComputeReserv
 }
 
 export interface ComputeReservationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#create ComputeReservation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#delete ComputeReservation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#update ComputeReservation#update}
+  */
   readonly update?: string;
 }
 
@@ -119,14 +195,22 @@ function computeReservationTimeoutsToTerraform(struct?: ComputeReservationTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html google_compute_reservation}
+*/
 export class ComputeReservation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html google_compute_reservation} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeReservationConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeReservationConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_reservation',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareDatasetIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#dataset_id HealthcareDatasetIamBinding#dataset_id}
+  */
   readonly datasetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#members HealthcareDatasetIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#role HealthcareDatasetIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#condition HealthcareDatasetIamBinding#condition}
+  */
   readonly condition?: HealthcareDatasetIamBindingCondition[];
 }
 export interface HealthcareDatasetIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#description HealthcareDatasetIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#expression HealthcareDatasetIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html#title HealthcareDatasetIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function healthcareDatasetIamBindingConditionToTerraform(struct?: HealthcareData
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html google_healthcare_dataset_iam_binding}
+*/
 export class HealthcareDatasetIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_binding.html google_healthcare_dataset_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareDatasetIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareDatasetIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dataset_iam_binding',

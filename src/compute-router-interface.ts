@@ -7,25 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRouterInterfaceConfig extends cdktf.TerraformMetaArguments {
-  /** The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified. */
+  /**
+  * The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#interconnect_attachment ComputeRouterInterface#interconnect_attachment}
+  */
   readonly interconnectAttachment?: string;
-  /** IP address and range of the interface. The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created. */
+  /**
+  * IP address and range of the interface. The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#ip_range ComputeRouterInterface#ip_range}
+  */
   readonly ipRange?: string;
-  /** A unique name for the interface, required by GCE. Changing this forces a new interface to be created. */
+  /**
+  * A unique name for the interface, required by GCE. Changing this forces a new interface to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#name ComputeRouterInterface#name}
+  */
   readonly name: string;
-  /** The ID of the project in which this interface's router belongs. If it is not provided, the provider project is used. Changing this forces a new interface to be created. */
+  /**
+  * The ID of the project in which this interface's router belongs. If it is not provided, the provider project is used. Changing this forces a new interface to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#project ComputeRouterInterface#project}
+  */
   readonly project?: string;
-  /** The region this interface's router sits in. If not specified, the project region will be used. Changing this forces a new interface to be created. */
+  /**
+  * The region this interface's router sits in. If not specified, the project region will be used. Changing this forces a new interface to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#region ComputeRouterInterface#region}
+  */
   readonly region?: string;
-  /** The name of the router this interface will be attached to. Changing this forces a new interface to be created. */
+  /**
+  * The name of the router this interface will be attached to. Changing this forces a new interface to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#router ComputeRouterInterface#router}
+  */
   readonly router: string;
-  /** The name or resource link to the VPN tunnel this interface will be linked to. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified. */
+  /**
+  * The name or resource link to the VPN tunnel this interface will be linked to. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#vpn_tunnel ComputeRouterInterface#vpn_tunnel}
+  */
   readonly vpnTunnel?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#timeouts ComputeRouterInterface#timeouts}
+  */
   readonly timeouts?: ComputeRouterInterfaceTimeouts;
 }
 export interface ComputeRouterInterfaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#create ComputeRouterInterface#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html#delete ComputeRouterInterface#delete}
+  */
   readonly delete?: string;
 }
 
@@ -38,14 +76,22 @@ function computeRouterInterfaceTimeoutsToTerraform(struct?: ComputeRouterInterfa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html google_compute_router_interface}
+*/
 export class ComputeRouterInterface extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface.html google_compute_router_interface} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRouterInterfaceConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRouterInterfaceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_router_interface',

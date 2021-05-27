@@ -7,53 +7,116 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArguments {
-  /** The number of days to look back to automatically refresh the data.
+  /**
+  * The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
-Set the value to 0 to use the default value. */
+Set the value to 0 to use the default value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#data_refresh_window_days BigqueryDataTransferConfig#data_refresh_window_days}
+  */
   readonly dataRefreshWindowDays?: number;
-  /** The data source id. Cannot be changed once the transfer config is created. */
+  /**
+  * The data source id. Cannot be changed once the transfer config is created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#data_source_id BigqueryDataTransferConfig#data_source_id}
+  */
   readonly dataSourceId: string;
-  /** The BigQuery target dataset id. */
+  /**
+  * The BigQuery target dataset id.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#destination_dataset_id BigqueryDataTransferConfig#destination_dataset_id}
+  */
   readonly destinationDatasetId: string;
-  /** When set to true, no runs are scheduled for a given transfer. */
+  /**
+  * When set to true, no runs are scheduled for a given transfer.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#disabled BigqueryDataTransferConfig#disabled}
+  */
   readonly disabled?: boolean;
-  /** The user specified display name for the transfer config. */
+  /**
+  * The user specified display name for the transfer config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#display_name BigqueryDataTransferConfig#display_name}
+  */
   readonly displayName: string;
-  /** The geographic location where the transfer config should reside.
-Examples: US, EU, asia-northeast1. The default value is US. */
+  /**
+  * The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#location BigqueryDataTransferConfig#location}
+  */
   readonly location?: string;
-  /** Pub/Sub topic where notifications will be sent after transfer runs
-associated with this transfer config finish. */
+  /**
+  * Pub/Sub topic where notifications will be sent after transfer runs
+associated with this transfer config finish.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#notification_pubsub_topic BigqueryDataTransferConfig#notification_pubsub_topic}
+  */
   readonly notificationPubsubTopic?: string;
-  /** These parameters are specific to each data source. */
+  /**
+  * These parameters are specific to each data source.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#params BigqueryDataTransferConfig#params}
+  */
   readonly params: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#project BigqueryDataTransferConfig#project}
+  */
   readonly project?: string;
-  /** Data transfer schedule. If the data source does not support a custom
+  /**
+  * Data transfer schedule. If the data source does not support a custom
 schedule, this should be empty. If it is empty, the default value for
 the data source will be used. The specified times are in UTC. Examples
 of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
 jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-NOTE: the granularity should be at least 8 hours, or less frequent. */
+NOTE: the granularity should be at least 8 hours, or less frequent.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#schedule BigqueryDataTransferConfig#schedule}
+  */
   readonly schedule?: string;
-  /** Optional service account name. If this field is set, transfer config will
+  /**
+  * Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
-requesting user calling this API has permissions to act as this service account. */
+requesting user calling this API has permissions to act as this service account.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#service_account_name BigqueryDataTransferConfig#service_account_name}
+  */
   readonly serviceAccountName?: string;
-  /** email_preferences block */
+  /**
+  * email_preferences block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#email_preferences BigqueryDataTransferConfig#email_preferences}
+  */
   readonly emailPreferences?: BigqueryDataTransferConfigEmailPreferences[];
-  /** schedule_options block */
+  /**
+  * schedule_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#schedule_options BigqueryDataTransferConfig#schedule_options}
+  */
   readonly scheduleOptions?: BigqueryDataTransferConfigScheduleOptions[];
-  /** sensitive_params block */
+  /**
+  * sensitive_params block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#sensitive_params BigqueryDataTransferConfig#sensitive_params}
+  */
   readonly sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#timeouts BigqueryDataTransferConfig#timeouts}
+  */
   readonly timeouts?: BigqueryDataTransferConfigTimeouts;
 }
 export interface BigqueryDataTransferConfigEmailPreferences {
-  /** If true, email notifications will be sent on transfer run failures. */
+  /**
+  * If true, email notifications will be sent on transfer run failures.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#enable_failure_email BigqueryDataTransferConfig#enable_failure_email}
+  */
   readonly enableFailureEmail: boolean;
 }
 
@@ -65,22 +128,34 @@ function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: Bigquery
 }
 
 export interface BigqueryDataTransferConfigScheduleOptions {
-  /** If true, automatic scheduling of data transfer runs for this
+  /**
+  * If true, automatic scheduling of data transfer runs for this
 configuration will be disabled. The runs can be started on ad-hoc
 basis using transferConfigs.startManualRuns API. When automatic
 scheduling is disabled, the TransferConfig.schedule field will
-be ignored. */
+be ignored.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#disable_auto_scheduling BigqueryDataTransferConfig#disable_auto_scheduling}
+  */
   readonly disableAutoScheduling?: boolean;
-  /** Defines time to stop scheduling transfer runs. A transfer run cannot be
+  /**
+  * Defines time to stop scheduling transfer runs. A transfer run cannot be
 scheduled at or after the end time. The end time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
-limited by this option. */
+limited by this option.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#end_time BigqueryDataTransferConfig#end_time}
+  */
   readonly endTime?: string;
-  /** Specifies time to start scheduling transfer runs. The first run will be
+  /**
+  * Specifies time to start scheduling transfer runs. The first run will be
 scheduled at or after the start time according to a recurrence pattern
 defined in the schedule string. The start time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
-limited by this option. */
+limited by this option.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#start_time BigqueryDataTransferConfig#start_time}
+  */
   readonly startTime?: string;
 }
 
@@ -94,7 +169,11 @@ function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: BigqueryD
 }
 
 export interface BigqueryDataTransferConfigSensitiveParams {
-  /** The Secret Access Key of the AWS account transferring data from. */
+  /**
+  * The Secret Access Key of the AWS account transferring data from.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#secret_access_key BigqueryDataTransferConfig#secret_access_key}
+  */
   readonly secretAccessKey: string;
 }
 
@@ -106,8 +185,17 @@ function bigqueryDataTransferConfigSensitiveParamsToTerraform(struct?: BigqueryD
 }
 
 export interface BigqueryDataTransferConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#create BigqueryDataTransferConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#delete BigqueryDataTransferConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#update BigqueryDataTransferConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -121,14 +209,22 @@ function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTran
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html google_bigquery_data_transfer_config}
+*/
 export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html google_bigquery_data_transfer_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryDataTransferConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryDataTransferConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_data_transfer_config',

@@ -7,24 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The MySQL version running on your source database server. Possible values: ["MYSQL_5_5", "MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0"] */
+  /**
+  * The MySQL version running on your source database server. Possible values: ["MYSQL_5_5", "MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#database_version SqlSourceRepresentationInstance#database_version}
+  */
   readonly databaseVersion: string;
-  /** The externally accessible IPv4 address for the source database server. */
+  /**
+  * The externally accessible IPv4 address for the source database server.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#host SqlSourceRepresentationInstance#host}
+  */
   readonly host: string;
-  /** The name of the source representation instance. Use any valid Cloud SQL instance name. */
+  /**
+  * The name of the source representation instance. Use any valid Cloud SQL instance name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#name SqlSourceRepresentationInstance#name}
+  */
   readonly name: string;
-  /** The externally accessible port for the source database server.
-Defaults to 3306. */
+  /**
+  * The externally accessible port for the source database server.
+Defaults to 3306.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#port SqlSourceRepresentationInstance#port}
+  */
   readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#project SqlSourceRepresentationInstance#project}
+  */
   readonly project?: string;
-  /** The Region in which the created instance should reside.
-If it is not provided, the provider region is used. */
+  /**
+  * The Region in which the created instance should reside.
+If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#region SqlSourceRepresentationInstance#region}
+  */
   readonly region?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#timeouts SqlSourceRepresentationInstance#timeouts}
+  */
   readonly timeouts?: SqlSourceRepresentationInstanceTimeouts;
 }
 export interface SqlSourceRepresentationInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#create SqlSourceRepresentationInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#delete SqlSourceRepresentationInstance#delete}
+  */
   readonly delete?: string;
 }
 
@@ -37,14 +70,22 @@ function sqlSourceRepresentationInstanceTimeoutsToTerraform(struct?: SqlSourceRe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html google_sql_source_representation_instance}
+*/
 export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html google_sql_source_representation_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlSourceRepresentationInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlSourceRepresentationInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_source_representation_instance',

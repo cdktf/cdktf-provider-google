@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#disable_dependent_services ProjectService#disable_dependent_services}
+  */
   readonly disableDependentServices?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#disable_on_destroy ProjectService#disable_on_destroy}
+  */
   readonly disableOnDestroy?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#project ProjectService#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#service ProjectService#service}
+  */
   readonly service: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#timeouts ProjectService#timeouts}
+  */
   readonly timeouts?: ProjectServiceTimeouts;
 }
 export interface ProjectServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#create ProjectService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#delete ProjectService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#read ProjectService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#update ProjectService#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function projectServiceTimeoutsToTerraform(struct?: ProjectServiceTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_service.html google_project_service}
+*/
 export class ProjectService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_service.html google_project_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_service',

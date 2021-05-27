@@ -7,33 +7,89 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocJobConfig extends cdktf.TerraformMetaArguments {
-  /** By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete. */
+  /**
+  * By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#force_delete DataprocJob#force_delete}
+  */
   readonly forceDelete?: boolean;
-  /** Optional. The labels to associate with this job. */
+  /**
+  * Optional. The labels to associate with this job.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#labels DataprocJob#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The project in which the cluster can be found and jobs subsequently run against. If it is not provided, the provider project is used. */
+  /**
+  * The project in which the cluster can be found and jobs subsequently run against. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#project DataprocJob#project}
+  */
   readonly project?: string;
-  /** The Cloud Dataproc region. This essentially determines which clusters are available for this job to be submitted to. If not specified, defaults to global. */
+  /**
+  * The Cloud Dataproc region. This essentially determines which clusters are available for this job to be submitted to. If not specified, defaults to global.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#region DataprocJob#region}
+  */
   readonly region?: string;
-  /** hadoop_config block */
+  /**
+  * hadoop_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#hadoop_config DataprocJob#hadoop_config}
+  */
   readonly hadoopConfig?: DataprocJobHadoopConfig[];
-  /** hive_config block */
+  /**
+  * hive_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#hive_config DataprocJob#hive_config}
+  */
   readonly hiveConfig?: DataprocJobHiveConfig[];
-  /** pig_config block */
+  /**
+  * pig_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#pig_config DataprocJob#pig_config}
+  */
   readonly pigConfig?: DataprocJobPigConfig[];
-  /** placement block */
+  /**
+  * placement block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#placement DataprocJob#placement}
+  */
   readonly placement: DataprocJobPlacement[];
-  /** pyspark_config block */
+  /**
+  * pyspark_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#pyspark_config DataprocJob#pyspark_config}
+  */
   readonly pysparkConfig?: DataprocJobPysparkConfig[];
-  /** reference block */
+  /**
+  * reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#reference DataprocJob#reference}
+  */
   readonly reference?: DataprocJobReference[];
-  /** scheduling block */
+  /**
+  * scheduling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#scheduling DataprocJob#scheduling}
+  */
   readonly scheduling?: DataprocJobScheduling[];
-  /** spark_config block */
+  /**
+  * spark_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#spark_config DataprocJob#spark_config}
+  */
   readonly sparkConfig?: DataprocJobSparkConfig[];
-  /** sparksql_config block */
+  /**
+  * sparksql_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#sparksql_config DataprocJob#sparksql_config}
+  */
   readonly sparksqlConfig?: DataprocJobSparksqlConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#timeouts DataprocJob#timeouts}
+  */
   readonly timeouts?: DataprocJobTimeouts;
 }
 export class DataprocJobStatus extends cdktf.ComplexComputedList {
@@ -59,7 +115,11 @@ export class DataprocJobStatus extends cdktf.ComplexComputedList {
   }
 }
 export interface DataprocJobHadoopConfigLoggingConfig {
-  /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
+  /**
+  * Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
+  */
   readonly driverLogLevels: { [key: string]: string };
 }
 
@@ -71,21 +131,53 @@ function dataprocJobHadoopConfigLoggingConfigToTerraform(struct?: DataprocJobHad
 }
 
 export interface DataprocJobHadoopConfig {
-  /** HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip. */
+  /**
+  * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#archive_uris DataprocJob#archive_uris}
+  */
   readonly archiveUris?: string[];
-  /** The arguments to pass to the driver. */
+  /**
+  * The arguments to pass to the driver.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#args DataprocJob#args}
+  */
   readonly args?: string[];
-  /** HCFS URIs of files to be copied to the working directory of Spark drivers and distributed tasks. Useful for naively parallel tasks. */
+  /**
+  * HCFS URIs of files to be copied to the working directory of Spark drivers and distributed tasks. Useful for naively parallel tasks.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#file_uris DataprocJob#file_uris}
+  */
   readonly fileUris?: string[];
-  /** HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks. */
+  /**
+  * HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#jar_file_uris DataprocJob#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
-  /** The class containing the main method of the driver. Must be in a provided jar or jar that is already on the classpath. Conflicts with main_jar_file_uri */
+  /**
+  * The class containing the main method of the driver. Must be in a provided jar or jar that is already on the classpath. Conflicts with main_jar_file_uri
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#main_class DataprocJob#main_class}
+  */
   readonly mainClass?: string;
-  /** The HCFS URI of jar file containing the driver jar. Conflicts with main_class */
+  /**
+  * The HCFS URI of jar file containing the driver jar. Conflicts with main_class
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#main_jar_file_uri DataprocJob#main_jar_file_uri}
+  */
   readonly mainJarFileUri?: string;
-  /** A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code. */
+  /**
+  * A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#logging_config DataprocJob#logging_config}
+  */
   readonly loggingConfig?: DataprocJobHadoopConfigLoggingConfig[];
 }
 
@@ -104,17 +196,41 @@ function dataprocJobHadoopConfigToTerraform(struct?: DataprocJobHadoopConfig): a
 }
 
 export interface DataprocJobHiveConfig {
-  /** Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false. */
+  /**
+  * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#continue_on_failure DataprocJob#continue_on_failure}
+  */
   readonly continueOnFailure?: boolean;
-  /** HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs. */
+  /**
+  * HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#jar_file_uris DataprocJob#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
-  /** A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code. */
+  /**
+  * A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list */
+  /**
+  * HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#query_file_uri DataprocJob#query_file_uri}
+  */
   readonly queryFileUri?: string;
-  /** The list of Hive queries or statements to execute as part of the job. Conflicts with query_file_uri */
+  /**
+  * The list of Hive queries or statements to execute as part of the job. Conflicts with query_file_uri
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#query_list DataprocJob#query_list}
+  */
   readonly queryList?: string[];
-  /** Mapping of query variable names to values (equivalent to the Hive command: SET name="value";). */
+  /**
+  * Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#script_variables DataprocJob#script_variables}
+  */
   readonly scriptVariables?: { [key: string]: string };
 }
 
@@ -131,7 +247,11 @@ function dataprocJobHiveConfigToTerraform(struct?: DataprocJobHiveConfig): any {
 }
 
 export interface DataprocJobPigConfigLoggingConfig {
-  /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
+  /**
+  * Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
+  */
   readonly driverLogLevels: { [key: string]: string };
 }
 
@@ -143,19 +263,47 @@ function dataprocJobPigConfigLoggingConfigToTerraform(struct?: DataprocJobPigCon
 }
 
 export interface DataprocJobPigConfig {
-  /** Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false. */
+  /**
+  * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#continue_on_failure DataprocJob#continue_on_failure}
+  */
   readonly continueOnFailure?: boolean;
-  /** HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs. */
+  /**
+  * HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#jar_file_uris DataprocJob#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
-  /** A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code. */
+  /**
+  * A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list */
+  /**
+  * HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#query_file_uri DataprocJob#query_file_uri}
+  */
   readonly queryFileUri?: string;
-  /** The list of Hive queries or statements to execute as part of the job. Conflicts with query_file_uri */
+  /**
+  * The list of Hive queries or statements to execute as part of the job. Conflicts with query_file_uri
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#query_list DataprocJob#query_list}
+  */
   readonly queryList?: string[];
-  /** Mapping of query variable names to values (equivalent to the Pig command: name=[value]). */
+  /**
+  * Mapping of query variable names to values (equivalent to the Pig command: name=[value]).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#script_variables DataprocJob#script_variables}
+  */
   readonly scriptVariables?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#logging_config DataprocJob#logging_config}
+  */
   readonly loggingConfig?: DataprocJobPigConfigLoggingConfig[];
 }
 
@@ -173,7 +321,11 @@ function dataprocJobPigConfigToTerraform(struct?: DataprocJobPigConfig): any {
 }
 
 export interface DataprocJobPlacement {
-  /** The name of the cluster where the job will be submitted */
+  /**
+  * The name of the cluster where the job will be submitted
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#cluster_name DataprocJob#cluster_name}
+  */
   readonly clusterName: string;
 }
 
@@ -185,7 +337,11 @@ function dataprocJobPlacementToTerraform(struct?: DataprocJobPlacement): any {
 }
 
 export interface DataprocJobPysparkConfigLoggingConfig {
-  /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
+  /**
+  * Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
+  */
   readonly driverLogLevels: { [key: string]: string };
 }
 
@@ -197,21 +353,53 @@ function dataprocJobPysparkConfigLoggingConfigToTerraform(struct?: DataprocJobPy
 }
 
 export interface DataprocJobPysparkConfig {
-  /** Optional. HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip */
+  /**
+  * Optional. HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#archive_uris DataprocJob#archive_uris}
+  */
   readonly archiveUris?: string[];
-  /** Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission */
+  /**
+  * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#args DataprocJob#args}
+  */
   readonly args?: string[];
-  /** Optional. HCFS URIs of files to be copied to the working directory of Python drivers and distributed tasks. Useful for naively parallel tasks */
+  /**
+  * Optional. HCFS URIs of files to be copied to the working directory of Python drivers and distributed tasks. Useful for naively parallel tasks
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#file_uris DataprocJob#file_uris}
+  */
   readonly fileUris?: string[];
-  /** Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks */
+  /**
+  * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#jar_file_uris DataprocJob#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
-  /** Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file */
+  /**
+  * Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#main_python_file_uri DataprocJob#main_python_file_uri}
+  */
   readonly mainPythonFileUri: string;
-  /** Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code */
+  /**
+  * Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip */
+  /**
+  * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#python_file_uris DataprocJob#python_file_uris}
+  */
   readonly pythonFileUris?: string[];
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#logging_config DataprocJob#logging_config}
+  */
   readonly loggingConfig?: DataprocJobPysparkConfigLoggingConfig[];
 }
 
@@ -230,7 +418,11 @@ function dataprocJobPysparkConfigToTerraform(struct?: DataprocJobPysparkConfig):
 }
 
 export interface DataprocJobReference {
-  /** The job ID, which must be unique within the project. The job ID is generated by the server upon job submission or provided by the user as a means to perform retries without creating duplicate jobs */
+  /**
+  * The job ID, which must be unique within the project. The job ID is generated by the server upon job submission or provided by the user as a means to perform retries without creating duplicate jobs
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#job_id DataprocJob#job_id}
+  */
   readonly jobId?: string;
 }
 
@@ -242,9 +434,17 @@ function dataprocJobReferenceToTerraform(struct?: DataprocJobReference): any {
 }
 
 export interface DataprocJobScheduling {
-  /** Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. */
+  /**
+  * Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#max_failures_per_hour DataprocJob#max_failures_per_hour}
+  */
   readonly maxFailuresPerHour: number;
-  /** Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. */
+  /**
+  * Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#max_failures_total DataprocJob#max_failures_total}
+  */
   readonly maxFailuresTotal: number;
 }
 
@@ -257,7 +457,11 @@ function dataprocJobSchedulingToTerraform(struct?: DataprocJobScheduling): any {
 }
 
 export interface DataprocJobSparkConfigLoggingConfig {
-  /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
+  /**
+  * Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
+  */
   readonly driverLogLevels: { [key: string]: string };
 }
 
@@ -269,21 +473,53 @@ function dataprocJobSparkConfigLoggingConfigToTerraform(struct?: DataprocJobSpar
 }
 
 export interface DataprocJobSparkConfig {
-  /** HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip. */
+  /**
+  * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#archive_uris DataprocJob#archive_uris}
+  */
   readonly archiveUris?: string[];
-  /** The arguments to pass to the driver. */
+  /**
+  * The arguments to pass to the driver.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#args DataprocJob#args}
+  */
   readonly args?: string[];
-  /** HCFS URIs of files to be copied to the working directory of Spark drivers and distributed tasks. Useful for naively parallel tasks. */
+  /**
+  * HCFS URIs of files to be copied to the working directory of Spark drivers and distributed tasks. Useful for naively parallel tasks.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#file_uris DataprocJob#file_uris}
+  */
   readonly fileUris?: string[];
-  /** HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks. */
+  /**
+  * HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#jar_file_uris DataprocJob#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
-  /** The class containing the main method of the driver. Must be in a provided jar or jar that is already on the classpath. Conflicts with main_jar_file_uri */
+  /**
+  * The class containing the main method of the driver. Must be in a provided jar or jar that is already on the classpath. Conflicts with main_jar_file_uri
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#main_class DataprocJob#main_class}
+  */
   readonly mainClass?: string;
-  /** The HCFS URI of jar file containing the driver jar. Conflicts with main_class */
+  /**
+  * The HCFS URI of jar file containing the driver jar. Conflicts with main_class
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#main_jar_file_uri DataprocJob#main_jar_file_uri}
+  */
   readonly mainJarFileUri?: string;
-  /** A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code. */
+  /**
+  * A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#logging_config DataprocJob#logging_config}
+  */
   readonly loggingConfig?: DataprocJobSparkConfigLoggingConfig[];
 }
 
@@ -302,7 +538,11 @@ function dataprocJobSparkConfigToTerraform(struct?: DataprocJobSparkConfig): any
 }
 
 export interface DataprocJobSparksqlConfigLoggingConfig {
-  /** Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'. */
+  /**
+  * Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
+  */
   readonly driverLogLevels: { [key: string]: string };
 }
 
@@ -314,17 +554,41 @@ function dataprocJobSparksqlConfigLoggingConfigToTerraform(struct?: DataprocJobS
 }
 
 export interface DataprocJobSparksqlConfig {
-  /** HCFS URIs of jar files to be added to the Spark CLASSPATH. */
+  /**
+  * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#jar_file_uris DataprocJob#jar_file_uris}
+  */
   readonly jarFileUris?: string[];
-  /** A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. */
+  /**
+  * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
+  */
   readonly properties?: { [key: string]: string };
-  /** The HCFS URI of the script that contains SQL queries. Conflicts with query_list */
+  /**
+  * The HCFS URI of the script that contains SQL queries. Conflicts with query_list
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#query_file_uri DataprocJob#query_file_uri}
+  */
   readonly queryFileUri?: string;
-  /** The list of SQL queries or statements to execute as part of the job. Conflicts with query_file_uri */
+  /**
+  * The list of SQL queries or statements to execute as part of the job. Conflicts with query_file_uri
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#query_list DataprocJob#query_list}
+  */
   readonly queryList?: string[];
-  /** Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";). */
+  /**
+  * Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#script_variables DataprocJob#script_variables}
+  */
   readonly scriptVariables?: { [key: string]: string };
-  /** logging_config block */
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#logging_config DataprocJob#logging_config}
+  */
   readonly loggingConfig?: DataprocJobSparksqlConfigLoggingConfig[];
 }
 
@@ -341,7 +605,13 @@ function dataprocJobSparksqlConfigToTerraform(struct?: DataprocJobSparksqlConfig
 }
 
 export interface DataprocJobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#create DataprocJob#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#delete DataprocJob#delete}
+  */
   readonly delete?: string;
 }
 
@@ -354,14 +624,22 @@ function dataprocJobTimeoutsToTerraform(struct?: DataprocJobTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html google_dataproc_job}
+*/
 export class DataprocJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html google_dataproc_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocJobConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocJobConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_job',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceAccountIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#member ServiceAccountIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#role ServiceAccountIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#service_account_id ServiceAccountIamMember#service_account_id}
+  */
   readonly serviceAccountId: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#condition ServiceAccountIamMember#condition}
+  */
   readonly condition?: ServiceAccountIamMemberCondition[];
 }
 export interface ServiceAccountIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#description ServiceAccountIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#expression ServiceAccountIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#title ServiceAccountIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function serviceAccountIamMemberConditionToTerraform(struct?: ServiceAccountIamM
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html google_service_account_iam_member}
+*/
 export class ServiceAccountIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html google_service_account_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceAccountIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceAccountIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account_iam_member',

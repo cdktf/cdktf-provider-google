@@ -7,57 +7,117 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
-  /** API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+  /**
+  * API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
 different service endpoints for different API versions. However, bots connectors and webhook calls will follow 
 the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
-* API_VERSION_V2_BETA_1: V2beta1 API. Possible values: ["API_VERSION_V1", "API_VERSION_V2", "API_VERSION_V2_BETA_1"] */
+* API_VERSION_V2_BETA_1: V2beta1 API. Possible values: ["API_VERSION_V1", "API_VERSION_V2", "API_VERSION_V2_BETA_1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#api_version DialogflowAgent#api_version}
+  */
   readonly apiVersion?: string;
-  /** The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+  /**
+  * The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
-from the API will be shown in the [avatarUriBackend] field. */
+from the API will be shown in the [avatarUriBackend] field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#avatar_uri DialogflowAgent#avatar_uri}
+  */
   readonly avatarUri?: string;
-  /** To filter out false positive results and still get variety in matched natural language inputs for your agent,
+  /**
+  * To filter out false positive results and still get variety in matched natural language inputs for your agent,
 you can tune the machine learning classification threshold. If the returned score value is less than the threshold
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be 
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the 
-default of 0.3 is used. */
+default of 0.3 is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#classification_threshold DialogflowAgent#classification_threshold}
+  */
   readonly classificationThreshold?: number;
-  /** The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language) 
-for a list of the currently supported language codes. This field cannot be updated after creation. */
+  /**
+  * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language) 
+for a list of the currently supported language codes. This field cannot be updated after creation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#default_language_code DialogflowAgent#default_language_code}
+  */
   readonly defaultLanguageCode: string;
-  /** The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected. */
+  /**
+  * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#description DialogflowAgent#description}
+  */
   readonly description?: string;
-  /** The name of this agent. */
+  /**
+  * The name of this agent.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#display_name DialogflowAgent#display_name}
+  */
   readonly displayName: string;
-  /** Determines whether this agent should log conversation queries. */
+  /**
+  * Determines whether this agent should log conversation queries.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#enable_logging DialogflowAgent#enable_logging}
+  */
   readonly enableLogging?: boolean;
-  /** Determines how intents are detected from user queries.
+  /**
+  * Determines how intents are detected from user queries.
 * MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-using @sys.any or very large developer entities. Possible values: ["MATCH_MODE_HYBRID", "MATCH_MODE_ML_ONLY"] */
+using @sys.any or very large developer entities. Possible values: ["MATCH_MODE_HYBRID", "MATCH_MODE_ML_ONLY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#match_mode DialogflowAgent#match_mode}
+  */
   readonly matchMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#project DialogflowAgent#project}
+  */
   readonly project?: string;
-  /** The list of all languages supported by this agent (except for the defaultLanguageCode). */
+  /**
+  * The list of all languages supported by this agent (except for the defaultLanguageCode).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#supported_language_codes DialogflowAgent#supported_language_codes}
+  */
   readonly supportedLanguageCodes?: string[];
-  /** The agent tier. If not specified, TIER_STANDARD is assumed.
+  /**
+  * The agent tier. If not specified, TIER_STANDARD is assumed.
 * TIER_STANDARD: Standard tier.
 * TIER_ENTERPRISE: Enterprise tier (Essentials).
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between 
-the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: ["TIER_STANDARD", "TIER_ENTERPRISE", "TIER_ENTERPRISE_PLUS"] */
+the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: ["TIER_STANDARD", "TIER_ENTERPRISE", "TIER_ENTERPRISE_PLUS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#tier DialogflowAgent#tier}
+  */
   readonly tier?: string;
-  /** The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
-Europe/Paris. */
+  /**
+  * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
+Europe/Paris.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#time_zone DialogflowAgent#time_zone}
+  */
   readonly timeZone: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#timeouts DialogflowAgent#timeouts}
+  */
   readonly timeouts?: DialogflowAgentTimeouts;
 }
 export interface DialogflowAgentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#create DialogflowAgent#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#delete DialogflowAgent#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#update DialogflowAgent#update}
+  */
   readonly update?: string;
 }
 
@@ -71,14 +131,22 @@ function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html google_dialogflow_agent}
+*/
 export class DialogflowAgent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html google_dialogflow_agent} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DialogflowAgentConfig
+  */
   public constructor(scope: Construct, id: string, config: DialogflowAgentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dialogflow_agent',

@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryTableIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#dataset_id BigqueryTableIamBinding#dataset_id}
+  */
   readonly datasetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#members BigqueryTableIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#project BigqueryTableIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#role BigqueryTableIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#table_id BigqueryTableIamBinding#table_id}
+  */
   readonly tableId: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#condition BigqueryTableIamBinding#condition}
+  */
   readonly condition?: BigqueryTableIamBindingCondition[];
 }
 export interface BigqueryTableIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#description BigqueryTableIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#expression BigqueryTableIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#title BigqueryTableIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function bigqueryTableIamBindingConditionToTerraform(struct?: BigqueryTableIamBi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html google_bigquery_table_iam_binding}
+*/
 export class BigqueryTableIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html google_bigquery_table_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryTableIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryTableIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_table_iam_binding',

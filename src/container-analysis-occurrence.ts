@@ -7,24 +7,48 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerAnalysisOccurrenceConfig extends cdktf.TerraformMetaArguments {
-  /** The analysis note associated with this occurrence, in the form of
+  /**
+  * The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
-filter in list requests. */
+filter in list requests.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#note_name ContainerAnalysisOccurrence#note_name}
+  */
   readonly noteName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#project ContainerAnalysisOccurrence#project}
+  */
   readonly project?: string;
-  /** A description of actions that can be taken to remedy the note. */
+  /**
+  * A description of actions that can be taken to remedy the note.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#remediation ContainerAnalysisOccurrence#remediation}
+  */
   readonly remediation?: string;
-  /** Required. Immutable. A URI that represents the resource for which
+  /**
+  * Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
-https://gcr.io/project/image@sha256:123abc for a Docker image. */
+https://gcr.io/project/image@sha256:123abc for a Docker image.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#resource_uri ContainerAnalysisOccurrence#resource_uri}
+  */
   readonly resourceUri: string;
-  /** attestation block */
+  /**
+  * attestation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#attestation ContainerAnalysisOccurrence#attestation}
+  */
   readonly attestation: ContainerAnalysisOccurrenceAttestation[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#timeouts ContainerAnalysisOccurrence#timeouts}
+  */
   readonly timeouts?: ContainerAnalysisOccurrenceTimeouts;
 }
 export interface ContainerAnalysisOccurrenceAttestationSignatures {
-  /** The identifier for the public key that verifies this
+  /**
+  * The identifier for the public key that verifies this
 signature. MUST be an RFC3986 conformant
 URI. * When possible, the key id should be an
 immutable reference, such as a cryptographic digest.
@@ -34,15 +58,22 @@ Examples of valid values:
   for more details on this scheme.
     * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA'
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
-    * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU" */
+    * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#public_key_id ContainerAnalysisOccurrence#public_key_id}
+  */
   readonly publicKeyId: string;
-  /** The content of the signature, an opaque bytestring.
+  /**
+  * The content of the signature, an opaque bytestring.
 The payload that this signature verifies MUST be
 unambiguously provided with the Signature during
 verification. A wrapper message might provide the
 payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
-unambiguously computed to derive the payload. */
+unambiguously computed to derive the payload.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#signature ContainerAnalysisOccurrence#signature}
+  */
   readonly signature?: string;
 }
 
@@ -55,10 +86,18 @@ function containerAnalysisOccurrenceAttestationSignaturesToTerraform(struct?: Co
 }
 
 export interface ContainerAnalysisOccurrenceAttestation {
-  /** The serialized payload that is verified by one or
-more signatures. A base64-encoded string. */
+  /**
+  * The serialized payload that is verified by one or
+more signatures. A base64-encoded string.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#serialized_payload ContainerAnalysisOccurrence#serialized_payload}
+  */
   readonly serializedPayload: string;
-  /** signatures block */
+  /**
+  * signatures block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#signatures ContainerAnalysisOccurrence#signatures}
+  */
   readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[];
 }
 
@@ -71,8 +110,17 @@ function containerAnalysisOccurrenceAttestationToTerraform(struct?: ContainerAna
 }
 
 export interface ContainerAnalysisOccurrenceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#create ContainerAnalysisOccurrence#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#delete ContainerAnalysisOccurrence#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#update ContainerAnalysisOccurrence#update}
+  */
   readonly update?: string;
 }
 
@@ -86,14 +134,22 @@ function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalys
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html google_container_analysis_occurrence}
+*/
 export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html google_container_analysis_occurrence} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerAnalysisOccurrenceConfig
+  */
   public constructor(scope: Construct, id: string, config: ContainerAnalysisOccurrenceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_container_analysis_occurrence',

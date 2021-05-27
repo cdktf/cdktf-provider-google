@@ -7,27 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments {
-  /** An optional textual description of the instance group. */
+  /**
+  * An optional textual description of the instance group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#description ComputeInstanceGroup#description}
+  */
   readonly description?: string;
-  /** List of instances in the group. They should be given as self_link URLs. When adding instances they must all be in the same network and zone as the instance group. */
+  /**
+  * List of instances in the group. They should be given as self_link URLs. When adding instances they must all be in the same network and zone as the instance group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#instances ComputeInstanceGroup#instances}
+  */
   readonly instances?: string[];
-  /** The name of the instance group. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens. */
+  /**
+  * The name of the instance group. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#name ComputeInstanceGroup#name}
+  */
   readonly name: string;
-  /** The URL of the network the instance group is in. If this is different from the network where the instances are in, the creation fails. Defaults to the network where the instances are in (if neither network nor instances is specified, this field will be blank). */
+  /**
+  * The URL of the network the instance group is in. If this is different from the network where the instances are in, the creation fails. Defaults to the network where the instances are in (if neither network nor instances is specified, this field will be blank).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#network ComputeInstanceGroup#network}
+  */
   readonly network?: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#project ComputeInstanceGroup#project}
+  */
   readonly project?: string;
-  /** The zone that this instance group should be created in. */
+  /**
+  * The zone that this instance group should be created in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#zone ComputeInstanceGroup#zone}
+  */
   readonly zone?: string;
-  /** named_port block */
+  /**
+  * named_port block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#named_port ComputeInstanceGroup#named_port}
+  */
   readonly namedPort?: ComputeInstanceGroupNamedPort[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#timeouts ComputeInstanceGroup#timeouts}
+  */
   readonly timeouts?: ComputeInstanceGroupTimeouts;
 }
 export interface ComputeInstanceGroupNamedPort {
-  /** The name which the port will be mapped to. */
+  /**
+  * The name which the port will be mapped to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#name ComputeInstanceGroup#name}
+  */
   readonly name: string;
-  /** The port number to map the name to. */
+  /**
+  * The port number to map the name to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#port ComputeInstanceGroup#port}
+  */
   readonly port: number;
 }
 
@@ -40,8 +80,17 @@ function computeInstanceGroupNamedPortToTerraform(struct?: ComputeInstanceGroupN
 }
 
 export interface ComputeInstanceGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#create ComputeInstanceGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#delete ComputeInstanceGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html#update ComputeInstanceGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +104,22 @@ function computeInstanceGroupTimeoutsToTerraform(struct?: ComputeInstanceGroupTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html google_compute_instance_group}
+*/
 export class ComputeInstanceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group.html google_compute_instance_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeInstanceGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeInstanceGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_group',

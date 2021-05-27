@@ -7,19 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Bigtable instance. */
+  /**
+  * The name of the Bigtable instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html#instance_name BigtableTable#instance_name}
+  */
   readonly instanceName: string;
-  /** The name of the table. */
+  /**
+  * The name of the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html#name BigtableTable#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html#project BigtableTable#project}
+  */
   readonly project?: string;
-  /** A list of predefined keys to split the table on. !> Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource. */
+  /**
+  * A list of predefined keys to split the table on. !> Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html#split_keys BigtableTable#split_keys}
+  */
   readonly splitKeys?: string[];
-  /** column_family block */
+  /**
+  * column_family block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html#column_family BigtableTable#column_family}
+  */
   readonly columnFamily?: BigtableTableColumnFamily[];
 }
 export interface BigtableTableColumnFamily {
-  /** The name of the column family. */
+  /**
+  * The name of the column family.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html#family BigtableTable#family}
+  */
   readonly family: string;
 }
 
@@ -31,14 +55,22 @@ function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html google_bigtable_table}
+*/
 export class BigtableTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_table.html google_bigtable_table} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigtableTableConfig
+  */
   public constructor(scope: Construct, id: string, config: BigtableTableConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_table',

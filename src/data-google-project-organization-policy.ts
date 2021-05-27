@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_project_organization_policy.html
+// https://www.terraform.io/docs/providers/google/d/project_organization_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,17 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
+  /**
+  * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html#constraint DataGoogleProjectOrganizationPolicy#constraint}
+  */
   readonly constraint: string;
-  /** The project ID. */
+  /**
+  * The project ID.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html#project DataGoogleProjectOrganizationPolicy#project}
+  */
   readonly project: string;
 }
 export class DataGoogleProjectOrganizationPolicyBooleanPolicy extends cdktf.ComplexComputedList {
@@ -73,14 +81,22 @@ export class DataGoogleProjectOrganizationPolicyRestorePolicy extends cdktf.Comp
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html google_project_organization_policy}
+*/
 export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html google_project_organization_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleProjectOrganizationPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleProjectOrganizationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_organization_policy',

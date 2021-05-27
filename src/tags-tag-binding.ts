@@ -7,15 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TagsTagBindingConfig extends cdktf.TerraformMetaArguments {
-  /** The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123 */
+  /**
+  * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#parent TagsTagBinding#parent}
+  */
   readonly parent: string;
-  /** The TagValue of the TagBinding. Must be of the form tagValues/456. */
+  /**
+  * The TagValue of the TagBinding. Must be of the form tagValues/456.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#tag_value TagsTagBinding#tag_value}
+  */
   readonly tagValue: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#timeouts TagsTagBinding#timeouts}
+  */
   readonly timeouts?: TagsTagBindingTimeouts;
 }
 export interface TagsTagBindingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#create TagsTagBinding#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#delete TagsTagBinding#delete}
+  */
   readonly delete?: string;
 }
 
@@ -28,14 +46,22 @@ function tagsTagBindingTimeoutsToTerraform(struct?: TagsTagBindingTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html google_tags_tag_binding}
+*/
 export class TagsTagBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html google_tags_tag_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TagsTagBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: TagsTagBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_binding',

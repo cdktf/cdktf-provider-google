@@ -7,27 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitoringGroupConfig extends cdktf.TerraformMetaArguments {
-  /** A user-assigned name for this group, used only for display
-purposes. */
+  /**
+  * A user-assigned name for this group, used only for display
+purposes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#display_name MonitoringGroup#display_name}
+  */
   readonly displayName: string;
-  /** The filter used to determine which monitored resources
-belong to this group. */
+  /**
+  * The filter used to determine which monitored resources
+belong to this group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#filter MonitoringGroup#filter}
+  */
   readonly filter: string;
-  /** If true, the members of this group are considered to be a
+  /**
+  * If true, the members of this group are considered to be a
 cluster. The system can perform additional analysis on
-groups that are clusters. */
+groups that are clusters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#is_cluster MonitoringGroup#is_cluster}
+  */
   readonly isCluster?: boolean;
-  /** The name of the group's parent, if it has one. The format is
+  /**
+  * The name of the group's parent, if it has one. The format is
 "projects/{project_id_or_number}/groups/{group_id}". For
-groups with no parent, parentName is the empty string, "". */
+groups with no parent, parentName is the empty string, "".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#parent_name MonitoringGroup#parent_name}
+  */
   readonly parentName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#project MonitoringGroup#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#timeouts MonitoringGroup#timeouts}
+  */
   readonly timeouts?: MonitoringGroupTimeouts;
 }
 export interface MonitoringGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#create MonitoringGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#delete MonitoringGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#update MonitoringGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +73,22 @@ function monitoringGroupTimeoutsToTerraform(struct?: MonitoringGroupTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html google_monitoring_group}
+*/
 export class MonitoringGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html google_monitoring_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitoringGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitoringGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_group',

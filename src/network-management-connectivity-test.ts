@@ -7,47 +7,102 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkManagementConnectivityTestConfig extends cdktf.TerraformMetaArguments {
-  /** The user-supplied description of the Connectivity Test.
-Maximum of 512 characters. */
+  /**
+  * The user-supplied description of the Connectivity Test.
+Maximum of 512 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#description NetworkManagementConnectivityTest#description}
+  */
   readonly description?: string;
-  /** Resource labels to represent user-provided metadata. */
+  /**
+  * Resource labels to represent user-provided metadata.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#labels NetworkManagementConnectivityTest#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Unique name for the connectivity test. */
+  /**
+  * Unique name for the connectivity test.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#name NetworkManagementConnectivityTest#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#project NetworkManagementConnectivityTest#project}
+  */
   readonly project?: string;
-  /** IP Protocol of the test. When not provided, "TCP" is assumed. */
+  /**
+  * IP Protocol of the test. When not provided, "TCP" is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#protocol NetworkManagementConnectivityTest#protocol}
+  */
   readonly protocol?: string;
-  /** Other projects that may be relevant for reachability analysis.
+  /**
+  * Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
-boundaries. */
+boundaries.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#related_projects NetworkManagementConnectivityTest#related_projects}
+  */
   readonly relatedProjects?: string[];
-  /** destination block */
+  /**
+  * destination block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#destination NetworkManagementConnectivityTest#destination}
+  */
   readonly destination: NetworkManagementConnectivityTestDestination[];
-  /** source block */
+  /**
+  * source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#source NetworkManagementConnectivityTest#source}
+  */
   readonly source: NetworkManagementConnectivityTestSource[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#timeouts NetworkManagementConnectivityTest#timeouts}
+  */
   readonly timeouts?: NetworkManagementConnectivityTestTimeouts;
 }
 export interface NetworkManagementConnectivityTestDestination {
-  /** A Compute Engine instance URI. */
+  /**
+  * A Compute Engine instance URI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#instance NetworkManagementConnectivityTest#instance}
+  */
   readonly instance?: string;
-  /** The IP address of the endpoint, which can be an external or
+  /**
+  * The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
-destination is a global load balancer VIP. */
+destination is a global load balancer VIP.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#ip_address NetworkManagementConnectivityTest#ip_address}
+  */
   readonly ipAddress?: string;
-  /** A Compute Engine network URI. */
+  /**
+  * A Compute Engine network URI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#network NetworkManagementConnectivityTest#network}
+  */
   readonly network?: string;
-  /** The IP protocol port of the endpoint. Only applicable when
-protocol is TCP or UDP. */
+  /**
+  * The IP protocol port of the endpoint. Only applicable when
+protocol is TCP or UDP.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#port NetworkManagementConnectivityTest#port}
+  */
   readonly port?: number;
-  /** Project ID where the endpoint is located. The Project ID can be
+  /**
+  * Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
 The following are two cases where you must provide the project ID:
 1. Only the IP address is specified, and the IP address is within
 a GCP project. 2. When you are using Shared VPC and the IP address
 that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
-project. */
+project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#project_id NetworkManagementConnectivityTest#project_id}
+  */
   readonly projectId?: string;
 }
 
@@ -63,20 +118,41 @@ function networkManagementConnectivityTestDestinationToTerraform(struct?: Networ
 }
 
 export interface NetworkManagementConnectivityTestSource {
-  /** A Compute Engine instance URI. */
+  /**
+  * A Compute Engine instance URI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#instance NetworkManagementConnectivityTest#instance}
+  */
   readonly instance?: string;
-  /** The IP address of the endpoint, which can be an external or
+  /**
+  * The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
-destination is a global load balancer VIP. */
+destination is a global load balancer VIP.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#ip_address NetworkManagementConnectivityTest#ip_address}
+  */
   readonly ipAddress?: string;
-  /** A Compute Engine network URI. */
+  /**
+  * A Compute Engine network URI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#network NetworkManagementConnectivityTest#network}
+  */
   readonly network?: string;
-  /** Type of the network where the endpoint is located. Possible values: ["GCP_NETWORK", "NON_GCP_NETWORK"] */
+  /**
+  * Type of the network where the endpoint is located. Possible values: ["GCP_NETWORK", "NON_GCP_NETWORK"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#network_type NetworkManagementConnectivityTest#network_type}
+  */
   readonly networkType?: string;
-  /** The IP protocol port of the endpoint. Only applicable when
-protocol is TCP or UDP. */
+  /**
+  * The IP protocol port of the endpoint. Only applicable when
+protocol is TCP or UDP.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#port NetworkManagementConnectivityTest#port}
+  */
   readonly port?: number;
-  /** Project ID where the endpoint is located. The Project ID can be
+  /**
+  * Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
 The following are two cases where you must provide the project ID:
 
@@ -85,7 +161,10 @@ The following are two cases where you must provide the project ID:
 2. When you are using Shared VPC and the IP address
    that you provide is from the service project. In this case,
    the network that the IP address resides in is defined in the
-   host project. */
+   host project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#project_id NetworkManagementConnectivityTest#project_id}
+  */
   readonly projectId?: string;
 }
 
@@ -102,8 +181,17 @@ function networkManagementConnectivityTestSourceToTerraform(struct?: NetworkMana
 }
 
 export interface NetworkManagementConnectivityTestTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#create NetworkManagementConnectivityTest#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#delete NetworkManagementConnectivityTest#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#update NetworkManagementConnectivityTest#update}
+  */
   readonly update?: string;
 }
 
@@ -117,14 +205,22 @@ function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkMa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html google_network_management_connectivity_test}
+*/
 export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html google_network_management_connectivity_test} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkManagementConnectivityTestConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkManagementConnectivityTestConfig) {
     super(scope, id, {
       terraformResourceType: 'google_network_management_connectivity_test',

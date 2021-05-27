@@ -7,30 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#description ComputeRouter#description}
+  */
   readonly description?: string;
-  /** Name of the resource. The name must be 1-63 characters long, and
+  /**
+  * Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
-except the last character, which cannot be a dash. */
+except the last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#name ComputeRouter#name}
+  */
   readonly name: string;
-  /** A reference to the network to which this router belongs. */
+  /**
+  * A reference to the network to which this router belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#network ComputeRouter#network}
+  */
   readonly network: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#project ComputeRouter#project}
+  */
   readonly project?: string;
-  /** Region where the router resides. */
+  /**
+  * Region where the router resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#region ComputeRouter#region}
+  */
   readonly region?: string;
-  /** bgp block */
+  /**
+  * bgp block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#bgp ComputeRouter#bgp}
+  */
   readonly bgp?: ComputeRouterBgp[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#timeouts ComputeRouter#timeouts}
+  */
   readonly timeouts?: ComputeRouterTimeouts;
 }
 export interface ComputeRouterBgpAdvertisedIpRanges {
-  /** User-specified description for the IP range. */
+  /**
+  * User-specified description for the IP range.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#description ComputeRouter#description}
+  */
   readonly description?: string;
-  /** The IP range to advertise. The value must be a
-CIDR-formatted string. */
+  /**
+  * The IP range to advertise. The value must be a
+CIDR-formatted string.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#range ComputeRouter#range}
+  */
   readonly range: string;
 }
 
@@ -43,22 +78,38 @@ function computeRouterBgpAdvertisedIpRangesToTerraform(struct?: ComputeRouterBgp
 }
 
 export interface ComputeRouterBgp {
-  /** User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"] */
+  /**
+  * User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#advertise_mode ComputeRouter#advertise_mode}
+  */
   readonly advertiseMode?: string;
-  /** User-specified list of prefix groups to advertise in custom mode.
+  /**
+  * User-specified list of prefix groups to advertise in custom mode.
 This field can only be populated if advertiseMode is CUSTOM and
 is advertised to all peers of the router. These groups will be
 advertised in addition to any specified prefixes. Leave this field
 blank to advertise no custom groups.
 
-This enum field has the one valid value: ALL_SUBNETS */
+This enum field has the one valid value: ALL_SUBNETS
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#advertised_groups ComputeRouter#advertised_groups}
+  */
   readonly advertisedGroups?: string[];
-  /** Local BGP Autonomous System Number (ASN). Must be an RFC6996
+  /**
+  * Local BGP Autonomous System Number (ASN). Must be an RFC6996
 private ASN, either 16-bit or 32-bit. The value will be fixed for
 this router resource. All VPN tunnels that link to this router
-will have the same local ASN. */
+will have the same local ASN.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#asn ComputeRouter#asn}
+  */
   readonly asn: number;
-  /** advertised_ip_ranges block */
+  /**
+  * advertised_ip_ranges block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
+  */
   readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[];
 }
 
@@ -73,8 +124,17 @@ function computeRouterBgpToTerraform(struct?: ComputeRouterBgp): any {
 }
 
 export interface ComputeRouterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#create ComputeRouter#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#delete ComputeRouter#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#update ComputeRouter#update}
+  */
   readonly update?: string;
 }
 
@@ -88,14 +148,22 @@ function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_router.html google_compute_router}
+*/
 export class ComputeRouter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_router.html google_compute_router} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRouterConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRouterConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_router',

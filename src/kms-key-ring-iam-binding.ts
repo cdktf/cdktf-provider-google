@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsKeyRingIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#key_ring_id KmsKeyRingIamBinding#key_ring_id}
+  */
   readonly keyRingId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#members KmsKeyRingIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#role KmsKeyRingIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#condition KmsKeyRingIamBinding#condition}
+  */
   readonly condition?: KmsKeyRingIamBindingCondition[];
 }
 export interface KmsKeyRingIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#description KmsKeyRingIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#expression KmsKeyRingIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html#title KmsKeyRingIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function kmsKeyRingIamBindingConditionToTerraform(struct?: KmsKeyRingIamBindingC
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html google_kms_key_ring_iam_binding}
+*/
 export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding.html google_kms_key_ring_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsKeyRingIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsKeyRingIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_key_ring_iam_binding',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_tpu_tensorflow_versions.html
+// https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleTpuTensorflowVersionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html#project DataGoogleTpuTensorflowVersions#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html#zone DataGoogleTpuTensorflowVersions#zone}
+  */
   readonly zone?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html google_tpu_tensorflow_versions}
+*/
 export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html google_tpu_tensorflow_versions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleTpuTensorflowVersionsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleTpuTensorflowVersionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_tpu_tensorflow_versions',

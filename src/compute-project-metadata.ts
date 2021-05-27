@@ -7,15 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArguments {
-  /** A series of key value pairs. */
+  /**
+  * A series of key value pairs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#metadata ComputeProjectMetadata#metadata}
+  */
   readonly metadata: { [key: string]: string };
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#project ComputeProjectMetadata#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#timeouts ComputeProjectMetadata#timeouts}
+  */
   readonly timeouts?: ComputeProjectMetadataTimeouts;
 }
 export interface ComputeProjectMetadataTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#create ComputeProjectMetadata#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#delete ComputeProjectMetadata#delete}
+  */
   readonly delete?: string;
 }
 
@@ -28,14 +46,22 @@ function computeProjectMetadataTimeoutsToTerraform(struct?: ComputeProjectMetada
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html google_compute_project_metadata}
+*/
 export class ComputeProjectMetadata extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html google_compute_project_metadata} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeProjectMetadataConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeProjectMetadataConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_project_metadata',

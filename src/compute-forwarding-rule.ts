@@ -7,22 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
-  /** For internal TCP/UDP load balancing (i.e. load balancing scheme is
+  /**
+  * For internal TCP/UDP load balancing (i.e. load balancing scheme is
 INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set. */
+if port or portRange are set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#all_ports ComputeForwardingRule#all_ports}
+  */
   readonly allPorts?: boolean;
-  /** If true, clients can access ILB from all regions.
-Otherwise only allows from the local region the ILB is located at. */
+  /**
+  * If true, clients can access ILB from all regions.
+Otherwise only allows from the local region the ILB is located at.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#allow_global_access ComputeForwardingRule#allow_global_access}
+  */
   readonly allowGlobalAccess?: boolean;
-  /** A BackendService to receive the matched traffic. This is used only
-for INTERNAL load balancing. */
+  /**
+  * A BackendService to receive the matched traffic. This is used only
+for INTERNAL load balancing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#backend_service ComputeForwardingRule#backend_service}
+  */
   readonly backendService?: string;
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#description ComputeForwardingRule#description}
+  */
   readonly description?: string;
-  /** The IP address that this forwarding rule serves. When a client sends
+  /**
+  * The IP address that this forwarding rule serves. When a client sends
 traffic to this IP address, the forwarding rule directs the traffic to
 the target that you specify in the forwarding rule. The
 loadBalancingScheme and the forwarding rule's target determine the
@@ -37,45 +54,73 @@ The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
 that has validateForProxyless field set to true.
 
 For Private Service Connect forwarding rules that forward traffic to
-Google APIs, IP address must be provided. */
+Google APIs, IP address must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ip_address ComputeForwardingRule#ip_address}
+  */
   readonly ipAddress?: string;
-  /** The IP protocol to which this rule applies.
+  /**
+  * The IP protocol to which this rule applies.
 
 When the load balancing scheme is INTERNAL, only TCP and UDP are
-valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"] */
+valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ip_protocol ComputeForwardingRule#ip_protocol}
+  */
   readonly ipProtocol?: string;
-  /** Indicates whether or not this load balancer can be used
+  /**
+  * Indicates whether or not this load balancer can be used
 as a collector for packet mirroring. To prevent mirroring loops,
 instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
-loadBalancingScheme set to INTERNAL. */
+loadBalancingScheme set to INTERNAL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#is_mirroring_collector ComputeForwardingRule#is_mirroring_collector}
+  */
   readonly isMirroringCollector?: boolean;
-  /** This signifies what the ForwardingRule will be used for and can be
+  /**
+  * This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
 Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
 and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
-INTERNAL_MANAGED is used for internal HTTP(S) load balancers. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL", "INTERNAL_MANAGED"] */
+INTERNAL_MANAGED is used for internal HTTP(S) load balancers. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL", "INTERNAL_MANAGED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#load_balancing_scheme ComputeForwardingRule#load_balancing_scheme}
+  */
   readonly loadBalancingScheme?: string;
-  /** Name of the resource; provided by the client when the resource is
+  /**
+  * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#name ComputeForwardingRule#name}
+  */
   readonly name: string;
-  /** For internal load balancing, this field identifies the network that
+  /**
+  * For internal load balancing, this field identifies the network that
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
-This field is only used for INTERNAL load balancing. */
+This field is only used for INTERNAL load balancing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#network ComputeForwardingRule#network}
+  */
   readonly network?: string;
-  /** The networking tier used for configuring this address. If this field is not
-specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"] */
+  /**
+  * The networking tier used for configuring this address. If this field is not
+specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#network_tier ComputeForwardingRule#network_tier}
+  */
   readonly networkTier?: string;
-  /** This field is used along with the target field for TargetHttpProxy,
+  /**
+  * This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
 TargetPool, TargetInstance.
 
@@ -93,9 +138,13 @@ ports:
                   1883, 5222
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
                   1883, 5222
-* TargetVpnGateway: 500, 4500 */
+* TargetVpnGateway: 500, 4500
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#port_range ComputeForwardingRule#port_range}
+  */
   readonly portRange?: string;
-  /** This field is used along with the backend_service field for internal
+  /**
+  * This field is used along with the backend_service field for internal
 load balancing.
 
 When the load balancing scheme is INTERNAL, a single port or a comma
@@ -103,13 +152,24 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 
-You may specify a maximum of up to 5 ports. */
+You may specify a maximum of up to 5 ports.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ports ComputeForwardingRule#ports}
+  */
   readonly ports?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#project ComputeForwardingRule#project}
+  */
   readonly project?: string;
-  /** A reference to the region where the regional forwarding rule resides.
-This field is not applicable to global forwarding rules. */
+  /**
+  * A reference to the region where the regional forwarding rule resides.
+This field is not applicable to global forwarding rules.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#region ComputeForwardingRule#region}
+  */
   readonly region?: string;
-  /** An optional prefix to the service name for this Forwarding Rule.
+  /**
+  * An optional prefix to the service name for this Forwarding Rule.
 If specified, will be the first label of the fully qualified service
 name.
 
@@ -120,26 +180,50 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-This field is only used for INTERNAL load balancing. */
+This field is only used for INTERNAL load balancing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#service_label ComputeForwardingRule#service_label}
+  */
   readonly serviceLabel?: string;
-  /** The subnetwork that the load balanced IP should belong to for this
+  /**
+  * The subnetwork that the load balanced IP should belong to for this
 Forwarding Rule.  This field is only used for INTERNAL load balancing.
 
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
-subnetwork must be specified. */
+subnetwork must be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#subnetwork ComputeForwardingRule#subnetwork}
+  */
   readonly subnetwork?: string;
-  /** The URL of the target resource to receive the matched traffic.
+  /**
+  * The URL of the target resource to receive the matched traffic.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
-object. */
+object.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#target ComputeForwardingRule#target}
+  */
   readonly target?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#timeouts ComputeForwardingRule#timeouts}
+  */
   readonly timeouts?: ComputeForwardingRuleTimeouts;
 }
 export interface ComputeForwardingRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#create ComputeForwardingRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#delete ComputeForwardingRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#update ComputeForwardingRule#update}
+  */
   readonly update?: string;
 }
 
@@ -153,14 +237,22 @@ function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRule
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html google_compute_forwarding_rule}
+*/
 export class ComputeForwardingRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html google_compute_forwarding_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeForwardingRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeForwardingRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_forwarding_rule',

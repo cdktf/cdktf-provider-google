@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapAppEngineServiceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#app_id IapAppEngineServiceIamBinding#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#members IapAppEngineServiceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#project IapAppEngineServiceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#role IapAppEngineServiceIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#service IapAppEngineServiceIamBinding#service}
+  */
   readonly service: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#condition IapAppEngineServiceIamBinding#condition}
+  */
   readonly condition?: IapAppEngineServiceIamBindingCondition[];
 }
 export interface IapAppEngineServiceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#description IapAppEngineServiceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#expression IapAppEngineServiceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#title IapAppEngineServiceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function iapAppEngineServiceIamBindingConditionToTerraform(struct?: IapAppEngine
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html google_iap_app_engine_service_iam_binding}
+*/
 export class IapAppEngineServiceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html google_iap_app_engine_service_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapAppEngineServiceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: IapAppEngineServiceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_app_engine_service_iam_binding',

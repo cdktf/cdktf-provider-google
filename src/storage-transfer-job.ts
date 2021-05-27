@@ -7,23 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageTransferJobConfig extends cdktf.TerraformMetaArguments {
-  /** Unique description to identify the Transfer Job. */
+  /**
+  * Unique description to identify the Transfer Job.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#description StorageTransferJob#description}
+  */
   readonly description: string;
-  /** The project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#project StorageTransferJob#project}
+  */
   readonly project?: string;
-  /** Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. */
+  /**
+  * Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#status StorageTransferJob#status}
+  */
   readonly status?: string;
-  /** schedule block */
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#schedule StorageTransferJob#schedule}
+  */
   readonly schedule: StorageTransferJobSchedule[];
-  /** transfer_spec block */
+  /**
+  * transfer_spec block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#transfer_spec StorageTransferJob#transfer_spec}
+  */
   readonly transferSpec: StorageTransferJobTransferSpec[];
 }
 export interface StorageTransferJobScheduleScheduleEndDate {
-  /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+  /**
+  * Day of month. Must be from 1 to 31 and valid for the year and month.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#day StorageTransferJob#day}
+  */
   readonly day: number;
-  /** Month of year. Must be from 1 to 12. */
+  /**
+  * Month of year. Must be from 1 to 12.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#month StorageTransferJob#month}
+  */
   readonly month: number;
-  /** Year of date. Must be from 1 to 9999. */
+  /**
+  * Year of date. Must be from 1 to 9999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#year StorageTransferJob#year}
+  */
   readonly year: number;
 }
 
@@ -37,11 +69,23 @@ function storageTransferJobScheduleScheduleEndDateToTerraform(struct?: StorageTr
 }
 
 export interface StorageTransferJobScheduleScheduleStartDate {
-  /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+  /**
+  * Day of month. Must be from 1 to 31 and valid for the year and month.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#day StorageTransferJob#day}
+  */
   readonly day: number;
-  /** Month of year. Must be from 1 to 12. */
+  /**
+  * Month of year. Must be from 1 to 12.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#month StorageTransferJob#month}
+  */
   readonly month: number;
-  /** Year of date. Must be from 1 to 9999. */
+  /**
+  * Year of date. Must be from 1 to 9999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#year StorageTransferJob#year}
+  */
   readonly year: number;
 }
 
@@ -55,13 +99,29 @@ function storageTransferJobScheduleScheduleStartDateToTerraform(struct?: Storage
 }
 
 export interface StorageTransferJobScheduleStartTimeOfDay {
-  /** Hours of day in 24 hour format. Should be from 0 to 23. */
+  /**
+  * Hours of day in 24 hour format. Should be from 0 to 23.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#hours StorageTransferJob#hours}
+  */
   readonly hours: number;
-  /** Minutes of hour of day. Must be from 0 to 59. */
+  /**
+  * Minutes of hour of day. Must be from 0 to 59.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#minutes StorageTransferJob#minutes}
+  */
   readonly minutes: number;
-  /** Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+  /**
+  * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#nanos StorageTransferJob#nanos}
+  */
   readonly nanos: number;
-  /** Seconds of minutes of the time. Must normally be from 0 to 59. */
+  /**
+  * Seconds of minutes of the time. Must normally be from 0 to 59.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#seconds StorageTransferJob#seconds}
+  */
   readonly seconds: number;
 }
 
@@ -76,11 +136,23 @@ function storageTransferJobScheduleStartTimeOfDayToTerraform(struct?: StorageTra
 }
 
 export interface StorageTransferJobSchedule {
-  /** schedule_end_date block */
+  /**
+  * schedule_end_date block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#schedule_end_date StorageTransferJob#schedule_end_date}
+  */
   readonly scheduleEndDate?: StorageTransferJobScheduleScheduleEndDate[];
-  /** schedule_start_date block */
+  /**
+  * schedule_start_date block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#schedule_start_date StorageTransferJob#schedule_start_date}
+  */
   readonly scheduleStartDate: StorageTransferJobScheduleScheduleStartDate[];
-  /** start_time_of_day block */
+  /**
+  * start_time_of_day block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#start_time_of_day StorageTransferJob#start_time_of_day}
+  */
   readonly startTimeOfDay?: StorageTransferJobScheduleStartTimeOfDay[];
 }
 
@@ -94,9 +166,17 @@ function storageTransferJobScheduleToTerraform(struct?: StorageTransferJobSchedu
 }
 
 export interface StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
-  /** AWS Key ID. */
+  /**
+  * AWS Key ID.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#access_key_id StorageTransferJob#access_key_id}
+  */
   readonly accessKeyId: string;
-  /** AWS Secret Access Key. */
+  /**
+  * AWS Secret Access Key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#secret_access_key StorageTransferJob#secret_access_key}
+  */
   readonly secretAccessKey: string;
 }
 
@@ -109,9 +189,17 @@ function storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform(st
 }
 
 export interface StorageTransferJobTransferSpecAwsS3DataSource {
-  /** S3 Bucket name. */
+  /**
+  * S3 Bucket name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#bucket_name StorageTransferJob#bucket_name}
+  */
   readonly bucketName: string;
-  /** aws_access_key block */
+  /**
+  * aws_access_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#aws_access_key StorageTransferJob#aws_access_key}
+  */
   readonly awsAccessKey: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey[];
 }
 
@@ -124,7 +212,11 @@ function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: Stora
 }
 
 export interface StorageTransferJobTransferSpecGcsDataSink {
-  /** Google Cloud Storage bucket name. */
+  /**
+  * Google Cloud Storage bucket name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#bucket_name StorageTransferJob#bucket_name}
+  */
   readonly bucketName: string;
 }
 
@@ -136,7 +228,11 @@ function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: StorageTr
 }
 
 export interface StorageTransferJobTransferSpecGcsDataSource {
-  /** Google Cloud Storage bucket name. */
+  /**
+  * Google Cloud Storage bucket name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#bucket_name StorageTransferJob#bucket_name}
+  */
   readonly bucketName: string;
 }
 
@@ -148,7 +244,11 @@ function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: Storage
 }
 
 export interface StorageTransferJobTransferSpecHttpDataSource {
-  /** The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported. */
+  /**
+  * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#list_url StorageTransferJob#list_url}
+  */
   readonly listUrl: string;
 }
 
@@ -160,13 +260,29 @@ function storageTransferJobTransferSpecHttpDataSourceToTerraform(struct?: Storag
 }
 
 export interface StorageTransferJobTransferSpecObjectConditions {
-  /** exclude_prefixes must follow the requirements described for include_prefixes. */
+  /**
+  * exclude_prefixes must follow the requirements described for include_prefixes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#exclude_prefixes StorageTransferJob#exclude_prefixes}
+  */
   readonly excludePrefixes?: string[];
-  /** If include_refixes is specified, objects that satisfy the object conditions must have names that start with one of the include_prefixes and that do not start with any of the exclude_prefixes. If include_prefixes is not specified, all objects except those that have names starting with one of the exclude_prefixes must satisfy the object conditions. */
+  /**
+  * If include_refixes is specified, objects that satisfy the object conditions must have names that start with one of the include_prefixes and that do not start with any of the exclude_prefixes. If include_prefixes is not specified, all objects except those that have names starting with one of the exclude_prefixes must satisfy the object conditions.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#include_prefixes StorageTransferJob#include_prefixes}
+  */
   readonly includePrefixes?: string[];
-  /** A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+  /**
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#max_time_elapsed_since_last_modification StorageTransferJob#max_time_elapsed_since_last_modification}
+  */
   readonly maxTimeElapsedSinceLastModification?: string;
-  /** A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+  /**
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#min_time_elapsed_since_last_modification StorageTransferJob#min_time_elapsed_since_last_modification}
+  */
   readonly minTimeElapsedSinceLastModification?: string;
 }
 
@@ -181,11 +297,23 @@ function storageTransferJobTransferSpecObjectConditionsToTerraform(struct?: Stor
 }
 
 export interface StorageTransferJobTransferSpecTransferOptions {
-  /** Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and delete_objects_unique_in_sink are mutually exclusive. */
+  /**
+  * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and delete_objects_unique_in_sink are mutually exclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#delete_objects_from_source_after_transfer StorageTransferJob#delete_objects_from_source_after_transfer}
+  */
   readonly deleteObjectsFromSourceAfterTransfer?: boolean;
-  /** Whether objects that exist only in the sink should be deleted. Note that this option and delete_objects_from_source_after_transfer are mutually exclusive. */
+  /**
+  * Whether objects that exist only in the sink should be deleted. Note that this option and delete_objects_from_source_after_transfer are mutually exclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#delete_objects_unique_in_sink StorageTransferJob#delete_objects_unique_in_sink}
+  */
   readonly deleteObjectsUniqueInSink?: boolean;
-  /** Whether overwriting objects that already exist in the sink is allowed. */
+  /**
+  * Whether overwriting objects that already exist in the sink is allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#overwrite_objects_already_existing_in_sink StorageTransferJob#overwrite_objects_already_existing_in_sink}
+  */
   readonly overwriteObjectsAlreadyExistingInSink?: boolean;
 }
 
@@ -199,17 +327,41 @@ function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: Stora
 }
 
 export interface StorageTransferJobTransferSpec {
-  /** aws_s3_data_source block */
+  /**
+  * aws_s3_data_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#aws_s3_data_source StorageTransferJob#aws_s3_data_source}
+  */
   readonly awsS3DataSource?: StorageTransferJobTransferSpecAwsS3DataSource[];
-  /** gcs_data_sink block */
+  /**
+  * gcs_data_sink block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#gcs_data_sink StorageTransferJob#gcs_data_sink}
+  */
   readonly gcsDataSink?: StorageTransferJobTransferSpecGcsDataSink[];
-  /** gcs_data_source block */
+  /**
+  * gcs_data_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#gcs_data_source StorageTransferJob#gcs_data_source}
+  */
   readonly gcsDataSource?: StorageTransferJobTransferSpecGcsDataSource[];
-  /** http_data_source block */
+  /**
+  * http_data_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#http_data_source StorageTransferJob#http_data_source}
+  */
   readonly httpDataSource?: StorageTransferJobTransferSpecHttpDataSource[];
-  /** object_conditions block */
+  /**
+  * object_conditions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#object_conditions StorageTransferJob#object_conditions}
+  */
   readonly objectConditions?: StorageTransferJobTransferSpecObjectConditions[];
-  /** transfer_options block */
+  /**
+  * transfer_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#transfer_options StorageTransferJob#transfer_options}
+  */
   readonly transferOptions?: StorageTransferJobTransferSpecTransferOptions[];
 }
 
@@ -226,14 +378,22 @@ function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTr
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html google_storage_transfer_job}
+*/
 export class StorageTransferJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html google_storage_transfer_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageTransferJobConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageTransferJobConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_transfer_job',

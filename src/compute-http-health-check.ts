@@ -7,47 +7,99 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeHttpHealthCheckConfig extends cdktf.TerraformMetaArguments {
-  /** How often (in seconds) to send a health check. The default value is 5
-seconds. */
+  /**
+  * How often (in seconds) to send a health check. The default value is 5
+seconds.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#check_interval_sec ComputeHttpHealthCheck#check_interval_sec}
+  */
   readonly checkIntervalSec?: number;
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#description ComputeHttpHealthCheck#description}
+  */
   readonly description?: string;
-  /** A so-far unhealthy instance will be marked healthy after this many
-consecutive successes. The default value is 2. */
+  /**
+  * A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#healthy_threshold ComputeHttpHealthCheck#healthy_threshold}
+  */
   readonly healthyThreshold?: number;
-  /** The value of the host header in the HTTP health check request. If
+  /**
+  * The value of the host header in the HTTP health check request. If
 left empty (default value), the public IP on behalf of which this
-health check is performed will be used. */
+health check is performed will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#host ComputeHttpHealthCheck#host}
+  */
   readonly host?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash. */
+last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#name ComputeHttpHealthCheck#name}
+  */
   readonly name: string;
-  /** The TCP port number for the HTTP health check request.
-The default value is 80. */
+  /**
+  * The TCP port number for the HTTP health check request.
+The default value is 80.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#port ComputeHttpHealthCheck#port}
+  */
   readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#project ComputeHttpHealthCheck#project}
+  */
   readonly project?: string;
-  /** The request path of the HTTP health check request.
-The default value is /. */
+  /**
+  * The request path of the HTTP health check request.
+The default value is /.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#request_path ComputeHttpHealthCheck#request_path}
+  */
   readonly requestPath?: string;
-  /** How long (in seconds) to wait before claiming failure.
+  /**
+  * How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
-greater value than checkIntervalSec. */
+greater value than checkIntervalSec.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#timeout_sec ComputeHttpHealthCheck#timeout_sec}
+  */
   readonly timeoutSec?: number;
-  /** A so-far healthy instance will be marked unhealthy after this many
-consecutive failures. The default value is 2. */
+  /**
+  * A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#unhealthy_threshold ComputeHttpHealthCheck#unhealthy_threshold}
+  */
   readonly unhealthyThreshold?: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#timeouts ComputeHttpHealthCheck#timeouts}
+  */
   readonly timeouts?: ComputeHttpHealthCheckTimeouts;
 }
 export interface ComputeHttpHealthCheckTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#create ComputeHttpHealthCheck#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#delete ComputeHttpHealthCheck#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html#update ComputeHttpHealthCheck#update}
+  */
   readonly update?: string;
 }
 
@@ -61,14 +113,22 @@ function computeHttpHealthCheckTimeoutsToTerraform(struct?: ComputeHttpHealthChe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html google_compute_http_health_check}
+*/
 export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_http_health_check.html google_compute_http_health_check} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeHttpHealthCheckConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeHttpHealthCheckConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_http_health_check',

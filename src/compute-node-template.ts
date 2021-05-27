@@ -7,33 +7,80 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNodeTemplateConfig extends cdktf.TerraformMetaArguments {
-  /** CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"] */
+  /**
+  * CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#cpu_overcommit_type ComputeNodeTemplate#cpu_overcommit_type}
+  */
   readonly cpuOvercommitType?: string;
-  /** An optional textual description of the resource. */
+  /**
+  * An optional textual description of the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#description ComputeNodeTemplate#description}
+  */
   readonly description?: string;
-  /** Name of the resource. */
+  /**
+  * Name of the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#name ComputeNodeTemplate#name}
+  */
   readonly name?: string;
-  /** Labels to use for node affinity, which will be used in
-instance scheduling. */
+  /**
+  * Labels to use for node affinity, which will be used in
+instance scheduling.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#node_affinity_labels ComputeNodeTemplate#node_affinity_labels}
+  */
   readonly nodeAffinityLabels?: { [key: string]: string };
-  /** Node type to use for nodes group that are created from this template.
-Only one of nodeTypeFlexibility and nodeType can be specified. */
+  /**
+  * Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#node_type ComputeNodeTemplate#node_type}
+  */
   readonly nodeType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#project ComputeNodeTemplate#project}
+  */
   readonly project?: string;
-  /** Region where nodes using the node template will be created.
-If it is not provided, the provider region is used. */
+  /**
+  * Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#region ComputeNodeTemplate#region}
+  */
   readonly region?: string;
-  /** node_type_flexibility block */
+  /**
+  * node_type_flexibility block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#node_type_flexibility ComputeNodeTemplate#node_type_flexibility}
+  */
   readonly nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility[];
-  /** server_binding block */
+  /**
+  * server_binding block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#server_binding ComputeNodeTemplate#server_binding}
+  */
   readonly serverBinding?: ComputeNodeTemplateServerBinding[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#timeouts ComputeNodeTemplate#timeouts}
+  */
   readonly timeouts?: ComputeNodeTemplateTimeouts;
 }
 export interface ComputeNodeTemplateNodeTypeFlexibility {
-  /** Number of virtual CPUs to use. */
+  /**
+  * Number of virtual CPUs to use.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#cpus ComputeNodeTemplate#cpus}
+  */
   readonly cpus?: string;
-  /** Physical memory available to the node, defined in MB. */
+  /**
+  * Physical memory available to the node, defined in MB.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#memory ComputeNodeTemplate#memory}
+  */
   readonly memory?: string;
 }
 
@@ -46,7 +93,8 @@ function computeNodeTemplateNodeTypeFlexibilityToTerraform(struct?: ComputeNodeT
 }
 
 export interface ComputeNodeTemplateServerBinding {
-  /** Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER',
+  /**
+  * Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER',
 nodes using this template will restart on any physical server
 following a maintenance event.
 
@@ -57,7 +105,10 @@ physical server. This option may be useful if you are using
 software licenses tied to the underlying server characteristics
 such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
-nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"] */
+nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#type ComputeNodeTemplate#type}
+  */
   readonly type: string;
 }
 
@@ -69,7 +120,13 @@ function computeNodeTemplateServerBindingToTerraform(struct?: ComputeNodeTemplat
 }
 
 export interface ComputeNodeTemplateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#create ComputeNodeTemplate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#delete ComputeNodeTemplate#delete}
+  */
   readonly delete?: string;
 }
 
@@ -82,14 +139,22 @@ function computeNodeTemplateTimeoutsToTerraform(struct?: ComputeNodeTemplateTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html google_compute_node_template}
+*/
 export class ComputeNodeTemplate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html google_compute_node_template} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeNodeTemplateConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: ComputeNodeTemplateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_compute_node_template',

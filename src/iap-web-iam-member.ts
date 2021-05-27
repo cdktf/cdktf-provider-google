@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapWebIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#member IapWebIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#project IapWebIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#role IapWebIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#condition IapWebIamMember#condition}
+  */
   readonly condition?: IapWebIamMemberCondition[];
 }
 export interface IapWebIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#description IapWebIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#expression IapWebIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#title IapWebIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function iapWebIamMemberConditionToTerraform(struct?: IapWebIamMemberCondition):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html google_iap_web_iam_member}
+*/
 export class IapWebIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html google_iap_web_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapWebIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: IapWebIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_web_iam_member',

@@ -7,32 +7,72 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
-  /** A list of URLs of the IP resources to be drained. These IPs must be
-valid static external IPs that have been assigned to the NAT. */
+  /**
+  * A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#drain_nat_ips ComputeRouterNat#drain_nat_ips}
+  */
   readonly drainNatIps?: string[];
-  /** Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
-see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs). */
+  /**
+  * Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#enable_endpoint_independent_mapping ComputeRouterNat#enable_endpoint_independent_mapping}
+  */
   readonly enableEndpointIndependentMapping?: boolean;
-  /** Timeout (in seconds) for ICMP connections. Defaults to 30s if not set. */
+  /**
+  * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#icmp_idle_timeout_sec ComputeRouterNat#icmp_idle_timeout_sec}
+  */
   readonly icmpIdleTimeoutSec?: number;
-  /** Minimum number of ports allocated to a VM from this NAT. */
+  /**
+  * Minimum number of ports allocated to a VM from this NAT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#min_ports_per_vm ComputeRouterNat#min_ports_per_vm}
+  */
   readonly minPortsPerVm?: number;
-  /** Name of the NAT service. The name must be 1-63 characters long and
-comply with RFC1035. */
+  /**
+  * Name of the NAT service. The name must be 1-63 characters long and
+comply with RFC1035.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#name ComputeRouterNat#name}
+  */
   readonly name: string;
-  /** How external IPs should be allocated for this NAT. Valid values are
+  /**
+  * How external IPs should be allocated for this NAT. Valid values are
 'AUTO_ONLY' for only allowing NAT IPs allocated by Google Cloud
-Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses. Possible values: ["MANUAL_ONLY", "AUTO_ONLY"] */
+Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses. Possible values: ["MANUAL_ONLY", "AUTO_ONLY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#nat_ip_allocate_option ComputeRouterNat#nat_ip_allocate_option}
+  */
   readonly natIpAllocateOption: string;
-  /** Self-links of NAT IPs. Only valid if natIpAllocateOption
-is set to MANUAL_ONLY. */
+  /**
+  * Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#nat_ips ComputeRouterNat#nat_ips}
+  */
   readonly natIps?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#project ComputeRouterNat#project}
+  */
   readonly project?: string;
-  /** Region where the router and NAT reside. */
+  /**
+  * Region where the router and NAT reside.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#region ComputeRouterNat#region}
+  */
   readonly region?: string;
-  /** The name of the Cloud Router in which this NAT will be configured. */
+  /**
+  * The name of the Cloud Router in which this NAT will be configured.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#router ComputeRouterNat#router}
+  */
   readonly router: string;
-  /** How NAT should be configured per Subnetwork.
+  /**
+  * How NAT should be configured per Subnetwork.
 If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the
 IP ranges in every Subnetwork are allowed to Nat.
 If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP
@@ -41,27 +81,62 @@ ranges in every Subnetwork are allowed to Nat.
 (specified in the field subnetwork below). Note that if this field
 contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
-other RouterNat section in any Router for this network in this region. Possible values: ["ALL_SUBNETWORKS_ALL_IP_RANGES", "ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES", "LIST_OF_SUBNETWORKS"] */
+other RouterNat section in any Router for this network in this region. Possible values: ["ALL_SUBNETWORKS_ALL_IP_RANGES", "ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES", "LIST_OF_SUBNETWORKS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#source_subnetwork_ip_ranges_to_nat ComputeRouterNat#source_subnetwork_ip_ranges_to_nat}
+  */
   readonly sourceSubnetworkIpRangesToNat: string;
-  /** Timeout (in seconds) for TCP established connections.
-Defaults to 1200s if not set. */
+  /**
+  * Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#tcp_established_idle_timeout_sec ComputeRouterNat#tcp_established_idle_timeout_sec}
+  */
   readonly tcpEstablishedIdleTimeoutSec?: number;
-  /** Timeout (in seconds) for TCP transitory connections.
-Defaults to 30s if not set. */
+  /**
+  * Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#tcp_transitory_idle_timeout_sec ComputeRouterNat#tcp_transitory_idle_timeout_sec}
+  */
   readonly tcpTransitoryIdleTimeoutSec?: number;
-  /** Timeout (in seconds) for UDP connections. Defaults to 30s if not set. */
+  /**
+  * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#udp_idle_timeout_sec ComputeRouterNat#udp_idle_timeout_sec}
+  */
   readonly udpIdleTimeoutSec?: number;
-  /** log_config block */
+  /**
+  * log_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#log_config ComputeRouterNat#log_config}
+  */
   readonly logConfig?: ComputeRouterNatLogConfig[];
-  /** subnetwork block */
+  /**
+  * subnetwork block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#subnetwork ComputeRouterNat#subnetwork}
+  */
   readonly subnetwork?: ComputeRouterNatSubnetwork[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#timeouts ComputeRouterNat#timeouts}
+  */
   readonly timeouts?: ComputeRouterNatTimeouts;
 }
 export interface ComputeRouterNatLogConfig {
-  /** Indicates whether or not to export logs. */
+  /**
+  * Indicates whether or not to export logs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#enable ComputeRouterNat#enable}
+  */
   readonly enable: boolean;
-  /** Specifies the desired filtering of logs on this NAT. Possible values: ["ERRORS_ONLY", "TRANSLATIONS_ONLY", "ALL"] */
+  /**
+  * Specifies the desired filtering of logs on this NAT. Possible values: ["ERRORS_ONLY", "TRANSLATIONS_ONLY", "ALL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#filter ComputeRouterNat#filter}
+  */
   readonly filter: string;
 }
 
@@ -74,17 +149,29 @@ function computeRouterNatLogConfigToTerraform(struct?: ComputeRouterNatLogConfig
 }
 
 export interface ComputeRouterNatSubnetwork {
-  /** Self-link of subnetwork to NAT */
+  /**
+  * Self-link of subnetwork to NAT
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#name ComputeRouterNat#name}
+  */
   readonly name: string;
-  /** List of the secondary ranges of the subnetwork that are allowed
+  /**
+  * List of the secondary ranges of the subnetwork that are allowed
 to use NAT. This can be populated only if
 'LIST_OF_SECONDARY_IP_RANGES' is one of the values in
-sourceIpRangesToNat */
+sourceIpRangesToNat
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#secondary_ip_range_names ComputeRouterNat#secondary_ip_range_names}
+  */
   readonly secondaryIpRangeNames?: string[];
-  /** List of options for which source IPs in the subnetwork
+  /**
+  * List of options for which source IPs in the subnetwork
 should have NAT enabled. Supported values include:
 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES',
-'PRIMARY_IP_RANGE'. */
+'PRIMARY_IP_RANGE'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#source_ip_ranges_to_nat ComputeRouterNat#source_ip_ranges_to_nat}
+  */
   readonly sourceIpRangesToNat: string[];
 }
 
@@ -98,8 +185,17 @@ function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatSubnetwo
 }
 
 export interface ComputeRouterNatTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#create ComputeRouterNat#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#delete ComputeRouterNat#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#update ComputeRouterNat#update}
+  */
   readonly update?: string;
 }
 
@@ -113,14 +209,22 @@ function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html google_compute_router_nat}
+*/
 export class ComputeRouterNat extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html google_compute_router_nat} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRouterNatConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRouterNatConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_router_nat',

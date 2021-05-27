@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_storage_bucket_object_content.html
+// https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,22 +7,42 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the containing bucket. */
+  /**
+  * The name of the containing bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html#bucket DataGoogleStorageBucketObjectContent#bucket}
+  */
   readonly bucket: string;
-  /** Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output. */
+  /**
+  * Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html#content DataGoogleStorageBucketObjectContent#content}
+  */
   readonly content?: string;
-  /** The name of the object. If you're interpolating the name of this object, see output_name instead. */
+  /**
+  * The name of the object. If you're interpolating the name of this object, see output_name instead.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html#name DataGoogleStorageBucketObjectContent#name}
+  */
   readonly name: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html google_storage_bucket_object_content}
+*/
 export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html google_storage_bucket_object_content} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleStorageBucketObjectContentConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleStorageBucketObjectContentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_object_content',

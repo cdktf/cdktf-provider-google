@@ -7,20 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DatastoreIndexConfig extends cdktf.TerraformMetaArguments {
-  /** Policy for including ancestors in the index. Default value: "NONE" Possible values: ["NONE", "ALL_ANCESTORS"] */
+  /**
+  * Policy for including ancestors in the index. Default value: "NONE" Possible values: ["NONE", "ALL_ANCESTORS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#ancestor DatastoreIndex#ancestor}
+  */
   readonly ancestor?: string;
-  /** The entity kind which the index applies to. */
+  /**
+  * The entity kind which the index applies to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#kind DatastoreIndex#kind}
+  */
   readonly kind: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#project DatastoreIndex#project}
+  */
   readonly project?: string;
-  /** properties block */
+  /**
+  * properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#properties DatastoreIndex#properties}
+  */
   readonly properties?: DatastoreIndexProperties[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#timeouts DatastoreIndex#timeouts}
+  */
   readonly timeouts?: DatastoreIndexTimeouts;
 }
 export interface DatastoreIndexProperties {
-  /** The direction the index should optimize for sorting. Possible values: ["ASCENDING", "DESCENDING"] */
+  /**
+  * The direction the index should optimize for sorting. Possible values: ["ASCENDING", "DESCENDING"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#direction DatastoreIndex#direction}
+  */
   readonly direction: string;
-  /** The property name to index. */
+  /**
+  * The property name to index.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#name DatastoreIndex#name}
+  */
   readonly name: string;
 }
 
@@ -33,7 +60,13 @@ function datastoreIndexPropertiesToTerraform(struct?: DatastoreIndexProperties):
 }
 
 export interface DatastoreIndexTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#create DatastoreIndex#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html#delete DatastoreIndex#delete}
+  */
   readonly delete?: string;
 }
 
@@ -46,14 +79,22 @@ function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html google_datastore_index}
+*/
 export class DatastoreIndex extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html google_datastore_index} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DatastoreIndexConfig
+  */
   public constructor(scope: Construct, id: string, config: DatastoreIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'google_datastore_index',

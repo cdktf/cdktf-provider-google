@@ -7,29 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApigeeInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** Description of the instance. */
+  /**
+  * Description of the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#description ApigeeInstance#description}
+  */
   readonly description?: string;
-  /** Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
-Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)' */
+  /**
+  * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
+Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#disk_encryption_key_name ApigeeInstance#disk_encryption_key_name}
+  */
   readonly diskEncryptionKeyName?: string;
-  /** Display name of the instance. */
+  /**
+  * Display name of the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#display_name ApigeeInstance#display_name}
+  */
   readonly displayName?: string;
-  /** Compute Engine location where the instance resides. For trial organization
+  /**
+  * Compute Engine location where the instance resides. For trial organization
 subscriptions, the location must be a Compute Engine zone. For paid organization
-subscriptions, it should correspond to a Compute Engine region. */
+subscriptions, it should correspond to a Compute Engine region.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#location ApigeeInstance#location}
+  */
   readonly location: string;
-  /** Resource ID of the instance. */
+  /**
+  * Resource ID of the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#name ApigeeInstance#name}
+  */
   readonly name: string;
-  /** The Apigee Organization associated with the Apigee instance,
-in the format 'organizations/{{org_name}}'. */
+  /**
+  * The Apigee Organization associated with the Apigee instance,
+in the format 'organizations/{{org_name}}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#org_id ApigeeInstance#org_id}
+  */
   readonly orgId: string;
-  /** The size of the CIDR block range that will be reserved by the instance. Possible values: ["SLASH_16", "SLASH_20"] */
+  /**
+  * The size of the CIDR block range that will be reserved by the instance. Possible values: ["SLASH_16", "SLASH_20"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#peering_cidr_range ApigeeInstance#peering_cidr_range}
+  */
   readonly peeringCidrRange?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#timeouts ApigeeInstance#timeouts}
+  */
   readonly timeouts?: ApigeeInstanceTimeouts;
 }
 export interface ApigeeInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#create ApigeeInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#delete ApigeeInstance#delete}
+  */
   readonly delete?: string;
 }
 
@@ -42,14 +80,22 @@ function apigeeInstanceTimeoutsToTerraform(struct?: ApigeeInstanceTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html google_apigee_instance}
+*/
 export class ApigeeInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html google_apigee_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApigeeInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: ApigeeInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_apigee_instance',

@@ -7,31 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
-  /** The charset value. See MySQL's
+  /**
+  * The charset value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
-a value of 'UTF8' at creation time. */
+a value of 'UTF8' at creation time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#charset SqlDatabase#charset}
+  */
   readonly charset?: string;
-  /** The collation value. See MySQL's
+  /**
+  * The collation value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
-a value of 'en_US.UTF8' at creation time. */
+a value of 'en_US.UTF8' at creation time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#collation SqlDatabase#collation}
+  */
   readonly collation?: string;
-  /** The name of the Cloud SQL instance. This does not include the project
-ID. */
+  /**
+  * The name of the Cloud SQL instance. This does not include the project
+ID.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#instance SqlDatabase#instance}
+  */
   readonly instance: string;
-  /** The name of the database in the Cloud SQL instance.
-This does not include the project ID or instance name. */
+  /**
+  * The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#name SqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#project SqlDatabase#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#timeouts SqlDatabase#timeouts}
+  */
   readonly timeouts?: SqlDatabaseTimeouts;
 }
 export interface SqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#create SqlDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#delete SqlDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#update SqlDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -45,14 +77,22 @@ function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_database.html google_sql_database}
+*/
 export class SqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_database.html google_sql_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_database',

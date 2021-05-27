@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_health_check.html
+// https://www.terraform.io/docs/providers/google/d/compute_health_check.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeHealthCheckConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash. */
+last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html#name DataGoogleComputeHealthCheck#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html#project DataGoogleComputeHealthCheck#project}
+  */
   readonly project?: string;
 }
 export class DataGoogleComputeHealthCheckGrpcHealthCheck extends cdktf.ComplexComputedList {
@@ -215,14 +222,22 @@ export class DataGoogleComputeHealthCheckTcpHealthCheck extends cdktf.ComplexCom
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html google_compute_health_check}
+*/
 export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html google_compute_health_check} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeHealthCheckConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeHealthCheckConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_health_check',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_monitoring_app_engine_service.html
+// https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,17 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleMonitoringAppEngineServiceConfig extends cdktf.TerraformMetaArguments {
-  /** The ID of the App Engine module underlying this service. 
+  /**
+  * The ID of the App Engine module underlying this service. 
 Corresponds to the 'moduleId' resource label for a 'gae_app'
-monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app) */
+monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app)
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html#module_id DataGoogleMonitoringAppEngineService#module_id}
+  */
   readonly moduleId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html#project DataGoogleMonitoringAppEngineService#project}
+  */
   readonly project?: string;
 }
 export class DataGoogleMonitoringAppEngineServiceTelemetry extends cdktf.ComplexComputedList {
@@ -21,14 +28,22 @@ export class DataGoogleMonitoringAppEngineServiceTelemetry extends cdktf.Complex
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html google_monitoring_app_engine_service}
+*/
 export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html google_monitoring_app_engine_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleMonitoringAppEngineServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleMonitoringAppEngineServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_app_engine_service',

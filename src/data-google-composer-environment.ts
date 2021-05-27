@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_composer_environment.html
+// https://www.terraform.io/docs/providers/google/d/composer_environment.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the environment. */
+  /**
+  * Name of the environment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html#name DataGoogleComposerEnvironment#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html#project DataGoogleComposerEnvironment#project}
+  */
   readonly project?: string;
-  /** The location or Compute Engine region for the environment. */
+  /**
+  * The location or Compute Engine region for the environment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html#region DataGoogleComposerEnvironment#region}
+  */
   readonly region?: string;
 }
 export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy extends cdktf.ComplexComputedList {
@@ -175,14 +187,22 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html google_composer_environment}
+*/
 export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html google_composer_environment} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComposerEnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComposerEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_composer_environment',

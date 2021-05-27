@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_client_openid_userinfo.html
+// https://www.terraform.io/docs/providers/google/d/client_openid_userinfo.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -9,14 +9,22 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleClientOpenidUserinfoConfig extends cdktf.TerraformMetaArguments {
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/client_openid_userinfo.html google_client_openid_userinfo}
+*/
 export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/client_openid_userinfo.html google_client_openid_userinfo} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleClientOpenidUserinfoConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleClientOpenidUserinfoConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_client_openid_userinfo',

@@ -7,15 +7,35 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotebooksLocationConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the Location resource. */
+  /**
+  * Name of the Location resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#name NotebooksLocation#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#project NotebooksLocation#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#timeouts NotebooksLocation#timeouts}
+  */
   readonly timeouts?: NotebooksLocationTimeouts;
 }
 export interface NotebooksLocationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#create NotebooksLocation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#delete NotebooksLocation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#update NotebooksLocation#update}
+  */
   readonly update?: string;
 }
 
@@ -29,14 +49,22 @@ function notebooksLocationTimeoutsToTerraform(struct?: NotebooksLocationTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html google_notebooks_location}
+*/
 export class NotebooksLocation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html google_notebooks_location} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotebooksLocationConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: NotebooksLocationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_notebooks_location',

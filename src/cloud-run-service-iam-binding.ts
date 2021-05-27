@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudRunServiceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#location CloudRunServiceIamBinding#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#members CloudRunServiceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#project CloudRunServiceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#role CloudRunServiceIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#service CloudRunServiceIamBinding#service}
+  */
   readonly service: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#condition CloudRunServiceIamBinding#condition}
+  */
   readonly condition?: CloudRunServiceIamBindingCondition[];
 }
 export interface CloudRunServiceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#description CloudRunServiceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#expression CloudRunServiceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html#title CloudRunServiceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function cloudRunServiceIamBindingConditionToTerraform(struct?: CloudRunServiceI
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html google_cloud_run_service_iam_binding}
+*/
 export class CloudRunServiceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_binding.html google_cloud_run_service_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudRunServiceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudRunServiceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_run_service_iam_binding',

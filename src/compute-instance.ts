@@ -7,63 +7,177 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires stopping the instance without setting this field, the update will fail. */
+  /**
+  * If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires stopping the instance without setting this field, the update will fail.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#allow_stopping_for_update ComputeInstance#allow_stopping_for_update}
+  */
   readonly allowStoppingForUpdate?: boolean;
-  /** Whether sending and receiving of packets with non-matching source or destination IPs is allowed. */
+  /**
+  * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#can_ip_forward ComputeInstance#can_ip_forward}
+  */
   readonly canIpForward?: boolean;
-  /** Whether deletion protection is enabled on this instance. */
+  /**
+  * Whether deletion protection is enabled on this instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#deletion_protection ComputeInstance#deletion_protection}
+  */
   readonly deletionProtection?: boolean;
-  /** A brief description of the resource. */
+  /**
+  * A brief description of the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#description ComputeInstance#description}
+  */
   readonly description?: string;
-  /** Desired status of the instance. Either "RUNNING" or "TERMINATED". */
+  /**
+  * Desired status of the instance. Either "RUNNING" or "TERMINATED".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#desired_status ComputeInstance#desired_status}
+  */
   readonly desiredStatus?: string;
-  /** Whether the instance has virtual displays enabled. */
+  /**
+  * Whether the instance has virtual displays enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#enable_display ComputeInstance#enable_display}
+  */
   readonly enableDisplay?: boolean;
-  /** List of the type and count of accelerator cards attached to the instance. */
+  /**
+  * List of the type and count of accelerator cards attached to the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#guest_accelerator ComputeInstance#guest_accelerator}
+  */
   readonly guestAccelerator?: ComputeInstanceGuestAccelerator[];
-  /** A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created. */
+  /**
+  * A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#hostname ComputeInstance#hostname}
+  */
   readonly hostname?: string;
-  /** A set of key/value label pairs assigned to the instance. */
+  /**
+  * A set of key/value label pairs assigned to the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#labels ComputeInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The machine type to create. */
+  /**
+  * The machine type to create.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#machine_type ComputeInstance#machine_type}
+  */
   readonly machineType: string;
-  /** Metadata key/value pairs made available within the instance. */
+  /**
+  * Metadata key/value pairs made available within the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#metadata ComputeInstance#metadata}
+  */
   readonly metadata?: { [key: string]: string };
-  /** Metadata startup scripts made available within the instance. */
+  /**
+  * Metadata startup scripts made available within the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#metadata_startup_script ComputeInstance#metadata_startup_script}
+  */
   readonly metadataStartupScript?: string;
-  /** The minimum CPU platform specified for the VM instance. */
+  /**
+  * The minimum CPU platform specified for the VM instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#min_cpu_platform ComputeInstance#min_cpu_platform}
+  */
   readonly minCpuPlatform?: string;
-  /** The name of the instance. One of name or self_link must be provided. */
+  /**
+  * The name of the instance. One of name or self_link must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#name ComputeInstance#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#project ComputeInstance#project}
+  */
   readonly project?: string;
-  /** A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported. */
+  /**
+  * A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#resource_policies ComputeInstance#resource_policies}
+  */
   readonly resourcePolicies?: string[];
-  /** The list of tags attached to the instance. */
+  /**
+  * The list of tags attached to the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#tags ComputeInstance#tags}
+  */
   readonly tags?: string[];
-  /** The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used. */
+  /**
+  * The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#zone ComputeInstance#zone}
+  */
   readonly zone?: string;
-  /** attached_disk block */
+  /**
+  * attached_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#attached_disk ComputeInstance#attached_disk}
+  */
   readonly attachedDisk?: ComputeInstanceAttachedDisk[];
-  /** boot_disk block */
+  /**
+  * boot_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#boot_disk ComputeInstance#boot_disk}
+  */
   readonly bootDisk: ComputeInstanceBootDisk[];
-  /** confidential_instance_config block */
+  /**
+  * confidential_instance_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#confidential_instance_config ComputeInstance#confidential_instance_config}
+  */
   readonly confidentialInstanceConfig?: ComputeInstanceConfidentialInstanceConfig[];
-  /** network_interface block */
+  /**
+  * network_interface block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#network_interface ComputeInstance#network_interface}
+  */
   readonly networkInterface: ComputeInstanceNetworkInterface[];
-  /** scheduling block */
+  /**
+  * scheduling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#scheduling ComputeInstance#scheduling}
+  */
   readonly scheduling?: ComputeInstanceScheduling[];
-  /** scratch_disk block */
+  /**
+  * scratch_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#scratch_disk ComputeInstance#scratch_disk}
+  */
   readonly scratchDisk?: ComputeInstanceScratchDisk[];
-  /** service_account block */
+  /**
+  * service_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#service_account ComputeInstance#service_account}
+  */
   readonly serviceAccount?: ComputeInstanceServiceAccount[];
-  /** shielded_instance_config block */
+  /**
+  * shielded_instance_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#shielded_instance_config ComputeInstance#shielded_instance_config}
+  */
   readonly shieldedInstanceConfig?: ComputeInstanceShieldedInstanceConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#timeouts ComputeInstance#timeouts}
+  */
   readonly timeouts?: ComputeInstanceTimeouts;
 }
 export interface ComputeInstanceGuestAccelerator {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#count ComputeInstance#count}
+  */
   readonly count?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#type ComputeInstance#type}
+  */
   readonly type?: string;
 }
 
@@ -76,15 +190,35 @@ function computeInstanceGuestAcceleratorToTerraform(struct?: ComputeInstanceGues
 }
 
 export interface ComputeInstanceAttachedDisk {
-  /** Name with which the attached disk is accessible under /dev/disk/by-id/ */
+  /**
+  * Name with which the attached disk is accessible under /dev/disk/by-id/
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#device_name ComputeInstance#device_name}
+  */
   readonly deviceName?: string;
-  /** A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set. */
+  /**
+  * A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+  */
   readonly diskEncryptionKeyRaw?: string;
-  /** The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set. */
+  /**
+  * The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#kms_key_self_link ComputeInstance#kms_key_self_link}
+  */
   readonly kmsKeySelfLink?: string;
-  /** Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE". */
+  /**
+  * Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#mode ComputeInstance#mode}
+  */
   readonly mode?: string;
-  /** The name or self_link of the disk attached to this instance. */
+  /**
+  * The name or self_link of the disk attached to this instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#source ComputeInstance#source}
+  */
   readonly source: string;
 }
 
@@ -100,13 +234,29 @@ function computeInstanceAttachedDiskToTerraform(struct?: ComputeInstanceAttached
 }
 
 export interface ComputeInstanceBootDiskInitializeParams {
-  /** The image from which this disk was initialised. */
+  /**
+  * The image from which this disk was initialised.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#image ComputeInstance#image}
+  */
   readonly image?: string;
-  /** A set of key/value label pairs assigned to the disk. */
+  /**
+  * A set of key/value label pairs assigned to the disk.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#labels ComputeInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The size of the image in gigabytes. */
+  /**
+  * The size of the image in gigabytes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#size ComputeInstance#size}
+  */
   readonly size?: number;
-  /** The Google Compute Engine disk type. One of pd-standard, pd-ssd or pd-balanced. */
+  /**
+  * The Google Compute Engine disk type. One of pd-standard, pd-ssd or pd-balanced.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#type ComputeInstance#type}
+  */
   readonly type?: string;
 }
 
@@ -121,19 +271,47 @@ function computeInstanceBootDiskInitializeParamsToTerraform(struct?: ComputeInst
 }
 
 export interface ComputeInstanceBootDisk {
-  /** Whether the disk will be auto-deleted when the instance is deleted. */
+  /**
+  * Whether the disk will be auto-deleted when the instance is deleted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#auto_delete ComputeInstance#auto_delete}
+  */
   readonly autoDelete?: boolean;
-  /** Name with which attached disk will be accessible under /dev/disk/by-id/ */
+  /**
+  * Name with which attached disk will be accessible under /dev/disk/by-id/
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#device_name ComputeInstance#device_name}
+  */
   readonly deviceName?: string;
-  /** A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set. */
+  /**
+  * A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+  */
   readonly diskEncryptionKeyRaw?: string;
-  /** The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set. */
+  /**
+  * The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#kms_key_self_link ComputeInstance#kms_key_self_link}
+  */
   readonly kmsKeySelfLink?: string;
-  /** Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE". */
+  /**
+  * Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#mode ComputeInstance#mode}
+  */
   readonly mode?: string;
-  /** The name or self_link of the disk attached to this instance. */
+  /**
+  * The name or self_link of the disk attached to this instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#source ComputeInstance#source}
+  */
   readonly source?: string;
-  /** initialize_params block */
+  /**
+  * initialize_params block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#initialize_params ComputeInstance#initialize_params}
+  */
   readonly initializeParams?: ComputeInstanceBootDiskInitializeParams[];
 }
 
@@ -151,7 +329,11 @@ function computeInstanceBootDiskToTerraform(struct?: ComputeInstanceBootDisk): a
 }
 
 export interface ComputeInstanceConfidentialInstanceConfig {
-  /** Defines whether the instance should have confidential compute enabled. */
+  /**
+  * Defines whether the instance should have confidential compute enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#enable_confidential_compute ComputeInstance#enable_confidential_compute}
+  */
   readonly enableConfidentialCompute: boolean;
 }
 
@@ -163,11 +345,23 @@ function computeInstanceConfidentialInstanceConfigToTerraform(struct?: ComputeIn
 }
 
 export interface ComputeInstanceNetworkInterfaceAccessConfig {
-  /** The IP address that is be 1:1 mapped to the instance's network ip. */
+  /**
+  * The IP address that is be 1:1 mapped to the instance's network ip.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#nat_ip ComputeInstance#nat_ip}
+  */
   readonly natIp?: string;
-  /** The networking tier used for configuring this instance. One of PREMIUM or STANDARD. */
+  /**
+  * The networking tier used for configuring this instance. One of PREMIUM or STANDARD.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#network_tier ComputeInstance#network_tier}
+  */
   readonly networkTier?: string;
-  /** The DNS domain name for the public PTR record. */
+  /**
+  * The DNS domain name for the public PTR record.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
+  */
   readonly publicPtrDomainName?: string;
 }
 
@@ -181,9 +375,17 @@ function computeInstanceNetworkInterfaceAccessConfigToTerraform(struct?: Compute
 }
 
 export interface ComputeInstanceNetworkInterfaceAliasIpRange {
-  /** The IP CIDR range represented by this alias IP range. */
+  /**
+  * The IP CIDR range represented by this alias IP range.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#ip_cidr_range ComputeInstance#ip_cidr_range}
+  */
   readonly ipCidrRange: string;
-  /** The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range. */
+  /**
+  * The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#subnetwork_range_name ComputeInstance#subnetwork_range_name}
+  */
   readonly subnetworkRangeName?: string;
 }
 
@@ -196,19 +398,47 @@ function computeInstanceNetworkInterfaceAliasIpRangeToTerraform(struct?: Compute
 }
 
 export interface ComputeInstanceNetworkInterface {
-  /** The name or self_link of the network attached to this interface. */
+  /**
+  * The name or self_link of the network attached to this interface.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#network ComputeInstance#network}
+  */
   readonly network?: string;
-  /** The private IP address assigned to the instance. */
+  /**
+  * The private IP address assigned to the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#network_ip ComputeInstance#network_ip}
+  */
   readonly networkIp?: string;
-  /** The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET */
+  /**
+  * The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#nic_type ComputeInstance#nic_type}
+  */
   readonly nicType?: string;
-  /** The name or self_link of the subnetwork attached to this interface. */
+  /**
+  * The name or self_link of the subnetwork attached to this interface.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#subnetwork ComputeInstance#subnetwork}
+  */
   readonly subnetwork?: string;
-  /** The project in which the subnetwork belongs. */
+  /**
+  * The project in which the subnetwork belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#subnetwork_project ComputeInstance#subnetwork_project}
+  */
   readonly subnetworkProject?: string;
-  /** access_config block */
+  /**
+  * access_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#access_config ComputeInstance#access_config}
+  */
   readonly accessConfig?: ComputeInstanceNetworkInterfaceAccessConfig[];
-  /** alias_ip_range block */
+  /**
+  * alias_ip_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#alias_ip_range ComputeInstance#alias_ip_range}
+  */
   readonly aliasIpRange?: ComputeInstanceNetworkInterfaceAliasIpRange[];
 }
 
@@ -226,8 +456,17 @@ function computeInstanceNetworkInterfaceToTerraform(struct?: ComputeInstanceNetw
 }
 
 export interface ComputeInstanceSchedulingNodeAffinities {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#key ComputeInstance#key}
+  */
   readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#operator ComputeInstance#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#values ComputeInstance#values}
+  */
   readonly values: string[];
 }
 
@@ -241,14 +480,33 @@ function computeInstanceSchedulingNodeAffinitiesToTerraform(struct?: ComputeInst
 }
 
 export interface ComputeInstanceScheduling {
-  /** Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). */
+  /**
+  * Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#automatic_restart ComputeInstance#automatic_restart}
+  */
   readonly automaticRestart?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#min_node_cpus ComputeInstance#min_node_cpus}
+  */
   readonly minNodeCpus?: number;
-  /** Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE, */
+  /**
+  * Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#on_host_maintenance ComputeInstance#on_host_maintenance}
+  */
   readonly onHostMaintenance?: string;
-  /** Whether the instance is preemptible. */
+  /**
+  * Whether the instance is preemptible.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#preemptible ComputeInstance#preemptible}
+  */
   readonly preemptible?: boolean;
-  /** node_affinities block */
+  /**
+  * node_affinities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#node_affinities ComputeInstance#node_affinities}
+  */
   readonly nodeAffinities?: ComputeInstanceSchedulingNodeAffinities[];
 }
 
@@ -264,7 +522,11 @@ function computeInstanceSchedulingToTerraform(struct?: ComputeInstanceScheduling
 }
 
 export interface ComputeInstanceScratchDisk {
-  /** The disk interface used for attaching this disk. One of SCSI or NVME. */
+  /**
+  * The disk interface used for attaching this disk. One of SCSI or NVME.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#interface ComputeInstance#interface}
+  */
   readonly interface: string;
 }
 
@@ -276,9 +538,17 @@ function computeInstanceScratchDiskToTerraform(struct?: ComputeInstanceScratchDi
 }
 
 export interface ComputeInstanceServiceAccount {
-  /** The service account e-mail address. */
+  /**
+  * The service account e-mail address.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#email ComputeInstance#email}
+  */
   readonly email?: string;
-  /** A list of service scopes. */
+  /**
+  * A list of service scopes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#scopes ComputeInstance#scopes}
+  */
   readonly scopes: string[];
 }
 
@@ -291,11 +561,23 @@ function computeInstanceServiceAccountToTerraform(struct?: ComputeInstanceServic
 }
 
 export interface ComputeInstanceShieldedInstanceConfig {
-  /** Whether integrity monitoring is enabled for the instance. */
+  /**
+  * Whether integrity monitoring is enabled for the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#enable_integrity_monitoring ComputeInstance#enable_integrity_monitoring}
+  */
   readonly enableIntegrityMonitoring?: boolean;
-  /** Whether secure boot is enabled for the instance. */
+  /**
+  * Whether secure boot is enabled for the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#enable_secure_boot ComputeInstance#enable_secure_boot}
+  */
   readonly enableSecureBoot?: boolean;
-  /** Whether the instance uses vTPM. */
+  /**
+  * Whether the instance uses vTPM.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#enable_vtpm ComputeInstance#enable_vtpm}
+  */
   readonly enableVtpm?: boolean;
 }
 
@@ -309,8 +591,17 @@ function computeInstanceShieldedInstanceConfigToTerraform(struct?: ComputeInstan
 }
 
 export interface ComputeInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#create ComputeInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#delete ComputeInstance#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#update ComputeInstance#update}
+  */
   readonly update?: string;
 }
 
@@ -324,14 +615,22 @@ function computeInstanceTimeoutsToTerraform(struct?: ComputeInstanceTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html google_compute_instance}
+*/
 export class ComputeInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html google_compute_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance',

@@ -7,15 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMetaArguments {
-  /** The ID of a host project to associate. */
+  /**
+  * The ID of a host project to associate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html#host_project ComputeSharedVpcServiceProject#host_project}
+  */
   readonly hostProject: string;
-  /** The ID of the project that will serve as a Shared VPC service project. */
+  /**
+  * The ID of the project that will serve as a Shared VPC service project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html#service_project ComputeSharedVpcServiceProject#service_project}
+  */
   readonly serviceProject: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html#timeouts ComputeSharedVpcServiceProject#timeouts}
+  */
   readonly timeouts?: ComputeSharedVpcServiceProjectTimeouts;
 }
 export interface ComputeSharedVpcServiceProjectTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html#create ComputeSharedVpcServiceProject#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html#delete ComputeSharedVpcServiceProject#delete}
+  */
   readonly delete?: string;
 }
 
@@ -28,14 +46,22 @@ function computeSharedVpcServiceProjectTimeoutsToTerraform(struct?: ComputeShare
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html google_compute_shared_vpc_service_project}
+*/
 export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project.html google_compute_shared_vpc_service_project} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeSharedVpcServiceProjectConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeSharedVpcServiceProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_shared_vpc_service_project',

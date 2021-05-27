@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocJobIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#job_id DataprocJobIamBinding#job_id}
+  */
   readonly jobId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#members DataprocJobIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#project DataprocJobIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#region DataprocJobIamBinding#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#role DataprocJobIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#condition DataprocJobIamBinding#condition}
+  */
   readonly condition?: DataprocJobIamBindingCondition[];
 }
 export interface DataprocJobIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#description DataprocJobIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#expression DataprocJobIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html#title DataprocJobIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function dataprocJobIamBindingConditionToTerraform(struct?: DataprocJobIamBindin
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html google_dataproc_job_iam_binding}
+*/
 export class DataprocJobIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_binding.html google_dataproc_job_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocJobIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocJobIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_job_iam_binding',

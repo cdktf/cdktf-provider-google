@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#instance_name ComputeInstanceIamBinding#instance_name}
+  */
   readonly instanceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#members ComputeInstanceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#project ComputeInstanceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#role ComputeInstanceIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#zone ComputeInstanceIamBinding#zone}
+  */
   readonly zone?: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#condition ComputeInstanceIamBinding#condition}
+  */
   readonly condition?: ComputeInstanceIamBindingCondition[];
 }
 export interface ComputeInstanceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#description ComputeInstanceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#expression ComputeInstanceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html#title ComputeInstanceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function computeInstanceIamBindingConditionToTerraform(struct?: ComputeInstanceI
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html google_compute_instance_iam_binding}
+*/
 export class ComputeInstanceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding.html google_compute_instance_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeInstanceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeInstanceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_iam_binding',

@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudRunServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#location CloudRunServiceIamMember#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#member CloudRunServiceIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#project CloudRunServiceIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#role CloudRunServiceIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#service CloudRunServiceIamMember#service}
+  */
   readonly service: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#condition CloudRunServiceIamMember#condition}
+  */
   readonly condition?: CloudRunServiceIamMemberCondition[];
 }
 export interface CloudRunServiceIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#description CloudRunServiceIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#expression CloudRunServiceIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html#title CloudRunServiceIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function cloudRunServiceIamMemberConditionToTerraform(struct?: CloudRunServiceIa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html google_cloud_run_service_iam_member}
+*/
 export class CloudRunServiceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_member.html google_cloud_run_service_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudRunServiceIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudRunServiceIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_run_service_iam_member',

@@ -7,35 +7,78 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogTagConfig extends cdktf.TerraformMetaArguments {
-  /** Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+  /**
+  * Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 
 For attaching a tag to a nested column, use '.' to separate the column names. Example:
-'outer_column.inner_column' */
+'outer_column.inner_column'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#column DataCatalogTag#column}
+  */
   readonly column?: string;
-  /** The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
-all entries in that group. */
+  /**
+  * The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+all entries in that group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#parent DataCatalogTag#parent}
+  */
   readonly parent?: string;
-  /** The resource name of the tag template that this tag uses. Example:
+  /**
+  * The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
-This field cannot be modified after creation. */
+This field cannot be modified after creation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#template DataCatalogTag#template}
+  */
   readonly template: string;
-  /** fields block */
+  /**
+  * fields block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#fields DataCatalogTag#fields}
+  */
   readonly fields: DataCatalogTagFields[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#timeouts DataCatalogTag#timeouts}
+  */
   readonly timeouts?: DataCatalogTagTimeouts;
 }
 export interface DataCatalogTagFields {
-  /** Holds the value for a tag field with boolean type. */
+  /**
+  * Holds the value for a tag field with boolean type.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#bool_value DataCatalogTag#bool_value}
+  */
   readonly boolValue?: boolean;
-  /** Holds the value for a tag field with double type. */
+  /**
+  * Holds the value for a tag field with double type.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#double_value DataCatalogTag#double_value}
+  */
   readonly doubleValue?: number;
-  /** The display name of the enum value. */
+  /**
+  * The display name of the enum value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#enum_value DataCatalogTag#enum_value}
+  */
   readonly enumValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#field_name DataCatalogTag#field_name}
+  */
   readonly fieldName: string;
-  /** Holds the value for a tag field with string type. */
+  /**
+  * Holds the value for a tag field with string type.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#string_value DataCatalogTag#string_value}
+  */
   readonly stringValue?: string;
-  /** Holds the value for a tag field with timestamp type. */
+  /**
+  * Holds the value for a tag field with timestamp type.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#timestamp_value DataCatalogTag#timestamp_value}
+  */
   readonly timestampValue?: string;
 }
 
@@ -52,8 +95,17 @@ function dataCatalogTagFieldsToTerraform(struct?: DataCatalogTagFields): any {
 }
 
 export interface DataCatalogTagTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#create DataCatalogTag#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#delete DataCatalogTag#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#update DataCatalogTag#update}
+  */
   readonly update?: string;
 }
 
@@ -67,14 +119,22 @@ function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html google_data_catalog_tag}
+*/
 export class DataCatalogTag extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html google_data_catalog_tag} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogTagConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogTagConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_tag',

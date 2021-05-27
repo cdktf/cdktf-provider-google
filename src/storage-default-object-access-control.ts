@@ -7,9 +7,14 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageDefaultObjectAccessControlConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the bucket. */
+  /**
+  * The name of the bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#bucket StorageDefaultObjectAccessControl#bucket}
+  */
   readonly bucket: string;
-  /** The entity holding the permission, in one of the following forms:
+  /**
+  * The entity holding the permission, in one of the following forms:
   * user-{{userId}}
   * user-{{email}} (such as "user-liz@example.com")
   * group-{{groupId}}
@@ -17,13 +22,28 @@ export interface StorageDefaultObjectAccessControlConfig extends cdktf.Terraform
   * domain-{{domain}} (such as "domain-example.com")
   * project-team-{{projectId}}
   * allUsers
-  * allAuthenticatedUsers */
+  * allAuthenticatedUsers
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#entity StorageDefaultObjectAccessControl#entity}
+  */
   readonly entity: string;
-  /** The name of the object, if applied to an object. */
+  /**
+  * The name of the object, if applied to an object.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#object StorageDefaultObjectAccessControl#object}
+  */
   readonly object?: string;
-  /** The access permission for the entity. Possible values: ["OWNER", "READER"] */
+  /**
+  * The access permission for the entity. Possible values: ["OWNER", "READER"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#role StorageDefaultObjectAccessControl#role}
+  */
   readonly role: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#timeouts StorageDefaultObjectAccessControl#timeouts}
+  */
   readonly timeouts?: StorageDefaultObjectAccessControlTimeouts;
 }
 export class StorageDefaultObjectAccessControlProjectTeam extends cdktf.ComplexComputedList {
@@ -39,8 +59,17 @@ export class StorageDefaultObjectAccessControlProjectTeam extends cdktf.ComplexC
   }
 }
 export interface StorageDefaultObjectAccessControlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#create StorageDefaultObjectAccessControl#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#delete StorageDefaultObjectAccessControl#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html#update StorageDefaultObjectAccessControl#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +83,22 @@ function storageDefaultObjectAccessControlTimeoutsToTerraform(struct?: StorageDe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html google_storage_default_object_access_control}
+*/
 export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control.html google_storage_default_object_access_control} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageDefaultObjectAccessControlConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageDefaultObjectAccessControlConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_default_object_access_control',

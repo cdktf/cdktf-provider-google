@@ -7,21 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNetworkPeeringRoutesConfigConfig extends cdktf.TerraformMetaArguments {
-  /** Whether to export the custom routes to the peer network. */
+  /**
+  * Whether to export the custom routes to the peer network.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#export_custom_routes ComputeNetworkPeeringRoutesConfig#export_custom_routes}
+  */
   readonly exportCustomRoutes: boolean;
-  /** Whether to import the custom routes to the peer network. */
+  /**
+  * Whether to import the custom routes to the peer network.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#import_custom_routes ComputeNetworkPeeringRoutesConfig#import_custom_routes}
+  */
   readonly importCustomRoutes: boolean;
-  /** The name of the primary network for the peering. */
+  /**
+  * The name of the primary network for the peering.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#network ComputeNetworkPeeringRoutesConfig#network}
+  */
   readonly network: string;
-  /** Name of the peering. */
+  /**
+  * Name of the peering.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#peering ComputeNetworkPeeringRoutesConfig#peering}
+  */
   readonly peering: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#project ComputeNetworkPeeringRoutesConfig#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#timeouts ComputeNetworkPeeringRoutesConfig#timeouts}
+  */
   readonly timeouts?: ComputeNetworkPeeringRoutesConfigTimeouts;
 }
 export interface ComputeNetworkPeeringRoutesConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#create ComputeNetworkPeeringRoutesConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#delete ComputeNetworkPeeringRoutesConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#update ComputeNetworkPeeringRoutesConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +67,22 @@ function computeNetworkPeeringRoutesConfigTimeoutsToTerraform(struct?: ComputeNe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html google_compute_network_peering_routes_config}
+*/
 export class ComputeNetworkPeeringRoutesConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html google_compute_network_peering_routes_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeNetworkPeeringRoutesConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeNetworkPeeringRoutesConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_network_peering_routes_config',

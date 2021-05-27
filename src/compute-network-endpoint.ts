@@ -7,26 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNetworkEndpointConfig extends cdktf.TerraformMetaArguments {
-  /** The name for a specific VM instance that the IP address belongs to.
+  /**
+  * The name for a specific VM instance that the IP address belongs to.
 This is required for network endpoints of type GCE_VM_IP_PORT.
-The instance must be in the same zone of network endpoint group. */
+The instance must be in the same zone of network endpoint group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#instance ComputeNetworkEndpoint#instance}
+  */
   readonly instance: string;
-  /** IPv4 address of network endpoint. The IP address must belong
+  /**
+  * IPv4 address of network endpoint. The IP address must belong
 to a VM in GCE (either the primary IP or as part of an aliased IP
-range). */
+range).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#ip_address ComputeNetworkEndpoint#ip_address}
+  */
   readonly ipAddress: string;
-  /** The network endpoint group this endpoint is part of. */
+  /**
+  * The network endpoint group this endpoint is part of.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#network_endpoint_group ComputeNetworkEndpoint#network_endpoint_group}
+  */
   readonly networkEndpointGroup: string;
-  /** Port number of network endpoint. */
+  /**
+  * Port number of network endpoint.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#port ComputeNetworkEndpoint#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#project ComputeNetworkEndpoint#project}
+  */
   readonly project?: string;
-  /** Zone where the containing network endpoint group is located. */
+  /**
+  * Zone where the containing network endpoint group is located.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#zone ComputeNetworkEndpoint#zone}
+  */
   readonly zone?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#timeouts ComputeNetworkEndpoint#timeouts}
+  */
   readonly timeouts?: ComputeNetworkEndpointTimeouts;
 }
 export interface ComputeNetworkEndpointTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#create ComputeNetworkEndpoint#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html#delete ComputeNetworkEndpoint#delete}
+  */
   readonly delete?: string;
 }
 
@@ -39,14 +72,22 @@ function computeNetworkEndpointTimeoutsToTerraform(struct?: ComputeNetworkEndpoi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html google_compute_network_endpoint}
+*/
 export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint.html google_compute_network_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeNetworkEndpointConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeNetworkEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_network_endpoint',

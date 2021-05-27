@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRegionDiskIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#members ComputeRegionDiskIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#name ComputeRegionDiskIamBinding#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#project ComputeRegionDiskIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#region ComputeRegionDiskIamBinding#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#role ComputeRegionDiskIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#condition ComputeRegionDiskIamBinding#condition}
+  */
   readonly condition?: ComputeRegionDiskIamBindingCondition[];
 }
 export interface ComputeRegionDiskIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#description ComputeRegionDiskIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#expression ComputeRegionDiskIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html#title ComputeRegionDiskIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function computeRegionDiskIamBindingConditionToTerraform(struct?: ComputeRegionD
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html google_compute_region_disk_iam_binding}
+*/
 export class ComputeRegionDiskIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_binding.html google_compute_region_disk_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRegionDiskIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRegionDiskIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_disk_iam_binding',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceAccountIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#members ServiceAccountIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#role ServiceAccountIamBinding#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#service_account_id ServiceAccountIamBinding#service_account_id}
+  */
   readonly serviceAccountId: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#condition ServiceAccountIamBinding#condition}
+  */
   readonly condition?: ServiceAccountIamBindingCondition[];
 }
 export interface ServiceAccountIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#description ServiceAccountIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#expression ServiceAccountIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html#title ServiceAccountIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function serviceAccountIamBindingConditionToTerraform(struct?: ServiceAccountIam
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html google_service_account_iam_binding}
+*/
 export class ServiceAccountIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_binding.html google_service_account_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceAccountIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceAccountIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account_iam_binding',

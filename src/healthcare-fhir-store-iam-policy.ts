@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareFhirStoreIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_policy.html#fhir_store_id HealthcareFhirStoreIamPolicy#fhir_store_id}
+  */
   readonly fhirStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_policy.html#policy_data HealthcareFhirStoreIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_policy.html google_healthcare_fhir_store_iam_policy}
+*/
 export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_policy.html google_healthcare_fhir_store_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareFhirStoreIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareFhirStoreIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_fhir_store_iam_policy',

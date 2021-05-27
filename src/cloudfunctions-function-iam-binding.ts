@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudfunctionsFunctionIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#cloud_function CloudfunctionsFunctionIamBinding#cloud_function}
+  */
   readonly cloudFunction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#members CloudfunctionsFunctionIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#project CloudfunctionsFunctionIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#region CloudfunctionsFunctionIamBinding#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#role CloudfunctionsFunctionIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#condition CloudfunctionsFunctionIamBinding#condition}
+  */
   readonly condition?: CloudfunctionsFunctionIamBindingCondition[];
 }
 export interface CloudfunctionsFunctionIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#description CloudfunctionsFunctionIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#expression CloudfunctionsFunctionIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html#title CloudfunctionsFunctionIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function cloudfunctionsFunctionIamBindingConditionToTerraform(struct?: Cloudfunc
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html google_cloudfunctions_function_iam_binding}
+*/
 export class CloudfunctionsFunctionIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_binding.html google_cloudfunctions_function_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudfunctionsFunctionIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudfunctionsFunctionIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function_iam_binding',

@@ -7,25 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SourcerepoRepositoryConfig extends cdktf.TerraformMetaArguments {
-  /** Resource name of the repository, of the form '{{repo}}'.
-The repo name may contain slashes. eg, 'name/with/slash' */
+  /**
+  * Resource name of the repository, of the form '{{repo}}'.
+The repo name may contain slashes. eg, 'name/with/slash'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#name SourcerepoRepository#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#project SourcerepoRepository#project}
+  */
   readonly project?: string;
-  /** pubsub_configs block */
+  /**
+  * pubsub_configs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#pubsub_configs SourcerepoRepository#pubsub_configs}
+  */
   readonly pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#timeouts SourcerepoRepository#timeouts}
+  */
   readonly timeouts?: SourcerepoRepositoryTimeouts;
 }
 export interface SourcerepoRepositoryPubsubConfigs {
-  /** The format of the Cloud Pub/Sub messages. 
+  /**
+  * The format of the Cloud Pub/Sub messages. 
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
-- JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"] */
+- JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#message_format SourcerepoRepository#message_format}
+  */
   readonly messageFormat: string;
-  /** Email address of the service account used for publishing Cloud Pub/Sub messages. 
+  /**
+  * Email address of the service account used for publishing Cloud Pub/Sub messages. 
 This service account needs to be in the same project as the PubsubConfig. When added, 
 the caller needs to have iam.serviceAccounts.actAs permission on this service account. 
-If unspecified, it defaults to the compute engine default service account. */
+If unspecified, it defaults to the compute engine default service account.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#service_account_email SourcerepoRepository#service_account_email}
+  */
   readonly serviceAccountEmail?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#topic SourcerepoRepository#topic}
+  */
   readonly topic: string;
 }
 
@@ -39,8 +65,17 @@ function sourcerepoRepositoryPubsubConfigsToTerraform(struct?: SourcerepoReposit
 }
 
 export interface SourcerepoRepositoryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#create SourcerepoRepository#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#delete SourcerepoRepository#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#update SourcerepoRepository#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +89,22 @@ function sourcerepoRepositoryTimeoutsToTerraform(struct?: SourcerepoRepositoryTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html google_sourcerepo_repository}
+*/
 export class SourcerepoRepository extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html google_sourcerepo_repository} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SourcerepoRepositoryConfig
+  */
   public constructor(scope: Construct, id: string, config: SourcerepoRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sourcerepo_repository',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_subnetwork.html
+// https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#name DataGoogleComputeSubnetwork#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#project DataGoogleComputeSubnetwork#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#region DataGoogleComputeSubnetwork#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#self_link DataGoogleComputeSubnetwork#self_link}
+  */
   readonly selfLink?: string;
 }
 export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexComputedList {
@@ -25,14 +37,22 @@ export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexCo
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html google_compute_subnetwork}
+*/
 export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html google_compute_subnetwork} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeSubnetworkConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeSubnetworkConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_compute_subnetwork',

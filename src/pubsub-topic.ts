@@ -7,31 +7,62 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
-  /** The resource name of the Cloud KMS CryptoKey to be used to protect access
+  /**
+  * The resource name of the Cloud KMS CryptoKey to be used to protect access
 to messages published on this topic. Your project's PubSub service account
 ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-The expected format is 'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*' */
+The expected format is 'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#kms_key_name PubsubTopic#kms_key_name}
+  */
   readonly kmsKeyName?: string;
-  /** A set of key/value label pairs to assign to this Topic. */
+  /**
+  * A set of key/value label pairs to assign to this Topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#labels PubsubTopic#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Name of the topic. */
+  /**
+  * Name of the topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#name PubsubTopic#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#project PubsubTopic#project}
+  */
   readonly project?: string;
-  /** message_storage_policy block */
+  /**
+  * message_storage_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#message_storage_policy PubsubTopic#message_storage_policy}
+  */
   readonly messageStoragePolicy?: PubsubTopicMessageStoragePolicy[];
-  /** schema_settings block */
+  /**
+  * schema_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#schema_settings PubsubTopic#schema_settings}
+  */
   readonly schemaSettings?: PubsubTopicSchemaSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#timeouts PubsubTopic#timeouts}
+  */
   readonly timeouts?: PubsubTopicTimeouts;
 }
 export interface PubsubTopicMessageStoragePolicy {
-  /** A list of IDs of GCP regions where messages that are published to
+  /**
+  * A list of IDs of GCP regions where messages that are published to
 the topic may be persisted in storage. Messages published by
 publishers running in non-allowed GCP regions (or running outside
 of GCP altogether) will be routed for storage in one of the
 allowed regions. An empty list means that no regions are allowed,
-and is not a valid configuration. */
+and is not a valid configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#allowed_persistence_regions PubsubTopic#allowed_persistence_regions}
+  */
   readonly allowedPersistenceRegions: string[];
 }
 
@@ -43,12 +74,20 @@ function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicMessageS
 }
 
 export interface PubsubTopicSchemaSettings {
-  /** The encoding of messages validated against schema. Default value: "ENCODING_UNSPECIFIED" Possible values: ["ENCODING_UNSPECIFIED", "JSON", "BINARY"] */
+  /**
+  * The encoding of messages validated against schema. Default value: "ENCODING_UNSPECIFIED" Possible values: ["ENCODING_UNSPECIFIED", "JSON", "BINARY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#encoding PubsubTopic#encoding}
+  */
   readonly encoding?: string;
-  /** The name of the schema that messages published should be
+  /**
+  * The name of the schema that messages published should be
 validated against. Format is projects/{project}/schemas/{schema}.
 The value of this field will be _deleted-schema_
-if the schema has been deleted. */
+if the schema has been deleted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#schema PubsubTopic#schema}
+  */
   readonly schema: string;
 }
 
@@ -61,8 +100,17 @@ function pubsubTopicSchemaSettingsToTerraform(struct?: PubsubTopicSchemaSettings
 }
 
 export interface PubsubTopicTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#create PubsubTopic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#delete PubsubTopic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#update PubsubTopic#update}
+  */
   readonly update?: string;
 }
 
@@ -76,14 +124,22 @@ function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html google_pubsub_topic}
+*/
 export class PubsubTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html google_pubsub_topic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubTopicConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_topic',

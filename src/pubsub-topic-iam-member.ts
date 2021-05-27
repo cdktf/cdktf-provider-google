@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PubsubTopicIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#member PubsubTopicIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#project PubsubTopicIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#role PubsubTopicIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#topic PubsubTopicIamMember#topic}
+  */
   readonly topic: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#condition PubsubTopicIamMember#condition}
+  */
   readonly condition?: PubsubTopicIamMemberCondition[];
 }
 export interface PubsubTopicIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#description PubsubTopicIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#expression PubsubTopicIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#title PubsubTopicIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function pubsubTopicIamMemberConditionToTerraform(struct?: PubsubTopicIamMemberC
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html google_pubsub_topic_iam_member}
+*/
 export class PubsubTopicIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html google_pubsub_topic_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PubsubTopicIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: PubsubTopicIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_topic_iam_member',

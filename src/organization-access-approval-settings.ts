@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface OrganizationAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
-  /** A list of email addresses to which notifications relating to approval requests should be sent.
+  /**
+  * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
-resources of that resource. A maximum of 50 email addresses are allowed. */
+resources of that resource. A maximum of 50 email addresses are allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#notification_emails OrganizationAccessApprovalSettings#notification_emails}
+  */
   readonly notificationEmails?: string[];
-  /** ID of the organization of the access approval settings. */
+  /**
+  * ID of the organization of the access approval settings.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#organization_id OrganizationAccessApprovalSettings#organization_id}
+  */
   readonly organizationId: string;
-  /** enrolled_services block */
+  /**
+  * enrolled_services block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#enrolled_services OrganizationAccessApprovalSettings#enrolled_services}
+  */
   readonly enrolledServices: OrganizationAccessApprovalSettingsEnrolledServices[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#timeouts OrganizationAccessApprovalSettings#timeouts}
+  */
   readonly timeouts?: OrganizationAccessApprovalSettingsTimeouts;
 }
 export interface OrganizationAccessApprovalSettingsEnrolledServices {
-  /** The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
+  /**
+  * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
   all
   appengine.googleapis.com
   bigquery.googleapis.com
@@ -29,9 +46,16 @@ export interface OrganizationAccessApprovalSettingsEnrolledServices {
   dataflow.googleapis.com
   iam.googleapis.com
   pubsub.googleapis.com
-  storage.googleapis.com */
+  storage.googleapis.com
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#cloud_product OrganizationAccessApprovalSettings#cloud_product}
+  */
   readonly cloudProduct: string;
-  /** The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"] */
+  /**
+  * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#enrollment_level OrganizationAccessApprovalSettings#enrollment_level}
+  */
   readonly enrollmentLevel?: string;
 }
 
@@ -44,8 +68,17 @@ function organizationAccessApprovalSettingsEnrolledServicesToTerraform(struct?: 
 }
 
 export interface OrganizationAccessApprovalSettingsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#create OrganizationAccessApprovalSettings#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#delete OrganizationAccessApprovalSettings#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#update OrganizationAccessApprovalSettings#update}
+  */
   readonly update?: string;
 }
 
@@ -59,14 +92,22 @@ function organizationAccessApprovalSettingsTimeoutsToTerraform(struct?: Organiza
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html google_organization_access_approval_settings}
+*/
 export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html google_organization_access_approval_settings} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options OrganizationAccessApprovalSettingsConfig
+  */
   public constructor(scope: Construct, id: string, config: OrganizationAccessApprovalSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'google_organization_access_approval_settings',

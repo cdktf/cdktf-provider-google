@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_client_config.html
+// https://www.terraform.io/docs/providers/google/d/client_config.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -9,14 +9,22 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleClientConfigConfig extends cdktf.TerraformMetaArguments {
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/client_config.html google_client_config}
+*/
 export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/client_config.html google_client_config} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleClientConfigConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleClientConfigConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_client_config',

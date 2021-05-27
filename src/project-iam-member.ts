@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#member ProjectIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#project ProjectIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#role ProjectIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#condition ProjectIamMember#condition}
+  */
   readonly condition?: ProjectIamMemberCondition[];
 }
 export interface ProjectIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#description ProjectIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#expression ProjectIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html#title ProjectIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function projectIamMemberConditionToTerraform(struct?: ProjectIamMemberCondition
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html google_project_iam_member}
+*/
 export class ProjectIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_iam_member.html google_project_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_iam_member',

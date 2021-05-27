@@ -7,16 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareConsentStoreConfig extends cdktf.TerraformMetaArguments {
-  /** Identifies the dataset addressed by this request. Must be in the format
-'projects/{project}/locations/{location}/datasets/{dataset}' */
+  /**
+  * Identifies the dataset addressed by this request. Must be in the format
+'projects/{project}/locations/{location}/datasets/{dataset}'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#dataset HealthcareConsentStore#dataset}
+  */
   readonly dataset: string;
-  /** Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+  /**
+  * Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#default_consent_ttl HealthcareConsentStore#default_consent_ttl}
+  */
   readonly defaultConsentTtl?: string;
-  /** If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist. */
+  /**
+  * If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#enable_consent_create_on_update HealthcareConsentStore#enable_consent_create_on_update}
+  */
   readonly enableConsentCreateOnUpdate?: boolean;
-  /** User-supplied key-value pairs used to organize Consent stores.
+  /**
+  * User-supplied key-value pairs used to organize Consent stores.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
 conform to the following PCRE regular expression: '[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}'
@@ -27,17 +40,37 @@ bytes, and must conform to the following PCRE regular expression: '[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 
 An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }. */
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#labels HealthcareConsentStore#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The name of this ConsentStore, for example:
-"consent1" */
+  /**
+  * The name of this ConsentStore, for example:
+"consent1"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#name HealthcareConsentStore#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#timeouts HealthcareConsentStore#timeouts}
+  */
   readonly timeouts?: HealthcareConsentStoreTimeouts;
 }
 export interface HealthcareConsentStoreTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#create HealthcareConsentStore#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#delete HealthcareConsentStore#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#update HealthcareConsentStore#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +84,22 @@ function healthcareConsentStoreTimeoutsToTerraform(struct?: HealthcareConsentSto
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html google_healthcare_consent_store}
+*/
 export class HealthcareConsentStore extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html google_healthcare_consent_store} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareConsentStoreConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareConsentStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_consent_store',

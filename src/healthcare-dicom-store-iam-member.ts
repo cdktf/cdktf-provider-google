@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareDicomStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#dicom_store_id HealthcareDicomStoreIamMember#dicom_store_id}
+  */
   readonly dicomStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#member HealthcareDicomStoreIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#role HealthcareDicomStoreIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#condition HealthcareDicomStoreIamMember#condition}
+  */
   readonly condition?: HealthcareDicomStoreIamMemberCondition[];
 }
 export interface HealthcareDicomStoreIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#description HealthcareDicomStoreIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#expression HealthcareDicomStoreIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#title HealthcareDicomStoreIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function healthcareDicomStoreIamMemberConditionToTerraform(struct?: HealthcareDi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html google_healthcare_dicom_store_iam_member}
+*/
 export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html google_healthcare_dicom_store_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareDicomStoreIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareDicomStoreIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dicom_store_iam_member',

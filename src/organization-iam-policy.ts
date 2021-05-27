@@ -7,19 +7,34 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface OrganizationIamPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The numeric ID of the organization in which you want to manage the audit logging config. */
+  /**
+  * The numeric ID of the organization in which you want to manage the audit logging config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_policy.html#org_id OrganizationIamPolicy#org_id}
+  */
   readonly orgId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_policy.html#policy_data OrganizationIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_policy.html google_organization_iam_policy}
+*/
 export class OrganizationIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_policy.html google_organization_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options OrganizationIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: OrganizationIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_organization_iam_policy',

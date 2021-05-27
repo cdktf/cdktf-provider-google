@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecretManagerSecretIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#member SecretManagerSecretIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#project SecretManagerSecretIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#role SecretManagerSecretIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#secret_id SecretManagerSecretIamMember#secret_id}
+  */
   readonly secretId: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#condition SecretManagerSecretIamMember#condition}
+  */
   readonly condition?: SecretManagerSecretIamMemberCondition[];
 }
 export interface SecretManagerSecretIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#description SecretManagerSecretIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#expression SecretManagerSecretIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html#title SecretManagerSecretIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function secretManagerSecretIamMemberConditionToTerraform(struct?: SecretManager
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html google_secret_manager_secret_iam_member}
+*/
 export class SecretManagerSecretIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member.html google_secret_manager_secret_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecretManagerSecretIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: SecretManagerSecretIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_secret_manager_secret_iam_member',

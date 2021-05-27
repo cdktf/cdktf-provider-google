@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareConsentStoreIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_policy.html#consent_store_id HealthcareConsentStoreIamPolicy#consent_store_id}
+  */
   readonly consentStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_policy.html#dataset HealthcareConsentStoreIamPolicy#dataset}
+  */
   readonly dataset: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_policy.html#policy_data HealthcareConsentStoreIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_policy.html google_healthcare_consent_store_iam_policy}
+*/
 export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_policy.html google_healthcare_consent_store_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareConsentStoreIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareConsentStoreIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_consent_store_iam_policy',

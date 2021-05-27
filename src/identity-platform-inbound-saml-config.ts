@@ -7,24 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IdentityPlatformInboundSamlConfigConfig extends cdktf.TerraformMetaArguments {
-  /** Human friendly display name. */
+  /**
+  * Human friendly display name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#display_name IdentityPlatformInboundSamlConfig#display_name}
+  */
   readonly displayName: string;
-  /** If this config allows users to sign in with the provider. */
+  /**
+  * If this config allows users to sign in with the provider.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#enabled IdentityPlatformInboundSamlConfig#enabled}
+  */
   readonly enabled?: boolean;
-  /** The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+  /**
+  * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
-alphanumeric character, and have at least 2 characters. */
+alphanumeric character, and have at least 2 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#name IdentityPlatformInboundSamlConfig#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#project IdentityPlatformInboundSamlConfig#project}
+  */
   readonly project?: string;
-  /** idp_config block */
+  /**
+  * idp_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#idp_config IdentityPlatformInboundSamlConfig#idp_config}
+  */
   readonly idpConfig: IdentityPlatformInboundSamlConfigIdpConfig[];
-  /** sp_config block */
+  /**
+  * sp_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#sp_config IdentityPlatformInboundSamlConfig#sp_config}
+  */
   readonly spConfig: IdentityPlatformInboundSamlConfigSpConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#timeouts IdentityPlatformInboundSamlConfig#timeouts}
+  */
   readonly timeouts?: IdentityPlatformInboundSamlConfigTimeouts;
 }
 export interface IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates {
-  /** The IdP's x509 certificate. */
+  /**
+  * The IdP's x509 certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#x509_certificate IdentityPlatformInboundSamlConfig#x509_certificate}
+  */
   readonly x509Certificate?: string;
 }
 
@@ -36,13 +67,29 @@ function identityPlatformInboundSamlConfigIdpConfigIdpCertificatesToTerraform(st
 }
 
 export interface IdentityPlatformInboundSamlConfigIdpConfig {
-  /** Unique identifier for all SAML entities */
+  /**
+  * Unique identifier for all SAML entities
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#idp_entity_id IdentityPlatformInboundSamlConfig#idp_entity_id}
+  */
   readonly idpEntityId: string;
-  /** Indicates if outbounding SAMLRequest should be signed. */
+  /**
+  * Indicates if outbounding SAMLRequest should be signed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#sign_request IdentityPlatformInboundSamlConfig#sign_request}
+  */
   readonly signRequest?: boolean;
-  /** URL to send Authentication request to. */
+  /**
+  * URL to send Authentication request to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#sso_url IdentityPlatformInboundSamlConfig#sso_url}
+  */
   readonly ssoUrl: string;
-  /** idp_certificates block */
+  /**
+  * idp_certificates block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#idp_certificates IdentityPlatformInboundSamlConfig#idp_certificates}
+  */
   readonly idpCertificates: IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates[];
 }
 
@@ -57,9 +104,17 @@ function identityPlatformInboundSamlConfigIdpConfigToTerraform(struct?: Identity
 }
 
 export interface IdentityPlatformInboundSamlConfigSpConfig {
-  /** Callback URI where responses from IDP are handled. Must start with 'https://'. */
+  /**
+  * Callback URI where responses from IDP are handled. Must start with 'https://'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#callback_uri IdentityPlatformInboundSamlConfig#callback_uri}
+  */
   readonly callbackUri?: string;
-  /** Unique identifier for all SAML entities. */
+  /**
+  * Unique identifier for all SAML entities.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#sp_entity_id IdentityPlatformInboundSamlConfig#sp_entity_id}
+  */
   readonly spEntityId?: string;
 }
 
@@ -72,8 +127,17 @@ function identityPlatformInboundSamlConfigSpConfigToTerraform(struct?: IdentityP
 }
 
 export interface IdentityPlatformInboundSamlConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#create IdentityPlatformInboundSamlConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#delete IdentityPlatformInboundSamlConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#update IdentityPlatformInboundSamlConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -87,14 +151,22 @@ function identityPlatformInboundSamlConfigTimeoutsToTerraform(struct?: IdentityP
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html google_identity_platform_inbound_saml_config}
+*/
 export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html google_identity_platform_inbound_saml_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IdentityPlatformInboundSamlConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: IdentityPlatformInboundSamlConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'google_identity_platform_inbound_saml_config',

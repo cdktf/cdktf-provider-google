@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_pubsub_topic.html
+// https://www.terraform.io/docs/providers/google/d/pubsub_topic.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,8 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGooglePubsubTopicConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the topic. */
+  /**
+  * Name of the topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/pubsub_topic.html#name DataGooglePubsubTopic#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/pubsub_topic.html#project DataGooglePubsubTopic#project}
+  */
   readonly project?: string;
 }
 export class DataGooglePubsubTopicMessageStoragePolicy extends cdktf.ComplexComputedList {
@@ -31,14 +38,22 @@ export class DataGooglePubsubTopicSchemaSettings extends cdktf.ComplexComputedLi
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/pubsub_topic.html google_pubsub_topic}
+*/
 export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/pubsub_topic.html google_pubsub_topic} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGooglePubsubTopicConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGooglePubsubTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_topic',

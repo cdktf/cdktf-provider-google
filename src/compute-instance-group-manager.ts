@@ -7,39 +7,103 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaArguments {
-  /** The base instance name to use for instances in this group. The value must be a valid RFC1035 name. Supported characters are lowercase letters, numbers, and hyphens (-). Instances are named by appending a hyphen and a random four-character string to the base instance name. */
+  /**
+  * The base instance name to use for instances in this group. The value must be a valid RFC1035 name. Supported characters are lowercase letters, numbers, and hyphens (-). Instances are named by appending a hyphen and a random four-character string to the base instance name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#base_instance_name ComputeInstanceGroupManager#base_instance_name}
+  */
   readonly baseInstanceName: string;
-  /** An optional textual description of the instance group manager. */
+  /**
+  * An optional textual description of the instance group manager.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#description ComputeInstanceGroupManager#description}
+  */
   readonly description?: string;
-  /** The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens. */
+  /**
+  * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#name ComputeInstanceGroupManager#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#project ComputeInstanceGroupManager#project}
+  */
   readonly project?: string;
-  /** The full URL of all target pools to which new instances in the group are added. Updating the target pools attribute does not affect existing instances. */
+  /**
+  * The full URL of all target pools to which new instances in the group are added. Updating the target pools attribute does not affect existing instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#target_pools ComputeInstanceGroupManager#target_pools}
+  */
   readonly targetPools?: string[];
-  /** The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0. */
+  /**
+  * The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#target_size ComputeInstanceGroupManager#target_size}
+  */
   readonly targetSize?: number;
-  /** Whether to wait for all instances to be created/updated before returning. Note that if this is set to true and the operation does not succeed, Terraform will continue trying until it times out. */
+  /**
+  * Whether to wait for all instances to be created/updated before returning. Note that if this is set to true and the operation does not succeed, Terraform will continue trying until it times out.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#wait_for_instances ComputeInstanceGroupManager#wait_for_instances}
+  */
   readonly waitForInstances?: boolean;
-  /** The zone that instances in this group should be created in. */
+  /**
+  * The zone that instances in this group should be created in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#zone ComputeInstanceGroupManager#zone}
+  */
   readonly zone?: string;
-  /** auto_healing_policies block */
+  /**
+  * auto_healing_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#auto_healing_policies ComputeInstanceGroupManager#auto_healing_policies}
+  */
   readonly autoHealingPolicies?: ComputeInstanceGroupManagerAutoHealingPolicies[];
-  /** named_port block */
+  /**
+  * named_port block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#named_port ComputeInstanceGroupManager#named_port}
+  */
   readonly namedPort?: ComputeInstanceGroupManagerNamedPort[];
-  /** stateful_disk block */
+  /**
+  * stateful_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#stateful_disk ComputeInstanceGroupManager#stateful_disk}
+  */
   readonly statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#timeouts ComputeInstanceGroupManager#timeouts}
+  */
   readonly timeouts?: ComputeInstanceGroupManagerTimeouts;
-  /** update_policy block */
+  /**
+  * update_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#update_policy ComputeInstanceGroupManager#update_policy}
+  */
   readonly updatePolicy?: ComputeInstanceGroupManagerUpdatePolicy[];
-  /** version block */
+  /**
+  * version block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#version ComputeInstanceGroupManager#version}
+  */
   readonly version: ComputeInstanceGroupManagerVersion[];
 }
 export interface ComputeInstanceGroupManagerAutoHealingPolicies {
-  /** The health check resource that signals autohealing. */
+  /**
+  * The health check resource that signals autohealing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#health_check ComputeInstanceGroupManager#health_check}
+  */
   readonly healthCheck: string;
-  /** The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600. */
+  /**
+  * The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#initial_delay_sec ComputeInstanceGroupManager#initial_delay_sec}
+  */
   readonly initialDelaySec: number;
 }
 
@@ -52,9 +116,17 @@ function computeInstanceGroupManagerAutoHealingPoliciesToTerraform(struct?: Comp
 }
 
 export interface ComputeInstanceGroupManagerNamedPort {
-  /** The name of the port. */
+  /**
+  * The name of the port.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#name ComputeInstanceGroupManager#name}
+  */
   readonly name: string;
-  /** The port number. */
+  /**
+  * The port number.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#port ComputeInstanceGroupManager#port}
+  */
   readonly port: number;
 }
 
@@ -67,9 +139,17 @@ function computeInstanceGroupManagerNamedPortToTerraform(struct?: ComputeInstanc
 }
 
 export interface ComputeInstanceGroupManagerStatefulDisk {
-  /** A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER. */
+  /**
+  * A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#delete_rule ComputeInstanceGroupManager#delete_rule}
+  */
   readonly deleteRule?: string;
-  /** The device name of the disk to be attached. */
+  /**
+  * The device name of the disk to be attached.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#device_name ComputeInstanceGroupManager#device_name}
+  */
   readonly deviceName: string;
 }
 
@@ -82,8 +162,17 @@ function computeInstanceGroupManagerStatefulDiskToTerraform(struct?: ComputeInst
 }
 
 export interface ComputeInstanceGroupManagerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#create ComputeInstanceGroupManager#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#delete ComputeInstanceGroupManager#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#update ComputeInstanceGroupManager#update}
+  */
   readonly update?: string;
 }
 
@@ -97,21 +186,53 @@ function computeInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeInstance
 }
 
 export interface ComputeInstanceGroupManagerUpdatePolicy {
-  /** The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. If neither is set, defaults to 1 */
+  /**
+  * The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. If neither is set, defaults to 1
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#max_surge_fixed ComputeInstanceGroupManager#max_surge_fixed}
+  */
   readonly maxSurgeFixed?: number;
-  /** The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with max_surge_fixed. */
+  /**
+  * The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with max_surge_fixed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#max_surge_percent ComputeInstanceGroupManager#max_surge_percent}
+  */
   readonly maxSurgePercent?: number;
-  /** The maximum number of instances that can be unavailable during the update process. Conflicts with max_unavailable_percent. If neither is set, defaults to 1. */
+  /**
+  * The maximum number of instances that can be unavailable during the update process. Conflicts with max_unavailable_percent. If neither is set, defaults to 1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#max_unavailable_fixed ComputeInstanceGroupManager#max_unavailable_fixed}
+  */
   readonly maxUnavailableFixed?: number;
-  /** The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with max_unavailable_fixed. */
+  /**
+  * The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with max_unavailable_fixed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#max_unavailable_percent ComputeInstanceGroupManager#max_unavailable_percent}
+  */
   readonly maxUnavailablePercent?: number;
-  /** Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]. */
+  /**
+  * Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#min_ready_sec ComputeInstanceGroupManager#min_ready_sec}
+  */
   readonly minReadySec?: number;
-  /** Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action. */
+  /**
+  * Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#minimal_action ComputeInstanceGroupManager#minimal_action}
+  */
   readonly minimalAction: string;
-  /** The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0. */
+  /**
+  * The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#replacement_method ComputeInstanceGroupManager#replacement_method}
+  */
   readonly replacementMethod?: string;
-  /** The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls). */
+  /**
+  * The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#type ComputeInstanceGroupManager#type}
+  */
   readonly type: string;
 }
 
@@ -130,9 +251,17 @@ function computeInstanceGroupManagerUpdatePolicyToTerraform(struct?: ComputeInst
 }
 
 export interface ComputeInstanceGroupManagerVersionTargetSize {
-  /** The number of instances which are managed for this version. Conflicts with percent. */
+  /**
+  * The number of instances which are managed for this version. Conflicts with percent.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#fixed ComputeInstanceGroupManager#fixed}
+  */
   readonly fixed?: number;
-  /** The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version. */
+  /**
+  * The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#percent ComputeInstanceGroupManager#percent}
+  */
   readonly percent?: number;
 }
 
@@ -145,11 +274,23 @@ function computeInstanceGroupManagerVersionTargetSizeToTerraform(struct?: Comput
 }
 
 export interface ComputeInstanceGroupManagerVersion {
-  /** The full URL to an instance template from which all new instances of this version will be created. */
+  /**
+  * The full URL to an instance template from which all new instances of this version will be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#instance_template ComputeInstanceGroupManager#instance_template}
+  */
   readonly instanceTemplate: string;
-  /** Version name. */
+  /**
+  * Version name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#name ComputeInstanceGroupManager#name}
+  */
   readonly name?: string;
-  /** target_size block */
+  /**
+  * target_size block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#target_size ComputeInstanceGroupManager#target_size}
+  */
   readonly targetSize?: ComputeInstanceGroupManagerVersionTargetSize[];
 }
 
@@ -163,14 +304,22 @@ function computeInstanceGroupManagerVersionToTerraform(struct?: ComputeInstanceG
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html google_compute_instance_group_manager}
+*/
 export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html google_compute_instance_group_manager} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeInstanceGroupManagerConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeInstanceGroupManagerConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_group_manager',

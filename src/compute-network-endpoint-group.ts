@@ -7,35 +7,76 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
-  /** The default port used if the port number is not specified in the
-network endpoint. */
+  /**
+  * The default port used if the port number is not specified in the
+network endpoint.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#default_port ComputeNetworkEndpointGroup#default_port}
+  */
   readonly defaultPort?: number;
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#description ComputeNetworkEndpointGroup#description}
+  */
   readonly description?: string;
-  /** Name of the resource; provided by the client when the resource is
+  /**
+  * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#name ComputeNetworkEndpointGroup#name}
+  */
   readonly name: string;
-  /** The network to which all network endpoints in the NEG belong.
-Uses "default" project network if unspecified. */
+  /**
+  * The network to which all network endpoints in the NEG belong.
+Uses "default" project network if unspecified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#network ComputeNetworkEndpointGroup#network}
+  */
   readonly network: string;
-  /** Type of network endpoints in this network endpoint group. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP_PORT"] */
+  /**
+  * Type of network endpoints in this network endpoint group. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP_PORT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#network_endpoint_type ComputeNetworkEndpointGroup#network_endpoint_type}
+  */
   readonly networkEndpointType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#project ComputeNetworkEndpointGroup#project}
+  */
   readonly project?: string;
-  /** Optional subnetwork to which all network endpoints in the NEG belong. */
+  /**
+  * Optional subnetwork to which all network endpoints in the NEG belong.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#subnetwork ComputeNetworkEndpointGroup#subnetwork}
+  */
   readonly subnetwork?: string;
-  /** Zone where the network endpoint group is located. */
+  /**
+  * Zone where the network endpoint group is located.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#zone ComputeNetworkEndpointGroup#zone}
+  */
   readonly zone?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#timeouts ComputeNetworkEndpointGroup#timeouts}
+  */
   readonly timeouts?: ComputeNetworkEndpointGroupTimeouts;
 }
 export interface ComputeNetworkEndpointGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#create ComputeNetworkEndpointGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html#delete ComputeNetworkEndpointGroup#delete}
+  */
   readonly delete?: string;
 }
 
@@ -48,14 +89,22 @@ function computeNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeNetworkE
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html google_compute_network_endpoint_group}
+*/
 export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group.html google_compute_network_endpoint_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeNetworkEndpointGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeNetworkEndpointGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_network_endpoint_group',

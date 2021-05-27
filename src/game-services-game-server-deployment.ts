@@ -7,22 +7,54 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface GameServicesGameServerDeploymentConfig extends cdktf.TerraformMetaArguments {
-  /** A unique id for the deployment. */
+  /**
+  * A unique id for the deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#deployment_id GameServicesGameServerDeployment#deployment_id}
+  */
   readonly deploymentId: string;
-  /** Human readable description of the game server deployment. */
+  /**
+  * Human readable description of the game server deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#description GameServicesGameServerDeployment#description}
+  */
   readonly description?: string;
-  /** The labels associated with this game server deployment. Each label is a
-key-value pair. */
+  /**
+  * The labels associated with this game server deployment. Each label is a
+key-value pair.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#labels GameServicesGameServerDeployment#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** Location of the Deployment. */
+  /**
+  * Location of the Deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#location GameServicesGameServerDeployment#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#project GameServicesGameServerDeployment#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#timeouts GameServicesGameServerDeployment#timeouts}
+  */
   readonly timeouts?: GameServicesGameServerDeploymentTimeouts;
 }
 export interface GameServicesGameServerDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#create GameServicesGameServerDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#delete GameServicesGameServerDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#update GameServicesGameServerDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +68,22 @@ function gameServicesGameServerDeploymentTimeoutsToTerraform(struct?: GameServic
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html google_game_services_game_server_deployment}
+*/
 export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html google_game_services_game_server_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options GameServicesGameServerDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: GameServicesGameServerDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_game_services_game_server_deployment',

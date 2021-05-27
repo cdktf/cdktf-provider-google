@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareConsentStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#consent_store_id HealthcareConsentStoreIamMember#consent_store_id}
+  */
   readonly consentStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#dataset HealthcareConsentStoreIamMember#dataset}
+  */
   readonly dataset: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#member HealthcareConsentStoreIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#role HealthcareConsentStoreIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#condition HealthcareConsentStoreIamMember#condition}
+  */
   readonly condition?: HealthcareConsentStoreIamMemberCondition[];
 }
 export interface HealthcareConsentStoreIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#description HealthcareConsentStoreIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#expression HealthcareConsentStoreIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html#title HealthcareConsentStoreIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function healthcareConsentStoreIamMemberConditionToTerraform(struct?: Healthcare
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html google_healthcare_consent_store_iam_member}
+*/
 export class HealthcareConsentStoreIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_member.html google_healthcare_consent_store_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareConsentStoreIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareConsentStoreIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_consent_store_iam_member',

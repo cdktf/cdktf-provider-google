@@ -7,9 +7,14 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageObjectAccessControlConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the bucket. */
+  /**
+  * The name of the bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#bucket StorageObjectAccessControl#bucket}
+  */
   readonly bucket: string;
-  /** The entity holding the permission, in one of the following forms:
+  /**
+  * The entity holding the permission, in one of the following forms:
   * user-{{userId}}
   * user-{{email}} (such as "user-liz@example.com")
   * group-{{groupId}}
@@ -17,13 +22,28 @@ export interface StorageObjectAccessControlConfig extends cdktf.TerraformMetaArg
   * domain-{{domain}} (such as "domain-example.com")
   * project-team-{{projectId}}
   * allUsers
-  * allAuthenticatedUsers */
+  * allAuthenticatedUsers
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#entity StorageObjectAccessControl#entity}
+  */
   readonly entity: string;
-  /** The name of the object to apply the access control to. */
+  /**
+  * The name of the object to apply the access control to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#object StorageObjectAccessControl#object}
+  */
   readonly object: string;
-  /** The access permission for the entity. Possible values: ["OWNER", "READER"] */
+  /**
+  * The access permission for the entity. Possible values: ["OWNER", "READER"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#role StorageObjectAccessControl#role}
+  */
   readonly role: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#timeouts StorageObjectAccessControl#timeouts}
+  */
   readonly timeouts?: StorageObjectAccessControlTimeouts;
 }
 export class StorageObjectAccessControlProjectTeam extends cdktf.ComplexComputedList {
@@ -39,8 +59,17 @@ export class StorageObjectAccessControlProjectTeam extends cdktf.ComplexComputed
   }
 }
 export interface StorageObjectAccessControlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#create StorageObjectAccessControl#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#delete StorageObjectAccessControl#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html#update StorageObjectAccessControl#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +83,22 @@ function storageObjectAccessControlTimeoutsToTerraform(struct?: StorageObjectAcc
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html google_storage_object_access_control}
+*/
 export class StorageObjectAccessControl extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control.html google_storage_object_access_control} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageObjectAccessControlConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageObjectAccessControlConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_object_access_control',

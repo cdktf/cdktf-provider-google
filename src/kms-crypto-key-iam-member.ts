@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsCryptoKeyIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}
+  */
   readonly cryptoKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#member KmsCryptoKeyIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#role KmsCryptoKeyIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#condition KmsCryptoKeyIamMember#condition}
+  */
   readonly condition?: KmsCryptoKeyIamMemberCondition[];
 }
 export interface KmsCryptoKeyIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#description KmsCryptoKeyIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#expression KmsCryptoKeyIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#title KmsCryptoKeyIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function kmsCryptoKeyIamMemberConditionToTerraform(struct?: KmsCryptoKeyIamMembe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html google_kms_crypto_key_iam_member}
+*/
 export class KmsCryptoKeyIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html google_kms_crypto_key_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsCryptoKeyIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsCryptoKeyIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_crypto_key_iam_member',

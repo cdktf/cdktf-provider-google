@@ -7,30 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
-  /** URL to the backup target pool. Must also set failover_ratio. */
+  /**
+  * URL to the backup target pool. Must also set failover_ratio.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#backup_pool ComputeTargetPool#backup_pool}
+  */
   readonly backupPool?: string;
-  /** Textual description field. */
+  /**
+  * Textual description field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#description ComputeTargetPool#description}
+  */
   readonly description?: string;
-  /** Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set). */
+  /**
+  * Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#failover_ratio ComputeTargetPool#failover_ratio}
+  */
   readonly failoverRatio?: number;
-  /** List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported. */
+  /**
+  * List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#health_checks ComputeTargetPool#health_checks}
+  */
   readonly healthChecks?: string[];
-  /** List of instances in the pool. They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool. */
+  /**
+  * List of instances in the pool. They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#instances ComputeTargetPool#instances}
+  */
   readonly instances?: string[];
-  /** A unique name for the resource, required by GCE. Changing this forces a new resource to be created. */
+  /**
+  * A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#name ComputeTargetPool#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#project ComputeTargetPool#project}
+  */
   readonly project?: string;
-  /** Where the target pool resides. Defaults to project region. */
+  /**
+  * Where the target pool resides. Defaults to project region.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#region ComputeTargetPool#region}
+  */
   readonly region?: string;
-  /** How to distribute load. Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE"). */
+  /**
+  * How to distribute load. Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#session_affinity ComputeTargetPool#session_affinity}
+  */
   readonly sessionAffinity?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#timeouts ComputeTargetPool#timeouts}
+  */
   readonly timeouts?: ComputeTargetPoolTimeouts;
 }
 export interface ComputeTargetPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#create ComputeTargetPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#delete ComputeTargetPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html#update ComputeTargetPool#update}
+  */
   readonly update?: string;
 }
 
@@ -44,14 +93,22 @@ function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html google_compute_target_pool}
+*/
 export class ComputeTargetPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool.html google_compute_target_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeTargetPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeTargetPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_target_pool',

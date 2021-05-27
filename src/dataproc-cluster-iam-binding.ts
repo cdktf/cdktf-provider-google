@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocClusterIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#cluster DataprocClusterIamBinding#cluster}
+  */
   readonly cluster: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#members DataprocClusterIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#project DataprocClusterIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#region DataprocClusterIamBinding#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#role DataprocClusterIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#condition DataprocClusterIamBinding#condition}
+  */
   readonly condition?: DataprocClusterIamBindingCondition[];
 }
 export interface DataprocClusterIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#description DataprocClusterIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#expression DataprocClusterIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#title DataprocClusterIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function dataprocClusterIamBindingConditionToTerraform(struct?: DataprocClusterI
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html google_dataproc_cluster_iam_binding}
+*/
 export class DataprocClusterIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html google_dataproc_cluster_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocClusterIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocClusterIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_cluster_iam_binding',

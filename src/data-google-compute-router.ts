@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_router.html
+// https://www.terraform.io/docs/providers/google/d/compute_router.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,17 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeRouterConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the resource. The name must be 1-63 characters long, and
+  /**
+  * Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
-except the last character, which cannot be a dash. */
+except the last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_router.html#name DataGoogleComputeRouter#name}
+  */
   readonly name: string;
-  /** A reference to the network to which this router belongs. */
+  /**
+  * A reference to the network to which this router belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_router.html#network DataGoogleComputeRouter#network}
+  */
   readonly network: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_router.html#project DataGoogleComputeRouter#project}
+  */
   readonly project?: string;
-  /** Region where the router resides. */
+  /**
+  * Region where the router resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_router.html#region DataGoogleComputeRouter#region}
+  */
   readonly region?: string;
 }
 export class DataGoogleComputeRouterBgpAdvertisedIpRanges extends cdktf.ComplexComputedList {
@@ -55,14 +70,22 @@ export class DataGoogleComputeRouterBgp extends cdktf.ComplexComputedList {
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_router.html google_compute_router}
+*/
 export class DataGoogleComputeRouter extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_router.html google_compute_router} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeRouterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeRouterConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_router',

@@ -7,48 +7,95 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRegionNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. Provide this property when
-you create the resource. */
+  /**
+  * An optional description of this resource. Provide this property when
+you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#description ComputeRegionNetworkEndpointGroup#description}
+  */
   readonly description?: string;
-  /** Name of the resource; provided by the client when the resource is
+  /**
+  * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#name ComputeRegionNetworkEndpointGroup#name}
+  */
   readonly name: string;
-  /** Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: "SERVERLESS" Possible values: ["SERVERLESS"] */
+  /**
+  * Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: "SERVERLESS" Possible values: ["SERVERLESS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#network_endpoint_type ComputeRegionNetworkEndpointGroup#network_endpoint_type}
+  */
   readonly networkEndpointType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#project ComputeRegionNetworkEndpointGroup#project}
+  */
   readonly project?: string;
-  /** A reference to the region where the Serverless NEGs Reside. */
+  /**
+  * A reference to the region where the Serverless NEGs Reside.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#region ComputeRegionNetworkEndpointGroup#region}
+  */
   readonly region: string;
-  /** app_engine block */
+  /**
+  * app_engine block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#app_engine ComputeRegionNetworkEndpointGroup#app_engine}
+  */
   readonly appEngine?: ComputeRegionNetworkEndpointGroupAppEngine[];
-  /** cloud_function block */
+  /**
+  * cloud_function block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#cloud_function ComputeRegionNetworkEndpointGroup#cloud_function}
+  */
   readonly cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction[];
-  /** cloud_run block */
+  /**
+  * cloud_run block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#cloud_run ComputeRegionNetworkEndpointGroup#cloud_run}
+  */
   readonly cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#timeouts ComputeRegionNetworkEndpointGroup#timeouts}
+  */
   readonly timeouts?: ComputeRegionNetworkEndpointGroupTimeouts;
 }
 export interface ComputeRegionNetworkEndpointGroupAppEngine {
-  /** Optional serving service.
+  /**
+  * Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
-Example value: "default", "my-service". */
+Example value: "default", "my-service".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#service ComputeRegionNetworkEndpointGroup#service}
+  */
   readonly service?: string;
-  /** A template to parse service and version fields from a request URL.
+  /**
+  * A template to parse service and version fields from a request URL.
 URL mask allows for routing to multiple App Engine services without
 having to create multiple Network Endpoint Groups and backend services.
 
 For example, the request URLs "foo1-dot-appname.appspot.com/v1" and
 "foo1-dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with
 URL mask "-dot-appname.appspot.com/". The URL mask will parse
-them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2" } respectively. */
+them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2" } respectively.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#url_mask ComputeRegionNetworkEndpointGroup#url_mask}
+  */
   readonly urlMask?: string;
-  /** Optional serving version.
+  /**
+  * Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
-Example value: "v1", "v2". */
+Example value: "v1", "v2".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#version ComputeRegionNetworkEndpointGroup#version}
+  */
   readonly version?: string;
 }
 
@@ -62,17 +109,25 @@ function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeR
 }
 
 export interface ComputeRegionNetworkEndpointGroupCloudFunction {
-  /** A user-defined name of the Cloud Function.
+  /**
+  * A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
-Example value: "func1". */
+Example value: "func1".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#function ComputeRegionNetworkEndpointGroup#function}
+  */
   readonly function?: string;
-  /** A template to parse function field from a request URL. URL mask allows
+  /**
+  * A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
 multiple Network Endpoint Groups and backend services.
 
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
-will parse them to { function = "function1" } and { function = "function2" } respectively. */
+will parse them to { function = "function1" } and { function = "function2" } respectively.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#url_mask ComputeRegionNetworkEndpointGroup#url_mask}
+  */
   readonly urlMask?: string;
 }
 
@@ -85,23 +140,35 @@ function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: Comp
 }
 
 export interface ComputeRegionNetworkEndpointGroupCloudRun {
-  /** Cloud Run service is the main resource of Cloud Run.
+  /**
+  * Cloud Run service is the main resource of Cloud Run.
 The service must be 1-63 characters long, and comply with RFC1035.
-Example value: "run-service". */
+Example value: "run-service".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#service ComputeRegionNetworkEndpointGroup#service}
+  */
   readonly service?: string;
-  /** Cloud Run tag represents the "named-revision" to provide
+  /**
+  * Cloud Run tag represents the "named-revision" to provide
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
-Example value: "revision-0010". */
+Example value: "revision-0010".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#tag ComputeRegionNetworkEndpointGroup#tag}
+  */
   readonly tag?: string;
-  /** A template to parse service and tag fields from a request URL.
+  /**
+  * A template to parse service and tag fields from a request URL.
 URL mask allows for routing to multiple Run services without having
 to create multiple network endpoint groups and backend services.
 
 For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2"
 an be backed by the same Serverless Network Endpoint Group (NEG) with
 URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="foo1" }
-and { service="bar2", tag="foo2" } respectively. */
+and { service="bar2", tag="foo2" } respectively.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#url_mask ComputeRegionNetworkEndpointGroup#url_mask}
+  */
   readonly urlMask?: string;
 }
 
@@ -115,7 +182,13 @@ function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRe
 }
 
 export interface ComputeRegionNetworkEndpointGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#create ComputeRegionNetworkEndpointGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#delete ComputeRegionNetworkEndpointGroup#delete}
+  */
   readonly delete?: string;
 }
 
@@ -128,14 +201,22 @@ function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html google_compute_region_network_endpoint_group}
+*/
 export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html google_compute_region_network_endpoint_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRegionNetworkEndpointGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRegionNetworkEndpointGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_network_endpoint_group',

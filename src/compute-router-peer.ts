@@ -7,10 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
-  /** User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"] */
+  /**
+  * User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#advertise_mode ComputeRouterPeer#advertise_mode}
+  */
   readonly advertiseMode?: string;
-  /** User-specified list of prefix groups to advertise in custom
+  /**
+  * User-specified list of prefix groups to advertise in custom
 mode, which can take one of the following options:
 
 * 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets.
@@ -21,43 +26,93 @@ mode, which can take one of the following options:
 Note that this field can only be populated if advertiseMode is 'CUSTOM'
 and overrides the list defined for the router (in the "bgp" message).
 These groups are advertised in addition to any specified prefixes.
-Leave this field blank to advertise no custom groups. */
+Leave this field blank to advertise no custom groups.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#advertised_groups ComputeRouterPeer#advertised_groups}
+  */
   readonly advertisedGroups?: string[];
-  /** The priority of routes advertised to this BGP peer.
+  /**
+  * The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
-length, the routes with the lowest priority value win. */
+length, the routes with the lowest priority value win.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
+  */
   readonly advertisedRoutePriority?: number;
-  /** Name of the interface the BGP peer is associated with. */
+  /**
+  * Name of the interface the BGP peer is associated with.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#interface ComputeRouterPeer#interface}
+  */
   readonly interface: string;
-  /** Name of this BGP peer. The name must be 1-63 characters long,
+  /**
+  * Name of this BGP peer. The name must be 1-63 characters long,
 and comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
-except the last character, which cannot be a dash. */
+except the last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#name ComputeRouterPeer#name}
+  */
   readonly name: string;
-  /** Peer BGP Autonomous System Number (ASN).
-Each BGP interface may use a different value. */
+  /**
+  * Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#peer_asn ComputeRouterPeer#peer_asn}
+  */
   readonly peerAsn: number;
-  /** IP address of the BGP interface outside Google Cloud Platform.
-Only IPv4 is supported. */
+  /**
+  * IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#peer_ip_address ComputeRouterPeer#peer_ip_address}
+  */
   readonly peerIpAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#project ComputeRouterPeer#project}
+  */
   readonly project?: string;
-  /** Region where the router and BgpPeer reside.
-If it is not provided, the provider region is used. */
+  /**
+  * Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#region ComputeRouterPeer#region}
+  */
   readonly region?: string;
-  /** The name of the Cloud Router in which this BgpPeer will be configured. */
+  /**
+  * The name of the Cloud Router in which this BgpPeer will be configured.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#router ComputeRouterPeer#router}
+  */
   readonly router: string;
-  /** advertised_ip_ranges block */
+  /**
+  * advertised_ip_ranges block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
+  */
   readonly advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#timeouts ComputeRouterPeer#timeouts}
+  */
   readonly timeouts?: ComputeRouterPeerTimeouts;
 }
 export interface ComputeRouterPeerAdvertisedIpRanges {
-  /** User-specified description for the IP range. */
+  /**
+  * User-specified description for the IP range.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#description ComputeRouterPeer#description}
+  */
   readonly description?: string;
-  /** The IP range to advertise. The value must be a
-CIDR-formatted string. */
+  /**
+  * The IP range to advertise. The value must be a
+CIDR-formatted string.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#range ComputeRouterPeer#range}
+  */
   readonly range: string;
 }
 
@@ -70,8 +125,17 @@ function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeRouterPe
 }
 
 export interface ComputeRouterPeerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#create ComputeRouterPeer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#delete ComputeRouterPeer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#update ComputeRouterPeer#update}
+  */
   readonly update?: string;
 }
 
@@ -85,14 +149,22 @@ function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html google_compute_router_peer}
+*/
 export class ComputeRouterPeer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html google_compute_router_peer} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRouterPeerConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRouterPeerConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_router_peer',

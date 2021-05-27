@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigtableInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#instance BigtableInstanceIamMember#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#member BigtableInstanceIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#project BigtableInstanceIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#role BigtableInstanceIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#condition BigtableInstanceIamMember#condition}
+  */
   readonly condition?: BigtableInstanceIamMemberCondition[];
 }
 export interface BigtableInstanceIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#description BigtableInstanceIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#expression BigtableInstanceIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#title BigtableInstanceIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function bigtableInstanceIamMemberConditionToTerraform(struct?: BigtableInstance
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html google_bigtable_instance_iam_member}
+*/
 export class BigtableInstanceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html google_bigtable_instance_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigtableInstanceIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: BigtableInstanceIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_instance_iam_member',

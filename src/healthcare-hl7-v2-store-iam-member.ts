@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareHl7V2StoreIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}
+  */
   readonly hl7V2StoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#member HealthcareHl7V2StoreIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#role HealthcareHl7V2StoreIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#condition HealthcareHl7V2StoreIamMember#condition}
+  */
   readonly condition?: HealthcareHl7V2StoreIamMemberCondition[];
 }
 export interface HealthcareHl7V2StoreIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#description HealthcareHl7V2StoreIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#expression HealthcareHl7V2StoreIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html#title HealthcareHl7V2StoreIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function healthcareHl7V2StoreIamMemberConditionToTerraform(struct?: HealthcareHl
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html google_healthcare_hl7_v2_store_iam_member}
+*/
 export class HealthcareHl7V2StoreIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member.html google_healthcare_hl7_v2_store_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareHl7V2StoreIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareHl7V2StoreIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_hl7_v2_store_iam_member',

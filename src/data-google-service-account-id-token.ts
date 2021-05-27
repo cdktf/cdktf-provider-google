@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_service_account_id_token.html
+// https://www.terraform.io/docs/providers/google/d/service_account_id_token.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleServiceAccountIdTokenConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html#delegates DataGoogleServiceAccountIdToken#delegates}
+  */
   readonly delegates?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html#include_email DataGoogleServiceAccountIdToken#include_email}
+  */
   readonly includeEmail?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html#target_audience DataGoogleServiceAccountIdToken#target_audience}
+  */
   readonly targetAudience: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html#target_service_account DataGoogleServiceAccountIdToken#target_service_account}
+  */
   readonly targetServiceAccount?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html google_service_account_id_token}
+*/
 export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html google_service_account_id_token} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleServiceAccountIdTokenConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleServiceAccountIdTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account_id_token',

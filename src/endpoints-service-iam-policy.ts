@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EndpointsServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_policy.html#policy_data EndpointsServiceIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_policy.html#service_name EndpointsServiceIamPolicy#service_name}
+  */
   readonly serviceName: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_policy.html google_endpoints_service_iam_policy}
+*/
 export class EndpointsServiceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_policy.html google_endpoints_service_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EndpointsServiceIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: EndpointsServiceIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_endpoints_service_iam_policy',

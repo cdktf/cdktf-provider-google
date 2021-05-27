@@ -7,23 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeAttachedDiskConfig extends cdktf.TerraformMetaArguments {
-  /** Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disks-x, where x is a number assigned by Google Compute Engine. */
+  /**
+  * Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disks-x, where x is a number assigned by Google Compute Engine.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#device_name ComputeAttachedDisk#device_name}
+  */
   readonly deviceName?: string;
-  /** name or self_link of the disk that will be attached. */
+  /**
+  * name or self_link of the disk that will be attached.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#disk ComputeAttachedDisk#disk}
+  */
   readonly disk: string;
-  /** name or self_link of the compute instance that the disk will be attached to. If the self_link is provided then zone and project are extracted from the self link. If only the name is used then zone and project must be defined as properties on the resource or provider. */
+  /**
+  * name or self_link of the compute instance that the disk will be attached to. If the self_link is provided then zone and project are extracted from the self link. If only the name is used then zone and project must be defined as properties on the resource or provider.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#instance ComputeAttachedDisk#instance}
+  */
   readonly instance: string;
-  /** The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. */
+  /**
+  * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#mode ComputeAttachedDisk#mode}
+  */
   readonly mode?: string;
-  /** The project that the referenced compute instance is a part of. If instance is referenced by its self_link the project defined in the link will take precedence. */
+  /**
+  * The project that the referenced compute instance is a part of. If instance is referenced by its self_link the project defined in the link will take precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#project ComputeAttachedDisk#project}
+  */
   readonly project?: string;
-  /** The zone that the referenced compute instance is located within. If instance is referenced by its self_link the zone defined in the link will take precedence. */
+  /**
+  * The zone that the referenced compute instance is located within. If instance is referenced by its self_link the zone defined in the link will take precedence.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#zone ComputeAttachedDisk#zone}
+  */
   readonly zone?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#timeouts ComputeAttachedDisk#timeouts}
+  */
   readonly timeouts?: ComputeAttachedDiskTimeouts;
 }
 export interface ComputeAttachedDiskTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#create ComputeAttachedDisk#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html#delete ComputeAttachedDisk#delete}
+  */
   readonly delete?: string;
 }
 
@@ -36,14 +70,22 @@ function computeAttachedDiskTimeoutsToTerraform(struct?: ComputeAttachedDiskTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html google_compute_attached_disk}
+*/
 export class ComputeAttachedDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk.html google_compute_attached_disk} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeAttachedDiskConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeAttachedDiskConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_attached_disk',

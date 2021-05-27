@@ -7,33 +7,76 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudiotRegistryConfig extends cdktf.TerraformMetaArguments {
-  /** Activate or deactivate HTTP. */
+  /**
+  * Activate or deactivate HTTP.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#http_config CloudiotRegistry#http_config}
+  */
   readonly httpConfig?: { [key: string]: string };
-  /** The default logging verbosity for activity from devices in this
+  /**
+  * The default logging verbosity for activity from devices in this
 registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO", "DEBUG"] */
+will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO", "DEBUG"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#log_level CloudiotRegistry#log_level}
+  */
   readonly logLevel?: string;
-  /** Activate or deactivate MQTT. */
+  /**
+  * Activate or deactivate MQTT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#mqtt_config CloudiotRegistry#mqtt_config}
+  */
   readonly mqttConfig?: { [key: string]: string };
-  /** A unique name for the resource, required by device registry. */
+  /**
+  * A unique name for the resource, required by device registry.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#name CloudiotRegistry#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#project CloudiotRegistry#project}
+  */
   readonly project?: string;
-  /** The region in which the created registry should reside.
-If it is not provided, the provider region is used. */
+  /**
+  * The region in which the created registry should reside.
+If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#region CloudiotRegistry#region}
+  */
   readonly region?: string;
-  /** A PubSub topic to publish device state updates. */
+  /**
+  * A PubSub topic to publish device state updates.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#state_notification_config CloudiotRegistry#state_notification_config}
+  */
   readonly stateNotificationConfig?: { [key: string]: string };
-  /** credentials block */
+  /**
+  * credentials block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#credentials CloudiotRegistry#credentials}
+  */
   readonly credentials?: CloudiotRegistryCredentials[];
-  /** event_notification_configs block */
+  /**
+  * event_notification_configs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#event_notification_configs CloudiotRegistry#event_notification_configs}
+  */
   readonly eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#timeouts CloudiotRegistry#timeouts}
+  */
   readonly timeouts?: CloudiotRegistryTimeouts;
 }
 export interface CloudiotRegistryCredentials {
-  /** A public key certificate format and data. */
+  /**
+  * A public key certificate format and data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#public_key_certificate CloudiotRegistry#public_key_certificate}
+  */
   readonly publicKeyCertificate: { [key: string]: string };
 }
 
@@ -45,13 +88,21 @@ function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredent
 }
 
 export interface CloudiotRegistryEventNotificationConfigs {
-  /** PubSub topic name to publish device events. */
+  /**
+  * PubSub topic name to publish device events.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#pubsub_topic_name CloudiotRegistry#pubsub_topic_name}
+  */
   readonly pubsubTopicName: string;
-  /** If the subfolder name matches this string exactly, this
+  /**
+  * If the subfolder name matches this string exactly, this
 configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last 'event_notification_configs'
-item. */
+item.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#subfolder_matches CloudiotRegistry#subfolder_matches}
+  */
   readonly subfolderMatches?: string;
 }
 
@@ -64,8 +115,17 @@ function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: CloudiotRe
 }
 
 export interface CloudiotRegistryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#create CloudiotRegistry#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#delete CloudiotRegistry#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#update CloudiotRegistry#update}
+  */
   readonly update?: string;
 }
 
@@ -79,14 +139,22 @@ function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html google_cloudiot_registry}
+*/
 export class CloudiotRegistry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html google_cloudiot_registry} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudiotRegistryConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudiotRegistryConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudiot_registry',

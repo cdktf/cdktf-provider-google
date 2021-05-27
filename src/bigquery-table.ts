@@ -7,41 +7,109 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
-  /** Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order. */
+  /**
+  * Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#clustering BigqueryTable#clustering}
+  */
   readonly clustering?: string[];
-  /** The dataset ID to create the table in. Changing this forces a new resource to be created. */
+  /**
+  * The dataset ID to create the table in. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#dataset_id BigqueryTable#dataset_id}
+  */
   readonly datasetId: string;
-  /** Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail. */
+  /**
+  * Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#deletion_protection BigqueryTable#deletion_protection}
+  */
   readonly deletionProtection?: boolean;
-  /** The field description. */
+  /**
+  * The field description.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#description BigqueryTable#description}
+  */
   readonly description?: string;
-  /** The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. */
+  /**
+  * The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#expiration_time BigqueryTable#expiration_time}
+  */
   readonly expirationTime?: number;
-  /** A descriptive name for the table. */
+  /**
+  * A descriptive name for the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#friendly_name BigqueryTable#friendly_name}
+  */
   readonly friendlyName?: string;
-  /** A mapping of labels to assign to the resource. */
+  /**
+  * A mapping of labels to assign to the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#labels BigqueryTable#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The ID of the project in which the resource belongs. */
+  /**
+  * The ID of the project in which the resource belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#project BigqueryTable#project}
+  */
   readonly project?: string;
-  /** A JSON schema for the table. */
+  /**
+  * A JSON schema for the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#schema BigqueryTable#schema}
+  */
   readonly schema?: string;
-  /** A unique ID for the resource. Changing this forces a new resource to be created. */
+  /**
+  * A unique ID for the resource. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#table_id BigqueryTable#table_id}
+  */
   readonly tableId: string;
-  /** encryption_configuration block */
+  /**
+  * encryption_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#encryption_configuration BigqueryTable#encryption_configuration}
+  */
   readonly encryptionConfiguration?: BigqueryTableEncryptionConfiguration[];
-  /** external_data_configuration block */
+  /**
+  * external_data_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#external_data_configuration BigqueryTable#external_data_configuration}
+  */
   readonly externalDataConfiguration?: BigqueryTableExternalDataConfiguration[];
-  /** materialized_view block */
+  /**
+  * materialized_view block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#materialized_view BigqueryTable#materialized_view}
+  */
   readonly materializedView?: BigqueryTableMaterializedView[];
-  /** range_partitioning block */
+  /**
+  * range_partitioning block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#range_partitioning BigqueryTable#range_partitioning}
+  */
   readonly rangePartitioning?: BigqueryTableRangePartitioning[];
-  /** time_partitioning block */
+  /**
+  * time_partitioning block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#time_partitioning BigqueryTable#time_partitioning}
+  */
   readonly timePartitioning?: BigqueryTableTimePartitioning[];
-  /** view block */
+  /**
+  * view block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#view BigqueryTable#view}
+  */
   readonly view?: BigqueryTableView[];
 }
 export interface BigqueryTableEncryptionConfiguration {
-  /** The self link or full name of a key which should be used to encrypt this table. Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource. */
+  /**
+  * The self link or full name of a key which should be used to encrypt this table. Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#kms_key_name BigqueryTable#kms_key_name}
+  */
   readonly kmsKeyName: string;
 }
 
@@ -53,17 +121,41 @@ function bigqueryTableEncryptionConfigurationToTerraform(struct?: BigqueryTableE
 }
 
 export interface BigqueryTableExternalDataConfigurationCsvOptions {
-  /** Indicates if BigQuery should accept rows that are missing trailing optional columns. */
+  /**
+  * Indicates if BigQuery should accept rows that are missing trailing optional columns.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#allow_jagged_rows BigqueryTable#allow_jagged_rows}
+  */
   readonly allowJaggedRows?: boolean;
-  /** Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false. */
+  /**
+  * Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#allow_quoted_newlines BigqueryTable#allow_quoted_newlines}
+  */
   readonly allowQuotedNewlines?: boolean;
-  /** The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. */
+  /**
+  * The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#encoding BigqueryTable#encoding}
+  */
   readonly encoding?: string;
-  /** The separator for fields in a CSV file. */
+  /**
+  * The separator for fields in a CSV file.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#field_delimiter BigqueryTable#field_delimiter}
+  */
   readonly fieldDelimiter?: string;
-  /** The value that is used to quote data sections in a CSV file. If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allow_quoted_newlines property to true. The API-side default is ", specified in Terraform escaped as \". Due to limitations with Terraform default values, this value is required to be explicitly set. */
+  /**
+  * The value that is used to quote data sections in a CSV file. If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allow_quoted_newlines property to true. The API-side default is ", specified in Terraform escaped as \". Due to limitations with Terraform default values, this value is required to be explicitly set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#quote BigqueryTable#quote}
+  */
   readonly quote: string;
-  /** The number of rows at the top of a CSV file that BigQuery will skip when reading the data. */
+  /**
+  * The number of rows at the top of a CSV file that BigQuery will skip when reading the data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#skip_leading_rows BigqueryTable#skip_leading_rows}
+  */
   readonly skipLeadingRows?: number;
 }
 
@@ -80,9 +172,17 @@ function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct?: Bi
 }
 
 export interface BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
-  /** Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20" */
+  /**
+  * Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#range BigqueryTable#range}
+  */
   readonly range?: string;
-  /** The number of rows at the top of the sheet that BigQuery will skip when reading the data. At least one of range or skip_leading_rows must be set. */
+  /**
+  * The number of rows at the top of the sheet that BigQuery will skip when reading the data. At least one of range or skip_leading_rows must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#skip_leading_rows BigqueryTable#skip_leading_rows}
+  */
   readonly skipLeadingRows?: number;
 }
 
@@ -95,11 +195,23 @@ function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(st
 }
 
 export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
-  /** When set, what mode of hive partitioning to use when reading data. */
+  /**
+  * When set, what mode of hive partitioning to use when reading data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#mode BigqueryTable#mode}
+  */
   readonly mode?: string;
-  /** If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. */
+  /**
+  * If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#require_partition_filter BigqueryTable#require_partition_filter}
+  */
   readonly requirePartitionFilter?: boolean;
-  /** When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins. */
+  /**
+  * When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#source_uri_prefix BigqueryTable#source_uri_prefix}
+  */
   readonly sourceUriPrefix?: string;
 }
 
@@ -113,25 +225,65 @@ function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerrafor
 }
 
 export interface BigqueryTableExternalDataConfiguration {
-  /** Let BigQuery try to autodetect the schema and format of the table. */
+  /**
+  * Let BigQuery try to autodetect the schema and format of the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#autodetect BigqueryTable#autodetect}
+  */
   readonly autodetect: boolean;
-  /** The compression type of the data source. Valid values are "NONE" or "GZIP". */
+  /**
+  * The compression type of the data source. Valid values are "NONE" or "GZIP".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#compression BigqueryTable#compression}
+  */
   readonly compression?: string;
-  /** Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. */
+  /**
+  * Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#ignore_unknown_values BigqueryTable#ignore_unknown_values}
+  */
   readonly ignoreUnknownValues?: boolean;
-  /** The maximum number of bad records that BigQuery can ignore when reading data. */
+  /**
+  * The maximum number of bad records that BigQuery can ignore when reading data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#max_bad_records BigqueryTable#max_bad_records}
+  */
   readonly maxBadRecords?: number;
-  /** A JSON schema for the external table. Schema is required for CSV and JSON formats and is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats when using external tables. */
+  /**
+  * A JSON schema for the external table. Schema is required for CSV and JSON formats and is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats when using external tables.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#schema BigqueryTable#schema}
+  */
   readonly schema?: string;
-  /** The data format. Supported values are: "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC" and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS" the scopes must include "googleapis.com/auth/drive.readonly". */
+  /**
+  * The data format. Supported values are: "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC" and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS" the scopes must include "googleapis.com/auth/drive.readonly".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#source_format BigqueryTable#source_format}
+  */
   readonly sourceFormat: string;
-  /** A list of the fully-qualified URIs that point to your data in Google Cloud. */
+  /**
+  * A list of the fully-qualified URIs that point to your data in Google Cloud.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#source_uris BigqueryTable#source_uris}
+  */
   readonly sourceUris: string[];
-  /** csv_options block */
+  /**
+  * csv_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#csv_options BigqueryTable#csv_options}
+  */
   readonly csvOptions?: BigqueryTableExternalDataConfigurationCsvOptions[];
-  /** google_sheets_options block */
+  /**
+  * google_sheets_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#google_sheets_options BigqueryTable#google_sheets_options}
+  */
   readonly googleSheetsOptions?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions[];
-  /** hive_partitioning_options block */
+  /**
+  * hive_partitioning_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#hive_partitioning_options BigqueryTable#hive_partitioning_options}
+  */
   readonly hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions[];
 }
 
@@ -152,11 +304,23 @@ function bigqueryTableExternalDataConfigurationToTerraform(struct?: BigqueryTabl
 }
 
 export interface BigqueryTableMaterializedView {
-  /** Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. */
+  /**
+  * Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#enable_refresh BigqueryTable#enable_refresh}
+  */
   readonly enableRefresh?: boolean;
-  /** A query whose result is persisted. */
+  /**
+  * A query whose result is persisted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#query BigqueryTable#query}
+  */
   readonly query: string;
-  /** Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000 */
+  /**
+  * Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#refresh_interval_ms BigqueryTable#refresh_interval_ms}
+  */
   readonly refreshIntervalMs?: number;
 }
 
@@ -170,11 +334,23 @@ function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableMaterial
 }
 
 export interface BigqueryTableRangePartitioningRange {
-  /** End of the range partitioning, exclusive. */
+  /**
+  * End of the range partitioning, exclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#end BigqueryTable#end}
+  */
   readonly end: number;
-  /** The width of each range within the partition. */
+  /**
+  * The width of each range within the partition.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#interval BigqueryTable#interval}
+  */
   readonly interval: number;
-  /** Start of the range partitioning, inclusive. */
+  /**
+  * Start of the range partitioning, inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#start BigqueryTable#start}
+  */
   readonly start: number;
 }
 
@@ -188,9 +364,17 @@ function bigqueryTableRangePartitioningRangeToTerraform(struct?: BigqueryTableRa
 }
 
 export interface BigqueryTableRangePartitioning {
-  /** The field used to determine how to create a range-based partition. */
+  /**
+  * The field used to determine how to create a range-based partition.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#field BigqueryTable#field}
+  */
   readonly field: string;
-  /** range block */
+  /**
+  * range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#range BigqueryTable#range}
+  */
   readonly range: BigqueryTableRangePartitioningRange[];
 }
 
@@ -203,13 +387,29 @@ function bigqueryTableRangePartitioningToTerraform(struct?: BigqueryTableRangePa
 }
 
 export interface BigqueryTableTimePartitioning {
-  /** Number of milliseconds for which to keep the storage for a partition. */
+  /**
+  * Number of milliseconds for which to keep the storage for a partition.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#expiration_ms BigqueryTable#expiration_ms}
+  */
   readonly expirationMs?: number;
-  /** The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time. */
+  /**
+  * The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#field BigqueryTable#field}
+  */
   readonly field?: string;
-  /** If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. */
+  /**
+  * If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#require_partition_filter BigqueryTable#require_partition_filter}
+  */
   readonly requirePartitionFilter?: boolean;
-  /** The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. */
+  /**
+  * The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#type BigqueryTable#type}
+  */
   readonly type: string;
 }
 
@@ -224,9 +424,17 @@ function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableTimePart
 }
 
 export interface BigqueryTableView {
-  /** A query that BigQuery executes when the view is referenced. */
+  /**
+  * A query that BigQuery executes when the view is referenced.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#query BigqueryTable#query}
+  */
   readonly query: string;
-  /** Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL */
+  /**
+  * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#use_legacy_sql BigqueryTable#use_legacy_sql}
+  */
   readonly useLegacySql?: boolean;
 }
 
@@ -239,14 +447,22 @@ function bigqueryTableViewToTerraform(struct?: BigqueryTableView): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html google_bigquery_table}
+*/
 export class BigqueryTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html google_bigquery_table} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryTableConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryTableConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_table',

@@ -7,32 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DnsPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** A textual description field. Defaults to 'Managed by Terraform'. */
+  /**
+  * A textual description field. Defaults to 'Managed by Terraform'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#description DnsPolicy#description}
+  */
   readonly description?: string;
-  /** Allows networks bound to this policy to receive DNS queries sent
+  /**
+  * Allows networks bound to this policy to receive DNS queries sent
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
-that are bound to this policy. */
+that are bound to this policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
+  */
   readonly enableInboundForwarding?: boolean;
-  /** Controls whether logging is enabled for the networks bound to this policy.
-Defaults to no logging if not set. */
+  /**
+  * Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#enable_logging DnsPolicy#enable_logging}
+  */
   readonly enableLogging?: boolean;
-  /** User assigned name for this policy. */
+  /**
+  * User assigned name for this policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#name DnsPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#project DnsPolicy#project}
+  */
   readonly project?: string;
-  /** alternative_name_server_config block */
+  /**
+  * alternative_name_server_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#alternative_name_server_config DnsPolicy#alternative_name_server_config}
+  */
   readonly alternativeNameServerConfig?: DnsPolicyAlternativeNameServerConfig[];
-  /** networks block */
+  /**
+  * networks block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#networks DnsPolicy#networks}
+  */
   readonly networks?: DnsPolicyNetworks[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#timeouts DnsPolicy#timeouts}
+  */
   readonly timeouts?: DnsPolicyTimeouts;
 }
 export interface DnsPolicyAlternativeNameServerConfigTargetNameServers {
-  /** Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding
+  /**
+  * Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
-to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"] */
+to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#forwarding_path DnsPolicy#forwarding_path}
+  */
   readonly forwardingPath?: string;
-  /** IPv4 address to forward to. */
+  /**
+  * IPv4 address to forward to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#ipv4_address DnsPolicy#ipv4_address}
+  */
   readonly ipv4Address: string;
 }
 
@@ -45,7 +84,11 @@ function dnsPolicyAlternativeNameServerConfigTargetNameServersToTerraform(struct
 }
 
 export interface DnsPolicyAlternativeNameServerConfig {
-  /** target_name_servers block */
+  /**
+  * target_name_servers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#target_name_servers DnsPolicy#target_name_servers}
+  */
   readonly targetNameServers: DnsPolicyAlternativeNameServerConfigTargetNameServers[];
 }
 
@@ -57,9 +100,13 @@ function dnsPolicyAlternativeNameServerConfigToTerraform(struct?: DnsPolicyAlter
 }
 
 export interface DnsPolicyNetworks {
-  /** The id or fully qualified URL of the VPC network to forward queries to.
+  /**
+  * The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
-'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}' */
+'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#network_url DnsPolicy#network_url}
+  */
   readonly networkUrl: string;
 }
 
@@ -71,8 +118,17 @@ function dnsPolicyNetworksToTerraform(struct?: DnsPolicyNetworks): any {
 }
 
 export interface DnsPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#create DnsPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#delete DnsPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#update DnsPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -86,14 +142,22 @@ function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html google_dns_policy}
+*/
 export class DnsPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html google_dns_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DnsPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DnsPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dns_policy',

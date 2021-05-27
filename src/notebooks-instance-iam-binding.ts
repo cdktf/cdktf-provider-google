@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotebooksInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#instance_name NotebooksInstanceIamBinding#instance_name}
+  */
   readonly instanceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#location NotebooksInstanceIamBinding#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#members NotebooksInstanceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#project NotebooksInstanceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#role NotebooksInstanceIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#condition NotebooksInstanceIamBinding#condition}
+  */
   readonly condition?: NotebooksInstanceIamBindingCondition[];
 }
 export interface NotebooksInstanceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#description NotebooksInstanceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#expression NotebooksInstanceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html#title NotebooksInstanceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function notebooksInstanceIamBindingConditionToTerraform(struct?: NotebooksInsta
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html google_notebooks_instance_iam_binding}
+*/
 export class NotebooksInstanceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_binding.html google_notebooks_instance_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotebooksInstanceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: NotebooksInstanceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_notebooks_instance_iam_binding',

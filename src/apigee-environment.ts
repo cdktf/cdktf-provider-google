@@ -7,21 +7,50 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
-  /** Description of the environment. */
+  /**
+  * Description of the environment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#description ApigeeEnvironment#description}
+  */
   readonly description?: string;
-  /** Display name of the environment. */
+  /**
+  * Display name of the environment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#display_name ApigeeEnvironment#display_name}
+  */
   readonly displayName?: string;
-  /** The resource ID of the environment. */
+  /**
+  * The resource ID of the environment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#name ApigeeEnvironment#name}
+  */
   readonly name: string;
-  /** The Apigee Organization associated with the Apigee environment,
-in the format 'organizations/{{org_name}}'. */
+  /**
+  * The Apigee Organization associated with the Apigee environment,
+in the format 'organizations/{{org_name}}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#org_id ApigeeEnvironment#org_id}
+  */
   readonly orgId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#timeouts ApigeeEnvironment#timeouts}
+  */
   readonly timeouts?: ApigeeEnvironmentTimeouts;
 }
 export interface ApigeeEnvironmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#create ApigeeEnvironment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#delete ApigeeEnvironment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#update ApigeeEnvironment#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +64,22 @@ function apigeeEnvironmentTimeoutsToTerraform(struct?: ApigeeEnvironmentTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html google_apigee_environment}
+*/
 export class ApigeeEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html google_apigee_environment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApigeeEnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: ApigeeEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'google_apigee_environment',

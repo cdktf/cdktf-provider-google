@@ -7,37 +7,66 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeBackendServiceConfig extends cdktf.TerraformMetaArguments {
-  /** Lifetime of cookies in seconds if session_affinity is
+  /**
+  * Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
 only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 
-When the load balancing scheme is INTERNAL, this field is not used. */
+When the load balancing scheme is INTERNAL, this field is not used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#affinity_cookie_ttl_sec ComputeBackendService#affinity_cookie_ttl_sec}
+  */
   readonly affinityCookieTtlSec?: number;
-  /** Time for which instance will be drained (not accept new
-connections, but still work to finish started). */
+  /**
+  * Time for which instance will be drained (not accept new
+connections, but still work to finish started).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#connection_draining_timeout_sec ComputeBackendService#connection_draining_timeout_sec}
+  */
   readonly connectionDrainingTimeoutSec?: number;
-  /** Headers that the HTTP/S load balancer should add to proxied
-requests. */
+  /**
+  * Headers that the HTTP/S load balancer should add to proxied
+requests.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#custom_request_headers ComputeBackendService#custom_request_headers}
+  */
   readonly customRequestHeaders?: string[];
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#description ComputeBackendService#description}
+  */
   readonly description?: string;
-  /** If true, enable Cloud CDN for this BackendService. */
+  /**
+  * If true, enable Cloud CDN for this BackendService.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enable_cdn ComputeBackendService#enable_cdn}
+  */
   readonly enableCdn?: boolean;
-  /** The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+  /**
+  * The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
 check can be specified.
 
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 
-For internal load balancing, a URL to a HealthCheck resource must be specified instead. */
+For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#health_checks ComputeBackendService#health_checks}
+  */
   readonly healthChecks?: string[];
-  /** Indicates whether the backend service will be used with internal or
+  /**
+  * Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"] */
+load balancing cannot be used with the other. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#load_balancing_scheme ComputeBackendService#load_balancing_scheme}
+  */
   readonly loadBalancingScheme?: string;
-  /** The load balancing algorithm used within the scope of the locality.
+  /**
+  * The load balancing algorithm used within the scope of the locality.
 The possible values are -
 
 * ROUND_ROBIN - This is a simple policy in which each healthy backend
@@ -65,69 +94,144 @@ The possible values are -
            Maglev, refer to https://ai.google/research/pubs/pub44824
 
 This field is applicable only when the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"] */
+INTERNAL_SELF_MANAGED. Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#locality_lb_policy ComputeBackendService#locality_lb_policy}
+  */
   readonly localityLbPolicy?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#name ComputeBackendService#name}
+  */
   readonly name: string;
-  /** Name of backend port. The same name should appear in the instance
+  /**
+  * Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
-scheme is EXTERNAL. */
+scheme is EXTERNAL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#port_name ComputeBackendService#port_name}
+  */
   readonly portName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#project ComputeBackendService#project}
+  */
   readonly project?: string;
-  /** The protocol this BackendService uses to communicate with backends.
+  /**
+  * The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
-types and may result in errors if used with the GA API. Possible values: ["HTTP", "HTTPS", "HTTP2", "TCP", "SSL", "GRPC"] */
+types and may result in errors if used with the GA API. Possible values: ["HTTP", "HTTPS", "HTTP2", "TCP", "SSL", "GRPC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#protocol ComputeBackendService#protocol}
+  */
   readonly protocol?: string;
-  /** The security policy associated with this backend service. */
+  /**
+  * The security policy associated with this backend service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#security_policy ComputeBackendService#security_policy}
+  */
   readonly securityPolicy?: string;
-  /** Type of session affinity to use. The default is NONE. Session affinity is
-not applicable if the protocol is UDP. Possible values: ["NONE", "CLIENT_IP", "CLIENT_IP_PORT_PROTO", "CLIENT_IP_PROTO", "GENERATED_COOKIE", "HEADER_FIELD", "HTTP_COOKIE"] */
+  /**
+  * Type of session affinity to use. The default is NONE. Session affinity is
+not applicable if the protocol is UDP. Possible values: ["NONE", "CLIENT_IP", "CLIENT_IP_PORT_PROTO", "CLIENT_IP_PROTO", "GENERATED_COOKIE", "HEADER_FIELD", "HTTP_COOKIE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#session_affinity ComputeBackendService#session_affinity}
+  */
   readonly sessionAffinity?: string;
-  /** How many seconds to wait for the backend before considering it a
-failed request. Default is 30 seconds. Valid range is [1, 86400]. */
+  /**
+  * How many seconds to wait for the backend before considering it a
+failed request. Default is 30 seconds. Valid range is [1, 86400].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#timeout_sec ComputeBackendService#timeout_sec}
+  */
   readonly timeoutSec?: number;
-  /** backend block */
+  /**
+  * backend block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#backend ComputeBackendService#backend}
+  */
   readonly backend?: ComputeBackendServiceBackend[];
-  /** cdn_policy block */
+  /**
+  * cdn_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#cdn_policy ComputeBackendService#cdn_policy}
+  */
   readonly cdnPolicy?: ComputeBackendServiceCdnPolicy[];
-  /** circuit_breakers block */
+  /**
+  * circuit_breakers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#circuit_breakers ComputeBackendService#circuit_breakers}
+  */
   readonly circuitBreakers?: ComputeBackendServiceCircuitBreakers[];
-  /** consistent_hash block */
+  /**
+  * consistent_hash block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#consistent_hash ComputeBackendService#consistent_hash}
+  */
   readonly consistentHash?: ComputeBackendServiceConsistentHash[];
-  /** iap block */
+  /**
+  * iap block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#iap ComputeBackendService#iap}
+  */
   readonly iap?: ComputeBackendServiceIap[];
-  /** log_config block */
+  /**
+  * log_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#log_config ComputeBackendService#log_config}
+  */
   readonly logConfig?: ComputeBackendServiceLogConfig[];
-  /** outlier_detection block */
+  /**
+  * outlier_detection block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#outlier_detection ComputeBackendService#outlier_detection}
+  */
   readonly outlierDetection?: ComputeBackendServiceOutlierDetection[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#timeouts ComputeBackendService#timeouts}
+  */
   readonly timeouts?: ComputeBackendServiceTimeouts;
 }
 export interface ComputeBackendServiceBackend {
-  /** Specifies the balancing mode for this backend.
+  /**
+  * Specifies the balancing mode for this backend.
 
 For global HTTP(S) or TCP/SSL load balancing, the default is
 UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
-and CONNECTION (for TCP/SSL). Default value: "UTILIZATION" Possible values: ["UTILIZATION", "RATE", "CONNECTION"] */
+and CONNECTION (for TCP/SSL). Default value: "UTILIZATION" Possible values: ["UTILIZATION", "RATE", "CONNECTION"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#balancing_mode ComputeBackendService#balancing_mode}
+  */
   readonly balancingMode?: string;
-  /** A multiplier applied to the group's maximum servicing capacity
+  /**
+  * A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
 
 Default value is 1, which means the group will serve up to 100%
 of its configured capacity (depending on balancingMode). A
 setting of 0 means the group is completely drained, offering
-0% of its available Capacity. Valid range is [0.0,1.0]. */
+0% of its available Capacity. Valid range is [0.0,1.0].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#capacity_scaler ComputeBackendService#capacity_scaler}
+  */
   readonly capacityScaler?: number;
-  /** An optional description of this resource.
-Provide this property when you create the resource. */
+  /**
+  * An optional description of this resource.
+Provide this property when you create the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#description ComputeBackendService#description}
+  */
   readonly description?: string;
-  /** The fully-qualified URL of an Instance Group or Network Endpoint
+  /**
+  * The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
 of instances that serve traffic. Member virtual machine
 instances from each instance group must live in the same zone as
@@ -143,51 +247,82 @@ Network Endpoint Group backends.
 
 Note that you must specify an Instance Group or Network Endpoint
 Group resource using the fully-qualified URL, rather than a
-partial URL. */
+partial URL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#group ComputeBackendService#group}
+  */
   readonly group: string;
-  /** The max number of simultaneous connections for the group. Can
+  /**
+  * The max number of simultaneous connections for the group. Can
 be used with either CONNECTION or UTILIZATION balancing modes.
 
 For CONNECTION mode, either maxConnections or one
 of maxConnectionsPerInstance or maxConnectionsPerEndpoint,
-as appropriate for group type, must be set. */
+as appropriate for group type, must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_connections ComputeBackendService#max_connections}
+  */
   readonly maxConnections?: number;
-  /** The max number of simultaneous connections that a single backend
+  /**
+  * The max number of simultaneous connections that a single backend
 network endpoint can handle. This is used to calculate the
 capacity of the group. Can be used in either CONNECTION or
 UTILIZATION balancing modes.
 
 For CONNECTION mode, either
-maxConnections or maxConnectionsPerEndpoint must be set. */
+maxConnections or maxConnectionsPerEndpoint must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_connections_per_endpoint ComputeBackendService#max_connections_per_endpoint}
+  */
   readonly maxConnectionsPerEndpoint?: number;
-  /** The max number of simultaneous connections that a single
+  /**
+  * The max number of simultaneous connections that a single
 backend instance can handle. This is used to calculate the
 capacity of the group. Can be used in either CONNECTION or
 UTILIZATION balancing modes.
 
 For CONNECTION mode, either maxConnections or
-maxConnectionsPerInstance must be set. */
+maxConnectionsPerInstance must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_connections_per_instance ComputeBackendService#max_connections_per_instance}
+  */
   readonly maxConnectionsPerInstance?: number;
-  /** The max requests per second (RPS) of the group.
+  /**
+  * The max requests per second (RPS) of the group.
 
 Can be used with either RATE or UTILIZATION balancing modes,
 but required if RATE mode. For RATE mode, either maxRate or one
 of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
-group type, must be set. */
+group type, must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_rate ComputeBackendService#max_rate}
+  */
   readonly maxRate?: number;
-  /** The max requests per second (RPS) that a single backend network
+  /**
+  * The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
 the group. Can be used in either balancing mode. For RATE mode,
-either maxRate or maxRatePerEndpoint must be set. */
+either maxRate or maxRatePerEndpoint must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_rate_per_endpoint ComputeBackendService#max_rate_per_endpoint}
+  */
   readonly maxRatePerEndpoint?: number;
-  /** The max requests per second (RPS) that a single backend
+  /**
+  * The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
 the group. Can be used in either balancing mode. For RATE mode,
-either maxRate or maxRatePerInstance must be set. */
+either maxRate or maxRatePerInstance must be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_rate_per_instance ComputeBackendService#max_rate_per_instance}
+  */
   readonly maxRatePerInstance?: number;
-  /** Used when balancingMode is UTILIZATION. This ratio defines the
+  /**
+  * Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. The default is 0.8. Valid
-range is [0.0, 1.0]. */
+range is [0.0, 1.0].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_utilization ComputeBackendService#max_utilization}
+  */
   readonly maxUtilization?: number;
 }
 
@@ -209,31 +344,51 @@ function computeBackendServiceBackendToTerraform(struct?: ComputeBackendServiceB
 }
 
 export interface ComputeBackendServiceCdnPolicyCacheKeyPolicy {
-  /** If true requests to different hosts will be cached separately. */
+  /**
+  * If true requests to different hosts will be cached separately.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#include_host ComputeBackendService#include_host}
+  */
   readonly includeHost?: boolean;
-  /** If true, http and https requests will be cached separately. */
+  /**
+  * If true, http and https requests will be cached separately.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#include_protocol ComputeBackendService#include_protocol}
+  */
   readonly includeProtocol?: boolean;
-  /** If true, include query string parameters in the cache key
+  /**
+  * If true, include query string parameters in the cache key
 according to query_string_whitelist and
 query_string_blacklist. If neither is set, the entire query
 string will be included.
 
 If false, the query string will be excluded from the cache
-key entirely. */
+key entirely.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#include_query_string ComputeBackendService#include_query_string}
+  */
   readonly includeQueryString?: boolean;
-  /** Names of query string parameters to exclude in cache keys.
+  /**
+  * Names of query string parameters to exclude in cache keys.
 
 All other parameters will be included. Either specify
 query_string_whitelist or query_string_blacklist, not both.
 '&' and '=' will be percent encoded and not treated as
-delimiters. */
+delimiters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#query_string_blacklist ComputeBackendService#query_string_blacklist}
+  */
   readonly queryStringBlacklist?: string[];
-  /** Names of query string parameters to include in cache keys.
+  /**
+  * Names of query string parameters to include in cache keys.
 
 All other parameters will be excluded. Either specify
 query_string_whitelist or query_string_blacklist, not both.
 '&' and '=' will be percent encoded and not treated as
-delimiters. */
+delimiters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#query_string_whitelist ComputeBackendService#query_string_whitelist}
+  */
   readonly queryStringWhitelist?: string[];
 }
 
@@ -249,7 +404,8 @@ function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: Comput
 }
 
 export interface ComputeBackendServiceCdnPolicy {
-  /** Maximum number of seconds the response to a signed URL request
+  /**
+  * Maximum number of seconds the response to a signed URL request
 will be considered fresh, defaults to 1hr (3600s). After this
 time period, the response will be revalidated before
 being served.
@@ -258,9 +414,16 @@ When serving responses to signed URL requests, Cloud CDN will
 internally behave as though all responses from this backend had a
 "Cache-Control: public, max-age=[TTL]" header, regardless of any
 existing Cache-Control header. The actual headers served in
-responses will not be altered. */
+responses will not be altered.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#signed_url_cache_max_age_sec ComputeBackendService#signed_url_cache_max_age_sec}
+  */
   readonly signedUrlCacheMaxAgeSec?: number;
-  /** cache_key_policy block */
+  /**
+  * cache_key_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#cache_key_policy ComputeBackendService#cache_key_policy}
+  */
   readonly cacheKeyPolicy?: ComputeBackendServiceCdnPolicyCacheKeyPolicy[];
 }
 
@@ -273,22 +436,42 @@ function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBackendServic
 }
 
 export interface ComputeBackendServiceCircuitBreakers {
-  /** The maximum number of connections to the backend cluster.
-Defaults to 1024. */
+  /**
+  * The maximum number of connections to the backend cluster.
+Defaults to 1024.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_connections ComputeBackendService#max_connections}
+  */
   readonly maxConnections?: number;
-  /** The maximum number of pending requests to the backend cluster.
-Defaults to 1024. */
+  /**
+  * The maximum number of pending requests to the backend cluster.
+Defaults to 1024.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_pending_requests ComputeBackendService#max_pending_requests}
+  */
   readonly maxPendingRequests?: number;
-  /** The maximum number of parallel requests to the backend cluster.
-Defaults to 1024. */
+  /**
+  * The maximum number of parallel requests to the backend cluster.
+Defaults to 1024.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_requests ComputeBackendService#max_requests}
+  */
   readonly maxRequests?: number;
-  /** Maximum requests for a single backend connection. This parameter
+  /**
+  * Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
 not specified, there is no limit. Setting this parameter to 1
-will effectively disable keep alive. */
+will effectively disable keep alive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_requests_per_connection ComputeBackendService#max_requests_per_connection}
+  */
   readonly maxRequestsPerConnection?: number;
-  /** The maximum number of parallel retries to the backend cluster.
-Defaults to 3. */
+  /**
+  * The maximum number of parallel retries to the backend cluster.
+Defaults to 3.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_retries ComputeBackendService#max_retries}
+  */
   readonly maxRetries?: number;
 }
 
@@ -304,13 +487,21 @@ function computeBackendServiceCircuitBreakersToTerraform(struct?: ComputeBackend
 }
 
 export interface ComputeBackendServiceConsistentHashHttpCookieTtl {
-  /** Span of time that's a fraction of a second at nanosecond
+  /**
+  * Span of time that's a fraction of a second at nanosecond
 resolution. Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must
-be from 0 to 999,999,999 inclusive. */
+be from 0 to 999,999,999 inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#nanos ComputeBackendService#nanos}
+  */
   readonly nanos?: number;
-  /** Span of time at a resolution of a second.
-Must be from 0 to 315,576,000,000 inclusive. */
+  /**
+  * Span of time at a resolution of a second.
+Must be from 0 to 315,576,000,000 inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#seconds ComputeBackendService#seconds}
+  */
   readonly seconds: number;
 }
 
@@ -323,11 +514,23 @@ function computeBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: Co
 }
 
 export interface ComputeBackendServiceConsistentHashHttpCookie {
-  /** Name of the cookie. */
+  /**
+  * Name of the cookie.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#name ComputeBackendService#name}
+  */
   readonly name?: string;
-  /** Path to set for the cookie. */
+  /**
+  * Path to set for the cookie.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#path ComputeBackendService#path}
+  */
   readonly path?: string;
-  /** ttl block */
+  /**
+  * ttl block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#ttl ComputeBackendService#ttl}
+  */
   readonly ttl?: ComputeBackendServiceConsistentHashHttpCookieTtl[];
 }
 
@@ -341,17 +544,29 @@ function computeBackendServiceConsistentHashHttpCookieToTerraform(struct?: Compu
 }
 
 export interface ComputeBackendServiceConsistentHash {
-  /** The hash based on the value of the specified header field.
-This field is applicable if the sessionAffinity is set to HEADER_FIELD. */
+  /**
+  * The hash based on the value of the specified header field.
+This field is applicable if the sessionAffinity is set to HEADER_FIELD.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#http_header_name ComputeBackendService#http_header_name}
+  */
   readonly httpHeaderName?: string;
-  /** The minimum number of virtual nodes to use for the hash ring.
+  /**
+  * The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
 distributions. If the number of hosts in the load balancing pool
 is larger than the ring size, each host will be assigned a single
 virtual node.
-Defaults to 1024. */
+Defaults to 1024.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#minimum_ring_size ComputeBackendService#minimum_ring_size}
+  */
   readonly minimumRingSize?: number;
-  /** http_cookie block */
+  /**
+  * http_cookie block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#http_cookie ComputeBackendService#http_cookie}
+  */
   readonly httpCookie?: ComputeBackendServiceConsistentHashHttpCookie[];
 }
 
@@ -365,9 +580,17 @@ function computeBackendServiceConsistentHashToTerraform(struct?: ComputeBackendS
 }
 
 export interface ComputeBackendServiceIap {
-  /** OAuth2 Client ID for IAP */
+  /**
+  * OAuth2 Client ID for IAP
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#oauth2_client_id ComputeBackendService#oauth2_client_id}
+  */
   readonly oauth2ClientId: string;
-  /** OAuth2 Client Secret for IAP */
+  /**
+  * OAuth2 Client Secret for IAP
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#oauth2_client_secret ComputeBackendService#oauth2_client_secret}
+  */
   readonly oauth2ClientSecret: string;
 }
 
@@ -380,12 +603,20 @@ function computeBackendServiceIapToTerraform(struct?: ComputeBackendServiceIap):
 }
 
 export interface ComputeBackendServiceLogConfig {
-  /** Whether to enable logging for the load balancer traffic served by this backend service. */
+  /**
+  * Whether to enable logging for the load balancer traffic served by this backend service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enable ComputeBackendService#enable}
+  */
   readonly enable?: boolean;
-  /** This field can only be specified if logging is enabled for this backend service. The value of
+  /**
+  * This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
 where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
-The default value is 1.0. */
+The default value is 1.0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#sample_rate ComputeBackendService#sample_rate}
+  */
   readonly sampleRate?: number;
 }
 
@@ -398,12 +629,20 @@ function computeBackendServiceLogConfigToTerraform(struct?: ComputeBackendServic
 }
 
 export interface ComputeBackendServiceOutlierDetectionBaseEjectionTime {
-  /** Span of time that's a fraction of a second at nanosecond resolution. Durations
+  /**
+  * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive. */
+'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#nanos ComputeBackendService#nanos}
+  */
   readonly nanos?: number;
-  /** Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive. */
+  /**
+  * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#seconds ComputeBackendService#seconds}
+  */
   readonly seconds: number;
 }
 
@@ -416,12 +655,20 @@ function computeBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct
 }
 
 export interface ComputeBackendServiceOutlierDetectionInterval {
-  /** Span of time that's a fraction of a second at nanosecond resolution. Durations
+  /**
+  * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive. */
+'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#nanos ComputeBackendService#nanos}
+  */
   readonly nanos?: number;
-  /** Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive. */
+  /**
+  * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#seconds ComputeBackendService#seconds}
+  */
   readonly seconds: number;
 }
 
@@ -434,50 +681,94 @@ function computeBackendServiceOutlierDetectionIntervalToTerraform(struct?: Compu
 }
 
 export interface ComputeBackendServiceOutlierDetection {
-  /** Number of errors before a host is ejected from the connection pool. When the
+  /**
+  * Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
-Defaults to 5. */
+Defaults to 5.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#consecutive_errors ComputeBackendService#consecutive_errors}
+  */
   readonly consecutiveErrors?: number;
-  /** The number of consecutive gateway failures (502, 503, 504 status or connection
+  /**
+  * The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
-gateway failure ejection occurs. Defaults to 5. */
+gateway failure ejection occurs. Defaults to 5.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#consecutive_gateway_failure ComputeBackendService#consecutive_gateway_failure}
+  */
   readonly consecutiveGatewayFailure?: number;
-  /** The percentage chance that a host will be actually ejected when an outlier
+  /**
+  * The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
-ejection or to ramp it up slowly. Defaults to 100. */
+ejection or to ramp it up slowly. Defaults to 100.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enforcing_consecutive_errors ComputeBackendService#enforcing_consecutive_errors}
+  */
   readonly enforcingConsecutiveErrors?: number;
-  /** The percentage chance that a host will be actually ejected when an outlier
+  /**
+  * The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
-used to disable ejection or to ramp it up slowly. Defaults to 0. */
+used to disable ejection or to ramp it up slowly. Defaults to 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enforcing_consecutive_gateway_failure ComputeBackendService#enforcing_consecutive_gateway_failure}
+  */
   readonly enforcingConsecutiveGatewayFailure?: number;
-  /** The percentage chance that a host will be actually ejected when an outlier
+  /**
+  * The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
-disable ejection or to ramp it up slowly. Defaults to 100. */
+disable ejection or to ramp it up slowly. Defaults to 100.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enforcing_success_rate ComputeBackendService#enforcing_success_rate}
+  */
   readonly enforcingSuccessRate?: number;
-  /** Maximum percentage of hosts in the load balancing pool for the backend service
-that can be ejected. Defaults to 10%. */
+  /**
+  * Maximum percentage of hosts in the load balancing pool for the backend service
+that can be ejected. Defaults to 10%.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_ejection_percent ComputeBackendService#max_ejection_percent}
+  */
   readonly maxEjectionPercent?: number;
-  /** The number of hosts in a cluster that must have enough request volume to detect
+  /**
+  * The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
 detection via success rate statistics is not performed for any host in the
-cluster. Defaults to 5. */
+cluster. Defaults to 5.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#success_rate_minimum_hosts ComputeBackendService#success_rate_minimum_hosts}
+  */
   readonly successRateMinimumHosts?: number;
-  /** The minimum number of total requests that must be collected in one interval (as
+  /**
+  * The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
 based outlier detection. If the volume is lower than this setting, outlier
 detection via success rate statistics is not performed for that host. Defaults
-to 100. */
+to 100.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#success_rate_request_volume ComputeBackendService#success_rate_request_volume}
+  */
   readonly successRateRequestVolume?: number;
-  /** This factor is used to determine the ejection threshold for success rate outlier
+  /**
+  * This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
 rate, and the product of this factor and the standard deviation of the mean
 success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
 by a thousand to get a double. That is, if the desired factor is 1.9, the
-runtime value should be 1900. Defaults to 1900. */
+runtime value should be 1900. Defaults to 1900.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#success_rate_stdev_factor ComputeBackendService#success_rate_stdev_factor}
+  */
   readonly successRateStdevFactor?: number;
-  /** base_ejection_time block */
+  /**
+  * base_ejection_time block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#base_ejection_time ComputeBackendService#base_ejection_time}
+  */
   readonly baseEjectionTime?: ComputeBackendServiceOutlierDetectionBaseEjectionTime[];
-  /** interval block */
+  /**
+  * interval block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#interval ComputeBackendService#interval}
+  */
   readonly interval?: ComputeBackendServiceOutlierDetectionInterval[];
 }
 
@@ -499,8 +790,17 @@ function computeBackendServiceOutlierDetectionToTerraform(struct?: ComputeBacken
 }
 
 export interface ComputeBackendServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#create ComputeBackendService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#delete ComputeBackendService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#update ComputeBackendService#update}
+  */
   readonly update?: string;
 }
 
@@ -514,14 +814,22 @@ function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendService
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html google_compute_backend_service}
+*/
 export class ComputeBackendService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html google_compute_backend_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeBackendServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeBackendServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_backend_service',

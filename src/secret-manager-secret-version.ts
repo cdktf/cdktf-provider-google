@@ -7,17 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
-  /** The current state of the SecretVersion. */
+  /**
+  * The current state of the SecretVersion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#enabled SecretManagerSecretVersion#enabled}
+  */
   readonly enabled?: boolean;
-  /** Secret Manager secret resource */
+  /**
+  * Secret Manager secret resource
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#secret SecretManagerSecretVersion#secret}
+  */
   readonly secret: string;
-  /** The secret data. Must be no larger than 64KiB. */
+  /**
+  * The secret data. Must be no larger than 64KiB.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#secret_data SecretManagerSecretVersion#secret_data}
+  */
   readonly secretData: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#timeouts SecretManagerSecretVersion#timeouts}
+  */
   readonly timeouts?: SecretManagerSecretVersionTimeouts;
 }
 export interface SecretManagerSecretVersionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#create SecretManagerSecretVersion#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#delete SecretManagerSecretVersion#delete}
+  */
   readonly delete?: string;
 }
 
@@ -30,14 +52,22 @@ function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSec
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html google_secret_manager_secret_version}
+*/
 export class SecretManagerSecretVersion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html google_secret_manager_secret_version} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecretManagerSecretVersionConfig
+  */
   public constructor(scope: Construct, id: string, config: SecretManagerSecretVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_secret_manager_secret_version',

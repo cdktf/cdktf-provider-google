@@ -7,29 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeTargetHttpProxyConfig extends cdktf.TerraformMetaArguments {
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#description ComputeTargetHttpProxy#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#name ComputeTargetHttpProxy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#project ComputeTargetHttpProxy#project}
+  */
   readonly project?: string;
-  /** This field only applies when the forwarding rule that references
-this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. */
+  /**
+  * This field only applies when the forwarding rule that references
+this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#proxy_bind ComputeTargetHttpProxy#proxy_bind}
+  */
   readonly proxyBind?: boolean;
-  /** A reference to the UrlMap resource that defines the mapping from URL
-to the BackendService. */
+  /**
+  * A reference to the UrlMap resource that defines the mapping from URL
+to the BackendService.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#url_map ComputeTargetHttpProxy#url_map}
+  */
   readonly urlMap: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#timeouts ComputeTargetHttpProxy#timeouts}
+  */
   readonly timeouts?: ComputeTargetHttpProxyTimeouts;
 }
 export interface ComputeTargetHttpProxyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#create ComputeTargetHttpProxy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#delete ComputeTargetHttpProxy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#update ComputeTargetHttpProxy#update}
+  */
   readonly update?: string;
 }
 
@@ -43,14 +75,22 @@ function computeTargetHttpProxyTimeoutsToTerraform(struct?: ComputeTargetHttpPro
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html google_compute_target_http_proxy}
+*/
 export class ComputeTargetHttpProxy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html google_compute_target_http_proxy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeTargetHttpProxyConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeTargetHttpProxyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_target_http_proxy',

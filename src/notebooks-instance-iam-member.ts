@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotebooksInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#instance_name NotebooksInstanceIamMember#instance_name}
+  */
   readonly instanceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#location NotebooksInstanceIamMember#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#member NotebooksInstanceIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#project NotebooksInstanceIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#role NotebooksInstanceIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#condition NotebooksInstanceIamMember#condition}
+  */
   readonly condition?: NotebooksInstanceIamMemberCondition[];
 }
 export interface NotebooksInstanceIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#description NotebooksInstanceIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#expression NotebooksInstanceIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#title NotebooksInstanceIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function notebooksInstanceIamMemberConditionToTerraform(struct?: NotebooksInstan
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html google_notebooks_instance_iam_member}
+*/
 export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html google_notebooks_instance_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotebooksInstanceIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: NotebooksInstanceIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_notebooks_instance_iam_member',

@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsKeyRingIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_policy.html#key_ring_id KmsKeyRingIamPolicy#key_ring_id}
+  */
   readonly keyRingId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_policy.html#policy_data KmsKeyRingIamPolicy#policy_data}
+  */
   readonly policyData: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_policy.html google_kms_key_ring_iam_policy}
+*/
 export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_policy.html google_kms_key_ring_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsKeyRingIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsKeyRingIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_key_ring_iam_policy',

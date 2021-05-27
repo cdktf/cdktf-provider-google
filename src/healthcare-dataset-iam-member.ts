@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HealthcareDatasetIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#dataset_id HealthcareDatasetIamMember#dataset_id}
+  */
   readonly datasetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#member HealthcareDatasetIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#role HealthcareDatasetIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#condition HealthcareDatasetIamMember#condition}
+  */
   readonly condition?: HealthcareDatasetIamMemberCondition[];
 }
 export interface HealthcareDatasetIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#description HealthcareDatasetIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#expression HealthcareDatasetIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html#title HealthcareDatasetIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function healthcareDatasetIamMemberConditionToTerraform(struct?: HealthcareDatas
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html google_healthcare_dataset_iam_member}
+*/
 export class HealthcareDatasetIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_member.html google_healthcare_dataset_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HealthcareDatasetIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: HealthcareDatasetIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dataset_iam_member',

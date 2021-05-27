@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_instance.html
+// https://www.terraform.io/docs/providers/google/d/compute_instance.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the instance. One of name or self_link must be provided. */
+  /**
+  * The name of the instance. One of name or self_link must be provided.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance.html#name DataGoogleComputeInstance#name}
+  */
   readonly name?: string;
-  /** The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance.html#project DataGoogleComputeInstance#project}
+  */
   readonly project?: string;
-  /** The URI of the created resource. */
+  /**
+  * The URI of the created resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance.html#self_link DataGoogleComputeInstance#self_link}
+  */
   readonly selfLink?: string;
-  /** The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used. */
+  /**
+  * The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance.html#zone DataGoogleComputeInstance#zone}
+  */
   readonly zone?: string;
 }
 export class DataGoogleComputeInstanceAttachedDisk extends cdktf.ComplexComputedList {
@@ -283,14 +299,22 @@ export class DataGoogleComputeInstanceShieldedInstanceConfig extends cdktf.Compl
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance.html google_compute_instance}
+*/
 export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance.html google_compute_instance} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeInstanceConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeInstanceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance',

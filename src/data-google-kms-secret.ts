@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_kms_secret.html
+// https://www.terraform.io/docs/providers/google/d/kms_secret.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,19 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleKmsSecretConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret.html#additional_authenticated_data DataGoogleKmsSecret#additional_authenticated_data}
+  */
   readonly additionalAuthenticatedData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret.html#ciphertext DataGoogleKmsSecret#ciphertext}
+  */
   readonly ciphertext: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret.html#crypto_key DataGoogleKmsSecret#crypto_key}
+  */
   readonly cryptoKey: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_secret.html google_kms_secret}
+*/
 export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_secret.html google_kms_secret} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleKmsSecretConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleKmsSecretConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_secret',

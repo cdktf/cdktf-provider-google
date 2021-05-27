@@ -7,14 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeProjectDefaultNetworkTierConfig extends cdktf.TerraformMetaArguments {
-  /** The default network tier to be configured for the project. This field can take the following values: PREMIUM or STANDARD. */
+  /**
+  * The default network tier to be configured for the project. This field can take the following values: PREMIUM or STANDARD.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html#network_tier ComputeProjectDefaultNetworkTier#network_tier}
+  */
   readonly networkTier: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html#project ComputeProjectDefaultNetworkTier#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html#timeouts ComputeProjectDefaultNetworkTier#timeouts}
+  */
   readonly timeouts?: ComputeProjectDefaultNetworkTierTimeouts;
 }
 export interface ComputeProjectDefaultNetworkTierTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html#create ComputeProjectDefaultNetworkTier#create}
+  */
   readonly create?: string;
 }
 
@@ -26,14 +41,22 @@ function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputePro
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html google_compute_project_default_network_tier}
+*/
 export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html google_compute_project_default_network_tier} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeProjectDefaultNetworkTierConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeProjectDefaultNetworkTierConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_project_default_network_tier',

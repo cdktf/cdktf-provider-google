@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_regions.html
+// https://www.terraform.io/docs/providers/google/d/compute_regions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,18 +7,32 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeRegionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_regions.html#project DataGoogleComputeRegions#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_regions.html#status DataGoogleComputeRegions#status}
+  */
   readonly status?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_regions.html google_compute_regions}
+*/
 export class DataGoogleComputeRegions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_regions.html google_compute_regions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeRegionsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeRegionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_compute_regions',

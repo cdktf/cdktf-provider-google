@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigtableTableIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#instance BigtableTableIamPolicy#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#policy_data BigtableTableIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#project BigtableTableIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#table BigtableTableIamPolicy#table}
+  */
   readonly table: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html google_bigtable_table_iam_policy}
+*/
 export class BigtableTableIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html google_bigtable_table_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigtableTableIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: BigtableTableIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_table_iam_policy',

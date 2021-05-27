@@ -7,18 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
-  /** The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created. */
+  /**
+  * The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#account_id ServiceAccount#account_id}
+  */
   readonly accountId: string;
-  /** A text description of the service account. Must be less than or equal to 256 UTF-8 bytes. */
+  /**
+  * A text description of the service account. Must be less than or equal to 256 UTF-8 bytes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#description ServiceAccount#description}
+  */
   readonly description?: string;
-  /** The display name for the service account. Can be updated without creating a new resource. */
+  /**
+  * The display name for the service account. Can be updated without creating a new resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#display_name ServiceAccount#display_name}
+  */
   readonly displayName?: string;
-  /** The ID of the project that the service account will be created in. Defaults to the provider project configuration. */
+  /**
+  * The ID of the project that the service account will be created in. Defaults to the provider project configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#project ServiceAccount#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#timeouts ServiceAccount#timeouts}
+  */
   readonly timeouts?: ServiceAccountTimeouts;
 }
 export interface ServiceAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#create ServiceAccount#create}
+  */
   readonly create?: string;
 }
 
@@ -30,14 +53,22 @@ function serviceAccountTimeoutsToTerraform(struct?: ServiceAccountTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account.html google_service_account}
+*/
 export class ServiceAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account.html google_service_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'google_service_account',

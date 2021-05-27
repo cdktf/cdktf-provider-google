@@ -7,41 +7,96 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeNodeGroupConfig extends cdktf.TerraformMetaArguments {
-  /** An optional textual description of the resource. */
+  /**
+  * An optional textual description of the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#description ComputeNodeGroup#description}
+  */
   readonly description?: string;
-  /** The initial number of nodes in the node group. One of 'initial_size' or 'size' must be specified. */
+  /**
+  * The initial number of nodes in the node group. One of 'initial_size' or 'size' must be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#initial_size ComputeNodeGroup#initial_size}
+  */
   readonly initialSize?: number;
-  /** Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. */
+  /**
+  * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#maintenance_policy ComputeNodeGroup#maintenance_policy}
+  */
   readonly maintenancePolicy?: string;
-  /** Name of the resource. */
+  /**
+  * Name of the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#name ComputeNodeGroup#name}
+  */
   readonly name?: string;
-  /** The URL of the node template to which this node group belongs. */
+  /**
+  * The URL of the node template to which this node group belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#node_template ComputeNodeGroup#node_template}
+  */
   readonly nodeTemplate: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#project ComputeNodeGroup#project}
+  */
   readonly project?: string;
-  /** The total number of nodes in the node group. One of 'initial_size' or 'size' must be specified. */
+  /**
+  * The total number of nodes in the node group. One of 'initial_size' or 'size' must be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#size ComputeNodeGroup#size}
+  */
   readonly size?: number;
-  /** Zone where this node group is located */
+  /**
+  * Zone where this node group is located
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#zone ComputeNodeGroup#zone}
+  */
   readonly zone?: string;
-  /** autoscaling_policy block */
+  /**
+  * autoscaling_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#autoscaling_policy ComputeNodeGroup#autoscaling_policy}
+  */
   readonly autoscalingPolicy?: ComputeNodeGroupAutoscalingPolicy[];
-  /** maintenance_window block */
+  /**
+  * maintenance_window block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#maintenance_window ComputeNodeGroup#maintenance_window}
+  */
   readonly maintenanceWindow?: ComputeNodeGroupMaintenanceWindow[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#timeouts ComputeNodeGroup#timeouts}
+  */
   readonly timeouts?: ComputeNodeGroupTimeouts;
 }
 export interface ComputeNodeGroupAutoscalingPolicy {
-  /** Maximum size of the node group. Set to a value less than or equal
-to 100 and greater than or equal to min-nodes. */
+  /**
+  * Maximum size of the node group. Set to a value less than or equal
+to 100 and greater than or equal to min-nodes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#max_nodes ComputeNodeGroup#max_nodes}
+  */
   readonly maxNodes?: number;
-  /** Minimum size of the node group. Must be less
-than or equal to max-nodes. The default value is 0. */
+  /**
+  * Minimum size of the node group. Must be less
+than or equal to max-nodes. The default value is 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#min_nodes ComputeNodeGroup#min_nodes}
+  */
   readonly minNodes?: number;
-  /** The autoscaling mode. Set to one of the following:
+  /**
+  * The autoscaling mode. Set to one of the following:
   - OFF: Disables the autoscaler.
   - ON: Enables scaling in and scaling out.
   - ONLY_SCALE_OUT: Enables only scaling out.
   You must use this mode if your node groups are configured to
-  restart their hosted VMs on minimal servers. Possible values: ["OFF", "ON", "ONLY_SCALE_OUT"] */
+  restart their hosted VMs on minimal servers. Possible values: ["OFF", "ON", "ONLY_SCALE_OUT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#mode ComputeNodeGroup#mode}
+  */
   readonly mode?: string;
 }
 
@@ -55,7 +110,11 @@ function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNodeGroupA
 }
 
 export interface ComputeNodeGroupMaintenanceWindow {
-  /** instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid. */
+  /**
+  * instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#start_time ComputeNodeGroup#start_time}
+  */
   readonly startTime: string;
 }
 
@@ -67,8 +126,17 @@ function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNodeGroupM
 }
 
 export interface ComputeNodeGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#create ComputeNodeGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#delete ComputeNodeGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html#update ComputeNodeGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -82,14 +150,22 @@ function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html google_compute_node_group}
+*/
 export class ComputeNodeGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_node_group.html google_compute_node_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeNodeGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeNodeGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_node_group',

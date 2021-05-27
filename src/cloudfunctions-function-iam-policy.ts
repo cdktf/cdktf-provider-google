@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudfunctionsFunctionIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_policy.html#cloud_function CloudfunctionsFunctionIamPolicy#cloud_function}
+  */
   readonly cloudFunction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_policy.html#policy_data CloudfunctionsFunctionIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_policy.html#project CloudfunctionsFunctionIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_policy.html#region CloudfunctionsFunctionIamPolicy#region}
+  */
   readonly region?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_policy.html google_cloudfunctions_function_iam_policy}
+*/
 export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_policy.html google_cloudfunctions_function_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudfunctionsFunctionIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudfunctionsFunctionIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function_iam_policy',

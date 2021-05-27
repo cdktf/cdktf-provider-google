@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_folder_organization_policy.html
+// https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,17 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleFolderOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the Constraint the Policy is configuring, for example, serviceuser.services. */
+  /**
+  * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html#constraint DataGoogleFolderOrganizationPolicy#constraint}
+  */
   readonly constraint: string;
-  /** The resource name of the folder to set the policy for. Its format is folders/{folder_id}. */
+  /**
+  * The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html#folder DataGoogleFolderOrganizationPolicy#folder}
+  */
   readonly folder: string;
 }
 export class DataGoogleFolderOrganizationPolicyBooleanPolicy extends cdktf.ComplexComputedList {
@@ -73,14 +81,22 @@ export class DataGoogleFolderOrganizationPolicyRestorePolicy extends cdktf.Compl
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html google_folder_organization_policy}
+*/
 export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html google_folder_organization_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleFolderOrganizationPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleFolderOrganizationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_folder_organization_policy',

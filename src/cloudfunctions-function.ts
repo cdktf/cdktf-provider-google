@@ -7,55 +7,151 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
-  /** Memory (in MB), available to the function. Default value is 256. Possible values include 128, 256, 512, 1024, etc. */
+  /**
+  * Memory (in MB), available to the function. Default value is 256. Possible values include 128, 256, 512, 1024, etc.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#available_memory_mb CloudfunctionsFunction#available_memory_mb}
+  */
   readonly availableMemoryMb?: number;
-  /**  A set of key/value environment variable pairs available during build time. */
+  /**
+  *  A set of key/value environment variable pairs available during build time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#build_environment_variables CloudfunctionsFunction#build_environment_variables}
+  */
   readonly buildEnvironmentVariables?: { [key: string]: string };
-  /** Description of the function. */
+  /**
+  * Description of the function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#description CloudfunctionsFunction#description}
+  */
   readonly description?: string;
-  /** Name of the function that will be executed when the Google Cloud Function is triggered. */
+  /**
+  * Name of the function that will be executed when the Google Cloud Function is triggered.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#entry_point CloudfunctionsFunction#entry_point}
+  */
   readonly entryPoint?: string;
-  /** A set of key/value environment variable pairs to assign to the function. */
+  /**
+  * A set of key/value environment variable pairs to assign to the function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#environment_variables CloudfunctionsFunction#environment_variables}
+  */
   readonly environmentVariables?: { [key: string]: string };
-  /** URL which triggers function execution. Returned only if trigger_http is used. */
+  /**
+  * URL which triggers function execution. Returned only if trigger_http is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#https_trigger_url CloudfunctionsFunction#https_trigger_url}
+  */
   readonly httpsTriggerUrl?: string;
-  /** String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function. */
+  /**
+  * String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#ingress_settings CloudfunctionsFunction#ingress_settings}
+  */
   readonly ingressSettings?: string;
-  /** A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements. */
+  /**
+  * A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#labels CloudfunctionsFunction#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The limit on the maximum number of function instances that may coexist at a given time. */
+  /**
+  * The limit on the maximum number of function instances that may coexist at a given time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#max_instances CloudfunctionsFunction#max_instances}
+  */
   readonly maxInstances?: number;
-  /** A user-defined name of the function. Function names must be unique globally. */
+  /**
+  * A user-defined name of the function. Function names must be unique globally.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#name CloudfunctionsFunction#name}
+  */
   readonly name: string;
-  /** Project of the function. If it is not provided, the provider project is used. */
+  /**
+  * Project of the function. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#project CloudfunctionsFunction#project}
+  */
   readonly project?: string;
-  /** Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used. */
+  /**
+  * Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#region CloudfunctionsFunction#region}
+  */
   readonly region?: string;
-  /** The runtime in which the function is going to run. Eg. "nodejs8", "nodejs10", "python37", "go111". */
+  /**
+  * The runtime in which the function is going to run. Eg. "nodejs8", "nodejs10", "python37", "go111".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#runtime CloudfunctionsFunction#runtime}
+  */
   readonly runtime: string;
-  /**  If provided, the self-provided service account to run the function with. */
+  /**
+  *  If provided, the self-provided service account to run the function with.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#service_account_email CloudfunctionsFunction#service_account_email}
+  */
   readonly serviceAccountEmail?: string;
-  /** The GCS bucket containing the zip archive which contains the function. */
+  /**
+  * The GCS bucket containing the zip archive which contains the function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#source_archive_bucket CloudfunctionsFunction#source_archive_bucket}
+  */
   readonly sourceArchiveBucket?: string;
-  /** The source archive object (file) in archive bucket. */
+  /**
+  * The source archive object (file) in archive bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#source_archive_object CloudfunctionsFunction#source_archive_object}
+  */
   readonly sourceArchiveObject?: string;
-  /** Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds. */
+  /**
+  * Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#timeout CloudfunctionsFunction#timeout}
+  */
   readonly timeout?: number;
-  /** Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as https_trigger_url. Cannot be used with trigger_bucket and trigger_topic. */
+  /**
+  * Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as https_trigger_url. Cannot be used with trigger_bucket and trigger_topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#trigger_http CloudfunctionsFunction#trigger_http}
+  */
   readonly triggerHttp?: boolean;
-  /** The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is projects/*\/locations/*\/connectors/*. */
+  /**
+  * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is projects/*\/locations/*\/connectors/*.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#vpc_connector CloudfunctionsFunction#vpc_connector}
+  */
   readonly vpcConnector?: string;
-  /** The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are ALL_TRAFFIC and PRIVATE_RANGES_ONLY. Defaults to PRIVATE_RANGES_ONLY. If unset, this field preserves the previously set value. */
+  /**
+  * The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are ALL_TRAFFIC and PRIVATE_RANGES_ONLY. Defaults to PRIVATE_RANGES_ONLY. If unset, this field preserves the previously set value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#vpc_connector_egress_settings CloudfunctionsFunction#vpc_connector_egress_settings}
+  */
   readonly vpcConnectorEgressSettings?: string;
-  /** event_trigger block */
+  /**
+  * event_trigger block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#event_trigger CloudfunctionsFunction#event_trigger}
+  */
   readonly eventTrigger?: CloudfunctionsFunctionEventTrigger[];
-  /** source_repository block */
+  /**
+  * source_repository block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#source_repository CloudfunctionsFunction#source_repository}
+  */
   readonly sourceRepository?: CloudfunctionsFunctionSourceRepository[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#timeouts CloudfunctionsFunction#timeouts}
+  */
   readonly timeouts?: CloudfunctionsFunctionTimeouts;
 }
 export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
-  /** Whether the function should be retried on failure. Defaults to false. */
+  /**
+  * Whether the function should be retried on failure. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#retry CloudfunctionsFunction#retry}
+  */
   readonly retry: boolean;
 }
 
@@ -67,11 +163,23 @@ function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: Clo
 }
 
 export interface CloudfunctionsFunctionEventTrigger {
-  /** The type of event to observe. For example: "google.storage.object.finalize". See the documentation on calling Cloud Functions for a full reference of accepted triggers. */
+  /**
+  * The type of event to observe. For example: "google.storage.object.finalize". See the documentation on calling Cloud Functions for a full reference of accepted triggers.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#event_type CloudfunctionsFunction#event_type}
+  */
   readonly eventType: string;
-  /** The name or partial URI of the resource from which to observe events. For example, "myBucket" or "projects/my-project/topics/my-topic" */
+  /**
+  * The name or partial URI of the resource from which to observe events. For example, "myBucket" or "projects/my-project/topics/my-topic"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#resource CloudfunctionsFunction#resource}
+  */
   readonly resource: string;
-  /** failure_policy block */
+  /**
+  * failure_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#failure_policy CloudfunctionsFunction#failure_policy}
+  */
   readonly failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy[];
 }
 
@@ -85,7 +193,11 @@ function cloudfunctionsFunctionEventTriggerToTerraform(struct?: CloudfunctionsFu
 }
 
 export interface CloudfunctionsFunctionSourceRepository {
-  /** The URL pointing to the hosted repository where the function is defined. */
+  /**
+  * The URL pointing to the hosted repository where the function is defined.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#url CloudfunctionsFunction#url}
+  */
   readonly url: string;
 }
 
@@ -97,9 +209,21 @@ function cloudfunctionsFunctionSourceRepositoryToTerraform(struct?: Cloudfunctio
 }
 
 export interface CloudfunctionsFunctionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#create CloudfunctionsFunction#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#delete CloudfunctionsFunction#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#read CloudfunctionsFunction#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#update CloudfunctionsFunction#update}
+  */
   readonly update?: string;
 }
 
@@ -114,14 +238,22 @@ function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFuncti
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html google_cloudfunctions_function}
+*/
 export class CloudfunctionsFunction extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html google_cloudfunctions_function} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudfunctionsFunctionConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudfunctionsFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function',

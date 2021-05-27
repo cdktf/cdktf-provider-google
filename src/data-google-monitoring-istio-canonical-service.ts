@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_monitoring_istio_canonical_service.html
+// https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,15 +7,30 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleMonitoringIstioCanonicalServiceConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the canonical service underlying this service.. 
-                        Corresponds to the destination_service_name metric label in Istio metrics. */
+  /**
+  * The name of the canonical service underlying this service.. 
+                        Corresponds to the destination_service_name metric label in Istio metrics.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html#canonical_service DataGoogleMonitoringIstioCanonicalService#canonical_service}
+  */
   readonly canonicalService: string;
-  /** The namespace of the canonical service underlying this service.
-                        Corresponds to the destination_service_namespace metric label in Istio metrics. */
+  /**
+  * The namespace of the canonical service underlying this service.
+                        Corresponds to the destination_service_namespace metric label in Istio metrics.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html#canonical_service_namespace DataGoogleMonitoringIstioCanonicalService#canonical_service_namespace}
+  */
   readonly canonicalServiceNamespace: string;
-  /** Identifier for the Istio mesh in which this canonical service is defined.
-                        Corresponds to the meshUid metric label in Istio metrics. */
+  /**
+  * Identifier for the Istio mesh in which this canonical service is defined.
+                        Corresponds to the meshUid metric label in Istio metrics.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html#mesh_uid DataGoogleMonitoringIstioCanonicalService#mesh_uid}
+  */
   readonly meshUid: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html#project DataGoogleMonitoringIstioCanonicalService#project}
+  */
   readonly project?: string;
 }
 export class DataGoogleMonitoringIstioCanonicalServiceTelemetry extends cdktf.ComplexComputedList {
@@ -26,14 +41,22 @@ export class DataGoogleMonitoringIstioCanonicalServiceTelemetry extends cdktf.Co
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html google_monitoring_istio_canonical_service}
+*/
 export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_istio_canonical_service.html google_monitoring_istio_canonical_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleMonitoringIstioCanonicalServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleMonitoringIstioCanonicalServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_istio_canonical_service',

@@ -7,17 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectUsageExportBucketConfig extends cdktf.TerraformMetaArguments {
-  /** The bucket to store reports in. */
+  /**
+  * The bucket to store reports in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#bucket_name ProjectUsageExportBucket#bucket_name}
+  */
   readonly bucketName: string;
-  /** A prefix for the reports, for instance, the project name. */
+  /**
+  * A prefix for the reports, for instance, the project name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#prefix ProjectUsageExportBucket#prefix}
+  */
   readonly prefix?: string;
-  /** The project to set the export bucket on. If it is not provided, the provider project is used. */
+  /**
+  * The project to set the export bucket on. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#project ProjectUsageExportBucket#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#timeouts ProjectUsageExportBucket#timeouts}
+  */
   readonly timeouts?: ProjectUsageExportBucketTimeouts;
 }
 export interface ProjectUsageExportBucketTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#create ProjectUsageExportBucket#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#delete ProjectUsageExportBucket#delete}
+  */
   readonly delete?: string;
 }
 
@@ -30,14 +52,22 @@ function projectUsageExportBucketTimeoutsToTerraform(struct?: ProjectUsageExport
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html google_project_usage_export_bucket}
+*/
 export class ProjectUsageExportBucket extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html google_project_usage_export_bucket} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectUsageExportBucketConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectUsageExportBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_usage_export_bucket',

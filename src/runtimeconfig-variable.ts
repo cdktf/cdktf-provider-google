@@ -7,24 +7,50 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RuntimeconfigVariableConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the variable to manage. Note that variable names can be hierarchical using slashes (e.g. "prod-variables/hostname"). */
+  /**
+  * The name of the variable to manage. Note that variable names can be hierarchical using slashes (e.g. "prod-variables/hostname").
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html#name RuntimeconfigVariable#name}
+  */
   readonly name: string;
-  /** The name of the RuntimeConfig resource containing this variable. */
+  /**
+  * The name of the RuntimeConfig resource containing this variable.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html#parent RuntimeconfigVariable#parent}
+  */
   readonly parent: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html#project RuntimeconfigVariable#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html#text RuntimeconfigVariable#text}
+  */
   readonly text?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html#value RuntimeconfigVariable#value}
+  */
   readonly value?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html google_runtimeconfig_variable}
+*/
 export class RuntimeconfigVariable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_variable.html google_runtimeconfig_variable} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RuntimeconfigVariableConfig
+  */
   public constructor(scope: Construct, id: string, config: RuntimeconfigVariableConfig) {
     super(scope, id, {
       terraformResourceType: 'google_runtimeconfig_variable',

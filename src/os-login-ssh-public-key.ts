@@ -7,20 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface OsLoginSshPublicKeyConfig extends cdktf.TerraformMetaArguments {
-  /** An expiration time in microseconds since epoch. */
+  /**
+  * An expiration time in microseconds since epoch.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#expiration_time_usec OsLoginSshPublicKey#expiration_time_usec}
+  */
   readonly expirationTimeUsec?: string;
-  /** Public key text in SSH format, defined by RFC4253 section 6.6. */
+  /**
+  * Public key text in SSH format, defined by RFC4253 section 6.6.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#key OsLoginSshPublicKey#key}
+  */
   readonly key: string;
-  /** The project ID of the Google Cloud Platform project. */
+  /**
+  * The project ID of the Google Cloud Platform project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#project OsLoginSshPublicKey#project}
+  */
   readonly project?: string;
-  /** The user email. */
+  /**
+  * The user email.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#user OsLoginSshPublicKey#user}
+  */
   readonly user: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#timeouts OsLoginSshPublicKey#timeouts}
+  */
   readonly timeouts?: OsLoginSshPublicKeyTimeouts;
 }
 export interface OsLoginSshPublicKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#create OsLoginSshPublicKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#delete OsLoginSshPublicKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html#update OsLoginSshPublicKey#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +63,22 @@ function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html google_os_login_ssh_public_key}
+*/
 export class OsLoginSshPublicKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html google_os_login_ssh_public_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options OsLoginSshPublicKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: OsLoginSshPublicKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_os_login_ssh_public_key',

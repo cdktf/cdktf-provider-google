@@ -7,33 +7,74 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsCryptoKeyConfig extends cdktf.TerraformMetaArguments {
-  /** The KeyRing that this key belongs to.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''. */
+  /**
+  * The KeyRing that this key belongs to.
+Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#key_ring KmsCryptoKey#key_ring}
+  */
   readonly keyRing: string;
-  /** Labels with user-defined metadata to apply to this resource. */
+  /**
+  * Labels with user-defined metadata to apply to this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#labels KmsCryptoKey#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The resource name for the CryptoKey. */
+  /**
+  * The resource name for the CryptoKey.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#name KmsCryptoKey#name}
+  */
   readonly name: string;
-  /** The immutable purpose of this CryptoKey. See the
+  /**
+  * The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs. Default value: "ENCRYPT_DECRYPT" Possible values: ["ENCRYPT_DECRYPT", "ASYMMETRIC_SIGN", "ASYMMETRIC_DECRYPT"] */
+for possible inputs. Default value: "ENCRYPT_DECRYPT" Possible values: ["ENCRYPT_DECRYPT", "ASYMMETRIC_SIGN", "ASYMMETRIC_DECRYPT"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#purpose KmsCryptoKey#purpose}
+  */
   readonly purpose?: string;
-  /** Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+  /**
+  * Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
-letter 's' (seconds). It must be greater than a day (ie, 86400). */
+letter 's' (seconds). It must be greater than a day (ie, 86400).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#rotation_period KmsCryptoKey#rotation_period}
+  */
   readonly rotationPeriod?: string;
-  /** If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
-You must use the 'google_kms_key_ring_import_job' resource to import the CryptoKeyVersion. */
+  /**
+  * If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
+You must use the 'google_kms_key_ring_import_job' resource to import the CryptoKeyVersion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#skip_initial_version_creation KmsCryptoKey#skip_initial_version_creation}
+  */
   readonly skipInitialVersionCreation?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#timeouts KmsCryptoKey#timeouts}
+  */
   readonly timeouts?: KmsCryptoKeyTimeouts;
-  /** version_template block */
+  /**
+  * version_template block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#version_template KmsCryptoKey#version_template}
+  */
   readonly versionTemplate?: KmsCryptoKeyVersionTemplate[];
 }
 export interface KmsCryptoKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#create KmsCryptoKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#delete KmsCryptoKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#update KmsCryptoKey#update}
+  */
   readonly update?: string;
 }
 
@@ -47,10 +88,18 @@ function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeouts): any {
 }
 
 export interface KmsCryptoKeyVersionTemplate {
-  /** The algorithm to use when creating a version based on this template.
-See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs. */
+  /**
+  * The algorithm to use when creating a version based on this template.
+See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#algorithm KmsCryptoKey#algorithm}
+  */
   readonly algorithm: string;
-  /** The protection level to use when creating a version based on this template. Default value: "SOFTWARE" Possible values: ["SOFTWARE", "HSM"] */
+  /**
+  * The protection level to use when creating a version based on this template. Default value: "SOFTWARE" Possible values: ["SOFTWARE", "HSM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#protection_level KmsCryptoKey#protection_level}
+  */
   readonly protectionLevel?: string;
 }
 
@@ -63,14 +112,22 @@ function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemp
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html google_kms_crypto_key}
+*/
 export class KmsCryptoKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html google_kms_crypto_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsCryptoKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsCryptoKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_crypto_key',

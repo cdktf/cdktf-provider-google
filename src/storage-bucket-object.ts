@@ -7,41 +7,100 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the containing bucket. */
+  /**
+  * The name of the containing bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#bucket StorageBucketObject#bucket}
+  */
   readonly bucket: string;
-  /** Cache-Control directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600 */
+  /**
+  * Cache-Control directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#cache_control StorageBucketObject#cache_control}
+  */
   readonly cacheControl?: string;
-  /** Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output. */
+  /**
+  * Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#content StorageBucketObject#content}
+  */
   readonly content?: string;
-  /** Content-Disposition of the object data. */
+  /**
+  * Content-Disposition of the object data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#content_disposition StorageBucketObject#content_disposition}
+  */
   readonly contentDisposition?: string;
-  /** Content-Encoding of the object data. */
+  /**
+  * Content-Encoding of the object data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#content_encoding StorageBucketObject#content_encoding}
+  */
   readonly contentEncoding?: string;
-  /** Content-Language of the object data. */
+  /**
+  * Content-Language of the object data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#content_language StorageBucketObject#content_language}
+  */
   readonly contentLanguage?: string;
-  /** Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8". */
+  /**
+  * Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#content_type StorageBucketObject#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#detect_md5hash StorageBucketObject#detect_md5hash}
+  */
   readonly detectMd5Hash?: string;
-  /** Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata's kmsKeyName value, if any. */
+  /**
+  * Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata's kmsKeyName value, if any.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#kms_key_name StorageBucketObject#kms_key_name}
+  */
   readonly kmsKeyName?: string;
-  /** User-provided metadata, in key/value pairs. */
+  /**
+  * User-provided metadata, in key/value pairs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#metadata StorageBucketObject#metadata}
+  */
   readonly metadata?: { [key: string]: string };
-  /** The name of the object. If you're interpolating the name of this object, see output_name instead. */
+  /**
+  * The name of the object. If you're interpolating the name of this object, see output_name instead.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#name StorageBucketObject#name}
+  */
   readonly name: string;
-  /** A path to the data you want to upload. Must be defined if content is not. */
+  /**
+  * A path to the data you want to upload. Must be defined if content is not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#source StorageBucketObject#source}
+  */
   readonly source?: string;
-  /** The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class. */
+  /**
+  * The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#storage_class StorageBucketObject#storage_class}
+  */
   readonly storageClass?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html google_storage_bucket_object}
+*/
 export class StorageBucketObject extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html google_storage_bucket_object} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageBucketObjectConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageBucketObjectConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_object',

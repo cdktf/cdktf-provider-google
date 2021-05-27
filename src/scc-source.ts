@@ -7,23 +7,48 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SccSourceConfig extends cdktf.TerraformMetaArguments {
-  /** The description of the source (max of 1024 characters). */
+  /**
+  * The description of the source (max of 1024 characters).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#description SccSource#description}
+  */
   readonly description?: string;
-  /** The source’s display name. A source’s display name must be unique
+  /**
+  * The source’s display name. A source’s display name must be unique
 amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
-and underscores, and can be no longer than 32 characters. */
+and underscores, and can be no longer than 32 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#display_name SccSource#display_name}
+  */
   readonly displayName: string;
-  /** The organization whose Cloud Security Command Center the Source
-lives in. */
+  /**
+  * The organization whose Cloud Security Command Center the Source
+lives in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#organization SccSource#organization}
+  */
   readonly organization: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#timeouts SccSource#timeouts}
+  */
   readonly timeouts?: SccSourceTimeouts;
 }
 export interface SccSourceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#create SccSource#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#delete SccSource#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source.html#update SccSource#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +62,22 @@ function sccSourceTimeoutsToTerraform(struct?: SccSourceTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_source.html google_scc_source}
+*/
 export class SccSource extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/scc_source.html google_scc_source} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SccSourceConfig
+  */
   public constructor(scope: Construct, id: string, config: SccSourceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_scc_source',

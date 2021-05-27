@@ -7,59 +7,106 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataprocAutoscalingPolicyConfig extends cdktf.TerraformMetaArguments {
-  /** The  location where the autoscaling policy should reside.
-The default value is 'global'. */
+  /**
+  * The  location where the autoscaling policy should reside.
+The default value is 'global'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#location DataprocAutoscalingPolicy#location}
+  */
   readonly location?: string;
-  /** The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+  /**
+  * The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
-3 and 50 characters. */
+3 and 50 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#policy_id DataprocAutoscalingPolicy#policy_id}
+  */
   readonly policyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#project DataprocAutoscalingPolicy#project}
+  */
   readonly project?: string;
-  /** basic_algorithm block */
+  /**
+  * basic_algorithm block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#basic_algorithm DataprocAutoscalingPolicy#basic_algorithm}
+  */
   readonly basicAlgorithm?: DataprocAutoscalingPolicyBasicAlgorithm[];
-  /** secondary_worker_config block */
+  /**
+  * secondary_worker_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#secondary_worker_config DataprocAutoscalingPolicy#secondary_worker_config}
+  */
   readonly secondaryWorkerConfig?: DataprocAutoscalingPolicySecondaryWorkerConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#timeouts DataprocAutoscalingPolicy#timeouts}
+  */
   readonly timeouts?: DataprocAutoscalingPolicyTimeouts;
-  /** worker_config block */
+  /**
+  * worker_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#worker_config DataprocAutoscalingPolicy#worker_config}
+  */
   readonly workerConfig?: DataprocAutoscalingPolicyWorkerConfig[];
 }
 export interface DataprocAutoscalingPolicyBasicAlgorithmYarnConfig {
-  /** Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+  /**
+  * Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 
-Bounds: [0s, 1d]. */
+Bounds: [0s, 1d].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#graceful_decommission_timeout DataprocAutoscalingPolicy#graceful_decommission_timeout}
+  */
   readonly gracefulDecommissionTimeout: string;
-  /** Fraction of average pending memory in the last cooldown period for which to
+  /**
+  * Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
 is no available memory remaining after the update (more aggressive scaling).
 A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 
-Bounds: [0.0, 1.0]. */
+Bounds: [0.0, 1.0].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#scale_down_factor DataprocAutoscalingPolicy#scale_down_factor}
+  */
   readonly scaleDownFactor: number;
-  /** Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+  /**
+  * Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
 recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
 means the autoscaler will scale down on any recommended change.
 
-Bounds: [0.0, 1.0]. Default: 0.0. */
+Bounds: [0.0, 1.0]. Default: 0.0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#scale_down_min_worker_fraction DataprocAutoscalingPolicy#scale_down_min_worker_fraction}
+  */
   readonly scaleDownMinWorkerFraction?: number;
-  /** Fraction of average pending memory in the last cooldown period for which to
+  /**
+  * Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
 is no pending memory remaining after the update (more aggressive scaling).
 A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 
-Bounds: [0.0, 1.0]. */
+Bounds: [0.0, 1.0].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#scale_up_factor DataprocAutoscalingPolicy#scale_up_factor}
+  */
   readonly scaleUpFactor: number;
-  /** Minimum scale-up threshold as a fraction of total cluster size before scaling
+  /**
+  * Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
 must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
 0 means the autoscaler will scale up on any recommended change.
 
-Bounds: [0.0, 1.0]. Default: 0.0. */
+Bounds: [0.0, 1.0]. Default: 0.0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#scale_up_min_worker_fraction DataprocAutoscalingPolicy#scale_up_min_worker_fraction}
+  */
   readonly scaleUpMinWorkerFraction?: number;
 }
 
@@ -75,12 +122,20 @@ function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct?: D
 }
 
 export interface DataprocAutoscalingPolicyBasicAlgorithm {
-  /** Duration between scaling events. A scaling period starts after the
+  /**
+  * Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 
-Bounds: [2m, 1d]. Default: 2m. */
+Bounds: [2m, 1d]. Default: 2m.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#cooldown_period DataprocAutoscalingPolicy#cooldown_period}
+  */
   readonly cooldownPeriod?: string;
-  /** yarn_config block */
+  /**
+  * yarn_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#yarn_config DataprocAutoscalingPolicy#yarn_config}
+  */
   readonly yarnConfig: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig[];
 }
 
@@ -93,13 +148,22 @@ function dataprocAutoscalingPolicyBasicAlgorithmToTerraform(struct?: DataprocAut
 }
 
 export interface DataprocAutoscalingPolicySecondaryWorkerConfig {
-  /** Maximum number of instances for this group. Note that by default, clusters will not use
+  /**
+  * Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
-Bounds: [minInstances, ). Defaults to 0. */
+Bounds: [minInstances, ). Defaults to 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#max_instances DataprocAutoscalingPolicy#max_instances}
+  */
   readonly maxInstances?: number;
-  /** Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0. */
+  /**
+  * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#min_instances DataprocAutoscalingPolicy#min_instances}
+  */
   readonly minInstances?: number;
-  /** Weight for the instance group, which is used to determine the fraction of total workers
+  /**
+  * Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
 and secondary workers have weight 1, the cluster will have approximately 2 primary workers
 for each secondary worker.
@@ -112,7 +176,10 @@ If weight is not set on any instance group, the cluster will default to equal we
 all groups: the cluster will attempt to maintain an equal number of workers in each group
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
-only on primary workers, the cluster will use primary workers only and no secondary workers. */
+only on primary workers, the cluster will use primary workers only and no secondary workers.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#weight DataprocAutoscalingPolicy#weight}
+  */
   readonly weight?: number;
 }
 
@@ -126,8 +193,17 @@ function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct?: Data
 }
 
 export interface DataprocAutoscalingPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#create DataprocAutoscalingPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#delete DataprocAutoscalingPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#update DataprocAutoscalingPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -141,11 +217,20 @@ function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscali
 }
 
 export interface DataprocAutoscalingPolicyWorkerConfig {
-  /** Maximum number of instances for this group. */
+  /**
+  * Maximum number of instances for this group.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#max_instances DataprocAutoscalingPolicy#max_instances}
+  */
   readonly maxInstances: number;
-  /** Minimum number of instances for this group. Bounds: [2, maxInstances]. Defaults to 2. */
+  /**
+  * Minimum number of instances for this group. Bounds: [2, maxInstances]. Defaults to 2.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#min_instances DataprocAutoscalingPolicy#min_instances}
+  */
   readonly minInstances?: number;
-  /** Weight for the instance group, which is used to determine the fraction of total workers
+  /**
+  * Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
 and secondary workers have weight 1, the cluster will have approximately 2 primary workers
 for each secondary worker.
@@ -158,7 +243,10 @@ If weight is not set on any instance group, the cluster will default to equal we
 all groups: the cluster will attempt to maintain an equal number of workers in each group
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
-only on primary workers, the cluster will use primary workers only and no secondary workers. */
+only on primary workers, the cluster will use primary workers only and no secondary workers.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#weight DataprocAutoscalingPolicy#weight}
+  */
   readonly weight?: number;
 }
 
@@ -172,14 +260,22 @@ function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutos
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html google_dataproc_autoscaling_policy}
+*/
 export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html google_dataproc_autoscaling_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataprocAutoscalingPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataprocAutoscalingPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_autoscaling_policy',

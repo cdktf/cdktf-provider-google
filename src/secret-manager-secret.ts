@@ -7,7 +7,8 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecretManagerSecretConfig extends cdktf.TerraformMetaArguments {
-  /** The labels assigned to this Secret.
+  /**
+  * The labels assigned to this Secret.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
 and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
@@ -18,18 +19,40 @@ and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]
 No more than 64 labels can be assigned to a given resource.
 
 An object containing a list of "key": value pairs. Example:
-{ "name": "wrench", "mass": "1.3kg", "count": "3" }. */
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#labels SecretManagerSecret#labels}
+  */
   readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#project SecretManagerSecret#project}
+  */
   readonly project?: string;
-  /** This must be unique within the project. */
+  /**
+  * This must be unique within the project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#secret_id SecretManagerSecret#secret_id}
+  */
   readonly secretId: string;
-  /** replication block */
+  /**
+  * replication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#replication SecretManagerSecret#replication}
+  */
   readonly replication: SecretManagerSecretReplication[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#timeouts SecretManagerSecret#timeouts}
+  */
   readonly timeouts?: SecretManagerSecretTimeouts;
 }
 export interface SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption {
-  /** Describes the Cloud KMS encryption key that will be used to protect destination secret. */
+  /**
+  * Describes the Cloud KMS encryption key that will be used to protect destination secret.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#kms_key_name SecretManagerSecret#kms_key_name}
+  */
   readonly kmsKeyName: string;
 }
 
@@ -41,9 +64,17 @@ function secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncrypt
 }
 
 export interface SecretManagerSecretReplicationUserManagedReplicas {
-  /** The canonical IDs of the location to replicate data. For example: "us-east1". */
+  /**
+  * The canonical IDs of the location to replicate data. For example: "us-east1".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#location SecretManagerSecret#location}
+  */
   readonly location: string;
-  /** customer_managed_encryption block */
+  /**
+  * customer_managed_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#customer_managed_encryption SecretManagerSecret#customer_managed_encryption}
+  */
   readonly customerManagedEncryption?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption[];
 }
 
@@ -56,7 +87,11 @@ function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: S
 }
 
 export interface SecretManagerSecretReplicationUserManaged {
-  /** replicas block */
+  /**
+  * replicas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#replicas SecretManagerSecret#replicas}
+  */
   readonly replicas: SecretManagerSecretReplicationUserManagedReplicas[];
 }
 
@@ -68,9 +103,17 @@ function secretManagerSecretReplicationUserManagedToTerraform(struct?: SecretMan
 }
 
 export interface SecretManagerSecretReplication {
-  /** The Secret will automatically be replicated without any restrictions. */
+  /**
+  * The Secret will automatically be replicated without any restrictions.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#automatic SecretManagerSecret#automatic}
+  */
   readonly automatic?: boolean;
-  /** user_managed block */
+  /**
+  * user_managed block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#user_managed SecretManagerSecret#user_managed}
+  */
   readonly userManaged?: SecretManagerSecretReplicationUserManaged[];
 }
 
@@ -83,8 +126,17 @@ function secretManagerSecretReplicationToTerraform(struct?: SecretManagerSecretR
 }
 
 export interface SecretManagerSecretTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#create SecretManagerSecret#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#delete SecretManagerSecret#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#update SecretManagerSecret#update}
+  */
   readonly update?: string;
 }
 
@@ -98,14 +150,22 @@ function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html google_secret_manager_secret}
+*/
 export class SecretManagerSecret extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html google_secret_manager_secret} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecretManagerSecretConfig
+  */
   public constructor(scope: Construct, id: string, config: SecretManagerSecretConfig) {
     super(scope, id, {
       terraformResourceType: 'google_secret_manager_secret',

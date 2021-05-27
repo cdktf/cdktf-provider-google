@@ -7,21 +7,42 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ProjectAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
-  /** A list of email addresses to which notifications relating to approval requests should be sent.
+  /**
+  * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
-resources of that resource. A maximum of 50 email addresses are allowed. */
+resources of that resource. A maximum of 50 email addresses are allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#notification_emails ProjectAccessApprovalSettings#notification_emails}
+  */
   readonly notificationEmails?: string[];
-  /** Deprecated in favor of 'project_id' */
+  /**
+  * Deprecated in favor of 'project_id'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#project ProjectAccessApprovalSettings#project}
+  */
   readonly project?: string;
-  /** ID of the project of the access approval settings. */
+  /**
+  * ID of the project of the access approval settings.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#project_id ProjectAccessApprovalSettings#project_id}
+  */
   readonly projectId: string;
-  /** enrolled_services block */
+  /**
+  * enrolled_services block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#enrolled_services ProjectAccessApprovalSettings#enrolled_services}
+  */
   readonly enrolledServices: ProjectAccessApprovalSettingsEnrolledServices[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#timeouts ProjectAccessApprovalSettings#timeouts}
+  */
   readonly timeouts?: ProjectAccessApprovalSettingsTimeouts;
 }
 export interface ProjectAccessApprovalSettingsEnrolledServices {
-  /** The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
+  /**
+  * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
   all
   appengine.googleapis.com
   bigquery.googleapis.com
@@ -31,9 +52,16 @@ export interface ProjectAccessApprovalSettingsEnrolledServices {
   dataflow.googleapis.com
   iam.googleapis.com
   pubsub.googleapis.com
-  storage.googleapis.com */
+  storage.googleapis.com
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#cloud_product ProjectAccessApprovalSettings#cloud_product}
+  */
   readonly cloudProduct: string;
-  /** The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"] */
+  /**
+  * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#enrollment_level ProjectAccessApprovalSettings#enrollment_level}
+  */
   readonly enrollmentLevel?: string;
 }
 
@@ -46,8 +74,17 @@ function projectAccessApprovalSettingsEnrolledServicesToTerraform(struct?: Proje
 }
 
 export interface ProjectAccessApprovalSettingsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#create ProjectAccessApprovalSettings#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#delete ProjectAccessApprovalSettings#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html#update ProjectAccessApprovalSettings#update}
+  */
   readonly update?: string;
 }
 
@@ -61,14 +98,22 @@ function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccess
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html google_project_access_approval_settings}
+*/
 export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings.html google_project_access_approval_settings} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ProjectAccessApprovalSettingsConfig
+  */
   public constructor(scope: Construct, id: string, config: ProjectAccessApprovalSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'google_project_access_approval_settings',

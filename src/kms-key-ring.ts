@@ -7,17 +7,38 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KmsKeyRingConfig extends cdktf.TerraformMetaArguments {
-  /** The location for the KeyRing.
-A full list of valid locations can be found by running 'gcloud kms locations list'. */
+  /**
+  * The location for the KeyRing.
+A full list of valid locations can be found by running 'gcloud kms locations list'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html#location KmsKeyRing#location}
+  */
   readonly location: string;
-  /** The resource name for the KeyRing. */
+  /**
+  * The resource name for the KeyRing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html#name KmsKeyRing#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html#project KmsKeyRing#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html#timeouts KmsKeyRing#timeouts}
+  */
   readonly timeouts?: KmsKeyRingTimeouts;
 }
 export interface KmsKeyRingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html#create KmsKeyRing#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html#delete KmsKeyRing#delete}
+  */
   readonly delete?: string;
 }
 
@@ -30,14 +51,22 @@ function kmsKeyRingTimeoutsToTerraform(struct?: KmsKeyRingTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html google_kms_key_ring}
+*/
 export class KmsKeyRing extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring.html google_kms_key_ring} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KmsKeyRingConfig
+  */
   public constructor(scope: Construct, id: string, config: KmsKeyRingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_kms_key_ring',

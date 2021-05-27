@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_storage_bucket_object.html
+// https://www.terraform.io/docs/providers/google/d/storage_bucket_object.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,36 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleStorageBucketObjectConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the containing bucket. */
+  /**
+  * The name of the containing bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object.html#bucket DataGoogleStorageBucketObject#bucket}
+  */
   readonly bucket?: string;
-  /** The name of the object. If you're interpolating the name of this object, see output_name instead. */
+  /**
+  * The name of the object. If you're interpolating the name of this object, see output_name instead.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object.html#name DataGoogleStorageBucketObject#name}
+  */
   readonly name?: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object.html google_storage_bucket_object}
+*/
 export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object.html google_storage_bucket_object} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleStorageBucketObjectConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleStorageBucketObjectConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_object',

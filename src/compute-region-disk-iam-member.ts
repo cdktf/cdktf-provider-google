@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRegionDiskIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#member ComputeRegionDiskIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#name ComputeRegionDiskIamMember#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#project ComputeRegionDiskIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#region ComputeRegionDiskIamMember#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#role ComputeRegionDiskIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#condition ComputeRegionDiskIamMember#condition}
+  */
   readonly condition?: ComputeRegionDiskIamMemberCondition[];
 }
 export interface ComputeRegionDiskIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#description ComputeRegionDiskIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#expression ComputeRegionDiskIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html#title ComputeRegionDiskIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function computeRegionDiskIamMemberConditionToTerraform(struct?: ComputeRegionDi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html google_compute_region_disk_iam_member}
+*/
 export class ComputeRegionDiskIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member.html google_compute_region_disk_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRegionDiskIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRegionDiskIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_disk_iam_member',

@@ -7,25 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments {
-  /** If false, any query using this reservation will use idle slots from other reservations within
+  /**
+  * If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
-capacity specified above at most. */
+capacity specified above at most.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
+  */
   readonly ignoreIdleSlots?: boolean;
-  /** The geographic location where the transfer config should reside.
-Examples: US, EU, asia-northeast1. The default value is US. */
+  /**
+  * The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#location BigqueryReservation#location}
+  */
   readonly location?: string;
-  /** The name of the reservation. This field must only contain alphanumeric characters or dash. */
+  /**
+  * The name of the reservation. This field must only contain alphanumeric characters or dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#name BigqueryReservation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#project BigqueryReservation#project}
+  */
   readonly project?: string;
-  /** Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
-unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false. */
+  /**
+  * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#slot_capacity BigqueryReservation#slot_capacity}
+  */
   readonly slotCapacity: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#timeouts BigqueryReservation#timeouts}
+  */
   readonly timeouts?: BigqueryReservationTimeouts;
 }
 export interface BigqueryReservationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#create BigqueryReservation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#delete BigqueryReservation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#update BigqueryReservation#update}
+  */
   readonly update?: string;
 }
 
@@ -39,14 +71,22 @@ function bigqueryReservationTimeoutsToTerraform(struct?: BigqueryReservationTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html google_bigquery_reservation}
+*/
 export class BigqueryReservation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html google_bigquery_reservation} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigqueryReservationConfig
+  */
   public constructor(scope: Construct, id: string, config: BigqueryReservationConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_reservation',

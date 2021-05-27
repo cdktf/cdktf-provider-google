@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface OrganizationIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#members OrganizationIamBinding#members}
+  */
   readonly members: string[];
-  /** The numeric ID of the organization in which you want to manage the audit logging config. */
+  /**
+  * The numeric ID of the organization in which you want to manage the audit logging config.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#org_id OrganizationIamBinding#org_id}
+  */
   readonly orgId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#role OrganizationIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#condition OrganizationIamBinding#condition}
+  */
   readonly condition?: OrganizationIamBindingCondition[];
 }
 export interface OrganizationIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#description OrganizationIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#expression OrganizationIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#title OrganizationIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +53,22 @@ function organizationIamBindingConditionToTerraform(struct?: OrganizationIamBind
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html google_organization_iam_binding}
+*/
 export class OrganizationIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html google_organization_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options OrganizationIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: OrganizationIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_organization_iam_binding',

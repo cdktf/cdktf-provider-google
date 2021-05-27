@@ -7,66 +7,138 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RedisInstanceConfig extends cdktf.TerraformMetaArguments {
-  /** Only applicable to STANDARD_HA tier which protects the instance
+  /**
+  * Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
-[locationId]. */
+[locationId].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#alternative_location_id RedisInstance#alternative_location_id}
+  */
   readonly alternativeLocationId?: string;
-  /** Optional. Indicates whether OSS Redis AUTH is enabled for the
+  /**
+  * Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
-Default value is "false" meaning AUTH is disabled. */
+Default value is "false" meaning AUTH is disabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#auth_enabled RedisInstance#auth_enabled}
+  */
   readonly authEnabled?: boolean;
-  /** The full name of the Google Compute Engine network to which the
+  /**
+  * The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
-will be used. */
+will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#authorized_network RedisInstance#authorized_network}
+  */
   readonly authorizedNetwork?: string;
-  /** The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"] */
+  /**
+  * The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#connect_mode RedisInstance#connect_mode}
+  */
   readonly connectMode?: string;
-  /** An arbitrary and optional user-provided name for the instance. */
+  /**
+  * An arbitrary and optional user-provided name for the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#display_name RedisInstance#display_name}
+  */
   readonly displayName?: string;
-  /** Resource labels to represent user provided metadata. */
+  /**
+  * Resource labels to represent user provided metadata.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#labels RedisInstance#labels}
+  */
   readonly labels?: { [key: string]: string };
-  /** The zone where the instance will be provisioned. If not provided,
+  /**
+  * The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
-be different from [locationId]. */
+be different from [locationId].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#location_id RedisInstance#location_id}
+  */
   readonly locationId?: string;
-  /** Redis memory size in GiB. */
+  /**
+  * Redis memory size in GiB.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#memory_size_gb RedisInstance#memory_size_gb}
+  */
   readonly memorySizeGb: number;
-  /** The ID of the instance or a fully qualified identifier for the instance. */
+  /**
+  * The ID of the instance or a fully qualified identifier for the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#name RedisInstance#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#project RedisInstance#project}
+  */
   readonly project?: string;
-  /** Redis configuration parameters, according to http://redis.io/topics/config.
+  /**
+  * Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
-https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs */
+https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#redis_configs RedisInstance#redis_configs}
+  */
   readonly redisConfigs?: { [key: string]: string };
-  /** The version of Redis software. If not provided, latest supported
+  /**
+  * The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
 
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
-- REDIS_3_2 for Redis 3.2 compatibility */
+- REDIS_3_2 for Redis 3.2 compatibility
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#redis_version RedisInstance#redis_version}
+  */
   readonly redisVersion?: string;
-  /** The name of the Redis region of the instance. */
+  /**
+  * The name of the Redis region of the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#region RedisInstance#region}
+  */
   readonly region?: string;
-  /** The CIDR range of internal addresses that are reserved for this
+  /**
+  * The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
-network. */
+network.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#reserved_ip_range RedisInstance#reserved_ip_range}
+  */
   readonly reservedIpRange?: string;
-  /** The service tier of the instance. Must be one of these values:
+  /**
+  * The service tier of the instance. Must be one of these values:
 
 - BASIC: standalone instance
-- STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"] */
+- STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#tier RedisInstance#tier}
+  */
   readonly tier?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#timeouts RedisInstance#timeouts}
+  */
   readonly timeouts?: RedisInstanceTimeouts;
 }
 export interface RedisInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#create RedisInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#delete RedisInstance#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#update RedisInstance#update}
+  */
   readonly update?: string;
 }
 
@@ -80,14 +152,22 @@ function redisInstanceTimeoutsToTerraform(struct?: RedisInstanceTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html google_redis_instance}
+*/
 export class RedisInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html google_redis_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RedisInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: RedisInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_redis_instance',

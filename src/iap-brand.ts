@@ -7,20 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IapBrandConfig extends cdktf.TerraformMetaArguments {
-  /** Application name displayed on OAuth consent screen. */
+  /**
+  * Application name displayed on OAuth consent screen.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html#application_title IapBrand#application_title}
+  */
   readonly applicationTitle: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html#project IapBrand#project}
+  */
   readonly project?: string;
-  /** Support email displayed on the OAuth consent screen. Can be either a
+  /**
+  * Support email displayed on the OAuth consent screen. Can be either a
 user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
-is an owner of the specified group in Cloud Identity. */
+is an owner of the specified group in Cloud Identity.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html#support_email IapBrand#support_email}
+  */
   readonly supportEmail: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html#timeouts IapBrand#timeouts}
+  */
   readonly timeouts?: IapBrandTimeouts;
 }
 export interface IapBrandTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html#create IapBrand#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html#delete IapBrand#delete}
+  */
   readonly delete?: string;
 }
 
@@ -33,14 +54,22 @@ function iapBrandTimeoutsToTerraform(struct?: IapBrandTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html google_iap_brand}
+*/
 export class IapBrand extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_brand.html google_iap_brand} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IapBrandConfig
+  */
   public constructor(scope: Construct, id: string, config: IapBrandConfig) {
     super(scope, id, {
       terraformResourceType: 'google_iap_brand',

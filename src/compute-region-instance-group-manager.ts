@@ -7,43 +7,115 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.TerraformMetaArguments {
-  /** The base instance name to use for instances in this group. The value must be a valid RFC1035 name. Supported characters are lowercase letters, numbers, and hyphens (-). Instances are named by appending a hyphen and a random four-character string to the base instance name. */
+  /**
+  * The base instance name to use for instances in this group. The value must be a valid RFC1035 name. Supported characters are lowercase letters, numbers, and hyphens (-). Instances are named by appending a hyphen and a random four-character string to the base instance name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#base_instance_name ComputeRegionInstanceGroupManager#base_instance_name}
+  */
   readonly baseInstanceName: string;
-  /** An optional textual description of the instance group manager. */
+  /**
+  * An optional textual description of the instance group manager.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#description ComputeRegionInstanceGroupManager#description}
+  */
   readonly description?: string;
-  /** The shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType). */
+  /**
+  * The shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#distribution_policy_target_shape ComputeRegionInstanceGroupManager#distribution_policy_target_shape}
+  */
   readonly distributionPolicyTargetShape?: string;
-  /** The distribution policy for this managed instance group. You can specify one or more values. */
+  /**
+  * The distribution policy for this managed instance group. You can specify one or more values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#distribution_policy_zones ComputeRegionInstanceGroupManager#distribution_policy_zones}
+  */
   readonly distributionPolicyZones?: string[];
-  /** The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens. */
+  /**
+  * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#name ComputeRegionInstanceGroupManager#name}
+  */
   readonly name: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#project ComputeRegionInstanceGroupManager#project}
+  */
   readonly project?: string;
-  /** The region where the managed instance group resides. */
+  /**
+  * The region where the managed instance group resides.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#region ComputeRegionInstanceGroupManager#region}
+  */
   readonly region?: string;
-  /** The full URL of all target pools to which new instances in the group are added. Updating the target pools attribute does not affect existing instances. */
+  /**
+  * The full URL of all target pools to which new instances in the group are added. Updating the target pools attribute does not affect existing instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#target_pools ComputeRegionInstanceGroupManager#target_pools}
+  */
   readonly targetPools?: string[];
-  /** The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0. */
+  /**
+  * The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#target_size ComputeRegionInstanceGroupManager#target_size}
+  */
   readonly targetSize?: number;
-  /** Whether to wait for all instances to be created/updated before returning. Note that if this is set to true and the operation does not succeed, Terraform will continue trying until it times out. */
+  /**
+  * Whether to wait for all instances to be created/updated before returning. Note that if this is set to true and the operation does not succeed, Terraform will continue trying until it times out.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#wait_for_instances ComputeRegionInstanceGroupManager#wait_for_instances}
+  */
   readonly waitForInstances?: boolean;
-  /** auto_healing_policies block */
+  /**
+  * auto_healing_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#auto_healing_policies ComputeRegionInstanceGroupManager#auto_healing_policies}
+  */
   readonly autoHealingPolicies?: ComputeRegionInstanceGroupManagerAutoHealingPolicies[];
-  /** named_port block */
+  /**
+  * named_port block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#named_port ComputeRegionInstanceGroupManager#named_port}
+  */
   readonly namedPort?: ComputeRegionInstanceGroupManagerNamedPort[];
-  /** stateful_disk block */
+  /**
+  * stateful_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#stateful_disk ComputeRegionInstanceGroupManager#stateful_disk}
+  */
   readonly statefulDisk?: ComputeRegionInstanceGroupManagerStatefulDisk[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#timeouts ComputeRegionInstanceGroupManager#timeouts}
+  */
   readonly timeouts?: ComputeRegionInstanceGroupManagerTimeouts;
-  /** update_policy block */
+  /**
+  * update_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#update_policy ComputeRegionInstanceGroupManager#update_policy}
+  */
   readonly updatePolicy?: ComputeRegionInstanceGroupManagerUpdatePolicy[];
-  /** version block */
+  /**
+  * version block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#version ComputeRegionInstanceGroupManager#version}
+  */
   readonly version: ComputeRegionInstanceGroupManagerVersion[];
 }
 export interface ComputeRegionInstanceGroupManagerAutoHealingPolicies {
-  /** The health check resource that signals autohealing. */
+  /**
+  * The health check resource that signals autohealing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#health_check ComputeRegionInstanceGroupManager#health_check}
+  */
   readonly healthCheck: string;
-  /** The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600. */
+  /**
+  * The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#initial_delay_sec ComputeRegionInstanceGroupManager#initial_delay_sec}
+  */
   readonly initialDelaySec: number;
 }
 
@@ -56,9 +128,17 @@ function computeRegionInstanceGroupManagerAutoHealingPoliciesToTerraform(struct?
 }
 
 export interface ComputeRegionInstanceGroupManagerNamedPort {
-  /** The name of the port. */
+  /**
+  * The name of the port.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#name ComputeRegionInstanceGroupManager#name}
+  */
   readonly name: string;
-  /** The port number. */
+  /**
+  * The port number.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#port ComputeRegionInstanceGroupManager#port}
+  */
   readonly port: number;
 }
 
@@ -71,9 +151,17 @@ function computeRegionInstanceGroupManagerNamedPortToTerraform(struct?: ComputeR
 }
 
 export interface ComputeRegionInstanceGroupManagerStatefulDisk {
-  /** A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER. */
+  /**
+  * A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#delete_rule ComputeRegionInstanceGroupManager#delete_rule}
+  */
   readonly deleteRule?: string;
-  /** The device name of the disk to be attached. */
+  /**
+  * The device name of the disk to be attached.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#device_name ComputeRegionInstanceGroupManager#device_name}
+  */
   readonly deviceName: string;
 }
 
@@ -86,8 +174,17 @@ function computeRegionInstanceGroupManagerStatefulDiskToTerraform(struct?: Compu
 }
 
 export interface ComputeRegionInstanceGroupManagerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#create ComputeRegionInstanceGroupManager#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#delete ComputeRegionInstanceGroupManager#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#update ComputeRegionInstanceGroupManager#update}
+  */
   readonly update?: string;
 }
 
@@ -101,23 +198,59 @@ function computeRegionInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeRe
 }
 
 export interface ComputeRegionInstanceGroupManagerUpdatePolicy {
-  /** The instance redistribution policy for regional managed instance groups. Valid values are: "PROACTIVE", "NONE". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled. */
+  /**
+  * The instance redistribution policy for regional managed instance groups. Valid values are: "PROACTIVE", "NONE". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#instance_redistribution_type ComputeRegionInstanceGroupManager#instance_redistribution_type}
+  */
   readonly instanceRedistributionType?: string;
-  /** The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0. */
+  /**
+  * The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#max_surge_fixed ComputeRegionInstanceGroupManager#max_surge_fixed}
+  */
   readonly maxSurgeFixed?: number;
-  /** The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with max_surge_fixed. Percent value is only allowed for regional managed instance groups with size at least 10. */
+  /**
+  * The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with max_surge_fixed. Percent value is only allowed for regional managed instance groups with size at least 10.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#max_surge_percent ComputeRegionInstanceGroupManager#max_surge_percent}
+  */
   readonly maxSurgePercent?: number;
-  /** The maximum number of instances that can be unavailable during the update process. Conflicts with max_unavailable_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0. */
+  /**
+  * The maximum number of instances that can be unavailable during the update process. Conflicts with max_unavailable_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#max_unavailable_fixed ComputeRegionInstanceGroupManager#max_unavailable_fixed}
+  */
   readonly maxUnavailableFixed?: number;
-  /** The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with max_unavailable_fixed. Percent value is only allowed for regional managed instance groups with size at least 10. */
+  /**
+  * The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with max_unavailable_fixed. Percent value is only allowed for regional managed instance groups with size at least 10.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#max_unavailable_percent ComputeRegionInstanceGroupManager#max_unavailable_percent}
+  */
   readonly maxUnavailablePercent?: number;
-  /** Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]. */
+  /**
+  * Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#min_ready_sec ComputeRegionInstanceGroupManager#min_ready_sec}
+  */
   readonly minReadySec?: number;
-  /** Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action. */
+  /**
+  * Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#minimal_action ComputeRegionInstanceGroupManager#minimal_action}
+  */
   readonly minimalAction: string;
-  /** The instance replacement method for regional managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0. */
+  /**
+  * The instance replacement method for regional managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#replacement_method ComputeRegionInstanceGroupManager#replacement_method}
+  */
   readonly replacementMethod?: string;
-  /** The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls). */
+  /**
+  * The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#type ComputeRegionInstanceGroupManager#type}
+  */
   readonly type: string;
 }
 
@@ -137,9 +270,17 @@ function computeRegionInstanceGroupManagerUpdatePolicyToTerraform(struct?: Compu
 }
 
 export interface ComputeRegionInstanceGroupManagerVersionTargetSize {
-  /** The number of instances which are managed for this version. Conflicts with percent. */
+  /**
+  * The number of instances which are managed for this version. Conflicts with percent.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#fixed ComputeRegionInstanceGroupManager#fixed}
+  */
   readonly fixed?: number;
-  /** The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version. */
+  /**
+  * The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#percent ComputeRegionInstanceGroupManager#percent}
+  */
   readonly percent?: number;
 }
 
@@ -152,11 +293,23 @@ function computeRegionInstanceGroupManagerVersionTargetSizeToTerraform(struct?: 
 }
 
 export interface ComputeRegionInstanceGroupManagerVersion {
-  /** The full URL to an instance template from which all new instances of this version will be created. */
+  /**
+  * The full URL to an instance template from which all new instances of this version will be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#instance_template ComputeRegionInstanceGroupManager#instance_template}
+  */
   readonly instanceTemplate: string;
-  /** Version name. */
+  /**
+  * Version name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#name ComputeRegionInstanceGroupManager#name}
+  */
   readonly name?: string;
-  /** target_size block */
+  /**
+  * target_size block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#target_size ComputeRegionInstanceGroupManager#target_size}
+  */
   readonly targetSize?: ComputeRegionInstanceGroupManagerVersionTargetSize[];
 }
 
@@ -170,14 +323,22 @@ function computeRegionInstanceGroupManagerVersionToTerraform(struct?: ComputeReg
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html google_compute_region_instance_group_manager}
+*/
 export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html google_compute_region_instance_group_manager} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeRegionInstanceGroupManagerConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeRegionInstanceGroupManagerConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_instance_group_manager',

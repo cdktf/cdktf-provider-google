@@ -7,33 +7,80 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitoringSloConfig extends cdktf.TerraformMetaArguments {
-  /** A calendar period, semantically "since the start of the current
-<calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"] */
+  /**
+  * A calendar period, semantically "since the start of the current
+<calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#calendar_period MonitoringSlo#calendar_period}
+  */
   readonly calendarPeriod?: string;
-  /** Name used for UI elements listing this SLO. */
+  /**
+  * Name used for UI elements listing this SLO.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#display_name MonitoringSlo#display_name}
+  */
   readonly displayName?: string;
-  /** The fraction of service that must be good in order for this objective
-to be met. 0 < goal <= 0.999 */
+  /**
+  * The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#goal MonitoringSlo#goal}
+  */
   readonly goal: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#project MonitoringSlo#project}
+  */
   readonly project?: string;
-  /** A rolling time period, semantically "in the past X days".
-Must be between 1 to 30 days, inclusive. */
+  /**
+  * A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#rolling_period_days MonitoringSlo#rolling_period_days}
+  */
   readonly rollingPeriodDays?: number;
-  /** ID of the service to which this SLO belongs. */
+  /**
+  * ID of the service to which this SLO belongs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#service MonitoringSlo#service}
+  */
   readonly service: string;
-  /** The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead. */
+  /**
+  * The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#slo_id MonitoringSlo#slo_id}
+  */
   readonly sloId?: string;
-  /** basic_sli block */
+  /**
+  * basic_sli block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#basic_sli MonitoringSlo#basic_sli}
+  */
   readonly basicSli?: MonitoringSloBasicSli[];
-  /** request_based_sli block */
+  /**
+  * request_based_sli block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#request_based_sli MonitoringSlo#request_based_sli}
+  */
   readonly requestBasedSli?: MonitoringSloRequestBasedSli[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#timeouts MonitoringSlo#timeouts}
+  */
   readonly timeouts?: MonitoringSloTimeouts;
-  /** windows_based_sli block */
+  /**
+  * windows_based_sli block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#windows_based_sli MonitoringSlo#windows_based_sli}
+  */
   readonly windowsBasedSli?: MonitoringSloWindowsBasedSli[];
 }
 export interface MonitoringSloBasicSliAvailability {
-  /** Whether an availability SLI is enabled or not. Must be set to true. Defaults to 'true'. */
+  /**
+  * Whether an availability SLI is enabled or not. Must be set to true. Defaults to 'true'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#enabled MonitoringSlo#enabled}
+  */
   readonly enabled?: boolean;
 }
 
@@ -45,9 +92,13 @@ function monitoringSloBasicSliAvailabilityToTerraform(struct?: MonitoringSloBasi
 }
 
 export interface MonitoringSloBasicSliLatency {
-  /** A duration string, e.g. 10s.
+  /**
+  * A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
-this service that return in no more than threshold. */
+this service that return in no more than threshold.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#threshold MonitoringSlo#threshold}
+  */
   readonly threshold: string;
 }
 
@@ -59,30 +110,50 @@ function monitoringSloBasicSliLatencyToTerraform(struct?: MonitoringSloBasicSliL
 }
 
 export interface MonitoringSloBasicSli {
-  /** An optional set of locations to which this SLI is relevant.
+  /**
+  * An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
 performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
-field will result in an error. */
+field will result in an error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#location MonitoringSlo#location}
+  */
   readonly location?: string[];
-  /** An optional set of RPCs to which this SLI is relevant.
+  /**
+  * An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
 performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
-error. */
+error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#method MonitoringSlo#method}
+  */
   readonly method?: string[];
-  /** The set of API versions to which this SLI is relevant.
+  /**
+  * The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
 calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
-field will result in an error. */
+field will result in an error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#version MonitoringSlo#version}
+  */
   readonly version?: string[];
-  /** availability block */
+  /**
+  * availability block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#availability MonitoringSlo#availability}
+  */
   readonly availability?: MonitoringSloBasicSliAvailability[];
-  /** latency block */
+  /**
+  * latency block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#latency MonitoringSlo#latency}
+  */
   readonly latency?: MonitoringSloBasicSliLatency[];
 }
 
@@ -98,13 +169,21 @@ function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSli): any {
 }
 
 export interface MonitoringSloRequestBasedSliDistributionCutRange {
-  /** max value for the range (inclusive). If not given,
+  /**
+  * max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
-">= range.min" */
+">= range.min"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#max MonitoringSlo#max}
+  */
   readonly max?: number;
-  /** Min value for the range (inclusive). If not given,
+  /**
+  * Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
-"< range.max" */
+"< range.max"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#min MonitoringSlo#min}
+  */
   readonly min?: number;
 }
 
@@ -117,13 +196,21 @@ function monitoringSloRequestBasedSliDistributionCutRangeToTerraform(struct?: Mo
 }
 
 export interface MonitoringSloRequestBasedSliDistributionCut {
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
 
 Must have ValueType = DISTRIBUTION and
-MetricKind = DELTA or MetricKind = CUMULATIVE. */
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#distribution_filter MonitoringSlo#distribution_filter}
+  */
   readonly distributionFilter: string;
-  /** range block */
+  /**
+  * range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#range MonitoringSlo#range}
+  */
   readonly range: MonitoringSloRequestBasedSliDistributionCutRange[];
 }
 
@@ -136,7 +223,8 @@ function monitoringSloRequestBasedSliDistributionCutToTerraform(struct?: Monitor
 }
 
 export interface MonitoringSloRequestBasedSliGoodTotalRatio {
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
 was not provided or demanded service that was of inadequate
 quality.
@@ -145,24 +233,35 @@ Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
-must be set (good + bad = total is assumed). */
+must be set (good + bad = total is assumed).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#bad_service_filter MonitoringSlo#bad_service_filter}
+  */
   readonly badServiceFilter?: string;
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying good service provided.
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
-must be set (good + bad = total is assumed). */
+must be set (good + bad = total is assumed).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#good_service_filter MonitoringSlo#good_service_filter}
+  */
   readonly goodServiceFilter?: string;
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying total demanded service.
 
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
-must be set (good + bad = total is assumed). */
+must be set (good + bad = total is assumed).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#total_service_filter MonitoringSlo#total_service_filter}
+  */
   readonly totalServiceFilter?: string;
 }
 
@@ -176,9 +275,17 @@ function monitoringSloRequestBasedSliGoodTotalRatioToTerraform(struct?: Monitori
 }
 
 export interface MonitoringSloRequestBasedSli {
-  /** distribution_cut block */
+  /**
+  * distribution_cut block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#distribution_cut MonitoringSlo#distribution_cut}
+  */
   readonly distributionCut?: MonitoringSloRequestBasedSliDistributionCut[];
-  /** good_total_ratio block */
+  /**
+  * good_total_ratio block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#good_total_ratio MonitoringSlo#good_total_ratio}
+  */
   readonly goodTotalRatio?: MonitoringSloRequestBasedSliGoodTotalRatio[];
 }
 
@@ -191,8 +298,17 @@ function monitoringSloRequestBasedSliToTerraform(struct?: MonitoringSloRequestBa
 }
 
 export interface MonitoringSloTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#create MonitoringSlo#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#delete MonitoringSlo#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#update MonitoringSlo#update}
+  */
   readonly update?: string;
 }
 
@@ -206,7 +322,11 @@ function monitoringSloTimeoutsToTerraform(struct?: MonitoringSloTimeouts): any {
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability {
-  /** Whether an availability SLI is enabled or not. Must be set to 'true. Defaults to 'true'. */
+  /**
+  * Whether an availability SLI is enabled or not. Must be set to 'true. Defaults to 'true'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#enabled MonitoringSlo#enabled}
+  */
   readonly enabled?: boolean;
 }
 
@@ -218,9 +338,13 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
-  /** A duration string, e.g. 10s.
+  /**
+  * A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
-this service that return in no more than threshold. */
+this service that return in no more than threshold.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#threshold MonitoringSlo#threshold}
+  */
   readonly threshold: string;
 }
 
@@ -232,30 +356,50 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
-  /** An optional set of locations to which this SLI is relevant.
+  /**
+  * An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
 performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
-field will result in an error. */
+field will result in an error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#location MonitoringSlo#location}
+  */
   readonly location?: string[];
-  /** An optional set of RPCs to which this SLI is relevant.
+  /**
+  * An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
 performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
-error. */
+error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#method MonitoringSlo#method}
+  */
   readonly method?: string[];
-  /** The set of API versions to which this SLI is relevant.
+  /**
+  * The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
 calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
-field will result in an error. */
+field will result in an error.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#version MonitoringSlo#version}
+  */
   readonly version?: string[];
-  /** availability block */
+  /**
+  * availability block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#availability MonitoringSlo#availability}
+  */
   readonly availability?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability[];
-  /** latency block */
+  /**
+  * latency block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#latency MonitoringSlo#latency}
+  */
   readonly latency?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency[];
 }
 
@@ -271,13 +415,21 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceT
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
-  /** max value for the range (inclusive). If not given,
+  /**
+  * max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
-">= range.min" */
+">= range.min"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#max MonitoringSlo#max}
+  */
   readonly max?: number;
-  /** Min value for the range (inclusive). If not given,
+  /**
+  * Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
-"< range.max" */
+"< range.max"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#min MonitoringSlo#min}
+  */
   readonly min?: number;
 }
 
@@ -290,13 +442,21 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
 
 Must have ValueType = DISTRIBUTION and
-MetricKind = DELTA or MetricKind = CUMULATIVE. */
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#distribution_filter MonitoringSlo#distribution_filter}
+  */
   readonly distributionFilter: string;
-  /** range block */
+  /**
+  * range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#range MonitoringSlo#range}
+  */
   readonly range: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange[];
 }
 
@@ -309,7 +469,8 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
 was not provided or demanded service that was of inadequate
 quality. Exactly two of
@@ -317,23 +478,34 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 
 Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE. */
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#bad_service_filter MonitoringSlo#bad_service_filter}
+  */
   readonly badServiceFilter?: string;
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying good service provided. Exactly two of
 good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 
 Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE. */
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#good_service_filter MonitoringSlo#good_service_filter}
+  */
   readonly goodServiceFilter?: string;
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying total demanded service. Exactly two of
 good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 
 Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE. */
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#total_service_filter MonitoringSlo#total_service_filter}
+  */
   readonly totalServiceFilter?: string;
 }
 
@@ -347,9 +519,17 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance {
-  /** distribution_cut block */
+  /**
+  * distribution_cut block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#distribution_cut MonitoringSlo#distribution_cut}
+  */
   readonly distributionCut?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut[];
-  /** good_total_ratio block */
+  /**
+  * good_total_ratio block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#good_total_ratio MonitoringSlo#good_total_ratio}
+  */
   readonly goodTotalRatio?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio[];
 }
 
@@ -362,12 +542,24 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceToTerrafo
 }
 
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThreshold {
-  /** If window performance >= threshold, the window is counted
-as good. */
+  /**
+  * If window performance >= threshold, the window is counted
+as good.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#threshold MonitoringSlo#threshold}
+  */
   readonly threshold?: number;
-  /** basic_sli_performance block */
+  /**
+  * basic_sli_performance block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#basic_sli_performance MonitoringSlo#basic_sli_performance}
+  */
   readonly basicSliPerformance?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance[];
-  /** performance block */
+  /**
+  * performance block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#performance MonitoringSlo#performance}
+  */
   readonly performance?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance[];
 }
 
@@ -381,13 +573,21 @@ function monitoringSloWindowsBasedSliGoodTotalRatioThresholdToTerraform(struct?:
 }
 
 export interface MonitoringSloWindowsBasedSliMetricMeanInRangeRange {
-  /** max value for the range (inclusive). If not given,
+  /**
+  * max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
-">= range.min" */
+">= range.min"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#max MonitoringSlo#max}
+  */
   readonly max?: number;
-  /** Min value for the range (inclusive). If not given,
+  /**
+  * Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
-"< range.max" */
+"< range.max"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#min MonitoringSlo#min}
+  */
   readonly min?: number;
 }
 
@@ -400,14 +600,22 @@ function monitoringSloWindowsBasedSliMetricMeanInRangeRangeToTerraform(struct?: 
 }
 
 export interface MonitoringSloWindowsBasedSliMetricMeanInRange {
-  /** A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
 The provided TimeSeries must have ValueType = INT64 or
 ValueType = DOUBLE and MetricKind = GAUGE. Mean value 'X'
 should satisfy 'range.min <= X < range.max'
-under good service. */
+under good service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#time_series MonitoringSlo#time_series}
+  */
   readonly timeSeries: string;
-  /** range block */
+  /**
+  * range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#range MonitoringSlo#range}
+  */
   readonly range: MonitoringSloWindowsBasedSliMetricMeanInRangeRange[];
 }
 
@@ -420,13 +628,21 @@ function monitoringSloWindowsBasedSliMetricMeanInRangeToTerraform(struct?: Monit
 }
 
 export interface MonitoringSloWindowsBasedSliMetricSumInRangeRange {
-  /** max value for the range (inclusive). If not given,
+  /**
+  * max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
-">= range.min" */
+">= range.min"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#max MonitoringSlo#max}
+  */
   readonly max?: number;
-  /** Min value for the range (inclusive). If not given,
+  /**
+  * Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
-"< range.max" */
+"< range.max"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#min MonitoringSlo#min}
+  */
   readonly min?: number;
 }
 
@@ -439,16 +655,24 @@ function monitoringSloWindowsBasedSliMetricSumInRangeRangeToTerraform(struct?: M
 }
 
 export interface MonitoringSloWindowsBasedSliMetricSumInRange {
-  /** A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
 quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 
 Summed value 'X' should satisfy
-'range.min <= X < range.max' for a good window. */
+'range.min <= X < range.max' for a good window.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#time_series MonitoringSlo#time_series}
+  */
   readonly timeSeries: string;
-  /** range block */
+  /**
+  * range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#range MonitoringSlo#range}
+  */
   readonly range: MonitoringSloWindowsBasedSliMetricSumInRangeRange[];
 }
 
@@ -461,21 +685,41 @@ function monitoringSloWindowsBasedSliMetricSumInRangeToTerraform(struct?: Monito
 }
 
 export interface MonitoringSloWindowsBasedSli {
-  /** A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+  /**
+  * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 with ValueType = BOOL. The window is good if any true values
 appear in the window. One of 'good_bad_metric_filter',
 'good_total_ratio_threshold', 'metric_mean_in_range',
-'metric_sum_in_range' must be set for 'windows_based_sli'. */
+'metric_sum_in_range' must be set for 'windows_based_sli'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#good_bad_metric_filter MonitoringSlo#good_bad_metric_filter}
+  */
   readonly goodBadMetricFilter?: string;
-  /** Duration over which window quality is evaluated, given as a
+  /**
+  * Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
-integer fraction of a day and at least 60s. */
+integer fraction of a day and at least 60s.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#window_period MonitoringSlo#window_period}
+  */
   readonly windowPeriod?: string;
-  /** good_total_ratio_threshold block */
+  /**
+  * good_total_ratio_threshold block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#good_total_ratio_threshold MonitoringSlo#good_total_ratio_threshold}
+  */
   readonly goodTotalRatioThreshold?: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold[];
-  /** metric_mean_in_range block */
+  /**
+  * metric_mean_in_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#metric_mean_in_range MonitoringSlo#metric_mean_in_range}
+  */
   readonly metricMeanInRange?: MonitoringSloWindowsBasedSliMetricMeanInRange[];
-  /** metric_sum_in_range block */
+  /**
+  * metric_sum_in_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#metric_sum_in_range MonitoringSlo#metric_sum_in_range}
+  */
   readonly metricSumInRange?: MonitoringSloWindowsBasedSliMetricSumInRange[];
 }
 
@@ -491,14 +735,22 @@ function monitoringSloWindowsBasedSliToTerraform(struct?: MonitoringSloWindowsBa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html google_monitoring_slo}
+*/
 export class MonitoringSlo extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html google_monitoring_slo} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitoringSloConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitoringSloConfig) {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_slo',

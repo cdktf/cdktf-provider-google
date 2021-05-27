@@ -7,17 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlSslCertConfig extends cdktf.TerraformMetaArguments {
-  /** The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created. */
+  /**
+  * The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html#common_name SqlSslCert#common_name}
+  */
   readonly commonName: string;
-  /** The name of the Cloud SQL instance. Changing this forces a new resource to be created. */
+  /**
+  * The name of the Cloud SQL instance. Changing this forces a new resource to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html#instance SqlSslCert#instance}
+  */
   readonly instance: string;
-  /** The ID of the project in which the resource belongs. If it is not provided, the provider project is used. */
+  /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html#project SqlSslCert#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html#timeouts SqlSslCert#timeouts}
+  */
   readonly timeouts?: SqlSslCertTimeouts;
 }
 export interface SqlSslCertTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html#create SqlSslCert#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html#delete SqlSslCert#delete}
+  */
   readonly delete?: string;
 }
 
@@ -30,14 +52,22 @@ function sqlSslCertTimeoutsToTerraform(struct?: SqlSslCertTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html google_sql_ssl_cert}
+*/
 export class SqlSslCert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert.html google_sql_ssl_cert} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlSslCertConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlSslCertConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_ssl_cert',

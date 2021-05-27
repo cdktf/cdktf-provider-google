@@ -7,26 +7,58 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppEngineFirewallRuleConfig extends cdktf.TerraformMetaArguments {
-  /** The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"] */
+  /**
+  * The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#action AppEngineFirewallRule#action}
+  */
   readonly action: string;
-  /** An optional string description of this rule. */
+  /**
+  * An optional string description of this rule.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#description AppEngineFirewallRule#description}
+  */
   readonly description?: string;
-  /** A positive integer that defines the order of rule evaluation.
+  /**
+  * A positive integer that defines the order of rule evaluation.
 Rules with the lowest priority are evaluated first.
 
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
-this rule can be modified by the user. */
+this rule can be modified by the user.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#priority AppEngineFirewallRule#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#project AppEngineFirewallRule#project}
+  */
   readonly project?: string;
-  /** IP address or range, defined using CIDR notation, of requests that this rule applies to. */
+  /**
+  * IP address or range, defined using CIDR notation, of requests that this rule applies to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#source_range AppEngineFirewallRule#source_range}
+  */
   readonly sourceRange: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#timeouts AppEngineFirewallRule#timeouts}
+  */
   readonly timeouts?: AppEngineFirewallRuleTimeouts;
 }
 export interface AppEngineFirewallRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#create AppEngineFirewallRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#delete AppEngineFirewallRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html#update AppEngineFirewallRule#update}
+  */
   readonly update?: string;
 }
 
@@ -40,14 +72,22 @@ function appEngineFirewallRuleTimeoutsToTerraform(struct?: AppEngineFirewallRule
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html google_app_engine_firewall_rule}
+*/
 export class AppEngineFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule.html google_app_engine_firewall_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppEngineFirewallRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: AppEngineFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_firewall_rule',

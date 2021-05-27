@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_google_compute_backend_bucket.html
+// https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleComputeBackendBucketConfig extends cdktf.TerraformMetaArguments {
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
 match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash. */
+last character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html#name DataGoogleComputeBackendBucket#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html#project DataGoogleComputeBackendBucket#project}
+  */
   readonly project?: string;
 }
 export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComputedList {
@@ -25,14 +32,22 @@ export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComput
   }
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html google_compute_backend_bucket}
+*/
 export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html google_compute_backend_bucket} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleComputeBackendBucketConfig
+  */
   public constructor(scope: Construct, id: string, config: DataGoogleComputeBackendBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_backend_bucket',

@@ -7,28 +7,60 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments {
-  /** The name of the bucket. */
+  /**
+  * The name of the bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#bucket StorageNotification#bucket}
+  */
   readonly bucket: string;
-  /**  A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription */
+  /**
+  *  A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#custom_attributes StorageNotification#custom_attributes}
+  */
   readonly customAttributes?: { [key: string]: string };
-  /** List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE" */
+  /**
+  * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#event_types StorageNotification#event_types}
+  */
   readonly eventTypes?: string[];
-  /** Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix. */
+  /**
+  * Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#object_name_prefix StorageNotification#object_name_prefix}
+  */
   readonly objectNamePrefix?: string;
-  /** The desired content of the Payload. One of "JSON_API_V1" or "NONE". */
+  /**
+  * The desired content of the Payload. One of "JSON_API_V1" or "NONE".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#payload_format StorageNotification#payload_format}
+  */
   readonly payloadFormat: string;
-  /** The Cloud Pub/Sub topic to which this subscription publishes. Expects either the  topic name, assumed to belong to the default GCP provider project, or the project-level name,  i.e. projects/my-gcp-project/topics/my-topic or my-topic. If the project is not set in the provider, you will need to use the project-level name. */
+  /**
+  * The Cloud Pub/Sub topic to which this subscription publishes. Expects either the  topic name, assumed to belong to the default GCP provider project, or the project-level name,  i.e. projects/my-gcp-project/topics/my-topic or my-topic. If the project is not set in the provider, you will need to use the project-level name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#topic StorageNotification#topic}
+  */
   readonly topic: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html google_storage_notification}
+*/
 export class StorageNotification extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html google_storage_notification} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageNotificationConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageNotificationConfig) {
     super(scope, id, {
       terraformResourceType: 'google_storage_notification',

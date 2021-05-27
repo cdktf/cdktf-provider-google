@@ -7,43 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
-  /** Entry description, which can consist of several sentences or paragraphs that describe entry contents. */
+  /**
+  * Entry description, which can consist of several sentences or paragraphs that describe entry contents.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#description DataCatalogEntry#description}
+  */
   readonly description?: string;
-  /** Display information such as title and description. A short name to identify the entry,
-for example, "Analytics Data - Jan 2011". */
+  /**
+  * Display information such as title and description. A short name to identify the entry,
+for example, "Analytics Data - Jan 2011".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#display_name DataCatalogEntry#display_name}
+  */
   readonly displayName?: string;
-  /** The name of the entry group this entry is in. */
+  /**
+  * The name of the entry group this entry is in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#entry_group DataCatalogEntry#entry_group}
+  */
   readonly entryGroup: string;
-  /** The id of the entry to create. */
+  /**
+  * The id of the entry to create.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#entry_id DataCatalogEntry#entry_id}
+  */
   readonly entryId: string;
-  /** The resource this metadata entry refers to.
+  /**
+  * The resource this metadata entry refers to.
 For Google Cloud Platform resources, linkedResource is the full name of the resource.
 For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
-this field is optional and defaults to an empty string. */
+this field is optional and defaults to an empty string.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#linked_resource DataCatalogEntry#linked_resource}
+  */
   readonly linkedResource?: string;
-  /** Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
+  /**
+  * Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
-for what fields this schema can contain. */
+for what fields this schema can contain.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#schema DataCatalogEntry#schema}
+  */
   readonly schema?: string;
-  /** The type of the entry. Only used for Entries with types in the EntryType enum.
-Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values: ["FILESET"] */
+  /**
+  * The type of the entry. Only used for Entries with types in the EntryType enum.
+Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values: ["FILESET"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#type DataCatalogEntry#type}
+  */
   readonly type?: string;
-  /** This field indicates the entry's source system that Data Catalog does not integrate with.
+  /**
+  * This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
-and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. */
+and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#user_specified_system DataCatalogEntry#user_specified_system}
+  */
   readonly userSpecifiedSystem?: string;
-  /** Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
+  /**
+  * Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
 When creating an entry, users should check the enum values first, if nothing matches the entry
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
-numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. */
+numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#user_specified_type DataCatalogEntry#user_specified_type}
+  */
   readonly userSpecifiedType?: string;
-  /** gcs_fileset_spec block */
+  /**
+  * gcs_fileset_spec block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#gcs_fileset_spec DataCatalogEntry#gcs_fileset_spec}
+  */
   readonly gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#timeouts DataCatalogEntry#timeouts}
+  */
   readonly timeouts?: DataCatalogEntryTimeouts;
 }
 export class DataCatalogEntryBigqueryDateShardedSpec extends cdktf.ComplexComputedList {
@@ -95,7 +139,8 @@ export class DataCatalogEntryBigqueryTableSpec extends cdktf.ComplexComputedList
   }
 }
 export interface DataCatalogEntryGcsFilesetSpec {
-  /** Patterns to identify a set of files in Google Cloud Storage.
+  /**
+  * Patterns to identify a set of files in Google Cloud Storage.
 See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
 for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
 
@@ -106,7 +151,10 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
 * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
 * gs://bucket_name/a/*\/b: matches all files in bucket_name that match a/*\/b pattern, such as a/c/b, a/d/b
-* gs://another_bucket/a.txt: matches gs://another_bucket/a.txt */
+* gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#file_patterns DataCatalogEntry#file_patterns}
+  */
   readonly filePatterns: string[];
 }
 
@@ -118,8 +166,17 @@ function dataCatalogEntryGcsFilesetSpecToTerraform(struct?: DataCatalogEntryGcsF
 }
 
 export interface DataCatalogEntryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#create DataCatalogEntry#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#delete DataCatalogEntry#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#update DataCatalogEntry#update}
+  */
   readonly update?: string;
 }
 
@@ -133,14 +190,22 @@ function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html google_data_catalog_entry}
+*/
 export class DataCatalogEntry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html google_data_catalog_entry} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogEntryConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogEntryConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_entry',

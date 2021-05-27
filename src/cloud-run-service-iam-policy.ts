@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CloudRunServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#location CloudRunServiceIamPolicy#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#policy_data CloudRunServiceIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#project CloudRunServiceIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#service CloudRunServiceIamPolicy#service}
+  */
   readonly service: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html google_cloud_run_service_iam_policy}
+*/
 export class CloudRunServiceIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html google_cloud_run_service_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CloudRunServiceIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: CloudRunServiceIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_cloud_run_service_iam_policy',

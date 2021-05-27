@@ -7,21 +7,50 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeGlobalNetworkEndpointConfig extends cdktf.TerraformMetaArguments {
-  /** Fully qualified domain name of network endpoint.
-This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT. */
+  /**
+  * Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#fqdn ComputeGlobalNetworkEndpoint#fqdn}
+  */
   readonly fqdn?: string;
-  /** The global network endpoint group this endpoint is part of. */
+  /**
+  * The global network endpoint group this endpoint is part of.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#global_network_endpoint_group ComputeGlobalNetworkEndpoint#global_network_endpoint_group}
+  */
   readonly globalNetworkEndpointGroup: string;
-  /** IPv4 address external endpoint. */
+  /**
+  * IPv4 address external endpoint.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#ip_address ComputeGlobalNetworkEndpoint#ip_address}
+  */
   readonly ipAddress?: string;
-  /** Port number of the external endpoint. */
+  /**
+  * Port number of the external endpoint.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#port ComputeGlobalNetworkEndpoint#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#project ComputeGlobalNetworkEndpoint#project}
+  */
   readonly project?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#timeouts ComputeGlobalNetworkEndpoint#timeouts}
+  */
   readonly timeouts?: ComputeGlobalNetworkEndpointTimeouts;
 }
 export interface ComputeGlobalNetworkEndpointTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#create ComputeGlobalNetworkEndpoint#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html#delete ComputeGlobalNetworkEndpoint#delete}
+  */
   readonly delete?: string;
 }
 
@@ -34,14 +63,22 @@ function computeGlobalNetworkEndpointTimeoutsToTerraform(struct?: ComputeGlobalN
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html google_compute_global_network_endpoint}
+*/
 export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint.html google_compute_global_network_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeGlobalNetworkEndpointConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeGlobalNetworkEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_global_network_endpoint',

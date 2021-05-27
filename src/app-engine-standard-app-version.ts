@@ -7,56 +7,149 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppEngineStandardAppVersionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#delete_service_on_destroy AppEngineStandardAppVersion#delete_service_on_destroy}
+  */
   readonly deleteServiceOnDestroy?: boolean;
-  /** Environment variables available to the application. */
+  /**
+  * Environment variables available to the application.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#env_variables AppEngineStandardAppVersion#env_variables}
+  */
   readonly envVariables?: { [key: string]: string };
-  /** A list of the types of messages that this application is able to receive. Possible values: ["INBOUND_SERVICE_MAIL", "INBOUND_SERVICE_MAIL_BOUNCE", "INBOUND_SERVICE_XMPP_ERROR", "INBOUND_SERVICE_XMPP_MESSAGE", "INBOUND_SERVICE_XMPP_SUBSCRIBE", "INBOUND_SERVICE_XMPP_PRESENCE", "INBOUND_SERVICE_CHANNEL_PRESENCE", "INBOUND_SERVICE_WARMUP"] */
+  /**
+  * A list of the types of messages that this application is able to receive. Possible values: ["INBOUND_SERVICE_MAIL", "INBOUND_SERVICE_MAIL_BOUNCE", "INBOUND_SERVICE_XMPP_ERROR", "INBOUND_SERVICE_XMPP_MESSAGE", "INBOUND_SERVICE_XMPP_SUBSCRIBE", "INBOUND_SERVICE_XMPP_PRESENCE", "INBOUND_SERVICE_CHANNEL_PRESENCE", "INBOUND_SERVICE_WARMUP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#inbound_services AppEngineStandardAppVersion#inbound_services}
+  */
   readonly inboundServices?: string[];
-  /** Instance class that is used to run this version. Valid values are
+  /**
+  * Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
-Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen. */
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#instance_class AppEngineStandardAppVersion#instance_class}
+  */
   readonly instanceClass?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#noop_on_destroy AppEngineStandardAppVersion#noop_on_destroy}
+  */
   readonly noopOnDestroy?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#project AppEngineStandardAppVersion#project}
+  */
   readonly project?: string;
-  /** Desired runtime. Example python27. */
+  /**
+  * Desired runtime. Example python27.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#runtime AppEngineStandardAppVersion#runtime}
+  */
   readonly runtime: string;
-  /** The version of the API in the given runtime environment.
-Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref */
+  /**
+  * The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#runtime_api_version AppEngineStandardAppVersion#runtime_api_version}
+  */
   readonly runtimeApiVersion?: string;
-  /** AppEngine service resource */
+  /**
+  * AppEngine service resource
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#service AppEngineStandardAppVersion#service}
+  */
   readonly service: string;
-  /** Whether multiple requests can be dispatched to this version at once. */
+  /**
+  * Whether multiple requests can be dispatched to this version at once.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#threadsafe AppEngineStandardAppVersion#threadsafe}
+  */
   readonly threadsafe?: boolean;
-  /** Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-". */
+  /**
+  * Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#version_id AppEngineStandardAppVersion#version_id}
+  */
   readonly versionId?: string;
-  /** automatic_scaling block */
+  /**
+  * automatic_scaling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#automatic_scaling AppEngineStandardAppVersion#automatic_scaling}
+  */
   readonly automaticScaling?: AppEngineStandardAppVersionAutomaticScaling[];
-  /** basic_scaling block */
+  /**
+  * basic_scaling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#basic_scaling AppEngineStandardAppVersion#basic_scaling}
+  */
   readonly basicScaling?: AppEngineStandardAppVersionBasicScaling[];
-  /** deployment block */
+  /**
+  * deployment block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#deployment AppEngineStandardAppVersion#deployment}
+  */
   readonly deployment: AppEngineStandardAppVersionDeployment[];
-  /** entrypoint block */
+  /**
+  * entrypoint block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#entrypoint AppEngineStandardAppVersion#entrypoint}
+  */
   readonly entrypoint?: AppEngineStandardAppVersionEntrypoint[];
-  /** handlers block */
+  /**
+  * handlers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#handlers AppEngineStandardAppVersion#handlers}
+  */
   readonly handlers?: AppEngineStandardAppVersionHandlers[];
-  /** libraries block */
+  /**
+  * libraries block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#libraries AppEngineStandardAppVersion#libraries}
+  */
   readonly libraries?: AppEngineStandardAppVersionLibraries[];
-  /** manual_scaling block */
+  /**
+  * manual_scaling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#manual_scaling AppEngineStandardAppVersion#manual_scaling}
+  */
   readonly manualScaling?: AppEngineStandardAppVersionManualScaling[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#timeouts AppEngineStandardAppVersion#timeouts}
+  */
   readonly timeouts?: AppEngineStandardAppVersionTimeouts;
-  /** vpc_access_connector block */
+  /**
+  * vpc_access_connector block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#vpc_access_connector AppEngineStandardAppVersion#vpc_access_connector}
+  */
   readonly vpcAccessConnector?: AppEngineStandardAppVersionVpcAccessConnector[];
 }
 export interface AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings {
-  /** Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration. */
+  /**
+  * Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#max_instances AppEngineStandardAppVersion#max_instances}
+  */
   readonly maxInstances?: number;
-  /** Minimum number of instances to run for this version. Set to zero to disable minInstances configuration. */
+  /**
+  * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#min_instances AppEngineStandardAppVersion#min_instances}
+  */
   readonly minInstances?: number;
-  /** Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value. */
+  /**
+  * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#target_cpu_utilization AppEngineStandardAppVersion#target_cpu_utilization}
+  */
   readonly targetCpuUtilization?: number;
-  /** Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value. */
+  /**
+  * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#target_throughput_utilization AppEngineStandardAppVersion#target_throughput_utilization}
+  */
   readonly targetThroughputUtilization?: number;
 }
 
@@ -71,21 +164,45 @@ function appEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsToT
 }
 
 export interface AppEngineStandardAppVersionAutomaticScaling {
-  /** Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+  /**
+  * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 
-Defaults to a runtime-specific value. */
+Defaults to a runtime-specific value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#max_concurrent_requests AppEngineStandardAppVersion#max_concurrent_requests}
+  */
   readonly maxConcurrentRequests?: number;
-  /** Maximum number of idle instances that should be maintained for this version. */
+  /**
+  * Maximum number of idle instances that should be maintained for this version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#max_idle_instances AppEngineStandardAppVersion#max_idle_instances}
+  */
   readonly maxIdleInstances?: number;
-  /** Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+  /**
+  * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#max_pending_latency AppEngineStandardAppVersion#max_pending_latency}
+  */
   readonly maxPendingLatency?: string;
-  /** Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service. */
+  /**
+  * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#min_idle_instances AppEngineStandardAppVersion#min_idle_instances}
+  */
   readonly minIdleInstances?: number;
-  /** Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". */
+  /**
+  * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#min_pending_latency AppEngineStandardAppVersion#min_pending_latency}
+  */
   readonly minPendingLatency?: string;
-  /** standard_scheduler_settings block */
+  /**
+  * standard_scheduler_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#standard_scheduler_settings AppEngineStandardAppVersion#standard_scheduler_settings}
+  */
   readonly standardSchedulerSettings?: AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings[];
 }
 
@@ -102,10 +219,18 @@ function appEngineStandardAppVersionAutomaticScalingToTerraform(struct?: AppEngi
 }
 
 export interface AppEngineStandardAppVersionBasicScaling {
-  /** Duration of time after the last request that an instance must wait before the instance is shut down.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s. */
+  /**
+  * Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#idle_timeout AppEngineStandardAppVersion#idle_timeout}
+  */
   readonly idleTimeout?: string;
-  /** Maximum number of instances to create for this version. Must be in the range [1.0, 200.0]. */
+  /**
+  * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#max_instances AppEngineStandardAppVersion#max_instances}
+  */
   readonly maxInstances: number;
 }
 
@@ -118,10 +243,21 @@ function appEngineStandardAppVersionBasicScalingToTerraform(struct?: AppEngineSt
 }
 
 export interface AppEngineStandardAppVersionDeploymentFiles {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#name AppEngineStandardAppVersion#name}
+  */
   readonly name: string;
-  /** SHA1 checksum of the file */
+  /**
+  * SHA1 checksum of the file
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#sha1_sum AppEngineStandardAppVersion#sha1_sum}
+  */
   readonly sha1Sum?: string;
-  /** Source URL */
+  /**
+  * Source URL
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#source_url AppEngineStandardAppVersion#source_url}
+  */
   readonly sourceUrl: string;
 }
 
@@ -135,9 +271,17 @@ function appEngineStandardAppVersionDeploymentFilesToTerraform(struct?: AppEngin
 }
 
 export interface AppEngineStandardAppVersionDeploymentZip {
-  /** files count */
+  /**
+  * files count
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#files_count AppEngineStandardAppVersion#files_count}
+  */
   readonly filesCount?: number;
-  /** Source URL */
+  /**
+  * Source URL
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#source_url AppEngineStandardAppVersion#source_url}
+  */
   readonly sourceUrl: string;
 }
 
@@ -150,9 +294,17 @@ function appEngineStandardAppVersionDeploymentZipToTerraform(struct?: AppEngineS
 }
 
 export interface AppEngineStandardAppVersionDeployment {
-  /** files block */
+  /**
+  * files block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#files AppEngineStandardAppVersion#files}
+  */
   readonly files?: AppEngineStandardAppVersionDeploymentFiles[];
-  /** zip block */
+  /**
+  * zip block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#zip AppEngineStandardAppVersion#zip}
+  */
   readonly zip?: AppEngineStandardAppVersionDeploymentZip[];
 }
 
@@ -165,7 +317,11 @@ function appEngineStandardAppVersionDeploymentToTerraform(struct?: AppEngineStan
 }
 
 export interface AppEngineStandardAppVersionEntrypoint {
-  /** The format should be a shell command that can be fed to bash -c. */
+  /**
+  * The format should be a shell command that can be fed to bash -c.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#shell AppEngineStandardAppVersion#shell}
+  */
   readonly shell: string;
 }
 
@@ -177,7 +333,11 @@ function appEngineStandardAppVersionEntrypointToTerraform(struct?: AppEngineStan
 }
 
 export interface AppEngineStandardAppVersionHandlersScript {
-  /** Path to the script from the application root directory. */
+  /**
+  * Path to the script from the application root directory.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#script_path AppEngineStandardAppVersion#script_path}
+  */
   readonly scriptPath: string;
 }
 
@@ -189,24 +349,52 @@ function appEngineStandardAppVersionHandlersScriptToTerraform(struct?: AppEngine
 }
 
 export interface AppEngineStandardAppVersionHandlersStaticFiles {
-  /** Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
+  /**
+  * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
 static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
-against both your code and static data storage resource quotas. */
+against both your code and static data storage resource quotas.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#application_readable AppEngineStandardAppVersion#application_readable}
+  */
   readonly applicationReadable?: boolean;
-  /** Time a static file served by this handler should be cached by web proxies and browsers.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s". */
+  /**
+  * Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#expiration AppEngineStandardAppVersion#expiration}
+  */
   readonly expiration?: string;
-  /** HTTP headers to use for all responses from these URLs.
-An object containing a list of "key:value" value pairs.". */
+  /**
+  * HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#http_headers AppEngineStandardAppVersion#http_headers}
+  */
   readonly httpHeaders?: { [key: string]: string };
-  /** MIME type used to serve all files served by this handler.
-Defaults to file-specific MIME types, which are derived from each file's filename extension. */
+  /**
+  * MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#mime_type AppEngineStandardAppVersion#mime_type}
+  */
   readonly mimeType?: string;
-  /** Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern. */
+  /**
+  * Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#path AppEngineStandardAppVersion#path}
+  */
   readonly path?: string;
-  /** Whether this handler should match the request if the file referenced by the handler does not exist. */
+  /**
+  * Whether this handler should match the request if the file referenced by the handler does not exist.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#require_matching_file AppEngineStandardAppVersion#require_matching_file}
+  */
   readonly requireMatchingFile?: boolean;
-  /** Regular expression that matches the file paths for all files that should be referenced by this handler. */
+  /**
+  * Regular expression that matches the file paths for all files that should be referenced by this handler.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#upload_path_regex AppEngineStandardAppVersion#upload_path_regex}
+  */
   readonly uploadPathRegex?: string;
 }
 
@@ -224,20 +412,48 @@ function appEngineStandardAppVersionHandlersStaticFilesToTerraform(struct?: AppE
 }
 
 export interface AppEngineStandardAppVersionHandlers {
-  /** Actions to take when the user is not logged in. Possible values: ["AUTH_FAIL_ACTION_REDIRECT", "AUTH_FAIL_ACTION_UNAUTHORIZED"] */
+  /**
+  * Actions to take when the user is not logged in. Possible values: ["AUTH_FAIL_ACTION_REDIRECT", "AUTH_FAIL_ACTION_UNAUTHORIZED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#auth_fail_action AppEngineStandardAppVersion#auth_fail_action}
+  */
   readonly authFailAction?: string;
-  /** Methods to restrict access to a URL based on login status. Possible values: ["LOGIN_OPTIONAL", "LOGIN_ADMIN", "LOGIN_REQUIRED"] */
+  /**
+  * Methods to restrict access to a URL based on login status. Possible values: ["LOGIN_OPTIONAL", "LOGIN_ADMIN", "LOGIN_REQUIRED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#login AppEngineStandardAppVersion#login}
+  */
   readonly login?: string;
-  /** 30x code to use when performing redirects for the secure field. Possible values: ["REDIRECT_HTTP_RESPONSE_CODE_301", "REDIRECT_HTTP_RESPONSE_CODE_302", "REDIRECT_HTTP_RESPONSE_CODE_303", "REDIRECT_HTTP_RESPONSE_CODE_307"] */
+  /**
+  * 30x code to use when performing redirects for the secure field. Possible values: ["REDIRECT_HTTP_RESPONSE_CODE_301", "REDIRECT_HTTP_RESPONSE_CODE_302", "REDIRECT_HTTP_RESPONSE_CODE_303", "REDIRECT_HTTP_RESPONSE_CODE_307"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#redirect_http_response_code AppEngineStandardAppVersion#redirect_http_response_code}
+  */
   readonly redirectHttpResponseCode?: string;
-  /** Security (HTTPS) enforcement for this URL. Possible values: ["SECURE_DEFAULT", "SECURE_NEVER", "SECURE_OPTIONAL", "SECURE_ALWAYS"] */
+  /**
+  * Security (HTTPS) enforcement for this URL. Possible values: ["SECURE_DEFAULT", "SECURE_NEVER", "SECURE_OPTIONAL", "SECURE_ALWAYS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#security_level AppEngineStandardAppVersion#security_level}
+  */
   readonly securityLevel?: string;
-  /** URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path. */
+  /**
+  * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#url_regex AppEngineStandardAppVersion#url_regex}
+  */
   readonly urlRegex?: string;
-  /** script block */
+  /**
+  * script block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#script AppEngineStandardAppVersion#script}
+  */
   readonly script?: AppEngineStandardAppVersionHandlersScript[];
-  /** static_files block */
+  /**
+  * static_files block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#static_files AppEngineStandardAppVersion#static_files}
+  */
   readonly staticFiles?: AppEngineStandardAppVersionHandlersStaticFiles[];
 }
 
@@ -255,9 +471,17 @@ function appEngineStandardAppVersionHandlersToTerraform(struct?: AppEngineStanda
 }
 
 export interface AppEngineStandardAppVersionLibraries {
-  /** Name of the library. Example "django". */
+  /**
+  * Name of the library. Example "django".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#name AppEngineStandardAppVersion#name}
+  */
   readonly name?: string;
-  /** Version of the library to select, or "latest". */
+  /**
+  * Version of the library to select, or "latest".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#version AppEngineStandardAppVersion#version}
+  */
   readonly version?: string;
 }
 
@@ -270,10 +494,14 @@ function appEngineStandardAppVersionLibrariesToTerraform(struct?: AppEngineStand
 }
 
 export interface AppEngineStandardAppVersionManualScaling {
-  /** Number of instances to assign to the service at the start.
+  /**
+  * Number of instances to assign to the service at the start.
 
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection. */
+Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#instances AppEngineStandardAppVersion#instances}
+  */
   readonly instances: number;
 }
 
@@ -285,8 +513,17 @@ function appEngineStandardAppVersionManualScalingToTerraform(struct?: AppEngineS
 }
 
 export interface AppEngineStandardAppVersionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#create AppEngineStandardAppVersion#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#delete AppEngineStandardAppVersion#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#update AppEngineStandardAppVersion#update}
+  */
   readonly update?: string;
 }
 
@@ -300,7 +537,11 @@ function appEngineStandardAppVersionTimeoutsToTerraform(struct?: AppEngineStanda
 }
 
 export interface AppEngineStandardAppVersionVpcAccessConnector {
-  /** Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1. */
+  /**
+  * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#name AppEngineStandardAppVersion#name}
+  */
   readonly name: string;
 }
 
@@ -312,14 +553,22 @@ function appEngineStandardAppVersionVpcAccessConnectorToTerraform(struct?: AppEn
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html google_app_engine_standard_app_version}
+*/
 export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html google_app_engine_standard_app_version} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppEngineStandardAppVersionConfig
+  */
   public constructor(scope: Construct, id: string, config: AppEngineStandardAppVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_standard_app_version',

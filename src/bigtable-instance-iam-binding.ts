@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BigtableInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#instance BigtableInstanceIamBinding#instance}
+  */
   readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#members BigtableInstanceIamBinding#members}
+  */
   readonly members: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#project BigtableInstanceIamBinding#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#role BigtableInstanceIamBinding#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#condition BigtableInstanceIamBinding#condition}
+  */
   readonly condition?: BigtableInstanceIamBindingCondition[];
 }
 export interface BigtableInstanceIamBindingCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#description BigtableInstanceIamBinding#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#expression BigtableInstanceIamBinding#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#title BigtableInstanceIamBinding#title}
+  */
   readonly title: string;
 }
 
@@ -30,14 +55,22 @@ function bigtableInstanceIamBindingConditionToTerraform(struct?: BigtableInstanc
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html google_bigtable_instance_iam_binding}
+*/
 export class BigtableInstanceIamBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html google_bigtable_instance_iam_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BigtableInstanceIamBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: BigtableInstanceIamBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_instance_iam_binding',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BillingAccountIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#billing_account_id BillingAccountIamMember#billing_account_id}
+  */
   readonly billingAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#member BillingAccountIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#role BillingAccountIamMember#role}
+  */
   readonly role: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#condition BillingAccountIamMember#condition}
+  */
   readonly condition?: BillingAccountIamMemberCondition[];
 }
 export interface BillingAccountIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#description BillingAccountIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#expression BillingAccountIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#title BillingAccountIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -29,14 +51,22 @@ function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamM
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html google_billing_account_iam_member}
+*/
 export class BillingAccountIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html google_billing_account_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BillingAccountIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: BillingAccountIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_billing_account_iam_member',

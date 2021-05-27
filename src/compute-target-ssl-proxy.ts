@@ -7,36 +7,76 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArguments {
-  /** A reference to the BackendService resource. */
+  /**
+  * A reference to the BackendService resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#backend_service ComputeTargetSslProxy#backend_service}
+  */
   readonly backendService: string;
-  /** An optional description of this resource. */
+  /**
+  * An optional description of this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#description ComputeTargetSslProxy#description}
+  */
   readonly description?: string;
-  /** Name of the resource. Provided by the client when the resource is
+  /**
+  * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
 the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash. */
+character, which cannot be a dash.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#name ComputeTargetSslProxy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#project ComputeTargetSslProxy#project}
+  */
   readonly project?: string;
-  /** Specifies the type of proxy header to append before sending data to
-the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"] */
+  /**
+  * Specifies the type of proxy header to append before sending data to
+the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#proxy_header ComputeTargetSslProxy#proxy_header}
+  */
   readonly proxyHeader?: string;
-  /** A list of SslCertificate resources that are used to authenticate
+  /**
+  * A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
-SSL certificate must be specified. */
+SSL certificate must be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#ssl_certificates ComputeTargetSslProxy#ssl_certificates}
+  */
   readonly sslCertificates: string[];
-  /** A reference to the SslPolicy resource that will be associated with
+  /**
+  * A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
-resource will not have any SSL policy configured. */
+resource will not have any SSL policy configured.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#ssl_policy ComputeTargetSslProxy#ssl_policy}
+  */
   readonly sslPolicy?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#timeouts ComputeTargetSslProxy#timeouts}
+  */
   readonly timeouts?: ComputeTargetSslProxyTimeouts;
 }
 export interface ComputeTargetSslProxyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#create ComputeTargetSslProxy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#delete ComputeTargetSslProxy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#update ComputeTargetSslProxy#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +90,22 @@ function computeTargetSslProxyTimeoutsToTerraform(struct?: ComputeTargetSslProxy
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html google_compute_target_ssl_proxy}
+*/
 export class ComputeTargetSslProxy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html google_compute_target_ssl_proxy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeTargetSslProxyConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeTargetSslProxyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_target_ssl_proxy',

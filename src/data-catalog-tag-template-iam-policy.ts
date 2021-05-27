@@ -7,20 +7,40 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataCatalogTagTemplateIamPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#policy_data DataCatalogTagTemplateIamPolicy#policy_data}
+  */
   readonly policyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#project DataCatalogTagTemplateIamPolicy#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#region DataCatalogTagTemplateIamPolicy#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#tag_template DataCatalogTagTemplateIamPolicy#tag_template}
+  */
   readonly tagTemplate: string;
 }
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html google_data_catalog_tag_template_iam_policy}
+*/
 export class DataCatalogTagTemplateIamPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html google_data_catalog_tag_template_iam_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataCatalogTagTemplateIamPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataCatalogTagTemplateIamPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_tag_template_iam_policy',

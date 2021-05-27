@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ComputeSubnetworkIamMemberConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#member ComputeSubnetworkIamMember#member}
+  */
   readonly member: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#project ComputeSubnetworkIamMember#project}
+  */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#region ComputeSubnetworkIamMember#region}
+  */
   readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#role ComputeSubnetworkIamMember#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#subnetwork ComputeSubnetworkIamMember#subnetwork}
+  */
   readonly subnetwork: string;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#condition ComputeSubnetworkIamMember#condition}
+  */
   readonly condition?: ComputeSubnetworkIamMemberCondition[];
 }
 export interface ComputeSubnetworkIamMemberCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#description ComputeSubnetworkIamMember#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#expression ComputeSubnetworkIamMember#expression}
+  */
   readonly expression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html#title ComputeSubnetworkIamMember#title}
+  */
   readonly title: string;
 }
 
@@ -31,14 +59,22 @@ function computeSubnetworkIamMemberConditionToTerraform(struct?: ComputeSubnetwo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html google_compute_subnetwork_iam_member}
+*/
 export class ComputeSubnetworkIamMember extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_member.html google_compute_subnetwork_iam_member} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ComputeSubnetworkIamMemberConfig
+  */
   public constructor(scope: Construct, id: string, config: ComputeSubnetworkIamMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'google_compute_subnetwork_iam_member',
