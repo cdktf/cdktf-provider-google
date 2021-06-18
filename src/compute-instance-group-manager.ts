@@ -50,6 +50,12 @@ export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaAr
   */
   readonly waitForInstances?: boolean;
   /**
+  * When used with wait_for_instances specifies the status to wait for. When STABLE is specified this resource will wait until the instances are stable before returning. When UPDATED is set, it will wait for the version target to be reached and any per instance configs to be effective as well as all instances to be stable before returning.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#wait_for_instances_status ComputeInstanceGroupManager#wait_for_instances_status}
+  */
+  readonly waitForInstancesStatus?: string;
+  /**
   * The zone that instances in this group should be created in.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#zone ComputeInstanceGroupManager#zone}
@@ -91,6 +97,49 @@ export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html#version ComputeInstanceGroupManager#version}
   */
   readonly version: ComputeInstanceGroupManagerVersion[];
+}
+export class ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs extends cdktf.ComplexComputedList {
+
+  // all_effective - computed: true, optional: false, required: false
+  public get allEffective() {
+    return this.getBooleanAttribute('all_effective');
+  }
+}
+export class ComputeInstanceGroupManagerStatusStateful extends cdktf.ComplexComputedList {
+
+  // has_stateful_config - computed: true, optional: false, required: false
+  public get hasStatefulConfig() {
+    return this.getBooleanAttribute('has_stateful_config');
+  }
+
+  // per_instance_configs - computed: true, optional: false, required: false
+  public get perInstanceConfigs() {
+    return this.interpolationForAttribute('per_instance_configs') as any;
+  }
+}
+export class ComputeInstanceGroupManagerStatusVersionTarget extends cdktf.ComplexComputedList {
+
+  // is_reached - computed: true, optional: false, required: false
+  public get isReached() {
+    return this.getBooleanAttribute('is_reached');
+  }
+}
+export class ComputeInstanceGroupManagerStatus extends cdktf.ComplexComputedList {
+
+  // is_stable - computed: true, optional: false, required: false
+  public get isStable() {
+    return this.getBooleanAttribute('is_stable');
+  }
+
+  // stateful - computed: true, optional: false, required: false
+  public get stateful() {
+    return this.interpolationForAttribute('stateful') as any;
+  }
+
+  // version_target - computed: true, optional: false, required: false
+  public get versionTarget() {
+    return this.interpolationForAttribute('version_target') as any;
+  }
 }
 export interface ComputeInstanceGroupManagerAutoHealingPolicies {
   /**
@@ -338,6 +387,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
     this._targetPools = config.targetPools;
     this._targetSize = config.targetSize;
     this._waitForInstances = config.waitForInstances;
+    this._waitForInstancesStatus = config.waitForInstancesStatus;
     this._zone = config.zone;
     this._autoHealingPolicies = config.autoHealingPolicies;
     this._namedPort = config.namedPort;
@@ -434,6 +484,11 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
+  // status - computed: true, optional: false, required: false
+  public status(index: string) {
+    return new ComputeInstanceGroupManagerStatus(this, 'status', index);
+  }
+
   // target_pools - computed: false, optional: true, required: false
   private _targetPools?: string[];
   public get targetPools() {
@@ -480,6 +535,22 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get waitForInstancesInput() {
     return this._waitForInstances
+  }
+
+  // wait_for_instances_status - computed: false, optional: true, required: false
+  private _waitForInstancesStatus?: string;
+  public get waitForInstancesStatus() {
+    return this.getStringAttribute('wait_for_instances_status');
+  }
+  public set waitForInstancesStatus(value: string ) {
+    this._waitForInstancesStatus = value;
+  }
+  public resetWaitForInstancesStatus() {
+    this._waitForInstancesStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitForInstancesStatusInput() {
+    return this._waitForInstancesStatus
   }
 
   // zone - computed: true, optional: true, required: false
@@ -604,6 +675,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
       target_pools: cdktf.listMapper(cdktf.stringToTerraform)(this._targetPools),
       target_size: cdktf.numberToTerraform(this._targetSize),
       wait_for_instances: cdktf.booleanToTerraform(this._waitForInstances),
+      wait_for_instances_status: cdktf.stringToTerraform(this._waitForInstancesStatus),
       zone: cdktf.stringToTerraform(this._zone),
       auto_healing_policies: cdktf.listMapper(computeInstanceGroupManagerAutoHealingPoliciesToTerraform)(this._autoHealingPolicies),
       named_port: cdktf.listMapper(computeInstanceGroupManagerNamedPortToTerraform)(this._namedPort),

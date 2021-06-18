@@ -54,6 +54,25 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
   */
   readonly edgeAvailabilityDomain?: string;
   /**
+  * Indicates the user-supplied encryption option of this interconnect
+attachment:
+
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+
+Not currently available publicly. Default value: "NONE" Possible values: ["NONE", "IPSEC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment.html#encryption ComputeInterconnectAttachment#encryption}
+  */
+  readonly encryption?: string;
+  /**
   * URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
@@ -61,6 +80,30 @@ be set if type is PARTNER.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment.html#interconnect ComputeInterconnectAttachment#interconnect}
   */
   readonly interconnect?: string;
+  /**
+  * URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment.html#ipsec_internal_addresses ComputeInterconnectAttachment#ipsec_internal_addresses}
+  */
+  readonly ipsecInternalAddresses?: string[];
   /**
   * Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -183,7 +226,9 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
     this._candidateSubnets = config.candidateSubnets;
     this._description = config.description;
     this._edgeAvailabilityDomain = config.edgeAvailabilityDomain;
+    this._encryption = config.encryption;
     this._interconnect = config.interconnect;
+    this._ipsecInternalAddresses = config.ipsecInternalAddresses;
     this._mtu = config.mtu;
     this._name = config.name;
     this._project = config.project;
@@ -293,6 +338,22 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
     return this._edgeAvailabilityDomain
   }
 
+  // encryption - computed: false, optional: true, required: false
+  private _encryption?: string;
+  public get encryption() {
+    return this.getStringAttribute('encryption');
+  }
+  public set encryption(value: string ) {
+    this._encryption = value;
+  }
+  public resetEncryption() {
+    this._encryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption
+  }
+
   // google_reference_id - computed: true, optional: false, required: false
   public get googleReferenceId() {
     return this.getStringAttribute('google_reference_id');
@@ -317,6 +378,22 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get interconnectInput() {
     return this._interconnect
+  }
+
+  // ipsec_internal_addresses - computed: false, optional: true, required: false
+  private _ipsecInternalAddresses?: string[];
+  public get ipsecInternalAddresses() {
+    return this.getListAttribute('ipsec_internal_addresses');
+  }
+  public set ipsecInternalAddresses(value: string[] ) {
+    this._ipsecInternalAddresses = value;
+  }
+  public resetIpsecInternalAddresses() {
+    this._ipsecInternalAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecInternalAddressesInput() {
+    return this._ipsecInternalAddresses
   }
 
   // mtu - computed: true, optional: true, required: false
@@ -477,7 +554,9 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
       candidate_subnets: cdktf.listMapper(cdktf.stringToTerraform)(this._candidateSubnets),
       description: cdktf.stringToTerraform(this._description),
       edge_availability_domain: cdktf.stringToTerraform(this._edgeAvailabilityDomain),
+      encryption: cdktf.stringToTerraform(this._encryption),
       interconnect: cdktf.stringToTerraform(this._interconnect),
+      ipsec_internal_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._ipsecInternalAddresses),
       mtu: cdktf.stringToTerraform(this._mtu),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

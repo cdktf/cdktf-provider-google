@@ -37,6 +37,11 @@ export class DataGoogleComputeHaVpnGatewayVpnInterfaces extends cdktf.ComplexCom
     return this.getNumberAttribute('id');
   }
 
+  // interconnect_attachment - computed: true, optional: false, required: false
+  public get interconnectAttachment() {
+    return this.getStringAttribute('interconnect_attachment');
+  }
+
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');

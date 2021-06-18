@@ -211,6 +211,59 @@ function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: Stora
   }
 }
 
+export interface StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials {
+  /**
+  * Azure shared access signature.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#sas_token StorageTransferJob#sas_token}
+  */
+  readonly sasToken: string;
+}
+
+function storageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    sas_token: cdktf.stringToTerraform(struct!.sasToken),
+  }
+}
+
+export interface StorageTransferJobTransferSpecAzureBlobStorageDataSource {
+  /**
+  * The container to transfer from the Azure Storage account.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#container StorageTransferJob#container}
+  */
+  readonly container: string;
+  /**
+  * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#path StorageTransferJob#path}
+  */
+  readonly path?: string;
+  /**
+  * The name of the Azure Storage account.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#storage_account StorageTransferJob#storage_account}
+  */
+  readonly storageAccount: string;
+  /**
+  * azure_credentials block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#azure_credentials StorageTransferJob#azure_credentials}
+  */
+  readonly azureCredentials: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials[];
+}
+
+function storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container: cdktf.stringToTerraform(struct!.container),
+    path: cdktf.stringToTerraform(struct!.path),
+    storage_account: cdktf.stringToTerraform(struct!.storageAccount),
+    azure_credentials: cdktf.listMapper(storageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsToTerraform)(struct!.azureCredentials),
+  }
+}
+
 export interface StorageTransferJobTransferSpecGcsDataSink {
   /**
   * Google Cloud Storage bucket name.
@@ -334,6 +387,12 @@ export interface StorageTransferJobTransferSpec {
   */
   readonly awsS3DataSource?: StorageTransferJobTransferSpecAwsS3DataSource[];
   /**
+  * azure_blob_storage_data_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#azure_blob_storage_data_source StorageTransferJob#azure_blob_storage_data_source}
+  */
+  readonly azureBlobStorageDataSource?: StorageTransferJobTransferSpecAzureBlobStorageDataSource[];
+  /**
   * gcs_data_sink block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#gcs_data_sink StorageTransferJob#gcs_data_sink}
@@ -369,6 +428,7 @@ function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTr
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     aws_s3_data_source: cdktf.listMapper(storageTransferJobTransferSpecAwsS3DataSourceToTerraform)(struct!.awsS3DataSource),
+    azure_blob_storage_data_source: cdktf.listMapper(storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraform)(struct!.azureBlobStorageDataSource),
     gcs_data_sink: cdktf.listMapper(storageTransferJobTransferSpecGcsDataSinkToTerraform)(struct!.gcsDataSink),
     gcs_data_source: cdktf.listMapper(storageTransferJobTransferSpecGcsDataSourceToTerraform)(struct!.gcsDataSource),
     http_data_source: cdktf.listMapper(storageTransferJobTransferSpecHttpDataSourceToTerraform)(struct!.httpDataSource),

@@ -80,12 +80,25 @@ export interface ComputeHaVpnGatewayVpnInterfaces {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#id ComputeHaVpnGateway#id}
   */
   readonly id?: number;
+  /**
+  * URL of the interconnect attachment resource. When the value
+of this field is present, the VPN Gateway will be used for
+IPsec-encrypted Cloud Interconnect; all Egress or Ingress
+traffic for this VPN Gateway interface will go through the
+specified interconnect attachment resource.
+
+Not currently available publicly.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway.html#interconnect_attachment ComputeHaVpnGateway#interconnect_attachment}
+  */
+  readonly interconnectAttachment?: string;
 }
 
 function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVpnGatewayVpnInterfaces): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     id: cdktf.numberToTerraform(struct!.id),
+    interconnect_attachment: cdktf.stringToTerraform(struct!.interconnectAttachment),
   }
 }
 

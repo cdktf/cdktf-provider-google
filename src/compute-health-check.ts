@@ -84,6 +84,12 @@ consecutive failures. The default value is 2.
   */
   readonly httpsHealthCheck?: ComputeHealthCheckHttpsHealthCheck[];
   /**
+  * log_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#log_config ComputeHealthCheck#log_config}
+  */
+  readonly logConfig?: ComputeHealthCheckLogConfig[];
+  /**
   * ssl_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#ssl_health_check ComputeHealthCheck#ssl_health_check}
@@ -396,6 +402,23 @@ function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHealthChe
   }
 }
 
+export interface ComputeHealthCheckLogConfig {
+  /**
+  * Indicates whether or not to export logs. This is false by default,
+which means no health check logging will be done.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#enable ComputeHealthCheck#enable}
+  */
+  readonly enable?: boolean;
+}
+
+function computeHealthCheckLogConfigToTerraform(struct?: ComputeHealthCheckLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable: cdktf.booleanToTerraform(struct!.enable),
+  }
+}
+
 export interface ComputeHealthCheckSslHealthCheck {
   /**
   * The TCP port number for the SSL health check request.
@@ -603,6 +626,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
     this._http2HealthCheck = config.http2HealthCheck;
     this._httpHealthCheck = config.httpHealthCheck;
     this._httpsHealthCheck = config.httpsHealthCheck;
+    this._logConfig = config.logConfig;
     this._sslHealthCheck = config.sslHealthCheck;
     this._tcpHealthCheck = config.tcpHealthCheck;
     this._timeouts = config.timeouts;
@@ -805,6 +829,22 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
     return this._httpsHealthCheck
   }
 
+  // log_config - computed: false, optional: true, required: false
+  private _logConfig?: ComputeHealthCheckLogConfig[];
+  public get logConfig() {
+    return this.interpolationForAttribute('log_config') as any;
+  }
+  public set logConfig(value: ComputeHealthCheckLogConfig[] ) {
+    this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
+  }
+
   // ssl_health_check - computed: false, optional: true, required: false
   private _sslHealthCheck?: ComputeHealthCheckSslHealthCheck[];
   public get sslHealthCheck() {
@@ -870,6 +910,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
       http2_health_check: cdktf.listMapper(computeHealthCheckHttp2HealthCheckToTerraform)(this._http2HealthCheck),
       http_health_check: cdktf.listMapper(computeHealthCheckHttpHealthCheckToTerraform)(this._httpHealthCheck),
       https_health_check: cdktf.listMapper(computeHealthCheckHttpsHealthCheckToTerraform)(this._httpsHealthCheck),
+      log_config: cdktf.listMapper(computeHealthCheckLogConfigToTerraform)(this._logConfig),
       ssl_health_check: cdktf.listMapper(computeHealthCheckSslHealthCheckToTerraform)(this._sslHealthCheck),
       tcp_health_check: cdktf.listMapper(computeHealthCheckTcpHealthCheckToTerraform)(this._tcpHealthCheck),
       timeouts: computeHealthCheckTimeoutsToTerraform(this._timeouts),

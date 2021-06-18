@@ -40,12 +40,26 @@ except the last character, which cannot be a dash.
   */
   readonly name: string;
   /**
+  * The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#network ComputeAddress#network}
+  */
+  readonly network?: string;
+  /**
   * The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#network_tier ComputeAddress#network_tier}
   */
   readonly networkTier?: string;
+  /**
+  * The prefix length if the resource represents an IP range.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#prefix_length ComputeAddress#prefix_length}
+  */
+  readonly prefixLength?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#project ComputeAddress#project}
   */
@@ -61,7 +75,7 @@ specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
 
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
 
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
   that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
   Interconnect configuration. These addresses are regional resources.
 
@@ -144,7 +158,9 @@ export class ComputeAddress extends cdktf.TerraformResource {
     this._addressType = config.addressType;
     this._description = config.description;
     this._name = config.name;
+    this._network = config.network;
     this._networkTier = config.networkTier;
+    this._prefixLength = config.prefixLength;
     this._project = config.project;
     this._purpose = config.purpose;
     this._region = config.region;
@@ -227,6 +243,22 @@ export class ComputeAddress extends cdktf.TerraformResource {
     return this._name
   }
 
+  // network - computed: false, optional: true, required: false
+  private _network?: string;
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+  public set network(value: string ) {
+    this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
+  }
+
   // network_tier - computed: true, optional: true, required: false
   private _networkTier?: string;
   public get networkTier() {
@@ -241,6 +273,22 @@ export class ComputeAddress extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkTierInput() {
     return this._networkTier
+  }
+
+  // prefix_length - computed: false, optional: true, required: false
+  private _prefixLength?: number;
+  public get prefixLength() {
+    return this.getNumberAttribute('prefix_length');
+  }
+  public set prefixLength(value: number ) {
+    this._prefixLength = value;
+  }
+  public resetPrefixLength() {
+    this._prefixLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixLengthInput() {
+    return this._prefixLength
   }
 
   // project - computed: true, optional: true, required: false
@@ -343,7 +391,9 @@ export class ComputeAddress extends cdktf.TerraformResource {
       address_type: cdktf.stringToTerraform(this._addressType),
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
       network_tier: cdktf.stringToTerraform(this._networkTier),
+      prefix_length: cdktf.numberToTerraform(this._prefixLength),
       project: cdktf.stringToTerraform(this._project),
       purpose: cdktf.stringToTerraform(this._purpose),
       region: cdktf.stringToTerraform(this._region),
