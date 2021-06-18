@@ -201,6 +201,7 @@ export * from './datastore-index';
 export * from './deployment-manager-deployment';
 export * from './dialogflow-agent';
 export * from './dialogflow-entity-type';
+export * from './dialogflow-fulfillment';
 export * from './dialogflow-intent';
 export * from './dns-managed-zone';
 export * from './dns-policy';

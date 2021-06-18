@@ -91,6 +91,12 @@ consecutive failures. The default value is 2.
   */
   readonly httpsHealthCheck?: ComputeRegionHealthCheckHttpsHealthCheck[];
   /**
+  * log_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_health_check.html#log_config ComputeRegionHealthCheck#log_config}
+  */
+  readonly logConfig?: ComputeRegionHealthCheckLogConfig[];
+  /**
   * ssl_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_health_check.html#ssl_health_check ComputeRegionHealthCheck#ssl_health_check}
@@ -405,6 +411,23 @@ function computeRegionHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeReg
   }
 }
 
+export interface ComputeRegionHealthCheckLogConfig {
+  /**
+  * Indicates whether or not to export logs. This is false by default,
+which means no health check logging will be done.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_health_check.html#enable ComputeRegionHealthCheck#enable}
+  */
+  readonly enable?: boolean;
+}
+
+function computeRegionHealthCheckLogConfigToTerraform(struct?: ComputeRegionHealthCheckLogConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable: cdktf.booleanToTerraform(struct!.enable),
+  }
+}
+
 export interface ComputeRegionHealthCheckSslHealthCheck {
   /**
   * The TCP port number for the SSL health check request.
@@ -613,6 +636,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
     this._http2HealthCheck = config.http2HealthCheck;
     this._httpHealthCheck = config.httpHealthCheck;
     this._httpsHealthCheck = config.httpsHealthCheck;
+    this._logConfig = config.logConfig;
     this._sslHealthCheck = config.sslHealthCheck;
     this._tcpHealthCheck = config.tcpHealthCheck;
     this._timeouts = config.timeouts;
@@ -831,6 +855,22 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
     return this._httpsHealthCheck
   }
 
+  // log_config - computed: false, optional: true, required: false
+  private _logConfig?: ComputeRegionHealthCheckLogConfig[];
+  public get logConfig() {
+    return this.interpolationForAttribute('log_config') as any;
+  }
+  public set logConfig(value: ComputeRegionHealthCheckLogConfig[] ) {
+    this._logConfig = value;
+  }
+  public resetLogConfig() {
+    this._logConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigInput() {
+    return this._logConfig
+  }
+
   // ssl_health_check - computed: false, optional: true, required: false
   private _sslHealthCheck?: ComputeRegionHealthCheckSslHealthCheck[];
   public get sslHealthCheck() {
@@ -897,6 +937,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
       http2_health_check: cdktf.listMapper(computeRegionHealthCheckHttp2HealthCheckToTerraform)(this._http2HealthCheck),
       http_health_check: cdktf.listMapper(computeRegionHealthCheckHttpHealthCheckToTerraform)(this._httpHealthCheck),
       https_health_check: cdktf.listMapper(computeRegionHealthCheckHttpsHealthCheckToTerraform)(this._httpsHealthCheck),
+      log_config: cdktf.listMapper(computeRegionHealthCheckLogConfigToTerraform)(this._logConfig),
       ssl_health_check: cdktf.listMapper(computeRegionHealthCheckSslHealthCheckToTerraform)(this._sslHealthCheck),
       tcp_health_check: cdktf.listMapper(computeRegionHealthCheckTcpHealthCheckToTerraform)(this._tcpHealthCheck),
       timeouts: computeRegionHealthCheckTimeoutsToTerraform(this._timeouts),

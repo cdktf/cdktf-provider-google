@@ -14,7 +14,7 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ipCidrRange?: string;
   /**
-  * Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+  * Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 300.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#max_throughput VpcAccessConnector#max_throughput}
   */

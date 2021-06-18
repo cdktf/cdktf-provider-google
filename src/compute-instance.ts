@@ -140,6 +140,12 @@ export interface ComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly networkInterface: ComputeInstanceNetworkInterface[];
   /**
+  * reservation_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#reservation_affinity ComputeInstance#reservation_affinity}
+  */
+  readonly reservationAffinity?: ComputeInstanceReservationAffinity[];
+  /**
   * scheduling block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#scheduling ComputeInstance#scheduling}
@@ -455,6 +461,52 @@ function computeInstanceNetworkInterfaceToTerraform(struct?: ComputeInstanceNetw
   }
 }
 
+export interface ComputeInstanceReservationAffinitySpecificReservation {
+  /**
+  * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#key ComputeInstance#key}
+  */
+  readonly key: string;
+  /**
+  * Corresponds to the label values of a reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#values ComputeInstance#values}
+  */
+  readonly values: string[];
+}
+
+function computeInstanceReservationAffinitySpecificReservationToTerraform(struct?: ComputeInstanceReservationAffinitySpecificReservation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
+export interface ComputeInstanceReservationAffinity {
+  /**
+  * The type of reservation from which this instance can consume resources.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#type ComputeInstance#type}
+  */
+  readonly type: string;
+  /**
+  * specific_reservation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#specific_reservation ComputeInstance#specific_reservation}
+  */
+  readonly specificReservation?: ComputeInstanceReservationAffinitySpecificReservation[];
+}
+
+function computeInstanceReservationAffinityToTerraform(struct?: ComputeInstanceReservationAffinity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+    specific_reservation: cdktf.listMapper(computeInstanceReservationAffinitySpecificReservationToTerraform)(struct!.specificReservation),
+  }
+}
+
 export interface ComputeInstanceSchedulingNodeAffinities {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#key ComputeInstance#key}
@@ -664,6 +716,7 @@ export class ComputeInstance extends cdktf.TerraformResource {
     this._bootDisk = config.bootDisk;
     this._confidentialInstanceConfig = config.confidentialInstanceConfig;
     this._networkInterface = config.networkInterface;
+    this._reservationAffinity = config.reservationAffinity;
     this._scheduling = config.scheduling;
     this._scratchDisk = config.scratchDisk;
     this._serviceAccount = config.serviceAccount;
@@ -1055,6 +1108,22 @@ export class ComputeInstance extends cdktf.TerraformResource {
     return this._networkInterface
   }
 
+  // reservation_affinity - computed: false, optional: true, required: false
+  private _reservationAffinity?: ComputeInstanceReservationAffinity[];
+  public get reservationAffinity() {
+    return this.interpolationForAttribute('reservation_affinity') as any;
+  }
+  public set reservationAffinity(value: ComputeInstanceReservationAffinity[] ) {
+    this._reservationAffinity = value;
+  }
+  public resetReservationAffinity() {
+    this._reservationAffinity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationAffinityInput() {
+    return this._reservationAffinity
+  }
+
   // scheduling - computed: false, optional: true, required: false
   private _scheduling?: ComputeInstanceScheduling[];
   public get scheduling() {
@@ -1163,6 +1232,7 @@ export class ComputeInstance extends cdktf.TerraformResource {
       boot_disk: cdktf.listMapper(computeInstanceBootDiskToTerraform)(this._bootDisk),
       confidential_instance_config: cdktf.listMapper(computeInstanceConfidentialInstanceConfigToTerraform)(this._confidentialInstanceConfig),
       network_interface: cdktf.listMapper(computeInstanceNetworkInterfaceToTerraform)(this._networkInterface),
+      reservation_affinity: cdktf.listMapper(computeInstanceReservationAffinityToTerraform)(this._reservationAffinity),
       scheduling: cdktf.listMapper(computeInstanceSchedulingToTerraform)(this._scheduling),
       scratch_disk: cdktf.listMapper(computeInstanceScratchDiskToTerraform)(this._scratchDisk),
       service_account: cdktf.listMapper(computeInstanceServiceAccountToTerraform)(this._serviceAccount),

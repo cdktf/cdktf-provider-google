@@ -551,6 +551,12 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   */
   readonly diskAutoresize?: boolean;
   /**
+  * The maximum size, in GB, to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_autoresize_limit SqlDatabaseInstance#disk_autoresize_limit}
+  */
+  readonly diskAutoresizeLimit?: number;
+  /**
   * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_size SqlDatabaseInstance#disk_size}
@@ -632,6 +638,7 @@ function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSett
     availability_type: cdktf.stringToTerraform(struct!.availabilityType),
     crash_safe_replication: cdktf.booleanToTerraform(struct!.crashSafeReplication),
     disk_autoresize: cdktf.booleanToTerraform(struct!.diskAutoresize),
+    disk_autoresize_limit: cdktf.numberToTerraform(struct!.diskAutoresizeLimit),
     disk_size: cdktf.numberToTerraform(struct!.diskSize),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     pricing_plan: cdktf.stringToTerraform(struct!.pricingPlan),

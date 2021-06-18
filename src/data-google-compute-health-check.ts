@@ -157,6 +157,13 @@ export class DataGoogleComputeHealthCheckHttpsHealthCheck extends cdktf.ComplexC
     return this.getStringAttribute('response');
   }
 }
+export class DataGoogleComputeHealthCheckLogConfig extends cdktf.ComplexComputedList {
+
+  // enable - computed: true, optional: false, required: false
+  public get enable() {
+    return this.getBooleanAttribute('enable');
+  }
+}
 export class DataGoogleComputeHealthCheckSslHealthCheck extends cdktf.ComplexComputedList {
 
   // port - computed: true, optional: false, required: false
@@ -300,6 +307,11 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // log_config - computed: true, optional: false, required: false
+  public logConfig(index: string) {
+    return new DataGoogleComputeHealthCheckLogConfig(this, 'log_config', index);
   }
 
   // name - computed: false, optional: false, required: true

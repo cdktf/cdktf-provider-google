@@ -61,6 +61,12 @@ the supported values for the caller's project.
   */
   readonly project?: string;
   /**
+  * Indicates how many IOPS must be provisioned for the disk.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk.html#provisioned_iops ComputeDisk#provisioned_iops}
+  */
+  readonly provisionedIops?: number;
+  /**
   * Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the 'image' or
 'snapshot' parameter, or specify it alone to create an empty
@@ -296,6 +302,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
     this._name = config.name;
     this._physicalBlockSizeBytes = config.physicalBlockSizeBytes;
     this._project = config.project;
+    this._provisionedIops = config.provisionedIops;
     this._size = config.size;
     this._snapshot = config.snapshot;
     this._type = config.type;
@@ -426,6 +433,22 @@ export class ComputeDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project
+  }
+
+  // provisioned_iops - computed: false, optional: true, required: false
+  private _provisionedIops?: number;
+  public get provisionedIops() {
+    return this.getNumberAttribute('provisioned_iops');
+  }
+  public set provisionedIops(value: number ) {
+    this._provisionedIops = value;
+  }
+  public resetProvisionedIops() {
+    this._provisionedIops = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisionedIopsInput() {
+    return this._provisionedIops
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -588,6 +611,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       physical_block_size_bytes: cdktf.numberToTerraform(this._physicalBlockSizeBytes),
       project: cdktf.stringToTerraform(this._project),
+      provisioned_iops: cdktf.numberToTerraform(this._provisionedIops),
       size: cdktf.numberToTerraform(this._size),
       snapshot: cdktf.stringToTerraform(this._snapshot),
       type: cdktf.stringToTerraform(this._type),

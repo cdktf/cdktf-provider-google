@@ -338,6 +338,11 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
     return this.getBooleanAttribute('disk_autoresize');
   }
 
+  // disk_autoresize_limit - computed: true, optional: false, required: false
+  public get diskAutoresizeLimit() {
+    return this.getNumberAttribute('disk_autoresize_limit');
+  }
+
   // disk_size - computed: true, optional: false, required: false
   public get diskSize() {
     return this.getNumberAttribute('disk_size');

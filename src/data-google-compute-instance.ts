@@ -218,6 +218,30 @@ export class DataGoogleComputeInstanceNetworkInterface extends cdktf.ComplexComp
     return this.getStringAttribute('subnetwork_project');
   }
 }
+export class DataGoogleComputeInstanceReservationAffinitySpecificReservation extends cdktf.ComplexComputedList {
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // values - computed: true, optional: false, required: false
+  public get values() {
+    return this.getListAttribute('values');
+  }
+}
+export class DataGoogleComputeInstanceReservationAffinity extends cdktf.ComplexComputedList {
+
+  // specific_reservation - computed: true, optional: false, required: false
+  public get specificReservation() {
+    return this.interpolationForAttribute('specific_reservation') as any;
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
 export class DataGoogleComputeInstanceSchedulingNodeAffinities extends cdktf.ComplexComputedList {
 
   // key - computed: true, optional: false, required: false
@@ -481,6 +505,11 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project
+  }
+
+  // reservation_affinity - computed: true, optional: false, required: false
+  public reservationAffinity(index: string) {
+    return new DataGoogleComputeInstanceReservationAffinity(this, 'reservation_affinity', index);
   }
 
   // resource_policies - computed: true, optional: false, required: false
