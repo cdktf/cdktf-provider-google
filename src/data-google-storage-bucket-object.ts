@@ -112,6 +112,11 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
     return this.getStringAttribute('detect_md5hash');
   }
 
+  // event_based_hold - computed: true, optional: false, required: false
+  public get eventBasedHold() {
+    return this.getBooleanAttribute('event_based_hold');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -171,6 +176,11 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
   // storage_class - computed: true, optional: false, required: false
   public get storageClass() {
     return this.getStringAttribute('storage_class');
+  }
+
+  // temporary_hold - computed: true, optional: false, required: false
+  public get temporaryHold() {
+    return this.getBooleanAttribute('temporary_hold');
   }
 
   // =========

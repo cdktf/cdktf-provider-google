@@ -48,7 +48,7 @@ in the format 'organizations/{{org_name}}'.
   */
   readonly orgId: string;
   /**
-  * The size of the CIDR block range that will be reserved by the instance. Possible values: ["SLASH_16", "SLASH_20"]
+  * The size of the CIDR block range that will be reserved by the instance. Possible values: ["SLASH_16", "SLASH_20", "SLASH_22"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#peering_cidr_range ApigeeInstance#peering_cidr_range}
   */

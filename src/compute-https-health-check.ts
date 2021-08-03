@@ -50,7 +50,7 @@ last character, which cannot be a dash.
   readonly name: string;
   /**
   * The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_https_health_check.html#port ComputeHttpsHealthCheck#port}
   */

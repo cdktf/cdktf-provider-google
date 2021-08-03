@@ -28,6 +28,18 @@ export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.Terraform
   */
   readonly project: string;
 }
+export class DataGoogleComputeInstanceTemplateAdvancedMachineFeatures extends cdktf.ComplexComputedList {
+
+  // enable_nested_virtualization - computed: true, optional: false, required: false
+  public get enableNestedVirtualization() {
+    return this.getBooleanAttribute('enable_nested_virtualization');
+  }
+
+  // threads_per_core - computed: true, optional: false, required: false
+  public get threadsPerCore() {
+    return this.getNumberAttribute('threads_per_core');
+  }
+}
 export class DataGoogleComputeInstanceTemplateConfidentialInstanceConfig extends cdktf.ComplexComputedList {
 
   // enable_confidential_compute - computed: true, optional: false, required: false
@@ -331,6 +343,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // advanced_machine_features - computed: true, optional: false, required: false
+  public advancedMachineFeatures(index: string) {
+    return new DataGoogleComputeInstanceTemplateAdvancedMachineFeatures(this, 'advanced_machine_features', index);
+  }
 
   // can_ip_forward - computed: true, optional: false, required: false
   public get canIpForward() {

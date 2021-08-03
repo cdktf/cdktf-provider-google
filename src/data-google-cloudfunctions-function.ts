@@ -20,7 +20,7 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformM
   */
   readonly project?: string;
   /**
-  * Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+  * Region of function. If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#region DataGoogleCloudfunctionsFunction#region}
   */

@@ -54,6 +54,12 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   */
   readonly detectMd5Hash?: string;
   /**
+  * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#event_based_hold StorageBucketObject#event_based_hold}
+  */
+  readonly eventBasedHold?: boolean;
+  /**
   * Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata's kmsKeyName value, if any.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#kms_key_name StorageBucketObject#kms_key_name}
@@ -83,6 +89,12 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#storage_class StorageBucketObject#storage_class}
   */
   readonly storageClass?: string;
+  /**
+  * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#temporary_hold StorageBucketObject#temporary_hold}
+  */
+  readonly temporaryHold?: boolean;
 }
 
 /**
@@ -120,11 +132,13 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     this._contentLanguage = config.contentLanguage;
     this._contentType = config.contentType;
     this._detectMd5Hash = config.detectMd5Hash;
+    this._eventBasedHold = config.eventBasedHold;
     this._kmsKeyName = config.kmsKeyName;
     this._metadata = config.metadata;
     this._name = config.name;
     this._source = config.source;
     this._storageClass = config.storageClass;
+    this._temporaryHold = config.temporaryHold;
   }
 
   // ==========
@@ -261,6 +275,22 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     return this._detectMd5Hash
   }
 
+  // event_based_hold - computed: false, optional: true, required: false
+  private _eventBasedHold?: boolean;
+  public get eventBasedHold() {
+    return this.getBooleanAttribute('event_based_hold');
+  }
+  public set eventBasedHold(value: boolean ) {
+    this._eventBasedHold = value;
+  }
+  public resetEventBasedHold() {
+    this._eventBasedHold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventBasedHoldInput() {
+    return this._eventBasedHold
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -363,6 +393,22 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     return this._storageClass
   }
 
+  // temporary_hold - computed: false, optional: true, required: false
+  private _temporaryHold?: boolean;
+  public get temporaryHold() {
+    return this.getBooleanAttribute('temporary_hold');
+  }
+  public set temporaryHold(value: boolean ) {
+    this._temporaryHold = value;
+  }
+  public resetTemporaryHold() {
+    this._temporaryHold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get temporaryHoldInput() {
+    return this._temporaryHold
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -377,11 +423,13 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       content_language: cdktf.stringToTerraform(this._contentLanguage),
       content_type: cdktf.stringToTerraform(this._contentType),
       detect_md5hash: cdktf.stringToTerraform(this._detectMd5Hash),
+      event_based_hold: cdktf.booleanToTerraform(this._eventBasedHold),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       source: cdktf.stringToTerraform(this._source),
       storage_class: cdktf.stringToTerraform(this._storageClass),
+      temporary_hold: cdktf.booleanToTerraform(this._temporaryHold),
     };
   }
 }

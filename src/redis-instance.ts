@@ -121,11 +121,46 @@ network.
   */
   readonly tier?: string;
   /**
+  * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#transit_encryption_mode RedisInstance#transit_encryption_mode}
+  */
+  readonly transitEncryptionMode?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#timeouts RedisInstance#timeouts}
   */
   readonly timeouts?: RedisInstanceTimeouts;
+}
+export class RedisInstanceServerCaCerts extends cdktf.ComplexComputedList {
+
+  // cert - computed: true, optional: false, required: false
+  public get cert() {
+    return this.getStringAttribute('cert');
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // expire_time - computed: true, optional: false, required: false
+  public get expireTime() {
+    return this.getStringAttribute('expire_time');
+  }
+
+  // serial_number - computed: true, optional: false, required: false
+  public get serialNumber() {
+    return this.getStringAttribute('serial_number');
+  }
+
+  // sha1_fingerprint - computed: true, optional: false, required: false
+  public get sha1Fingerprint() {
+    return this.getStringAttribute('sha1_fingerprint');
+  }
 }
 export interface RedisInstanceTimeouts {
   /**
@@ -194,6 +229,7 @@ export class RedisInstance extends cdktf.TerraformResource {
     this._region = config.region;
     this._reservedIpRange = config.reservedIpRange;
     this._tier = config.tier;
+    this._transitEncryptionMode = config.transitEncryptionMode;
     this._timeouts = config.timeouts;
   }
 
@@ -454,6 +490,11 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._reservedIpRange
   }
 
+  // server_ca_certs - computed: true, optional: false, required: false
+  public serverCaCerts(index: string) {
+    return new RedisInstanceServerCaCerts(this, 'server_ca_certs', index);
+  }
+
   // tier - computed: false, optional: true, required: false
   private _tier?: string;
   public get tier() {
@@ -468,6 +509,22 @@ export class RedisInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
     return this._tier
+  }
+
+  // transit_encryption_mode - computed: false, optional: true, required: false
+  private _transitEncryptionMode?: string;
+  public get transitEncryptionMode() {
+    return this.getStringAttribute('transit_encryption_mode');
+  }
+  public set transitEncryptionMode(value: string ) {
+    this._transitEncryptionMode = value;
+  }
+  public resetTransitEncryptionMode() {
+    this._transitEncryptionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transitEncryptionModeInput() {
+    return this._transitEncryptionMode
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -507,6 +564,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),
       tier: cdktf.stringToTerraform(this._tier),
+      transit_encryption_mode: cdktf.stringToTerraform(this._transitEncryptionMode),
       timeouts: redisInstanceTimeoutsToTerraform(this._timeouts),
     };
   }

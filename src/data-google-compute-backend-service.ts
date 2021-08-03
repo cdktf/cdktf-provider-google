@@ -108,11 +108,58 @@ export class DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy extends cdkt
     return this.getListAttribute('query_string_whitelist');
   }
 }
+export class DataGoogleComputeBackendServiceCdnPolicyNegativeCachingPolicy extends cdktf.ComplexComputedList {
+
+  // code - computed: true, optional: false, required: false
+  public get code() {
+    return this.getNumberAttribute('code');
+  }
+
+  // ttl - computed: true, optional: false, required: false
+  public get ttl() {
+    return this.getNumberAttribute('ttl');
+  }
+}
 export class DataGoogleComputeBackendServiceCdnPolicy extends cdktf.ComplexComputedList {
 
   // cache_key_policy - computed: true, optional: false, required: false
   public get cacheKeyPolicy() {
     return this.interpolationForAttribute('cache_key_policy') as any;
+  }
+
+  // cache_mode - computed: true, optional: false, required: false
+  public get cacheMode() {
+    return this.getStringAttribute('cache_mode');
+  }
+
+  // client_ttl - computed: true, optional: false, required: false
+  public get clientTtl() {
+    return this.getNumberAttribute('client_ttl');
+  }
+
+  // default_ttl - computed: true, optional: false, required: false
+  public get defaultTtl() {
+    return this.getNumberAttribute('default_ttl');
+  }
+
+  // max_ttl - computed: true, optional: false, required: false
+  public get maxTtl() {
+    return this.getNumberAttribute('max_ttl');
+  }
+
+  // negative_caching - computed: true, optional: false, required: false
+  public get negativeCaching() {
+    return this.getBooleanAttribute('negative_caching');
+  }
+
+  // negative_caching_policy - computed: true, optional: false, required: false
+  public get negativeCachingPolicy() {
+    return this.interpolationForAttribute('negative_caching_policy') as any;
+  }
+
+  // serve_while_stale - computed: true, optional: false, required: false
+  public get serveWhileStale() {
+    return this.getNumberAttribute('serve_while_stale');
   }
 
   // signed_url_cache_max_age_sec - computed: true, optional: false, required: false
@@ -377,6 +424,11 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
   // custom_request_headers - computed: true, optional: false, required: false
   public get customRequestHeaders() {
     return this.getListAttribute('custom_request_headers');
+  }
+
+  // custom_response_headers - computed: true, optional: false, required: false
+  public get customResponseHeaders() {
+    return this.getListAttribute('custom_response_headers');
   }
 
   // description - computed: true, optional: false, required: false

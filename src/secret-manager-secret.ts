@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface SecretManagerSecretConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#expire_time SecretManagerSecret#expire_time}
+  */
+  readonly expireTime?: string;
+  /**
   * The labels assigned to this Secret.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
@@ -35,17 +42,36 @@ An object containing a list of "key": value pairs. Example:
   */
   readonly secretId: string;
   /**
+  * The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#ttl SecretManagerSecret#ttl}
+  */
+  readonly ttl?: string;
+  /**
   * replication block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#replication SecretManagerSecret#replication}
   */
   readonly replication: SecretManagerSecretReplication[];
   /**
+  * rotation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#rotation SecretManagerSecret#rotation}
+  */
+  readonly rotation?: SecretManagerSecretRotation[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#timeouts SecretManagerSecret#timeouts}
   */
   readonly timeouts?: SecretManagerSecretTimeouts;
+  /**
+  * topics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#topics SecretManagerSecret#topics}
+  */
+  readonly topics?: SecretManagerSecretTopics[];
 }
 export interface SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption {
   /**
@@ -125,6 +151,31 @@ function secretManagerSecretReplicationToTerraform(struct?: SecretManagerSecretR
   }
 }
 
+export interface SecretManagerSecretRotation {
+  /**
+  * Timestamp in UTC at which the Secret is scheduled to rotate.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#next_rotation_time SecretManagerSecret#next_rotation_time}
+  */
+  readonly nextRotationTime?: string;
+  /**
+  * The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
+If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time' will be advanced by this period when the service automatically sends rotation notifications.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#rotation_period SecretManagerSecret#rotation_period}
+  */
+  readonly rotationPeriod?: string;
+}
+
+function secretManagerSecretRotationToTerraform(struct?: SecretManagerSecretRotation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    next_rotation_time: cdktf.stringToTerraform(struct!.nextRotationTime),
+    rotation_period: cdktf.stringToTerraform(struct!.rotationPeriod),
+  }
+}
+
 export interface SecretManagerSecretTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#create SecretManagerSecret#create}
@@ -146,6 +197,23 @@ function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTime
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export interface SecretManagerSecretTopics {
+  /**
+  * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*\/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#name SecretManagerSecret#name}
+  */
+  readonly name: string;
+}
+
+function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecretTopics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
@@ -177,11 +245,15 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._expireTime = config.expireTime;
     this._labels = config.labels;
     this._project = config.project;
     this._secretId = config.secretId;
+    this._ttl = config.ttl;
     this._replication = config.replication;
+    this._rotation = config.rotation;
     this._timeouts = config.timeouts;
+    this._topics = config.topics;
   }
 
   // ==========
@@ -191,6 +263,22 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // expire_time - computed: true, optional: true, required: false
+  private _expireTime?: string;
+  public get expireTime() {
+    return this.getStringAttribute('expire_time');
+  }
+  public set expireTime(value: string) {
+    this._expireTime = value;
+  }
+  public resetExpireTime() {
+    this._expireTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expireTimeInput() {
+    return this._expireTime
   }
 
   // id - computed: true, optional: true, required: false
@@ -248,6 +336,22 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
     return this._secretId
   }
 
+  // ttl - computed: false, optional: true, required: false
+  private _ttl?: string;
+  public get ttl() {
+    return this.getStringAttribute('ttl');
+  }
+  public set ttl(value: string ) {
+    this._ttl = value;
+  }
+  public resetTtl() {
+    this._ttl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl
+  }
+
   // replication - computed: false, optional: false, required: true
   private _replication: SecretManagerSecretReplication[];
   public get replication() {
@@ -259,6 +363,22 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get replicationInput() {
     return this._replication
+  }
+
+  // rotation - computed: false, optional: true, required: false
+  private _rotation?: SecretManagerSecretRotation[];
+  public get rotation() {
+    return this.interpolationForAttribute('rotation') as any;
+  }
+  public set rotation(value: SecretManagerSecretRotation[] ) {
+    this._rotation = value;
+  }
+  public resetRotation() {
+    this._rotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rotationInput() {
+    return this._rotation
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -277,17 +397,37 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // topics - computed: false, optional: true, required: false
+  private _topics?: SecretManagerSecretTopics[];
+  public get topics() {
+    return this.interpolationForAttribute('topics') as any;
+  }
+  public set topics(value: SecretManagerSecretTopics[] ) {
+    this._topics = value;
+  }
+  public resetTopics() {
+    this._topics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicsInput() {
+    return this._topics
+  }
+
   // =========
   // SYNTHESIS
   // =========
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      expire_time: cdktf.stringToTerraform(this._expireTime),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       secret_id: cdktf.stringToTerraform(this._secretId),
+      ttl: cdktf.stringToTerraform(this._ttl),
       replication: cdktf.listMapper(secretManagerSecretReplicationToTerraform)(this._replication),
+      rotation: cdktf.listMapper(secretManagerSecretRotationToTerraform)(this._rotation),
       timeouts: secretManagerSecretTimeoutsToTerraform(this._timeouts),
+      topics: cdktf.listMapper(secretManagerSecretTopicsToTerraform)(this._topics),
     };
   }
 }

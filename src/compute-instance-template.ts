@@ -92,6 +92,12 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   */
   readonly tags?: string[];
   /**
+  * advanced_machine_features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#advanced_machine_features ComputeInstanceTemplate#advanced_machine_features}
+  */
+  readonly advancedMachineFeatures?: ComputeInstanceTemplateAdvancedMachineFeatures[];
+  /**
   * confidential_instance_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#confidential_instance_config ComputeInstanceTemplate#confidential_instance_config}
@@ -146,6 +152,29 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   */
   readonly timeouts?: ComputeInstanceTemplateTimeouts;
 }
+export interface ComputeInstanceTemplateAdvancedMachineFeatures {
+  /**
+  * Whether to enable nested virtualization or not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_nested_virtualization ComputeInstanceTemplate#enable_nested_virtualization}
+  */
+  readonly enableNestedVirtualization?: boolean;
+  /**
+  * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#threads_per_core ComputeInstanceTemplate#threads_per_core}
+  */
+  readonly threadsPerCore?: number;
+}
+
+function computeInstanceTemplateAdvancedMachineFeaturesToTerraform(struct?: ComputeInstanceTemplateAdvancedMachineFeatures): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_nested_virtualization: cdktf.booleanToTerraform(struct!.enableNestedVirtualization),
+    threads_per_core: cdktf.numberToTerraform(struct!.threadsPerCore),
+  }
+}
+
 export interface ComputeInstanceTemplateConfidentialInstanceConfig {
   /**
   * Defines whether the instance should have confidential compute enabled.
@@ -640,6 +669,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._tags = config.tags;
+    this._advancedMachineFeatures = config.advancedMachineFeatures;
     this._confidentialInstanceConfig = config.confidentialInstanceConfig;
     this._disk = config.disk;
     this._guestAccelerator = config.guestAccelerator;
@@ -896,6 +926,22 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     return this.getStringAttribute('tags_fingerprint');
   }
 
+  // advanced_machine_features - computed: false, optional: true, required: false
+  private _advancedMachineFeatures?: ComputeInstanceTemplateAdvancedMachineFeatures[];
+  public get advancedMachineFeatures() {
+    return this.interpolationForAttribute('advanced_machine_features') as any;
+  }
+  public set advancedMachineFeatures(value: ComputeInstanceTemplateAdvancedMachineFeatures[] ) {
+    this._advancedMachineFeatures = value;
+  }
+  public resetAdvancedMachineFeatures() {
+    this._advancedMachineFeatures = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedMachineFeaturesInput() {
+    return this._advancedMachineFeatures
+  }
+
   // confidential_instance_config - computed: false, optional: true, required: false
   private _confidentialInstanceConfig?: ComputeInstanceTemplateConfidentialInstanceConfig[];
   public get confidentialInstanceConfig() {
@@ -1057,6 +1103,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      advanced_machine_features: cdktf.listMapper(computeInstanceTemplateAdvancedMachineFeaturesToTerraform)(this._advancedMachineFeatures),
       confidential_instance_config: cdktf.listMapper(computeInstanceTemplateConfidentialInstanceConfigToTerraform)(this._confidentialInstanceConfig),
       disk: cdktf.listMapper(computeInstanceTemplateDiskToTerraform)(this._disk),
       guest_accelerator: cdktf.listMapper(computeInstanceTemplateGuestAcceleratorToTerraform)(this._guestAccelerator),

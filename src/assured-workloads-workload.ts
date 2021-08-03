@@ -1,0 +1,358 @@
+// https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#billing_account AssuredWorkloadsWorkload#billing_account}
+  */
+  readonly billingAccount: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
+  */
+  readonly complianceRegime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#display_name AssuredWorkloadsWorkload#display_name}
+  */
+  readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#labels AssuredWorkloadsWorkload#labels}
+  */
+  readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#location AssuredWorkloadsWorkload#location}
+  */
+  readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#organization AssuredWorkloadsWorkload#organization}
+  */
+  readonly organization: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
+  */
+  readonly provisionedResourcesParent?: string;
+  /**
+  * kms_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#kms_settings AssuredWorkloadsWorkload#kms_settings}
+  */
+  readonly kmsSettings?: AssuredWorkloadsWorkloadKmsSettings[];
+  /**
+  * resource_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_settings AssuredWorkloadsWorkload#resource_settings}
+  */
+  readonly resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[];
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#timeouts AssuredWorkloadsWorkload#timeouts}
+  */
+  readonly timeouts?: AssuredWorkloadsWorkloadTimeouts;
+}
+export class AssuredWorkloadsWorkloadResources extends cdktf.ComplexComputedList {
+
+  // resource_id - computed: true, optional: false, required: false
+  public get resourceId() {
+    return this.getNumberAttribute('resource_id');
+  }
+
+  // resource_type - computed: true, optional: false, required: false
+  public get resourceType() {
+    return this.getStringAttribute('resource_type');
+  }
+}
+export interface AssuredWorkloadsWorkloadKmsSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
+  */
+  readonly nextRotationTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#rotation_period AssuredWorkloadsWorkload#rotation_period}
+  */
+  readonly rotationPeriod: string;
+}
+
+function assuredWorkloadsWorkloadKmsSettingsToTerraform(struct?: AssuredWorkloadsWorkloadKmsSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    next_rotation_time: cdktf.stringToTerraform(struct!.nextRotationTime),
+    rotation_period: cdktf.stringToTerraform(struct!.rotationPeriod),
+  }
+}
+
+export interface AssuredWorkloadsWorkloadResourceSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_id AssuredWorkloadsWorkload#resource_id}
+  */
+  readonly resourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_type AssuredWorkloadsWorkload#resource_type}
+  */
+  readonly resourceType?: string;
+}
+
+function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: AssuredWorkloadsWorkloadResourceSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resource_id: cdktf.stringToTerraform(struct!.resourceId),
+    resource_type: cdktf.stringToTerraform(struct!.resourceType),
+  }
+}
+
+export interface AssuredWorkloadsWorkloadTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#create AssuredWorkloadsWorkload#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#delete AssuredWorkloadsWorkload#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#update AssuredWorkloadsWorkload#update}
+  */
+  readonly update?: string;
+}
+
+function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWorkloadTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html google_assured_workloads_workload}
+*/
+export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html google_assured_workloads_workload} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AssuredWorkloadsWorkloadConfig
+  */
+  public constructor(scope: Construct, id: string, config: AssuredWorkloadsWorkloadConfig) {
+    super(scope, id, {
+      terraformResourceType: 'google_assured_workloads_workload',
+      terraformGeneratorMetadata: {
+        providerName: 'google'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._billingAccount = config.billingAccount;
+    this._complianceRegime = config.complianceRegime;
+    this._displayName = config.displayName;
+    this._labels = config.labels;
+    this._location = config.location;
+    this._organization = config.organization;
+    this._provisionedResourcesParent = config.provisionedResourcesParent;
+    this._kmsSettings = config.kmsSettings;
+    this._resourceSettings = config.resourceSettings;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // billing_account - computed: false, optional: false, required: true
+  private _billingAccount: string;
+  public get billingAccount() {
+    return this.getStringAttribute('billing_account');
+  }
+  public set billingAccount(value: string) {
+    this._billingAccount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingAccountInput() {
+    return this._billingAccount
+  }
+
+  // compliance_regime - computed: false, optional: false, required: true
+  private _complianceRegime: string;
+  public get complianceRegime() {
+    return this.getStringAttribute('compliance_regime');
+  }
+  public set complianceRegime(value: string) {
+    this._complianceRegime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get complianceRegimeInput() {
+    return this._complianceRegime
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // display_name - computed: false, optional: false, required: true
+  private _displayName: string;
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string };
+  public get labels() {
+    return this.interpolationForAttribute('labels') as any;
+  }
+  public set labels(value: { [key: string]: string } ) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location: string;
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // organization - computed: false, optional: false, required: true
+  private _organization: string;
+  public get organization() {
+    return this.getStringAttribute('organization');
+  }
+  public set organization(value: string) {
+    this._organization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization
+  }
+
+  // provisioned_resources_parent - computed: false, optional: true, required: false
+  private _provisionedResourcesParent?: string;
+  public get provisionedResourcesParent() {
+    return this.getStringAttribute('provisioned_resources_parent');
+  }
+  public set provisionedResourcesParent(value: string ) {
+    this._provisionedResourcesParent = value;
+  }
+  public resetProvisionedResourcesParent() {
+    this._provisionedResourcesParent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisionedResourcesParentInput() {
+    return this._provisionedResourcesParent
+  }
+
+  // resources - computed: true, optional: false, required: false
+  public resources(index: string) {
+    return new AssuredWorkloadsWorkloadResources(this, 'resources', index);
+  }
+
+  // kms_settings - computed: false, optional: true, required: false
+  private _kmsSettings?: AssuredWorkloadsWorkloadKmsSettings[];
+  public get kmsSettings() {
+    return this.interpolationForAttribute('kms_settings') as any;
+  }
+  public set kmsSettings(value: AssuredWorkloadsWorkloadKmsSettings[] ) {
+    this._kmsSettings = value;
+  }
+  public resetKmsSettings() {
+    this._kmsSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsSettingsInput() {
+    return this._kmsSettings
+  }
+
+  // resource_settings - computed: false, optional: true, required: false
+  private _resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[];
+  public get resourceSettings() {
+    return this.interpolationForAttribute('resource_settings') as any;
+  }
+  public set resourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[] ) {
+    this._resourceSettings = value;
+  }
+  public resetResourceSettings() {
+    this._resourceSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceSettingsInput() {
+    return this._resourceSettings
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: AssuredWorkloadsWorkloadTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: AssuredWorkloadsWorkloadTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      billing_account: cdktf.stringToTerraform(this._billingAccount),
+      compliance_regime: cdktf.stringToTerraform(this._complianceRegime),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
+      organization: cdktf.stringToTerraform(this._organization),
+      provisioned_resources_parent: cdktf.stringToTerraform(this._provisionedResourcesParent),
+      kms_settings: cdktf.listMapper(assuredWorkloadsWorkloadKmsSettingsToTerraform)(this._kmsSettings),
+      resource_settings: cdktf.listMapper(assuredWorkloadsWorkloadResourceSettingsToTerraform)(this._resourceSettings),
+      timeouts: assuredWorkloadsWorkloadTimeoutsToTerraform(this._timeouts),
+    };
+  }
+}
