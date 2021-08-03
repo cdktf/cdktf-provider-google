@@ -74,7 +74,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly project?: string;
   /**
-  * Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+  * Region of function. If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#region CloudfunctionsFunction#region}
   */

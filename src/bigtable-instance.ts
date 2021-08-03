@@ -58,6 +58,12 @@ export interface BigtableInstanceCluster {
   */
   readonly clusterId: string;
   /**
+  * Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the cloudkms.cryptoKeyEncrypterDecrypter role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#kms_key_name BigtableInstance#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
+  /**
   * The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#num_nodes BigtableInstance#num_nodes}
@@ -81,6 +87,7 @@ function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): a
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     cluster_id: cdktf.stringToTerraform(struct!.clusterId),
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
     num_nodes: cdktf.numberToTerraform(struct!.numNodes),
     storage_type: cdktf.stringToTerraform(struct!.storageType),
     zone: cdktf.stringToTerraform(struct!.zone),

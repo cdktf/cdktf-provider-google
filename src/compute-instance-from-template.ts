@@ -140,6 +140,12 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   */
   readonly zone?: string;
   /**
+  * advanced_machine_features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#advanced_machine_features ComputeInstanceFromTemplate#advanced_machine_features}
+  */
+  readonly advancedMachineFeatures?: ComputeInstanceFromTemplateAdvancedMachineFeatures[];
+  /**
   * boot_disk block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#boot_disk ComputeInstanceFromTemplate#boot_disk}
@@ -270,6 +276,29 @@ function computeInstanceFromTemplateServiceAccountToTerraform(struct?: ComputeIn
   return {
     email: struct!.email === undefined ? null : cdktf.stringToTerraform(struct!.email),
     scopes: struct!.scopes === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.scopes),
+  }
+}
+
+export interface ComputeInstanceFromTemplateAdvancedMachineFeatures {
+  /**
+  * Whether to enable nested virtualization or not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_nested_virtualization ComputeInstanceFromTemplate#enable_nested_virtualization}
+  */
+  readonly enableNestedVirtualization?: boolean;
+  /**
+  * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#threads_per_core ComputeInstanceFromTemplate#threads_per_core}
+  */
+  readonly threadsPerCore?: number;
+}
+
+function computeInstanceFromTemplateAdvancedMachineFeaturesToTerraform(struct?: ComputeInstanceFromTemplateAdvancedMachineFeatures): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_nested_virtualization: cdktf.booleanToTerraform(struct!.enableNestedVirtualization),
+    threads_per_core: cdktf.numberToTerraform(struct!.threadsPerCore),
   }
 }
 
@@ -701,6 +730,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
     this._sourceInstanceTemplate = config.sourceInstanceTemplate;
     this._tags = config.tags;
     this._zone = config.zone;
+    this._advancedMachineFeatures = config.advancedMachineFeatures;
     this._bootDisk = config.bootDisk;
     this._confidentialInstanceConfig = config.confidentialInstanceConfig;
     this._networkInterface = config.networkInterface;
@@ -1100,6 +1130,22 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
     return this._zone
   }
 
+  // advanced_machine_features - computed: false, optional: true, required: false
+  private _advancedMachineFeatures?: ComputeInstanceFromTemplateAdvancedMachineFeatures[];
+  public get advancedMachineFeatures() {
+    return this.interpolationForAttribute('advanced_machine_features') as any;
+  }
+  public set advancedMachineFeatures(value: ComputeInstanceFromTemplateAdvancedMachineFeatures[] ) {
+    this._advancedMachineFeatures = value;
+  }
+  public resetAdvancedMachineFeatures() {
+    this._advancedMachineFeatures = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedMachineFeaturesInput() {
+    return this._advancedMachineFeatures
+  }
+
   // boot_disk - computed: false, optional: true, required: false
   private _bootDisk?: ComputeInstanceFromTemplateBootDisk[];
   public get bootDisk() {
@@ -1240,6 +1286,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       source_instance_template: cdktf.stringToTerraform(this._sourceInstanceTemplate),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       zone: cdktf.stringToTerraform(this._zone),
+      advanced_machine_features: cdktf.listMapper(computeInstanceFromTemplateAdvancedMachineFeaturesToTerraform)(this._advancedMachineFeatures),
       boot_disk: cdktf.listMapper(computeInstanceFromTemplateBootDiskToTerraform)(this._bootDisk),
       confidential_instance_config: cdktf.listMapper(computeInstanceFromTemplateConfidentialInstanceConfigToTerraform)(this._confidentialInstanceConfig),
       network_interface: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceToTerraform)(this._networkInterface),

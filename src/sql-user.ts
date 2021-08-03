@@ -142,12 +142,12 @@ export class SqlUser extends cdktf.TerraformResource {
     return this._deletionPolicy
   }
 
-  // host - computed: false, optional: true, required: false
+  // host - computed: true, optional: true, required: false
   private _host?: string;
   public get host() {
     return this.getStringAttribute('host');
   }
-  public set host(value: string ) {
+  public set host(value: string) {
     this._host = value;
   }
   public resetHost() {

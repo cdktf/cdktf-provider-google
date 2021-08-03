@@ -28,7 +28,7 @@ Set the value to 0 to use the default value.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#destination_dataset_id BigqueryDataTransferConfig#destination_dataset_id}
   */
-  readonly destinationDatasetId: string;
+  readonly destinationDatasetId?: string;
   /**
   * When set to true, no runs are scheduled for a given transfer.
   * 
@@ -286,13 +286,16 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
     return this._dataSourceId
   }
 
-  // destination_dataset_id - computed: false, optional: false, required: true
-  private _destinationDatasetId: string;
+  // destination_dataset_id - computed: false, optional: true, required: false
+  private _destinationDatasetId?: string;
   public get destinationDatasetId() {
     return this.getStringAttribute('destination_dataset_id');
   }
-  public set destinationDatasetId(value: string) {
+  public set destinationDatasetId(value: string ) {
     this._destinationDatasetId = value;
+  }
+  public resetDestinationDatasetId() {
+    this._destinationDatasetId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get destinationDatasetIdInput() {

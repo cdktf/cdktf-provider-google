@@ -1,0 +1,1156 @@
+// https://www.terraform.io/docs/providers/google/r/privateca_certificate.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface PrivatecaCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Certificate Authority name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#certificate_authority PrivatecaCertificate#certificate_authority}
+  */
+  readonly certificateAuthority?: string;
+  /**
+  * Labels with user-defined metadata to apply to this resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#labels PrivatecaCertificate#labels}
+  */
+  readonly labels?: { [key: string]: string };
+  /**
+  * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
+"notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
+fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#lifetime PrivatecaCertificate#lifetime}
+  */
+  readonly lifetime?: string;
+  /**
+  * Location of the Certificate. A full list of valid locations can be found by
+running 'gcloud privateca locations list'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#location PrivatecaCertificate#location}
+  */
+  readonly location: string;
+  /**
+  * The name for this Certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#name PrivatecaCertificate#name}
+  */
+  readonly name: string;
+  /**
+  * Immutable. A pem-encoded X.509 certificate signing request (CSR).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#pem_csr PrivatecaCertificate#pem_csr}
+  */
+  readonly pemCsr?: string;
+  /**
+  * The name of the CaPool this Certificate belongs to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#pool PrivatecaCertificate#pool}
+  */
+  readonly pool: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#project PrivatecaCertificate#project}
+  */
+  readonly project?: string;
+  /**
+  * config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#config PrivatecaCertificate#config}
+  */
+  readonly config?: PrivatecaCertificateConfigA[];
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#timeouts PrivatecaCertificate#timeouts}
+  */
+  readonly timeouts?: PrivatecaCertificateTimeouts;
+}
+export class PrivatecaCertificateCertificateDescriptionAuthorityKeyId extends cdktf.ComplexComputedList {
+
+  // key_id - computed: true, optional: false, required: false
+  public get keyId() {
+    return this.getStringAttribute('key_id');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionCertFingerprint extends cdktf.ComplexComputedList {
+
+  // sha256_hash - computed: true, optional: false, required: false
+  public get sha256Hash() {
+    return this.getStringAttribute('sha256_hash');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageBaseKeyUsageKeyUsageOptions extends cdktf.ComplexComputedList {
+
+  // cert_sign - computed: true, optional: false, required: false
+  public get certSign() {
+    return this.getBooleanAttribute('cert_sign');
+  }
+
+  // content_commitment - computed: true, optional: false, required: false
+  public get contentCommitment() {
+    return this.getBooleanAttribute('content_commitment');
+  }
+
+  // crl_sign - computed: true, optional: false, required: false
+  public get crlSign() {
+    return this.getBooleanAttribute('crl_sign');
+  }
+
+  // data_encipherment - computed: true, optional: false, required: false
+  public get dataEncipherment() {
+    return this.getBooleanAttribute('data_encipherment');
+  }
+
+  // decipher_only - computed: true, optional: false, required: false
+  public get decipherOnly() {
+    return this.getBooleanAttribute('decipher_only');
+  }
+
+  // digital_signature - computed: true, optional: false, required: false
+  public get digitalSignature() {
+    return this.getBooleanAttribute('digital_signature');
+  }
+
+  // encipher_only - computed: true, optional: false, required: false
+  public get encipherOnly() {
+    return this.getBooleanAttribute('encipher_only');
+  }
+
+  // key_agreement - computed: true, optional: false, required: false
+  public get keyAgreement() {
+    return this.getBooleanAttribute('key_agreement');
+  }
+
+  // key_encipherment - computed: true, optional: false, required: false
+  public get keyEncipherment() {
+    return this.getBooleanAttribute('key_encipherment');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageBaseKeyUsage extends cdktf.ComplexComputedList {
+
+  // key_usage_options - computed: true, optional: false, required: false
+  public get keyUsageOptions() {
+    return this.interpolationForAttribute('key_usage_options') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageExtendedKeyUsage extends cdktf.ComplexComputedList {
+
+  // client_auth - computed: true, optional: false, required: false
+  public get clientAuth() {
+    return this.getBooleanAttribute('client_auth');
+  }
+
+  // code_signing - computed: true, optional: false, required: false
+  public get codeSigning() {
+    return this.getBooleanAttribute('code_signing');
+  }
+
+  // email_protection - computed: true, optional: false, required: false
+  public get emailProtection() {
+    return this.getBooleanAttribute('email_protection');
+  }
+
+  // ocsp_signing - computed: true, optional: false, required: false
+  public get ocspSigning() {
+    return this.getBooleanAttribute('ocsp_signing');
+  }
+
+  // server_auth - computed: true, optional: false, required: false
+  public get serverAuth() {
+    return this.getBooleanAttribute('server_auth');
+  }
+
+  // time_stamping - computed: true, optional: false, required: false
+  public get timeStamping() {
+    return this.getBooleanAttribute('time_stamping');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageUnknownExtendedKeyUsagesObectId extends cdktf.ComplexComputedList {
+
+  // object_id_path - computed: true, optional: false, required: false
+  public get objectIdPath() {
+    return this.interpolationForAttribute('object_id_path') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageUnknownExtendedKeyUsages extends cdktf.ComplexComputedList {
+
+  // obect_id - computed: true, optional: false, required: false
+  public get obectId() {
+    return this.interpolationForAttribute('obect_id') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsage extends cdktf.ComplexComputedList {
+
+  // base_key_usage - computed: true, optional: false, required: false
+  public get baseKeyUsage() {
+    return this.interpolationForAttribute('base_key_usage') as any;
+  }
+
+  // extended_key_usage - computed: true, optional: false, required: false
+  public get extendedKeyUsage() {
+    return this.interpolationForAttribute('extended_key_usage') as any;
+  }
+
+  // unknown_extended_key_usages - computed: true, optional: false, required: false
+  public get unknownExtendedKeyUsages() {
+    return this.interpolationForAttribute('unknown_extended_key_usages') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionConfigValues extends cdktf.ComplexComputedList {
+
+  // key_usage - computed: true, optional: false, required: false
+  public get keyUsage() {
+    return this.interpolationForAttribute('key_usage') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionPublicKey extends cdktf.ComplexComputedList {
+
+  // format - computed: true, optional: false, required: false
+  public get format() {
+    return this.getStringAttribute('format');
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubject extends cdktf.ComplexComputedList {
+
+  // common_name - computed: true, optional: false, required: false
+  public get commonName() {
+    return this.getStringAttribute('common_name');
+  }
+
+  // country_code - computed: true, optional: false, required: false
+  public get countryCode() {
+    return this.getStringAttribute('country_code');
+  }
+
+  // locality - computed: true, optional: false, required: false
+  public get locality() {
+    return this.getStringAttribute('locality');
+  }
+
+  // organization - computed: true, optional: false, required: false
+  public get organization() {
+    return this.getStringAttribute('organization');
+  }
+
+  // organizational_unit - computed: true, optional: false, required: false
+  public get organizationalUnit() {
+    return this.getStringAttribute('organizational_unit');
+  }
+
+  // postal_code - computed: true, optional: false, required: false
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+
+  // province - computed: true, optional: false, required: false
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+
+  // street_address - computed: true, optional: false, required: false
+  public get streetAddress() {
+    return this.getStringAttribute('street_address');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSansObectId extends cdktf.ComplexComputedList {
+
+  // object_id_path - computed: true, optional: false, required: false
+  public get objectIdPath() {
+    return this.interpolationForAttribute('object_id_path') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSans extends cdktf.ComplexComputedList {
+
+  // critical - computed: true, optional: false, required: false
+  public get critical() {
+    return this.getBooleanAttribute('critical');
+  }
+
+  // obect_id - computed: true, optional: false, required: false
+  public get obectId() {
+    return this.interpolationForAttribute('obect_id') as any;
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubjectAltName extends cdktf.ComplexComputedList {
+
+  // custom_sans - computed: true, optional: false, required: false
+  public get customSans() {
+    return this.interpolationForAttribute('custom_sans') as any;
+  }
+
+  // dns_names - computed: true, optional: false, required: false
+  public get dnsNames() {
+    return this.getListAttribute('dns_names');
+  }
+
+  // email_addresses - computed: true, optional: false, required: false
+  public get emailAddresses() {
+    return this.getListAttribute('email_addresses');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // uris - computed: true, optional: false, required: false
+  public get uris() {
+    return this.getListAttribute('uris');
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionSubjectDescription extends cdktf.ComplexComputedList {
+
+  // hex_serial_number - computed: true, optional: false, required: false
+  public get hexSerialNumber() {
+    return this.getStringAttribute('hex_serial_number');
+  }
+
+  // lifetime - computed: true, optional: false, required: false
+  public get lifetime() {
+    return this.getStringAttribute('lifetime');
+  }
+
+  // not_after_time - computed: true, optional: false, required: false
+  public get notAfterTime() {
+    return this.getStringAttribute('not_after_time');
+  }
+
+  // not_before_time - computed: true, optional: false, required: false
+  public get notBeforeTime() {
+    return this.getStringAttribute('not_before_time');
+  }
+
+  // subject - computed: true, optional: false, required: false
+  public get subject() {
+    return this.interpolationForAttribute('subject') as any;
+  }
+
+  // subject_alt_name - computed: true, optional: false, required: false
+  public get subjectAltName() {
+    return this.interpolationForAttribute('subject_alt_name') as any;
+  }
+}
+export class PrivatecaCertificateCertificateDescriptionSubjectKeyId extends cdktf.ComplexComputedList {
+
+  // key_id - computed: true, optional: false, required: false
+  public get keyId() {
+    return this.getStringAttribute('key_id');
+  }
+}
+export class PrivatecaCertificateCertificateDescription extends cdktf.ComplexComputedList {
+
+  // aia_issuing_certificate_urls - computed: true, optional: false, required: false
+  public get aiaIssuingCertificateUrls() {
+    return this.getListAttribute('aia_issuing_certificate_urls');
+  }
+
+  // authority_key_id - computed: true, optional: false, required: false
+  public get authorityKeyId() {
+    return this.interpolationForAttribute('authority_key_id') as any;
+  }
+
+  // cert_fingerprint - computed: true, optional: false, required: false
+  public get certFingerprint() {
+    return this.interpolationForAttribute('cert_fingerprint') as any;
+  }
+
+  // config_values - computed: true, optional: false, required: false
+  public get configValues() {
+    return this.interpolationForAttribute('config_values') as any;
+  }
+
+  // crl_distribution_points - computed: true, optional: false, required: false
+  public get crlDistributionPoints() {
+    return this.getListAttribute('crl_distribution_points');
+  }
+
+  // public_key - computed: true, optional: false, required: false
+  public get publicKey() {
+    return this.interpolationForAttribute('public_key') as any;
+  }
+
+  // subject_description - computed: true, optional: false, required: false
+  public get subjectDescription() {
+    return this.interpolationForAttribute('subject_description') as any;
+  }
+
+  // subject_key_id - computed: true, optional: false, required: false
+  public get subjectKeyId() {
+    return this.interpolationForAttribute('subject_key_id') as any;
+  }
+}
+export class PrivatecaCertificateRevocationDetails extends cdktf.ComplexComputedList {
+
+  // revocation_state - computed: true, optional: false, required: false
+  public get revocationState() {
+    return this.getStringAttribute('revocation_state');
+  }
+
+  // revocation_time - computed: true, optional: false, required: false
+  public get revocationTime() {
+    return this.getStringAttribute('revocation_time');
+  }
+}
+export interface PrivatecaCertificateConfigPublicKey {
+  /**
+  * The format of the public key. Currently, only PEM format is supported. Possible values: ["KEY_TYPE_UNSPECIFIED", "PEM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#format PrivatecaCertificate#format}
+  */
+  readonly format: string;
+  /**
+  * Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key PrivatecaCertificate#key}
+  */
+  readonly key?: string;
+}
+
+function privatecaCertificateConfigPublicKeyToTerraform(struct?: PrivatecaCertificateConfigPublicKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    format: cdktf.stringToTerraform(struct!.format),
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
+export interface PrivatecaCertificateConfigSubjectConfigSubject {
+  /**
+  * The common name of the distinguished name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#common_name PrivatecaCertificate#common_name}
+  */
+  readonly commonName: string;
+  /**
+  * The country code of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#country_code PrivatecaCertificate#country_code}
+  */
+  readonly countryCode?: string;
+  /**
+  * The locality or city of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#locality PrivatecaCertificate#locality}
+  */
+  readonly locality?: string;
+  /**
+  * The organization of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#organization PrivatecaCertificate#organization}
+  */
+  readonly organization: string;
+  /**
+  * The organizational unit of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#organizational_unit PrivatecaCertificate#organizational_unit}
+  */
+  readonly organizationalUnit?: string;
+  /**
+  * The postal code of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#postal_code PrivatecaCertificate#postal_code}
+  */
+  readonly postalCode?: string;
+  /**
+  * The province, territory, or regional state of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#province PrivatecaCertificate#province}
+  */
+  readonly province?: string;
+  /**
+  * The street address of the subject.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#street_address PrivatecaCertificate#street_address}
+  */
+  readonly streetAddress?: string;
+}
+
+function privatecaCertificateConfigSubjectConfigSubjectToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigSubject): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    common_name: cdktf.stringToTerraform(struct!.commonName),
+    country_code: cdktf.stringToTerraform(struct!.countryCode),
+    locality: cdktf.stringToTerraform(struct!.locality),
+    organization: cdktf.stringToTerraform(struct!.organization),
+    organizational_unit: cdktf.stringToTerraform(struct!.organizationalUnit),
+    postal_code: cdktf.stringToTerraform(struct!.postalCode),
+    province: cdktf.stringToTerraform(struct!.province),
+    street_address: cdktf.stringToTerraform(struct!.streetAddress),
+  }
+}
+
+export interface PrivatecaCertificateConfigSubjectConfigSubjectAltName {
+  /**
+  * Contains only valid, fully-qualified host names.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#dns_names PrivatecaCertificate#dns_names}
+  */
+  readonly dnsNames?: string[];
+  /**
+  * Contains only valid RFC 2822 E-mail addresses.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#email_addresses PrivatecaCertificate#email_addresses}
+  */
+  readonly emailAddresses?: string[];
+  /**
+  * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#ip_addresses PrivatecaCertificate#ip_addresses}
+  */
+  readonly ipAddresses?: string[];
+  /**
+  * Contains only valid RFC 3986 URIs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#uris PrivatecaCertificate#uris}
+  */
+  readonly uris?: string[];
+}
+
+function privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigSubjectAltName): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dns_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsNames),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
+    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
+    uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.uris),
+  }
+}
+
+export interface PrivatecaCertificateConfigSubjectConfig {
+  /**
+  * subject block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#subject PrivatecaCertificate#subject}
+  */
+  readonly subject: PrivatecaCertificateConfigSubjectConfigSubject[];
+  /**
+  * subject_alt_name block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#subject_alt_name PrivatecaCertificate#subject_alt_name}
+  */
+  readonly subjectAltName?: PrivatecaCertificateConfigSubjectConfigSubjectAltName[];
+}
+
+function privatecaCertificateConfigSubjectConfigToTerraform(struct?: PrivatecaCertificateConfigSubjectConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    subject: cdktf.listMapper(privatecaCertificateConfigSubjectConfigSubjectToTerraform)(struct!.subject),
+    subject_alt_name: cdktf.listMapper(privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform)(struct!.subjectAltName),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId {
+  /**
+  * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#object_id_path PrivatecaCertificate#object_id_path}
+  */
+  readonly objectIdPath: number[];
+}
+
+function privatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdToTerraform(struct?: PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigAdditionalExtensions {
+  /**
+  * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+handle this extension, the client should consider this to be an error).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#critical PrivatecaCertificate#critical}
+  */
+  readonly critical: boolean;
+  /**
+  * The value of this X.509 extension. A base64-encoded string.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#value PrivatecaCertificate#value}
+  */
+  readonly value: string;
+  /**
+  * object_id block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#object_id PrivatecaCertificate#object_id}
+  */
+  readonly objectId: PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId[];
+}
+
+function privatecaCertificateConfigX509ConfigAdditionalExtensionsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigAdditionalExtensions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    critical: cdktf.booleanToTerraform(struct!.critical),
+    value: cdktf.stringToTerraform(struct!.value),
+    object_id: cdktf.listMapper(privatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdToTerraform)(struct!.objectId),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigCaOptions {
+  /**
+  * Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing,
+the extension will be omitted from the CA certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#is_ca PrivatecaCertificate#is_ca}
+  */
+  readonly isCa?: boolean;
+  /**
+  * Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
+subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
+value is missing, the max path length will be omitted from the CA certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#max_issuer_path_length PrivatecaCertificate#max_issuer_path_length}
+  */
+  readonly maxIssuerPathLength?: number;
+}
+
+function privatecaCertificateConfigX509ConfigCaOptionsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigCaOptions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    is_ca: cdktf.booleanToTerraform(struct!.isCa),
+    max_issuer_path_length: cdktf.numberToTerraform(struct!.maxIssuerPathLength),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage {
+  /**
+  * The key may be used to sign certificates.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#cert_sign PrivatecaCertificate#cert_sign}
+  */
+  readonly certSign?: boolean;
+  /**
+  * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#content_commitment PrivatecaCertificate#content_commitment}
+  */
+  readonly contentCommitment?: boolean;
+  /**
+  * The key may be used sign certificate revocation lists.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#crl_sign PrivatecaCertificate#crl_sign}
+  */
+  readonly crlSign?: boolean;
+  /**
+  * The key may be used to encipher data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#data_encipherment PrivatecaCertificate#data_encipherment}
+  */
+  readonly dataEncipherment?: boolean;
+  /**
+  * The key may be used to decipher only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#decipher_only PrivatecaCertificate#decipher_only}
+  */
+  readonly decipherOnly?: boolean;
+  /**
+  * The key may be used for digital signatures.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#digital_signature PrivatecaCertificate#digital_signature}
+  */
+  readonly digitalSignature?: boolean;
+  /**
+  * The key may be used to encipher only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#encipher_only PrivatecaCertificate#encipher_only}
+  */
+  readonly encipherOnly?: boolean;
+  /**
+  * The key may be used in a key agreement protocol.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key_agreement PrivatecaCertificate#key_agreement}
+  */
+  readonly keyAgreement?: boolean;
+  /**
+  * The key may be used to encipher other keys.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key_encipherment PrivatecaCertificate#key_encipherment}
+  */
+  readonly keyEncipherment?: boolean;
+}
+
+function privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cert_sign: cdktf.booleanToTerraform(struct!.certSign),
+    content_commitment: cdktf.booleanToTerraform(struct!.contentCommitment),
+    crl_sign: cdktf.booleanToTerraform(struct!.crlSign),
+    data_encipherment: cdktf.booleanToTerraform(struct!.dataEncipherment),
+    decipher_only: cdktf.booleanToTerraform(struct!.decipherOnly),
+    digital_signature: cdktf.booleanToTerraform(struct!.digitalSignature),
+    encipher_only: cdktf.booleanToTerraform(struct!.encipherOnly),
+    key_agreement: cdktf.booleanToTerraform(struct!.keyAgreement),
+    key_encipherment: cdktf.booleanToTerraform(struct!.keyEncipherment),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage {
+  /**
+  * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#client_auth PrivatecaCertificate#client_auth}
+  */
+  readonly clientAuth?: boolean;
+  /**
+  * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#code_signing PrivatecaCertificate#code_signing}
+  */
+  readonly codeSigning?: boolean;
+  /**
+  * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#email_protection PrivatecaCertificate#email_protection}
+  */
+  readonly emailProtection?: boolean;
+  /**
+  * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#ocsp_signing PrivatecaCertificate#ocsp_signing}
+  */
+  readonly ocspSigning?: boolean;
+  /**
+  * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#server_auth PrivatecaCertificate#server_auth}
+  */
+  readonly serverAuth?: boolean;
+  /**
+  * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#time_stamping PrivatecaCertificate#time_stamping}
+  */
+  readonly timeStamping?: boolean;
+}
+
+function privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_auth: cdktf.booleanToTerraform(struct!.clientAuth),
+    code_signing: cdktf.booleanToTerraform(struct!.codeSigning),
+    email_protection: cdktf.booleanToTerraform(struct!.emailProtection),
+    ocsp_signing: cdktf.booleanToTerraform(struct!.ocspSigning),
+    server_auth: cdktf.booleanToTerraform(struct!.serverAuth),
+    time_stamping: cdktf.booleanToTerraform(struct!.timeStamping),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages {
+  /**
+  * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#object_id_path PrivatecaCertificate#object_id_path}
+  */
+  readonly objectIdPath: number[];
+}
+
+function privatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigKeyUsage {
+  /**
+  * base_key_usage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#base_key_usage PrivatecaCertificate#base_key_usage}
+  */
+  readonly baseKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage[];
+  /**
+  * extended_key_usage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#extended_key_usage PrivatecaCertificate#extended_key_usage}
+  */
+  readonly extendedKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage[];
+  /**
+  * unknown_extended_key_usages block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#unknown_extended_key_usages PrivatecaCertificate#unknown_extended_key_usages}
+  */
+  readonly unknownExtendedKeyUsages?: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages[];
+}
+
+function privatecaCertificateConfigX509ConfigKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    base_key_usage: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform)(struct!.baseKeyUsage),
+    extended_key_usage: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform)(struct!.extendedKeyUsage),
+    unknown_extended_key_usages: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform)(struct!.unknownExtendedKeyUsages),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509ConfigPolicyIds {
+  /**
+  * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#object_id_path PrivatecaCertificate#object_id_path}
+  */
+  readonly objectIdPath: number[];
+}
+
+function privatecaCertificateConfigX509ConfigPolicyIdsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigPolicyIds): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+  }
+}
+
+export interface PrivatecaCertificateConfigX509Config {
+  /**
+  * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+"Authority Information Access" extension in the certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#aia_ocsp_servers PrivatecaCertificate#aia_ocsp_servers}
+  */
+  readonly aiaOcspServers?: string[];
+  /**
+  * additional_extensions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#additional_extensions PrivatecaCertificate#additional_extensions}
+  */
+  readonly additionalExtensions?: PrivatecaCertificateConfigX509ConfigAdditionalExtensions[];
+  /**
+  * ca_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#ca_options PrivatecaCertificate#ca_options}
+  */
+  readonly caOptions?: PrivatecaCertificateConfigX509ConfigCaOptions[];
+  /**
+  * key_usage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key_usage PrivatecaCertificate#key_usage}
+  */
+  readonly keyUsage: PrivatecaCertificateConfigX509ConfigKeyUsage[];
+  /**
+  * policy_ids block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#policy_ids PrivatecaCertificate#policy_ids}
+  */
+  readonly policyIds?: PrivatecaCertificateConfigX509ConfigPolicyIds[];
+}
+
+function privatecaCertificateConfigX509ConfigToTerraform(struct?: PrivatecaCertificateConfigX509Config): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aia_ocsp_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.aiaOcspServers),
+    additional_extensions: cdktf.listMapper(privatecaCertificateConfigX509ConfigAdditionalExtensionsToTerraform)(struct!.additionalExtensions),
+    ca_options: cdktf.listMapper(privatecaCertificateConfigX509ConfigCaOptionsToTerraform)(struct!.caOptions),
+    key_usage: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageToTerraform)(struct!.keyUsage),
+    policy_ids: cdktf.listMapper(privatecaCertificateConfigX509ConfigPolicyIdsToTerraform)(struct!.policyIds),
+  }
+}
+
+export interface PrivatecaCertificateConfigA {
+  /**
+  * public_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#public_key PrivatecaCertificate#public_key}
+  */
+  readonly publicKey: PrivatecaCertificateConfigPublicKey[];
+  /**
+  * subject_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#subject_config PrivatecaCertificate#subject_config}
+  */
+  readonly subjectConfig: PrivatecaCertificateConfigSubjectConfig[];
+  /**
+  * x509_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#x509_config PrivatecaCertificate#x509_config}
+  */
+  readonly x509Config: PrivatecaCertificateConfigX509Config[];
+}
+
+function privatecaCertificateConfigAToTerraform(struct?: PrivatecaCertificateConfigA): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    public_key: cdktf.listMapper(privatecaCertificateConfigPublicKeyToTerraform)(struct!.publicKey),
+    subject_config: cdktf.listMapper(privatecaCertificateConfigSubjectConfigToTerraform)(struct!.subjectConfig),
+    x509_config: cdktf.listMapper(privatecaCertificateConfigX509ConfigToTerraform)(struct!.x509Config),
+  }
+}
+
+export interface PrivatecaCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#create PrivatecaCertificate#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#delete PrivatecaCertificate#delete}
+  */
+  readonly delete?: string;
+}
+
+function privatecaCertificateTimeoutsToTerraform(struct?: PrivatecaCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+  }
+}
+
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html google_privateca_certificate}
+*/
+export class PrivatecaCertificate extends cdktf.TerraformResource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html google_privateca_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PrivatecaCertificateConfig
+  */
+  public constructor(scope: Construct, id: string, config: PrivatecaCertificateConfig) {
+    super(scope, id, {
+      terraformResourceType: 'google_privateca_certificate',
+      terraformGeneratorMetadata: {
+        providerName: 'google'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._certificateAuthority = config.certificateAuthority;
+    this._labels = config.labels;
+    this._lifetime = config.lifetime;
+    this._location = config.location;
+    this._name = config.name;
+    this._pemCsr = config.pemCsr;
+    this._pool = config.pool;
+    this._project = config.project;
+    this._config = config.config;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // certificate_authority - computed: false, optional: true, required: false
+  private _certificateAuthority?: string;
+  public get certificateAuthority() {
+    return this.getStringAttribute('certificate_authority');
+  }
+  public set certificateAuthority(value: string ) {
+    this._certificateAuthority = value;
+  }
+  public resetCertificateAuthority() {
+    this._certificateAuthority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateAuthorityInput() {
+    return this._certificateAuthority
+  }
+
+  // certificate_description - computed: true, optional: false, required: false
+  public certificateDescription(index: string) {
+    return new PrivatecaCertificateCertificateDescription(this, 'certificate_description', index);
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string };
+  public get labels() {
+    return this.interpolationForAttribute('labels') as any;
+  }
+  public set labels(value: { [key: string]: string } ) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
+
+  // lifetime - computed: false, optional: true, required: false
+  private _lifetime?: string;
+  public get lifetime() {
+    return this.getStringAttribute('lifetime');
+  }
+  public set lifetime(value: string ) {
+    this._lifetime = value;
+  }
+  public resetLifetime() {
+    this._lifetime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lifetimeInput() {
+    return this._lifetime
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location: string;
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name: string;
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // pem_certificate - computed: true, optional: false, required: false
+  public get pemCertificate() {
+    return this.getStringAttribute('pem_certificate');
+  }
+
+  // pem_certificates - computed: true, optional: false, required: false
+  public get pemCertificates() {
+    return this.getListAttribute('pem_certificates');
+  }
+
+  // pem_csr - computed: false, optional: true, required: false
+  private _pemCsr?: string;
+  public get pemCsr() {
+    return this.getStringAttribute('pem_csr');
+  }
+  public set pemCsr(value: string ) {
+    this._pemCsr = value;
+  }
+  public resetPemCsr() {
+    this._pemCsr = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemCsrInput() {
+    return this._pemCsr
+  }
+
+  // pool - computed: false, optional: false, required: true
+  private _pool: string;
+  public get pool() {
+    return this.getStringAttribute('pool');
+  }
+  public set pool(value: string) {
+    this._pool = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get poolInput() {
+    return this._pool
+  }
+
+  // project - computed: true, optional: true, required: false
+  private _project?: string;
+  public get project() {
+    return this.getStringAttribute('project');
+  }
+  public set project(value: string) {
+    this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
+
+  // revocation_details - computed: true, optional: false, required: false
+  public revocationDetails(index: string) {
+    return new PrivatecaCertificateRevocationDetails(this, 'revocation_details', index);
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // config - computed: false, optional: true, required: false
+  private _config?: PrivatecaCertificateConfigA[];
+  public get config() {
+    return this.interpolationForAttribute('config') as any;
+  }
+  public set config(value: PrivatecaCertificateConfigA[] ) {
+    this._config = value;
+  }
+  public resetConfig() {
+    this._config = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configInput() {
+    return this._config
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: PrivatecaCertificateTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: PrivatecaCertificateTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      certificate_authority: cdktf.stringToTerraform(this._certificateAuthority),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      lifetime: cdktf.stringToTerraform(this._lifetime),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      pem_csr: cdktf.stringToTerraform(this._pemCsr),
+      pool: cdktf.stringToTerraform(this._pool),
+      project: cdktf.stringToTerraform(this._project),
+      config: cdktf.listMapper(privatecaCertificateConfigAToTerraform)(this._config),
+      timeouts: privatecaCertificateTimeoutsToTerraform(this._timeouts),
+    };
+  }
+}

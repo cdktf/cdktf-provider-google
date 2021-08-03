@@ -33,6 +33,13 @@ requests.
   */
   readonly customRequestHeaders?: string[];
   /**
+  * Headers that the HTTP/S load balancer should add to proxied
+responses.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#custom_response_headers ComputeBackendService#custom_response_headers}
+  */
+  readonly customResponseHeaders?: string[];
+  /**
   * An optional description of this resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#description ComputeBackendService#description}
@@ -318,8 +325,7 @@ either maxRate or maxRatePerInstance must be set.
   readonly maxRatePerInstance?: number;
   /**
   * Used when balancingMode is UTILIZATION. This ratio defines the
-CPU utilization target for the group. The default is 0.8. Valid
-range is [0.0, 1.0].
+CPU utilization target for the group. Valid range is [0.0, 1.0].
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_utilization ComputeBackendService#max_utilization}
   */
@@ -403,7 +409,70 @@ function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: Comput
   }
 }
 
+export interface ComputeBackendServiceCdnPolicyNegativeCachingPolicy {
+  /**
+  * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+can be specified as values, and you cannot specify a status code more than once.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#code ComputeBackendService#code}
+  */
+  readonly code?: number;
+  /**
+  * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#ttl ComputeBackendService#ttl}
+  */
+  readonly ttl?: number;
+}
+
+function computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    code: cdktf.numberToTerraform(struct!.code),
+    ttl: cdktf.numberToTerraform(struct!.ttl),
+  }
+}
+
 export interface ComputeBackendServiceCdnPolicy {
+  /**
+  * Specifies the cache setting for all responses from this backend.
+The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: ["USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "CACHE_ALL_STATIC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#cache_mode ComputeBackendService#cache_mode}
+  */
+  readonly cacheMode?: string;
+  /**
+  * Specifies the maximum allowed TTL for cached content served by this origin.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#client_ttl ComputeBackendService#client_ttl}
+  */
+  readonly clientTtl?: number;
+  /**
+  * Specifies the default TTL for cached content served by this origin for responses
+that do not have an existing valid TTL (max-age or s-max-age).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#default_ttl ComputeBackendService#default_ttl}
+  */
+  readonly defaultTtl?: number;
+  /**
+  * Specifies the maximum allowed TTL for cached content served by this origin.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#max_ttl ComputeBackendService#max_ttl}
+  */
+  readonly maxTtl?: number;
+  /**
+  * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#negative_caching ComputeBackendService#negative_caching}
+  */
+  readonly negativeCaching?: boolean;
+  /**
+  * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#serve_while_stale ComputeBackendService#serve_while_stale}
+  */
+  readonly serveWhileStale?: number;
   /**
   * Maximum number of seconds the response to a signed URL request
 will be considered fresh, defaults to 1hr (3600s). After this
@@ -425,13 +494,26 @@ responses will not be altered.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#cache_key_policy ComputeBackendService#cache_key_policy}
   */
   readonly cacheKeyPolicy?: ComputeBackendServiceCdnPolicyCacheKeyPolicy[];
+  /**
+  * negative_caching_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#negative_caching_policy ComputeBackendService#negative_caching_policy}
+  */
+  readonly negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[];
 }
 
 function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    cache_mode: cdktf.stringToTerraform(struct!.cacheMode),
+    client_ttl: cdktf.numberToTerraform(struct!.clientTtl),
+    default_ttl: cdktf.numberToTerraform(struct!.defaultTtl),
+    max_ttl: cdktf.numberToTerraform(struct!.maxTtl),
+    negative_caching: cdktf.booleanToTerraform(struct!.negativeCaching),
+    serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
     cache_key_policy: cdktf.listMapper(computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform)(struct!.cacheKeyPolicy),
+    negative_caching_policy: cdktf.listMapper(computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
   }
 }
 
@@ -844,6 +926,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     this._affinityCookieTtlSec = config.affinityCookieTtlSec;
     this._connectionDrainingTimeoutSec = config.connectionDrainingTimeoutSec;
     this._customRequestHeaders = config.customRequestHeaders;
+    this._customResponseHeaders = config.customResponseHeaders;
     this._description = config.description;
     this._enableCdn = config.enableCdn;
     this._healthChecks = config.healthChecks;
@@ -921,6 +1004,22 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customRequestHeadersInput() {
     return this._customRequestHeaders
+  }
+
+  // custom_response_headers - computed: false, optional: true, required: false
+  private _customResponseHeaders?: string[];
+  public get customResponseHeaders() {
+    return this.getListAttribute('custom_response_headers');
+  }
+  public set customResponseHeaders(value: string[] ) {
+    this._customResponseHeaders = value;
+  }
+  public resetCustomResponseHeaders() {
+    this._customResponseHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customResponseHeadersInput() {
+    return this._customResponseHeaders
   }
 
   // description - computed: false, optional: true, required: false
@@ -1264,6 +1363,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
       connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
       custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customRequestHeaders),
+      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
       health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),

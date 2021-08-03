@@ -24,6 +24,33 @@ export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArgume
   */
   readonly region?: string;
 }
+export class DataGoogleRedisInstanceServerCaCerts extends cdktf.ComplexComputedList {
+
+  // cert - computed: true, optional: false, required: false
+  public get cert() {
+    return this.getStringAttribute('cert');
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // expire_time - computed: true, optional: false, required: false
+  public get expireTime() {
+    return this.getStringAttribute('expire_time');
+  }
+
+  // serial_number - computed: true, optional: false, required: false
+  public get serialNumber() {
+    return this.getStringAttribute('serial_number');
+  }
+
+  // sha1_fingerprint - computed: true, optional: false, required: false
+  public get sha1Fingerprint() {
+    return this.getStringAttribute('sha1_fingerprint');
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html google_redis_instance}
@@ -196,9 +223,19 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
     return this.getStringAttribute('reserved_ip_range');
   }
 
+  // server_ca_certs - computed: true, optional: false, required: false
+  public serverCaCerts(index: string) {
+    return new DataGoogleRedisInstanceServerCaCerts(this, 'server_ca_certs', index);
+  }
+
   // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
+  }
+
+  // transit_encryption_mode - computed: true, optional: false, required: false
+  public get transitEncryptionMode() {
+    return this.getStringAttribute('transit_encryption_mode');
   }
 
   // =========

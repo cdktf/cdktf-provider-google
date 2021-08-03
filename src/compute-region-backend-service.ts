@@ -422,7 +422,62 @@ function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: 
   }
 }
 
+export interface ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy {
+  /**
+  * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+can be specified as values, and you cannot specify a status code more than once.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#code ComputeRegionBackendService#code}
+  */
+  readonly code?: number;
+}
+
+function computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    code: cdktf.numberToTerraform(struct!.code),
+  }
+}
+
 export interface ComputeRegionBackendServiceCdnPolicy {
+  /**
+  * Specifies the cache setting for all responses from this backend.
+The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: ["USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "CACHE_ALL_STATIC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#cache_mode ComputeRegionBackendService#cache_mode}
+  */
+  readonly cacheMode?: string;
+  /**
+  * Specifies the maximum allowed TTL for cached content served by this origin.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#client_ttl ComputeRegionBackendService#client_ttl}
+  */
+  readonly clientTtl?: number;
+  /**
+  * Specifies the default TTL for cached content served by this origin for responses
+that do not have an existing valid TTL (max-age or s-max-age).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#default_ttl ComputeRegionBackendService#default_ttl}
+  */
+  readonly defaultTtl?: number;
+  /**
+  * Specifies the maximum allowed TTL for cached content served by this origin.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#max_ttl ComputeRegionBackendService#max_ttl}
+  */
+  readonly maxTtl?: number;
+  /**
+  * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#negative_caching ComputeRegionBackendService#negative_caching}
+  */
+  readonly negativeCaching?: boolean;
+  /**
+  * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#serve_while_stale ComputeRegionBackendService#serve_while_stale}
+  */
+  readonly serveWhileStale?: number;
   /**
   * Maximum number of seconds the response to a signed URL request
 will be considered fresh, defaults to 1hr (3600s). After this
@@ -444,13 +499,26 @@ responses will not be altered.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#cache_key_policy ComputeRegionBackendService#cache_key_policy}
   */
   readonly cacheKeyPolicy?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy[];
+  /**
+  * negative_caching_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#negative_caching_policy ComputeRegionBackendService#negative_caching_policy}
+  */
+  readonly negativeCachingPolicy?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[];
 }
 
 function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    cache_mode: cdktf.stringToTerraform(struct!.cacheMode),
+    client_ttl: cdktf.numberToTerraform(struct!.clientTtl),
+    default_ttl: cdktf.numberToTerraform(struct!.defaultTtl),
+    max_ttl: cdktf.numberToTerraform(struct!.maxTtl),
+    negative_caching: cdktf.booleanToTerraform(struct!.negativeCaching),
+    serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
     cache_key_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform)(struct!.cacheKeyPolicy),
+    negative_caching_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
   }
 }
 

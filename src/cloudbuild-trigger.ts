@@ -90,6 +90,12 @@ a build.
   */
   readonly github?: CloudbuildTriggerGithub[];
   /**
+  * pubsub_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#pubsub_config CloudbuildTrigger#pubsub_config}
+  */
+  readonly pubsubConfig?: CloudbuildTriggerPubsubConfig[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#timeouts CloudbuildTrigger#timeouts}
@@ -101,6 +107,12 @@ a build.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#trigger_template CloudbuildTrigger#trigger_template}
   */
   readonly triggerTemplate?: CloudbuildTriggerTriggerTemplate[];
+  /**
+  * webhook_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#webhook_config CloudbuildTrigger#webhook_config}
+  */
+  readonly webhookConfig?: CloudbuildTriggerWebhookConfig[];
 }
 export interface CloudbuildTriggerBuildArtifactsObjects {
   /**
@@ -809,6 +821,29 @@ function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGithub): a
   }
 }
 
+export interface CloudbuildTriggerPubsubConfig {
+  /**
+  * Service account that will make the push request.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#service_account_email CloudbuildTrigger#service_account_email}
+  */
+  readonly serviceAccountEmail?: string;
+  /**
+  * The name of the topic from which this subscription is receiving messages.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#topic CloudbuildTrigger#topic}
+  */
+  readonly topic: string;
+}
+
+function cloudbuildTriggerPubsubConfigToTerraform(struct?: CloudbuildTriggerPubsubConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
 export interface CloudbuildTriggerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#create CloudbuildTrigger#create}
@@ -898,6 +933,22 @@ function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerT
   }
 }
 
+export interface CloudbuildTriggerWebhookConfig {
+  /**
+  * Resource name for the secret required as a URL parameter.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#secret CloudbuildTrigger#secret}
+  */
+  readonly secret: string;
+}
+
+function cloudbuildTriggerWebhookConfigToTerraform(struct?: CloudbuildTriggerWebhookConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    secret: cdktf.stringToTerraform(struct!.secret),
+  }
+}
+
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html google_cloudbuild_trigger}
@@ -937,8 +988,10 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._build = config.buildAttribute;
     this._github = config.github;
+    this._pubsubConfig = config.pubsubConfig;
     this._timeouts = config.timeouts;
     this._triggerTemplate = config.triggerTemplate;
+    this._webhookConfig = config.webhookConfig;
   }
 
   // ==========
@@ -1136,6 +1189,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     return this._github
   }
 
+  // pubsub_config - computed: false, optional: true, required: false
+  private _pubsubConfig?: CloudbuildTriggerPubsubConfig[];
+  public get pubsubConfig() {
+    return this.interpolationForAttribute('pubsub_config') as any;
+  }
+  public set pubsubConfig(value: CloudbuildTriggerPubsubConfig[] ) {
+    this._pubsubConfig = value;
+  }
+  public resetPubsubConfig() {
+    this._pubsubConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubConfigInput() {
+    return this._pubsubConfig
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CloudbuildTriggerTimeouts;
   public get timeouts() {
@@ -1168,6 +1237,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     return this._triggerTemplate
   }
 
+  // webhook_config - computed: false, optional: true, required: false
+  private _webhookConfig?: CloudbuildTriggerWebhookConfig[];
+  public get webhookConfig() {
+    return this.interpolationForAttribute('webhook_config') as any;
+  }
+  public set webhookConfig(value: CloudbuildTriggerWebhookConfig[] ) {
+    this._webhookConfig = value;
+  }
+  public resetWebhookConfig() {
+    this._webhookConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookConfigInput() {
+    return this._webhookConfig
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -1185,8 +1270,10 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       build: cdktf.listMapper(cloudbuildTriggerBuildToTerraform)(this._build),
       github: cdktf.listMapper(cloudbuildTriggerGithubToTerraform)(this._github),
+      pubsub_config: cdktf.listMapper(cloudbuildTriggerPubsubConfigToTerraform)(this._pubsubConfig),
       timeouts: cloudbuildTriggerTimeoutsToTerraform(this._timeouts),
       trigger_template: cdktf.listMapper(cloudbuildTriggerTriggerTemplateToTerraform)(this._triggerTemplate),
+      webhook_config: cdktf.listMapper(cloudbuildTriggerWebhookConfigToTerraform)(this._webhookConfig),
     };
   }
 }
