@@ -605,7 +605,7 @@ export interface MonitoringSloWindowsBasedSliMetricMeanInRange {
 specifying the TimeSeries to use for evaluating window
 The provided TimeSeries must have ValueType = INT64 or
 ValueType = DOUBLE and MetricKind = GAUGE. Mean value 'X'
-should satisfy 'range.min <= X < range.max'
+should satisfy 'range.min <= X <= range.max'
 under good service.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#time_series MonitoringSlo#time_series}
@@ -663,7 +663,7 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 
 Summed value 'X' should satisfy
-'range.min <= X < range.max' for a good window.
+'range.min <= X <= range.max' for a good window.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#time_series MonitoringSlo#time_series}
   */

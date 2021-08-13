@@ -95,7 +95,36 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#temporary_hold StorageBucketObject#temporary_hold}
   */
   readonly temporaryHold?: boolean;
+  /**
+  * customer_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#customer_encryption StorageBucketObject#customer_encryption}
+  */
+  readonly customerEncryption?: StorageBucketObjectCustomerEncryption[];
 }
+export interface StorageBucketObjectCustomerEncryption {
+  /**
+  * The encryption algorithm. Default: AES256
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#encryption_algorithm StorageBucketObject#encryption_algorithm}
+  */
+  readonly encryptionAlgorithm?: string;
+  /**
+  * Base64 encoded customer supplied encryption key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#encryption_key StorageBucketObject#encryption_key}
+  */
+  readonly encryptionKey: string;
+}
+
+function storageBucketObjectCustomerEncryptionToTerraform(struct?: StorageBucketObjectCustomerEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encryption_algorithm: cdktf.stringToTerraform(struct!.encryptionAlgorithm),
+    encryption_key: cdktf.stringToTerraform(struct!.encryptionKey),
+  }
+}
+
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html google_storage_bucket_object}
@@ -139,6 +168,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     this._source = config.source;
     this._storageClass = config.storageClass;
     this._temporaryHold = config.temporaryHold;
+    this._customerEncryption = config.customerEncryption;
   }
 
   // ==========
@@ -409,6 +439,22 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     return this._temporaryHold
   }
 
+  // customer_encryption - computed: false, optional: true, required: false
+  private _customerEncryption?: StorageBucketObjectCustomerEncryption[];
+  public get customerEncryption() {
+    return this.interpolationForAttribute('customer_encryption') as any;
+  }
+  public set customerEncryption(value: StorageBucketObjectCustomerEncryption[] ) {
+    this._customerEncryption = value;
+  }
+  public resetCustomerEncryption() {
+    this._customerEncryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerEncryptionInput() {
+    return this._customerEncryption
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -430,6 +476,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       source: cdktf.stringToTerraform(this._source),
       storage_class: cdktf.stringToTerraform(this._storageClass),
       temporary_hold: cdktf.booleanToTerraform(this._temporaryHold),
+      customer_encryption: cdktf.listMapper(storageBucketObjectCustomerEncryptionToTerraform)(this._customerEncryption),
     };
   }
 }
