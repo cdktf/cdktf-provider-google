@@ -48,11 +48,19 @@ If not provided, a random string starting with 'tf-' will be selected.
   */
   readonly name?: string;
   /**
-  * The number of nodes allocated to this instance.
+  * The number of nodes allocated to this instance. At most one of either node_count or processing_units
+can be present in terraform.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#num_nodes SpannerInstance#num_nodes}
   */
   readonly numNodes?: number;
+  /**
+  * The number of processing units allocated to this instance. At most one of processing_units 
+or node_count can be present in terraform.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#processing_units SpannerInstance#processing_units}
+  */
+  readonly processingUnits?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#project SpannerInstance#project}
   */
@@ -122,6 +130,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
     this._labels = config.labels;
     this._name = config.name;
     this._numNodes = config.numNodes;
+    this._processingUnits = config.processingUnits;
     this._project = config.project;
     this._timeouts = config.timeouts;
   }
@@ -209,12 +218,12 @@ export class SpannerInstance extends cdktf.TerraformResource {
     return this._name
   }
 
-  // num_nodes - computed: false, optional: true, required: false
+  // num_nodes - computed: true, optional: true, required: false
   private _numNodes?: number;
   public get numNodes() {
     return this.getNumberAttribute('num_nodes');
   }
-  public set numNodes(value: number ) {
+  public set numNodes(value: number) {
     this._numNodes = value;
   }
   public resetNumNodes() {
@@ -223,6 +232,22 @@ export class SpannerInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get numNodesInput() {
     return this._numNodes
+  }
+
+  // processing_units - computed: true, optional: true, required: false
+  private _processingUnits?: number;
+  public get processingUnits() {
+    return this.getNumberAttribute('processing_units');
+  }
+  public set processingUnits(value: number) {
+    this._processingUnits = value;
+  }
+  public resetProcessingUnits() {
+    this._processingUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get processingUnitsInput() {
+    return this._processingUnits
   }
 
   // project - computed: true, optional: true, required: false
@@ -274,6 +299,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       num_nodes: cdktf.numberToTerraform(this._numNodes),
+      processing_units: cdktf.numberToTerraform(this._processingUnits),
       project: cdktf.stringToTerraform(this._project),
       timeouts: spannerInstanceTimeoutsToTerraform(this._timeouts),
     };

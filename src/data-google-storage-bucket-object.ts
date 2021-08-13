@@ -20,6 +20,18 @@ export interface DataGoogleStorageBucketObjectConfig extends cdktf.TerraformMeta
   */
   readonly name?: string;
 }
+export class DataGoogleStorageBucketObjectCustomerEncryption extends cdktf.ComplexComputedList {
+
+  // encryption_algorithm - computed: true, optional: false, required: false
+  public get encryptionAlgorithm() {
+    return this.getStringAttribute('encryption_algorithm');
+  }
+
+  // encryption_key - computed: true, optional: false, required: false
+  public get encryptionKey() {
+    return this.getStringAttribute('encryption_key');
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object.html google_storage_bucket_object}
@@ -105,6 +117,11 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
   // crc32c - computed: true, optional: false, required: false
   public get crc32C() {
     return this.getStringAttribute('crc32c');
+  }
+
+  // customer_encryption - computed: true, optional: false, required: false
+  public customerEncryption(index: string) {
+    return new DataGoogleStorageBucketObjectCustomerEncryption(this, 'customer_encryption', index);
   }
 
   // detect_md5hash - computed: true, optional: false, required: false
