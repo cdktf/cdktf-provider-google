@@ -204,6 +204,7 @@ export * from './deployment-manager-deployment';
 export * from './dialogflow-agent';
 export * from './dialogflow-cx-agent';
 export * from './dialogflow-cx-entity-type';
+export * from './dialogflow-cx-environment';
 export * from './dialogflow-cx-flow';
 export * from './dialogflow-cx-intent';
 export * from './dialogflow-cx-page';

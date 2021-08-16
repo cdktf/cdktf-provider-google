@@ -87,6 +87,11 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
   // protection_level - computed: true, optional: false, required: false
   public get protectionLevel() {
     return this.getStringAttribute('protection_level');
