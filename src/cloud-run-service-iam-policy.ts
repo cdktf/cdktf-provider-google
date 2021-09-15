@@ -30,6 +30,11 @@ export interface CloudRunServiceIamPolicyConfig extends cdktf.TerraformMetaArgum
 */
 export class CloudRunServiceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_service_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -64,6 +64,11 @@ function iapTunnelInstanceIamMemberConditionToTerraform(struct?: IapTunnelInstan
 */
 export class IapTunnelInstanceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_tunnel_instance_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

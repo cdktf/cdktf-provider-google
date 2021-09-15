@@ -41,7 +41,7 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#proxy_bind ComputeTargetTcpProxy#proxy_bind}
   */
-  readonly proxyBind?: boolean;
+  readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
   * Specifies the type of proxy header to append before sending data to
 the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
@@ -85,6 +85,11 @@ function computeTargetTcpProxyTimeoutsToTerraform(struct?: ComputeTargetTcpProxy
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html google_compute_target_tcp_proxy}
 */
 export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_tcp_proxy";
 
   // ===========
   // INITIALIZER
@@ -190,11 +195,11 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
 
   // proxy_bind - computed: true, optional: true, required: false
-  private _proxyBind?: boolean;
+  private _proxyBind?: boolean | cdktf.IResolvable;
   public get proxyBind() {
     return this.getBooleanAttribute('proxy_bind');
   }
-  public set proxyBind(value: boolean) {
+  public set proxyBind(value: boolean | cdktf.IResolvable) {
     this._proxyBind = value;
   }
   public resetProxyBind() {

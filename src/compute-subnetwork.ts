@@ -49,7 +49,7 @@ access Google APIs and services by using Private Google Access.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#private_ip_google_access ComputeSubnetwork#private_ip_google_access}
   */
-  readonly privateIpGoogleAccess?: boolean;
+  readonly privateIpGoogleAccess?: boolean | cdktf.IResolvable;
   /**
   * The private IPv6 google access type for the VMs in this subnet.
   * 
@@ -61,11 +61,33 @@ access Google APIs and services by using Private Google Access.
   */
   readonly project?: string;
   /**
+  * The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set 'role'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#purpose ComputeSubnetwork#purpose}
+  */
+  readonly purpose?: string;
+  /**
   * The GCP region for this subnetwork.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#region ComputeSubnetwork#region}
   */
   readonly region?: string;
+  /**
+  * The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining. Possible values: ["ACTIVE", "BACKUP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#role ComputeSubnetwork#role}
+  */
+  readonly role?: string;
   /**
   * An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
@@ -199,6 +221,11 @@ function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkTimeouts
 */
 export class ComputeSubnetwork extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_subnetwork";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -228,7 +255,9 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     this._privateIpGoogleAccess = config.privateIpGoogleAccess;
     this._privateIpv6GoogleAccess = config.privateIpv6GoogleAccess;
     this._project = config.project;
+    this._purpose = config.purpose;
     this._region = config.region;
+    this._role = config.role;
     this._secondaryIpRange = config.secondaryIpRange;
     this._logConfig = config.logConfig;
     this._timeouts = config.timeouts;
@@ -314,11 +343,11 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
 
   // private_ip_google_access - computed: false, optional: true, required: false
-  private _privateIpGoogleAccess?: boolean;
+  private _privateIpGoogleAccess?: boolean | cdktf.IResolvable;
   public get privateIpGoogleAccess() {
     return this.getBooleanAttribute('private_ip_google_access');
   }
-  public set privateIpGoogleAccess(value: boolean ) {
+  public set privateIpGoogleAccess(value: boolean | cdktf.IResolvable ) {
     this._privateIpGoogleAccess = value;
   }
   public resetPrivateIpGoogleAccess() {
@@ -361,6 +390,22 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     return this._project
   }
 
+  // purpose - computed: true, optional: true, required: false
+  private _purpose?: string;
+  public get purpose() {
+    return this.getStringAttribute('purpose');
+  }
+  public set purpose(value: string) {
+    this._purpose = value;
+  }
+  public resetPurpose() {
+    this._purpose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purposeInput() {
+    return this._purpose
+  }
+
   // region - computed: true, optional: true, required: false
   private _region?: string;
   public get region() {
@@ -375,6 +420,22 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
     return this._region
+  }
+
+  // role - computed: false, optional: true, required: false
+  private _role?: string;
+  public get role() {
+    return this.getStringAttribute('role');
+  }
+  public set role(value: string ) {
+    this._role = value;
+  }
+  public resetRole() {
+    this._role = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // secondary_ip_range - computed: true, optional: true, required: false
@@ -443,7 +504,9 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       private_ip_google_access: cdktf.booleanToTerraform(this._privateIpGoogleAccess),
       private_ipv6_google_access: cdktf.stringToTerraform(this._privateIpv6GoogleAccess),
       project: cdktf.stringToTerraform(this._project),
+      purpose: cdktf.stringToTerraform(this._purpose),
       region: cdktf.stringToTerraform(this._region),
+      role: cdktf.stringToTerraform(this._role),
       secondary_ip_range: cdktf.listMapper(computeSubnetworkSecondaryIpRangeToTerraform)(this._secondaryIpRange),
       log_config: cdktf.listMapper(computeSubnetworkLogConfigToTerraform)(this._logConfig),
       timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts),

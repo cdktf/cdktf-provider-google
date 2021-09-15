@@ -28,7 +28,7 @@ groups that are clusters.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html#is_cluster MonitoringGroup#is_cluster}
   */
-  readonly isCluster?: boolean;
+  readonly isCluster?: boolean | cdktf.IResolvable;
   /**
   * The name of the group's parent, if it has one. The format is
 "projects/{project_id_or_number}/groups/{group_id}". For
@@ -77,6 +77,11 @@ function monitoringGroupTimeoutsToTerraform(struct?: MonitoringGroupTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_group.html google_monitoring_group}
 */
 export class MonitoringGroup extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_group";
 
   // ===========
   // INITIALIZER
@@ -144,11 +149,11 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
 
   // is_cluster - computed: false, optional: true, required: false
-  private _isCluster?: boolean;
+  private _isCluster?: boolean | cdktf.IResolvable;
   public get isCluster() {
     return this.getBooleanAttribute('is_cluster');
   }
-  public set isCluster(value: boolean ) {
+  public set isCluster(value: boolean | cdktf.IResolvable ) {
     this._isCluster = value;
   }
   public resetIsCluster() {

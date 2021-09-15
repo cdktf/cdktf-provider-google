@@ -31,7 +31,7 @@ key-value pair.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#labels GameServicesGameServerConfig#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Location of the Deployment.
   * 
@@ -144,7 +144,7 @@ export interface GameServicesGameServerConfigScalingConfigsSelectors {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#labels GameServicesGameServerConfig#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function gameServicesGameServerConfigScalingConfigsSelectorsToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSelectors): any {
@@ -217,6 +217,11 @@ function gameServicesGameServerConfigTimeoutsToTerraform(struct?: GameServicesGa
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html google_game_services_game_server_config}
 */
 export class GameServicesGameServerConfig extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_game_services_game_server_config";
 
   // ===========
   // INITIALIZER
@@ -303,11 +308,11 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

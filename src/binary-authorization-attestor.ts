@@ -174,6 +174,11 @@ function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthoriza
 */
 export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_binary_authorization_attestor";
+
   // ===========
   // INITIALIZER
   // ===========

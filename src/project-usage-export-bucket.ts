@@ -57,6 +57,11 @@ function projectUsageExportBucketTimeoutsToTerraform(struct?: ProjectUsageExport
 */
 export class ProjectUsageExportBucket extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_usage_export_bucket";
+
   // ===========
   // INITIALIZER
   // ===========

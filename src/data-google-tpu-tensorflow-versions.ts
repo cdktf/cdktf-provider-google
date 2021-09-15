@@ -22,6 +22,11 @@ export interface DataGoogleTpuTensorflowVersionsConfig extends cdktf.TerraformMe
 */
 export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_tpu_tensorflow_versions";
+
   // ===========
   // INITIALIZER
   // ===========

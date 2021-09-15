@@ -94,6 +94,11 @@ function sourcerepoRepositoryTimeoutsToTerraform(struct?: SourcerepoRepositoryTi
 */
 export class SourcerepoRepository extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sourcerepo_repository";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -12,7 +12,7 @@ export interface AppEngineServiceSplitTrafficConfig extends cdktf.TerraformMetaA
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#migrate_traffic AppEngineServiceSplitTraffic#migrate_traffic}
   */
-  readonly migrateTraffic?: boolean;
+  readonly migrateTraffic?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#project AppEngineServiceSplitTraffic#project}
   */
@@ -42,7 +42,7 @@ export interface AppEngineServiceSplitTrafficSplit {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic.html#allocations AppEngineServiceSplitTraffic#allocations}
   */
-  readonly allocations: { [key: string]: string };
+  readonly allocations: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: ["UNSPECIFIED", "COOKIE", "IP", "RANDOM"]
   * 
@@ -89,6 +89,11 @@ function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServi
 */
 export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_service_split_traffic";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -128,11 +133,11 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
 
   // migrate_traffic - computed: false, optional: true, required: false
-  private _migrateTraffic?: boolean;
+  private _migrateTraffic?: boolean | cdktf.IResolvable;
   public get migrateTraffic() {
     return this.getBooleanAttribute('migrate_traffic');
   }
-  public set migrateTraffic(value: boolean ) {
+  public set migrateTraffic(value: boolean | cdktf.IResolvable ) {
     this._migrateTraffic = value;
   }
   public resetMigrateTraffic() {

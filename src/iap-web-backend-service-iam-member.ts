@@ -60,6 +60,11 @@ function iapWebBackendServiceIamMemberConditionToTerraform(struct?: IapWebBacken
 */
 export class IapWebBackendServiceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_web_backend_service_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

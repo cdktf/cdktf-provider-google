@@ -53,6 +53,11 @@ export class DataGoogleComputeHaVpnGatewayVpnInterfaces extends cdktf.ComplexCom
 */
 export class DataGoogleComputeHaVpnGateway extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_ha_vpn_gateway";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -46,6 +46,11 @@ function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputePro
 */
 export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_project_default_network_tier";
+
   // ===========
   // INITIALIZER
   // ===========

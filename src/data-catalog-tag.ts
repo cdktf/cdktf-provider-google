@@ -51,7 +51,7 @@ export interface DataCatalogTagFields {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html#bool_value DataCatalogTag#bool_value}
   */
-  readonly boolValue?: boolean;
+  readonly boolValue?: boolean | cdktf.IResolvable;
   /**
   * Holds the value for a tag field with double type.
   * 
@@ -123,6 +123,11 @@ function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag.html google_data_catalog_tag}
 */
 export class DataCatalogTag extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_tag";
 
   // ===========
   // INITIALIZER

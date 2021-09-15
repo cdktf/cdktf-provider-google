@@ -56,6 +56,11 @@ function tagsTagKeyIamMemberConditionToTerraform(struct?: TagsTagKeyIamMemberCon
 */
 export class TagsTagKeyIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_tags_tag_key_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

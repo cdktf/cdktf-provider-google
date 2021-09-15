@@ -322,13 +322,13 @@ export interface ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_resource_policy.html#guest_flush ComputeResourcePolicy#guest_flush}
   */
-  readonly guestFlush?: boolean;
+  readonly guestFlush?: boolean | cdktf.IResolvable;
   /**
   * A set of key-value pairs.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_resource_policy.html#labels ComputeResourcePolicy#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
@@ -401,6 +401,11 @@ function computeResourcePolicyTimeoutsToTerraform(struct?: ComputeResourcePolicy
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_resource_policy.html google_compute_resource_policy}
 */
 export class ComputeResourcePolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_resource_policy";
 
   // ===========
   // INITIALIZER

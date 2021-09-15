@@ -42,6 +42,11 @@ export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexCo
 */
 export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_subnetwork";
+
   // ===========
   // INITIALIZER
   // ===========

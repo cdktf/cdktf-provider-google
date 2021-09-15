@@ -56,6 +56,11 @@ function healthcareHl7V2StoreIamMemberConditionToTerraform(struct?: HealthcareHl
 */
 export class HealthcareHl7V2StoreIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_hl7_v2_store_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

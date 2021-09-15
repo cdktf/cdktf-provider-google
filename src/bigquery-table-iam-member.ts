@@ -64,6 +64,11 @@ function bigqueryTableIamMemberConditionToTerraform(struct?: BigqueryTableIamMem
 */
 export class BigqueryTableIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_table_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

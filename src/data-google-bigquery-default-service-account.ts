@@ -18,6 +18,11 @@ export interface DataGoogleBigqueryDefaultServiceAccountConfig extends cdktf.Ter
 */
 export class DataGoogleBigqueryDefaultServiceAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_default_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -94,6 +94,11 @@ function pubsubLiteSubscriptionTimeoutsToTerraform(struct?: PubsubLiteSubscripti
 */
 export class PubsubLiteSubscription extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_lite_subscription";
+
   // ===========
   // INITIALIZER
   // ===========

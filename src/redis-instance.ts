@@ -23,7 +23,7 @@ Default value is "false" meaning AUTH is disabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#auth_enabled RedisInstance#auth_enabled}
   */
-  readonly authEnabled?: boolean;
+  readonly authEnabled?: boolean | cdktf.IResolvable;
   /**
   * The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
@@ -49,7 +49,7 @@ will be used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#labels RedisInstance#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -83,7 +83,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance.html#redis_configs RedisInstance#redis_configs}
   */
-  readonly redisConfigs?: { [key: string]: string };
+  readonly redisConfigs?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The version of Redis software. If not provided, latest supported
 version will be used. Please check the API documentation linked 
@@ -189,6 +189,11 @@ function redisInstanceTimeoutsToTerraform(struct?: RedisInstanceTimeouts): any {
 */
 export class RedisInstance extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_redis_instance";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -251,11 +256,11 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // auth_enabled - computed: false, optional: true, required: false
-  private _authEnabled?: boolean;
+  private _authEnabled?: boolean | cdktf.IResolvable;
   public get authEnabled() {
     return this.getBooleanAttribute('auth_enabled');
   }
-  public set authEnabled(value: boolean ) {
+  public set authEnabled(value: boolean | cdktf.IResolvable ) {
     this._authEnabled = value;
   }
   public resetAuthEnabled() {
@@ -340,11 +345,11 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -424,11 +429,11 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // redis_configs - computed: false, optional: true, required: false
-  private _redisConfigs?: { [key: string]: string };
+  private _redisConfigs?: { [key: string]: string } | cdktf.IResolvable;
   public get redisConfigs() {
     return this.interpolationForAttribute('redis_configs') as any;
   }
-  public set redisConfigs(value: { [key: string]: string } ) {
+  public set redisConfigs(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._redisConfigs = value;
   }
   public resetRedisConfigs() {

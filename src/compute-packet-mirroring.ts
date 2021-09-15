@@ -224,6 +224,11 @@ function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacketMirrori
 */
 export class ComputePacketMirroring extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_packet_mirroring";
+
   // ===========
   // INITIALIZER
   // ===========

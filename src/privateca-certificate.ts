@@ -14,11 +14,21 @@ export interface PrivatecaCertificateConfig extends cdktf.TerraformMetaArguments
   */
   readonly certificateAuthority?: string;
   /**
+  * The resource name for a CertificateTemplate used to issue this certificate,
+in the format 'projects/*\/locations/*\/certificateTemplates/*'. If this is specified,
+the caller must have the necessary permission to use this template. If this is
+omitted, no template will be used. This template must be in the same location
+as the Certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#certificate_template PrivatecaCertificate#certificate_template}
+  */
+  readonly certificateTemplate?: string;
+  /**
   * Labels with user-defined metadata to apply to this resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#labels PrivatecaCertificate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -576,7 +586,7 @@ handle this extension, the client should consider this to be an error).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#critical PrivatecaCertificate#critical}
   */
-  readonly critical: boolean;
+  readonly critical: boolean | cdktf.IResolvable;
   /**
   * The value of this X.509 extension. A base64-encoded string.
   * 
@@ -607,7 +617,7 @@ the extension will be omitted from the CA certificate.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#is_ca PrivatecaCertificate#is_ca}
   */
-  readonly isCa?: boolean;
+  readonly isCa?: boolean | cdktf.IResolvable;
   /**
   * Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
 subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
@@ -632,55 +642,55 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#cert_sign PrivatecaCertificate#cert_sign}
   */
-  readonly certSign?: boolean;
+  readonly certSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#content_commitment PrivatecaCertificate#content_commitment}
   */
-  readonly contentCommitment?: boolean;
+  readonly contentCommitment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used sign certificate revocation lists.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#crl_sign PrivatecaCertificate#crl_sign}
   */
-  readonly crlSign?: boolean;
+  readonly crlSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher data.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#data_encipherment PrivatecaCertificate#data_encipherment}
   */
-  readonly dataEncipherment?: boolean;
+  readonly dataEncipherment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to decipher only.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#decipher_only PrivatecaCertificate#decipher_only}
   */
-  readonly decipherOnly?: boolean;
+  readonly decipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for digital signatures.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#digital_signature PrivatecaCertificate#digital_signature}
   */
-  readonly digitalSignature?: boolean;
+  readonly digitalSignature?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher only.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#encipher_only PrivatecaCertificate#encipher_only}
   */
-  readonly encipherOnly?: boolean;
+  readonly encipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used in a key agreement protocol.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key_agreement PrivatecaCertificate#key_agreement}
   */
-  readonly keyAgreement?: boolean;
+  readonly keyAgreement?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher other keys.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key_encipherment PrivatecaCertificate#key_encipherment}
   */
-  readonly keyEncipherment?: boolean;
+  readonly keyEncipherment?: boolean | cdktf.IResolvable;
 }
 
 function privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage): any {
@@ -704,37 +714,37 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#client_auth PrivatecaCertificate#client_auth}
   */
-  readonly clientAuth?: boolean;
+  readonly clientAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#code_signing PrivatecaCertificate#code_signing}
   */
-  readonly codeSigning?: boolean;
+  readonly codeSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#email_protection PrivatecaCertificate#email_protection}
   */
-  readonly emailProtection?: boolean;
+  readonly emailProtection?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#ocsp_signing PrivatecaCertificate#ocsp_signing}
   */
-  readonly ocspSigning?: boolean;
+  readonly ocspSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#server_auth PrivatecaCertificate#server_auth}
   */
-  readonly serverAuth?: boolean;
+  readonly serverAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#time_stamping PrivatecaCertificate#time_stamping}
   */
-  readonly timeStamping?: boolean;
+  readonly timeStamping?: boolean | cdktf.IResolvable;
 }
 
 function privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage): any {
@@ -911,6 +921,11 @@ function privatecaCertificateTimeoutsToTerraform(struct?: PrivatecaCertificateTi
 */
 export class PrivatecaCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_privateca_certificate";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -934,6 +949,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._certificateAuthority = config.certificateAuthority;
+    this._certificateTemplate = config.certificateTemplate;
     this._labels = config.labels;
     this._lifetime = config.lifetime;
     this._location = config.location;
@@ -970,6 +986,22 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
     return new PrivatecaCertificateCertificateDescription(this, 'certificate_description', index);
   }
 
+  // certificate_template - computed: false, optional: true, required: false
+  private _certificateTemplate?: string;
+  public get certificateTemplate() {
+    return this.getStringAttribute('certificate_template');
+  }
+  public set certificateTemplate(value: string ) {
+    this._certificateTemplate = value;
+  }
+  public resetCertificateTemplate() {
+    this._certificateTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateTemplateInput() {
+    return this._certificateTemplate
+  }
+
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
@@ -981,11 +1013,11 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1142,6 +1174,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       certificate_authority: cdktf.stringToTerraform(this._certificateAuthority),
+      certificate_template: cdktf.stringToTerraform(this._certificateTemplate),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       lifetime: cdktf.stringToTerraform(this._lifetime),
       location: cdktf.stringToTerraform(this._location),

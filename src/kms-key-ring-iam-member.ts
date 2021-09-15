@@ -56,6 +56,11 @@ function kmsKeyRingIamMemberConditionToTerraform(struct?: KmsKeyRingIamMemberCon
 */
 export class KmsKeyRingIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_key_ring_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -36,7 +36,7 @@ affinity for any reservation. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#specific_reservation_required ComputeReservation#specific_reservation_required}
   */
-  readonly specificReservationRequired?: boolean;
+  readonly specificReservationRequired?: boolean | cdktf.IResolvable;
   /**
   * The zone where the reservation is made.
   * 
@@ -200,6 +200,11 @@ function computeReservationTimeoutsToTerraform(struct?: ComputeReservationTimeou
 */
 export class ComputeReservation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_reservation";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -301,11 +306,11 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // specific_reservation_required - computed: false, optional: true, required: false
-  private _specificReservationRequired?: boolean;
+  private _specificReservationRequired?: boolean | cdktf.IResolvable;
   public get specificReservationRequired() {
     return this.getBooleanAttribute('specific_reservation_required');
   }
-  public set specificReservationRequired(value: boolean ) {
+  public set specificReservationRequired(value: boolean | cdktf.IResolvable ) {
     this._specificReservationRequired = value;
   }
   public resetSpecificReservationRequired() {

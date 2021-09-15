@@ -18,7 +18,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#enable_streaming_engine DataflowJob#enable_streaming_engine}
   */
-  readonly enableStreamingEngine?: boolean;
+  readonly enableStreamingEngine?: boolean | cdktf.IResolvable;
   /**
   * The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE".
   * 
@@ -36,7 +36,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#labels DataflowJob#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The machine type to use for the job.
   * 
@@ -72,7 +72,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#parameters DataflowJob#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The project in which the resource belongs.
   * 
@@ -114,7 +114,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html#transform_name_mapping DataflowJob#transform_name_mapping}
   */
-  readonly transformNameMapping?: { [key: string]: string };
+  readonly transformNameMapping?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The zone in which the created job should run. If it is not provided, the provider zone is used.
   * 
@@ -147,6 +147,11 @@ function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dataflow_job.html google_dataflow_job}
 */
 export class DataflowJob extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataflow_job";
 
   // ===========
   // INITIALIZER
@@ -213,11 +218,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // enable_streaming_engine - computed: false, optional: true, required: false
-  private _enableStreamingEngine?: boolean;
+  private _enableStreamingEngine?: boolean | cdktf.IResolvable;
   public get enableStreamingEngine() {
     return this.getBooleanAttribute('enable_streaming_engine');
   }
-  public set enableStreamingEngine(value: boolean ) {
+  public set enableStreamingEngine(value: boolean | cdktf.IResolvable ) {
     this._enableStreamingEngine = value;
   }
   public resetEnableStreamingEngine() {
@@ -271,11 +276,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -364,11 +369,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -475,11 +480,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // transform_name_mapping - computed: false, optional: true, required: false
-  private _transformNameMapping?: { [key: string]: string };
+  private _transformNameMapping?: { [key: string]: string } | cdktf.IResolvable;
   public get transformNameMapping() {
     return this.interpolationForAttribute('transform_name_mapping') as any;
   }
-  public set transformNameMapping(value: { [key: string]: string } ) {
+  public set transformNameMapping(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._transformNameMapping = value;
   }
   public resetTransformNameMapping() {

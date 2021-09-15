@@ -113,6 +113,11 @@ function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappi
 */
 export class AppEngineDomainMapping extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_domain_mapping";
+
   // ===========
   // INITIALIZER
   // ===========

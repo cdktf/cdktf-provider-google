@@ -18,6 +18,11 @@ export interface DataGoogleStorageTransferProjectServiceAccountConfig extends cd
 */
 export class DataGoogleStorageTransferProjectServiceAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_transfer_project_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

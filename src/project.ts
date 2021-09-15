@@ -12,7 +12,7 @@ export interface ProjectConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#auto_create_network Project#auto_create_network}
   */
-  readonly autoCreateNetwork?: boolean;
+  readonly autoCreateNetwork?: boolean | cdktf.IResolvable;
   /**
   * The alphanumeric ID of the billing account this project belongs to. The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details.
   * 
@@ -30,7 +30,7 @@ export interface ProjectConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#labels Project#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The display name of the project.
   * 
@@ -54,7 +54,7 @@ export interface ProjectConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project.html#skip_delete Project#skip_delete}
   */
-  readonly skipDelete?: boolean;
+  readonly skipDelete?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -97,6 +97,11 @@ function projectTimeoutsToTerraform(struct?: ProjectTimeouts): any {
 */
 export class Project extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -135,11 +140,11 @@ export class Project extends cdktf.TerraformResource {
   // ==========
 
   // auto_create_network - computed: false, optional: true, required: false
-  private _autoCreateNetwork?: boolean;
+  private _autoCreateNetwork?: boolean | cdktf.IResolvable;
   public get autoCreateNetwork() {
     return this.getBooleanAttribute('auto_create_network');
   }
-  public set autoCreateNetwork(value: boolean ) {
+  public set autoCreateNetwork(value: boolean | cdktf.IResolvable ) {
     this._autoCreateNetwork = value;
   }
   public resetAutoCreateNetwork() {
@@ -188,11 +193,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -251,11 +256,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // skip_delete - computed: true, optional: true, required: false
-  private _skipDelete?: boolean;
+  private _skipDelete?: boolean | cdktf.IResolvable;
   public get skipDelete() {
     return this.getBooleanAttribute('skip_delete');
   }
-  public set skipDelete(value: boolean) {
+  public set skipDelete(value: boolean | cdktf.IResolvable) {
     this._skipDelete = value;
   }
   public resetSkipDelete() {

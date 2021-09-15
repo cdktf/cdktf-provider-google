@@ -342,7 +342,7 @@ list of APIs specified in 'allowedServices'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#enable_restriction AccessContextManagerServicePerimeters#enable_restriction}
   */
-  readonly enableRestriction?: boolean;
+  readonly enableRestriction?: boolean | cdktf.IResolvable;
 }
 
 function accessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServices): any {
@@ -734,7 +734,7 @@ list of APIs specified in 'allowedServices'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#enable_restriction AccessContextManagerServicePerimeters#enable_restriction}
   */
-  readonly enableRestriction?: boolean;
+  readonly enableRestriction?: boolean | cdktf.IResolvable;
 }
 
 function accessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServices): any {
@@ -867,7 +867,7 @@ bet set to True if any of the fields in the spec are set to non-default values.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html#use_explicit_dry_run_spec AccessContextManagerServicePerimeters#use_explicit_dry_run_spec}
   */
-  readonly useExplicitDryRunSpec?: boolean;
+  readonly useExplicitDryRunSpec?: boolean | cdktf.IResolvable;
   /**
   * spec block
   * 
@@ -924,6 +924,11 @@ function accessContextManagerServicePerimetersTimeoutsToTerraform(struct?: Acces
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters.html google_access_context_manager_service_perimeters}
 */
 export class AccessContextManagerServicePerimeters extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_service_perimeters";
 
   // ===========
   // INITIALIZER

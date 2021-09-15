@@ -19,7 +19,7 @@ error in any statement, the database is not created.
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#deletion_protection SpannerDatabase#deletion_protection}
   */
-  readonly deletionProtection?: boolean;
+  readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The instance to create the database on.
   * 
@@ -97,6 +97,11 @@ function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeouts): a
 */
 export class SpannerDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_spanner_database";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -149,11 +154,11 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean;
+  private _deletionProtection?: boolean | cdktf.IResolvable;
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {

@@ -18,6 +18,11 @@ export interface DataGoogleIamRoleConfig extends cdktf.TerraformMetaArguments {
 */
 export class DataGoogleIamRole extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iam_role";
+
   // ===========
   // INITIALIZER
   // ===========

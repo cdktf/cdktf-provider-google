@@ -95,6 +95,11 @@ function computeTargetSslProxyTimeoutsToTerraform(struct?: ComputeTargetSslProxy
 */
 export class ComputeTargetSslProxy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_ssl_proxy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -12,21 +12,21 @@ export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#export_custom_routes ComputeNetworkPeering#export_custom_routes}
   */
-  readonly exportCustomRoutes?: boolean;
+  readonly exportCustomRoutes?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#export_subnet_routes_with_public_ip ComputeNetworkPeering#export_subnet_routes_with_public_ip}
   */
-  readonly exportSubnetRoutesWithPublicIp?: boolean;
+  readonly exportSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
   * Whether to export the custom routes from the peer network. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#import_custom_routes ComputeNetworkPeering#import_custom_routes}
   */
-  readonly importCustomRoutes?: boolean;
+  readonly importCustomRoutes?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html#import_subnet_routes_with_public_ip ComputeNetworkPeering#import_subnet_routes_with_public_ip}
   */
-  readonly importSubnetRoutesWithPublicIp?: boolean;
+  readonly importSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
   * Name of the peering.
   * 
@@ -82,6 +82,11 @@ function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeering
 */
 export class ComputeNetworkPeering extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_network_peering";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -119,11 +124,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   // ==========
 
   // export_custom_routes - computed: false, optional: true, required: false
-  private _exportCustomRoutes?: boolean;
+  private _exportCustomRoutes?: boolean | cdktf.IResolvable;
   public get exportCustomRoutes() {
     return this.getBooleanAttribute('export_custom_routes');
   }
-  public set exportCustomRoutes(value: boolean ) {
+  public set exportCustomRoutes(value: boolean | cdktf.IResolvable ) {
     this._exportCustomRoutes = value;
   }
   public resetExportCustomRoutes() {
@@ -135,11 +140,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // export_subnet_routes_with_public_ip - computed: false, optional: true, required: false
-  private _exportSubnetRoutesWithPublicIp?: boolean;
+  private _exportSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   public get exportSubnetRoutesWithPublicIp() {
     return this.getBooleanAttribute('export_subnet_routes_with_public_ip');
   }
-  public set exportSubnetRoutesWithPublicIp(value: boolean ) {
+  public set exportSubnetRoutesWithPublicIp(value: boolean | cdktf.IResolvable ) {
     this._exportSubnetRoutesWithPublicIp = value;
   }
   public resetExportSubnetRoutesWithPublicIp() {
@@ -156,11 +161,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // import_custom_routes - computed: false, optional: true, required: false
-  private _importCustomRoutes?: boolean;
+  private _importCustomRoutes?: boolean | cdktf.IResolvable;
   public get importCustomRoutes() {
     return this.getBooleanAttribute('import_custom_routes');
   }
-  public set importCustomRoutes(value: boolean ) {
+  public set importCustomRoutes(value: boolean | cdktf.IResolvable ) {
     this._importCustomRoutes = value;
   }
   public resetImportCustomRoutes() {
@@ -172,11 +177,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // import_subnet_routes_with_public_ip - computed: false, optional: true, required: false
-  private _importSubnetRoutesWithPublicIp?: boolean;
+  private _importSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   public get importSubnetRoutesWithPublicIp() {
     return this.getBooleanAttribute('import_subnet_routes_with_public_ip');
   }
-  public set importSubnetRoutesWithPublicIp(value: boolean ) {
+  public set importSubnetRoutesWithPublicIp(value: boolean | cdktf.IResolvable ) {
     this._importSubnetRoutesWithPublicIp = value;
   }
   public resetImportSubnetRoutesWithPublicIp() {

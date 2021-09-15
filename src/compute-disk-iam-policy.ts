@@ -30,6 +30,11 @@ export interface ComputeDiskIamPolicyConfig extends cdktf.TerraformMetaArguments
 */
 export class ComputeDiskIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_disk_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

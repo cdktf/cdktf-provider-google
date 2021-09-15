@@ -22,6 +22,11 @@ export interface DataGoogleActiveFolderConfig extends cdktf.TerraformMetaArgumen
 */
 export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_active_folder";
+
   // ===========
   // INITIALIZER
   // ===========

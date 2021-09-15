@@ -75,7 +75,7 @@ export interface AppEngineApplicationFeatureSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#split_health_checks AppEngineApplication#split_health_checks}
   */
-  readonly splitHealthChecks: boolean;
+  readonly splitHealthChecks: boolean | cdktf.IResolvable;
 }
 
 function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettings): any {
@@ -91,7 +91,7 @@ export interface AppEngineApplicationIap {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#enabled AppEngineApplication#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * OAuth2 client ID to use for the authentication flow.
   * 
@@ -139,6 +139,11 @@ function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTi
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html google_app_engine_application}
 */
 export class AppEngineApplication extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_application";
 
   // ===========
   // INITIALIZER

@@ -64,6 +64,11 @@ function tagsTagKeyTimeoutsToTerraform(struct?: TagsTagKeyTimeouts): any {
 */
 export class TagsTagKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_tags_tag_key";
+
   // ===========
   // INITIALIZER
   // ===========

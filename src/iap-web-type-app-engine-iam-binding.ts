@@ -60,6 +60,11 @@ function iapWebTypeAppEngineIamBindingConditionToTerraform(struct?: IapWebTypeAp
 */
 export class IapWebTypeAppEngineIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_web_type_app_engine_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

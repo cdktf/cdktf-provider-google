@@ -53,6 +53,11 @@ function projectIamAuditConfigAuditLogConfigToTerraform(struct?: ProjectIamAudit
 */
 export class ProjectIamAuditConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_iam_audit_config";
+
   // ===========
   // INITIALIZER
   // ===========

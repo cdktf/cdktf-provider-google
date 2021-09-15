@@ -68,6 +68,11 @@ function healthcareDatasetTimeoutsToTerraform(struct?: HealthcareDatasetTimeouts
 */
 export class HealthcareDataset extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_dataset";
+
   // ===========
   // INITIALIZER
   // ===========

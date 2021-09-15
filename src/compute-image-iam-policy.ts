@@ -26,6 +26,11 @@ export interface ComputeImageIamPolicyConfig extends cdktf.TerraformMetaArgument
 */
 export class ComputeImageIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_image_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

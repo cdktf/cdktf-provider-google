@@ -265,6 +265,11 @@ function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutos
 */
 export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_autoscaling_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -20,7 +20,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#enable_endpoint_independent_mapping ComputeRouterNat#enable_endpoint_independent_mapping}
   */
-  readonly enableEndpointIndependentMapping?: boolean;
+  readonly enableEndpointIndependentMapping?: boolean | cdktf.IResolvable;
   /**
   * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
   * 
@@ -131,7 +131,7 @@ export interface ComputeRouterNatLogConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat.html#enable ComputeRouterNat#enable}
   */
-  readonly enable: boolean;
+  readonly enable: boolean | cdktf.IResolvable;
   /**
   * Specifies the desired filtering of logs on this NAT. Possible values: ["ERRORS_ONLY", "TRANSLATIONS_ONLY", "ALL"]
   * 
@@ -214,6 +214,11 @@ function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeouts):
 */
 export class ComputeRouterNat extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_router_nat";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -276,11 +281,11 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // enable_endpoint_independent_mapping - computed: false, optional: true, required: false
-  private _enableEndpointIndependentMapping?: boolean;
+  private _enableEndpointIndependentMapping?: boolean | cdktf.IResolvable;
   public get enableEndpointIndependentMapping() {
     return this.getBooleanAttribute('enable_endpoint_independent_mapping');
   }
-  public set enableEndpointIndependentMapping(value: boolean ) {
+  public set enableEndpointIndependentMapping(value: boolean | cdktf.IResolvable ) {
     this._enableEndpointIndependentMapping = value;
   }
   public resetEnableEndpointIndependentMapping() {

@@ -48,7 +48,7 @@ the Condition overall to be satisfied. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level_condition.html#negate AccessContextManagerAccessLevelCondition#negate}
   */
-  readonly negate?: boolean;
+  readonly negate?: boolean | cdktf.IResolvable;
   /**
   * The request must originate from one of the provided
 countries/regions.
@@ -125,20 +125,20 @@ An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level_condition.html#require_admin_approval AccessContextManagerAccessLevelCondition#require_admin_approval}
   */
-  readonly requireAdminApproval?: boolean;
+  readonly requireAdminApproval?: boolean | cdktf.IResolvable;
   /**
   * Whether the device needs to be corp owned.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level_condition.html#require_corp_owned AccessContextManagerAccessLevelCondition#require_corp_owned}
   */
-  readonly requireCorpOwned?: boolean;
+  readonly requireCorpOwned?: boolean | cdktf.IResolvable;
   /**
   * Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level_condition.html#require_screen_lock AccessContextManagerAccessLevelCondition#require_screen_lock}
   */
-  readonly requireScreenLock?: boolean;
+  readonly requireScreenLock?: boolean | cdktf.IResolvable;
   /**
   * os_constraints block
   * 
@@ -183,6 +183,11 @@ function accessContextManagerAccessLevelConditionTimeoutsToTerraform(struct?: Ac
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level_condition.html google_access_context_manager_access_level_condition}
 */
 export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_access_level_condition";
 
   // ===========
   // INITIALIZER
@@ -271,11 +276,11 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
 
   // negate - computed: false, optional: true, required: false
-  private _negate?: boolean;
+  private _negate?: boolean | cdktf.IResolvable;
   public get negate() {
     return this.getBooleanAttribute('negate');
   }
-  public set negate(value: boolean ) {
+  public set negate(value: boolean | cdktf.IResolvable ) {
     this._negate = value;
   }
   public resetNegate() {

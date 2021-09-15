@@ -14,13 +14,18 @@ export interface DataGoogleFolderConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder.html#lookup_organization DataGoogleFolder#lookup_organization}
   */
-  readonly lookupOrganization?: boolean;
+  readonly lookupOrganization?: boolean | cdktf.IResolvable;
 }
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/folder.html google_folder}
 */
 export class DataGoogleFolder extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder";
 
   // ===========
   // INITIALIZER
@@ -91,11 +96,11 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   }
 
   // lookup_organization - computed: false, optional: true, required: false
-  private _lookupOrganization?: boolean;
+  private _lookupOrganization?: boolean | cdktf.IResolvable;
   public get lookupOrganization() {
     return this.getBooleanAttribute('lookup_organization');
   }
-  public set lookupOrganization(value: boolean ) {
+  public set lookupOrganization(value: boolean | cdktf.IResolvable ) {
     this._lookupOrganization = value;
   }
   public resetLookupOrganization() {

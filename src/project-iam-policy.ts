@@ -22,6 +22,11 @@ export interface ProjectIamPolicyConfig extends cdktf.TerraformMetaArguments {
 */
 export class ProjectIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

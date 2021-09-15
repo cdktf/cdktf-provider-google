@@ -56,6 +56,11 @@ function monitoringDashboardTimeoutsToTerraform(struct?: MonitoringDashboardTime
 */
 export class MonitoringDashboard extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_dashboard";
+
   // ===========
   // INITIALIZER
   // ===========

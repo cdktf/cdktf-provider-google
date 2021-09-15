@@ -115,7 +115,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#annotations CloudRunDomainMapping#annotations}
   */
-  readonly annotations?: { [key: string]: string };
+  readonly annotations?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -124,7 +124,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#labels CloudRunDomainMapping#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * In Cloud Run the namespace must be equal to either the
 project ID or project number.
@@ -158,7 +158,7 @@ has given such a warning.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html#force_override CloudRunDomainMapping#force_override}
   */
-  readonly forceOverride?: boolean;
+  readonly forceOverride?: boolean | cdktf.IResolvable;
   /**
   * The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
@@ -201,6 +201,11 @@ function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomainMapping
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping.html google_cloud_run_domain_mapping}
 */
 export class CloudRunDomainMapping extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_domain_mapping";
 
   // ===========
   // INITIALIZER

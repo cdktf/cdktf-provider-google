@@ -30,7 +30,7 @@ An object containing a list of "key": value pairs. Example:
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#labels SecretManagerSecret#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#project SecretManagerSecret#project}
   */
@@ -134,7 +134,7 @@ export interface SecretManagerSecretReplication {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret.html#automatic SecretManagerSecret#automatic}
   */
-  readonly automatic?: boolean;
+  readonly automatic?: boolean | cdktf.IResolvable;
   /**
   * user_managed block
   * 
@@ -223,6 +223,11 @@ function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecretTopics
 */
 export class SecretManagerSecret extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_secret_manager_secret";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -287,11 +292,11 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

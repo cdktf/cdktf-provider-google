@@ -56,6 +56,11 @@ function endpointsServiceIamMemberConditionToTerraform(struct?: EndpointsService
 */
 export class EndpointsServiceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_endpoints_service_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

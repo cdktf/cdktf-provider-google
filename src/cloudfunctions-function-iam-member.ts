@@ -64,6 +64,11 @@ function cloudfunctionsFunctionIamMemberConditionToTerraform(struct?: Cloudfunct
 */
 export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudfunctions_function_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

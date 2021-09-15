@@ -22,6 +22,11 @@ export interface ServiceAccountIamPolicyConfig extends cdktf.TerraformMetaArgume
 */
 export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_service_account_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

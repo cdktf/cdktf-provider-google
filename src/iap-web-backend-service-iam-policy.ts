@@ -26,6 +26,11 @@ export interface IapWebBackendServiceIamPolicyConfig extends cdktf.TerraformMeta
 */
 export class IapWebBackendServiceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_web_backend_service_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

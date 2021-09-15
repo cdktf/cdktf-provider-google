@@ -10,11 +10,11 @@ export interface ProjectServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#disable_dependent_services ProjectService#disable_dependent_services}
   */
-  readonly disableDependentServices?: boolean;
+  readonly disableDependentServices?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#disable_on_destroy ProjectService#disable_on_destroy}
   */
-  readonly disableOnDestroy?: boolean;
+  readonly disableOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_service.html#project ProjectService#project}
   */
@@ -65,6 +65,11 @@ function projectServiceTimeoutsToTerraform(struct?: ProjectServiceTimeouts): any
 */
 export class ProjectService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -99,11 +104,11 @@ export class ProjectService extends cdktf.TerraformResource {
   // ==========
 
   // disable_dependent_services - computed: false, optional: true, required: false
-  private _disableDependentServices?: boolean;
+  private _disableDependentServices?: boolean | cdktf.IResolvable;
   public get disableDependentServices() {
     return this.getBooleanAttribute('disable_dependent_services');
   }
-  public set disableDependentServices(value: boolean ) {
+  public set disableDependentServices(value: boolean | cdktf.IResolvable ) {
     this._disableDependentServices = value;
   }
   public resetDisableDependentServices() {
@@ -115,11 +120,11 @@ export class ProjectService extends cdktf.TerraformResource {
   }
 
   // disable_on_destroy - computed: false, optional: true, required: false
-  private _disableOnDestroy?: boolean;
+  private _disableOnDestroy?: boolean | cdktf.IResolvable;
   public get disableOnDestroy() {
     return this.getBooleanAttribute('disable_on_destroy');
   }
-  public set disableOnDestroy(value: boolean ) {
+  public set disableOnDestroy(value: boolean | cdktf.IResolvable ) {
     this._disableOnDestroy = value;
   }
   public resetDisableOnDestroy() {

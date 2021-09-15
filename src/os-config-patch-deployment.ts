@@ -78,7 +78,7 @@ export interface OsConfigPatchDeploymentInstanceFilterGroupLabels {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#labels OsConfigPatchDeployment#labels}
   */
-  readonly labels: { [key: string]: string };
+  readonly labels: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels): any {
@@ -94,7 +94,7 @@ export interface OsConfigPatchDeploymentInstanceFilter {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#all OsConfigPatchDeployment#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
@@ -190,7 +190,7 @@ export interface OsConfigPatchDeploymentPatchConfigGoo {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#enabled OsConfigPatchDeployment#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConfigPatchDeploymentPatchConfigGoo): any {
@@ -569,13 +569,13 @@ any other patch configuration fields.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#minimal OsConfigPatchDeployment#minimal}
   */
-  readonly minimal?: boolean;
+  readonly minimal?: boolean | cdktf.IResolvable;
   /**
   * Adds the --security flag to yum update. Not supported on all platforms.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#security OsConfigPatchDeployment#security}
   */
-  readonly security?: boolean;
+  readonly security?: boolean | cdktf.IResolvable;
 }
 
 function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConfigPatchDeploymentPatchConfigYum): any {
@@ -619,13 +619,13 @@ This field must not be used with any other patch configuration fields.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#with_optional OsConfigPatchDeployment#with_optional}
   */
-  readonly withOptional?: boolean;
+  readonly withOptional?: boolean | cdktf.IResolvable;
   /**
   * Adds the --with-update flag, to zypper patch.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html#with_update OsConfigPatchDeployment#with_update}
   */
-  readonly withUpdate?: boolean;
+  readonly withUpdate?: boolean | cdktf.IResolvable;
 }
 
 function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsConfigPatchDeploymentPatchConfigZypper): any {
@@ -953,6 +953,11 @@ function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatchDeploy
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment.html google_os_config_patch_deployment}
 */
 export class OsConfigPatchDeployment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_os_config_patch_deployment";
 
   // ===========
   // INITIALIZER

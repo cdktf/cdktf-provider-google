@@ -44,6 +44,11 @@ export class DataGoogleStorageBucketObjectContentCustomerEncryption extends cdkt
 */
 export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket_object_content";
+
   // ===========
   // INITIALIZER
   // ===========

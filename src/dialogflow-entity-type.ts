@@ -18,7 +18,7 @@ export interface DialogflowEntityTypeConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#enable_fuzzy_extraction DialogflowEntityType#enable_fuzzy_extraction}
   */
-  readonly enableFuzzyExtraction?: boolean;
+  readonly enableFuzzyExtraction?: boolean | cdktf.IResolvable;
   /**
   * Indicates the kind of entity type.
 * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
@@ -107,6 +107,11 @@ function dialogflowEntityTypeTimeoutsToTerraform(struct?: DialogflowEntityTypeTi
 */
 export class DialogflowEntityType extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_entity_type";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -155,11 +160,11 @@ export class DialogflowEntityType extends cdktf.TerraformResource {
   }
 
   // enable_fuzzy_extraction - computed: false, optional: true, required: false
-  private _enableFuzzyExtraction?: boolean;
+  private _enableFuzzyExtraction?: boolean | cdktf.IResolvable;
   public get enableFuzzyExtraction() {
     return this.getBooleanAttribute('enable_fuzzy_extraction');
   }
-  public set enableFuzzyExtraction(value: boolean ) {
+  public set enableFuzzyExtraction(value: boolean | cdktf.IResolvable ) {
     this._enableFuzzyExtraction = value;
   }
   public resetEnableFuzzyExtraction() {

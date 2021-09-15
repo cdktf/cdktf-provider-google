@@ -30,7 +30,7 @@ export interface LoggingBillingAccountSinkConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_sink.html#disabled LoggingBillingAccountSink#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when exporting logs. Only log entries that match the filter are exported.
   * 
@@ -62,7 +62,7 @@ export interface LoggingBillingAccountSinkBigqueryOptions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_sink.html#use_partitioned_tables LoggingBillingAccountSink#use_partitioned_tables}
   */
-  readonly usePartitionedTables: boolean;
+  readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
 
 function loggingBillingAccountSinkBigqueryOptionsToTerraform(struct?: LoggingBillingAccountSinkBigqueryOptions): any {
@@ -84,7 +84,7 @@ export interface LoggingBillingAccountSinkExclusions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_sink.html#disabled LoggingBillingAccountSink#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries
   * 
@@ -114,6 +114,11 @@ function loggingBillingAccountSinkExclusionsToTerraform(struct?: LoggingBillingA
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_sink.html google_logging_billing_account_sink}
 */
 export class LoggingBillingAccountSink extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_billing_account_sink";
 
   // ===========
   // INITIALIZER
@@ -194,11 +199,11 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {

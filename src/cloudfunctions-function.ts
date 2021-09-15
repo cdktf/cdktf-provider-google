@@ -18,7 +18,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#build_environment_variables CloudfunctionsFunction#build_environment_variables}
   */
-  readonly buildEnvironmentVariables?: { [key: string]: string };
+  readonly buildEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Description of the function.
   * 
@@ -36,7 +36,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#environment_variables CloudfunctionsFunction#environment_variables}
   */
-  readonly environmentVariables?: { [key: string]: string };
+  readonly environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * URL which triggers function execution. Returned only if trigger_http is used.
   * 
@@ -54,7 +54,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#labels CloudfunctionsFunction#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The limit on the maximum number of function instances that may coexist at a given time.
   * 
@@ -114,7 +114,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#trigger_http CloudfunctionsFunction#trigger_http}
   */
-  readonly triggerHttp?: boolean;
+  readonly triggerHttp?: boolean | cdktf.IResolvable;
   /**
   * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is projects/*\/locations/*\/connectors/*.
   * 
@@ -152,7 +152,7 @@ export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#retry CloudfunctionsFunction#retry}
   */
-  readonly retry: boolean;
+  readonly retry: boolean | cdktf.IResolvable;
 }
 
 function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: CloudfunctionsFunctionEventTriggerFailurePolicy): any {
@@ -243,6 +243,11 @@ function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFuncti
 */
 export class CloudfunctionsFunction extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudfunctions_function";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -311,11 +316,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // build_environment_variables - computed: false, optional: true, required: false
-  private _buildEnvironmentVariables?: { [key: string]: string };
+  private _buildEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   public get buildEnvironmentVariables() {
     return this.interpolationForAttribute('build_environment_variables') as any;
   }
-  public set buildEnvironmentVariables(value: { [key: string]: string } ) {
+  public set buildEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._buildEnvironmentVariables = value;
   }
   public resetBuildEnvironmentVariables() {
@@ -359,11 +364,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // environment_variables - computed: false, optional: true, required: false
-  private _environmentVariables?: { [key: string]: string };
+  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   public get environmentVariables() {
     return this.interpolationForAttribute('environment_variables') as any;
   }
-  public set environmentVariables(value: { [key: string]: string } ) {
+  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._environmentVariables = value;
   }
   public resetEnvironmentVariables() {
@@ -412,11 +417,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -566,11 +571,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // trigger_http - computed: false, optional: true, required: false
-  private _triggerHttp?: boolean;
+  private _triggerHttp?: boolean | cdktf.IResolvable;
   public get triggerHttp() {
     return this.getBooleanAttribute('trigger_http');
   }
-  public set triggerHttp(value: boolean ) {
+  public set triggerHttp(value: boolean | cdktf.IResolvable ) {
     this._triggerHttp = value;
   }
   public resetTriggerHttp() {

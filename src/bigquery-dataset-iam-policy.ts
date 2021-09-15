@@ -26,6 +26,11 @@ export interface BigqueryDatasetIamPolicyConfig extends cdktf.TerraformMetaArgum
 */
 export class BigqueryDatasetIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_dataset_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

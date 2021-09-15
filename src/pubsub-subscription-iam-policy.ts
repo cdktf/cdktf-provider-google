@@ -26,6 +26,11 @@ export interface PubsubSubscriptionIamPolicyConfig extends cdktf.TerraformMetaAr
 */
 export class PubsubSubscriptionIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_subscription_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

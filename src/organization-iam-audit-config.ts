@@ -55,6 +55,11 @@ function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: Organizati
 */
 export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization_iam_audit_config";
+
   // ===========
   // INITIALIZER
   // ===========

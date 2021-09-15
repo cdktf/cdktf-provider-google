@@ -40,6 +40,11 @@ export interface RuntimeconfigVariableConfig extends cdktf.TerraformMetaArgument
 */
 export class RuntimeconfigVariable extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_runtimeconfig_variable";
+
   // ===========
   // INITIALIZER
   // ===========

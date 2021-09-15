@@ -90,6 +90,11 @@ function sqlUserTimeoutsToTerraform(struct?: SqlUserTimeouts): any {
 */
 export class SqlUser extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_user";
+
   // ===========
   // INITIALIZER
   // ===========

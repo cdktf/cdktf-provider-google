@@ -31,7 +31,7 @@ instance scheduling.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#node_affinity_labels ComputeNodeTemplate#node_affinity_labels}
   */
-  readonly nodeAffinityLabels?: { [key: string]: string };
+  readonly nodeAffinityLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Node type to use for nodes group that are created from this template.
 Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -144,6 +144,11 @@ function computeNodeTemplateTimeoutsToTerraform(struct?: ComputeNodeTemplateTime
 */
 export class ComputeNodeTemplate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_node_template";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -241,11 +246,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // node_affinity_labels - computed: false, optional: true, required: false
-  private _nodeAffinityLabels?: { [key: string]: string };
+  private _nodeAffinityLabels?: { [key: string]: string } | cdktf.IResolvable;
   public get nodeAffinityLabels() {
     return this.interpolationForAttribute('node_affinity_labels') as any;
   }
-  public set nodeAffinityLabels(value: { [key: string]: string } ) {
+  public set nodeAffinityLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._nodeAffinityLabels = value;
   }
   public resetNodeAffinityLabels() {

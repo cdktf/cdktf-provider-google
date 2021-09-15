@@ -50,7 +50,7 @@ responses.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enable_cdn ComputeBackendService#enable_cdn}
   */
-  readonly enableCdn?: boolean;
+  readonly enableCdn?: boolean | cdktf.IResolvable;
   /**
   * The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -355,13 +355,13 @@ export interface ComputeBackendServiceCdnPolicyCacheKeyPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#include_host ComputeBackendService#include_host}
   */
-  readonly includeHost?: boolean;
+  readonly includeHost?: boolean | cdktf.IResolvable;
   /**
   * If true, http and https requests will be cached separately.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#include_protocol ComputeBackendService#include_protocol}
   */
-  readonly includeProtocol?: boolean;
+  readonly includeProtocol?: boolean | cdktf.IResolvable;
   /**
   * If true, include query string parameters in the cache key
 according to query_string_whitelist and
@@ -373,7 +373,7 @@ key entirely.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#include_query_string ComputeBackendService#include_query_string}
   */
-  readonly includeQueryString?: boolean;
+  readonly includeQueryString?: boolean | cdktf.IResolvable;
   /**
   * Names of query string parameters to exclude in cache keys.
 
@@ -466,7 +466,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#negative_caching ComputeBackendService#negative_caching}
   */
-  readonly negativeCaching?: boolean;
+  readonly negativeCaching?: boolean | cdktf.IResolvable;
   /**
   * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
   * 
@@ -690,7 +690,7 @@ export interface ComputeBackendServiceLogConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#enable ComputeBackendService#enable}
   */
-  readonly enable?: boolean;
+  readonly enable?: boolean | cdktf.IResolvable;
   /**
   * This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
@@ -901,6 +901,11 @@ function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendService
 */
 export class ComputeBackendService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_backend_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1039,11 +1044,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean;
+  private _enableCdn?: boolean | cdktf.IResolvable;
   public get enableCdn() {
     return this.getBooleanAttribute('enable_cdn');
   }
-  public set enableCdn(value: boolean ) {
+  public set enableCdn(value: boolean | cdktf.IResolvable ) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {

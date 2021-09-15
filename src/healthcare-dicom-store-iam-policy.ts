@@ -22,6 +22,11 @@ export interface HealthcareDicomStoreIamPolicyConfig extends cdktf.TerraformMeta
 */
 export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_dicom_store_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

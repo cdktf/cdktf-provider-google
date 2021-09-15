@@ -37,13 +37,13 @@ for a list of the currently supported language codes. This field cannot be updat
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html#enable_spell_correction DialogflowCxAgent#enable_spell_correction}
   */
-  readonly enableSpellCorrection?: boolean;
+  readonly enableSpellCorrection?: boolean | cdktf.IResolvable;
   /**
   * Determines whether this agent should log conversation queries.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html#enable_stackdriver_logging DialogflowCxAgent#enable_stackdriver_logging}
   */
-  readonly enableStackdriverLogging?: boolean;
+  readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
   /**
   * The name of the location this agent is located in.
 
@@ -96,7 +96,7 @@ export interface DialogflowCxAgentSpeechToTextSettings {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html#enable_speech_adaptation DialogflowCxAgent#enable_speech_adaptation}
   */
-  readonly enableSpeechAdaptation?: boolean;
+  readonly enableSpeechAdaptation?: boolean | cdktf.IResolvable;
 }
 
 function dialogflowCxAgentSpeechToTextSettingsToTerraform(struct?: DialogflowCxAgentSpeechToTextSettings): any {
@@ -135,6 +135,11 @@ function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html google_dialogflow_cx_agent}
 */
 export class DialogflowCxAgent extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_agent";
 
   // ===========
   // INITIALIZER
@@ -236,11 +241,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // enable_spell_correction - computed: false, optional: true, required: false
-  private _enableSpellCorrection?: boolean;
+  private _enableSpellCorrection?: boolean | cdktf.IResolvable;
   public get enableSpellCorrection() {
     return this.getBooleanAttribute('enable_spell_correction');
   }
-  public set enableSpellCorrection(value: boolean ) {
+  public set enableSpellCorrection(value: boolean | cdktf.IResolvable ) {
     this._enableSpellCorrection = value;
   }
   public resetEnableSpellCorrection() {
@@ -252,11 +257,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // enable_stackdriver_logging - computed: false, optional: true, required: false
-  private _enableStackdriverLogging?: boolean;
+  private _enableStackdriverLogging?: boolean | cdktf.IResolvable;
   public get enableStackdriverLogging() {
     return this.getBooleanAttribute('enable_stackdriver_logging');
   }
-  public set enableStackdriverLogging(value: boolean ) {
+  public set enableStackdriverLogging(value: boolean | cdktf.IResolvable ) {
     this._enableStackdriverLogging = value;
   }
   public resetEnableStackdriverLogging() {

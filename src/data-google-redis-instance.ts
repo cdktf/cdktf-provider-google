@@ -57,6 +57,11 @@ export class DataGoogleRedisInstanceServerCaCerts extends cdktf.ComplexComputedL
 */
 export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_redis_instance";
+
   // ===========
   // INITIALIZER
   // ===========

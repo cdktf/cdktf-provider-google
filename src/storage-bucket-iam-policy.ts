@@ -22,6 +22,11 @@ export interface StorageBucketIamPolicyConfig extends cdktf.TerraformMetaArgumen
 */
 export class StorageBucketIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

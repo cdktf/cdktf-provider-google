@@ -12,13 +12,13 @@ export interface ComputeNetworkPeeringRoutesConfigConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#export_custom_routes ComputeNetworkPeeringRoutesConfig#export_custom_routes}
   */
-  readonly exportCustomRoutes: boolean;
+  readonly exportCustomRoutes: boolean | cdktf.IResolvable;
   /**
   * Whether to import the custom routes to the peer network.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering_routes_config.html#import_custom_routes ComputeNetworkPeeringRoutesConfig#import_custom_routes}
   */
-  readonly importCustomRoutes: boolean;
+  readonly importCustomRoutes: boolean | cdktf.IResolvable;
   /**
   * The name of the primary network for the peering.
   * 
@@ -72,6 +72,11 @@ function computeNetworkPeeringRoutesConfigTimeoutsToTerraform(struct?: ComputeNe
 */
 export class ComputeNetworkPeeringRoutesConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_network_peering_routes_config";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -107,11 +112,11 @@ export class ComputeNetworkPeeringRoutesConfig extends cdktf.TerraformResource {
   // ==========
 
   // export_custom_routes - computed: false, optional: false, required: true
-  private _exportCustomRoutes: boolean;
+  private _exportCustomRoutes: boolean | cdktf.IResolvable;
   public get exportCustomRoutes() {
     return this.getBooleanAttribute('export_custom_routes');
   }
-  public set exportCustomRoutes(value: boolean) {
+  public set exportCustomRoutes(value: boolean | cdktf.IResolvable) {
     this._exportCustomRoutes = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -125,11 +130,11 @@ export class ComputeNetworkPeeringRoutesConfig extends cdktf.TerraformResource {
   }
 
   // import_custom_routes - computed: false, optional: false, required: true
-  private _importCustomRoutes: boolean;
+  private _importCustomRoutes: boolean | cdktf.IResolvable;
   public get importCustomRoutes() {
     return this.getBooleanAttribute('import_custom_routes');
   }
-  public set importCustomRoutes(value: boolean) {
+  public set importCustomRoutes(value: boolean | cdktf.IResolvable) {
     this._importCustomRoutes = value;
   }
   // Temporarily expose input value. Use with caution.

@@ -138,7 +138,7 @@ Headers can be set when the job is created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_scheduler_job.html#headers CloudSchedulerJob#headers}
   */
-  readonly headers?: { [key: string]: string };
+  readonly headers?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Which HTTP method to use for the request.
   * 
@@ -241,7 +241,7 @@ Repeated headers are not supported, but a header value can contain commas.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_scheduler_job.html#headers CloudSchedulerJob#headers}
   */
-  readonly headers?: { [key: string]: string };
+  readonly headers?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Which HTTP method to use for the request.
   * 
@@ -287,7 +287,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_scheduler_job.html#attributes CloudSchedulerJob#attributes}
   */
-  readonly attributes?: { [key: string]: string };
+  readonly attributes?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
@@ -399,6 +399,11 @@ function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_scheduler_job.html google_cloud_scheduler_job}
 */
 export class CloudSchedulerJob extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_scheduler_job";
 
   // ===========
   // INITIALIZER

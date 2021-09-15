@@ -30,6 +30,11 @@ export interface PrivatecaCaPoolIamPolicyConfig extends cdktf.TerraformMetaArgum
 */
 export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_privateca_ca_pool_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

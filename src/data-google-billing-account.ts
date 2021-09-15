@@ -18,13 +18,18 @@ export interface DataGoogleBillingAccountConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account.html#open DataGoogleBillingAccount#open}
   */
-  readonly open?: boolean;
+  readonly open?: boolean | cdktf.IResolvable;
 }
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/billing_account.html google_billing_account}
 */
 export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_billing_account";
 
   // ===========
   // INITIALIZER
@@ -100,11 +105,11 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
 
   // open - computed: true, optional: true, required: false
-  private _open?: boolean;
+  private _open?: boolean | cdktf.IResolvable;
   public get open() {
     return this.getBooleanAttribute('open');
   }
-  public set open(value: boolean) {
+  public set open(value: boolean | cdktf.IResolvable) {
     this._open = value;
   }
   public resetOpen() {

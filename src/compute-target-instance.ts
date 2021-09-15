@@ -85,6 +85,11 @@ function computeTargetInstanceTimeoutsToTerraform(struct?: ComputeTargetInstance
 */
 export class ComputeTargetInstance extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_instance";
+
   // ===========
   // INITIALIZER
   // ===========

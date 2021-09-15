@@ -18,7 +18,7 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#labels NetworkServicesEdgeCacheKeyset#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
@@ -100,6 +100,11 @@ function networkServicesEdgeCacheKeysetTimeoutsToTerraform(struct?: NetworkServi
 */
 export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_network_services_edge_cache_keyset";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -156,11 +161,11 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

@@ -174,6 +174,11 @@ function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetric
 */
 export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_metric_descriptor";
+
   // ===========
   // INITIALIZER
   // ===========

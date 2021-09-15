@@ -23,7 +23,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html#selective_authentication ActiveDirectoryDomainTrust#selective_authentication}
   */
-  readonly selectiveAuthentication?: boolean;
+  readonly selectiveAuthentication?: boolean | cdktf.IResolvable;
   /**
   * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
   * 
@@ -90,6 +90,11 @@ function activeDirectoryDomainTrustTimeoutsToTerraform(struct?: ActiveDirectoryD
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust.html google_active_directory_domain_trust}
 */
 export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_active_directory_domain_trust";
 
   // ===========
   // INITIALIZER
@@ -163,11 +168,11 @@ export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
   }
 
   // selective_authentication - computed: false, optional: true, required: false
-  private _selectiveAuthentication?: boolean;
+  private _selectiveAuthentication?: boolean | cdktf.IResolvable;
   public get selectiveAuthentication() {
     return this.getBooleanAttribute('selective_authentication');
   }
-  public set selectiveAuthentication(value: boolean ) {
+  public set selectiveAuthentication(value: boolean | cdktf.IResolvable ) {
     this._selectiveAuthentication = value;
   }
   public resetSelectiveAuthentication() {

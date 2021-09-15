@@ -64,6 +64,11 @@ function projectDefaultServiceAccountsTimeoutsToTerraform(struct?: ProjectDefaul
 */
 export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_default_service_accounts";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -108,6 +108,11 @@ function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVpnGatewa
 */
 export class ComputeHaVpnGateway extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_ha_vpn_gateway";
+
   // ===========
   // INITIALIZER
   // ===========

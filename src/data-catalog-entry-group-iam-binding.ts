@@ -64,6 +64,11 @@ function dataCatalogEntryGroupIamBindingConditionToTerraform(struct?: DataCatalo
 */
 export class DataCatalogEntryGroupIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_entry_group_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

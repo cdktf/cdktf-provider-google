@@ -85,7 +85,7 @@ This translates to the Access-Control-Allow-Credentials header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#allow_credentials ComputeUrlMap#allow_credentials}
   */
-  readonly allowCredentials?: boolean;
+  readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
   * 
@@ -118,7 +118,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#disabled ComputeUrlMap#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
   * 
@@ -404,7 +404,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace?: boolean;
+  readonly replace?: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
@@ -435,7 +435,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace?: boolean;
+  readonly replace?: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
@@ -599,7 +599,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#https_redirect ComputeUrlMap#https_redirect}
   */
-  readonly httpsRedirect?: boolean;
+  readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -646,7 +646,7 @@ retained. The default is set to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#strip_query ComputeUrlMap#strip_query}
   */
-  readonly stripQuery: boolean;
+  readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapDefaultUrlRedirect): any {
@@ -681,7 +681,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionRequestHeadersToAdd): any {
@@ -713,7 +713,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionResponseHeadersToAdd): any {
@@ -805,7 +805,7 @@ This translates to the Access-Control-Allow-Credentials header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#allow_credentials ComputeUrlMap#allow_credentials}
   */
-  readonly allowCredentials?: boolean;
+  readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
   * 
@@ -838,7 +838,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#disabled ComputeUrlMap#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
   * 
@@ -1124,7 +1124,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace?: boolean;
+  readonly replace?: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
@@ -1155,7 +1155,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace?: boolean;
+  readonly replace?: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
@@ -1319,7 +1319,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#https_redirect ComputeUrlMap#https_redirect}
   */
-  readonly httpsRedirect?: boolean;
+  readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -1366,7 +1366,7 @@ retained.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#strip_query ComputeUrlMap#strip_query}
   */
-  readonly stripQuery: boolean;
+  readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherDefaultUrlRedirect): any {
@@ -1401,7 +1401,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd): any {
@@ -1433,7 +1433,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd): any {
@@ -1492,7 +1492,7 @@ Control-Allow-Credentials header. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#allow_credentials ComputeUrlMap#allow_credentials}
   */
-  readonly allowCredentials?: boolean;
+  readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
   * 
@@ -1525,7 +1525,7 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#disabled ComputeUrlMap#disabled}
   */
-  readonly disabled: boolean;
+  readonly disabled: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
   * 
@@ -1821,7 +1821,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
@@ -1853,7 +1853,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
@@ -2017,7 +2017,7 @@ permitted. The default is set to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#https_redirect ComputeUrlMap#https_redirect}
   */
-  readonly httpsRedirect?: boolean;
+  readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one
 that was supplied in the request. pathRedirect cannot be supplied
@@ -2065,7 +2065,7 @@ portion of the original URL is retained.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#strip_query ComputeUrlMap#strip_query}
   */
-  readonly stripQuery: boolean;
+  readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleUrlRedirect): any {
@@ -2140,7 +2140,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd): any {
@@ -2172,7 +2172,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd): any {
@@ -2269,7 +2269,7 @@ match criteria above are NOT met. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#invert_match ComputeUrlMap#invert_match}
   */
-  readonly invertMatch?: boolean;
+  readonly invertMatch?: boolean | cdktf.IResolvable;
   /**
   * The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -2285,7 +2285,7 @@ prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#present_match ComputeUrlMap#present_match}
   */
-  readonly presentMatch?: boolean;
+  readonly presentMatch?: boolean | cdktf.IResolvable;
   /**
   * The value of the header must match the regular expression specified in
 regexMatch. For regular expression grammar, please see:
@@ -2404,7 +2404,7 @@ presentMatch, exactMatch and regexMatch must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#present_match ComputeUrlMap#present_match}
   */
-  readonly presentMatch?: boolean;
+  readonly presentMatch?: boolean | cdktf.IResolvable;
   /**
   * The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -2443,7 +2443,7 @@ Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#ignore_case ComputeUrlMap#ignore_case}
   */
-  readonly ignoreCase?: boolean;
+  readonly ignoreCase?: boolean | cdktf.IResolvable;
   /**
   * For satisfying the matchRule condition, the request's path must begin with the
 specified prefixMatch. prefixMatch must begin with a /. The value must be
@@ -2504,7 +2504,7 @@ Control-Allow-Credentials header. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#allow_credentials ComputeUrlMap#allow_credentials}
   */
-  readonly allowCredentials?: boolean;
+  readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
   * 
@@ -2538,7 +2538,7 @@ which indicates that the CORS policy is in effect. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#disabled ComputeUrlMap#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
   * 
@@ -2834,7 +2834,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
@@ -2866,7 +2866,7 @@ were set for that header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#replace ComputeUrlMap#replace}
   */
-  readonly replace: boolean;
+  readonly replace: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
@@ -3028,7 +3028,7 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#https_redirect ComputeUrlMap#https_redirect}
   */
-  readonly httpsRedirect?: boolean;
+  readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one that was
 supplied in the request. Only one of pathRedirect or prefixRedirect must be
@@ -3067,7 +3067,7 @@ original URL is retained. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html#strip_query ComputeUrlMap#strip_query}
   */
-  readonly stripQuery?: boolean;
+  readonly stripQuery?: boolean | cdktf.IResolvable;
 }
 
 function computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesUrlRedirect): any {
@@ -3285,6 +3285,11 @@ function computeUrlMapTimeoutsToTerraform(struct?: ComputeUrlMapTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_url_map.html google_compute_url_map}
 */
 export class ComputeUrlMap extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_url_map";
 
   // ===========
   // INITIALIZER

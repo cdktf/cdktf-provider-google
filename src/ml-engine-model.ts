@@ -18,7 +18,7 @@ export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#labels MlEngineModel#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name specified for the model.
   * 
@@ -30,13 +30,13 @@ export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#online_prediction_console_logging MlEngineModel#online_prediction_console_logging}
   */
-  readonly onlinePredictionConsoleLogging?: boolean;
+  readonly onlinePredictionConsoleLogging?: boolean | cdktf.IResolvable;
   /**
   * If true, online prediction access logs are sent to StackDriver Logging.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#online_prediction_logging MlEngineModel#online_prediction_logging}
   */
-  readonly onlinePredictionLogging?: boolean;
+  readonly onlinePredictionLogging?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/ml_engine_model.html#project MlEngineModel#project}
   */
@@ -102,6 +102,11 @@ function mlEngineModelTimeoutsToTerraform(struct?: MlEngineModelTimeouts): any {
 */
 export class MlEngineModel extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_ml_engine_model";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -161,11 +166,11 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -190,11 +195,11 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
 
   // online_prediction_console_logging - computed: false, optional: true, required: false
-  private _onlinePredictionConsoleLogging?: boolean;
+  private _onlinePredictionConsoleLogging?: boolean | cdktf.IResolvable;
   public get onlinePredictionConsoleLogging() {
     return this.getBooleanAttribute('online_prediction_console_logging');
   }
-  public set onlinePredictionConsoleLogging(value: boolean ) {
+  public set onlinePredictionConsoleLogging(value: boolean | cdktf.IResolvable ) {
     this._onlinePredictionConsoleLogging = value;
   }
   public resetOnlinePredictionConsoleLogging() {
@@ -206,11 +211,11 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
 
   // online_prediction_logging - computed: false, optional: true, required: false
-  private _onlinePredictionLogging?: boolean;
+  private _onlinePredictionLogging?: boolean | cdktf.IResolvable;
   public get onlinePredictionLogging() {
     return this.getBooleanAttribute('online_prediction_logging');
   }
-  public set onlinePredictionLogging(value: boolean ) {
+  public set onlinePredictionLogging(value: boolean | cdktf.IResolvable ) {
     this._onlinePredictionLogging = value;
   }
   public resetOnlinePredictionLogging() {

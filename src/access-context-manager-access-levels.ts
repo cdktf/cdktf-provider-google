@@ -72,20 +72,20 @@ An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#require_admin_approval AccessContextManagerAccessLevels#require_admin_approval}
   */
-  readonly requireAdminApproval?: boolean;
+  readonly requireAdminApproval?: boolean | cdktf.IResolvable;
   /**
   * Whether the device needs to be corp owned.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#require_corp_owned AccessContextManagerAccessLevels#require_corp_owned}
   */
-  readonly requireCorpOwned?: boolean;
+  readonly requireCorpOwned?: boolean | cdktf.IResolvable;
   /**
   * Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#require_screen_lock AccessContextManagerAccessLevels#require_screen_lock}
   */
-  readonly requireScreenLock?: boolean;
+  readonly requireScreenLock?: boolean | cdktf.IResolvable;
   /**
   * os_constraints block
   * 
@@ -142,7 +142,7 @@ the Condition overall to be satisfied. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#negate AccessContextManagerAccessLevels#negate}
   */
-  readonly negate?: boolean;
+  readonly negate?: boolean | cdktf.IResolvable;
   /**
   * The request must originate from one of the provided
 countries/regions.
@@ -336,6 +336,11 @@ function accessContextManagerAccessLevelsTimeoutsToTerraform(struct?: AccessCont
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html google_access_context_manager_access_levels}
 */
 export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_access_levels";
 
   // ===========
   // INITIALIZER

@@ -22,6 +22,11 @@ export interface BillingAccountIamPolicyConfig extends cdktf.TerraformMetaArgume
 */
 export class BillingAccountIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_billing_account_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -14,6 +14,11 @@ export interface DataGoogleComputeLbIpRangesConfig extends cdktf.TerraformMetaAr
 */
 export class DataGoogleComputeLbIpRanges extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_lb_ip_ranges";
+
   // ===========
   // INITIALIZER
   // ===========

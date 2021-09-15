@@ -60,6 +60,11 @@ function sourcerepoRepositoryIamMemberConditionToTerraform(struct?: SourcerepoRe
 */
 export class SourcerepoRepositoryIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sourcerepo_repository_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

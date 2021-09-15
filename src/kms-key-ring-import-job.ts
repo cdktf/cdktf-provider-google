@@ -84,6 +84,11 @@ function kmsKeyRingImportJobTimeoutsToTerraform(struct?: KmsKeyRingImportJobTime
 */
 export class KmsKeyRingImportJob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_key_ring_import_job";
+
   // ===========
   // INITIALIZER
   // ===========

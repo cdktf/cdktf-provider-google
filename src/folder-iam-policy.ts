@@ -22,6 +22,11 @@ export interface FolderIamPolicyConfig extends cdktf.TerraformMetaArguments {
 */
 export class FolderIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

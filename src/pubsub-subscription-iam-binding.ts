@@ -60,6 +60,11 @@ function pubsubSubscriptionIamBindingConditionToTerraform(struct?: PubsubSubscri
 */
 export class PubsubSubscriptionIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_subscription_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

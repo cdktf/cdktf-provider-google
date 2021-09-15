@@ -26,6 +26,11 @@ export interface HealthcareConsentStoreIamPolicyConfig extends cdktf.TerraformMe
 */
 export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_consent_store_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

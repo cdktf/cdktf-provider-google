@@ -62,6 +62,11 @@ function accessContextManagerGcpUserAccessBindingTimeoutsToTerraform(struct?: Ac
 */
 export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_gcp_user_access_binding";
+
   // ===========
   // INITIALIZER
   // ===========

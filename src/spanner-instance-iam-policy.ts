@@ -26,6 +26,11 @@ export interface SpannerInstanceIamPolicyConfig extends cdktf.TerraformMetaArgum
 */
 export class SpannerInstanceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_spanner_instance_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

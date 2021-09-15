@@ -155,6 +155,11 @@ function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeouts):
 */
 export class ComputeNodeGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_node_group";
+
   // ===========
   // INITIALIZER
   // ===========

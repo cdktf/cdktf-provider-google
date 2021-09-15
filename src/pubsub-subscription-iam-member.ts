@@ -60,6 +60,11 @@ function pubsubSubscriptionIamMemberConditionToTerraform(struct?: PubsubSubscrip
 */
 export class PubsubSubscriptionIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_subscription_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

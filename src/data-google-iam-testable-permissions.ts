@@ -53,6 +53,11 @@ export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexCo
 */
 export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iam_testable_permissions";
+
   // ===========
   // INITIALIZER
   // ===========

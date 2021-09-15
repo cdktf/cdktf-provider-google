@@ -60,6 +60,11 @@ function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily
 */
 export class BigtableTable extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_table";
+
   // ===========
   // INITIALIZER
   // ===========

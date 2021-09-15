@@ -22,6 +22,11 @@ export interface KmsKeyRingIamPolicyConfig extends cdktf.TerraformMetaArguments 
 */
 export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_key_ring_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

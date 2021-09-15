@@ -24,7 +24,7 @@ export interface LoggingProjectSinkConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#disabled LoggingProjectSink#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when exporting logs. Only log entries that match the filter are exported.
   * 
@@ -48,7 +48,7 @@ export interface LoggingProjectSinkConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#unique_writer_identity LoggingProjectSink#unique_writer_identity}
   */
-  readonly uniqueWriterIdentity?: boolean;
+  readonly uniqueWriterIdentity?: boolean | cdktf.IResolvable;
   /**
   * bigquery_options block
   * 
@@ -68,7 +68,7 @@ export interface LoggingProjectSinkBigqueryOptions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#use_partitioned_tables LoggingProjectSink#use_partitioned_tables}
   */
-  readonly usePartitionedTables: boolean;
+  readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
 
 function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingProjectSinkBigqueryOptions): any {
@@ -90,7 +90,7 @@ export interface LoggingProjectSinkExclusions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html#disabled LoggingProjectSink#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries
   * 
@@ -120,6 +120,11 @@ function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectSinkExcl
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink.html google_logging_project_sink}
 */
 export class LoggingProjectSink extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_project_sink";
 
   // ===========
   // INITIALIZER
@@ -188,11 +193,11 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -254,11 +259,11 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
 
   // unique_writer_identity - computed: false, optional: true, required: false
-  private _uniqueWriterIdentity?: boolean;
+  private _uniqueWriterIdentity?: boolean | cdktf.IResolvable;
   public get uniqueWriterIdentity() {
     return this.getBooleanAttribute('unique_writer_identity');
   }
-  public set uniqueWriterIdentity(value: boolean ) {
+  public set uniqueWriterIdentity(value: boolean | cdktf.IResolvable ) {
     this._uniqueWriterIdentity = value;
   }
   public resetUniqueWriterIdentity() {

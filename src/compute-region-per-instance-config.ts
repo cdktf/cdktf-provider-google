@@ -40,7 +40,7 @@ export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#remove_instance_state_on_destroy ComputeRegionPerInstanceConfig#remove_instance_state_on_destroy}
   */
-  readonly removeInstanceStateOnDestroy?: boolean;
+  readonly removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * preserved_state block
   * 
@@ -102,7 +102,7 @@ export interface ComputeRegionPerInstanceConfigPreservedState {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#metadata ComputeRegionPerInstanceConfig#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * disk block
   * 
@@ -148,6 +148,11 @@ function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: ComputeRegio
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html google_compute_region_per_instance_config}
 */
 export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_per_instance_config";
 
   // ===========
   // INITIALIZER
@@ -282,11 +287,11 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // remove_instance_state_on_destroy - computed: false, optional: true, required: false
-  private _removeInstanceStateOnDestroy?: boolean;
+  private _removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable;
   public get removeInstanceStateOnDestroy() {
     return this.getBooleanAttribute('remove_instance_state_on_destroy');
   }
-  public set removeInstanceStateOnDestroy(value: boolean ) {
+  public set removeInstanceStateOnDestroy(value: boolean | cdktf.IResolvable ) {
     this._removeInstanceStateOnDestroy = value;
   }
   public resetRemoveInstanceStateOnDestroy() {

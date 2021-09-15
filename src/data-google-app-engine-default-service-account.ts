@@ -18,6 +18,11 @@ export interface DataGoogleAppEngineDefaultServiceAccountConfig extends cdktf.Te
 */
 export class DataGoogleAppEngineDefaultServiceAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_default_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -22,6 +22,11 @@ export interface HealthcareHl7V2StoreIamPolicyConfig extends cdktf.TerraformMeta
 */
 export class HealthcareHl7V2StoreIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_hl7_v2_store_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

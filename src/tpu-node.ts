@@ -38,7 +38,7 @@ is peered with another network that is using that CIDR block.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#labels TpuNode#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The immutable name of the TPU.
   * 
@@ -72,7 +72,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#use_service_networking TpuNode#use_service_networking}
   */
-  readonly useServiceNetworking?: boolean;
+  readonly useServiceNetworking?: boolean | cdktf.IResolvable;
   /**
   * The GCP location for the TPU. If it is not provided, the provider zone is used.
   * 
@@ -110,7 +110,7 @@ export interface TpuNodeSchedulingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html#preemptible TpuNode#preemptible}
   */
-  readonly preemptible: boolean;
+  readonly preemptible: boolean | cdktf.IResolvable;
 }
 
 function tpuNodeSchedulingConfigToTerraform(struct?: TpuNodeSchedulingConfig): any {
@@ -149,6 +149,11 @@ function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/tpu_node.html google_tpu_node}
 */
 export class TpuNode extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_tpu_node";
 
   // ===========
   // INITIALIZER
@@ -241,11 +246,11 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -325,11 +330,11 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // use_service_networking - computed: false, optional: true, required: false
-  private _useServiceNetworking?: boolean;
+  private _useServiceNetworking?: boolean | cdktf.IResolvable;
   public get useServiceNetworking() {
     return this.getBooleanAttribute('use_service_networking');
   }
-  public set useServiceNetworking(value: boolean ) {
+  public set useServiceNetworking(value: boolean | cdktf.IResolvable ) {
     this._useServiceNetworking = value;
   }
   public resetUseServiceNetworking() {

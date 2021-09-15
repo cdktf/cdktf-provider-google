@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface KmsCryptoKeyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+If not specified at creation time, the default duration is 24 hours.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#destroy_scheduled_duration KmsCryptoKey#destroy_scheduled_duration}
+  */
+  readonly destroyScheduledDuration?: string;
+  /**
   * The KeyRing that this key belongs to.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   * 
@@ -19,7 +26,7 @@ Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#labels KmsCryptoKey#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The resource name for the CryptoKey.
   * 
@@ -49,7 +56,7 @@ You must use the 'google_kms_key_ring_import_job' resource to import the CryptoK
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#skip_initial_version_creation KmsCryptoKey#skip_initial_version_creation}
   */
-  readonly skipInitialVersionCreation?: boolean;
+  readonly skipInitialVersionCreation?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -117,6 +124,11 @@ function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemp
 */
 export class KmsCryptoKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_crypto_key";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -139,6 +151,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._destroyScheduledDuration = config.destroyScheduledDuration;
     this._keyRing = config.keyRing;
     this._labels = config.labels;
     this._name = config.name;
@@ -152,6 +165,22 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // destroy_scheduled_duration - computed: true, optional: true, required: false
+  private _destroyScheduledDuration?: string;
+  public get destroyScheduledDuration() {
+    return this.getStringAttribute('destroy_scheduled_duration');
+  }
+  public set destroyScheduledDuration(value: string) {
+    this._destroyScheduledDuration = value;
+  }
+  public resetDestroyScheduledDuration() {
+    this._destroyScheduledDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destroyScheduledDurationInput() {
+    return this._destroyScheduledDuration
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -172,11 +201,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -238,11 +267,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // skip_initial_version_creation - computed: false, optional: true, required: false
-  private _skipInitialVersionCreation?: boolean;
+  private _skipInitialVersionCreation?: boolean | cdktf.IResolvable;
   public get skipInitialVersionCreation() {
     return this.getBooleanAttribute('skip_initial_version_creation');
   }
-  public set skipInitialVersionCreation(value: boolean ) {
+  public set skipInitialVersionCreation(value: boolean | cdktf.IResolvable ) {
     this._skipInitialVersionCreation = value;
   }
   public resetSkipInitialVersionCreation() {
@@ -291,6 +320,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      destroy_scheduled_duration: cdktf.stringToTerraform(this._destroyScheduledDuration),
       key_ring: cdktf.stringToTerraform(this._keyRing),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),

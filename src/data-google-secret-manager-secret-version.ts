@@ -26,6 +26,11 @@ export interface DataGoogleSecretManagerSecretVersionConfig extends cdktf.Terraf
 */
 export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_secret_manager_secret_version";
+
   // ===========
   // INITIALIZER
   // ===========

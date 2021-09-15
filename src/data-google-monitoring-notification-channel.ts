@@ -24,7 +24,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel.html#labels DataGoogleMonitoringNotificationChannel#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel.html#project DataGoogleMonitoringNotificationChannel#project}
   */
@@ -40,7 +40,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel.html#user_labels DataGoogleMonitoringNotificationChannel#user_labels}
   */
-  readonly userLabels?: { [key: string]: string };
+  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
 }
 export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends cdktf.ComplexComputedList {
 
@@ -64,6 +64,11 @@ export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends cdkt
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel.html google_monitoring_notification_channel}
 */
 export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_notification_channel";
 
   // ===========
   // INITIALIZER
@@ -130,11 +135,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -188,11 +193,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string };
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable;
   public get userLabels() {
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } ) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._userLabels = value;
   }
   public resetUserLabels() {

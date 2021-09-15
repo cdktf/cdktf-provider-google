@@ -18,6 +18,11 @@ export interface DataGoogleCloudRunLocationsConfig extends cdktf.TerraformMetaAr
 */
 export class DataGoogleCloudRunLocations extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_locations";
+
   // ===========
   // INITIALIZER
   // ===========

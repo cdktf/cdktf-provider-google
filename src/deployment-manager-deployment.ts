@@ -52,7 +52,7 @@ to true or if other fields are updated while preview is true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#preview DeploymentManagerDeployment#preview}
   */
-  readonly preview?: boolean;
+  readonly preview?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#project DeploymentManagerDeployment#project}
   */
@@ -192,6 +192,11 @@ function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManag
 */
 export class DeploymentManagerDeployment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_deployment_manager_deployment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -306,11 +311,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // preview - computed: false, optional: true, required: false
-  private _preview?: boolean;
+  private _preview?: boolean | cdktf.IResolvable;
   public get preview() {
     return this.getBooleanAttribute('preview');
   }
-  public set preview(value: boolean ) {
+  public set preview(value: boolean | cdktf.IResolvable ) {
     this._preview = value;
   }
   public resetPreview() {

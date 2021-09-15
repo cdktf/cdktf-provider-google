@@ -35,7 +35,7 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html#proxy_bind ComputeTargetHttpProxy#proxy_bind}
   */
-  readonly proxyBind?: boolean;
+  readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
   * A reference to the UrlMap resource that defines the mapping from URL
 to the BackendService.
@@ -79,6 +79,11 @@ function computeTargetHttpProxyTimeoutsToTerraform(struct?: ComputeTargetHttpPro
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_http_proxy.html google_compute_target_http_proxy}
 */
 export class ComputeTargetHttpProxy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_http_proxy";
 
   // ===========
   // INITIALIZER
@@ -170,11 +175,11 @@ export class ComputeTargetHttpProxy extends cdktf.TerraformResource {
   }
 
   // proxy_bind - computed: true, optional: true, required: false
-  private _proxyBind?: boolean;
+  private _proxyBind?: boolean | cdktf.IResolvable;
   public get proxyBind() {
     return this.getBooleanAttribute('proxy_bind');
   }
-  public set proxyBind(value: boolean) {
+  public set proxyBind(value: boolean | cdktf.IResolvable) {
     this._proxyBind = value;
   }
   public resetProxyBind() {

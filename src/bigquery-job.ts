@@ -24,7 +24,7 @@ export interface BigqueryJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#labels BigqueryJob#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The geographic location of the job. The default value is US.
   * 
@@ -343,13 +343,13 @@ Default is ','
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#print_header BigqueryJob#print_header}
   */
-  readonly printHeader?: boolean;
+  readonly printHeader?: boolean | cdktf.IResolvable;
   /**
   * Whether to use logical types when extracting to AVRO format.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#use_avro_logical_types BigqueryJob#use_avro_logical_types}
   */
-  readonly useAvroLogicalTypes?: boolean;
+  readonly useAvroLogicalTypes?: boolean | cdktf.IResolvable;
   /**
   * source_model block
   * 
@@ -467,20 +467,20 @@ an invalid error is returned in the job result. The default value is false. Only
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#allow_jagged_rows BigqueryJob#allow_jagged_rows}
   */
-  readonly allowJaggedRows?: boolean;
+  readonly allowJaggedRows?: boolean | cdktf.IResolvable;
   /**
   * Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#allow_quoted_newlines BigqueryJob#allow_quoted_newlines}
   */
-  readonly allowQuotedNewlines?: boolean;
+  readonly allowQuotedNewlines?: boolean | cdktf.IResolvable;
   /**
   * Indicates if we should automatically infer the options and schema for CSV and JSON sources.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#autodetect BigqueryJob#autodetect}
   */
-  readonly autodetect?: boolean;
+  readonly autodetect?: boolean | cdktf.IResolvable;
   /**
   * Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -518,7 +518,7 @@ JSON: Named values that don't match any column names
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#ignore_unknown_values BigqueryJob#ignore_unknown_values}
   */
-  readonly ignoreUnknownValues?: boolean;
+  readonly ignoreUnknownValues?: boolean | cdktf.IResolvable;
   /**
   * The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
@@ -787,7 +787,7 @@ However, you must still set destinationTable when result size exceeds the allowe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#allow_large_results BigqueryJob#allow_large_results}
   */
-  readonly allowLargeResults?: boolean;
+  readonly allowLargeResults?: boolean | cdktf.IResolvable;
   /**
   * Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -803,7 +803,7 @@ allowLargeResults must be true if this is set to false. For standard SQL queries
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#flatten_results BigqueryJob#flatten_results}
   */
-  readonly flattenResults?: boolean;
+  readonly flattenResults?: boolean | cdktf.IResolvable;
   /**
   * Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
@@ -856,7 +856,7 @@ If set to false, the query will use BigQuery's standard SQL.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#use_legacy_sql BigqueryJob#use_legacy_sql}
   */
-  readonly useLegacySql?: boolean;
+  readonly useLegacySql?: boolean | cdktf.IResolvable;
   /**
   * Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
@@ -864,7 +864,7 @@ The default value is true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#use_query_cache BigqueryJob#use_query_cache}
   */
-  readonly useQueryCache?: boolean;
+  readonly useQueryCache?: boolean | cdktf.IResolvable;
   /**
   * Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -956,6 +956,11 @@ function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeouts): any {
 */
 export class BigqueryJob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_job";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1034,11 +1039,11 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

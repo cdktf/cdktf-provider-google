@@ -69,7 +69,7 @@ bet set to True if any of the fields in the spec are set to non-default values.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter.html#use_explicit_dry_run_spec AccessContextManagerServicePerimeter#use_explicit_dry_run_spec}
   */
-  readonly useExplicitDryRunSpec?: boolean;
+  readonly useExplicitDryRunSpec?: boolean | cdktf.IResolvable;
   /**
   * spec block
   * 
@@ -404,7 +404,7 @@ list of APIs specified in 'allowedServices'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter.html#enable_restriction AccessContextManagerServicePerimeter#enable_restriction}
   */
-  readonly enableRestriction?: boolean;
+  readonly enableRestriction?: boolean | cdktf.IResolvable;
 }
 
 function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterSpecVpcAccessibleServices): any {
@@ -796,7 +796,7 @@ list of APIs specified in 'allowedServices'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter.html#enable_restriction AccessContextManagerServicePerimeter#enable_restriction}
   */
-  readonly enableRestriction?: boolean;
+  readonly enableRestriction?: boolean | cdktf.IResolvable;
 }
 
 function accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterStatusVpcAccessibleServices): any {
@@ -902,6 +902,11 @@ function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?: Access
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter.html google_access_context_manager_service_perimeter}
 */
 export class AccessContextManagerServicePerimeter extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_service_perimeter";
 
   // ===========
   // INITIALIZER
@@ -1027,11 +1032,11 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // use_explicit_dry_run_spec - computed: false, optional: true, required: false
-  private _useExplicitDryRunSpec?: boolean;
+  private _useExplicitDryRunSpec?: boolean | cdktf.IResolvable;
   public get useExplicitDryRunSpec() {
     return this.getBooleanAttribute('use_explicit_dry_run_spec');
   }
-  public set useExplicitDryRunSpec(value: boolean ) {
+  public set useExplicitDryRunSpec(value: boolean | cdktf.IResolvable ) {
     this._useExplicitDryRunSpec = value;
   }
   public resetUseExplicitDryRunSpec() {

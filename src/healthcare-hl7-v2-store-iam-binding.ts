@@ -56,6 +56,11 @@ function healthcareHl7V2StoreIamBindingConditionToTerraform(struct?: HealthcareH
 */
 export class HealthcareHl7V2StoreIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_hl7_v2_store_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

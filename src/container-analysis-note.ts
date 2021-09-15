@@ -146,6 +146,11 @@ function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNote
 */
 export class ContainerAnalysisNote extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_analysis_note";
+
   // ===========
   // INITIALIZER
   // ===========

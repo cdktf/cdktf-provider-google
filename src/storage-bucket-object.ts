@@ -58,7 +58,7 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#event_based_hold StorageBucketObject#event_based_hold}
   */
-  readonly eventBasedHold?: boolean;
+  readonly eventBasedHold?: boolean | cdktf.IResolvable;
   /**
   * Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata's kmsKeyName value, if any.
   * 
@@ -70,7 +70,7 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#metadata StorageBucketObject#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
   * 
@@ -94,13 +94,19 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#temporary_hold StorageBucketObject#temporary_hold}
   */
-  readonly temporaryHold?: boolean;
+  readonly temporaryHold?: boolean | cdktf.IResolvable;
   /**
   * customer_encryption block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#customer_encryption StorageBucketObject#customer_encryption}
   */
   readonly customerEncryption?: StorageBucketObjectCustomerEncryption[];
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#timeouts StorageBucketObject#timeouts}
+  */
+  readonly timeouts?: StorageBucketObjectTimeouts;
 }
 export interface StorageBucketObjectCustomerEncryption {
   /**
@@ -125,11 +131,40 @@ function storageBucketObjectCustomerEncryptionToTerraform(struct?: StorageBucket
   }
 }
 
+export interface StorageBucketObjectTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#create StorageBucketObject#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#delete StorageBucketObject#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html#update StorageBucketObject#update}
+  */
+  readonly update?: string;
+}
+
+function storageBucketObjectTimeoutsToTerraform(struct?: StorageBucketObjectTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html google_storage_bucket_object}
 */
 export class StorageBucketObject extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket_object";
 
   // ===========
   // INITIALIZER
@@ -169,6 +204,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     this._storageClass = config.storageClass;
     this._temporaryHold = config.temporaryHold;
     this._customerEncryption = config.customerEncryption;
+    this._timeouts = config.timeouts;
   }
 
   // ==========
@@ -306,11 +342,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // event_based_hold - computed: false, optional: true, required: false
-  private _eventBasedHold?: boolean;
+  private _eventBasedHold?: boolean | cdktf.IResolvable;
   public get eventBasedHold() {
     return this.getBooleanAttribute('event_based_hold');
   }
-  public set eventBasedHold(value: boolean ) {
+  public set eventBasedHold(value: boolean | cdktf.IResolvable ) {
     this._eventBasedHold = value;
   }
   public resetEventBasedHold() {
@@ -353,11 +389,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string };
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
   public get metadata() {
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -424,11 +460,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // temporary_hold - computed: false, optional: true, required: false
-  private _temporaryHold?: boolean;
+  private _temporaryHold?: boolean | cdktf.IResolvable;
   public get temporaryHold() {
     return this.getBooleanAttribute('temporary_hold');
   }
-  public set temporaryHold(value: boolean ) {
+  public set temporaryHold(value: boolean | cdktf.IResolvable ) {
     this._temporaryHold = value;
   }
   public resetTemporaryHold() {
@@ -455,6 +491,22 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     return this._customerEncryption
   }
 
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: StorageBucketObjectTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: StorageBucketObjectTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -477,6 +529,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       storage_class: cdktf.stringToTerraform(this._storageClass),
       temporary_hold: cdktf.booleanToTerraform(this._temporaryHold),
       customer_encryption: cdktf.listMapper(storageBucketObjectCustomerEncryptionToTerraform)(this._customerEncryption),
+      timeouts: storageBucketObjectTimeoutsToTerraform(this._timeouts),
     };
   }
 }

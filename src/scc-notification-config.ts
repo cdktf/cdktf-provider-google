@@ -116,6 +116,11 @@ function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfig
 */
 export class SccNotificationConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_scc_notification_config";
+
   // ===========
   // INITIALIZER
   // ===========

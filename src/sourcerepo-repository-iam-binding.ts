@@ -60,6 +60,11 @@ function sourcerepoRepositoryIamBindingConditionToTerraform(struct?: SourcerepoR
 */
 export class SourcerepoRepositoryIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sourcerepo_repository_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

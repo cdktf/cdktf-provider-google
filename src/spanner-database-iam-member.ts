@@ -64,6 +64,11 @@ function spannerDatabaseIamMemberConditionToTerraform(struct?: SpannerDatabaseIa
 */
 export class SpannerDatabaseIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_spanner_database_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

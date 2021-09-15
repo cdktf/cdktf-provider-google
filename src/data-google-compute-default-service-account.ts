@@ -18,6 +18,11 @@ export interface DataGoogleComputeDefaultServiceAccountConfig extends cdktf.Terr
 */
 export class DataGoogleComputeDefaultServiceAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_default_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

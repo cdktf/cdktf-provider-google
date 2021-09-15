@@ -56,6 +56,11 @@ function iapWebIamMemberConditionToTerraform(struct?: IapWebIamMemberCondition):
 */
 export class IapWebIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_web_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

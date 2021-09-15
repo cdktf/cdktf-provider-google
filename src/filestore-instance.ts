@@ -18,7 +18,7 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#labels FilestoreInstance#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The resource name of the instance.
   * 
@@ -147,6 +147,11 @@ function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceTimeouts
 */
 export class FilestoreInstance extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_filestore_instance";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -216,11 +221,11 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

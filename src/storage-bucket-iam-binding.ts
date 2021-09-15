@@ -56,6 +56,11 @@ function storageBucketIamBindingConditionToTerraform(struct?: StorageBucketIamBi
 */
 export class StorageBucketIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

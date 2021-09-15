@@ -39,6 +39,11 @@ export class DataGoogleKmsCryptoKeyVersionTemplate extends cdktf.ComplexComputed
 */
 export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_crypto_key";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -68,6 +73,11 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // destroy_scheduled_duration - computed: true, optional: false, required: false
+  public get destroyScheduledDuration() {
+    return this.getStringAttribute('destroy_scheduled_duration');
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {

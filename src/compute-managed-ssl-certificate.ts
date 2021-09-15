@@ -100,6 +100,11 @@ function computeManagedSslCertificateTimeoutsToTerraform(struct?: ComputeManaged
 */
 export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_managed_ssl_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

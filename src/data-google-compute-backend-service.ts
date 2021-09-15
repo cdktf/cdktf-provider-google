@@ -356,6 +356,11 @@ export class DataGoogleComputeBackendServiceOutlierDetection extends cdktf.Compl
 */
 export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_backend_service";
+
   // ===========
   // INITIALIZER
   // ===========

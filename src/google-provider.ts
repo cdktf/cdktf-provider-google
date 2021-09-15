@@ -168,6 +168,10 @@ export interface GoogleProviderConfig {
   */
   readonly dnsCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}
+  */
+  readonly essentialContactsCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}
   */
   readonly eventarcCustomEndpoint?: string;
@@ -284,6 +288,10 @@ export interface GoogleProviderConfig {
   */
   readonly region?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_reason GoogleProvider#request_reason}
+  */
+  readonly requestReason?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_timeout GoogleProvider#request_timeout}
   */
   readonly requestTimeout?: string;
@@ -358,7 +366,7 @@ export interface GoogleProviderConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#user_project_override GoogleProvider#user_project_override}
   */
-  readonly userProjectOverride?: boolean;
+  readonly userProjectOverride?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}
   */
@@ -392,7 +400,7 @@ export interface GoogleProviderBatching {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#enable_batching GoogleProvider#enable_batching}
   */
-  readonly enableBatching?: boolean;
+  readonly enableBatching?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#send_after GoogleProvider#send_after}
   */
@@ -412,6 +420,11 @@ function googleProviderBatchingToTerraform(struct?: GoogleProviderBatching): any
 * Represents a {@link https://www.terraform.io/docs/providers/google google}
 */
 export class GoogleProvider extends cdktf.TerraformProvider {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google";
 
   // ===========
   // INITIALIZER
@@ -473,6 +486,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._dialogflowCustomEndpoint = config.dialogflowCustomEndpoint;
     this._dialogflowCxCustomEndpoint = config.dialogflowCxCustomEndpoint;
     this._dnsCustomEndpoint = config.dnsCustomEndpoint;
+    this._essentialContactsCustomEndpoint = config.essentialContactsCustomEndpoint;
     this._eventarcCustomEndpoint = config.eventarcCustomEndpoint;
     this._filestoreCustomEndpoint = config.filestoreCustomEndpoint;
     this._firestoreCustomEndpoint = config.firestoreCustomEndpoint;
@@ -502,6 +516,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._pubsubLiteCustomEndpoint = config.pubsubLiteCustomEndpoint;
     this._redisCustomEndpoint = config.redisCustomEndpoint;
     this._region = config.region;
+    this._requestReason = config.requestReason;
     this._requestTimeout = config.requestTimeout;
     this._resourceManagerCustomEndpoint = config.resourceManagerCustomEndpoint;
     this._resourceManagerV2CustomEndpoint = config.resourceManagerV2CustomEndpoint;
@@ -1173,6 +1188,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._dnsCustomEndpoint
   }
 
+  // essential_contacts_custom_endpoint - computed: false, optional: true, required: false
+  private _essentialContactsCustomEndpoint?: string;
+  public get essentialContactsCustomEndpoint() {
+    return this._essentialContactsCustomEndpoint;
+  }
+  public set essentialContactsCustomEndpoint(value: string  | undefined) {
+    this._essentialContactsCustomEndpoint = value;
+  }
+  public resetEssentialContactsCustomEndpoint() {
+    this._essentialContactsCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get essentialContactsCustomEndpointInput() {
+    return this._essentialContactsCustomEndpoint
+  }
+
   // eventarc_custom_endpoint - computed: false, optional: true, required: false
   private _eventarcCustomEndpoint?: string;
   public get eventarcCustomEndpoint() {
@@ -1637,6 +1668,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._region
   }
 
+  // request_reason - computed: false, optional: true, required: false
+  private _requestReason?: string;
+  public get requestReason() {
+    return this._requestReason;
+  }
+  public set requestReason(value: string  | undefined) {
+    this._requestReason = value;
+  }
+  public resetRequestReason() {
+    this._requestReason = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestReasonInput() {
+    return this._requestReason
+  }
+
   // request_timeout - computed: false, optional: true, required: false
   private _requestTimeout?: string;
   public get requestTimeout() {
@@ -1926,11 +1973,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // user_project_override - computed: false, optional: true, required: false
-  private _userProjectOverride?: boolean;
+  private _userProjectOverride?: boolean | cdktf.IResolvable;
   public get userProjectOverride() {
     return this._userProjectOverride;
   }
-  public set userProjectOverride(value: boolean  | undefined) {
+  public set userProjectOverride(value: boolean | cdktf.IResolvable  | undefined) {
     this._userProjectOverride = value;
   }
   public resetUserProjectOverride() {
@@ -2083,6 +2130,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       dialogflow_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCustomEndpoint),
       dialogflow_cx_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCxCustomEndpoint),
       dns_custom_endpoint: cdktf.stringToTerraform(this._dnsCustomEndpoint),
+      essential_contacts_custom_endpoint: cdktf.stringToTerraform(this._essentialContactsCustomEndpoint),
       eventarc_custom_endpoint: cdktf.stringToTerraform(this._eventarcCustomEndpoint),
       filestore_custom_endpoint: cdktf.stringToTerraform(this._filestoreCustomEndpoint),
       firestore_custom_endpoint: cdktf.stringToTerraform(this._firestoreCustomEndpoint),
@@ -2112,6 +2160,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       pubsub_lite_custom_endpoint: cdktf.stringToTerraform(this._pubsubLiteCustomEndpoint),
       redis_custom_endpoint: cdktf.stringToTerraform(this._redisCustomEndpoint),
       region: cdktf.stringToTerraform(this._region),
+      request_reason: cdktf.stringToTerraform(this._requestReason),
       request_timeout: cdktf.stringToTerraform(this._requestTimeout),
       resource_manager_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerCustomEndpoint),
       resource_manager_v2_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerV2CustomEndpoint),

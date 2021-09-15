@@ -12,7 +12,7 @@ export interface CloudiotDeviceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#blocked CloudiotDevice#blocked}
   */
-  readonly blocked?: boolean;
+  readonly blocked?: boolean | cdktf.IResolvable;
   /**
   * The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"]
   * 
@@ -24,7 +24,7 @@ export interface CloudiotDeviceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_device.html#metadata CloudiotDevice#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A unique name for the resource.
   * 
@@ -206,6 +206,11 @@ function cloudiotDeviceTimeoutsToTerraform(struct?: CloudiotDeviceTimeouts): any
 */
 export class CloudiotDevice extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudiot_device";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -243,11 +248,11 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   // ==========
 
   // blocked - computed: false, optional: true, required: false
-  private _blocked?: boolean;
+  private _blocked?: boolean | cdktf.IResolvable;
   public get blocked() {
     return this.getBooleanAttribute('blocked');
   }
-  public set blocked(value: boolean ) {
+  public set blocked(value: boolean | cdktf.IResolvable ) {
     this._blocked = value;
   }
   public resetBlocked() {
@@ -320,11 +325,11 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string };
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
   public get metadata() {
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._metadata = value;
   }
   public resetMetadata() {

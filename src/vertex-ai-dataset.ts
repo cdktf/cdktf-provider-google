@@ -18,7 +18,7 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#labels VertexAiDataset#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
   * 
@@ -95,6 +95,11 @@ function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeouts): a
 */
 export class VertexAiDataset extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_vertex_ai_dataset";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -154,11 +159,11 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string }
-  public get labels(): { [key: string]: string } {
+  private _labels?: { [key: string]: string } | cdktf.IResolvable
+  public get labels(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
   }
-  public set labels(value: { [key: string]: string }) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {

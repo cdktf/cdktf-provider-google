@@ -37,7 +37,7 @@ may be delivered in any order.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#enable_message_ordering PubsubSubscription#enable_message_ordering}
   */
-  readonly enableMessageOrdering?: boolean;
+  readonly enableMessageOrdering?: boolean | cdktf.IResolvable;
   /**
   * The subscription only delivers the messages that match the filter. 
 Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
@@ -52,7 +52,7 @@ you can't modify the filter.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#labels PubsubSubscription#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -85,7 +85,7 @@ messageRetentionDuration window.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#retain_acked_messages PubsubSubscription#retain_acked_messages}
   */
-  readonly retainAckedMessages?: boolean;
+  readonly retainAckedMessages?: boolean | cdktf.IResolvable;
   /**
   * A reference to a Topic resource.
   * 
@@ -246,7 +246,7 @@ The possible values for this attribute are:
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#attributes PubsubSubscription#attributes}
   */
-  readonly attributes?: { [key: string]: string };
+  readonly attributes?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
@@ -327,6 +327,11 @@ function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptionTimeou
 */
 export class PubsubSubscription extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_subscription";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -386,11 +391,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // enable_message_ordering - computed: false, optional: true, required: false
-  private _enableMessageOrdering?: boolean;
+  private _enableMessageOrdering?: boolean | cdktf.IResolvable;
   public get enableMessageOrdering() {
     return this.getBooleanAttribute('enable_message_ordering');
   }
-  public set enableMessageOrdering(value: boolean ) {
+  public set enableMessageOrdering(value: boolean | cdktf.IResolvable ) {
     this._enableMessageOrdering = value;
   }
   public resetEnableMessageOrdering() {
@@ -423,11 +428,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -489,11 +494,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // retain_acked_messages - computed: false, optional: true, required: false
-  private _retainAckedMessages?: boolean;
+  private _retainAckedMessages?: boolean | cdktf.IResolvable;
   public get retainAckedMessages() {
     return this.getBooleanAttribute('retain_acked_messages');
   }
-  public set retainAckedMessages(value: boolean ) {
+  public set retainAckedMessages(value: boolean | cdktf.IResolvable ) {
     this._retainAckedMessages = value;
   }
   public resetRetainAckedMessages() {

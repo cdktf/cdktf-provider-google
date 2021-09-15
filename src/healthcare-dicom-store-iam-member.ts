@@ -56,6 +56,11 @@ function healthcareDicomStoreIamMemberConditionToTerraform(struct?: HealthcareDi
 */
 export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_dicom_store_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

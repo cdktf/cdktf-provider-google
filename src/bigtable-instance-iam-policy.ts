@@ -26,6 +26,11 @@ export interface BigtableInstanceIamPolicyConfig extends cdktf.TerraformMetaArgu
 */
 export class BigtableInstanceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_instance_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

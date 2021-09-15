@@ -12,7 +12,7 @@ export interface ComposerEnvironmentConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#labels ComposerEnvironment#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Name of the environment.
   * 
@@ -64,7 +64,7 @@ export interface ComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#use_ip_aliases ComposerEnvironment#use_ip_aliases}
   */
-  readonly useIpAliases?: boolean;
+  readonly useIpAliases?: boolean | cdktf.IResolvable;
 }
 
 function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
@@ -162,7 +162,7 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#enable_private_endpoint ComposerEnvironment#enable_private_endpoint}
   */
-  readonly enablePrivateEndpoint?: boolean;
+  readonly enablePrivateEndpoint?: boolean | cdktf.IResolvable;
   /**
   * The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network. If left blank, the default value of '172.16.0.0/28' is used.
   * 
@@ -193,13 +193,13 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#airflow_config_overrides ComposerEnvironment#airflow_config_overrides}
   */
-  readonly airflowConfigOverrides?: { [key: string]: string };
+  readonly airflowConfigOverrides?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#env_variables ComposerEnvironment#env_variables}
   */
-  readonly envVariables?: { [key: string]: string };
+  readonly envVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?. The Cloud Composer portion of the version is a semantic version. The portion of the image version following 'airflow-' is an official Apache Airflow repository release name. See documentation for allowed release names.
   * 
@@ -211,7 +211,7 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#pypi_packages ComposerEnvironment#pypi_packages}
   */
-  readonly pypiPackages?: { [key: string]: string };
+  readonly pypiPackages?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
   * 
@@ -298,6 +298,11 @@ function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironmentTime
 */
 export class ComposerEnvironment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_composer_environment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -338,11 +343,11 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

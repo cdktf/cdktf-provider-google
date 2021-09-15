@@ -26,6 +26,11 @@ export interface DataGoogleComputeVpnGatewayConfig extends cdktf.TerraformMetaAr
 */
 export class DataGoogleComputeVpnGateway extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_vpn_gateway";
+
   // ===========
   // INITIALIZER
   // ===========

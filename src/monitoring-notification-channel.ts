@@ -24,7 +24,7 @@ export interface MonitoringNotificationChannelConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#enabled MonitoringNotificationChannel#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Configuration fields that define the channel and its behavior. The
 permissible and required labels are specified in the
@@ -36,7 +36,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#labels MonitoringNotificationChannel#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#project MonitoringNotificationChannel#project}
   */
@@ -52,7 +52,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#user_labels MonitoringNotificationChannel#user_labels}
   */
-  readonly userLabels?: { [key: string]: string };
+  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * sensitive_labels block
   * 
@@ -126,6 +126,11 @@ function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNot
 */
 export class MonitoringNotificationChannel extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_notification_channel";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -196,11 +201,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -217,11 +222,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -267,11 +272,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string };
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable;
   public get userLabels() {
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } ) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._userLabels = value;
   }
   public resetUserLabels() {

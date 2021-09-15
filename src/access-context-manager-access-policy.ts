@@ -57,6 +57,11 @@ function accessContextManagerAccessPolicyTimeoutsToTerraform(struct?: AccessCont
 */
 export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_access_policy";
+
   // ===========
   // INITIALIZER
   // ===========

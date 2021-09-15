@@ -85,6 +85,11 @@ function dialogflowCxEnvironmentVersionConfigsToTerraform(struct?: DialogflowCxE
 */
 export class DialogflowCxEnvironment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_environment";
+
   // ===========
   // INITIALIZER
   // ===========

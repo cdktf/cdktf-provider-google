@@ -95,6 +95,11 @@ function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersi
 */
 export class BigtableGcPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_gc_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -80,6 +80,11 @@ function computeRegionTargetHttpProxyTimeoutsToTerraform(struct?: ComputeRegionT
 */
 export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_target_http_proxy";
+
   // ===========
   // INITIALIZER
   // ===========

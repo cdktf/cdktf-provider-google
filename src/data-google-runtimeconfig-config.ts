@@ -26,6 +26,11 @@ export interface DataGoogleRuntimeconfigConfigConfig extends cdktf.TerraformMeta
 */
 export class DataGoogleRuntimeconfigConfig extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_runtimeconfig_config";
+
   // ===========
   // INITIALIZER
   // ===========

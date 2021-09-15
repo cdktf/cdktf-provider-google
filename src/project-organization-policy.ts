@@ -56,7 +56,7 @@ export interface ProjectOrganizationPolicyBooleanPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#enforced ProjectOrganizationPolicy#enforced}
   */
-  readonly enforced: boolean;
+  readonly enforced: boolean | cdktf.IResolvable;
 }
 
 function projectOrganizationPolicyBooleanPolicyToTerraform(struct?: ProjectOrganizationPolicyBooleanPolicy): any {
@@ -72,7 +72,7 @@ export interface ProjectOrganizationPolicyListPolicyAllow {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#all ProjectOrganizationPolicy#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
   * 
@@ -95,7 +95,7 @@ export interface ProjectOrganizationPolicyListPolicyDeny {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#all ProjectOrganizationPolicy#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
   * 
@@ -118,7 +118,7 @@ export interface ProjectOrganizationPolicyListPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
   */
-  readonly inheritFromParent?: boolean;
+  readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
   * 
@@ -155,7 +155,7 @@ export interface ProjectOrganizationPolicyRestorePolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html#default ProjectOrganizationPolicy#default}
   */
-  readonly default: boolean;
+  readonly default: boolean | cdktf.IResolvable;
 }
 
 function projectOrganizationPolicyRestorePolicyToTerraform(struct?: ProjectOrganizationPolicyRestorePolicy): any {
@@ -199,6 +199,11 @@ function projectOrganizationPolicyTimeoutsToTerraform(struct?: ProjectOrganizati
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy.html google_project_organization_policy}
 */
 export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_organization_policy";
 
   // ===========
   // INITIALIZER

@@ -200,6 +200,11 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicy extends cdktf
 */
 export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_resource_policy";
+
   // ===========
   // INITIALIZER
   // ===========

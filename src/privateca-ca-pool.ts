@@ -15,7 +15,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#labels PrivatecaCaPool#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Location of the CaPool. A full list of valid locations can be found by
 running 'gcloud privateca locations list'.
@@ -64,13 +64,13 @@ export interface PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#allow_config_based_issuance PrivatecaCaPool#allow_config_based_issuance}
   */
-  readonly allowConfigBasedIssuance: boolean;
+  readonly allowConfigBasedIssuance: boolean | cdktf.IResolvable;
   /**
   * When true, allows callers to create Certificates by specifying a CSR.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#allow_csr_based_issuance PrivatecaCaPool#allow_csr_based_issuance}
   */
-  readonly allowCsrBasedIssuance: boolean;
+  readonly allowCsrBasedIssuance: boolean | cdktf.IResolvable;
 }
 
 function privatecaCaPoolIssuancePolicyAllowedIssuanceModesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes): any {
@@ -168,7 +168,7 @@ handle this extension, the client should consider this to be an error).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#critical PrivatecaCaPool#critical}
   */
-  readonly critical: boolean;
+  readonly critical: boolean | cdktf.IResolvable;
   /**
   * The value of this X.509 extension. A base64-encoded string.
   * 
@@ -199,7 +199,7 @@ the extension will be omitted from the CA certificate.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#is_ca PrivatecaCaPool#is_ca}
   */
-  readonly isCa?: boolean;
+  readonly isCa?: boolean | cdktf.IResolvable;
   /**
   * Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
 subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
@@ -224,55 +224,55 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#cert_sign PrivatecaCaPool#cert_sign}
   */
-  readonly certSign?: boolean;
+  readonly certSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#content_commitment PrivatecaCaPool#content_commitment}
   */
-  readonly contentCommitment?: boolean;
+  readonly contentCommitment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used sign certificate revocation lists.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#crl_sign PrivatecaCaPool#crl_sign}
   */
-  readonly crlSign?: boolean;
+  readonly crlSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher data.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#data_encipherment PrivatecaCaPool#data_encipherment}
   */
-  readonly dataEncipherment?: boolean;
+  readonly dataEncipherment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to decipher only.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#decipher_only PrivatecaCaPool#decipher_only}
   */
-  readonly decipherOnly?: boolean;
+  readonly decipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for digital signatures.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#digital_signature PrivatecaCaPool#digital_signature}
   */
-  readonly digitalSignature?: boolean;
+  readonly digitalSignature?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher only.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#encipher_only PrivatecaCaPool#encipher_only}
   */
-  readonly encipherOnly?: boolean;
+  readonly encipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used in a key agreement protocol.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#key_agreement PrivatecaCaPool#key_agreement}
   */
-  readonly keyAgreement?: boolean;
+  readonly keyAgreement?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher other keys.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#key_encipherment PrivatecaCaPool#key_encipherment}
   */
-  readonly keyEncipherment?: boolean;
+  readonly keyEncipherment?: boolean | cdktf.IResolvable;
 }
 
 function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage): any {
@@ -296,37 +296,37 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyU
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#client_auth PrivatecaCaPool#client_auth}
   */
-  readonly clientAuth?: boolean;
+  readonly clientAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#code_signing PrivatecaCaPool#code_signing}
   */
-  readonly codeSigning?: boolean;
+  readonly codeSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#email_protection PrivatecaCaPool#email_protection}
   */
-  readonly emailProtection?: boolean;
+  readonly emailProtection?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#ocsp_signing PrivatecaCaPool#ocsp_signing}
   */
-  readonly ocspSigning?: boolean;
+  readonly ocspSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#server_auth PrivatecaCaPool#server_auth}
   */
-  readonly serverAuth?: boolean;
+  readonly serverAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#time_stamping PrivatecaCaPool#time_stamping}
   */
-  readonly timeStamping?: boolean;
+  readonly timeStamping?: boolean | cdktf.IResolvable;
 }
 
 function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage): any {
@@ -492,14 +492,14 @@ Otherwise, the requested SubjectAltNames will be discarded.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#allow_subject_alt_names_passthrough PrivatecaCaPool#allow_subject_alt_names_passthrough}
   */
-  readonly allowSubjectAltNamesPassthrough: boolean;
+  readonly allowSubjectAltNamesPassthrough: boolean | cdktf.IResolvable;
   /**
   * If this is set, the Subject field may be copied from a certificate request into the signed certificate.
 Otherwise, the requested Subject will be discarded.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#allow_subject_passthrough PrivatecaCaPool#allow_subject_passthrough}
   */
-  readonly allowSubjectPassthrough: boolean;
+  readonly allowSubjectPassthrough: boolean | cdktf.IResolvable;
   /**
   * cel_expression block
   * 
@@ -570,7 +570,7 @@ X.509 extension will not be written in issued certificates.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#publish_ca_cert PrivatecaCaPool#publish_ca_cert}
   */
-  readonly publishCaCert: boolean;
+  readonly publishCaCert: boolean | cdktf.IResolvable;
   /**
   * When true, publishes each CertificateAuthority's CRL and includes its URL in the "CRL Distribution Points" X.509 extension
 in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not
@@ -579,7 +579,7 @@ also rebuilt shortly after a certificate is revoked.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html#publish_crl PrivatecaCaPool#publish_crl}
   */
-  readonly publishCrl: boolean;
+  readonly publishCrl: boolean | cdktf.IResolvable;
 }
 
 function privatecaCaPoolPublishingOptionsToTerraform(struct?: PrivatecaCaPoolPublishingOptions): any {
@@ -619,6 +619,11 @@ function privatecaCaPoolTimeoutsToTerraform(struct?: PrivatecaCaPoolTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool.html google_privateca_ca_pool}
 */
 export class PrivatecaCaPool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_privateca_ca_pool";
 
   // ===========
   // INITIALIZER
@@ -662,11 +667,11 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

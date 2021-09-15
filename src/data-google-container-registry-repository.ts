@@ -22,6 +22,11 @@ export interface DataGoogleContainerRegistryRepositoryConfig extends cdktf.Terra
 */
 export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_registry_repository";
+
   // ===========
   // INITIALIZER
   // ===========

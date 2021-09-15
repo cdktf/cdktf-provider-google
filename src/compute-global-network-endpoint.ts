@@ -68,6 +68,11 @@ function computeGlobalNetworkEndpointTimeoutsToTerraform(struct?: ComputeGlobalN
 */
 export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_global_network_endpoint";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -233,6 +233,11 @@ function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeouts): a
 */
 export class CloudTasksQueue extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_tasks_queue";
+
   // ===========
   // INITIALIZER
   // ===========

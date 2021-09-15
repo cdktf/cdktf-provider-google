@@ -22,6 +22,11 @@ export interface IapTunnelIamPolicyConfig extends cdktf.TerraformMetaArguments {
 */
 export class IapTunnelIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_tunnel_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

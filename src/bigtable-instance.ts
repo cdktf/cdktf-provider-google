@@ -12,7 +12,7 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#deletion_protection BigtableInstance#deletion_protection}
   */
-  readonly deletionProtection?: boolean;
+  readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The human-readable display name of the Bigtable instance. Defaults to the instance name.
   * 
@@ -30,7 +30,7 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance.html#labels BigtableInstance#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
   * 
@@ -100,6 +100,11 @@ function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): a
 */
 export class BigtableInstance extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_instance";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -136,11 +141,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   // ==========
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean;
+  private _deletionProtection?: boolean | cdktf.IResolvable;
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -189,11 +194,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

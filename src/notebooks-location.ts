@@ -54,6 +54,11 @@ function notebooksLocationTimeoutsToTerraform(struct?: NotebooksLocationTimeouts
 */
 export class NotebooksLocation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_notebooks_location";
+
   // ===========
   // INITIALIZER
   // ===========

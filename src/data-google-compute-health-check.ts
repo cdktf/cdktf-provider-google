@@ -234,6 +234,11 @@ export class DataGoogleComputeHealthCheckTcpHealthCheck extends cdktf.ComplexCom
 */
 export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_health_check";
+
   // ===========
   // INITIALIZER
   // ===========

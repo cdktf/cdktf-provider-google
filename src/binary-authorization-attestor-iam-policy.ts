@@ -26,6 +26,11 @@ export interface BinaryAuthorizationAttestorIamPolicyConfig extends cdktf.Terraf
 */
 export class BinaryAuthorizationAttestorIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_binary_authorization_attestor_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

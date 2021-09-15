@@ -64,6 +64,11 @@ function notebooksInstanceIamBindingConditionToTerraform(struct?: NotebooksInsta
 */
 export class NotebooksInstanceIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_notebooks_instance_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

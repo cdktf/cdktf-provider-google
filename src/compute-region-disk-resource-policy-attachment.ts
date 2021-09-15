@@ -62,6 +62,11 @@ function computeRegionDiskResourcePolicyAttachmentTimeoutsToTerraform(struct?: C
 */
 export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_disk_resource_policy_attachment";
+
   // ===========
   // INITIALIZER
   // ===========

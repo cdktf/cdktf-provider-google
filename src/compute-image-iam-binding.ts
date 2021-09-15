@@ -60,6 +60,11 @@ function computeImageIamBindingConditionToTerraform(struct?: ComputeImageIamBind
 */
 export class ComputeImageIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_image_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

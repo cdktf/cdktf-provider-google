@@ -40,6 +40,11 @@ If it is not provided, the provider region is used.
 */
 export class DataGoogleComputeRegionSslCertificate extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_ssl_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

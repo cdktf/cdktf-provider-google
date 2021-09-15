@@ -61,6 +61,11 @@ function folderTimeoutsToTerraform(struct?: FolderTimeouts): any {
 */
 export class Folder extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder";
+
   // ===========
   // INITIALIZER
   // ===========

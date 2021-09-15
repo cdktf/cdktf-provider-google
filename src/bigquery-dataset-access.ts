@@ -145,6 +145,11 @@ function bigqueryDatasetAccessViewAToTerraform(struct?: BigqueryDatasetAccessVie
 */
 export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_dataset_access";
+
   // ===========
   // INITIALIZER
   // ===========

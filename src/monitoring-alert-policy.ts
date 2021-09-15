@@ -28,7 +28,7 @@ name is limited to 512 Unicode characters.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy.html#enabled MonitoringAlertPolicy#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -54,7 +54,7 @@ must begin with a letter.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy.html#user_labels MonitoringAlertPolicy#user_labels}
   */
-  readonly userLabels?: { [key: string]: string };
+  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * conditions block
   * 
@@ -791,6 +791,11 @@ function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAlertPolicy
 */
 export class MonitoringAlertPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_alert_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -860,11 +865,11 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -918,11 +923,11 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string };
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable;
   public get userLabels() {
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } ) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._userLabels = value;
   }
   public resetUserLabels() {

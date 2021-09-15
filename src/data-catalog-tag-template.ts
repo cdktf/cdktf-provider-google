@@ -18,7 +18,7 @@ export interface DataCatalogTagTemplateConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template.html#force_delete DataCatalogTagTemplate#force_delete}
   */
-  readonly forceDelete?: boolean;
+  readonly forceDelete?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template.html#project DataCatalogTagTemplate#project}
   */
@@ -126,7 +126,7 @@ export interface DataCatalogTagTemplateFields {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template.html#is_required DataCatalogTagTemplate#is_required}
   */
-  readonly isRequired?: boolean;
+  readonly isRequired?: boolean | cdktf.IResolvable;
   /**
   * The order of this field with respect to other fields in this tag template.
 A higher value indicates a more important field. The value can be negative.
@@ -185,6 +185,11 @@ function dataCatalogTagTemplateTimeoutsToTerraform(struct?: DataCatalogTagTempla
 */
 export class DataCatalogTagTemplate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_tag_template";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -237,11 +242,11 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
   }
 
   // force_delete - computed: false, optional: true, required: false
-  private _forceDelete?: boolean;
+  private _forceDelete?: boolean | cdktf.IResolvable;
   public get forceDelete() {
     return this.getBooleanAttribute('force_delete');
   }
-  public set forceDelete(value: boolean ) {
+  public set forceDelete(value: boolean | cdktf.IResolvable ) {
     this._forceDelete = value;
   }
   public resetForceDelete() {

@@ -14,6 +14,11 @@ export interface DataGoogleClientConfigConfig extends cdktf.TerraformMetaArgumen
 */
 export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_client_config";
+
   // ===========
   // INITIALIZER
   // ===========

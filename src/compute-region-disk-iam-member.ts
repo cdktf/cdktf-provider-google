@@ -64,6 +64,11 @@ function computeRegionDiskIamMemberConditionToTerraform(struct?: ComputeRegionDi
 */
 export class ComputeRegionDiskIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_disk_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

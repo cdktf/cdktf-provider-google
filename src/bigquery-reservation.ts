@@ -14,7 +14,7 @@ capacity specified above at most.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
   */
-  readonly ignoreIdleSlots?: boolean;
+  readonly ignoreIdleSlots?: boolean | cdktf.IResolvable;
   /**
   * The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
@@ -76,6 +76,11 @@ function bigqueryReservationTimeoutsToTerraform(struct?: BigqueryReservationTime
 */
 export class BigqueryReservation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_reservation";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -116,11 +121,11 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   }
 
   // ignore_idle_slots - computed: false, optional: true, required: false
-  private _ignoreIdleSlots?: boolean;
+  private _ignoreIdleSlots?: boolean | cdktf.IResolvable;
   public get ignoreIdleSlots() {
     return this.getBooleanAttribute('ignore_idle_slots');
   }
-  public set ignoreIdleSlots(value: boolean ) {
+  public set ignoreIdleSlots(value: boolean | cdktf.IResolvable ) {
     this._ignoreIdleSlots = value;
   }
   public resetIgnoreIdleSlots() {

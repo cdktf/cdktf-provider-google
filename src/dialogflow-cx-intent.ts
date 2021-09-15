@@ -25,7 +25,7 @@ Adding training phrases to fallback intent is useful in the case of requests tha
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent.html#is_fallback DialogflowCxIntent#is_fallback}
   */
-  readonly isFallback?: boolean;
+  readonly isFallback?: boolean | cdktf.IResolvable;
   /**
   * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes.
 Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
@@ -33,7 +33,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent.html#labels DialogflowCxIntent#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The language of the following fields in intent:
 Intent.training_phrases.parts.text
@@ -95,14 +95,14 @@ Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent.html#is_list DialogflowCxIntent#is_list}
   */
-  readonly isList?: boolean;
+  readonly isList?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. 
 Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent.html#redact DialogflowCxIntent#redact}
   */
-  readonly redact?: boolean;
+  readonly redact?: boolean | cdktf.IResolvable;
 }
 
 function dialogflowCxIntentParametersToTerraform(struct?: DialogflowCxIntentParameters): any {
@@ -191,6 +191,11 @@ function dialogflowCxIntentTrainingPhrasesToTerraform(struct?: DialogflowCxInten
 */
 export class DialogflowCxIntent extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_intent";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -264,11 +269,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // is_fallback - computed: false, optional: true, required: false
-  private _isFallback?: boolean;
+  private _isFallback?: boolean | cdktf.IResolvable;
   public get isFallback() {
     return this.getBooleanAttribute('is_fallback');
   }
-  public set isFallback(value: boolean ) {
+  public set isFallback(value: boolean | cdktf.IResolvable ) {
     this._isFallback = value;
   }
   public resetIsFallback() {
@@ -280,11 +285,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

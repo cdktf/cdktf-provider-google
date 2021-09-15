@@ -153,6 +153,11 @@ function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeouts): any {
 */
 export class ComputeRouter extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_router";
+
   // ===========
   // INITIALIZER
   // ===========

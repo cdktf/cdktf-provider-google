@@ -8,22 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Optional. User labels attached to the triggers that can be used to group resources.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#labels EventarcTrigger#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The location for the resource
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#location EventarcTrigger#location}
   */
   readonly location: string;
   /**
+  * Required. The resource name of the trigger. Must be unique within the location on the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#name EventarcTrigger#name}
   */
   readonly name: string;
   /**
+  * The project for the resource
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#project EventarcTrigger#project}
   */
   readonly project?: string;
   /**
+  * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have `roles/eventarc.eventReceiver` IAM role.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#service_account EventarcTrigger#service_account}
   */
   readonly serviceAccount?: string;
@@ -54,14 +64,20 @@ export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
 }
 export interface EventarcTriggerDestinationCloudRunService {
   /**
+  * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#path EventarcTrigger#path}
   */
   readonly path?: string;
   /**
+  * Required. The region the Cloud Run service is deployed in.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#region EventarcTrigger#region}
   */
   readonly region?: string;
   /**
+  * Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#service EventarcTrigger#service}
   */
   readonly service: string;
@@ -78,6 +94,8 @@ function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: EventarcT
 
 export interface EventarcTriggerDestination {
   /**
+  * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#cloud_function EventarcTrigger#cloud_function}
   */
   readonly cloudFunction?: string;
@@ -99,10 +117,14 @@ function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDestinati
 
 export interface EventarcTriggerMatchingCriteria {
   /**
+  * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#attribute EventarcTrigger#attribute}
   */
   readonly attribute: string;
   /**
+  * Required. The value for the attribute.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#value EventarcTrigger#value}
   */
   readonly value: string;
@@ -142,6 +164,8 @@ function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeouts): a
 
 export interface EventarcTriggerTransportPubsub {
   /**
+  * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html#topic EventarcTrigger#topic}
   */
   readonly topic?: string;
@@ -175,6 +199,11 @@ function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTransport):
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger.html google_eventarc_trigger}
 */
 export class EventarcTrigger extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_eventarc_trigger";
 
   // ===========
   // INITIALIZER
@@ -229,11 +258,11 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

@@ -58,6 +58,11 @@ function serviceAccountTimeoutsToTerraform(struct?: ServiceAccountTimeouts): any
 */
 export class ServiceAccount extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

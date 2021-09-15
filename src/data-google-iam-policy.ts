@@ -116,6 +116,11 @@ function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBindi
 */
 export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

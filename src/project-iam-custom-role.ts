@@ -50,6 +50,11 @@ export interface ProjectIamCustomRoleConfig extends cdktf.TerraformMetaArguments
 */
 export class ProjectIamCustomRole extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_iam_custom_role";
+
   // ===========
   // INITIALIZER
   // ===========

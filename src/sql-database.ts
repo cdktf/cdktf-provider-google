@@ -82,6 +82,11 @@ function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeouts): any {
 */
 export class SqlDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_database";
+
   // ===========
   // INITIALIZER
   // ===========

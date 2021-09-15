@@ -139,6 +139,11 @@ function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalys
 */
 export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_analysis_occurrence";
+
   // ===========
   // INITIALIZER
   // ===========

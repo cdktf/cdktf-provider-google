@@ -22,6 +22,11 @@ export interface DataGoogleComputeNodeTypesConfig extends cdktf.TerraformMetaArg
 */
 export class DataGoogleComputeNodeTypes extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_node_types";
+
   // ===========
   // INITIALIZER
   // ===========

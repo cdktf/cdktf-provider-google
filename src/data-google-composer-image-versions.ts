@@ -34,6 +34,11 @@ export class DataGoogleComposerImageVersionsImageVersions extends cdktf.ComplexC
 */
 export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_composer_image_versions";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -56,6 +56,11 @@ function projectIamBindingConditionToTerraform(struct?: ProjectIamBindingConditi
 */
 export class ProjectIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

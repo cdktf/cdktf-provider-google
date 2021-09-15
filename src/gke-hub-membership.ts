@@ -12,7 +12,7 @@ export interface GkeHubMembershipConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/gke_hub_membership.html#labels GkeHubMembership#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The client-provided identifier of the membership.
   * 
@@ -125,6 +125,11 @@ function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTimeouts):
 */
 export class GkeHubMembership extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_gke_hub_membership";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -165,11 +170,11 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

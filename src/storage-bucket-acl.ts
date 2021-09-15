@@ -38,6 +38,11 @@ export interface StorageBucketAclConfig extends cdktf.TerraformMetaArguments {
 */
 export class StorageBucketAcl extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket_acl";
+
   // ===========
   // INITIALIZER
   // ===========

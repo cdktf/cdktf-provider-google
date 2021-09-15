@@ -60,7 +60,7 @@ for a list of the currently supported language codes. This field cannot be updat
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html#enable_logging DialogflowAgent#enable_logging}
   */
-  readonly enableLogging?: boolean;
+  readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
   * Determines how intents are detected from user queries.
 * MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
@@ -135,6 +135,11 @@ function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html google_dialogflow_agent}
 */
 export class DialogflowAgent extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_agent";
 
   // ===========
   // INITIALIZER
@@ -273,11 +278,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // enable_logging - computed: false, optional: true, required: false
-  private _enableLogging?: boolean;
+  private _enableLogging?: boolean | cdktf.IResolvable;
   public get enableLogging() {
     return this.getBooleanAttribute('enable_logging');
   }
-  public set enableLogging(value: boolean ) {
+  public set enableLogging(value: boolean | cdktf.IResolvable ) {
     this._enableLogging = value;
   }
   public resetEnableLogging() {

@@ -12,23 +12,23 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#bucket_policy_only StorageBucket#bucket_policy_only}
   */
-  readonly bucketPolicyOnly?: boolean;
+  readonly bucketPolicyOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#default_event_based_hold StorageBucket#default_event_based_hold}
   */
-  readonly defaultEventBasedHold?: boolean;
+  readonly defaultEventBasedHold?: boolean | cdktf.IResolvable;
   /**
   * When deleting a bucket, this boolean option will delete all contained objects. If you try to delete a bucket that contains objects, Terraform will fail that run.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#force_destroy StorageBucket#force_destroy}
   */
-  readonly forceDestroy?: boolean;
+  readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
   * A set of key/value label pairs to assign to the bucket.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#labels StorageBucket#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The Google Cloud Storage location
   * 
@@ -52,7 +52,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#requester_pays StorageBucket#requester_pays}
   */
-  readonly requesterPays?: boolean;
+  readonly requesterPays?: boolean | cdktf.IResolvable;
   /**
   * The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
   * 
@@ -64,7 +64,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
   */
-  readonly uniformBucketLevelAccess?: boolean;
+  readonly uniformBucketLevelAccess?: boolean | cdktf.IResolvable;
   /**
   * cors block
   * 
@@ -309,7 +309,7 @@ export interface StorageBucketRetentionPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#is_locked StorageBucket#is_locked}
   */
-  readonly isLocked?: boolean;
+  readonly isLocked?: boolean | cdktf.IResolvable;
   /**
   * The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
   * 
@@ -332,7 +332,7 @@ export interface StorageBucketVersioning {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#enabled StorageBucket#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function storageBucketVersioningToTerraform(struct?: StorageBucketVersioning): any {
@@ -370,6 +370,11 @@ function storageBucketWebsiteToTerraform(struct?: StorageBucketWebsite): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html google_storage_bucket}
 */
 export class StorageBucket extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket";
 
   // ===========
   // INITIALIZER
@@ -417,11 +422,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   // ==========
 
   // bucket_policy_only - computed: true, optional: true, required: false
-  private _bucketPolicyOnly?: boolean;
+  private _bucketPolicyOnly?: boolean | cdktf.IResolvable;
   public get bucketPolicyOnly() {
     return this.getBooleanAttribute('bucket_policy_only');
   }
-  public set bucketPolicyOnly(value: boolean) {
+  public set bucketPolicyOnly(value: boolean | cdktf.IResolvable) {
     this._bucketPolicyOnly = value;
   }
   public resetBucketPolicyOnly() {
@@ -433,11 +438,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // default_event_based_hold - computed: false, optional: true, required: false
-  private _defaultEventBasedHold?: boolean;
+  private _defaultEventBasedHold?: boolean | cdktf.IResolvable;
   public get defaultEventBasedHold() {
     return this.getBooleanAttribute('default_event_based_hold');
   }
-  public set defaultEventBasedHold(value: boolean ) {
+  public set defaultEventBasedHold(value: boolean | cdktf.IResolvable ) {
     this._defaultEventBasedHold = value;
   }
   public resetDefaultEventBasedHold() {
@@ -449,11 +454,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean;
+  private _forceDestroy?: boolean | cdktf.IResolvable;
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy');
   }
-  public set forceDestroy(value: boolean ) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable ) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -470,11 +475,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -531,11 +536,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // requester_pays - computed: false, optional: true, required: false
-  private _requesterPays?: boolean;
+  private _requesterPays?: boolean | cdktf.IResolvable;
   public get requesterPays() {
     return this.getBooleanAttribute('requester_pays');
   }
-  public set requesterPays(value: boolean ) {
+  public set requesterPays(value: boolean | cdktf.IResolvable ) {
     this._requesterPays = value;
   }
   public resetRequesterPays() {
@@ -568,11 +573,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // uniform_bucket_level_access - computed: true, optional: true, required: false
-  private _uniformBucketLevelAccess?: boolean;
+  private _uniformBucketLevelAccess?: boolean | cdktf.IResolvable;
   public get uniformBucketLevelAccess() {
     return this.getBooleanAttribute('uniform_bucket_level_access');
   }
-  public set uniformBucketLevelAccess(value: boolean) {
+  public set uniformBucketLevelAccess(value: boolean | cdktf.IResolvable) {
     this._uniformBucketLevelAccess = value;
   }
   public resetUniformBucketLevelAccess() {

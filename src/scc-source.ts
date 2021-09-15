@@ -67,6 +67,11 @@ function sccSourceTimeoutsToTerraform(struct?: SccSourceTimeouts): any {
 */
 export class SccSource extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_scc_source";
+
   // ===========
   // INITIALIZER
   // ===========

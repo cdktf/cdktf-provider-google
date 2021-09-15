@@ -22,13 +22,13 @@ export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#force_destroy DnsManagedZone#force_destroy}
   */
-  readonly forceDestroy?: boolean;
+  readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
   * A set of key/value label pairs to assign to this ManagedZone.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#labels DnsManagedZone#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * User assigned name for this resource.
 Must be unique within the project.
@@ -297,6 +297,11 @@ function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeouts): any
 */
 export class DnsManagedZone extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dns_managed_zone";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -367,11 +372,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean;
+  private _forceDestroy?: boolean | cdktf.IResolvable;
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy');
   }
-  public set forceDestroy(value: boolean ) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable ) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -388,11 +393,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

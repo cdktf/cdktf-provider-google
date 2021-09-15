@@ -27,7 +27,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#enable_consent_create_on_update HealthcareConsentStore#enable_consent_create_on_update}
   */
-  readonly enableConsentCreateOnUpdate?: boolean;
+  readonly enableConsentCreateOnUpdate?: boolean | cdktf.IResolvable;
   /**
   * User-supplied key-value pairs used to organize Consent stores.
 
@@ -44,7 +44,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html#labels HealthcareConsentStore#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name of this ConsentStore, for example:
 "consent1"
@@ -88,6 +88,11 @@ function healthcareConsentStoreTimeoutsToTerraform(struct?: HealthcareConsentSto
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store.html google_healthcare_consent_store}
 */
 export class HealthcareConsentStore extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_consent_store";
 
   // ===========
   // INITIALIZER
@@ -153,11 +158,11 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
 
   // enable_consent_create_on_update - computed: false, optional: true, required: false
-  private _enableConsentCreateOnUpdate?: boolean;
+  private _enableConsentCreateOnUpdate?: boolean | cdktf.IResolvable;
   public get enableConsentCreateOnUpdate() {
     return this.getBooleanAttribute('enable_consent_create_on_update');
   }
-  public set enableConsentCreateOnUpdate(value: boolean ) {
+  public set enableConsentCreateOnUpdate(value: boolean | cdktf.IResolvable ) {
     this._enableConsentCreateOnUpdate = value;
   }
   public resetEnableConsentCreateOnUpdate() {
@@ -174,11 +179,11 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

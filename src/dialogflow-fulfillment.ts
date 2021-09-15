@@ -18,7 +18,7 @@ export interface DialogflowFulfillmentConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment.html#enabled DialogflowFulfillment#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment.html#project DialogflowFulfillment#project}
   */
@@ -71,7 +71,7 @@ export interface DialogflowFulfillmentGenericWebService {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment.html#request_headers DialogflowFulfillment#request_headers}
   */
-  readonly requestHeaders?: { [key: string]: string };
+  readonly requestHeaders?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The fulfillment URI for receiving POST requests. It must use https protocol.
   * 
@@ -126,6 +126,11 @@ function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulfillment
 */
 export class DialogflowFulfillment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_fulfillment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -174,11 +179,11 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

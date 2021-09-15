@@ -56,6 +56,11 @@ function folderIamBindingConditionToTerraform(struct?: FolderIamBindingCondition
 */
 export class FolderIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

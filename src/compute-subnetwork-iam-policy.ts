@@ -30,6 +30,11 @@ export interface ComputeSubnetworkIamPolicyConfig extends cdktf.TerraformMetaArg
 */
 export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_subnetwork_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

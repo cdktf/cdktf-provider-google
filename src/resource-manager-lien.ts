@@ -73,6 +73,11 @@ function resourceManagerLienTimeoutsToTerraform(struct?: ResourceManagerLienTime
 */
 export class ResourceManagerLien extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_resource_manager_lien";
+
   // ===========
   // INITIALIZER
   // ===========

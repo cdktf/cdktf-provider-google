@@ -18,7 +18,7 @@ export interface WorkflowsWorkflowConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/workflows_workflow.html#labels WorkflowsWorkflow#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Name of the Workflow.
   * 
@@ -91,6 +91,11 @@ function workflowsWorkflowTimeoutsToTerraform(struct?: WorkflowsWorkflowTimeouts
 */
 export class WorkflowsWorkflow extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_workflows_workflow";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -155,11 +160,11 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

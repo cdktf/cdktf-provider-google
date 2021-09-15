@@ -76,6 +76,11 @@ function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineSe
 */
 export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_service_network_settings";
+
   // ===========
   // INITIALIZER
   // ===========

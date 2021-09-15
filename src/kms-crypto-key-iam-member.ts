@@ -56,6 +56,11 @@ function kmsCryptoKeyIamMemberConditionToTerraform(struct?: KmsCryptoKeyIamMembe
 */
 export class KmsCryptoKeyIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_crypto_key_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

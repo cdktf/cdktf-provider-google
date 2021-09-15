@@ -18,7 +18,7 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#disabled CloudbuildTrigger#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
   * 
@@ -70,7 +70,7 @@ a build.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
   */
-  readonly substitutions?: { [key: string]: string };
+  readonly substitutions?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Tags for annotation of a BuildTrigger
   * 
@@ -216,7 +216,7 @@ NOTE this is always enabled for triggered builds and cannot be overridden in the
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#dynamic_substitutions CloudbuildTrigger#dynamic_substitutions}
   */
-  readonly dynamicSubstitutions?: boolean;
+  readonly dynamicSubstitutions?: boolean | cdktf.IResolvable;
   /**
   * A list of global environment variable definitions that will exist for all build steps
 in this build. If a variable is defined in both globally and in a build step,
@@ -323,7 +323,7 @@ There can be at most 100 secret values across all of a build's secrets.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#secret_env CloudbuildTrigger#secret_env}
   */
-  readonly secretEnv?: { [key: string]: string };
+  readonly secretEnv?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTriggerBuildSecret): any {
@@ -362,7 +362,7 @@ this value is ignored for that step's execution.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
   */
-  readonly invertRegex?: boolean;
+  readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * ID of the project that owns the Cloud Source Repository. 
 If omitted, the project ID requesting the build is assumed.
@@ -381,7 +381,7 @@ If omitted, the project ID requesting the build is assumed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
   */
-  readonly substitutions?: { [key: string]: string };
+  readonly substitutions?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
@@ -656,7 +656,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
   */
-  readonly substitutions?: { [key: string]: string };
+  readonly substitutions?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Tags for annotation of a Build. These are not docker tags.
   * 
@@ -740,7 +740,7 @@ export interface CloudbuildTriggerGithubPullRequest {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
   */
-  readonly invertRegex?: boolean;
+  readonly invertRegex?: boolean | cdktf.IResolvable;
 }
 
 function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTriggerGithubPullRequest): any {
@@ -764,7 +764,7 @@ export interface CloudbuildTriggerGithubPush {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
   */
-  readonly invertRegex?: boolean;
+  readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * Regex of tags to match.  Specify only one of branch or tag.
   * 
@@ -897,7 +897,7 @@ execution.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#invert_regex CloudbuildTrigger#invert_regex}
   */
-  readonly invertRegex?: boolean;
+  readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * ID of the project that owns the Cloud Source Repository. If
 omitted, the project ID requesting the build is assumed.
@@ -954,6 +954,11 @@ function cloudbuildTriggerWebhookConfigToTerraform(struct?: CloudbuildTriggerWeb
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html google_cloudbuild_trigger}
 */
 export class CloudbuildTrigger extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudbuild_trigger";
 
   // ===========
   // INITIALIZER
@@ -1020,11 +1025,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -1121,11 +1126,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // substitutions - computed: false, optional: true, required: false
-  private _substitutions?: { [key: string]: string };
+  private _substitutions?: { [key: string]: string } | cdktf.IResolvable;
   public get substitutions() {
     return this.interpolationForAttribute('substitutions') as any;
   }
-  public set substitutions(value: { [key: string]: string } ) {
+  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._substitutions = value;
   }
   public resetSubstitutions() {

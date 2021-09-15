@@ -18,7 +18,7 @@ export interface LoggingProjectExclusionConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html#disabled LoggingProjectExclusion#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   * 
@@ -41,6 +41,11 @@ export interface LoggingProjectExclusionConfig extends cdktf.TerraformMetaArgume
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html google_logging_project_exclusion}
 */
 export class LoggingProjectExclusion extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_project_exclusion";
 
   // ===========
   // INITIALIZER
@@ -92,11 +97,11 @@ export class LoggingProjectExclusion extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {

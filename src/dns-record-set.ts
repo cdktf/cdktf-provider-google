@@ -82,6 +82,11 @@ function dnsRecordSetTimeoutsToTerraform(struct?: DnsRecordSetTimeouts): any {
 */
 export class DnsRecordSet extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dns_record_set";
+
   // ===========
   // INITIALIZER
   // ===========

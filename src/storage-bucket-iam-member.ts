@@ -56,6 +56,11 @@ function storageBucketIamMemberConditionToTerraform(struct?: StorageBucketIamMem
 */
 export class StorageBucketIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_bucket_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

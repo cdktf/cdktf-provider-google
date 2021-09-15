@@ -85,6 +85,11 @@ function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomSer
 */
 export class MonitoringCustomService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_custom_service";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -26,6 +26,11 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
 */
 export class ContainerRegistry extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_registry";
+
   // ===========
   // INITIALIZER
   // ===========

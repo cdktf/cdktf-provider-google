@@ -60,6 +60,11 @@ function binaryAuthorizationAttestorIamBindingConditionToTerraform(struct?: Bina
 */
 export class BinaryAuthorizationAttestorIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_binary_authorization_attestor_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

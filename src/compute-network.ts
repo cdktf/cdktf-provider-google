@@ -17,11 +17,11 @@ the user can explicitly connect subnetwork resources.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#auto_create_subnetworks ComputeNetwork#auto_create_subnetworks}
   */
-  readonly autoCreateSubnetworks?: boolean;
+  readonly autoCreateSubnetworks?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#delete_default_routes_on_create ComputeNetwork#delete_default_routes_on_create}
   */
-  readonly deleteDefaultRoutesOnCreate?: boolean;
+  readonly deleteDefaultRoutesOnCreate?: boolean | cdktf.IResolvable;
   /**
   * An optional description of this resource. The resource must be
 recreated to modify this field.
@@ -99,6 +99,11 @@ function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeouts): any
 */
 export class ComputeNetwork extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_network";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -136,11 +141,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   // ==========
 
   // auto_create_subnetworks - computed: false, optional: true, required: false
-  private _autoCreateSubnetworks?: boolean;
+  private _autoCreateSubnetworks?: boolean | cdktf.IResolvable;
   public get autoCreateSubnetworks() {
     return this.getBooleanAttribute('auto_create_subnetworks');
   }
-  public set autoCreateSubnetworks(value: boolean ) {
+  public set autoCreateSubnetworks(value: boolean | cdktf.IResolvable ) {
     this._autoCreateSubnetworks = value;
   }
   public resetAutoCreateSubnetworks() {
@@ -152,11 +157,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // delete_default_routes_on_create - computed: false, optional: true, required: false
-  private _deleteDefaultRoutesOnCreate?: boolean;
+  private _deleteDefaultRoutesOnCreate?: boolean | cdktf.IResolvable;
   public get deleteDefaultRoutesOnCreate() {
     return this.getBooleanAttribute('delete_default_routes_on_create');
   }
-  public set deleteDefaultRoutesOnCreate(value: boolean ) {
+  public set deleteDefaultRoutesOnCreate(value: boolean | cdktf.IResolvable ) {
     this._deleteDefaultRoutesOnCreate = value;
   }
   public resetDeleteDefaultRoutesOnCreate() {

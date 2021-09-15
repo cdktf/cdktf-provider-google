@@ -56,6 +56,11 @@ function endpointsServiceIamBindingConditionToTerraform(struct?: EndpointsServic
 */
 export class EndpointsServiceIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_endpoints_service_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -28,6 +28,11 @@ is attached to. The format is
 */
 export class DataGoogleIapClient extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_client";
+
   // ===========
   // INITIALIZER
   // ===========

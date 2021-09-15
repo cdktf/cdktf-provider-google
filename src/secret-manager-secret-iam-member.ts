@@ -60,6 +60,11 @@ function secretManagerSecretIamMemberConditionToTerraform(struct?: SecretManager
 */
 export class SecretManagerSecretIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_secret_manager_secret_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

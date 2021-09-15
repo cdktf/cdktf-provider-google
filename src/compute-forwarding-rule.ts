@@ -8,22 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+  * This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#all_ports ComputeForwardingRule#all_ports}
   */
-  readonly allPorts?: boolean;
+  readonly allPorts?: boolean | cdktf.IResolvable;
   /**
   * If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#allow_global_access ComputeForwardingRule#allow_global_access}
   */
-  readonly allowGlobalAccess?: boolean;
+  readonly allowGlobalAccess?: boolean | cdktf.IResolvable;
   /**
   * A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
@@ -63,7 +65,7 @@ Google APIs, IP address must be provided.
   * The IP protocol to which this rule applies.
 
 When the load balancing scheme is INTERNAL, only TCP and UDP are
-valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"]
+valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP", "L3_DEFAULT"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ip_protocol ComputeForwardingRule#ip_protocol}
   */
@@ -78,7 +80,7 @@ loadBalancingScheme set to INTERNAL.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#is_mirroring_collector ComputeForwardingRule#is_mirroring_collector}
   */
-  readonly isMirroringCollector?: boolean;
+  readonly isMirroringCollector?: boolean | cdktf.IResolvable;
   /**
   * This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
@@ -144,15 +146,18 @@ ports:
   */
   readonly portRange?: string;
   /**
-  * This field is used along with the backend_service field for internal
-load balancing.
+  * This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
 
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
 
-You may specify a maximum of up to 5 ports.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ports ComputeForwardingRule#ports}
   */
@@ -242,6 +247,11 @@ function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRule
 */
 export class ComputeForwardingRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_forwarding_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -290,11 +300,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // ==========
 
   // all_ports - computed: false, optional: true, required: false
-  private _allPorts?: boolean;
+  private _allPorts?: boolean | cdktf.IResolvable;
   public get allPorts() {
     return this.getBooleanAttribute('all_ports');
   }
-  public set allPorts(value: boolean ) {
+  public set allPorts(value: boolean | cdktf.IResolvable ) {
     this._allPorts = value;
   }
   public resetAllPorts() {
@@ -306,11 +316,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // allow_global_access - computed: false, optional: true, required: false
-  private _allowGlobalAccess?: boolean;
+  private _allowGlobalAccess?: boolean | cdktf.IResolvable;
   public get allowGlobalAccess() {
     return this.getBooleanAttribute('allow_global_access');
   }
-  public set allowGlobalAccess(value: boolean ) {
+  public set allowGlobalAccess(value: boolean | cdktf.IResolvable ) {
     this._allowGlobalAccess = value;
   }
   public resetAllowGlobalAccess() {
@@ -396,11 +406,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // is_mirroring_collector - computed: false, optional: true, required: false
-  private _isMirroringCollector?: boolean;
+  private _isMirroringCollector?: boolean | cdktf.IResolvable;
   public get isMirroringCollector() {
     return this.getBooleanAttribute('is_mirroring_collector');
   }
-  public set isMirroringCollector(value: boolean ) {
+  public set isMirroringCollector(value: boolean | cdktf.IResolvable ) {
     this._isMirroringCollector = value;
   }
   public resetIsMirroringCollector() {

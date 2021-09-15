@@ -26,6 +26,11 @@ export interface DataGoogleContainerEngineVersionsConfig extends cdktf.Terraform
 */
 export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_engine_versions";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -31,6 +31,11 @@ A full list of valid locations can be found by running 'gcloud kms locations lis
 */
 export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_key_ring";
+
   // ===========
   // INITIALIZER
   // ===========

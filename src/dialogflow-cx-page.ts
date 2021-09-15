@@ -116,7 +116,7 @@ export interface DialogflowCxPageEntryFulfillment {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
-  readonly returnPartialResponses?: boolean;
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   * 
@@ -185,7 +185,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillment {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
-  readonly returnPartialResponses?: boolean;
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   * 
@@ -293,7 +293,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
-  readonly returnPartialResponses?: boolean;
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   * 
@@ -359,21 +359,21 @@ Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#is_list DialogflowCxPage#is_list}
   */
-  readonly isList?: boolean;
+  readonly isList?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter content should be redacted in log. 
 If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#redact DialogflowCxPage#redact}
   */
-  readonly redact?: boolean;
+  readonly redact?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. 
 Required parameters must be filled before form filling concludes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#required DialogflowCxPage#required}
   */
-  readonly required?: boolean;
+  readonly required?: boolean | cdktf.IResolvable;
   /**
   * fill_behavior block
   * 
@@ -472,7 +472,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillment {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
-  readonly returnPartialResponses?: boolean;
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   * 
@@ -556,6 +556,11 @@ function dialogflowCxPageTransitionRoutesToTerraform(struct?: DialogflowCxPageTr
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page.html google_dialogflow_cx_page}
 */
 export class DialogflowCxPage extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_page";
 
   // ===========
   // INITIALIZER

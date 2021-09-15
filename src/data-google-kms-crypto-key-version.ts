@@ -34,6 +34,11 @@ export class DataGoogleKmsCryptoKeyVersionPublicKey extends cdktf.ComplexCompute
 */
 export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_crypto_key_version";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -34,6 +34,11 @@ export interface DataGoogleContainerRegistryImageConfig extends cdktf.TerraformM
 */
 export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_registry_image";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -64,6 +64,11 @@ function privatecaCaPoolIamBindingConditionToTerraform(struct?: PrivatecaCaPoolI
 */
 export class PrivatecaCaPoolIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_privateca_ca_pool_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

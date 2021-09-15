@@ -57,6 +57,11 @@ function sqlSslCertTimeoutsToTerraform(struct?: SqlSslCertTimeouts): any {
 */
 export class SqlSslCert extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_ssl_cert";
+
   // ===========
   // INITIALIZER
   // ===========

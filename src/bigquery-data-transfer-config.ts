@@ -34,7 +34,7 @@ Set the value to 0 to use the default value.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#disabled BigqueryDataTransferConfig#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The user specified display name for the transfer config.
   * 
@@ -60,7 +60,7 @@ associated with this transfer config finish.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#params BigqueryDataTransferConfig#params}
   */
-  readonly params: { [key: string]: string };
+  readonly params: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#project BigqueryDataTransferConfig#project}
   */
@@ -117,7 +117,7 @@ export interface BigqueryDataTransferConfigEmailPreferences {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#enable_failure_email BigqueryDataTransferConfig#enable_failure_email}
   */
-  readonly enableFailureEmail: boolean;
+  readonly enableFailureEmail: boolean | cdktf.IResolvable;
 }
 
 function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: BigqueryDataTransferConfigEmailPreferences): any {
@@ -137,7 +137,7 @@ be ignored.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#disable_auto_scheduling BigqueryDataTransferConfig#disable_auto_scheduling}
   */
-  readonly disableAutoScheduling?: boolean;
+  readonly disableAutoScheduling?: boolean | cdktf.IResolvable;
   /**
   * Defines time to stop scheduling transfer runs. A transfer run cannot be
 scheduled at or after the end time. The end time can be changed at any
@@ -213,6 +213,11 @@ function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTran
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html google_bigquery_data_transfer_config}
 */
 export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_data_transfer_config";
 
   // ===========
   // INITIALIZER
@@ -303,11 +308,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -374,11 +379,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // params - computed: false, optional: false, required: true
-  private _params: { [key: string]: string };
+  private _params: { [key: string]: string } | cdktf.IResolvable;
   public get params() {
     return this.interpolationForAttribute('params') as any;
   }
-  public set params(value: { [key: string]: string }) {
+  public set params(value: { [key: string]: string } | cdktf.IResolvable) {
     this._params = value;
   }
   // Temporarily expose input value. Use with caution.

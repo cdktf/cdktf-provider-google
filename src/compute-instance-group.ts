@@ -109,6 +109,11 @@ function computeInstanceGroupTimeoutsToTerraform(struct?: ComputeInstanceGroupTi
 */
 export class ComputeInstanceGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_group";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -19,7 +19,7 @@ Maximum of 512 characters.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test.html#labels NetworkManagementConnectivityTest#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Unique name for the connectivity test.
   * 
@@ -210,6 +210,11 @@ function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkMa
 */
 export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_network_management_connectivity_test";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -269,11 +274,11 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

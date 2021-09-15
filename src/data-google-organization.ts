@@ -22,6 +22,11 @@ export interface DataGoogleOrganizationConfig extends cdktf.TerraformMetaArgumen
 */
 export class DataGoogleOrganization extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization";
+
   // ===========
   // INITIALIZER
   // ===========

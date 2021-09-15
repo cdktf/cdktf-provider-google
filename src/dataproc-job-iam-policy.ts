@@ -30,6 +30,11 @@ export interface DataprocJobIamPolicyConfig extends cdktf.TerraformMetaArguments
 */
 export class DataprocJobIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_job_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

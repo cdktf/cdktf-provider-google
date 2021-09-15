@@ -18,7 +18,7 @@ export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html#custom_attributes StorageNotification#custom_attributes}
   */
-  readonly customAttributes?: { [key: string]: string };
+  readonly customAttributes?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE"
   * 
@@ -49,6 +49,11 @@ export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments 
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_notification.html google_storage_notification}
 */
 export class StorageNotification extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_notification";
 
   // ===========
   // INITIALIZER
@@ -98,11 +103,11 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // custom_attributes - computed: false, optional: true, required: false
-  private _customAttributes?: { [key: string]: string };
+  private _customAttributes?: { [key: string]: string } | cdktf.IResolvable;
   public get customAttributes() {
     return this.interpolationForAttribute('custom_attributes') as any;
   }
-  public set customAttributes(value: { [key: string]: string } ) {
+  public set customAttributes(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._customAttributes = value;
   }
   public resetCustomAttributes() {

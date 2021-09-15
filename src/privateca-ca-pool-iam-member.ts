@@ -64,6 +64,11 @@ function privatecaCaPoolIamMemberConditionToTerraform(struct?: PrivatecaCaPoolIa
 */
 export class PrivatecaCaPoolIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_privateca_ca_pool_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

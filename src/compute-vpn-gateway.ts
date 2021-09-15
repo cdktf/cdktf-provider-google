@@ -73,6 +73,11 @@ function computeVpnGatewayTimeoutsToTerraform(struct?: ComputeVpnGatewayTimeouts
 */
 export class ComputeVpnGateway extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_vpn_gateway";
+
   // ===========
   // INITIALIZER
   // ===========

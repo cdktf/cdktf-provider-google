@@ -66,7 +66,7 @@ export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html#wait_for_instances ComputeRegionInstanceGroupManager#wait_for_instances}
   */
-  readonly waitForInstances?: boolean;
+  readonly waitForInstances?: boolean | cdktf.IResolvable;
   /**
   * When used with wait_for_instances specifies the status to wait for. When STABLE is specified this resource will wait until the instances are stable before returning. When UPDATED is set, it will wait for the version target to be reached and any per instance configs to be effective as well as all instances to be stable before returning.
   * 
@@ -377,6 +377,11 @@ function computeRegionInstanceGroupManagerVersionToTerraform(struct?: ComputeReg
 */
 export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_instance_group_manager";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -586,11 +591,11 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // wait_for_instances - computed: false, optional: true, required: false
-  private _waitForInstances?: boolean;
+  private _waitForInstances?: boolean | cdktf.IResolvable;
   public get waitForInstances() {
     return this.getBooleanAttribute('wait_for_instances');
   }
-  public set waitForInstances(value: boolean ) {
+  public set waitForInstances(value: boolean | cdktf.IResolvable ) {
     this._waitForInstances = value;
   }
   public resetWaitForInstances() {

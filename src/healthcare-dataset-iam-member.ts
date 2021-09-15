@@ -56,6 +56,11 @@ function healthcareDatasetIamMemberConditionToTerraform(struct?: HealthcareDatas
 */
 export class HealthcareDatasetIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_dataset_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

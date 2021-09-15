@@ -18,7 +18,7 @@ export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html#disabled LoggingFolderExclusion#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   * 
@@ -41,6 +41,11 @@ export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArgumen
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_folder_exclusion.html google_logging_folder_exclusion}
 */
 export class LoggingFolderExclusion extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_folder_exclusion";
 
   // ===========
   // INITIALIZER
@@ -92,11 +97,11 @@ export class LoggingFolderExclusion extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {

@@ -103,6 +103,11 @@ function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccess
 */
 export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_access_approval_settings";
+
   // ===========
   // INITIALIZER
   // ===========

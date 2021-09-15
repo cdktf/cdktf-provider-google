@@ -91,6 +91,11 @@ function apigeeOrganizationTimeoutsToTerraform(struct?: ApigeeOrganizationTimeou
 */
 export class ApigeeOrganization extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_apigee_organization";
+
   // ===========
   // INITIALIZER
   // ===========
