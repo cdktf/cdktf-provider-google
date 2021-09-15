@@ -31,7 +31,7 @@ client when the resource is created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#enable_cdn ComputeBackendBucket#enable_cdn}
   */
-  readonly enableCdn?: boolean;
+  readonly enableCdn?: boolean | cdktf.IResolvable;
   /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -118,7 +118,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#negative_caching ComputeBackendBucket#negative_caching}
   */
-  readonly negativeCaching?: boolean;
+  readonly negativeCaching?: boolean | cdktf.IResolvable;
   /**
   * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
   * 
@@ -189,6 +189,11 @@ function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTi
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html google_compute_backend_bucket}
 */
 export class ComputeBackendBucket extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_backend_bucket";
 
   // ===========
   // INITIALIZER
@@ -277,11 +282,11 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean;
+  private _enableCdn?: boolean | cdktf.IResolvable;
   public get enableCdn() {
     return this.getBooleanAttribute('enable_cdn');
   }
-  public set enableCdn(value: boolean ) {
+  public set enableCdn(value: boolean | cdktf.IResolvable ) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {

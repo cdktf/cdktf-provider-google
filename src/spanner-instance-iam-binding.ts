@@ -60,6 +60,11 @@ function spannerInstanceIamBindingConditionToTerraform(struct?: SpannerInstanceI
 */
 export class SpannerInstanceIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_spanner_instance_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

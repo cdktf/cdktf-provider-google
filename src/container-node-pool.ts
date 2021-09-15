@@ -127,13 +127,13 @@ export interface ContainerNodePoolManagement {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#auto_repair ContainerNodePool#auto_repair}
   */
-  readonly autoRepair?: boolean;
+  readonly autoRepair?: boolean | cdktf.IResolvable;
   /**
   * Whether the nodes will be automatically upgraded.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#auto_upgrade ContainerNodePool#auto_upgrade}
   */
-  readonly autoUpgrade?: boolean;
+  readonly autoUpgrade?: boolean | cdktf.IResolvable;
 }
 
 function containerNodePoolManagementToTerraform(struct?: ContainerNodePoolManagement): any {
@@ -193,13 +193,13 @@ export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#enable_integrity_monitoring ContainerNodePool#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has Secure Boot enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#enable_secure_boot ContainerNodePool#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
 }
 
 function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerNodePoolNodeConfigShieldedInstanceConfig): any {
@@ -256,7 +256,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#labels ContainerNodePool#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The number of local SSD disks to be attached to the node.
   * 
@@ -274,7 +274,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#metadata ContainerNodePool#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform.
   * 
@@ -292,7 +292,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#preemptible ContainerNodePool#preemptible}
   */
-  readonly preemptible?: boolean;
+  readonly preemptible?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Platform Service Account to be used by the node VMs.
   * 
@@ -399,6 +399,11 @@ function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNodePoolU
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html google_container_node_pool}
 */
 export class ContainerNodePool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_node_pool";
 
   // ===========
   // INITIALIZER

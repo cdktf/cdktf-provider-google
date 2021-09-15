@@ -33,7 +33,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html#labels ActiveDirectoryDomain#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/] 
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
@@ -88,6 +88,11 @@ function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomain
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html google_active_directory_domain}
 */
 export class ActiveDirectoryDomain extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_active_directory_domain";
 
   // ===========
   // INITIALIZER
@@ -181,11 +186,11 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

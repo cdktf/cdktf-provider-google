@@ -64,6 +64,11 @@ function cloudRunServiceIamMemberConditionToTerraform(struct?: CloudRunServiceIa
 */
 export class CloudRunServiceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_service_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

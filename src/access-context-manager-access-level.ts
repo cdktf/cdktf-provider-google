@@ -73,7 +73,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_verified_chrome_os AccessContextManagerAccessLevel#require_verified_chrome_os}
   */
-  readonly requireVerifiedChromeOs?: boolean;
+  readonly requireVerifiedChromeOs?: boolean | cdktf.IResolvable;
 }
 
 function accessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints): any {
@@ -105,20 +105,20 @@ An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_admin_approval AccessContextManagerAccessLevel#require_admin_approval}
   */
-  readonly requireAdminApproval?: boolean;
+  readonly requireAdminApproval?: boolean | cdktf.IResolvable;
   /**
   * Whether the device needs to be corp owned.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_corp_owned AccessContextManagerAccessLevel#require_corp_owned}
   */
-  readonly requireCorpOwned?: boolean;
+  readonly requireCorpOwned?: boolean | cdktf.IResolvable;
   /**
   * Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_screen_lock AccessContextManagerAccessLevel#require_screen_lock}
   */
-  readonly requireScreenLock?: boolean;
+  readonly requireScreenLock?: boolean | cdktf.IResolvable;
   /**
   * os_constraints block
   * 
@@ -175,7 +175,7 @@ the Condition overall to be satisfied. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#negate AccessContextManagerAccessLevel#negate}
   */
-  readonly negate?: boolean;
+  readonly negate?: boolean | cdktf.IResolvable;
   /**
   * The request must originate from one of the provided
 countries/regions.
@@ -323,6 +323,11 @@ function accessContextManagerAccessLevelTimeoutsToTerraform(struct?: AccessConte
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html google_access_context_manager_access_level}
 */
 export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_access_level";
 
   // ===========
   // INITIALIZER

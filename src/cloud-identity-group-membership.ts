@@ -116,6 +116,11 @@ function cloudIdentityGroupMembershipTimeoutsToTerraform(struct?: CloudIdentityG
 */
 export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_identity_group_membership";
+
   // ===========
   // INITIALIZER
   // ===========

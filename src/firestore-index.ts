@@ -99,6 +99,11 @@ function firestoreIndexTimeoutsToTerraform(struct?: FirestoreIndexTimeouts): any
 */
 export class FirestoreIndex extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_firestore_index";
+
   // ===========
   // INITIALIZER
   // ===========

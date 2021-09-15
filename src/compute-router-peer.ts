@@ -40,11 +40,27 @@ length, the routes with the lowest priority value win.
   */
   readonly advertisedRoutePriority?: number;
   /**
+  * The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#enable ComputeRouterPeer#enable}
+  */
+  readonly enable?: boolean | cdktf.IResolvable;
+  /**
   * Name of the interface the BGP peer is associated with.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#interface ComputeRouterPeer#interface}
   */
   readonly interface: string;
+  /**
+  * IP address of the interface inside Google Cloud Platform.
+Only IPv4 is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer.html#ip_address ComputeRouterPeer#ip_address}
+  */
+  readonly ipAddress?: string;
   /**
   * Name of this BGP peer. The name must be 1-63 characters long,
 and comply with RFC1035. Specifically, the name must be 1-63 characters
@@ -154,6 +170,11 @@ function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeouts
 */
 export class ComputeRouterPeer extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_router_peer";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -179,7 +200,9 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._advertiseMode = config.advertiseMode;
     this._advertisedGroups = config.advertisedGroups;
     this._advertisedRoutePriority = config.advertisedRoutePriority;
+    this._enable = config.enable;
     this._interface = config.interface;
+    this._ipAddress = config.ipAddress;
     this._name = config.name;
     this._peerAsn = config.peerAsn;
     this._peerIpAddress = config.peerIpAddress;
@@ -242,6 +265,22 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     return this._advertisedRoutePriority
   }
 
+  // enable - computed: false, optional: true, required: false
+  private _enable?: boolean | cdktf.IResolvable;
+  public get enable() {
+    return this.getBooleanAttribute('enable');
+  }
+  public set enable(value: boolean | cdktf.IResolvable ) {
+    this._enable = value;
+  }
+  public resetEnable() {
+    this._enable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableInput() {
+    return this._enable
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -260,9 +299,20 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     return this._interface
   }
 
-  // ip_address - computed: true, optional: false, required: false
+  // ip_address - computed: true, optional: true, required: false
+  private _ipAddress?: string;
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress
   }
 
   // management_type - computed: true, optional: false, required: false
@@ -395,7 +445,9 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       advertise_mode: cdktf.stringToTerraform(this._advertiseMode),
       advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._advertisedGroups),
       advertised_route_priority: cdktf.numberToTerraform(this._advertisedRoutePriority),
+      enable: cdktf.booleanToTerraform(this._enable),
       interface: cdktf.stringToTerraform(this._interface),
+      ip_address: cdktf.stringToTerraform(this._ipAddress),
       name: cdktf.stringToTerraform(this._name),
       peer_asn: cdktf.numberToTerraform(this._peerAsn),
       peer_ip_address: cdktf.stringToTerraform(this._peerIpAddress),

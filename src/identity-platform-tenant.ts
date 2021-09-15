@@ -12,7 +12,7 @@ export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#allow_password_signup IdentityPlatformTenant#allow_password_signup}
   */
-  readonly allowPasswordSignup?: boolean;
+  readonly allowPasswordSignup?: boolean | cdktf.IResolvable;
   /**
   * Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
@@ -20,7 +20,7 @@ are not able to manage its users.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#disable_auth IdentityPlatformTenant#disable_auth}
   */
-  readonly disableAuth?: boolean;
+  readonly disableAuth?: boolean | cdktf.IResolvable;
   /**
   * Human friendly display name of the tenant.
   * 
@@ -32,7 +32,7 @@ are not able to manage its users.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
   */
-  readonly enableEmailLinkSignin?: boolean;
+  readonly enableEmailLinkSignin?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#project IdentityPlatformTenant#project}
   */
@@ -74,6 +74,11 @@ function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTena
 */
 export class IdentityPlatformTenant extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_identity_platform_tenant";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -109,11 +114,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // ==========
 
   // allow_password_signup - computed: false, optional: true, required: false
-  private _allowPasswordSignup?: boolean;
+  private _allowPasswordSignup?: boolean | cdktf.IResolvable;
   public get allowPasswordSignup() {
     return this.getBooleanAttribute('allow_password_signup');
   }
-  public set allowPasswordSignup(value: boolean ) {
+  public set allowPasswordSignup(value: boolean | cdktf.IResolvable ) {
     this._allowPasswordSignup = value;
   }
   public resetAllowPasswordSignup() {
@@ -125,11 +130,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // disable_auth - computed: false, optional: true, required: false
-  private _disableAuth?: boolean;
+  private _disableAuth?: boolean | cdktf.IResolvable;
   public get disableAuth() {
     return this.getBooleanAttribute('disable_auth');
   }
-  public set disableAuth(value: boolean ) {
+  public set disableAuth(value: boolean | cdktf.IResolvable ) {
     this._disableAuth = value;
   }
   public resetDisableAuth() {
@@ -154,11 +159,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // enable_email_link_signin - computed: false, optional: true, required: false
-  private _enableEmailLinkSignin?: boolean;
+  private _enableEmailLinkSignin?: boolean | cdktf.IResolvable;
   public get enableEmailLinkSignin() {
     return this.getBooleanAttribute('enable_email_link_signin');
   }
-  public set enableEmailLinkSignin(value: boolean ) {
+  public set enableEmailLinkSignin(value: boolean | cdktf.IResolvable ) {
     this._enableEmailLinkSignin = value;
   }
   public resetEnableEmailLinkSignin() {

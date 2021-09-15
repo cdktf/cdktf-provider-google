@@ -109,7 +109,7 @@ export interface DialogflowCxFlowEventHandlersTriggerFulfillment {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow.html#return_partial_responses DialogflowCxFlow#return_partial_responses}
   */
-  readonly returnPartialResponses?: boolean;
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   * 
@@ -276,7 +276,7 @@ export interface DialogflowCxFlowTransitionRoutesTriggerFulfillment {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow.html#return_partial_responses DialogflowCxFlow#return_partial_responses}
   */
-  readonly returnPartialResponses?: boolean;
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   * 
@@ -360,6 +360,11 @@ function dialogflowCxFlowTransitionRoutesToTerraform(struct?: DialogflowCxFlowTr
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow.html google_dialogflow_cx_flow}
 */
 export class DialogflowCxFlow extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_flow";
 
   // ===========
   // INITIALIZER

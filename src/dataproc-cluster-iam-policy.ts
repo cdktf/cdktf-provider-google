@@ -30,6 +30,11 @@ export interface DataprocClusterIamPolicyConfig extends cdktf.TerraformMetaArgum
 */
 export class DataprocClusterIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_cluster_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

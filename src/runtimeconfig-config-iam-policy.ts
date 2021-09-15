@@ -26,6 +26,11 @@ export interface RuntimeconfigConfigIamPolicyConfig extends cdktf.TerraformMetaA
 */
 export class RuntimeconfigConfigIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_runtimeconfig_config_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -180,6 +180,11 @@ function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuthorizati
 */
 export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_binary_authorization_policy";
+
   // ===========
   // INITIALIZER
   // ===========

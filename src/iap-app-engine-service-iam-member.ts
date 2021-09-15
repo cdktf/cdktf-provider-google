@@ -64,6 +64,11 @@ function iapAppEngineServiceIamMemberConditionToTerraform(struct?: IapAppEngineS
 */
 export class IapAppEngineServiceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_app_engine_service_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

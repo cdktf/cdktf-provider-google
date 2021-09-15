@@ -59,6 +59,11 @@ function iapBrandTimeoutsToTerraform(struct?: IapBrandTimeouts): any {
 */
 export class IapBrand extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_brand";
+
   // ===========
   // INITIALIZER
   // ===========

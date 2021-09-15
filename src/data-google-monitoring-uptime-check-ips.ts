@@ -31,6 +31,11 @@ export class DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps extends cdktf.Comp
 */
 export class DataGoogleMonitoringUptimeCheckIps extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_uptime_check_ips";
+
   // ===========
   // INITIALIZER
   // ===========

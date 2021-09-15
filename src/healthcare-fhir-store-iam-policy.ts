@@ -22,6 +22,11 @@ export interface HealthcareFhirStoreIamPolicyConfig extends cdktf.TerraformMetaA
 */
 export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_fhir_store_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

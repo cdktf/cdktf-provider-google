@@ -161,6 +161,11 @@ function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeouts): a
 */
 export class BigqueryRoutine extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_routine";
+
   // ===========
   // INITIALIZER
   // ===========

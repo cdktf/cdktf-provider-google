@@ -12,7 +12,7 @@ export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#metadata ComputeProjectMetadata#metadata}
   */
-  readonly metadata: { [key: string]: string };
+  readonly metadata: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
@@ -51,6 +51,11 @@ function computeProjectMetadataTimeoutsToTerraform(struct?: ComputeProjectMetada
 */
 export class ComputeProjectMetadata extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_project_metadata";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -88,11 +93,11 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: false, required: true
-  private _metadata: { [key: string]: string };
+  private _metadata: { [key: string]: string } | cdktf.IResolvable;
   public get metadata() {
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string }) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   // Temporarily expose input value. Use with caution.

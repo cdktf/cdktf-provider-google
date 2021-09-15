@@ -60,6 +60,11 @@ function runtimeconfigConfigIamMemberConditionToTerraform(struct?: Runtimeconfig
 */
 export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_runtimeconfig_config_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

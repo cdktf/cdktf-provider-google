@@ -98,6 +98,11 @@ function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeouts
 */
 export class ComputeTargetPool extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_pool";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -30,6 +30,11 @@ export interface StorageObjectAclConfig extends cdktf.TerraformMetaArguments {
 */
 export class StorageObjectAcl extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_object_acl";
+
   // ===========
   // INITIALIZER
   // ===========

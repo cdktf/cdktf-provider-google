@@ -147,6 +147,11 @@ function notebooksEnvironmentVmImageToTerraform(struct?: NotebooksEnvironmentVmI
 */
 export class NotebooksEnvironment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_notebooks_environment";
+
   // ===========
   // INITIALIZER
   // ===========

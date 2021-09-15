@@ -53,6 +53,11 @@ function folderIamAuditConfigAuditLogConfigToTerraform(struct?: FolderIamAuditCo
 */
 export class FolderIamAuditConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_iam_audit_config";
+
   // ===========
   // INITIALIZER
   // ===========

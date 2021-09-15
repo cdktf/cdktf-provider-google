@@ -103,7 +103,7 @@ input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
   */
-  readonly reverseOrder?: boolean;
+  readonly reverseOrder?: boolean | cdktf.IResolvable;
   /**
   * characters_to_ignore block
   * 
@@ -521,7 +521,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
   */
-  readonly booleanValue?: boolean;
+  readonly booleanValue?: boolean | cdktf.IResolvable;
   /**
   * Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   * 
@@ -603,7 +603,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html#replace_with_info_type_config DataLossPreventionDeidentifyTemplate#replace_with_info_type_config}
   */
-  readonly replaceWithInfoTypeConfig?: boolean;
+  readonly replaceWithInfoTypeConfig?: boolean | cdktf.IResolvable;
   /**
   * character_mask_config block
   * 
@@ -725,6 +725,11 @@ function dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(struct?: DataLo
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template.html google_data_loss_prevention_deidentify_template}
 */
 export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_loss_prevention_deidentify_template";
 
   // ===========
   // INITIALIZER

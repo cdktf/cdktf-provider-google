@@ -64,6 +64,11 @@ function computeInstanceIamMemberConditionToTerraform(struct?: ComputeInstanceIa
 */
 export class ComputeInstanceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

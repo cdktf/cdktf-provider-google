@@ -22,6 +22,11 @@ export interface DataGoogleDnsManagedZoneConfig extends cdktf.TerraformMetaArgum
 */
 export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dns_managed_zone";
+
   // ===========
   // INITIALIZER
   // ===========

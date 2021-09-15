@@ -75,6 +75,11 @@ function sqlSourceRepresentationInstanceTimeoutsToTerraform(struct?: SqlSourceRe
 */
 export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_source_representation_instance";
+
   // ===========
   // INITIALIZER
   // ===========

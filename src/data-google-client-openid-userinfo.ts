@@ -14,6 +14,11 @@ export interface DataGoogleClientOpenidUserinfoConfig extends cdktf.TerraformMet
 */
 export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_client_openid_userinfo";
+
   // ===========
   // INITIALIZER
   // ===========

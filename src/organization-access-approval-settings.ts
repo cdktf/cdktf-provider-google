@@ -97,6 +97,11 @@ function organizationAccessApprovalSettingsTimeoutsToTerraform(struct?: Organiza
 */
 export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization_access_approval_settings";
+
   // ===========
   // INITIALIZER
   // ===========

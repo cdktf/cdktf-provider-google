@@ -77,6 +77,11 @@ function appEngineFirewallRuleTimeoutsToTerraform(struct?: AppEngineFirewallRule
 */
 export class AppEngineFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

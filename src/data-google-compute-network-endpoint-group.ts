@@ -40,6 +40,11 @@ character, which cannot be a dash.
 */
 export class DataGoogleComputeNetworkEndpointGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_network_endpoint_group";
+
   // ===========
   // INITIALIZER
   // ===========

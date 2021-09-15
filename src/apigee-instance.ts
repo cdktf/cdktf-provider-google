@@ -85,6 +85,11 @@ function apigeeInstanceTimeoutsToTerraform(struct?: ApigeeInstanceTimeouts): any
 */
 export class ApigeeInstance extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_apigee_instance";
+
   // ===========
   // INITIALIZER
   // ===========

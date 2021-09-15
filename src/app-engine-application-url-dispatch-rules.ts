@@ -87,6 +87,11 @@ function appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(struct?: AppEng
 */
 export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_application_url_dispatch_rules";
+
   // ===========
   // INITIALIZER
   // ===========

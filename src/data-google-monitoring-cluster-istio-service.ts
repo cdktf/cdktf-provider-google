@@ -53,6 +53,11 @@ export class DataGoogleMonitoringClusterIstioServiceTelemetry extends cdktf.Comp
 */
 export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_cluster_istio_service";
+
   // ===========
   // INITIALIZER
   // ===========

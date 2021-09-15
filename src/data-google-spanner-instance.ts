@@ -28,14 +28,14 @@ unique per project and between 4 and 30 characters in length.
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#force_destroy DataGoogleSpannerInstance#force_destroy}
   */
-  readonly forceDestroy?: boolean;
+  readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
   * An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#labels DataGoogleSpannerInstance#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A unique identifier for the instance, which cannot be changed after
 the instance is created. The name must be between 6 and 30 characters
@@ -71,6 +71,11 @@ or node_count can be present in terraform.
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html google_spanner_instance}
 */
 export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_spanner_instance";
 
   // ===========
   // INITIALIZER
@@ -141,11 +146,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean;
+  private _forceDestroy?: boolean | cdktf.IResolvable;
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy');
   }
-  public set forceDestroy(value: boolean ) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable ) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -162,11 +167,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

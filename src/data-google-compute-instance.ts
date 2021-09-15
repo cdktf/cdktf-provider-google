@@ -340,6 +340,11 @@ export class DataGoogleComputeInstanceShieldedInstanceConfig extends cdktf.Compl
 */
 export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -62,6 +62,11 @@ function computeProjectMetadataItemTimeoutsToTerraform(struct?: ComputeProjectMe
 */
 export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_project_metadata_item";
+
   // ===========
   // INITIALIZER
   // ===========

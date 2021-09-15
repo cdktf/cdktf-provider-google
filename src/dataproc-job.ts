@@ -12,13 +12,13 @@ export interface DataprocJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#force_delete DataprocJob#force_delete}
   */
-  readonly forceDelete?: boolean;
+  readonly forceDelete?: boolean | cdktf.IResolvable;
   /**
   * Optional. The labels to associate with this job.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#labels DataprocJob#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The project in which the cluster can be found and jobs subsequently run against. If it is not provided, the provider project is used.
   * 
@@ -120,7 +120,7 @@ export interface DataprocJobHadoopConfigLoggingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
   */
-  readonly driverLogLevels: { [key: string]: string };
+  readonly driverLogLevels: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocJobHadoopConfigLoggingConfigToTerraform(struct?: DataprocJobHadoopConfigLoggingConfig): any {
@@ -172,7 +172,7 @@ export interface DataprocJobHadoopConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -201,7 +201,7 @@ export interface DataprocJobHiveConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#continue_on_failure DataprocJob#continue_on_failure}
   */
-  readonly continueOnFailure?: boolean;
+  readonly continueOnFailure?: boolean | cdktf.IResolvable;
   /**
   * HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
   * 
@@ -213,7 +213,7 @@ export interface DataprocJobHiveConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
   * 
@@ -231,7 +231,7 @@ export interface DataprocJobHiveConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#script_variables DataprocJob#script_variables}
   */
-  readonly scriptVariables?: { [key: string]: string };
+  readonly scriptVariables?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocJobHiveConfigToTerraform(struct?: DataprocJobHiveConfig): any {
@@ -252,7 +252,7 @@ export interface DataprocJobPigConfigLoggingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
   */
-  readonly driverLogLevels: { [key: string]: string };
+  readonly driverLogLevels: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocJobPigConfigLoggingConfigToTerraform(struct?: DataprocJobPigConfigLoggingConfig): any {
@@ -268,7 +268,7 @@ export interface DataprocJobPigConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#continue_on_failure DataprocJob#continue_on_failure}
   */
-  readonly continueOnFailure?: boolean;
+  readonly continueOnFailure?: boolean | cdktf.IResolvable;
   /**
   * HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
   * 
@@ -280,7 +280,7 @@ export interface DataprocJobPigConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
   * 
@@ -298,7 +298,7 @@ export interface DataprocJobPigConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#script_variables DataprocJob#script_variables}
   */
-  readonly scriptVariables?: { [key: string]: string };
+  readonly scriptVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -342,7 +342,7 @@ export interface DataprocJobPysparkConfigLoggingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
   */
-  readonly driverLogLevels: { [key: string]: string };
+  readonly driverLogLevels: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocJobPysparkConfigLoggingConfigToTerraform(struct?: DataprocJobPysparkConfigLoggingConfig): any {
@@ -388,7 +388,7 @@ export interface DataprocJobPysparkConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip
   * 
@@ -462,7 +462,7 @@ export interface DataprocJobSparkConfigLoggingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
   */
-  readonly driverLogLevels: { [key: string]: string };
+  readonly driverLogLevels: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocJobSparkConfigLoggingConfigToTerraform(struct?: DataprocJobSparkConfigLoggingConfig): any {
@@ -514,7 +514,7 @@ export interface DataprocJobSparkConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -543,7 +543,7 @@ export interface DataprocJobSparksqlConfigLoggingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#driver_log_levels DataprocJob#driver_log_levels}
   */
-  readonly driverLogLevels: { [key: string]: string };
+  readonly driverLogLevels: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocJobSparksqlConfigLoggingConfigToTerraform(struct?: DataprocJobSparksqlConfigLoggingConfig): any {
@@ -565,7 +565,7 @@ export interface DataprocJobSparksqlConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#properties DataprocJob#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The HCFS URI of the script that contains SQL queries. Conflicts with query_list
   * 
@@ -583,7 +583,7 @@ export interface DataprocJobSparksqlConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html#script_variables DataprocJob#script_variables}
   */
-  readonly scriptVariables?: { [key: string]: string };
+  readonly scriptVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -628,6 +628,11 @@ function dataprocJobTimeoutsToTerraform(struct?: DataprocJobTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job.html google_dataproc_job}
 */
 export class DataprocJob extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_job";
 
   // ===========
   // INITIALIZER
@@ -682,11 +687,11 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // force_delete - computed: false, optional: true, required: false
-  private _forceDelete?: boolean;
+  private _forceDelete?: boolean | cdktf.IResolvable;
   public get forceDelete() {
     return this.getBooleanAttribute('force_delete');
   }
-  public set forceDelete(value: boolean ) {
+  public set forceDelete(value: boolean | cdktf.IResolvable ) {
     this._forceDelete = value;
   }
   public resetForceDelete() {
@@ -703,11 +708,11 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

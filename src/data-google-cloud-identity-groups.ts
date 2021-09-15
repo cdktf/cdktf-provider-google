@@ -83,6 +83,11 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
 */
 export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_identity_groups";
+
   // ===========
   // INITIALIZER
   // ===========

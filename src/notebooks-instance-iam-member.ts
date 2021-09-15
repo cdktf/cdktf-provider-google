@@ -64,6 +64,11 @@ function notebooksInstanceIamMemberConditionToTerraform(struct?: NotebooksInstan
 */
 export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_notebooks_instance_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

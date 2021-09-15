@@ -25,7 +25,7 @@ Patient.get$everything, will not return all the results if broken references exi
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#disable_referential_integrity HealthcareFhirStore#disable_referential_integrity}
   */
-  readonly disableReferentialIntegrity?: boolean;
+  readonly disableReferentialIntegrity?: boolean | cdktf.IResolvable;
   /**
   * Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -37,7 +37,7 @@ attempts to read the historical versions.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#disable_resource_versioning HealthcareFhirStore#disable_resource_versioning}
   */
-  readonly disableResourceVersioning?: boolean;
+  readonly disableResourceVersioning?: boolean | cdktf.IResolvable;
   /**
   * Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -50,7 +50,7 @@ will fail with an error.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#enable_history_import HealthcareFhirStore#enable_history_import}
   */
-  readonly enableHistoryImport?: boolean;
+  readonly enableHistoryImport?: boolean | cdktf.IResolvable;
   /**
   * Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -61,7 +61,7 @@ notifications.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#enable_update_create HealthcareFhirStore#enable_update_create}
   */
-  readonly enableUpdateCreate?: boolean;
+  readonly enableUpdateCreate?: boolean | cdktf.IResolvable;
   /**
   * User-supplied key-value pairs used to organize FHIR stores.
 
@@ -78,7 +78,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#labels HealthcareFhirStore#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The resource name for the FhirStore.
 
@@ -239,6 +239,11 @@ function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirStoreTime
 */
 export class HealthcareFhirStore extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_fhir_store";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -292,11 +297,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // disable_referential_integrity - computed: false, optional: true, required: false
-  private _disableReferentialIntegrity?: boolean;
+  private _disableReferentialIntegrity?: boolean | cdktf.IResolvable;
   public get disableReferentialIntegrity() {
     return this.getBooleanAttribute('disable_referential_integrity');
   }
-  public set disableReferentialIntegrity(value: boolean ) {
+  public set disableReferentialIntegrity(value: boolean | cdktf.IResolvable ) {
     this._disableReferentialIntegrity = value;
   }
   public resetDisableReferentialIntegrity() {
@@ -308,11 +313,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // disable_resource_versioning - computed: false, optional: true, required: false
-  private _disableResourceVersioning?: boolean;
+  private _disableResourceVersioning?: boolean | cdktf.IResolvable;
   public get disableResourceVersioning() {
     return this.getBooleanAttribute('disable_resource_versioning');
   }
-  public set disableResourceVersioning(value: boolean ) {
+  public set disableResourceVersioning(value: boolean | cdktf.IResolvable ) {
     this._disableResourceVersioning = value;
   }
   public resetDisableResourceVersioning() {
@@ -324,11 +329,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // enable_history_import - computed: false, optional: true, required: false
-  private _enableHistoryImport?: boolean;
+  private _enableHistoryImport?: boolean | cdktf.IResolvable;
   public get enableHistoryImport() {
     return this.getBooleanAttribute('enable_history_import');
   }
-  public set enableHistoryImport(value: boolean ) {
+  public set enableHistoryImport(value: boolean | cdktf.IResolvable ) {
     this._enableHistoryImport = value;
   }
   public resetEnableHistoryImport() {
@@ -340,11 +345,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // enable_update_create - computed: false, optional: true, required: false
-  private _enableUpdateCreate?: boolean;
+  private _enableUpdateCreate?: boolean | cdktf.IResolvable;
   public get enableUpdateCreate() {
     return this.getBooleanAttribute('enable_update_create');
   }
-  public set enableUpdateCreate(value: boolean ) {
+  public set enableUpdateCreate(value: boolean | cdktf.IResolvable ) {
     this._enableUpdateCreate = value;
   }
   public resetEnableUpdateCreate() {
@@ -361,11 +366,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

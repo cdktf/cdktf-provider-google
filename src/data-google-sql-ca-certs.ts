@@ -49,6 +49,11 @@ export class DataGoogleSqlCaCertsCerts extends cdktf.ComplexComputedList {
 */
 export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_ca_certs";
+
   // ===========
   // INITIALIZER
   // ===========

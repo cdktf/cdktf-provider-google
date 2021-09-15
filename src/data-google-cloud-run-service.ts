@@ -355,6 +355,11 @@ export class DataGoogleCloudRunServiceTraffic extends cdktf.ComplexComputedList 
 */
 export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_service";
+
   // ===========
   // INITIALIZER
   // ===========

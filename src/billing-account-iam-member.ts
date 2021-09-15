@@ -56,6 +56,11 @@ function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamM
 */
 export class BillingAccountIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_billing_account_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -212,6 +212,11 @@ function computeGlobalForwardingRuleTimeoutsToTerraform(struct?: ComputeGlobalFo
 */
 export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_global_forwarding_rule";
+
   // ===========
   // INITIALIZER
   // ===========

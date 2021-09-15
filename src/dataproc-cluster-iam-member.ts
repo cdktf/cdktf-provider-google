@@ -64,6 +64,11 @@ function dataprocClusterIamMemberConditionToTerraform(struct?: DataprocClusterIa
 */
 export class DataprocClusterIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_cluster_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

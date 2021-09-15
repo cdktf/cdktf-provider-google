@@ -56,7 +56,7 @@ export interface FolderOrganizationPolicyBooleanPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#enforced FolderOrganizationPolicy#enforced}
   */
-  readonly enforced: boolean;
+  readonly enforced: boolean | cdktf.IResolvable;
 }
 
 function folderOrganizationPolicyBooleanPolicyToTerraform(struct?: FolderOrganizationPolicyBooleanPolicy): any {
@@ -72,7 +72,7 @@ export interface FolderOrganizationPolicyListPolicyAllow {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#all FolderOrganizationPolicy#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
   * 
@@ -95,7 +95,7 @@ export interface FolderOrganizationPolicyListPolicyDeny {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#all FolderOrganizationPolicy#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
   * 
@@ -118,7 +118,7 @@ export interface FolderOrganizationPolicyListPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#inherit_from_parent FolderOrganizationPolicy#inherit_from_parent}
   */
-  readonly inheritFromParent?: boolean;
+  readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
   * 
@@ -155,7 +155,7 @@ export interface FolderOrganizationPolicyRestorePolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html#default FolderOrganizationPolicy#default}
   */
-  readonly default: boolean;
+  readonly default: boolean | cdktf.IResolvable;
 }
 
 function folderOrganizationPolicyRestorePolicyToTerraform(struct?: FolderOrganizationPolicyRestorePolicy): any {
@@ -199,6 +199,11 @@ function folderOrganizationPolicyTimeoutsToTerraform(struct?: FolderOrganization
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_organization_policy.html google_folder_organization_policy}
 */
 export class FolderOrganizationPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_organization_policy";
 
   // ===========
   // INITIALIZER

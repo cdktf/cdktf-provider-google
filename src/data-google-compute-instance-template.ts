@@ -14,7 +14,7 @@ export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html#most_recent DataGoogleComputeInstanceTemplate#most_recent}
   */
-  readonly mostRecent?: boolean;
+  readonly mostRecent?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name.
   * 
@@ -312,6 +312,11 @@ export class DataGoogleComputeInstanceTemplateShieldedInstanceConfig extends cdk
 */
 export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_template";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -436,11 +441,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // most_recent - computed: false, optional: true, required: false
-  private _mostRecent?: boolean;
+  private _mostRecent?: boolean | cdktf.IResolvable;
   public get mostRecent() {
     return this.getBooleanAttribute('most_recent');
   }
-  public set mostRecent(value: boolean ) {
+  public set mostRecent(value: boolean | cdktf.IResolvable ) {
     this._mostRecent = value;
   }
   public resetMostRecent() {

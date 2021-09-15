@@ -18,7 +18,7 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#deletion_protection SqlDatabaseInstance#deletion_protection}
   */
-  readonly deletionProtection?: boolean;
+  readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance that will act as the master in the replication setup. Note, this requires the master to have binary_log_enabled set, as well as existing backups.
   * 
@@ -183,7 +183,7 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#failover_target SqlDatabaseInstance#failover_target}
   */
-  readonly failoverTarget?: boolean;
+  readonly failoverTarget?: boolean | cdktf.IResolvable;
   /**
   * Time in ms between replication heartbeats.
   * 
@@ -213,7 +213,7 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#verify_server_certificate SqlDatabaseInstance#verify_server_certificate}
   */
-  readonly verifyServerCertificate?: boolean;
+  readonly verifyServerCertificate?: boolean | cdktf.IResolvable;
 }
 
 function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlDatabaseInstanceReplicaConfiguration): any {
@@ -292,13 +292,13 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#binary_log_enabled SqlDatabaseInstance#binary_log_enabled}
   */
-  readonly binaryLogEnabled?: boolean;
+  readonly binaryLogEnabled?: boolean | cdktf.IResolvable;
   /**
   * True if backup configuration is enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#enabled SqlDatabaseInstance#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Location of the backup configuration.
   * 
@@ -310,7 +310,7 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#point_in_time_recovery_enabled SqlDatabaseInstance#point_in_time_recovery_enabled}
   */
-  readonly pointInTimeRecoveryEnabled?: boolean;
+  readonly pointInTimeRecoveryEnabled?: boolean | cdktf.IResolvable;
   /**
   * HH:MM format time indicating when backup configuration starts.
   * 
@@ -373,7 +373,7 @@ export interface SqlDatabaseInstanceSettingsInsightsConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#query_insights_enabled SqlDatabaseInstance#query_insights_enabled}
   */
-  readonly queryInsightsEnabled?: boolean;
+  readonly queryInsightsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
   * 
@@ -385,13 +385,13 @@ export interface SqlDatabaseInstanceSettingsInsightsConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#record_application_tags SqlDatabaseInstance#record_application_tags}
   */
-  readonly recordApplicationTags?: boolean;
+  readonly recordApplicationTags?: boolean | cdktf.IResolvable;
   /**
   * True if Query Insights will record client address when enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#record_client_address SqlDatabaseInstance#record_client_address}
   */
-  readonly recordClientAddress?: boolean;
+  readonly recordClientAddress?: boolean | cdktf.IResolvable;
 }
 
 function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: SqlDatabaseInstanceSettingsInsightsConfig): any {
@@ -434,7 +434,7 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#ipv4_enabled SqlDatabaseInstance#ipv4_enabled}
   */
-  readonly ipv4Enabled?: boolean;
+  readonly ipv4Enabled?: boolean | cdktf.IResolvable;
   /**
   * The VPC network from which the Cloud SQL instance is accessible for private IP. For example, projects/myProject/global/networks/default. Specifying a network enables private IP. At least ipv4_enabled must be enabled or a private_network must be configured. This setting can be updated, but it cannot be removed after it is set.
   * 
@@ -444,7 +444,7 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#require_ssl SqlDatabaseInstance#require_ssl}
   */
-  readonly requireSsl?: boolean;
+  readonly requireSsl?: boolean | cdktf.IResolvable;
   /**
   * authorized_networks block
   * 
@@ -539,17 +539,23 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   */
   readonly availabilityType?: string;
   /**
+  * The name of server instance collation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#collation SqlDatabaseInstance#collation}
+  */
+  readonly collation?: string;
+  /**
   * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see here for information on how to upgrade to Second Generation instances. Specific to read instances, indicates when crash-safe replication flags are enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#crash_safe_replication SqlDatabaseInstance#crash_safe_replication}
   */
-  readonly crashSafeReplication?: boolean;
+  readonly crashSafeReplication?: boolean | cdktf.IResolvable;
   /**
   * Configuration to increase storage size automatically.  Note that future terraform apply calls will attempt to resize the disk to the value specified in disk_size - if this is set, do not set disk_size.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_autoresize SqlDatabaseInstance#disk_autoresize}
   */
-  readonly diskAutoresize?: boolean;
+  readonly diskAutoresize?: boolean | cdktf.IResolvable;
   /**
   * The maximum size, in GB, to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
   * 
@@ -591,7 +597,7 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#user_labels SqlDatabaseInstance#user_labels}
   */
-  readonly userLabels?: { [key: string]: string };
+  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * backup_configuration block
   * 
@@ -636,6 +642,7 @@ function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSett
     activation_policy: cdktf.stringToTerraform(struct!.activationPolicy),
     authorized_gae_applications: cdktf.listMapper(cdktf.stringToTerraform)(struct!.authorizedGaeApplications),
     availability_type: cdktf.stringToTerraform(struct!.availabilityType),
+    collation: cdktf.stringToTerraform(struct!.collation),
     crash_safe_replication: cdktf.booleanToTerraform(struct!.crashSafeReplication),
     disk_autoresize: cdktf.booleanToTerraform(struct!.diskAutoresize),
     disk_autoresize_limit: cdktf.numberToTerraform(struct!.diskAutoresizeLimit),
@@ -683,6 +690,11 @@ function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInstanceTime
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html google_sql_database_instance}
 */
 export class SqlDatabaseInstance extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_database_instance";
 
   // ===========
   // INITIALIZER
@@ -746,11 +758,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean;
+  private _deletionProtection?: boolean | cdktf.IResolvable;
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {

@@ -13,7 +13,7 @@ PARTNER type this will Pre-Activate the interconnect attachment
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment.html#admin_enabled ComputeInterconnectAttachment#admin_enabled}
   */
-  readonly adminEnabled?: boolean;
+  readonly adminEnabled?: boolean | cdktf.IResolvable;
   /**
   * Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
@@ -199,6 +199,11 @@ function computeInterconnectAttachmentTimeoutsToTerraform(struct?: ComputeInterc
 */
 export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_interconnect_attachment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -244,11 +249,11 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   // ==========
 
   // admin_enabled - computed: false, optional: true, required: false
-  private _adminEnabled?: boolean;
+  private _adminEnabled?: boolean | cdktf.IResolvable;
   public get adminEnabled() {
     return this.getBooleanAttribute('admin_enabled');
   }
-  public set adminEnabled(value: boolean ) {
+  public set adminEnabled(value: boolean | cdktf.IResolvable ) {
     this._adminEnabled = value;
   }
   public resetAdminEnabled() {

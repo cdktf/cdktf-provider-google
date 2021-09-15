@@ -72,6 +72,11 @@ function firestoreDocumentTimeoutsToTerraform(struct?: FirestoreDocumentTimeouts
 */
 export class FirestoreDocument extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_firestore_document";
+
   // ===========
   // INITIALIZER
   // ===========

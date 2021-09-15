@@ -26,6 +26,11 @@ export interface SourcerepoRepositoryIamPolicyConfig extends cdktf.TerraformMeta
 */
 export class SourcerepoRepositoryIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sourcerepo_repository_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

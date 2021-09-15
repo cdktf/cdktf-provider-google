@@ -88,6 +88,11 @@ function storageObjectAccessControlTimeoutsToTerraform(struct?: StorageObjectAcc
 */
 export class StorageObjectAccessControl extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_object_access_control";
+
   // ===========
   // INITIALIZER
   // ===========

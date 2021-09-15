@@ -25,7 +25,7 @@ export interface MemcacheInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#labels MemcacheInstance#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
@@ -115,7 +115,7 @@ export interface MemcacheInstanceMemcacheParameters {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html#params MemcacheInstance#params}
   */
-  readonly params?: { [key: string]: string };
+  readonly params?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function memcacheInstanceMemcacheParametersToTerraform(struct?: MemcacheInstanceMemcacheParameters): any {
@@ -177,6 +177,11 @@ function memcacheInstanceTimeoutsToTerraform(struct?: MemcacheInstanceTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/memcache_instance.html google_memcache_instance}
 */
 export class MemcacheInstance extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_memcache_instance";
 
   // ===========
   // INITIALIZER
@@ -266,11 +271,11 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

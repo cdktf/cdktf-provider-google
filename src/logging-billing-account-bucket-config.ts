@@ -44,6 +44,11 @@ export interface LoggingBillingAccountBucketConfigConfig extends cdktf.Terraform
 */
 export class LoggingBillingAccountBucketConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_billing_account_bucket_config";
+
   // ===========
   // INITIALIZER
   // ===========

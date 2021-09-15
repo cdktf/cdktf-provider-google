@@ -30,7 +30,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#labels HealthcareHl7V2Store#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The resource name for the Hl7V2Store.
 
@@ -131,7 +131,7 @@ export interface HealthcareHl7V2StoreParserConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#allow_null_header HealthcareHl7V2Store#allow_null_header}
   */
-  readonly allowNullHeader?: boolean;
+  readonly allowNullHeader?: boolean | cdktf.IResolvable;
   /**
   * JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
@@ -188,6 +188,11 @@ function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTi
 */
 export class HealthcareHl7V2Store extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_hl7_v2_store";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -242,11 +247,11 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

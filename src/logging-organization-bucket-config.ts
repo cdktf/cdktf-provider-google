@@ -44,6 +44,11 @@ export interface LoggingOrganizationBucketConfigConfig extends cdktf.TerraformMe
 */
 export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_organization_bucket_config";
+
   // ===========
   // INITIALIZER
   // ===========

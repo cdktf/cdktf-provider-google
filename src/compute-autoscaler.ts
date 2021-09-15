@@ -212,7 +212,7 @@ export interface ComputeAutoscalerAutoscalingPolicyScalingSchedules {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#disabled ComputeAutoscaler#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
   * 
@@ -372,6 +372,11 @@ function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html google_compute_autoscaler}
 */
 export class ComputeAutoscaler extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_autoscaler";
 
   // ===========
   // INITIALIZER

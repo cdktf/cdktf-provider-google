@@ -44,6 +44,11 @@ export interface LoggingProjectBucketConfigConfig extends cdktf.TerraformMetaArg
 */
 export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_project_bucket_config";
+
   // ===========
   // INITIALIZER
   // ===========

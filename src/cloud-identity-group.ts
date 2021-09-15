@@ -39,7 +39,7 @@ Must not contain more than one entry. Must contain the entry
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#labels CloudIdentityGroup#labels}
   */
-  readonly labels: { [key: string]: string };
+  readonly labels: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The resource name of the entity under which this Group resides in the
 Cloud Identity resource hierarchy.
@@ -130,6 +130,11 @@ function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeou
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html google_cloud_identity_group}
 */
 export class CloudIdentityGroup extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_identity_group";
 
   // ===========
   // INITIALIZER
@@ -225,11 +230,11 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: false, required: true
-  private _labels: { [key: string]: string };
+  private _labels: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string }) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   // Temporarily expose input value. Use with caution.

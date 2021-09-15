@@ -101,6 +101,11 @@ function computeSslPolicyTimeoutsToTerraform(struct?: ComputeSslPolicyTimeouts):
 */
 export class ComputeSslPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_ssl_policy";
+
   // ===========
   // INITIALIZER
   // ===========

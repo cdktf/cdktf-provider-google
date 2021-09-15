@@ -46,6 +46,11 @@ export class DataGoogleMonitoringMeshIstioServiceTelemetry extends cdktf.Complex
 */
 export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_mesh_istio_service";
+
   // ===========
   // INITIALIZER
   // ===========

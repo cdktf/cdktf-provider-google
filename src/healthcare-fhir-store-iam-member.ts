@@ -56,6 +56,11 @@ function healthcareFhirStoreIamMemberConditionToTerraform(struct?: HealthcareFhi
 */
 export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_fhir_store_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

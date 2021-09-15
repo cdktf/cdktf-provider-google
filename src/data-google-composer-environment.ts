@@ -192,6 +192,11 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
 */
 export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_composer_environment";
+
   // ===========
   // INITIALIZER
   // ===========

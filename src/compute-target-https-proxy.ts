@@ -35,7 +35,7 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html#proxy_bind ComputeTargetHttpsProxy#proxy_bind}
   */
-  readonly proxyBind?: boolean;
+  readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
   * Specifies the QUIC override policy for this resource. This determines
 whether the load balancer will attempt to negotiate QUIC with clients
@@ -105,6 +105,11 @@ function computeTargetHttpsProxyTimeoutsToTerraform(struct?: ComputeTargetHttpsP
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy.html google_compute_target_https_proxy}
 */
 export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_https_proxy";
 
   // ===========
   // INITIALIZER
@@ -199,11 +204,11 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
   }
 
   // proxy_bind - computed: true, optional: true, required: false
-  private _proxyBind?: boolean;
+  private _proxyBind?: boolean | cdktf.IResolvable;
   public get proxyBind() {
     return this.getBooleanAttribute('proxy_bind');
   }
-  public set proxyBind(value: boolean) {
+  public set proxyBind(value: boolean | cdktf.IResolvable) {
     this._proxyBind = value;
   }
   public resetProxyBind() {

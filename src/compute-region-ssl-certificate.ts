@@ -91,6 +91,11 @@ function computeRegionSslCertificateTimeoutsToTerraform(struct?: ComputeRegionSs
 */
 export class ComputeRegionSslCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_ssl_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

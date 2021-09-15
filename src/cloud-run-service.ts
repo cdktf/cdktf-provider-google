@@ -10,7 +10,7 @@ export interface CloudRunServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#autogenerate_revision_name CloudRunService#autogenerate_revision_name}
   */
-  readonly autogenerateRevisionName?: boolean;
+  readonly autogenerateRevisionName?: boolean | cdktf.IResolvable;
   /**
   * The location of the cloud run instance. eg us-central1
   * 
@@ -121,7 +121,7 @@ Cloud Run (fully managed) uses the following annotation keys to configure featur
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#annotations CloudRunService#annotations}
   */
-  readonly annotations?: { [key: string]: string };
+  readonly annotations?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -130,7 +130,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#labels CloudRunService#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * In Cloud Run the namespace must be equal to either the
 project ID or project number.
@@ -161,7 +161,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#annotations CloudRunService#annotations}
   */
-  readonly annotations?: { [key: string]: string };
+  readonly annotations?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -170,7 +170,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#labels CloudRunService#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Name must be unique within a namespace, within a Cloud Run region.
 Is required when creating resources. Name is primarily intended
@@ -253,7 +253,7 @@ export interface CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#optional CloudRunService#optional}
   */
-  readonly optional?: boolean;
+  readonly optional?: boolean | cdktf.IResolvable;
   /**
   * local_object_reference block
   * 
@@ -294,7 +294,7 @@ export interface CloudRunServiceTemplateSpecContainersEnvFromSecretRef {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#optional CloudRunService#optional}
   */
-  readonly optional?: boolean;
+  readonly optional?: boolean | cdktf.IResolvable;
   /**
   * local_object_reference block
   * 
@@ -379,7 +379,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#limits CloudRunService#limits}
   */
-  readonly limits?: { [key: string]: string };
+  readonly limits?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Requests describes the minimum amount of compute resources required.
 If Requests is omitted for a container, it defaults to Limits if that is
@@ -389,7 +389,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#requests CloudRunService#requests}
   */
-  readonly requests?: { [key: string]: string };
+  readonly requests?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function cloudRunServiceTemplateSpecContainersResourcesToTerraform(struct?: CloudRunServiceTemplateSpecContainersResources): any {
@@ -586,7 +586,7 @@ false when RevisionName is non-empty.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#latest_revision CloudRunService#latest_revision}
   */
-  readonly latestRevision?: boolean;
+  readonly latestRevision?: boolean | cdktf.IResolvable;
   /**
   * Percent specifies percent of the traffic to this Revision or Configuration.
   * 
@@ -615,6 +615,11 @@ function cloudRunServiceTrafficToTerraform(struct?: CloudRunServiceTraffic): any
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html google_cloud_run_service}
 */
 export class CloudRunService extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_service";
 
   // ===========
   // INITIALIZER
@@ -653,11 +658,11 @@ export class CloudRunService extends cdktf.TerraformResource {
   // ==========
 
   // autogenerate_revision_name - computed: false, optional: true, required: false
-  private _autogenerateRevisionName?: boolean;
+  private _autogenerateRevisionName?: boolean | cdktf.IResolvable;
   public get autogenerateRevisionName() {
     return this.getBooleanAttribute('autogenerate_revision_name');
   }
-  public set autogenerateRevisionName(value: boolean ) {
+  public set autogenerateRevisionName(value: boolean | cdktf.IResolvable ) {
     this._autogenerateRevisionName = value;
   }
   public resetAutogenerateRevisionName() {

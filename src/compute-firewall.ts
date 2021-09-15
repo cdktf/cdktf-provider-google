@@ -39,13 +39,13 @@ is unspecified, the firewall rule will be enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#disabled ComputeFirewall#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported to Stackdriver.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#enable_logging ComputeFirewall#enable_logging}
   */
-  readonly enableLogging?: boolean;
+  readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -277,6 +277,11 @@ function computeFirewallTimeoutsToTerraform(struct?: ComputeFirewallTimeouts): a
 */
 export class ComputeFirewall extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_firewall";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -377,11 +382,11 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -393,11 +398,11 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
 
   // enable_logging - computed: true, optional: true, required: false
-  private _enableLogging?: boolean;
+  private _enableLogging?: boolean | cdktf.IResolvable;
   public get enableLogging() {
     return this.getBooleanAttribute('enable_logging');
   }
-  public set enableLogging(value: boolean) {
+  public set enableLogging(value: boolean | cdktf.IResolvable) {
     this._enableLogging = value;
   }
   public resetEnableLogging() {

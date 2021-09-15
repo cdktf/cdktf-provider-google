@@ -21,14 +21,14 @@ that are bound to this policy.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
   */
-  readonly enableInboundForwarding?: boolean;
+  readonly enableInboundForwarding?: boolean | cdktf.IResolvable;
   /**
   * Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy.html#enable_logging DnsPolicy#enable_logging}
   */
-  readonly enableLogging?: boolean;
+  readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
   * User assigned name for this policy.
   * 
@@ -147,6 +147,11 @@ function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeouts): any {
 */
 export class DnsPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dns_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -200,11 +205,11 @@ export class DnsPolicy extends cdktf.TerraformResource {
   }
 
   // enable_inbound_forwarding - computed: false, optional: true, required: false
-  private _enableInboundForwarding?: boolean;
+  private _enableInboundForwarding?: boolean | cdktf.IResolvable;
   public get enableInboundForwarding() {
     return this.getBooleanAttribute('enable_inbound_forwarding');
   }
-  public set enableInboundForwarding(value: boolean ) {
+  public set enableInboundForwarding(value: boolean | cdktf.IResolvable ) {
     this._enableInboundForwarding = value;
   }
   public resetEnableInboundForwarding() {
@@ -216,11 +221,11 @@ export class DnsPolicy extends cdktf.TerraformResource {
   }
 
   // enable_logging - computed: false, optional: true, required: false
-  private _enableLogging?: boolean;
+  private _enableLogging?: boolean | cdktf.IResolvable;
   public get enableLogging() {
     return this.getBooleanAttribute('enable_logging');
   }
-  public set enableLogging(value: boolean ) {
+  public set enableLogging(value: boolean | cdktf.IResolvable ) {
     this._enableLogging = value;
   }
   public resetEnableLogging() {

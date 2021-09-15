@@ -26,7 +26,7 @@ export interface DialogflowCxEntityTypeConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_entity_type.html#enable_fuzzy_extraction DialogflowCxEntityType#enable_fuzzy_extraction}
   */
-  readonly enableFuzzyExtraction?: boolean;
+  readonly enableFuzzyExtraction?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the entity type can be automatically expanded.
 * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
@@ -58,7 +58,7 @@ Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_entity_type.html#redact DialogflowCxEntityType#redact}
   */
-  readonly redact?: boolean;
+  readonly redact?: boolean | cdktf.IResolvable;
   /**
   * entities block
   * 
@@ -150,6 +150,11 @@ function dialogflowCxEntityTypeTimeoutsToTerraform(struct?: DialogflowCxEntityTy
 */
 export class DialogflowCxEntityType extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_entity_type";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -218,11 +223,11 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
 
   // enable_fuzzy_extraction - computed: false, optional: true, required: false
-  private _enableFuzzyExtraction?: boolean;
+  private _enableFuzzyExtraction?: boolean | cdktf.IResolvable;
   public get enableFuzzyExtraction() {
     return this.getBooleanAttribute('enable_fuzzy_extraction');
   }
-  public set enableFuzzyExtraction(value: boolean ) {
+  public set enableFuzzyExtraction(value: boolean | cdktf.IResolvable ) {
     this._enableFuzzyExtraction = value;
   }
   public resetEnableFuzzyExtraction() {
@@ -289,11 +294,11 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
 
   // redact - computed: false, optional: true, required: false
-  private _redact?: boolean;
+  private _redact?: boolean | cdktf.IResolvable;
   public get redact() {
     return this.getBooleanAttribute('redact');
   }
-  public set redact(value: boolean ) {
+  public set redact(value: boolean | cdktf.IResolvable ) {
     this._redact = value;
   }
   public resetRedact() {

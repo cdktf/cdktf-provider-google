@@ -64,6 +64,11 @@ function computeSubnetworkIamBindingConditionToTerraform(struct?: ComputeSubnetw
 */
 export class ComputeSubnetworkIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_subnetwork_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

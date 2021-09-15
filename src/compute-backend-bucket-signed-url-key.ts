@@ -62,6 +62,11 @@ function computeBackendBucketSignedUrlKeyTimeoutsToTerraform(struct?: ComputeBac
 */
 export class ComputeBackendBucketSignedUrlKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_backend_bucket_signed_url_key";
+
   // ===========
   // INITIALIZER
   // ===========

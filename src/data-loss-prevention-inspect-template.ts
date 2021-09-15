@@ -627,13 +627,13 @@ export interface DataLossPreventionInspectTemplateInspectConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template.html#exclude_info_types DataLossPreventionInspectTemplate#exclude_info_types}
   */
-  readonly excludeInfoTypes?: boolean;
+  readonly excludeInfoTypes?: boolean | cdktf.IResolvable;
   /**
   * When true, a contextual quote from the data that triggered a finding is included in the response.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template.html#include_quote DataLossPreventionInspectTemplate#include_quote}
   */
-  readonly includeQuote?: boolean;
+  readonly includeQuote?: boolean | cdktf.IResolvable;
   /**
   * Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info Default value: "POSSIBLE" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
   * 
@@ -709,6 +709,11 @@ function dataLossPreventionInspectTemplateTimeoutsToTerraform(struct?: DataLossP
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template.html google_data_loss_prevention_inspect_template}
 */
 export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_loss_prevention_inspect_template";
 
   // ===========
   // INITIALIZER

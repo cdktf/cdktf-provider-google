@@ -402,7 +402,7 @@ be based on the time of the execution of the last run of the JobTrigger.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
   */
-  readonly enableAutoPopulationOfTimespanConfig?: boolean;
+  readonly enableAutoPopulationOfTimespanConfig?: boolean | cdktf.IResolvable;
   /**
   * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
   * 
@@ -567,6 +567,11 @@ function dataLossPreventionJobTriggerTriggersToTerraform(struct?: DataLossPreven
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html google_data_loss_prevention_job_trigger}
 */
 export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_loss_prevention_job_trigger";
 
   // ===========
   // INITIALIZER

@@ -75,6 +75,11 @@ function computeAttachedDiskTimeoutsToTerraform(struct?: ComputeAttachedDiskTime
 */
 export class ComputeAttachedDisk extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_attached_disk";
+
   // ===========
   // INITIALIZER
   // ===========

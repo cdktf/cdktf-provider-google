@@ -26,6 +26,11 @@ export interface SecretManagerSecretIamPolicyConfig extends cdktf.TerraformMetaA
 */
 export class SecretManagerSecretIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_secret_manager_secret_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -76,6 +76,11 @@ export class DataGoogleCloudIdentityGroupMembershipsMemberships extends cdktf.Co
 */
 export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_identity_group_memberships";
+
   // ===========
   // INITIALIZER
   // ===========

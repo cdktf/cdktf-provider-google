@@ -28,7 +28,7 @@ A reference to a Topic resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#labels NetworkServicesEdgeCacheOrigin#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The maximum number of attempts to cache fill from this origin. Another attempt is made when a cache fill fails with one of the retryConditions.
 
@@ -185,6 +185,11 @@ function networkServicesEdgeCacheOriginTimeoutsToTerraform(struct?: NetworkServi
 */
 export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_network_services_edge_cache_origin";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -263,11 +268,11 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

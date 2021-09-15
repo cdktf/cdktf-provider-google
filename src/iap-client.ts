@@ -53,6 +53,11 @@ function iapClientTimeoutsToTerraform(struct?: IapClientTimeouts): any {
 */
 export class IapClient extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_client";
+
   // ===========
   // INITIALIZER
   // ===========

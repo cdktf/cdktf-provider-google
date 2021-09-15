@@ -52,6 +52,11 @@ function apigeeInstanceAttachmentTimeoutsToTerraform(struct?: ApigeeInstanceAtta
 */
 export class ApigeeInstanceAttachment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_apigee_instance_attachment";
+
   // ===========
   // INITIALIZER
   // ===========

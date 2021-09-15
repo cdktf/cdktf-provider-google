@@ -29,7 +29,7 @@ the same as for the valueExtractor field.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#label_extractors LoggingMetric#label_extractors}
   */
-  readonly labelExtractors?: { [key: string]: string };
+  readonly labelExtractors?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
 Metric identifiers are limited to 100 characters and can include only the following
@@ -293,6 +293,11 @@ function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeouts): any {
 */
 export class LoggingMetric extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_metric";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -365,11 +370,11 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // label_extractors - computed: false, optional: true, required: false
-  private _labelExtractors?: { [key: string]: string };
+  private _labelExtractors?: { [key: string]: string } | cdktf.IResolvable;
   public get labelExtractors() {
     return this.interpolationForAttribute('label_extractors') as any;
   }
-  public set labelExtractors(value: { [key: string]: string } ) {
+  public set labelExtractors(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labelExtractors = value;
   }
   public resetLabelExtractors() {

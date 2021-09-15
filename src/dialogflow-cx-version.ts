@@ -80,6 +80,11 @@ function dialogflowCxVersionTimeoutsToTerraform(struct?: DialogflowCxVersionTime
 */
 export class DialogflowCxVersion extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_cx_version";
+
   // ===========
   // INITIALIZER
   // ===========

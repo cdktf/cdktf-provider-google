@@ -60,6 +60,11 @@ function healthcareConsentStoreIamBindingConditionToTerraform(struct?: Healthcar
 */
 export class HealthcareConsentStoreIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_consent_store_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

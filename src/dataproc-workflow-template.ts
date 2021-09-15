@@ -8,22 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataprocWorkflowTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Optional. The labels to associate with this template. These labels will be propagated to all jobs and clusters created by the workflow instance. Label **keys** must contain 1 to 63 characters, and must conform to (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a template.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#labels DataprocWorkflowTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The location for the resource
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#location DataprocWorkflowTemplate#location}
   */
   readonly location: string;
   /**
+  * Output only. The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. * For `projects.regions.workflowTemplates`, the resource name of the template has the following format: `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}` * For `projects.locations.workflowTemplates`, the resource name of the template has the following format: `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#name DataprocWorkflowTemplate#name}
   */
   readonly name: string;
   /**
+  * The project for the resource
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#project DataprocWorkflowTemplate#project}
   */
   readonly project?: string;
   /**
+  * Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#version DataprocWorkflowTemplate#version}
   */
   readonly version?: number;
@@ -54,9 +64,11 @@ export interface DataprocWorkflowTemplateConfig extends cdktf.TerraformMetaArgum
 }
 export interface DataprocWorkflowTemplateJobsHadoopJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsHadoopJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig): any {
@@ -68,33 +80,47 @@ function dataprocWorkflowTemplateJobsHadoopJobLoggingConfigToTerraform(struct?: 
 
 export interface DataprocWorkflowTemplateJobsHadoopJob {
   /**
+  * Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
+  * Optional. The arguments to pass to the driver. Do not include arguments, such as `-libjars` or `-Dfoo=bar`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
   */
   readonly args?: string[];
   /**
+  * Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
   */
   readonly fileUris?: string[];
   /**
+  * Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
+  * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_class DataprocWorkflowTemplate#main_class}
   */
   readonly mainClass?: string;
   /**
+  * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
   */
   readonly mainJarFileUri?: string;
   /**
+  * Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -119,6 +145,8 @@ function dataprocWorkflowTemplateJobsHadoopJobToTerraform(struct?: DataprocWorkf
 
 export interface DataprocWorkflowTemplateJobsHiveJobQueryList {
   /**
+  * Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
   */
   readonly queries: string[];
@@ -133,25 +161,35 @@ function dataprocWorkflowTemplateJobsHiveJobQueryListToTerraform(struct?: Datapr
 
 export interface DataprocWorkflowTemplateJobsHiveJob {
   /**
+  * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
   */
-  readonly continueOnFailure?: boolean;
+  readonly continueOnFailure?: boolean | cdktf.IResolvable;
   /**
+  * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
+  * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The HCFS URI of the script that contains Hive queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
   */
   readonly queryFileUri?: string;
   /**
+  * Optional. Mapping of query variable names to values (equivalent to the Hive command: `SET name="value";`).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#script_variables DataprocWorkflowTemplate#script_variables}
   */
-  readonly scriptVariables?: { [key: string]: string };
+  readonly scriptVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * query_list block
   * 
@@ -174,9 +212,11 @@ function dataprocWorkflowTemplateJobsHiveJobToTerraform(struct?: DataprocWorkflo
 
 export interface DataprocWorkflowTemplateJobsPigJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsPigJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobLoggingConfig): any {
@@ -188,6 +228,8 @@ function dataprocWorkflowTemplateJobsPigJobLoggingConfigToTerraform(struct?: Dat
 
 export interface DataprocWorkflowTemplateJobsPigJobQueryList {
   /**
+  * Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
   */
   readonly queries: string[];
@@ -202,25 +244,35 @@ function dataprocWorkflowTemplateJobsPigJobQueryListToTerraform(struct?: Datapro
 
 export interface DataprocWorkflowTemplateJobsPigJob {
   /**
+  * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
   */
-  readonly continueOnFailure?: boolean;
+  readonly continueOnFailure?: boolean | cdktf.IResolvable;
   /**
+  * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
+  * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The HCFS URI of the script that contains the Pig queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
   */
   readonly queryFileUri?: string;
   /**
+  * Optional. Mapping of query variable names to values (equivalent to the Pig command: `name=`).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#script_variables DataprocWorkflowTemplate#script_variables}
   */
-  readonly scriptVariables?: { [key: string]: string };
+  readonly scriptVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -250,9 +302,11 @@ function dataprocWorkflowTemplateJobsPigJobToTerraform(struct?: DataprocWorkflow
 
 export interface DataprocWorkflowTemplateJobsPrestoJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsPrestoJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig): any {
@@ -264,6 +318,8 @@ function dataprocWorkflowTemplateJobsPrestoJobLoggingConfigToTerraform(struct?: 
 
 export interface DataprocWorkflowTemplateJobsPrestoJobQueryList {
   /**
+  * Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
   */
   readonly queries: string[];
@@ -278,22 +334,32 @@ function dataprocWorkflowTemplateJobsPrestoJobQueryListToTerraform(struct?: Data
 
 export interface DataprocWorkflowTemplateJobsPrestoJob {
   /**
+  * Optional. Presto client tags to attach to this query
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#client_tags DataprocWorkflowTemplate#client_tags}
   */
   readonly clientTags?: string[];
   /**
+  * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
   */
-  readonly continueOnFailure?: boolean;
+  readonly continueOnFailure?: boolean | cdktf.IResolvable;
   /**
+  * Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#output_format DataprocWorkflowTemplate#output_format}
   */
   readonly outputFormat?: string;
   /**
+  * Optional. A mapping of property names to values. Used to set Presto (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The HCFS URI of the script that contains SQL queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
   */
   readonly queryFileUri?: string;
@@ -326,9 +392,11 @@ function dataprocWorkflowTemplateJobsPrestoJobToTerraform(struct?: DataprocWorkf
 
 export interface DataprocWorkflowTemplateJobsPysparkJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsPysparkJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig): any {
@@ -340,30 +408,44 @@ function dataprocWorkflowTemplateJobsPysparkJobLoggingConfigToTerraform(struct?:
 
 export interface DataprocWorkflowTemplateJobsPysparkJob {
   /**
+  * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
+  * Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
   */
   readonly args?: string[];
   /**
+  * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
   */
   readonly fileUris?: string[];
   /**
+  * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
+  * Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_python_file_uri DataprocWorkflowTemplate#main_python_file_uri}
   */
   readonly mainPythonFileUri: string;
   /**
+  * Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#python_file_uris DataprocWorkflowTemplate#python_file_uris}
   */
   readonly pythonFileUris?: string[];
@@ -391,10 +473,14 @@ function dataprocWorkflowTemplateJobsPysparkJobToTerraform(struct?: DataprocWork
 
 export interface DataprocWorkflowTemplateJobsScheduling {
   /**
+  * Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#max_failures_per_hour DataprocWorkflowTemplate#max_failures_per_hour}
   */
   readonly maxFailuresPerHour?: number;
   /**
+  * Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#max_failures_total DataprocWorkflowTemplate#max_failures_total}
   */
   readonly maxFailuresTotal?: number;
@@ -410,9 +496,11 @@ function dataprocWorkflowTemplateJobsSchedulingToTerraform(struct?: DataprocWork
 
 export interface DataprocWorkflowTemplateJobsSparkJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsSparkJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkJobLoggingConfig): any {
@@ -424,33 +512,47 @@ function dataprocWorkflowTemplateJobsSparkJobLoggingConfigToTerraform(struct?: D
 
 export interface DataprocWorkflowTemplateJobsSparkJob {
   /**
+  * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
+  * Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
   */
   readonly args?: string[];
   /**
+  * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
   */
   readonly fileUris?: string[];
   /**
+  * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
+  * The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in `jar_file_uris`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_class DataprocWorkflowTemplate#main_class}
   */
   readonly mainClass?: string;
   /**
+  * The HCFS URI of the jar file that contains the main class.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
   */
   readonly mainJarFileUri?: string;
   /**
+  * Optional. A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -475,9 +577,11 @@ function dataprocWorkflowTemplateJobsSparkJobToTerraform(struct?: DataprocWorkfl
 
 export interface DataprocWorkflowTemplateJobsSparkRJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsSparkRJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig): any {
@@ -489,25 +593,35 @@ function dataprocWorkflowTemplateJobsSparkRJobLoggingConfigToTerraform(struct?: 
 
 export interface DataprocWorkflowTemplateJobsSparkRJob {
   /**
+  * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#archive_uris DataprocWorkflowTemplate#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
+  * Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#args DataprocWorkflowTemplate#args}
   */
   readonly args?: string[];
   /**
+  * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#file_uris DataprocWorkflowTemplate#file_uris}
   */
   readonly fileUris?: string[];
   /**
+  * Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#main_r_file_uri DataprocWorkflowTemplate#main_r_file_uri}
   */
   readonly mainRFileUri: string;
   /**
+  * Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -530,9 +644,11 @@ function dataprocWorkflowTemplateJobsSparkRJobToTerraform(struct?: DataprocWorkf
 
 export interface DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig {
   /**
+  * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
   */
-  readonly driverLogLevels?: { [key: string]: string };
+  readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig): any {
@@ -544,6 +660,8 @@ function dataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigToTerraform(struct?
 
 export interface DataprocWorkflowTemplateJobsSparkSqlJobQueryList {
   /**
+  * Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#queries DataprocWorkflowTemplate#queries}
   */
   readonly queries: string[];
@@ -558,21 +676,29 @@ function dataprocWorkflowTemplateJobsSparkSqlJobQueryListToTerraform(struct?: Da
 
 export interface DataprocWorkflowTemplateJobsSparkSqlJob {
   /**
+  * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
+  * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The HCFS URI of the script that contains SQL queries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#query_file_uri DataprocWorkflowTemplate#query_file_uri}
   */
   readonly queryFileUri?: string;
   /**
+  * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#script_variables DataprocWorkflowTemplate#script_variables}
   */
-  readonly scriptVariables?: { [key: string]: string };
+  readonly scriptVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * logging_config block
   * 
@@ -601,14 +727,20 @@ function dataprocWorkflowTemplateJobsSparkSqlJobToTerraform(struct?: DataprocWor
 
 export interface DataprocWorkflowTemplateJobs {
   /**
+  * Optional. The labels to associate with this job. Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: {0,63} No more than 32 labels can be associated with a given job.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#labels DataprocWorkflowTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#prerequisite_step_ids DataprocWorkflowTemplate#prerequisite_step_ids}
   */
   readonly prerequisiteStepIds?: string[];
   /**
+  * Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#step_id DataprocWorkflowTemplate#step_id}
   */
   readonly stepId: string;
@@ -688,6 +820,8 @@ function dataprocWorkflowTemplateJobsToTerraform(struct?: DataprocWorkflowTempla
 
 export interface DataprocWorkflowTemplateParametersValidationRegex {
   /**
+  * Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#regexes DataprocWorkflowTemplate#regexes}
   */
   readonly regexes: string[];
@@ -702,6 +836,8 @@ function dataprocWorkflowTemplateParametersValidationRegexToTerraform(struct?: D
 
 export interface DataprocWorkflowTemplateParametersValidationValues {
   /**
+  * Required. List of allowed values for the parameter.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#values DataprocWorkflowTemplate#values}
   */
   readonly values: string[];
@@ -739,14 +875,20 @@ function dataprocWorkflowTemplateParametersValidationToTerraform(struct?: Datapr
 
 export interface DataprocWorkflowTemplateParameters {
   /**
+  * Optional. Brief description of the parameter. Must not exceed 1024 characters.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#description DataprocWorkflowTemplate#description}
   */
   readonly description?: string;
   /**
+  * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths. A field path is similar in syntax to a .sparkJob.args
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#fields DataprocWorkflowTemplate#fields}
   */
   readonly fields: string[];
   /**
+  * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#name DataprocWorkflowTemplate#name}
   */
   readonly name: string;
@@ -770,10 +912,14 @@ function dataprocWorkflowTemplateParametersToTerraform(struct?: DataprocWorkflow
 
 export interface DataprocWorkflowTemplatePlacementClusterSelector {
   /**
+  * Required. The cluster labels. Cluster must have all labels to match.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cluster_labels DataprocWorkflowTemplate#cluster_labels}
   */
-  readonly clusterLabels: { [key: string]: string };
+  readonly clusterLabels: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster. If unspecified, the zone of the first cluster matching the selector is used.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#zone DataprocWorkflowTemplate#zone}
   */
   readonly zone?: string;
@@ -789,6 +935,8 @@ function dataprocWorkflowTemplatePlacementClusterSelectorToTerraform(struct?: Da
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig {
   /**
+  * Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#policy DataprocWorkflowTemplate#policy}
   */
   readonly policy?: string;
@@ -803,6 +951,8 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigT
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig {
   /**
+  * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#gce_pd_kms_key_name DataprocWorkflowTemplate#gce_pd_kms_key_name}
   */
   readonly gcePdKmsKeyName?: string;
@@ -817,9 +967,11 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigTo
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
   /**
+  * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#enable_http_port_access DataprocWorkflowTemplate#enable_http_port_access}
   */
-  readonly enableHttpPortAccess?: boolean;
+  readonly enableHttpPortAccess?: boolean | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig): any {
@@ -831,6 +983,8 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigToTe
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity {
   /**
+  * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#node_group DataprocWorkflowTemplate#node_group}
   */
   readonly nodeGroup: string;
@@ -845,14 +999,20 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNo
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity {
   /**
+  * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#consume_reservation_type DataprocWorkflowTemplate#consume_reservation_type}
   */
   readonly consumeReservationType?: string;
   /**
+  * Optional. Corresponds to the label key of reservation resource.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#key DataprocWorkflowTemplate#key}
   */
   readonly key?: string;
   /**
+  * Optional. Corresponds to the label values of reservation resource.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#values DataprocWorkflowTemplate#values}
   */
   readonly values?: string[];
@@ -869,38 +1029,56 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigRe
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig {
   /**
+  * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#internal_ip_only DataprocWorkflowTemplate#internal_ip_only}
   */
-  readonly internalIpOnly?: boolean;
+  readonly internalIpOnly?: boolean | cdktf.IResolvable;
   /**
+  * The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#metadata DataprocWorkflowTemplate#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see /regions/global/default` * `default`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#network DataprocWorkflowTemplate#network}
   */
   readonly network?: string;
   /**
+  * Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#private_ipv6_google_access DataprocWorkflowTemplate#private_ipv6_google_access}
   */
   readonly privateIpv6GoogleAccess?: string;
   /**
+  * Optional. The (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#service_account DataprocWorkflowTemplate#service_account}
   */
   readonly serviceAccount?: string;
   /**
+  * Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#service_account_scopes DataprocWorkflowTemplate#service_account_scopes}
   */
   readonly serviceAccountScopes?: string[];
   /**
+  * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects//regions/us-east1/subnetworks/sub0` * `sub0`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#subnetwork DataprocWorkflowTemplate#subnetwork}
   */
   readonly subnetwork?: string;
   /**
+  * The Compute Engine tags to add to all instances (see (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#tags DataprocWorkflowTemplate#tags}
   */
   readonly tags?: string[];
   /**
+  * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#zone DataprocWorkflowTemplate#zone}
   */
   readonly zone?: string;
@@ -937,10 +1115,14 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigTo
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions {
   /**
+  * Required. Cloud Storage URI of executable file.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#executable_file DataprocWorkflowTemplate#executable_file}
   */
   readonly executableFile?: string;
   /**
+  * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#execution_timeout DataprocWorkflowTemplate#execution_timeout}
   */
   readonly executionTimeout?: string;
@@ -956,14 +1138,20 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActi
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig {
   /**
+  * Optional. The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#auto_delete_time DataprocWorkflowTemplate#auto_delete_time}
   */
   readonly autoDeleteTime?: string;
   /**
+  * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#auto_delete_ttl DataprocWorkflowTemplate#auto_delete_ttl}
   */
   readonly autoDeleteTtl?: string;
   /**
+  * Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#idle_delete_ttl DataprocWorkflowTemplate#idle_delete_ttl}
   */
   readonly idleDeleteTtl?: string;
@@ -980,10 +1168,14 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigToT
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators {
   /**
+  * The number of the accelerator cards of this type exposed to this instance.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_count DataprocWorkflowTemplate#accelerator_count}
   */
   readonly acceleratorCount?: number;
   /**
+  * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_type DataprocWorkflowTemplate#accelerator_type}
   */
   readonly acceleratorType?: string;
@@ -999,14 +1191,20 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccele
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig {
   /**
+  * Optional. Size in GB of the boot disk (default is 500GB).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
+  * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
   */
   readonly bootDiskType?: string;
   /**
+  * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
   */
   readonly numLocalSsds?: number;
@@ -1023,22 +1221,32 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskCo
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig {
   /**
+  * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image DataprocWorkflowTemplate#image}
   */
   readonly image?: string;
   /**
+  * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#machine_type DataprocWorkflowTemplate#machine_type}
   */
   readonly machineType?: string;
   /**
+  * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
+  * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_instances DataprocWorkflowTemplate#num_instances}
   */
   readonly numInstances?: number;
   /**
+  * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#preemptibility DataprocWorkflowTemplate#preemptibility}
   */
   readonly preemptibility?: string;
@@ -1071,10 +1279,14 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigToTerr
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators {
   /**
+  * The number of the accelerator cards of this type exposed to this instance.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_count DataprocWorkflowTemplate#accelerator_count}
   */
   readonly acceleratorCount?: number;
   /**
+  * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_type DataprocWorkflowTemplate#accelerator_type}
   */
   readonly acceleratorType?: string;
@@ -1090,14 +1302,20 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerCon
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig {
   /**
+  * Optional. Size in GB of the boot disk (default is 500GB).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
+  * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
   */
   readonly bootDiskType?: string;
   /**
+  * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
   */
   readonly numLocalSsds?: number;
@@ -1114,22 +1332,32 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerCon
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig {
   /**
+  * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image DataprocWorkflowTemplate#image}
   */
   readonly image?: string;
   /**
+  * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#machine_type DataprocWorkflowTemplate#machine_type}
   */
   readonly machineType?: string;
   /**
+  * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
+  * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_instances DataprocWorkflowTemplate#num_instances}
   */
   readonly numInstances?: number;
   /**
+  * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#preemptibility DataprocWorkflowTemplate#preemptibility}
   */
   readonly preemptibility?: string;
@@ -1162,62 +1390,92 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerCon
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig {
   /**
+  * Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_admin_server DataprocWorkflowTemplate#cross_realm_trust_admin_server}
   */
   readonly crossRealmTrustAdminServer?: string;
   /**
+  * Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_kdc DataprocWorkflowTemplate#cross_realm_trust_kdc}
   */
   readonly crossRealmTrustKdc?: string;
   /**
+  * Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_realm DataprocWorkflowTemplate#cross_realm_trust_realm}
   */
   readonly crossRealmTrustRealm?: string;
   /**
+  * Optional. The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cross_realm_trust_shared_password DataprocWorkflowTemplate#cross_realm_trust_shared_password}
   */
   readonly crossRealmTrustSharedPassword?: string;
   /**
+  * Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#enable_kerberos DataprocWorkflowTemplate#enable_kerberos}
   */
-  readonly enableKerberos?: boolean;
+  readonly enableKerberos?: boolean | cdktf.IResolvable;
   /**
+  * Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#kdc_db_key DataprocWorkflowTemplate#kdc_db_key}
   */
   readonly kdcDbKey?: string;
   /**
+  * Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#key_password DataprocWorkflowTemplate#key_password}
   */
   readonly keyPassword?: string;
   /**
+  * Optional. The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#keystore DataprocWorkflowTemplate#keystore}
   */
   readonly keystore?: string;
   /**
+  * Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#keystore_password DataprocWorkflowTemplate#keystore_password}
   */
   readonly keystorePassword?: string;
   /**
+  * Optional. The uri of the KMS key used to encrypt various sensitive files.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#kms_key DataprocWorkflowTemplate#kms_key}
   */
   readonly kmsKey?: string;
   /**
+  * Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#realm DataprocWorkflowTemplate#realm}
   */
   readonly realm?: string;
   /**
+  * Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#root_principal_password DataprocWorkflowTemplate#root_principal_password}
   */
   readonly rootPrincipalPassword?: string;
   /**
+  * Optional. The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#tgt_lifetime_hours DataprocWorkflowTemplate#tgt_lifetime_hours}
   */
   readonly tgtLifetimeHours?: number;
   /**
+  * Optional. The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#truststore DataprocWorkflowTemplate#truststore}
   */
   readonly truststore?: string;
   /**
+  * Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#truststore_password DataprocWorkflowTemplate#truststore_password}
   */
   readonly truststorePassword?: string;
@@ -1262,13 +1520,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigToTe
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
   /**
+  * Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image_version DataprocWorkflowTemplate#image_version}
   */
   readonly imageVersion?: string;
   /**
+  * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#properties DataprocWorkflowTemplate#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig): any {
@@ -1281,10 +1543,14 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigToTe
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators {
   /**
+  * The number of the accelerator cards of this type exposed to this instance.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_count DataprocWorkflowTemplate#accelerator_count}
   */
   readonly acceleratorCount?: number;
   /**
+  * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#accelerator_type DataprocWorkflowTemplate#accelerator_type}
   */
   readonly acceleratorType?: string;
@@ -1300,14 +1566,20 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccele
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig {
   /**
+  * Optional. Size in GB of the boot disk (default is 500GB).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
+  * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
   */
   readonly bootDiskType?: string;
   /**
+  * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
   */
   readonly numLocalSsds?: number;
@@ -1324,22 +1596,32 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskCo
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
   /**
+  * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#image DataprocWorkflowTemplate#image}
   */
   readonly image?: string;
   /**
+  * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#machine_type DataprocWorkflowTemplate#machine_type}
   */
   readonly machineType?: string;
   /**
+  * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
+  * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#num_instances DataprocWorkflowTemplate#num_instances}
   */
   readonly numInstances?: number;
   /**
+  * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#preemptibility DataprocWorkflowTemplate#preemptibility}
   */
   readonly preemptibility?: string;
@@ -1372,10 +1654,14 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigToTerr
 
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfig {
   /**
+  * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#staging_bucket DataprocWorkflowTemplate#staging_bucket}
   */
   readonly stagingBucket?: string;
   /**
+  * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#temp_bucket DataprocWorkflowTemplate#temp_bucket}
   */
   readonly tempBucket?: string;
@@ -1468,13 +1754,17 @@ function dataprocWorkflowTemplatePlacementManagedClusterConfigToTerraform(struct
 
 export interface DataprocWorkflowTemplatePlacementManagedCluster {
   /**
+  * Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#cluster_name DataprocWorkflowTemplate#cluster_name}
   */
   readonly clusterName: string;
   /**
+  * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template.html#labels DataprocWorkflowTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * config block
   * 
@@ -1540,6 +1830,11 @@ function dataprocWorkflowTemplateTimeoutsToTerraform(struct?: DataprocWorkflowTe
 */
 export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_workflow_template";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1588,11 +1883,11 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

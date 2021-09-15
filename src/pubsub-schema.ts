@@ -68,6 +68,11 @@ function pubsubSchemaTimeoutsToTerraform(struct?: PubsubSchemaTimeouts): any {
 */
 export class PubsubSchema extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_schema";
+
   // ===========
   // INITIALIZER
   // ===========

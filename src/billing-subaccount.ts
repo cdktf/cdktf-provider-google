@@ -26,6 +26,11 @@ export interface BillingSubaccountConfig extends cdktf.TerraformMetaArguments {
 */
 export class BillingSubaccount extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_billing_subaccount";
+
   // ===========
   // INITIALIZER
   // ===========

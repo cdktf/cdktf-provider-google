@@ -60,6 +60,11 @@ function bigqueryDatasetIamMemberConditionToTerraform(struct?: BigqueryDatasetIa
 */
 export class BigqueryDatasetIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_dataset_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

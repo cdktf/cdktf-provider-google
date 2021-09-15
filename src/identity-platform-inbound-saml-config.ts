@@ -18,7 +18,7 @@ export interface IdentityPlatformInboundSamlConfigConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#enabled IdentityPlatformInboundSamlConfig#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
@@ -78,7 +78,7 @@ export interface IdentityPlatformInboundSamlConfigIdpConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config.html#sign_request IdentityPlatformInboundSamlConfig#sign_request}
   */
-  readonly signRequest?: boolean;
+  readonly signRequest?: boolean | cdktf.IResolvable;
   /**
   * URL to send Authentication request to.
   * 
@@ -156,6 +156,11 @@ function identityPlatformInboundSamlConfigTimeoutsToTerraform(struct?: IdentityP
 */
 export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_identity_platform_inbound_saml_config";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -205,11 +210,11 @@ export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

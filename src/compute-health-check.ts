@@ -409,7 +409,7 @@ which means no health check logging will be done.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#enable ComputeHealthCheck#enable}
   */
-  readonly enable?: boolean;
+  readonly enable?: boolean | cdktf.IResolvable;
 }
 
 function computeHealthCheckLogConfigToTerraform(struct?: ComputeHealthCheckLogConfig): any {
@@ -592,6 +592,11 @@ function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthCheckTimeou
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html google_compute_health_check}
 */
 export class ComputeHealthCheck extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_health_check";
 
   // ===========
   // INITIALIZER

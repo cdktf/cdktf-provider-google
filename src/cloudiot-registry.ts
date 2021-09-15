@@ -12,7 +12,7 @@ export interface CloudiotRegistryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#http_config CloudiotRegistry#http_config}
   */
-  readonly httpConfig?: { [key: string]: string };
+  readonly httpConfig?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The default logging verbosity for activity from devices in this
 registry. Specifies which events should be written to logs. For
@@ -28,7 +28,7 @@ will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#mqtt_config CloudiotRegistry#mqtt_config}
   */
-  readonly mqttConfig?: { [key: string]: string };
+  readonly mqttConfig?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A unique name for the resource, required by device registry.
   * 
@@ -51,7 +51,7 @@ If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#state_notification_config CloudiotRegistry#state_notification_config}
   */
-  readonly stateNotificationConfig?: { [key: string]: string };
+  readonly stateNotificationConfig?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * credentials block
   * 
@@ -77,7 +77,7 @@ export interface CloudiotRegistryCredentials {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry.html#public_key_certificate CloudiotRegistry#public_key_certificate}
   */
-  readonly publicKeyCertificate: { [key: string]: string };
+  readonly publicKeyCertificate: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredentials): any {
@@ -144,6 +144,11 @@ function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeouts):
 */
 export class CloudiotRegistry extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudiot_registry";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -183,11 +188,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   // ==========
 
   // http_config - computed: true, optional: true, required: false
-  private _httpConfig?: { [key: string]: string }
-  public get httpConfig(): { [key: string]: string } {
+  private _httpConfig?: { [key: string]: string } | cdktf.IResolvable
+  public get httpConfig(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('http_config') as any; // Getting the computed value is not yet implemented
   }
-  public set httpConfig(value: { [key: string]: string }) {
+  public set httpConfig(value: { [key: string]: string } | cdktf.IResolvable) {
     this._httpConfig = value;
   }
   public resetHttpConfig() {
@@ -220,11 +225,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // mqtt_config - computed: true, optional: true, required: false
-  private _mqttConfig?: { [key: string]: string }
-  public get mqttConfig(): { [key: string]: string } {
+  private _mqttConfig?: { [key: string]: string } | cdktf.IResolvable
+  public get mqttConfig(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('mqtt_config') as any; // Getting the computed value is not yet implemented
   }
-  public set mqttConfig(value: { [key: string]: string }) {
+  public set mqttConfig(value: { [key: string]: string } | cdktf.IResolvable) {
     this._mqttConfig = value;
   }
   public resetMqttConfig() {
@@ -281,11 +286,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // state_notification_config - computed: false, optional: true, required: false
-  private _stateNotificationConfig?: { [key: string]: string };
+  private _stateNotificationConfig?: { [key: string]: string } | cdktf.IResolvable;
   public get stateNotificationConfig() {
     return this.interpolationForAttribute('state_notification_config') as any;
   }
-  public set stateNotificationConfig(value: { [key: string]: string } ) {
+  public set stateNotificationConfig(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._stateNotificationConfig = value;
   }
   public resetStateNotificationConfig() {

@@ -86,6 +86,11 @@ export class DataGoogleProjectOrganizationPolicyRestorePolicy extends cdktf.Comp
 */
 export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project_organization_policy";
+
   // ===========
   // INITIALIZER
   // ===========

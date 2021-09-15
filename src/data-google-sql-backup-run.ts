@@ -24,13 +24,18 @@ export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#most_recent DataGoogleSqlBackupRun#most_recent}
   */
-  readonly mostRecent?: boolean;
+  readonly mostRecent?: boolean | cdktf.IResolvable;
 }
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html google_sql_backup_run}
 */
 export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_backup_run";
 
   // ===========
   // INITIALIZER
@@ -103,11 +108,11 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   }
 
   // most_recent - computed: false, optional: true, required: false
-  private _mostRecent?: boolean;
+  private _mostRecent?: boolean | cdktf.IResolvable;
   public get mostRecent() {
     return this.getBooleanAttribute('most_recent');
   }
-  public set mostRecent(value: boolean ) {
+  public set mostRecent(value: boolean | cdktf.IResolvable ) {
     this._mostRecent = value;
   }
   public resetMostRecent() {

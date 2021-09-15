@@ -768,6 +768,11 @@ export class DataGoogleContainerClusterWorkloadIdentityConfig extends cdktf.Comp
 */
 export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_cluster";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -54,7 +54,7 @@ export interface OrganizationPolicyBooleanPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#enforced OrganizationPolicy#enforced}
   */
-  readonly enforced: boolean;
+  readonly enforced: boolean | cdktf.IResolvable;
 }
 
 function organizationPolicyBooleanPolicyToTerraform(struct?: OrganizationPolicyBooleanPolicy): any {
@@ -70,7 +70,7 @@ export interface OrganizationPolicyListPolicyAllow {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#all OrganizationPolicy#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
   * 
@@ -93,7 +93,7 @@ export interface OrganizationPolicyListPolicyDeny {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#all OrganizationPolicy#all}
   */
-  readonly all?: boolean;
+  readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
   * 
@@ -116,7 +116,7 @@ export interface OrganizationPolicyListPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#inherit_from_parent OrganizationPolicy#inherit_from_parent}
   */
-  readonly inheritFromParent?: boolean;
+  readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
   * 
@@ -153,7 +153,7 @@ export interface OrganizationPolicyRestorePolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html#default OrganizationPolicy#default}
   */
-  readonly default: boolean;
+  readonly default: boolean | cdktf.IResolvable;
 }
 
 function organizationPolicyRestorePolicyToTerraform(struct?: OrganizationPolicyRestorePolicy): any {
@@ -197,6 +197,11 @@ function organizationPolicyTimeoutsToTerraform(struct?: OrganizationPolicyTimeou
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_policy.html google_organization_policy}
 */
 export class OrganizationPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization_policy";
 
   // ===========
   // INITIALIZER

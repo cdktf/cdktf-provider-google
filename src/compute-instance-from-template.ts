@@ -12,7 +12,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#allow_stopping_for_update ComputeInstanceFromTemplate#allow_stopping_for_update}
   */
-  readonly allowStoppingForUpdate?: boolean;
+  readonly allowStoppingForUpdate?: boolean | cdktf.IResolvable;
   /**
   * List of disks attached to the instance
   * 
@@ -24,13 +24,13 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#can_ip_forward ComputeInstanceFromTemplate#can_ip_forward}
   */
-  readonly canIpForward?: boolean;
+  readonly canIpForward?: boolean | cdktf.IResolvable;
   /**
   * Whether deletion protection is enabled on this instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#deletion_protection ComputeInstanceFromTemplate#deletion_protection}
   */
-  readonly deletionProtection?: boolean;
+  readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * A brief description of the resource.
   * 
@@ -48,7 +48,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_display ComputeInstanceFromTemplate#enable_display}
   */
-  readonly enableDisplay?: boolean;
+  readonly enableDisplay?: boolean | cdktf.IResolvable;
   /**
   * List of the type and count of accelerator cards attached to the instance.
   * 
@@ -66,7 +66,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#labels ComputeInstanceFromTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The machine type to create.
   * 
@@ -78,7 +78,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#metadata ComputeInstanceFromTemplate#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Metadata startup scripts made available within the instance.
   * 
@@ -285,7 +285,7 @@ export interface ComputeInstanceFromTemplateAdvancedMachineFeatures {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_nested_virtualization ComputeInstanceFromTemplate#enable_nested_virtualization}
   */
-  readonly enableNestedVirtualization?: boolean;
+  readonly enableNestedVirtualization?: boolean | cdktf.IResolvable;
   /**
   * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
   * 
@@ -314,7 +314,7 @@ export interface ComputeInstanceFromTemplateBootDiskInitializeParams {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#labels ComputeInstanceFromTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The size of the image in gigabytes.
   * 
@@ -345,7 +345,7 @@ export interface ComputeInstanceFromTemplateBootDisk {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#auto_delete ComputeInstanceFromTemplate#auto_delete}
   */
-  readonly autoDelete?: boolean;
+  readonly autoDelete?: boolean | cdktf.IResolvable;
   /**
   * Name with which attached disk will be accessible under /dev/disk/by-id/
   * 
@@ -403,7 +403,7 @@ export interface ComputeInstanceFromTemplateConfidentialInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_confidential_compute ComputeInstanceFromTemplate#enable_confidential_compute}
   */
-  readonly enableConfidentialCompute: boolean;
+  readonly enableConfidentialCompute: boolean | cdktf.IResolvable;
 }
 
 function computeInstanceFromTemplateConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceFromTemplateConfidentialInstanceConfig): any {
@@ -590,7 +590,7 @@ export interface ComputeInstanceFromTemplateScheduling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#automatic_restart ComputeInstanceFromTemplate#automatic_restart}
   */
-  readonly automaticRestart?: boolean;
+  readonly automaticRestart?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#min_node_cpus ComputeInstanceFromTemplate#min_node_cpus}
   */
@@ -606,7 +606,7 @@ export interface ComputeInstanceFromTemplateScheduling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#preemptible ComputeInstanceFromTemplate#preemptible}
   */
-  readonly preemptible?: boolean;
+  readonly preemptible?: boolean | cdktf.IResolvable;
   /**
   * node_affinities block
   * 
@@ -632,19 +632,19 @@ export interface ComputeInstanceFromTemplateShieldedInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_integrity_monitoring ComputeInstanceFromTemplate#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Whether secure boot is enabled for the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_secure_boot ComputeInstanceFromTemplate#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Whether the instance uses vTPM.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html#enable_vtpm ComputeInstanceFromTemplate#enable_vtpm}
   */
-  readonly enableVtpm?: boolean;
+  readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
 function computeInstanceFromTemplateShieldedInstanceConfigToTerraform(struct?: ComputeInstanceFromTemplateShieldedInstanceConfig): any {
@@ -685,6 +685,11 @@ function computeInstanceFromTemplateTimeoutsToTerraform(struct?: ComputeInstance
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template.html google_compute_instance_from_template}
 */
 export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_from_template";
 
   // ===========
   // INITIALIZER
@@ -745,11 +750,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // ==========
 
   // allow_stopping_for_update - computed: true, optional: true, required: false
-  private _allowStoppingForUpdate?: boolean;
+  private _allowStoppingForUpdate?: boolean | cdktf.IResolvable;
   public get allowStoppingForUpdate() {
     return this.getBooleanAttribute('allow_stopping_for_update');
   }
-  public set allowStoppingForUpdate(value: boolean) {
+  public set allowStoppingForUpdate(value: boolean | cdktf.IResolvable) {
     this._allowStoppingForUpdate = value;
   }
   public resetAllowStoppingForUpdate() {
@@ -777,11 +782,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // can_ip_forward - computed: true, optional: true, required: false
-  private _canIpForward?: boolean;
+  private _canIpForward?: boolean | cdktf.IResolvable;
   public get canIpForward() {
     return this.getBooleanAttribute('can_ip_forward');
   }
-  public set canIpForward(value: boolean) {
+  public set canIpForward(value: boolean | cdktf.IResolvable) {
     this._canIpForward = value;
   }
   public resetCanIpForward() {
@@ -803,11 +808,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // deletion_protection - computed: true, optional: true, required: false
-  private _deletionProtection?: boolean;
+  private _deletionProtection?: boolean | cdktf.IResolvable;
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -851,11 +856,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // enable_display - computed: true, optional: true, required: false
-  private _enableDisplay?: boolean;
+  private _enableDisplay?: boolean | cdktf.IResolvable;
   public get enableDisplay() {
     return this.getBooleanAttribute('enable_display');
   }
-  public set enableDisplay(value: boolean) {
+  public set enableDisplay(value: boolean | cdktf.IResolvable) {
     this._enableDisplay = value;
   }
   public resetEnableDisplay() {
@@ -914,11 +919,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string }
-  public get labels(): { [key: string]: string } {
+  private _labels?: { [key: string]: string } | cdktf.IResolvable
+  public get labels(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
   }
-  public set labels(value: { [key: string]: string }) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -946,11 +951,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string }
-  public get metadata(): { [key: string]: string } {
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable
+  public get metadata(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string }) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {

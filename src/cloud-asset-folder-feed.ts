@@ -173,6 +173,11 @@ function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTi
 */
 export class CloudAssetFolderFeed extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_asset_folder_feed";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -64,6 +64,11 @@ function cloudfunctionsFunctionIamBindingConditionToTerraform(struct?: Cloudfunc
 */
 export class CloudfunctionsFunctionIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudfunctions_function_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

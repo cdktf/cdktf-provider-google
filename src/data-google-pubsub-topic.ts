@@ -43,6 +43,11 @@ export class DataGooglePubsubTopicSchemaSettings extends cdktf.ComplexComputedLi
 */
 export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_topic";
+
   // ===========
   // INITIALIZER
   // ===========

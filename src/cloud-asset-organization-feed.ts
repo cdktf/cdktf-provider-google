@@ -173,6 +173,11 @@ function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrgani
 */
 export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_asset_organization_feed";
+
   // ===========
   // INITIALIZER
   // ===========

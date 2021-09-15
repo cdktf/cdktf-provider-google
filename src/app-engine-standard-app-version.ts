@@ -10,13 +10,13 @@ export interface AppEngineStandardAppVersionConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#delete_service_on_destroy AppEngineStandardAppVersion#delete_service_on_destroy}
   */
-  readonly deleteServiceOnDestroy?: boolean;
+  readonly deleteServiceOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * Environment variables available to the application.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#env_variables AppEngineStandardAppVersion#env_variables}
   */
-  readonly envVariables?: { [key: string]: string };
+  readonly envVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A list of the types of messages that this application is able to receive. Possible values: ["INBOUND_SERVICE_MAIL", "INBOUND_SERVICE_MAIL_BOUNCE", "INBOUND_SERVICE_XMPP_ERROR", "INBOUND_SERVICE_XMPP_MESSAGE", "INBOUND_SERVICE_XMPP_SUBSCRIBE", "INBOUND_SERVICE_XMPP_PRESENCE", "INBOUND_SERVICE_CHANNEL_PRESENCE", "INBOUND_SERVICE_WARMUP"]
   * 
@@ -35,7 +35,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#noop_on_destroy AppEngineStandardAppVersion#noop_on_destroy}
   */
-  readonly noopOnDestroy?: boolean;
+  readonly noopOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#project AppEngineStandardAppVersion#project}
   */
@@ -64,7 +64,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#threadsafe AppEngineStandardAppVersion#threadsafe}
   */
-  readonly threadsafe?: boolean;
+  readonly threadsafe?: boolean | cdktf.IResolvable;
   /**
   * Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
   * 
@@ -356,7 +356,7 @@ against both your code and static data storage resource quotas.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#application_readable AppEngineStandardAppVersion#application_readable}
   */
-  readonly applicationReadable?: boolean;
+  readonly applicationReadable?: boolean | cdktf.IResolvable;
   /**
   * Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
@@ -370,7 +370,7 @@ An object containing a list of "key:value" value pairs.".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#http_headers AppEngineStandardAppVersion#http_headers}
   */
-  readonly httpHeaders?: { [key: string]: string };
+  readonly httpHeaders?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
@@ -389,7 +389,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version.html#require_matching_file AppEngineStandardAppVersion#require_matching_file}
   */
-  readonly requireMatchingFile?: boolean;
+  readonly requireMatchingFile?: boolean | cdktf.IResolvable;
   /**
   * Regular expression that matches the file paths for all files that should be referenced by this handler.
   * 
@@ -558,6 +558,11 @@ function appEngineStandardAppVersionVpcAccessConnectorToTerraform(struct?: AppEn
 */
 export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_app_engine_standard_app_version";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -607,11 +612,11 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   // ==========
 
   // delete_service_on_destroy - computed: false, optional: true, required: false
-  private _deleteServiceOnDestroy?: boolean;
+  private _deleteServiceOnDestroy?: boolean | cdktf.IResolvable;
   public get deleteServiceOnDestroy() {
     return this.getBooleanAttribute('delete_service_on_destroy');
   }
-  public set deleteServiceOnDestroy(value: boolean ) {
+  public set deleteServiceOnDestroy(value: boolean | cdktf.IResolvable ) {
     this._deleteServiceOnDestroy = value;
   }
   public resetDeleteServiceOnDestroy() {
@@ -623,11 +628,11 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // env_variables - computed: false, optional: true, required: false
-  private _envVariables?: { [key: string]: string };
+  private _envVariables?: { [key: string]: string } | cdktf.IResolvable;
   public get envVariables() {
     return this.interpolationForAttribute('env_variables') as any;
   }
-  public set envVariables(value: { [key: string]: string } ) {
+  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._envVariables = value;
   }
   public resetEnvVariables() {
@@ -681,11 +686,11 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // noop_on_destroy - computed: false, optional: true, required: false
-  private _noopOnDestroy?: boolean;
+  private _noopOnDestroy?: boolean | cdktf.IResolvable;
   public get noopOnDestroy() {
     return this.getBooleanAttribute('noop_on_destroy');
   }
-  public set noopOnDestroy(value: boolean ) {
+  public set noopOnDestroy(value: boolean | cdktf.IResolvable ) {
     this._noopOnDestroy = value;
   }
   public resetNoopOnDestroy() {
@@ -755,11 +760,11 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // threadsafe - computed: false, optional: true, required: false
-  private _threadsafe?: boolean;
+  private _threadsafe?: boolean | cdktf.IResolvable;
   public get threadsafe() {
     return this.getBooleanAttribute('threadsafe');
   }
-  public set threadsafe(value: boolean ) {
+  public set threadsafe(value: boolean | cdktf.IResolvable ) {
     this._threadsafe = value;
   }
   public resetThreadsafe() {

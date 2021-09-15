@@ -56,6 +56,11 @@ function healthcareDatasetIamBindingConditionToTerraform(struct?: HealthcareData
 */
 export class HealthcareDatasetIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_dataset_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

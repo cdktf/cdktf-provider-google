@@ -56,6 +56,11 @@ function folderIamMemberConditionToTerraform(struct?: FolderIamMemberCondition):
 */
 export class FolderIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

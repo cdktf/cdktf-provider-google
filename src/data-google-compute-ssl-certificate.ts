@@ -33,6 +33,11 @@ These are in the same namespace as the managed SSL certificates.
 */
 export class DataGoogleComputeSslCertificate extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_ssl_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

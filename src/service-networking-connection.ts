@@ -62,6 +62,11 @@ function serviceNetworkingConnectionTimeoutsToTerraform(struct?: ServiceNetworki
 */
 export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_service_networking_connection";
+
   // ===========
   // INITIALIZER
   // ===========

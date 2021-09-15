@@ -24,7 +24,7 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#deletion_protection BigqueryTable#deletion_protection}
   */
-  readonly deletionProtection?: boolean;
+  readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The field description.
   * 
@@ -48,7 +48,7 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#labels BigqueryTable#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The ID of the project in which the resource belongs.
   * 
@@ -126,13 +126,13 @@ export interface BigqueryTableExternalDataConfigurationCsvOptions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#allow_jagged_rows BigqueryTable#allow_jagged_rows}
   */
-  readonly allowJaggedRows?: boolean;
+  readonly allowJaggedRows?: boolean | cdktf.IResolvable;
   /**
   * Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#allow_quoted_newlines BigqueryTable#allow_quoted_newlines}
   */
-  readonly allowQuotedNewlines?: boolean;
+  readonly allowQuotedNewlines?: boolean | cdktf.IResolvable;
   /**
   * The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
   * 
@@ -206,7 +206,7 @@ export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#require_partition_filter BigqueryTable#require_partition_filter}
   */
-  readonly requirePartitionFilter?: boolean;
+  readonly requirePartitionFilter?: boolean | cdktf.IResolvable;
   /**
   * When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins.
   * 
@@ -230,7 +230,7 @@ export interface BigqueryTableExternalDataConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#autodetect BigqueryTable#autodetect}
   */
-  readonly autodetect: boolean;
+  readonly autodetect: boolean | cdktf.IResolvable;
   /**
   * The compression type of the data source. Valid values are "NONE" or "GZIP".
   * 
@@ -242,7 +242,7 @@ export interface BigqueryTableExternalDataConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#ignore_unknown_values BigqueryTable#ignore_unknown_values}
   */
-  readonly ignoreUnknownValues?: boolean;
+  readonly ignoreUnknownValues?: boolean | cdktf.IResolvable;
   /**
   * The maximum number of bad records that BigQuery can ignore when reading data.
   * 
@@ -309,7 +309,7 @@ export interface BigqueryTableMaterializedView {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#enable_refresh BigqueryTable#enable_refresh}
   */
-  readonly enableRefresh?: boolean;
+  readonly enableRefresh?: boolean | cdktf.IResolvable;
   /**
   * A query whose result is persisted.
   * 
@@ -404,7 +404,7 @@ export interface BigqueryTableTimePartitioning {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#require_partition_filter BigqueryTable#require_partition_filter}
   */
-  readonly requirePartitionFilter?: boolean;
+  readonly requirePartitionFilter?: boolean | cdktf.IResolvable;
   /**
   * The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively.
   * 
@@ -435,7 +435,7 @@ export interface BigqueryTableView {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#use_legacy_sql BigqueryTable#use_legacy_sql}
   */
-  readonly useLegacySql?: boolean;
+  readonly useLegacySql?: boolean | cdktf.IResolvable;
 }
 
 function bigqueryTableViewToTerraform(struct?: BigqueryTableView): any {
@@ -451,6 +451,11 @@ function bigqueryTableViewToTerraform(struct?: BigqueryTableView): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html google_bigquery_table}
 */
 export class BigqueryTable extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_table";
 
   // ===========
   // INITIALIZER
@@ -531,11 +536,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean;
+  private _deletionProtection?: boolean | cdktf.IResolvable;
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection');
   }
-  public set deletionProtection(value: boolean ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -605,11 +610,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

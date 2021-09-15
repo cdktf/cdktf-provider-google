@@ -24,7 +24,7 @@ export interface LoggingOrganizationSinkConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_sink.html#disabled LoggingOrganizationSink#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when exporting logs. Only log entries that match the filter are exported.
   * 
@@ -36,7 +36,7 @@ export interface LoggingOrganizationSinkConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_sink.html#include_children LoggingOrganizationSink#include_children}
   */
-  readonly includeChildren?: boolean;
+  readonly includeChildren?: boolean | cdktf.IResolvable;
   /**
   * The name of the logging sink.
   * 
@@ -68,7 +68,7 @@ export interface LoggingOrganizationSinkBigqueryOptions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_sink.html#use_partitioned_tables LoggingOrganizationSink#use_partitioned_tables}
   */
-  readonly usePartitionedTables: boolean;
+  readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
 
 function loggingOrganizationSinkBigqueryOptionsToTerraform(struct?: LoggingOrganizationSinkBigqueryOptions): any {
@@ -90,7 +90,7 @@ export interface LoggingOrganizationSinkExclusions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_sink.html#disabled LoggingOrganizationSink#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries
   * 
@@ -120,6 +120,11 @@ function loggingOrganizationSinkExclusionsToTerraform(struct?: LoggingOrganizati
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_organization_sink.html google_logging_organization_sink}
 */
 export class LoggingOrganizationSink extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_logging_organization_sink";
 
   // ===========
   // INITIALIZER
@@ -188,11 +193,11 @@ export class LoggingOrganizationSink extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean;
+  private _disabled?: boolean | cdktf.IResolvable;
   public get disabled() {
     return this.getBooleanAttribute('disabled');
   }
-  public set disabled(value: boolean ) {
+  public set disabled(value: boolean | cdktf.IResolvable ) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -225,11 +230,11 @@ export class LoggingOrganizationSink extends cdktf.TerraformResource {
   }
 
   // include_children - computed: false, optional: true, required: false
-  private _includeChildren?: boolean;
+  private _includeChildren?: boolean | cdktf.IResolvable;
   public get includeChildren() {
     return this.getBooleanAttribute('include_children');
   }
-  public set includeChildren(value: boolean ) {
+  public set includeChildren(value: boolean | cdktf.IResolvable ) {
     this._includeChildren = value;
   }
   public resetIncludeChildren() {

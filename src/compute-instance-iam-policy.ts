@@ -30,6 +30,11 @@ export interface ComputeInstanceIamPolicyConfig extends cdktf.TerraformMetaArgum
 */
 export class ComputeInstanceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

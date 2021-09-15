@@ -130,6 +130,11 @@ function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeouts):
 */
 export class EndpointsService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_endpoints_service";
+
   // ===========
   // INITIALIZER
   // ===========

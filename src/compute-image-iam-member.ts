@@ -60,6 +60,11 @@ function computeImageIamMemberConditionToTerraform(struct?: ComputeImageIamMembe
 */
 export class ComputeImageIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_image_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -26,6 +26,11 @@ export interface IapWebTypeAppEngineIamPolicyConfig extends cdktf.TerraformMetaA
 */
 export class IapWebTypeAppEngineIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_web_type_app_engine_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

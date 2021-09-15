@@ -84,6 +84,11 @@ function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeouts): any
 */
 export class DatastoreIndex extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_datastore_index";
+
   // ===========
   // INITIALIZER
   // ===========

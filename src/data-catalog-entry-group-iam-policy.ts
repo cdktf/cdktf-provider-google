@@ -30,6 +30,11 @@ export interface DataCatalogEntryGroupIamPolicyConfig extends cdktf.TerraformMet
 */
 export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_entry_group_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

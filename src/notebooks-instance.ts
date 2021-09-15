@@ -62,7 +62,7 @@ won't be installed. Only applicable to instances with GPUs.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#install_gpu_driver NotebooksInstance#install_gpu_driver}
   */
-  readonly installGpuDriver?: boolean;
+  readonly installGpuDriver?: boolean | cdktf.IResolvable;
   /**
   * The list of owners of this instance after creation.
 Format: alias@example.com.
@@ -86,7 +86,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#labels NotebooksInstance#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A reference to the zone where the machine resides.
   * 
@@ -105,7 +105,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#metadata NotebooksInstance#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name specified for the Notebook instance.
   * 
@@ -124,19 +124,19 @@ Format: projects/{project_id}/global/networks/{network_id}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#no_proxy_access NotebooksInstance#no_proxy_access}
   */
-  readonly noProxyAccess?: boolean;
+  readonly noProxyAccess?: boolean | cdktf.IResolvable;
   /**
   * No public IP will be assigned to this instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#no_public_ip NotebooksInstance#no_public_ip}
   */
-  readonly noPublicIp?: boolean;
+  readonly noPublicIp?: boolean | cdktf.IResolvable;
   /**
   * If true, the data disk will not be auto deleted when deleting the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#no_remove_data_disk NotebooksInstance#no_remove_data_disk}
   */
-  readonly noRemoveDataDisk?: boolean;
+  readonly noRemoveDataDisk?: boolean | cdktf.IResolvable;
   /**
   * Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
@@ -274,7 +274,7 @@ Enabled by default.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#enable_integrity_monitoring NotebooksInstance#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
 authentic software by verifying the digital signature of all boot components, and halting the boot process
@@ -283,14 +283,14 @@ Disabled by default.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#enable_secure_boot NotebooksInstance#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has the vTPM enabled.
 Enabled by default.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#enable_vtpm NotebooksInstance#enable_vtpm}
   */
-  readonly enableVtpm?: boolean;
+  readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
 function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksInstanceShieldedInstanceConfig): any {
@@ -362,6 +362,11 @@ function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVmImage):
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html google_notebooks_instance}
 */
 export class NotebooksInstance extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_notebooks_instance";
 
   // ===========
   // INITIALIZER
@@ -540,11 +545,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // install_gpu_driver - computed: false, optional: true, required: false
-  private _installGpuDriver?: boolean;
+  private _installGpuDriver?: boolean | cdktf.IResolvable;
   public get installGpuDriver() {
     return this.getBooleanAttribute('install_gpu_driver');
   }
-  public set installGpuDriver(value: boolean ) {
+  public set installGpuDriver(value: boolean | cdktf.IResolvable ) {
     this._installGpuDriver = value;
   }
   public resetInstallGpuDriver() {
@@ -588,11 +593,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string }
-  public get labels(): { [key: string]: string } {
+  private _labels?: { [key: string]: string } | cdktf.IResolvable
+  public get labels(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
   }
-  public set labels(value: { [key: string]: string }) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -630,11 +635,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string };
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
   public get metadata() {
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -675,11 +680,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // no_proxy_access - computed: false, optional: true, required: false
-  private _noProxyAccess?: boolean;
+  private _noProxyAccess?: boolean | cdktf.IResolvable;
   public get noProxyAccess() {
     return this.getBooleanAttribute('no_proxy_access');
   }
-  public set noProxyAccess(value: boolean ) {
+  public set noProxyAccess(value: boolean | cdktf.IResolvable ) {
     this._noProxyAccess = value;
   }
   public resetNoProxyAccess() {
@@ -691,11 +696,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // no_public_ip - computed: false, optional: true, required: false
-  private _noPublicIp?: boolean;
+  private _noPublicIp?: boolean | cdktf.IResolvable;
   public get noPublicIp() {
     return this.getBooleanAttribute('no_public_ip');
   }
-  public set noPublicIp(value: boolean ) {
+  public set noPublicIp(value: boolean | cdktf.IResolvable ) {
     this._noPublicIp = value;
   }
   public resetNoPublicIp() {
@@ -707,11 +712,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // no_remove_data_disk - computed: false, optional: true, required: false
-  private _noRemoveDataDisk?: boolean;
+  private _noRemoveDataDisk?: boolean | cdktf.IResolvable;
   public get noRemoveDataDisk() {
     return this.getBooleanAttribute('no_remove_data_disk');
   }
-  public set noRemoveDataDisk(value: boolean ) {
+  public set noRemoveDataDisk(value: boolean | cdktf.IResolvable ) {
     this._noRemoveDataDisk = value;
   }
   public resetNoRemoveDataDisk() {

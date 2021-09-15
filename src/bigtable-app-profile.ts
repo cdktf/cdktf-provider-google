@@ -24,7 +24,7 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#ignore_warnings BigtableAppProfile#ignore_warnings}
   */
-  readonly ignoreWarnings?: boolean;
+  readonly ignoreWarnings?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance to create the app profile within.
   * 
@@ -38,7 +38,7 @@ consistency to improve availability.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
   */
-  readonly multiClusterRoutingUseAny?: boolean;
+  readonly multiClusterRoutingUseAny?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#project BigtableAppProfile#project}
   */
@@ -63,7 +63,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
   */
-  readonly allowTransactionalWrites?: boolean;
+  readonly allowTransactionalWrites?: boolean | cdktf.IResolvable;
   /**
   * The cluster to which read/write requests should be routed.
   * 
@@ -109,6 +109,11 @@ function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeou
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html google_bigtable_app_profile}
 */
 export class BigtableAppProfile extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_app_profile";
 
   // ===========
   // INITIALIZER
@@ -181,11 +186,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // ignore_warnings - computed: false, optional: true, required: false
-  private _ignoreWarnings?: boolean;
+  private _ignoreWarnings?: boolean | cdktf.IResolvable;
   public get ignoreWarnings() {
     return this.getBooleanAttribute('ignore_warnings');
   }
-  public set ignoreWarnings(value: boolean ) {
+  public set ignoreWarnings(value: boolean | cdktf.IResolvable ) {
     this._ignoreWarnings = value;
   }
   public resetIgnoreWarnings() {
@@ -213,11 +218,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // multi_cluster_routing_use_any - computed: false, optional: true, required: false
-  private _multiClusterRoutingUseAny?: boolean;
+  private _multiClusterRoutingUseAny?: boolean | cdktf.IResolvable;
   public get multiClusterRoutingUseAny() {
     return this.getBooleanAttribute('multi_cluster_routing_use_any');
   }
-  public set multiClusterRoutingUseAny(value: boolean ) {
+  public set multiClusterRoutingUseAny(value: boolean | cdktf.IResolvable ) {
     this._multiClusterRoutingUseAny = value;
   }
   public resetMultiClusterRoutingUseAny() {

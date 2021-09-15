@@ -30,6 +30,11 @@ export interface DataGoogleComputeInstanceSerialPortConfig extends cdktf.Terrafo
 */
 export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_serial_port";
+
   // ===========
   // INITIALIZER
   // ===========

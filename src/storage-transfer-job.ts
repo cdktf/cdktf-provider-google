@@ -355,19 +355,19 @@ export interface StorageTransferJobTransferSpecTransferOptions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#delete_objects_from_source_after_transfer StorageTransferJob#delete_objects_from_source_after_transfer}
   */
-  readonly deleteObjectsFromSourceAfterTransfer?: boolean;
+  readonly deleteObjectsFromSourceAfterTransfer?: boolean | cdktf.IResolvable;
   /**
   * Whether objects that exist only in the sink should be deleted. Note that this option and delete_objects_from_source_after_transfer are mutually exclusive.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#delete_objects_unique_in_sink StorageTransferJob#delete_objects_unique_in_sink}
   */
-  readonly deleteObjectsUniqueInSink?: boolean;
+  readonly deleteObjectsUniqueInSink?: boolean | cdktf.IResolvable;
   /**
   * Whether overwriting objects that already exist in the sink is allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#overwrite_objects_already_existing_in_sink StorageTransferJob#overwrite_objects_already_existing_in_sink}
   */
-  readonly overwriteObjectsAlreadyExistingInSink?: boolean;
+  readonly overwriteObjectsAlreadyExistingInSink?: boolean | cdktf.IResolvable;
 }
 
 function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: StorageTransferJobTransferSpecTransferOptions): any {
@@ -442,6 +442,11 @@ function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTr
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html google_storage_transfer_job}
 */
 export class StorageTransferJob extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_transfer_job";
 
   // ===========
   // INITIALIZER

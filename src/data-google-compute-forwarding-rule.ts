@@ -37,6 +37,11 @@ This field is not applicable to global forwarding rules.
 */
 export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_forwarding_rule";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -18,6 +18,11 @@ export interface DataGoogleNetblockIpRangesConfig extends cdktf.TerraformMetaArg
 */
 export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_netblock_ip_ranges";
+
   // ===========
   // INITIALIZER
   // ===========

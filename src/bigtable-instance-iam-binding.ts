@@ -60,6 +60,11 @@ function bigtableInstanceIamBindingConditionToTerraform(struct?: BigtableInstanc
 */
 export class BigtableInstanceIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_instance_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

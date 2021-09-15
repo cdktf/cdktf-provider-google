@@ -118,7 +118,7 @@ export interface ComputeSecurityPolicyRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_security_policy.html#preview ComputeSecurityPolicy#preview}
   */
-  readonly preview?: boolean;
+  readonly preview?: boolean | cdktf.IResolvable;
   /**
   * An unique positive integer indicating the priority of evaluation for a rule. Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
   * 
@@ -173,6 +173,11 @@ function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurityPolicy
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_security_policy.html google_compute_security_policy}
 */
 export class ComputeSecurityPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_security_policy";
 
   // ===========
   // INITIALIZER

@@ -46,6 +46,11 @@ export class DataGoogleMonitoringIstioCanonicalServiceTelemetry extends cdktf.Co
 */
 export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_istio_canonical_service";
+
   // ===========
   // INITIALIZER
   // ===========

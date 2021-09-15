@@ -36,7 +36,7 @@ connections, but still work to finish started).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#enable_cdn ComputeRegionBackendService#enable_cdn}
   */
-  readonly enableCdn?: boolean;
+  readonly enableCdn?: boolean | cdktf.IResolvable;
   /**
   * The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -128,7 +128,7 @@ Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load 
   /**
   * The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
-types and may result in errors if used with the GA API. Possible values: ["HTTP", "HTTPS", "HTTP2", "SSL", "TCP", "UDP", "GRPC"]
+types and may result in errors if used with the GA API. Possible values: ["HTTP", "HTTPS", "HTTP2", "SSL", "TCP", "UDP", "GRPC", "UNSPECIFIED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#protocol ComputeRegionBackendService#protocol}
   */
@@ -238,7 +238,7 @@ than one failover backend can be configured for a given RegionBackendService.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#failover ComputeRegionBackendService#failover}
   */
-  readonly failover?: boolean;
+  readonly failover?: boolean | cdktf.IResolvable;
   /**
   * The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -368,13 +368,13 @@ export interface ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#include_host ComputeRegionBackendService#include_host}
   */
-  readonly includeHost?: boolean;
+  readonly includeHost?: boolean | cdktf.IResolvable;
   /**
   * If true, http and https requests will be cached separately.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#include_protocol ComputeRegionBackendService#include_protocol}
   */
-  readonly includeProtocol?: boolean;
+  readonly includeProtocol?: boolean | cdktf.IResolvable;
   /**
   * If true, include query string parameters in the cache key
 according to query_string_whitelist and
@@ -386,7 +386,7 @@ key entirely.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#include_query_string ComputeRegionBackendService#include_query_string}
   */
-  readonly includeQueryString?: boolean;
+  readonly includeQueryString?: boolean | cdktf.IResolvable;
   /**
   * Names of query string parameters to exclude in cache keys.
 
@@ -471,7 +471,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#negative_caching ComputeRegionBackendService#negative_caching}
   */
-  readonly negativeCaching?: boolean;
+  readonly negativeCaching?: boolean | cdktf.IResolvable;
   /**
   * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
   * 
@@ -679,7 +679,7 @@ The default is false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#disable_connection_drain_on_failover ComputeRegionBackendService#disable_connection_drain_on_failover}
   */
-  readonly disableConnectionDrainOnFailover?: boolean;
+  readonly disableConnectionDrainOnFailover?: boolean | cdktf.IResolvable;
   /**
   * This option is used only when no healthy VMs are detected in the primary
 and backup instance groups. When set to true, traffic is dropped. When
@@ -688,7 +688,7 @@ The default is false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#drop_traffic_if_unhealthy ComputeRegionBackendService#drop_traffic_if_unhealthy}
   */
-  readonly dropTrafficIfUnhealthy?: boolean;
+  readonly dropTrafficIfUnhealthy?: boolean | cdktf.IResolvable;
   /**
   * The value of the field must be in [0, 1]. If the ratio of the healthy
 VMs in the primary backend is at or below this number, traffic arriving
@@ -719,7 +719,7 @@ export interface ComputeRegionBackendServiceLogConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#enable ComputeRegionBackendService#enable}
   */
-  readonly enable?: boolean;
+  readonly enable?: boolean | cdktf.IResolvable;
   /**
   * This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
@@ -930,6 +930,11 @@ function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBa
 */
 export class ComputeRegionBackendService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_backend_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1035,11 +1040,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean;
+  private _enableCdn?: boolean | cdktf.IResolvable;
   public get enableCdn() {
     return this.getBooleanAttribute('enable_cdn');
   }
-  public set enableCdn(value: boolean ) {
+  public set enableCdn(value: boolean | cdktf.IResolvable ) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {

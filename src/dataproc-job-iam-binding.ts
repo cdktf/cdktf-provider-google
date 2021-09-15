@@ -64,6 +64,11 @@ function dataprocJobIamBindingConditionToTerraform(struct?: DataprocJobIamBindin
 */
 export class DataprocJobIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_job_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

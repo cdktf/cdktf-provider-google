@@ -64,6 +64,11 @@ function bigqueryTableIamBindingConditionToTerraform(struct?: BigqueryTableIamBi
 */
 export class BigqueryTableIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_table_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

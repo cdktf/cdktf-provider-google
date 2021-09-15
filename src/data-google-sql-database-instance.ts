@@ -323,6 +323,11 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
     return this.interpolationForAttribute('backup_configuration') as any;
   }
 
+  // collation - computed: true, optional: false, required: false
+  public get collation() {
+    return this.getStringAttribute('collation');
+  }
+
   // crash_safe_replication - computed: true, optional: false, required: false
   public get crashSafeReplication() {
     return this.getBooleanAttribute('crash_safe_replication');
@@ -403,6 +408,11 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance.html google_sql_database_instance}
 */
 export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_sql_database_instance";
 
   // ===========
   // INITIALIZER

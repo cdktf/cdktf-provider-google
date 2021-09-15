@@ -60,6 +60,11 @@ function storageHmacKeyTimeoutsToTerraform(struct?: StorageHmacKeyTimeouts): any
 */
 export class StorageHmacKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_hmac_key";
+
   // ===========
   // INITIALIZER
   // ===========

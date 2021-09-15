@@ -69,6 +69,11 @@ function apigeeEnvironmentTimeoutsToTerraform(struct?: ApigeeEnvironmentTimeouts
 */
 export class ApigeeEnvironment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_apigee_environment";
+
   // ===========
   // INITIALIZER
   // ===========

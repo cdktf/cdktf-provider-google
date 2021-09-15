@@ -144,6 +144,11 @@ function computeRouteTimeoutsToTerraform(struct?: ComputeRouteTimeouts): any {
 */
 export class ComputeRoute extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_route";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -294,12 +299,12 @@ export class ComputeRoute extends cdktf.TerraformResource {
     return this._nextHopInstance
   }
 
-  // next_hop_instance_zone - computed: false, optional: true, required: false
+  // next_hop_instance_zone - computed: true, optional: true, required: false
   private _nextHopInstanceZone?: string;
   public get nextHopInstanceZone() {
     return this.getStringAttribute('next_hop_instance_zone');
   }
-  public set nextHopInstanceZone(value: string ) {
+  public set nextHopInstanceZone(value: string) {
     this._nextHopInstanceZone = value;
   }
   public resetNextHopInstanceZone() {

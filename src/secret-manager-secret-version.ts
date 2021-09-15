@@ -12,7 +12,7 @@ export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html#enabled SecretManagerSecretVersion#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Secret Manager secret resource
   * 
@@ -57,6 +57,11 @@ function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSec
 */
 export class SecretManagerSecretVersion extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_secret_manager_secret_version";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -100,11 +105,11 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

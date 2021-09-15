@@ -150,6 +150,11 @@ function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeouts): a
 */
 export class PubsubLiteTopic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_lite_topic";
+
   // ===========
   // INITIALIZER
   // ===========

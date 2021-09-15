@@ -30,7 +30,7 @@ export interface DataGoogleStorageObjectSignedUrlConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#extension_headers DataGoogleStorageObjectSignedUrl#extension_headers}
   */
-  readonly extensionHeaders?: { [key: string]: string };
+  readonly extensionHeaders?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#http_method DataGoogleStorageObjectSignedUrl#http_method}
   */
@@ -45,6 +45,11 @@ export interface DataGoogleStorageObjectSignedUrlConfig extends cdktf.TerraformM
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html google_storage_object_signed_url}
 */
 export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_object_signed_url";
 
   // ===========
   // INITIALIZER
@@ -160,11 +165,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // extension_headers - computed: false, optional: true, required: false
-  private _extensionHeaders?: { [key: string]: string };
+  private _extensionHeaders?: { [key: string]: string } | cdktf.IResolvable;
   public get extensionHeaders() {
     return this.interpolationForAttribute('extension_headers') as any;
   }
-  public set extensionHeaders(value: { [key: string]: string } ) {
+  public set extensionHeaders(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._extensionHeaders = value;
   }
   public resetExtensionHeaders() {

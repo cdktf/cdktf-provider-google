@@ -73,6 +73,11 @@ function dataCatalogEntryGroupTimeoutsToTerraform(struct?: DataCatalogEntryGroup
 */
 export class DataCatalogEntryGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_entry_group";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -30,6 +30,11 @@ export interface NotebooksInstanceIamPolicyConfig extends cdktf.TerraformMetaArg
 */
 export class NotebooksInstanceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_notebooks_instance_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

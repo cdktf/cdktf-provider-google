@@ -68,6 +68,11 @@ function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTime
 */
 export class OsLoginSshPublicKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_os_login_ssh_public_key";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -26,6 +26,11 @@ export interface DataGoogleKmsSecretConfig extends cdktf.TerraformMetaArguments 
 */
 export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_secret";
+
   // ===========
   // INITIALIZER
   // ===========

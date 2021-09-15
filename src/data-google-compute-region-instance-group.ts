@@ -59,6 +59,11 @@ export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.Complex
 */
 export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_region_instance_group";
+
   // ===========
   // INITIALIZER
   // ===========

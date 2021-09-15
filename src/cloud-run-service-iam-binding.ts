@@ -64,6 +64,11 @@ function cloudRunServiceIamBindingConditionToTerraform(struct?: CloudRunServiceI
 */
 export class CloudRunServiceIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloud_run_service_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

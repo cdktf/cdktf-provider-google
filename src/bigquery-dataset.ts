@@ -56,7 +56,7 @@ expiration time indicated by this property.
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
   */
-  readonly deleteContentsOnDestroy?: boolean;
+  readonly deleteContentsOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * A user-friendly description of the dataset
   * 
@@ -75,7 +75,7 @@ organize and group your datasets
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#labels BigqueryDataset#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
@@ -265,6 +265,11 @@ function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeouts): a
 */
 export class BigqueryDataset extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigquery_dataset";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -356,11 +361,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // delete_contents_on_destroy - computed: false, optional: true, required: false
-  private _deleteContentsOnDestroy?: boolean;
+  private _deleteContentsOnDestroy?: boolean | cdktf.IResolvable;
   public get deleteContentsOnDestroy() {
     return this.getBooleanAttribute('delete_contents_on_destroy');
   }
-  public set deleteContentsOnDestroy(value: boolean ) {
+  public set deleteContentsOnDestroy(value: boolean | cdktf.IResolvable ) {
     this._deleteContentsOnDestroy = value;
   }
   public resetDeleteContentsOnDestroy() {
@@ -414,11 +419,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

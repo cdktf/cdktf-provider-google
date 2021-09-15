@@ -14,7 +14,7 @@ export interface DataGoogleServiceAccountIdTokenConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html#include_email DataGoogleServiceAccountIdToken#include_email}
   */
-  readonly includeEmail?: boolean;
+  readonly includeEmail?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html#target_audience DataGoogleServiceAccountIdToken#target_audience}
   */
@@ -29,6 +29,11 @@ export interface DataGoogleServiceAccountIdTokenConfig extends cdktf.TerraformMe
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_id_token.html google_service_account_id_token}
 */
 export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_service_account_id_token";
 
   // ===========
   // INITIALIZER
@@ -89,11 +94,11 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
 
   // include_email - computed: false, optional: true, required: false
-  private _includeEmail?: boolean;
+  private _includeEmail?: boolean | cdktf.IResolvable;
   public get includeEmail() {
     return this.getBooleanAttribute('include_email');
   }
-  public set includeEmail(value: boolean ) {
+  public set includeEmail(value: boolean | cdktf.IResolvable ) {
     this._includeEmail = value;
   }
   public resetIncludeEmail() {

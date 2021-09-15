@@ -58,6 +58,11 @@ function organizationIamBindingConditionToTerraform(struct?: OrganizationIamBind
 */
 export class OrganizationIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

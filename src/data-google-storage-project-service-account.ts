@@ -22,6 +22,11 @@ export interface DataGoogleStorageProjectServiceAccountConfig extends cdktf.Terr
 */
 export class DataGoogleStorageProjectServiceAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_storage_project_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

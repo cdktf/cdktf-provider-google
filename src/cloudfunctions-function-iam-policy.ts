@@ -30,6 +30,11 @@ export interface CloudfunctionsFunctionIamPolicyConfig extends cdktf.TerraformMe
 */
 export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudfunctions_function_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

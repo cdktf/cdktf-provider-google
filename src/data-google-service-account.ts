@@ -22,6 +22,11 @@ export interface DataGoogleServiceAccountConfig extends cdktf.TerraformMetaArgum
 */
 export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_service_account";
+
   // ===========
   // INITIALIZER
   // ===========

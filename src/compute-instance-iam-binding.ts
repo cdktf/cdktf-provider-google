@@ -64,6 +64,11 @@ function computeInstanceIamBindingConditionToTerraform(struct?: ComputeInstanceI
 */
 export class ComputeInstanceIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

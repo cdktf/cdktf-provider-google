@@ -8,30 +8,44 @@ import * as cdktf from 'cdktf';
 
 export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, 'billingAccounts/012345-567890-ABCDEF`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#billing_account AssuredWorkloadsWorkload#billing_account}
   */
   readonly billingAccount: string;
   /**
+  * Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
   */
   readonly complianceRegime: string;
   /**
+  * Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#display_name AssuredWorkloadsWorkload#display_name}
   */
   readonly displayName: string;
   /**
+  * Optional. Labels applied to the workload.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#labels AssuredWorkloadsWorkload#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * The location for the resource
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#location AssuredWorkloadsWorkload#location}
   */
   readonly location: string;
   /**
+  * The organization for the resource
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#organization AssuredWorkloadsWorkload#organization}
   */
   readonly organization: string;
   /**
+  * Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
   */
   readonly provisionedResourcesParent?: string;
@@ -68,10 +82,14 @@ export class AssuredWorkloadsWorkloadResources extends cdktf.ComplexComputedList
 }
 export interface AssuredWorkloadsWorkloadKmsSettings {
   /**
+  * Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
   */
   readonly nextRotationTime: string;
   /**
+  * Required. Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#rotation_period AssuredWorkloadsWorkload#rotation_period}
   */
   readonly rotationPeriod: string;
@@ -87,10 +105,14 @@ function assuredWorkloadsWorkloadKmsSettingsToTerraform(struct?: AssuredWorkload
 
 export interface AssuredWorkloadsWorkloadResourceSettings {
   /**
+  * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_id AssuredWorkloadsWorkload#resource_id}
   */
   readonly resourceId?: string;
   /**
+  * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_type AssuredWorkloadsWorkload#resource_type}
   */
   readonly resourceType?: string;
@@ -133,6 +155,11 @@ function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWo
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html google_assured_workloads_workload}
 */
 export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_assured_workloads_workload";
 
   // ===========
   // INITIALIZER
@@ -222,11 +249,11 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

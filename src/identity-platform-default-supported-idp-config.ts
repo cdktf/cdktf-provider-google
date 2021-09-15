@@ -24,7 +24,7 @@ export interface IdentityPlatformDefaultSupportedIdpConfigConfig extends cdktf.T
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#enabled IdentityPlatformDefaultSupportedIdpConfig#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * ID of the IDP. Possible values include:
 
@@ -92,6 +92,11 @@ function identityPlatformDefaultSupportedIdpConfigTimeoutsToTerraform(struct?: I
 */
 export class IdentityPlatformDefaultSupportedIdpConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_identity_platform_default_supported_idp_config";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -153,11 +158,11 @@ export class IdentityPlatformDefaultSupportedIdpConfig extends cdktf.TerraformRe
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

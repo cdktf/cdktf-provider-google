@@ -22,6 +22,11 @@ export interface KmsCryptoKeyIamPolicyConfig extends cdktf.TerraformMetaArgument
 */
 export class KmsCryptoKeyIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_crypto_key_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

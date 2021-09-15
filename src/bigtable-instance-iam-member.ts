@@ -60,6 +60,11 @@ function bigtableInstanceIamMemberConditionToTerraform(struct?: BigtableInstance
 */
 export class BigtableInstanceIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_bigtable_instance_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

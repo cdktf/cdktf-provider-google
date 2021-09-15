@@ -64,6 +64,11 @@ function dataCatalogTagTemplateIamBindingConditionToTerraform(struct?: DataCatal
 */
 export class DataCatalogTagTemplateIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_tag_template_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

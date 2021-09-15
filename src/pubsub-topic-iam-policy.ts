@@ -26,6 +26,11 @@ export interface PubsubTopicIamPolicyConfig extends cdktf.TerraformMetaArguments
 */
 export class PubsubTopicIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_topic_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

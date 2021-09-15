@@ -12,7 +12,7 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#can_ip_forward ComputeInstanceTemplate#can_ip_forward}
   */
-  readonly canIpForward?: boolean;
+  readonly canIpForward?: boolean | cdktf.IResolvable;
   /**
   * A brief description of this resource.
   * 
@@ -24,7 +24,7 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_display ComputeInstanceTemplate#enable_display}
   */
-  readonly enableDisplay?: boolean;
+  readonly enableDisplay?: boolean | cdktf.IResolvable;
   /**
   * A description of the instance.
   * 
@@ -36,7 +36,7 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#labels ComputeInstanceTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The machine type to create. To create a machine with a custom type (such as extended memory), format the value like custom-VCPUS-MEM_IN_MB like custom-6-20480 for 6 vCPU and 20GB of RAM.
   * 
@@ -48,7 +48,7 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#metadata ComputeInstanceTemplate#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously.
   * 
@@ -158,7 +158,7 @@ export interface ComputeInstanceTemplateAdvancedMachineFeatures {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_nested_virtualization ComputeInstanceTemplate#enable_nested_virtualization}
   */
-  readonly enableNestedVirtualization?: boolean;
+  readonly enableNestedVirtualization?: boolean | cdktf.IResolvable;
   /**
   * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
   * 
@@ -181,7 +181,7 @@ export interface ComputeInstanceTemplateConfidentialInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_confidential_compute ComputeInstanceTemplate#enable_confidential_compute}
   */
-  readonly enableConfidentialCompute: boolean;
+  readonly enableConfidentialCompute: boolean | cdktf.IResolvable;
 }
 
 function computeInstanceTemplateConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceTemplateConfidentialInstanceConfig): any {
@@ -213,13 +213,13 @@ export interface ComputeInstanceTemplateDisk {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#auto_delete ComputeInstanceTemplate#auto_delete}
   */
-  readonly autoDelete?: boolean;
+  readonly autoDelete?: boolean | cdktf.IResolvable;
   /**
   * Indicates that this is a boot disk.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#boot ComputeInstanceTemplate#boot}
   */
-  readonly boot?: boolean;
+  readonly boot?: boolean | cdktf.IResolvable;
   /**
   * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance. If not specified, the server chooses a default device name to apply to this disk.
   * 
@@ -255,7 +255,7 @@ export interface ComputeInstanceTemplateDisk {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#labels ComputeInstanceTemplate#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode.
   * 
@@ -517,7 +517,7 @@ export interface ComputeInstanceTemplateScheduling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#automatic_restart ComputeInstanceTemplate#automatic_restart}
   */
-  readonly automaticRestart?: boolean;
+  readonly automaticRestart?: boolean | cdktf.IResolvable;
   /**
   * Minimum number of cpus for the instance.
   * 
@@ -535,7 +535,7 @@ export interface ComputeInstanceTemplateScheduling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#preemptible ComputeInstanceTemplate#preemptible}
   */
-  readonly preemptible?: boolean;
+  readonly preemptible?: boolean | cdktf.IResolvable;
   /**
   * node_affinities block
   * 
@@ -584,19 +584,19 @@ export interface ComputeInstanceTemplateShieldedInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_integrity_monitoring ComputeInstanceTemplate#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_secure_boot ComputeInstanceTemplate#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#enable_vtpm ComputeInstanceTemplate#enable_vtpm}
   */
-  readonly enableVtpm?: boolean;
+  readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
 function computeInstanceTemplateShieldedInstanceConfigToTerraform(struct?: ComputeInstanceTemplateShieldedInstanceConfig): any {
@@ -632,6 +632,11 @@ function computeInstanceTemplateTimeoutsToTerraform(struct?: ComputeInstanceTemp
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html google_compute_instance_template}
 */
 export class ComputeInstanceTemplate extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_instance_template";
 
   // ===========
   // INITIALIZER
@@ -686,11 +691,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   // ==========
 
   // can_ip_forward - computed: false, optional: true, required: false
-  private _canIpForward?: boolean;
+  private _canIpForward?: boolean | cdktf.IResolvable;
   public get canIpForward() {
     return this.getBooleanAttribute('can_ip_forward');
   }
-  public set canIpForward(value: boolean ) {
+  public set canIpForward(value: boolean | cdktf.IResolvable ) {
     this._canIpForward = value;
   }
   public resetCanIpForward() {
@@ -718,11 +723,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // enable_display - computed: false, optional: true, required: false
-  private _enableDisplay?: boolean;
+  private _enableDisplay?: boolean | cdktf.IResolvable;
   public get enableDisplay() {
     return this.getBooleanAttribute('enable_display');
   }
-  public set enableDisplay(value: boolean ) {
+  public set enableDisplay(value: boolean | cdktf.IResolvable ) {
     this._enableDisplay = value;
   }
   public resetEnableDisplay() {
@@ -755,11 +760,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -784,11 +789,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string };
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
   public get metadata() {
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._metadata = value;
   }
   public resetMetadata() {

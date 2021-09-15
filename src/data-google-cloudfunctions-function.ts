@@ -68,6 +68,11 @@ export class DataGoogleCloudfunctionsFunctionSourceRepository extends cdktf.Comp
 */
 export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_cloudfunctions_function";
+
   // ===========
   // INITIALIZER
   // ===========

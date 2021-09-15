@@ -36,43 +36,43 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_autopilot ContainerCluster#enable_autopilot}
   */
-  readonly enableAutopilot?: boolean;
+  readonly enableAutopilot?: boolean | cdktf.IResolvable;
   /**
   * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binary Authorization.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_binary_authorization ContainerCluster#enable_binary_authorization}
   */
-  readonly enableBinaryAuthorization?: boolean;
+  readonly enableBinaryAuthorization?: boolean | cdktf.IResolvable;
   /**
   * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_intranode_visibility ContainerCluster#enable_intranode_visibility}
   */
-  readonly enableIntranodeVisibility?: boolean;
+  readonly enableIntranodeVisibility?: boolean | cdktf.IResolvable;
   /**
   * Whether to enable Kubernetes Alpha features for this cluster. Note that when this option is enabled, the cluster cannot be upgraded and will be automatically deleted after 30 days.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_kubernetes_alpha ContainerCluster#enable_kubernetes_alpha}
   */
-  readonly enableKubernetesAlpha?: boolean;
+  readonly enableKubernetesAlpha?: boolean | cdktf.IResolvable;
   /**
   * Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_legacy_abac ContainerCluster#enable_legacy_abac}
   */
-  readonly enableLegacyAbac?: boolean;
+  readonly enableLegacyAbac?: boolean | cdktf.IResolvable;
   /**
   * Enable Shielded Nodes features on all nodes in this cluster.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_shielded_nodes ContainerCluster#enable_shielded_nodes}
   */
-  readonly enableShieldedNodes?: boolean;
+  readonly enableShieldedNodes?: boolean | cdktf.IResolvable;
   /**
   * Whether to enable Cloud TPU resources in this cluster.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_tpu ContainerCluster#enable_tpu}
   */
-  readonly enableTpu?: boolean;
+  readonly enableTpu?: boolean | cdktf.IResolvable;
   /**
   * The number of nodes to create in this cluster's default node pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Must be set if node_pool is not set. If you're using google_container_node_pool objects with no default node pool, you'll need to set this to a value of at least 1, alongside setting remove_default_node_pool to true.
   * 
@@ -150,13 +150,13 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#remove_default_node_pool ContainerCluster#remove_default_node_pool}
   */
-  readonly removeDefaultNodePool?: boolean;
+  readonly removeDefaultNodePool?: boolean | cdktf.IResolvable;
   /**
   * The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#resource_labels ContainerCluster#resource_labels}
   */
-  readonly resourceLabels?: { [key: string]: string };
+  readonly resourceLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name or self_link of the Google Compute Engine subnetwork in which the cluster's instances are launched.
   * 
@@ -282,7 +282,7 @@ export interface ContainerClusterAddonsConfigCloudrunConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#disabled ContainerCluster#disabled}
   */
-  readonly disabled: boolean;
+  readonly disabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#load_balancer_type ContainerCluster#load_balancer_type}
   */
@@ -301,7 +301,7 @@ export interface ContainerClusterAddonsConfigHorizontalPodAutoscaling {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#disabled ContainerCluster#disabled}
   */
-  readonly disabled: boolean;
+  readonly disabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterAddonsConfigHorizontalPodAutoscalingToTerraform(struct?: ContainerClusterAddonsConfigHorizontalPodAutoscaling): any {
@@ -315,7 +315,7 @@ export interface ContainerClusterAddonsConfigHttpLoadBalancing {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#disabled ContainerCluster#disabled}
   */
-  readonly disabled: boolean;
+  readonly disabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterAddonsConfigHttpLoadBalancingToTerraform(struct?: ContainerClusterAddonsConfigHttpLoadBalancing): any {
@@ -329,7 +329,7 @@ export interface ContainerClusterAddonsConfigNetworkPolicyConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#disabled ContainerCluster#disabled}
   */
-  readonly disabled: boolean;
+  readonly disabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterAddonsConfigNetworkPolicyConfigToTerraform(struct?: ContainerClusterAddonsConfigNetworkPolicyConfig): any {
@@ -451,7 +451,7 @@ export interface ContainerClusterClusterAutoscaling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enabled ContainerCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * auto_provisioning_defaults block
   * 
@@ -504,7 +504,7 @@ export interface ContainerClusterDefaultSnatStatus {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#disabled ContainerCluster#disabled}
   */
-  readonly disabled: boolean;
+  readonly disabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterDefaultSnatStatusToTerraform(struct?: ContainerClusterDefaultSnatStatus): any {
@@ -649,7 +649,7 @@ export interface ContainerClusterMasterAuthClientCertificateConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#issue_client_certificate ContainerCluster#issue_client_certificate}
   */
-  readonly issueClientCertificate: boolean;
+  readonly issueClientCertificate: boolean | cdktf.IResolvable;
 }
 
 function containerClusterMasterAuthClientCertificateConfigToTerraform(struct?: ContainerClusterMasterAuthClientCertificateConfig): any {
@@ -734,7 +734,7 @@ export interface ContainerClusterNetworkPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enabled ContainerCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
   * 
@@ -800,13 +800,13 @@ export interface ContainerClusterNodeConfigShieldedInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_integrity_monitoring ContainerCluster#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has Secure Boot enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_secure_boot ContainerCluster#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
 }
 
 function containerClusterNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerClusterNodeConfigShieldedInstanceConfig): any {
@@ -863,7 +863,7 @@ export interface ContainerClusterNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#labels ContainerCluster#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The number of local SSD disks to be attached to the node.
   * 
@@ -881,7 +881,7 @@ export interface ContainerClusterNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#metadata ContainerCluster#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform.
   * 
@@ -899,7 +899,7 @@ export interface ContainerClusterNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#preemptible ContainerCluster#preemptible}
   */
-  readonly preemptible?: boolean;
+  readonly preemptible?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Platform Service Account to be used by the node VMs.
   * 
@@ -983,13 +983,13 @@ export interface ContainerClusterNodePoolManagement {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#auto_repair ContainerCluster#auto_repair}
   */
-  readonly autoRepair?: boolean;
+  readonly autoRepair?: boolean | cdktf.IResolvable;
   /**
   * Whether the nodes will be automatically upgraded.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#auto_upgrade ContainerCluster#auto_upgrade}
   */
-  readonly autoUpgrade?: boolean;
+  readonly autoUpgrade?: boolean | cdktf.IResolvable;
 }
 
 function containerClusterNodePoolManagementToTerraform(struct?: ContainerClusterNodePoolManagement): any {
@@ -1049,13 +1049,13 @@ export interface ContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_integrity_monitoring ContainerCluster#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has Secure Boot enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_secure_boot ContainerCluster#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
 }
 
 function containerClusterNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerClusterNodePoolNodeConfigShieldedInstanceConfig): any {
@@ -1112,7 +1112,7 @@ export interface ContainerClusterNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#labels ContainerCluster#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The number of local SSD disks to be attached to the node.
   * 
@@ -1130,7 +1130,7 @@ export interface ContainerClusterNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#metadata ContainerCluster#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform.
   * 
@@ -1148,7 +1148,7 @@ export interface ContainerClusterNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#preemptible ContainerCluster#preemptible}
   */
-  readonly preemptible?: boolean;
+  readonly preemptible?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Platform Service Account to be used by the node VMs.
   * 
@@ -1318,7 +1318,7 @@ export interface ContainerClusterPodSecurityPolicyConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enabled ContainerCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterPodSecurityPolicyConfigToTerraform(struct?: ContainerClusterPodSecurityPolicyConfig): any {
@@ -1334,7 +1334,7 @@ export interface ContainerClusterPrivateClusterConfigMasterGlobalAccessConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enabled ContainerCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterPrivateClusterConfigMasterGlobalAccessConfigToTerraform(struct?: ContainerClusterPrivateClusterConfigMasterGlobalAccessConfig): any {
@@ -1350,13 +1350,13 @@ export interface ContainerClusterPrivateClusterConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_private_endpoint ContainerCluster#enable_private_endpoint}
   */
-  readonly enablePrivateEndpoint: boolean;
+  readonly enablePrivateEndpoint: boolean | cdktf.IResolvable;
   /**
   * When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_private_nodes ContainerCluster#enable_private_nodes}
   */
-  readonly enablePrivateNodes?: boolean;
+  readonly enablePrivateNodes?: boolean | cdktf.IResolvable;
   /**
   * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning private IP addresses to the cluster master(s) and the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network, and it must be a /28 subnet. See Private Cluster Limitations for more details. This field only applies to private clusters, when enable_private_nodes is true.
   * 
@@ -1423,13 +1423,13 @@ export interface ContainerClusterResourceUsageExportConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_network_egress_metering ContainerCluster#enable_network_egress_metering}
   */
-  readonly enableNetworkEgressMetering?: boolean;
+  readonly enableNetworkEgressMetering?: boolean | cdktf.IResolvable;
   /**
   * Whether to enable resource consumption metering on this cluster. When enabled, a table will be created in the resource export BigQuery dataset to store resource consumption data. The resulting table can be joined with the resource usage table or with BigQuery billing export. Defaults to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_resource_consumption_metering ContainerCluster#enable_resource_consumption_metering}
   */
-  readonly enableResourceConsumptionMetering?: boolean;
+  readonly enableResourceConsumptionMetering?: boolean | cdktf.IResolvable;
   /**
   * bigquery_destination block
   * 
@@ -1482,7 +1482,7 @@ export interface ContainerClusterVerticalPodAutoscaling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enabled ContainerCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function containerClusterVerticalPodAutoscalingToTerraform(struct?: ContainerClusterVerticalPodAutoscaling): any {
@@ -1513,6 +1513,11 @@ function containerClusterWorkloadIdentityConfigToTerraform(struct?: ContainerClu
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html google_container_cluster}
 */
 export class ContainerCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_container_cluster";
 
   // ===========
   // INITIALIZER
@@ -1652,11 +1657,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_autopilot - computed: false, optional: true, required: false
-  private _enableAutopilot?: boolean;
+  private _enableAutopilot?: boolean | cdktf.IResolvable;
   public get enableAutopilot() {
     return this.getBooleanAttribute('enable_autopilot');
   }
-  public set enableAutopilot(value: boolean ) {
+  public set enableAutopilot(value: boolean | cdktf.IResolvable ) {
     this._enableAutopilot = value;
   }
   public resetEnableAutopilot() {
@@ -1668,11 +1673,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_binary_authorization - computed: false, optional: true, required: false
-  private _enableBinaryAuthorization?: boolean;
+  private _enableBinaryAuthorization?: boolean | cdktf.IResolvable;
   public get enableBinaryAuthorization() {
     return this.getBooleanAttribute('enable_binary_authorization');
   }
-  public set enableBinaryAuthorization(value: boolean ) {
+  public set enableBinaryAuthorization(value: boolean | cdktf.IResolvable ) {
     this._enableBinaryAuthorization = value;
   }
   public resetEnableBinaryAuthorization() {
@@ -1684,11 +1689,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_intranode_visibility - computed: true, optional: true, required: false
-  private _enableIntranodeVisibility?: boolean;
+  private _enableIntranodeVisibility?: boolean | cdktf.IResolvable;
   public get enableIntranodeVisibility() {
     return this.getBooleanAttribute('enable_intranode_visibility');
   }
-  public set enableIntranodeVisibility(value: boolean) {
+  public set enableIntranodeVisibility(value: boolean | cdktf.IResolvable) {
     this._enableIntranodeVisibility = value;
   }
   public resetEnableIntranodeVisibility() {
@@ -1700,11 +1705,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_kubernetes_alpha - computed: false, optional: true, required: false
-  private _enableKubernetesAlpha?: boolean;
+  private _enableKubernetesAlpha?: boolean | cdktf.IResolvable;
   public get enableKubernetesAlpha() {
     return this.getBooleanAttribute('enable_kubernetes_alpha');
   }
-  public set enableKubernetesAlpha(value: boolean ) {
+  public set enableKubernetesAlpha(value: boolean | cdktf.IResolvable ) {
     this._enableKubernetesAlpha = value;
   }
   public resetEnableKubernetesAlpha() {
@@ -1716,11 +1721,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_legacy_abac - computed: false, optional: true, required: false
-  private _enableLegacyAbac?: boolean;
+  private _enableLegacyAbac?: boolean | cdktf.IResolvable;
   public get enableLegacyAbac() {
     return this.getBooleanAttribute('enable_legacy_abac');
   }
-  public set enableLegacyAbac(value: boolean ) {
+  public set enableLegacyAbac(value: boolean | cdktf.IResolvable ) {
     this._enableLegacyAbac = value;
   }
   public resetEnableLegacyAbac() {
@@ -1732,11 +1737,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_shielded_nodes - computed: true, optional: true, required: false
-  private _enableShieldedNodes?: boolean;
+  private _enableShieldedNodes?: boolean | cdktf.IResolvable;
   public get enableShieldedNodes() {
     return this.getBooleanAttribute('enable_shielded_nodes');
   }
-  public set enableShieldedNodes(value: boolean) {
+  public set enableShieldedNodes(value: boolean | cdktf.IResolvable) {
     this._enableShieldedNodes = value;
   }
   public resetEnableShieldedNodes() {
@@ -1748,11 +1753,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // enable_tpu - computed: false, optional: true, required: false
-  private _enableTpu?: boolean;
+  private _enableTpu?: boolean | cdktf.IResolvable;
   public get enableTpu() {
     return this.getBooleanAttribute('enable_tpu');
   }
-  public set enableTpu(value: boolean ) {
+  public set enableTpu(value: boolean | cdktf.IResolvable ) {
     this._enableTpu = value;
   }
   public resetEnableTpu() {
@@ -1983,11 +1988,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // remove_default_node_pool - computed: false, optional: true, required: false
-  private _removeDefaultNodePool?: boolean;
+  private _removeDefaultNodePool?: boolean | cdktf.IResolvable;
   public get removeDefaultNodePool() {
     return this.getBooleanAttribute('remove_default_node_pool');
   }
-  public set removeDefaultNodePool(value: boolean ) {
+  public set removeDefaultNodePool(value: boolean | cdktf.IResolvable ) {
     this._removeDefaultNodePool = value;
   }
   public resetRemoveDefaultNodePool() {
@@ -1999,11 +2004,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
   }
 
   // resource_labels - computed: false, optional: true, required: false
-  private _resourceLabels?: { [key: string]: string };
+  private _resourceLabels?: { [key: string]: string } | cdktf.IResolvable;
   public get resourceLabels() {
     return this.interpolationForAttribute('resource_labels') as any;
   }
-  public set resourceLabels(value: { [key: string]: string } ) {
+  public set resourceLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._resourceLabels = value;
   }
   public resetResourceLabels() {

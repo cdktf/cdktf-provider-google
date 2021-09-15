@@ -81,7 +81,7 @@ export interface MonitoringSloBasicSliAvailability {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#enabled MonitoringSlo#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
 }
 
 function monitoringSloBasicSliAvailabilityToTerraform(struct?: MonitoringSloBasicSliAvailability): any {
@@ -327,7 +327,7 @@ export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html#enabled MonitoringSlo#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
 }
 
 function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability): any {
@@ -739,6 +739,11 @@ function monitoringSloWindowsBasedSliToTerraform(struct?: MonitoringSloWindowsBa
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo.html google_monitoring_slo}
 */
 export class MonitoringSlo extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_slo";
 
   // ===========
   // INITIALIZER

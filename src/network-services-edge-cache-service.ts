@@ -18,7 +18,7 @@ export interface NetworkServicesEdgeCacheServiceConfig extends cdktf.TerraformMe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#disable_quic NetworkServicesEdgeCacheService#disable_quic}
   */
-  readonly disableQuic?: boolean;
+  readonly disableQuic?: boolean | cdktf.IResolvable;
   /**
   * Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
   * 
@@ -38,7 +38,7 @@ Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attac
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#labels NetworkServicesEdgeCacheService#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
@@ -59,7 +59,7 @@ You must have at least one (1) edgeSslCertificate specified to enable this.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#require_tls NetworkServicesEdgeCacheService#require_tls}
   */
-  readonly requireTls?: boolean;
+  readonly requireTls?: boolean | cdktf.IResolvable;
   /**
   * URL of the SslPolicy resource that will be associated with the EdgeCacheService.
 
@@ -93,7 +93,7 @@ export interface NetworkServicesEdgeCacheServiceLogConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#enable NetworkServicesEdgeCacheService#enable}
   */
-  readonly enable?: boolean;
+  readonly enable?: boolean | cdktf.IResolvable;
   /**
   * Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
 
@@ -165,7 +165,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeade
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#replace NetworkServicesEdgeCacheService#replace}
   */
-  readonly replace?: boolean;
+  readonly replace?: boolean | cdktf.IResolvable;
 }
 
 function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd): any {
@@ -211,7 +211,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeade
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#replace NetworkServicesEdgeCacheService#replace}
   */
-  readonly replace?: boolean;
+  readonly replace?: boolean | cdktf.IResolvable;
 }
 
 function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd): any {
@@ -297,7 +297,7 @@ If set to true, the headerMatch is considered a match if the match criteria abov
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#invert_match NetworkServicesEdgeCacheService#invert_match}
   */
-  readonly invertMatch?: boolean;
+  readonly invertMatch?: boolean | cdktf.IResolvable;
   /**
   * The value of the header must start with the contents of prefixMatch.
   * 
@@ -309,7 +309,7 @@ If set to true, the headerMatch is considered a match if the match criteria abov
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#present_match NetworkServicesEdgeCacheService#present_match}
   */
-  readonly presentMatch?: boolean;
+  readonly presentMatch?: boolean | cdktf.IResolvable;
   /**
   * The value of the header must end with the contents of suffixMatch.
   * 
@@ -348,7 +348,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatch
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#present_match NetworkServicesEdgeCacheService#present_match}
   */
-  readonly presentMatch?: boolean;
+  readonly presentMatch?: boolean | cdktf.IResolvable;
 }
 
 function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch): any {
@@ -372,7 +372,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatch
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#ignore_case NetworkServicesEdgeCacheService#ignore_case}
   */
-  readonly ignoreCase?: boolean;
+  readonly ignoreCase?: boolean | cdktf.IResolvable;
   /**
   * For satisfying the matchRule condition, the path of the request
 must match the wildcard pattern specified in pathTemplateMatch
@@ -427,7 +427,7 @@ Note: this should only be enabled if hosts share the same origin and content Rem
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#exclude_host NetworkServicesEdgeCacheService#exclude_host}
   */
-  readonly excludeHost?: boolean;
+  readonly excludeHost?: boolean | cdktf.IResolvable;
   /**
   * If true, exclude query string parameters from the cache key
 
@@ -439,7 +439,7 @@ included.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#exclude_query_string NetworkServicesEdgeCacheService#exclude_query_string}
   */
-  readonly excludeQueryString?: boolean;
+  readonly excludeQueryString?: boolean | cdktf.IResolvable;
   /**
   * Names of query string parameters to exclude from cache keys. All other parameters will be included.
 
@@ -453,7 +453,7 @@ Either specify includedQueryParameters or excludedQueryParameters, not both. '&'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#include_protocol NetworkServicesEdgeCacheService#include_protocol}
   */
-  readonly includeProtocol?: boolean;
+  readonly includeProtocol?: boolean | cdktf.IResolvable;
   /**
   * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
 
@@ -562,7 +562,7 @@ These defaults can be overridden in negativeCachingPolicy
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#negative_caching NetworkServicesEdgeCacheService#negative_caching}
   */
-  readonly negativeCaching?: boolean;
+  readonly negativeCaching?: boolean | cdktf.IResolvable;
   /**
   * Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 
@@ -573,7 +573,7 @@ Note that when specifying an explicit negativeCachingPolicy, you should take car
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#negative_caching_policy NetworkServicesEdgeCacheService#negative_caching_policy}
   */
-  readonly negativeCachingPolicy?: { [key: string]: string };
+  readonly negativeCachingPolicy?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
   * 
@@ -621,7 +621,7 @@ This translates to the Access-Control-Allow-Credentials response header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#allow_credentials NetworkServicesEdgeCacheService#allow_credentials}
   */
-  readonly allowCredentials?: boolean;
+  readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers response header.
   * 
@@ -647,7 +647,7 @@ This translates to the Access-Control-Allow-Origin response header.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#disabled NetworkServicesEdgeCacheService#disabled}
   */
-  readonly disabled?: boolean;
+  readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers response header.
   * 
@@ -768,7 +768,7 @@ This can only be set if there is at least one (1) edgeSslCertificate set on the 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#https_redirect NetworkServicesEdgeCacheService#https_redirect}
   */
-  readonly httpsRedirect?: boolean;
+  readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one that was supplied in the request.
 
@@ -806,7 +806,7 @@ The supported values are:
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service.html#strip_query NetworkServicesEdgeCacheService#strip_query}
   */
-  readonly stripQuery?: boolean;
+  readonly stripQuery?: boolean | cdktf.IResolvable;
 }
 
 function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect): any {
@@ -969,6 +969,11 @@ function networkServicesEdgeCacheServiceTimeoutsToTerraform(struct?: NetworkServ
 */
 export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_network_services_edge_cache_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1026,11 +1031,11 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
 
   // disable_quic - computed: true, optional: true, required: false
-  private _disableQuic?: boolean;
+  private _disableQuic?: boolean | cdktf.IResolvable;
   public get disableQuic() {
     return this.getBooleanAttribute('disable_quic');
   }
-  public set disableQuic(value: boolean) {
+  public set disableQuic(value: boolean | cdktf.IResolvable) {
     this._disableQuic = value;
   }
   public resetDisableQuic() {
@@ -1089,11 +1094,11 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1134,11 +1139,11 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
 
   // require_tls - computed: true, optional: true, required: false
-  private _requireTls?: boolean;
+  private _requireTls?: boolean | cdktf.IResolvable;
   public get requireTls() {
     return this.getBooleanAttribute('require_tls');
   }
-  public set requireTls(value: boolean) {
+  public set requireTls(value: boolean | cdktf.IResolvable) {
     this._requireTls = value;
   }
   public resetRequireTls() {

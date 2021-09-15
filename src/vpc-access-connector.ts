@@ -79,6 +79,11 @@ function vpcAccessConnectorTimeoutsToTerraform(struct?: VpcAccessConnectorTimeou
 */
 export class VpcAccessConnector extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_vpc_access_connector";
+
   // ===========
   // INITIALIZER
   // ===========

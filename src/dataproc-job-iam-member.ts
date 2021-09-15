@@ -64,6 +64,11 @@ function dataprocJobIamMemberConditionToTerraform(struct?: DataprocJobIamMemberC
 */
 export class DataprocJobIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_job_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

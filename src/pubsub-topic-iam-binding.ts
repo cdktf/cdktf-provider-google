@@ -60,6 +60,11 @@ function pubsubTopicIamBindingConditionToTerraform(struct?: PubsubTopicIamBindin
 */
 export class PubsubTopicIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_pubsub_topic_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

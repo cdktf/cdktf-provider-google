@@ -56,6 +56,11 @@ function iapWebIamBindingConditionToTerraform(struct?: IapWebIamBindingCondition
 */
 export class IapWebIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_iap_web_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

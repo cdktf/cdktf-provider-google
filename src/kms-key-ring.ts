@@ -56,6 +56,11 @@ function kmsKeyRingTimeoutsToTerraform(struct?: KmsKeyRingTimeouts): any {
 */
 export class KmsKeyRing extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_key_ring";
+
   // ===========
   // INITIALIZER
   // ===========

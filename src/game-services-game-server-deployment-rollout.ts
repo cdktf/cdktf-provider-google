@@ -108,6 +108,11 @@ function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: Gam
 */
 export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_game_services_game_server_deployment_rollout";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -18,7 +18,7 @@ export interface DataprocClusterConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#labels DataprocCluster#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name of the cluster, unique within the project and zone.
   * 
@@ -88,19 +88,19 @@ export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceCon
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_integrity_monitoring DataprocCluster#enable_integrity_monitoring}
   */
-  readonly enableIntegrityMonitoring?: boolean;
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether instances have Secure Boot enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_secure_boot DataprocCluster#enable_secure_boot}
   */
-  readonly enableSecureBoot?: boolean;
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Defines whether instances have the vTPM enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_vtpm DataprocCluster#enable_vtpm}
   */
-  readonly enableVtpm?: boolean;
+  readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
 function dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig): any {
@@ -118,13 +118,13 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#internal_ip_only DataprocCluster#internal_ip_only}
   */
-  readonly internalIpOnly?: boolean;
+  readonly internalIpOnly?: boolean | cdktf.IResolvable;
   /**
   * A map of the Compute Engine metadata entries to add to all instances
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#metadata DataprocCluster#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name or self_link of the Google Compute Engine network to the cluster will be part of. Conflicts with subnetwork. If neither is specified, this defaults to the "default" network.
   * 
@@ -395,7 +395,7 @@ Kerberos realm and the remote trusted realm, in a cross realm trust relationship
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_kerberos DataprocCluster#enable_kerberos}
   */
-  readonly enableKerberos?: boolean;
+  readonly enableKerberos?: boolean | cdktf.IResolvable;
   /**
   * The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.
   * 
@@ -515,7 +515,7 @@ export interface DataprocClusterClusterConfigSoftwareConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#override_properties DataprocCluster#override_properties}
   */
-  readonly overrideProperties?: { [key: string]: string };
+  readonly overrideProperties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: DataprocClusterClusterConfigSoftwareConfig): any {
@@ -747,6 +747,11 @@ function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeouts): a
 */
 export class DataprocCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_cluster";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -804,11 +809,11 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string }
-  public get labels(): { [key: string]: string } {
+  private _labels?: { [key: string]: string } | cdktf.IResolvable
+  public get labels(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
   }
-  public set labels(value: { [key: string]: string }) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {

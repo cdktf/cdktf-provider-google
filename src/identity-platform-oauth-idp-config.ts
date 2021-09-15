@@ -30,7 +30,7 @@ export interface IdentityPlatformOauthIdpConfigConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#enabled IdentityPlatformOauthIdpConfig#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * For OIDC Idps, the issuer identifier.
   * 
@@ -83,6 +83,11 @@ function identityPlatformOauthIdpConfigTimeoutsToTerraform(struct?: IdentityPlat
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html google_identity_platform_oauth_idp_config}
 */
 export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_identity_platform_oauth_idp_config";
 
   // ===========
   // INITIALIZER
@@ -166,11 +171,11 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

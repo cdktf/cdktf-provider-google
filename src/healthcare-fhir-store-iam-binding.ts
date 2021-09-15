@@ -56,6 +56,11 @@ function healthcareFhirStoreIamBindingConditionToTerraform(struct?: HealthcareFh
 */
 export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_fhir_store_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

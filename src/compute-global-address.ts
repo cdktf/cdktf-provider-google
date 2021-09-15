@@ -114,6 +114,11 @@ function computeGlobalAddressTimeoutsToTerraform(struct?: ComputeGlobalAddressTi
 */
 export class ComputeGlobalAddress extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_global_address";
+
   // ===========
   // INITIALIZER
   // ===========

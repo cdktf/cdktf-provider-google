@@ -84,6 +84,11 @@ export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComput
 */
 export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_backend_bucket";
+
   // ===========
   // INITIALIZER
   // ===========

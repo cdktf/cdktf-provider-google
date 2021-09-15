@@ -24,6 +24,11 @@ export interface OrganizationIamPolicyConfig extends cdktf.TerraformMetaArgument
 */
 export class OrganizationIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

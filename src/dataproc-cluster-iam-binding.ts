@@ -64,6 +64,11 @@ function dataprocClusterIamBindingConditionToTerraform(struct?: DataprocClusterI
 */
 export class DataprocClusterIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dataproc_cluster_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

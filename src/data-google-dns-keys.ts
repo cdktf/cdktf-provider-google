@@ -145,6 +145,11 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
 */
 export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dns_keys";
+
   // ===========
   // INITIALIZER
   // ===========

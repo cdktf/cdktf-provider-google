@@ -64,6 +64,11 @@ function computeDiskIamBindingConditionToTerraform(struct?: ComputeDiskIamBindin
 */
 export class ComputeDiskIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_disk_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -22,6 +22,11 @@ export interface HealthcareDatasetIamPolicyConfig extends cdktf.TerraformMetaArg
 */
 export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_dataset_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -59,7 +59,7 @@ Account Users IAM roles for the target account.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget.html#disable_default_iam_recipients BillingBudget#disable_default_iam_recipients}
   */
-  readonly disableDefaultIamRecipients?: boolean;
+  readonly disableDefaultIamRecipients?: boolean | cdktf.IResolvable;
   /**
   * The full resource name of a monitoring notification
 channel in the form
@@ -144,7 +144,7 @@ use the 'specified_amount' block.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget.html#last_period_amount BillingBudget#last_period_amount}
   */
-  readonly lastPeriodAmount?: boolean;
+  readonly lastPeriodAmount?: boolean | cdktf.IResolvable;
   /**
   * specified_amount block
   * 
@@ -186,7 +186,7 @@ this set of labeled resources should be included in the budget.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget.html#labels BillingBudget#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * A set of projects of the form projects/{project_number},
 specifying that usage from only this set of projects should be
@@ -287,6 +287,11 @@ function billingBudgetTimeoutsToTerraform(struct?: BillingBudgetTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_budget.html google_billing_budget}
 */
 export class BillingBudget extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_billing_budget";
 
   // ===========
   // INITIALIZER

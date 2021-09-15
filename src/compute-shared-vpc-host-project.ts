@@ -45,6 +45,11 @@ function computeSharedVpcHostProjectTimeoutsToTerraform(struct?: ComputeSharedVp
 */
 export class ComputeSharedVpcHostProject extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_shared_vpc_host_project";
+
   // ===========
   // INITIALIZER
   // ===========

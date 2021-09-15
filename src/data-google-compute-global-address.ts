@@ -22,6 +22,11 @@ export interface DataGoogleComputeGlobalAddressConfig extends cdktf.TerraformMet
 */
 export class DataGoogleComputeGlobalAddress extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_global_address";
+
   // ===========
   // INITIALIZER
   // ===========

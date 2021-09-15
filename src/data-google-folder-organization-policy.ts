@@ -86,6 +86,11 @@ export class DataGoogleFolderOrganizationPolicyRestorePolicy extends cdktf.Compl
 */
 export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_organization_policy";
+
   // ===========
   // INITIALIZER
   // ===========

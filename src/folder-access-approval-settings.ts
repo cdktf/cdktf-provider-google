@@ -110,6 +110,11 @@ function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessAp
 */
 export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_folder_access_approval_settings";
+
   // ===========
   // INITIALIZER
   // ===========

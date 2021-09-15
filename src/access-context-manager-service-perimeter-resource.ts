@@ -53,6 +53,11 @@ function accessContextManagerServicePerimeterResourceTimeoutsToTerraform(struct?
 */
 export class AccessContextManagerServicePerimeterResource extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_access_context_manager_service_perimeter_resource";
+
   // ===========
   // INITIALIZER
   // ===========

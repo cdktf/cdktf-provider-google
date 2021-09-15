@@ -20,6 +20,11 @@ export interface DataGoogleProjectConfig extends cdktf.TerraformMetaArguments {
 */
 export class DataGoogleProject extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_project";
+
   // ===========
   // INITIALIZER
   // ===========

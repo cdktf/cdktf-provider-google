@@ -26,6 +26,11 @@ export interface DataGoogleComputeZonesConfig extends cdktf.TerraformMetaArgumen
 */
 export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_zones";
+
   // ===========
   // INITIALIZER
   // ===========

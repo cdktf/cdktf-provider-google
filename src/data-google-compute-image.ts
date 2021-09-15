@@ -30,6 +30,11 @@ export interface DataGoogleComputeImageConfig extends cdktf.TerraformMetaArgumen
 */
 export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_image";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -25,7 +25,7 @@ key-value pair.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html#labels GameServicesGameServerDeployment#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Location of the Deployment.
   * 
@@ -72,6 +72,11 @@ function gameServicesGameServerDeploymentTimeoutsToTerraform(struct?: GameServic
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment.html google_game_services_game_server_deployment}
 */
 export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_game_services_game_server_deployment";
 
   // ===========
   // INITIALIZER
@@ -142,11 +147,11 @@ export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

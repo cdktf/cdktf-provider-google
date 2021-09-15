@@ -35,7 +35,7 @@ RFC1035.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#labels ComputeImage#labels}
   */
-  readonly labels?: { [key: string]: string };
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Any applicable license URI.
   * 
@@ -193,6 +193,11 @@ function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeouts): any {
 */
 export class ComputeImage extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_image";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -303,11 +308,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string };
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
   public get labels() {
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._labels = value;
   }
   public resetLabels() {

@@ -63,6 +63,11 @@ function apigeeEnvgroupTimeoutsToTerraform(struct?: ApigeeEnvgroupTimeouts): any
 */
 export class ApigeeEnvgroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_apigee_envgroup";
+
   // ===========
   // INITIALIZER
   // ===========

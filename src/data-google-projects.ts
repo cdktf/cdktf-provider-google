@@ -55,6 +55,11 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 */
 export class DataGoogleProjects extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_projects";
+
   // ===========
   // INITIALIZER
   // ===========

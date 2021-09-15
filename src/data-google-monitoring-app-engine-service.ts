@@ -33,6 +33,11 @@ export class DataGoogleMonitoringAppEngineServiceTelemetry extends cdktf.Complex
 */
 export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_app_engine_service";
+
   // ===========
   // INITIALIZER
   // ===========

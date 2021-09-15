@@ -58,6 +58,11 @@ function organizationIamMemberConditionToTerraform(struct?: OrganizationIamMembe
 */
 export class OrganizationIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_organization_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

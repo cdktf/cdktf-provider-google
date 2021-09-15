@@ -22,6 +22,11 @@ export interface TagsTagKeyIamPolicyConfig extends cdktf.TerraformMetaArguments 
 */
 export class TagsTagKeyIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_tags_tag_key_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

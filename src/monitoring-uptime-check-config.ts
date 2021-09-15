@@ -136,13 +136,13 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#headers MonitoringUptimeCheckConfig#headers}
   */
-  readonly headers?: { [key: string]: string };
+  readonly headers?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#mask_headers MonitoringUptimeCheckConfig#mask_headers}
   */
-  readonly maskHeaders?: boolean;
+  readonly maskHeaders?: boolean | cdktf.IResolvable;
   /**
   * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
   * 
@@ -166,13 +166,13 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#use_ssl MonitoringUptimeCheckConfig#use_ssl}
   */
-  readonly useSsl?: boolean;
+  readonly useSsl?: boolean | cdktf.IResolvable;
   /**
   * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
   */
-  readonly validateSsl?: boolean;
+  readonly validateSsl?: boolean | cdktf.IResolvable;
   /**
   * auth_info block
   * 
@@ -203,7 +203,7 @@ export interface MonitoringUptimeCheckConfigMonitoredResource {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#labels MonitoringUptimeCheckConfig#labels}
   */
-  readonly labels: { [key: string]: string };
+  readonly labels: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
   * 
@@ -288,6 +288,11 @@ function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: MonitoringUptim
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html google_monitoring_uptime_check_config}
 */
 export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_monitoring_uptime_check_config";
 
   // ===========
   // INITIALIZER

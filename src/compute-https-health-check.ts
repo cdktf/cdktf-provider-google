@@ -118,6 +118,11 @@ function computeHttpsHealthCheckTimeoutsToTerraform(struct?: ComputeHttpsHealthC
 */
 export class ComputeHttpsHealthCheck extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_https_health_check";
+
   // ===========
   // INITIALIZER
   // ===========

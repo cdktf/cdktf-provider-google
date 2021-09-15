@@ -56,6 +56,11 @@ function billingAccountIamBindingConditionToTerraform(struct?: BillingAccountIam
 */
 export class BillingAccountIamBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_billing_account_iam_binding";
+
   // ===========
   // INITIALIZER
   // ===========

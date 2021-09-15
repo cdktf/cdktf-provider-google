@@ -22,6 +22,11 @@ export interface EndpointsServiceIamPolicyConfig extends cdktf.TerraformMetaArgu
 */
 export class EndpointsServiceIamPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_endpoints_service_iam_policy";
+
   // ===========
   // INITIALIZER
   // ===========

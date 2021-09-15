@@ -39,6 +39,11 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
 */
 export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_game_services_game_server_deployment_rollout";
+
   // ===========
   // INITIALIZER
   // ===========

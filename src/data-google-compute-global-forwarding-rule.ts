@@ -54,6 +54,11 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends cdktf.
 */
 export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_global_forwarding_rule";
+
   // ===========
   // INITIALIZER
   // ===========

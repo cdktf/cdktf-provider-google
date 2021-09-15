@@ -60,6 +60,11 @@ function healthcareConsentStoreIamMemberConditionToTerraform(struct?: Healthcare
 */
 export class HealthcareConsentStoreIamMember extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_healthcare_consent_store_iam_member";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -51,7 +51,7 @@ it is connecting to
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#validate_for_proxyless ComputeTargetGrpcProxy#validate_for_proxyless}
   */
-  readonly validateForProxyless?: boolean;
+  readonly validateForProxyless?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -88,6 +88,11 @@ function computeTargetGrpcProxyTimeoutsToTerraform(struct?: ComputeTargetGrpcPro
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html google_compute_target_grpc_proxy}
 */
 export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_compute_target_grpc_proxy";
 
   // ===========
   // INITIALIZER
@@ -210,11 +215,11 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // validate_for_proxyless - computed: false, optional: true, required: false
-  private _validateForProxyless?: boolean;
+  private _validateForProxyless?: boolean | cdktf.IResolvable;
   public get validateForProxyless() {
     return this.getBooleanAttribute('validate_for_proxyless');
   }
-  public set validateForProxyless(value: boolean ) {
+  public set validateForProxyless(value: boolean | cdktf.IResolvable ) {
     this._validateForProxyless = value;
   }
   public resetValidateForProxyless() {

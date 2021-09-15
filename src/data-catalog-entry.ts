@@ -195,6 +195,11 @@ function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeouts):
 */
 export class DataCatalogEntry extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_catalog_entry";
+
   // ===========
   // INITIALIZER
   // ===========

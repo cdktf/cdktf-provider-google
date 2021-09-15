@@ -296,6 +296,11 @@ function dataLossPreventionStoredInfoTypeTimeoutsToTerraform(struct?: DataLossPr
 */
 export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_data_loss_prevention_stored_info_type";
+
   // ===========
   // INITIALIZER
   // ===========

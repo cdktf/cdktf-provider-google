@@ -58,6 +58,11 @@ function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTime
 */
 export class KmsSecretCiphertext extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_kms_secret_ciphertext";
+
   // ===========
   // INITIALIZER
   // ===========

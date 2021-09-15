@@ -47,7 +47,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_intent.html#is_fallback DialogflowIntent#is_fallback}
   */
-  readonly isFallback?: boolean;
+  readonly isFallback?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
@@ -55,7 +55,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_intent.html#ml_disabled DialogflowIntent#ml_disabled}
   */
-  readonly mlDisabled?: boolean;
+  readonly mlDisabled?: boolean | cdktf.IResolvable;
   /**
   * The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
@@ -81,7 +81,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_intent.html#reset_contexts DialogflowIntent#reset_contexts}
   */
-  readonly resetContexts?: boolean;
+  readonly resetContexts?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -139,6 +139,11 @@ function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_intent.html google_dialogflow_intent}
 */
 export class DialogflowIntent extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "google_dialogflow_intent";
 
   // ===========
   // INITIALIZER
@@ -269,11 +274,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // is_fallback - computed: true, optional: true, required: false
-  private _isFallback?: boolean;
+  private _isFallback?: boolean | cdktf.IResolvable;
   public get isFallback() {
     return this.getBooleanAttribute('is_fallback');
   }
-  public set isFallback(value: boolean) {
+  public set isFallback(value: boolean | cdktf.IResolvable) {
     this._isFallback = value;
   }
   public resetIsFallback() {
@@ -285,11 +290,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // ml_disabled - computed: true, optional: true, required: false
-  private _mlDisabled?: boolean;
+  private _mlDisabled?: boolean | cdktf.IResolvable;
   public get mlDisabled() {
     return this.getBooleanAttribute('ml_disabled');
   }
-  public set mlDisabled(value: boolean) {
+  public set mlDisabled(value: boolean | cdktf.IResolvable) {
     this._mlDisabled = value;
   }
   public resetMlDisabled() {
@@ -354,11 +359,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // reset_contexts - computed: true, optional: true, required: false
-  private _resetContexts?: boolean;
+  private _resetContexts?: boolean | cdktf.IResolvable;
   public get resetContexts() {
     return this.getBooleanAttribute('reset_contexts');
   }
-  public set resetContexts(value: boolean) {
+  public set resetContexts(value: boolean | cdktf.IResolvable) {
     this._resetContexts = value;
   }
   public resetResetContexts() {
