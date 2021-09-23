@@ -8,204 +8,137 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * This field can be used with internal load balancer or network load balancer
-when the forwarding rule references a backend service, or with the target
-field when it references a TargetInstance. Set this to true to
-allow packets addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
-must be set to true when the protocol is set to L3_DEFAULT.
-Cannot be set if port or portRange are set.
+  * This field is used along with the `backend_service` field for internal load balancing or with the `target` field for internal TargetInstance. This field cannot be used with `port` or `portRange` fields. When the load balancing scheme is `INTERNAL` and protocol is TCP/UDP, specify this field to allow packets addressed to any ports will be forwarded to the backends configured with this forwarding rule.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#all_ports ComputeForwardingRule#all_ports}
   */
   readonly allPorts?: boolean | cdktf.IResolvable;
   /**
-  * If true, clients can access ILB from all regions.
-Otherwise only allows from the local region the ILB is located at.
+  * This field is used along with the `backend_service` field for internal load balancing or with the `target` field for internal TargetInstance. If the field is set to `TRUE`, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#allow_global_access ComputeForwardingRule#allow_global_access}
   */
   readonly allowGlobalAccess?: boolean | cdktf.IResolvable;
   /**
-  * A BackendService to receive the matched traffic. This is used only
-for INTERNAL load balancing.
+  * This field is only used for `INTERNAL` load balancing. For internal load balancing, this field identifies the BackendService resource to receive the matched traffic.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#backend_service ComputeForwardingRule#backend_service}
   */
   readonly backendService?: string;
   /**
-  * An optional description of this resource. Provide this property when
-you create the resource.
+  * An optional description of this resource. Provide this property when you create the resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#description ComputeForwardingRule#description}
   */
   readonly description?: string;
   /**
-  * The IP address that this forwarding rule serves. When a client sends
-traffic to this IP address, the forwarding rule directs the traffic to
-the target that you specify in the forwarding rule. The
-loadBalancingScheme and the forwarding rule's target determine the
-type of IP address that you can use. For detailed information, refer
-to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-
-An address can be specified either by a literal IP address or a
-reference to an existing Address resource. If you don't specify a
-reserved IP address, an ephemeral IP address is assigned.
-
-The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
-that has validateForProxyless field set to true.
-
-For Private Service Connect forwarding rules that forward traffic to
-Google APIs, IP address must be provided.
+  * IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in `https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name` * Partial URL or by name, as in: * `projects/project_id/regions/region/addresses/address-name` * `regions/region/addresses/address-name` * `global/addresses/address-name` * `address-name` The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ip_address ComputeForwardingRule#ip_address}
   */
   readonly ipAddress?: string;
   /**
-  * The IP protocol to which this rule applies.
-
-When the load balancing scheme is INTERNAL, only TCP and UDP are
-valid. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP", "L3_DEFAULT"]
+  * The IP protocol to which this rule applies. For protocol forwarding, valid options are `TCP`, `UDP`, `ESP`, `AH`, `SCTP` or `ICMP`. For Internal TCP/UDP Load Balancing, the load balancing scheme is `INTERNAL`, and one of `TCP` or `UDP` are valid. For Traffic Director, the load balancing scheme is `INTERNAL_SELF_MANAGED`, and only `TCP`is valid. For Internal HTTP(S) Load Balancing, the load balancing scheme is `INTERNAL_MANAGED`, and only `TCP` is valid. For HTTP(S), SSL Proxy, and TCP Proxy Load Balancing, the load balancing scheme is `EXTERNAL` and only `TCP` is valid. For Network TCP/UDP Load Balancing, the load balancing scheme is `EXTERNAL`, and one of `TCP` or `UDP` is valid.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ip_protocol ComputeForwardingRule#ip_protocol}
   */
   readonly ipProtocol?: string;
   /**
-  * Indicates whether or not this load balancer can be used
-as a collector for packet mirroring. To prevent mirroring loops,
-instances behind this load balancer will not have their traffic
-mirrored even if a PacketMirroring rule applies to them. This
-can only be set to true for load balancers that have their
-loadBalancingScheme set to INTERNAL.
+  * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops, instances behind this load balancer will not have their traffic mirrored even if a `PacketMirroring` rule applies to them. This can only be set to true for load balancers that have their `loadBalancingScheme` set to `INTERNAL`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#is_mirroring_collector ComputeForwardingRule#is_mirroring_collector}
   */
   readonly isMirroringCollector?: boolean | cdktf.IResolvable;
   /**
-  * This signifies what the ForwardingRule will be used for and can be
-EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
-Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
-and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
-INTERNAL is used for protocol forwarding to VMs from an internal IP address,
-and internal TCP/UDP load balancers.
-INTERNAL_MANAGED is used for internal HTTP(S) load balancers. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL", "INTERNAL_MANAGED"]
+  * Labels to apply to this rule.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#labels ComputeForwardingRule#labels}
+  */
+  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  /**
+  * Specifies the forwarding rule type.
+
+*   `EXTERNAL` is used for:
+    *   Classic Cloud VPN gateways
+    *   Protocol forwarding to VMs from an external IP address
+    *   The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP
+*   `INTERNAL` is used for:
+    *   Protocol forwarding to VMs from an internal IP address
+    *   Internal TCP/UDP load balancers
+*   `INTERNAL_MANAGED` is used for:
+    *   Internal HTTP(S) load balancers
+*   `INTERNAL_SELF_MANAGED` is used for:
+    *   Traffic Director
+
+For more information about forwarding rules, refer to [Forwarding rule concepts](/load-balancing/docs/forwarding-rule-concepts). Possible values: INVALID, INTERNAL, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED, EXTERNAL
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#load_balancing_scheme ComputeForwardingRule#load_balancing_scheme}
   */
   readonly loadBalancingScheme?: string;
   /**
-  * Name of the resource; provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#name ComputeForwardingRule#name}
   */
   readonly name: string;
   /**
-  * For internal load balancing, this field identifies the network that
-the load balanced IP should belong to for this Forwarding Rule. If
-this field is not specified, the default network will be used.
-This field is only used for INTERNAL load balancing.
+  * This field is not used for external load balancing. For `INTERNAL` and `INTERNAL_SELF_MANAGED` load balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#network ComputeForwardingRule#network}
   */
   readonly network?: string;
   /**
-  * The networking tier used for configuring this address. If this field is not
-specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
+  * This signifies the networking tier used for configuring this load balancer and can only take the following values: `PREMIUM`, `STANDARD`. For regional ForwardingRule, the valid values are `PREMIUM` and `STANDARD`. For GlobalForwardingRule, the valid value is `PREMIUM`. If this field is not specified, it is assumed to be `PREMIUM`. If `IPAddress` is specified, this value must be equal to the networkTier of the Address.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#network_tier ComputeForwardingRule#network_tier}
   */
   readonly networkTier?: string;
   /**
-  * This field is used along with the target field for TargetHttpProxy,
-TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
-TargetPool, TargetInstance.
+  * When the load balancing scheme is `EXTERNAL`, `INTERNAL_SELF_MANAGED` and `INTERNAL_MANAGED`, you can specify a `port_range`. Use with a forwarding rule that points to a target proxy or a target pool. Do not use with a forwarding rule that points to a backend service. This field is used along with the `target` field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance. Applicable only when `IPProtocol` is `TCP`, `UDP`, or `SCTP`, only packets addressed to ports in the specified range will be forwarded to `target`. Forwarding rules with the same `[IPAddress, IPProtocol]` pair must have disjoint port ranges. Some types of forwarding target have constraints on the acceptable ports:
 
-Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets
-addressed to ports in the specified range will be forwarded to target.
-Forwarding rules with the same [IPAddress, IPProtocol] pair must have
-disjoint port ranges.
+*   TargetHttpProxy: 80, 8080
+*   TargetHttpsProxy: 443
+*   TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222
+*   TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222
+*   TargetVpnGateway: 500, 4500
 
-Some types of forwarding target have constraints on the acceptable
-ports:
-
-* TargetHttpProxy: 80, 8080
-* TargetHttpsProxy: 443
-* TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetVpnGateway: 500, 4500
+@pattern: d+(?:-d+)?
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#port_range ComputeForwardingRule#port_range}
   */
   readonly portRange?: string;
   /**
-  * This field is used along with internal load balancing and network
-load balancer when the forwarding rule references a backend service
-and when protocol is not L3_DEFAULT.
-
-A single port or a comma separated list of ports can be configured.
-Only packets addressed to these ports will be forwarded to the backends
-configured with this forwarding rule.
-
-You can only use one of ports and portRange, or allPorts.
-The three are mutually exclusive.
-
-You may specify a maximum of up to 5 ports, which can be non-contiguous.
+  * This field is used along with the `backend_service` field for internal load balancing. When the load balancing scheme is `INTERNAL`, a list of ports can be configured, for example, ['80'], ['8000','9000']. Only packets addressed to these ports are forwarded to the backends configured with the forwarding rule. If the forwarding rule's loadBalancingScheme is INTERNAL, you can specify ports in one of the following ways: * A list of up to five ports, which can be non-contiguous * Keyword `ALL`, which causes the forwarding rule to forward traffic on any port of the forwarding rule's protocol. @pattern: d+(?:-d+)? For more information, refer to [Port specifications](/load-balancing/docs/forwarding-rule-concepts#port_specifications).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#ports ComputeForwardingRule#ports}
   */
   readonly ports?: string[];
   /**
+  * The project this resource belongs in.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#project ComputeForwardingRule#project}
   */
   readonly project?: string;
   /**
-  * A reference to the region where the regional forwarding rule resides.
-This field is not applicable to global forwarding rules.
+  * The location of this resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#region ComputeForwardingRule#region}
   */
   readonly region?: string;
   /**
-  * An optional prefix to the service name for this Forwarding Rule.
-If specified, will be the first label of the fully qualified service
-name.
-
-The label must be 1-63 characters long, and comply with RFC1035.
-Specifically, the label must be 1-63 characters long and match the
-regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first
-character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
-
-This field is only used for INTERNAL load balancing.
+  * An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name. The label must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the label must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. This field is only used for internal load balancing.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#service_label ComputeForwardingRule#service_label}
   */
   readonly serviceLabel?: string;
   /**
-  * The subnetwork that the load balanced IP should belong to for this
-Forwarding Rule.  This field is only used for INTERNAL load balancing.
-
-If the network specified is in auto subnet mode, this field is
-optional. However, if the network is in custom subnet mode, a
-subnetwork must be specified.
+  * This field is only used for `INTERNAL` load balancing. For internal load balancing, this field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule. If the network specified is in auto subnet mode, this field is optional. However, if the network is in custom subnet mode, a subnetwork must be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#subnetwork ComputeForwardingRule#subnetwork}
   */
   readonly subnetwork?: string;
   /**
-  * The URL of the target resource to receive the matched traffic.
-The target must live in the same region as the forwarding rule.
-The forwarded traffic must be of a type appropriate to the target
-object.
+  * The URL of the target resource to receive the matched traffic. For regional forwarding rules, this target must live in the same region as the forwarding rule. For global forwarding rules, this target must be a global load balancing resource. The forwarded traffic must be of a type appropriate to the target object. For `INTERNAL_SELF_MANAGED` load balancing, only `targetHttpProxy` is valid, not `targetHttpsProxy`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule.html#target ComputeForwardingRule#target}
   */
@@ -281,6 +214,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     this._ipAddress = config.ipAddress;
     this._ipProtocol = config.ipProtocol;
     this._isMirroringCollector = config.isMirroringCollector;
+    this._labels = config.labels;
     this._loadBalancingScheme = config.loadBalancingScheme;
     this._name = config.name;
     this._network = config.network;
@@ -419,6 +353,27 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get isMirroringCollectorInput() {
     return this._isMirroringCollector
+  }
+
+  // label_fingerprint - computed: true, optional: false, required: false
+  public get labelFingerprint() {
+    return this.getStringAttribute('label_fingerprint');
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  public get labels() {
+    return this.interpolationForAttribute('labels') as any;
+  }
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
@@ -633,6 +588,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
       is_mirroring_collector: cdktf.booleanToTerraform(this._isMirroringCollector),
+      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),

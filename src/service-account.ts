@@ -20,6 +20,12 @@ export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Whether the service account is disabled. Defaults to false
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#disabled ServiceAccount#disabled}
+  */
+  readonly disabled?: boolean | cdktf.IResolvable;
+  /**
   * The display name for the service account. Can be updated without creating a new resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account.html#display_name ServiceAccount#display_name}
@@ -87,6 +93,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
     });
     this._accountId = config.accountId;
     this._description = config.description;
+    this._disabled = config.disabled;
     this._displayName = config.displayName;
     this._project = config.project;
     this._timeouts = config.timeouts;
@@ -123,6 +130,22 @@ export class ServiceAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description
+  }
+
+  // disabled - computed: false, optional: true, required: false
+  private _disabled?: boolean | cdktf.IResolvable;
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean | cdktf.IResolvable ) {
+    this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
   }
 
   // display_name - computed: false, optional: true, required: false
@@ -201,6 +224,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
     return {
       account_id: cdktf.stringToTerraform(this._accountId),
       description: cdktf.stringToTerraform(this._description),
+      disabled: cdktf.booleanToTerraform(this._disabled),
       display_name: cdktf.stringToTerraform(this._displayName),
       project: cdktf.stringToTerraform(this._project),
       timeouts: serviceAccountTimeoutsToTerraform(this._timeouts),

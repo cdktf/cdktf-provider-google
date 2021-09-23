@@ -271,12 +271,19 @@ export interface StorageTransferJobTransferSpecGcsDataSink {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#bucket_name StorageTransferJob#bucket_name}
   */
   readonly bucketName: string;
+  /**
+  * Google Cloud Storage path in bucket to transfer
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#path StorageTransferJob#path}
+  */
+  readonly path?: string;
 }
 
 function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     bucket_name: cdktf.stringToTerraform(struct!.bucketName),
+    path: cdktf.stringToTerraform(struct!.path),
   }
 }
 
@@ -287,12 +294,19 @@ export interface StorageTransferJobTransferSpecGcsDataSource {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#bucket_name StorageTransferJob#bucket_name}
   */
   readonly bucketName: string;
+  /**
+  * Google Cloud Storage path in bucket to transfer
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job.html#path StorageTransferJob#path}
+  */
+  readonly path?: string;
 }
 
 function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     bucket_name: cdktf.stringToTerraform(struct!.bucketName),
+    path: cdktf.stringToTerraform(struct!.path),
   }
 }
 

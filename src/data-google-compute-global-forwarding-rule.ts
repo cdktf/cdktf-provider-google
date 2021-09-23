@@ -8,18 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Name of the resource; provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_global_forwarding_rule.html#name DataGoogleComputeGlobalForwardingRule#name}
   */
   readonly name: string;
   /**
+  * The project this resource belongs in.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_global_forwarding_rule.html#project DataGoogleComputeGlobalForwardingRule#project}
   */
   readonly project?: string;
@@ -114,6 +110,16 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
     return this.getStringAttribute('ip_version');
   }
 
+  // label_fingerprint - computed: true, optional: false, required: false
+  public get labelFingerprint() {
+    return this.getStringAttribute('label_fingerprint');
+  }
+
+  // labels - computed: true, optional: false, required: false
+  public labels(key: string): string {
+    return new cdktf.StringMap(this, 'labels').lookup(key);
+  }
+
   // load_balancing_scheme - computed: true, optional: false, required: false
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
@@ -135,6 +141,11 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network - computed: true, optional: false, required: false
+  public get network() {
+    return this.getStringAttribute('network');
   }
 
   // port_range - computed: true, optional: false, required: false
