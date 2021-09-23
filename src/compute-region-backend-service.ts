@@ -185,6 +185,12 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
   */
   readonly failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy[];
   /**
+  * iap block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#iap ComputeRegionBackendService#iap}
+  */
+  readonly iap?: ComputeRegionBackendServiceIap[];
+  /**
   * log_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#log_config ComputeRegionBackendService#log_config}
@@ -713,6 +719,29 @@ function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRe
   }
 }
 
+export interface ComputeRegionBackendServiceIap {
+  /**
+  * OAuth2 Client ID for IAP
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#oauth2_client_id ComputeRegionBackendService#oauth2_client_id}
+  */
+  readonly oauth2ClientId: string;
+  /**
+  * OAuth2 Client Secret for IAP
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#oauth2_client_secret ComputeRegionBackendService#oauth2_client_secret}
+  */
+  readonly oauth2ClientSecret: string;
+}
+
+function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegionBackendServiceIap): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    oauth2_client_id: cdktf.stringToTerraform(struct!.oauth2ClientId),
+    oauth2_client_secret: cdktf.stringToTerraform(struct!.oauth2ClientSecret),
+  }
+}
+
 export interface ComputeRegionBackendServiceLogConfig {
   /**
   * Whether to enable logging for the load balancer traffic served by this backend service.
@@ -977,6 +1006,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     this._circuitBreakers = config.circuitBreakers;
     this._consistentHash = config.consistentHash;
     this._failoverPolicy = config.failoverPolicy;
+    this._iap = config.iap;
     this._logConfig = config.logConfig;
     this._outlierDetection = config.outlierDetection;
     this._timeouts = config.timeouts;
@@ -1323,6 +1353,22 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     return this._failoverPolicy
   }
 
+  // iap - computed: false, optional: true, required: false
+  private _iap?: ComputeRegionBackendServiceIap[];
+  public get iap() {
+    return this.interpolationForAttribute('iap') as any;
+  }
+  public set iap(value: ComputeRegionBackendServiceIap[] ) {
+    this._iap = value;
+  }
+  public resetIap() {
+    this._iap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iapInput() {
+    return this._iap
+  }
+
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeRegionBackendServiceLogConfig[];
   public get logConfig() {
@@ -1397,6 +1443,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       circuit_breakers: cdktf.listMapper(computeRegionBackendServiceCircuitBreakersToTerraform)(this._circuitBreakers),
       consistent_hash: cdktf.listMapper(computeRegionBackendServiceConsistentHashToTerraform)(this._consistentHash),
       failover_policy: cdktf.listMapper(computeRegionBackendServiceFailoverPolicyToTerraform)(this._failoverPolicy),
+      iap: cdktf.listMapper(computeRegionBackendServiceIapToTerraform)(this._iap),
       log_config: cdktf.listMapper(computeRegionBackendServiceLogConfigToTerraform)(this._logConfig),
       outlier_detection: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionToTerraform)(this._outlierDetection),
       timeouts: computeRegionBackendServiceTimeoutsToTerraform(this._timeouts),
