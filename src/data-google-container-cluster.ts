@@ -175,6 +175,13 @@ export class DataGoogleContainerClusterIpAllocationPolicy extends cdktf.ComplexC
     return this.getStringAttribute('services_secondary_range_name');
   }
 }
+export class DataGoogleContainerClusterLoggingConfig extends cdktf.ComplexComputedList {
+
+  // enable_components - computed: true, optional: false, required: false
+  public get enableComponents() {
+    return this.getListAttribute('enable_components');
+  }
+}
 export class DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow extends cdktf.ComplexComputedList {
 
   // duration - computed: true, optional: false, required: false
@@ -296,6 +303,13 @@ export class DataGoogleContainerClusterMasterAuthorizedNetworksConfig extends cd
     return this.interpolationForAttribute('cidr_blocks') as any;
   }
 }
+export class DataGoogleContainerClusterMonitoringConfig extends cdktf.ComplexComputedList {
+
+  // enable_components - computed: true, optional: false, required: false
+  public get enableComponents() {
+    return this.getListAttribute('enable_components');
+  }
+}
 export class DataGoogleContainerClusterNetworkPolicy extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
@@ -350,6 +364,11 @@ export class DataGoogleContainerClusterNodeConfigTaint extends cdktf.ComplexComp
   }
 }
 export class DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig extends cdktf.ComplexComputedList {
+
+  // mode - computed: true, optional: false, required: false
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
 
   // node_metadata - computed: true, optional: false, required: false
   public get nodeMetadata() {
@@ -504,6 +523,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigTaint extends cdktf.Com
   }
 }
 export class DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfig extends cdktf.ComplexComputedList {
+
+  // mode - computed: true, optional: false, required: false
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
 
   // node_metadata - computed: true, optional: false, required: false
   public get nodeMetadata() {
@@ -930,6 +954,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
     return this._location
   }
 
+  // logging_config - computed: true, optional: false, required: false
+  public loggingConfig(index: string) {
+    return new DataGoogleContainerClusterLoggingConfig(this, 'logging_config', index);
+  }
+
   // logging_service - computed: true, optional: false, required: false
   public get loggingService() {
     return this.getStringAttribute('logging_service');
@@ -958,6 +987,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // min_master_version - computed: true, optional: false, required: false
   public get minMasterVersion() {
     return this.getStringAttribute('min_master_version');
+  }
+
+  // monitoring_config - computed: true, optional: false, required: false
+  public monitoringConfig(index: string) {
+    return new DataGoogleContainerClusterMonitoringConfig(this, 'monitoring_config', index);
   }
 
   // monitoring_service - computed: true, optional: false, required: false

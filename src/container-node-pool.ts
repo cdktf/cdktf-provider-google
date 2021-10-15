@@ -212,16 +212,23 @@ function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: C
 
 export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
   /**
+  * Mode is the configuration for how to expose metadata to workloads running on the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#mode ContainerNodePool#mode}
+  */
+  readonly mode?: string;
+  /**
   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#node_metadata ContainerNodePool#node_metadata}
   */
-  readonly nodeMetadata: string;
+  readonly nodeMetadata?: string;
 }
 
 function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerNodePoolNodeConfigWorkloadMetadataConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    mode: cdktf.stringToTerraform(struct!.mode),
     node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
   }
 }

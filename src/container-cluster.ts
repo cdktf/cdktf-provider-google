@@ -200,6 +200,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ipAllocationPolicy?: ContainerClusterIpAllocationPolicy[];
   /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#logging_config ContainerCluster#logging_config}
+  */
+  readonly loggingConfig?: ContainerClusterLoggingConfig[];
+  /**
   * maintenance_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#maintenance_policy ContainerCluster#maintenance_policy}
@@ -217,6 +223,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#master_authorized_networks_config ContainerCluster#master_authorized_networks_config}
   */
   readonly masterAuthorizedNetworksConfig?: ContainerClusterMasterAuthorizedNetworksConfig[];
+  /**
+  * monitoring_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#monitoring_config ContainerCluster#monitoring_config}
+  */
+  readonly monitoringConfig?: ContainerClusterMonitoringConfig[];
   /**
   * network_policy block
   * 
@@ -551,6 +563,22 @@ function containerClusterIpAllocationPolicyToTerraform(struct?: ContainerCluster
   }
 }
 
+export interface ContainerClusterLoggingConfig {
+  /**
+  * GKE components exposing logs. Valid values include SYSTEM_COMPONENTS and WORKLOADS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_components ContainerCluster#enable_components}
+  */
+  readonly enableComponents: string[];
+}
+
+function containerClusterLoggingConfigToTerraform(struct?: ContainerClusterLoggingConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.enableComponents),
+  }
+}
+
 export interface ContainerClusterMaintenancePolicyDailyMaintenanceWindow {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#start_time ContainerCluster#start_time}
@@ -728,6 +756,22 @@ function containerClusterMasterAuthorizedNetworksConfigToTerraform(struct?: Cont
   }
 }
 
+export interface ContainerClusterMonitoringConfig {
+  /**
+  * GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#enable_components ContainerCluster#enable_components}
+  */
+  readonly enableComponents: string[];
+}
+
+function containerClusterMonitoringConfigToTerraform(struct?: ContainerClusterMonitoringConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.enableComponents),
+  }
+}
+
 export interface ContainerClusterNetworkPolicy {
   /**
   * Whether network policy is enabled on the cluster.
@@ -819,16 +863,23 @@ function containerClusterNodeConfigShieldedInstanceConfigToTerraform(struct?: Co
 
 export interface ContainerClusterNodeConfigWorkloadMetadataConfig {
   /**
+  * Mode is the configuration for how to expose metadata to workloads running on the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#mode ContainerCluster#mode}
+  */
+  readonly mode?: string;
+  /**
   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#node_metadata ContainerCluster#node_metadata}
   */
-  readonly nodeMetadata: string;
+  readonly nodeMetadata?: string;
 }
 
 function containerClusterNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerClusterNodeConfigWorkloadMetadataConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    mode: cdktf.stringToTerraform(struct!.mode),
     node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
   }
 }
@@ -1068,16 +1119,23 @@ function containerClusterNodePoolNodeConfigShieldedInstanceConfigToTerraform(str
 
 export interface ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig {
   /**
+  * Mode is the configuration for how to expose metadata to workloads running on the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#mode ContainerCluster#mode}
+  */
+  readonly mode?: string;
+  /**
   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#node_metadata ContainerCluster#node_metadata}
   */
-  readonly nodeMetadata: string;
+  readonly nodeMetadata?: string;
 }
 
 function containerClusterNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    mode: cdktf.stringToTerraform(struct!.mode),
     node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
   }
 }
@@ -1573,9 +1631,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._databaseEncryption = config.databaseEncryption;
     this._defaultSnatStatus = config.defaultSnatStatus;
     this._ipAllocationPolicy = config.ipAllocationPolicy;
+    this._loggingConfig = config.loggingConfig;
     this._maintenancePolicy = config.maintenancePolicy;
     this._masterAuth = config.masterAuth;
     this._masterAuthorizedNetworksConfig = config.masterAuthorizedNetworksConfig;
+    this._monitoringConfig = config.monitoringConfig;
     this._networkPolicy = config.networkPolicy;
     this._nodeConfig = config.nodeConfig;
     this._nodePool = config.nodePool;
@@ -2146,6 +2206,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._ipAllocationPolicy
   }
 
+  // logging_config - computed: false, optional: true, required: false
+  private _loggingConfig?: ContainerClusterLoggingConfig[];
+  public get loggingConfig() {
+    return this.interpolationForAttribute('logging_config') as any;
+  }
+  public set loggingConfig(value: ContainerClusterLoggingConfig[] ) {
+    this._loggingConfig = value;
+  }
+  public resetLoggingConfig() {
+    this._loggingConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingConfigInput() {
+    return this._loggingConfig
+  }
+
   // maintenance_policy - computed: false, optional: true, required: false
   private _maintenancePolicy?: ContainerClusterMaintenancePolicy[];
   public get maintenancePolicy() {
@@ -2192,6 +2268,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get masterAuthorizedNetworksConfigInput() {
     return this._masterAuthorizedNetworksConfig
+  }
+
+  // monitoring_config - computed: false, optional: true, required: false
+  private _monitoringConfig?: ContainerClusterMonitoringConfig[];
+  public get monitoringConfig() {
+    return this.interpolationForAttribute('monitoring_config') as any;
+  }
+  public set monitoringConfig(value: ContainerClusterMonitoringConfig[] ) {
+    this._monitoringConfig = value;
+  }
+  public resetMonitoringConfig() {
+    this._monitoringConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitoringConfigInput() {
+    return this._monitoringConfig
   }
 
   // network_policy - computed: false, optional: true, required: false
@@ -2392,9 +2484,11 @@ export class ContainerCluster extends cdktf.TerraformResource {
       database_encryption: cdktf.listMapper(containerClusterDatabaseEncryptionToTerraform)(this._databaseEncryption),
       default_snat_status: cdktf.listMapper(containerClusterDefaultSnatStatusToTerraform)(this._defaultSnatStatus),
       ip_allocation_policy: cdktf.listMapper(containerClusterIpAllocationPolicyToTerraform)(this._ipAllocationPolicy),
+      logging_config: cdktf.listMapper(containerClusterLoggingConfigToTerraform)(this._loggingConfig),
       maintenance_policy: cdktf.listMapper(containerClusterMaintenancePolicyToTerraform)(this._maintenancePolicy),
       master_auth: cdktf.listMapper(containerClusterMasterAuthToTerraform)(this._masterAuth),
       master_authorized_networks_config: cdktf.listMapper(containerClusterMasterAuthorizedNetworksConfigToTerraform)(this._masterAuthorizedNetworksConfig),
+      monitoring_config: cdktf.listMapper(containerClusterMonitoringConfigToTerraform)(this._monitoringConfig),
       network_policy: cdktf.listMapper(containerClusterNetworkPolicyToTerraform)(this._networkPolicy),
       node_config: cdktf.listMapper(containerClusterNodeConfigToTerraform)(this._nodeConfig),
       node_pool: cdktf.listMapper(containerClusterNodePoolToTerraform)(this._nodePool),

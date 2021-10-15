@@ -167,6 +167,28 @@ export class DataGoogleComputeInstanceTemplateNetworkInterfaceAliasIpRange exten
     return this.getStringAttribute('subnetwork_range_name');
   }
 }
+export class DataGoogleComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig extends cdktf.ComplexComputedList {
+
+  // external_ipv6 - computed: true, optional: false, required: false
+  public get externalIpv6() {
+    return this.getStringAttribute('external_ipv6');
+  }
+
+  // external_ipv6_prefix_length - computed: true, optional: false, required: false
+  public get externalIpv6PrefixLength() {
+    return this.getStringAttribute('external_ipv6_prefix_length');
+  }
+
+  // network_tier - computed: true, optional: false, required: false
+  public get networkTier() {
+    return this.getStringAttribute('network_tier');
+  }
+
+  // public_ptr_domain_name - computed: true, optional: false, required: false
+  public get publicPtrDomainName() {
+    return this.getStringAttribute('public_ptr_domain_name');
+  }
+}
 export class DataGoogleComputeInstanceTemplateNetworkInterface extends cdktf.ComplexComputedList {
 
   // access_config - computed: true, optional: false, required: false
@@ -177,6 +199,16 @@ export class DataGoogleComputeInstanceTemplateNetworkInterface extends cdktf.Com
   // alias_ip_range - computed: true, optional: false, required: false
   public get aliasIpRange() {
     return this.interpolationForAttribute('alias_ip_range') as any;
+  }
+
+  // ipv6_access_config - computed: true, optional: false, required: false
+  public get ipv6AccessConfig() {
+    return this.interpolationForAttribute('ipv6_access_config') as any;
+  }
+
+  // ipv6_access_type - computed: true, optional: false, required: false
+  public get ipv6AccessType() {
+    return this.getStringAttribute('ipv6_access_type');
   }
 
   // name - computed: true, optional: false, required: false
@@ -197,6 +229,11 @@ export class DataGoogleComputeInstanceTemplateNetworkInterface extends cdktf.Com
   // nic_type - computed: true, optional: false, required: false
   public get nicType() {
     return this.getStringAttribute('nic_type');
+  }
+
+  // stack_type - computed: true, optional: false, required: false
+  public get stackType() {
+    return this.getStringAttribute('stack_type');
   }
 
   // subnetwork - computed: true, optional: false, required: false

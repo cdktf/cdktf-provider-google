@@ -25,6 +25,14 @@ non-overlapping within a network. Only IPv4 is supported.
   */
   readonly ipCidrRange: string;
   /**
+  * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path. Possible values: ["EXTERNAL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#ipv6_access_type ComputeSubnetwork#ipv6_access_type}
+  */
+  readonly ipv6AccessType?: string;
+  /**
   * The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
@@ -103,6 +111,13 @@ For more details about this behavior, see [this section](https://www.terraform.i
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
   */
   readonly secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[];
+  /**
+  * The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used. Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#stack_type ComputeSubnetwork#stack_type}
+  */
+  readonly stackType?: string;
   /**
   * log_config block
   * 
@@ -250,6 +265,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._ipCidrRange = config.ipCidrRange;
+    this._ipv6AccessType = config.ipv6AccessType;
     this._name = config.name;
     this._network = config.network;
     this._privateIpGoogleAccess = config.privateIpGoogleAccess;
@@ -259,6 +275,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     this._region = config.region;
     this._role = config.role;
     this._secondaryIpRange = config.secondaryIpRange;
+    this._stackType = config.stackType;
     this._logConfig = config.logConfig;
     this._timeouts = config.timeouts;
   }
@@ -288,6 +305,11 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     return this._description
   }
 
+  // external_ipv6_prefix - computed: true, optional: false, required: false
+  public get externalIpv6Prefix() {
+    return this.getStringAttribute('external_ipv6_prefix');
+  }
+
   // fingerprint - computed: true, optional: false, required: false
   public get fingerprint() {
     return this.getStringAttribute('fingerprint');
@@ -314,6 +336,27 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ipCidrRangeInput() {
     return this._ipCidrRange
+  }
+
+  // ipv6_access_type - computed: false, optional: true, required: false
+  private _ipv6AccessType?: string;
+  public get ipv6AccessType() {
+    return this.getStringAttribute('ipv6_access_type');
+  }
+  public set ipv6AccessType(value: string ) {
+    this._ipv6AccessType = value;
+  }
+  public resetIpv6AccessType() {
+    this._ipv6AccessType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AccessTypeInput() {
+    return this._ipv6AccessType
+  }
+
+  // ipv6_cidr_range - computed: true, optional: false, required: false
+  public get ipv6CidrRange() {
+    return this.getStringAttribute('ipv6_cidr_range');
   }
 
   // name - computed: false, optional: false, required: true
@@ -459,6 +502,22 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
+  // stack_type - computed: true, optional: true, required: false
+  private _stackType?: string;
+  public get stackType() {
+    return this.getStringAttribute('stack_type');
+  }
+  public set stackType(value: string) {
+    this._stackType = value;
+  }
+  public resetStackType() {
+    this._stackType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stackTypeInput() {
+    return this._stackType
+  }
+
   // log_config - computed: false, optional: true, required: false
   private _logConfig?: ComputeSubnetworkLogConfig[];
   public get logConfig() {
@@ -499,6 +558,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       ip_cidr_range: cdktf.stringToTerraform(this._ipCidrRange),
+      ipv6_access_type: cdktf.stringToTerraform(this._ipv6AccessType),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       private_ip_google_access: cdktf.booleanToTerraform(this._privateIpGoogleAccess),
@@ -508,6 +568,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       role: cdktf.stringToTerraform(this._role),
       secondary_ip_range: cdktf.listMapper(computeSubnetworkSecondaryIpRangeToTerraform)(this._secondaryIpRange),
+      stack_type: cdktf.stringToTerraform(this._stackType),
       log_config: cdktf.listMapper(computeSubnetworkLogConfigToTerraform)(this._logConfig),
       timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts),
     };

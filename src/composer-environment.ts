@@ -80,7 +80,7 @@ function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct
 
 export interface ComposerEnvironmentConfigNodeConfig {
   /**
-  * The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.
+  * The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#disk_size_gb ComposerEnvironment#disk_size_gb}
   */
@@ -92,7 +92,7 @@ export interface ComposerEnvironmentConfigNodeConfig {
   */
   readonly ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[];
   /**
-  * The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone.
+  * The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#machine_type ComposerEnvironment#machine_type}
   */
@@ -104,7 +104,7 @@ export interface ComposerEnvironmentConfigNodeConfig {
   */
   readonly network?: string;
   /**
-  * The set of Google API scopes to be made available on all node VMs. Cannot be updated. If empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"].
+  * The set of Google API scopes to be made available on all node VMs. Cannot be updated. If empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#oauth_scopes ComposerEnvironment#oauth_scopes}
   */
@@ -122,13 +122,13 @@ export interface ComposerEnvironmentConfigNodeConfig {
   */
   readonly subnetwork?: string;
   /**
-  * The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with RFC1035. Cannot be updated.
+  * The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with RFC1035. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#tags ComposerEnvironment#tags}
   */
   readonly tags?: string[];
   /**
-  * The Compute Engine zone in which to deploy the VMs running the Apache Airflow software, specified as the zone name or relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project and region.
+  * The Compute Engine zone in which to deploy the VMs running the Apache Airflow software, specified as the zone name or relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project and region. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#zone ComposerEnvironment#zone}
   */
@@ -158,7 +158,7 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   */
   readonly cloudSqlIpv4CidrBlock?: string;
   /**
-  * If true, access to the public endpoint of the GKE cluster is denied.
+  * If true, access to the public endpoint of the GKE cluster is denied. If this field is set to true, ip_allocation_policy.use_ip_aliases must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#enable_private_endpoint ComposerEnvironment#enable_private_endpoint}
   */
@@ -170,7 +170,7 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   */
   readonly masterIpv4CidrBlock?: string;
   /**
-  * The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+  * The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#web_server_ipv4_cidr_block ComposerEnvironment#web_server_ipv4_cidr_block}
   */
@@ -213,11 +213,17 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   */
   readonly pypiPackages?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+  * The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#python_version ComposerEnvironment#python_version}
   */
   readonly pythonVersion?: string;
+  /**
+  * The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#scheduler_count ComposerEnvironment#scheduler_count}
+  */
+  readonly schedulerCount?: number;
 }
 
 function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: ComposerEnvironmentConfigSoftwareConfig): any {
@@ -228,12 +234,13 @@ function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: ComposerEnv
     image_version: cdktf.stringToTerraform(struct!.imageVersion),
     pypi_packages: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.pypiPackages),
     python_version: cdktf.stringToTerraform(struct!.pythonVersion),
+    scheduler_count: cdktf.numberToTerraform(struct!.schedulerCount),
   }
 }
 
 export interface ComposerEnvironmentConfigA {
   /**
-  * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.
+  * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#node_count ComposerEnvironment#node_count}
   */

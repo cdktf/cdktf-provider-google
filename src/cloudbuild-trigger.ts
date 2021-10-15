@@ -66,6 +66,18 @@ a build.
   */
   readonly project?: string;
   /**
+  * The service account used for all user-controlled operations including
+triggers.patch, triggers.run, builds.create, and builds.cancel.
+
+If no service account is set, then the standard Cloud Build service account
+([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+
+Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#service_account CloudbuildTrigger#service_account}
+  */
+  readonly serviceAccount?: string;
+  /**
   * Substitutions data for Build resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#substitutions CloudbuildTrigger#substitutions}
@@ -989,6 +1001,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._includedFiles = config.includedFiles;
     this._name = config.name;
     this._project = config.project;
+    this._serviceAccount = config.serviceAccount;
     this._substitutions = config.substitutions;
     this._tags = config.tags;
     this._build = config.buildAttribute;
@@ -1123,6 +1136,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project
+  }
+
+  // service_account - computed: false, optional: true, required: false
+  private _serviceAccount?: string;
+  public get serviceAccount() {
+    return this.getStringAttribute('service_account');
+  }
+  public set serviceAccount(value: string ) {
+    this._serviceAccount = value;
+  }
+  public resetServiceAccount() {
+    this._serviceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountInput() {
+    return this._serviceAccount
   }
 
   // substitutions - computed: false, optional: true, required: false
@@ -1271,6 +1300,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       included_files: cdktf.listMapper(cdktf.stringToTerraform)(this._includedFiles),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      service_account: cdktf.stringToTerraform(this._serviceAccount),
       substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(this._substitutions),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       build: cdktf.listMapper(cloudbuildTriggerBuildToTerraform)(this._build),

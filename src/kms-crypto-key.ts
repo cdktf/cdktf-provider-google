@@ -15,6 +15,12 @@ If not specified at creation time, the default duration is 24 hours.
   */
   readonly destroyScheduledDuration?: string;
   /**
+  * Whether this key may contain imported versions only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#import_only KmsCryptoKey#import_only}
+  */
+  readonly importOnly?: boolean | cdktf.IResolvable;
+  /**
   * The KeyRing that this key belongs to.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   * 
@@ -152,6 +158,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._destroyScheduledDuration = config.destroyScheduledDuration;
+    this._importOnly = config.importOnly;
     this._keyRing = config.keyRing;
     this._labels = config.labels;
     this._name = config.name;
@@ -185,6 +192,22 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // import_only - computed: true, optional: true, required: false
+  private _importOnly?: boolean | cdktf.IResolvable;
+  public get importOnly() {
+    return this.getBooleanAttribute('import_only');
+  }
+  public set importOnly(value: boolean | cdktf.IResolvable) {
+    this._importOnly = value;
+  }
+  public resetImportOnly() {
+    this._importOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importOnlyInput() {
+    return this._importOnly
   }
 
   // key_ring - computed: false, optional: false, required: true
@@ -321,6 +344,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       destroy_scheduled_duration: cdktf.stringToTerraform(this._destroyScheduledDuration),
+      import_only: cdktf.booleanToTerraform(this._importOnly),
       key_ring: cdktf.stringToTerraform(this._keyRing),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),

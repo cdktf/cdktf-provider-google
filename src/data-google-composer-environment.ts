@@ -148,6 +148,11 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
   public get pythonVersion() {
     return this.getStringAttribute('python_version');
   }
+
+  // scheduler_count - computed: true, optional: false, required: false
+  public get schedulerCount() {
+    return this.getNumberAttribute('scheduler_count');
+  }
 }
 export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedList {
 

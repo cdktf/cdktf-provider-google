@@ -88,6 +88,10 @@ export interface GoogleProviderConfig {
   */
   readonly cloudIotCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}
+  */
+  readonly cloudResourceManagerCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}
   */
   readonly cloudRunCustomEndpoint?: string;
@@ -255,6 +259,10 @@ export interface GoogleProviderConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}
   */
   readonly notebooksCustomEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}
+  */
+  readonly orgPolicyCustomEndpoint?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}
   */
@@ -466,6 +474,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._cloudFunctionsCustomEndpoint = config.cloudFunctionsCustomEndpoint;
     this._cloudIdentityCustomEndpoint = config.cloudIdentityCustomEndpoint;
     this._cloudIotCustomEndpoint = config.cloudIotCustomEndpoint;
+    this._cloudResourceManagerCustomEndpoint = config.cloudResourceManagerCustomEndpoint;
     this._cloudRunCustomEndpoint = config.cloudRunCustomEndpoint;
     this._cloudSchedulerCustomEndpoint = config.cloudSchedulerCustomEndpoint;
     this._cloudTasksCustomEndpoint = config.cloudTasksCustomEndpoint;
@@ -508,6 +517,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._networkManagementCustomEndpoint = config.networkManagementCustomEndpoint;
     this._networkServicesCustomEndpoint = config.networkServicesCustomEndpoint;
     this._notebooksCustomEndpoint = config.notebooksCustomEndpoint;
+    this._orgPolicyCustomEndpoint = config.orgPolicyCustomEndpoint;
     this._osConfigCustomEndpoint = config.osConfigCustomEndpoint;
     this._osLoginCustomEndpoint = config.osLoginCustomEndpoint;
     this._privatecaCustomEndpoint = config.privatecaCustomEndpoint;
@@ -866,6 +876,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get cloudIotCustomEndpointInput() {
     return this._cloudIotCustomEndpoint
+  }
+
+  // cloud_resource_manager_custom_endpoint - computed: false, optional: true, required: false
+  private _cloudResourceManagerCustomEndpoint?: string;
+  public get cloudResourceManagerCustomEndpoint() {
+    return this._cloudResourceManagerCustomEndpoint;
+  }
+  public set cloudResourceManagerCustomEndpoint(value: string  | undefined) {
+    this._cloudResourceManagerCustomEndpoint = value;
+  }
+  public resetCloudResourceManagerCustomEndpoint() {
+    this._cloudResourceManagerCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudResourceManagerCustomEndpointInput() {
+    return this._cloudResourceManagerCustomEndpoint
   }
 
   // cloud_run_custom_endpoint - computed: false, optional: true, required: false
@@ -1540,6 +1566,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._notebooksCustomEndpoint
   }
 
+  // org_policy_custom_endpoint - computed: false, optional: true, required: false
+  private _orgPolicyCustomEndpoint?: string;
+  public get orgPolicyCustomEndpoint() {
+    return this._orgPolicyCustomEndpoint;
+  }
+  public set orgPolicyCustomEndpoint(value: string  | undefined) {
+    this._orgPolicyCustomEndpoint = value;
+  }
+  public resetOrgPolicyCustomEndpoint() {
+    this._orgPolicyCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orgPolicyCustomEndpointInput() {
+    return this._orgPolicyCustomEndpoint
+  }
+
   // os_config_custom_endpoint - computed: false, optional: true, required: false
   private _osConfigCustomEndpoint?: string;
   public get osConfigCustomEndpoint() {
@@ -2110,6 +2152,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       cloud_functions_custom_endpoint: cdktf.stringToTerraform(this._cloudFunctionsCustomEndpoint),
       cloud_identity_custom_endpoint: cdktf.stringToTerraform(this._cloudIdentityCustomEndpoint),
       cloud_iot_custom_endpoint: cdktf.stringToTerraform(this._cloudIotCustomEndpoint),
+      cloud_resource_manager_custom_endpoint: cdktf.stringToTerraform(this._cloudResourceManagerCustomEndpoint),
       cloud_run_custom_endpoint: cdktf.stringToTerraform(this._cloudRunCustomEndpoint),
       cloud_scheduler_custom_endpoint: cdktf.stringToTerraform(this._cloudSchedulerCustomEndpoint),
       cloud_tasks_custom_endpoint: cdktf.stringToTerraform(this._cloudTasksCustomEndpoint),
@@ -2152,6 +2195,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       network_management_custom_endpoint: cdktf.stringToTerraform(this._networkManagementCustomEndpoint),
       network_services_custom_endpoint: cdktf.stringToTerraform(this._networkServicesCustomEndpoint),
       notebooks_custom_endpoint: cdktf.stringToTerraform(this._notebooksCustomEndpoint),
+      org_policy_custom_endpoint: cdktf.stringToTerraform(this._orgPolicyCustomEndpoint),
       os_config_custom_endpoint: cdktf.stringToTerraform(this._osConfigCustomEndpoint),
       os_login_custom_endpoint: cdktf.stringToTerraform(this._osLoginCustomEndpoint),
       privateca_custom_endpoint: cdktf.stringToTerraform(this._privatecaCustomEndpoint),
