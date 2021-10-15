@@ -98,7 +98,7 @@ export interface ComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly project?: string;
   /**
-  * A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
+  * A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#resource_policies ComputeInstance#resource_policies}
   */
@@ -432,6 +432,29 @@ function computeInstanceNetworkInterfaceAliasIpRangeToTerraform(struct?: Compute
   }
 }
 
+export interface ComputeInstanceNetworkInterfaceIpv6AccessConfig {
+  /**
+  * The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM tier is valid for IPv6
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#network_tier ComputeInstance#network_tier}
+  */
+  readonly networkTier: string;
+  /**
+  * The domain name to be used when creating DNSv6 records for the external IPv6 ranges.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
+  */
+  readonly publicPtrDomainName?: string;
+}
+
+function computeInstanceNetworkInterfaceIpv6AccessConfigToTerraform(struct?: ComputeInstanceNetworkInterfaceIpv6AccessConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_tier: cdktf.stringToTerraform(struct!.networkTier),
+    public_ptr_domain_name: cdktf.stringToTerraform(struct!.publicPtrDomainName),
+  }
+}
+
 export interface ComputeInstanceNetworkInterface {
   /**
   * The name or self_link of the network attached to this interface.
@@ -451,6 +474,12 @@ export interface ComputeInstanceNetworkInterface {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#nic_type ComputeInstance#nic_type}
   */
   readonly nicType?: string;
+  /**
+  * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#stack_type ComputeInstance#stack_type}
+  */
+  readonly stackType?: string;
   /**
   * The name or self_link of the subnetwork attached to this interface.
   * 
@@ -475,6 +504,12 @@ export interface ComputeInstanceNetworkInterface {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#alias_ip_range ComputeInstance#alias_ip_range}
   */
   readonly aliasIpRange?: ComputeInstanceNetworkInterfaceAliasIpRange[];
+  /**
+  * ipv6_access_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance.html#ipv6_access_config ComputeInstance#ipv6_access_config}
+  */
+  readonly ipv6AccessConfig?: ComputeInstanceNetworkInterfaceIpv6AccessConfig[];
 }
 
 function computeInstanceNetworkInterfaceToTerraform(struct?: ComputeInstanceNetworkInterface): any {
@@ -483,10 +518,12 @@ function computeInstanceNetworkInterfaceToTerraform(struct?: ComputeInstanceNetw
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
     nic_type: cdktf.stringToTerraform(struct!.nicType),
+    stack_type: cdktf.stringToTerraform(struct!.stackType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
     access_config: cdktf.listMapper(computeInstanceNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),
     alias_ip_range: cdktf.listMapper(computeInstanceNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
+    ipv6_access_config: cdktf.listMapper(computeInstanceNetworkInterfaceIpv6AccessConfigToTerraform)(struct!.ipv6AccessConfig),
   }
 }
 

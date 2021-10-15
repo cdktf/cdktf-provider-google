@@ -383,6 +383,22 @@ function computeInstanceTemplateNetworkInterfaceAliasIpRangeToTerraform(struct?:
   }
 }
 
+export interface ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig {
+  /**
+  * The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM tier is valid for IPv6
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#network_tier ComputeInstanceTemplate#network_tier}
+  */
+  readonly networkTier: string;
+}
+
+function computeInstanceTemplateNetworkInterfaceIpv6AccessConfigToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_tier: cdktf.stringToTerraform(struct!.networkTier),
+  }
+}
+
 export interface ComputeInstanceTemplateNetworkInterface {
   /**
   * The name or self_link of the network to attach this interface to. Use network attribute for Legacy or Auto subnetted networks and subnetwork for custom subnetted networks.
@@ -402,6 +418,12 @@ export interface ComputeInstanceTemplateNetworkInterface {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#nic_type ComputeInstanceTemplate#nic_type}
   */
   readonly nicType?: string;
+  /**
+  * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#stack_type ComputeInstanceTemplate#stack_type}
+  */
+  readonly stackType?: string;
   /**
   * The name of the subnetwork to attach this interface to. The subnetwork must exist in the same region this instance will be created in. Either network or subnetwork must be provided.
   * 
@@ -426,6 +448,12 @@ export interface ComputeInstanceTemplateNetworkInterface {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#alias_ip_range ComputeInstanceTemplate#alias_ip_range}
   */
   readonly aliasIpRange?: ComputeInstanceTemplateNetworkInterfaceAliasIpRange[];
+  /**
+  * ipv6_access_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#ipv6_access_config ComputeInstanceTemplate#ipv6_access_config}
+  */
+  readonly ipv6AccessConfig?: ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig[];
 }
 
 function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInstanceTemplateNetworkInterface): any {
@@ -434,10 +462,12 @@ function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInst
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
     nic_type: cdktf.stringToTerraform(struct!.nicType),
+    stack_type: cdktf.stringToTerraform(struct!.stackType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
     access_config: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),
     alias_ip_range: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
+    ipv6_access_config: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceIpv6AccessConfigToTerraform)(struct!.ipv6AccessConfig),
   }
 }
 

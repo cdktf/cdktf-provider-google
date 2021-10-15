@@ -36,6 +36,12 @@ export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
   */
   readonly partitionConfig?: PubsubLiteTopicPartitionConfig[];
   /**
+  * reservation_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#reservation_config PubsubLiteTopic#reservation_config}
+  */
+  readonly reservationConfig?: PubsubLiteTopicReservationConfig[];
+  /**
   * retention_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#retention_config PubsubLiteTopic#retention_config}
@@ -91,6 +97,22 @@ function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTopicParti
   return {
     count: cdktf.numberToTerraform(struct!.count),
     capacity: cdktf.listMapper(pubsubLiteTopicPartitionConfigCapacityToTerraform)(struct!.capacity),
+  }
+}
+
+export interface PubsubLiteTopicReservationConfig {
+  /**
+  * The Reservation to use for this topic's throughput capacity.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#throughput_reservation PubsubLiteTopic#throughput_reservation}
+  */
+  readonly throughputReservation?: string;
+}
+
+function pubsubLiteTopicReservationConfigToTerraform(struct?: PubsubLiteTopicReservationConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    throughput_reservation: cdktf.stringToTerraform(struct!.throughputReservation),
   }
 }
 
@@ -182,6 +204,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
     this._region = config.region;
     this._zone = config.zone;
     this._partitionConfig = config.partitionConfig;
+    this._reservationConfig = config.reservationConfig;
     this._retentionConfig = config.retentionConfig;
     this._timeouts = config.timeouts;
   }
@@ -272,6 +295,22 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
     return this._partitionConfig
   }
 
+  // reservation_config - computed: false, optional: true, required: false
+  private _reservationConfig?: PubsubLiteTopicReservationConfig[];
+  public get reservationConfig() {
+    return this.interpolationForAttribute('reservation_config') as any;
+  }
+  public set reservationConfig(value: PubsubLiteTopicReservationConfig[] ) {
+    this._reservationConfig = value;
+  }
+  public resetReservationConfig() {
+    this._reservationConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationConfigInput() {
+    return this._reservationConfig
+  }
+
   // retention_config - computed: false, optional: true, required: false
   private _retentionConfig?: PubsubLiteTopicRetentionConfig[];
   public get retentionConfig() {
@@ -315,6 +354,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       zone: cdktf.stringToTerraform(this._zone),
       partition_config: cdktf.listMapper(pubsubLiteTopicPartitionConfigToTerraform)(this._partitionConfig),
+      reservation_config: cdktf.listMapper(pubsubLiteTopicReservationConfigToTerraform)(this._reservationConfig),
       retention_config: cdktf.listMapper(pubsubLiteTopicRetentionConfigToTerraform)(this._retentionConfig),
       timeouts: pubsubLiteTopicTimeoutsToTerraform(this._timeouts),
     };

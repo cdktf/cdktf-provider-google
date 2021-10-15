@@ -8,74 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Identifies the managed zone addressed by this request.
+  * The name of the zone in which this record set will reside.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#managed_zone DnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
-  * For example, www.example.com.
+  * The DNS name this record set will apply to.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#name DnsRecordSet#name}
   */
   readonly name: string;
   /**
+  * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#project DnsRecordSet#project}
   */
   readonly project?: string;
   /**
-  * The string data for the records in this record set whose meaning depends on the DNS type. 
-For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get
-split on spaces. To specify a single record value longer than 255 characters such as a TXT record for 
-DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters").
+  * The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters").
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#rrdatas DnsRecordSet#rrdatas}
   */
-  readonly rrdatas?: string[];
+  readonly rrdatas: string[];
   /**
-  * Number of seconds that this ResourceRecordSet can be cached by
-resolvers.
+  * The time-to-live of this record set (seconds).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#ttl DnsRecordSet#ttl}
   */
   readonly ttl?: number;
   /**
-  * One of valid DNS resource types. Possible values: ["A", "AAAA", "CAA", "CNAME", "DNSKEY", "DS", "IPSECVPNKEY", "MX", "NAPTR", "NS", "PTR", "SOA", "SPF", "SRV", "SSHFP", "TLSA", "TXT"]
+  * The DNS record set type.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#type DnsRecordSet#type}
   */
   readonly type: string;
-  /**
-  * timeouts block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#timeouts DnsRecordSet#timeouts}
-  */
-  readonly timeouts?: DnsRecordSetTimeouts;
 }
-export interface DnsRecordSetTimeouts {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#create DnsRecordSet#create}
-  */
-  readonly create?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#delete DnsRecordSet#delete}
-  */
-  readonly delete?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#update DnsRecordSet#update}
-  */
-  readonly update?: string;
-}
-
-function dnsRecordSetTimeoutsToTerraform(struct?: DnsRecordSetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    create: cdktf.stringToTerraform(struct!.create),
-    delete: cdktf.stringToTerraform(struct!.delete),
-    update: cdktf.stringToTerraform(struct!.update),
-  }
-}
-
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html google_dns_record_set}
@@ -115,7 +83,6 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     this._rrdatas = config.rrdatas;
     this._ttl = config.ttl;
     this._type = config.type;
-    this._timeouts = config.timeouts;
   }
 
   // ==========
@@ -169,16 +136,13 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     return this._project
   }
 
-  // rrdatas - computed: false, optional: true, required: false
-  private _rrdatas?: string[];
+  // rrdatas - computed: false, optional: false, required: true
+  private _rrdatas: string[];
   public get rrdatas() {
     return this.getListAttribute('rrdatas');
   }
-  public set rrdatas(value: string[] ) {
+  public set rrdatas(value: string[]) {
     this._rrdatas = value;
-  }
-  public resetRrdatas() {
-    this._rrdatas = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rrdatasInput() {
@@ -214,22 +178,6 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     return this._type
   }
 
-  // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DnsRecordSetTimeouts;
-  public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
-  }
-  public set timeouts(value: DnsRecordSetTimeouts ) {
-    this._timeouts = value;
-  }
-  public resetTimeouts() {
-    this._timeouts = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get timeoutsInput() {
-    return this._timeouts
-  }
-
   // =========
   // SYNTHESIS
   // =========
@@ -242,7 +190,6 @@ export class DnsRecordSet extends cdktf.TerraformResource {
       rrdatas: cdktf.listMapper(cdktf.stringToTerraform)(this._rrdatas),
       ttl: cdktf.numberToTerraform(this._ttl),
       type: cdktf.stringToTerraform(this._type),
-      timeouts: dnsRecordSetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

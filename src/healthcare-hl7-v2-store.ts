@@ -147,6 +147,12 @@ A base64-encoded string.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#segment_terminator HealthcareHl7V2Store#segment_terminator}
   */
   readonly segmentTerminator?: string;
+  /**
+  * The version of the unschematized parser to be used when a custom 'schema' is not set. Default value: "V1" Possible values: ["V1", "V2"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#version HealthcareHl7V2Store#version}
+  */
+  readonly version?: string;
 }
 
 function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfig): any {
@@ -155,6 +161,7 @@ function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2Sto
     allow_null_header: cdktf.booleanToTerraform(struct!.allowNullHeader),
     schema: cdktf.stringToTerraform(struct!.schema),
     segment_terminator: cdktf.stringToTerraform(struct!.segmentTerminator),
+    version: cdktf.stringToTerraform(struct!.version),
   }
 }
 

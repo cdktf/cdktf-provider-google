@@ -84,6 +84,11 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // import_only - computed: true, optional: false, required: false
+  public get importOnly() {
+    return this.getBooleanAttribute('import_only');
+  }
+
   // key_ring - computed: false, optional: false, required: true
   private _keyRing: string;
   public get keyRing() {
