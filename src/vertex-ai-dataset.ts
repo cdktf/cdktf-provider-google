@@ -40,7 +40,7 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#encryption_spec VertexAiDataset#encryption_spec}
   */
-  readonly encryptionSpec?: VertexAiDatasetEncryptionSpec[];
+  readonly encryptionSpec?: VertexAiDatasetEncryptionSpec;
   /**
   * timeouts block
   * 
@@ -58,13 +58,42 @@ Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/
   readonly kmsKeyName?: string;
 }
 
-function vertexAiDatasetEncryptionSpecToTerraform(struct?: VertexAiDatasetEncryptionSpec): any {
+function vertexAiDatasetEncryptionSpecToTerraform(struct?: VertexAiDatasetEncryptionSpecOutputReference | VertexAiDatasetEncryptionSpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
 }
 
+export class VertexAiDatasetEncryptionSpecOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string | undefined; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string | undefined) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+}
 export interface VertexAiDatasetTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#create VertexAiDataset#create}
@@ -80,8 +109,11 @@ export interface VertexAiDatasetTimeouts {
   readonly update?: string;
 }
 
-function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeouts): any {
+function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeoutsOutputReference | VertexAiDatasetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -89,6 +121,64 @@ function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeouts): a
   }
 }
 
+export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html google_vertex_ai_dataset}
@@ -141,7 +231,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -159,11 +249,12 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable
-  public get labels(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get labels() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -175,7 +266,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // metadata_schema_uri - computed: false, optional: false, required: true
-  private _metadataSchemaUri: string;
+  private _metadataSchemaUri?: string; 
   public get metadataSchemaUri() {
     return this.getStringAttribute('metadata_schema_uri');
   }
@@ -193,11 +284,11 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -209,11 +300,11 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -230,11 +321,12 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // encryption_spec - computed: false, optional: true, required: false
-  private _encryptionSpec?: VertexAiDatasetEncryptionSpec[];
+  private _encryptionSpec?: VertexAiDatasetEncryptionSpec | undefined; 
+  private __encryptionSpecOutput = new VertexAiDatasetEncryptionSpecOutputReference(this as any, "encryption_spec", true);
   public get encryptionSpec() {
-    return this.interpolationForAttribute('encryption_spec') as any;
+    return this.__encryptionSpecOutput;
   }
-  public set encryptionSpec(value: VertexAiDatasetEncryptionSpec[] ) {
+  public putEncryptionSpec(value: VertexAiDatasetEncryptionSpec | undefined) {
     this._encryptionSpec = value;
   }
   public resetEncryptionSpec() {
@@ -246,11 +338,12 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VertexAiDatasetTimeouts;
+  private _timeouts?: VertexAiDatasetTimeouts | undefined; 
+  private __timeoutsOutput = new VertexAiDatasetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VertexAiDatasetTimeouts ) {
+  public putTimeouts(value: VertexAiDatasetTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -272,7 +365,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
       metadata_schema_uri: cdktf.stringToTerraform(this._metadataSchemaUri),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      encryption_spec: cdktf.listMapper(vertexAiDatasetEncryptionSpecToTerraform)(this._encryptionSpec),
+      encryption_spec: vertexAiDatasetEncryptionSpecToTerraform(this._encryptionSpec),
       timeouts: vertexAiDatasetTimeoutsToTerraform(this._timeouts),
     };
   }

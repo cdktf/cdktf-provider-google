@@ -91,15 +91,15 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
 
   // deleted - computed: true, optional: false, required: false
   public get deleted() {
-    return this.getBooleanAttribute('deleted');
+    return this.getBooleanAttribute('deleted') as any;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -121,7 +121,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   }
 
   // org_id - computed: false, optional: false, required: true
-  private _orgId: string;
+  private _orgId?: string; 
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
@@ -134,7 +134,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions: string[];
+  private _permissions?: string[]; 
   public get permissions() {
     return this.getListAttribute('permissions');
   }
@@ -147,7 +147,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   }
 
   // role_id - computed: false, optional: false, required: true
-  private _roleId: string;
+  private _roleId?: string; 
   public get roleId() {
     return this.getStringAttribute('role_id');
   }
@@ -160,11 +160,11 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   }
 
   // stage - computed: false, optional: true, required: false
-  private _stage?: string;
+  private _stage?: string | undefined; 
   public get stage() {
     return this.getStringAttribute('stage');
   }
-  public set stage(value: string ) {
+  public set stage(value: string | undefined) {
     this._stage = value;
   }
   public resetStage() {
@@ -176,7 +176,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   }
 
   // title - computed: false, optional: false, required: true
-  private _title: string;
+  private _title?: string; 
   public get title() {
     return this.getStringAttribute('title');
   }

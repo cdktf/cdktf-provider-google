@@ -52,11 +52,13 @@ export class DataGoogleCloudIdentityGroupMembershipsMemberships extends cdktf.Co
 
   // preferred_member_key - computed: true, optional: false, required: false
   public get preferredMemberKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('preferred_member_key') as any;
   }
 
   // roles - computed: true, optional: false, required: false
   public get roles() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('roles') as any;
   }
 
@@ -111,7 +113,7 @@ export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformData
   // ==========
 
   // group - computed: false, optional: false, required: true
-  private _group: string;
+  private _group?: string; 
   public get group() {
     return this.getStringAttribute('group');
   }

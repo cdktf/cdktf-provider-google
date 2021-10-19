@@ -100,7 +100,7 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
   }
 
   // instance - computed: false, optional: false, required: true
-  private _instance: string;
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
@@ -113,11 +113,11 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

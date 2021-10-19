@@ -69,11 +69,11 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   // ==========
 
   // backup_id - computed: true, optional: true, required: false
-  private _backupId?: number;
+  private _backupId?: number | undefined; 
   public get backupId() {
     return this.getNumberAttribute('backup_id');
   }
-  public set backupId(value: number) {
+  public set backupId(value: number | undefined) {
     this._backupId = value;
   }
   public resetBackupId() {
@@ -90,7 +90,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   }
 
   // instance - computed: false, optional: false, required: true
-  private _instance: string;
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
@@ -108,11 +108,11 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   }
 
   // most_recent - computed: false, optional: true, required: false
-  private _mostRecent?: boolean | cdktf.IResolvable;
+  private _mostRecent?: boolean | cdktf.IResolvable | undefined; 
   public get mostRecent() {
-    return this.getBooleanAttribute('most_recent');
+    return this.getBooleanAttribute('most_recent') as any;
   }
-  public set mostRecent(value: boolean | cdktf.IResolvable ) {
+  public set mostRecent(value: boolean | cdktf.IResolvable | undefined) {
     this._mostRecent = value;
   }
   public resetMostRecent() {

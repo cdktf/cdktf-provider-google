@@ -63,7 +63,7 @@ export class DataGoogleKmsSecretCiphertext extends cdktf.TerraformDataSource {
   }
 
   // crypto_key - computed: false, optional: false, required: true
-  private _cryptoKey: string;
+  private _cryptoKey?: string; 
   public get cryptoKey() {
     return this.getStringAttribute('crypto_key');
   }
@@ -81,7 +81,7 @@ export class DataGoogleKmsSecretCiphertext extends cdktf.TerraformDataSource {
   }
 
   // plaintext - computed: false, optional: false, required: true
-  private _plaintext: string;
+  private _plaintext?: string; 
   public get plaintext() {
     return this.getStringAttribute('plaintext');
   }

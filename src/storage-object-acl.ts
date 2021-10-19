@@ -68,7 +68,7 @@ export class StorageObjectAcl extends cdktf.TerraformResource {
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -86,7 +86,7 @@ export class StorageObjectAcl extends cdktf.TerraformResource {
   }
 
   // object - computed: false, optional: false, required: true
-  private _object: string;
+  private _object?: string; 
   public get object() {
     return this.getStringAttribute('object');
   }
@@ -99,11 +99,11 @@ export class StorageObjectAcl extends cdktf.TerraformResource {
   }
 
   // predefined_acl - computed: false, optional: true, required: false
-  private _predefinedAcl?: string;
+  private _predefinedAcl?: string | undefined; 
   public get predefinedAcl() {
     return this.getStringAttribute('predefined_acl');
   }
-  public set predefinedAcl(value: string ) {
+  public set predefinedAcl(value: string | undefined) {
     this._predefinedAcl = value;
   }
   public resetPredefinedAcl() {
@@ -115,11 +115,11 @@ export class StorageObjectAcl extends cdktf.TerraformResource {
   }
 
   // role_entity - computed: true, optional: true, required: false
-  private _roleEntity?: string[];
+  private _roleEntity?: string[] | undefined; 
   public get roleEntity() {
     return this.getListAttribute('role_entity');
   }
-  public set roleEntity(value: string[]) {
+  public set roleEntity(value: string[] | undefined) {
     this._roleEntity = value;
   }
   public resetRoleEntity() {

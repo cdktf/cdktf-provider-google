@@ -32,7 +32,7 @@ export interface NotebooksInstanceIamMemberConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html#condition NotebooksInstanceIamMember#condition}
   */
-  readonly condition?: NotebooksInstanceIamMemberCondition[];
+  readonly condition?: NotebooksInstanceIamMemberCondition;
 }
 export interface NotebooksInstanceIamMemberCondition {
   /**
@@ -49,8 +49,11 @@ export interface NotebooksInstanceIamMemberCondition {
   readonly title: string;
 }
 
-function notebooksInstanceIamMemberConditionToTerraform(struct?: NotebooksInstanceIamMemberCondition): any {
+function notebooksInstanceIamMemberConditionToTerraform(struct?: NotebooksInstanceIamMemberConditionOutputReference | NotebooksInstanceIamMemberCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -58,6 +61,58 @@ function notebooksInstanceIamMemberConditionToTerraform(struct?: NotebooksInstan
   }
 }
 
+export class NotebooksInstanceIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance_iam_member.html google_notebooks_instance_iam_member}
@@ -114,7 +169,7 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   }
 
   // instance_name - computed: false, optional: false, required: true
-  private _instanceName: string;
+  private _instanceName?: string; 
   public get instanceName() {
     return this.getStringAttribute('instance_name');
   }
@@ -127,11 +182,11 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   }
 
   // location - computed: true, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -143,7 +198,7 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   }
 
   // member - computed: false, optional: false, required: true
-  private _member: string;
+  private _member?: string; 
   public get member() {
     return this.getStringAttribute('member');
   }
@@ -156,11 +211,11 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -172,7 +227,7 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   }
 
   // role - computed: false, optional: false, required: true
-  private _role: string;
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
@@ -185,11 +240,12 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: NotebooksInstanceIamMemberCondition[];
+  private _condition?: NotebooksInstanceIamMemberCondition | undefined; 
+  private __conditionOutput = new NotebooksInstanceIamMemberConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: NotebooksInstanceIamMemberCondition[] ) {
+  public putCondition(value: NotebooksInstanceIamMemberCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -211,7 +267,7 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
       member: cdktf.stringToTerraform(this._member),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
-      condition: cdktf.listMapper(notebooksInstanceIamMemberConditionToTerraform)(this._condition),
+      condition: notebooksInstanceIamMemberConditionToTerraform(this._condition),
     };
   }
 }

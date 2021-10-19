@@ -73,11 +73,11 @@ export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
   }
 
   // range_type - computed: false, optional: true, required: false
-  private _rangeType?: string;
+  private _rangeType?: string | undefined; 
   public get rangeType() {
     return this.getStringAttribute('range_type');
   }
-  public set rangeType(value: string ) {
+  public set rangeType(value: string | undefined) {
     this._rangeType = value;
   }
   public resetRangeType() {

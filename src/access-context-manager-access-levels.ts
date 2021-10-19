@@ -46,6 +46,9 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 function accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     minimum_version: cdktf.stringToTerraform(struct!.minimumVersion),
     os_type: cdktf.stringToTerraform(struct!.osType),
@@ -94,8 +97,11 @@ to be true. Defaults to false.
   readonly osConstraints?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints[];
 }
 
-function accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy): any {
+function accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOutputReference | AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allowed_device_management_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedDeviceManagementLevels),
     allowed_encryption_statuses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedEncryptionStatuses),
@@ -106,6 +112,113 @@ function accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy
   }
 }
 
+export class AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allowed_device_management_levels - computed: false, optional: true, required: false
+  private _allowedDeviceManagementLevels?: string[] | undefined; 
+  public get allowedDeviceManagementLevels() {
+    return this.getListAttribute('allowed_device_management_levels');
+  }
+  public set allowedDeviceManagementLevels(value: string[] | undefined) {
+    this._allowedDeviceManagementLevels = value;
+  }
+  public resetAllowedDeviceManagementLevels() {
+    this._allowedDeviceManagementLevels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedDeviceManagementLevelsInput() {
+    return this._allowedDeviceManagementLevels
+  }
+
+  // allowed_encryption_statuses - computed: false, optional: true, required: false
+  private _allowedEncryptionStatuses?: string[] | undefined; 
+  public get allowedEncryptionStatuses() {
+    return this.getListAttribute('allowed_encryption_statuses');
+  }
+  public set allowedEncryptionStatuses(value: string[] | undefined) {
+    this._allowedEncryptionStatuses = value;
+  }
+  public resetAllowedEncryptionStatuses() {
+    this._allowedEncryptionStatuses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedEncryptionStatusesInput() {
+    return this._allowedEncryptionStatuses
+  }
+
+  // require_admin_approval - computed: false, optional: true, required: false
+  private _requireAdminApproval?: boolean | cdktf.IResolvable | undefined; 
+  public get requireAdminApproval() {
+    return this.getBooleanAttribute('require_admin_approval') as any;
+  }
+  public set requireAdminApproval(value: boolean | cdktf.IResolvable | undefined) {
+    this._requireAdminApproval = value;
+  }
+  public resetRequireAdminApproval() {
+    this._requireAdminApproval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireAdminApprovalInput() {
+    return this._requireAdminApproval
+  }
+
+  // require_corp_owned - computed: false, optional: true, required: false
+  private _requireCorpOwned?: boolean | cdktf.IResolvable | undefined; 
+  public get requireCorpOwned() {
+    return this.getBooleanAttribute('require_corp_owned') as any;
+  }
+  public set requireCorpOwned(value: boolean | cdktf.IResolvable | undefined) {
+    this._requireCorpOwned = value;
+  }
+  public resetRequireCorpOwned() {
+    this._requireCorpOwned = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireCorpOwnedInput() {
+    return this._requireCorpOwned
+  }
+
+  // require_screen_lock - computed: false, optional: true, required: false
+  private _requireScreenLock?: boolean | cdktf.IResolvable | undefined; 
+  public get requireScreenLock() {
+    return this.getBooleanAttribute('require_screen_lock') as any;
+  }
+  public set requireScreenLock(value: boolean | cdktf.IResolvable | undefined) {
+    this._requireScreenLock = value;
+  }
+  public resetRequireScreenLock() {
+    this._requireScreenLock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireScreenLockInput() {
+    return this._requireScreenLock
+  }
+
+  // os_constraints - computed: false, optional: true, required: false
+  private _osConstraints?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints[] | undefined; 
+  public get osConstraints() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('os_constraints') as any;
+  }
+  public set osConstraints(value: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints[] | undefined) {
+    this._osConstraints = value;
+  }
+  public resetOsConstraints() {
+    this._osConstraints = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osConstraintsInput() {
+    return this._osConstraints
+  }
+}
 export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   /**
   * A list of CIDR block IP subnetwork specification. May be IPv4
@@ -166,18 +279,21 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#device_policy AccessContextManagerAccessLevels#device_policy}
   */
-  readonly devicePolicy?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy[];
+  readonly devicePolicy?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy;
 }
 
 function accessContextManagerAccessLevelsAccessLevelsBasicConditionsToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicConditions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ip_subnetworks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipSubnetworks),
     members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.members),
     negate: cdktf.booleanToTerraform(struct!.negate),
     regions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.regions),
     required_access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requiredAccessLevels),
-    device_policy: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyToTerraform)(struct!.devicePolicy),
+    device_policy: accessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyToTerraform(struct!.devicePolicy),
   }
 }
 
@@ -200,14 +316,57 @@ for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND",
   readonly conditions: AccessContextManagerAccessLevelsAccessLevelsBasicConditions[];
 }
 
-function accessContextManagerAccessLevelsAccessLevelsBasicToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasic): any {
+function accessContextManagerAccessLevelsAccessLevelsBasicToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsBasicOutputReference | AccessContextManagerAccessLevelsAccessLevelsBasic): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     combining_function: cdktf.stringToTerraform(struct!.combiningFunction),
     conditions: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicConditionsToTerraform)(struct!.conditions),
   }
 }
 
+export class AccessContextManagerAccessLevelsAccessLevelsBasicOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // combining_function - computed: false, optional: true, required: false
+  private _combiningFunction?: string | undefined; 
+  public get combiningFunction() {
+    return this.getStringAttribute('combining_function');
+  }
+  public set combiningFunction(value: string | undefined) {
+    this._combiningFunction = value;
+  }
+  public resetCombiningFunction() {
+    this._combiningFunction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get combiningFunctionInput() {
+    return this._combiningFunction
+  }
+
+  // conditions - computed: false, optional: false, required: true
+  private _conditions?: AccessContextManagerAccessLevelsAccessLevelsBasicConditions[]; 
+  public get conditions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('conditions') as any;
+  }
+  public set conditions(value: AccessContextManagerAccessLevelsAccessLevelsBasicConditions[]) {
+    this._conditions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionsInput() {
+    return this._conditions
+  }
+}
 export interface AccessContextManagerAccessLevelsAccessLevelsCustomExpr {
   /**
   * Description of the expression
@@ -235,8 +394,11 @@ export interface AccessContextManagerAccessLevelsAccessLevelsCustomExpr {
   readonly title?: string;
 }
 
-function accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsCustomExpr): any {
+function accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsCustomExprOutputReference | AccessContextManagerAccessLevelsAccessLevelsCustomExpr): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -245,22 +407,120 @@ function accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform(struc
   }
 }
 
+export class AccessContextManagerAccessLevelsAccessLevelsCustomExprOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // location - computed: false, optional: true, required: false
+  private _location?: string | undefined; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string | undefined) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // title - computed: false, optional: true, required: false
+  private _title?: string | undefined; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string | undefined) {
+    this._title = value;
+  }
+  public resetTitle() {
+    this._title = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 export interface AccessContextManagerAccessLevelsAccessLevelsCustom {
   /**
   * expr block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#expr AccessContextManagerAccessLevels#expr}
   */
-  readonly expr: AccessContextManagerAccessLevelsAccessLevelsCustomExpr[];
+  readonly expr: AccessContextManagerAccessLevelsAccessLevelsCustomExpr;
 }
 
-function accessContextManagerAccessLevelsAccessLevelsCustomToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsCustom): any {
+function accessContextManagerAccessLevelsAccessLevelsCustomToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevelsCustomOutputReference | AccessContextManagerAccessLevelsAccessLevelsCustom): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    expr: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform)(struct!.expr),
+    expr: accessContextManagerAccessLevelsAccessLevelsCustomExprToTerraform(struct!.expr),
   }
 }
 
+export class AccessContextManagerAccessLevelsAccessLevelsCustomOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // expr - computed: false, optional: false, required: true
+  private _expr?: AccessContextManagerAccessLevelsAccessLevelsCustomExpr; 
+  private __exprOutput = new AccessContextManagerAccessLevelsAccessLevelsCustomExprOutputReference(this as any, "expr", true);
+  public get expr() {
+    return this.__exprOutput;
+  }
+  public putExpr(value: AccessContextManagerAccessLevelsAccessLevelsCustomExpr) {
+    this._expr = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exprInput() {
+    return this._expr
+  }
+}
 export interface AccessContextManagerAccessLevelsAccessLevels {
   /**
   * Description of the AccessLevel and its use. Does not affect behavior.
@@ -287,23 +547,26 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#basic AccessContextManagerAccessLevels#basic}
   */
-  readonly basic?: AccessContextManagerAccessLevelsAccessLevelsBasic[];
+  readonly basic?: AccessContextManagerAccessLevelsAccessLevelsBasic;
   /**
   * custom block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html#custom AccessContextManagerAccessLevels#custom}
   */
-  readonly custom?: AccessContextManagerAccessLevelsAccessLevelsCustom[];
+  readonly custom?: AccessContextManagerAccessLevelsAccessLevelsCustom;
 }
 
 function accessContextManagerAccessLevelsAccessLevelsToTerraform(struct?: AccessContextManagerAccessLevelsAccessLevels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     title: cdktf.stringToTerraform(struct!.title),
-    basic: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsBasicToTerraform)(struct!.basic),
-    custom: cdktf.listMapper(accessContextManagerAccessLevelsAccessLevelsCustomToTerraform)(struct!.custom),
+    basic: accessContextManagerAccessLevelsAccessLevelsBasicToTerraform(struct!.basic),
+    custom: accessContextManagerAccessLevelsAccessLevelsCustomToTerraform(struct!.custom),
   }
 }
 
@@ -322,8 +585,11 @@ export interface AccessContextManagerAccessLevelsTimeouts {
   readonly update?: string;
 }
 
-function accessContextManagerAccessLevelsTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelsTimeouts): any {
+function accessContextManagerAccessLevelsTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelsTimeoutsOutputReference | AccessContextManagerAccessLevelsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -331,6 +597,64 @@ function accessContextManagerAccessLevelsTimeoutsToTerraform(struct?: AccessCont
   }
 }
 
+export class AccessContextManagerAccessLevelsTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_levels.html google_access_context_manager_access_levels}
@@ -379,7 +703,7 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
@@ -392,11 +716,12 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
   }
 
   // access_levels - computed: false, optional: true, required: false
-  private _accessLevels?: AccessContextManagerAccessLevelsAccessLevels[];
+  private _accessLevels?: AccessContextManagerAccessLevelsAccessLevels[] | undefined; 
   public get accessLevels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('access_levels') as any;
   }
-  public set accessLevels(value: AccessContextManagerAccessLevelsAccessLevels[] ) {
+  public set accessLevels(value: AccessContextManagerAccessLevelsAccessLevels[] | undefined) {
     this._accessLevels = value;
   }
   public resetAccessLevels() {
@@ -408,11 +733,12 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AccessContextManagerAccessLevelsTimeouts;
+  private _timeouts?: AccessContextManagerAccessLevelsTimeouts | undefined; 
+  private __timeoutsOutput = new AccessContextManagerAccessLevelsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AccessContextManagerAccessLevelsTimeouts ) {
+  public putTimeouts(value: AccessContextManagerAccessLevelsTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -72,37 +72,37 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#encryption_configuration BigqueryTable#encryption_configuration}
   */
-  readonly encryptionConfiguration?: BigqueryTableEncryptionConfiguration[];
+  readonly encryptionConfiguration?: BigqueryTableEncryptionConfiguration;
   /**
   * external_data_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#external_data_configuration BigqueryTable#external_data_configuration}
   */
-  readonly externalDataConfiguration?: BigqueryTableExternalDataConfiguration[];
+  readonly externalDataConfiguration?: BigqueryTableExternalDataConfiguration;
   /**
   * materialized_view block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#materialized_view BigqueryTable#materialized_view}
   */
-  readonly materializedView?: BigqueryTableMaterializedView[];
+  readonly materializedView?: BigqueryTableMaterializedView;
   /**
   * range_partitioning block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#range_partitioning BigqueryTable#range_partitioning}
   */
-  readonly rangePartitioning?: BigqueryTableRangePartitioning[];
+  readonly rangePartitioning?: BigqueryTableRangePartitioning;
   /**
   * time_partitioning block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#time_partitioning BigqueryTable#time_partitioning}
   */
-  readonly timePartitioning?: BigqueryTableTimePartitioning[];
+  readonly timePartitioning?: BigqueryTableTimePartitioning;
   /**
   * view block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#view BigqueryTable#view}
   */
-  readonly view?: BigqueryTableView[];
+  readonly view?: BigqueryTableView;
 }
 export interface BigqueryTableEncryptionConfiguration {
   /**
@@ -113,13 +113,39 @@ export interface BigqueryTableEncryptionConfiguration {
   readonly kmsKeyName: string;
 }
 
-function bigqueryTableEncryptionConfigurationToTerraform(struct?: BigqueryTableEncryptionConfiguration): any {
+function bigqueryTableEncryptionConfigurationToTerraform(struct?: BigqueryTableEncryptionConfigurationOutputReference | BigqueryTableEncryptionConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
 }
 
+export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+}
 export interface BigqueryTableExternalDataConfigurationCsvOptions {
   /**
   * Indicates if BigQuery should accept rows that are missing trailing optional columns.
@@ -159,8 +185,11 @@ export interface BigqueryTableExternalDataConfigurationCsvOptions {
   readonly skipLeadingRows?: number;
 }
 
-function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationCsvOptions): any {
+function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationCsvOptionsOutputReference | BigqueryTableExternalDataConfigurationCsvOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_jagged_rows: cdktf.booleanToTerraform(struct!.allowJaggedRows),
     allow_quoted_newlines: cdktf.booleanToTerraform(struct!.allowQuotedNewlines),
@@ -171,6 +200,109 @@ function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct?: Bi
   }
 }
 
+export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_jagged_rows - computed: false, optional: true, required: false
+  private _allowJaggedRows?: boolean | cdktf.IResolvable | undefined; 
+  public get allowJaggedRows() {
+    return this.getBooleanAttribute('allow_jagged_rows') as any;
+  }
+  public set allowJaggedRows(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowJaggedRows = value;
+  }
+  public resetAllowJaggedRows() {
+    this._allowJaggedRows = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowJaggedRowsInput() {
+    return this._allowJaggedRows
+  }
+
+  // allow_quoted_newlines - computed: false, optional: true, required: false
+  private _allowQuotedNewlines?: boolean | cdktf.IResolvable | undefined; 
+  public get allowQuotedNewlines() {
+    return this.getBooleanAttribute('allow_quoted_newlines') as any;
+  }
+  public set allowQuotedNewlines(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowQuotedNewlines = value;
+  }
+  public resetAllowQuotedNewlines() {
+    this._allowQuotedNewlines = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowQuotedNewlinesInput() {
+    return this._allowQuotedNewlines
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string | undefined; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string | undefined) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
+  }
+
+  // field_delimiter - computed: false, optional: true, required: false
+  private _fieldDelimiter?: string | undefined; 
+  public get fieldDelimiter() {
+    return this.getStringAttribute('field_delimiter');
+  }
+  public set fieldDelimiter(value: string | undefined) {
+    this._fieldDelimiter = value;
+  }
+  public resetFieldDelimiter() {
+    this._fieldDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldDelimiterInput() {
+    return this._fieldDelimiter
+  }
+
+  // quote - computed: false, optional: false, required: true
+  private _quote?: string; 
+  public get quote() {
+    return this.getStringAttribute('quote');
+  }
+  public set quote(value: string) {
+    this._quote = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quoteInput() {
+    return this._quote
+  }
+
+  // skip_leading_rows - computed: false, optional: true, required: false
+  private _skipLeadingRows?: number | undefined; 
+  public get skipLeadingRows() {
+    return this.getNumberAttribute('skip_leading_rows');
+  }
+  public set skipLeadingRows(value: number | undefined) {
+    this._skipLeadingRows = value;
+  }
+  public resetSkipLeadingRows() {
+    this._skipLeadingRows = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipLeadingRowsInput() {
+    return this._skipLeadingRows
+  }
+}
 export interface BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
   /**
   * Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20"
@@ -186,14 +318,59 @@ export interface BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
   readonly skipLeadingRows?: number;
 }
 
-function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions): any {
+function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference | BigqueryTableExternalDataConfigurationGoogleSheetsOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     range: cdktf.stringToTerraform(struct!.range),
     skip_leading_rows: cdktf.numberToTerraform(struct!.skipLeadingRows),
   }
 }
 
+export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // range - computed: false, optional: true, required: false
+  private _range?: string | undefined; 
+  public get range() {
+    return this.getStringAttribute('range');
+  }
+  public set range(value: string | undefined) {
+    this._range = value;
+  }
+  public resetRange() {
+    this._range = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeInput() {
+    return this._range
+  }
+
+  // skip_leading_rows - computed: false, optional: true, required: false
+  private _skipLeadingRows?: number | undefined; 
+  public get skipLeadingRows() {
+    return this.getNumberAttribute('skip_leading_rows');
+  }
+  public set skipLeadingRows(value: number | undefined) {
+    this._skipLeadingRows = value;
+  }
+  public resetSkipLeadingRows() {
+    this._skipLeadingRows = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipLeadingRowsInput() {
+    return this._skipLeadingRows
+  }
+}
 export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
   /**
   * When set, what mode of hive partitioning to use when reading data.
@@ -215,8 +392,11 @@ export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
   readonly sourceUriPrefix?: string;
 }
 
-function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationHivePartitioningOptions): any {
+function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference | BigqueryTableExternalDataConfigurationHivePartitioningOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     mode: cdktf.stringToTerraform(struct!.mode),
     require_partition_filter: cdktf.booleanToTerraform(struct!.requirePartitionFilter),
@@ -224,6 +404,64 @@ function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerrafor
   }
 }
 
+export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: string | undefined; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string | undefined) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode
+  }
+
+  // require_partition_filter - computed: false, optional: true, required: false
+  private _requirePartitionFilter?: boolean | cdktf.IResolvable | undefined; 
+  public get requirePartitionFilter() {
+    return this.getBooleanAttribute('require_partition_filter') as any;
+  }
+  public set requirePartitionFilter(value: boolean | cdktf.IResolvable | undefined) {
+    this._requirePartitionFilter = value;
+  }
+  public resetRequirePartitionFilter() {
+    this._requirePartitionFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requirePartitionFilterInput() {
+    return this._requirePartitionFilter
+  }
+
+  // source_uri_prefix - computed: false, optional: true, required: false
+  private _sourceUriPrefix?: string | undefined; 
+  public get sourceUriPrefix() {
+    return this.getStringAttribute('source_uri_prefix');
+  }
+  public set sourceUriPrefix(value: string | undefined) {
+    this._sourceUriPrefix = value;
+  }
+  public resetSourceUriPrefix() {
+    this._sourceUriPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUriPrefixInput() {
+    return this._sourceUriPrefix
+  }
+}
 export interface BigqueryTableExternalDataConfiguration {
   /**
   * Let BigQuery try to autodetect the schema and format of the table.
@@ -272,23 +510,26 @@ export interface BigqueryTableExternalDataConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#csv_options BigqueryTable#csv_options}
   */
-  readonly csvOptions?: BigqueryTableExternalDataConfigurationCsvOptions[];
+  readonly csvOptions?: BigqueryTableExternalDataConfigurationCsvOptions;
   /**
   * google_sheets_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#google_sheets_options BigqueryTable#google_sheets_options}
   */
-  readonly googleSheetsOptions?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions[];
+  readonly googleSheetsOptions?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions;
   /**
   * hive_partitioning_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#hive_partitioning_options BigqueryTable#hive_partitioning_options}
   */
-  readonly hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions[];
+  readonly hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions;
 }
 
-function bigqueryTableExternalDataConfigurationToTerraform(struct?: BigqueryTableExternalDataConfiguration): any {
+function bigqueryTableExternalDataConfigurationToTerraform(struct?: BigqueryTableExternalDataConfigurationOutputReference | BigqueryTableExternalDataConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     autodetect: cdktf.booleanToTerraform(struct!.autodetect),
     compression: cdktf.stringToTerraform(struct!.compression),
@@ -297,12 +538,176 @@ function bigqueryTableExternalDataConfigurationToTerraform(struct?: BigqueryTabl
     schema: cdktf.stringToTerraform(struct!.schema),
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
     source_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceUris),
-    csv_options: cdktf.listMapper(bigqueryTableExternalDataConfigurationCsvOptionsToTerraform)(struct!.csvOptions),
-    google_sheets_options: cdktf.listMapper(bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform)(struct!.googleSheetsOptions),
-    hive_partitioning_options: cdktf.listMapper(bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform)(struct!.hivePartitioningOptions),
+    csv_options: bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct!.csvOptions),
+    google_sheets_options: bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct!.googleSheetsOptions),
+    hive_partitioning_options: bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct!.hivePartitioningOptions),
   }
 }
 
+export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // autodetect - computed: false, optional: false, required: true
+  private _autodetect?: boolean | cdktf.IResolvable; 
+  public get autodetect() {
+    return this.getBooleanAttribute('autodetect') as any;
+  }
+  public set autodetect(value: boolean | cdktf.IResolvable) {
+    this._autodetect = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autodetectInput() {
+    return this._autodetect
+  }
+
+  // compression - computed: false, optional: true, required: false
+  private _compression?: string | undefined; 
+  public get compression() {
+    return this.getStringAttribute('compression');
+  }
+  public set compression(value: string | undefined) {
+    this._compression = value;
+  }
+  public resetCompression() {
+    this._compression = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionInput() {
+    return this._compression
+  }
+
+  // ignore_unknown_values - computed: false, optional: true, required: false
+  private _ignoreUnknownValues?: boolean | cdktf.IResolvable | undefined; 
+  public get ignoreUnknownValues() {
+    return this.getBooleanAttribute('ignore_unknown_values') as any;
+  }
+  public set ignoreUnknownValues(value: boolean | cdktf.IResolvable | undefined) {
+    this._ignoreUnknownValues = value;
+  }
+  public resetIgnoreUnknownValues() {
+    this._ignoreUnknownValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreUnknownValuesInput() {
+    return this._ignoreUnknownValues
+  }
+
+  // max_bad_records - computed: false, optional: true, required: false
+  private _maxBadRecords?: number | undefined; 
+  public get maxBadRecords() {
+    return this.getNumberAttribute('max_bad_records');
+  }
+  public set maxBadRecords(value: number | undefined) {
+    this._maxBadRecords = value;
+  }
+  public resetMaxBadRecords() {
+    this._maxBadRecords = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxBadRecordsInput() {
+    return this._maxBadRecords
+  }
+
+  // schema - computed: true, optional: true, required: false
+  private _schema?: string | undefined; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string | undefined) {
+    this._schema = value;
+  }
+  public resetSchema() {
+    this._schema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema
+  }
+
+  // source_format - computed: false, optional: false, required: true
+  private _sourceFormat?: string; 
+  public get sourceFormat() {
+    return this.getStringAttribute('source_format');
+  }
+  public set sourceFormat(value: string) {
+    this._sourceFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceFormatInput() {
+    return this._sourceFormat
+  }
+
+  // source_uris - computed: false, optional: false, required: true
+  private _sourceUris?: string[]; 
+  public get sourceUris() {
+    return this.getListAttribute('source_uris');
+  }
+  public set sourceUris(value: string[]) {
+    this._sourceUris = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUrisInput() {
+    return this._sourceUris
+  }
+
+  // csv_options - computed: false, optional: true, required: false
+  private _csvOptions?: BigqueryTableExternalDataConfigurationCsvOptions | undefined; 
+  private __csvOptionsOutput = new BigqueryTableExternalDataConfigurationCsvOptionsOutputReference(this as any, "csv_options", true);
+  public get csvOptions() {
+    return this.__csvOptionsOutput;
+  }
+  public putCsvOptions(value: BigqueryTableExternalDataConfigurationCsvOptions | undefined) {
+    this._csvOptions = value;
+  }
+  public resetCsvOptions() {
+    this._csvOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get csvOptionsInput() {
+    return this._csvOptions
+  }
+
+  // google_sheets_options - computed: false, optional: true, required: false
+  private _googleSheetsOptions?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions | undefined; 
+  private __googleSheetsOptionsOutput = new BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference(this as any, "google_sheets_options", true);
+  public get googleSheetsOptions() {
+    return this.__googleSheetsOptionsOutput;
+  }
+  public putGoogleSheetsOptions(value: BigqueryTableExternalDataConfigurationGoogleSheetsOptions | undefined) {
+    this._googleSheetsOptions = value;
+  }
+  public resetGoogleSheetsOptions() {
+    this._googleSheetsOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get googleSheetsOptionsInput() {
+    return this._googleSheetsOptions
+  }
+
+  // hive_partitioning_options - computed: false, optional: true, required: false
+  private _hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions | undefined; 
+  private __hivePartitioningOptionsOutput = new BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference(this as any, "hive_partitioning_options", true);
+  public get hivePartitioningOptions() {
+    return this.__hivePartitioningOptionsOutput;
+  }
+  public putHivePartitioningOptions(value: BigqueryTableExternalDataConfigurationHivePartitioningOptions | undefined) {
+    this._hivePartitioningOptions = value;
+  }
+  public resetHivePartitioningOptions() {
+    this._hivePartitioningOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hivePartitioningOptionsInput() {
+    return this._hivePartitioningOptions
+  }
+}
 export interface BigqueryTableMaterializedView {
   /**
   * Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true.
@@ -324,8 +729,11 @@ export interface BigqueryTableMaterializedView {
   readonly refreshIntervalMs?: number;
 }
 
-function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableMaterializedView): any {
+function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableMaterializedViewOutputReference | BigqueryTableMaterializedView): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable_refresh: cdktf.booleanToTerraform(struct!.enableRefresh),
     query: cdktf.stringToTerraform(struct!.query),
@@ -333,6 +741,61 @@ function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableMaterial
   }
 }
 
+export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable_refresh - computed: false, optional: true, required: false
+  private _enableRefresh?: boolean | cdktf.IResolvable | undefined; 
+  public get enableRefresh() {
+    return this.getBooleanAttribute('enable_refresh') as any;
+  }
+  public set enableRefresh(value: boolean | cdktf.IResolvable | undefined) {
+    this._enableRefresh = value;
+  }
+  public resetEnableRefresh() {
+    this._enableRefresh = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableRefreshInput() {
+    return this._enableRefresh
+  }
+
+  // query - computed: false, optional: false, required: true
+  private _query?: string; 
+  public get query() {
+    return this.getStringAttribute('query');
+  }
+  public set query(value: string) {
+    this._query = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryInput() {
+    return this._query
+  }
+
+  // refresh_interval_ms - computed: false, optional: true, required: false
+  private _refreshIntervalMs?: number | undefined; 
+  public get refreshIntervalMs() {
+    return this.getNumberAttribute('refresh_interval_ms');
+  }
+  public set refreshIntervalMs(value: number | undefined) {
+    this._refreshIntervalMs = value;
+  }
+  public resetRefreshIntervalMs() {
+    this._refreshIntervalMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get refreshIntervalMsInput() {
+    return this._refreshIntervalMs
+  }
+}
 export interface BigqueryTableRangePartitioningRange {
   /**
   * End of the range partitioning, exclusive.
@@ -354,8 +817,11 @@ export interface BigqueryTableRangePartitioningRange {
   readonly start: number;
 }
 
-function bigqueryTableRangePartitioningRangeToTerraform(struct?: BigqueryTableRangePartitioningRange): any {
+function bigqueryTableRangePartitioningRangeToTerraform(struct?: BigqueryTableRangePartitioningRangeOutputReference | BigqueryTableRangePartitioningRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     end: cdktf.numberToTerraform(struct!.end),
     interval: cdktf.numberToTerraform(struct!.interval),
@@ -363,6 +829,55 @@ function bigqueryTableRangePartitioningRangeToTerraform(struct?: BigqueryTableRa
   }
 }
 
+export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // end - computed: false, optional: false, required: true
+  private _end?: number; 
+  public get end() {
+    return this.getNumberAttribute('end');
+  }
+  public set end(value: number) {
+    this._end = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endInput() {
+    return this._end
+  }
+
+  // interval - computed: false, optional: false, required: true
+  private _interval?: number; 
+  public get interval() {
+    return this.getNumberAttribute('interval');
+  }
+  public set interval(value: number) {
+    this._interval = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval
+  }
+
+  // start - computed: false, optional: false, required: true
+  private _start?: number; 
+  public get start() {
+    return this.getNumberAttribute('start');
+  }
+  public set start(value: number) {
+    this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start
+  }
+}
 export interface BigqueryTableRangePartitioning {
   /**
   * The field used to determine how to create a range-based partition.
@@ -375,17 +890,57 @@ export interface BigqueryTableRangePartitioning {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html#range BigqueryTable#range}
   */
-  readonly range: BigqueryTableRangePartitioningRange[];
+  readonly range: BigqueryTableRangePartitioningRange;
 }
 
-function bigqueryTableRangePartitioningToTerraform(struct?: BigqueryTableRangePartitioning): any {
+function bigqueryTableRangePartitioningToTerraform(struct?: BigqueryTableRangePartitioningOutputReference | BigqueryTableRangePartitioning): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     field: cdktf.stringToTerraform(struct!.field),
-    range: cdktf.listMapper(bigqueryTableRangePartitioningRangeToTerraform)(struct!.range),
+    range: bigqueryTableRangePartitioningRangeToTerraform(struct!.range),
   }
 }
 
+export class BigqueryTableRangePartitioningOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // field - computed: false, optional: false, required: true
+  private _field?: string; 
+  public get field() {
+    return this.getStringAttribute('field');
+  }
+  public set field(value: string) {
+    this._field = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldInput() {
+    return this._field
+  }
+
+  // range - computed: false, optional: false, required: true
+  private _range?: BigqueryTableRangePartitioningRange; 
+  private __rangeOutput = new BigqueryTableRangePartitioningRangeOutputReference(this as any, "range", true);
+  public get range() {
+    return this.__rangeOutput;
+  }
+  public putRange(value: BigqueryTableRangePartitioningRange) {
+    this._range = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeInput() {
+    return this._range
+  }
+}
 export interface BigqueryTableTimePartitioning {
   /**
   * Number of milliseconds for which to keep the storage for a partition.
@@ -413,8 +968,11 @@ export interface BigqueryTableTimePartitioning {
   readonly type: string;
 }
 
-function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableTimePartitioning): any {
+function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableTimePartitioningOutputReference | BigqueryTableTimePartitioning): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     expiration_ms: cdktf.numberToTerraform(struct!.expirationMs),
     field: cdktf.stringToTerraform(struct!.field),
@@ -423,6 +981,77 @@ function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableTimePart
   }
 }
 
+export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // expiration_ms - computed: true, optional: true, required: false
+  private _expirationMs?: number | undefined; 
+  public get expirationMs() {
+    return this.getNumberAttribute('expiration_ms');
+  }
+  public set expirationMs(value: number | undefined) {
+    this._expirationMs = value;
+  }
+  public resetExpirationMs() {
+    this._expirationMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationMsInput() {
+    return this._expirationMs
+  }
+
+  // field - computed: false, optional: true, required: false
+  private _field?: string | undefined; 
+  public get field() {
+    return this.getStringAttribute('field');
+  }
+  public set field(value: string | undefined) {
+    this._field = value;
+  }
+  public resetField() {
+    this._field = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldInput() {
+    return this._field
+  }
+
+  // require_partition_filter - computed: false, optional: true, required: false
+  private _requirePartitionFilter?: boolean | cdktf.IResolvable | undefined; 
+  public get requirePartitionFilter() {
+    return this.getBooleanAttribute('require_partition_filter') as any;
+  }
+  public set requirePartitionFilter(value: boolean | cdktf.IResolvable | undefined) {
+    this._requirePartitionFilter = value;
+  }
+  public resetRequirePartitionFilter() {
+    this._requirePartitionFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requirePartitionFilterInput() {
+    return this._requirePartitionFilter
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface BigqueryTableView {
   /**
   * A query that BigQuery executes when the view is referenced.
@@ -438,14 +1067,56 @@ export interface BigqueryTableView {
   readonly useLegacySql?: boolean | cdktf.IResolvable;
 }
 
-function bigqueryTableViewToTerraform(struct?: BigqueryTableView): any {
+function bigqueryTableViewToTerraform(struct?: BigqueryTableViewOutputReference | BigqueryTableView): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     query: cdktf.stringToTerraform(struct!.query),
     use_legacy_sql: cdktf.booleanToTerraform(struct!.useLegacySql),
   }
 }
 
+export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // query - computed: false, optional: false, required: true
+  private _query?: string; 
+  public get query() {
+    return this.getStringAttribute('query');
+  }
+  public set query(value: string) {
+    this._query = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryInput() {
+    return this._query
+  }
+
+  // use_legacy_sql - computed: false, optional: true, required: false
+  private _useLegacySql?: boolean | cdktf.IResolvable | undefined; 
+  public get useLegacySql() {
+    return this.getBooleanAttribute('use_legacy_sql') as any;
+  }
+  public set useLegacySql(value: boolean | cdktf.IResolvable | undefined) {
+    this._useLegacySql = value;
+  }
+  public resetUseLegacySql() {
+    this._useLegacySql = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useLegacySqlInput() {
+    return this._useLegacySql
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table.html google_bigquery_table}
@@ -502,11 +1173,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   // ==========
 
   // clustering - computed: false, optional: true, required: false
-  private _clustering?: string[];
+  private _clustering?: string[] | undefined; 
   public get clustering() {
     return this.getListAttribute('clustering');
   }
-  public set clustering(value: string[] ) {
+  public set clustering(value: string[] | undefined) {
     this._clustering = value;
   }
   public resetClustering() {
@@ -523,7 +1194,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // dataset_id - computed: false, optional: false, required: true
-  private _datasetId: string;
+  private _datasetId?: string; 
   public get datasetId() {
     return this.getStringAttribute('dataset_id');
   }
@@ -536,11 +1207,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean | cdktf.IResolvable;
+  private _deletionProtection?: boolean | cdktf.IResolvable | undefined; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection');
+    return this.getBooleanAttribute('deletion_protection') as any;
   }
-  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable | undefined) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -552,11 +1223,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -573,11 +1244,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // expiration_time - computed: true, optional: true, required: false
-  private _expirationTime?: number;
+  private _expirationTime?: number | undefined; 
   public get expirationTime() {
     return this.getNumberAttribute('expiration_time');
   }
-  public set expirationTime(value: number) {
+  public set expirationTime(value: number | undefined) {
     this._expirationTime = value;
   }
   public resetExpirationTime() {
@@ -589,11 +1260,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // friendly_name - computed: false, optional: true, required: false
-  private _friendlyName?: string;
+  private _friendlyName?: string | undefined; 
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string ) {
+  public set friendlyName(value: string | undefined) {
     this._friendlyName = value;
   }
   public resetFriendlyName() {
@@ -610,11 +1281,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -651,11 +1323,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -667,11 +1339,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // schema - computed: true, optional: true, required: false
-  private _schema?: string;
+  private _schema?: string | undefined; 
   public get schema() {
     return this.getStringAttribute('schema');
   }
-  public set schema(value: string) {
+  public set schema(value: string | undefined) {
     this._schema = value;
   }
   public resetSchema() {
@@ -688,7 +1360,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // table_id - computed: false, optional: false, required: true
-  private _tableId: string;
+  private _tableId?: string; 
   public get tableId() {
     return this.getStringAttribute('table_id');
   }
@@ -706,11 +1378,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration?: BigqueryTableEncryptionConfiguration[];
+  private _encryptionConfiguration?: BigqueryTableEncryptionConfiguration | undefined; 
+  private __encryptionConfigurationOutput = new BigqueryTableEncryptionConfigurationOutputReference(this as any, "encryption_configuration", true);
   public get encryptionConfiguration() {
-    return this.interpolationForAttribute('encryption_configuration') as any;
+    return this.__encryptionConfigurationOutput;
   }
-  public set encryptionConfiguration(value: BigqueryTableEncryptionConfiguration[] ) {
+  public putEncryptionConfiguration(value: BigqueryTableEncryptionConfiguration | undefined) {
     this._encryptionConfiguration = value;
   }
   public resetEncryptionConfiguration() {
@@ -722,11 +1395,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // external_data_configuration - computed: false, optional: true, required: false
-  private _externalDataConfiguration?: BigqueryTableExternalDataConfiguration[];
+  private _externalDataConfiguration?: BigqueryTableExternalDataConfiguration | undefined; 
+  private __externalDataConfigurationOutput = new BigqueryTableExternalDataConfigurationOutputReference(this as any, "external_data_configuration", true);
   public get externalDataConfiguration() {
-    return this.interpolationForAttribute('external_data_configuration') as any;
+    return this.__externalDataConfigurationOutput;
   }
-  public set externalDataConfiguration(value: BigqueryTableExternalDataConfiguration[] ) {
+  public putExternalDataConfiguration(value: BigqueryTableExternalDataConfiguration | undefined) {
     this._externalDataConfiguration = value;
   }
   public resetExternalDataConfiguration() {
@@ -738,11 +1412,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // materialized_view - computed: false, optional: true, required: false
-  private _materializedView?: BigqueryTableMaterializedView[];
+  private _materializedView?: BigqueryTableMaterializedView | undefined; 
+  private __materializedViewOutput = new BigqueryTableMaterializedViewOutputReference(this as any, "materialized_view", true);
   public get materializedView() {
-    return this.interpolationForAttribute('materialized_view') as any;
+    return this.__materializedViewOutput;
   }
-  public set materializedView(value: BigqueryTableMaterializedView[] ) {
+  public putMaterializedView(value: BigqueryTableMaterializedView | undefined) {
     this._materializedView = value;
   }
   public resetMaterializedView() {
@@ -754,11 +1429,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // range_partitioning - computed: false, optional: true, required: false
-  private _rangePartitioning?: BigqueryTableRangePartitioning[];
+  private _rangePartitioning?: BigqueryTableRangePartitioning | undefined; 
+  private __rangePartitioningOutput = new BigqueryTableRangePartitioningOutputReference(this as any, "range_partitioning", true);
   public get rangePartitioning() {
-    return this.interpolationForAttribute('range_partitioning') as any;
+    return this.__rangePartitioningOutput;
   }
-  public set rangePartitioning(value: BigqueryTableRangePartitioning[] ) {
+  public putRangePartitioning(value: BigqueryTableRangePartitioning | undefined) {
     this._rangePartitioning = value;
   }
   public resetRangePartitioning() {
@@ -770,11 +1446,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // time_partitioning - computed: false, optional: true, required: false
-  private _timePartitioning?: BigqueryTableTimePartitioning[];
+  private _timePartitioning?: BigqueryTableTimePartitioning | undefined; 
+  private __timePartitioningOutput = new BigqueryTableTimePartitioningOutputReference(this as any, "time_partitioning", true);
   public get timePartitioning() {
-    return this.interpolationForAttribute('time_partitioning') as any;
+    return this.__timePartitioningOutput;
   }
-  public set timePartitioning(value: BigqueryTableTimePartitioning[] ) {
+  public putTimePartitioning(value: BigqueryTableTimePartitioning | undefined) {
     this._timePartitioning = value;
   }
   public resetTimePartitioning() {
@@ -786,11 +1463,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // view - computed: false, optional: true, required: false
-  private _view?: BigqueryTableView[];
+  private _view?: BigqueryTableView | undefined; 
+  private __viewOutput = new BigqueryTableViewOutputReference(this as any, "view", true);
   public get view() {
-    return this.interpolationForAttribute('view') as any;
+    return this.__viewOutput;
   }
-  public set view(value: BigqueryTableView[] ) {
+  public putView(value: BigqueryTableView | undefined) {
     this._view = value;
   }
   public resetView() {
@@ -817,12 +1495,12 @@ export class BigqueryTable extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       schema: cdktf.stringToTerraform(this._schema),
       table_id: cdktf.stringToTerraform(this._tableId),
-      encryption_configuration: cdktf.listMapper(bigqueryTableEncryptionConfigurationToTerraform)(this._encryptionConfiguration),
-      external_data_configuration: cdktf.listMapper(bigqueryTableExternalDataConfigurationToTerraform)(this._externalDataConfiguration),
-      materialized_view: cdktf.listMapper(bigqueryTableMaterializedViewToTerraform)(this._materializedView),
-      range_partitioning: cdktf.listMapper(bigqueryTableRangePartitioningToTerraform)(this._rangePartitioning),
-      time_partitioning: cdktf.listMapper(bigqueryTableTimePartitioningToTerraform)(this._timePartitioning),
-      view: cdktf.listMapper(bigqueryTableViewToTerraform)(this._view),
+      encryption_configuration: bigqueryTableEncryptionConfigurationToTerraform(this._encryptionConfiguration),
+      external_data_configuration: bigqueryTableExternalDataConfigurationToTerraform(this._externalDataConfiguration),
+      materialized_view: bigqueryTableMaterializedViewToTerraform(this._materializedView),
+      range_partitioning: bigqueryTableRangePartitioningToTerraform(this._rangePartitioning),
+      time_partitioning: bigqueryTableTimePartitioningToTerraform(this._timePartitioning),
+      view: bigqueryTableViewToTerraform(this._view),
     };
   }
 }

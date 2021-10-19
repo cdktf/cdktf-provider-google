@@ -95,7 +95,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
 
   // managed_zone - computed: false, optional: false, required: true
-  private _managedZone: string;
+  private _managedZone?: string; 
   public get managedZone() {
     return this.getStringAttribute('managed_zone');
   }
@@ -108,7 +108,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -121,11 +121,11 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -137,7 +137,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
 
   // rrdatas - computed: false, optional: false, required: true
-  private _rrdatas: string[];
+  private _rrdatas?: string[]; 
   public get rrdatas() {
     return this.getListAttribute('rrdatas');
   }
@@ -150,11 +150,11 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl?: number;
+  private _ttl?: number | undefined; 
   public get ttl() {
     return this.getNumberAttribute('ttl');
   }
-  public set ttl(value: number ) {
+  public set ttl(value: number | undefined) {
     this._ttl = value;
   }
   public resetTtl() {
@@ -166,7 +166,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }

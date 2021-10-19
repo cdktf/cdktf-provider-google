@@ -31,6 +31,7 @@ export class DataGoogleCloudRunServiceMetadata extends cdktf.ComplexComputedList
 
   // annotations - computed: true, optional: false, required: false
   public get annotations() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('annotations') as any;
   }
 
@@ -41,6 +42,7 @@ export class DataGoogleCloudRunServiceMetadata extends cdktf.ComplexComputedList
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
 
@@ -90,6 +92,7 @@ export class DataGoogleCloudRunServiceStatus extends cdktf.ComplexComputedList {
 
   // conditions - computed: true, optional: false, required: false
   public get conditions() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('conditions') as any;
   }
 
@@ -117,6 +120,7 @@ export class DataGoogleCloudRunServiceTemplateMetadata extends cdktf.ComplexComp
 
   // annotations - computed: true, optional: false, required: false
   public get annotations() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('annotations') as any;
   }
 
@@ -127,6 +131,7 @@ export class DataGoogleCloudRunServiceTemplateMetadata extends cdktf.ComplexComp
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
 
@@ -178,12 +183,13 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromConfigMapRef 
 
   // local_object_reference - computed: true, optional: false, required: false
   public get localObjectReference() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('local_object_reference') as any;
   }
 
   // optional - computed: true, optional: false, required: false
   public get optional() {
-    return this.getBooleanAttribute('optional');
+    return this.getBooleanAttribute('optional') as any;
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference extends cdktf.ComplexComputedList {
@@ -197,18 +203,20 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFromSecretRef ext
 
   // local_object_reference - computed: true, optional: false, required: false
   public get localObjectReference() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('local_object_reference') as any;
   }
 
   // optional - computed: true, optional: false, required: false
   public get optional() {
-    return this.getBooleanAttribute('optional');
+    return this.getBooleanAttribute('optional') as any;
   }
 }
 export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom extends cdktf.ComplexComputedList {
 
   // config_map_ref - computed: true, optional: false, required: false
   public get configMapRef() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('config_map_ref') as any;
   }
 
@@ -219,6 +227,7 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersEnvFrom extends cdkt
 
   // secret_ref - computed: true, optional: false, required: false
   public get secretRef() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('secret_ref') as any;
   }
 }
@@ -243,11 +252,13 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersResources extends cd
 
   // limits - computed: true, optional: false, required: false
   public get limits() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('limits') as any;
   }
 
   // requests - computed: true, optional: false, required: false
   public get requests() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('requests') as any;
   }
 }
@@ -265,11 +276,13 @@ export class DataGoogleCloudRunServiceTemplateSpecContainers extends cdktf.Compl
 
   // env - computed: true, optional: false, required: false
   public get env() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('env') as any;
   }
 
   // env_from - computed: true, optional: false, required: false
   public get envFrom() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('env_from') as any;
   }
 
@@ -280,11 +293,13 @@ export class DataGoogleCloudRunServiceTemplateSpecContainers extends cdktf.Compl
 
   // ports - computed: true, optional: false, required: false
   public get ports() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ports') as any;
   }
 
   // resources - computed: true, optional: false, required: false
   public get resources() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('resources') as any;
   }
 
@@ -302,6 +317,7 @@ export class DataGoogleCloudRunServiceTemplateSpec extends cdktf.ComplexComputed
 
   // containers - computed: true, optional: false, required: false
   public get containers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('containers') as any;
   }
 
@@ -324,11 +340,13 @@ export class DataGoogleCloudRunServiceTemplate extends cdktf.ComplexComputedList
 
   // metadata - computed: true, optional: false, required: false
   public get metadata() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
 
   // spec - computed: true, optional: false, required: false
   public get spec() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('spec') as any;
   }
 }
@@ -336,7 +354,7 @@ export class DataGoogleCloudRunServiceTraffic extends cdktf.ComplexComputedList 
 
   // latest_revision - computed: true, optional: false, required: false
   public get latestRevision() {
-    return this.getBooleanAttribute('latest_revision');
+    return this.getBooleanAttribute('latest_revision') as any;
   }
 
   // percent - computed: true, optional: false, required: false
@@ -393,7 +411,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
 
   // autogenerate_revision_name - computed: true, optional: false, required: false
   public get autogenerateRevisionName() {
-    return this.getBooleanAttribute('autogenerate_revision_name');
+    return this.getBooleanAttribute('autogenerate_revision_name') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -402,7 +420,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -420,7 +438,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -433,11 +451,11 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

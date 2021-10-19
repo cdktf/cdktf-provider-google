@@ -57,13 +57,13 @@ enablement check, quota, and billing.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#condition CloudAssetOrganizationFeed#condition}
   */
-  readonly condition?: CloudAssetOrganizationFeedCondition[];
+  readonly condition?: CloudAssetOrganizationFeedCondition;
   /**
   * feed_output_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#feed_output_config CloudAssetOrganizationFeed#feed_output_config}
   */
-  readonly feedOutputConfig: CloudAssetOrganizationFeedFeedOutputConfig[];
+  readonly feedOutputConfig: CloudAssetOrganizationFeedFeedOutputConfig;
   /**
   * timeouts block
   * 
@@ -101,8 +101,11 @@ This can be used e.g. in UIs which allow to enter the expression.
   readonly title?: string;
 }
 
-function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrganizationFeedCondition): any {
+function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrganizationFeedConditionOutputReference | CloudAssetOrganizationFeedCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -111,6 +114,77 @@ function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrgan
   }
 }
 
+export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // location - computed: false, optional: true, required: false
+  private _location?: string | undefined; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string | undefined) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // title - computed: false, optional: true, required: false
+  private _title?: string | undefined; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string | undefined) {
+    this._title = value;
+  }
+  public resetTitle() {
+    this._title = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
   /**
   * Destination on Cloud Pubsub topic.
@@ -120,29 +194,82 @@ export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
   readonly topic: string;
 }
 
-function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination): any {
+function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference | CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     topic: cdktf.stringToTerraform(struct!.topic),
   }
 }
 
+export class CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // topic - computed: false, optional: false, required: true
+  private _topic?: string; 
+  public get topic() {
+    return this.getStringAttribute('topic');
+  }
+  public set topic(value: string) {
+    this._topic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicInput() {
+    return this._topic
+  }
+}
 export interface CloudAssetOrganizationFeedFeedOutputConfig {
   /**
   * pubsub_destination block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#pubsub_destination CloudAssetOrganizationFeed#pubsub_destination}
   */
-  readonly pubsubDestination: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination[];
+  readonly pubsubDestination: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination;
 }
 
-function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfig): any {
+function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigOutputReference | CloudAssetOrganizationFeedFeedOutputConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    pubsub_destination: cdktf.listMapper(cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform)(struct!.pubsubDestination),
+    pubsub_destination: cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct!.pubsubDestination),
   }
 }
 
+export class CloudAssetOrganizationFeedFeedOutputConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // pubsub_destination - computed: false, optional: false, required: true
+  private _pubsubDestination?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination; 
+  private __pubsubDestinationOutput = new CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference(this as any, "pubsub_destination", true);
+  public get pubsubDestination() {
+    return this.__pubsubDestinationOutput;
+  }
+  public putPubsubDestination(value: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination) {
+    this._pubsubDestination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubDestinationInput() {
+    return this._pubsubDestination
+  }
+}
 export interface CloudAssetOrganizationFeedTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html#create CloudAssetOrganizationFeed#create}
@@ -158,8 +285,11 @@ export interface CloudAssetOrganizationFeedTimeouts {
   readonly update?: string;
 }
 
-function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrganizationFeedTimeouts): any {
+function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrganizationFeedTimeoutsOutputReference | CloudAssetOrganizationFeedTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -167,6 +297,64 @@ function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrgani
   }
 }
 
+export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_organization_feed.html google_cloud_asset_organization_feed}
@@ -216,11 +404,11 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   // ==========
 
   // asset_names - computed: false, optional: true, required: false
-  private _assetNames?: string[];
+  private _assetNames?: string[] | undefined; 
   public get assetNames() {
     return this.getListAttribute('asset_names');
   }
-  public set assetNames(value: string[] ) {
+  public set assetNames(value: string[] | undefined) {
     this._assetNames = value;
   }
   public resetAssetNames() {
@@ -232,11 +420,11 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // asset_types - computed: false, optional: true, required: false
-  private _assetTypes?: string[];
+  private _assetTypes?: string[] | undefined; 
   public get assetTypes() {
     return this.getListAttribute('asset_types');
   }
-  public set assetTypes(value: string[] ) {
+  public set assetTypes(value: string[] | undefined) {
     this._assetTypes = value;
   }
   public resetAssetTypes() {
@@ -248,7 +436,7 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // billing_project - computed: false, optional: false, required: true
-  private _billingProject: string;
+  private _billingProject?: string; 
   public get billingProject() {
     return this.getStringAttribute('billing_project');
   }
@@ -261,11 +449,11 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string;
+  private _contentType?: string | undefined; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string ) {
+  public set contentType(value: string | undefined) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -277,7 +465,7 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // feed_id - computed: false, optional: false, required: true
-  private _feedId: string;
+  private _feedId?: string; 
   public get feedId() {
     return this.getStringAttribute('feed_id');
   }
@@ -300,7 +488,7 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // org_id - computed: false, optional: false, required: true
-  private _orgId: string;
+  private _orgId?: string; 
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
@@ -313,11 +501,12 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: CloudAssetOrganizationFeedCondition[];
+  private _condition?: CloudAssetOrganizationFeedCondition | undefined; 
+  private __conditionOutput = new CloudAssetOrganizationFeedConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: CloudAssetOrganizationFeedCondition[] ) {
+  public putCondition(value: CloudAssetOrganizationFeedCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -329,11 +518,12 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // feed_output_config - computed: false, optional: false, required: true
-  private _feedOutputConfig: CloudAssetOrganizationFeedFeedOutputConfig[];
+  private _feedOutputConfig?: CloudAssetOrganizationFeedFeedOutputConfig; 
+  private __feedOutputConfigOutput = new CloudAssetOrganizationFeedFeedOutputConfigOutputReference(this as any, "feed_output_config", true);
   public get feedOutputConfig() {
-    return this.interpolationForAttribute('feed_output_config') as any;
+    return this.__feedOutputConfigOutput;
   }
-  public set feedOutputConfig(value: CloudAssetOrganizationFeedFeedOutputConfig[]) {
+  public putFeedOutputConfig(value: CloudAssetOrganizationFeedFeedOutputConfig) {
     this._feedOutputConfig = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -342,11 +532,12 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudAssetOrganizationFeedTimeouts;
+  private _timeouts?: CloudAssetOrganizationFeedTimeouts | undefined; 
+  private __timeoutsOutput = new CloudAssetOrganizationFeedTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: CloudAssetOrganizationFeedTimeouts ) {
+  public putTimeouts(value: CloudAssetOrganizationFeedTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -369,8 +560,8 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
       content_type: cdktf.stringToTerraform(this._contentType),
       feed_id: cdktf.stringToTerraform(this._feedId),
       org_id: cdktf.stringToTerraform(this._orgId),
-      condition: cdktf.listMapper(cloudAssetOrganizationFeedConditionToTerraform)(this._condition),
-      feed_output_config: cdktf.listMapper(cloudAssetOrganizationFeedFeedOutputConfigToTerraform)(this._feedOutputConfig),
+      condition: cloudAssetOrganizationFeedConditionToTerraform(this._condition),
+      feed_output_config: cloudAssetOrganizationFeedFeedOutputConfigToTerraform(this._feedOutputConfig),
       timeouts: cloudAssetOrganizationFeedTimeoutsToTerraform(this._timeouts),
     };
   }

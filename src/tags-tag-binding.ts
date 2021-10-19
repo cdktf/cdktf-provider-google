@@ -37,14 +37,59 @@ export interface TagsTagBindingTimeouts {
   readonly delete?: string;
 }
 
-function tagsTagBindingTimeoutsToTerraform(struct?: TagsTagBindingTimeouts): any {
+function tagsTagBindingTimeoutsToTerraform(struct?: TagsTagBindingTimeoutsOutputReference | TagsTagBindingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class TagsTagBindingTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html google_tags_tag_binding}
@@ -98,7 +143,7 @@ export class TagsTagBinding extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
@@ -111,7 +156,7 @@ export class TagsTagBinding extends cdktf.TerraformResource {
   }
 
   // tag_value - computed: false, optional: false, required: true
-  private _tagValue: string;
+  private _tagValue?: string; 
   public get tagValue() {
     return this.getStringAttribute('tag_value');
   }
@@ -124,11 +169,12 @@ export class TagsTagBinding extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: TagsTagBindingTimeouts;
+  private _timeouts?: TagsTagBindingTimeouts | undefined; 
+  private __timeoutsOutput = new TagsTagBindingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: TagsTagBindingTimeouts ) {
+  public putTimeouts(value: TagsTagBindingTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

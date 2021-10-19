@@ -95,11 +95,11 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string ) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -121,11 +121,11 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -137,11 +137,11 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   }
 
   // self_link - computed: true, optional: true, required: false
-  private _selfLink?: string;
+  private _selfLink?: string | undefined; 
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string) {
+  public set selfLink(value: string | undefined) {
     this._selfLink = value;
   }
   public resetSelfLink() {
@@ -158,11 +158,11 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string;
+  private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string) {
+  public set zone(value: string | undefined) {
     this._zone = value;
   }
   public resetZone() {

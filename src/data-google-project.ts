@@ -56,7 +56,7 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
 
   // auto_create_network - computed: true, optional: false, required: false
   public get autoCreateNetwork() {
-    return this.getBooleanAttribute('auto_create_network');
+    return this.getBooleanAttribute('auto_create_network') as any;
   }
 
   // billing_account - computed: true, optional: false, required: false
@@ -95,11 +95,11 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
   }
 
   // project_id - computed: false, optional: true, required: false
-  private _projectId?: string;
+  private _projectId?: string | undefined; 
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
-  public set projectId(value: string ) {
+  public set projectId(value: string | undefined) {
     this._projectId = value;
   }
   public resetProjectId() {
@@ -112,7 +112,7 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
 
   // skip_delete - computed: true, optional: false, required: false
   public get skipDelete() {
-    return this.getBooleanAttribute('skip_delete');
+    return this.getBooleanAttribute('skip_delete') as any;
   }
 
   // =========

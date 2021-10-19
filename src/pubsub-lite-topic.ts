@@ -34,19 +34,19 @@ export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#partition_config PubsubLiteTopic#partition_config}
   */
-  readonly partitionConfig?: PubsubLiteTopicPartitionConfig[];
+  readonly partitionConfig?: PubsubLiteTopicPartitionConfig;
   /**
   * reservation_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#reservation_config PubsubLiteTopic#reservation_config}
   */
-  readonly reservationConfig?: PubsubLiteTopicReservationConfig[];
+  readonly reservationConfig?: PubsubLiteTopicReservationConfig;
   /**
   * retention_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#retention_config PubsubLiteTopic#retention_config}
   */
-  readonly retentionConfig?: PubsubLiteTopicRetentionConfig[];
+  readonly retentionConfig?: PubsubLiteTopicRetentionConfig;
   /**
   * timeouts block
   * 
@@ -69,14 +69,53 @@ export interface PubsubLiteTopicPartitionConfigCapacity {
   readonly subscribeMibPerSec: number;
 }
 
-function pubsubLiteTopicPartitionConfigCapacityToTerraform(struct?: PubsubLiteTopicPartitionConfigCapacity): any {
+function pubsubLiteTopicPartitionConfigCapacityToTerraform(struct?: PubsubLiteTopicPartitionConfigCapacityOutputReference | PubsubLiteTopicPartitionConfigCapacity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     publish_mib_per_sec: cdktf.numberToTerraform(struct!.publishMibPerSec),
     subscribe_mib_per_sec: cdktf.numberToTerraform(struct!.subscribeMibPerSec),
   }
 }
 
+export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // publish_mib_per_sec - computed: false, optional: false, required: true
+  private _publishMibPerSec?: number; 
+  public get publishMibPerSec() {
+    return this.getNumberAttribute('publish_mib_per_sec');
+  }
+  public set publishMibPerSec(value: number) {
+    this._publishMibPerSec = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publishMibPerSecInput() {
+    return this._publishMibPerSec
+  }
+
+  // subscribe_mib_per_sec - computed: false, optional: false, required: true
+  private _subscribeMibPerSec?: number; 
+  public get subscribeMibPerSec() {
+    return this.getNumberAttribute('subscribe_mib_per_sec');
+  }
+  public set subscribeMibPerSec(value: number) {
+    this._subscribeMibPerSec = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscribeMibPerSecInput() {
+    return this._subscribeMibPerSec
+  }
+}
 export interface PubsubLiteTopicPartitionConfig {
   /**
   * The number of partitions in the topic. Must be at least 1.
@@ -89,17 +128,60 @@ export interface PubsubLiteTopicPartitionConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#capacity PubsubLiteTopic#capacity}
   */
-  readonly capacity?: PubsubLiteTopicPartitionConfigCapacity[];
+  readonly capacity?: PubsubLiteTopicPartitionConfigCapacity;
 }
 
-function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTopicPartitionConfig): any {
+function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTopicPartitionConfigOutputReference | PubsubLiteTopicPartitionConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    capacity: cdktf.listMapper(pubsubLiteTopicPartitionConfigCapacityToTerraform)(struct!.capacity),
+    capacity: pubsubLiteTopicPartitionConfigCapacityToTerraform(struct!.capacity),
   }
 }
 
+export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // count - computed: false, optional: false, required: true
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count
+  }
+
+  // capacity - computed: false, optional: true, required: false
+  private _capacity?: PubsubLiteTopicPartitionConfigCapacity | undefined; 
+  private __capacityOutput = new PubsubLiteTopicPartitionConfigCapacityOutputReference(this as any, "capacity", true);
+  public get capacity() {
+    return this.__capacityOutput;
+  }
+  public putCapacity(value: PubsubLiteTopicPartitionConfigCapacity | undefined) {
+    this._capacity = value;
+  }
+  public resetCapacity() {
+    this._capacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
+  }
+}
 export interface PubsubLiteTopicReservationConfig {
   /**
   * The Reservation to use for this topic's throughput capacity.
@@ -109,13 +191,42 @@ export interface PubsubLiteTopicReservationConfig {
   readonly throughputReservation?: string;
 }
 
-function pubsubLiteTopicReservationConfigToTerraform(struct?: PubsubLiteTopicReservationConfig): any {
+function pubsubLiteTopicReservationConfigToTerraform(struct?: PubsubLiteTopicReservationConfigOutputReference | PubsubLiteTopicReservationConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     throughput_reservation: cdktf.stringToTerraform(struct!.throughputReservation),
   }
 }
 
+export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // throughput_reservation - computed: false, optional: true, required: false
+  private _throughputReservation?: string | undefined; 
+  public get throughputReservation() {
+    return this.getStringAttribute('throughput_reservation');
+  }
+  public set throughputReservation(value: string | undefined) {
+    this._throughputReservation = value;
+  }
+  public resetThroughputReservation() {
+    this._throughputReservation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throughputReservationInput() {
+    return this._throughputReservation
+  }
+}
 export interface PubsubLiteTopicRetentionConfig {
   /**
   * The provisioned storage, in bytes, per partition. If the number of bytes stored
@@ -134,14 +245,56 @@ long as the bytes retained for each partition is below perPartitionBytes.
   readonly period?: string;
 }
 
-function pubsubLiteTopicRetentionConfigToTerraform(struct?: PubsubLiteTopicRetentionConfig): any {
+function pubsubLiteTopicRetentionConfigToTerraform(struct?: PubsubLiteTopicRetentionConfigOutputReference | PubsubLiteTopicRetentionConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     per_partition_bytes: cdktf.stringToTerraform(struct!.perPartitionBytes),
     period: cdktf.stringToTerraform(struct!.period),
   }
 }
 
+export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // per_partition_bytes - computed: false, optional: false, required: true
+  private _perPartitionBytes?: string; 
+  public get perPartitionBytes() {
+    return this.getStringAttribute('per_partition_bytes');
+  }
+  public set perPartitionBytes(value: string) {
+    this._perPartitionBytes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perPartitionBytesInput() {
+    return this._perPartitionBytes
+  }
+
+  // period - computed: false, optional: true, required: false
+  private _period?: string | undefined; 
+  public get period() {
+    return this.getStringAttribute('period');
+  }
+  public set period(value: string | undefined) {
+    this._period = value;
+  }
+  public resetPeriod() {
+    this._period = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodInput() {
+    return this._period
+  }
+}
 export interface PubsubLiteTopicTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html#create PubsubLiteTopic#create}
@@ -157,8 +310,11 @@ export interface PubsubLiteTopicTimeouts {
   readonly update?: string;
 }
 
-function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeouts): any {
+function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeoutsOutputReference | PubsubLiteTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -166,6 +322,64 @@ function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeouts): a
   }
 }
 
+export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic.html google_pubsub_lite_topic}
@@ -219,7 +433,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -232,11 +446,11 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -248,11 +462,11 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string ) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -264,11 +478,11 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string;
+  private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string ) {
+  public set zone(value: string | undefined) {
     this._zone = value;
   }
   public resetZone() {
@@ -280,11 +494,12 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // partition_config - computed: false, optional: true, required: false
-  private _partitionConfig?: PubsubLiteTopicPartitionConfig[];
+  private _partitionConfig?: PubsubLiteTopicPartitionConfig | undefined; 
+  private __partitionConfigOutput = new PubsubLiteTopicPartitionConfigOutputReference(this as any, "partition_config", true);
   public get partitionConfig() {
-    return this.interpolationForAttribute('partition_config') as any;
+    return this.__partitionConfigOutput;
   }
-  public set partitionConfig(value: PubsubLiteTopicPartitionConfig[] ) {
+  public putPartitionConfig(value: PubsubLiteTopicPartitionConfig | undefined) {
     this._partitionConfig = value;
   }
   public resetPartitionConfig() {
@@ -296,11 +511,12 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // reservation_config - computed: false, optional: true, required: false
-  private _reservationConfig?: PubsubLiteTopicReservationConfig[];
+  private _reservationConfig?: PubsubLiteTopicReservationConfig | undefined; 
+  private __reservationConfigOutput = new PubsubLiteTopicReservationConfigOutputReference(this as any, "reservation_config", true);
   public get reservationConfig() {
-    return this.interpolationForAttribute('reservation_config') as any;
+    return this.__reservationConfigOutput;
   }
-  public set reservationConfig(value: PubsubLiteTopicReservationConfig[] ) {
+  public putReservationConfig(value: PubsubLiteTopicReservationConfig | undefined) {
     this._reservationConfig = value;
   }
   public resetReservationConfig() {
@@ -312,11 +528,12 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // retention_config - computed: false, optional: true, required: false
-  private _retentionConfig?: PubsubLiteTopicRetentionConfig[];
+  private _retentionConfig?: PubsubLiteTopicRetentionConfig | undefined; 
+  private __retentionConfigOutput = new PubsubLiteTopicRetentionConfigOutputReference(this as any, "retention_config", true);
   public get retentionConfig() {
-    return this.interpolationForAttribute('retention_config') as any;
+    return this.__retentionConfigOutput;
   }
-  public set retentionConfig(value: PubsubLiteTopicRetentionConfig[] ) {
+  public putRetentionConfig(value: PubsubLiteTopicRetentionConfig | undefined) {
     this._retentionConfig = value;
   }
   public resetRetentionConfig() {
@@ -328,11 +545,12 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PubsubLiteTopicTimeouts;
+  private _timeouts?: PubsubLiteTopicTimeouts | undefined; 
+  private __timeoutsOutput = new PubsubLiteTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PubsubLiteTopicTimeouts ) {
+  public putTimeouts(value: PubsubLiteTopicTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -353,9 +571,9 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       zone: cdktf.stringToTerraform(this._zone),
-      partition_config: cdktf.listMapper(pubsubLiteTopicPartitionConfigToTerraform)(this._partitionConfig),
-      reservation_config: cdktf.listMapper(pubsubLiteTopicReservationConfigToTerraform)(this._reservationConfig),
-      retention_config: cdktf.listMapper(pubsubLiteTopicRetentionConfigToTerraform)(this._retentionConfig),
+      partition_config: pubsubLiteTopicPartitionConfigToTerraform(this._partitionConfig),
+      reservation_config: pubsubLiteTopicReservationConfigToTerraform(this._reservationConfig),
+      retention_config: pubsubLiteTopicRetentionConfigToTerraform(this._retentionConfig),
       timeouts: pubsubLiteTopicTimeoutsToTerraform(this._timeouts),
     };
   }

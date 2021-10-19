@@ -48,7 +48,7 @@ affinity for any reservation. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#specific_reservation ComputeReservation#specific_reservation}
   */
-  readonly specificReservation: ComputeReservationSpecificReservation[];
+  readonly specificReservation: ComputeReservationSpecificReservation;
   /**
   * timeouts block
   * 
@@ -78,6 +78,9 @@ If you are creating an instance template, specify only the accelerator name.
 
 function computeReservationSpecificReservationInstancePropertiesGuestAcceleratorsToTerraform(struct?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     accelerator_count: cdktf.numberToTerraform(struct!.acceleratorCount),
     accelerator_type: cdktf.stringToTerraform(struct!.acceleratorType),
@@ -101,6 +104,9 @@ export interface ComputeReservationSpecificReservationInstancePropertiesLocalSsd
 
 function computeReservationSpecificReservationInstancePropertiesLocalSsdsToTerraform(struct?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     interface: cdktf.stringToTerraform(struct!.interface),
@@ -137,8 +143,11 @@ for information on available CPU platforms.
   readonly localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[];
 }
 
-function computeReservationSpecificReservationInstancePropertiesToTerraform(struct?: ComputeReservationSpecificReservationInstanceProperties): any {
+function computeReservationSpecificReservationInstancePropertiesToTerraform(struct?: ComputeReservationSpecificReservationInstancePropertiesOutputReference | ComputeReservationSpecificReservationInstanceProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
@@ -147,6 +156,79 @@ function computeReservationSpecificReservationInstancePropertiesToTerraform(stru
   }
 }
 
+export class ComputeReservationSpecificReservationInstancePropertiesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // machine_type - computed: false, optional: false, required: true
+  private _machineType?: string; 
+  public get machineType() {
+    return this.getStringAttribute('machine_type');
+  }
+  public set machineType(value: string) {
+    this._machineType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineTypeInput() {
+    return this._machineType
+  }
+
+  // min_cpu_platform - computed: true, optional: true, required: false
+  private _minCpuPlatform?: string | undefined; 
+  public get minCpuPlatform() {
+    return this.getStringAttribute('min_cpu_platform');
+  }
+  public set minCpuPlatform(value: string | undefined) {
+    this._minCpuPlatform = value;
+  }
+  public resetMinCpuPlatform() {
+    this._minCpuPlatform = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCpuPlatformInput() {
+    return this._minCpuPlatform
+  }
+
+  // guest_accelerators - computed: false, optional: true, required: false
+  private _guestAccelerators?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | undefined; 
+  public get guestAccelerators() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('guest_accelerators') as any;
+  }
+  public set guestAccelerators(value: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | undefined) {
+    this._guestAccelerators = value;
+  }
+  public resetGuestAccelerators() {
+    this._guestAccelerators = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get guestAcceleratorsInput() {
+    return this._guestAccelerators
+  }
+
+  // local_ssds - computed: false, optional: true, required: false
+  private _localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | undefined; 
+  public get localSsds() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('local_ssds') as any;
+  }
+  public set localSsds(value: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | undefined) {
+    this._localSsds = value;
+  }
+  public resetLocalSsds() {
+    this._localSsds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localSsdsInput() {
+    return this._localSsds
+  }
+}
 export interface ComputeReservationSpecificReservation {
   /**
   * The number of resources that are allocated.
@@ -159,17 +241,57 @@ export interface ComputeReservationSpecificReservation {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#instance_properties ComputeReservation#instance_properties}
   */
-  readonly instanceProperties: ComputeReservationSpecificReservationInstanceProperties[];
+  readonly instanceProperties: ComputeReservationSpecificReservationInstanceProperties;
 }
 
-function computeReservationSpecificReservationToTerraform(struct?: ComputeReservationSpecificReservation): any {
+function computeReservationSpecificReservationToTerraform(struct?: ComputeReservationSpecificReservationOutputReference | ComputeReservationSpecificReservation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    instance_properties: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesToTerraform)(struct!.instanceProperties),
+    instance_properties: computeReservationSpecificReservationInstancePropertiesToTerraform(struct!.instanceProperties),
   }
 }
 
+export class ComputeReservationSpecificReservationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // count - computed: false, optional: false, required: true
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count
+  }
+
+  // instance_properties - computed: false, optional: false, required: true
+  private _instanceProperties?: ComputeReservationSpecificReservationInstanceProperties; 
+  private __instancePropertiesOutput = new ComputeReservationSpecificReservationInstancePropertiesOutputReference(this as any, "instance_properties", true);
+  public get instanceProperties() {
+    return this.__instancePropertiesOutput;
+  }
+  public putInstanceProperties(value: ComputeReservationSpecificReservationInstanceProperties) {
+    this._instanceProperties = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instancePropertiesInput() {
+    return this._instanceProperties
+  }
+}
 export interface ComputeReservationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html#create ComputeReservation#create}
@@ -185,8 +307,11 @@ export interface ComputeReservationTimeouts {
   readonly update?: string;
 }
 
-function computeReservationTimeoutsToTerraform(struct?: ComputeReservationTimeouts): any {
+function computeReservationTimeoutsToTerraform(struct?: ComputeReservationTimeoutsOutputReference | ComputeReservationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -194,6 +319,64 @@ function computeReservationTimeoutsToTerraform(struct?: ComputeReservationTimeou
   }
 }
 
+export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_reservation.html google_compute_reservation}
@@ -251,11 +434,11 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -272,7 +455,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -285,11 +468,11 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -306,11 +489,11 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // specific_reservation_required - computed: false, optional: true, required: false
-  private _specificReservationRequired?: boolean | cdktf.IResolvable;
+  private _specificReservationRequired?: boolean | cdktf.IResolvable | undefined; 
   public get specificReservationRequired() {
-    return this.getBooleanAttribute('specific_reservation_required');
+    return this.getBooleanAttribute('specific_reservation_required') as any;
   }
-  public set specificReservationRequired(value: boolean | cdktf.IResolvable ) {
+  public set specificReservationRequired(value: boolean | cdktf.IResolvable | undefined) {
     this._specificReservationRequired = value;
   }
   public resetSpecificReservationRequired() {
@@ -327,7 +510,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // zone - computed: false, optional: false, required: true
-  private _zone: string;
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
@@ -340,11 +523,12 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // specific_reservation - computed: false, optional: false, required: true
-  private _specificReservation: ComputeReservationSpecificReservation[];
+  private _specificReservation?: ComputeReservationSpecificReservation; 
+  private __specificReservationOutput = new ComputeReservationSpecificReservationOutputReference(this as any, "specific_reservation", true);
   public get specificReservation() {
-    return this.interpolationForAttribute('specific_reservation') as any;
+    return this.__specificReservationOutput;
   }
-  public set specificReservation(value: ComputeReservationSpecificReservation[]) {
+  public putSpecificReservation(value: ComputeReservationSpecificReservation) {
     this._specificReservation = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -353,11 +537,12 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeReservationTimeouts;
+  private _timeouts?: ComputeReservationTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeReservationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeReservationTimeouts ) {
+  public putTimeouts(value: ComputeReservationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -379,7 +564,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       specific_reservation_required: cdktf.booleanToTerraform(this._specificReservationRequired),
       zone: cdktf.stringToTerraform(this._zone),
-      specific_reservation: cdktf.listMapper(computeReservationSpecificReservationToTerraform)(this._specificReservation),
+      specific_reservation: computeReservationSpecificReservationToTerraform(this._specificReservation),
       timeouts: computeReservationTimeoutsToTerraform(this._timeouts),
     };
   }

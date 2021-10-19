@@ -84,7 +84,7 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -97,7 +97,7 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
@@ -110,11 +110,11 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -126,11 +126,11 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
 
   // text - computed: false, optional: true, required: false
-  private _text?: string;
+  private _text?: string | undefined; 
   public get text() {
     return this.getStringAttribute('text');
   }
-  public set text(value: string ) {
+  public set text(value: string | undefined) {
     this._text = value;
   }
   public resetText() {
@@ -147,11 +147,11 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
 
   // value - computed: false, optional: true, required: false
-  private _value?: string;
+  private _value?: string | undefined; 
   public get value() {
     return this.getStringAttribute('value');
   }
-  public set value(value: string ) {
+  public set value(value: string | undefined) {
     this._value = value;
   }
   public resetValue() {

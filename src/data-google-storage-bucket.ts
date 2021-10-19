@@ -106,11 +106,13 @@ export class DataGoogleStorageBucketLifecycleRule extends cdktf.ComplexComputedL
 
   // action - computed: true, optional: false, required: false
   public get action() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('action') as any;
   }
 
   // condition - computed: true, optional: false, required: false
   public get condition() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('condition') as any;
   }
 }
@@ -130,7 +132,7 @@ export class DataGoogleStorageBucketRetentionPolicy extends cdktf.ComplexCompute
 
   // is_locked - computed: true, optional: false, required: false
   public get isLocked() {
-    return this.getBooleanAttribute('is_locked');
+    return this.getBooleanAttribute('is_locked') as any;
   }
 
   // retention_period - computed: true, optional: false, required: false
@@ -142,7 +144,7 @@ export class DataGoogleStorageBucketVersioning extends cdktf.ComplexComputedList
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 }
 export class DataGoogleStorageBucketWebsite extends cdktf.ComplexComputedList {
@@ -199,7 +201,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
   // bucket_policy_only - computed: true, optional: false, required: false
   public get bucketPolicyOnly() {
-    return this.getBooleanAttribute('bucket_policy_only');
+    return this.getBooleanAttribute('bucket_policy_only') as any;
   }
 
   // cors - computed: true, optional: false, required: false
@@ -209,7 +211,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
   // default_event_based_hold - computed: true, optional: false, required: false
   public get defaultEventBasedHold() {
-    return this.getBooleanAttribute('default_event_based_hold');
+    return this.getBooleanAttribute('default_event_based_hold') as any;
   }
 
   // encryption - computed: true, optional: false, required: false
@@ -219,7 +221,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
   // force_destroy - computed: true, optional: false, required: false
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy');
+    return this.getBooleanAttribute('force_destroy') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -248,7 +250,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -267,7 +269,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
   // requester_pays - computed: true, optional: false, required: false
   public get requesterPays() {
-    return this.getBooleanAttribute('requester_pays');
+    return this.getBooleanAttribute('requester_pays') as any;
   }
 
   // retention_policy - computed: true, optional: false, required: false
@@ -287,7 +289,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
   // uniform_bucket_level_access - computed: true, optional: false, required: false
   public get uniformBucketLevelAccess() {
-    return this.getBooleanAttribute('uniform_bucket_level_access');
+    return this.getBooleanAttribute('uniform_bucket_level_access') as any;
   }
 
   // url - computed: true, optional: false, required: false

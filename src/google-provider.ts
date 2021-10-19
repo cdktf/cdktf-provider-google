@@ -402,7 +402,7 @@ export interface GoogleProviderConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#batching GoogleProvider#batching}
   */
-  readonly batching?: GoogleProviderBatching[];
+  readonly batching?: GoogleProviderBatching;
 }
 export interface GoogleProviderBatching {
   /**
@@ -415,14 +415,59 @@ export interface GoogleProviderBatching {
   readonly sendAfter?: string;
 }
 
-function googleProviderBatchingToTerraform(struct?: GoogleProviderBatching): any {
+function googleProviderBatchingToTerraform(struct?: GoogleProviderBatchingOutputReference | GoogleProviderBatching): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable_batching: cdktf.booleanToTerraform(struct!.enableBatching),
     send_after: cdktf.stringToTerraform(struct!.sendAfter),
   }
 }
 
+export class GoogleProviderBatchingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable_batching - computed: false, optional: true, required: false
+  private _enableBatching?: boolean | cdktf.IResolvable | undefined; 
+  public get enableBatching() {
+    return this._enableBatching;
+  }
+  public set enableBatching(value: boolean | cdktf.IResolvable | undefined| undefined) {
+    this._enableBatching = value;
+  }
+  public resetEnableBatching() {
+    this._enableBatching = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableBatchingInput() {
+    return this._enableBatching
+  }
+
+  // send_after - computed: false, optional: true, required: false
+  private _sendAfter?: string | undefined; 
+  public get sendAfter() {
+    return this._sendAfter;
+  }
+  public set sendAfter(value: string | undefined| undefined) {
+    this._sendAfter = value;
+  }
+  public resetSendAfter() {
+    this._sendAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sendAfterInput() {
+    return this._sendAfter
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google google}
@@ -559,11 +604,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // ==========
 
   // access_approval_custom_endpoint - computed: false, optional: true, required: false
-  private _accessApprovalCustomEndpoint?: string;
+  private _accessApprovalCustomEndpoint?: string | undefined; 
   public get accessApprovalCustomEndpoint() {
     return this._accessApprovalCustomEndpoint;
   }
-  public set accessApprovalCustomEndpoint(value: string  | undefined) {
+  public set accessApprovalCustomEndpoint(value: string | undefined| undefined) {
     this._accessApprovalCustomEndpoint = value;
   }
   public resetAccessApprovalCustomEndpoint() {
@@ -575,11 +620,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // access_context_manager_custom_endpoint - computed: false, optional: true, required: false
-  private _accessContextManagerCustomEndpoint?: string;
+  private _accessContextManagerCustomEndpoint?: string | undefined; 
   public get accessContextManagerCustomEndpoint() {
     return this._accessContextManagerCustomEndpoint;
   }
-  public set accessContextManagerCustomEndpoint(value: string  | undefined) {
+  public set accessContextManagerCustomEndpoint(value: string | undefined| undefined) {
     this._accessContextManagerCustomEndpoint = value;
   }
   public resetAccessContextManagerCustomEndpoint() {
@@ -591,11 +636,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // access_token - computed: false, optional: true, required: false
-  private _accessToken?: string;
+  private _accessToken?: string | undefined; 
   public get accessToken() {
     return this._accessToken;
   }
-  public set accessToken(value: string  | undefined) {
+  public set accessToken(value: string | undefined| undefined) {
     this._accessToken = value;
   }
   public resetAccessToken() {
@@ -607,11 +652,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // active_directory_custom_endpoint - computed: false, optional: true, required: false
-  private _activeDirectoryCustomEndpoint?: string;
+  private _activeDirectoryCustomEndpoint?: string | undefined; 
   public get activeDirectoryCustomEndpoint() {
     return this._activeDirectoryCustomEndpoint;
   }
-  public set activeDirectoryCustomEndpoint(value: string  | undefined) {
+  public set activeDirectoryCustomEndpoint(value: string | undefined| undefined) {
     this._activeDirectoryCustomEndpoint = value;
   }
   public resetActiveDirectoryCustomEndpoint() {
@@ -623,11 +668,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // apigee_custom_endpoint - computed: false, optional: true, required: false
-  private _apigeeCustomEndpoint?: string;
+  private _apigeeCustomEndpoint?: string | undefined; 
   public get apigeeCustomEndpoint() {
     return this._apigeeCustomEndpoint;
   }
-  public set apigeeCustomEndpoint(value: string  | undefined) {
+  public set apigeeCustomEndpoint(value: string | undefined| undefined) {
     this._apigeeCustomEndpoint = value;
   }
   public resetApigeeCustomEndpoint() {
@@ -639,11 +684,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // app_engine_custom_endpoint - computed: false, optional: true, required: false
-  private _appEngineCustomEndpoint?: string;
+  private _appEngineCustomEndpoint?: string | undefined; 
   public get appEngineCustomEndpoint() {
     return this._appEngineCustomEndpoint;
   }
-  public set appEngineCustomEndpoint(value: string  | undefined) {
+  public set appEngineCustomEndpoint(value: string | undefined| undefined) {
     this._appEngineCustomEndpoint = value;
   }
   public resetAppEngineCustomEndpoint() {
@@ -655,11 +700,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // assured_workloads_custom_endpoint - computed: false, optional: true, required: false
-  private _assuredWorkloadsCustomEndpoint?: string;
+  private _assuredWorkloadsCustomEndpoint?: string | undefined; 
   public get assuredWorkloadsCustomEndpoint() {
     return this._assuredWorkloadsCustomEndpoint;
   }
-  public set assuredWorkloadsCustomEndpoint(value: string  | undefined) {
+  public set assuredWorkloadsCustomEndpoint(value: string | undefined| undefined) {
     this._assuredWorkloadsCustomEndpoint = value;
   }
   public resetAssuredWorkloadsCustomEndpoint() {
@@ -671,11 +716,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // big_query_custom_endpoint - computed: false, optional: true, required: false
-  private _bigQueryCustomEndpoint?: string;
+  private _bigQueryCustomEndpoint?: string | undefined; 
   public get bigQueryCustomEndpoint() {
     return this._bigQueryCustomEndpoint;
   }
-  public set bigQueryCustomEndpoint(value: string  | undefined) {
+  public set bigQueryCustomEndpoint(value: string | undefined| undefined) {
     this._bigQueryCustomEndpoint = value;
   }
   public resetBigQueryCustomEndpoint() {
@@ -687,11 +732,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // bigquery_data_transfer_custom_endpoint - computed: false, optional: true, required: false
-  private _bigqueryDataTransferCustomEndpoint?: string;
+  private _bigqueryDataTransferCustomEndpoint?: string | undefined; 
   public get bigqueryDataTransferCustomEndpoint() {
     return this._bigqueryDataTransferCustomEndpoint;
   }
-  public set bigqueryDataTransferCustomEndpoint(value: string  | undefined) {
+  public set bigqueryDataTransferCustomEndpoint(value: string | undefined| undefined) {
     this._bigqueryDataTransferCustomEndpoint = value;
   }
   public resetBigqueryDataTransferCustomEndpoint() {
@@ -703,11 +748,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // bigquery_reservation_custom_endpoint - computed: false, optional: true, required: false
-  private _bigqueryReservationCustomEndpoint?: string;
+  private _bigqueryReservationCustomEndpoint?: string | undefined; 
   public get bigqueryReservationCustomEndpoint() {
     return this._bigqueryReservationCustomEndpoint;
   }
-  public set bigqueryReservationCustomEndpoint(value: string  | undefined) {
+  public set bigqueryReservationCustomEndpoint(value: string | undefined| undefined) {
     this._bigqueryReservationCustomEndpoint = value;
   }
   public resetBigqueryReservationCustomEndpoint() {
@@ -719,11 +764,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // bigtable_custom_endpoint - computed: false, optional: true, required: false
-  private _bigtableCustomEndpoint?: string;
+  private _bigtableCustomEndpoint?: string | undefined; 
   public get bigtableCustomEndpoint() {
     return this._bigtableCustomEndpoint;
   }
-  public set bigtableCustomEndpoint(value: string  | undefined) {
+  public set bigtableCustomEndpoint(value: string | undefined| undefined) {
     this._bigtableCustomEndpoint = value;
   }
   public resetBigtableCustomEndpoint() {
@@ -735,11 +780,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // billing_custom_endpoint - computed: false, optional: true, required: false
-  private _billingCustomEndpoint?: string;
+  private _billingCustomEndpoint?: string | undefined; 
   public get billingCustomEndpoint() {
     return this._billingCustomEndpoint;
   }
-  public set billingCustomEndpoint(value: string  | undefined) {
+  public set billingCustomEndpoint(value: string | undefined| undefined) {
     this._billingCustomEndpoint = value;
   }
   public resetBillingCustomEndpoint() {
@@ -751,11 +796,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // billing_project - computed: false, optional: true, required: false
-  private _billingProject?: string;
+  private _billingProject?: string | undefined; 
   public get billingProject() {
     return this._billingProject;
   }
-  public set billingProject(value: string  | undefined) {
+  public set billingProject(value: string | undefined| undefined) {
     this._billingProject = value;
   }
   public resetBillingProject() {
@@ -767,11 +812,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // binary_authorization_custom_endpoint - computed: false, optional: true, required: false
-  private _binaryAuthorizationCustomEndpoint?: string;
+  private _binaryAuthorizationCustomEndpoint?: string | undefined; 
   public get binaryAuthorizationCustomEndpoint() {
     return this._binaryAuthorizationCustomEndpoint;
   }
-  public set binaryAuthorizationCustomEndpoint(value: string  | undefined) {
+  public set binaryAuthorizationCustomEndpoint(value: string | undefined| undefined) {
     this._binaryAuthorizationCustomEndpoint = value;
   }
   public resetBinaryAuthorizationCustomEndpoint() {
@@ -783,11 +828,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_asset_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudAssetCustomEndpoint?: string;
+  private _cloudAssetCustomEndpoint?: string | undefined; 
   public get cloudAssetCustomEndpoint() {
     return this._cloudAssetCustomEndpoint;
   }
-  public set cloudAssetCustomEndpoint(value: string  | undefined) {
+  public set cloudAssetCustomEndpoint(value: string | undefined| undefined) {
     this._cloudAssetCustomEndpoint = value;
   }
   public resetCloudAssetCustomEndpoint() {
@@ -799,11 +844,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_billing_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudBillingCustomEndpoint?: string;
+  private _cloudBillingCustomEndpoint?: string | undefined; 
   public get cloudBillingCustomEndpoint() {
     return this._cloudBillingCustomEndpoint;
   }
-  public set cloudBillingCustomEndpoint(value: string  | undefined) {
+  public set cloudBillingCustomEndpoint(value: string | undefined| undefined) {
     this._cloudBillingCustomEndpoint = value;
   }
   public resetCloudBillingCustomEndpoint() {
@@ -815,11 +860,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_build_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudBuildCustomEndpoint?: string;
+  private _cloudBuildCustomEndpoint?: string | undefined; 
   public get cloudBuildCustomEndpoint() {
     return this._cloudBuildCustomEndpoint;
   }
-  public set cloudBuildCustomEndpoint(value: string  | undefined) {
+  public set cloudBuildCustomEndpoint(value: string | undefined| undefined) {
     this._cloudBuildCustomEndpoint = value;
   }
   public resetCloudBuildCustomEndpoint() {
@@ -831,11 +876,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_functions_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudFunctionsCustomEndpoint?: string;
+  private _cloudFunctionsCustomEndpoint?: string | undefined; 
   public get cloudFunctionsCustomEndpoint() {
     return this._cloudFunctionsCustomEndpoint;
   }
-  public set cloudFunctionsCustomEndpoint(value: string  | undefined) {
+  public set cloudFunctionsCustomEndpoint(value: string | undefined| undefined) {
     this._cloudFunctionsCustomEndpoint = value;
   }
   public resetCloudFunctionsCustomEndpoint() {
@@ -847,11 +892,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_identity_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudIdentityCustomEndpoint?: string;
+  private _cloudIdentityCustomEndpoint?: string | undefined; 
   public get cloudIdentityCustomEndpoint() {
     return this._cloudIdentityCustomEndpoint;
   }
-  public set cloudIdentityCustomEndpoint(value: string  | undefined) {
+  public set cloudIdentityCustomEndpoint(value: string | undefined| undefined) {
     this._cloudIdentityCustomEndpoint = value;
   }
   public resetCloudIdentityCustomEndpoint() {
@@ -863,11 +908,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_iot_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudIotCustomEndpoint?: string;
+  private _cloudIotCustomEndpoint?: string | undefined; 
   public get cloudIotCustomEndpoint() {
     return this._cloudIotCustomEndpoint;
   }
-  public set cloudIotCustomEndpoint(value: string  | undefined) {
+  public set cloudIotCustomEndpoint(value: string | undefined| undefined) {
     this._cloudIotCustomEndpoint = value;
   }
   public resetCloudIotCustomEndpoint() {
@@ -879,11 +924,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_resource_manager_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudResourceManagerCustomEndpoint?: string;
+  private _cloudResourceManagerCustomEndpoint?: string | undefined; 
   public get cloudResourceManagerCustomEndpoint() {
     return this._cloudResourceManagerCustomEndpoint;
   }
-  public set cloudResourceManagerCustomEndpoint(value: string  | undefined) {
+  public set cloudResourceManagerCustomEndpoint(value: string | undefined| undefined) {
     this._cloudResourceManagerCustomEndpoint = value;
   }
   public resetCloudResourceManagerCustomEndpoint() {
@@ -895,11 +940,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_run_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudRunCustomEndpoint?: string;
+  private _cloudRunCustomEndpoint?: string | undefined; 
   public get cloudRunCustomEndpoint() {
     return this._cloudRunCustomEndpoint;
   }
-  public set cloudRunCustomEndpoint(value: string  | undefined) {
+  public set cloudRunCustomEndpoint(value: string | undefined| undefined) {
     this._cloudRunCustomEndpoint = value;
   }
   public resetCloudRunCustomEndpoint() {
@@ -911,11 +956,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_scheduler_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudSchedulerCustomEndpoint?: string;
+  private _cloudSchedulerCustomEndpoint?: string | undefined; 
   public get cloudSchedulerCustomEndpoint() {
     return this._cloudSchedulerCustomEndpoint;
   }
-  public set cloudSchedulerCustomEndpoint(value: string  | undefined) {
+  public set cloudSchedulerCustomEndpoint(value: string | undefined| undefined) {
     this._cloudSchedulerCustomEndpoint = value;
   }
   public resetCloudSchedulerCustomEndpoint() {
@@ -927,11 +972,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // cloud_tasks_custom_endpoint - computed: false, optional: true, required: false
-  private _cloudTasksCustomEndpoint?: string;
+  private _cloudTasksCustomEndpoint?: string | undefined; 
   public get cloudTasksCustomEndpoint() {
     return this._cloudTasksCustomEndpoint;
   }
-  public set cloudTasksCustomEndpoint(value: string  | undefined) {
+  public set cloudTasksCustomEndpoint(value: string | undefined| undefined) {
     this._cloudTasksCustomEndpoint = value;
   }
   public resetCloudTasksCustomEndpoint() {
@@ -943,11 +988,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // composer_custom_endpoint - computed: false, optional: true, required: false
-  private _composerCustomEndpoint?: string;
+  private _composerCustomEndpoint?: string | undefined; 
   public get composerCustomEndpoint() {
     return this._composerCustomEndpoint;
   }
-  public set composerCustomEndpoint(value: string  | undefined) {
+  public set composerCustomEndpoint(value: string | undefined| undefined) {
     this._composerCustomEndpoint = value;
   }
   public resetComposerCustomEndpoint() {
@@ -959,11 +1004,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // compute_beta_custom_endpoint - computed: false, optional: true, required: false
-  private _computeBetaCustomEndpoint?: string;
+  private _computeBetaCustomEndpoint?: string | undefined; 
   public get computeBetaCustomEndpoint() {
     return this._computeBetaCustomEndpoint;
   }
-  public set computeBetaCustomEndpoint(value: string  | undefined) {
+  public set computeBetaCustomEndpoint(value: string | undefined| undefined) {
     this._computeBetaCustomEndpoint = value;
   }
   public resetComputeBetaCustomEndpoint() {
@@ -975,11 +1020,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // compute_custom_endpoint - computed: false, optional: true, required: false
-  private _computeCustomEndpoint?: string;
+  private _computeCustomEndpoint?: string | undefined; 
   public get computeCustomEndpoint() {
     return this._computeCustomEndpoint;
   }
-  public set computeCustomEndpoint(value: string  | undefined) {
+  public set computeCustomEndpoint(value: string | undefined| undefined) {
     this._computeCustomEndpoint = value;
   }
   public resetComputeCustomEndpoint() {
@@ -991,11 +1036,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // container_analysis_custom_endpoint - computed: false, optional: true, required: false
-  private _containerAnalysisCustomEndpoint?: string;
+  private _containerAnalysisCustomEndpoint?: string | undefined; 
   public get containerAnalysisCustomEndpoint() {
     return this._containerAnalysisCustomEndpoint;
   }
-  public set containerAnalysisCustomEndpoint(value: string  | undefined) {
+  public set containerAnalysisCustomEndpoint(value: string | undefined| undefined) {
     this._containerAnalysisCustomEndpoint = value;
   }
   public resetContainerAnalysisCustomEndpoint() {
@@ -1007,11 +1052,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // container_beta_custom_endpoint - computed: false, optional: true, required: false
-  private _containerBetaCustomEndpoint?: string;
+  private _containerBetaCustomEndpoint?: string | undefined; 
   public get containerBetaCustomEndpoint() {
     return this._containerBetaCustomEndpoint;
   }
-  public set containerBetaCustomEndpoint(value: string  | undefined) {
+  public set containerBetaCustomEndpoint(value: string | undefined| undefined) {
     this._containerBetaCustomEndpoint = value;
   }
   public resetContainerBetaCustomEndpoint() {
@@ -1023,11 +1068,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // container_custom_endpoint - computed: false, optional: true, required: false
-  private _containerCustomEndpoint?: string;
+  private _containerCustomEndpoint?: string | undefined; 
   public get containerCustomEndpoint() {
     return this._containerCustomEndpoint;
   }
-  public set containerCustomEndpoint(value: string  | undefined) {
+  public set containerCustomEndpoint(value: string | undefined| undefined) {
     this._containerCustomEndpoint = value;
   }
   public resetContainerCustomEndpoint() {
@@ -1039,11 +1084,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: string;
+  private _credentials?: string | undefined; 
   public get credentials() {
     return this._credentials;
   }
-  public set credentials(value: string  | undefined) {
+  public set credentials(value: string | undefined| undefined) {
     this._credentials = value;
   }
   public resetCredentials() {
@@ -1055,11 +1100,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // data_catalog_custom_endpoint - computed: false, optional: true, required: false
-  private _dataCatalogCustomEndpoint?: string;
+  private _dataCatalogCustomEndpoint?: string | undefined; 
   public get dataCatalogCustomEndpoint() {
     return this._dataCatalogCustomEndpoint;
   }
-  public set dataCatalogCustomEndpoint(value: string  | undefined) {
+  public set dataCatalogCustomEndpoint(value: string | undefined| undefined) {
     this._dataCatalogCustomEndpoint = value;
   }
   public resetDataCatalogCustomEndpoint() {
@@ -1071,11 +1116,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // data_loss_prevention_custom_endpoint - computed: false, optional: true, required: false
-  private _dataLossPreventionCustomEndpoint?: string;
+  private _dataLossPreventionCustomEndpoint?: string | undefined; 
   public get dataLossPreventionCustomEndpoint() {
     return this._dataLossPreventionCustomEndpoint;
   }
-  public set dataLossPreventionCustomEndpoint(value: string  | undefined) {
+  public set dataLossPreventionCustomEndpoint(value: string | undefined| undefined) {
     this._dataLossPreventionCustomEndpoint = value;
   }
   public resetDataLossPreventionCustomEndpoint() {
@@ -1087,11 +1132,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // dataflow_custom_endpoint - computed: false, optional: true, required: false
-  private _dataflowCustomEndpoint?: string;
+  private _dataflowCustomEndpoint?: string | undefined; 
   public get dataflowCustomEndpoint() {
     return this._dataflowCustomEndpoint;
   }
-  public set dataflowCustomEndpoint(value: string  | undefined) {
+  public set dataflowCustomEndpoint(value: string | undefined| undefined) {
     this._dataflowCustomEndpoint = value;
   }
   public resetDataflowCustomEndpoint() {
@@ -1103,11 +1148,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // dataproc_beta_custom_endpoint - computed: false, optional: true, required: false
-  private _dataprocBetaCustomEndpoint?: string;
+  private _dataprocBetaCustomEndpoint?: string | undefined; 
   public get dataprocBetaCustomEndpoint() {
     return this._dataprocBetaCustomEndpoint;
   }
-  public set dataprocBetaCustomEndpoint(value: string  | undefined) {
+  public set dataprocBetaCustomEndpoint(value: string | undefined| undefined) {
     this._dataprocBetaCustomEndpoint = value;
   }
   public resetDataprocBetaCustomEndpoint() {
@@ -1119,11 +1164,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // dataproc_custom_endpoint - computed: false, optional: true, required: false
-  private _dataprocCustomEndpoint?: string;
+  private _dataprocCustomEndpoint?: string | undefined; 
   public get dataprocCustomEndpoint() {
     return this._dataprocCustomEndpoint;
   }
-  public set dataprocCustomEndpoint(value: string  | undefined) {
+  public set dataprocCustomEndpoint(value: string | undefined| undefined) {
     this._dataprocCustomEndpoint = value;
   }
   public resetDataprocCustomEndpoint() {
@@ -1135,11 +1180,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // datastore_custom_endpoint - computed: false, optional: true, required: false
-  private _datastoreCustomEndpoint?: string;
+  private _datastoreCustomEndpoint?: string | undefined; 
   public get datastoreCustomEndpoint() {
     return this._datastoreCustomEndpoint;
   }
-  public set datastoreCustomEndpoint(value: string  | undefined) {
+  public set datastoreCustomEndpoint(value: string | undefined| undefined) {
     this._datastoreCustomEndpoint = value;
   }
   public resetDatastoreCustomEndpoint() {
@@ -1151,11 +1196,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // deployment_manager_custom_endpoint - computed: false, optional: true, required: false
-  private _deploymentManagerCustomEndpoint?: string;
+  private _deploymentManagerCustomEndpoint?: string | undefined; 
   public get deploymentManagerCustomEndpoint() {
     return this._deploymentManagerCustomEndpoint;
   }
-  public set deploymentManagerCustomEndpoint(value: string  | undefined) {
+  public set deploymentManagerCustomEndpoint(value: string | undefined| undefined) {
     this._deploymentManagerCustomEndpoint = value;
   }
   public resetDeploymentManagerCustomEndpoint() {
@@ -1167,11 +1212,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // dialogflow_custom_endpoint - computed: false, optional: true, required: false
-  private _dialogflowCustomEndpoint?: string;
+  private _dialogflowCustomEndpoint?: string | undefined; 
   public get dialogflowCustomEndpoint() {
     return this._dialogflowCustomEndpoint;
   }
-  public set dialogflowCustomEndpoint(value: string  | undefined) {
+  public set dialogflowCustomEndpoint(value: string | undefined| undefined) {
     this._dialogflowCustomEndpoint = value;
   }
   public resetDialogflowCustomEndpoint() {
@@ -1183,11 +1228,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // dialogflow_cx_custom_endpoint - computed: false, optional: true, required: false
-  private _dialogflowCxCustomEndpoint?: string;
+  private _dialogflowCxCustomEndpoint?: string | undefined; 
   public get dialogflowCxCustomEndpoint() {
     return this._dialogflowCxCustomEndpoint;
   }
-  public set dialogflowCxCustomEndpoint(value: string  | undefined) {
+  public set dialogflowCxCustomEndpoint(value: string | undefined| undefined) {
     this._dialogflowCxCustomEndpoint = value;
   }
   public resetDialogflowCxCustomEndpoint() {
@@ -1199,11 +1244,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // dns_custom_endpoint - computed: false, optional: true, required: false
-  private _dnsCustomEndpoint?: string;
+  private _dnsCustomEndpoint?: string | undefined; 
   public get dnsCustomEndpoint() {
     return this._dnsCustomEndpoint;
   }
-  public set dnsCustomEndpoint(value: string  | undefined) {
+  public set dnsCustomEndpoint(value: string | undefined| undefined) {
     this._dnsCustomEndpoint = value;
   }
   public resetDnsCustomEndpoint() {
@@ -1215,11 +1260,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // essential_contacts_custom_endpoint - computed: false, optional: true, required: false
-  private _essentialContactsCustomEndpoint?: string;
+  private _essentialContactsCustomEndpoint?: string | undefined; 
   public get essentialContactsCustomEndpoint() {
     return this._essentialContactsCustomEndpoint;
   }
-  public set essentialContactsCustomEndpoint(value: string  | undefined) {
+  public set essentialContactsCustomEndpoint(value: string | undefined| undefined) {
     this._essentialContactsCustomEndpoint = value;
   }
   public resetEssentialContactsCustomEndpoint() {
@@ -1231,11 +1276,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // eventarc_custom_endpoint - computed: false, optional: true, required: false
-  private _eventarcCustomEndpoint?: string;
+  private _eventarcCustomEndpoint?: string | undefined; 
   public get eventarcCustomEndpoint() {
     return this._eventarcCustomEndpoint;
   }
-  public set eventarcCustomEndpoint(value: string  | undefined) {
+  public set eventarcCustomEndpoint(value: string | undefined| undefined) {
     this._eventarcCustomEndpoint = value;
   }
   public resetEventarcCustomEndpoint() {
@@ -1247,11 +1292,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // filestore_custom_endpoint - computed: false, optional: true, required: false
-  private _filestoreCustomEndpoint?: string;
+  private _filestoreCustomEndpoint?: string | undefined; 
   public get filestoreCustomEndpoint() {
     return this._filestoreCustomEndpoint;
   }
-  public set filestoreCustomEndpoint(value: string  | undefined) {
+  public set filestoreCustomEndpoint(value: string | undefined| undefined) {
     this._filestoreCustomEndpoint = value;
   }
   public resetFilestoreCustomEndpoint() {
@@ -1263,11 +1308,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // firestore_custom_endpoint - computed: false, optional: true, required: false
-  private _firestoreCustomEndpoint?: string;
+  private _firestoreCustomEndpoint?: string | undefined; 
   public get firestoreCustomEndpoint() {
     return this._firestoreCustomEndpoint;
   }
-  public set firestoreCustomEndpoint(value: string  | undefined) {
+  public set firestoreCustomEndpoint(value: string | undefined| undefined) {
     this._firestoreCustomEndpoint = value;
   }
   public resetFirestoreCustomEndpoint() {
@@ -1279,11 +1324,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // game_services_custom_endpoint - computed: false, optional: true, required: false
-  private _gameServicesCustomEndpoint?: string;
+  private _gameServicesCustomEndpoint?: string | undefined; 
   public get gameServicesCustomEndpoint() {
     return this._gameServicesCustomEndpoint;
   }
-  public set gameServicesCustomEndpoint(value: string  | undefined) {
+  public set gameServicesCustomEndpoint(value: string | undefined| undefined) {
     this._gameServicesCustomEndpoint = value;
   }
   public resetGameServicesCustomEndpoint() {
@@ -1295,11 +1340,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // gke_hub_custom_endpoint - computed: false, optional: true, required: false
-  private _gkeHubCustomEndpoint?: string;
+  private _gkeHubCustomEndpoint?: string | undefined; 
   public get gkeHubCustomEndpoint() {
     return this._gkeHubCustomEndpoint;
   }
-  public set gkeHubCustomEndpoint(value: string  | undefined) {
+  public set gkeHubCustomEndpoint(value: string | undefined| undefined) {
     this._gkeHubCustomEndpoint = value;
   }
   public resetGkeHubCustomEndpoint() {
@@ -1311,11 +1356,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // gkehub_feature_custom_endpoint - computed: false, optional: true, required: false
-  private _gkehubFeatureCustomEndpoint?: string;
+  private _gkehubFeatureCustomEndpoint?: string | undefined; 
   public get gkehubFeatureCustomEndpoint() {
     return this._gkehubFeatureCustomEndpoint;
   }
-  public set gkehubFeatureCustomEndpoint(value: string  | undefined) {
+  public set gkehubFeatureCustomEndpoint(value: string | undefined| undefined) {
     this._gkehubFeatureCustomEndpoint = value;
   }
   public resetGkehubFeatureCustomEndpoint() {
@@ -1327,11 +1372,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // healthcare_custom_endpoint - computed: false, optional: true, required: false
-  private _healthcareCustomEndpoint?: string;
+  private _healthcareCustomEndpoint?: string | undefined; 
   public get healthcareCustomEndpoint() {
     return this._healthcareCustomEndpoint;
   }
-  public set healthcareCustomEndpoint(value: string  | undefined) {
+  public set healthcareCustomEndpoint(value: string | undefined| undefined) {
     this._healthcareCustomEndpoint = value;
   }
   public resetHealthcareCustomEndpoint() {
@@ -1343,11 +1388,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // iam_credentials_custom_endpoint - computed: false, optional: true, required: false
-  private _iamCredentialsCustomEndpoint?: string;
+  private _iamCredentialsCustomEndpoint?: string | undefined; 
   public get iamCredentialsCustomEndpoint() {
     return this._iamCredentialsCustomEndpoint;
   }
-  public set iamCredentialsCustomEndpoint(value: string  | undefined) {
+  public set iamCredentialsCustomEndpoint(value: string | undefined| undefined) {
     this._iamCredentialsCustomEndpoint = value;
   }
   public resetIamCredentialsCustomEndpoint() {
@@ -1359,11 +1404,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // iam_custom_endpoint - computed: false, optional: true, required: false
-  private _iamCustomEndpoint?: string;
+  private _iamCustomEndpoint?: string | undefined; 
   public get iamCustomEndpoint() {
     return this._iamCustomEndpoint;
   }
-  public set iamCustomEndpoint(value: string  | undefined) {
+  public set iamCustomEndpoint(value: string | undefined| undefined) {
     this._iamCustomEndpoint = value;
   }
   public resetIamCustomEndpoint() {
@@ -1375,11 +1420,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // iap_custom_endpoint - computed: false, optional: true, required: false
-  private _iapCustomEndpoint?: string;
+  private _iapCustomEndpoint?: string | undefined; 
   public get iapCustomEndpoint() {
     return this._iapCustomEndpoint;
   }
-  public set iapCustomEndpoint(value: string  | undefined) {
+  public set iapCustomEndpoint(value: string | undefined| undefined) {
     this._iapCustomEndpoint = value;
   }
   public resetIapCustomEndpoint() {
@@ -1391,11 +1436,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // identity_platform_custom_endpoint - computed: false, optional: true, required: false
-  private _identityPlatformCustomEndpoint?: string;
+  private _identityPlatformCustomEndpoint?: string | undefined; 
   public get identityPlatformCustomEndpoint() {
     return this._identityPlatformCustomEndpoint;
   }
-  public set identityPlatformCustomEndpoint(value: string  | undefined) {
+  public set identityPlatformCustomEndpoint(value: string | undefined| undefined) {
     this._identityPlatformCustomEndpoint = value;
   }
   public resetIdentityPlatformCustomEndpoint() {
@@ -1407,11 +1452,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // impersonate_service_account - computed: false, optional: true, required: false
-  private _impersonateServiceAccount?: string;
+  private _impersonateServiceAccount?: string | undefined; 
   public get impersonateServiceAccount() {
     return this._impersonateServiceAccount;
   }
-  public set impersonateServiceAccount(value: string  | undefined) {
+  public set impersonateServiceAccount(value: string | undefined| undefined) {
     this._impersonateServiceAccount = value;
   }
   public resetImpersonateServiceAccount() {
@@ -1423,11 +1468,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // impersonate_service_account_delegates - computed: false, optional: true, required: false
-  private _impersonateServiceAccountDelegates?: string[];
+  private _impersonateServiceAccountDelegates?: string[] | undefined; 
   public get impersonateServiceAccountDelegates() {
     return this._impersonateServiceAccountDelegates;
   }
-  public set impersonateServiceAccountDelegates(value: string[]  | undefined) {
+  public set impersonateServiceAccountDelegates(value: string[] | undefined| undefined) {
     this._impersonateServiceAccountDelegates = value;
   }
   public resetImpersonateServiceAccountDelegates() {
@@ -1439,11 +1484,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // kms_custom_endpoint - computed: false, optional: true, required: false
-  private _kmsCustomEndpoint?: string;
+  private _kmsCustomEndpoint?: string | undefined; 
   public get kmsCustomEndpoint() {
     return this._kmsCustomEndpoint;
   }
-  public set kmsCustomEndpoint(value: string  | undefined) {
+  public set kmsCustomEndpoint(value: string | undefined| undefined) {
     this._kmsCustomEndpoint = value;
   }
   public resetKmsCustomEndpoint() {
@@ -1455,11 +1500,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // logging_custom_endpoint - computed: false, optional: true, required: false
-  private _loggingCustomEndpoint?: string;
+  private _loggingCustomEndpoint?: string | undefined; 
   public get loggingCustomEndpoint() {
     return this._loggingCustomEndpoint;
   }
-  public set loggingCustomEndpoint(value: string  | undefined) {
+  public set loggingCustomEndpoint(value: string | undefined| undefined) {
     this._loggingCustomEndpoint = value;
   }
   public resetLoggingCustomEndpoint() {
@@ -1471,11 +1516,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // memcache_custom_endpoint - computed: false, optional: true, required: false
-  private _memcacheCustomEndpoint?: string;
+  private _memcacheCustomEndpoint?: string | undefined; 
   public get memcacheCustomEndpoint() {
     return this._memcacheCustomEndpoint;
   }
-  public set memcacheCustomEndpoint(value: string  | undefined) {
+  public set memcacheCustomEndpoint(value: string | undefined| undefined) {
     this._memcacheCustomEndpoint = value;
   }
   public resetMemcacheCustomEndpoint() {
@@ -1487,11 +1532,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // ml_engine_custom_endpoint - computed: false, optional: true, required: false
-  private _mlEngineCustomEndpoint?: string;
+  private _mlEngineCustomEndpoint?: string | undefined; 
   public get mlEngineCustomEndpoint() {
     return this._mlEngineCustomEndpoint;
   }
-  public set mlEngineCustomEndpoint(value: string  | undefined) {
+  public set mlEngineCustomEndpoint(value: string | undefined| undefined) {
     this._mlEngineCustomEndpoint = value;
   }
   public resetMlEngineCustomEndpoint() {
@@ -1503,11 +1548,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // monitoring_custom_endpoint - computed: false, optional: true, required: false
-  private _monitoringCustomEndpoint?: string;
+  private _monitoringCustomEndpoint?: string | undefined; 
   public get monitoringCustomEndpoint() {
     return this._monitoringCustomEndpoint;
   }
-  public set monitoringCustomEndpoint(value: string  | undefined) {
+  public set monitoringCustomEndpoint(value: string | undefined| undefined) {
     this._monitoringCustomEndpoint = value;
   }
   public resetMonitoringCustomEndpoint() {
@@ -1519,11 +1564,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // network_management_custom_endpoint - computed: false, optional: true, required: false
-  private _networkManagementCustomEndpoint?: string;
+  private _networkManagementCustomEndpoint?: string | undefined; 
   public get networkManagementCustomEndpoint() {
     return this._networkManagementCustomEndpoint;
   }
-  public set networkManagementCustomEndpoint(value: string  | undefined) {
+  public set networkManagementCustomEndpoint(value: string | undefined| undefined) {
     this._networkManagementCustomEndpoint = value;
   }
   public resetNetworkManagementCustomEndpoint() {
@@ -1535,11 +1580,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // network_services_custom_endpoint - computed: false, optional: true, required: false
-  private _networkServicesCustomEndpoint?: string;
+  private _networkServicesCustomEndpoint?: string | undefined; 
   public get networkServicesCustomEndpoint() {
     return this._networkServicesCustomEndpoint;
   }
-  public set networkServicesCustomEndpoint(value: string  | undefined) {
+  public set networkServicesCustomEndpoint(value: string | undefined| undefined) {
     this._networkServicesCustomEndpoint = value;
   }
   public resetNetworkServicesCustomEndpoint() {
@@ -1551,11 +1596,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // notebooks_custom_endpoint - computed: false, optional: true, required: false
-  private _notebooksCustomEndpoint?: string;
+  private _notebooksCustomEndpoint?: string | undefined; 
   public get notebooksCustomEndpoint() {
     return this._notebooksCustomEndpoint;
   }
-  public set notebooksCustomEndpoint(value: string  | undefined) {
+  public set notebooksCustomEndpoint(value: string | undefined| undefined) {
     this._notebooksCustomEndpoint = value;
   }
   public resetNotebooksCustomEndpoint() {
@@ -1567,11 +1612,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // org_policy_custom_endpoint - computed: false, optional: true, required: false
-  private _orgPolicyCustomEndpoint?: string;
+  private _orgPolicyCustomEndpoint?: string | undefined; 
   public get orgPolicyCustomEndpoint() {
     return this._orgPolicyCustomEndpoint;
   }
-  public set orgPolicyCustomEndpoint(value: string  | undefined) {
+  public set orgPolicyCustomEndpoint(value: string | undefined| undefined) {
     this._orgPolicyCustomEndpoint = value;
   }
   public resetOrgPolicyCustomEndpoint() {
@@ -1583,11 +1628,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // os_config_custom_endpoint - computed: false, optional: true, required: false
-  private _osConfigCustomEndpoint?: string;
+  private _osConfigCustomEndpoint?: string | undefined; 
   public get osConfigCustomEndpoint() {
     return this._osConfigCustomEndpoint;
   }
-  public set osConfigCustomEndpoint(value: string  | undefined) {
+  public set osConfigCustomEndpoint(value: string | undefined| undefined) {
     this._osConfigCustomEndpoint = value;
   }
   public resetOsConfigCustomEndpoint() {
@@ -1599,11 +1644,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // os_login_custom_endpoint - computed: false, optional: true, required: false
-  private _osLoginCustomEndpoint?: string;
+  private _osLoginCustomEndpoint?: string | undefined; 
   public get osLoginCustomEndpoint() {
     return this._osLoginCustomEndpoint;
   }
-  public set osLoginCustomEndpoint(value: string  | undefined) {
+  public set osLoginCustomEndpoint(value: string | undefined| undefined) {
     this._osLoginCustomEndpoint = value;
   }
   public resetOsLoginCustomEndpoint() {
@@ -1615,11 +1660,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // privateca_custom_endpoint - computed: false, optional: true, required: false
-  private _privatecaCustomEndpoint?: string;
+  private _privatecaCustomEndpoint?: string | undefined; 
   public get privatecaCustomEndpoint() {
     return this._privatecaCustomEndpoint;
   }
-  public set privatecaCustomEndpoint(value: string  | undefined) {
+  public set privatecaCustomEndpoint(value: string | undefined| undefined) {
     this._privatecaCustomEndpoint = value;
   }
   public resetPrivatecaCustomEndpoint() {
@@ -1631,11 +1676,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this._project;
   }
-  public set project(value: string  | undefined) {
+  public set project(value: string | undefined| undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -1647,11 +1692,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // pubsub_custom_endpoint - computed: false, optional: true, required: false
-  private _pubsubCustomEndpoint?: string;
+  private _pubsubCustomEndpoint?: string | undefined; 
   public get pubsubCustomEndpoint() {
     return this._pubsubCustomEndpoint;
   }
-  public set pubsubCustomEndpoint(value: string  | undefined) {
+  public set pubsubCustomEndpoint(value: string | undefined| undefined) {
     this._pubsubCustomEndpoint = value;
   }
   public resetPubsubCustomEndpoint() {
@@ -1663,11 +1708,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // pubsub_lite_custom_endpoint - computed: false, optional: true, required: false
-  private _pubsubLiteCustomEndpoint?: string;
+  private _pubsubLiteCustomEndpoint?: string | undefined; 
   public get pubsubLiteCustomEndpoint() {
     return this._pubsubLiteCustomEndpoint;
   }
-  public set pubsubLiteCustomEndpoint(value: string  | undefined) {
+  public set pubsubLiteCustomEndpoint(value: string | undefined| undefined) {
     this._pubsubLiteCustomEndpoint = value;
   }
   public resetPubsubLiteCustomEndpoint() {
@@ -1679,11 +1724,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // redis_custom_endpoint - computed: false, optional: true, required: false
-  private _redisCustomEndpoint?: string;
+  private _redisCustomEndpoint?: string | undefined; 
   public get redisCustomEndpoint() {
     return this._redisCustomEndpoint;
   }
-  public set redisCustomEndpoint(value: string  | undefined) {
+  public set redisCustomEndpoint(value: string | undefined| undefined) {
     this._redisCustomEndpoint = value;
   }
   public resetRedisCustomEndpoint() {
@@ -1695,11 +1740,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this._region;
   }
-  public set region(value: string  | undefined) {
+  public set region(value: string | undefined| undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -1711,11 +1756,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // request_reason - computed: false, optional: true, required: false
-  private _requestReason?: string;
+  private _requestReason?: string | undefined; 
   public get requestReason() {
     return this._requestReason;
   }
-  public set requestReason(value: string  | undefined) {
+  public set requestReason(value: string | undefined| undefined) {
     this._requestReason = value;
   }
   public resetRequestReason() {
@@ -1727,11 +1772,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // request_timeout - computed: false, optional: true, required: false
-  private _requestTimeout?: string;
+  private _requestTimeout?: string | undefined; 
   public get requestTimeout() {
     return this._requestTimeout;
   }
-  public set requestTimeout(value: string  | undefined) {
+  public set requestTimeout(value: string | undefined| undefined) {
     this._requestTimeout = value;
   }
   public resetRequestTimeout() {
@@ -1743,11 +1788,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // resource_manager_custom_endpoint - computed: false, optional: true, required: false
-  private _resourceManagerCustomEndpoint?: string;
+  private _resourceManagerCustomEndpoint?: string | undefined; 
   public get resourceManagerCustomEndpoint() {
     return this._resourceManagerCustomEndpoint;
   }
-  public set resourceManagerCustomEndpoint(value: string  | undefined) {
+  public set resourceManagerCustomEndpoint(value: string | undefined| undefined) {
     this._resourceManagerCustomEndpoint = value;
   }
   public resetResourceManagerCustomEndpoint() {
@@ -1759,11 +1804,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // resource_manager_v2_custom_endpoint - computed: false, optional: true, required: false
-  private _resourceManagerV2CustomEndpoint?: string;
+  private _resourceManagerV2CustomEndpoint?: string | undefined; 
   public get resourceManagerV2CustomEndpoint() {
     return this._resourceManagerV2CustomEndpoint;
   }
-  public set resourceManagerV2CustomEndpoint(value: string  | undefined) {
+  public set resourceManagerV2CustomEndpoint(value: string | undefined| undefined) {
     this._resourceManagerV2CustomEndpoint = value;
   }
   public resetResourceManagerV2CustomEndpoint() {
@@ -1775,11 +1820,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // runtime_config_custom_endpoint - computed: false, optional: true, required: false
-  private _runtimeConfigCustomEndpoint?: string;
+  private _runtimeConfigCustomEndpoint?: string | undefined; 
   public get runtimeConfigCustomEndpoint() {
     return this._runtimeConfigCustomEndpoint;
   }
-  public set runtimeConfigCustomEndpoint(value: string  | undefined) {
+  public set runtimeConfigCustomEndpoint(value: string | undefined| undefined) {
     this._runtimeConfigCustomEndpoint = value;
   }
   public resetRuntimeConfigCustomEndpoint() {
@@ -1791,11 +1836,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // runtimeconfig_custom_endpoint - computed: false, optional: true, required: false
-  private _runtimeconfigCustomEndpoint?: string;
+  private _runtimeconfigCustomEndpoint?: string | undefined; 
   public get runtimeconfigCustomEndpoint() {
     return this._runtimeconfigCustomEndpoint;
   }
-  public set runtimeconfigCustomEndpoint(value: string  | undefined) {
+  public set runtimeconfigCustomEndpoint(value: string | undefined| undefined) {
     this._runtimeconfigCustomEndpoint = value;
   }
   public resetRuntimeconfigCustomEndpoint() {
@@ -1807,11 +1852,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // scopes - computed: false, optional: true, required: false
-  private _scopes?: string[];
+  private _scopes?: string[] | undefined; 
   public get scopes() {
     return this._scopes;
   }
-  public set scopes(value: string[]  | undefined) {
+  public set scopes(value: string[] | undefined| undefined) {
     this._scopes = value;
   }
   public resetScopes() {
@@ -1823,11 +1868,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // secret_manager_custom_endpoint - computed: false, optional: true, required: false
-  private _secretManagerCustomEndpoint?: string;
+  private _secretManagerCustomEndpoint?: string | undefined; 
   public get secretManagerCustomEndpoint() {
     return this._secretManagerCustomEndpoint;
   }
-  public set secretManagerCustomEndpoint(value: string  | undefined) {
+  public set secretManagerCustomEndpoint(value: string | undefined| undefined) {
     this._secretManagerCustomEndpoint = value;
   }
   public resetSecretManagerCustomEndpoint() {
@@ -1839,11 +1884,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // security_center_custom_endpoint - computed: false, optional: true, required: false
-  private _securityCenterCustomEndpoint?: string;
+  private _securityCenterCustomEndpoint?: string | undefined; 
   public get securityCenterCustomEndpoint() {
     return this._securityCenterCustomEndpoint;
   }
-  public set securityCenterCustomEndpoint(value: string  | undefined) {
+  public set securityCenterCustomEndpoint(value: string | undefined| undefined) {
     this._securityCenterCustomEndpoint = value;
   }
   public resetSecurityCenterCustomEndpoint() {
@@ -1855,11 +1900,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // service_management_custom_endpoint - computed: false, optional: true, required: false
-  private _serviceManagementCustomEndpoint?: string;
+  private _serviceManagementCustomEndpoint?: string | undefined; 
   public get serviceManagementCustomEndpoint() {
     return this._serviceManagementCustomEndpoint;
   }
-  public set serviceManagementCustomEndpoint(value: string  | undefined) {
+  public set serviceManagementCustomEndpoint(value: string | undefined| undefined) {
     this._serviceManagementCustomEndpoint = value;
   }
   public resetServiceManagementCustomEndpoint() {
@@ -1871,11 +1916,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // service_networking_custom_endpoint - computed: false, optional: true, required: false
-  private _serviceNetworkingCustomEndpoint?: string;
+  private _serviceNetworkingCustomEndpoint?: string | undefined; 
   public get serviceNetworkingCustomEndpoint() {
     return this._serviceNetworkingCustomEndpoint;
   }
-  public set serviceNetworkingCustomEndpoint(value: string  | undefined) {
+  public set serviceNetworkingCustomEndpoint(value: string | undefined| undefined) {
     this._serviceNetworkingCustomEndpoint = value;
   }
   public resetServiceNetworkingCustomEndpoint() {
@@ -1887,11 +1932,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // service_usage_custom_endpoint - computed: false, optional: true, required: false
-  private _serviceUsageCustomEndpoint?: string;
+  private _serviceUsageCustomEndpoint?: string | undefined; 
   public get serviceUsageCustomEndpoint() {
     return this._serviceUsageCustomEndpoint;
   }
-  public set serviceUsageCustomEndpoint(value: string  | undefined) {
+  public set serviceUsageCustomEndpoint(value: string | undefined| undefined) {
     this._serviceUsageCustomEndpoint = value;
   }
   public resetServiceUsageCustomEndpoint() {
@@ -1903,11 +1948,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // source_repo_custom_endpoint - computed: false, optional: true, required: false
-  private _sourceRepoCustomEndpoint?: string;
+  private _sourceRepoCustomEndpoint?: string | undefined; 
   public get sourceRepoCustomEndpoint() {
     return this._sourceRepoCustomEndpoint;
   }
-  public set sourceRepoCustomEndpoint(value: string  | undefined) {
+  public set sourceRepoCustomEndpoint(value: string | undefined| undefined) {
     this._sourceRepoCustomEndpoint = value;
   }
   public resetSourceRepoCustomEndpoint() {
@@ -1919,11 +1964,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // spanner_custom_endpoint - computed: false, optional: true, required: false
-  private _spannerCustomEndpoint?: string;
+  private _spannerCustomEndpoint?: string | undefined; 
   public get spannerCustomEndpoint() {
     return this._spannerCustomEndpoint;
   }
-  public set spannerCustomEndpoint(value: string  | undefined) {
+  public set spannerCustomEndpoint(value: string | undefined| undefined) {
     this._spannerCustomEndpoint = value;
   }
   public resetSpannerCustomEndpoint() {
@@ -1935,11 +1980,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // sql_custom_endpoint - computed: false, optional: true, required: false
-  private _sqlCustomEndpoint?: string;
+  private _sqlCustomEndpoint?: string | undefined; 
   public get sqlCustomEndpoint() {
     return this._sqlCustomEndpoint;
   }
-  public set sqlCustomEndpoint(value: string  | undefined) {
+  public set sqlCustomEndpoint(value: string | undefined| undefined) {
     this._sqlCustomEndpoint = value;
   }
   public resetSqlCustomEndpoint() {
@@ -1951,11 +1996,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // storage_custom_endpoint - computed: false, optional: true, required: false
-  private _storageCustomEndpoint?: string;
+  private _storageCustomEndpoint?: string | undefined; 
   public get storageCustomEndpoint() {
     return this._storageCustomEndpoint;
   }
-  public set storageCustomEndpoint(value: string  | undefined) {
+  public set storageCustomEndpoint(value: string | undefined| undefined) {
     this._storageCustomEndpoint = value;
   }
   public resetStorageCustomEndpoint() {
@@ -1967,11 +2012,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // storage_transfer_custom_endpoint - computed: false, optional: true, required: false
-  private _storageTransferCustomEndpoint?: string;
+  private _storageTransferCustomEndpoint?: string | undefined; 
   public get storageTransferCustomEndpoint() {
     return this._storageTransferCustomEndpoint;
   }
-  public set storageTransferCustomEndpoint(value: string  | undefined) {
+  public set storageTransferCustomEndpoint(value: string | undefined| undefined) {
     this._storageTransferCustomEndpoint = value;
   }
   public resetStorageTransferCustomEndpoint() {
@@ -1983,11 +2028,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // tags_custom_endpoint - computed: false, optional: true, required: false
-  private _tagsCustomEndpoint?: string;
+  private _tagsCustomEndpoint?: string | undefined; 
   public get tagsCustomEndpoint() {
     return this._tagsCustomEndpoint;
   }
-  public set tagsCustomEndpoint(value: string  | undefined) {
+  public set tagsCustomEndpoint(value: string | undefined| undefined) {
     this._tagsCustomEndpoint = value;
   }
   public resetTagsCustomEndpoint() {
@@ -1999,11 +2044,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // tpu_custom_endpoint - computed: false, optional: true, required: false
-  private _tpuCustomEndpoint?: string;
+  private _tpuCustomEndpoint?: string | undefined; 
   public get tpuCustomEndpoint() {
     return this._tpuCustomEndpoint;
   }
-  public set tpuCustomEndpoint(value: string  | undefined) {
+  public set tpuCustomEndpoint(value: string | undefined| undefined) {
     this._tpuCustomEndpoint = value;
   }
   public resetTpuCustomEndpoint() {
@@ -2015,11 +2060,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // user_project_override - computed: false, optional: true, required: false
-  private _userProjectOverride?: boolean | cdktf.IResolvable;
+  private _userProjectOverride?: boolean | cdktf.IResolvable | undefined; 
   public get userProjectOverride() {
     return this._userProjectOverride;
   }
-  public set userProjectOverride(value: boolean | cdktf.IResolvable  | undefined) {
+  public set userProjectOverride(value: boolean | cdktf.IResolvable | undefined| undefined) {
     this._userProjectOverride = value;
   }
   public resetUserProjectOverride() {
@@ -2031,11 +2076,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // vertex_ai_custom_endpoint - computed: false, optional: true, required: false
-  private _vertexAiCustomEndpoint?: string;
+  private _vertexAiCustomEndpoint?: string | undefined; 
   public get vertexAiCustomEndpoint() {
     return this._vertexAiCustomEndpoint;
   }
-  public set vertexAiCustomEndpoint(value: string  | undefined) {
+  public set vertexAiCustomEndpoint(value: string | undefined| undefined) {
     this._vertexAiCustomEndpoint = value;
   }
   public resetVertexAiCustomEndpoint() {
@@ -2047,11 +2092,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // vpc_access_custom_endpoint - computed: false, optional: true, required: false
-  private _vpcAccessCustomEndpoint?: string;
+  private _vpcAccessCustomEndpoint?: string | undefined; 
   public get vpcAccessCustomEndpoint() {
     return this._vpcAccessCustomEndpoint;
   }
-  public set vpcAccessCustomEndpoint(value: string  | undefined) {
+  public set vpcAccessCustomEndpoint(value: string | undefined| undefined) {
     this._vpcAccessCustomEndpoint = value;
   }
   public resetVpcAccessCustomEndpoint() {
@@ -2063,11 +2108,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // workflows_custom_endpoint - computed: false, optional: true, required: false
-  private _workflowsCustomEndpoint?: string;
+  private _workflowsCustomEndpoint?: string | undefined; 
   public get workflowsCustomEndpoint() {
     return this._workflowsCustomEndpoint;
   }
-  public set workflowsCustomEndpoint(value: string  | undefined) {
+  public set workflowsCustomEndpoint(value: string | undefined| undefined) {
     this._workflowsCustomEndpoint = value;
   }
   public resetWorkflowsCustomEndpoint() {
@@ -2079,11 +2124,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string;
+  private _zone?: string | undefined; 
   public get zone() {
     return this._zone;
   }
-  public set zone(value: string  | undefined) {
+  public set zone(value: string | undefined| undefined) {
     this._zone = value;
   }
   public resetZone() {
@@ -2095,11 +2140,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // alias - computed: false, optional: true, required: false
-  private _alias?: string;
+  private _alias?: string | undefined; 
   public get alias() {
     return this._alias;
   }
-  public set alias(value: string  | undefined) {
+  public set alias(value: string | undefined| undefined) {
     this._alias = value;
   }
   public resetAlias() {
@@ -2111,11 +2156,11 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   }
 
   // batching - computed: false, optional: true, required: false
-  private _batching?: GoogleProviderBatching[];
+  private _batching?: GoogleProviderBatching | undefined; 
   public get batching() {
     return this._batching;
   }
-  public set batching(value: GoogleProviderBatching[]  | undefined) {
+  public set batching(value: GoogleProviderBatching | undefined| undefined) {
     this._batching = value;
   }
   public resetBatching() {
@@ -2229,7 +2274,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       workflows_custom_endpoint: cdktf.stringToTerraform(this._workflowsCustomEndpoint),
       zone: cdktf.stringToTerraform(this._zone),
       alias: cdktf.stringToTerraform(this._alias),
-      batching: cdktf.listMapper(googleProviderBatchingToTerraform)(this._batching),
+      batching: googleProviderBatchingToTerraform(this._batching),
     };
   }
 }

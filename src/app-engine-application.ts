@@ -40,13 +40,13 @@ export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#feature_settings AppEngineApplication#feature_settings}
   */
-  readonly featureSettings?: AppEngineApplicationFeatureSettings[];
+  readonly featureSettings?: AppEngineApplicationFeatureSettings;
   /**
   * iap block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#iap AppEngineApplication#iap}
   */
-  readonly iap?: AppEngineApplicationIap[];
+  readonly iap?: AppEngineApplicationIap;
   /**
   * timeouts block
   * 
@@ -78,13 +78,39 @@ export interface AppEngineApplicationFeatureSettings {
   readonly splitHealthChecks: boolean | cdktf.IResolvable;
 }
 
-function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettings): any {
+function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettingsOutputReference | AppEngineApplicationFeatureSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     split_health_checks: cdktf.booleanToTerraform(struct!.splitHealthChecks),
   }
 }
 
+export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // split_health_checks - computed: false, optional: false, required: true
+  private _splitHealthChecks?: boolean | cdktf.IResolvable; 
+  public get splitHealthChecks() {
+    return this.getBooleanAttribute('split_health_checks') as any;
+  }
+  public set splitHealthChecks(value: boolean | cdktf.IResolvable) {
+    this._splitHealthChecks = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get splitHealthChecksInput() {
+    return this._splitHealthChecks
+  }
+}
 export interface AppEngineApplicationIap {
   /**
   * Adapted for use with the app
@@ -106,8 +132,11 @@ export interface AppEngineApplicationIap {
   readonly oauth2ClientSecret: string;
 }
 
-function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIap): any {
+function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIapOutputReference | AppEngineApplicationIap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     oauth2_client_id: cdktf.stringToTerraform(struct!.oauth2ClientId),
@@ -115,6 +144,58 @@ function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIap): a
   }
 }
 
+export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // oauth2_client_id - computed: false, optional: false, required: true
+  private _oauth2ClientId?: string; 
+  public get oauth2ClientId() {
+    return this.getStringAttribute('oauth2_client_id');
+  }
+  public set oauth2ClientId(value: string) {
+    this._oauth2ClientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauth2ClientIdInput() {
+    return this._oauth2ClientId
+  }
+
+  // oauth2_client_secret - computed: false, optional: false, required: true
+  private _oauth2ClientSecret?: string; 
+  public get oauth2ClientSecret() {
+    return this.getStringAttribute('oauth2_client_secret');
+  }
+  public set oauth2ClientSecret(value: string) {
+    this._oauth2ClientSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauth2ClientSecretInput() {
+    return this._oauth2ClientSecret
+  }
+}
 export interface AppEngineApplicationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#create AppEngineApplication#create}
@@ -126,14 +207,59 @@ export interface AppEngineApplicationTimeouts {
   readonly update?: string;
 }
 
-function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeouts): any {
+function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeoutsOutputReference | AppEngineApplicationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
+export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html google_app_engine_application}
@@ -187,11 +313,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // auth_domain - computed: true, optional: true, required: false
-  private _authDomain?: string;
+  private _authDomain?: string | undefined; 
   public get authDomain() {
     return this.getStringAttribute('auth_domain');
   }
-  public set authDomain(value: string) {
+  public set authDomain(value: string | undefined) {
     this._authDomain = value;
   }
   public resetAuthDomain() {
@@ -208,11 +334,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // database_type - computed: true, optional: true, required: false
-  private _databaseType?: string;
+  private _databaseType?: string | undefined; 
   public get databaseType() {
     return this.getStringAttribute('database_type');
   }
-  public set databaseType(value: string) {
+  public set databaseType(value: string | undefined) {
     this._databaseType = value;
   }
   public resetDatabaseType() {
@@ -244,7 +370,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // location_id - computed: false, optional: false, required: true
-  private _locationId: string;
+  private _locationId?: string; 
   public get locationId() {
     return this.getStringAttribute('location_id');
   }
@@ -262,11 +388,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -278,11 +404,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // serving_status - computed: true, optional: true, required: false
-  private _servingStatus?: string;
+  private _servingStatus?: string | undefined; 
   public get servingStatus() {
     return this.getStringAttribute('serving_status');
   }
-  public set servingStatus(value: string) {
+  public set servingStatus(value: string | undefined) {
     this._servingStatus = value;
   }
   public resetServingStatus() {
@@ -299,11 +425,12 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // feature_settings - computed: false, optional: true, required: false
-  private _featureSettings?: AppEngineApplicationFeatureSettings[];
+  private _featureSettings?: AppEngineApplicationFeatureSettings | undefined; 
+  private __featureSettingsOutput = new AppEngineApplicationFeatureSettingsOutputReference(this as any, "feature_settings", true);
   public get featureSettings() {
-    return this.interpolationForAttribute('feature_settings') as any;
+    return this.__featureSettingsOutput;
   }
-  public set featureSettings(value: AppEngineApplicationFeatureSettings[] ) {
+  public putFeatureSettings(value: AppEngineApplicationFeatureSettings | undefined) {
     this._featureSettings = value;
   }
   public resetFeatureSettings() {
@@ -315,11 +442,12 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap?: AppEngineApplicationIap[];
+  private _iap?: AppEngineApplicationIap | undefined; 
+  private __iapOutput = new AppEngineApplicationIapOutputReference(this as any, "iap", true);
   public get iap() {
-    return this.interpolationForAttribute('iap') as any;
+    return this.__iapOutput;
   }
-  public set iap(value: AppEngineApplicationIap[] ) {
+  public putIap(value: AppEngineApplicationIap | undefined) {
     this._iap = value;
   }
   public resetIap() {
@@ -331,11 +459,12 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineApplicationTimeouts;
+  private _timeouts?: AppEngineApplicationTimeouts | undefined; 
+  private __timeoutsOutput = new AppEngineApplicationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppEngineApplicationTimeouts ) {
+  public putTimeouts(value: AppEngineApplicationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -357,8 +486,8 @@ export class AppEngineApplication extends cdktf.TerraformResource {
       location_id: cdktf.stringToTerraform(this._locationId),
       project: cdktf.stringToTerraform(this._project),
       serving_status: cdktf.stringToTerraform(this._servingStatus),
-      feature_settings: cdktf.listMapper(appEngineApplicationFeatureSettingsToTerraform)(this._featureSettings),
-      iap: cdktf.listMapper(appEngineApplicationIapToTerraform)(this._iap),
+      feature_settings: appEngineApplicationFeatureSettingsToTerraform(this._featureSettings),
+      iap: appEngineApplicationIapToTerraform(this._iap),
       timeouts: appEngineApplicationTimeoutsToTerraform(this._timeouts),
     };
   }

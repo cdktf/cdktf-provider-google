@@ -78,7 +78,7 @@ export class BigtableTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // instance - computed: false, optional: false, required: true
-  private _instance: string;
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
@@ -91,7 +91,7 @@ export class BigtableTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -104,11 +104,11 @@ export class BigtableTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -120,7 +120,7 @@ export class BigtableTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // table - computed: false, optional: false, required: true
-  private _table: string;
+  private _table?: string; 
   public get table() {
     return this.getStringAttribute('table');
   }

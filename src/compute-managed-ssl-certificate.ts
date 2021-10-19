@@ -50,7 +50,7 @@ which type this is. Default value: "MANAGED" Possible values: ["MANAGED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#managed ComputeManagedSslCertificate#managed}
   */
-  readonly managed?: ComputeManagedSslCertificateManaged[];
+  readonly managed?: ComputeManagedSslCertificateManaged;
   /**
   * timeouts block
   * 
@@ -68,13 +68,39 @@ there can be up to 100 domains in this list.
   readonly domains: string[];
 }
 
-function computeManagedSslCertificateManagedToTerraform(struct?: ComputeManagedSslCertificateManaged): any {
+function computeManagedSslCertificateManagedToTerraform(struct?: ComputeManagedSslCertificateManagedOutputReference | ComputeManagedSslCertificateManaged): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     domains: cdktf.listMapper(cdktf.stringToTerraform)(struct!.domains),
   }
 }
 
+export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // domains - computed: false, optional: false, required: true
+  private _domains?: string[]; 
+  public get domains() {
+    return this.getListAttribute('domains');
+  }
+  public set domains(value: string[]) {
+    this._domains = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainsInput() {
+    return this._domains
+  }
+}
 export interface ComputeManagedSslCertificateTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#create ComputeManagedSslCertificate#create}
@@ -86,14 +112,59 @@ export interface ComputeManagedSslCertificateTimeouts {
   readonly delete?: string;
 }
 
-function computeManagedSslCertificateTimeoutsToTerraform(struct?: ComputeManagedSslCertificateTimeouts): any {
+function computeManagedSslCertificateTimeoutsToTerraform(struct?: ComputeManagedSslCertificateTimeoutsOutputReference | ComputeManagedSslCertificateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html google_compute_managed_ssl_certificate}
@@ -141,11 +212,11 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   // ==========
 
   // certificate_id - computed: true, optional: true, required: false
-  private _certificateId?: number;
+  private _certificateId?: number | undefined; 
   public get certificateId() {
     return this.getNumberAttribute('certificate_id');
   }
-  public set certificateId(value: number) {
+  public set certificateId(value: number | undefined) {
     this._certificateId = value;
   }
   public resetCertificateId() {
@@ -162,11 +233,11 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -188,11 +259,11 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string ) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -204,11 +275,11 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -230,11 +301,11 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string;
+  private _type?: string | undefined; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string ) {
+  public set type(value: string | undefined) {
     this._type = value;
   }
   public resetType() {
@@ -246,11 +317,12 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // managed - computed: false, optional: true, required: false
-  private _managed?: ComputeManagedSslCertificateManaged[];
+  private _managed?: ComputeManagedSslCertificateManaged | undefined; 
+  private __managedOutput = new ComputeManagedSslCertificateManagedOutputReference(this as any, "managed", true);
   public get managed() {
-    return this.interpolationForAttribute('managed') as any;
+    return this.__managedOutput;
   }
-  public set managed(value: ComputeManagedSslCertificateManaged[] ) {
+  public putManaged(value: ComputeManagedSslCertificateManaged | undefined) {
     this._managed = value;
   }
   public resetManaged() {
@@ -262,11 +334,12 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeManagedSslCertificateTimeouts;
+  private _timeouts?: ComputeManagedSslCertificateTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeManagedSslCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeManagedSslCertificateTimeouts ) {
+  public putTimeouts(value: ComputeManagedSslCertificateTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -288,7 +361,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
-      managed: cdktf.listMapper(computeManagedSslCertificateManagedToTerraform)(this._managed),
+      managed: computeManagedSslCertificateManagedToTerraform(this._managed),
       timeouts: computeManagedSslCertificateTimeoutsToTerraform(this._timeouts),
     };
   }

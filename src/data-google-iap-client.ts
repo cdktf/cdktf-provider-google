@@ -64,7 +64,7 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
   // ==========
 
   // brand - computed: false, optional: false, required: true
-  private _brand: string;
+  private _brand?: string; 
   public get brand() {
     return this.getStringAttribute('brand');
   }
@@ -77,7 +77,7 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
   }
 
   // client_id - computed: false, optional: false, required: true
-  private _clientId: string;
+  private _clientId?: string; 
   public get clientId() {
     return this.getStringAttribute('client_id');
   }

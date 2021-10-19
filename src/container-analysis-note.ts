@@ -46,7 +46,7 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#attestation_authority ContainerAnalysisNote#attestation_authority}
   */
-  readonly attestationAuthority: ContainerAnalysisNoteAttestationAuthority[];
+  readonly attestationAuthority: ContainerAnalysisNoteAttestationAuthority;
   /**
   * related_url block
   * 
@@ -70,29 +70,82 @@ example "qa".
   readonly humanReadableName: string;
 }
 
-function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityHint): any {
+function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityHintOutputReference | ContainerAnalysisNoteAttestationAuthorityHint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     human_readable_name: cdktf.stringToTerraform(struct!.humanReadableName),
   }
 }
 
+export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // human_readable_name - computed: false, optional: false, required: true
+  private _humanReadableName?: string; 
+  public get humanReadableName() {
+    return this.getStringAttribute('human_readable_name');
+  }
+  public set humanReadableName(value: string) {
+    this._humanReadableName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get humanReadableNameInput() {
+    return this._humanReadableName
+  }
+}
 export interface ContainerAnalysisNoteAttestationAuthority {
   /**
   * hint block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html#hint ContainerAnalysisNote#hint}
   */
-  readonly hint: ContainerAnalysisNoteAttestationAuthorityHint[];
+  readonly hint: ContainerAnalysisNoteAttestationAuthorityHint;
 }
 
-function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: ContainerAnalysisNoteAttestationAuthority): any {
+function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityOutputReference | ContainerAnalysisNoteAttestationAuthority): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    hint: cdktf.listMapper(containerAnalysisNoteAttestationAuthorityHintToTerraform)(struct!.hint),
+    hint: containerAnalysisNoteAttestationAuthorityHintToTerraform(struct!.hint),
   }
 }
 
+export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // hint - computed: false, optional: false, required: true
+  private _hint?: ContainerAnalysisNoteAttestationAuthorityHint; 
+  private __hintOutput = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this as any, "hint", true);
+  public get hint() {
+    return this.__hintOutput;
+  }
+  public putHint(value: ContainerAnalysisNoteAttestationAuthorityHint) {
+    this._hint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hintInput() {
+    return this._hint
+  }
+}
 export interface ContainerAnalysisNoteRelatedUrl {
   /**
   * Label to describe usage of the URL
@@ -110,6 +163,9 @@ export interface ContainerAnalysisNoteRelatedUrl {
 
 function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNoteRelatedUrl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     label: cdktf.stringToTerraform(struct!.label),
     url: cdktf.stringToTerraform(struct!.url),
@@ -131,8 +187,11 @@ export interface ContainerAnalysisNoteTimeouts {
   readonly update?: string;
 }
 
-function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeouts): any {
+function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeoutsOutputReference | ContainerAnalysisNoteTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -140,6 +199,64 @@ function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNote
   }
 }
 
+export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note.html google_container_analysis_note}
@@ -194,11 +311,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // expiration_time - computed: false, optional: true, required: false
-  private _expirationTime?: string;
+  private _expirationTime?: string | undefined; 
   public get expirationTime() {
     return this.getStringAttribute('expiration_time');
   }
-  public set expirationTime(value: string ) {
+  public set expirationTime(value: string | undefined) {
     this._expirationTime = value;
   }
   public resetExpirationTime() {
@@ -220,11 +337,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // long_description - computed: false, optional: true, required: false
-  private _longDescription?: string;
+  private _longDescription?: string | undefined; 
   public get longDescription() {
     return this.getStringAttribute('long_description');
   }
-  public set longDescription(value: string ) {
+  public set longDescription(value: string | undefined) {
     this._longDescription = value;
   }
   public resetLongDescription() {
@@ -236,7 +353,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -249,11 +366,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -265,11 +382,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // related_note_names - computed: false, optional: true, required: false
-  private _relatedNoteNames?: string[];
+  private _relatedNoteNames?: string[] | undefined; 
   public get relatedNoteNames() {
     return this.getListAttribute('related_note_names');
   }
-  public set relatedNoteNames(value: string[] ) {
+  public set relatedNoteNames(value: string[] | undefined) {
     this._relatedNoteNames = value;
   }
   public resetRelatedNoteNames() {
@@ -281,11 +398,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // short_description - computed: false, optional: true, required: false
-  private _shortDescription?: string;
+  private _shortDescription?: string | undefined; 
   public get shortDescription() {
     return this.getStringAttribute('short_description');
   }
-  public set shortDescription(value: string ) {
+  public set shortDescription(value: string | undefined) {
     this._shortDescription = value;
   }
   public resetShortDescription() {
@@ -302,11 +419,12 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // attestation_authority - computed: false, optional: false, required: true
-  private _attestationAuthority: ContainerAnalysisNoteAttestationAuthority[];
+  private _attestationAuthority?: ContainerAnalysisNoteAttestationAuthority; 
+  private __attestationAuthorityOutput = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this as any, "attestation_authority", true);
   public get attestationAuthority() {
-    return this.interpolationForAttribute('attestation_authority') as any;
+    return this.__attestationAuthorityOutput;
   }
-  public set attestationAuthority(value: ContainerAnalysisNoteAttestationAuthority[]) {
+  public putAttestationAuthority(value: ContainerAnalysisNoteAttestationAuthority) {
     this._attestationAuthority = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -315,11 +433,12 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // related_url - computed: false, optional: true, required: false
-  private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[];
+  private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[] | undefined; 
   public get relatedUrl() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('related_url') as any;
   }
-  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[] ) {
+  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[] | undefined) {
     this._relatedUrl = value;
   }
   public resetRelatedUrl() {
@@ -331,11 +450,12 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ContainerAnalysisNoteTimeouts;
+  private _timeouts?: ContainerAnalysisNoteTimeouts | undefined; 
+  private __timeoutsOutput = new ContainerAnalysisNoteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ContainerAnalysisNoteTimeouts ) {
+  public putTimeouts(value: ContainerAnalysisNoteTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -358,7 +478,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       related_note_names: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedNoteNames),
       short_description: cdktf.stringToTerraform(this._shortDescription),
-      attestation_authority: cdktf.listMapper(containerAnalysisNoteAttestationAuthorityToTerraform)(this._attestationAuthority),
+      attestation_authority: containerAnalysisNoteAttestationAuthorityToTerraform(this._attestationAuthority),
       related_url: cdktf.listMapper(containerAnalysisNoteRelatedUrlToTerraform)(this._relatedUrl),
       timeouts: containerAnalysisNoteTimeoutsToTerraform(this._timeouts),
     };

@@ -28,7 +28,7 @@ export interface PubsubTopicIamMemberConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html#condition PubsubTopicIamMember#condition}
   */
-  readonly condition?: PubsubTopicIamMemberCondition[];
+  readonly condition?: PubsubTopicIamMemberCondition;
 }
 export interface PubsubTopicIamMemberCondition {
   /**
@@ -45,8 +45,11 @@ export interface PubsubTopicIamMemberCondition {
   readonly title: string;
 }
 
-function pubsubTopicIamMemberConditionToTerraform(struct?: PubsubTopicIamMemberCondition): any {
+function pubsubTopicIamMemberConditionToTerraform(struct?: PubsubTopicIamMemberConditionOutputReference | PubsubTopicIamMemberCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -54,6 +57,58 @@ function pubsubTopicIamMemberConditionToTerraform(struct?: PubsubTopicIamMemberC
   }
 }
 
+export class PubsubTopicIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_member.html google_pubsub_topic_iam_member}
@@ -109,7 +164,7 @@ export class PubsubTopicIamMember extends cdktf.TerraformResource {
   }
 
   // member - computed: false, optional: false, required: true
-  private _member: string;
+  private _member?: string; 
   public get member() {
     return this.getStringAttribute('member');
   }
@@ -122,11 +177,11 @@ export class PubsubTopicIamMember extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -138,7 +193,7 @@ export class PubsubTopicIamMember extends cdktf.TerraformResource {
   }
 
   // role - computed: false, optional: false, required: true
-  private _role: string;
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
@@ -151,7 +206,7 @@ export class PubsubTopicIamMember extends cdktf.TerraformResource {
   }
 
   // topic - computed: false, optional: false, required: true
-  private _topic: string;
+  private _topic?: string; 
   public get topic() {
     return this.getStringAttribute('topic');
   }
@@ -164,11 +219,12 @@ export class PubsubTopicIamMember extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: PubsubTopicIamMemberCondition[];
+  private _condition?: PubsubTopicIamMemberCondition | undefined; 
+  private __conditionOutput = new PubsubTopicIamMemberConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: PubsubTopicIamMemberCondition[] ) {
+  public putCondition(value: PubsubTopicIamMemberCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -189,7 +245,7 @@ export class PubsubTopicIamMember extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       topic: cdktf.stringToTerraform(this._topic),
-      condition: cdktf.listMapper(pubsubTopicIamMemberConditionToTerraform)(this._condition),
+      condition: pubsubTopicIamMemberConditionToTerraform(this._condition),
     };
   }
 }

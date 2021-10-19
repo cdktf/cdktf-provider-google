@@ -44,7 +44,7 @@ character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#autoscaling_policy ComputeAutoscaler#autoscaling_policy}
   */
-  readonly autoscalingPolicy: ComputeAutoscalerAutoscalingPolicy[];
+  readonly autoscalingPolicy: ComputeAutoscalerAutoscalingPolicy;
   /**
   * timeouts block
   * 
@@ -83,14 +83,56 @@ utilization.
   readonly target: number;
 }
 
-function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyCpuUtilization): any {
+function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference | ComputeAutoscalerAutoscalingPolicyCpuUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     predictive_method: cdktf.stringToTerraform(struct!.predictiveMethod),
     target: cdktf.numberToTerraform(struct!.target),
   }
 }
 
+export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // predictive_method - computed: false, optional: true, required: false
+  private _predictiveMethod?: string | undefined; 
+  public get predictiveMethod() {
+    return this.getStringAttribute('predictive_method');
+  }
+  public set predictiveMethod(value: string | undefined) {
+    this._predictiveMethod = value;
+  }
+  public resetPredictiveMethod() {
+    this._predictiveMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get predictiveMethodInput() {
+    return this._predictiveMethod
+  }
+
+  // target - computed: false, optional: false, required: true
+  private _target?: number; 
+  public get target() {
+    return this.getNumberAttribute('target');
+  }
+  public set target(value: number) {
+    this._target = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target
+  }
+}
 export interface ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization {
   /**
   * Fraction of backend capacity utilization (set in HTTP(s) load
@@ -102,13 +144,39 @@ be a positive float value. If not defined, the default is 0.8.
   readonly target: number;
 }
 
-function computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization): any {
+function computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference | ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     target: cdktf.numberToTerraform(struct!.target),
   }
 }
 
+export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // target - computed: false, optional: false, required: true
+  private _target?: number; 
+  public get target() {
+    return this.getNumberAttribute('target');
+  }
+  public set target(value: number) {
+    this._target = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target
+  }
+}
 export interface ComputeAutoscalerAutoscalingPolicyMetric {
   /**
   * The identifier (type) of the Stackdriver Monitoring metric.
@@ -144,6 +212,9 @@ Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "D
 
 function computeAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyMetric): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     target: cdktf.numberToTerraform(struct!.target),
@@ -168,14 +239,59 @@ For example, specify 80 for 80%.
   readonly percent?: number;
 }
 
-function computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas): any {
+function computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference | ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     fixed: cdktf.numberToTerraform(struct!.fixed),
     percent: cdktf.numberToTerraform(struct!.percent),
   }
 }
 
+export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // fixed - computed: false, optional: true, required: false
+  private _fixed?: number | undefined; 
+  public get fixed() {
+    return this.getNumberAttribute('fixed');
+  }
+  public set fixed(value: number | undefined) {
+    this._fixed = value;
+  }
+  public resetFixed() {
+    this._fixed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedInput() {
+    return this._fixed
+  }
+
+  // percent - computed: false, optional: true, required: false
+  private _percent?: number | undefined; 
+  public get percent() {
+    return this.getNumberAttribute('percent');
+  }
+  public set percent(value: number | undefined) {
+    this._percent = value;
+  }
+  public resetPercent() {
+    this._percent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentInput() {
+    return this._percent
+  }
+}
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControl {
   /**
   * How long back autoscaling should look when computing recommendations
@@ -189,17 +305,63 @@ to include directives regarding slower scale down, as described above.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#max_scaled_in_replicas ComputeAutoscaler#max_scaled_in_replicas}
   */
-  readonly maxScaledInReplicas?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas[];
+  readonly maxScaledInReplicas?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas;
 }
 
-function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControl): any {
+function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference | ComputeAutoscalerAutoscalingPolicyScaleInControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     time_window_sec: cdktf.numberToTerraform(struct!.timeWindowSec),
-    max_scaled_in_replicas: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform)(struct!.maxScaledInReplicas),
+    max_scaled_in_replicas: computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct!.maxScaledInReplicas),
   }
 }
 
+export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // time_window_sec - computed: false, optional: true, required: false
+  private _timeWindowSec?: number | undefined; 
+  public get timeWindowSec() {
+    return this.getNumberAttribute('time_window_sec');
+  }
+  public set timeWindowSec(value: number | undefined) {
+    this._timeWindowSec = value;
+  }
+  public resetTimeWindowSec() {
+    this._timeWindowSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeWindowSecInput() {
+    return this._timeWindowSec
+  }
+
+  // max_scaled_in_replicas - computed: false, optional: true, required: false
+  private _maxScaledInReplicas?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined; 
+  private __maxScaledInReplicasOutput = new ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this as any, "max_scaled_in_replicas", true);
+  public get maxScaledInReplicas() {
+    return this.__maxScaledInReplicasOutput;
+  }
+  public putMaxScaledInReplicas(value: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined) {
+    this._maxScaledInReplicas = value;
+  }
+  public resetMaxScaledInReplicas() {
+    this._maxScaledInReplicas = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxScaledInReplicasInput() {
+    return this._maxScaledInReplicas
+  }
+}
 export interface ComputeAutoscalerAutoscalingPolicyScalingSchedules {
   /**
   * A description of a scaling schedule.
@@ -245,6 +407,9 @@ export interface ComputeAutoscalerAutoscalingPolicyScalingSchedules {
 
 function computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScalingSchedules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     disabled: cdktf.booleanToTerraform(struct!.disabled),
@@ -301,13 +466,13 @@ allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#cpu_utilization ComputeAutoscaler#cpu_utilization}
   */
-  readonly cpuUtilization?: ComputeAutoscalerAutoscalingPolicyCpuUtilization[];
+  readonly cpuUtilization?: ComputeAutoscalerAutoscalingPolicyCpuUtilization;
   /**
   * load_balancing_utilization block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#load_balancing_utilization ComputeAutoscaler#load_balancing_utilization}
   */
-  readonly loadBalancingUtilization?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization[];
+  readonly loadBalancingUtilization?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization;
   /**
   * metric block
   * 
@@ -319,7 +484,7 @@ allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#scale_in_control ComputeAutoscaler#scale_in_control}
   */
-  readonly scaleInControl?: ComputeAutoscalerAutoscalingPolicyScaleInControl[];
+  readonly scaleInControl?: ComputeAutoscalerAutoscalingPolicyScaleInControl;
   /**
   * scaling_schedules block
   * 
@@ -328,21 +493,177 @@ allowed.
   readonly scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[];
 }
 
-function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscalerAutoscalingPolicy): any {
+function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyOutputReference | ComputeAutoscalerAutoscalingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cooldown_period: cdktf.numberToTerraform(struct!.cooldownPeriod),
     max_replicas: cdktf.numberToTerraform(struct!.maxReplicas),
     min_replicas: cdktf.numberToTerraform(struct!.minReplicas),
     mode: cdktf.stringToTerraform(struct!.mode),
-    cpu_utilization: cdktf.listMapper(computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform)(struct!.cpuUtilization),
-    load_balancing_utilization: cdktf.listMapper(computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform)(struct!.loadBalancingUtilization),
+    cpu_utilization: computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct!.cpuUtilization),
+    load_balancing_utilization: computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct!.loadBalancingUtilization),
     metric: cdktf.listMapper(computeAutoscalerAutoscalingPolicyMetricToTerraform)(struct!.metric),
-    scale_in_control: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScaleInControlToTerraform)(struct!.scaleInControl),
+    scale_in_control: computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct!.scaleInControl),
     scaling_schedules: cdktf.listMapper(computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform)(struct!.scalingSchedules),
   }
 }
 
+export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cooldown_period - computed: false, optional: true, required: false
+  private _cooldownPeriod?: number | undefined; 
+  public get cooldownPeriod() {
+    return this.getNumberAttribute('cooldown_period');
+  }
+  public set cooldownPeriod(value: number | undefined) {
+    this._cooldownPeriod = value;
+  }
+  public resetCooldownPeriod() {
+    this._cooldownPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cooldownPeriodInput() {
+    return this._cooldownPeriod
+  }
+
+  // max_replicas - computed: false, optional: false, required: true
+  private _maxReplicas?: number; 
+  public get maxReplicas() {
+    return this.getNumberAttribute('max_replicas');
+  }
+  public set maxReplicas(value: number) {
+    this._maxReplicas = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxReplicasInput() {
+    return this._maxReplicas
+  }
+
+  // min_replicas - computed: false, optional: false, required: true
+  private _minReplicas?: number; 
+  public get minReplicas() {
+    return this.getNumberAttribute('min_replicas');
+  }
+  public set minReplicas(value: number) {
+    this._minReplicas = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minReplicasInput() {
+    return this._minReplicas
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: string | undefined; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string | undefined) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode
+  }
+
+  // cpu_utilization - computed: false, optional: true, required: false
+  private _cpuUtilization?: ComputeAutoscalerAutoscalingPolicyCpuUtilization | undefined; 
+  private __cpuUtilizationOutput = new ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
+  public get cpuUtilization() {
+    return this.__cpuUtilizationOutput;
+  }
+  public putCpuUtilization(value: ComputeAutoscalerAutoscalingPolicyCpuUtilization | undefined) {
+    this._cpuUtilization = value;
+  }
+  public resetCpuUtilization() {
+    this._cpuUtilization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuUtilizationInput() {
+    return this._cpuUtilization
+  }
+
+  // load_balancing_utilization - computed: false, optional: true, required: false
+  private _loadBalancingUtilization?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined; 
+  private __loadBalancingUtilizationOutput = new ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this as any, "load_balancing_utilization", true);
+  public get loadBalancingUtilization() {
+    return this.__loadBalancingUtilizationOutput;
+  }
+  public putLoadBalancingUtilization(value: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined) {
+    this._loadBalancingUtilization = value;
+  }
+  public resetLoadBalancingUtilization() {
+    this._loadBalancingUtilization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancingUtilizationInput() {
+    return this._loadBalancingUtilization
+  }
+
+  // metric - computed: false, optional: true, required: false
+  private _metric?: ComputeAutoscalerAutoscalingPolicyMetric[] | undefined; 
+  public get metric() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('metric') as any;
+  }
+  public set metric(value: ComputeAutoscalerAutoscalingPolicyMetric[] | undefined) {
+    this._metric = value;
+  }
+  public resetMetric() {
+    this._metric = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricInput() {
+    return this._metric
+  }
+
+  // scale_in_control - computed: false, optional: true, required: false
+  private _scaleInControl?: ComputeAutoscalerAutoscalingPolicyScaleInControl | undefined; 
+  private __scaleInControlOutput = new ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference(this as any, "scale_in_control", true);
+  public get scaleInControl() {
+    return this.__scaleInControlOutput;
+  }
+  public putScaleInControl(value: ComputeAutoscalerAutoscalingPolicyScaleInControl | undefined) {
+    this._scaleInControl = value;
+  }
+  public resetScaleInControl() {
+    this._scaleInControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleInControlInput() {
+    return this._scaleInControl
+  }
+
+  // scaling_schedules - computed: false, optional: true, required: false
+  private _scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[] | undefined; 
+  public get scalingSchedules() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('scaling_schedules') as any;
+  }
+  public set scalingSchedules(value: ComputeAutoscalerAutoscalingPolicyScalingSchedules[] | undefined) {
+    this._scalingSchedules = value;
+  }
+  public resetScalingSchedules() {
+    this._scalingSchedules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scalingSchedulesInput() {
+    return this._scalingSchedules
+  }
+}
 export interface ComputeAutoscalerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html#create ComputeAutoscaler#create}
@@ -358,8 +679,11 @@ export interface ComputeAutoscalerTimeouts {
   readonly update?: string;
 }
 
-function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeouts): any {
+function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeoutsOutputReference | ComputeAutoscalerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -367,6 +691,64 @@ function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeouts
   }
 }
 
+export class ComputeAutoscalerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler.html google_compute_autoscaler}
@@ -419,11 +801,11 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -440,7 +822,7 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -453,11 +835,11 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -474,7 +856,7 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // target - computed: false, optional: false, required: true
-  private _target: string;
+  private _target?: string; 
   public get target() {
     return this.getStringAttribute('target');
   }
@@ -487,11 +869,11 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string;
+  private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string) {
+  public set zone(value: string | undefined) {
     this._zone = value;
   }
   public resetZone() {
@@ -503,11 +885,12 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // autoscaling_policy - computed: false, optional: false, required: true
-  private _autoscalingPolicy: ComputeAutoscalerAutoscalingPolicy[];
+  private _autoscalingPolicy?: ComputeAutoscalerAutoscalingPolicy; 
+  private __autoscalingPolicyOutput = new ComputeAutoscalerAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
   public get autoscalingPolicy() {
-    return this.interpolationForAttribute('autoscaling_policy') as any;
+    return this.__autoscalingPolicyOutput;
   }
-  public set autoscalingPolicy(value: ComputeAutoscalerAutoscalingPolicy[]) {
+  public putAutoscalingPolicy(value: ComputeAutoscalerAutoscalingPolicy) {
     this._autoscalingPolicy = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -516,11 +899,12 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeAutoscalerTimeouts;
+  private _timeouts?: ComputeAutoscalerTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeAutoscalerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeAutoscalerTimeouts ) {
+  public putTimeouts(value: ComputeAutoscalerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -542,7 +926,7 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       target: cdktf.stringToTerraform(this._target),
       zone: cdktf.stringToTerraform(this._zone),
-      autoscaling_policy: cdktf.listMapper(computeAutoscalerAutoscalingPolicyToTerraform)(this._autoscalingPolicy),
+      autoscaling_policy: computeAutoscalerAutoscalingPolicyToTerraform(this._autoscalingPolicy),
       timeouts: computeAutoscalerTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -29,7 +29,7 @@ service ID.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#telemetry MonitoringCustomService#telemetry}
   */
-  readonly telemetry?: MonitoringCustomServiceTelemetry[];
+  readonly telemetry?: MonitoringCustomServiceTelemetry;
   /**
   * timeouts block
   * 
@@ -48,13 +48,42 @@ https://cloud.google.com/apis/design/resource_names.
   readonly resourceName?: string;
 }
 
-function monitoringCustomServiceTelemetryToTerraform(struct?: MonitoringCustomServiceTelemetry): any {
+function monitoringCustomServiceTelemetryToTerraform(struct?: MonitoringCustomServiceTelemetryOutputReference | MonitoringCustomServiceTelemetry): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     resource_name: cdktf.stringToTerraform(struct!.resourceName),
   }
 }
 
+export class MonitoringCustomServiceTelemetryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // resource_name - computed: false, optional: true, required: false
+  private _resourceName?: string | undefined; 
+  public get resourceName() {
+    return this.getStringAttribute('resource_name');
+  }
+  public set resourceName(value: string | undefined) {
+    this._resourceName = value;
+  }
+  public resetResourceName() {
+    this._resourceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceNameInput() {
+    return this._resourceName
+  }
+}
 export interface MonitoringCustomServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#create MonitoringCustomService#create}
@@ -70,8 +99,11 @@ export interface MonitoringCustomServiceTimeouts {
   readonly update?: string;
 }
 
-function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomServiceTimeouts): any {
+function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomServiceTimeoutsOutputReference | MonitoringCustomServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -79,6 +111,64 @@ function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomSer
   }
 }
 
+export class MonitoringCustomServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html google_monitoring_custom_service}
@@ -124,11 +214,11 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   // ==========
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -150,11 +240,11 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -166,11 +256,11 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   }
 
   // service_id - computed: true, optional: true, required: false
-  private _serviceId?: string;
+  private _serviceId?: string | undefined; 
   public get serviceId() {
     return this.getStringAttribute('service_id');
   }
-  public set serviceId(value: string) {
+  public set serviceId(value: string | undefined) {
     this._serviceId = value;
   }
   public resetServiceId() {
@@ -182,11 +272,12 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   }
 
   // telemetry - computed: false, optional: true, required: false
-  private _telemetry?: MonitoringCustomServiceTelemetry[];
+  private _telemetry?: MonitoringCustomServiceTelemetry | undefined; 
+  private __telemetryOutput = new MonitoringCustomServiceTelemetryOutputReference(this as any, "telemetry", true);
   public get telemetry() {
-    return this.interpolationForAttribute('telemetry') as any;
+    return this.__telemetryOutput;
   }
-  public set telemetry(value: MonitoringCustomServiceTelemetry[] ) {
+  public putTelemetry(value: MonitoringCustomServiceTelemetry | undefined) {
     this._telemetry = value;
   }
   public resetTelemetry() {
@@ -198,11 +289,12 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringCustomServiceTimeouts;
+  private _timeouts?: MonitoringCustomServiceTimeouts | undefined; 
+  private __timeoutsOutput = new MonitoringCustomServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitoringCustomServiceTimeouts ) {
+  public putTimeouts(value: MonitoringCustomServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -222,7 +314,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       project: cdktf.stringToTerraform(this._project),
       service_id: cdktf.stringToTerraform(this._serviceId),
-      telemetry: cdktf.listMapper(monitoringCustomServiceTelemetryToTerraform)(this._telemetry),
+      telemetry: monitoringCustomServiceTelemetryToTerraform(this._telemetry),
       timeouts: monitoringCustomServiceTimeoutsToTerraform(this._timeouts),
     };
   }

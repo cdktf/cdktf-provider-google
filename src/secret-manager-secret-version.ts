@@ -43,14 +43,59 @@ export interface SecretManagerSecretVersionTimeouts {
   readonly delete?: string;
 }
 
-function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSecretVersionTimeouts): any {
+function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSecretVersionTimeoutsOutputReference | SecretManagerSecretVersionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class SecretManagerSecretVersionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret_version.html google_secret_manager_secret_version}
@@ -105,11 +150,11 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -131,7 +176,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: false, required: true
-  private _secret: string;
+  private _secret?: string; 
   public get secret() {
     return this.getStringAttribute('secret');
   }
@@ -144,7 +189,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
 
   // secret_data - computed: false, optional: false, required: true
-  private _secretData: string;
+  private _secretData?: string; 
   public get secretData() {
     return this.getStringAttribute('secret_data');
   }
@@ -157,11 +202,12 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SecretManagerSecretVersionTimeouts;
+  private _timeouts?: SecretManagerSecretVersionTimeouts | undefined; 
+  private __timeoutsOutput = new SecretManagerSecretVersionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SecretManagerSecretVersionTimeouts ) {
+  public putTimeouts(value: SecretManagerSecretVersionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

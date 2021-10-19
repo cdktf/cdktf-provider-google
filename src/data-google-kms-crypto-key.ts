@@ -86,11 +86,11 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
   // import_only - computed: true, optional: false, required: false
   public get importOnly() {
-    return this.getBooleanAttribute('import_only');
+    return this.getBooleanAttribute('import_only') as any;
   }
 
   // key_ring - computed: false, optional: false, required: true
-  private _keyRing: string;
+  private _keyRing?: string; 
   public get keyRing() {
     return this.getStringAttribute('key_ring');
   }
@@ -108,7 +108,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -137,7 +137,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
   // skip_initial_version_creation - computed: true, optional: false, required: false
   public get skipInitialVersionCreation() {
-    return this.getBooleanAttribute('skip_initial_version_creation');
+    return this.getBooleanAttribute('skip_initial_version_creation') as any;
   }
 
   // version_template - computed: true, optional: false, required: false

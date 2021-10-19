@@ -68,7 +68,7 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   }
 
   // folder - computed: false, optional: false, required: true
-  private _folder: string;
+  private _folder?: string; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
@@ -96,11 +96,11 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   }
 
   // lookup_organization - computed: false, optional: true, required: false
-  private _lookupOrganization?: boolean | cdktf.IResolvable;
+  private _lookupOrganization?: boolean | cdktf.IResolvable | undefined; 
   public get lookupOrganization() {
-    return this.getBooleanAttribute('lookup_organization');
+    return this.getBooleanAttribute('lookup_organization') as any;
   }
-  public set lookupOrganization(value: boolean | cdktf.IResolvable ) {
+  public set lookupOrganization(value: boolean | cdktf.IResolvable | undefined) {
     this._lookupOrganization = value;
   }
   public resetLookupOrganization() {

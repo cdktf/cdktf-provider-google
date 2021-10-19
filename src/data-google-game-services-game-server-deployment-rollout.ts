@@ -30,6 +30,7 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
 
   // realms_selector - computed: true, optional: false, required: false
   public get realmsSelector() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('realms_selector') as any;
   }
 }
@@ -79,7 +80,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
   }
 
   // deployment_id - computed: false, optional: false, required: true
-  private _deploymentId: string;
+  private _deploymentId?: string; 
   public get deploymentId() {
     return this.getStringAttribute('deployment_id');
   }

@@ -58,7 +58,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#sensitive_labels MonitoringNotificationChannel#sensitive_labels}
   */
-  readonly sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels[];
+  readonly sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels;
   /**
   * timeouts block
   * 
@@ -87,8 +87,11 @@ export interface MonitoringNotificationChannelSensitiveLabels {
   readonly serviceKey?: string;
 }
 
-function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: MonitoringNotificationChannelSensitiveLabels): any {
+function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: MonitoringNotificationChannelSensitiveLabelsOutputReference | MonitoringNotificationChannelSensitiveLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     auth_token: cdktf.stringToTerraform(struct!.authToken),
     password: cdktf.stringToTerraform(struct!.password),
@@ -96,6 +99,64 @@ function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: Monito
   }
 }
 
+export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // auth_token - computed: false, optional: true, required: false
+  private _authToken?: string | undefined; 
+  public get authToken() {
+    return this.getStringAttribute('auth_token');
+  }
+  public set authToken(value: string | undefined) {
+    this._authToken = value;
+  }
+  public resetAuthToken() {
+    this._authToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authTokenInput() {
+    return this._authToken
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string | undefined; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string | undefined) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // service_key - computed: false, optional: true, required: false
+  private _serviceKey?: string | undefined; 
+  public get serviceKey() {
+    return this.getStringAttribute('service_key');
+  }
+  public set serviceKey(value: string | undefined) {
+    this._serviceKey = value;
+  }
+  public resetServiceKey() {
+    this._serviceKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceKeyInput() {
+    return this._serviceKey
+  }
+}
 export interface MonitoringNotificationChannelTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html#create MonitoringNotificationChannel#create}
@@ -111,8 +172,11 @@ export interface MonitoringNotificationChannelTimeouts {
   readonly update?: string;
 }
 
-function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeouts): any {
+function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeoutsOutputReference | MonitoringNotificationChannelTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -120,6 +184,64 @@ function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNot
   }
 }
 
+export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html google_monitoring_notification_channel}
@@ -169,11 +291,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -185,11 +307,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -201,11 +323,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -222,11 +344,12 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -243,11 +366,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -259,7 +382,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -272,11 +395,12 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable;
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get userLabels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -293,11 +417,12 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // sensitive_labels - computed: false, optional: true, required: false
-  private _sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels[];
+  private _sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels | undefined; 
+  private __sensitiveLabelsOutput = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this as any, "sensitive_labels", true);
   public get sensitiveLabels() {
-    return this.interpolationForAttribute('sensitive_labels') as any;
+    return this.__sensitiveLabelsOutput;
   }
-  public set sensitiveLabels(value: MonitoringNotificationChannelSensitiveLabels[] ) {
+  public putSensitiveLabels(value: MonitoringNotificationChannelSensitiveLabels | undefined) {
     this._sensitiveLabels = value;
   }
   public resetSensitiveLabels() {
@@ -309,11 +434,12 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringNotificationChannelTimeouts;
+  private _timeouts?: MonitoringNotificationChannelTimeouts | undefined; 
+  private __timeoutsOutput = new MonitoringNotificationChannelTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitoringNotificationChannelTimeouts ) {
+  public putTimeouts(value: MonitoringNotificationChannelTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -337,7 +463,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
       user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
-      sensitive_labels: cdktf.listMapper(monitoringNotificationChannelSensitiveLabelsToTerraform)(this._sensitiveLabels),
+      sensitive_labels: monitoringNotificationChannelSensitiveLabelsToTerraform(this._sensitiveLabels),
       timeouts: monitoringNotificationChannelTimeoutsToTerraform(this._timeouts),
     };
   }

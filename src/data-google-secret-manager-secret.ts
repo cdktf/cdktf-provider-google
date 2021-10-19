@@ -29,6 +29,7 @@ export class DataGoogleSecretManagerSecretReplicationUserManagedReplicas extends
 
   // customer_managed_encryption - computed: true, optional: false, required: false
   public get customerManagedEncryption() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('customer_managed_encryption') as any;
   }
 
@@ -41,6 +42,7 @@ export class DataGoogleSecretManagerSecretReplicationUserManaged extends cdktf.C
 
   // replicas - computed: true, optional: false, required: false
   public get replicas() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('replicas') as any;
   }
 }
@@ -48,11 +50,12 @@ export class DataGoogleSecretManagerSecretReplication extends cdktf.ComplexCompu
 
   // automatic - computed: true, optional: false, required: false
   public get automatic() {
-    return this.getBooleanAttribute('automatic');
+    return this.getBooleanAttribute('automatic') as any;
   }
 
   // user_managed - computed: true, optional: false, required: false
   public get userManaged() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_managed') as any;
   }
 }
@@ -142,11 +145,11 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -168,7 +171,7 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   }
 
   // secret_id - computed: false, optional: false, required: true
-  private _secretId: string;
+  private _secretId?: string; 
   public get secretId() {
     return this.getStringAttribute('secret_id');
   }

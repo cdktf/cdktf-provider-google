@@ -68,11 +68,11 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
   }
 
   // domain - computed: true, optional: true, required: false
-  private _domain?: string;
+  private _domain?: string | undefined; 
   public get domain() {
     return this.getStringAttribute('domain');
   }
-  public set domain(value: string) {
+  public set domain(value: string | undefined) {
     this._domain = value;
   }
   public resetDomain() {
@@ -104,11 +104,11 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
   }
 
   // organization - computed: false, optional: true, required: false
-  private _organization?: string;
+  private _organization?: string | undefined; 
   public get organization() {
     return this.getStringAttribute('organization');
   }
-  public set organization(value: string ) {
+  public set organization(value: string | undefined) {
     this._organization = value;
   }
   public resetOrganization() {

@@ -40,25 +40,25 @@ export interface BigqueryJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#copy BigqueryJob#copy}
   */
-  readonly copy?: BigqueryJobCopy[];
+  readonly copy?: BigqueryJobCopy;
   /**
   * extract block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#extract BigqueryJob#extract}
   */
-  readonly extract?: BigqueryJobExtract[];
+  readonly extract?: BigqueryJobExtract;
   /**
   * load block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#load BigqueryJob#load}
   */
-  readonly load?: BigqueryJobLoad[];
+  readonly load?: BigqueryJobLoad;
   /**
   * query block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#query BigqueryJob#query}
   */
-  readonly query?: BigqueryJobQuery[];
+  readonly query?: BigqueryJobQuery;
   /**
   * timeouts block
   * 
@@ -104,11 +104,13 @@ export class BigqueryJobStatus extends cdktf.ComplexComputedList {
 
   // error_result - computed: true, optional: false, required: false
   public get errorResult() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('error_result') as any;
   }
 
   // errors - computed: true, optional: false, required: false
   public get errors() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('errors') as any;
   }
 
@@ -127,13 +129,39 @@ The BigQuery Service Account associated with your project requires access to thi
   readonly kmsKeyName: string;
 }
 
-function bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobCopyDestinationEncryptionConfiguration): any {
+function bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobCopyDestinationEncryptionConfigurationOutputReference | BigqueryJobCopyDestinationEncryptionConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
 }
 
+export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+}
 export interface BigqueryJobCopyDestinationTable {
   /**
   * The ID of the dataset containing this table.
@@ -156,8 +184,11 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
   readonly tableId: string;
 }
 
-function bigqueryJobCopyDestinationTableToTerraform(struct?: BigqueryJobCopyDestinationTable): any {
+function bigqueryJobCopyDestinationTableToTerraform(struct?: BigqueryJobCopyDestinationTableOutputReference | BigqueryJobCopyDestinationTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -165,6 +196,61 @@ function bigqueryJobCopyDestinationTableToTerraform(struct?: BigqueryJobCopyDest
   }
 }
 
+export class BigqueryJobCopyDestinationTableOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: true, optional: true, required: false
+  private _datasetId?: string | undefined; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string | undefined) {
+    this._datasetId = value;
+  }
+  public resetDatasetId() {
+    this._datasetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // table_id - computed: false, optional: false, required: true
+  private _tableId?: string; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string) {
+    this._tableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
+}
 export interface BigqueryJobCopySourceTables {
   /**
   * The ID of the dataset containing this table.
@@ -189,6 +275,9 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 function bigqueryJobCopySourceTablesToTerraform(struct?: BigqueryJobCopySourceTables): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -222,13 +311,13 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#destination_encryption_configuration BigqueryJob#destination_encryption_configuration}
   */
-  readonly destinationEncryptionConfiguration?: BigqueryJobCopyDestinationEncryptionConfiguration[];
+  readonly destinationEncryptionConfiguration?: BigqueryJobCopyDestinationEncryptionConfiguration;
   /**
   * destination_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#destination_table BigqueryJob#destination_table}
   */
-  readonly destinationTable?: BigqueryJobCopyDestinationTable[];
+  readonly destinationTable?: BigqueryJobCopyDestinationTable;
   /**
   * source_tables block
   * 
@@ -237,17 +326,110 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   readonly sourceTables: BigqueryJobCopySourceTables[];
 }
 
-function bigqueryJobCopyToTerraform(struct?: BigqueryJobCopy): any {
+function bigqueryJobCopyToTerraform(struct?: BigqueryJobCopyOutputReference | BigqueryJobCopy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create_disposition: cdktf.stringToTerraform(struct!.createDisposition),
     write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
-    destination_encryption_configuration: cdktf.listMapper(bigqueryJobCopyDestinationEncryptionConfigurationToTerraform)(struct!.destinationEncryptionConfiguration),
-    destination_table: cdktf.listMapper(bigqueryJobCopyDestinationTableToTerraform)(struct!.destinationTable),
+    destination_encryption_configuration: bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(struct!.destinationEncryptionConfiguration),
+    destination_table: bigqueryJobCopyDestinationTableToTerraform(struct!.destinationTable),
     source_tables: cdktf.listMapper(bigqueryJobCopySourceTablesToTerraform)(struct!.sourceTables),
   }
 }
 
+export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create_disposition - computed: false, optional: true, required: false
+  private _createDisposition?: string | undefined; 
+  public get createDisposition() {
+    return this.getStringAttribute('create_disposition');
+  }
+  public set createDisposition(value: string | undefined) {
+    this._createDisposition = value;
+  }
+  public resetCreateDisposition() {
+    this._createDisposition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createDispositionInput() {
+    return this._createDisposition
+  }
+
+  // write_disposition - computed: false, optional: true, required: false
+  private _writeDisposition?: string | undefined; 
+  public get writeDisposition() {
+    return this.getStringAttribute('write_disposition');
+  }
+  public set writeDisposition(value: string | undefined) {
+    this._writeDisposition = value;
+  }
+  public resetWriteDisposition() {
+    this._writeDisposition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeDispositionInput() {
+    return this._writeDisposition
+  }
+
+  // destination_encryption_configuration - computed: false, optional: true, required: false
+  private _destinationEncryptionConfiguration?: BigqueryJobCopyDestinationEncryptionConfiguration | undefined; 
+  private __destinationEncryptionConfigurationOutput = new BigqueryJobCopyDestinationEncryptionConfigurationOutputReference(this as any, "destination_encryption_configuration", true);
+  public get destinationEncryptionConfiguration() {
+    return this.__destinationEncryptionConfigurationOutput;
+  }
+  public putDestinationEncryptionConfiguration(value: BigqueryJobCopyDestinationEncryptionConfiguration | undefined) {
+    this._destinationEncryptionConfiguration = value;
+  }
+  public resetDestinationEncryptionConfiguration() {
+    this._destinationEncryptionConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationEncryptionConfigurationInput() {
+    return this._destinationEncryptionConfiguration
+  }
+
+  // destination_table - computed: false, optional: true, required: false
+  private _destinationTable?: BigqueryJobCopyDestinationTable | undefined; 
+  private __destinationTableOutput = new BigqueryJobCopyDestinationTableOutputReference(this as any, "destination_table", true);
+  public get destinationTable() {
+    return this.__destinationTableOutput;
+  }
+  public putDestinationTable(value: BigqueryJobCopyDestinationTable | undefined) {
+    this._destinationTable = value;
+  }
+  public resetDestinationTable() {
+    this._destinationTable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationTableInput() {
+    return this._destinationTable
+  }
+
+  // source_tables - computed: false, optional: false, required: true
+  private _sourceTables?: BigqueryJobCopySourceTables[]; 
+  public get sourceTables() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('source_tables') as any;
+  }
+  public set sourceTables(value: BigqueryJobCopySourceTables[]) {
+    this._sourceTables = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceTablesInput() {
+    return this._sourceTables
+  }
+}
 export interface BigqueryJobExtractSourceModel {
   /**
   * The ID of the dataset containing this model.
@@ -269,8 +451,11 @@ export interface BigqueryJobExtractSourceModel {
   readonly projectId: string;
 }
 
-function bigqueryJobExtractSourceModelToTerraform(struct?: BigqueryJobExtractSourceModel): any {
+function bigqueryJobExtractSourceModelToTerraform(struct?: BigqueryJobExtractSourceModelOutputReference | BigqueryJobExtractSourceModel): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     model_id: cdktf.stringToTerraform(struct!.modelId),
@@ -278,6 +463,55 @@ function bigqueryJobExtractSourceModelToTerraform(struct?: BigqueryJobExtractSou
   }
 }
 
+export class BigqueryJobExtractSourceModelOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // model_id - computed: false, optional: false, required: true
+  private _modelId?: string; 
+  public get modelId() {
+    return this.getStringAttribute('model_id');
+  }
+  public set modelId(value: string) {
+    this._modelId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelIdInput() {
+    return this._modelId
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+}
 export interface BigqueryJobExtractSourceTable {
   /**
   * The ID of the dataset containing this table.
@@ -300,8 +534,11 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
   readonly tableId: string;
 }
 
-function bigqueryJobExtractSourceTableToTerraform(struct?: BigqueryJobExtractSourceTable): any {
+function bigqueryJobExtractSourceTableToTerraform(struct?: BigqueryJobExtractSourceTableOutputReference | BigqueryJobExtractSourceTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -309,6 +546,61 @@ function bigqueryJobExtractSourceTableToTerraform(struct?: BigqueryJobExtractSou
   }
 }
 
+export class BigqueryJobExtractSourceTableOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: true, optional: true, required: false
+  private _datasetId?: string | undefined; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string | undefined) {
+    this._datasetId = value;
+  }
+  public resetDatasetId() {
+    this._datasetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // table_id - computed: false, optional: false, required: true
+  private _tableId?: string; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string) {
+    this._tableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
+}
 export interface BigqueryJobExtract {
   /**
   * The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
@@ -355,17 +647,20 @@ Default is ','
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#source_model BigqueryJob#source_model}
   */
-  readonly sourceModel?: BigqueryJobExtractSourceModel[];
+  readonly sourceModel?: BigqueryJobExtractSourceModel;
   /**
   * source_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#source_table BigqueryJob#source_table}
   */
-  readonly sourceTable?: BigqueryJobExtractSourceTable[];
+  readonly sourceTable?: BigqueryJobExtractSourceTable;
 }
 
-function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtract): any {
+function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtractOutputReference | BigqueryJobExtract): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     compression: cdktf.stringToTerraform(struct!.compression),
     destination_format: cdktf.stringToTerraform(struct!.destinationFormat),
@@ -373,11 +668,148 @@ function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtract): any {
     field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
     print_header: cdktf.booleanToTerraform(struct!.printHeader),
     use_avro_logical_types: cdktf.booleanToTerraform(struct!.useAvroLogicalTypes),
-    source_model: cdktf.listMapper(bigqueryJobExtractSourceModelToTerraform)(struct!.sourceModel),
-    source_table: cdktf.listMapper(bigqueryJobExtractSourceTableToTerraform)(struct!.sourceTable),
+    source_model: bigqueryJobExtractSourceModelToTerraform(struct!.sourceModel),
+    source_table: bigqueryJobExtractSourceTableToTerraform(struct!.sourceTable),
   }
 }
 
+export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // compression - computed: false, optional: true, required: false
+  private _compression?: string | undefined; 
+  public get compression() {
+    return this.getStringAttribute('compression');
+  }
+  public set compression(value: string | undefined) {
+    this._compression = value;
+  }
+  public resetCompression() {
+    this._compression = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionInput() {
+    return this._compression
+  }
+
+  // destination_format - computed: true, optional: true, required: false
+  private _destinationFormat?: string | undefined; 
+  public get destinationFormat() {
+    return this.getStringAttribute('destination_format');
+  }
+  public set destinationFormat(value: string | undefined) {
+    this._destinationFormat = value;
+  }
+  public resetDestinationFormat() {
+    this._destinationFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationFormatInput() {
+    return this._destinationFormat
+  }
+
+  // destination_uris - computed: false, optional: false, required: true
+  private _destinationUris?: string[]; 
+  public get destinationUris() {
+    return this.getListAttribute('destination_uris');
+  }
+  public set destinationUris(value: string[]) {
+    this._destinationUris = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationUrisInput() {
+    return this._destinationUris
+  }
+
+  // field_delimiter - computed: true, optional: true, required: false
+  private _fieldDelimiter?: string | undefined; 
+  public get fieldDelimiter() {
+    return this.getStringAttribute('field_delimiter');
+  }
+  public set fieldDelimiter(value: string | undefined) {
+    this._fieldDelimiter = value;
+  }
+  public resetFieldDelimiter() {
+    this._fieldDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldDelimiterInput() {
+    return this._fieldDelimiter
+  }
+
+  // print_header - computed: false, optional: true, required: false
+  private _printHeader?: boolean | cdktf.IResolvable | undefined; 
+  public get printHeader() {
+    return this.getBooleanAttribute('print_header') as any;
+  }
+  public set printHeader(value: boolean | cdktf.IResolvable | undefined) {
+    this._printHeader = value;
+  }
+  public resetPrintHeader() {
+    this._printHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get printHeaderInput() {
+    return this._printHeader
+  }
+
+  // use_avro_logical_types - computed: false, optional: true, required: false
+  private _useAvroLogicalTypes?: boolean | cdktf.IResolvable | undefined; 
+  public get useAvroLogicalTypes() {
+    return this.getBooleanAttribute('use_avro_logical_types') as any;
+  }
+  public set useAvroLogicalTypes(value: boolean | cdktf.IResolvable | undefined) {
+    this._useAvroLogicalTypes = value;
+  }
+  public resetUseAvroLogicalTypes() {
+    this._useAvroLogicalTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useAvroLogicalTypesInput() {
+    return this._useAvroLogicalTypes
+  }
+
+  // source_model - computed: false, optional: true, required: false
+  private _sourceModel?: BigqueryJobExtractSourceModel | undefined; 
+  private __sourceModelOutput = new BigqueryJobExtractSourceModelOutputReference(this as any, "source_model", true);
+  public get sourceModel() {
+    return this.__sourceModelOutput;
+  }
+  public putSourceModel(value: BigqueryJobExtractSourceModel | undefined) {
+    this._sourceModel = value;
+  }
+  public resetSourceModel() {
+    this._sourceModel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceModelInput() {
+    return this._sourceModel
+  }
+
+  // source_table - computed: false, optional: true, required: false
+  private _sourceTable?: BigqueryJobExtractSourceTable | undefined; 
+  private __sourceTableOutput = new BigqueryJobExtractSourceTableOutputReference(this as any, "source_table", true);
+  public get sourceTable() {
+    return this.__sourceTableOutput;
+  }
+  public putSourceTable(value: BigqueryJobExtractSourceTable | undefined) {
+    this._sourceTable = value;
+  }
+  public resetSourceTable() {
+    this._sourceTable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceTableInput() {
+    return this._sourceTable
+  }
+}
 export interface BigqueryJobLoadDestinationEncryptionConfiguration {
   /**
   * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -388,13 +820,39 @@ The BigQuery Service Account associated with your project requires access to thi
   readonly kmsKeyName: string;
 }
 
-function bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobLoadDestinationEncryptionConfiguration): any {
+function bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobLoadDestinationEncryptionConfigurationOutputReference | BigqueryJobLoadDestinationEncryptionConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
 }
 
+export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+}
 export interface BigqueryJobLoadDestinationTable {
   /**
   * The ID of the dataset containing this table.
@@ -417,8 +875,11 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
   readonly tableId: string;
 }
 
-function bigqueryJobLoadDestinationTableToTerraform(struct?: BigqueryJobLoadDestinationTable): any {
+function bigqueryJobLoadDestinationTableToTerraform(struct?: BigqueryJobLoadDestinationTableOutputReference | BigqueryJobLoadDestinationTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -426,6 +887,61 @@ function bigqueryJobLoadDestinationTableToTerraform(struct?: BigqueryJobLoadDest
   }
 }
 
+export class BigqueryJobLoadDestinationTableOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: true, optional: true, required: false
+  private _datasetId?: string | undefined; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string | undefined) {
+    this._datasetId = value;
+  }
+  public resetDatasetId() {
+    this._datasetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // table_id - computed: false, optional: false, required: true
+  private _tableId?: string; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string) {
+    this._tableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
+}
 export interface BigqueryJobLoadTimePartitioning {
   /**
   * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
@@ -450,8 +966,11 @@ but in OnePlatform the field will be treated as unset.
   readonly type: string;
 }
 
-function bigqueryJobLoadTimePartitioningToTerraform(struct?: BigqueryJobLoadTimePartitioning): any {
+function bigqueryJobLoadTimePartitioningToTerraform(struct?: BigqueryJobLoadTimePartitioningOutputReference | BigqueryJobLoadTimePartitioning): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     expiration_ms: cdktf.stringToTerraform(struct!.expirationMs),
     field: cdktf.stringToTerraform(struct!.field),
@@ -459,6 +978,61 @@ function bigqueryJobLoadTimePartitioningToTerraform(struct?: BigqueryJobLoadTime
   }
 }
 
+export class BigqueryJobLoadTimePartitioningOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // expiration_ms - computed: false, optional: true, required: false
+  private _expirationMs?: string | undefined; 
+  public get expirationMs() {
+    return this.getStringAttribute('expiration_ms');
+  }
+  public set expirationMs(value: string | undefined) {
+    this._expirationMs = value;
+  }
+  public resetExpirationMs() {
+    this._expirationMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationMsInput() {
+    return this._expirationMs
+  }
+
+  // field - computed: false, optional: true, required: false
+  private _field?: string | undefined; 
+  public get field() {
+    return this.getStringAttribute('field');
+  }
+  public set field(value: string | undefined) {
+    this._field = value;
+  }
+  public resetField() {
+    this._field = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldInput() {
+    return this._field
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface BigqueryJobLoad {
   /**
   * Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
@@ -612,23 +1186,26 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#destination_encryption_configuration BigqueryJob#destination_encryption_configuration}
   */
-  readonly destinationEncryptionConfiguration?: BigqueryJobLoadDestinationEncryptionConfiguration[];
+  readonly destinationEncryptionConfiguration?: BigqueryJobLoadDestinationEncryptionConfiguration;
   /**
   * destination_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#destination_table BigqueryJob#destination_table}
   */
-  readonly destinationTable: BigqueryJobLoadDestinationTable[];
+  readonly destinationTable: BigqueryJobLoadDestinationTable;
   /**
   * time_partitioning block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#time_partitioning BigqueryJob#time_partitioning}
   */
-  readonly timePartitioning?: BigqueryJobLoadTimePartitioning[];
+  readonly timePartitioning?: BigqueryJobLoadTimePartitioning;
 }
 
-function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoad): any {
+function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoadOutputReference | BigqueryJobLoad): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_jagged_rows: cdktf.booleanToTerraform(struct!.allowJaggedRows),
     allow_quoted_newlines: cdktf.booleanToTerraform(struct!.allowQuotedNewlines),
@@ -646,12 +1223,323 @@ function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoad): any {
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
     source_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceUris),
     write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
-    destination_encryption_configuration: cdktf.listMapper(bigqueryJobLoadDestinationEncryptionConfigurationToTerraform)(struct!.destinationEncryptionConfiguration),
-    destination_table: cdktf.listMapper(bigqueryJobLoadDestinationTableToTerraform)(struct!.destinationTable),
-    time_partitioning: cdktf.listMapper(bigqueryJobLoadTimePartitioningToTerraform)(struct!.timePartitioning),
+    destination_encryption_configuration: bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(struct!.destinationEncryptionConfiguration),
+    destination_table: bigqueryJobLoadDestinationTableToTerraform(struct!.destinationTable),
+    time_partitioning: bigqueryJobLoadTimePartitioningToTerraform(struct!.timePartitioning),
   }
 }
 
+export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_jagged_rows - computed: false, optional: true, required: false
+  private _allowJaggedRows?: boolean | cdktf.IResolvable | undefined; 
+  public get allowJaggedRows() {
+    return this.getBooleanAttribute('allow_jagged_rows') as any;
+  }
+  public set allowJaggedRows(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowJaggedRows = value;
+  }
+  public resetAllowJaggedRows() {
+    this._allowJaggedRows = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowJaggedRowsInput() {
+    return this._allowJaggedRows
+  }
+
+  // allow_quoted_newlines - computed: false, optional: true, required: false
+  private _allowQuotedNewlines?: boolean | cdktf.IResolvable | undefined; 
+  public get allowQuotedNewlines() {
+    return this.getBooleanAttribute('allow_quoted_newlines') as any;
+  }
+  public set allowQuotedNewlines(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowQuotedNewlines = value;
+  }
+  public resetAllowQuotedNewlines() {
+    this._allowQuotedNewlines = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowQuotedNewlinesInput() {
+    return this._allowQuotedNewlines
+  }
+
+  // autodetect - computed: false, optional: true, required: false
+  private _autodetect?: boolean | cdktf.IResolvable | undefined; 
+  public get autodetect() {
+    return this.getBooleanAttribute('autodetect') as any;
+  }
+  public set autodetect(value: boolean | cdktf.IResolvable | undefined) {
+    this._autodetect = value;
+  }
+  public resetAutodetect() {
+    this._autodetect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autodetectInput() {
+    return this._autodetect
+  }
+
+  // create_disposition - computed: false, optional: true, required: false
+  private _createDisposition?: string | undefined; 
+  public get createDisposition() {
+    return this.getStringAttribute('create_disposition');
+  }
+  public set createDisposition(value: string | undefined) {
+    this._createDisposition = value;
+  }
+  public resetCreateDisposition() {
+    this._createDisposition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createDispositionInput() {
+    return this._createDisposition
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string | undefined; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string | undefined) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
+  }
+
+  // field_delimiter - computed: true, optional: true, required: false
+  private _fieldDelimiter?: string | undefined; 
+  public get fieldDelimiter() {
+    return this.getStringAttribute('field_delimiter');
+  }
+  public set fieldDelimiter(value: string | undefined) {
+    this._fieldDelimiter = value;
+  }
+  public resetFieldDelimiter() {
+    this._fieldDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldDelimiterInput() {
+    return this._fieldDelimiter
+  }
+
+  // ignore_unknown_values - computed: false, optional: true, required: false
+  private _ignoreUnknownValues?: boolean | cdktf.IResolvable | undefined; 
+  public get ignoreUnknownValues() {
+    return this.getBooleanAttribute('ignore_unknown_values') as any;
+  }
+  public set ignoreUnknownValues(value: boolean | cdktf.IResolvable | undefined) {
+    this._ignoreUnknownValues = value;
+  }
+  public resetIgnoreUnknownValues() {
+    this._ignoreUnknownValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreUnknownValuesInput() {
+    return this._ignoreUnknownValues
+  }
+
+  // max_bad_records - computed: false, optional: true, required: false
+  private _maxBadRecords?: number | undefined; 
+  public get maxBadRecords() {
+    return this.getNumberAttribute('max_bad_records');
+  }
+  public set maxBadRecords(value: number | undefined) {
+    this._maxBadRecords = value;
+  }
+  public resetMaxBadRecords() {
+    this._maxBadRecords = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxBadRecordsInput() {
+    return this._maxBadRecords
+  }
+
+  // null_marker - computed: false, optional: true, required: false
+  private _nullMarker?: string | undefined; 
+  public get nullMarker() {
+    return this.getStringAttribute('null_marker');
+  }
+  public set nullMarker(value: string | undefined) {
+    this._nullMarker = value;
+  }
+  public resetNullMarker() {
+    this._nullMarker = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nullMarkerInput() {
+    return this._nullMarker
+  }
+
+  // projection_fields - computed: false, optional: true, required: false
+  private _projectionFields?: string[] | undefined; 
+  public get projectionFields() {
+    return this.getListAttribute('projection_fields');
+  }
+  public set projectionFields(value: string[] | undefined) {
+    this._projectionFields = value;
+  }
+  public resetProjectionFields() {
+    this._projectionFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectionFieldsInput() {
+    return this._projectionFields
+  }
+
+  // quote - computed: true, optional: true, required: false
+  private _quote?: string | undefined; 
+  public get quote() {
+    return this.getStringAttribute('quote');
+  }
+  public set quote(value: string | undefined) {
+    this._quote = value;
+  }
+  public resetQuote() {
+    this._quote = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quoteInput() {
+    return this._quote
+  }
+
+  // schema_update_options - computed: false, optional: true, required: false
+  private _schemaUpdateOptions?: string[] | undefined; 
+  public get schemaUpdateOptions() {
+    return this.getListAttribute('schema_update_options');
+  }
+  public set schemaUpdateOptions(value: string[] | undefined) {
+    this._schemaUpdateOptions = value;
+  }
+  public resetSchemaUpdateOptions() {
+    this._schemaUpdateOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaUpdateOptionsInput() {
+    return this._schemaUpdateOptions
+  }
+
+  // skip_leading_rows - computed: false, optional: true, required: false
+  private _skipLeadingRows?: number | undefined; 
+  public get skipLeadingRows() {
+    return this.getNumberAttribute('skip_leading_rows');
+  }
+  public set skipLeadingRows(value: number | undefined) {
+    this._skipLeadingRows = value;
+  }
+  public resetSkipLeadingRows() {
+    this._skipLeadingRows = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipLeadingRowsInput() {
+    return this._skipLeadingRows
+  }
+
+  // source_format - computed: false, optional: true, required: false
+  private _sourceFormat?: string | undefined; 
+  public get sourceFormat() {
+    return this.getStringAttribute('source_format');
+  }
+  public set sourceFormat(value: string | undefined) {
+    this._sourceFormat = value;
+  }
+  public resetSourceFormat() {
+    this._sourceFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceFormatInput() {
+    return this._sourceFormat
+  }
+
+  // source_uris - computed: false, optional: false, required: true
+  private _sourceUris?: string[]; 
+  public get sourceUris() {
+    return this.getListAttribute('source_uris');
+  }
+  public set sourceUris(value: string[]) {
+    this._sourceUris = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUrisInput() {
+    return this._sourceUris
+  }
+
+  // write_disposition - computed: false, optional: true, required: false
+  private _writeDisposition?: string | undefined; 
+  public get writeDisposition() {
+    return this.getStringAttribute('write_disposition');
+  }
+  public set writeDisposition(value: string | undefined) {
+    this._writeDisposition = value;
+  }
+  public resetWriteDisposition() {
+    this._writeDisposition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeDispositionInput() {
+    return this._writeDisposition
+  }
+
+  // destination_encryption_configuration - computed: false, optional: true, required: false
+  private _destinationEncryptionConfiguration?: BigqueryJobLoadDestinationEncryptionConfiguration | undefined; 
+  private __destinationEncryptionConfigurationOutput = new BigqueryJobLoadDestinationEncryptionConfigurationOutputReference(this as any, "destination_encryption_configuration", true);
+  public get destinationEncryptionConfiguration() {
+    return this.__destinationEncryptionConfigurationOutput;
+  }
+  public putDestinationEncryptionConfiguration(value: BigqueryJobLoadDestinationEncryptionConfiguration | undefined) {
+    this._destinationEncryptionConfiguration = value;
+  }
+  public resetDestinationEncryptionConfiguration() {
+    this._destinationEncryptionConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationEncryptionConfigurationInput() {
+    return this._destinationEncryptionConfiguration
+  }
+
+  // destination_table - computed: false, optional: false, required: true
+  private _destinationTable?: BigqueryJobLoadDestinationTable; 
+  private __destinationTableOutput = new BigqueryJobLoadDestinationTableOutputReference(this as any, "destination_table", true);
+  public get destinationTable() {
+    return this.__destinationTableOutput;
+  }
+  public putDestinationTable(value: BigqueryJobLoadDestinationTable) {
+    this._destinationTable = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationTableInput() {
+    return this._destinationTable
+  }
+
+  // time_partitioning - computed: false, optional: true, required: false
+  private _timePartitioning?: BigqueryJobLoadTimePartitioning | undefined; 
+  private __timePartitioningOutput = new BigqueryJobLoadTimePartitioningOutputReference(this as any, "time_partitioning", true);
+  public get timePartitioning() {
+    return this.__timePartitioningOutput;
+  }
+  public putTimePartitioning(value: BigqueryJobLoadTimePartitioning | undefined) {
+    this._timePartitioning = value;
+  }
+  public resetTimePartitioning() {
+    this._timePartitioning = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timePartitioningInput() {
+    return this._timePartitioning
+  }
+}
 export interface BigqueryJobQueryDefaultDataset {
   /**
   * The dataset. Can be specified '{{dataset_id}}' if 'project_id' is also set,
@@ -668,14 +1556,56 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}' if not.
   readonly projectId?: string;
 }
 
-function bigqueryJobQueryDefaultDatasetToTerraform(struct?: BigqueryJobQueryDefaultDataset): any {
+function bigqueryJobQueryDefaultDatasetToTerraform(struct?: BigqueryJobQueryDefaultDatasetOutputReference | BigqueryJobQueryDefaultDataset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
   }
 }
 
+export class BigqueryJobQueryDefaultDatasetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+}
 export interface BigqueryJobQueryDestinationEncryptionConfiguration {
   /**
   * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -686,13 +1616,39 @@ The BigQuery Service Account associated with your project requires access to thi
   readonly kmsKeyName: string;
 }
 
-function bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobQueryDestinationEncryptionConfiguration): any {
+function bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobQueryDestinationEncryptionConfigurationOutputReference | BigqueryJobQueryDestinationEncryptionConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
 }
 
+export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+}
 export interface BigqueryJobQueryDestinationTable {
   /**
   * The ID of the dataset containing this table.
@@ -715,8 +1671,11 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
   readonly tableId: string;
 }
 
-function bigqueryJobQueryDestinationTableToTerraform(struct?: BigqueryJobQueryDestinationTable): any {
+function bigqueryJobQueryDestinationTableToTerraform(struct?: BigqueryJobQueryDestinationTableOutputReference | BigqueryJobQueryDestinationTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -724,6 +1683,61 @@ function bigqueryJobQueryDestinationTableToTerraform(struct?: BigqueryJobQueryDe
   }
 }
 
+export class BigqueryJobQueryDestinationTableOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: true, optional: true, required: false
+  private _datasetId?: string | undefined; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string | undefined) {
+    this._datasetId = value;
+  }
+  public resetDatasetId() {
+    this._datasetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // table_id - computed: false, optional: false, required: true
+  private _tableId?: string; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string) {
+    this._tableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
+}
 export interface BigqueryJobQueryScriptOptions {
   /**
   * Determines which statement in the script represents the "key result",
@@ -746,8 +1760,11 @@ used to populate the schema and query results of the script job. Possible values
   readonly statementTimeoutMs?: string;
 }
 
-function bigqueryJobQueryScriptOptionsToTerraform(struct?: BigqueryJobQueryScriptOptions): any {
+function bigqueryJobQueryScriptOptionsToTerraform(struct?: BigqueryJobQueryScriptOptionsOutputReference | BigqueryJobQueryScriptOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     key_result_statement: cdktf.stringToTerraform(struct!.keyResultStatement),
     statement_byte_budget: cdktf.stringToTerraform(struct!.statementByteBudget),
@@ -755,6 +1772,64 @@ function bigqueryJobQueryScriptOptionsToTerraform(struct?: BigqueryJobQueryScrip
   }
 }
 
+export class BigqueryJobQueryScriptOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // key_result_statement - computed: false, optional: true, required: false
+  private _keyResultStatement?: string | undefined; 
+  public get keyResultStatement() {
+    return this.getStringAttribute('key_result_statement');
+  }
+  public set keyResultStatement(value: string | undefined) {
+    this._keyResultStatement = value;
+  }
+  public resetKeyResultStatement() {
+    this._keyResultStatement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyResultStatementInput() {
+    return this._keyResultStatement
+  }
+
+  // statement_byte_budget - computed: false, optional: true, required: false
+  private _statementByteBudget?: string | undefined; 
+  public get statementByteBudget() {
+    return this.getStringAttribute('statement_byte_budget');
+  }
+  public set statementByteBudget(value: string | undefined) {
+    this._statementByteBudget = value;
+  }
+  public resetStatementByteBudget() {
+    this._statementByteBudget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statementByteBudgetInput() {
+    return this._statementByteBudget
+  }
+
+  // statement_timeout_ms - computed: false, optional: true, required: false
+  private _statementTimeoutMs?: string | undefined; 
+  public get statementTimeoutMs() {
+    return this.getStringAttribute('statement_timeout_ms');
+  }
+  public set statementTimeoutMs(value: string | undefined) {
+    this._statementTimeoutMs = value;
+  }
+  public resetStatementTimeoutMs() {
+    this._statementTimeoutMs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statementTimeoutMsInput() {
+    return this._statementTimeoutMs
+  }
+}
 export interface BigqueryJobQueryUserDefinedFunctionResources {
   /**
   * An inline resource that contains code for a user-defined function (UDF).
@@ -773,6 +1848,9 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 function bigqueryJobQueryUserDefinedFunctionResourcesToTerraform(struct?: BigqueryJobQueryUserDefinedFunctionResources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     inline_code: cdktf.stringToTerraform(struct!.inlineCode),
     resource_uri: cdktf.stringToTerraform(struct!.resourceUri),
@@ -881,25 +1959,25 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#default_dataset BigqueryJob#default_dataset}
   */
-  readonly defaultDataset?: BigqueryJobQueryDefaultDataset[];
+  readonly defaultDataset?: BigqueryJobQueryDefaultDataset;
   /**
   * destination_encryption_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#destination_encryption_configuration BigqueryJob#destination_encryption_configuration}
   */
-  readonly destinationEncryptionConfiguration?: BigqueryJobQueryDestinationEncryptionConfiguration[];
+  readonly destinationEncryptionConfiguration?: BigqueryJobQueryDestinationEncryptionConfiguration;
   /**
   * destination_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#destination_table BigqueryJob#destination_table}
   */
-  readonly destinationTable?: BigqueryJobQueryDestinationTable[];
+  readonly destinationTable?: BigqueryJobQueryDestinationTable;
   /**
   * script_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#script_options BigqueryJob#script_options}
   */
-  readonly scriptOptions?: BigqueryJobQueryScriptOptions[];
+  readonly scriptOptions?: BigqueryJobQueryScriptOptions;
   /**
   * user_defined_function_resources block
   * 
@@ -908,8 +1986,11 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   readonly userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[];
 }
 
-function bigqueryJobQueryToTerraform(struct?: BigqueryJobQuery): any {
+function bigqueryJobQueryToTerraform(struct?: BigqueryJobQueryOutputReference | BigqueryJobQuery): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_large_results: cdktf.booleanToTerraform(struct!.allowLargeResults),
     create_disposition: cdktf.stringToTerraform(struct!.createDisposition),
@@ -923,14 +2004,298 @@ function bigqueryJobQueryToTerraform(struct?: BigqueryJobQuery): any {
     use_legacy_sql: cdktf.booleanToTerraform(struct!.useLegacySql),
     use_query_cache: cdktf.booleanToTerraform(struct!.useQueryCache),
     write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
-    default_dataset: cdktf.listMapper(bigqueryJobQueryDefaultDatasetToTerraform)(struct!.defaultDataset),
-    destination_encryption_configuration: cdktf.listMapper(bigqueryJobQueryDestinationEncryptionConfigurationToTerraform)(struct!.destinationEncryptionConfiguration),
-    destination_table: cdktf.listMapper(bigqueryJobQueryDestinationTableToTerraform)(struct!.destinationTable),
-    script_options: cdktf.listMapper(bigqueryJobQueryScriptOptionsToTerraform)(struct!.scriptOptions),
+    default_dataset: bigqueryJobQueryDefaultDatasetToTerraform(struct!.defaultDataset),
+    destination_encryption_configuration: bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(struct!.destinationEncryptionConfiguration),
+    destination_table: bigqueryJobQueryDestinationTableToTerraform(struct!.destinationTable),
+    script_options: bigqueryJobQueryScriptOptionsToTerraform(struct!.scriptOptions),
     user_defined_function_resources: cdktf.listMapper(bigqueryJobQueryUserDefinedFunctionResourcesToTerraform)(struct!.userDefinedFunctionResources),
   }
 }
 
+export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_large_results - computed: false, optional: true, required: false
+  private _allowLargeResults?: boolean | cdktf.IResolvable | undefined; 
+  public get allowLargeResults() {
+    return this.getBooleanAttribute('allow_large_results') as any;
+  }
+  public set allowLargeResults(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowLargeResults = value;
+  }
+  public resetAllowLargeResults() {
+    this._allowLargeResults = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowLargeResultsInput() {
+    return this._allowLargeResults
+  }
+
+  // create_disposition - computed: false, optional: true, required: false
+  private _createDisposition?: string | undefined; 
+  public get createDisposition() {
+    return this.getStringAttribute('create_disposition');
+  }
+  public set createDisposition(value: string | undefined) {
+    this._createDisposition = value;
+  }
+  public resetCreateDisposition() {
+    this._createDisposition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createDispositionInput() {
+    return this._createDisposition
+  }
+
+  // flatten_results - computed: false, optional: true, required: false
+  private _flattenResults?: boolean | cdktf.IResolvable | undefined; 
+  public get flattenResults() {
+    return this.getBooleanAttribute('flatten_results') as any;
+  }
+  public set flattenResults(value: boolean | cdktf.IResolvable | undefined) {
+    this._flattenResults = value;
+  }
+  public resetFlattenResults() {
+    this._flattenResults = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get flattenResultsInput() {
+    return this._flattenResults
+  }
+
+  // maximum_billing_tier - computed: false, optional: true, required: false
+  private _maximumBillingTier?: number | undefined; 
+  public get maximumBillingTier() {
+    return this.getNumberAttribute('maximum_billing_tier');
+  }
+  public set maximumBillingTier(value: number | undefined) {
+    this._maximumBillingTier = value;
+  }
+  public resetMaximumBillingTier() {
+    this._maximumBillingTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumBillingTierInput() {
+    return this._maximumBillingTier
+  }
+
+  // maximum_bytes_billed - computed: false, optional: true, required: false
+  private _maximumBytesBilled?: string | undefined; 
+  public get maximumBytesBilled() {
+    return this.getStringAttribute('maximum_bytes_billed');
+  }
+  public set maximumBytesBilled(value: string | undefined) {
+    this._maximumBytesBilled = value;
+  }
+  public resetMaximumBytesBilled() {
+    this._maximumBytesBilled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumBytesBilledInput() {
+    return this._maximumBytesBilled
+  }
+
+  // parameter_mode - computed: false, optional: true, required: false
+  private _parameterMode?: string | undefined; 
+  public get parameterMode() {
+    return this.getStringAttribute('parameter_mode');
+  }
+  public set parameterMode(value: string | undefined) {
+    this._parameterMode = value;
+  }
+  public resetParameterMode() {
+    this._parameterMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterModeInput() {
+    return this._parameterMode
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: string | undefined; 
+  public get priority() {
+    return this.getStringAttribute('priority');
+  }
+  public set priority(value: string | undefined) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
+  }
+
+  // query - computed: false, optional: false, required: true
+  private _query?: string; 
+  public get query() {
+    return this.getStringAttribute('query');
+  }
+  public set query(value: string) {
+    this._query = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryInput() {
+    return this._query
+  }
+
+  // schema_update_options - computed: false, optional: true, required: false
+  private _schemaUpdateOptions?: string[] | undefined; 
+  public get schemaUpdateOptions() {
+    return this.getListAttribute('schema_update_options');
+  }
+  public set schemaUpdateOptions(value: string[] | undefined) {
+    this._schemaUpdateOptions = value;
+  }
+  public resetSchemaUpdateOptions() {
+    this._schemaUpdateOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaUpdateOptionsInput() {
+    return this._schemaUpdateOptions
+  }
+
+  // use_legacy_sql - computed: false, optional: true, required: false
+  private _useLegacySql?: boolean | cdktf.IResolvable | undefined; 
+  public get useLegacySql() {
+    return this.getBooleanAttribute('use_legacy_sql') as any;
+  }
+  public set useLegacySql(value: boolean | cdktf.IResolvable | undefined) {
+    this._useLegacySql = value;
+  }
+  public resetUseLegacySql() {
+    this._useLegacySql = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useLegacySqlInput() {
+    return this._useLegacySql
+  }
+
+  // use_query_cache - computed: false, optional: true, required: false
+  private _useQueryCache?: boolean | cdktf.IResolvable | undefined; 
+  public get useQueryCache() {
+    return this.getBooleanAttribute('use_query_cache') as any;
+  }
+  public set useQueryCache(value: boolean | cdktf.IResolvable | undefined) {
+    this._useQueryCache = value;
+  }
+  public resetUseQueryCache() {
+    this._useQueryCache = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useQueryCacheInput() {
+    return this._useQueryCache
+  }
+
+  // write_disposition - computed: false, optional: true, required: false
+  private _writeDisposition?: string | undefined; 
+  public get writeDisposition() {
+    return this.getStringAttribute('write_disposition');
+  }
+  public set writeDisposition(value: string | undefined) {
+    this._writeDisposition = value;
+  }
+  public resetWriteDisposition() {
+    this._writeDisposition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeDispositionInput() {
+    return this._writeDisposition
+  }
+
+  // default_dataset - computed: false, optional: true, required: false
+  private _defaultDataset?: BigqueryJobQueryDefaultDataset | undefined; 
+  private __defaultDatasetOutput = new BigqueryJobQueryDefaultDatasetOutputReference(this as any, "default_dataset", true);
+  public get defaultDataset() {
+    return this.__defaultDatasetOutput;
+  }
+  public putDefaultDataset(value: BigqueryJobQueryDefaultDataset | undefined) {
+    this._defaultDataset = value;
+  }
+  public resetDefaultDataset() {
+    this._defaultDataset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultDatasetInput() {
+    return this._defaultDataset
+  }
+
+  // destination_encryption_configuration - computed: false, optional: true, required: false
+  private _destinationEncryptionConfiguration?: BigqueryJobQueryDestinationEncryptionConfiguration | undefined; 
+  private __destinationEncryptionConfigurationOutput = new BigqueryJobQueryDestinationEncryptionConfigurationOutputReference(this as any, "destination_encryption_configuration", true);
+  public get destinationEncryptionConfiguration() {
+    return this.__destinationEncryptionConfigurationOutput;
+  }
+  public putDestinationEncryptionConfiguration(value: BigqueryJobQueryDestinationEncryptionConfiguration | undefined) {
+    this._destinationEncryptionConfiguration = value;
+  }
+  public resetDestinationEncryptionConfiguration() {
+    this._destinationEncryptionConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationEncryptionConfigurationInput() {
+    return this._destinationEncryptionConfiguration
+  }
+
+  // destination_table - computed: false, optional: true, required: false
+  private _destinationTable?: BigqueryJobQueryDestinationTable | undefined; 
+  private __destinationTableOutput = new BigqueryJobQueryDestinationTableOutputReference(this as any, "destination_table", true);
+  public get destinationTable() {
+    return this.__destinationTableOutput;
+  }
+  public putDestinationTable(value: BigqueryJobQueryDestinationTable | undefined) {
+    this._destinationTable = value;
+  }
+  public resetDestinationTable() {
+    this._destinationTable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationTableInput() {
+    return this._destinationTable
+  }
+
+  // script_options - computed: false, optional: true, required: false
+  private _scriptOptions?: BigqueryJobQueryScriptOptions | undefined; 
+  private __scriptOptionsOutput = new BigqueryJobQueryScriptOptionsOutputReference(this as any, "script_options", true);
+  public get scriptOptions() {
+    return this.__scriptOptionsOutput;
+  }
+  public putScriptOptions(value: BigqueryJobQueryScriptOptions | undefined) {
+    this._scriptOptions = value;
+  }
+  public resetScriptOptions() {
+    this._scriptOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptOptionsInput() {
+    return this._scriptOptions
+  }
+
+  // user_defined_function_resources - computed: false, optional: true, required: false
+  private _userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[] | undefined; 
+  public get userDefinedFunctionResources() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('user_defined_function_resources') as any;
+  }
+  public set userDefinedFunctionResources(value: BigqueryJobQueryUserDefinedFunctionResources[] | undefined) {
+    this._userDefinedFunctionResources = value;
+  }
+  public resetUserDefinedFunctionResources() {
+    this._userDefinedFunctionResources = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDefinedFunctionResourcesInput() {
+    return this._userDefinedFunctionResources
+  }
+}
 export interface BigqueryJobTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html#create BigqueryJob#create}
@@ -942,14 +2307,59 @@ export interface BigqueryJobTimeouts {
   readonly delete?: string;
 }
 
-function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeouts): any {
+function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeoutsOutputReference | BigqueryJobTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_job.html google_bigquery_job}
@@ -1005,7 +2415,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // job_id - computed: false, optional: false, required: true
-  private _jobId: string;
+  private _jobId?: string; 
   public get jobId() {
     return this.getStringAttribute('job_id');
   }
@@ -1018,11 +2428,11 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // job_timeout_ms - computed: false, optional: true, required: false
-  private _jobTimeoutMs?: string;
+  private _jobTimeoutMs?: string | undefined; 
   public get jobTimeoutMs() {
     return this.getStringAttribute('job_timeout_ms');
   }
-  public set jobTimeoutMs(value: string ) {
+  public set jobTimeoutMs(value: string | undefined) {
     this._jobTimeoutMs = value;
   }
   public resetJobTimeoutMs() {
@@ -1039,11 +2449,12 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1055,11 +2466,11 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string ) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -1071,11 +2482,11 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -1097,11 +2508,12 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // copy - computed: false, optional: true, required: false
-  private _copy?: BigqueryJobCopy[];
+  private _copy?: BigqueryJobCopy | undefined; 
+  private __copyOutput = new BigqueryJobCopyOutputReference(this as any, "copy", true);
   public get copy() {
-    return this.interpolationForAttribute('copy') as any;
+    return this.__copyOutput;
   }
-  public set copy(value: BigqueryJobCopy[] ) {
+  public putCopy(value: BigqueryJobCopy | undefined) {
     this._copy = value;
   }
   public resetCopy() {
@@ -1113,11 +2525,12 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // extract - computed: false, optional: true, required: false
-  private _extract?: BigqueryJobExtract[];
+  private _extract?: BigqueryJobExtract | undefined; 
+  private __extractOutput = new BigqueryJobExtractOutputReference(this as any, "extract", true);
   public get extract() {
-    return this.interpolationForAttribute('extract') as any;
+    return this.__extractOutput;
   }
-  public set extract(value: BigqueryJobExtract[] ) {
+  public putExtract(value: BigqueryJobExtract | undefined) {
     this._extract = value;
   }
   public resetExtract() {
@@ -1129,11 +2542,12 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // load - computed: false, optional: true, required: false
-  private _load?: BigqueryJobLoad[];
+  private _load?: BigqueryJobLoad | undefined; 
+  private __loadOutput = new BigqueryJobLoadOutputReference(this as any, "load", true);
   public get load() {
-    return this.interpolationForAttribute('load') as any;
+    return this.__loadOutput;
   }
-  public set load(value: BigqueryJobLoad[] ) {
+  public putLoad(value: BigqueryJobLoad | undefined) {
     this._load = value;
   }
   public resetLoad() {
@@ -1145,11 +2559,12 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // query - computed: false, optional: true, required: false
-  private _query?: BigqueryJobQuery[];
+  private _query?: BigqueryJobQuery | undefined; 
+  private __queryOutput = new BigqueryJobQueryOutputReference(this as any, "query", true);
   public get query() {
-    return this.interpolationForAttribute('query') as any;
+    return this.__queryOutput;
   }
-  public set query(value: BigqueryJobQuery[] ) {
+  public putQuery(value: BigqueryJobQuery | undefined) {
     this._query = value;
   }
   public resetQuery() {
@@ -1161,11 +2576,12 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BigqueryJobTimeouts;
+  private _timeouts?: BigqueryJobTimeouts | undefined; 
+  private __timeoutsOutput = new BigqueryJobTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: BigqueryJobTimeouts ) {
+  public putTimeouts(value: BigqueryJobTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1187,10 +2603,10 @@ export class BigqueryJob extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
-      copy: cdktf.listMapper(bigqueryJobCopyToTerraform)(this._copy),
-      extract: cdktf.listMapper(bigqueryJobExtractToTerraform)(this._extract),
-      load: cdktf.listMapper(bigqueryJobLoadToTerraform)(this._load),
-      query: cdktf.listMapper(bigqueryJobQueryToTerraform)(this._query),
+      copy: bigqueryJobCopyToTerraform(this._copy),
+      extract: bigqueryJobExtractToTerraform(this._extract),
+      load: bigqueryJobLoadToTerraform(this._load),
+      query: bigqueryJobQueryToTerraform(this._query),
       timeouts: bigqueryJobTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -97,25 +97,25 @@ messageRetentionDuration window.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#dead_letter_policy PubsubSubscription#dead_letter_policy}
   */
-  readonly deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy[];
+  readonly deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy;
   /**
   * expiration_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#expiration_policy PubsubSubscription#expiration_policy}
   */
-  readonly expirationPolicy?: PubsubSubscriptionExpirationPolicy[];
+  readonly expirationPolicy?: PubsubSubscriptionExpirationPolicy;
   /**
   * push_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#push_config PubsubSubscription#push_config}
   */
-  readonly pushConfig?: PubsubSubscriptionPushConfig[];
+  readonly pushConfig?: PubsubSubscriptionPushConfig;
   /**
   * retry_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#retry_policy PubsubSubscription#retry_policy}
   */
-  readonly retryPolicy?: PubsubSubscriptionRetryPolicy[];
+  readonly retryPolicy?: PubsubSubscriptionRetryPolicy;
   /**
   * timeouts block
   * 
@@ -159,14 +159,59 @@ If this parameter is 0, a default value of 5 is used.
   readonly maxDeliveryAttempts?: number;
 }
 
-function pubsubSubscriptionDeadLetterPolicyToTerraform(struct?: PubsubSubscriptionDeadLetterPolicy): any {
+function pubsubSubscriptionDeadLetterPolicyToTerraform(struct?: PubsubSubscriptionDeadLetterPolicyOutputReference | PubsubSubscriptionDeadLetterPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dead_letter_topic: cdktf.stringToTerraform(struct!.deadLetterTopic),
     max_delivery_attempts: cdktf.numberToTerraform(struct!.maxDeliveryAttempts),
   }
 }
 
+export class PubsubSubscriptionDeadLetterPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dead_letter_topic - computed: false, optional: true, required: false
+  private _deadLetterTopic?: string | undefined; 
+  public get deadLetterTopic() {
+    return this.getStringAttribute('dead_letter_topic');
+  }
+  public set deadLetterTopic(value: string | undefined) {
+    this._deadLetterTopic = value;
+  }
+  public resetDeadLetterTopic() {
+    this._deadLetterTopic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deadLetterTopicInput() {
+    return this._deadLetterTopic
+  }
+
+  // max_delivery_attempts - computed: false, optional: true, required: false
+  private _maxDeliveryAttempts?: number | undefined; 
+  public get maxDeliveryAttempts() {
+    return this.getNumberAttribute('max_delivery_attempts');
+  }
+  public set maxDeliveryAttempts(value: number | undefined) {
+    this._maxDeliveryAttempts = value;
+  }
+  public resetMaxDeliveryAttempts() {
+    this._maxDeliveryAttempts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxDeliveryAttemptsInput() {
+    return this._maxDeliveryAttempts
+  }
+}
 export interface PubsubSubscriptionExpirationPolicy {
   /**
   * Specifies the "time-to-live" duration for an associated resource. The
@@ -180,13 +225,39 @@ Example - "3.5s".
   readonly ttl: string;
 }
 
-function pubsubSubscriptionExpirationPolicyToTerraform(struct?: PubsubSubscriptionExpirationPolicy): any {
+function pubsubSubscriptionExpirationPolicyToTerraform(struct?: PubsubSubscriptionExpirationPolicyOutputReference | PubsubSubscriptionExpirationPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ttl: cdktf.stringToTerraform(struct!.ttl),
   }
 }
 
+export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // ttl - computed: false, optional: false, required: true
+  private _ttl?: string; 
+  public get ttl() {
+    return this.getStringAttribute('ttl');
+  }
+  public set ttl(value: string) {
+    this._ttl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl
+  }
+}
 export interface PubsubSubscriptionPushConfigOidcToken {
   /**
   * Audience to be used when generating OIDC token. The audience claim
@@ -210,14 +281,56 @@ iam.serviceAccounts.actAs permission for the service account.
   readonly serviceAccountEmail: string;
 }
 
-function pubsubSubscriptionPushConfigOidcTokenToTerraform(struct?: PubsubSubscriptionPushConfigOidcToken): any {
+function pubsubSubscriptionPushConfigOidcTokenToTerraform(struct?: PubsubSubscriptionPushConfigOidcTokenOutputReference | PubsubSubscriptionPushConfigOidcToken): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     audience: cdktf.stringToTerraform(struct!.audience),
     service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
   }
 }
 
+export class PubsubSubscriptionPushConfigOidcTokenOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // audience - computed: false, optional: true, required: false
+  private _audience?: string | undefined; 
+  public get audience() {
+    return this.getStringAttribute('audience');
+  }
+  public set audience(value: string | undefined) {
+    this._audience = value;
+  }
+  public resetAudience() {
+    this._audience = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audienceInput() {
+    return this._audience
+  }
+
+  // service_account_email - computed: false, optional: false, required: true
+  private _serviceAccountEmail?: string; 
+  public get serviceAccountEmail() {
+    return this.getStringAttribute('service_account_email');
+  }
+  public set serviceAccountEmail(value: string) {
+    this._serviceAccountEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountEmailInput() {
+    return this._serviceAccountEmail
+  }
+}
 export interface PubsubSubscriptionPushConfig {
   /**
   * Endpoint configuration attributes.
@@ -260,18 +373,78 @@ For example, a Webhook endpoint might use
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#oidc_token PubsubSubscription#oidc_token}
   */
-  readonly oidcToken?: PubsubSubscriptionPushConfigOidcToken[];
+  readonly oidcToken?: PubsubSubscriptionPushConfigOidcToken;
 }
 
-function pubsubSubscriptionPushConfigToTerraform(struct?: PubsubSubscriptionPushConfig): any {
+function pubsubSubscriptionPushConfigToTerraform(struct?: PubsubSubscriptionPushConfigOutputReference | PubsubSubscriptionPushConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     attributes: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.attributes),
     push_endpoint: cdktf.stringToTerraform(struct!.pushEndpoint),
-    oidc_token: cdktf.listMapper(pubsubSubscriptionPushConfigOidcTokenToTerraform)(struct!.oidcToken),
+    oidc_token: pubsubSubscriptionPushConfigOidcTokenToTerraform(struct!.oidcToken),
   }
 }
 
+export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // attributes - computed: false, optional: true, required: false
+  private _attributes?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get attributes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('attributes') as any;
+  }
+  public set attributes(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._attributes = value;
+  }
+  public resetAttributes() {
+    this._attributes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributesInput() {
+    return this._attributes
+  }
+
+  // push_endpoint - computed: false, optional: false, required: true
+  private _pushEndpoint?: string; 
+  public get pushEndpoint() {
+    return this.getStringAttribute('push_endpoint');
+  }
+  public set pushEndpoint(value: string) {
+    this._pushEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pushEndpointInput() {
+    return this._pushEndpoint
+  }
+
+  // oidc_token - computed: false, optional: true, required: false
+  private _oidcToken?: PubsubSubscriptionPushConfigOidcToken | undefined; 
+  private __oidcTokenOutput = new PubsubSubscriptionPushConfigOidcTokenOutputReference(this as any, "oidc_token", true);
+  public get oidcToken() {
+    return this.__oidcTokenOutput;
+  }
+  public putOidcToken(value: PubsubSubscriptionPushConfigOidcToken | undefined) {
+    this._oidcToken = value;
+  }
+  public resetOidcToken() {
+    this._oidcToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oidcTokenInput() {
+    return this._oidcToken
+  }
+}
 export interface PubsubSubscriptionRetryPolicy {
   /**
   * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. 
@@ -289,14 +462,59 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly minimumBackoff?: string;
 }
 
-function pubsubSubscriptionRetryPolicyToTerraform(struct?: PubsubSubscriptionRetryPolicy): any {
+function pubsubSubscriptionRetryPolicyToTerraform(struct?: PubsubSubscriptionRetryPolicyOutputReference | PubsubSubscriptionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     maximum_backoff: cdktf.stringToTerraform(struct!.maximumBackoff),
     minimum_backoff: cdktf.stringToTerraform(struct!.minimumBackoff),
   }
 }
 
+export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // maximum_backoff - computed: true, optional: true, required: false
+  private _maximumBackoff?: string | undefined; 
+  public get maximumBackoff() {
+    return this.getStringAttribute('maximum_backoff');
+  }
+  public set maximumBackoff(value: string | undefined) {
+    this._maximumBackoff = value;
+  }
+  public resetMaximumBackoff() {
+    this._maximumBackoff = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumBackoffInput() {
+    return this._maximumBackoff
+  }
+
+  // minimum_backoff - computed: true, optional: true, required: false
+  private _minimumBackoff?: string | undefined; 
+  public get minimumBackoff() {
+    return this.getStringAttribute('minimum_backoff');
+  }
+  public set minimumBackoff(value: string | undefined) {
+    this._minimumBackoff = value;
+  }
+  public resetMinimumBackoff() {
+    this._minimumBackoff = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumBackoffInput() {
+    return this._minimumBackoff
+  }
+}
 export interface PubsubSubscriptionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#create PubsubSubscription#create}
@@ -312,8 +530,11 @@ export interface PubsubSubscriptionTimeouts {
   readonly update?: string;
 }
 
-function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptionTimeouts): any {
+function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptionTimeoutsOutputReference | PubsubSubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -321,6 +542,64 @@ function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptionTimeou
   }
 }
 
+export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html google_pubsub_subscription}
@@ -375,11 +654,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   // ==========
 
   // ack_deadline_seconds - computed: true, optional: true, required: false
-  private _ackDeadlineSeconds?: number;
+  private _ackDeadlineSeconds?: number | undefined; 
   public get ackDeadlineSeconds() {
     return this.getNumberAttribute('ack_deadline_seconds');
   }
-  public set ackDeadlineSeconds(value: number) {
+  public set ackDeadlineSeconds(value: number | undefined) {
     this._ackDeadlineSeconds = value;
   }
   public resetAckDeadlineSeconds() {
@@ -391,11 +670,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // enable_message_ordering - computed: false, optional: true, required: false
-  private _enableMessageOrdering?: boolean | cdktf.IResolvable;
+  private _enableMessageOrdering?: boolean | cdktf.IResolvable | undefined; 
   public get enableMessageOrdering() {
-    return this.getBooleanAttribute('enable_message_ordering');
+    return this.getBooleanAttribute('enable_message_ordering') as any;
   }
-  public set enableMessageOrdering(value: boolean | cdktf.IResolvable ) {
+  public set enableMessageOrdering(value: boolean | cdktf.IResolvable | undefined) {
     this._enableMessageOrdering = value;
   }
   public resetEnableMessageOrdering() {
@@ -407,11 +686,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string;
+  private _filter?: string | undefined; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string ) {
+  public set filter(value: string | undefined) {
     this._filter = value;
   }
   public resetFilter() {
@@ -428,11 +707,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -444,11 +724,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // message_retention_duration - computed: false, optional: true, required: false
-  private _messageRetentionDuration?: string;
+  private _messageRetentionDuration?: string | undefined; 
   public get messageRetentionDuration() {
     return this.getStringAttribute('message_retention_duration');
   }
-  public set messageRetentionDuration(value: string ) {
+  public set messageRetentionDuration(value: string | undefined) {
     this._messageRetentionDuration = value;
   }
   public resetMessageRetentionDuration() {
@@ -460,7 +740,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -478,11 +758,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -494,11 +774,11 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // retain_acked_messages - computed: false, optional: true, required: false
-  private _retainAckedMessages?: boolean | cdktf.IResolvable;
+  private _retainAckedMessages?: boolean | cdktf.IResolvable | undefined; 
   public get retainAckedMessages() {
-    return this.getBooleanAttribute('retain_acked_messages');
+    return this.getBooleanAttribute('retain_acked_messages') as any;
   }
-  public set retainAckedMessages(value: boolean | cdktf.IResolvable ) {
+  public set retainAckedMessages(value: boolean | cdktf.IResolvable | undefined) {
     this._retainAckedMessages = value;
   }
   public resetRetainAckedMessages() {
@@ -510,7 +790,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // topic - computed: false, optional: false, required: true
-  private _topic: string;
+  private _topic?: string; 
   public get topic() {
     return this.getStringAttribute('topic');
   }
@@ -523,11 +803,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // dead_letter_policy - computed: false, optional: true, required: false
-  private _deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy[];
+  private _deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy | undefined; 
+  private __deadLetterPolicyOutput = new PubsubSubscriptionDeadLetterPolicyOutputReference(this as any, "dead_letter_policy", true);
   public get deadLetterPolicy() {
-    return this.interpolationForAttribute('dead_letter_policy') as any;
+    return this.__deadLetterPolicyOutput;
   }
-  public set deadLetterPolicy(value: PubsubSubscriptionDeadLetterPolicy[] ) {
+  public putDeadLetterPolicy(value: PubsubSubscriptionDeadLetterPolicy | undefined) {
     this._deadLetterPolicy = value;
   }
   public resetDeadLetterPolicy() {
@@ -539,11 +820,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // expiration_policy - computed: false, optional: true, required: false
-  private _expirationPolicy?: PubsubSubscriptionExpirationPolicy[];
+  private _expirationPolicy?: PubsubSubscriptionExpirationPolicy | undefined; 
+  private __expirationPolicyOutput = new PubsubSubscriptionExpirationPolicyOutputReference(this as any, "expiration_policy", true);
   public get expirationPolicy() {
-    return this.interpolationForAttribute('expiration_policy') as any;
+    return this.__expirationPolicyOutput;
   }
-  public set expirationPolicy(value: PubsubSubscriptionExpirationPolicy[] ) {
+  public putExpirationPolicy(value: PubsubSubscriptionExpirationPolicy | undefined) {
     this._expirationPolicy = value;
   }
   public resetExpirationPolicy() {
@@ -555,11 +837,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // push_config - computed: false, optional: true, required: false
-  private _pushConfig?: PubsubSubscriptionPushConfig[];
+  private _pushConfig?: PubsubSubscriptionPushConfig | undefined; 
+  private __pushConfigOutput = new PubsubSubscriptionPushConfigOutputReference(this as any, "push_config", true);
   public get pushConfig() {
-    return this.interpolationForAttribute('push_config') as any;
+    return this.__pushConfigOutput;
   }
-  public set pushConfig(value: PubsubSubscriptionPushConfig[] ) {
+  public putPushConfig(value: PubsubSubscriptionPushConfig | undefined) {
     this._pushConfig = value;
   }
   public resetPushConfig() {
@@ -571,11 +854,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy?: PubsubSubscriptionRetryPolicy[];
+  private _retryPolicy?: PubsubSubscriptionRetryPolicy | undefined; 
+  private __retryPolicyOutput = new PubsubSubscriptionRetryPolicyOutputReference(this as any, "retry_policy", true);
   public get retryPolicy() {
-    return this.interpolationForAttribute('retry_policy') as any;
+    return this.__retryPolicyOutput;
   }
-  public set retryPolicy(value: PubsubSubscriptionRetryPolicy[] ) {
+  public putRetryPolicy(value: PubsubSubscriptionRetryPolicy | undefined) {
     this._retryPolicy = value;
   }
   public resetRetryPolicy() {
@@ -587,11 +871,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PubsubSubscriptionTimeouts;
+  private _timeouts?: PubsubSubscriptionTimeouts | undefined; 
+  private __timeoutsOutput = new PubsubSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PubsubSubscriptionTimeouts ) {
+  public putTimeouts(value: PubsubSubscriptionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -617,10 +902,10 @@ export class PubsubSubscription extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       retain_acked_messages: cdktf.booleanToTerraform(this._retainAckedMessages),
       topic: cdktf.stringToTerraform(this._topic),
-      dead_letter_policy: cdktf.listMapper(pubsubSubscriptionDeadLetterPolicyToTerraform)(this._deadLetterPolicy),
-      expiration_policy: cdktf.listMapper(pubsubSubscriptionExpirationPolicyToTerraform)(this._expirationPolicy),
-      push_config: cdktf.listMapper(pubsubSubscriptionPushConfigToTerraform)(this._pushConfig),
-      retry_policy: cdktf.listMapper(pubsubSubscriptionRetryPolicyToTerraform)(this._retryPolicy),
+      dead_letter_policy: pubsubSubscriptionDeadLetterPolicyToTerraform(this._deadLetterPolicy),
+      expiration_policy: pubsubSubscriptionExpirationPolicyToTerraform(this._expirationPolicy),
+      push_config: pubsubSubscriptionPushConfigToTerraform(this._pushConfig),
+      retry_policy: pubsubSubscriptionRetryPolicyToTerraform(this._retryPolicy),
       timeouts: pubsubSubscriptionTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -32,7 +32,7 @@ export interface DataprocClusterIamBindingConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#condition DataprocClusterIamBinding#condition}
   */
-  readonly condition?: DataprocClusterIamBindingCondition[];
+  readonly condition?: DataprocClusterIamBindingCondition;
 }
 export interface DataprocClusterIamBindingCondition {
   /**
@@ -49,8 +49,11 @@ export interface DataprocClusterIamBindingCondition {
   readonly title: string;
 }
 
-function dataprocClusterIamBindingConditionToTerraform(struct?: DataprocClusterIamBindingCondition): any {
+function dataprocClusterIamBindingConditionToTerraform(struct?: DataprocClusterIamBindingConditionOutputReference | DataprocClusterIamBindingCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -58,6 +61,58 @@ function dataprocClusterIamBindingConditionToTerraform(struct?: DataprocClusterI
   }
 }
 
+export class DataprocClusterIamBindingConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html google_dataproc_cluster_iam_binding}
@@ -104,7 +159,7 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   // ==========
 
   // cluster - computed: false, optional: false, required: true
-  private _cluster: string;
+  private _cluster?: string; 
   public get cluster() {
     return this.getStringAttribute('cluster');
   }
@@ -127,7 +182,7 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   }
 
   // members - computed: false, optional: false, required: true
-  private _members: string[];
+  private _members?: string[]; 
   public get members() {
     return this.getListAttribute('members');
   }
@@ -140,11 +195,11 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -156,11 +211,11 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -172,7 +227,7 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   }
 
   // role - computed: false, optional: false, required: true
-  private _role: string;
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
@@ -185,11 +240,12 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: DataprocClusterIamBindingCondition[];
+  private _condition?: DataprocClusterIamBindingCondition | undefined; 
+  private __conditionOutput = new DataprocClusterIamBindingConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: DataprocClusterIamBindingCondition[] ) {
+  public putCondition(value: DataprocClusterIamBindingCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -211,7 +267,7 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       role: cdktf.stringToTerraform(this._role),
-      condition: cdktf.listMapper(dataprocClusterIamBindingConditionToTerraform)(this._condition),
+      condition: dataprocClusterIamBindingConditionToTerraform(this._condition),
     };
   }
 }

@@ -58,7 +58,7 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -76,11 +76,11 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   }
 
   // role_entity - computed: true, optional: true, required: false
-  private _roleEntity?: string[];
+  private _roleEntity?: string[] | undefined; 
   public get roleEntity() {
     return this.getListAttribute('role_entity');
   }
-  public set roleEntity(value: string[]) {
+  public set roleEntity(value: string[] | undefined) {
     this._roleEntity = value;
   }
   public resetRoleEntity() {

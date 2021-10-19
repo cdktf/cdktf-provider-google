@@ -68,11 +68,11 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   // ==========
 
   // delegates - computed: false, optional: true, required: false
-  private _delegates?: string[];
+  private _delegates?: string[] | undefined; 
   public get delegates() {
     return this.getListAttribute('delegates');
   }
-  public set delegates(value: string[] ) {
+  public set delegates(value: string[] | undefined) {
     this._delegates = value;
   }
   public resetDelegates() {
@@ -94,11 +94,11 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
 
   // include_email - computed: false, optional: true, required: false
-  private _includeEmail?: boolean | cdktf.IResolvable;
+  private _includeEmail?: boolean | cdktf.IResolvable | undefined; 
   public get includeEmail() {
-    return this.getBooleanAttribute('include_email');
+    return this.getBooleanAttribute('include_email') as any;
   }
-  public set includeEmail(value: boolean | cdktf.IResolvable ) {
+  public set includeEmail(value: boolean | cdktf.IResolvable | undefined) {
     this._includeEmail = value;
   }
   public resetIncludeEmail() {
@@ -110,7 +110,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
 
   // target_audience - computed: false, optional: false, required: true
-  private _targetAudience: string;
+  private _targetAudience?: string; 
   public get targetAudience() {
     return this.getStringAttribute('target_audience');
   }
@@ -123,11 +123,11 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
 
   // target_service_account - computed: false, optional: true, required: false
-  private _targetServiceAccount?: string;
+  private _targetServiceAccount?: string | undefined; 
   public get targetServiceAccount() {
     return this.getStringAttribute('target_service_account');
   }
-  public set targetServiceAccount(value: string ) {
+  public set targetServiceAccount(value: string | undefined) {
     this._targetServiceAccount = value;
   }
   public resetTargetServiceAccount() {

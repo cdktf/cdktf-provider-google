@@ -63,7 +63,7 @@ export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // consent_store_id - computed: false, optional: false, required: true
-  private _consentStoreId: string;
+  private _consentStoreId?: string; 
   public get consentStoreId() {
     return this.getStringAttribute('consent_store_id');
   }
@@ -76,7 +76,7 @@ export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // dataset - computed: false, optional: false, required: true
-  private _dataset: string;
+  private _dataset?: string; 
   public get dataset() {
     return this.getStringAttribute('dataset');
   }
@@ -99,7 +99,7 @@ export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

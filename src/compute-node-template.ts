@@ -55,13 +55,13 @@ If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#node_type_flexibility ComputeNodeTemplate#node_type_flexibility}
   */
-  readonly nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility[];
+  readonly nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility;
   /**
   * server_binding block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#server_binding ComputeNodeTemplate#server_binding}
   */
-  readonly serverBinding?: ComputeNodeTemplateServerBinding[];
+  readonly serverBinding?: ComputeNodeTemplateServerBinding;
   /**
   * timeouts block
   * 
@@ -84,14 +84,59 @@ export interface ComputeNodeTemplateNodeTypeFlexibility {
   readonly memory?: string;
 }
 
-function computeNodeTemplateNodeTypeFlexibilityToTerraform(struct?: ComputeNodeTemplateNodeTypeFlexibility): any {
+function computeNodeTemplateNodeTypeFlexibilityToTerraform(struct?: ComputeNodeTemplateNodeTypeFlexibilityOutputReference | ComputeNodeTemplateNodeTypeFlexibility): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cpus: cdktf.stringToTerraform(struct!.cpus),
     memory: cdktf.stringToTerraform(struct!.memory),
   }
 }
 
+export class ComputeNodeTemplateNodeTypeFlexibilityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cpus - computed: false, optional: true, required: false
+  private _cpus?: string | undefined; 
+  public get cpus() {
+    return this.getStringAttribute('cpus');
+  }
+  public set cpus(value: string | undefined) {
+    this._cpus = value;
+  }
+  public resetCpus() {
+    this._cpus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpusInput() {
+    return this._cpus
+  }
+
+  // memory - computed: false, optional: true, required: false
+  private _memory?: string | undefined; 
+  public get memory() {
+    return this.getStringAttribute('memory');
+  }
+  public set memory(value: string | undefined) {
+    this._memory = value;
+  }
+  public resetMemory() {
+    this._memory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory
+  }
+}
 export interface ComputeNodeTemplateServerBinding {
   /**
   * Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER',
@@ -112,13 +157,39 @@ nodes will experience outages while maintenance is applied. Possible values: ["R
   readonly type: string;
 }
 
-function computeNodeTemplateServerBindingToTerraform(struct?: ComputeNodeTemplateServerBinding): any {
+function computeNodeTemplateServerBindingToTerraform(struct?: ComputeNodeTemplateServerBindingOutputReference | ComputeNodeTemplateServerBinding): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class ComputeNodeTemplateServerBindingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface ComputeNodeTemplateTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html#create ComputeNodeTemplate#create}
@@ -130,14 +201,59 @@ export interface ComputeNodeTemplateTimeouts {
   readonly delete?: string;
 }
 
-function computeNodeTemplateTimeoutsToTerraform(struct?: ComputeNodeTemplateTimeouts): any {
+function computeNodeTemplateTimeoutsToTerraform(struct?: ComputeNodeTemplateTimeoutsOutputReference | ComputeNodeTemplateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class ComputeNodeTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_node_template.html google_compute_node_template}
@@ -188,11 +304,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   // ==========
 
   // cpu_overcommit_type - computed: false, optional: true, required: false
-  private _cpuOvercommitType?: string;
+  private _cpuOvercommitType?: string | undefined; 
   public get cpuOvercommitType() {
     return this.getStringAttribute('cpu_overcommit_type');
   }
-  public set cpuOvercommitType(value: string ) {
+  public set cpuOvercommitType(value: string | undefined) {
     this._cpuOvercommitType = value;
   }
   public resetCpuOvercommitType() {
@@ -209,11 +325,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -230,11 +346,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string ) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -246,11 +362,12 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // node_affinity_labels - computed: false, optional: true, required: false
-  private _nodeAffinityLabels?: { [key: string]: string } | cdktf.IResolvable;
+  private _nodeAffinityLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get nodeAffinityLabels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_affinity_labels') as any;
   }
-  public set nodeAffinityLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set nodeAffinityLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._nodeAffinityLabels = value;
   }
   public resetNodeAffinityLabels() {
@@ -262,11 +379,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // node_type - computed: false, optional: true, required: false
-  private _nodeType?: string;
+  private _nodeType?: string | undefined; 
   public get nodeType() {
     return this.getStringAttribute('node_type');
   }
-  public set nodeType(value: string ) {
+  public set nodeType(value: string | undefined) {
     this._nodeType = value;
   }
   public resetNodeType() {
@@ -278,11 +395,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -294,11 +411,11 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -315,11 +432,12 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // node_type_flexibility - computed: false, optional: true, required: false
-  private _nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility[];
+  private _nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility | undefined; 
+  private __nodeTypeFlexibilityOutput = new ComputeNodeTemplateNodeTypeFlexibilityOutputReference(this as any, "node_type_flexibility", true);
   public get nodeTypeFlexibility() {
-    return this.interpolationForAttribute('node_type_flexibility') as any;
+    return this.__nodeTypeFlexibilityOutput;
   }
-  public set nodeTypeFlexibility(value: ComputeNodeTemplateNodeTypeFlexibility[] ) {
+  public putNodeTypeFlexibility(value: ComputeNodeTemplateNodeTypeFlexibility | undefined) {
     this._nodeTypeFlexibility = value;
   }
   public resetNodeTypeFlexibility() {
@@ -331,11 +449,12 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // server_binding - computed: false, optional: true, required: false
-  private _serverBinding?: ComputeNodeTemplateServerBinding[];
+  private _serverBinding?: ComputeNodeTemplateServerBinding | undefined; 
+  private __serverBindingOutput = new ComputeNodeTemplateServerBindingOutputReference(this as any, "server_binding", true);
   public get serverBinding() {
-    return this.interpolationForAttribute('server_binding') as any;
+    return this.__serverBindingOutput;
   }
-  public set serverBinding(value: ComputeNodeTemplateServerBinding[] ) {
+  public putServerBinding(value: ComputeNodeTemplateServerBinding | undefined) {
     this._serverBinding = value;
   }
   public resetServerBinding() {
@@ -347,11 +466,12 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeNodeTemplateTimeouts;
+  private _timeouts?: ComputeNodeTemplateTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeNodeTemplateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeNodeTemplateTimeouts ) {
+  public putTimeouts(value: ComputeNodeTemplateTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -375,8 +495,8 @@ export class ComputeNodeTemplate extends cdktf.TerraformResource {
       node_type: cdktf.stringToTerraform(this._nodeType),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      node_type_flexibility: cdktf.listMapper(computeNodeTemplateNodeTypeFlexibilityToTerraform)(this._nodeTypeFlexibility),
-      server_binding: cdktf.listMapper(computeNodeTemplateServerBindingToTerraform)(this._serverBinding),
+      node_type_flexibility: computeNodeTemplateNodeTypeFlexibilityToTerraform(this._nodeTypeFlexibility),
+      server_binding: computeNodeTemplateServerBindingToTerraform(this._serverBinding),
       timeouts: computeNodeTemplateTimeoutsToTerraform(this._timeouts),
     };
   }

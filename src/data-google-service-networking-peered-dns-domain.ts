@@ -78,7 +78,7 @@ export class DataGoogleServiceNetworkingPeeredDnsDomain extends cdktf.TerraformD
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -91,7 +91,7 @@ export class DataGoogleServiceNetworkingPeeredDnsDomain extends cdktf.TerraformD
   }
 
   // network - computed: false, optional: false, required: true
-  private _network: string;
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
@@ -109,7 +109,7 @@ export class DataGoogleServiceNetworkingPeeredDnsDomain extends cdktf.TerraformD
   }
 
   // project - computed: false, optional: false, required: true
-  private _project: string;
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
@@ -122,7 +122,7 @@ export class DataGoogleServiceNetworkingPeeredDnsDomain extends cdktf.TerraformD
   }
 
   // service - computed: false, optional: false, required: true
-  private _service: string;
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }

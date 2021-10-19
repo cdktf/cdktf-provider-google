@@ -71,7 +71,7 @@ running 'gcloud privateca locations list'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#config PrivatecaCertificate#config}
   */
-  readonly config?: PrivatecaCertificateConfigA[];
+  readonly config?: PrivatecaCertificateConfigA;
   /**
   * timeouts block
   * 
@@ -97,53 +97,54 @@ export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageBaseK
 
   // cert_sign - computed: true, optional: false, required: false
   public get certSign() {
-    return this.getBooleanAttribute('cert_sign');
+    return this.getBooleanAttribute('cert_sign') as any;
   }
 
   // content_commitment - computed: true, optional: false, required: false
   public get contentCommitment() {
-    return this.getBooleanAttribute('content_commitment');
+    return this.getBooleanAttribute('content_commitment') as any;
   }
 
   // crl_sign - computed: true, optional: false, required: false
   public get crlSign() {
-    return this.getBooleanAttribute('crl_sign');
+    return this.getBooleanAttribute('crl_sign') as any;
   }
 
   // data_encipherment - computed: true, optional: false, required: false
   public get dataEncipherment() {
-    return this.getBooleanAttribute('data_encipherment');
+    return this.getBooleanAttribute('data_encipherment') as any;
   }
 
   // decipher_only - computed: true, optional: false, required: false
   public get decipherOnly() {
-    return this.getBooleanAttribute('decipher_only');
+    return this.getBooleanAttribute('decipher_only') as any;
   }
 
   // digital_signature - computed: true, optional: false, required: false
   public get digitalSignature() {
-    return this.getBooleanAttribute('digital_signature');
+    return this.getBooleanAttribute('digital_signature') as any;
   }
 
   // encipher_only - computed: true, optional: false, required: false
   public get encipherOnly() {
-    return this.getBooleanAttribute('encipher_only');
+    return this.getBooleanAttribute('encipher_only') as any;
   }
 
   // key_agreement - computed: true, optional: false, required: false
   public get keyAgreement() {
-    return this.getBooleanAttribute('key_agreement');
+    return this.getBooleanAttribute('key_agreement') as any;
   }
 
   // key_encipherment - computed: true, optional: false, required: false
   public get keyEncipherment() {
-    return this.getBooleanAttribute('key_encipherment');
+    return this.getBooleanAttribute('key_encipherment') as any;
   }
 }
 export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageBaseKeyUsage extends cdktf.ComplexComputedList {
 
   // key_usage_options - computed: true, optional: false, required: false
   public get keyUsageOptions() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('key_usage_options') as any;
   }
 }
@@ -151,38 +152,39 @@ export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageExten
 
   // client_auth - computed: true, optional: false, required: false
   public get clientAuth() {
-    return this.getBooleanAttribute('client_auth');
+    return this.getBooleanAttribute('client_auth') as any;
   }
 
   // code_signing - computed: true, optional: false, required: false
   public get codeSigning() {
-    return this.getBooleanAttribute('code_signing');
+    return this.getBooleanAttribute('code_signing') as any;
   }
 
   // email_protection - computed: true, optional: false, required: false
   public get emailProtection() {
-    return this.getBooleanAttribute('email_protection');
+    return this.getBooleanAttribute('email_protection') as any;
   }
 
   // ocsp_signing - computed: true, optional: false, required: false
   public get ocspSigning() {
-    return this.getBooleanAttribute('ocsp_signing');
+    return this.getBooleanAttribute('ocsp_signing') as any;
   }
 
   // server_auth - computed: true, optional: false, required: false
   public get serverAuth() {
-    return this.getBooleanAttribute('server_auth');
+    return this.getBooleanAttribute('server_auth') as any;
   }
 
   // time_stamping - computed: true, optional: false, required: false
   public get timeStamping() {
-    return this.getBooleanAttribute('time_stamping');
+    return this.getBooleanAttribute('time_stamping') as any;
   }
 }
 export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageUnknownExtendedKeyUsagesObectId extends cdktf.ComplexComputedList {
 
   // object_id_path - computed: true, optional: false, required: false
   public get objectIdPath() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('object_id_path') as any;
   }
 }
@@ -190,6 +192,7 @@ export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsageUnkno
 
   // obect_id - computed: true, optional: false, required: false
   public get obectId() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('obect_id') as any;
   }
 }
@@ -197,16 +200,19 @@ export class PrivatecaCertificateCertificateDescriptionConfigValuesKeyUsage exte
 
   // base_key_usage - computed: true, optional: false, required: false
   public get baseKeyUsage() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('base_key_usage') as any;
   }
 
   // extended_key_usage - computed: true, optional: false, required: false
   public get extendedKeyUsage() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('extended_key_usage') as any;
   }
 
   // unknown_extended_key_usages - computed: true, optional: false, required: false
   public get unknownExtendedKeyUsages() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('unknown_extended_key_usages') as any;
   }
 }
@@ -214,6 +220,7 @@ export class PrivatecaCertificateCertificateDescriptionConfigValues extends cdkt
 
   // key_usage - computed: true, optional: false, required: false
   public get keyUsage() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('key_usage') as any;
   }
 }
@@ -275,6 +282,7 @@ export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubject
 
   // object_id_path - computed: true, optional: false, required: false
   public get objectIdPath() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('object_id_path') as any;
   }
 }
@@ -282,11 +290,12 @@ export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubject
 
   // critical - computed: true, optional: false, required: false
   public get critical() {
-    return this.getBooleanAttribute('critical');
+    return this.getBooleanAttribute('critical') as any;
   }
 
   // obect_id - computed: true, optional: false, required: false
   public get obectId() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('obect_id') as any;
   }
 
@@ -299,6 +308,7 @@ export class PrivatecaCertificateCertificateDescriptionSubjectDescriptionSubject
 
   // custom_sans - computed: true, optional: false, required: false
   public get customSans() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_sans') as any;
   }
 
@@ -346,11 +356,13 @@ export class PrivatecaCertificateCertificateDescriptionSubjectDescription extend
 
   // subject - computed: true, optional: false, required: false
   public get subject() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subject') as any;
   }
 
   // subject_alt_name - computed: true, optional: false, required: false
   public get subjectAltName() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subject_alt_name') as any;
   }
 }
@@ -370,16 +382,19 @@ export class PrivatecaCertificateCertificateDescription extends cdktf.ComplexCom
 
   // authority_key_id - computed: true, optional: false, required: false
   public get authorityKeyId() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('authority_key_id') as any;
   }
 
   // cert_fingerprint - computed: true, optional: false, required: false
   public get certFingerprint() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cert_fingerprint') as any;
   }
 
   // config_values - computed: true, optional: false, required: false
   public get configValues() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('config_values') as any;
   }
 
@@ -390,16 +405,19 @@ export class PrivatecaCertificateCertificateDescription extends cdktf.ComplexCom
 
   // public_key - computed: true, optional: false, required: false
   public get publicKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('public_key') as any;
   }
 
   // subject_description - computed: true, optional: false, required: false
   public get subjectDescription() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subject_description') as any;
   }
 
   // subject_key_id - computed: true, optional: false, required: false
   public get subjectKeyId() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subject_key_id') as any;
   }
 }
@@ -430,14 +448,56 @@ export interface PrivatecaCertificateConfigPublicKey {
   readonly key?: string;
 }
 
-function privatecaCertificateConfigPublicKeyToTerraform(struct?: PrivatecaCertificateConfigPublicKey): any {
+function privatecaCertificateConfigPublicKeyToTerraform(struct?: PrivatecaCertificateConfigPublicKeyOutputReference | PrivatecaCertificateConfigPublicKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     format: cdktf.stringToTerraform(struct!.format),
     key: cdktf.stringToTerraform(struct!.key),
   }
 }
 
+export class PrivatecaCertificateConfigPublicKeyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // format - computed: false, optional: false, required: true
+  private _format?: string; 
+  public get format() {
+    return this.getStringAttribute('format');
+  }
+  public set format(value: string) {
+    this._format = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formatInput() {
+    return this._format
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string | undefined; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string | undefined) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key
+  }
+}
 export interface PrivatecaCertificateConfigSubjectConfigSubject {
   /**
   * The common name of the distinguished name.
@@ -489,8 +549,11 @@ export interface PrivatecaCertificateConfigSubjectConfigSubject {
   readonly streetAddress?: string;
 }
 
-function privatecaCertificateConfigSubjectConfigSubjectToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigSubject): any {
+function privatecaCertificateConfigSubjectConfigSubjectToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigSubjectOutputReference | PrivatecaCertificateConfigSubjectConfigSubject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     common_name: cdktf.stringToTerraform(struct!.commonName),
     country_code: cdktf.stringToTerraform(struct!.countryCode),
@@ -503,6 +566,138 @@ function privatecaCertificateConfigSubjectConfigSubjectToTerraform(struct?: Priv
   }
 }
 
+export class PrivatecaCertificateConfigSubjectConfigSubjectOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // common_name - computed: false, optional: false, required: true
+  private _commonName?: string; 
+  public get commonName() {
+    return this.getStringAttribute('common_name');
+  }
+  public set commonName(value: string) {
+    this._commonName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commonNameInput() {
+    return this._commonName
+  }
+
+  // country_code - computed: false, optional: true, required: false
+  private _countryCode?: string | undefined; 
+  public get countryCode() {
+    return this.getStringAttribute('country_code');
+  }
+  public set countryCode(value: string | undefined) {
+    this._countryCode = value;
+  }
+  public resetCountryCode() {
+    this._countryCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryCodeInput() {
+    return this._countryCode
+  }
+
+  // locality - computed: false, optional: true, required: false
+  private _locality?: string | undefined; 
+  public get locality() {
+    return this.getStringAttribute('locality');
+  }
+  public set locality(value: string | undefined) {
+    this._locality = value;
+  }
+  public resetLocality() {
+    this._locality = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityInput() {
+    return this._locality
+  }
+
+  // organization - computed: false, optional: false, required: true
+  private _organization?: string; 
+  public get organization() {
+    return this.getStringAttribute('organization');
+  }
+  public set organization(value: string) {
+    this._organization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization
+  }
+
+  // organizational_unit - computed: false, optional: true, required: false
+  private _organizationalUnit?: string | undefined; 
+  public get organizationalUnit() {
+    return this.getStringAttribute('organizational_unit');
+  }
+  public set organizationalUnit(value: string | undefined) {
+    this._organizationalUnit = value;
+  }
+  public resetOrganizationalUnit() {
+    this._organizationalUnit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationalUnitInput() {
+    return this._organizationalUnit
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string | undefined; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string | undefined) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode
+  }
+
+  // province - computed: false, optional: true, required: false
+  private _province?: string | undefined; 
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+  public set province(value: string | undefined) {
+    this._province = value;
+  }
+  public resetProvince() {
+    this._province = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provinceInput() {
+    return this._province
+  }
+
+  // street_address - computed: false, optional: true, required: false
+  private _streetAddress?: string | undefined; 
+  public get streetAddress() {
+    return this.getStringAttribute('street_address');
+  }
+  public set streetAddress(value: string | undefined) {
+    this._streetAddress = value;
+  }
+  public resetStreetAddress() {
+    this._streetAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streetAddressInput() {
+    return this._streetAddress
+  }
+}
 export interface PrivatecaCertificateConfigSubjectConfigSubjectAltName {
   /**
   * Contains only valid, fully-qualified host names.
@@ -530,8 +725,11 @@ export interface PrivatecaCertificateConfigSubjectConfigSubjectAltName {
   readonly uris?: string[];
 }
 
-function privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigSubjectAltName): any {
+function privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigSubjectAltNameOutputReference | PrivatecaCertificateConfigSubjectConfigSubjectAltName): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dns_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsNames),
     email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
@@ -540,29 +738,147 @@ function privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform(struct
   }
 }
 
+export class PrivatecaCertificateConfigSubjectConfigSubjectAltNameOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dns_names - computed: false, optional: true, required: false
+  private _dnsNames?: string[] | undefined; 
+  public get dnsNames() {
+    return this.getListAttribute('dns_names');
+  }
+  public set dnsNames(value: string[] | undefined) {
+    this._dnsNames = value;
+  }
+  public resetDnsNames() {
+    this._dnsNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsNamesInput() {
+    return this._dnsNames
+  }
+
+  // email_addresses - computed: false, optional: true, required: false
+  private _emailAddresses?: string[] | undefined; 
+  public get emailAddresses() {
+    return this.getListAttribute('email_addresses');
+  }
+  public set emailAddresses(value: string[] | undefined) {
+    this._emailAddresses = value;
+  }
+  public resetEmailAddresses() {
+    this._emailAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressesInput() {
+    return this._emailAddresses
+  }
+
+  // ip_addresses - computed: false, optional: true, required: false
+  private _ipAddresses?: string[] | undefined; 
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+  public set ipAddresses(value: string[] | undefined) {
+    this._ipAddresses = value;
+  }
+  public resetIpAddresses() {
+    this._ipAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressesInput() {
+    return this._ipAddresses
+  }
+
+  // uris - computed: false, optional: true, required: false
+  private _uris?: string[] | undefined; 
+  public get uris() {
+    return this.getListAttribute('uris');
+  }
+  public set uris(value: string[] | undefined) {
+    this._uris = value;
+  }
+  public resetUris() {
+    this._uris = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urisInput() {
+    return this._uris
+  }
+}
 export interface PrivatecaCertificateConfigSubjectConfig {
   /**
   * subject block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#subject PrivatecaCertificate#subject}
   */
-  readonly subject: PrivatecaCertificateConfigSubjectConfigSubject[];
+  readonly subject: PrivatecaCertificateConfigSubjectConfigSubject;
   /**
   * subject_alt_name block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#subject_alt_name PrivatecaCertificate#subject_alt_name}
   */
-  readonly subjectAltName?: PrivatecaCertificateConfigSubjectConfigSubjectAltName[];
+  readonly subjectAltName?: PrivatecaCertificateConfigSubjectConfigSubjectAltName;
 }
 
-function privatecaCertificateConfigSubjectConfigToTerraform(struct?: PrivatecaCertificateConfigSubjectConfig): any {
+function privatecaCertificateConfigSubjectConfigToTerraform(struct?: PrivatecaCertificateConfigSubjectConfigOutputReference | PrivatecaCertificateConfigSubjectConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    subject: cdktf.listMapper(privatecaCertificateConfigSubjectConfigSubjectToTerraform)(struct!.subject),
-    subject_alt_name: cdktf.listMapper(privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform)(struct!.subjectAltName),
+    subject: privatecaCertificateConfigSubjectConfigSubjectToTerraform(struct!.subject),
+    subject_alt_name: privatecaCertificateConfigSubjectConfigSubjectAltNameToTerraform(struct!.subjectAltName),
   }
 }
 
+export class PrivatecaCertificateConfigSubjectConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // subject - computed: false, optional: false, required: true
+  private _subject?: PrivatecaCertificateConfigSubjectConfigSubject; 
+  private __subjectOutput = new PrivatecaCertificateConfigSubjectConfigSubjectOutputReference(this as any, "subject", true);
+  public get subject() {
+    return this.__subjectOutput;
+  }
+  public putSubject(value: PrivatecaCertificateConfigSubjectConfigSubject) {
+    this._subject = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectInput() {
+    return this._subject
+  }
+
+  // subject_alt_name - computed: false, optional: true, required: false
+  private _subjectAltName?: PrivatecaCertificateConfigSubjectConfigSubjectAltName | undefined; 
+  private __subjectAltNameOutput = new PrivatecaCertificateConfigSubjectConfigSubjectAltNameOutputReference(this as any, "subject_alt_name", true);
+  public get subjectAltName() {
+    return this.__subjectAltNameOutput;
+  }
+  public putSubjectAltName(value: PrivatecaCertificateConfigSubjectConfigSubjectAltName | undefined) {
+    this._subjectAltName = value;
+  }
+  public resetSubjectAltName() {
+    this._subjectAltName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectAltNameInput() {
+    return this._subjectAltName
+  }
+}
 export interface PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
@@ -572,13 +888,40 @@ export interface PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectI
   readonly objectIdPath: number[];
 }
 
-function privatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdToTerraform(struct?: PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId): any {
+function privatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdToTerraform(struct?: PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdOutputReference | PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
   }
 }
 
+export class PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // object_id_path - computed: false, optional: false, required: true
+  private _objectIdPath?: number[]; 
+  public get objectIdPath() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('object_id_path') as any;
+  }
+  public set objectIdPath(value: number[]) {
+    this._objectIdPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdPathInput() {
+    return this._objectIdPath
+  }
+}
 export interface PrivatecaCertificateConfigX509ConfigAdditionalExtensions {
   /**
   * Indicates whether or not this extension is critical (i.e., if the client does not know how to
@@ -598,15 +941,18 @@ handle this extension, the client should consider this to be an error).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#object_id PrivatecaCertificate#object_id}
   */
-  readonly objectId: PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId[];
+  readonly objectId: PrivatecaCertificateConfigX509ConfigAdditionalExtensionsObjectId;
 }
 
 function privatecaCertificateConfigX509ConfigAdditionalExtensionsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigAdditionalExtensions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     critical: cdktf.booleanToTerraform(struct!.critical),
     value: cdktf.stringToTerraform(struct!.value),
-    object_id: cdktf.listMapper(privatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdToTerraform)(struct!.objectId),
+    object_id: privatecaCertificateConfigX509ConfigAdditionalExtensionsObjectIdToTerraform(struct!.objectId),
   }
 }
 
@@ -628,14 +974,59 @@ value is missing, the max path length will be omitted from the CA certificate.
   readonly maxIssuerPathLength?: number;
 }
 
-function privatecaCertificateConfigX509ConfigCaOptionsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigCaOptions): any {
+function privatecaCertificateConfigX509ConfigCaOptionsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference | PrivatecaCertificateConfigX509ConfigCaOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     is_ca: cdktf.booleanToTerraform(struct!.isCa),
     max_issuer_path_length: cdktf.numberToTerraform(struct!.maxIssuerPathLength),
   }
 }
 
+export class PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // is_ca - computed: false, optional: true, required: false
+  private _isCa?: boolean | cdktf.IResolvable | undefined; 
+  public get isCa() {
+    return this.getBooleanAttribute('is_ca') as any;
+  }
+  public set isCa(value: boolean | cdktf.IResolvable | undefined) {
+    this._isCa = value;
+  }
+  public resetIsCa() {
+    this._isCa = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isCaInput() {
+    return this._isCa
+  }
+
+  // max_issuer_path_length - computed: false, optional: true, required: false
+  private _maxIssuerPathLength?: number | undefined; 
+  public get maxIssuerPathLength() {
+    return this.getNumberAttribute('max_issuer_path_length');
+  }
+  public set maxIssuerPathLength(value: number | undefined) {
+    this._maxIssuerPathLength = value;
+  }
+  public resetMaxIssuerPathLength() {
+    this._maxIssuerPathLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxIssuerPathLengthInput() {
+    return this._maxIssuerPathLength
+  }
+}
 export interface PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage {
   /**
   * The key may be used to sign certificates.
@@ -693,8 +1084,11 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage {
   readonly keyEncipherment?: boolean | cdktf.IResolvable;
 }
 
-function privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage): any {
+function privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageOutputReference | PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cert_sign: cdktf.booleanToTerraform(struct!.certSign),
     content_commitment: cdktf.booleanToTerraform(struct!.contentCommitment),
@@ -708,6 +1102,160 @@ function privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(str
   }
 }
 
+export class PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cert_sign - computed: false, optional: true, required: false
+  private _certSign?: boolean | cdktf.IResolvable | undefined; 
+  public get certSign() {
+    return this.getBooleanAttribute('cert_sign') as any;
+  }
+  public set certSign(value: boolean | cdktf.IResolvable | undefined) {
+    this._certSign = value;
+  }
+  public resetCertSign() {
+    this._certSign = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certSignInput() {
+    return this._certSign
+  }
+
+  // content_commitment - computed: false, optional: true, required: false
+  private _contentCommitment?: boolean | cdktf.IResolvable | undefined; 
+  public get contentCommitment() {
+    return this.getBooleanAttribute('content_commitment') as any;
+  }
+  public set contentCommitment(value: boolean | cdktf.IResolvable | undefined) {
+    this._contentCommitment = value;
+  }
+  public resetContentCommitment() {
+    this._contentCommitment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentCommitmentInput() {
+    return this._contentCommitment
+  }
+
+  // crl_sign - computed: false, optional: true, required: false
+  private _crlSign?: boolean | cdktf.IResolvable | undefined; 
+  public get crlSign() {
+    return this.getBooleanAttribute('crl_sign') as any;
+  }
+  public set crlSign(value: boolean | cdktf.IResolvable | undefined) {
+    this._crlSign = value;
+  }
+  public resetCrlSign() {
+    this._crlSign = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crlSignInput() {
+    return this._crlSign
+  }
+
+  // data_encipherment - computed: false, optional: true, required: false
+  private _dataEncipherment?: boolean | cdktf.IResolvable | undefined; 
+  public get dataEncipherment() {
+    return this.getBooleanAttribute('data_encipherment') as any;
+  }
+  public set dataEncipherment(value: boolean | cdktf.IResolvable | undefined) {
+    this._dataEncipherment = value;
+  }
+  public resetDataEncipherment() {
+    this._dataEncipherment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataEnciphermentInput() {
+    return this._dataEncipherment
+  }
+
+  // decipher_only - computed: false, optional: true, required: false
+  private _decipherOnly?: boolean | cdktf.IResolvable | undefined; 
+  public get decipherOnly() {
+    return this.getBooleanAttribute('decipher_only') as any;
+  }
+  public set decipherOnly(value: boolean | cdktf.IResolvable | undefined) {
+    this._decipherOnly = value;
+  }
+  public resetDecipherOnly() {
+    this._decipherOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get decipherOnlyInput() {
+    return this._decipherOnly
+  }
+
+  // digital_signature - computed: false, optional: true, required: false
+  private _digitalSignature?: boolean | cdktf.IResolvable | undefined; 
+  public get digitalSignature() {
+    return this.getBooleanAttribute('digital_signature') as any;
+  }
+  public set digitalSignature(value: boolean | cdktf.IResolvable | undefined) {
+    this._digitalSignature = value;
+  }
+  public resetDigitalSignature() {
+    this._digitalSignature = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get digitalSignatureInput() {
+    return this._digitalSignature
+  }
+
+  // encipher_only - computed: false, optional: true, required: false
+  private _encipherOnly?: boolean | cdktf.IResolvable | undefined; 
+  public get encipherOnly() {
+    return this.getBooleanAttribute('encipher_only') as any;
+  }
+  public set encipherOnly(value: boolean | cdktf.IResolvable | undefined) {
+    this._encipherOnly = value;
+  }
+  public resetEncipherOnly() {
+    this._encipherOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encipherOnlyInput() {
+    return this._encipherOnly
+  }
+
+  // key_agreement - computed: false, optional: true, required: false
+  private _keyAgreement?: boolean | cdktf.IResolvable | undefined; 
+  public get keyAgreement() {
+    return this.getBooleanAttribute('key_agreement') as any;
+  }
+  public set keyAgreement(value: boolean | cdktf.IResolvable | undefined) {
+    this._keyAgreement = value;
+  }
+  public resetKeyAgreement() {
+    this._keyAgreement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyAgreementInput() {
+    return this._keyAgreement
+  }
+
+  // key_encipherment - computed: false, optional: true, required: false
+  private _keyEncipherment?: boolean | cdktf.IResolvable | undefined; 
+  public get keyEncipherment() {
+    return this.getBooleanAttribute('key_encipherment') as any;
+  }
+  public set keyEncipherment(value: boolean | cdktf.IResolvable | undefined) {
+    this._keyEncipherment = value;
+  }
+  public resetKeyEncipherment() {
+    this._keyEncipherment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyEnciphermentInput() {
+    return this._keyEncipherment
+  }
+}
 export interface PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage {
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
@@ -747,8 +1295,11 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage {
   readonly timeStamping?: boolean | cdktf.IResolvable;
 }
 
-function privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage): any {
+function privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference | PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     client_auth: cdktf.booleanToTerraform(struct!.clientAuth),
     code_signing: cdktf.booleanToTerraform(struct!.codeSigning),
@@ -759,6 +1310,112 @@ function privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform
   }
 }
 
+export class PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // client_auth - computed: false, optional: true, required: false
+  private _clientAuth?: boolean | cdktf.IResolvable | undefined; 
+  public get clientAuth() {
+    return this.getBooleanAttribute('client_auth') as any;
+  }
+  public set clientAuth(value: boolean | cdktf.IResolvable | undefined) {
+    this._clientAuth = value;
+  }
+  public resetClientAuth() {
+    this._clientAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientAuthInput() {
+    return this._clientAuth
+  }
+
+  // code_signing - computed: false, optional: true, required: false
+  private _codeSigning?: boolean | cdktf.IResolvable | undefined; 
+  public get codeSigning() {
+    return this.getBooleanAttribute('code_signing') as any;
+  }
+  public set codeSigning(value: boolean | cdktf.IResolvable | undefined) {
+    this._codeSigning = value;
+  }
+  public resetCodeSigning() {
+    this._codeSigning = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get codeSigningInput() {
+    return this._codeSigning
+  }
+
+  // email_protection - computed: false, optional: true, required: false
+  private _emailProtection?: boolean | cdktf.IResolvable | undefined; 
+  public get emailProtection() {
+    return this.getBooleanAttribute('email_protection') as any;
+  }
+  public set emailProtection(value: boolean | cdktf.IResolvable | undefined) {
+    this._emailProtection = value;
+  }
+  public resetEmailProtection() {
+    this._emailProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailProtectionInput() {
+    return this._emailProtection
+  }
+
+  // ocsp_signing - computed: false, optional: true, required: false
+  private _ocspSigning?: boolean | cdktf.IResolvable | undefined; 
+  public get ocspSigning() {
+    return this.getBooleanAttribute('ocsp_signing') as any;
+  }
+  public set ocspSigning(value: boolean | cdktf.IResolvable | undefined) {
+    this._ocspSigning = value;
+  }
+  public resetOcspSigning() {
+    this._ocspSigning = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ocspSigningInput() {
+    return this._ocspSigning
+  }
+
+  // server_auth - computed: false, optional: true, required: false
+  private _serverAuth?: boolean | cdktf.IResolvable | undefined; 
+  public get serverAuth() {
+    return this.getBooleanAttribute('server_auth') as any;
+  }
+  public set serverAuth(value: boolean | cdktf.IResolvable | undefined) {
+    this._serverAuth = value;
+  }
+  public resetServerAuth() {
+    this._serverAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverAuthInput() {
+    return this._serverAuth
+  }
+
+  // time_stamping - computed: false, optional: true, required: false
+  private _timeStamping?: boolean | cdktf.IResolvable | undefined; 
+  public get timeStamping() {
+    return this.getBooleanAttribute('time_stamping') as any;
+  }
+  public set timeStamping(value: boolean | cdktf.IResolvable | undefined) {
+    this._timeStamping = value;
+  }
+  public resetTimeStamping() {
+    this._timeStamping = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeStampingInput() {
+    return this._timeStamping
+  }
+}
 export interface PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
@@ -770,6 +1427,9 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyU
 
 function privatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
   }
@@ -781,13 +1441,13 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsage {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#base_key_usage PrivatecaCertificate#base_key_usage}
   */
-  readonly baseKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage[];
+  readonly baseKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage;
   /**
   * extended_key_usage block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#extended_key_usage PrivatecaCertificate#extended_key_usage}
   */
-  readonly extendedKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage[];
+  readonly extendedKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage;
   /**
   * unknown_extended_key_usages block
   * 
@@ -796,15 +1456,73 @@ export interface PrivatecaCertificateConfigX509ConfigKeyUsage {
   readonly unknownExtendedKeyUsages?: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages[];
 }
 
-function privatecaCertificateConfigX509ConfigKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsage): any {
+function privatecaCertificateConfigX509ConfigKeyUsageToTerraform(struct?: PrivatecaCertificateConfigX509ConfigKeyUsageOutputReference | PrivatecaCertificateConfigX509ConfigKeyUsage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    base_key_usage: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform)(struct!.baseKeyUsage),
-    extended_key_usage: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform)(struct!.extendedKeyUsage),
+    base_key_usage: privatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(struct!.baseKeyUsage),
+    extended_key_usage: privatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct!.extendedKeyUsage),
     unknown_extended_key_usages: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform)(struct!.unknownExtendedKeyUsages),
   }
 }
 
+export class PrivatecaCertificateConfigX509ConfigKeyUsageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // base_key_usage - computed: false, optional: false, required: true
+  private _baseKeyUsage?: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage; 
+  private __baseKeyUsageOutput = new PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsageOutputReference(this as any, "base_key_usage", true);
+  public get baseKeyUsage() {
+    return this.__baseKeyUsageOutput;
+  }
+  public putBaseKeyUsage(value: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage) {
+    this._baseKeyUsage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseKeyUsageInput() {
+    return this._baseKeyUsage
+  }
+
+  // extended_key_usage - computed: false, optional: false, required: true
+  private _extendedKeyUsage?: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage; 
+  private __extendedKeyUsageOutput = new PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference(this as any, "extended_key_usage", true);
+  public get extendedKeyUsage() {
+    return this.__extendedKeyUsageOutput;
+  }
+  public putExtendedKeyUsage(value: PrivatecaCertificateConfigX509ConfigKeyUsageExtendedKeyUsage) {
+    this._extendedKeyUsage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extendedKeyUsageInput() {
+    return this._extendedKeyUsage
+  }
+
+  // unknown_extended_key_usages - computed: false, optional: true, required: false
+  private _unknownExtendedKeyUsages?: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages[] | undefined; 
+  public get unknownExtendedKeyUsages() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('unknown_extended_key_usages') as any;
+  }
+  public set unknownExtendedKeyUsages(value: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages[] | undefined) {
+    this._unknownExtendedKeyUsages = value;
+  }
+  public resetUnknownExtendedKeyUsages() {
+    this._unknownExtendedKeyUsages = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unknownExtendedKeyUsagesInput() {
+    return this._unknownExtendedKeyUsages
+  }
+}
 export interface PrivatecaCertificateConfigX509ConfigPolicyIds {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
@@ -816,6 +1534,9 @@ export interface PrivatecaCertificateConfigX509ConfigPolicyIds {
 
 function privatecaCertificateConfigX509ConfigPolicyIdsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigPolicyIds): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
   }
@@ -840,13 +1561,13 @@ export interface PrivatecaCertificateConfigX509Config {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#ca_options PrivatecaCertificate#ca_options}
   */
-  readonly caOptions?: PrivatecaCertificateConfigX509ConfigCaOptions[];
+  readonly caOptions?: PrivatecaCertificateConfigX509ConfigCaOptions;
   /**
   * key_usage block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#key_usage PrivatecaCertificate#key_usage}
   */
-  readonly keyUsage: PrivatecaCertificateConfigX509ConfigKeyUsage[];
+  readonly keyUsage: PrivatecaCertificateConfigX509ConfigKeyUsage;
   /**
   * policy_ids block
   * 
@@ -855,47 +1576,196 @@ export interface PrivatecaCertificateConfigX509Config {
   readonly policyIds?: PrivatecaCertificateConfigX509ConfigPolicyIds[];
 }
 
-function privatecaCertificateConfigX509ConfigToTerraform(struct?: PrivatecaCertificateConfigX509Config): any {
+function privatecaCertificateConfigX509ConfigToTerraform(struct?: PrivatecaCertificateConfigX509ConfigOutputReference | PrivatecaCertificateConfigX509Config): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     aia_ocsp_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.aiaOcspServers),
     additional_extensions: cdktf.listMapper(privatecaCertificateConfigX509ConfigAdditionalExtensionsToTerraform)(struct!.additionalExtensions),
-    ca_options: cdktf.listMapper(privatecaCertificateConfigX509ConfigCaOptionsToTerraform)(struct!.caOptions),
-    key_usage: cdktf.listMapper(privatecaCertificateConfigX509ConfigKeyUsageToTerraform)(struct!.keyUsage),
+    ca_options: privatecaCertificateConfigX509ConfigCaOptionsToTerraform(struct!.caOptions),
+    key_usage: privatecaCertificateConfigX509ConfigKeyUsageToTerraform(struct!.keyUsage),
     policy_ids: cdktf.listMapper(privatecaCertificateConfigX509ConfigPolicyIdsToTerraform)(struct!.policyIds),
   }
 }
 
+export class PrivatecaCertificateConfigX509ConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // aia_ocsp_servers - computed: false, optional: true, required: false
+  private _aiaOcspServers?: string[] | undefined; 
+  public get aiaOcspServers() {
+    return this.getListAttribute('aia_ocsp_servers');
+  }
+  public set aiaOcspServers(value: string[] | undefined) {
+    this._aiaOcspServers = value;
+  }
+  public resetAiaOcspServers() {
+    this._aiaOcspServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aiaOcspServersInput() {
+    return this._aiaOcspServers
+  }
+
+  // additional_extensions - computed: false, optional: true, required: false
+  private _additionalExtensions?: PrivatecaCertificateConfigX509ConfigAdditionalExtensions[] | undefined; 
+  public get additionalExtensions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('additional_extensions') as any;
+  }
+  public set additionalExtensions(value: PrivatecaCertificateConfigX509ConfigAdditionalExtensions[] | undefined) {
+    this._additionalExtensions = value;
+  }
+  public resetAdditionalExtensions() {
+    this._additionalExtensions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalExtensionsInput() {
+    return this._additionalExtensions
+  }
+
+  // ca_options - computed: false, optional: true, required: false
+  private _caOptions?: PrivatecaCertificateConfigX509ConfigCaOptions | undefined; 
+  private __caOptionsOutput = new PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference(this as any, "ca_options", true);
+  public get caOptions() {
+    return this.__caOptionsOutput;
+  }
+  public putCaOptions(value: PrivatecaCertificateConfigX509ConfigCaOptions | undefined) {
+    this._caOptions = value;
+  }
+  public resetCaOptions() {
+    this._caOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caOptionsInput() {
+    return this._caOptions
+  }
+
+  // key_usage - computed: false, optional: false, required: true
+  private _keyUsage?: PrivatecaCertificateConfigX509ConfigKeyUsage; 
+  private __keyUsageOutput = new PrivatecaCertificateConfigX509ConfigKeyUsageOutputReference(this as any, "key_usage", true);
+  public get keyUsage() {
+    return this.__keyUsageOutput;
+  }
+  public putKeyUsage(value: PrivatecaCertificateConfigX509ConfigKeyUsage) {
+    this._keyUsage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyUsageInput() {
+    return this._keyUsage
+  }
+
+  // policy_ids - computed: false, optional: true, required: false
+  private _policyIds?: PrivatecaCertificateConfigX509ConfigPolicyIds[] | undefined; 
+  public get policyIds() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('policy_ids') as any;
+  }
+  public set policyIds(value: PrivatecaCertificateConfigX509ConfigPolicyIds[] | undefined) {
+    this._policyIds = value;
+  }
+  public resetPolicyIds() {
+    this._policyIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyIdsInput() {
+    return this._policyIds
+  }
+}
 export interface PrivatecaCertificateConfigA {
   /**
   * public_key block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#public_key PrivatecaCertificate#public_key}
   */
-  readonly publicKey: PrivatecaCertificateConfigPublicKey[];
+  readonly publicKey: PrivatecaCertificateConfigPublicKey;
   /**
   * subject_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#subject_config PrivatecaCertificate#subject_config}
   */
-  readonly subjectConfig: PrivatecaCertificateConfigSubjectConfig[];
+  readonly subjectConfig: PrivatecaCertificateConfigSubjectConfig;
   /**
   * x509_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#x509_config PrivatecaCertificate#x509_config}
   */
-  readonly x509Config: PrivatecaCertificateConfigX509Config[];
+  readonly x509Config: PrivatecaCertificateConfigX509Config;
 }
 
-function privatecaCertificateConfigAToTerraform(struct?: PrivatecaCertificateConfigA): any {
+function privatecaCertificateConfigAToTerraform(struct?: PrivatecaCertificateConfigAOutputReference | PrivatecaCertificateConfigA): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    public_key: cdktf.listMapper(privatecaCertificateConfigPublicKeyToTerraform)(struct!.publicKey),
-    subject_config: cdktf.listMapper(privatecaCertificateConfigSubjectConfigToTerraform)(struct!.subjectConfig),
-    x509_config: cdktf.listMapper(privatecaCertificateConfigX509ConfigToTerraform)(struct!.x509Config),
+    public_key: privatecaCertificateConfigPublicKeyToTerraform(struct!.publicKey),
+    subject_config: privatecaCertificateConfigSubjectConfigToTerraform(struct!.subjectConfig),
+    x509_config: privatecaCertificateConfigX509ConfigToTerraform(struct!.x509Config),
   }
 }
 
+export class PrivatecaCertificateConfigAOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // public_key - computed: false, optional: false, required: true
+  private _publicKey?: PrivatecaCertificateConfigPublicKey; 
+  private __publicKeyOutput = new PrivatecaCertificateConfigPublicKeyOutputReference(this as any, "public_key", true);
+  public get publicKey() {
+    return this.__publicKeyOutput;
+  }
+  public putPublicKey(value: PrivatecaCertificateConfigPublicKey) {
+    this._publicKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyInput() {
+    return this._publicKey
+  }
+
+  // subject_config - computed: false, optional: false, required: true
+  private _subjectConfig?: PrivatecaCertificateConfigSubjectConfig; 
+  private __subjectConfigOutput = new PrivatecaCertificateConfigSubjectConfigOutputReference(this as any, "subject_config", true);
+  public get subjectConfig() {
+    return this.__subjectConfigOutput;
+  }
+  public putSubjectConfig(value: PrivatecaCertificateConfigSubjectConfig) {
+    this._subjectConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectConfigInput() {
+    return this._subjectConfig
+  }
+
+  // x509_config - computed: false, optional: false, required: true
+  private _x509Config?: PrivatecaCertificateConfigX509Config; 
+  private __x509ConfigOutput = new PrivatecaCertificateConfigX509ConfigOutputReference(this as any, "x509_config", true);
+  public get x509Config() {
+    return this.__x509ConfigOutput;
+  }
+  public putX509Config(value: PrivatecaCertificateConfigX509Config) {
+    this._x509Config = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get x509ConfigInput() {
+    return this._x509Config
+  }
+}
 export interface PrivatecaCertificateTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html#create PrivatecaCertificate#create}
@@ -907,14 +1777,59 @@ export interface PrivatecaCertificateTimeouts {
   readonly delete?: string;
 }
 
-function privatecaCertificateTimeoutsToTerraform(struct?: PrivatecaCertificateTimeouts): any {
+function privatecaCertificateTimeoutsToTerraform(struct?: PrivatecaCertificateTimeoutsOutputReference | PrivatecaCertificateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class PrivatecaCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate.html google_privateca_certificate}
@@ -966,11 +1881,11 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   // ==========
 
   // certificate_authority - computed: false, optional: true, required: false
-  private _certificateAuthority?: string;
+  private _certificateAuthority?: string | undefined; 
   public get certificateAuthority() {
     return this.getStringAttribute('certificate_authority');
   }
-  public set certificateAuthority(value: string ) {
+  public set certificateAuthority(value: string | undefined) {
     this._certificateAuthority = value;
   }
   public resetCertificateAuthority() {
@@ -987,11 +1902,11 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // certificate_template - computed: false, optional: true, required: false
-  private _certificateTemplate?: string;
+  private _certificateTemplate?: string | undefined; 
   public get certificateTemplate() {
     return this.getStringAttribute('certificate_template');
   }
-  public set certificateTemplate(value: string ) {
+  public set certificateTemplate(value: string | undefined) {
     this._certificateTemplate = value;
   }
   public resetCertificateTemplate() {
@@ -1013,11 +1928,12 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1029,11 +1945,11 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // lifetime - computed: false, optional: true, required: false
-  private _lifetime?: string;
+  private _lifetime?: string | undefined; 
   public get lifetime() {
     return this.getStringAttribute('lifetime');
   }
-  public set lifetime(value: string ) {
+  public set lifetime(value: string | undefined) {
     this._lifetime = value;
   }
   public resetLifetime() {
@@ -1045,7 +1961,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -1058,7 +1974,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -1081,11 +1997,11 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // pem_csr - computed: false, optional: true, required: false
-  private _pemCsr?: string;
+  private _pemCsr?: string | undefined; 
   public get pemCsr() {
     return this.getStringAttribute('pem_csr');
   }
-  public set pemCsr(value: string ) {
+  public set pemCsr(value: string | undefined) {
     this._pemCsr = value;
   }
   public resetPemCsr() {
@@ -1097,7 +2013,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // pool - computed: false, optional: false, required: true
-  private _pool: string;
+  private _pool?: string; 
   public get pool() {
     return this.getStringAttribute('pool');
   }
@@ -1110,11 +2026,11 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -1136,11 +2052,12 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // config - computed: false, optional: true, required: false
-  private _config?: PrivatecaCertificateConfigA[];
+  private _config?: PrivatecaCertificateConfigA | undefined; 
+  private __configOutput = new PrivatecaCertificateConfigAOutputReference(this as any, "config", true);
   public get config() {
-    return this.interpolationForAttribute('config') as any;
+    return this.__configOutput;
   }
-  public set config(value: PrivatecaCertificateConfigA[] ) {
+  public putConfig(value: PrivatecaCertificateConfigA | undefined) {
     this._config = value;
   }
   public resetConfig() {
@@ -1152,11 +2069,12 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PrivatecaCertificateTimeouts;
+  private _timeouts?: PrivatecaCertificateTimeouts | undefined; 
+  private __timeoutsOutput = new PrivatecaCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PrivatecaCertificateTimeouts ) {
+  public putTimeouts(value: PrivatecaCertificateTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1182,7 +2100,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
       pem_csr: cdktf.stringToTerraform(this._pemCsr),
       pool: cdktf.stringToTerraform(this._pool),
       project: cdktf.stringToTerraform(this._project),
-      config: cdktf.listMapper(privatecaCertificateConfigAToTerraform)(this._config),
+      config: privatecaCertificateConfigAToTerraform(this._config),
       timeouts: privatecaCertificateTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -74,7 +74,7 @@ You must use the 'google_kms_key_ring_import_job' resource to import the CryptoK
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html#version_template KmsCryptoKey#version_template}
   */
-  readonly versionTemplate?: KmsCryptoKeyVersionTemplate[];
+  readonly versionTemplate?: KmsCryptoKeyVersionTemplate;
 }
 export interface KmsCryptoKeyTimeouts {
   /**
@@ -91,8 +91,11 @@ export interface KmsCryptoKeyTimeouts {
   readonly update?: string;
 }
 
-function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeouts): any {
+function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeoutsOutputReference | KmsCryptoKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -100,6 +103,64 @@ function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeouts): any {
   }
 }
 
+export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface KmsCryptoKeyVersionTemplate {
   /**
   * The algorithm to use when creating a version based on this template.
@@ -116,14 +177,56 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
   readonly protectionLevel?: string;
 }
 
-function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemplate): any {
+function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemplateOutputReference | KmsCryptoKeyVersionTemplate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     algorithm: cdktf.stringToTerraform(struct!.algorithm),
     protection_level: cdktf.stringToTerraform(struct!.protectionLevel),
   }
 }
 
+export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // algorithm - computed: false, optional: false, required: true
+  private _algorithm?: string; 
+  public get algorithm() {
+    return this.getStringAttribute('algorithm');
+  }
+  public set algorithm(value: string) {
+    this._algorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get algorithmInput() {
+    return this._algorithm
+  }
+
+  // protection_level - computed: false, optional: true, required: false
+  private _protectionLevel?: string | undefined; 
+  public get protectionLevel() {
+    return this.getStringAttribute('protection_level');
+  }
+  public set protectionLevel(value: string | undefined) {
+    this._protectionLevel = value;
+  }
+  public resetProtectionLevel() {
+    this._protectionLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protectionLevelInput() {
+    return this._protectionLevel
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key.html google_kms_crypto_key}
@@ -174,11 +277,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // ==========
 
   // destroy_scheduled_duration - computed: true, optional: true, required: false
-  private _destroyScheduledDuration?: string;
+  private _destroyScheduledDuration?: string | undefined; 
   public get destroyScheduledDuration() {
     return this.getStringAttribute('destroy_scheduled_duration');
   }
-  public set destroyScheduledDuration(value: string) {
+  public set destroyScheduledDuration(value: string | undefined) {
     this._destroyScheduledDuration = value;
   }
   public resetDestroyScheduledDuration() {
@@ -195,11 +298,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // import_only - computed: true, optional: true, required: false
-  private _importOnly?: boolean | cdktf.IResolvable;
+  private _importOnly?: boolean | cdktf.IResolvable | undefined; 
   public get importOnly() {
-    return this.getBooleanAttribute('import_only');
+    return this.getBooleanAttribute('import_only') as any;
   }
-  public set importOnly(value: boolean | cdktf.IResolvable) {
+  public set importOnly(value: boolean | cdktf.IResolvable | undefined) {
     this._importOnly = value;
   }
   public resetImportOnly() {
@@ -211,7 +314,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // key_ring - computed: false, optional: false, required: true
-  private _keyRing: string;
+  private _keyRing?: string; 
   public get keyRing() {
     return this.getStringAttribute('key_ring');
   }
@@ -224,11 +327,12 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -240,7 +344,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -253,11 +357,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // purpose - computed: false, optional: true, required: false
-  private _purpose?: string;
+  private _purpose?: string | undefined; 
   public get purpose() {
     return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string ) {
+  public set purpose(value: string | undefined) {
     this._purpose = value;
   }
   public resetPurpose() {
@@ -269,11 +373,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // rotation_period - computed: false, optional: true, required: false
-  private _rotationPeriod?: string;
+  private _rotationPeriod?: string | undefined; 
   public get rotationPeriod() {
     return this.getStringAttribute('rotation_period');
   }
-  public set rotationPeriod(value: string ) {
+  public set rotationPeriod(value: string | undefined) {
     this._rotationPeriod = value;
   }
   public resetRotationPeriod() {
@@ -290,11 +394,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // skip_initial_version_creation - computed: false, optional: true, required: false
-  private _skipInitialVersionCreation?: boolean | cdktf.IResolvable;
+  private _skipInitialVersionCreation?: boolean | cdktf.IResolvable | undefined; 
   public get skipInitialVersionCreation() {
-    return this.getBooleanAttribute('skip_initial_version_creation');
+    return this.getBooleanAttribute('skip_initial_version_creation') as any;
   }
-  public set skipInitialVersionCreation(value: boolean | cdktf.IResolvable ) {
+  public set skipInitialVersionCreation(value: boolean | cdktf.IResolvable | undefined) {
     this._skipInitialVersionCreation = value;
   }
   public resetSkipInitialVersionCreation() {
@@ -306,11 +410,12 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KmsCryptoKeyTimeouts;
+  private _timeouts?: KmsCryptoKeyTimeouts | undefined; 
+  private __timeoutsOutput = new KmsCryptoKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KmsCryptoKeyTimeouts ) {
+  public putTimeouts(value: KmsCryptoKeyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -322,11 +427,12 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // version_template - computed: false, optional: true, required: false
-  private _versionTemplate?: KmsCryptoKeyVersionTemplate[];
+  private _versionTemplate?: KmsCryptoKeyVersionTemplate | undefined; 
+  private __versionTemplateOutput = new KmsCryptoKeyVersionTemplateOutputReference(this as any, "version_template", true);
   public get versionTemplate() {
-    return this.interpolationForAttribute('version_template') as any;
+    return this.__versionTemplateOutput;
   }
-  public set versionTemplate(value: KmsCryptoKeyVersionTemplate[] ) {
+  public putVersionTemplate(value: KmsCryptoKeyVersionTemplate | undefined) {
     this._versionTemplate = value;
   }
   public resetVersionTemplate() {
@@ -352,7 +458,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       rotation_period: cdktf.stringToTerraform(this._rotationPeriod),
       skip_initial_version_creation: cdktf.booleanToTerraform(this._skipInitialVersionCreation),
       timeouts: kmsCryptoKeyTimeoutsToTerraform(this._timeouts),
-      version_template: cdktf.listMapper(kmsCryptoKeyVersionTemplateToTerraform)(this._versionTemplate),
+      version_template: kmsCryptoKeyVersionTemplateToTerraform(this._versionTemplate),
     };
   }
 }

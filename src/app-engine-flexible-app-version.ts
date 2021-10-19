@@ -108,31 +108,31 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#api_config AppEngineFlexibleAppVersion#api_config}
   */
-  readonly apiConfig?: AppEngineFlexibleAppVersionApiConfig[];
+  readonly apiConfig?: AppEngineFlexibleAppVersionApiConfig;
   /**
   * automatic_scaling block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#automatic_scaling AppEngineFlexibleAppVersion#automatic_scaling}
   */
-  readonly automaticScaling?: AppEngineFlexibleAppVersionAutomaticScaling[];
+  readonly automaticScaling?: AppEngineFlexibleAppVersionAutomaticScaling;
   /**
   * deployment block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#deployment AppEngineFlexibleAppVersion#deployment}
   */
-  readonly deployment?: AppEngineFlexibleAppVersionDeployment[];
+  readonly deployment?: AppEngineFlexibleAppVersionDeployment;
   /**
   * endpoints_api_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#endpoints_api_service AppEngineFlexibleAppVersion#endpoints_api_service}
   */
-  readonly endpointsApiService?: AppEngineFlexibleAppVersionEndpointsApiService[];
+  readonly endpointsApiService?: AppEngineFlexibleAppVersionEndpointsApiService;
   /**
   * entrypoint block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#entrypoint AppEngineFlexibleAppVersion#entrypoint}
   */
-  readonly entrypoint?: AppEngineFlexibleAppVersionEntrypoint[];
+  readonly entrypoint?: AppEngineFlexibleAppVersionEntrypoint;
   /**
   * handlers block
   * 
@@ -144,31 +144,31 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#liveness_check AppEngineFlexibleAppVersion#liveness_check}
   */
-  readonly livenessCheck: AppEngineFlexibleAppVersionLivenessCheck[];
+  readonly livenessCheck: AppEngineFlexibleAppVersionLivenessCheck;
   /**
   * manual_scaling block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#manual_scaling AppEngineFlexibleAppVersion#manual_scaling}
   */
-  readonly manualScaling?: AppEngineFlexibleAppVersionManualScaling[];
+  readonly manualScaling?: AppEngineFlexibleAppVersionManualScaling;
   /**
   * network block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#network AppEngineFlexibleAppVersion#network}
   */
-  readonly network?: AppEngineFlexibleAppVersionNetwork[];
+  readonly network?: AppEngineFlexibleAppVersionNetwork;
   /**
   * readiness_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#readiness_check AppEngineFlexibleAppVersion#readiness_check}
   */
-  readonly readinessCheck: AppEngineFlexibleAppVersionReadinessCheck[];
+  readonly readinessCheck: AppEngineFlexibleAppVersionReadinessCheck;
   /**
   * resources block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#resources AppEngineFlexibleAppVersion#resources}
   */
-  readonly resources?: AppEngineFlexibleAppVersionResources[];
+  readonly resources?: AppEngineFlexibleAppVersionResources;
   /**
   * timeouts block
   * 
@@ -180,7 +180,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#vpc_access_connector AppEngineFlexibleAppVersion#vpc_access_connector}
   */
-  readonly vpcAccessConnector?: AppEngineFlexibleAppVersionVpcAccessConnector[];
+  readonly vpcAccessConnector?: AppEngineFlexibleAppVersionVpcAccessConnector;
 }
 export interface AppEngineFlexibleAppVersionApiConfig {
   /**
@@ -215,8 +215,11 @@ export interface AppEngineFlexibleAppVersionApiConfig {
   readonly url?: string;
 }
 
-function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngineFlexibleAppVersionApiConfig): any {
+function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngineFlexibleAppVersionApiConfigOutputReference | AppEngineFlexibleAppVersionApiConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     auth_fail_action: cdktf.stringToTerraform(struct!.authFailAction),
     login: cdktf.stringToTerraform(struct!.login),
@@ -226,6 +229,93 @@ function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngineFlexi
   }
 }
 
+export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // auth_fail_action - computed: false, optional: true, required: false
+  private _authFailAction?: string | undefined; 
+  public get authFailAction() {
+    return this.getStringAttribute('auth_fail_action');
+  }
+  public set authFailAction(value: string | undefined) {
+    this._authFailAction = value;
+  }
+  public resetAuthFailAction() {
+    this._authFailAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authFailActionInput() {
+    return this._authFailAction
+  }
+
+  // login - computed: false, optional: true, required: false
+  private _login?: string | undefined; 
+  public get login() {
+    return this.getStringAttribute('login');
+  }
+  public set login(value: string | undefined) {
+    this._login = value;
+  }
+  public resetLogin() {
+    this._login = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginInput() {
+    return this._login
+  }
+
+  // script - computed: false, optional: false, required: true
+  private _script?: string; 
+  public get script() {
+    return this.getStringAttribute('script');
+  }
+  public set script(value: string) {
+    this._script = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptInput() {
+    return this._script
+  }
+
+  // security_level - computed: false, optional: true, required: false
+  private _securityLevel?: string | undefined; 
+  public get securityLevel() {
+    return this.getStringAttribute('security_level');
+  }
+  public set securityLevel(value: string | undefined) {
+    this._securityLevel = value;
+  }
+  public resetSecurityLevel() {
+    this._securityLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityLevelInput() {
+    return this._securityLevel
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url?: string | undefined; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string | undefined) {
+    this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url
+  }
+}
 export interface AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization {
   /**
   * Period of time over which CPU utilization is calculated.
@@ -241,14 +331,56 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization {
   readonly targetUtilization: number;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization): any {
+function appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     aggregation_window_length: cdktf.stringToTerraform(struct!.aggregationWindowLength),
     target_utilization: cdktf.numberToTerraform(struct!.targetUtilization),
   }
 }
 
+export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // aggregation_window_length - computed: false, optional: true, required: false
+  private _aggregationWindowLength?: string | undefined; 
+  public get aggregationWindowLength() {
+    return this.getStringAttribute('aggregation_window_length');
+  }
+  public set aggregationWindowLength(value: string | undefined) {
+    this._aggregationWindowLength = value;
+  }
+  public resetAggregationWindowLength() {
+    this._aggregationWindowLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aggregationWindowLengthInput() {
+    return this._aggregationWindowLength
+  }
+
+  // target_utilization - computed: false, optional: false, required: true
+  private _targetUtilization?: number; 
+  public get targetUtilization() {
+    return this.getNumberAttribute('target_utilization');
+  }
+  public set targetUtilization(value: number) {
+    this._targetUtilization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetUtilizationInput() {
+    return this._targetUtilization
+  }
+}
 export interface AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
   /**
   * Target bytes read per second.
@@ -276,8 +408,11 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
   readonly targetWriteOpsPerSecond?: number;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization): any {
+function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     target_read_bytes_per_second: cdktf.numberToTerraform(struct!.targetReadBytesPerSecond),
     target_read_ops_per_second: cdktf.numberToTerraform(struct!.targetReadOpsPerSecond),
@@ -286,6 +421,80 @@ function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(s
   }
 }
 
+export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // target_read_bytes_per_second - computed: false, optional: true, required: false
+  private _targetReadBytesPerSecond?: number | undefined; 
+  public get targetReadBytesPerSecond() {
+    return this.getNumberAttribute('target_read_bytes_per_second');
+  }
+  public set targetReadBytesPerSecond(value: number | undefined) {
+    this._targetReadBytesPerSecond = value;
+  }
+  public resetTargetReadBytesPerSecond() {
+    this._targetReadBytesPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetReadBytesPerSecondInput() {
+    return this._targetReadBytesPerSecond
+  }
+
+  // target_read_ops_per_second - computed: false, optional: true, required: false
+  private _targetReadOpsPerSecond?: number | undefined; 
+  public get targetReadOpsPerSecond() {
+    return this.getNumberAttribute('target_read_ops_per_second');
+  }
+  public set targetReadOpsPerSecond(value: number | undefined) {
+    this._targetReadOpsPerSecond = value;
+  }
+  public resetTargetReadOpsPerSecond() {
+    this._targetReadOpsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetReadOpsPerSecondInput() {
+    return this._targetReadOpsPerSecond
+  }
+
+  // target_write_bytes_per_second - computed: false, optional: true, required: false
+  private _targetWriteBytesPerSecond?: number | undefined; 
+  public get targetWriteBytesPerSecond() {
+    return this.getNumberAttribute('target_write_bytes_per_second');
+  }
+  public set targetWriteBytesPerSecond(value: number | undefined) {
+    this._targetWriteBytesPerSecond = value;
+  }
+  public resetTargetWriteBytesPerSecond() {
+    this._targetWriteBytesPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetWriteBytesPerSecondInput() {
+    return this._targetWriteBytesPerSecond
+  }
+
+  // target_write_ops_per_second - computed: false, optional: true, required: false
+  private _targetWriteOpsPerSecond?: number | undefined; 
+  public get targetWriteOpsPerSecond() {
+    return this.getNumberAttribute('target_write_ops_per_second');
+  }
+  public set targetWriteOpsPerSecond(value: number | undefined) {
+    this._targetWriteOpsPerSecond = value;
+  }
+  public resetTargetWriteOpsPerSecond() {
+    this._targetWriteOpsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetWriteOpsPerSecondInput() {
+    return this._targetWriteOpsPerSecond
+  }
+}
 export interface AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
   /**
   * Target bytes received per second.
@@ -313,8 +522,11 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
   readonly targetSentPacketsPerSecond?: number;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization): any {
+function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     target_received_bytes_per_second: cdktf.numberToTerraform(struct!.targetReceivedBytesPerSecond),
     target_received_packets_per_second: cdktf.numberToTerraform(struct!.targetReceivedPacketsPerSecond),
@@ -323,6 +535,80 @@ function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerrafor
   }
 }
 
+export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // target_received_bytes_per_second - computed: false, optional: true, required: false
+  private _targetReceivedBytesPerSecond?: number | undefined; 
+  public get targetReceivedBytesPerSecond() {
+    return this.getNumberAttribute('target_received_bytes_per_second');
+  }
+  public set targetReceivedBytesPerSecond(value: number | undefined) {
+    this._targetReceivedBytesPerSecond = value;
+  }
+  public resetTargetReceivedBytesPerSecond() {
+    this._targetReceivedBytesPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetReceivedBytesPerSecondInput() {
+    return this._targetReceivedBytesPerSecond
+  }
+
+  // target_received_packets_per_second - computed: false, optional: true, required: false
+  private _targetReceivedPacketsPerSecond?: number | undefined; 
+  public get targetReceivedPacketsPerSecond() {
+    return this.getNumberAttribute('target_received_packets_per_second');
+  }
+  public set targetReceivedPacketsPerSecond(value: number | undefined) {
+    this._targetReceivedPacketsPerSecond = value;
+  }
+  public resetTargetReceivedPacketsPerSecond() {
+    this._targetReceivedPacketsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetReceivedPacketsPerSecondInput() {
+    return this._targetReceivedPacketsPerSecond
+  }
+
+  // target_sent_bytes_per_second - computed: false, optional: true, required: false
+  private _targetSentBytesPerSecond?: number | undefined; 
+  public get targetSentBytesPerSecond() {
+    return this.getNumberAttribute('target_sent_bytes_per_second');
+  }
+  public set targetSentBytesPerSecond(value: number | undefined) {
+    this._targetSentBytesPerSecond = value;
+  }
+  public resetTargetSentBytesPerSecond() {
+    this._targetSentBytesPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetSentBytesPerSecondInput() {
+    return this._targetSentBytesPerSecond
+  }
+
+  // target_sent_packets_per_second - computed: false, optional: true, required: false
+  private _targetSentPacketsPerSecond?: number | undefined; 
+  public get targetSentPacketsPerSecond() {
+    return this.getNumberAttribute('target_sent_packets_per_second');
+  }
+  public set targetSentPacketsPerSecond(value: number | undefined) {
+    this._targetSentPacketsPerSecond = value;
+  }
+  public resetTargetSentPacketsPerSecond() {
+    this._targetSentPacketsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetSentPacketsPerSecondInput() {
+    return this._targetSentPacketsPerSecond
+  }
+}
 export interface AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization {
   /**
   * Target number of concurrent requests.
@@ -338,14 +624,59 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization {
   readonly targetRequestCountPerSecond?: string;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization): any {
+function appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     target_concurrent_requests: cdktf.numberToTerraform(struct!.targetConcurrentRequests),
     target_request_count_per_second: cdktf.stringToTerraform(struct!.targetRequestCountPerSecond),
   }
 }
 
+export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // target_concurrent_requests - computed: false, optional: true, required: false
+  private _targetConcurrentRequests?: number | undefined; 
+  public get targetConcurrentRequests() {
+    return this.getNumberAttribute('target_concurrent_requests');
+  }
+  public set targetConcurrentRequests(value: number | undefined) {
+    this._targetConcurrentRequests = value;
+  }
+  public resetTargetConcurrentRequests() {
+    this._targetConcurrentRequests = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetConcurrentRequestsInput() {
+    return this._targetConcurrentRequests
+  }
+
+  // target_request_count_per_second - computed: false, optional: true, required: false
+  private _targetRequestCountPerSecond?: string | undefined; 
+  public get targetRequestCountPerSecond() {
+    return this.getStringAttribute('target_request_count_per_second');
+  }
+  public set targetRequestCountPerSecond(value: string | undefined) {
+    this._targetRequestCountPerSecond = value;
+  }
+  public resetTargetRequestCountPerSecond() {
+    this._targetRequestCountPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetRequestCountPerSecondInput() {
+    return this._targetRequestCountPerSecond
+  }
+}
 export interface AppEngineFlexibleAppVersionAutomaticScaling {
   /**
   * The time period that the Autoscaler should wait before it starts collecting information from a new instance.
@@ -404,29 +735,32 @@ Defaults to a runtime-specific value.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#cpu_utilization AppEngineFlexibleAppVersion#cpu_utilization}
   */
-  readonly cpuUtilization: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization[];
+  readonly cpuUtilization: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization;
   /**
   * disk_utilization block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#disk_utilization AppEngineFlexibleAppVersion#disk_utilization}
   */
-  readonly diskUtilization?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization[];
+  readonly diskUtilization?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization;
   /**
   * network_utilization block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#network_utilization AppEngineFlexibleAppVersion#network_utilization}
   */
-  readonly networkUtilization?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization[];
+  readonly networkUtilization?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization;
   /**
   * request_utilization block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#request_utilization AppEngineFlexibleAppVersion#request_utilization}
   */
-  readonly requestUtilization?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization[];
+  readonly requestUtilization?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScaling): any {
+function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingOutputReference | AppEngineFlexibleAppVersionAutomaticScaling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cool_down_period: cdktf.stringToTerraform(struct!.coolDownPeriod),
     max_concurrent_requests: cdktf.numberToTerraform(struct!.maxConcurrentRequests),
@@ -436,13 +770,216 @@ function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: AppEngi
     min_idle_instances: cdktf.numberToTerraform(struct!.minIdleInstances),
     min_pending_latency: cdktf.stringToTerraform(struct!.minPendingLatency),
     min_total_instances: cdktf.numberToTerraform(struct!.minTotalInstances),
-    cpu_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform)(struct!.cpuUtilization),
-    disk_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform)(struct!.diskUtilization),
-    network_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform)(struct!.networkUtilization),
-    request_utilization: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform)(struct!.requestUtilization),
+    cpu_utilization: appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform(struct!.cpuUtilization),
+    disk_utilization: appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(struct!.diskUtilization),
+    network_utilization: appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform(struct!.networkUtilization),
+    request_utilization: appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform(struct!.requestUtilization),
   }
 }
 
+export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cool_down_period - computed: false, optional: true, required: false
+  private _coolDownPeriod?: string | undefined; 
+  public get coolDownPeriod() {
+    return this.getStringAttribute('cool_down_period');
+  }
+  public set coolDownPeriod(value: string | undefined) {
+    this._coolDownPeriod = value;
+  }
+  public resetCoolDownPeriod() {
+    this._coolDownPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get coolDownPeriodInput() {
+    return this._coolDownPeriod
+  }
+
+  // max_concurrent_requests - computed: true, optional: true, required: false
+  private _maxConcurrentRequests?: number | undefined; 
+  public get maxConcurrentRequests() {
+    return this.getNumberAttribute('max_concurrent_requests');
+  }
+  public set maxConcurrentRequests(value: number | undefined) {
+    this._maxConcurrentRequests = value;
+  }
+  public resetMaxConcurrentRequests() {
+    this._maxConcurrentRequests = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConcurrentRequestsInput() {
+    return this._maxConcurrentRequests
+  }
+
+  // max_idle_instances - computed: false, optional: true, required: false
+  private _maxIdleInstances?: number | undefined; 
+  public get maxIdleInstances() {
+    return this.getNumberAttribute('max_idle_instances');
+  }
+  public set maxIdleInstances(value: number | undefined) {
+    this._maxIdleInstances = value;
+  }
+  public resetMaxIdleInstances() {
+    this._maxIdleInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxIdleInstancesInput() {
+    return this._maxIdleInstances
+  }
+
+  // max_pending_latency - computed: false, optional: true, required: false
+  private _maxPendingLatency?: string | undefined; 
+  public get maxPendingLatency() {
+    return this.getStringAttribute('max_pending_latency');
+  }
+  public set maxPendingLatency(value: string | undefined) {
+    this._maxPendingLatency = value;
+  }
+  public resetMaxPendingLatency() {
+    this._maxPendingLatency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxPendingLatencyInput() {
+    return this._maxPendingLatency
+  }
+
+  // max_total_instances - computed: false, optional: true, required: false
+  private _maxTotalInstances?: number | undefined; 
+  public get maxTotalInstances() {
+    return this.getNumberAttribute('max_total_instances');
+  }
+  public set maxTotalInstances(value: number | undefined) {
+    this._maxTotalInstances = value;
+  }
+  public resetMaxTotalInstances() {
+    this._maxTotalInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxTotalInstancesInput() {
+    return this._maxTotalInstances
+  }
+
+  // min_idle_instances - computed: false, optional: true, required: false
+  private _minIdleInstances?: number | undefined; 
+  public get minIdleInstances() {
+    return this.getNumberAttribute('min_idle_instances');
+  }
+  public set minIdleInstances(value: number | undefined) {
+    this._minIdleInstances = value;
+  }
+  public resetMinIdleInstances() {
+    this._minIdleInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minIdleInstancesInput() {
+    return this._minIdleInstances
+  }
+
+  // min_pending_latency - computed: false, optional: true, required: false
+  private _minPendingLatency?: string | undefined; 
+  public get minPendingLatency() {
+    return this.getStringAttribute('min_pending_latency');
+  }
+  public set minPendingLatency(value: string | undefined) {
+    this._minPendingLatency = value;
+  }
+  public resetMinPendingLatency() {
+    this._minPendingLatency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minPendingLatencyInput() {
+    return this._minPendingLatency
+  }
+
+  // min_total_instances - computed: false, optional: true, required: false
+  private _minTotalInstances?: number | undefined; 
+  public get minTotalInstances() {
+    return this.getNumberAttribute('min_total_instances');
+  }
+  public set minTotalInstances(value: number | undefined) {
+    this._minTotalInstances = value;
+  }
+  public resetMinTotalInstances() {
+    this._minTotalInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minTotalInstancesInput() {
+    return this._minTotalInstances
+  }
+
+  // cpu_utilization - computed: false, optional: false, required: true
+  private _cpuUtilization?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization; 
+  private __cpuUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
+  public get cpuUtilization() {
+    return this.__cpuUtilizationOutput;
+  }
+  public putCpuUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization) {
+    this._cpuUtilization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuUtilizationInput() {
+    return this._cpuUtilization
+  }
+
+  // disk_utilization - computed: false, optional: true, required: false
+  private _diskUtilization?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined; 
+  private __diskUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference(this as any, "disk_utilization", true);
+  public get diskUtilization() {
+    return this.__diskUtilizationOutput;
+  }
+  public putDiskUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined) {
+    this._diskUtilization = value;
+  }
+  public resetDiskUtilization() {
+    this._diskUtilization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskUtilizationInput() {
+    return this._diskUtilization
+  }
+
+  // network_utilization - computed: false, optional: true, required: false
+  private _networkUtilization?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined; 
+  private __networkUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference(this as any, "network_utilization", true);
+  public get networkUtilization() {
+    return this.__networkUtilizationOutput;
+  }
+  public putNetworkUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined) {
+    this._networkUtilization = value;
+  }
+  public resetNetworkUtilization() {
+    this._networkUtilization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkUtilizationInput() {
+    return this._networkUtilization
+  }
+
+  // request_utilization - computed: false, optional: true, required: false
+  private _requestUtilization?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined; 
+  private __requestUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference(this as any, "request_utilization", true);
+  public get requestUtilization() {
+    return this.__requestUtilizationOutput;
+  }
+  public putRequestUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined) {
+    this._requestUtilization = value;
+  }
+  public resetRequestUtilization() {
+    this._requestUtilization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestUtilizationInput() {
+    return this._requestUtilization
+  }
+}
 export interface AppEngineFlexibleAppVersionDeploymentCloudBuildOptions {
   /**
   * Path to the yaml file used in deployment, used to determine runtime configuration details.
@@ -460,14 +997,56 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly cloudBuildTimeout?: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions): any {
+function appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference | AppEngineFlexibleAppVersionDeploymentCloudBuildOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     app_yaml_path: cdktf.stringToTerraform(struct!.appYamlPath),
     cloud_build_timeout: cdktf.stringToTerraform(struct!.cloudBuildTimeout),
   }
 }
 
+export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // app_yaml_path - computed: false, optional: false, required: true
+  private _appYamlPath?: string; 
+  public get appYamlPath() {
+    return this.getStringAttribute('app_yaml_path');
+  }
+  public set appYamlPath(value: string) {
+    this._appYamlPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appYamlPathInput() {
+    return this._appYamlPath
+  }
+
+  // cloud_build_timeout - computed: false, optional: true, required: false
+  private _cloudBuildTimeout?: string | undefined; 
+  public get cloudBuildTimeout() {
+    return this.getStringAttribute('cloud_build_timeout');
+  }
+  public set cloudBuildTimeout(value: string | undefined) {
+    this._cloudBuildTimeout = value;
+  }
+  public resetCloudBuildTimeout() {
+    this._cloudBuildTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudBuildTimeoutInput() {
+    return this._cloudBuildTimeout
+  }
+}
 export interface AppEngineFlexibleAppVersionDeploymentContainer {
   /**
   * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
@@ -478,13 +1057,39 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
   readonly image: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentContainer): any {
+function appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentContainerOutputReference | AppEngineFlexibleAppVersionDeploymentContainer): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     image: cdktf.stringToTerraform(struct!.image),
   }
 }
 
+export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // image - computed: false, optional: false, required: true
+  private _image?: string; 
+  public get image() {
+    return this.getStringAttribute('image');
+  }
+  public set image(value: string) {
+    this._image = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageInput() {
+    return this._image
+  }
+}
 export interface AppEngineFlexibleAppVersionDeploymentFiles {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#name AppEngineFlexibleAppVersion#name}
@@ -506,6 +1111,9 @@ export interface AppEngineFlexibleAppVersionDeploymentFiles {
 
 function appEngineFlexibleAppVersionDeploymentFilesToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentFiles): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     sha1_sum: cdktf.stringToTerraform(struct!.sha1Sum),
@@ -528,27 +1136,69 @@ export interface AppEngineFlexibleAppVersionDeploymentZip {
   readonly sourceUrl: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentZipToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentZip): any {
+function appEngineFlexibleAppVersionDeploymentZipToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentZipOutputReference | AppEngineFlexibleAppVersionDeploymentZip): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     files_count: cdktf.numberToTerraform(struct!.filesCount),
     source_url: cdktf.stringToTerraform(struct!.sourceUrl),
   }
 }
 
+export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // files_count - computed: false, optional: true, required: false
+  private _filesCount?: number | undefined; 
+  public get filesCount() {
+    return this.getNumberAttribute('files_count');
+  }
+  public set filesCount(value: number | undefined) {
+    this._filesCount = value;
+  }
+  public resetFilesCount() {
+    this._filesCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filesCountInput() {
+    return this._filesCount
+  }
+
+  // source_url - computed: false, optional: false, required: true
+  private _sourceUrl?: string; 
+  public get sourceUrl() {
+    return this.getStringAttribute('source_url');
+  }
+  public set sourceUrl(value: string) {
+    this._sourceUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUrlInput() {
+    return this._sourceUrl
+  }
+}
 export interface AppEngineFlexibleAppVersionDeployment {
   /**
   * cloud_build_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#cloud_build_options AppEngineFlexibleAppVersion#cloud_build_options}
   */
-  readonly cloudBuildOptions?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions[];
+  readonly cloudBuildOptions?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions;
   /**
   * container block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#container AppEngineFlexibleAppVersion#container}
   */
-  readonly container?: AppEngineFlexibleAppVersionDeploymentContainer[];
+  readonly container?: AppEngineFlexibleAppVersionDeploymentContainer;
   /**
   * files block
   * 
@@ -560,19 +1210,100 @@ export interface AppEngineFlexibleAppVersionDeployment {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#zip AppEngineFlexibleAppVersion#zip}
   */
-  readonly zip?: AppEngineFlexibleAppVersionDeploymentZip[];
+  readonly zip?: AppEngineFlexibleAppVersionDeploymentZip;
 }
 
-function appEngineFlexibleAppVersionDeploymentToTerraform(struct?: AppEngineFlexibleAppVersionDeployment): any {
+function appEngineFlexibleAppVersionDeploymentToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentOutputReference | AppEngineFlexibleAppVersionDeployment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    cloud_build_options: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform)(struct!.cloudBuildOptions),
-    container: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentContainerToTerraform)(struct!.container),
+    cloud_build_options: appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform(struct!.cloudBuildOptions),
+    container: appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct!.container),
     files: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentFilesToTerraform)(struct!.files),
-    zip: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentZipToTerraform)(struct!.zip),
+    zip: appEngineFlexibleAppVersionDeploymentZipToTerraform(struct!.zip),
   }
 }
 
+export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cloud_build_options - computed: false, optional: true, required: false
+  private _cloudBuildOptions?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined; 
+  private __cloudBuildOptionsOutput = new AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference(this as any, "cloud_build_options", true);
+  public get cloudBuildOptions() {
+    return this.__cloudBuildOptionsOutput;
+  }
+  public putCloudBuildOptions(value: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined) {
+    this._cloudBuildOptions = value;
+  }
+  public resetCloudBuildOptions() {
+    this._cloudBuildOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudBuildOptionsInput() {
+    return this._cloudBuildOptions
+  }
+
+  // container - computed: false, optional: true, required: false
+  private _container?: AppEngineFlexibleAppVersionDeploymentContainer | undefined; 
+  private __containerOutput = new AppEngineFlexibleAppVersionDeploymentContainerOutputReference(this as any, "container", true);
+  public get container() {
+    return this.__containerOutput;
+  }
+  public putContainer(value: AppEngineFlexibleAppVersionDeploymentContainer | undefined) {
+    this._container = value;
+  }
+  public resetContainer() {
+    this._container = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerInput() {
+    return this._container
+  }
+
+  // files - computed: false, optional: true, required: false
+  private _files?: AppEngineFlexibleAppVersionDeploymentFiles[] | undefined; 
+  public get files() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('files') as any;
+  }
+  public set files(value: AppEngineFlexibleAppVersionDeploymentFiles[] | undefined) {
+    this._files = value;
+  }
+  public resetFiles() {
+    this._files = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filesInput() {
+    return this._files
+  }
+
+  // zip - computed: false, optional: true, required: false
+  private _zip?: AppEngineFlexibleAppVersionDeploymentZip | undefined; 
+  private __zipOutput = new AppEngineFlexibleAppVersionDeploymentZipOutputReference(this as any, "zip", true);
+  public get zip() {
+    return this.__zipOutput;
+  }
+  public putZip(value: AppEngineFlexibleAppVersionDeploymentZip | undefined) {
+    this._zip = value;
+  }
+  public resetZip() {
+    this._zip = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zipInput() {
+    return this._zip
+  }
+}
 export interface AppEngineFlexibleAppVersionEndpointsApiService {
   /**
   * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
@@ -608,8 +1339,11 @@ For example "myapi.endpoints.myproject.cloud.goog"
   readonly rolloutStrategy?: string;
 }
 
-function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct?: AppEngineFlexibleAppVersionEndpointsApiService): any {
+function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct?: AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference | AppEngineFlexibleAppVersionEndpointsApiService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     config_id: cdktf.stringToTerraform(struct!.configId),
     disable_trace_sampling: cdktf.booleanToTerraform(struct!.disableTraceSampling),
@@ -618,6 +1352,77 @@ function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct?: AppE
   }
 }
 
+export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // config_id - computed: false, optional: true, required: false
+  private _configId?: string | undefined; 
+  public get configId() {
+    return this.getStringAttribute('config_id');
+  }
+  public set configId(value: string | undefined) {
+    this._configId = value;
+  }
+  public resetConfigId() {
+    this._configId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configIdInput() {
+    return this._configId
+  }
+
+  // disable_trace_sampling - computed: false, optional: true, required: false
+  private _disableTraceSampling?: boolean | cdktf.IResolvable | undefined; 
+  public get disableTraceSampling() {
+    return this.getBooleanAttribute('disable_trace_sampling') as any;
+  }
+  public set disableTraceSampling(value: boolean | cdktf.IResolvable | undefined) {
+    this._disableTraceSampling = value;
+  }
+  public resetDisableTraceSampling() {
+    this._disableTraceSampling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableTraceSamplingInput() {
+    return this._disableTraceSampling
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // rollout_strategy - computed: false, optional: true, required: false
+  private _rolloutStrategy?: string | undefined; 
+  public get rolloutStrategy() {
+    return this.getStringAttribute('rollout_strategy');
+  }
+  public set rolloutStrategy(value: string | undefined) {
+    this._rolloutStrategy = value;
+  }
+  public resetRolloutStrategy() {
+    this._rolloutStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rolloutStrategyInput() {
+    return this._rolloutStrategy
+  }
+}
 export interface AppEngineFlexibleAppVersionEntrypoint {
   /**
   * The format should be a shell command that can be fed to bash -c.
@@ -627,13 +1432,39 @@ export interface AppEngineFlexibleAppVersionEntrypoint {
   readonly shell: string;
 }
 
-function appEngineFlexibleAppVersionEntrypointToTerraform(struct?: AppEngineFlexibleAppVersionEntrypoint): any {
+function appEngineFlexibleAppVersionEntrypointToTerraform(struct?: AppEngineFlexibleAppVersionEntrypointOutputReference | AppEngineFlexibleAppVersionEntrypoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     shell: cdktf.stringToTerraform(struct!.shell),
   }
 }
 
+export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // shell - computed: false, optional: false, required: true
+  private _shell?: string; 
+  public get shell() {
+    return this.getStringAttribute('shell');
+  }
+  public set shell(value: string) {
+    this._shell = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shellInput() {
+    return this._shell
+  }
+}
 export interface AppEngineFlexibleAppVersionHandlersScript {
   /**
   * Path to the script from the application root directory.
@@ -643,13 +1474,39 @@ export interface AppEngineFlexibleAppVersionHandlersScript {
   readonly scriptPath: string;
 }
 
-function appEngineFlexibleAppVersionHandlersScriptToTerraform(struct?: AppEngineFlexibleAppVersionHandlersScript): any {
+function appEngineFlexibleAppVersionHandlersScriptToTerraform(struct?: AppEngineFlexibleAppVersionHandlersScriptOutputReference | AppEngineFlexibleAppVersionHandlersScript): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     script_path: cdktf.stringToTerraform(struct!.scriptPath),
   }
 }
 
+export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // script_path - computed: false, optional: false, required: true
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath
+  }
+}
 export interface AppEngineFlexibleAppVersionHandlersStaticFiles {
   /**
   * Whether files should also be uploaded as code data. By default, files declared in static file handlers are
@@ -702,8 +1559,11 @@ The path can refer to text matched in groupings in the URL pattern.
   readonly uploadPathRegex?: string;
 }
 
-function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct?: AppEngineFlexibleAppVersionHandlersStaticFiles): any {
+function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct?: AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference | AppEngineFlexibleAppVersionHandlersStaticFiles): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     application_readable: cdktf.booleanToTerraform(struct!.applicationReadable),
     expiration: cdktf.stringToTerraform(struct!.expiration),
@@ -715,6 +1575,129 @@ function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct?: AppE
   }
 }
 
+export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // application_readable - computed: false, optional: true, required: false
+  private _applicationReadable?: boolean | cdktf.IResolvable | undefined; 
+  public get applicationReadable() {
+    return this.getBooleanAttribute('application_readable') as any;
+  }
+  public set applicationReadable(value: boolean | cdktf.IResolvable | undefined) {
+    this._applicationReadable = value;
+  }
+  public resetApplicationReadable() {
+    this._applicationReadable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationReadableInput() {
+    return this._applicationReadable
+  }
+
+  // expiration - computed: false, optional: true, required: false
+  private _expiration?: string | undefined; 
+  public get expiration() {
+    return this.getStringAttribute('expiration');
+  }
+  public set expiration(value: string | undefined) {
+    this._expiration = value;
+  }
+  public resetExpiration() {
+    this._expiration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationInput() {
+    return this._expiration
+  }
+
+  // http_headers - computed: false, optional: true, required: false
+  private _httpHeaders?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get httpHeaders() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('http_headers') as any;
+  }
+  public set httpHeaders(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._httpHeaders = value;
+  }
+  public resetHttpHeaders() {
+    this._httpHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpHeadersInput() {
+    return this._httpHeaders
+  }
+
+  // mime_type - computed: false, optional: true, required: false
+  private _mimeType?: string | undefined; 
+  public get mimeType() {
+    return this.getStringAttribute('mime_type');
+  }
+  public set mimeType(value: string | undefined) {
+    this._mimeType = value;
+  }
+  public resetMimeType() {
+    this._mimeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mimeTypeInput() {
+    return this._mimeType
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string | undefined; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string | undefined) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // require_matching_file - computed: false, optional: true, required: false
+  private _requireMatchingFile?: boolean | cdktf.IResolvable | undefined; 
+  public get requireMatchingFile() {
+    return this.getBooleanAttribute('require_matching_file') as any;
+  }
+  public set requireMatchingFile(value: boolean | cdktf.IResolvable | undefined) {
+    this._requireMatchingFile = value;
+  }
+  public resetRequireMatchingFile() {
+    this._requireMatchingFile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireMatchingFileInput() {
+    return this._requireMatchingFile
+  }
+
+  // upload_path_regex - computed: false, optional: true, required: false
+  private _uploadPathRegex?: string | undefined; 
+  public get uploadPathRegex() {
+    return this.getStringAttribute('upload_path_regex');
+  }
+  public set uploadPathRegex(value: string | undefined) {
+    this._uploadPathRegex = value;
+  }
+  public resetUploadPathRegex() {
+    this._uploadPathRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uploadPathRegexInput() {
+    return this._uploadPathRegex
+  }
+}
 export interface AppEngineFlexibleAppVersionHandlers {
   /**
   * Actions to take when the user is not logged in. Possible values: ["AUTH_FAIL_ACTION_REDIRECT", "AUTH_FAIL_ACTION_UNAUTHORIZED"]
@@ -752,25 +1735,28 @@ All URLs that begin with this prefix are handled by this handler, using the port
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#script AppEngineFlexibleAppVersion#script}
   */
-  readonly script?: AppEngineFlexibleAppVersionHandlersScript[];
+  readonly script?: AppEngineFlexibleAppVersionHandlersScript;
   /**
   * static_files block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#static_files AppEngineFlexibleAppVersion#static_files}
   */
-  readonly staticFiles?: AppEngineFlexibleAppVersionHandlersStaticFiles[];
+  readonly staticFiles?: AppEngineFlexibleAppVersionHandlersStaticFiles;
 }
 
 function appEngineFlexibleAppVersionHandlersToTerraform(struct?: AppEngineFlexibleAppVersionHandlers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     auth_fail_action: cdktf.stringToTerraform(struct!.authFailAction),
     login: cdktf.stringToTerraform(struct!.login),
     redirect_http_response_code: cdktf.stringToTerraform(struct!.redirectHttpResponseCode),
     security_level: cdktf.stringToTerraform(struct!.securityLevel),
     url_regex: cdktf.stringToTerraform(struct!.urlRegex),
-    script: cdktf.listMapper(appEngineFlexibleAppVersionHandlersScriptToTerraform)(struct!.script),
-    static_files: cdktf.listMapper(appEngineFlexibleAppVersionHandlersStaticFilesToTerraform)(struct!.staticFiles),
+    script: appEngineFlexibleAppVersionHandlersScriptToTerraform(struct!.script),
+    static_files: appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct!.staticFiles),
   }
 }
 
@@ -819,8 +1805,11 @@ export interface AppEngineFlexibleAppVersionLivenessCheck {
   readonly timeout?: string;
 }
 
-function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: AppEngineFlexibleAppVersionLivenessCheck): any {
+function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: AppEngineFlexibleAppVersionLivenessCheckOutputReference | AppEngineFlexibleAppVersionLivenessCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     check_interval: cdktf.stringToTerraform(struct!.checkInterval),
     failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
@@ -832,6 +1821,125 @@ function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: AppEngineF
   }
 }
 
+export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // check_interval - computed: false, optional: true, required: false
+  private _checkInterval?: string | undefined; 
+  public get checkInterval() {
+    return this.getStringAttribute('check_interval');
+  }
+  public set checkInterval(value: string | undefined) {
+    this._checkInterval = value;
+  }
+  public resetCheckInterval() {
+    this._checkInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get checkIntervalInput() {
+    return this._checkInterval
+  }
+
+  // failure_threshold - computed: false, optional: true, required: false
+  private _failureThreshold?: number | undefined; 
+  public get failureThreshold() {
+    return this.getNumberAttribute('failure_threshold');
+  }
+  public set failureThreshold(value: number | undefined) {
+    this._failureThreshold = value;
+  }
+  public resetFailureThreshold() {
+    this._failureThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failureThresholdInput() {
+    return this._failureThreshold
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string | undefined; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string | undefined) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
+  }
+
+  // initial_delay - computed: false, optional: true, required: false
+  private _initialDelay?: string | undefined; 
+  public get initialDelay() {
+    return this.getStringAttribute('initial_delay');
+  }
+  public set initialDelay(value: string | undefined) {
+    this._initialDelay = value;
+  }
+  public resetInitialDelay() {
+    this._initialDelay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initialDelayInput() {
+    return this._initialDelay
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // success_threshold - computed: false, optional: true, required: false
+  private _successThreshold?: number | undefined; 
+  public get successThreshold() {
+    return this.getNumberAttribute('success_threshold');
+  }
+  public set successThreshold(value: number | undefined) {
+    this._successThreshold = value;
+  }
+  public resetSuccessThreshold() {
+    this._successThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successThresholdInput() {
+    return this._successThreshold
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string | undefined; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string | undefined) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
+  }
+}
 export interface AppEngineFlexibleAppVersionManualScaling {
   /**
   * Number of instances to assign to the service at the start.
@@ -844,13 +1952,39 @@ Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manua
   readonly instances: number;
 }
 
-function appEngineFlexibleAppVersionManualScalingToTerraform(struct?: AppEngineFlexibleAppVersionManualScaling): any {
+function appEngineFlexibleAppVersionManualScalingToTerraform(struct?: AppEngineFlexibleAppVersionManualScalingOutputReference | AppEngineFlexibleAppVersionManualScaling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     instances: cdktf.numberToTerraform(struct!.instances),
   }
 }
 
+export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // instances - computed: false, optional: false, required: true
+  private _instances?: number; 
+  public get instances() {
+    return this.getNumberAttribute('instances');
+  }
+  public set instances(value: number) {
+    this._instances = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instancesInput() {
+    return this._instances
+  }
+}
 export interface AppEngineFlexibleAppVersionNetwork {
   /**
   * List of ports, or port pairs, to forward from the virtual machine to the application container.
@@ -889,8 +2023,11 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
   readonly subnetwork?: string;
 }
 
-function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngineFlexibleAppVersionNetwork): any {
+function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngineFlexibleAppVersionNetworkOutputReference | AppEngineFlexibleAppVersionNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     forwarded_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.forwardedPorts),
     instance_tag: cdktf.stringToTerraform(struct!.instanceTag),
@@ -900,6 +2037,93 @@ function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngineFlexibl
   }
 }
 
+export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // forwarded_ports - computed: false, optional: true, required: false
+  private _forwardedPorts?: string[] | undefined; 
+  public get forwardedPorts() {
+    return this.getListAttribute('forwarded_ports');
+  }
+  public set forwardedPorts(value: string[] | undefined) {
+    this._forwardedPorts = value;
+  }
+  public resetForwardedPorts() {
+    this._forwardedPorts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardedPortsInput() {
+    return this._forwardedPorts
+  }
+
+  // instance_tag - computed: false, optional: true, required: false
+  private _instanceTag?: string | undefined; 
+  public get instanceTag() {
+    return this.getStringAttribute('instance_tag');
+  }
+  public set instanceTag(value: string | undefined) {
+    this._instanceTag = value;
+  }
+  public resetInstanceTag() {
+    this._instanceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceTagInput() {
+    return this._instanceTag
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // session_affinity - computed: false, optional: true, required: false
+  private _sessionAffinity?: boolean | cdktf.IResolvable | undefined; 
+  public get sessionAffinity() {
+    return this.getBooleanAttribute('session_affinity') as any;
+  }
+  public set sessionAffinity(value: boolean | cdktf.IResolvable | undefined) {
+    this._sessionAffinity = value;
+  }
+  public resetSessionAffinity() {
+    this._sessionAffinity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionAffinityInput() {
+    return this._sessionAffinity
+  }
+
+  // subnetwork - computed: false, optional: true, required: false
+  private _subnetwork?: string | undefined; 
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+  public set subnetwork(value: string | undefined) {
+    this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork
+  }
+}
 export interface AppEngineFlexibleAppVersionReadinessCheck {
   /**
   * A maximum time limit on application initialization, measured from moment the application successfully
@@ -946,8 +2170,11 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
   readonly timeout?: string;
 }
 
-function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: AppEngineFlexibleAppVersionReadinessCheck): any {
+function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: AppEngineFlexibleAppVersionReadinessCheckOutputReference | AppEngineFlexibleAppVersionReadinessCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     app_start_timeout: cdktf.stringToTerraform(struct!.appStartTimeout),
     check_interval: cdktf.stringToTerraform(struct!.checkInterval),
@@ -959,6 +2186,125 @@ function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: AppEngine
   }
 }
 
+export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // app_start_timeout - computed: false, optional: true, required: false
+  private _appStartTimeout?: string | undefined; 
+  public get appStartTimeout() {
+    return this.getStringAttribute('app_start_timeout');
+  }
+  public set appStartTimeout(value: string | undefined) {
+    this._appStartTimeout = value;
+  }
+  public resetAppStartTimeout() {
+    this._appStartTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appStartTimeoutInput() {
+    return this._appStartTimeout
+  }
+
+  // check_interval - computed: false, optional: true, required: false
+  private _checkInterval?: string | undefined; 
+  public get checkInterval() {
+    return this.getStringAttribute('check_interval');
+  }
+  public set checkInterval(value: string | undefined) {
+    this._checkInterval = value;
+  }
+  public resetCheckInterval() {
+    this._checkInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get checkIntervalInput() {
+    return this._checkInterval
+  }
+
+  // failure_threshold - computed: false, optional: true, required: false
+  private _failureThreshold?: number | undefined; 
+  public get failureThreshold() {
+    return this.getNumberAttribute('failure_threshold');
+  }
+  public set failureThreshold(value: number | undefined) {
+    this._failureThreshold = value;
+  }
+  public resetFailureThreshold() {
+    this._failureThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failureThresholdInput() {
+    return this._failureThreshold
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string | undefined; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string | undefined) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // success_threshold - computed: false, optional: true, required: false
+  private _successThreshold?: number | undefined; 
+  public get successThreshold() {
+    return this.getNumberAttribute('success_threshold');
+  }
+  public set successThreshold(value: number | undefined) {
+    this._successThreshold = value;
+  }
+  public resetSuccessThreshold() {
+    this._successThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successThresholdInput() {
+    return this._successThreshold
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string | undefined; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string | undefined) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
+  }
+}
 export interface AppEngineFlexibleAppVersionResourcesVolumes {
   /**
   * Unique name for the volume.
@@ -982,6 +2328,9 @@ export interface AppEngineFlexibleAppVersionResourcesVolumes {
 
 function appEngineFlexibleAppVersionResourcesVolumesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesVolumes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     size_gb: cdktf.numberToTerraform(struct!.sizeGb),
@@ -1016,8 +2365,11 @@ export interface AppEngineFlexibleAppVersionResources {
   readonly volumes?: AppEngineFlexibleAppVersionResourcesVolumes[];
 }
 
-function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngineFlexibleAppVersionResources): any {
+function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesOutputReference | AppEngineFlexibleAppVersionResources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cpu: cdktf.numberToTerraform(struct!.cpu),
     disk_gb: cdktf.numberToTerraform(struct!.diskGb),
@@ -1026,6 +2378,81 @@ function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngineFlexi
   }
 }
 
+export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cpu - computed: false, optional: true, required: false
+  private _cpu?: number | undefined; 
+  public get cpu() {
+    return this.getNumberAttribute('cpu');
+  }
+  public set cpu(value: number | undefined) {
+    this._cpu = value;
+  }
+  public resetCpu() {
+    this._cpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu
+  }
+
+  // disk_gb - computed: false, optional: true, required: false
+  private _diskGb?: number | undefined; 
+  public get diskGb() {
+    return this.getNumberAttribute('disk_gb');
+  }
+  public set diskGb(value: number | undefined) {
+    this._diskGb = value;
+  }
+  public resetDiskGb() {
+    this._diskGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskGbInput() {
+    return this._diskGb
+  }
+
+  // memory_gb - computed: false, optional: true, required: false
+  private _memoryGb?: number | undefined; 
+  public get memoryGb() {
+    return this.getNumberAttribute('memory_gb');
+  }
+  public set memoryGb(value: number | undefined) {
+    this._memoryGb = value;
+  }
+  public resetMemoryGb() {
+    this._memoryGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryGbInput() {
+    return this._memoryGb
+  }
+
+  // volumes - computed: false, optional: true, required: false
+  private _volumes?: AppEngineFlexibleAppVersionResourcesVolumes[] | undefined; 
+  public get volumes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('volumes') as any;
+  }
+  public set volumes(value: AppEngineFlexibleAppVersionResourcesVolumes[] | undefined) {
+    this._volumes = value;
+  }
+  public resetVolumes() {
+    this._volumes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumesInput() {
+    return this._volumes
+  }
+}
 export interface AppEngineFlexibleAppVersionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html#create AppEngineFlexibleAppVersion#create}
@@ -1041,8 +2468,11 @@ export interface AppEngineFlexibleAppVersionTimeouts {
   readonly update?: string;
 }
 
-function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngineFlexibleAppVersionTimeouts): any {
+function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngineFlexibleAppVersionTimeoutsOutputReference | AppEngineFlexibleAppVersionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -1050,6 +2480,64 @@ function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngineFlexib
   }
 }
 
+export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface AppEngineFlexibleAppVersionVpcAccessConnector {
   /**
   * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
@@ -1059,13 +2547,39 @@ export interface AppEngineFlexibleAppVersionVpcAccessConnector {
   readonly name: string;
 }
 
-function appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(struct?: AppEngineFlexibleAppVersionVpcAccessConnector): any {
+function appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(struct?: AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference | AppEngineFlexibleAppVersionVpcAccessConnector): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
+export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version.html google_app_engine_flexible_app_version}
@@ -1135,11 +2649,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   // ==========
 
   // beta_settings - computed: false, optional: true, required: false
-  private _betaSettings?: { [key: string]: string } | cdktf.IResolvable;
+  private _betaSettings?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get betaSettings() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('beta_settings') as any;
   }
-  public set betaSettings(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set betaSettings(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._betaSettings = value;
   }
   public resetBetaSettings() {
@@ -1151,11 +2666,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // default_expiration - computed: false, optional: true, required: false
-  private _defaultExpiration?: string;
+  private _defaultExpiration?: string | undefined; 
   public get defaultExpiration() {
     return this.getStringAttribute('default_expiration');
   }
-  public set defaultExpiration(value: string ) {
+  public set defaultExpiration(value: string | undefined) {
     this._defaultExpiration = value;
   }
   public resetDefaultExpiration() {
@@ -1167,11 +2682,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // delete_service_on_destroy - computed: false, optional: true, required: false
-  private _deleteServiceOnDestroy?: boolean | cdktf.IResolvable;
+  private _deleteServiceOnDestroy?: boolean | cdktf.IResolvable | undefined; 
   public get deleteServiceOnDestroy() {
-    return this.getBooleanAttribute('delete_service_on_destroy');
+    return this.getBooleanAttribute('delete_service_on_destroy') as any;
   }
-  public set deleteServiceOnDestroy(value: boolean | cdktf.IResolvable ) {
+  public set deleteServiceOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
     this._deleteServiceOnDestroy = value;
   }
   public resetDeleteServiceOnDestroy() {
@@ -1183,11 +2698,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // env_variables - computed: false, optional: true, required: false
-  private _envVariables?: { [key: string]: string } | cdktf.IResolvable;
+  private _envVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get envVariables() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('env_variables') as any;
   }
-  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._envVariables = value;
   }
   public resetEnvVariables() {
@@ -1204,11 +2720,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // inbound_services - computed: false, optional: true, required: false
-  private _inboundServices?: string[];
+  private _inboundServices?: string[] | undefined; 
   public get inboundServices() {
     return this.getListAttribute('inbound_services');
   }
-  public set inboundServices(value: string[] ) {
+  public set inboundServices(value: string[] | undefined) {
     this._inboundServices = value;
   }
   public resetInboundServices() {
@@ -1220,11 +2736,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // instance_class - computed: false, optional: true, required: false
-  private _instanceClass?: string;
+  private _instanceClass?: string | undefined; 
   public get instanceClass() {
     return this.getStringAttribute('instance_class');
   }
-  public set instanceClass(value: string ) {
+  public set instanceClass(value: string | undefined) {
     this._instanceClass = value;
   }
   public resetInstanceClass() {
@@ -1241,11 +2757,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // nobuild_files_regex - computed: false, optional: true, required: false
-  private _nobuildFilesRegex?: string;
+  private _nobuildFilesRegex?: string | undefined; 
   public get nobuildFilesRegex() {
     return this.getStringAttribute('nobuild_files_regex');
   }
-  public set nobuildFilesRegex(value: string ) {
+  public set nobuildFilesRegex(value: string | undefined) {
     this._nobuildFilesRegex = value;
   }
   public resetNobuildFilesRegex() {
@@ -1257,11 +2773,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // noop_on_destroy - computed: false, optional: true, required: false
-  private _noopOnDestroy?: boolean | cdktf.IResolvable;
+  private _noopOnDestroy?: boolean | cdktf.IResolvable | undefined; 
   public get noopOnDestroy() {
-    return this.getBooleanAttribute('noop_on_destroy');
+    return this.getBooleanAttribute('noop_on_destroy') as any;
   }
-  public set noopOnDestroy(value: boolean | cdktf.IResolvable ) {
+  public set noopOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
     this._noopOnDestroy = value;
   }
   public resetNoopOnDestroy() {
@@ -1273,11 +2789,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -1289,7 +2805,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // runtime - computed: false, optional: false, required: true
-  private _runtime: string;
+  private _runtime?: string; 
   public get runtime() {
     return this.getStringAttribute('runtime');
   }
@@ -1302,11 +2818,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // runtime_api_version - computed: true, optional: true, required: false
-  private _runtimeApiVersion?: string;
+  private _runtimeApiVersion?: string | undefined; 
   public get runtimeApiVersion() {
     return this.getStringAttribute('runtime_api_version');
   }
-  public set runtimeApiVersion(value: string) {
+  public set runtimeApiVersion(value: string | undefined) {
     this._runtimeApiVersion = value;
   }
   public resetRuntimeApiVersion() {
@@ -1318,11 +2834,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // runtime_channel - computed: false, optional: true, required: false
-  private _runtimeChannel?: string;
+  private _runtimeChannel?: string | undefined; 
   public get runtimeChannel() {
     return this.getStringAttribute('runtime_channel');
   }
-  public set runtimeChannel(value: string ) {
+  public set runtimeChannel(value: string | undefined) {
     this._runtimeChannel = value;
   }
   public resetRuntimeChannel() {
@@ -1334,11 +2850,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // runtime_main_executable_path - computed: false, optional: true, required: false
-  private _runtimeMainExecutablePath?: string;
+  private _runtimeMainExecutablePath?: string | undefined; 
   public get runtimeMainExecutablePath() {
     return this.getStringAttribute('runtime_main_executable_path');
   }
-  public set runtimeMainExecutablePath(value: string ) {
+  public set runtimeMainExecutablePath(value: string | undefined) {
     this._runtimeMainExecutablePath = value;
   }
   public resetRuntimeMainExecutablePath() {
@@ -1350,7 +2866,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service: string;
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
@@ -1363,11 +2879,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // serving_status - computed: false, optional: true, required: false
-  private _servingStatus?: string;
+  private _servingStatus?: string | undefined; 
   public get servingStatus() {
     return this.getStringAttribute('serving_status');
   }
-  public set servingStatus(value: string ) {
+  public set servingStatus(value: string | undefined) {
     this._servingStatus = value;
   }
   public resetServingStatus() {
@@ -1379,11 +2895,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // version_id - computed: false, optional: true, required: false
-  private _versionId?: string;
+  private _versionId?: string | undefined; 
   public get versionId() {
     return this.getStringAttribute('version_id');
   }
-  public set versionId(value: string ) {
+  public set versionId(value: string | undefined) {
     this._versionId = value;
   }
   public resetVersionId() {
@@ -1395,11 +2911,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // api_config - computed: false, optional: true, required: false
-  private _apiConfig?: AppEngineFlexibleAppVersionApiConfig[];
+  private _apiConfig?: AppEngineFlexibleAppVersionApiConfig | undefined; 
+  private __apiConfigOutput = new AppEngineFlexibleAppVersionApiConfigOutputReference(this as any, "api_config", true);
   public get apiConfig() {
-    return this.interpolationForAttribute('api_config') as any;
+    return this.__apiConfigOutput;
   }
-  public set apiConfig(value: AppEngineFlexibleAppVersionApiConfig[] ) {
+  public putApiConfig(value: AppEngineFlexibleAppVersionApiConfig | undefined) {
     this._apiConfig = value;
   }
   public resetApiConfig() {
@@ -1411,11 +2928,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // automatic_scaling - computed: false, optional: true, required: false
-  private _automaticScaling?: AppEngineFlexibleAppVersionAutomaticScaling[];
+  private _automaticScaling?: AppEngineFlexibleAppVersionAutomaticScaling | undefined; 
+  private __automaticScalingOutput = new AppEngineFlexibleAppVersionAutomaticScalingOutputReference(this as any, "automatic_scaling", true);
   public get automaticScaling() {
-    return this.interpolationForAttribute('automatic_scaling') as any;
+    return this.__automaticScalingOutput;
   }
-  public set automaticScaling(value: AppEngineFlexibleAppVersionAutomaticScaling[] ) {
+  public putAutomaticScaling(value: AppEngineFlexibleAppVersionAutomaticScaling | undefined) {
     this._automaticScaling = value;
   }
   public resetAutomaticScaling() {
@@ -1427,11 +2945,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // deployment - computed: false, optional: true, required: false
-  private _deployment?: AppEngineFlexibleAppVersionDeployment[];
+  private _deployment?: AppEngineFlexibleAppVersionDeployment | undefined; 
+  private __deploymentOutput = new AppEngineFlexibleAppVersionDeploymentOutputReference(this as any, "deployment", true);
   public get deployment() {
-    return this.interpolationForAttribute('deployment') as any;
+    return this.__deploymentOutput;
   }
-  public set deployment(value: AppEngineFlexibleAppVersionDeployment[] ) {
+  public putDeployment(value: AppEngineFlexibleAppVersionDeployment | undefined) {
     this._deployment = value;
   }
   public resetDeployment() {
@@ -1443,11 +2962,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // endpoints_api_service - computed: false, optional: true, required: false
-  private _endpointsApiService?: AppEngineFlexibleAppVersionEndpointsApiService[];
+  private _endpointsApiService?: AppEngineFlexibleAppVersionEndpointsApiService | undefined; 
+  private __endpointsApiServiceOutput = new AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference(this as any, "endpoints_api_service", true);
   public get endpointsApiService() {
-    return this.interpolationForAttribute('endpoints_api_service') as any;
+    return this.__endpointsApiServiceOutput;
   }
-  public set endpointsApiService(value: AppEngineFlexibleAppVersionEndpointsApiService[] ) {
+  public putEndpointsApiService(value: AppEngineFlexibleAppVersionEndpointsApiService | undefined) {
     this._endpointsApiService = value;
   }
   public resetEndpointsApiService() {
@@ -1459,11 +2979,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // entrypoint - computed: false, optional: true, required: false
-  private _entrypoint?: AppEngineFlexibleAppVersionEntrypoint[];
+  private _entrypoint?: AppEngineFlexibleAppVersionEntrypoint | undefined; 
+  private __entrypointOutput = new AppEngineFlexibleAppVersionEntrypointOutputReference(this as any, "entrypoint", true);
   public get entrypoint() {
-    return this.interpolationForAttribute('entrypoint') as any;
+    return this.__entrypointOutput;
   }
-  public set entrypoint(value: AppEngineFlexibleAppVersionEntrypoint[] ) {
+  public putEntrypoint(value: AppEngineFlexibleAppVersionEntrypoint | undefined) {
     this._entrypoint = value;
   }
   public resetEntrypoint() {
@@ -1475,11 +2996,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // handlers - computed: false, optional: true, required: false
-  private _handlers?: AppEngineFlexibleAppVersionHandlers[];
+  private _handlers?: AppEngineFlexibleAppVersionHandlers[] | undefined; 
   public get handlers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('handlers') as any;
   }
-  public set handlers(value: AppEngineFlexibleAppVersionHandlers[] ) {
+  public set handlers(value: AppEngineFlexibleAppVersionHandlers[] | undefined) {
     this._handlers = value;
   }
   public resetHandlers() {
@@ -1491,11 +3013,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // liveness_check - computed: false, optional: false, required: true
-  private _livenessCheck: AppEngineFlexibleAppVersionLivenessCheck[];
+  private _livenessCheck?: AppEngineFlexibleAppVersionLivenessCheck; 
+  private __livenessCheckOutput = new AppEngineFlexibleAppVersionLivenessCheckOutputReference(this as any, "liveness_check", true);
   public get livenessCheck() {
-    return this.interpolationForAttribute('liveness_check') as any;
+    return this.__livenessCheckOutput;
   }
-  public set livenessCheck(value: AppEngineFlexibleAppVersionLivenessCheck[]) {
+  public putLivenessCheck(value: AppEngineFlexibleAppVersionLivenessCheck) {
     this._livenessCheck = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1504,11 +3027,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // manual_scaling - computed: false, optional: true, required: false
-  private _manualScaling?: AppEngineFlexibleAppVersionManualScaling[];
+  private _manualScaling?: AppEngineFlexibleAppVersionManualScaling | undefined; 
+  private __manualScalingOutput = new AppEngineFlexibleAppVersionManualScalingOutputReference(this as any, "manual_scaling", true);
   public get manualScaling() {
-    return this.interpolationForAttribute('manual_scaling') as any;
+    return this.__manualScalingOutput;
   }
-  public set manualScaling(value: AppEngineFlexibleAppVersionManualScaling[] ) {
+  public putManualScaling(value: AppEngineFlexibleAppVersionManualScaling | undefined) {
     this._manualScaling = value;
   }
   public resetManualScaling() {
@@ -1520,11 +3044,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: AppEngineFlexibleAppVersionNetwork[];
+  private _network?: AppEngineFlexibleAppVersionNetwork | undefined; 
+  private __networkOutput = new AppEngineFlexibleAppVersionNetworkOutputReference(this as any, "network", true);
   public get network() {
-    return this.interpolationForAttribute('network') as any;
+    return this.__networkOutput;
   }
-  public set network(value: AppEngineFlexibleAppVersionNetwork[] ) {
+  public putNetwork(value: AppEngineFlexibleAppVersionNetwork | undefined) {
     this._network = value;
   }
   public resetNetwork() {
@@ -1536,11 +3061,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // readiness_check - computed: false, optional: false, required: true
-  private _readinessCheck: AppEngineFlexibleAppVersionReadinessCheck[];
+  private _readinessCheck?: AppEngineFlexibleAppVersionReadinessCheck; 
+  private __readinessCheckOutput = new AppEngineFlexibleAppVersionReadinessCheckOutputReference(this as any, "readiness_check", true);
   public get readinessCheck() {
-    return this.interpolationForAttribute('readiness_check') as any;
+    return this.__readinessCheckOutput;
   }
-  public set readinessCheck(value: AppEngineFlexibleAppVersionReadinessCheck[]) {
+  public putReadinessCheck(value: AppEngineFlexibleAppVersionReadinessCheck) {
     this._readinessCheck = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1549,11 +3075,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // resources - computed: false, optional: true, required: false
-  private _resources?: AppEngineFlexibleAppVersionResources[];
+  private _resources?: AppEngineFlexibleAppVersionResources | undefined; 
+  private __resourcesOutput = new AppEngineFlexibleAppVersionResourcesOutputReference(this as any, "resources", true);
   public get resources() {
-    return this.interpolationForAttribute('resources') as any;
+    return this.__resourcesOutput;
   }
-  public set resources(value: AppEngineFlexibleAppVersionResources[] ) {
+  public putResources(value: AppEngineFlexibleAppVersionResources | undefined) {
     this._resources = value;
   }
   public resetResources() {
@@ -1565,11 +3092,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineFlexibleAppVersionTimeouts;
+  private _timeouts?: AppEngineFlexibleAppVersionTimeouts | undefined; 
+  private __timeoutsOutput = new AppEngineFlexibleAppVersionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppEngineFlexibleAppVersionTimeouts ) {
+  public putTimeouts(value: AppEngineFlexibleAppVersionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1581,11 +3109,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // vpc_access_connector - computed: false, optional: true, required: false
-  private _vpcAccessConnector?: AppEngineFlexibleAppVersionVpcAccessConnector[];
+  private _vpcAccessConnector?: AppEngineFlexibleAppVersionVpcAccessConnector | undefined; 
+  private __vpcAccessConnectorOutput = new AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference(this as any, "vpc_access_connector", true);
   public get vpcAccessConnector() {
-    return this.interpolationForAttribute('vpc_access_connector') as any;
+    return this.__vpcAccessConnectorOutput;
   }
-  public set vpcAccessConnector(value: AppEngineFlexibleAppVersionVpcAccessConnector[] ) {
+  public putVpcAccessConnector(value: AppEngineFlexibleAppVersionVpcAccessConnector | undefined) {
     this._vpcAccessConnector = value;
   }
   public resetVpcAccessConnector() {
@@ -1618,19 +3147,19 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       service: cdktf.stringToTerraform(this._service),
       serving_status: cdktf.stringToTerraform(this._servingStatus),
       version_id: cdktf.stringToTerraform(this._versionId),
-      api_config: cdktf.listMapper(appEngineFlexibleAppVersionApiConfigToTerraform)(this._apiConfig),
-      automatic_scaling: cdktf.listMapper(appEngineFlexibleAppVersionAutomaticScalingToTerraform)(this._automaticScaling),
-      deployment: cdktf.listMapper(appEngineFlexibleAppVersionDeploymentToTerraform)(this._deployment),
-      endpoints_api_service: cdktf.listMapper(appEngineFlexibleAppVersionEndpointsApiServiceToTerraform)(this._endpointsApiService),
-      entrypoint: cdktf.listMapper(appEngineFlexibleAppVersionEntrypointToTerraform)(this._entrypoint),
+      api_config: appEngineFlexibleAppVersionApiConfigToTerraform(this._apiConfig),
+      automatic_scaling: appEngineFlexibleAppVersionAutomaticScalingToTerraform(this._automaticScaling),
+      deployment: appEngineFlexibleAppVersionDeploymentToTerraform(this._deployment),
+      endpoints_api_service: appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(this._endpointsApiService),
+      entrypoint: appEngineFlexibleAppVersionEntrypointToTerraform(this._entrypoint),
       handlers: cdktf.listMapper(appEngineFlexibleAppVersionHandlersToTerraform)(this._handlers),
-      liveness_check: cdktf.listMapper(appEngineFlexibleAppVersionLivenessCheckToTerraform)(this._livenessCheck),
-      manual_scaling: cdktf.listMapper(appEngineFlexibleAppVersionManualScalingToTerraform)(this._manualScaling),
-      network: cdktf.listMapper(appEngineFlexibleAppVersionNetworkToTerraform)(this._network),
-      readiness_check: cdktf.listMapper(appEngineFlexibleAppVersionReadinessCheckToTerraform)(this._readinessCheck),
-      resources: cdktf.listMapper(appEngineFlexibleAppVersionResourcesToTerraform)(this._resources),
+      liveness_check: appEngineFlexibleAppVersionLivenessCheckToTerraform(this._livenessCheck),
+      manual_scaling: appEngineFlexibleAppVersionManualScalingToTerraform(this._manualScaling),
+      network: appEngineFlexibleAppVersionNetworkToTerraform(this._network),
+      readiness_check: appEngineFlexibleAppVersionReadinessCheckToTerraform(this._readinessCheck),
+      resources: appEngineFlexibleAppVersionResourcesToTerraform(this._resources),
       timeouts: appEngineFlexibleAppVersionTimeoutsToTerraform(this._timeouts),
-      vpc_access_connector: cdktf.listMapper(appEngineFlexibleAppVersionVpcAccessConnectorToTerraform)(this._vpcAccessConnector),
+      vpc_access_connector: appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(this._vpcAccessConnector),
     };
   }
 }

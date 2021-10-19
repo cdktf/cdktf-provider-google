@@ -43,14 +43,59 @@ export interface ProjectUsageExportBucketTimeouts {
   readonly delete?: string;
 }
 
-function projectUsageExportBucketTimeoutsToTerraform(struct?: ProjectUsageExportBucketTimeouts): any {
+function projectUsageExportBucketTimeoutsToTerraform(struct?: ProjectUsageExportBucketTimeoutsOutputReference | ProjectUsageExportBucketTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class ProjectUsageExportBucketTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html google_project_usage_export_bucket}
@@ -95,7 +140,7 @@ export class ProjectUsageExportBucket extends cdktf.TerraformResource {
   // ==========
 
   // bucket_name - computed: false, optional: false, required: true
-  private _bucketName: string;
+  private _bucketName?: string; 
   public get bucketName() {
     return this.getStringAttribute('bucket_name');
   }
@@ -113,11 +158,11 @@ export class ProjectUsageExportBucket extends cdktf.TerraformResource {
   }
 
   // prefix - computed: false, optional: true, required: false
-  private _prefix?: string;
+  private _prefix?: string | undefined; 
   public get prefix() {
     return this.getStringAttribute('prefix');
   }
-  public set prefix(value: string ) {
+  public set prefix(value: string | undefined) {
     this._prefix = value;
   }
   public resetPrefix() {
@@ -129,11 +174,11 @@ export class ProjectUsageExportBucket extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -145,11 +190,12 @@ export class ProjectUsageExportBucket extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ProjectUsageExportBucketTimeouts;
+  private _timeouts?: ProjectUsageExportBucketTimeouts | undefined; 
+  private __timeoutsOutput = new ProjectUsageExportBucketTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ProjectUsageExportBucketTimeouts ) {
+  public putTimeouts(value: ProjectUsageExportBucketTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

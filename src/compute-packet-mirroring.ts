@@ -43,25 +43,25 @@ If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring.html#collector_ilb ComputePacketMirroring#collector_ilb}
   */
-  readonly collectorIlb: ComputePacketMirroringCollectorIlb[];
+  readonly collectorIlb: ComputePacketMirroringCollectorIlb;
   /**
   * filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring.html#filter ComputePacketMirroring#filter}
   */
-  readonly filter?: ComputePacketMirroringFilter[];
+  readonly filter?: ComputePacketMirroringFilter;
   /**
   * mirrored_resources block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring.html#mirrored_resources ComputePacketMirroring#mirrored_resources}
   */
-  readonly mirroredResources: ComputePacketMirroringMirroredResources[];
+  readonly mirroredResources: ComputePacketMirroringMirroredResources;
   /**
   * network block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring.html#network ComputePacketMirroring#network}
   */
-  readonly network: ComputePacketMirroringNetwork[];
+  readonly network: ComputePacketMirroringNetwork;
   /**
   * timeouts block
   * 
@@ -78,13 +78,39 @@ export interface ComputePacketMirroringCollectorIlb {
   readonly url: string;
 }
 
-function computePacketMirroringCollectorIlbToTerraform(struct?: ComputePacketMirroringCollectorIlb): any {
+function computePacketMirroringCollectorIlbToTerraform(struct?: ComputePacketMirroringCollectorIlbOutputReference | ComputePacketMirroringCollectorIlb): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     url: cdktf.stringToTerraform(struct!.url),
   }
 }
 
+export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url
+  }
+}
 export interface ComputePacketMirroringFilter {
   /**
   * IP CIDR ranges that apply as a filter on the source (ingress) or
@@ -107,8 +133,11 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
   readonly ipProtocols?: string[];
 }
 
-function computePacketMirroringFilterToTerraform(struct?: ComputePacketMirroringFilter): any {
+function computePacketMirroringFilterToTerraform(struct?: ComputePacketMirroringFilterOutputReference | ComputePacketMirroringFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cidrRanges),
     direction: cdktf.stringToTerraform(struct!.direction),
@@ -116,6 +145,64 @@ function computePacketMirroringFilterToTerraform(struct?: ComputePacketMirroring
   }
 }
 
+export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cidr_ranges - computed: false, optional: true, required: false
+  private _cidrRanges?: string[] | undefined; 
+  public get cidrRanges() {
+    return this.getListAttribute('cidr_ranges');
+  }
+  public set cidrRanges(value: string[] | undefined) {
+    this._cidrRanges = value;
+  }
+  public resetCidrRanges() {
+    this._cidrRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrRangesInput() {
+    return this._cidrRanges
+  }
+
+  // direction - computed: false, optional: true, required: false
+  private _direction?: string | undefined; 
+  public get direction() {
+    return this.getStringAttribute('direction');
+  }
+  public set direction(value: string | undefined) {
+    this._direction = value;
+  }
+  public resetDirection() {
+    this._direction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directionInput() {
+    return this._direction
+  }
+
+  // ip_protocols - computed: false, optional: true, required: false
+  private _ipProtocols?: string[] | undefined; 
+  public get ipProtocols() {
+    return this.getListAttribute('ip_protocols');
+  }
+  public set ipProtocols(value: string[] | undefined) {
+    this._ipProtocols = value;
+  }
+  public resetIpProtocols() {
+    this._ipProtocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipProtocolsInput() {
+    return this._ipProtocols
+  }
+}
 export interface ComputePacketMirroringMirroredResourcesInstances {
   /**
   * The URL of the instances where this rule should be active.
@@ -127,6 +214,9 @@ export interface ComputePacketMirroringMirroredResourcesInstances {
 
 function computePacketMirroringMirroredResourcesInstancesToTerraform(struct?: ComputePacketMirroringMirroredResourcesInstances): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     url: cdktf.stringToTerraform(struct!.url),
   }
@@ -143,6 +233,9 @@ export interface ComputePacketMirroringMirroredResourcesSubnetworks {
 
 function computePacketMirroringMirroredResourcesSubnetworksToTerraform(struct?: ComputePacketMirroringMirroredResourcesSubnetworks): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     url: cdktf.stringToTerraform(struct!.url),
   }
@@ -169,8 +262,11 @@ export interface ComputePacketMirroringMirroredResources {
   readonly subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[];
 }
 
-function computePacketMirroringMirroredResourcesToTerraform(struct?: ComputePacketMirroringMirroredResources): any {
+function computePacketMirroringMirroredResourcesToTerraform(struct?: ComputePacketMirroringMirroredResourcesOutputReference | ComputePacketMirroringMirroredResources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     instances: cdktf.listMapper(computePacketMirroringMirroredResourcesInstancesToTerraform)(struct!.instances),
@@ -178,6 +274,66 @@ function computePacketMirroringMirroredResourcesToTerraform(struct?: ComputePack
   }
 }
 
+export class ComputePacketMirroringMirroredResourcesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: string[] | undefined; 
+  public get tags() {
+    return this.getListAttribute('tags');
+  }
+  public set tags(value: string[] | undefined) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
+  // instances - computed: false, optional: true, required: false
+  private _instances?: ComputePacketMirroringMirroredResourcesInstances[] | undefined; 
+  public get instances() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('instances') as any;
+  }
+  public set instances(value: ComputePacketMirroringMirroredResourcesInstances[] | undefined) {
+    this._instances = value;
+  }
+  public resetInstances() {
+    this._instances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instancesInput() {
+    return this._instances
+  }
+
+  // subnetworks - computed: false, optional: true, required: false
+  private _subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[] | undefined; 
+  public get subnetworks() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('subnetworks') as any;
+  }
+  public set subnetworks(value: ComputePacketMirroringMirroredResourcesSubnetworks[] | undefined) {
+    this._subnetworks = value;
+  }
+  public resetSubnetworks() {
+    this._subnetworks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworksInput() {
+    return this._subnetworks
+  }
+}
 export interface ComputePacketMirroringNetwork {
   /**
   * The full self_link URL of the network where this rule is active.
@@ -187,13 +343,39 @@ export interface ComputePacketMirroringNetwork {
   readonly url: string;
 }
 
-function computePacketMirroringNetworkToTerraform(struct?: ComputePacketMirroringNetwork): any {
+function computePacketMirroringNetworkToTerraform(struct?: ComputePacketMirroringNetworkOutputReference | ComputePacketMirroringNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     url: cdktf.stringToTerraform(struct!.url),
   }
 }
 
+export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url
+  }
+}
 export interface ComputePacketMirroringTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring.html#create ComputePacketMirroring#create}
@@ -209,8 +391,11 @@ export interface ComputePacketMirroringTimeouts {
   readonly update?: string;
 }
 
-function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacketMirroringTimeouts): any {
+function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacketMirroringTimeoutsOutputReference | ComputePacketMirroringTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -218,6 +403,64 @@ function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacketMirrori
   }
 }
 
+export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring.html google_compute_packet_mirroring}
@@ -268,11 +511,11 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -289,7 +532,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -302,11 +545,11 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // priority - computed: true, optional: true, required: false
-  private _priority?: number;
+  private _priority?: number | undefined; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
-  public set priority(value: number) {
+  public set priority(value: number | undefined) {
     this._priority = value;
   }
   public resetPriority() {
@@ -318,11 +561,11 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -334,11 +577,11 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -350,11 +593,12 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // collector_ilb - computed: false, optional: false, required: true
-  private _collectorIlb: ComputePacketMirroringCollectorIlb[];
+  private _collectorIlb?: ComputePacketMirroringCollectorIlb; 
+  private __collectorIlbOutput = new ComputePacketMirroringCollectorIlbOutputReference(this as any, "collector_ilb", true);
   public get collectorIlb() {
-    return this.interpolationForAttribute('collector_ilb') as any;
+    return this.__collectorIlbOutput;
   }
-  public set collectorIlb(value: ComputePacketMirroringCollectorIlb[]) {
+  public putCollectorIlb(value: ComputePacketMirroringCollectorIlb) {
     this._collectorIlb = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -363,11 +607,12 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: ComputePacketMirroringFilter[];
+  private _filter?: ComputePacketMirroringFilter | undefined; 
+  private __filterOutput = new ComputePacketMirroringFilterOutputReference(this as any, "filter", true);
   public get filter() {
-    return this.interpolationForAttribute('filter') as any;
+    return this.__filterOutput;
   }
-  public set filter(value: ComputePacketMirroringFilter[] ) {
+  public putFilter(value: ComputePacketMirroringFilter | undefined) {
     this._filter = value;
   }
   public resetFilter() {
@@ -379,11 +624,12 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // mirrored_resources - computed: false, optional: false, required: true
-  private _mirroredResources: ComputePacketMirroringMirroredResources[];
+  private _mirroredResources?: ComputePacketMirroringMirroredResources; 
+  private __mirroredResourcesOutput = new ComputePacketMirroringMirroredResourcesOutputReference(this as any, "mirrored_resources", true);
   public get mirroredResources() {
-    return this.interpolationForAttribute('mirrored_resources') as any;
+    return this.__mirroredResourcesOutput;
   }
-  public set mirroredResources(value: ComputePacketMirroringMirroredResources[]) {
+  public putMirroredResources(value: ComputePacketMirroringMirroredResources) {
     this._mirroredResources = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -392,11 +638,12 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: false, required: true
-  private _network: ComputePacketMirroringNetwork[];
+  private _network?: ComputePacketMirroringNetwork; 
+  private __networkOutput = new ComputePacketMirroringNetworkOutputReference(this as any, "network", true);
   public get network() {
-    return this.interpolationForAttribute('network') as any;
+    return this.__networkOutput;
   }
-  public set network(value: ComputePacketMirroringNetwork[]) {
+  public putNetwork(value: ComputePacketMirroringNetwork) {
     this._network = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -405,11 +652,12 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputePacketMirroringTimeouts;
+  private _timeouts?: ComputePacketMirroringTimeouts | undefined; 
+  private __timeoutsOutput = new ComputePacketMirroringTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputePacketMirroringTimeouts ) {
+  public putTimeouts(value: ComputePacketMirroringTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -431,10 +679,10 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
       priority: cdktf.numberToTerraform(this._priority),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      collector_ilb: cdktf.listMapper(computePacketMirroringCollectorIlbToTerraform)(this._collectorIlb),
-      filter: cdktf.listMapper(computePacketMirroringFilterToTerraform)(this._filter),
-      mirrored_resources: cdktf.listMapper(computePacketMirroringMirroredResourcesToTerraform)(this._mirroredResources),
-      network: cdktf.listMapper(computePacketMirroringNetworkToTerraform)(this._network),
+      collector_ilb: computePacketMirroringCollectorIlbToTerraform(this._collectorIlb),
+      filter: computePacketMirroringFilterToTerraform(this._filter),
+      mirrored_resources: computePacketMirroringMirroredResourcesToTerraform(this._mirroredResources),
+      network: computePacketMirroringNetworkToTerraform(this._network),
       timeouts: computePacketMirroringTimeoutsToTerraform(this._timeouts),
     };
   }

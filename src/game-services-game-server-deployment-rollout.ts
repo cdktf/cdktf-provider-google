@@ -48,13 +48,42 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   readonly realms?: string[];
 }
 
-function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
+function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference | GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     realms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.realms),
   }
 }
 
+export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // realms - computed: false, optional: true, required: false
+  private _realms?: string[] | undefined; 
+  public get realms() {
+    return this.getListAttribute('realms');
+  }
+  public set realms(value: string[] | undefined) {
+    this._realms = value;
+  }
+  public resetRealms() {
+    this._realms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get realmsInput() {
+    return this._realms
+  }
+}
 export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverrides {
   /**
   * Version of the configuration.
@@ -67,14 +96,17 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#realms_selector GameServicesGameServerDeploymentRollout#realms_selector}
   */
-  readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector[];
+  readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector;
 }
 
 function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     config_version: cdktf.stringToTerraform(struct!.configVersion),
-    realms_selector: cdktf.listMapper(gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform)(struct!.realmsSelector),
+    realms_selector: gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct!.realmsSelector),
   }
 }
 
@@ -93,8 +125,11 @@ export interface GameServicesGameServerDeploymentRolloutTimeouts {
   readonly update?: string;
 }
 
-function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeouts): any {
+function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeoutsOutputReference | GameServicesGameServerDeploymentRolloutTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -102,6 +137,64 @@ function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: Gam
   }
 }
 
+export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout}
@@ -147,7 +240,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   // ==========
 
   // default_game_server_config - computed: false, optional: false, required: true
-  private _defaultGameServerConfig: string;
+  private _defaultGameServerConfig?: string; 
   public get defaultGameServerConfig() {
     return this.getStringAttribute('default_game_server_config');
   }
@@ -160,7 +253,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // deployment_id - computed: false, optional: false, required: true
-  private _deploymentId: string;
+  private _deploymentId?: string; 
   public get deploymentId() {
     return this.getStringAttribute('deployment_id');
   }
@@ -183,11 +276,11 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -199,11 +292,12 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // game_server_config_overrides - computed: false, optional: true, required: false
-  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[];
+  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | undefined; 
   public get gameServerConfigOverrides() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('game_server_config_overrides') as any;
   }
-  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] ) {
+  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | undefined) {
     this._gameServerConfigOverrides = value;
   }
   public resetGameServerConfigOverrides() {
@@ -215,11 +309,12 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: GameServicesGameServerDeploymentRolloutTimeouts;
+  private _timeouts?: GameServicesGameServerDeploymentRolloutTimeouts | undefined; 
+  private __timeoutsOutput = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: GameServicesGameServerDeploymentRolloutTimeouts ) {
+  public putTimeouts(value: GameServicesGameServerDeploymentRolloutTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

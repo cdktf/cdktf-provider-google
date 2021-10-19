@@ -53,6 +53,9 @@ export interface DatastoreIndexProperties {
 
 function datastoreIndexPropertiesToTerraform(struct?: DatastoreIndexProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     direction: cdktf.stringToTerraform(struct!.direction),
     name: cdktf.stringToTerraform(struct!.name),
@@ -70,14 +73,59 @@ export interface DatastoreIndexTimeouts {
   readonly delete?: string;
 }
 
-function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeouts): any {
+function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeoutsOutputReference | DatastoreIndexTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class DatastoreIndexTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/datastore_index.html google_datastore_index}
@@ -123,11 +171,11 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   // ==========
 
   // ancestor - computed: false, optional: true, required: false
-  private _ancestor?: string;
+  private _ancestor?: string | undefined; 
   public get ancestor() {
     return this.getStringAttribute('ancestor');
   }
-  public set ancestor(value: string ) {
+  public set ancestor(value: string | undefined) {
     this._ancestor = value;
   }
   public resetAncestor() {
@@ -149,7 +197,7 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   }
 
   // kind - computed: false, optional: false, required: true
-  private _kind: string;
+  private _kind?: string; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
@@ -162,11 +210,11 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -178,11 +226,12 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: DatastoreIndexProperties[];
+  private _properties?: DatastoreIndexProperties[] | undefined; 
   public get properties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: DatastoreIndexProperties[] ) {
+  public set properties(value: DatastoreIndexProperties[] | undefined) {
     this._properties = value;
   }
   public resetProperties() {
@@ -194,11 +243,12 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DatastoreIndexTimeouts;
+  private _timeouts?: DatastoreIndexTimeouts | undefined; 
+  private __timeoutsOutput = new DatastoreIndexTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DatastoreIndexTimeouts ) {
+  public putTimeouts(value: DatastoreIndexTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -68,7 +68,7 @@ export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
   }
 
   // key_ring_id - computed: false, optional: false, required: true
-  private _keyRingId: string;
+  private _keyRingId?: string; 
   public get keyRingId() {
     return this.getStringAttribute('key_ring_id');
   }
@@ -81,7 +81,7 @@ export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

@@ -80,8 +80,11 @@ export interface ComputeTargetSslProxyTimeouts {
   readonly update?: string;
 }
 
-function computeTargetSslProxyTimeoutsToTerraform(struct?: ComputeTargetSslProxyTimeouts): any {
+function computeTargetSslProxyTimeoutsToTerraform(struct?: ComputeTargetSslProxyTimeoutsOutputReference | ComputeTargetSslProxyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -89,6 +92,64 @@ function computeTargetSslProxyTimeoutsToTerraform(struct?: ComputeTargetSslProxy
   }
 }
 
+export class ComputeTargetSslProxyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html google_compute_target_ssl_proxy}
@@ -137,7 +198,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   // ==========
 
   // backend_service - computed: false, optional: false, required: true
-  private _backendService: string;
+  private _backendService?: string; 
   public get backendService() {
     return this.getStringAttribute('backend_service');
   }
@@ -155,11 +216,11 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -176,7 +237,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -189,11 +250,11 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -205,11 +266,11 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // proxy_header - computed: false, optional: true, required: false
-  private _proxyHeader?: string;
+  private _proxyHeader?: string | undefined; 
   public get proxyHeader() {
     return this.getStringAttribute('proxy_header');
   }
-  public set proxyHeader(value: string ) {
+  public set proxyHeader(value: string | undefined) {
     this._proxyHeader = value;
   }
   public resetProxyHeader() {
@@ -231,7 +292,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // ssl_certificates - computed: false, optional: false, required: true
-  private _sslCertificates: string[];
+  private _sslCertificates?: string[]; 
   public get sslCertificates() {
     return this.getListAttribute('ssl_certificates');
   }
@@ -244,11 +305,11 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // ssl_policy - computed: false, optional: true, required: false
-  private _sslPolicy?: string;
+  private _sslPolicy?: string | undefined; 
   public get sslPolicy() {
     return this.getStringAttribute('ssl_policy');
   }
-  public set sslPolicy(value: string ) {
+  public set sslPolicy(value: string | undefined) {
     this._sslPolicy = value;
   }
   public resetSslPolicy() {
@@ -260,11 +321,12 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeTargetSslProxyTimeouts;
+  private _timeouts?: ComputeTargetSslProxyTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeTargetSslProxyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeTargetSslProxyTimeouts ) {
+  public putTimeouts(value: ComputeTargetSslProxyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

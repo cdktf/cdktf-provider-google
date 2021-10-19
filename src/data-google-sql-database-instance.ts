@@ -78,7 +78,7 @@ export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends cdktf.Com
 
   // failover_target - computed: true, optional: false, required: false
   public get failoverTarget() {
-    return this.getBooleanAttribute('failover_target');
+    return this.getBooleanAttribute('failover_target') as any;
   }
 
   // master_heartbeat_period - computed: true, optional: false, required: false
@@ -103,7 +103,7 @@ export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends cdktf.Com
 
   // verify_server_certificate - computed: true, optional: false, required: false
   public get verifyServerCertificate() {
-    return this.getBooleanAttribute('verify_server_certificate');
+    return this.getBooleanAttribute('verify_server_certificate') as any;
   }
 }
 export class DataGoogleSqlDatabaseInstanceRestoreBackupContext extends cdktf.ComplexComputedList {
@@ -166,17 +166,18 @@ export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cd
 
   // backup_retention_settings - computed: true, optional: false, required: false
   public get backupRetentionSettings() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backup_retention_settings') as any;
   }
 
   // binary_log_enabled - computed: true, optional: false, required: false
   public get binaryLogEnabled() {
-    return this.getBooleanAttribute('binary_log_enabled');
+    return this.getBooleanAttribute('binary_log_enabled') as any;
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // location - computed: true, optional: false, required: false
@@ -186,7 +187,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cd
 
   // point_in_time_recovery_enabled - computed: true, optional: false, required: false
   public get pointInTimeRecoveryEnabled() {
-    return this.getBooleanAttribute('point_in_time_recovery_enabled');
+    return this.getBooleanAttribute('point_in_time_recovery_enabled') as any;
   }
 
   // start_time - computed: true, optional: false, required: false
@@ -215,7 +216,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfig extends cdktf.C
 
   // query_insights_enabled - computed: true, optional: false, required: false
   public get queryInsightsEnabled() {
-    return this.getBooleanAttribute('query_insights_enabled');
+    return this.getBooleanAttribute('query_insights_enabled') as any;
   }
 
   // query_string_length - computed: true, optional: false, required: false
@@ -225,12 +226,12 @@ export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfig extends cdktf.C
 
   // record_application_tags - computed: true, optional: false, required: false
   public get recordApplicationTags() {
-    return this.getBooleanAttribute('record_application_tags');
+    return this.getBooleanAttribute('record_application_tags') as any;
   }
 
   // record_client_address - computed: true, optional: false, required: false
   public get recordClientAddress() {
-    return this.getBooleanAttribute('record_client_address');
+    return this.getBooleanAttribute('record_client_address') as any;
   }
 }
 export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks extends cdktf.ComplexComputedList {
@@ -254,12 +255,13 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends cdktf.
 
   // authorized_networks - computed: true, optional: false, required: false
   public get authorizedNetworks() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('authorized_networks') as any;
   }
 
   // ipv4_enabled - computed: true, optional: false, required: false
   public get ipv4Enabled() {
-    return this.getBooleanAttribute('ipv4_enabled');
+    return this.getBooleanAttribute('ipv4_enabled') as any;
   }
 
   // private_network - computed: true, optional: false, required: false
@@ -269,7 +271,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends cdktf.
 
   // require_ssl - computed: true, optional: false, required: false
   public get requireSsl() {
-    return this.getBooleanAttribute('require_ssl');
+    return this.getBooleanAttribute('require_ssl') as any;
   }
 }
 export class DataGoogleSqlDatabaseInstanceSettingsLocationPreference extends cdktf.ComplexComputedList {
@@ -320,6 +322,7 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
 
   // backup_configuration - computed: true, optional: false, required: false
   public get backupConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backup_configuration') as any;
   }
 
@@ -330,17 +333,18 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
 
   // crash_safe_replication - computed: true, optional: false, required: false
   public get crashSafeReplication() {
-    return this.getBooleanAttribute('crash_safe_replication');
+    return this.getBooleanAttribute('crash_safe_replication') as any;
   }
 
   // database_flags - computed: true, optional: false, required: false
   public get databaseFlags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('database_flags') as any;
   }
 
   // disk_autoresize - computed: true, optional: false, required: false
   public get diskAutoresize() {
-    return this.getBooleanAttribute('disk_autoresize');
+    return this.getBooleanAttribute('disk_autoresize') as any;
   }
 
   // disk_autoresize_limit - computed: true, optional: false, required: false
@@ -360,21 +364,25 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
 
   // insights_config - computed: true, optional: false, required: false
   public get insightsConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('insights_config') as any;
   }
 
   // ip_configuration - computed: true, optional: false, required: false
   public get ipConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_configuration') as any;
   }
 
   // location_preference - computed: true, optional: false, required: false
   public get locationPreference() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('location_preference') as any;
   }
 
   // maintenance_window - computed: true, optional: false, required: false
   public get maintenanceWindow() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('maintenance_window') as any;
   }
 
@@ -395,6 +403,7 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
 
   // user_labels - computed: true, optional: false, required: false
   public get userLabels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
 
@@ -461,7 +470,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
 
   // deletion_protection - computed: true, optional: false, required: false
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection');
+    return this.getBooleanAttribute('deletion_protection') as any;
   }
 
   // first_ip_address - computed: true, optional: false, required: false
@@ -485,7 +494,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -503,11 +512,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

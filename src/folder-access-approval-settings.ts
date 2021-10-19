@@ -74,6 +74,9 @@ Note: These values are supported as input, but considered a legacy format:
 
 function folderAccessApprovalSettingsEnrolledServicesToTerraform(struct?: FolderAccessApprovalSettingsEnrolledServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cloud_product: cdktf.stringToTerraform(struct!.cloudProduct),
     enrollment_level: cdktf.stringToTerraform(struct!.enrollmentLevel),
@@ -95,8 +98,11 @@ export interface FolderAccessApprovalSettingsTimeouts {
   readonly update?: string;
 }
 
-function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessApprovalSettingsTimeouts): any {
+function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessApprovalSettingsTimeoutsOutputReference | FolderAccessApprovalSettingsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -104,6 +110,64 @@ function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessAp
   }
 }
 
+export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html google_folder_access_approval_settings}
@@ -149,11 +213,11 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
 
   // enrolled_ancestor - computed: true, optional: false, required: false
   public get enrolledAncestor() {
-    return this.getBooleanAttribute('enrolled_ancestor');
+    return this.getBooleanAttribute('enrolled_ancestor') as any;
   }
 
   // folder_id - computed: false, optional: false, required: true
-  private _folderId: string;
+  private _folderId?: string; 
   public get folderId() {
     return this.getStringAttribute('folder_id');
   }
@@ -176,11 +240,11 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // notification_emails - computed: true, optional: true, required: false
-  private _notificationEmails?: string[];
+  private _notificationEmails?: string[] | undefined; 
   public get notificationEmails() {
     return this.getListAttribute('notification_emails');
   }
-  public set notificationEmails(value: string[]) {
+  public set notificationEmails(value: string[] | undefined) {
     this._notificationEmails = value;
   }
   public resetNotificationEmails() {
@@ -192,8 +256,9 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // enrolled_services - computed: false, optional: false, required: true
-  private _enrolledServices: FolderAccessApprovalSettingsEnrolledServices[];
+  private _enrolledServices?: FolderAccessApprovalSettingsEnrolledServices[]; 
   public get enrolledServices() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('enrolled_services') as any;
   }
   public set enrolledServices(value: FolderAccessApprovalSettingsEnrolledServices[]) {
@@ -205,11 +270,12 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FolderAccessApprovalSettingsTimeouts;
+  private _timeouts?: FolderAccessApprovalSettingsTimeouts | undefined; 
+  private __timeoutsOutput = new FolderAccessApprovalSettingsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: FolderAccessApprovalSettingsTimeouts ) {
+  public putTimeouts(value: FolderAccessApprovalSettingsTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

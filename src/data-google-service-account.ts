@@ -58,7 +58,7 @@ export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
   // ==========
 
   // account_id - computed: false, optional: false, required: true
-  private _accountId: string;
+  private _accountId?: string; 
   public get accountId() {
     return this.getStringAttribute('account_id');
   }
@@ -91,11 +91,11 @@ export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

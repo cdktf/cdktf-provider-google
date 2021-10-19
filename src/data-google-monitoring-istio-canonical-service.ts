@@ -84,7 +84,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   // ==========
 
   // canonical_service - computed: false, optional: false, required: true
-  private _canonicalService: string;
+  private _canonicalService?: string; 
   public get canonicalService() {
     return this.getStringAttribute('canonical_service');
   }
@@ -97,7 +97,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
 
   // canonical_service_namespace - computed: false, optional: false, required: true
-  private _canonicalServiceNamespace: string;
+  private _canonicalServiceNamespace?: string; 
   public get canonicalServiceNamespace() {
     return this.getStringAttribute('canonical_service_namespace');
   }
@@ -120,7 +120,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
 
   // mesh_uid - computed: false, optional: false, required: true
-  private _meshUid: string;
+  private _meshUid?: string; 
   public get meshUid() {
     return this.getStringAttribute('mesh_uid');
   }
@@ -138,11 +138,11 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

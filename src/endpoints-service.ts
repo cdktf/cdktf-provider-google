@@ -70,6 +70,7 @@ export class EndpointsServiceApis extends cdktf.ComplexComputedList {
 
   // methods - computed: true, optional: false, required: false
   public get methods() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('methods') as any;
   }
 
@@ -115,8 +116,11 @@ export interface EndpointsServiceTimeouts {
   readonly update?: string;
 }
 
-function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeouts): any {
+function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeoutsOutputReference | EndpointsServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -124,6 +128,64 @@ function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeouts):
   }
 }
 
+export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service.html google_endpoints_service}
@@ -190,11 +252,11 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // grpc_config - computed: false, optional: true, required: false
-  private _grpcConfig?: string;
+  private _grpcConfig?: string | undefined; 
   public get grpcConfig() {
     return this.getStringAttribute('grpc_config');
   }
-  public set grpcConfig(value: string ) {
+  public set grpcConfig(value: string | undefined) {
     this._grpcConfig = value;
   }
   public resetGrpcConfig() {
@@ -211,11 +273,11 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // openapi_config - computed: false, optional: true, required: false
-  private _openapiConfig?: string;
+  private _openapiConfig?: string | undefined; 
   public get openapiConfig() {
     return this.getStringAttribute('openapi_config');
   }
-  public set openapiConfig(value: string ) {
+  public set openapiConfig(value: string | undefined) {
     this._openapiConfig = value;
   }
   public resetOpenapiConfig() {
@@ -227,11 +289,11 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -243,11 +305,11 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // protoc_output_base64 - computed: false, optional: true, required: false
-  private _protocOutputBase64?: string;
+  private _protocOutputBase64?: string | undefined; 
   public get protocOutputBase64() {
     return this.getStringAttribute('protoc_output_base64');
   }
-  public set protocOutputBase64(value: string ) {
+  public set protocOutputBase64(value: string | undefined) {
     this._protocOutputBase64 = value;
   }
   public resetProtocOutputBase64() {
@@ -259,7 +321,7 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // service_name - computed: false, optional: false, required: true
-  private _serviceName: string;
+  private _serviceName?: string; 
   public get serviceName() {
     return this.getStringAttribute('service_name');
   }
@@ -272,11 +334,12 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EndpointsServiceTimeouts;
+  private _timeouts?: EndpointsServiceTimeouts | undefined; 
+  private __timeoutsOutput = new EndpointsServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: EndpointsServiceTimeouts ) {
+  public putTimeouts(value: EndpointsServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

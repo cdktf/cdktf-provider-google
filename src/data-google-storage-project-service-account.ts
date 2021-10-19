@@ -68,11 +68,11 @@ export class DataGoogleStorageProjectServiceAccount extends cdktf.TerraformDataS
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -84,11 +84,11 @@ export class DataGoogleStorageProjectServiceAccount extends cdktf.TerraformDataS
   }
 
   // user_project - computed: false, optional: true, required: false
-  private _userProject?: string;
+  private _userProject?: string | undefined; 
   public get userProject() {
     return this.getStringAttribute('user_project');
   }
-  public set userProject(value: string ) {
+  public set userProject(value: string | undefined) {
     this._userProject = value;
   }
   public resetUserProject() {

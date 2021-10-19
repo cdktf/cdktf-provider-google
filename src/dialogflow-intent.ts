@@ -125,8 +125,11 @@ export interface DialogflowIntentTimeouts {
   readonly update?: string;
 }
 
-function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeouts): any {
+function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeoutsOutputReference | DialogflowIntentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -134,6 +137,64 @@ function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeouts):
   }
 }
 
+export class DialogflowIntentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_intent.html google_dialogflow_intent}
@@ -187,11 +248,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   // ==========
 
   // action - computed: true, optional: true, required: false
-  private _action?: string;
+  private _action?: string | undefined; 
   public get action() {
     return this.getStringAttribute('action');
   }
-  public set action(value: string) {
+  public set action(value: string | undefined) {
     this._action = value;
   }
   public resetAction() {
@@ -203,11 +264,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // default_response_platforms - computed: false, optional: true, required: false
-  private _defaultResponsePlatforms?: string[];
+  private _defaultResponsePlatforms?: string[] | undefined; 
   public get defaultResponsePlatforms() {
     return this.getListAttribute('default_response_platforms');
   }
-  public set defaultResponsePlatforms(value: string[] ) {
+  public set defaultResponsePlatforms(value: string[] | undefined) {
     this._defaultResponsePlatforms = value;
   }
   public resetDefaultResponsePlatforms() {
@@ -219,7 +280,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -232,11 +293,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // events - computed: false, optional: true, required: false
-  private _events?: string[];
+  private _events?: string[] | undefined; 
   public get events() {
     return this.getListAttribute('events');
   }
-  public set events(value: string[] ) {
+  public set events(value: string[] | undefined) {
     this._events = value;
   }
   public resetEvents() {
@@ -258,11 +319,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // input_context_names - computed: false, optional: true, required: false
-  private _inputContextNames?: string[];
+  private _inputContextNames?: string[] | undefined; 
   public get inputContextNames() {
     return this.getListAttribute('input_context_names');
   }
-  public set inputContextNames(value: string[] ) {
+  public set inputContextNames(value: string[] | undefined) {
     this._inputContextNames = value;
   }
   public resetInputContextNames() {
@@ -274,11 +335,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // is_fallback - computed: true, optional: true, required: false
-  private _isFallback?: boolean | cdktf.IResolvable;
+  private _isFallback?: boolean | cdktf.IResolvable | undefined; 
   public get isFallback() {
-    return this.getBooleanAttribute('is_fallback');
+    return this.getBooleanAttribute('is_fallback') as any;
   }
-  public set isFallback(value: boolean | cdktf.IResolvable) {
+  public set isFallback(value: boolean | cdktf.IResolvable | undefined) {
     this._isFallback = value;
   }
   public resetIsFallback() {
@@ -290,11 +351,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // ml_disabled - computed: true, optional: true, required: false
-  private _mlDisabled?: boolean | cdktf.IResolvable;
+  private _mlDisabled?: boolean | cdktf.IResolvable | undefined; 
   public get mlDisabled() {
-    return this.getBooleanAttribute('ml_disabled');
+    return this.getBooleanAttribute('ml_disabled') as any;
   }
-  public set mlDisabled(value: boolean | cdktf.IResolvable) {
+  public set mlDisabled(value: boolean | cdktf.IResolvable | undefined) {
     this._mlDisabled = value;
   }
   public resetMlDisabled() {
@@ -311,11 +372,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // parent_followup_intent_name - computed: true, optional: true, required: false
-  private _parentFollowupIntentName?: string;
+  private _parentFollowupIntentName?: string | undefined; 
   public get parentFollowupIntentName() {
     return this.getStringAttribute('parent_followup_intent_name');
   }
-  public set parentFollowupIntentName(value: string) {
+  public set parentFollowupIntentName(value: string | undefined) {
     this._parentFollowupIntentName = value;
   }
   public resetParentFollowupIntentName() {
@@ -327,11 +388,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // priority - computed: true, optional: true, required: false
-  private _priority?: number;
+  private _priority?: number | undefined; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
-  public set priority(value: number) {
+  public set priority(value: number | undefined) {
     this._priority = value;
   }
   public resetPriority() {
@@ -343,11 +404,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -359,11 +420,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // reset_contexts - computed: true, optional: true, required: false
-  private _resetContexts?: boolean | cdktf.IResolvable;
+  private _resetContexts?: boolean | cdktf.IResolvable | undefined; 
   public get resetContexts() {
-    return this.getBooleanAttribute('reset_contexts');
+    return this.getBooleanAttribute('reset_contexts') as any;
   }
-  public set resetContexts(value: boolean | cdktf.IResolvable) {
+  public set resetContexts(value: boolean | cdktf.IResolvable | undefined) {
     this._resetContexts = value;
   }
   public resetResetContexts() {
@@ -380,11 +441,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // webhook_state - computed: true, optional: true, required: false
-  private _webhookState?: string;
+  private _webhookState?: string | undefined; 
   public get webhookState() {
     return this.getStringAttribute('webhook_state');
   }
-  public set webhookState(value: string) {
+  public set webhookState(value: string | undefined) {
     this._webhookState = value;
   }
   public resetWebhookState() {
@@ -396,11 +457,12 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowIntentTimeouts;
+  private _timeouts?: DialogflowIntentTimeouts | undefined; 
+  private __timeoutsOutput = new DialogflowIntentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DialogflowIntentTimeouts ) {
+  public putTimeouts(value: DialogflowIntentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

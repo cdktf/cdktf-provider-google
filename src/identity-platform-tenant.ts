@@ -59,8 +59,11 @@ export interface IdentityPlatformTenantTimeouts {
   readonly update?: string;
 }
 
-function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTenantTimeouts): any {
+function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTenantTimeoutsOutputReference | IdentityPlatformTenantTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -68,6 +71,64 @@ function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTena
   }
 }
 
+export class IdentityPlatformTenantTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html google_identity_platform_tenant}
@@ -114,11 +175,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // ==========
 
   // allow_password_signup - computed: false, optional: true, required: false
-  private _allowPasswordSignup?: boolean | cdktf.IResolvable;
+  private _allowPasswordSignup?: boolean | cdktf.IResolvable | undefined; 
   public get allowPasswordSignup() {
-    return this.getBooleanAttribute('allow_password_signup');
+    return this.getBooleanAttribute('allow_password_signup') as any;
   }
-  public set allowPasswordSignup(value: boolean | cdktf.IResolvable ) {
+  public set allowPasswordSignup(value: boolean | cdktf.IResolvable | undefined) {
     this._allowPasswordSignup = value;
   }
   public resetAllowPasswordSignup() {
@@ -130,11 +191,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // disable_auth - computed: false, optional: true, required: false
-  private _disableAuth?: boolean | cdktf.IResolvable;
+  private _disableAuth?: boolean | cdktf.IResolvable | undefined; 
   public get disableAuth() {
-    return this.getBooleanAttribute('disable_auth');
+    return this.getBooleanAttribute('disable_auth') as any;
   }
-  public set disableAuth(value: boolean | cdktf.IResolvable ) {
+  public set disableAuth(value: boolean | cdktf.IResolvable | undefined) {
     this._disableAuth = value;
   }
   public resetDisableAuth() {
@@ -146,7 +207,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -159,11 +220,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // enable_email_link_signin - computed: false, optional: true, required: false
-  private _enableEmailLinkSignin?: boolean | cdktf.IResolvable;
+  private _enableEmailLinkSignin?: boolean | cdktf.IResolvable | undefined; 
   public get enableEmailLinkSignin() {
-    return this.getBooleanAttribute('enable_email_link_signin');
+    return this.getBooleanAttribute('enable_email_link_signin') as any;
   }
-  public set enableEmailLinkSignin(value: boolean | cdktf.IResolvable ) {
+  public set enableEmailLinkSignin(value: boolean | cdktf.IResolvable | undefined) {
     this._enableEmailLinkSignin = value;
   }
   public resetEnableEmailLinkSignin() {
@@ -185,11 +246,11 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -201,11 +262,12 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IdentityPlatformTenantTimeouts;
+  private _timeouts?: IdentityPlatformTenantTimeouts | undefined; 
+  private __timeoutsOutput = new IdentityPlatformTenantTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: IdentityPlatformTenantTimeouts ) {
+  public putTimeouts(value: IdentityPlatformTenantTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

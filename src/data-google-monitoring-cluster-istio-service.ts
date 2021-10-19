@@ -92,7 +92,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   // ==========
 
   // cluster_name - computed: false, optional: false, required: true
-  private _clusterName: string;
+  private _clusterName?: string; 
   public get clusterName() {
     return this.getStringAttribute('cluster_name');
   }
@@ -115,7 +115,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -133,11 +133,11 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -154,7 +154,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
 
   // service_name - computed: false, optional: false, required: true
-  private _serviceName: string;
+  private _serviceName?: string; 
   public get serviceName() {
     return this.getStringAttribute('service_name');
   }
@@ -167,7 +167,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
 
   // service_namespace - computed: false, optional: false, required: true
-  private _serviceNamespace: string;
+  private _serviceNamespace?: string; 
   public get serviceNamespace() {
     return this.getStringAttribute('service_namespace');
   }

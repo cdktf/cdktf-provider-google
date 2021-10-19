@@ -81,7 +81,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -99,11 +99,11 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
 
   // content - computed: false, optional: true, required: false
-  private _content?: string;
+  private _content?: string | undefined; 
   public get content() {
     return this.getStringAttribute('content');
   }
-  public set content(value: string ) {
+  public set content(value: string | undefined) {
     this._content = value;
   }
   public resetContent() {
@@ -151,7 +151,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
 
   // event_based_hold - computed: true, optional: false, required: false
   public get eventBasedHold() {
-    return this.getBooleanAttribute('event_based_hold');
+    return this.getBooleanAttribute('event_based_hold') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -180,7 +180,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -214,7 +214,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
 
   // temporary_hold - computed: true, optional: false, required: false
   public get temporaryHold() {
-    return this.getBooleanAttribute('temporary_hold');
+    return this.getBooleanAttribute('temporary_hold') as any;
   }
 
   // =========

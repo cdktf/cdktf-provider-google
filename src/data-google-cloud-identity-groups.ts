@@ -49,6 +49,7 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
 
   // group_key - computed: true, optional: false, required: false
   public get groupKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('group_key') as any;
   }
 
@@ -59,6 +60,7 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
 
@@ -128,7 +130,7 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }

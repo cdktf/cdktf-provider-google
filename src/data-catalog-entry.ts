@@ -82,7 +82,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#gcs_fileset_spec DataCatalogEntry#gcs_fileset_spec}
   */
-  readonly gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec[];
+  readonly gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec;
   /**
   * timeouts block
   * 
@@ -130,11 +130,13 @@ export class DataCatalogEntryBigqueryTableSpec extends cdktf.ComplexComputedList
 
   // table_spec - computed: true, optional: false, required: false
   public get tableSpec() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('table_spec') as any;
   }
 
   // view_spec - computed: true, optional: false, required: false
   public get viewSpec() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('view_spec') as any;
   }
 }
@@ -158,13 +160,39 @@ for more information. Note that bucket wildcards are currently not supported. Ex
   readonly filePatterns: string[];
 }
 
-function dataCatalogEntryGcsFilesetSpecToTerraform(struct?: DataCatalogEntryGcsFilesetSpec): any {
+function dataCatalogEntryGcsFilesetSpecToTerraform(struct?: DataCatalogEntryGcsFilesetSpecOutputReference | DataCatalogEntryGcsFilesetSpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     file_patterns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.filePatterns),
   }
 }
 
+export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // file_patterns - computed: false, optional: false, required: true
+  private _filePatterns?: string[]; 
+  public get filePatterns() {
+    return this.getListAttribute('file_patterns');
+  }
+  public set filePatterns(value: string[]) {
+    this._filePatterns = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filePatternsInput() {
+    return this._filePatterns
+  }
+}
 export interface DataCatalogEntryTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html#create DataCatalogEntry#create}
@@ -180,8 +208,11 @@ export interface DataCatalogEntryTimeouts {
   readonly update?: string;
 }
 
-function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeouts): any {
+function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeoutsOutputReference | DataCatalogEntryTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -189,6 +220,64 @@ function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeouts):
   }
 }
 
+export class DataCatalogEntryTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry.html google_data_catalog_entry}
@@ -250,11 +339,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -266,11 +355,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -282,7 +371,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // entry_group - computed: false, optional: false, required: true
-  private _entryGroup: string;
+  private _entryGroup?: string; 
   public get entryGroup() {
     return this.getStringAttribute('entry_group');
   }
@@ -295,7 +384,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // entry_id - computed: false, optional: false, required: true
-  private _entryId: string;
+  private _entryId?: string; 
   public get entryId() {
     return this.getStringAttribute('entry_id');
   }
@@ -318,11 +407,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // linked_resource - computed: true, optional: true, required: false
-  private _linkedResource?: string;
+  private _linkedResource?: string | undefined; 
   public get linkedResource() {
     return this.getStringAttribute('linked_resource');
   }
-  public set linkedResource(value: string) {
+  public set linkedResource(value: string | undefined) {
     this._linkedResource = value;
   }
   public resetLinkedResource() {
@@ -339,11 +428,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // schema - computed: false, optional: true, required: false
-  private _schema?: string;
+  private _schema?: string | undefined; 
   public get schema() {
     return this.getStringAttribute('schema');
   }
-  public set schema(value: string ) {
+  public set schema(value: string | undefined) {
     this._schema = value;
   }
   public resetSchema() {
@@ -355,11 +444,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string;
+  private _type?: string | undefined; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string ) {
+  public set type(value: string | undefined) {
     this._type = value;
   }
   public resetType() {
@@ -371,11 +460,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // user_specified_system - computed: false, optional: true, required: false
-  private _userSpecifiedSystem?: string;
+  private _userSpecifiedSystem?: string | undefined; 
   public get userSpecifiedSystem() {
     return this.getStringAttribute('user_specified_system');
   }
-  public set userSpecifiedSystem(value: string ) {
+  public set userSpecifiedSystem(value: string | undefined) {
     this._userSpecifiedSystem = value;
   }
   public resetUserSpecifiedSystem() {
@@ -387,11 +476,11 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // user_specified_type - computed: false, optional: true, required: false
-  private _userSpecifiedType?: string;
+  private _userSpecifiedType?: string | undefined; 
   public get userSpecifiedType() {
     return this.getStringAttribute('user_specified_type');
   }
-  public set userSpecifiedType(value: string ) {
+  public set userSpecifiedType(value: string | undefined) {
     this._userSpecifiedType = value;
   }
   public resetUserSpecifiedType() {
@@ -403,11 +492,12 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // gcs_fileset_spec - computed: false, optional: true, required: false
-  private _gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec[];
+  private _gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec | undefined; 
+  private __gcsFilesetSpecOutput = new DataCatalogEntryGcsFilesetSpecOutputReference(this as any, "gcs_fileset_spec", true);
   public get gcsFilesetSpec() {
-    return this.interpolationForAttribute('gcs_fileset_spec') as any;
+    return this.__gcsFilesetSpecOutput;
   }
-  public set gcsFilesetSpec(value: DataCatalogEntryGcsFilesetSpec[] ) {
+  public putGcsFilesetSpec(value: DataCatalogEntryGcsFilesetSpec | undefined) {
     this._gcsFilesetSpec = value;
   }
   public resetGcsFilesetSpec() {
@@ -419,11 +509,12 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataCatalogEntryTimeouts;
+  private _timeouts?: DataCatalogEntryTimeouts | undefined; 
+  private __timeoutsOutput = new DataCatalogEntryTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataCatalogEntryTimeouts ) {
+  public putTimeouts(value: DataCatalogEntryTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -449,7 +540,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
       type: cdktf.stringToTerraform(this._type),
       user_specified_system: cdktf.stringToTerraform(this._userSpecifiedSystem),
       user_specified_type: cdktf.stringToTerraform(this._userSpecifiedType),
-      gcs_fileset_spec: cdktf.listMapper(dataCatalogEntryGcsFilesetSpecToTerraform)(this._gcsFilesetSpec),
+      gcs_fileset_spec: dataCatalogEntryGcsFilesetSpecToTerraform(this._gcsFilesetSpec),
       timeouts: dataCatalogEntryTimeoutsToTerraform(this._timeouts),
     };
   }

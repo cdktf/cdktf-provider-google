@@ -88,11 +88,11 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
 
   // family - computed: true, optional: true, required: false
-  private _family?: string;
+  private _family?: string | undefined; 
   public get family() {
     return this.getStringAttribute('family');
   }
-  public set family(value: string) {
+  public set family(value: string | undefined) {
     this._family = value;
   }
   public resetFamily() {
@@ -104,11 +104,11 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string;
+  private _filter?: string | undefined; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string ) {
+  public set filter(value: string | undefined) {
     this._filter = value;
   }
   public resetFilter() {
@@ -150,11 +150,11 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -166,11 +166,11 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

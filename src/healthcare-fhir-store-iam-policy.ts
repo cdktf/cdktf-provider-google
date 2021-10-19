@@ -63,7 +63,7 @@ export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // fhir_store_id - computed: false, optional: false, required: true
-  private _fhirStoreId: string;
+  private _fhirStoreId?: string; 
   public get fhirStoreId() {
     return this.getStringAttribute('fhir_store_id');
   }
@@ -81,7 +81,7 @@ export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

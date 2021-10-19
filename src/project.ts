@@ -81,8 +81,11 @@ export interface ProjectTimeouts {
   readonly update?: string;
 }
 
-function projectTimeoutsToTerraform(struct?: ProjectTimeouts): any {
+function projectTimeoutsToTerraform(struct?: ProjectTimeoutsOutputReference | ProjectTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -91,6 +94,80 @@ function projectTimeoutsToTerraform(struct?: ProjectTimeouts): any {
   }
 }
 
+export class ProjectTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/project.html google_project}
@@ -140,11 +217,11 @@ export class Project extends cdktf.TerraformResource {
   // ==========
 
   // auto_create_network - computed: false, optional: true, required: false
-  private _autoCreateNetwork?: boolean | cdktf.IResolvable;
+  private _autoCreateNetwork?: boolean | cdktf.IResolvable | undefined; 
   public get autoCreateNetwork() {
-    return this.getBooleanAttribute('auto_create_network');
+    return this.getBooleanAttribute('auto_create_network') as any;
   }
-  public set autoCreateNetwork(value: boolean | cdktf.IResolvable ) {
+  public set autoCreateNetwork(value: boolean | cdktf.IResolvable | undefined) {
     this._autoCreateNetwork = value;
   }
   public resetAutoCreateNetwork() {
@@ -156,11 +233,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // billing_account - computed: false, optional: true, required: false
-  private _billingAccount?: string;
+  private _billingAccount?: string | undefined; 
   public get billingAccount() {
     return this.getStringAttribute('billing_account');
   }
-  public set billingAccount(value: string ) {
+  public set billingAccount(value: string | undefined) {
     this._billingAccount = value;
   }
   public resetBillingAccount() {
@@ -172,11 +249,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // folder_id - computed: true, optional: true, required: false
-  private _folderId?: string;
+  private _folderId?: string | undefined; 
   public get folderId() {
     return this.getStringAttribute('folder_id');
   }
-  public set folderId(value: string) {
+  public set folderId(value: string | undefined) {
     this._folderId = value;
   }
   public resetFolderId() {
@@ -193,11 +270,12 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -209,7 +287,7 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -227,11 +305,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // org_id - computed: true, optional: true, required: false
-  private _orgId?: string;
+  private _orgId?: string | undefined; 
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
-  public set orgId(value: string) {
+  public set orgId(value: string | undefined) {
     this._orgId = value;
   }
   public resetOrgId() {
@@ -243,7 +321,7 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // project_id - computed: false, optional: false, required: true
-  private _projectId: string;
+  private _projectId?: string; 
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
@@ -256,11 +334,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // skip_delete - computed: true, optional: true, required: false
-  private _skipDelete?: boolean | cdktf.IResolvable;
+  private _skipDelete?: boolean | cdktf.IResolvable | undefined; 
   public get skipDelete() {
-    return this.getBooleanAttribute('skip_delete');
+    return this.getBooleanAttribute('skip_delete') as any;
   }
-  public set skipDelete(value: boolean | cdktf.IResolvable) {
+  public set skipDelete(value: boolean | cdktf.IResolvable | undefined) {
     this._skipDelete = value;
   }
   public resetSkipDelete() {
@@ -272,11 +350,12 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ProjectTimeouts;
+  private _timeouts?: ProjectTimeouts | undefined; 
+  private __timeoutsOutput = new ProjectTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ProjectTimeouts ) {
+  public putTimeouts(value: ProjectTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

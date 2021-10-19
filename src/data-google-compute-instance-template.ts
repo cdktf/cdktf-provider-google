@@ -32,7 +32,7 @@ export class DataGoogleComputeInstanceTemplateAdvancedMachineFeatures extends cd
 
   // enable_nested_virtualization - computed: true, optional: false, required: false
   public get enableNestedVirtualization() {
-    return this.getBooleanAttribute('enable_nested_virtualization');
+    return this.getBooleanAttribute('enable_nested_virtualization') as any;
   }
 
   // threads_per_core - computed: true, optional: false, required: false
@@ -44,7 +44,7 @@ export class DataGoogleComputeInstanceTemplateConfidentialInstanceConfig extends
 
   // enable_confidential_compute - computed: true, optional: false, required: false
   public get enableConfidentialCompute() {
-    return this.getBooleanAttribute('enable_confidential_compute');
+    return this.getBooleanAttribute('enable_confidential_compute') as any;
   }
 }
 export class DataGoogleComputeInstanceTemplateDiskDiskEncryptionKey extends cdktf.ComplexComputedList {
@@ -58,12 +58,12 @@ export class DataGoogleComputeInstanceTemplateDisk extends cdktf.ComplexComputed
 
   // auto_delete - computed: true, optional: false, required: false
   public get autoDelete() {
-    return this.getBooleanAttribute('auto_delete');
+    return this.getBooleanAttribute('auto_delete') as any;
   }
 
   // boot - computed: true, optional: false, required: false
   public get boot() {
-    return this.getBooleanAttribute('boot');
+    return this.getBooleanAttribute('boot') as any;
   }
 
   // device_name - computed: true, optional: false, required: false
@@ -73,6 +73,7 @@ export class DataGoogleComputeInstanceTemplateDisk extends cdktf.ComplexComputed
 
   // disk_encryption_key - computed: true, optional: false, required: false
   public get diskEncryptionKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('disk_encryption_key') as any;
   }
 
@@ -98,6 +99,7 @@ export class DataGoogleComputeInstanceTemplateDisk extends cdktf.ComplexComputed
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
 
@@ -193,16 +195,19 @@ export class DataGoogleComputeInstanceTemplateNetworkInterface extends cdktf.Com
 
   // access_config - computed: true, optional: false, required: false
   public get accessConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('access_config') as any;
   }
 
   // alias_ip_range - computed: true, optional: false, required: false
   public get aliasIpRange() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('alias_ip_range') as any;
   }
 
   // ipv6_access_config - computed: true, optional: false, required: false
   public get ipv6AccessConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ipv6_access_config') as any;
   }
 
@@ -262,6 +267,7 @@ export class DataGoogleComputeInstanceTemplateReservationAffinity extends cdktf.
 
   // specific_reservation - computed: true, optional: false, required: false
   public get specificReservation() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('specific_reservation') as any;
   }
 
@@ -291,7 +297,7 @@ export class DataGoogleComputeInstanceTemplateScheduling extends cdktf.ComplexCo
 
   // automatic_restart - computed: true, optional: false, required: false
   public get automaticRestart() {
-    return this.getBooleanAttribute('automatic_restart');
+    return this.getBooleanAttribute('automatic_restart') as any;
   }
 
   // min_node_cpus - computed: true, optional: false, required: false
@@ -301,6 +307,7 @@ export class DataGoogleComputeInstanceTemplateScheduling extends cdktf.ComplexCo
 
   // node_affinities - computed: true, optional: false, required: false
   public get nodeAffinities() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_affinities') as any;
   }
 
@@ -311,7 +318,7 @@ export class DataGoogleComputeInstanceTemplateScheduling extends cdktf.ComplexCo
 
   // preemptible - computed: true, optional: false, required: false
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible');
+    return this.getBooleanAttribute('preemptible') as any;
   }
 }
 export class DataGoogleComputeInstanceTemplateServiceAccount extends cdktf.ComplexComputedList {
@@ -330,17 +337,17 @@ export class DataGoogleComputeInstanceTemplateShieldedInstanceConfig extends cdk
 
   // enable_integrity_monitoring - computed: true, optional: false, required: false
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring');
+    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
   }
 
   // enable_secure_boot - computed: true, optional: false, required: false
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot');
+    return this.getBooleanAttribute('enable_secure_boot') as any;
   }
 
   // enable_vtpm - computed: true, optional: false, required: false
   public get enableVtpm() {
-    return this.getBooleanAttribute('enable_vtpm');
+    return this.getBooleanAttribute('enable_vtpm') as any;
   }
 }
 
@@ -393,7 +400,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
 
   // can_ip_forward - computed: true, optional: false, required: false
   public get canIpForward() {
-    return this.getBooleanAttribute('can_ip_forward');
+    return this.getBooleanAttribute('can_ip_forward') as any;
   }
 
   // confidential_instance_config - computed: true, optional: false, required: false
@@ -413,15 +420,15 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
 
   // enable_display - computed: true, optional: false, required: false
   public get enableDisplay() {
-    return this.getBooleanAttribute('enable_display');
+    return this.getBooleanAttribute('enable_display') as any;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string;
+  private _filter?: string | undefined; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string ) {
+  public set filter(value: string | undefined) {
     this._filter = value;
   }
   public resetFilter() {
@@ -478,11 +485,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // most_recent - computed: false, optional: true, required: false
-  private _mostRecent?: boolean | cdktf.IResolvable;
+  private _mostRecent?: boolean | cdktf.IResolvable | undefined; 
   public get mostRecent() {
-    return this.getBooleanAttribute('most_recent');
+    return this.getBooleanAttribute('most_recent') as any;
   }
-  public set mostRecent(value: boolean | cdktf.IResolvable ) {
+  public set mostRecent(value: boolean | cdktf.IResolvable | undefined) {
     this._mostRecent = value;
   }
   public resetMostRecent() {
@@ -494,11 +501,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string ) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -520,7 +527,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // project - computed: false, optional: false, required: true
-  private _project: string;
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }

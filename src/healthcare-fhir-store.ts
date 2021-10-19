@@ -98,7 +98,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#notification_config HealthcareFhirStore#notification_config}
   */
-  readonly notificationConfig?: HealthcareFhirStoreNotificationConfig[];
+  readonly notificationConfig?: HealthcareFhirStoreNotificationConfig;
   /**
   * stream_configs block
   * 
@@ -126,13 +126,39 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
   readonly pubsubTopic: string;
 }
 
-function healthcareFhirStoreNotificationConfigToTerraform(struct?: HealthcareFhirStoreNotificationConfig): any {
+function healthcareFhirStoreNotificationConfigToTerraform(struct?: HealthcareFhirStoreNotificationConfigOutputReference | HealthcareFhirStoreNotificationConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
   }
 }
 
+export class HealthcareFhirStoreNotificationConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // pubsub_topic - computed: false, optional: false, required: true
+  private _pubsubTopic?: string; 
+  public get pubsubTopic() {
+    return this.getStringAttribute('pubsub_topic');
+  }
+  public set pubsubTopic(value: string) {
+    this._pubsubTopic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubTopicInput() {
+    return this._pubsubTopic
+  }
+}
 export interface HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig {
   /**
   * The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
@@ -153,14 +179,56 @@ value 2. The maximum depth allowed is 5.
   readonly schemaType?: string;
 }
 
-function healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigToTerraform(struct?: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig): any {
+function healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigToTerraform(struct?: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference | HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     recursive_structure_depth: cdktf.numberToTerraform(struct!.recursiveStructureDepth),
     schema_type: cdktf.stringToTerraform(struct!.schemaType),
   }
 }
 
+export class HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // recursive_structure_depth - computed: false, optional: false, required: true
+  private _recursiveStructureDepth?: number; 
+  public get recursiveStructureDepth() {
+    return this.getNumberAttribute('recursive_structure_depth');
+  }
+  public set recursiveStructureDepth(value: number) {
+    this._recursiveStructureDepth = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recursiveStructureDepthInput() {
+    return this._recursiveStructureDepth
+  }
+
+  // schema_type - computed: false, optional: true, required: false
+  private _schemaType?: string | undefined; 
+  public get schemaType() {
+    return this.getStringAttribute('schema_type');
+  }
+  public set schemaType(value: string | undefined) {
+    this._schemaType = value;
+  }
+  public resetSchemaType() {
+    this._schemaType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaTypeInput() {
+    return this._schemaType
+  }
+}
 export interface HealthcareFhirStoreStreamConfigsBigqueryDestination {
   /**
   * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
@@ -173,17 +241,57 @@ export interface HealthcareFhirStoreStreamConfigsBigqueryDestination {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#schema_config HealthcareFhirStore#schema_config}
   */
-  readonly schemaConfig: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig[];
+  readonly schemaConfig: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig;
 }
 
-function healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform(struct?: HealthcareFhirStoreStreamConfigsBigqueryDestination): any {
+function healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform(struct?: HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference | HealthcareFhirStoreStreamConfigsBigqueryDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_uri: cdktf.stringToTerraform(struct!.datasetUri),
-    schema_config: cdktf.listMapper(healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigToTerraform)(struct!.schemaConfig),
+    schema_config: healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigToTerraform(struct!.schemaConfig),
   }
 }
 
+export class HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_uri - computed: false, optional: false, required: true
+  private _datasetUri?: string; 
+  public get datasetUri() {
+    return this.getStringAttribute('dataset_uri');
+  }
+  public set datasetUri(value: string) {
+    this._datasetUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetUriInput() {
+    return this._datasetUri
+  }
+
+  // schema_config - computed: false, optional: false, required: true
+  private _schemaConfig?: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig; 
+  private __schemaConfigOutput = new HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference(this as any, "schema_config", true);
+  public get schemaConfig() {
+    return this.__schemaConfigOutput;
+  }
+  public putSchemaConfig(value: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig) {
+    this._schemaConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaConfigInput() {
+    return this._schemaConfig
+  }
+}
 export interface HealthcareFhirStoreStreamConfigs {
   /**
   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
@@ -198,14 +306,17 @@ an empty list as an intent to stream all the supported resource types in this FH
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html#bigquery_destination HealthcareFhirStore#bigquery_destination}
   */
-  readonly bigqueryDestination: HealthcareFhirStoreStreamConfigsBigqueryDestination[];
+  readonly bigqueryDestination: HealthcareFhirStoreStreamConfigsBigqueryDestination;
 }
 
 function healthcareFhirStoreStreamConfigsToTerraform(struct?: HealthcareFhirStoreStreamConfigs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     resource_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourceTypes),
-    bigquery_destination: cdktf.listMapper(healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform)(struct!.bigqueryDestination),
+    bigquery_destination: healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform(struct!.bigqueryDestination),
   }
 }
 
@@ -224,8 +335,11 @@ export interface HealthcareFhirStoreTimeouts {
   readonly update?: string;
 }
 
-function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirStoreTimeouts): any {
+function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirStoreTimeoutsOutputReference | HealthcareFhirStoreTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -233,6 +347,64 @@ function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirStoreTime
   }
 }
 
+export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store.html google_healthcare_fhir_store}
@@ -284,7 +456,7 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   // ==========
 
   // dataset - computed: false, optional: false, required: true
-  private _dataset: string;
+  private _dataset?: string; 
   public get dataset() {
     return this.getStringAttribute('dataset');
   }
@@ -297,11 +469,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // disable_referential_integrity - computed: false, optional: true, required: false
-  private _disableReferentialIntegrity?: boolean | cdktf.IResolvable;
+  private _disableReferentialIntegrity?: boolean | cdktf.IResolvable | undefined; 
   public get disableReferentialIntegrity() {
-    return this.getBooleanAttribute('disable_referential_integrity');
+    return this.getBooleanAttribute('disable_referential_integrity') as any;
   }
-  public set disableReferentialIntegrity(value: boolean | cdktf.IResolvable ) {
+  public set disableReferentialIntegrity(value: boolean | cdktf.IResolvable | undefined) {
     this._disableReferentialIntegrity = value;
   }
   public resetDisableReferentialIntegrity() {
@@ -313,11 +485,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // disable_resource_versioning - computed: false, optional: true, required: false
-  private _disableResourceVersioning?: boolean | cdktf.IResolvable;
+  private _disableResourceVersioning?: boolean | cdktf.IResolvable | undefined; 
   public get disableResourceVersioning() {
-    return this.getBooleanAttribute('disable_resource_versioning');
+    return this.getBooleanAttribute('disable_resource_versioning') as any;
   }
-  public set disableResourceVersioning(value: boolean | cdktf.IResolvable ) {
+  public set disableResourceVersioning(value: boolean | cdktf.IResolvable | undefined) {
     this._disableResourceVersioning = value;
   }
   public resetDisableResourceVersioning() {
@@ -329,11 +501,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // enable_history_import - computed: false, optional: true, required: false
-  private _enableHistoryImport?: boolean | cdktf.IResolvable;
+  private _enableHistoryImport?: boolean | cdktf.IResolvable | undefined; 
   public get enableHistoryImport() {
-    return this.getBooleanAttribute('enable_history_import');
+    return this.getBooleanAttribute('enable_history_import') as any;
   }
-  public set enableHistoryImport(value: boolean | cdktf.IResolvable ) {
+  public set enableHistoryImport(value: boolean | cdktf.IResolvable | undefined) {
     this._enableHistoryImport = value;
   }
   public resetEnableHistoryImport() {
@@ -345,11 +517,11 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // enable_update_create - computed: false, optional: true, required: false
-  private _enableUpdateCreate?: boolean | cdktf.IResolvable;
+  private _enableUpdateCreate?: boolean | cdktf.IResolvable | undefined; 
   public get enableUpdateCreate() {
-    return this.getBooleanAttribute('enable_update_create');
+    return this.getBooleanAttribute('enable_update_create') as any;
   }
-  public set enableUpdateCreate(value: boolean | cdktf.IResolvable ) {
+  public set enableUpdateCreate(value: boolean | cdktf.IResolvable | undefined) {
     this._enableUpdateCreate = value;
   }
   public resetEnableUpdateCreate() {
@@ -366,11 +538,12 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -382,7 +555,7 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -400,7 +573,7 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // version - computed: false, optional: false, required: true
-  private _version: string;
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -413,11 +586,12 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig?: HealthcareFhirStoreNotificationConfig[];
+  private _notificationConfig?: HealthcareFhirStoreNotificationConfig | undefined; 
+  private __notificationConfigOutput = new HealthcareFhirStoreNotificationConfigOutputReference(this as any, "notification_config", true);
   public get notificationConfig() {
-    return this.interpolationForAttribute('notification_config') as any;
+    return this.__notificationConfigOutput;
   }
-  public set notificationConfig(value: HealthcareFhirStoreNotificationConfig[] ) {
+  public putNotificationConfig(value: HealthcareFhirStoreNotificationConfig | undefined) {
     this._notificationConfig = value;
   }
   public resetNotificationConfig() {
@@ -429,11 +603,12 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // stream_configs - computed: false, optional: true, required: false
-  private _streamConfigs?: HealthcareFhirStoreStreamConfigs[];
+  private _streamConfigs?: HealthcareFhirStoreStreamConfigs[] | undefined; 
   public get streamConfigs() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('stream_configs') as any;
   }
-  public set streamConfigs(value: HealthcareFhirStoreStreamConfigs[] ) {
+  public set streamConfigs(value: HealthcareFhirStoreStreamConfigs[] | undefined) {
     this._streamConfigs = value;
   }
   public resetStreamConfigs() {
@@ -445,11 +620,12 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HealthcareFhirStoreTimeouts;
+  private _timeouts?: HealthcareFhirStoreTimeouts | undefined; 
+  private __timeoutsOutput = new HealthcareFhirStoreTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: HealthcareFhirStoreTimeouts ) {
+  public putTimeouts(value: HealthcareFhirStoreTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -474,7 +650,7 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       version: cdktf.stringToTerraform(this._version),
-      notification_config: cdktf.listMapper(healthcareFhirStoreNotificationConfigToTerraform)(this._notificationConfig),
+      notification_config: healthcareFhirStoreNotificationConfigToTerraform(this._notificationConfig),
       stream_configs: cdktf.listMapper(healthcareFhirStoreStreamConfigsToTerraform)(this._streamConfigs),
       timeouts: healthcareFhirStoreTimeoutsToTerraform(this._timeouts),
     };

@@ -38,7 +38,7 @@ Config lives in.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#streaming_config SccNotificationConfig#streaming_config}
   */
-  readonly streamingConfig: SccNotificationConfigStreamingConfig[];
+  readonly streamingConfig: SccNotificationConfigStreamingConfig;
   /**
   * timeouts block
   * 
@@ -79,13 +79,39 @@ for information on how to write a filter.
   readonly filter: string;
 }
 
-function sccNotificationConfigStreamingConfigToTerraform(struct?: SccNotificationConfigStreamingConfig): any {
+function sccNotificationConfigStreamingConfigToTerraform(struct?: SccNotificationConfigStreamingConfigOutputReference | SccNotificationConfigStreamingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     filter: cdktf.stringToTerraform(struct!.filter),
   }
 }
 
+export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // filter - computed: false, optional: false, required: true
+  private _filter?: string; 
+  public get filter() {
+    return this.getStringAttribute('filter');
+  }
+  public set filter(value: string) {
+    this._filter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
+  }
+}
 export interface SccNotificationConfigTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#create SccNotificationConfig#create}
@@ -101,8 +127,11 @@ export interface SccNotificationConfigTimeouts {
   readonly update?: string;
 }
 
-function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfigTimeouts): any {
+function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfigTimeoutsOutputReference | SccNotificationConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -110,6 +139,64 @@ function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfig
   }
 }
 
+export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html google_scc_notification_config}
@@ -156,7 +243,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   // ==========
 
   // config_id - computed: false, optional: false, required: true
-  private _configId: string;
+  private _configId?: string; 
   public get configId() {
     return this.getStringAttribute('config_id');
   }
@@ -169,11 +256,11 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -195,7 +282,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // organization - computed: false, optional: false, required: true
-  private _organization: string;
+  private _organization?: string; 
   public get organization() {
     return this.getStringAttribute('organization');
   }
@@ -208,7 +295,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // pubsub_topic - computed: false, optional: false, required: true
-  private _pubsubTopic: string;
+  private _pubsubTopic?: string; 
   public get pubsubTopic() {
     return this.getStringAttribute('pubsub_topic');
   }
@@ -226,11 +313,12 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // streaming_config - computed: false, optional: false, required: true
-  private _streamingConfig: SccNotificationConfigStreamingConfig[];
+  private _streamingConfig?: SccNotificationConfigStreamingConfig; 
+  private __streamingConfigOutput = new SccNotificationConfigStreamingConfigOutputReference(this as any, "streaming_config", true);
   public get streamingConfig() {
-    return this.interpolationForAttribute('streaming_config') as any;
+    return this.__streamingConfigOutput;
   }
-  public set streamingConfig(value: SccNotificationConfigStreamingConfig[]) {
+  public putStreamingConfig(value: SccNotificationConfigStreamingConfig) {
     this._streamingConfig = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -239,11 +327,12 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SccNotificationConfigTimeouts;
+  private _timeouts?: SccNotificationConfigTimeouts | undefined; 
+  private __timeoutsOutput = new SccNotificationConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SccNotificationConfigTimeouts ) {
+  public putTimeouts(value: SccNotificationConfigTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -264,7 +353,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       organization: cdktf.stringToTerraform(this._organization),
       pubsub_topic: cdktf.stringToTerraform(this._pubsubTopic),
-      streaming_config: cdktf.listMapper(sccNotificationConfigStreamingConfigToTerraform)(this._streamingConfig),
+      streaming_config: sccNotificationConfigStreamingConfigToTerraform(this._streamingConfig),
       timeouts: sccNotificationConfigTimeoutsToTerraform(this._timeouts),
     };
   }

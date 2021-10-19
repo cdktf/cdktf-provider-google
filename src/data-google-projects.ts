@@ -21,6 +21,7 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
 
@@ -41,6 +42,7 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 
   // parent - computed: true, optional: false, required: false
   public get parent() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parent') as any;
   }
 
@@ -90,7 +92,7 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
   // ==========
 
   // filter - computed: false, optional: false, required: true
-  private _filter: string;
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }

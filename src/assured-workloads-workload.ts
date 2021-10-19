@@ -54,7 +54,7 @@ export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#kms_settings AssuredWorkloadsWorkload#kms_settings}
   */
-  readonly kmsSettings?: AssuredWorkloadsWorkloadKmsSettings[];
+  readonly kmsSettings?: AssuredWorkloadsWorkloadKmsSettings;
   /**
   * resource_settings block
   * 
@@ -95,14 +95,53 @@ export interface AssuredWorkloadsWorkloadKmsSettings {
   readonly rotationPeriod: string;
 }
 
-function assuredWorkloadsWorkloadKmsSettingsToTerraform(struct?: AssuredWorkloadsWorkloadKmsSettings): any {
+function assuredWorkloadsWorkloadKmsSettingsToTerraform(struct?: AssuredWorkloadsWorkloadKmsSettingsOutputReference | AssuredWorkloadsWorkloadKmsSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     next_rotation_time: cdktf.stringToTerraform(struct!.nextRotationTime),
     rotation_period: cdktf.stringToTerraform(struct!.rotationPeriod),
   }
 }
 
+export class AssuredWorkloadsWorkloadKmsSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // next_rotation_time - computed: false, optional: false, required: true
+  private _nextRotationTime?: string; 
+  public get nextRotationTime() {
+    return this.getStringAttribute('next_rotation_time');
+  }
+  public set nextRotationTime(value: string) {
+    this._nextRotationTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextRotationTimeInput() {
+    return this._nextRotationTime
+  }
+
+  // rotation_period - computed: false, optional: false, required: true
+  private _rotationPeriod?: string; 
+  public get rotationPeriod() {
+    return this.getStringAttribute('rotation_period');
+  }
+  public set rotationPeriod(value: string) {
+    this._rotationPeriod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rotationPeriodInput() {
+    return this._rotationPeriod
+  }
+}
 export interface AssuredWorkloadsWorkloadResourceSettings {
   /**
   * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
@@ -120,6 +159,9 @@ export interface AssuredWorkloadsWorkloadResourceSettings {
 
 function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: AssuredWorkloadsWorkloadResourceSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     resource_id: cdktf.stringToTerraform(struct!.resourceId),
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
@@ -141,8 +183,11 @@ export interface AssuredWorkloadsWorkloadTimeouts {
   readonly update?: string;
 }
 
-function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWorkloadTimeouts): any {
+function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWorkloadTimeoutsOutputReference | AssuredWorkloadsWorkloadTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -150,6 +195,64 @@ function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWo
   }
 }
 
+export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html google_assured_workloads_workload}
@@ -200,7 +303,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // ==========
 
   // billing_account - computed: false, optional: false, required: true
-  private _billingAccount: string;
+  private _billingAccount?: string; 
   public get billingAccount() {
     return this.getStringAttribute('billing_account');
   }
@@ -213,7 +316,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // compliance_regime - computed: false, optional: false, required: true
-  private _complianceRegime: string;
+  private _complianceRegime?: string; 
   public get complianceRegime() {
     return this.getStringAttribute('compliance_regime');
   }
@@ -231,7 +334,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -249,11 +352,12 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -265,7 +369,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -283,7 +387,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // organization - computed: false, optional: false, required: true
-  private _organization: string;
+  private _organization?: string; 
   public get organization() {
     return this.getStringAttribute('organization');
   }
@@ -296,11 +400,11 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // provisioned_resources_parent - computed: false, optional: true, required: false
-  private _provisionedResourcesParent?: string;
+  private _provisionedResourcesParent?: string | undefined; 
   public get provisionedResourcesParent() {
     return this.getStringAttribute('provisioned_resources_parent');
   }
-  public set provisionedResourcesParent(value: string ) {
+  public set provisionedResourcesParent(value: string | undefined) {
     this._provisionedResourcesParent = value;
   }
   public resetProvisionedResourcesParent() {
@@ -317,11 +421,12 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // kms_settings - computed: false, optional: true, required: false
-  private _kmsSettings?: AssuredWorkloadsWorkloadKmsSettings[];
+  private _kmsSettings?: AssuredWorkloadsWorkloadKmsSettings | undefined; 
+  private __kmsSettingsOutput = new AssuredWorkloadsWorkloadKmsSettingsOutputReference(this as any, "kms_settings", true);
   public get kmsSettings() {
-    return this.interpolationForAttribute('kms_settings') as any;
+    return this.__kmsSettingsOutput;
   }
-  public set kmsSettings(value: AssuredWorkloadsWorkloadKmsSettings[] ) {
+  public putKmsSettings(value: AssuredWorkloadsWorkloadKmsSettings | undefined) {
     this._kmsSettings = value;
   }
   public resetKmsSettings() {
@@ -333,11 +438,12 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // resource_settings - computed: false, optional: true, required: false
-  private _resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[];
+  private _resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[] | undefined; 
   public get resourceSettings() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('resource_settings') as any;
   }
-  public set resourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[] ) {
+  public set resourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[] | undefined) {
     this._resourceSettings = value;
   }
   public resetResourceSettings() {
@@ -349,11 +455,12 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AssuredWorkloadsWorkloadTimeouts;
+  private _timeouts?: AssuredWorkloadsWorkloadTimeouts | undefined; 
+  private __timeoutsOutput = new AssuredWorkloadsWorkloadTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AssuredWorkloadsWorkloadTimeouts ) {
+  public putTimeouts(value: AssuredWorkloadsWorkloadTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -377,7 +484,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       organization: cdktf.stringToTerraform(this._organization),
       provisioned_resources_parent: cdktf.stringToTerraform(this._provisionedResourcesParent),
-      kms_settings: cdktf.listMapper(assuredWorkloadsWorkloadKmsSettingsToTerraform)(this._kmsSettings),
+      kms_settings: assuredWorkloadsWorkloadKmsSettingsToTerraform(this._kmsSettings),
       resource_settings: cdktf.listMapper(assuredWorkloadsWorkloadResourceSettingsToTerraform)(this._resourceSettings),
       timeouts: assuredWorkloadsWorkloadTimeoutsToTerraform(this._timeouts),
     };

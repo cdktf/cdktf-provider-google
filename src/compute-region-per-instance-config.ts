@@ -46,7 +46,7 @@ export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#preserved_state ComputeRegionPerInstanceConfig#preserved_state}
   */
-  readonly preservedState?: ComputeRegionPerInstanceConfigPreservedState[];
+  readonly preservedState?: ComputeRegionPerInstanceConfigPreservedState;
   /**
   * timeouts block
   * 
@@ -88,6 +88,9 @@ deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER
 
 function computeRegionPerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputeRegionPerInstanceConfigPreservedStateDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     delete_rule: cdktf.stringToTerraform(struct!.deleteRule),
     device_name: cdktf.stringToTerraform(struct!.deviceName),
@@ -111,14 +114,61 @@ export interface ComputeRegionPerInstanceConfigPreservedState {
   readonly disk?: ComputeRegionPerInstanceConfigPreservedStateDisk[];
 }
 
-function computeRegionPerInstanceConfigPreservedStateToTerraform(struct?: ComputeRegionPerInstanceConfigPreservedState): any {
+function computeRegionPerInstanceConfigPreservedStateToTerraform(struct?: ComputeRegionPerInstanceConfigPreservedStateOutputReference | ComputeRegionPerInstanceConfigPreservedState): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
     disk: cdktf.listMapper(computeRegionPerInstanceConfigPreservedStateDiskToTerraform)(struct!.disk),
   }
 }
 
+export class ComputeRegionPerInstanceConfigPreservedStateOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // metadata - computed: false, optional: true, required: false
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get metadata() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('metadata') as any;
+  }
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
+  }
+
+  // disk - computed: false, optional: true, required: false
+  private _disk?: ComputeRegionPerInstanceConfigPreservedStateDisk[] | undefined; 
+  public get disk() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('disk') as any;
+  }
+  public set disk(value: ComputeRegionPerInstanceConfigPreservedStateDisk[] | undefined) {
+    this._disk = value;
+  }
+  public resetDisk() {
+    this._disk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskInput() {
+    return this._disk
+  }
+}
 export interface ComputeRegionPerInstanceConfigTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html#create ComputeRegionPerInstanceConfig#create}
@@ -134,8 +184,11 @@ export interface ComputeRegionPerInstanceConfigTimeouts {
   readonly update?: string;
 }
 
-function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: ComputeRegionPerInstanceConfigTimeouts): any {
+function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: ComputeRegionPerInstanceConfigTimeoutsOutputReference | ComputeRegionPerInstanceConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -143,6 +196,64 @@ function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: ComputeRegio
   }
 }
 
+export class ComputeRegionPerInstanceConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config.html google_compute_region_per_instance_config}
@@ -197,11 +308,11 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // minimal_action - computed: false, optional: true, required: false
-  private _minimalAction?: string;
+  private _minimalAction?: string | undefined; 
   public get minimalAction() {
     return this.getStringAttribute('minimal_action');
   }
-  public set minimalAction(value: string ) {
+  public set minimalAction(value: string | undefined) {
     this._minimalAction = value;
   }
   public resetMinimalAction() {
@@ -213,11 +324,11 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // most_disruptive_allowed_action - computed: false, optional: true, required: false
-  private _mostDisruptiveAllowedAction?: string;
+  private _mostDisruptiveAllowedAction?: string | undefined; 
   public get mostDisruptiveAllowedAction() {
     return this.getStringAttribute('most_disruptive_allowed_action');
   }
-  public set mostDisruptiveAllowedAction(value: string ) {
+  public set mostDisruptiveAllowedAction(value: string | undefined) {
     this._mostDisruptiveAllowedAction = value;
   }
   public resetMostDisruptiveAllowedAction() {
@@ -229,7 +340,7 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -242,11 +353,11 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -258,11 +369,11 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -274,7 +385,7 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // region_instance_group_manager - computed: false, optional: false, required: true
-  private _regionInstanceGroupManager: string;
+  private _regionInstanceGroupManager?: string; 
   public get regionInstanceGroupManager() {
     return this.getStringAttribute('region_instance_group_manager');
   }
@@ -287,11 +398,11 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // remove_instance_state_on_destroy - computed: false, optional: true, required: false
-  private _removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable;
+  private _removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable | undefined; 
   public get removeInstanceStateOnDestroy() {
-    return this.getBooleanAttribute('remove_instance_state_on_destroy');
+    return this.getBooleanAttribute('remove_instance_state_on_destroy') as any;
   }
-  public set removeInstanceStateOnDestroy(value: boolean | cdktf.IResolvable ) {
+  public set removeInstanceStateOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
     this._removeInstanceStateOnDestroy = value;
   }
   public resetRemoveInstanceStateOnDestroy() {
@@ -303,11 +414,12 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // preserved_state - computed: false, optional: true, required: false
-  private _preservedState?: ComputeRegionPerInstanceConfigPreservedState[];
+  private _preservedState?: ComputeRegionPerInstanceConfigPreservedState | undefined; 
+  private __preservedStateOutput = new ComputeRegionPerInstanceConfigPreservedStateOutputReference(this as any, "preserved_state", true);
   public get preservedState() {
-    return this.interpolationForAttribute('preserved_state') as any;
+    return this.__preservedStateOutput;
   }
-  public set preservedState(value: ComputeRegionPerInstanceConfigPreservedState[] ) {
+  public putPreservedState(value: ComputeRegionPerInstanceConfigPreservedState | undefined) {
     this._preservedState = value;
   }
   public resetPreservedState() {
@@ -319,11 +431,12 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionPerInstanceConfigTimeouts;
+  private _timeouts?: ComputeRegionPerInstanceConfigTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRegionPerInstanceConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRegionPerInstanceConfigTimeouts ) {
+  public putTimeouts(value: ComputeRegionPerInstanceConfigTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -347,7 +460,7 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       region_instance_group_manager: cdktf.stringToTerraform(this._regionInstanceGroupManager),
       remove_instance_state_on_destroy: cdktf.booleanToTerraform(this._removeInstanceStateOnDestroy),
-      preserved_state: cdktf.listMapper(computeRegionPerInstanceConfigPreservedStateToTerraform)(this._preservedState),
+      preserved_state: computeRegionPerInstanceConfigPreservedStateToTerraform(this._preservedState),
       timeouts: computeRegionPerInstanceConfigTimeoutsToTerraform(this._timeouts),
     };
   }

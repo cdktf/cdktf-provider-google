@@ -68,7 +68,7 @@ export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // ca_pool - computed: false, optional: false, required: true
-  private _caPool: string;
+  private _caPool?: string; 
   public get caPool() {
     return this.getStringAttribute('ca_pool');
   }
@@ -91,11 +91,11 @@ export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
   }
 
   // location - computed: true, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -107,7 +107,7 @@ export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -120,11 +120,11 @@ export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

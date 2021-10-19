@@ -68,7 +68,7 @@ export class ProjectIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -81,7 +81,7 @@ export class ProjectIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: false, optional: false, required: true
-  private _project: string;
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }

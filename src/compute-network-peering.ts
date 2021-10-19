@@ -67,8 +67,11 @@ export interface ComputeNetworkPeeringTimeouts {
   readonly update?: string;
 }
 
-function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeeringTimeouts): any {
+function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeeringTimeoutsOutputReference | ComputeNetworkPeeringTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -76,6 +79,64 @@ function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeering
   }
 }
 
+export class ComputeNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering.html google_compute_network_peering}
@@ -124,11 +185,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   // ==========
 
   // export_custom_routes - computed: false, optional: true, required: false
-  private _exportCustomRoutes?: boolean | cdktf.IResolvable;
+  private _exportCustomRoutes?: boolean | cdktf.IResolvable | undefined; 
   public get exportCustomRoutes() {
-    return this.getBooleanAttribute('export_custom_routes');
+    return this.getBooleanAttribute('export_custom_routes') as any;
   }
-  public set exportCustomRoutes(value: boolean | cdktf.IResolvable ) {
+  public set exportCustomRoutes(value: boolean | cdktf.IResolvable | undefined) {
     this._exportCustomRoutes = value;
   }
   public resetExportCustomRoutes() {
@@ -140,11 +201,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // export_subnet_routes_with_public_ip - computed: false, optional: true, required: false
-  private _exportSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
+  private _exportSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable | undefined; 
   public get exportSubnetRoutesWithPublicIp() {
-    return this.getBooleanAttribute('export_subnet_routes_with_public_ip');
+    return this.getBooleanAttribute('export_subnet_routes_with_public_ip') as any;
   }
-  public set exportSubnetRoutesWithPublicIp(value: boolean | cdktf.IResolvable ) {
+  public set exportSubnetRoutesWithPublicIp(value: boolean | cdktf.IResolvable | undefined) {
     this._exportSubnetRoutesWithPublicIp = value;
   }
   public resetExportSubnetRoutesWithPublicIp() {
@@ -161,11 +222,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // import_custom_routes - computed: false, optional: true, required: false
-  private _importCustomRoutes?: boolean | cdktf.IResolvable;
+  private _importCustomRoutes?: boolean | cdktf.IResolvable | undefined; 
   public get importCustomRoutes() {
-    return this.getBooleanAttribute('import_custom_routes');
+    return this.getBooleanAttribute('import_custom_routes') as any;
   }
-  public set importCustomRoutes(value: boolean | cdktf.IResolvable ) {
+  public set importCustomRoutes(value: boolean | cdktf.IResolvable | undefined) {
     this._importCustomRoutes = value;
   }
   public resetImportCustomRoutes() {
@@ -177,11 +238,11 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // import_subnet_routes_with_public_ip - computed: false, optional: true, required: false
-  private _importSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
+  private _importSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable | undefined; 
   public get importSubnetRoutesWithPublicIp() {
-    return this.getBooleanAttribute('import_subnet_routes_with_public_ip');
+    return this.getBooleanAttribute('import_subnet_routes_with_public_ip') as any;
   }
-  public set importSubnetRoutesWithPublicIp(value: boolean | cdktf.IResolvable ) {
+  public set importSubnetRoutesWithPublicIp(value: boolean | cdktf.IResolvable | undefined) {
     this._importSubnetRoutesWithPublicIp = value;
   }
   public resetImportSubnetRoutesWithPublicIp() {
@@ -193,7 +254,7 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -206,7 +267,7 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: false, required: true
-  private _network: string;
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
@@ -219,7 +280,7 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // peer_network - computed: false, optional: false, required: true
-  private _peerNetwork: string;
+  private _peerNetwork?: string; 
   public get peerNetwork() {
     return this.getStringAttribute('peer_network');
   }
@@ -242,11 +303,12 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeNetworkPeeringTimeouts;
+  private _timeouts?: ComputeNetworkPeeringTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeNetworkPeeringTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeNetworkPeeringTimeouts ) {
+  public putTimeouts(value: ComputeNetworkPeeringTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

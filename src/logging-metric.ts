@@ -61,13 +61,13 @@ error to specify a regex that does not include exactly one capture group.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#bucket_options LoggingMetric#bucket_options}
   */
-  readonly bucketOptions?: LoggingMetricBucketOptions[];
+  readonly bucketOptions?: LoggingMetricBucketOptions;
   /**
   * metric_descriptor block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#metric_descriptor LoggingMetric#metric_descriptor}
   */
-  readonly metricDescriptor: LoggingMetricMetricDescriptor[];
+  readonly metricDescriptor: LoggingMetricMetricDescriptor;
   /**
   * timeouts block
   * 
@@ -84,13 +84,40 @@ export interface LoggingMetricBucketOptionsExplicitBuckets {
   readonly bounds: number[];
 }
 
-function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: LoggingMetricBucketOptionsExplicitBuckets): any {
+function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: LoggingMetricBucketOptionsExplicitBucketsOutputReference | LoggingMetricBucketOptionsExplicitBuckets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     bounds: cdktf.listMapper(cdktf.numberToTerraform)(struct!.bounds),
   }
 }
 
+export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // bounds - computed: false, optional: false, required: true
+  private _bounds?: number[]; 
+  public get bounds() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('bounds') as any;
+  }
+  public set bounds(value: number[]) {
+    this._bounds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get boundsInput() {
+    return this._bounds
+  }
+}
 export interface LoggingMetricBucketOptionsExponentialBuckets {
   /**
   * Must be greater than 1.
@@ -112,8 +139,11 @@ export interface LoggingMetricBucketOptionsExponentialBuckets {
   readonly scale?: number;
 }
 
-function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?: LoggingMetricBucketOptionsExponentialBuckets): any {
+function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?: LoggingMetricBucketOptionsExponentialBucketsOutputReference | LoggingMetricBucketOptionsExponentialBuckets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     growth_factor: cdktf.numberToTerraform(struct!.growthFactor),
     num_finite_buckets: cdktf.numberToTerraform(struct!.numFiniteBuckets),
@@ -121,6 +151,64 @@ function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?: Loggin
   }
 }
 
+export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // growth_factor - computed: false, optional: true, required: false
+  private _growthFactor?: number | undefined; 
+  public get growthFactor() {
+    return this.getNumberAttribute('growth_factor');
+  }
+  public set growthFactor(value: number | undefined) {
+    this._growthFactor = value;
+  }
+  public resetGrowthFactor() {
+    this._growthFactor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get growthFactorInput() {
+    return this._growthFactor
+  }
+
+  // num_finite_buckets - computed: false, optional: true, required: false
+  private _numFiniteBuckets?: number | undefined; 
+  public get numFiniteBuckets() {
+    return this.getNumberAttribute('num_finite_buckets');
+  }
+  public set numFiniteBuckets(value: number | undefined) {
+    this._numFiniteBuckets = value;
+  }
+  public resetNumFiniteBuckets() {
+    this._numFiniteBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numFiniteBucketsInput() {
+    return this._numFiniteBuckets
+  }
+
+  // scale - computed: false, optional: true, required: false
+  private _scale?: number | undefined; 
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+  public set scale(value: number | undefined) {
+    this._scale = value;
+  }
+  public resetScale() {
+    this._scale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleInput() {
+    return this._scale
+  }
+}
 export interface LoggingMetricBucketOptionsLinearBuckets {
   /**
   * Must be greater than 0.
@@ -142,8 +230,11 @@ export interface LoggingMetricBucketOptionsLinearBuckets {
   readonly width?: number;
 }
 
-function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: LoggingMetricBucketOptionsLinearBuckets): any {
+function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: LoggingMetricBucketOptionsLinearBucketsOutputReference | LoggingMetricBucketOptionsLinearBuckets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     num_finite_buckets: cdktf.numberToTerraform(struct!.numFiniteBuckets),
     offset: cdktf.numberToTerraform(struct!.offset),
@@ -151,36 +242,158 @@ function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: LoggingMetr
   }
 }
 
+export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // num_finite_buckets - computed: false, optional: true, required: false
+  private _numFiniteBuckets?: number | undefined; 
+  public get numFiniteBuckets() {
+    return this.getNumberAttribute('num_finite_buckets');
+  }
+  public set numFiniteBuckets(value: number | undefined) {
+    this._numFiniteBuckets = value;
+  }
+  public resetNumFiniteBuckets() {
+    this._numFiniteBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numFiniteBucketsInput() {
+    return this._numFiniteBuckets
+  }
+
+  // offset - computed: false, optional: true, required: false
+  private _offset?: number | undefined; 
+  public get offset() {
+    return this.getNumberAttribute('offset');
+  }
+  public set offset(value: number | undefined) {
+    this._offset = value;
+  }
+  public resetOffset() {
+    this._offset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offsetInput() {
+    return this._offset
+  }
+
+  // width - computed: false, optional: true, required: false
+  private _width?: number | undefined; 
+  public get width() {
+    return this.getNumberAttribute('width');
+  }
+  public set width(value: number | undefined) {
+    this._width = value;
+  }
+  public resetWidth() {
+    this._width = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get widthInput() {
+    return this._width
+  }
+}
 export interface LoggingMetricBucketOptions {
   /**
   * explicit_buckets block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#explicit_buckets LoggingMetric#explicit_buckets}
   */
-  readonly explicitBuckets?: LoggingMetricBucketOptionsExplicitBuckets[];
+  readonly explicitBuckets?: LoggingMetricBucketOptionsExplicitBuckets;
   /**
   * exponential_buckets block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#exponential_buckets LoggingMetric#exponential_buckets}
   */
-  readonly exponentialBuckets?: LoggingMetricBucketOptionsExponentialBuckets[];
+  readonly exponentialBuckets?: LoggingMetricBucketOptionsExponentialBuckets;
   /**
   * linear_buckets block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#linear_buckets LoggingMetric#linear_buckets}
   */
-  readonly linearBuckets?: LoggingMetricBucketOptionsLinearBuckets[];
+  readonly linearBuckets?: LoggingMetricBucketOptionsLinearBuckets;
 }
 
-function loggingMetricBucketOptionsToTerraform(struct?: LoggingMetricBucketOptions): any {
+function loggingMetricBucketOptionsToTerraform(struct?: LoggingMetricBucketOptionsOutputReference | LoggingMetricBucketOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    explicit_buckets: cdktf.listMapper(loggingMetricBucketOptionsExplicitBucketsToTerraform)(struct!.explicitBuckets),
-    exponential_buckets: cdktf.listMapper(loggingMetricBucketOptionsExponentialBucketsToTerraform)(struct!.exponentialBuckets),
-    linear_buckets: cdktf.listMapper(loggingMetricBucketOptionsLinearBucketsToTerraform)(struct!.linearBuckets),
+    explicit_buckets: loggingMetricBucketOptionsExplicitBucketsToTerraform(struct!.explicitBuckets),
+    exponential_buckets: loggingMetricBucketOptionsExponentialBucketsToTerraform(struct!.exponentialBuckets),
+    linear_buckets: loggingMetricBucketOptionsLinearBucketsToTerraform(struct!.linearBuckets),
   }
 }
 
+export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // explicit_buckets - computed: false, optional: true, required: false
+  private _explicitBuckets?: LoggingMetricBucketOptionsExplicitBuckets | undefined; 
+  private __explicitBucketsOutput = new LoggingMetricBucketOptionsExplicitBucketsOutputReference(this as any, "explicit_buckets", true);
+  public get explicitBuckets() {
+    return this.__explicitBucketsOutput;
+  }
+  public putExplicitBuckets(value: LoggingMetricBucketOptionsExplicitBuckets | undefined) {
+    this._explicitBuckets = value;
+  }
+  public resetExplicitBuckets() {
+    this._explicitBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get explicitBucketsInput() {
+    return this._explicitBuckets
+  }
+
+  // exponential_buckets - computed: false, optional: true, required: false
+  private _exponentialBuckets?: LoggingMetricBucketOptionsExponentialBuckets | undefined; 
+  private __exponentialBucketsOutput = new LoggingMetricBucketOptionsExponentialBucketsOutputReference(this as any, "exponential_buckets", true);
+  public get exponentialBuckets() {
+    return this.__exponentialBucketsOutput;
+  }
+  public putExponentialBuckets(value: LoggingMetricBucketOptionsExponentialBuckets | undefined) {
+    this._exponentialBuckets = value;
+  }
+  public resetExponentialBuckets() {
+    this._exponentialBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exponentialBucketsInput() {
+    return this._exponentialBuckets
+  }
+
+  // linear_buckets - computed: false, optional: true, required: false
+  private _linearBuckets?: LoggingMetricBucketOptionsLinearBuckets | undefined; 
+  private __linearBucketsOutput = new LoggingMetricBucketOptionsLinearBucketsOutputReference(this as any, "linear_buckets", true);
+  public get linearBuckets() {
+    return this.__linearBucketsOutput;
+  }
+  public putLinearBuckets(value: LoggingMetricBucketOptionsLinearBuckets | undefined) {
+    this._linearBuckets = value;
+  }
+  public resetLinearBuckets() {
+    this._linearBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linearBucketsInput() {
+    return this._linearBuckets
+  }
+}
 export interface LoggingMetricMetricDescriptorLabels {
   /**
   * A human-readable description for the label.
@@ -204,6 +417,9 @@ export interface LoggingMetricMetricDescriptorLabels {
 
 function loggingMetricMetricDescriptorLabelsToTerraform(struct?: LoggingMetricMetricDescriptorLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     key: cdktf.stringToTerraform(struct!.key),
@@ -252,8 +468,11 @@ For counter metrics, set this to INT64. Possible values: ["BOOL", "INT64", "DOUB
   readonly labels?: LoggingMetricMetricDescriptorLabels[];
 }
 
-function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricMetricDescriptor): any {
+function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricMetricDescriptorOutputReference | LoggingMetricMetricDescriptor): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     display_name: cdktf.stringToTerraform(struct!.displayName),
     metric_kind: cdktf.stringToTerraform(struct!.metricKind),
@@ -263,6 +482,91 @@ function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricMetricDe
   }
 }
 
+export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string | undefined; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string | undefined) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
+
+  // metric_kind - computed: false, optional: false, required: true
+  private _metricKind?: string; 
+  public get metricKind() {
+    return this.getStringAttribute('metric_kind');
+  }
+  public set metricKind(value: string) {
+    this._metricKind = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricKindInput() {
+    return this._metricKind
+  }
+
+  // unit - computed: false, optional: true, required: false
+  private _unit?: string | undefined; 
+  public get unit() {
+    return this.getStringAttribute('unit');
+  }
+  public set unit(value: string | undefined) {
+    this._unit = value;
+  }
+  public resetUnit() {
+    this._unit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unitInput() {
+    return this._unit
+  }
+
+  // value_type - computed: false, optional: false, required: true
+  private _valueType?: string; 
+  public get valueType() {
+    return this.getStringAttribute('value_type');
+  }
+  public set valueType(value: string) {
+    this._valueType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueTypeInput() {
+    return this._valueType
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: LoggingMetricMetricDescriptorLabels[] | undefined; 
+  public get labels() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('labels') as any;
+  }
+  public set labels(value: LoggingMetricMetricDescriptorLabels[] | undefined) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
+}
 export interface LoggingMetricTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#create LoggingMetric#create}
@@ -278,8 +582,11 @@ export interface LoggingMetricTimeouts {
   readonly update?: string;
 }
 
-function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeouts): any {
+function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeoutsOutputReference | LoggingMetricTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -287,6 +594,64 @@ function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeouts): any {
   }
 }
 
+export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html google_logging_metric}
@@ -336,11 +701,11 @@ export class LoggingMetric extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -352,7 +717,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: false, required: true
-  private _filter: string;
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
@@ -370,11 +735,12 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // label_extractors - computed: false, optional: true, required: false
-  private _labelExtractors?: { [key: string]: string } | cdktf.IResolvable;
+  private _labelExtractors?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labelExtractors() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('label_extractors') as any;
   }
-  public set labelExtractors(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labelExtractors(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labelExtractors = value;
   }
   public resetLabelExtractors() {
@@ -386,7 +752,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -399,11 +765,11 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -415,11 +781,11 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // value_extractor - computed: false, optional: true, required: false
-  private _valueExtractor?: string;
+  private _valueExtractor?: string | undefined; 
   public get valueExtractor() {
     return this.getStringAttribute('value_extractor');
   }
-  public set valueExtractor(value: string ) {
+  public set valueExtractor(value: string | undefined) {
     this._valueExtractor = value;
   }
   public resetValueExtractor() {
@@ -431,11 +797,12 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // bucket_options - computed: false, optional: true, required: false
-  private _bucketOptions?: LoggingMetricBucketOptions[];
+  private _bucketOptions?: LoggingMetricBucketOptions | undefined; 
+  private __bucketOptionsOutput = new LoggingMetricBucketOptionsOutputReference(this as any, "bucket_options", true);
   public get bucketOptions() {
-    return this.interpolationForAttribute('bucket_options') as any;
+    return this.__bucketOptionsOutput;
   }
-  public set bucketOptions(value: LoggingMetricBucketOptions[] ) {
+  public putBucketOptions(value: LoggingMetricBucketOptions | undefined) {
     this._bucketOptions = value;
   }
   public resetBucketOptions() {
@@ -447,11 +814,12 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // metric_descriptor - computed: false, optional: false, required: true
-  private _metricDescriptor: LoggingMetricMetricDescriptor[];
+  private _metricDescriptor?: LoggingMetricMetricDescriptor; 
+  private __metricDescriptorOutput = new LoggingMetricMetricDescriptorOutputReference(this as any, "metric_descriptor", true);
   public get metricDescriptor() {
-    return this.interpolationForAttribute('metric_descriptor') as any;
+    return this.__metricDescriptorOutput;
   }
-  public set metricDescriptor(value: LoggingMetricMetricDescriptor[]) {
+  public putMetricDescriptor(value: LoggingMetricMetricDescriptor) {
     this._metricDescriptor = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -460,11 +828,12 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LoggingMetricTimeouts;
+  private _timeouts?: LoggingMetricTimeouts | undefined; 
+  private __timeoutsOutput = new LoggingMetricTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: LoggingMetricTimeouts ) {
+  public putTimeouts(value: LoggingMetricTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -487,8 +856,8 @@ export class LoggingMetric extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       value_extractor: cdktf.stringToTerraform(this._valueExtractor),
-      bucket_options: cdktf.listMapper(loggingMetricBucketOptionsToTerraform)(this._bucketOptions),
-      metric_descriptor: cdktf.listMapper(loggingMetricMetricDescriptorToTerraform)(this._metricDescriptor),
+      bucket_options: loggingMetricBucketOptionsToTerraform(this._bucketOptions),
+      metric_descriptor: loggingMetricMetricDescriptorToTerraform(this._metricDescriptor),
       timeouts: loggingMetricTimeoutsToTerraform(this._timeouts),
     };
   }

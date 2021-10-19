@@ -47,6 +47,7 @@ export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
 
   // digests - computed: true, optional: false, required: false
   public get digests() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('digests') as any;
   }
 
@@ -62,7 +63,7 @@ export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
 
   // is_active - computed: true, optional: false, required: false
   public get isActive() {
-    return this.getBooleanAttribute('is_active');
+    return this.getBooleanAttribute('is_active') as any;
   }
 
   // key_length - computed: true, optional: false, required: false
@@ -111,6 +112,7 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
 
   // digests - computed: true, optional: false, required: false
   public get digests() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('digests') as any;
   }
 
@@ -121,7 +123,7 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
 
   // is_active - computed: true, optional: false, required: false
   public get isActive() {
-    return this.getBooleanAttribute('is_active');
+    return this.getBooleanAttribute('is_active') as any;
   }
 
   // key_length - computed: true, optional: false, required: false
@@ -191,7 +193,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   }
 
   // managed_zone - computed: false, optional: false, required: true
-  private _managedZone: string;
+  private _managedZone?: string; 
   public get managedZone() {
     return this.getStringAttribute('managed_zone');
   }
@@ -204,11 +206,11 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

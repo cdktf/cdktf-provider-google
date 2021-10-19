@@ -96,13 +96,13 @@ create the disk. Provide this when creating the disk.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#disk_encryption_key ComputeRegionDisk#disk_encryption_key}
   */
-  readonly diskEncryptionKey?: ComputeRegionDiskDiskEncryptionKey[];
+  readonly diskEncryptionKey?: ComputeRegionDiskDiskEncryptionKey;
   /**
   * source_snapshot_encryption_key block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#source_snapshot_encryption_key ComputeRegionDisk#source_snapshot_encryption_key}
   */
-  readonly sourceSnapshotEncryptionKey?: ComputeRegionDiskSourceSnapshotEncryptionKey[];
+  readonly sourceSnapshotEncryptionKey?: ComputeRegionDiskSourceSnapshotEncryptionKey;
   /**
   * timeouts block
   * 
@@ -120,13 +120,42 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
   readonly rawKey?: string;
 }
 
-function computeRegionDiskDiskEncryptionKeyToTerraform(struct?: ComputeRegionDiskDiskEncryptionKey): any {
+function computeRegionDiskDiskEncryptionKeyToTerraform(struct?: ComputeRegionDiskDiskEncryptionKeyOutputReference | ComputeRegionDiskDiskEncryptionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     raw_key: cdktf.stringToTerraform(struct!.rawKey),
   }
 }
 
+export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // raw_key - computed: false, optional: true, required: false
+  private _rawKey?: string | undefined; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string | undefined) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey
+  }
+}
 export interface ComputeRegionDiskSourceSnapshotEncryptionKey {
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
@@ -137,13 +166,42 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
   readonly rawKey?: string;
 }
 
-function computeRegionDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeRegionDiskSourceSnapshotEncryptionKey): any {
+function computeRegionDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference | ComputeRegionDiskSourceSnapshotEncryptionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     raw_key: cdktf.stringToTerraform(struct!.rawKey),
   }
 }
 
+export class ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // raw_key - computed: false, optional: true, required: false
+  private _rawKey?: string | undefined; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string | undefined) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey
+  }
+}
 export interface ComputeRegionDiskTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#create ComputeRegionDisk#create}
@@ -159,8 +217,11 @@ export interface ComputeRegionDiskTimeouts {
   readonly update?: string;
 }
 
-function computeRegionDiskTimeoutsToTerraform(struct?: ComputeRegionDiskTimeouts): any {
+function computeRegionDiskTimeoutsToTerraform(struct?: ComputeRegionDiskTimeoutsOutputReference | ComputeRegionDiskTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -168,6 +229,64 @@ function computeRegionDiskTimeoutsToTerraform(struct?: ComputeRegionDiskTimeouts
   }
 }
 
+export class ComputeRegionDiskTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html google_compute_region_disk}
@@ -226,11 +345,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -252,11 +371,12 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -278,7 +398,7 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -291,11 +411,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // physical_block_size_bytes - computed: true, optional: true, required: false
-  private _physicalBlockSizeBytes?: number;
+  private _physicalBlockSizeBytes?: number | undefined; 
   public get physicalBlockSizeBytes() {
     return this.getNumberAttribute('physical_block_size_bytes');
   }
-  public set physicalBlockSizeBytes(value: number) {
+  public set physicalBlockSizeBytes(value: number | undefined) {
     this._physicalBlockSizeBytes = value;
   }
   public resetPhysicalBlockSizeBytes() {
@@ -307,11 +427,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -323,11 +443,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -339,7 +459,7 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // replica_zones - computed: false, optional: false, required: true
-  private _replicaZones: string[];
+  private _replicaZones?: string[]; 
   public get replicaZones() {
     return this.getListAttribute('replica_zones');
   }
@@ -357,11 +477,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // size - computed: true, optional: true, required: false
-  private _size?: number;
+  private _size?: number | undefined; 
   public get size() {
     return this.getNumberAttribute('size');
   }
-  public set size(value: number) {
+  public set size(value: number | undefined) {
     this._size = value;
   }
   public resetSize() {
@@ -373,11 +493,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // snapshot - computed: false, optional: true, required: false
-  private _snapshot?: string;
+  private _snapshot?: string | undefined; 
   public get snapshot() {
     return this.getStringAttribute('snapshot');
   }
-  public set snapshot(value: string ) {
+  public set snapshot(value: string | undefined) {
     this._snapshot = value;
   }
   public resetSnapshot() {
@@ -394,11 +514,11 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string;
+  private _type?: string | undefined; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string ) {
+  public set type(value: string | undefined) {
     this._type = value;
   }
   public resetType() {
@@ -415,11 +535,12 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
-  private _diskEncryptionKey?: ComputeRegionDiskDiskEncryptionKey[];
+  private _diskEncryptionKey?: ComputeRegionDiskDiskEncryptionKey | undefined; 
+  private __diskEncryptionKeyOutput = new ComputeRegionDiskDiskEncryptionKeyOutputReference(this as any, "disk_encryption_key", true);
   public get diskEncryptionKey() {
-    return this.interpolationForAttribute('disk_encryption_key') as any;
+    return this.__diskEncryptionKeyOutput;
   }
-  public set diskEncryptionKey(value: ComputeRegionDiskDiskEncryptionKey[] ) {
+  public putDiskEncryptionKey(value: ComputeRegionDiskDiskEncryptionKey | undefined) {
     this._diskEncryptionKey = value;
   }
   public resetDiskEncryptionKey() {
@@ -431,11 +552,12 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // source_snapshot_encryption_key - computed: false, optional: true, required: false
-  private _sourceSnapshotEncryptionKey?: ComputeRegionDiskSourceSnapshotEncryptionKey[];
+  private _sourceSnapshotEncryptionKey?: ComputeRegionDiskSourceSnapshotEncryptionKey | undefined; 
+  private __sourceSnapshotEncryptionKeyOutput = new ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference(this as any, "source_snapshot_encryption_key", true);
   public get sourceSnapshotEncryptionKey() {
-    return this.interpolationForAttribute('source_snapshot_encryption_key') as any;
+    return this.__sourceSnapshotEncryptionKeyOutput;
   }
-  public set sourceSnapshotEncryptionKey(value: ComputeRegionDiskSourceSnapshotEncryptionKey[] ) {
+  public putSourceSnapshotEncryptionKey(value: ComputeRegionDiskSourceSnapshotEncryptionKey | undefined) {
     this._sourceSnapshotEncryptionKey = value;
   }
   public resetSourceSnapshotEncryptionKey() {
@@ -447,11 +569,12 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionDiskTimeouts;
+  private _timeouts?: ComputeRegionDiskTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRegionDiskTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRegionDiskTimeouts ) {
+  public putTimeouts(value: ComputeRegionDiskTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -478,8 +601,8 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
       size: cdktf.numberToTerraform(this._size),
       snapshot: cdktf.stringToTerraform(this._snapshot),
       type: cdktf.stringToTerraform(this._type),
-      disk_encryption_key: cdktf.listMapper(computeRegionDiskDiskEncryptionKeyToTerraform)(this._diskEncryptionKey),
-      source_snapshot_encryption_key: cdktf.listMapper(computeRegionDiskSourceSnapshotEncryptionKeyToTerraform)(this._sourceSnapshotEncryptionKey),
+      disk_encryption_key: computeRegionDiskDiskEncryptionKeyToTerraform(this._diskEncryptionKey),
+      source_snapshot_encryption_key: computeRegionDiskSourceSnapshotEncryptionKeyToTerraform(this._sourceSnapshotEncryptionKey),
       timeouts: computeRegionDiskTimeoutsToTerraform(this._timeouts),
     };
   }

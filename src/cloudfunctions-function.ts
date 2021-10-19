@@ -132,13 +132,13 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#event_trigger CloudfunctionsFunction#event_trigger}
   */
-  readonly eventTrigger?: CloudfunctionsFunctionEventTrigger[];
+  readonly eventTrigger?: CloudfunctionsFunctionEventTrigger;
   /**
   * source_repository block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#source_repository CloudfunctionsFunction#source_repository}
   */
-  readonly sourceRepository?: CloudfunctionsFunctionSourceRepository[];
+  readonly sourceRepository?: CloudfunctionsFunctionSourceRepository;
   /**
   * timeouts block
   * 
@@ -155,13 +155,39 @@ export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
   readonly retry: boolean | cdktf.IResolvable;
 }
 
-function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: CloudfunctionsFunctionEventTriggerFailurePolicy): any {
+function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference | CloudfunctionsFunctionEventTriggerFailurePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     retry: cdktf.booleanToTerraform(struct!.retry),
   }
 }
 
+export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // retry - computed: false, optional: false, required: true
+  private _retry?: boolean | cdktf.IResolvable; 
+  public get retry() {
+    return this.getBooleanAttribute('retry') as any;
+  }
+  public set retry(value: boolean | cdktf.IResolvable) {
+    this._retry = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryInput() {
+    return this._retry
+  }
+}
 export interface CloudfunctionsFunctionEventTrigger {
   /**
   * The type of event to observe. For example: "google.storage.object.finalize". See the documentation on calling Cloud Functions for a full reference of accepted triggers.
@@ -180,18 +206,74 @@ export interface CloudfunctionsFunctionEventTrigger {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#failure_policy CloudfunctionsFunction#failure_policy}
   */
-  readonly failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy[];
+  readonly failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy;
 }
 
-function cloudfunctionsFunctionEventTriggerToTerraform(struct?: CloudfunctionsFunctionEventTrigger): any {
+function cloudfunctionsFunctionEventTriggerToTerraform(struct?: CloudfunctionsFunctionEventTriggerOutputReference | CloudfunctionsFunctionEventTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     event_type: cdktf.stringToTerraform(struct!.eventType),
     resource: cdktf.stringToTerraform(struct!.resource),
-    failure_policy: cdktf.listMapper(cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform)(struct!.failurePolicy),
+    failure_policy: cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct!.failurePolicy),
   }
 }
 
+export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // event_type - computed: false, optional: false, required: true
+  private _eventType?: string; 
+  public get eventType() {
+    return this.getStringAttribute('event_type');
+  }
+  public set eventType(value: string) {
+    this._eventType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventTypeInput() {
+    return this._eventType
+  }
+
+  // resource - computed: false, optional: false, required: true
+  private _resource?: string; 
+  public get resource() {
+    return this.getStringAttribute('resource');
+  }
+  public set resource(value: string) {
+    this._resource = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceInput() {
+    return this._resource
+  }
+
+  // failure_policy - computed: false, optional: true, required: false
+  private _failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy | undefined; 
+  private __failurePolicyOutput = new CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(this as any, "failure_policy", true);
+  public get failurePolicy() {
+    return this.__failurePolicyOutput;
+  }
+  public putFailurePolicy(value: CloudfunctionsFunctionEventTriggerFailurePolicy | undefined) {
+    this._failurePolicy = value;
+  }
+  public resetFailurePolicy() {
+    this._failurePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failurePolicyInput() {
+    return this._failurePolicy
+  }
+}
 export interface CloudfunctionsFunctionSourceRepository {
   /**
   * The URL pointing to the hosted repository where the function is defined.
@@ -201,13 +283,39 @@ export interface CloudfunctionsFunctionSourceRepository {
   readonly url: string;
 }
 
-function cloudfunctionsFunctionSourceRepositoryToTerraform(struct?: CloudfunctionsFunctionSourceRepository): any {
+function cloudfunctionsFunctionSourceRepositoryToTerraform(struct?: CloudfunctionsFunctionSourceRepositoryOutputReference | CloudfunctionsFunctionSourceRepository): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     url: cdktf.stringToTerraform(struct!.url),
   }
 }
 
+export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url
+  }
+}
 export interface CloudfunctionsFunctionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html#create CloudfunctionsFunction#create}
@@ -227,8 +335,11 @@ export interface CloudfunctionsFunctionTimeouts {
   readonly update?: string;
 }
 
-function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFunctionTimeouts): any {
+function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFunctionTimeoutsOutputReference | CloudfunctionsFunctionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -237,6 +348,80 @@ function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFuncti
   }
 }
 
+export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html google_cloudfunctions_function}
@@ -300,11 +485,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // ==========
 
   // available_memory_mb - computed: false, optional: true, required: false
-  private _availableMemoryMb?: number;
+  private _availableMemoryMb?: number | undefined; 
   public get availableMemoryMb() {
     return this.getNumberAttribute('available_memory_mb');
   }
-  public set availableMemoryMb(value: number ) {
+  public set availableMemoryMb(value: number | undefined) {
     this._availableMemoryMb = value;
   }
   public resetAvailableMemoryMb() {
@@ -316,11 +501,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // build_environment_variables - computed: false, optional: true, required: false
-  private _buildEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  private _buildEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get buildEnvironmentVariables() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('build_environment_variables') as any;
   }
-  public set buildEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set buildEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._buildEnvironmentVariables = value;
   }
   public resetBuildEnvironmentVariables() {
@@ -332,11 +518,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -348,11 +534,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // entry_point - computed: false, optional: true, required: false
-  private _entryPoint?: string;
+  private _entryPoint?: string | undefined; 
   public get entryPoint() {
     return this.getStringAttribute('entry_point');
   }
-  public set entryPoint(value: string ) {
+  public set entryPoint(value: string | undefined) {
     this._entryPoint = value;
   }
   public resetEntryPoint() {
@@ -364,11 +550,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // environment_variables - computed: false, optional: true, required: false
-  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get environmentVariables() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('environment_variables') as any;
   }
-  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._environmentVariables = value;
   }
   public resetEnvironmentVariables() {
@@ -380,11 +567,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // https_trigger_url - computed: true, optional: true, required: false
-  private _httpsTriggerUrl?: string;
+  private _httpsTriggerUrl?: string | undefined; 
   public get httpsTriggerUrl() {
     return this.getStringAttribute('https_trigger_url');
   }
-  public set httpsTriggerUrl(value: string) {
+  public set httpsTriggerUrl(value: string | undefined) {
     this._httpsTriggerUrl = value;
   }
   public resetHttpsTriggerUrl() {
@@ -401,11 +588,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // ingress_settings - computed: false, optional: true, required: false
-  private _ingressSettings?: string;
+  private _ingressSettings?: string | undefined; 
   public get ingressSettings() {
     return this.getStringAttribute('ingress_settings');
   }
-  public set ingressSettings(value: string ) {
+  public set ingressSettings(value: string | undefined) {
     this._ingressSettings = value;
   }
   public resetIngressSettings() {
@@ -417,11 +604,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -433,11 +621,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // max_instances - computed: false, optional: true, required: false
-  private _maxInstances?: number;
+  private _maxInstances?: number | undefined; 
   public get maxInstances() {
     return this.getNumberAttribute('max_instances');
   }
-  public set maxInstances(value: number ) {
+  public set maxInstances(value: number | undefined) {
     this._maxInstances = value;
   }
   public resetMaxInstances() {
@@ -449,7 +637,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -462,11 +650,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -478,11 +666,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -494,7 +682,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // runtime - computed: false, optional: false, required: true
-  private _runtime: string;
+  private _runtime?: string; 
   public get runtime() {
     return this.getStringAttribute('runtime');
   }
@@ -507,11 +695,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // service_account_email - computed: true, optional: true, required: false
-  private _serviceAccountEmail?: string;
+  private _serviceAccountEmail?: string | undefined; 
   public get serviceAccountEmail() {
     return this.getStringAttribute('service_account_email');
   }
-  public set serviceAccountEmail(value: string) {
+  public set serviceAccountEmail(value: string | undefined) {
     this._serviceAccountEmail = value;
   }
   public resetServiceAccountEmail() {
@@ -523,11 +711,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // source_archive_bucket - computed: false, optional: true, required: false
-  private _sourceArchiveBucket?: string;
+  private _sourceArchiveBucket?: string | undefined; 
   public get sourceArchiveBucket() {
     return this.getStringAttribute('source_archive_bucket');
   }
-  public set sourceArchiveBucket(value: string ) {
+  public set sourceArchiveBucket(value: string | undefined) {
     this._sourceArchiveBucket = value;
   }
   public resetSourceArchiveBucket() {
@@ -539,11 +727,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // source_archive_object - computed: false, optional: true, required: false
-  private _sourceArchiveObject?: string;
+  private _sourceArchiveObject?: string | undefined; 
   public get sourceArchiveObject() {
     return this.getStringAttribute('source_archive_object');
   }
-  public set sourceArchiveObject(value: string ) {
+  public set sourceArchiveObject(value: string | undefined) {
     this._sourceArchiveObject = value;
   }
   public resetSourceArchiveObject() {
@@ -555,11 +743,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: number;
+  private _timeout?: number | undefined; 
   public get timeout() {
     return this.getNumberAttribute('timeout');
   }
-  public set timeout(value: number ) {
+  public set timeout(value: number | undefined) {
     this._timeout = value;
   }
   public resetTimeout() {
@@ -571,11 +759,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // trigger_http - computed: false, optional: true, required: false
-  private _triggerHttp?: boolean | cdktf.IResolvable;
+  private _triggerHttp?: boolean | cdktf.IResolvable | undefined; 
   public get triggerHttp() {
-    return this.getBooleanAttribute('trigger_http');
+    return this.getBooleanAttribute('trigger_http') as any;
   }
-  public set triggerHttp(value: boolean | cdktf.IResolvable ) {
+  public set triggerHttp(value: boolean | cdktf.IResolvable | undefined) {
     this._triggerHttp = value;
   }
   public resetTriggerHttp() {
@@ -587,11 +775,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // vpc_connector - computed: false, optional: true, required: false
-  private _vpcConnector?: string;
+  private _vpcConnector?: string | undefined; 
   public get vpcConnector() {
     return this.getStringAttribute('vpc_connector');
   }
-  public set vpcConnector(value: string ) {
+  public set vpcConnector(value: string | undefined) {
     this._vpcConnector = value;
   }
   public resetVpcConnector() {
@@ -603,11 +791,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // vpc_connector_egress_settings - computed: true, optional: true, required: false
-  private _vpcConnectorEgressSettings?: string;
+  private _vpcConnectorEgressSettings?: string | undefined; 
   public get vpcConnectorEgressSettings() {
     return this.getStringAttribute('vpc_connector_egress_settings');
   }
-  public set vpcConnectorEgressSettings(value: string) {
+  public set vpcConnectorEgressSettings(value: string | undefined) {
     this._vpcConnectorEgressSettings = value;
   }
   public resetVpcConnectorEgressSettings() {
@@ -619,11 +807,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // event_trigger - computed: false, optional: true, required: false
-  private _eventTrigger?: CloudfunctionsFunctionEventTrigger[];
+  private _eventTrigger?: CloudfunctionsFunctionEventTrigger | undefined; 
+  private __eventTriggerOutput = new CloudfunctionsFunctionEventTriggerOutputReference(this as any, "event_trigger", true);
   public get eventTrigger() {
-    return this.interpolationForAttribute('event_trigger') as any;
+    return this.__eventTriggerOutput;
   }
-  public set eventTrigger(value: CloudfunctionsFunctionEventTrigger[] ) {
+  public putEventTrigger(value: CloudfunctionsFunctionEventTrigger | undefined) {
     this._eventTrigger = value;
   }
   public resetEventTrigger() {
@@ -635,11 +824,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // source_repository - computed: false, optional: true, required: false
-  private _sourceRepository?: CloudfunctionsFunctionSourceRepository[];
+  private _sourceRepository?: CloudfunctionsFunctionSourceRepository | undefined; 
+  private __sourceRepositoryOutput = new CloudfunctionsFunctionSourceRepositoryOutputReference(this as any, "source_repository", true);
   public get sourceRepository() {
-    return this.interpolationForAttribute('source_repository') as any;
+    return this.__sourceRepositoryOutput;
   }
-  public set sourceRepository(value: CloudfunctionsFunctionSourceRepository[] ) {
+  public putSourceRepository(value: CloudfunctionsFunctionSourceRepository | undefined) {
     this._sourceRepository = value;
   }
   public resetSourceRepository() {
@@ -651,11 +841,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudfunctionsFunctionTimeouts;
+  private _timeouts?: CloudfunctionsFunctionTimeouts | undefined; 
+  private __timeoutsOutput = new CloudfunctionsFunctionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: CloudfunctionsFunctionTimeouts ) {
+  public putTimeouts(value: CloudfunctionsFunctionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -692,8 +883,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       trigger_http: cdktf.booleanToTerraform(this._triggerHttp),
       vpc_connector: cdktf.stringToTerraform(this._vpcConnector),
       vpc_connector_egress_settings: cdktf.stringToTerraform(this._vpcConnectorEgressSettings),
-      event_trigger: cdktf.listMapper(cloudfunctionsFunctionEventTriggerToTerraform)(this._eventTrigger),
-      source_repository: cdktf.listMapper(cloudfunctionsFunctionSourceRepositoryToTerraform)(this._sourceRepository),
+      event_trigger: cloudfunctionsFunctionEventTriggerToTerraform(this._eventTrigger),
+      source_repository: cloudfunctionsFunctionSourceRepositoryToTerraform(this._sourceRepository),
       timeouts: cloudfunctionsFunctionTimeoutsToTerraform(this._timeouts),
     };
   }

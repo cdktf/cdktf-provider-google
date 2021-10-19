@@ -68,7 +68,7 @@ to true or if other fields are updated while preview is true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#target DeploymentManagerDeployment#target}
   */
-  readonly target: DeploymentManagerDeploymentTarget[];
+  readonly target: DeploymentManagerDeploymentTarget;
   /**
   * timeouts block
   * 
@@ -93,6 +93,9 @@ export interface DeploymentManagerDeploymentLabels {
 
 function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManagerDeploymentLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     key: cdktf.stringToTerraform(struct!.key),
     value: cdktf.stringToTerraform(struct!.value),
@@ -108,13 +111,39 @@ export interface DeploymentManagerDeploymentTargetConfig {
   readonly content: string;
 }
 
-function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentManagerDeploymentTargetConfig): any {
+function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentManagerDeploymentTargetConfigOutputReference | DeploymentManagerDeploymentTargetConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content: cdktf.stringToTerraform(struct!.content),
   }
 }
 
+export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content
+  }
+}
 export interface DeploymentManagerDeploymentTargetImports {
   /**
   * The full contents of the template that you want to import.
@@ -133,6 +162,9 @@ configuration.
 
 function deploymentManagerDeploymentTargetImportsToTerraform(struct?: DeploymentManagerDeploymentTargetImports): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content: cdktf.stringToTerraform(struct!.content),
     name: cdktf.stringToTerraform(struct!.name),
@@ -145,7 +177,7 @@ export interface DeploymentManagerDeploymentTarget {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#config DeploymentManagerDeployment#config}
   */
-  readonly config: DeploymentManagerDeploymentTargetConfig[];
+  readonly config: DeploymentManagerDeploymentTargetConfig;
   /**
   * imports block
   * 
@@ -154,14 +186,58 @@ export interface DeploymentManagerDeploymentTarget {
   readonly imports?: DeploymentManagerDeploymentTargetImports[];
 }
 
-function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManagerDeploymentTarget): any {
+function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManagerDeploymentTargetOutputReference | DeploymentManagerDeploymentTarget): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    config: cdktf.listMapper(deploymentManagerDeploymentTargetConfigToTerraform)(struct!.config),
+    config: deploymentManagerDeploymentTargetConfigToTerraform(struct!.config),
     imports: cdktf.listMapper(deploymentManagerDeploymentTargetImportsToTerraform)(struct!.imports),
   }
 }
 
+export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // config - computed: false, optional: false, required: true
+  private _config?: DeploymentManagerDeploymentTargetConfig; 
+  private __configOutput = new DeploymentManagerDeploymentTargetConfigOutputReference(this as any, "config", true);
+  public get config() {
+    return this.__configOutput;
+  }
+  public putConfig(value: DeploymentManagerDeploymentTargetConfig) {
+    this._config = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configInput() {
+    return this._config
+  }
+
+  // imports - computed: false, optional: true, required: false
+  private _imports?: DeploymentManagerDeploymentTargetImports[] | undefined; 
+  public get imports() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('imports') as any;
+  }
+  public set imports(value: DeploymentManagerDeploymentTargetImports[] | undefined) {
+    this._imports = value;
+  }
+  public resetImports() {
+    this._imports = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importsInput() {
+    return this._imports
+  }
+}
 export interface DeploymentManagerDeploymentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html#create DeploymentManagerDeployment#create}
@@ -177,8 +253,11 @@ export interface DeploymentManagerDeploymentTimeouts {
   readonly update?: string;
 }
 
-function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeouts): any {
+function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeoutsOutputReference | DeploymentManagerDeploymentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -186,6 +265,64 @@ function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManag
   }
 }
 
+export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment.html google_deployment_manager_deployment}
@@ -235,11 +372,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   // ==========
 
   // create_policy - computed: false, optional: true, required: false
-  private _createPolicy?: string;
+  private _createPolicy?: string | undefined; 
   public get createPolicy() {
     return this.getStringAttribute('create_policy');
   }
-  public set createPolicy(value: string ) {
+  public set createPolicy(value: string | undefined) {
     this._createPolicy = value;
   }
   public resetCreatePolicy() {
@@ -251,11 +388,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // delete_policy - computed: false, optional: true, required: false
-  private _deletePolicy?: string;
+  private _deletePolicy?: string | undefined; 
   public get deletePolicy() {
     return this.getStringAttribute('delete_policy');
   }
-  public set deletePolicy(value: string ) {
+  public set deletePolicy(value: string | undefined) {
     this._deletePolicy = value;
   }
   public resetDeletePolicy() {
@@ -272,11 +409,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -298,7 +435,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -311,11 +448,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // preview - computed: false, optional: true, required: false
-  private _preview?: boolean | cdktf.IResolvable;
+  private _preview?: boolean | cdktf.IResolvable | undefined; 
   public get preview() {
-    return this.getBooleanAttribute('preview');
+    return this.getBooleanAttribute('preview') as any;
   }
-  public set preview(value: boolean | cdktf.IResolvable ) {
+  public set preview(value: boolean | cdktf.IResolvable | undefined) {
     this._preview = value;
   }
   public resetPreview() {
@@ -327,11 +464,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -348,11 +485,12 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: DeploymentManagerDeploymentLabels[];
+  private _labels?: DeploymentManagerDeploymentLabels[] | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: DeploymentManagerDeploymentLabels[] ) {
+  public set labels(value: DeploymentManagerDeploymentLabels[] | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -364,11 +502,12 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // target - computed: false, optional: false, required: true
-  private _target: DeploymentManagerDeploymentTarget[];
+  private _target?: DeploymentManagerDeploymentTarget; 
+  private __targetOutput = new DeploymentManagerDeploymentTargetOutputReference(this as any, "target", true);
   public get target() {
-    return this.interpolationForAttribute('target') as any;
+    return this.__targetOutput;
   }
-  public set target(value: DeploymentManagerDeploymentTarget[]) {
+  public putTarget(value: DeploymentManagerDeploymentTarget) {
     this._target = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -377,11 +516,12 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DeploymentManagerDeploymentTimeouts;
+  private _timeouts?: DeploymentManagerDeploymentTimeouts | undefined; 
+  private __timeoutsOutput = new DeploymentManagerDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DeploymentManagerDeploymentTimeouts ) {
+  public putTimeouts(value: DeploymentManagerDeploymentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -405,7 +545,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       preview: cdktf.booleanToTerraform(this._preview),
       project: cdktf.stringToTerraform(this._project),
       labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform)(this._labels),
-      target: cdktf.listMapper(deploymentManagerDeploymentTargetToTerraform)(this._target),
+      target: deploymentManagerDeploymentTargetToTerraform(this._target),
       timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }

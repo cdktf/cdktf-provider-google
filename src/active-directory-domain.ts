@@ -74,8 +74,11 @@ export interface ActiveDirectoryDomainTimeouts {
   readonly update?: string;
 }
 
-function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomainTimeouts): any {
+function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomainTimeoutsOutputReference | ActiveDirectoryDomainTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,64 @@ function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomain
   }
 }
 
+export class ActiveDirectoryDomainTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain.html google_active_directory_domain}
@@ -131,11 +192,11 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   // ==========
 
   // admin - computed: false, optional: true, required: false
-  private _admin?: string;
+  private _admin?: string | undefined; 
   public get admin() {
     return this.getStringAttribute('admin');
   }
-  public set admin(value: string ) {
+  public set admin(value: string | undefined) {
     this._admin = value;
   }
   public resetAdmin() {
@@ -147,11 +208,11 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // authorized_networks - computed: false, optional: true, required: false
-  private _authorizedNetworks?: string[];
+  private _authorizedNetworks?: string[] | undefined; 
   public get authorizedNetworks() {
     return this.getListAttribute('authorized_networks');
   }
-  public set authorizedNetworks(value: string[] ) {
+  public set authorizedNetworks(value: string[] | undefined) {
     this._authorizedNetworks = value;
   }
   public resetAuthorizedNetworks() {
@@ -163,7 +224,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // domain_name - computed: false, optional: false, required: true
-  private _domainName: string;
+  private _domainName?: string; 
   public get domainName() {
     return this.getStringAttribute('domain_name');
   }
@@ -186,11 +247,12 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -202,7 +264,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // locations - computed: false, optional: false, required: true
-  private _locations: string[];
+  private _locations?: string[]; 
   public get locations() {
     return this.getListAttribute('locations');
   }
@@ -220,11 +282,11 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -236,7 +298,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // reserved_ip_range - computed: false, optional: false, required: true
-  private _reservedIpRange: string;
+  private _reservedIpRange?: string; 
   public get reservedIpRange() {
     return this.getStringAttribute('reserved_ip_range');
   }
@@ -249,11 +311,12 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ActiveDirectoryDomainTimeouts;
+  private _timeouts?: ActiveDirectoryDomainTimeouts | undefined; 
+  private __timeoutsOutput = new ActiveDirectoryDomainTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ActiveDirectoryDomainTimeouts ) {
+  public putTimeouts(value: ActiveDirectoryDomainTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

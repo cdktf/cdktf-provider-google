@@ -121,8 +121,11 @@ export interface DialogflowAgentTimeouts {
   readonly update?: string;
 }
 
-function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeouts): any {
+function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeoutsOutputReference | DialogflowAgentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -130,6 +133,64 @@ function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeouts): a
   }
 }
 
+export class DialogflowAgentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent.html google_dialogflow_agent}
@@ -183,11 +244,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   // ==========
 
   // api_version - computed: true, optional: true, required: false
-  private _apiVersion?: string;
+  private _apiVersion?: string | undefined; 
   public get apiVersion() {
     return this.getStringAttribute('api_version');
   }
-  public set apiVersion(value: string) {
+  public set apiVersion(value: string | undefined) {
     this._apiVersion = value;
   }
   public resetApiVersion() {
@@ -199,11 +260,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // avatar_uri - computed: false, optional: true, required: false
-  private _avatarUri?: string;
+  private _avatarUri?: string | undefined; 
   public get avatarUri() {
     return this.getStringAttribute('avatar_uri');
   }
-  public set avatarUri(value: string ) {
+  public set avatarUri(value: string | undefined) {
     this._avatarUri = value;
   }
   public resetAvatarUri() {
@@ -220,11 +281,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // classification_threshold - computed: false, optional: true, required: false
-  private _classificationThreshold?: number;
+  private _classificationThreshold?: number | undefined; 
   public get classificationThreshold() {
     return this.getNumberAttribute('classification_threshold');
   }
-  public set classificationThreshold(value: number ) {
+  public set classificationThreshold(value: number | undefined) {
     this._classificationThreshold = value;
   }
   public resetClassificationThreshold() {
@@ -236,7 +297,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // default_language_code - computed: false, optional: false, required: true
-  private _defaultLanguageCode: string;
+  private _defaultLanguageCode?: string; 
   public get defaultLanguageCode() {
     return this.getStringAttribute('default_language_code');
   }
@@ -249,11 +310,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -265,7 +326,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -278,11 +339,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // enable_logging - computed: false, optional: true, required: false
-  private _enableLogging?: boolean | cdktf.IResolvable;
+  private _enableLogging?: boolean | cdktf.IResolvable | undefined; 
   public get enableLogging() {
-    return this.getBooleanAttribute('enable_logging');
+    return this.getBooleanAttribute('enable_logging') as any;
   }
-  public set enableLogging(value: boolean | cdktf.IResolvable ) {
+  public set enableLogging(value: boolean | cdktf.IResolvable | undefined) {
     this._enableLogging = value;
   }
   public resetEnableLogging() {
@@ -299,11 +360,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // match_mode - computed: true, optional: true, required: false
-  private _matchMode?: string;
+  private _matchMode?: string | undefined; 
   public get matchMode() {
     return this.getStringAttribute('match_mode');
   }
-  public set matchMode(value: string) {
+  public set matchMode(value: string | undefined) {
     this._matchMode = value;
   }
   public resetMatchMode() {
@@ -315,11 +376,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -331,11 +392,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // supported_language_codes - computed: false, optional: true, required: false
-  private _supportedLanguageCodes?: string[];
+  private _supportedLanguageCodes?: string[] | undefined; 
   public get supportedLanguageCodes() {
     return this.getListAttribute('supported_language_codes');
   }
-  public set supportedLanguageCodes(value: string[] ) {
+  public set supportedLanguageCodes(value: string[] | undefined) {
     this._supportedLanguageCodes = value;
   }
   public resetSupportedLanguageCodes() {
@@ -347,11 +408,11 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // tier - computed: false, optional: true, required: false
-  private _tier?: string;
+  private _tier?: string | undefined; 
   public get tier() {
     return this.getStringAttribute('tier');
   }
-  public set tier(value: string ) {
+  public set tier(value: string | undefined) {
     this._tier = value;
   }
   public resetTier() {
@@ -363,7 +424,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // time_zone - computed: false, optional: false, required: true
-  private _timeZone: string;
+  private _timeZone?: string; 
   public get timeZone() {
     return this.getStringAttribute('time_zone');
   }
@@ -376,11 +437,12 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowAgentTimeouts;
+  private _timeouts?: DialogflowAgentTimeouts | undefined; 
+  private __timeoutsOutput = new DialogflowAgentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DialogflowAgentTimeouts ) {
+  public putTimeouts(value: DialogflowAgentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

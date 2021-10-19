@@ -50,7 +50,7 @@ export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy ext
 
   // use_ip_aliases - computed: true, optional: false, required: false
   public get useIpAliases() {
-    return this.getBooleanAttribute('use_ip_aliases');
+    return this.getBooleanAttribute('use_ip_aliases') as any;
   }
 }
 export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.ComplexComputedList {
@@ -62,6 +62,7 @@ export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.Complex
 
   // ip_allocation_policy - computed: true, optional: false, required: false
   public get ipAllocationPolicy() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_allocation_policy') as any;
   }
 
@@ -109,7 +110,7 @@ export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig extends
 
   // enable_private_endpoint - computed: true, optional: false, required: false
   public get enablePrivateEndpoint() {
-    return this.getBooleanAttribute('enable_private_endpoint');
+    return this.getBooleanAttribute('enable_private_endpoint') as any;
   }
 
   // master_ipv4_cidr_block - computed: true, optional: false, required: false
@@ -126,11 +127,13 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
 
   // airflow_config_overrides - computed: true, optional: false, required: false
   public get airflowConfigOverrides() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('airflow_config_overrides') as any;
   }
 
   // env_variables - computed: true, optional: false, required: false
   public get envVariables() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('env_variables') as any;
   }
 
@@ -141,6 +144,7 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
 
   // pypi_packages - computed: true, optional: false, required: false
   public get pypiPackages() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('pypi_packages') as any;
   }
 
@@ -173,6 +177,7 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
 
   // node_config - computed: true, optional: false, required: false
   public get nodeConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_config') as any;
   }
 
@@ -183,11 +188,13 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
 
   // private_environment_config - computed: true, optional: false, required: false
   public get privateEnvironmentConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('private_environment_config') as any;
   }
 
   // software_config - computed: true, optional: false, required: false
   public get softwareConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('software_config') as any;
   }
 }
@@ -249,7 +256,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -262,11 +269,11 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -278,11 +285,11 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string ) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {

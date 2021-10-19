@@ -67,6 +67,9 @@ Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCEN
 
 function firestoreIndexFieldsToTerraform(struct?: FirestoreIndexFields): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     array_config: cdktf.stringToTerraform(struct!.arrayConfig),
     field_path: cdktf.stringToTerraform(struct!.fieldPath),
@@ -85,14 +88,59 @@ export interface FirestoreIndexTimeouts {
   readonly delete?: string;
 }
 
-function firestoreIndexTimeoutsToTerraform(struct?: FirestoreIndexTimeouts): any {
+function firestoreIndexTimeoutsToTerraform(struct?: FirestoreIndexTimeoutsOutputReference | FirestoreIndexTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class FirestoreIndexTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/firestore_index.html google_firestore_index}
@@ -139,7 +187,7 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   // ==========
 
   // collection - computed: false, optional: false, required: true
-  private _collection: string;
+  private _collection?: string; 
   public get collection() {
     return this.getStringAttribute('collection');
   }
@@ -152,11 +200,11 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // database - computed: false, optional: true, required: false
-  private _database?: string;
+  private _database?: string | undefined; 
   public get database() {
     return this.getStringAttribute('database');
   }
-  public set database(value: string ) {
+  public set database(value: string | undefined) {
     this._database = value;
   }
   public resetDatabase() {
@@ -178,11 +226,11 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -194,11 +242,11 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // query_scope - computed: false, optional: true, required: false
-  private _queryScope?: string;
+  private _queryScope?: string | undefined; 
   public get queryScope() {
     return this.getStringAttribute('query_scope');
   }
-  public set queryScope(value: string ) {
+  public set queryScope(value: string | undefined) {
     this._queryScope = value;
   }
   public resetQueryScope() {
@@ -210,8 +258,9 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // fields - computed: false, optional: false, required: true
-  private _fields: FirestoreIndexFields[];
+  private _fields?: FirestoreIndexFields[]; 
   public get fields() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('fields') as any;
   }
   public set fields(value: FirestoreIndexFields[]) {
@@ -223,11 +272,12 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FirestoreIndexTimeouts;
+  private _timeouts?: FirestoreIndexTimeouts | undefined; 
+  private __timeoutsOutput = new FirestoreIndexTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: FirestoreIndexTimeouts ) {
+  public putTimeouts(value: FirestoreIndexTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
