@@ -94,19 +94,19 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#build CloudbuildTrigger#build}
   */
-  readonly buildAttribute?: CloudbuildTriggerBuild[];
+  readonly buildAttribute?: CloudbuildTriggerBuild;
   /**
   * github block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#github CloudbuildTrigger#github}
   */
-  readonly github?: CloudbuildTriggerGithub[];
+  readonly github?: CloudbuildTriggerGithub;
   /**
   * pubsub_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#pubsub_config CloudbuildTrigger#pubsub_config}
   */
-  readonly pubsubConfig?: CloudbuildTriggerPubsubConfig[];
+  readonly pubsubConfig?: CloudbuildTriggerPubsubConfig;
   /**
   * timeouts block
   * 
@@ -118,13 +118,13 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#trigger_template CloudbuildTrigger#trigger_template}
   */
-  readonly triggerTemplate?: CloudbuildTriggerTriggerTemplate[];
+  readonly triggerTemplate?: CloudbuildTriggerTriggerTemplate;
   /**
   * webhook_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#webhook_config CloudbuildTrigger#webhook_config}
   */
-  readonly webhookConfig?: CloudbuildTriggerWebhookConfig[];
+  readonly webhookConfig?: CloudbuildTriggerWebhookConfig;
 }
 export interface CloudbuildTriggerBuildArtifactsObjects {
   /**
@@ -144,14 +144,59 @@ this location as a prefix.
   readonly paths?: string[];
 }
 
-function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: CloudbuildTriggerBuildArtifactsObjects): any {
+function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: CloudbuildTriggerBuildArtifactsObjectsOutputReference | CloudbuildTriggerBuildArtifactsObjects): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     location: cdktf.stringToTerraform(struct!.location),
     paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
   }
 }
 
+export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // location - computed: false, optional: true, required: false
+  private _location?: string | undefined; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string | undefined) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // paths - computed: false, optional: true, required: false
+  private _paths?: string[] | undefined; 
+  public get paths() {
+    return this.getListAttribute('paths');
+  }
+  public set paths(value: string[] | undefined) {
+    this._paths = value;
+  }
+  public resetPaths() {
+    this._paths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathsInput() {
+    return this._paths
+  }
+}
 export interface CloudbuildTriggerBuildArtifacts {
   /**
   * A list of images to be pushed upon the successful completion of all build steps.
@@ -170,17 +215,63 @@ If any of the images fail to be pushed, the build is marked FAILURE.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#objects CloudbuildTrigger#objects}
   */
-  readonly objects?: CloudbuildTriggerBuildArtifactsObjects[];
+  readonly objects?: CloudbuildTriggerBuildArtifactsObjects;
 }
 
-function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTriggerBuildArtifacts): any {
+function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTriggerBuildArtifactsOutputReference | CloudbuildTriggerBuildArtifacts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
-    objects: cdktf.listMapper(cloudbuildTriggerBuildArtifactsObjectsToTerraform)(struct!.objects),
+    objects: cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct!.objects),
   }
 }
 
+export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // images - computed: false, optional: true, required: false
+  private _images?: string[] | undefined; 
+  public get images() {
+    return this.getListAttribute('images');
+  }
+  public set images(value: string[] | undefined) {
+    this._images = value;
+  }
+  public resetImages() {
+    this._images = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imagesInput() {
+    return this._images
+  }
+
+  // objects - computed: false, optional: true, required: false
+  private _objects?: CloudbuildTriggerBuildArtifactsObjects | undefined; 
+  private __objectsOutput = new CloudbuildTriggerBuildArtifactsObjectsOutputReference(this as any, "objects", true);
+  public get objects() {
+    return this.__objectsOutput;
+  }
+  public putObjects(value: CloudbuildTriggerBuildArtifactsObjects | undefined) {
+    this._objects = value;
+  }
+  public resetObjects() {
+    this._objects = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectsInput() {
+    return this._objects
+  }
+}
 export interface CloudbuildTriggerBuildOptionsVolumes {
   /**
   * Name of the volume to mount.
@@ -204,6 +295,9 @@ build step or with certain reserved volume paths.
 
 function cloudbuildTriggerBuildOptionsVolumesToTerraform(struct?: CloudbuildTriggerBuildOptionsVolumes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     path: cdktf.stringToTerraform(struct!.path),
@@ -302,8 +396,11 @@ This field is experimental.
   readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[];
 }
 
-function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTriggerBuildOptions): any {
+function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTriggerBuildOptionsOutputReference | CloudbuildTriggerBuildOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     dynamic_substitutions: cdktf.booleanToTerraform(struct!.dynamicSubstitutions),
@@ -320,6 +417,209 @@ function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTriggerBuil
   }
 }
 
+export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // disk_size_gb - computed: false, optional: true, required: false
+  private _diskSizeGb?: number | undefined; 
+  public get diskSizeGb() {
+    return this.getNumberAttribute('disk_size_gb');
+  }
+  public set diskSizeGb(value: number | undefined) {
+    this._diskSizeGb = value;
+  }
+  public resetDiskSizeGb() {
+    this._diskSizeGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeGbInput() {
+    return this._diskSizeGb
+  }
+
+  // dynamic_substitutions - computed: false, optional: true, required: false
+  private _dynamicSubstitutions?: boolean | cdktf.IResolvable | undefined; 
+  public get dynamicSubstitutions() {
+    return this.getBooleanAttribute('dynamic_substitutions') as any;
+  }
+  public set dynamicSubstitutions(value: boolean | cdktf.IResolvable | undefined) {
+    this._dynamicSubstitutions = value;
+  }
+  public resetDynamicSubstitutions() {
+    this._dynamicSubstitutions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicSubstitutionsInput() {
+    return this._dynamicSubstitutions
+  }
+
+  // env - computed: false, optional: true, required: false
+  private _env?: string[] | undefined; 
+  public get env() {
+    return this.getListAttribute('env');
+  }
+  public set env(value: string[] | undefined) {
+    this._env = value;
+  }
+  public resetEnv() {
+    this._env = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envInput() {
+    return this._env
+  }
+
+  // log_streaming_option - computed: false, optional: true, required: false
+  private _logStreamingOption?: string | undefined; 
+  public get logStreamingOption() {
+    return this.getStringAttribute('log_streaming_option');
+  }
+  public set logStreamingOption(value: string | undefined) {
+    this._logStreamingOption = value;
+  }
+  public resetLogStreamingOption() {
+    this._logStreamingOption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logStreamingOptionInput() {
+    return this._logStreamingOption
+  }
+
+  // logging - computed: false, optional: true, required: false
+  private _logging?: string | undefined; 
+  public get logging() {
+    return this.getStringAttribute('logging');
+  }
+  public set logging(value: string | undefined) {
+    this._logging = value;
+  }
+  public resetLogging() {
+    this._logging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingInput() {
+    return this._logging
+  }
+
+  // machine_type - computed: false, optional: true, required: false
+  private _machineType?: string | undefined; 
+  public get machineType() {
+    return this.getStringAttribute('machine_type');
+  }
+  public set machineType(value: string | undefined) {
+    this._machineType = value;
+  }
+  public resetMachineType() {
+    this._machineType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineTypeInput() {
+    return this._machineType
+  }
+
+  // requested_verify_option - computed: false, optional: true, required: false
+  private _requestedVerifyOption?: string | undefined; 
+  public get requestedVerifyOption() {
+    return this.getStringAttribute('requested_verify_option');
+  }
+  public set requestedVerifyOption(value: string | undefined) {
+    this._requestedVerifyOption = value;
+  }
+  public resetRequestedVerifyOption() {
+    this._requestedVerifyOption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestedVerifyOptionInput() {
+    return this._requestedVerifyOption
+  }
+
+  // secret_env - computed: false, optional: true, required: false
+  private _secretEnv?: string[] | undefined; 
+  public get secretEnv() {
+    return this.getListAttribute('secret_env');
+  }
+  public set secretEnv(value: string[] | undefined) {
+    this._secretEnv = value;
+  }
+  public resetSecretEnv() {
+    this._secretEnv = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretEnvInput() {
+    return this._secretEnv
+  }
+
+  // source_provenance_hash - computed: false, optional: true, required: false
+  private _sourceProvenanceHash?: string[] | undefined; 
+  public get sourceProvenanceHash() {
+    return this.getListAttribute('source_provenance_hash');
+  }
+  public set sourceProvenanceHash(value: string[] | undefined) {
+    this._sourceProvenanceHash = value;
+  }
+  public resetSourceProvenanceHash() {
+    this._sourceProvenanceHash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceProvenanceHashInput() {
+    return this._sourceProvenanceHash
+  }
+
+  // substitution_option - computed: false, optional: true, required: false
+  private _substitutionOption?: string | undefined; 
+  public get substitutionOption() {
+    return this.getStringAttribute('substitution_option');
+  }
+  public set substitutionOption(value: string | undefined) {
+    this._substitutionOption = value;
+  }
+  public resetSubstitutionOption() {
+    this._substitutionOption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get substitutionOptionInput() {
+    return this._substitutionOption
+  }
+
+  // worker_pool - computed: false, optional: true, required: false
+  private _workerPool?: string | undefined; 
+  public get workerPool() {
+    return this.getStringAttribute('worker_pool');
+  }
+  public set workerPool(value: string | undefined) {
+    this._workerPool = value;
+  }
+  public resetWorkerPool() {
+    this._workerPool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workerPoolInput() {
+    return this._workerPool
+  }
+
+  // volumes - computed: false, optional: true, required: false
+  private _volumes?: CloudbuildTriggerBuildOptionsVolumes[] | undefined; 
+  public get volumes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('volumes') as any;
+  }
+  public set volumes(value: CloudbuildTriggerBuildOptionsVolumes[] | undefined) {
+    this._volumes = value;
+  }
+  public resetVolumes() {
+    this._volumes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumesInput() {
+    return this._volumes
+  }
+}
 export interface CloudbuildTriggerBuildSecret {
   /**
   * Cloud KMS key name to use to decrypt these envs.
@@ -340,6 +640,9 @@ There can be at most 100 secret values across all of a build's secrets.
 
 function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTriggerBuildSecret): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
     secret_env: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secretEnv),
@@ -404,8 +707,11 @@ described at https://github.com/google/re2/wiki/Syntax
   readonly tagName?: string;
 }
 
-function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: CloudbuildTriggerBuildSourceRepoSource): any {
+function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: CloudbuildTriggerBuildSourceRepoSourceOutputReference | CloudbuildTriggerBuildSourceRepoSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     branch_name: cdktf.stringToTerraform(struct!.branchName),
     commit_sha: cdktf.stringToTerraform(struct!.commitSha),
@@ -418,6 +724,142 @@ function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: CloudbuildTr
   }
 }
 
+export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // branch_name - computed: false, optional: true, required: false
+  private _branchName?: string | undefined; 
+  public get branchName() {
+    return this.getStringAttribute('branch_name');
+  }
+  public set branchName(value: string | undefined) {
+    this._branchName = value;
+  }
+  public resetBranchName() {
+    this._branchName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchNameInput() {
+    return this._branchName
+  }
+
+  // commit_sha - computed: false, optional: true, required: false
+  private _commitSha?: string | undefined; 
+  public get commitSha() {
+    return this.getStringAttribute('commit_sha');
+  }
+  public set commitSha(value: string | undefined) {
+    this._commitSha = value;
+  }
+  public resetCommitSha() {
+    this._commitSha = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commitShaInput() {
+    return this._commitSha
+  }
+
+  // dir - computed: false, optional: true, required: false
+  private _dir?: string | undefined; 
+  public get dir() {
+    return this.getStringAttribute('dir');
+  }
+  public set dir(value: string | undefined) {
+    this._dir = value;
+  }
+  public resetDir() {
+    this._dir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dirInput() {
+    return this._dir
+  }
+
+  // invert_regex - computed: false, optional: true, required: false
+  private _invertRegex?: boolean | cdktf.IResolvable | undefined; 
+  public get invertRegex() {
+    return this.getBooleanAttribute('invert_regex') as any;
+  }
+  public set invertRegex(value: boolean | cdktf.IResolvable | undefined) {
+    this._invertRegex = value;
+  }
+  public resetInvertRegex() {
+    this._invertRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertRegexInput() {
+    return this._invertRegex
+  }
+
+  // project_id - computed: false, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // repo_name - computed: false, optional: false, required: true
+  private _repoName?: string; 
+  public get repoName() {
+    return this.getStringAttribute('repo_name');
+  }
+  public set repoName(value: string) {
+    this._repoName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repoNameInput() {
+    return this._repoName
+  }
+
+  // substitutions - computed: false, optional: true, required: false
+  private _substitutions?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get substitutions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('substitutions') as any;
+  }
+  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._substitutions = value;
+  }
+  public resetSubstitutions() {
+    this._substitutions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get substitutionsInput() {
+    return this._substitutions
+  }
+
+  // tag_name - computed: false, optional: true, required: false
+  private _tagName?: string | undefined; 
+  public get tagName() {
+    return this.getStringAttribute('tag_name');
+  }
+  public set tagName(value: string | undefined) {
+    this._tagName = value;
+  }
+  public resetTagName() {
+    this._tagName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagNameInput() {
+    return this._tagName
+  }
+}
 export interface CloudbuildTriggerBuildSourceStorageSource {
   /**
   * Google Cloud Storage bucket containing the source.
@@ -441,8 +883,11 @@ This object must be a gzipped archive file (.tar.gz) containing source to build.
   readonly object: string;
 }
 
-function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: CloudbuildTriggerBuildSourceStorageSource): any {
+function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: CloudbuildTriggerBuildSourceStorageSourceOutputReference | CloudbuildTriggerBuildSourceStorageSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     bucket: cdktf.stringToTerraform(struct!.bucket),
     generation: cdktf.stringToTerraform(struct!.generation),
@@ -450,29 +895,128 @@ function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: Cloudbuil
   }
 }
 
+export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket
+  }
+
+  // generation - computed: false, optional: true, required: false
+  private _generation?: string | undefined; 
+  public get generation() {
+    return this.getStringAttribute('generation');
+  }
+  public set generation(value: string | undefined) {
+    this._generation = value;
+  }
+  public resetGeneration() {
+    this._generation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get generationInput() {
+    return this._generation
+  }
+
+  // object - computed: false, optional: false, required: true
+  private _object?: string; 
+  public get object() {
+    return this.getStringAttribute('object');
+  }
+  public set object(value: string) {
+    this._object = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectInput() {
+    return this._object
+  }
+}
 export interface CloudbuildTriggerBuildSource {
   /**
   * repo_source block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#repo_source CloudbuildTrigger#repo_source}
   */
-  readonly repoSource?: CloudbuildTriggerBuildSourceRepoSource[];
+  readonly repoSource?: CloudbuildTriggerBuildSourceRepoSource;
   /**
   * storage_source block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#storage_source CloudbuildTrigger#storage_source}
   */
-  readonly storageSource?: CloudbuildTriggerBuildSourceStorageSource[];
+  readonly storageSource?: CloudbuildTriggerBuildSourceStorageSource;
 }
 
-function cloudbuildTriggerBuildSourceToTerraform(struct?: CloudbuildTriggerBuildSource): any {
+function cloudbuildTriggerBuildSourceToTerraform(struct?: CloudbuildTriggerBuildSourceOutputReference | CloudbuildTriggerBuildSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    repo_source: cdktf.listMapper(cloudbuildTriggerBuildSourceRepoSourceToTerraform)(struct!.repoSource),
-    storage_source: cdktf.listMapper(cloudbuildTriggerBuildSourceStorageSourceToTerraform)(struct!.storageSource),
+    repo_source: cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct!.repoSource),
+    storage_source: cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct!.storageSource),
   }
 }
 
+export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // repo_source - computed: false, optional: true, required: false
+  private _repoSource?: CloudbuildTriggerBuildSourceRepoSource | undefined; 
+  private __repoSourceOutput = new CloudbuildTriggerBuildSourceRepoSourceOutputReference(this as any, "repo_source", true);
+  public get repoSource() {
+    return this.__repoSourceOutput;
+  }
+  public putRepoSource(value: CloudbuildTriggerBuildSourceRepoSource | undefined) {
+    this._repoSource = value;
+  }
+  public resetRepoSource() {
+    this._repoSource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repoSourceInput() {
+    return this._repoSource
+  }
+
+  // storage_source - computed: false, optional: true, required: false
+  private _storageSource?: CloudbuildTriggerBuildSourceStorageSource | undefined; 
+  private __storageSourceOutput = new CloudbuildTriggerBuildSourceStorageSourceOutputReference(this as any, "storage_source", true);
+  public get storageSource() {
+    return this.__storageSourceOutput;
+  }
+  public putStorageSource(value: CloudbuildTriggerBuildSourceStorageSource | undefined) {
+    this._storageSource = value;
+  }
+  public resetStorageSource() {
+    this._storageSource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageSourceInput() {
+    return this._storageSource
+  }
+}
 export interface CloudbuildTriggerBuildStepVolumes {
   /**
   * Name of the volume to mount.
@@ -496,6 +1040,9 @@ the same build step or with certain reserved volume paths.
 
 function cloudbuildTriggerBuildStepVolumesToTerraform(struct?: CloudbuildTriggerBuildStepVolumes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     path: cdktf.stringToTerraform(struct!.path),
@@ -622,6 +1169,9 @@ have completed successfully.
 
 function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTriggerBuildStep): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
     dir: cdktf.stringToTerraform(struct!.dir),
@@ -690,13 +1240,13 @@ Default time is ten minutes (600s).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#artifacts CloudbuildTrigger#artifacts}
   */
-  readonly artifacts?: CloudbuildTriggerBuildArtifacts[];
+  readonly artifacts?: CloudbuildTriggerBuildArtifacts;
   /**
   * options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#options CloudbuildTrigger#options}
   */
-  readonly options?: CloudbuildTriggerBuildOptions[];
+  readonly options?: CloudbuildTriggerBuildOptions;
   /**
   * secret block
   * 
@@ -708,7 +1258,7 @@ Default time is ten minutes (600s).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#source CloudbuildTrigger#source}
   */
-  readonly source?: CloudbuildTriggerBuildSource[];
+  readonly source?: CloudbuildTriggerBuildSource;
   /**
   * step block
   * 
@@ -717,8 +1267,11 @@ Default time is ten minutes (600s).
   readonly step: CloudbuildTriggerBuildStep[];
 }
 
-function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuild): any {
+function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuildOutputReference | CloudbuildTriggerBuild): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
     logs_bucket: cdktf.stringToTerraform(struct!.logsBucket),
@@ -726,14 +1279,203 @@ function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuild): any
     substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.substitutions),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     timeout: cdktf.stringToTerraform(struct!.timeout),
-    artifacts: cdktf.listMapper(cloudbuildTriggerBuildArtifactsToTerraform)(struct!.artifacts),
-    options: cdktf.listMapper(cloudbuildTriggerBuildOptionsToTerraform)(struct!.options),
+    artifacts: cloudbuildTriggerBuildArtifactsToTerraform(struct!.artifacts),
+    options: cloudbuildTriggerBuildOptionsToTerraform(struct!.options),
     secret: cdktf.listMapper(cloudbuildTriggerBuildSecretToTerraform)(struct!.secret),
-    source: cdktf.listMapper(cloudbuildTriggerBuildSourceToTerraform)(struct!.source),
+    source: cloudbuildTriggerBuildSourceToTerraform(struct!.source),
     step: cdktf.listMapper(cloudbuildTriggerBuildStepToTerraform)(struct!.step),
   }
 }
 
+export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // images - computed: false, optional: true, required: false
+  private _images?: string[] | undefined; 
+  public get images() {
+    return this.getListAttribute('images');
+  }
+  public set images(value: string[] | undefined) {
+    this._images = value;
+  }
+  public resetImages() {
+    this._images = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imagesInput() {
+    return this._images
+  }
+
+  // logs_bucket - computed: false, optional: true, required: false
+  private _logsBucket?: string | undefined; 
+  public get logsBucket() {
+    return this.getStringAttribute('logs_bucket');
+  }
+  public set logsBucket(value: string | undefined) {
+    this._logsBucket = value;
+  }
+  public resetLogsBucket() {
+    this._logsBucket = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logsBucketInput() {
+    return this._logsBucket
+  }
+
+  // queue_ttl - computed: false, optional: true, required: false
+  private _queueTtl?: string | undefined; 
+  public get queueTtl() {
+    return this.getStringAttribute('queue_ttl');
+  }
+  public set queueTtl(value: string | undefined) {
+    this._queueTtl = value;
+  }
+  public resetQueueTtl() {
+    this._queueTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueTtlInput() {
+    return this._queueTtl
+  }
+
+  // substitutions - computed: false, optional: true, required: false
+  private _substitutions?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get substitutions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('substitutions') as any;
+  }
+  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._substitutions = value;
+  }
+  public resetSubstitutions() {
+    this._substitutions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get substitutionsInput() {
+    return this._substitutions
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: string[] | undefined; 
+  public get tags() {
+    return this.getListAttribute('tags');
+  }
+  public set tags(value: string[] | undefined) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string | undefined; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string | undefined) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
+  }
+
+  // artifacts - computed: false, optional: true, required: false
+  private _artifacts?: CloudbuildTriggerBuildArtifacts | undefined; 
+  private __artifactsOutput = new CloudbuildTriggerBuildArtifactsOutputReference(this as any, "artifacts", true);
+  public get artifacts() {
+    return this.__artifactsOutput;
+  }
+  public putArtifacts(value: CloudbuildTriggerBuildArtifacts | undefined) {
+    this._artifacts = value;
+  }
+  public resetArtifacts() {
+    this._artifacts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get artifactsInput() {
+    return this._artifacts
+  }
+
+  // options - computed: false, optional: true, required: false
+  private _options?: CloudbuildTriggerBuildOptions | undefined; 
+  private __optionsOutput = new CloudbuildTriggerBuildOptionsOutputReference(this as any, "options", true);
+  public get options() {
+    return this.__optionsOutput;
+  }
+  public putOptions(value: CloudbuildTriggerBuildOptions | undefined) {
+    this._options = value;
+  }
+  public resetOptions() {
+    this._options = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionsInput() {
+    return this._options
+  }
+
+  // secret - computed: false, optional: true, required: false
+  private _secret?: CloudbuildTriggerBuildSecret[] | undefined; 
+  public get secret() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('secret') as any;
+  }
+  public set secret(value: CloudbuildTriggerBuildSecret[] | undefined) {
+    this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
+  }
+
+  // source - computed: false, optional: true, required: false
+  private _source?: CloudbuildTriggerBuildSource | undefined; 
+  private __sourceOutput = new CloudbuildTriggerBuildSourceOutputReference(this as any, "source", true);
+  public get source() {
+    return this.__sourceOutput;
+  }
+  public putSource(value: CloudbuildTriggerBuildSource | undefined) {
+    this._source = value;
+  }
+  public resetSource() {
+    this._source = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source
+  }
+
+  // step - computed: false, optional: false, required: true
+  private _step?: CloudbuildTriggerBuildStep[]; 
+  public get step() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('step') as any;
+  }
+  public set step(value: CloudbuildTriggerBuildStep[]) {
+    this._step = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stepInput() {
+    return this._step
+  }
+}
 export interface CloudbuildTriggerGithubPullRequest {
   /**
   * Regex of branches to match.
@@ -755,8 +1497,11 @@ export interface CloudbuildTriggerGithubPullRequest {
   readonly invertRegex?: boolean | cdktf.IResolvable;
 }
 
-function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTriggerGithubPullRequest): any {
+function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTriggerGithubPullRequestOutputReference | CloudbuildTriggerGithubPullRequest): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     branch: cdktf.stringToTerraform(struct!.branch),
     comment_control: cdktf.stringToTerraform(struct!.commentControl),
@@ -764,6 +1509,61 @@ function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTrigge
   }
 }
 
+export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // branch - computed: false, optional: false, required: true
+  private _branch?: string; 
+  public get branch() {
+    return this.getStringAttribute('branch');
+  }
+  public set branch(value: string) {
+    this._branch = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchInput() {
+    return this._branch
+  }
+
+  // comment_control - computed: false, optional: true, required: false
+  private _commentControl?: string | undefined; 
+  public get commentControl() {
+    return this.getStringAttribute('comment_control');
+  }
+  public set commentControl(value: string | undefined) {
+    this._commentControl = value;
+  }
+  public resetCommentControl() {
+    this._commentControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commentControlInput() {
+    return this._commentControl
+  }
+
+  // invert_regex - computed: false, optional: true, required: false
+  private _invertRegex?: boolean | cdktf.IResolvable | undefined; 
+  public get invertRegex() {
+    return this.getBooleanAttribute('invert_regex') as any;
+  }
+  public set invertRegex(value: boolean | cdktf.IResolvable | undefined) {
+    this._invertRegex = value;
+  }
+  public resetInvertRegex() {
+    this._invertRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertRegexInput() {
+    return this._invertRegex
+  }
+}
 export interface CloudbuildTriggerGithubPush {
   /**
   * Regex of branches to match.  Specify only one of branch or tag.
@@ -785,8 +1585,11 @@ export interface CloudbuildTriggerGithubPush {
   readonly tag?: string;
 }
 
-function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTriggerGithubPush): any {
+function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTriggerGithubPushOutputReference | CloudbuildTriggerGithubPush): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     branch: cdktf.stringToTerraform(struct!.branch),
     invert_regex: cdktf.booleanToTerraform(struct!.invertRegex),
@@ -794,6 +1597,64 @@ function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTriggerGithub
   }
 }
 
+export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // branch - computed: false, optional: true, required: false
+  private _branch?: string | undefined; 
+  public get branch() {
+    return this.getStringAttribute('branch');
+  }
+  public set branch(value: string | undefined) {
+    this._branch = value;
+  }
+  public resetBranch() {
+    this._branch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchInput() {
+    return this._branch
+  }
+
+  // invert_regex - computed: false, optional: true, required: false
+  private _invertRegex?: boolean | cdktf.IResolvable | undefined; 
+  public get invertRegex() {
+    return this.getBooleanAttribute('invert_regex') as any;
+  }
+  public set invertRegex(value: boolean | cdktf.IResolvable | undefined) {
+    this._invertRegex = value;
+  }
+  public resetInvertRegex() {
+    this._invertRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertRegexInput() {
+    return this._invertRegex
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string | undefined; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string | undefined) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag
+  }
+}
 export interface CloudbuildTriggerGithub {
   /**
   * Name of the repository. For example: The name for
@@ -814,25 +1675,104 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#pull_request CloudbuildTrigger#pull_request}
   */
-  readonly pullRequest?: CloudbuildTriggerGithubPullRequest[];
+  readonly pullRequest?: CloudbuildTriggerGithubPullRequest;
   /**
   * push block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#push CloudbuildTrigger#push}
   */
-  readonly push?: CloudbuildTriggerGithubPush[];
+  readonly push?: CloudbuildTriggerGithubPush;
 }
 
-function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGithub): any {
+function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGithubOutputReference | CloudbuildTriggerGithub): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     owner: cdktf.stringToTerraform(struct!.owner),
-    pull_request: cdktf.listMapper(cloudbuildTriggerGithubPullRequestToTerraform)(struct!.pullRequest),
-    push: cdktf.listMapper(cloudbuildTriggerGithubPushToTerraform)(struct!.push),
+    pull_request: cloudbuildTriggerGithubPullRequestToTerraform(struct!.pullRequest),
+    push: cloudbuildTriggerGithubPushToTerraform(struct!.push),
   }
 }
 
+export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string | undefined; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string | undefined) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // owner - computed: false, optional: true, required: false
+  private _owner?: string | undefined; 
+  public get owner() {
+    return this.getStringAttribute('owner');
+  }
+  public set owner(value: string | undefined) {
+    this._owner = value;
+  }
+  public resetOwner() {
+    this._owner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ownerInput() {
+    return this._owner
+  }
+
+  // pull_request - computed: false, optional: true, required: false
+  private _pullRequest?: CloudbuildTriggerGithubPullRequest | undefined; 
+  private __pullRequestOutput = new CloudbuildTriggerGithubPullRequestOutputReference(this as any, "pull_request", true);
+  public get pullRequest() {
+    return this.__pullRequestOutput;
+  }
+  public putPullRequest(value: CloudbuildTriggerGithubPullRequest | undefined) {
+    this._pullRequest = value;
+  }
+  public resetPullRequest() {
+    this._pullRequest = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pullRequestInput() {
+    return this._pullRequest
+  }
+
+  // push - computed: false, optional: true, required: false
+  private _push?: CloudbuildTriggerGithubPush | undefined; 
+  private __pushOutput = new CloudbuildTriggerGithubPushOutputReference(this as any, "push", true);
+  public get push() {
+    return this.__pushOutput;
+  }
+  public putPush(value: CloudbuildTriggerGithubPush | undefined) {
+    this._push = value;
+  }
+  public resetPush() {
+    this._push = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pushInput() {
+    return this._push
+  }
+}
 export interface CloudbuildTriggerPubsubConfig {
   /**
   * Service account that will make the push request.
@@ -848,14 +1788,56 @@ export interface CloudbuildTriggerPubsubConfig {
   readonly topic: string;
 }
 
-function cloudbuildTriggerPubsubConfigToTerraform(struct?: CloudbuildTriggerPubsubConfig): any {
+function cloudbuildTriggerPubsubConfigToTerraform(struct?: CloudbuildTriggerPubsubConfigOutputReference | CloudbuildTriggerPubsubConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
     topic: cdktf.stringToTerraform(struct!.topic),
   }
 }
 
+export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // service_account_email - computed: false, optional: true, required: false
+  private _serviceAccountEmail?: string | undefined; 
+  public get serviceAccountEmail() {
+    return this.getStringAttribute('service_account_email');
+  }
+  public set serviceAccountEmail(value: string | undefined) {
+    this._serviceAccountEmail = value;
+  }
+  public resetServiceAccountEmail() {
+    this._serviceAccountEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountEmailInput() {
+    return this._serviceAccountEmail
+  }
+
+  // topic - computed: false, optional: false, required: true
+  private _topic?: string; 
+  public get topic() {
+    return this.getStringAttribute('topic');
+  }
+  public set topic(value: string) {
+    this._topic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicInput() {
+    return this._topic
+  }
+}
 export interface CloudbuildTriggerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html#create CloudbuildTrigger#create}
@@ -871,8 +1853,11 @@ export interface CloudbuildTriggerTimeouts {
   readonly update?: string;
 }
 
-function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeouts): any {
+function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeoutsOutputReference | CloudbuildTriggerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -880,6 +1865,64 @@ function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeouts
   }
 }
 
+export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface CloudbuildTriggerTriggerTemplate {
   /**
   * Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
@@ -932,8 +1975,11 @@ This field is a regular expression.
   readonly tagName?: string;
 }
 
-function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerTriggerTemplate): any {
+function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerTriggerTemplateOutputReference | CloudbuildTriggerTriggerTemplate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     branch_name: cdktf.stringToTerraform(struct!.branchName),
     commit_sha: cdktf.stringToTerraform(struct!.commitSha),
@@ -945,6 +1991,128 @@ function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerT
   }
 }
 
+export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // branch_name - computed: false, optional: true, required: false
+  private _branchName?: string | undefined; 
+  public get branchName() {
+    return this.getStringAttribute('branch_name');
+  }
+  public set branchName(value: string | undefined) {
+    this._branchName = value;
+  }
+  public resetBranchName() {
+    this._branchName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchNameInput() {
+    return this._branchName
+  }
+
+  // commit_sha - computed: false, optional: true, required: false
+  private _commitSha?: string | undefined; 
+  public get commitSha() {
+    return this.getStringAttribute('commit_sha');
+  }
+  public set commitSha(value: string | undefined) {
+    this._commitSha = value;
+  }
+  public resetCommitSha() {
+    this._commitSha = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commitShaInput() {
+    return this._commitSha
+  }
+
+  // dir - computed: false, optional: true, required: false
+  private _dir?: string | undefined; 
+  public get dir() {
+    return this.getStringAttribute('dir');
+  }
+  public set dir(value: string | undefined) {
+    this._dir = value;
+  }
+  public resetDir() {
+    this._dir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dirInput() {
+    return this._dir
+  }
+
+  // invert_regex - computed: false, optional: true, required: false
+  private _invertRegex?: boolean | cdktf.IResolvable | undefined; 
+  public get invertRegex() {
+    return this.getBooleanAttribute('invert_regex') as any;
+  }
+  public set invertRegex(value: boolean | cdktf.IResolvable | undefined) {
+    this._invertRegex = value;
+  }
+  public resetInvertRegex() {
+    this._invertRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertRegexInput() {
+    return this._invertRegex
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string | undefined; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string | undefined) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // repo_name - computed: false, optional: true, required: false
+  private _repoName?: string | undefined; 
+  public get repoName() {
+    return this.getStringAttribute('repo_name');
+  }
+  public set repoName(value: string | undefined) {
+    this._repoName = value;
+  }
+  public resetRepoName() {
+    this._repoName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repoNameInput() {
+    return this._repoName
+  }
+
+  // tag_name - computed: false, optional: true, required: false
+  private _tagName?: string | undefined; 
+  public get tagName() {
+    return this.getStringAttribute('tag_name');
+  }
+  public set tagName(value: string | undefined) {
+    this._tagName = value;
+  }
+  public resetTagName() {
+    this._tagName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagNameInput() {
+    return this._tagName
+  }
+}
 export interface CloudbuildTriggerWebhookConfig {
   /**
   * Resource name for the secret required as a URL parameter.
@@ -954,13 +2122,39 @@ export interface CloudbuildTriggerWebhookConfig {
   readonly secret: string;
 }
 
-function cloudbuildTriggerWebhookConfigToTerraform(struct?: CloudbuildTriggerWebhookConfig): any {
+function cloudbuildTriggerWebhookConfigToTerraform(struct?: CloudbuildTriggerWebhookConfigOutputReference | CloudbuildTriggerWebhookConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     secret: cdktf.stringToTerraform(struct!.secret),
   }
 }
 
+export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: string; 
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+  public set secret(value: string) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger.html google_cloudbuild_trigger}
@@ -1022,11 +2216,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -1038,11 +2232,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable;
+  private _disabled?: boolean | cdktf.IResolvable | undefined; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled');
+    return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable ) {
+  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -1054,11 +2248,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // filename - computed: false, optional: true, required: false
-  private _filename?: string;
+  private _filename?: string | undefined; 
   public get filename() {
     return this.getStringAttribute('filename');
   }
-  public set filename(value: string ) {
+  public set filename(value: string | undefined) {
     this._filename = value;
   }
   public resetFilename() {
@@ -1075,11 +2269,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // ignored_files - computed: false, optional: true, required: false
-  private _ignoredFiles?: string[];
+  private _ignoredFiles?: string[] | undefined; 
   public get ignoredFiles() {
     return this.getListAttribute('ignored_files');
   }
-  public set ignoredFiles(value: string[] ) {
+  public set ignoredFiles(value: string[] | undefined) {
     this._ignoredFiles = value;
   }
   public resetIgnoredFiles() {
@@ -1091,11 +2285,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // included_files - computed: false, optional: true, required: false
-  private _includedFiles?: string[];
+  private _includedFiles?: string[] | undefined; 
   public get includedFiles() {
     return this.getListAttribute('included_files');
   }
-  public set includedFiles(value: string[] ) {
+  public set includedFiles(value: string[] | undefined) {
     this._includedFiles = value;
   }
   public resetIncludedFiles() {
@@ -1107,11 +2301,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -1123,11 +2317,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -1139,11 +2333,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // service_account - computed: false, optional: true, required: false
-  private _serviceAccount?: string;
+  private _serviceAccount?: string | undefined; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string ) {
+  public set serviceAccount(value: string | undefined) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -1155,11 +2349,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // substitutions - computed: false, optional: true, required: false
-  private _substitutions?: { [key: string]: string } | cdktf.IResolvable;
+  private _substitutions?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get substitutions() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('substitutions') as any;
   }
-  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._substitutions = value;
   }
   public resetSubstitutions() {
@@ -1171,11 +2366,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[];
+  private _tags?: string[] | undefined; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] ) {
+  public set tags(value: string[] | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -1192,11 +2387,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // build - computed: false, optional: true, required: false
-  private _build?: CloudbuildTriggerBuild[];
+  private _build?: CloudbuildTriggerBuild | undefined; 
+  private __buildOutput = new CloudbuildTriggerBuildOutputReference(this as any, "build", true);
   public get buildAttribute() {
-    return this.interpolationForAttribute('build') as any;
+    return this.__buildOutput;
   }
-  public set buildAttribute(value: CloudbuildTriggerBuild[] ) {
+  public putBuildAttribute(value: CloudbuildTriggerBuild | undefined) {
     this._build = value;
   }
   public resetBuildAttribute() {
@@ -1208,11 +2404,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // github - computed: false, optional: true, required: false
-  private _github?: CloudbuildTriggerGithub[];
+  private _github?: CloudbuildTriggerGithub | undefined; 
+  private __githubOutput = new CloudbuildTriggerGithubOutputReference(this as any, "github", true);
   public get github() {
-    return this.interpolationForAttribute('github') as any;
+    return this.__githubOutput;
   }
-  public set github(value: CloudbuildTriggerGithub[] ) {
+  public putGithub(value: CloudbuildTriggerGithub | undefined) {
     this._github = value;
   }
   public resetGithub() {
@@ -1224,11 +2421,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // pubsub_config - computed: false, optional: true, required: false
-  private _pubsubConfig?: CloudbuildTriggerPubsubConfig[];
+  private _pubsubConfig?: CloudbuildTriggerPubsubConfig | undefined; 
+  private __pubsubConfigOutput = new CloudbuildTriggerPubsubConfigOutputReference(this as any, "pubsub_config", true);
   public get pubsubConfig() {
-    return this.interpolationForAttribute('pubsub_config') as any;
+    return this.__pubsubConfigOutput;
   }
-  public set pubsubConfig(value: CloudbuildTriggerPubsubConfig[] ) {
+  public putPubsubConfig(value: CloudbuildTriggerPubsubConfig | undefined) {
     this._pubsubConfig = value;
   }
   public resetPubsubConfig() {
@@ -1240,11 +2438,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudbuildTriggerTimeouts;
+  private _timeouts?: CloudbuildTriggerTimeouts | undefined; 
+  private __timeoutsOutput = new CloudbuildTriggerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: CloudbuildTriggerTimeouts ) {
+  public putTimeouts(value: CloudbuildTriggerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1256,11 +2455,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // trigger_template - computed: false, optional: true, required: false
-  private _triggerTemplate?: CloudbuildTriggerTriggerTemplate[];
+  private _triggerTemplate?: CloudbuildTriggerTriggerTemplate | undefined; 
+  private __triggerTemplateOutput = new CloudbuildTriggerTriggerTemplateOutputReference(this as any, "trigger_template", true);
   public get triggerTemplate() {
-    return this.interpolationForAttribute('trigger_template') as any;
+    return this.__triggerTemplateOutput;
   }
-  public set triggerTemplate(value: CloudbuildTriggerTriggerTemplate[] ) {
+  public putTriggerTemplate(value: CloudbuildTriggerTriggerTemplate | undefined) {
     this._triggerTemplate = value;
   }
   public resetTriggerTemplate() {
@@ -1272,11 +2472,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // webhook_config - computed: false, optional: true, required: false
-  private _webhookConfig?: CloudbuildTriggerWebhookConfig[];
+  private _webhookConfig?: CloudbuildTriggerWebhookConfig | undefined; 
+  private __webhookConfigOutput = new CloudbuildTriggerWebhookConfigOutputReference(this as any, "webhook_config", true);
   public get webhookConfig() {
-    return this.interpolationForAttribute('webhook_config') as any;
+    return this.__webhookConfigOutput;
   }
-  public set webhookConfig(value: CloudbuildTriggerWebhookConfig[] ) {
+  public putWebhookConfig(value: CloudbuildTriggerWebhookConfig | undefined) {
     this._webhookConfig = value;
   }
   public resetWebhookConfig() {
@@ -1303,12 +2504,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       service_account: cdktf.stringToTerraform(this._serviceAccount),
       substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(this._substitutions),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
-      build: cdktf.listMapper(cloudbuildTriggerBuildToTerraform)(this._build),
-      github: cdktf.listMapper(cloudbuildTriggerGithubToTerraform)(this._github),
-      pubsub_config: cdktf.listMapper(cloudbuildTriggerPubsubConfigToTerraform)(this._pubsubConfig),
+      build: cloudbuildTriggerBuildToTerraform(this._build),
+      github: cloudbuildTriggerGithubToTerraform(this._github),
+      pubsub_config: cloudbuildTriggerPubsubConfigToTerraform(this._pubsubConfig),
       timeouts: cloudbuildTriggerTimeoutsToTerraform(this._timeouts),
-      trigger_template: cdktf.listMapper(cloudbuildTriggerTriggerTemplateToTerraform)(this._triggerTemplate),
-      webhook_config: cdktf.listMapper(cloudbuildTriggerWebhookConfigToTerraform)(this._webhookConfig),
+      trigger_template: cloudbuildTriggerTriggerTemplateToTerraform(this._triggerTemplate),
+      webhook_config: cloudbuildTriggerWebhookConfigToTerraform(this._webhookConfig),
     };
   }
 }

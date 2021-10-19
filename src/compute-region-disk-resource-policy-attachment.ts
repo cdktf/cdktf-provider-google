@@ -48,14 +48,59 @@ export interface ComputeRegionDiskResourcePolicyAttachmentTimeouts {
   readonly delete?: string;
 }
 
-function computeRegionDiskResourcePolicyAttachmentTimeoutsToTerraform(struct?: ComputeRegionDiskResourcePolicyAttachmentTimeouts): any {
+function computeRegionDiskResourcePolicyAttachmentTimeoutsToTerraform(struct?: ComputeRegionDiskResourcePolicyAttachmentTimeoutsOutputReference | ComputeRegionDiskResourcePolicyAttachmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class ComputeRegionDiskResourcePolicyAttachmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment.html google_compute_region_disk_resource_policy_attachment}
@@ -101,7 +146,7 @@ export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformRe
   // ==========
 
   // disk - computed: false, optional: false, required: true
-  private _disk: string;
+  private _disk?: string; 
   public get disk() {
     return this.getStringAttribute('disk');
   }
@@ -119,7 +164,7 @@ export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformRe
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -132,11 +177,11 @@ export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformRe
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -148,11 +193,11 @@ export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformRe
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -164,11 +209,12 @@ export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformRe
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionDiskResourcePolicyAttachmentTimeouts;
+  private _timeouts?: ComputeRegionDiskResourcePolicyAttachmentTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRegionDiskResourcePolicyAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRegionDiskResourcePolicyAttachmentTimeouts ) {
+  public putTimeouts(value: ComputeRegionDiskResourcePolicyAttachmentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

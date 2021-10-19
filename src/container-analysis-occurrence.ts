@@ -38,7 +38,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#attestation ContainerAnalysisOccurrence#attestation}
   */
-  readonly attestation: ContainerAnalysisOccurrenceAttestation[];
+  readonly attestation: ContainerAnalysisOccurrenceAttestation;
   /**
   * timeouts block
   * 
@@ -79,6 +79,9 @@ unambiguously computed to derive the payload.
 
 function containerAnalysisOccurrenceAttestationSignaturesToTerraform(struct?: ContainerAnalysisOccurrenceAttestationSignatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     public_key_id: cdktf.stringToTerraform(struct!.publicKeyId),
     signature: cdktf.stringToTerraform(struct!.signature),
@@ -101,14 +104,54 @@ more signatures. A base64-encoded string.
   readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[];
 }
 
-function containerAnalysisOccurrenceAttestationToTerraform(struct?: ContainerAnalysisOccurrenceAttestation): any {
+function containerAnalysisOccurrenceAttestationToTerraform(struct?: ContainerAnalysisOccurrenceAttestationOutputReference | ContainerAnalysisOccurrenceAttestation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     serialized_payload: cdktf.stringToTerraform(struct!.serializedPayload),
     signatures: cdktf.listMapper(containerAnalysisOccurrenceAttestationSignaturesToTerraform)(struct!.signatures),
   }
 }
 
+export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // serialized_payload - computed: false, optional: false, required: true
+  private _serializedPayload?: string; 
+  public get serializedPayload() {
+    return this.getStringAttribute('serialized_payload');
+  }
+  public set serializedPayload(value: string) {
+    this._serializedPayload = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serializedPayloadInput() {
+    return this._serializedPayload
+  }
+
+  // signatures - computed: false, optional: false, required: true
+  private _signatures?: ContainerAnalysisOccurrenceAttestationSignatures[]; 
+  public get signatures() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('signatures') as any;
+  }
+  public set signatures(value: ContainerAnalysisOccurrenceAttestationSignatures[]) {
+    this._signatures = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signaturesInput() {
+    return this._signatures
+  }
+}
 export interface ContainerAnalysisOccurrenceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#create ContainerAnalysisOccurrence#create}
@@ -124,8 +167,11 @@ export interface ContainerAnalysisOccurrenceTimeouts {
   readonly update?: string;
 }
 
-function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalysisOccurrenceTimeouts): any {
+function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalysisOccurrenceTimeoutsOutputReference | ContainerAnalysisOccurrenceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -133,6 +179,64 @@ function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalys
   }
 }
 
+export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html google_container_analysis_occurrence}
@@ -199,7 +303,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // note_name - computed: false, optional: false, required: true
-  private _noteName: string;
+  private _noteName?: string; 
   public get noteName() {
     return this.getStringAttribute('note_name');
   }
@@ -212,11 +316,11 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -228,11 +332,11 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // remediation - computed: false, optional: true, required: false
-  private _remediation?: string;
+  private _remediation?: string | undefined; 
   public get remediation() {
     return this.getStringAttribute('remediation');
   }
-  public set remediation(value: string ) {
+  public set remediation(value: string | undefined) {
     this._remediation = value;
   }
   public resetRemediation() {
@@ -244,7 +348,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // resource_uri - computed: false, optional: false, required: true
-  private _resourceUri: string;
+  private _resourceUri?: string; 
   public get resourceUri() {
     return this.getStringAttribute('resource_uri');
   }
@@ -262,11 +366,12 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // attestation - computed: false, optional: false, required: true
-  private _attestation: ContainerAnalysisOccurrenceAttestation[];
+  private _attestation?: ContainerAnalysisOccurrenceAttestation; 
+  private __attestationOutput = new ContainerAnalysisOccurrenceAttestationOutputReference(this as any, "attestation", true);
   public get attestation() {
-    return this.interpolationForAttribute('attestation') as any;
+    return this.__attestationOutput;
   }
-  public set attestation(value: ContainerAnalysisOccurrenceAttestation[]) {
+  public putAttestation(value: ContainerAnalysisOccurrenceAttestation) {
     this._attestation = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -275,11 +380,12 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ContainerAnalysisOccurrenceTimeouts;
+  private _timeouts?: ContainerAnalysisOccurrenceTimeouts | undefined; 
+  private __timeoutsOutput = new ContainerAnalysisOccurrenceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ContainerAnalysisOccurrenceTimeouts ) {
+  public putTimeouts(value: ContainerAnalysisOccurrenceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -300,7 +406,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       remediation: cdktf.stringToTerraform(this._remediation),
       resource_uri: cdktf.stringToTerraform(this._resourceUri),
-      attestation: cdktf.listMapper(containerAnalysisOccurrenceAttestationToTerraform)(this._attestation),
+      attestation: containerAnalysisOccurrenceAttestationToTerraform(this._attestation),
       timeouts: containerAnalysisOccurrenceTimeoutsToTerraform(this._timeouts),
     };
   }

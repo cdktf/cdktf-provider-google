@@ -100,11 +100,11 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string ) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -122,15 +122,15 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
   // private_ip_google_access - computed: true, optional: false, required: false
   public get privateIpGoogleAccess() {
-    return this.getBooleanAttribute('private_ip_google_access');
+    return this.getBooleanAttribute('private_ip_google_access') as any;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -142,11 +142,11 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -163,11 +163,11 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // self_link - computed: true, optional: true, required: false
-  private _selfLink?: string;
+  private _selfLink?: string | undefined; 
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string) {
+  public set selfLink(value: string | undefined) {
     this._selfLink = value;
   }
   public resetSelfLink() {

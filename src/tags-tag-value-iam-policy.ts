@@ -68,7 +68,7 @@ export class TagsTagValueIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -81,7 +81,7 @@ export class TagsTagValueIamPolicy extends cdktf.TerraformResource {
   }
 
   // tag_value - computed: false, optional: false, required: true
-  private _tagValue: string;
+  private _tagValue?: string; 
   public get tagValue() {
     return this.getStringAttribute('tag_value');
   }

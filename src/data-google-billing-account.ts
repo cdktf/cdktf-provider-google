@@ -63,11 +63,11 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   // ==========
 
   // billing_account - computed: false, optional: true, required: false
-  private _billingAccount?: string;
+  private _billingAccount?: string | undefined; 
   public get billingAccount() {
     return this.getStringAttribute('billing_account');
   }
-  public set billingAccount(value: string ) {
+  public set billingAccount(value: string | undefined) {
     this._billingAccount = value;
   }
   public resetBillingAccount() {
@@ -79,11 +79,11 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
 
   // display_name - computed: true, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -105,11 +105,11 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
 
   // open - computed: true, optional: true, required: false
-  private _open?: boolean | cdktf.IResolvable;
+  private _open?: boolean | cdktf.IResolvable | undefined; 
   public get open() {
-    return this.getBooleanAttribute('open');
+    return this.getBooleanAttribute('open') as any;
   }
-  public set open(value: boolean | cdktf.IResolvable) {
+  public set open(value: boolean | cdktf.IResolvable | undefined) {
     this._open = value;
   }
   public resetOpen() {

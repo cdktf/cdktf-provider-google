@@ -22,7 +22,7 @@ export interface AppEngineServiceNetworkSettingsConfig extends cdktf.TerraformMe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_network_settings.html#network_settings AppEngineServiceNetworkSettings#network_settings}
   */
-  readonly networkSettings: AppEngineServiceNetworkSettingsNetworkSettings[];
+  readonly networkSettings: AppEngineServiceNetworkSettingsNetworkSettings;
   /**
   * timeouts block
   * 
@@ -39,13 +39,42 @@ export interface AppEngineServiceNetworkSettingsNetworkSettings {
   readonly ingressTrafficAllowed?: string;
 }
 
-function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct?: AppEngineServiceNetworkSettingsNetworkSettings): any {
+function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct?: AppEngineServiceNetworkSettingsNetworkSettingsOutputReference | AppEngineServiceNetworkSettingsNetworkSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ingress_traffic_allowed: cdktf.stringToTerraform(struct!.ingressTrafficAllowed),
   }
 }
 
+export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // ingress_traffic_allowed - computed: false, optional: true, required: false
+  private _ingressTrafficAllowed?: string | undefined; 
+  public get ingressTrafficAllowed() {
+    return this.getStringAttribute('ingress_traffic_allowed');
+  }
+  public set ingressTrafficAllowed(value: string | undefined) {
+    this._ingressTrafficAllowed = value;
+  }
+  public resetIngressTrafficAllowed() {
+    this._ingressTrafficAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressTrafficAllowedInput() {
+    return this._ingressTrafficAllowed
+  }
+}
 export interface AppEngineServiceNetworkSettingsTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_network_settings.html#create AppEngineServiceNetworkSettings#create}
@@ -61,8 +90,11 @@ export interface AppEngineServiceNetworkSettingsTimeouts {
   readonly update?: string;
 }
 
-function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineServiceNetworkSettingsTimeouts): any {
+function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineServiceNetworkSettingsTimeoutsOutputReference | AppEngineServiceNetworkSettingsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -70,6 +102,64 @@ function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineSe
   }
 }
 
+export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_network_settings.html google_app_engine_service_network_settings}
@@ -119,11 +209,11 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -135,7 +225,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service: string;
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
@@ -148,11 +238,12 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // network_settings - computed: false, optional: false, required: true
-  private _networkSettings: AppEngineServiceNetworkSettingsNetworkSettings[];
+  private _networkSettings?: AppEngineServiceNetworkSettingsNetworkSettings; 
+  private __networkSettingsOutput = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this as any, "network_settings", true);
   public get networkSettings() {
-    return this.interpolationForAttribute('network_settings') as any;
+    return this.__networkSettingsOutput;
   }
-  public set networkSettings(value: AppEngineServiceNetworkSettingsNetworkSettings[]) {
+  public putNetworkSettings(value: AppEngineServiceNetworkSettingsNetworkSettings) {
     this._networkSettings = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -161,11 +252,12 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineServiceNetworkSettingsTimeouts;
+  private _timeouts?: AppEngineServiceNetworkSettingsTimeouts | undefined; 
+  private __timeoutsOutput = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppEngineServiceNetworkSettingsTimeouts ) {
+  public putTimeouts(value: AppEngineServiceNetworkSettingsTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -184,7 +276,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
     return {
       project: cdktf.stringToTerraform(this._project),
       service: cdktf.stringToTerraform(this._service),
-      network_settings: cdktf.listMapper(appEngineServiceNetworkSettingsNetworkSettingsToTerraform)(this._networkSettings),
+      network_settings: appEngineServiceNetworkSettingsNetworkSettingsToTerraform(this._networkSettings),
       timeouts: appEngineServiceNetworkSettingsTimeoutsToTerraform(this._timeouts),
     };
   }

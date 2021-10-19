@@ -63,11 +63,11 @@ export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
   // ==========
 
   // additional_authenticated_data - computed: false, optional: true, required: false
-  private _additionalAuthenticatedData?: string;
+  private _additionalAuthenticatedData?: string | undefined; 
   public get additionalAuthenticatedData() {
     return this.getStringAttribute('additional_authenticated_data');
   }
-  public set additionalAuthenticatedData(value: string ) {
+  public set additionalAuthenticatedData(value: string | undefined) {
     this._additionalAuthenticatedData = value;
   }
   public resetAdditionalAuthenticatedData() {
@@ -79,7 +79,7 @@ export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
   }
 
   // ciphertext - computed: false, optional: false, required: true
-  private _ciphertext: string;
+  private _ciphertext?: string; 
   public get ciphertext() {
     return this.getStringAttribute('ciphertext');
   }
@@ -92,7 +92,7 @@ export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
   }
 
   // crypto_key - computed: false, optional: false, required: true
-  private _cryptoKey: string;
+  private _cryptoKey?: string; 
   public get cryptoKey() {
     return this.getStringAttribute('crypto_key');
   }

@@ -47,19 +47,19 @@ character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#app_engine ComputeRegionNetworkEndpointGroup#app_engine}
   */
-  readonly appEngine?: ComputeRegionNetworkEndpointGroupAppEngine[];
+  readonly appEngine?: ComputeRegionNetworkEndpointGroupAppEngine;
   /**
   * cloud_function block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#cloud_function ComputeRegionNetworkEndpointGroup#cloud_function}
   */
-  readonly cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction[];
+  readonly cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction;
   /**
   * cloud_run block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#cloud_run ComputeRegionNetworkEndpointGroup#cloud_run}
   */
-  readonly cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun[];
+  readonly cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun;
   /**
   * timeouts block
   * 
@@ -99,8 +99,11 @@ Example value: "v1", "v2".
   readonly version?: string;
 }
 
-function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeRegionNetworkEndpointGroupAppEngine): any {
+function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeRegionNetworkEndpointGroupAppEngineOutputReference | ComputeRegionNetworkEndpointGroupAppEngine): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     service: cdktf.stringToTerraform(struct!.service),
     url_mask: cdktf.stringToTerraform(struct!.urlMask),
@@ -108,6 +111,64 @@ function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeR
   }
 }
 
+export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // service - computed: false, optional: true, required: false
+  private _service?: string | undefined; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string | undefined) {
+    this._service = value;
+  }
+  public resetService() {
+    this._service = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
+  }
+
+  // url_mask - computed: false, optional: true, required: false
+  private _urlMask?: string | undefined; 
+  public get urlMask() {
+    return this.getStringAttribute('url_mask');
+  }
+  public set urlMask(value: string | undefined) {
+    this._urlMask = value;
+  }
+  public resetUrlMask() {
+    this._urlMask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlMaskInput() {
+    return this._urlMask
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string | undefined; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string | undefined) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+}
 export interface ComputeRegionNetworkEndpointGroupCloudFunction {
   /**
   * A user-defined name of the Cloud Function.
@@ -131,14 +192,59 @@ will parse them to { function = "function1" } and { function = "function2" } res
   readonly urlMask?: string;
 }
 
-function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudFunction): any {
+function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference | ComputeRegionNetworkEndpointGroupCloudFunction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     function: cdktf.stringToTerraform(struct!.function),
     url_mask: cdktf.stringToTerraform(struct!.urlMask),
   }
 }
 
+export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // function - computed: false, optional: true, required: false
+  private _function?: string | undefined; 
+  public get function() {
+    return this.getStringAttribute('function');
+  }
+  public set function(value: string | undefined) {
+    this._function = value;
+  }
+  public resetFunction() {
+    this._function = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionInput() {
+    return this._function
+  }
+
+  // url_mask - computed: false, optional: true, required: false
+  private _urlMask?: string | undefined; 
+  public get urlMask() {
+    return this.getStringAttribute('url_mask');
+  }
+  public set urlMask(value: string | undefined) {
+    this._urlMask = value;
+  }
+  public resetUrlMask() {
+    this._urlMask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlMaskInput() {
+    return this._urlMask
+  }
+}
 export interface ComputeRegionNetworkEndpointGroupCloudRun {
   /**
   * Cloud Run service is the main resource of Cloud Run.
@@ -172,8 +278,11 @@ and { service="bar2", tag="foo2" } respectively.
   readonly urlMask?: string;
 }
 
-function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudRun): any {
+function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudRunOutputReference | ComputeRegionNetworkEndpointGroupCloudRun): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     service: cdktf.stringToTerraform(struct!.service),
     tag: cdktf.stringToTerraform(struct!.tag),
@@ -181,6 +290,64 @@ function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRe
   }
 }
 
+export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // service - computed: false, optional: true, required: false
+  private _service?: string | undefined; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string | undefined) {
+    this._service = value;
+  }
+  public resetService() {
+    this._service = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string | undefined; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string | undefined) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag
+  }
+
+  // url_mask - computed: false, optional: true, required: false
+  private _urlMask?: string | undefined; 
+  public get urlMask() {
+    return this.getStringAttribute('url_mask');
+  }
+  public set urlMask(value: string | undefined) {
+    this._urlMask = value;
+  }
+  public resetUrlMask() {
+    this._urlMask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlMaskInput() {
+    return this._urlMask
+  }
+}
 export interface ComputeRegionNetworkEndpointGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html#create ComputeRegionNetworkEndpointGroup#create}
@@ -192,14 +359,59 @@ export interface ComputeRegionNetworkEndpointGroupTimeouts {
   readonly delete?: string;
 }
 
-function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeouts): any {
+function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeoutsOutputReference | ComputeRegionNetworkEndpointGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group.html google_compute_region_network_endpoint_group}
@@ -249,11 +461,11 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -270,7 +482,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -283,11 +495,11 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // network_endpoint_type - computed: false, optional: true, required: false
-  private _networkEndpointType?: string;
+  private _networkEndpointType?: string | undefined; 
   public get networkEndpointType() {
     return this.getStringAttribute('network_endpoint_type');
   }
-  public set networkEndpointType(value: string ) {
+  public set networkEndpointType(value: string | undefined) {
     this._networkEndpointType = value;
   }
   public resetNetworkEndpointType() {
@@ -299,11 +511,11 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -315,7 +527,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // region - computed: false, optional: false, required: true
-  private _region: string;
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
@@ -333,11 +545,12 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // app_engine - computed: false, optional: true, required: false
-  private _appEngine?: ComputeRegionNetworkEndpointGroupAppEngine[];
+  private _appEngine?: ComputeRegionNetworkEndpointGroupAppEngine | undefined; 
+  private __appEngineOutput = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this as any, "app_engine", true);
   public get appEngine() {
-    return this.interpolationForAttribute('app_engine') as any;
+    return this.__appEngineOutput;
   }
-  public set appEngine(value: ComputeRegionNetworkEndpointGroupAppEngine[] ) {
+  public putAppEngine(value: ComputeRegionNetworkEndpointGroupAppEngine | undefined) {
     this._appEngine = value;
   }
   public resetAppEngine() {
@@ -349,11 +562,12 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // cloud_function - computed: false, optional: true, required: false
-  private _cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction[];
+  private _cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction | undefined; 
+  private __cloudFunctionOutput = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this as any, "cloud_function", true);
   public get cloudFunction() {
-    return this.interpolationForAttribute('cloud_function') as any;
+    return this.__cloudFunctionOutput;
   }
-  public set cloudFunction(value: ComputeRegionNetworkEndpointGroupCloudFunction[] ) {
+  public putCloudFunction(value: ComputeRegionNetworkEndpointGroupCloudFunction | undefined) {
     this._cloudFunction = value;
   }
   public resetCloudFunction() {
@@ -365,11 +579,12 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // cloud_run - computed: false, optional: true, required: false
-  private _cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun[];
+  private _cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun | undefined; 
+  private __cloudRunOutput = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this as any, "cloud_run", true);
   public get cloudRun() {
-    return this.interpolationForAttribute('cloud_run') as any;
+    return this.__cloudRunOutput;
   }
-  public set cloudRun(value: ComputeRegionNetworkEndpointGroupCloudRun[] ) {
+  public putCloudRun(value: ComputeRegionNetworkEndpointGroupCloudRun | undefined) {
     this._cloudRun = value;
   }
   public resetCloudRun() {
@@ -381,11 +596,12 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionNetworkEndpointGroupTimeouts;
+  private _timeouts?: ComputeRegionNetworkEndpointGroupTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRegionNetworkEndpointGroupTimeouts ) {
+  public putTimeouts(value: ComputeRegionNetworkEndpointGroupTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -407,9 +623,9 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
       network_endpoint_type: cdktf.stringToTerraform(this._networkEndpointType),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      app_engine: cdktf.listMapper(computeRegionNetworkEndpointGroupAppEngineToTerraform)(this._appEngine),
-      cloud_function: cdktf.listMapper(computeRegionNetworkEndpointGroupCloudFunctionToTerraform)(this._cloudFunction),
-      cloud_run: cdktf.listMapper(computeRegionNetworkEndpointGroupCloudRunToTerraform)(this._cloudRun),
+      app_engine: computeRegionNetworkEndpointGroupAppEngineToTerraform(this._appEngine),
+      cloud_function: computeRegionNetworkEndpointGroupCloudFunctionToTerraform(this._cloudFunction),
+      cloud_run: computeRegionNetworkEndpointGroupCloudRunToTerraform(this._cloudRun),
       timeouts: computeRegionNetworkEndpointGroupTimeoutsToTerraform(this._timeouts),
     };
   }

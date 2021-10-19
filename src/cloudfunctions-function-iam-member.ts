@@ -32,7 +32,7 @@ export interface CloudfunctionsFunctionIamMemberConfig extends cdktf.TerraformMe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html#condition CloudfunctionsFunctionIamMember#condition}
   */
-  readonly condition?: CloudfunctionsFunctionIamMemberCondition[];
+  readonly condition?: CloudfunctionsFunctionIamMemberCondition;
 }
 export interface CloudfunctionsFunctionIamMemberCondition {
   /**
@@ -49,8 +49,11 @@ export interface CloudfunctionsFunctionIamMemberCondition {
   readonly title: string;
 }
 
-function cloudfunctionsFunctionIamMemberConditionToTerraform(struct?: CloudfunctionsFunctionIamMemberCondition): any {
+function cloudfunctionsFunctionIamMemberConditionToTerraform(struct?: CloudfunctionsFunctionIamMemberConditionOutputReference | CloudfunctionsFunctionIamMemberCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -58,6 +61,58 @@ function cloudfunctionsFunctionIamMemberConditionToTerraform(struct?: Cloudfunct
   }
 }
 
+export class CloudfunctionsFunctionIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member.html google_cloudfunctions_function_iam_member}
@@ -104,7 +159,7 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   // ==========
 
   // cloud_function - computed: false, optional: false, required: true
-  private _cloudFunction: string;
+  private _cloudFunction?: string; 
   public get cloudFunction() {
     return this.getStringAttribute('cloud_function');
   }
@@ -127,7 +182,7 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   }
 
   // member - computed: false, optional: false, required: true
-  private _member: string;
+  private _member?: string; 
   public get member() {
     return this.getStringAttribute('member');
   }
@@ -140,11 +195,11 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -156,11 +211,11 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -172,7 +227,7 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   }
 
   // role - computed: false, optional: false, required: true
-  private _role: string;
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
@@ -185,11 +240,12 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: CloudfunctionsFunctionIamMemberCondition[];
+  private _condition?: CloudfunctionsFunctionIamMemberCondition | undefined; 
+  private __conditionOutput = new CloudfunctionsFunctionIamMemberConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: CloudfunctionsFunctionIamMemberCondition[] ) {
+  public putCondition(value: CloudfunctionsFunctionIamMemberCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -211,7 +267,7 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       role: cdktf.stringToTerraform(this._role),
-      condition: cdktf.listMapper(cloudfunctionsFunctionIamMemberConditionToTerraform)(this._condition),
+      condition: cloudfunctionsFunctionIamMemberConditionToTerraform(this._condition),
     };
   }
 }

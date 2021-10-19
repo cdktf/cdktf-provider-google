@@ -83,11 +83,11 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string ) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -99,11 +99,11 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -130,11 +130,11 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
 
   // version_prefix - computed: false, optional: true, required: false
-  private _versionPrefix?: string;
+  private _versionPrefix?: string | undefined; 
   public get versionPrefix() {
     return this.getStringAttribute('version_prefix');
   }
-  public set versionPrefix(value: string ) {
+  public set versionPrefix(value: string | undefined) {
     this._versionPrefix = value;
   }
   public resetVersionPrefix() {

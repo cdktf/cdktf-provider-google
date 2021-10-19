@@ -33,13 +33,42 @@ export interface ComputeProjectDefaultNetworkTierTimeouts {
   readonly create?: string;
 }
 
-function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputeProjectDefaultNetworkTierTimeouts): any {
+function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputeProjectDefaultNetworkTierTimeoutsOutputReference | ComputeProjectDefaultNetworkTierTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
   }
 }
 
+export class ComputeProjectDefaultNetworkTierTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier.html google_compute_project_default_network_tier}
@@ -88,7 +117,7 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
   }
 
   // network_tier - computed: false, optional: false, required: true
-  private _networkTier: string;
+  private _networkTier?: string; 
   public get networkTier() {
     return this.getStringAttribute('network_tier');
   }
@@ -101,11 +130,11 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -117,11 +146,12 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeProjectDefaultNetworkTierTimeouts;
+  private _timeouts?: ComputeProjectDefaultNetworkTierTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeProjectDefaultNetworkTierTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeProjectDefaultNetworkTierTimeouts ) {
+  public putTimeouts(value: ComputeProjectDefaultNetworkTierTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

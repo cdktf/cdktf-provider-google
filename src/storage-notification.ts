@@ -90,7 +90,7 @@ export class StorageNotification extends cdktf.TerraformResource {
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -103,11 +103,12 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // custom_attributes - computed: false, optional: true, required: false
-  private _customAttributes?: { [key: string]: string } | cdktf.IResolvable;
+  private _customAttributes?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get customAttributes() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_attributes') as any;
   }
-  public set customAttributes(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set customAttributes(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._customAttributes = value;
   }
   public resetCustomAttributes() {
@@ -119,11 +120,11 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // event_types - computed: false, optional: true, required: false
-  private _eventTypes?: string[];
+  private _eventTypes?: string[] | undefined; 
   public get eventTypes() {
     return this.getListAttribute('event_types');
   }
-  public set eventTypes(value: string[] ) {
+  public set eventTypes(value: string[] | undefined) {
     this._eventTypes = value;
   }
   public resetEventTypes() {
@@ -145,11 +146,11 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // object_name_prefix - computed: false, optional: true, required: false
-  private _objectNamePrefix?: string;
+  private _objectNamePrefix?: string | undefined; 
   public get objectNamePrefix() {
     return this.getStringAttribute('object_name_prefix');
   }
-  public set objectNamePrefix(value: string ) {
+  public set objectNamePrefix(value: string | undefined) {
     this._objectNamePrefix = value;
   }
   public resetObjectNamePrefix() {
@@ -161,7 +162,7 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // payload_format - computed: false, optional: false, required: true
-  private _payloadFormat: string;
+  private _payloadFormat?: string; 
   public get payloadFormat() {
     return this.getStringAttribute('payload_format');
   }
@@ -179,7 +180,7 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // topic - computed: false, optional: false, required: true
-  private _topic: string;
+  private _topic?: string; 
   public get topic() {
     return this.getStringAttribute('topic');
   }

@@ -83,7 +83,7 @@ More info can be found in the API documentation
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor.html#metadata MonitoringMetricDescriptor#metadata}
   */
-  readonly metadata?: MonitoringMetricDescriptorMetadata[];
+  readonly metadata?: MonitoringMetricDescriptorMetadata;
   /**
   * timeouts block
   * 
@@ -114,6 +114,9 @@ export interface MonitoringMetricDescriptorLabels {
 
 function monitoringMetricDescriptorLabelsToTerraform(struct?: MonitoringMetricDescriptorLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     key: cdktf.stringToTerraform(struct!.key),
@@ -136,14 +139,59 @@ export interface MonitoringMetricDescriptorMetadata {
   readonly samplePeriod?: string;
 }
 
-function monitoringMetricDescriptorMetadataToTerraform(struct?: MonitoringMetricDescriptorMetadata): any {
+function monitoringMetricDescriptorMetadataToTerraform(struct?: MonitoringMetricDescriptorMetadataOutputReference | MonitoringMetricDescriptorMetadata): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ingest_delay: cdktf.stringToTerraform(struct!.ingestDelay),
     sample_period: cdktf.stringToTerraform(struct!.samplePeriod),
   }
 }
 
+export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // ingest_delay - computed: false, optional: true, required: false
+  private _ingestDelay?: string | undefined; 
+  public get ingestDelay() {
+    return this.getStringAttribute('ingest_delay');
+  }
+  public set ingestDelay(value: string | undefined) {
+    this._ingestDelay = value;
+  }
+  public resetIngestDelay() {
+    this._ingestDelay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingestDelayInput() {
+    return this._ingestDelay
+  }
+
+  // sample_period - computed: false, optional: true, required: false
+  private _samplePeriod?: string | undefined; 
+  public get samplePeriod() {
+    return this.getStringAttribute('sample_period');
+  }
+  public set samplePeriod(value: string | undefined) {
+    this._samplePeriod = value;
+  }
+  public resetSamplePeriod() {
+    this._samplePeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get samplePeriodInput() {
+    return this._samplePeriod
+  }
+}
 export interface MonitoringMetricDescriptorTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor.html#create MonitoringMetricDescriptor#create}
@@ -159,8 +207,11 @@ export interface MonitoringMetricDescriptorTimeouts {
   readonly update?: string;
 }
 
-function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetricDescriptorTimeouts): any {
+function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetricDescriptorTimeoutsOutputReference | MonitoringMetricDescriptorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -168,6 +219,64 @@ function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetric
   }
 }
 
+export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor.html google_monitoring_metric_descriptor}
@@ -219,7 +328,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: false, required: true
-  private _description: string;
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
@@ -232,7 +341,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -250,11 +359,11 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // launch_stage - computed: false, optional: true, required: false
-  private _launchStage?: string;
+  private _launchStage?: string | undefined; 
   public get launchStage() {
     return this.getStringAttribute('launch_stage');
   }
-  public set launchStage(value: string ) {
+  public set launchStage(value: string | undefined) {
     this._launchStage = value;
   }
   public resetLaunchStage() {
@@ -266,7 +375,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // metric_kind - computed: false, optional: false, required: true
-  private _metricKind: string;
+  private _metricKind?: string; 
   public get metricKind() {
     return this.getStringAttribute('metric_kind');
   }
@@ -289,11 +398,11 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -305,7 +414,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -318,11 +427,11 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // unit - computed: false, optional: true, required: false
-  private _unit?: string;
+  private _unit?: string | undefined; 
   public get unit() {
     return this.getStringAttribute('unit');
   }
-  public set unit(value: string ) {
+  public set unit(value: string | undefined) {
     this._unit = value;
   }
   public resetUnit() {
@@ -334,7 +443,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // value_type - computed: false, optional: false, required: true
-  private _valueType: string;
+  private _valueType?: string; 
   public get valueType() {
     return this.getStringAttribute('value_type');
   }
@@ -347,11 +456,12 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: MonitoringMetricDescriptorLabels[];
+  private _labels?: MonitoringMetricDescriptorLabels[] | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: MonitoringMetricDescriptorLabels[] ) {
+  public set labels(value: MonitoringMetricDescriptorLabels[] | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -363,11 +473,12 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: MonitoringMetricDescriptorMetadata[];
+  private _metadata?: MonitoringMetricDescriptorMetadata | undefined; 
+  private __metadataOutput = new MonitoringMetricDescriptorMetadataOutputReference(this as any, "metadata", true);
   public get metadata() {
-    return this.interpolationForAttribute('metadata') as any;
+    return this.__metadataOutput;
   }
-  public set metadata(value: MonitoringMetricDescriptorMetadata[] ) {
+  public putMetadata(value: MonitoringMetricDescriptorMetadata | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -379,11 +490,12 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringMetricDescriptorTimeouts;
+  private _timeouts?: MonitoringMetricDescriptorTimeouts | undefined; 
+  private __timeoutsOutput = new MonitoringMetricDescriptorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitoringMetricDescriptorTimeouts ) {
+  public putTimeouts(value: MonitoringMetricDescriptorTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -409,7 +521,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
       unit: cdktf.stringToTerraform(this._unit),
       value_type: cdktf.stringToTerraform(this._valueType),
       labels: cdktf.listMapper(monitoringMetricDescriptorLabelsToTerraform)(this._labels),
-      metadata: cdktf.listMapper(monitoringMetricDescriptorMetadataToTerraform)(this._metadata),
+      metadata: monitoringMetricDescriptorMetadataToTerraform(this._metadata),
       timeouts: monitoringMetricDescriptorTimeoutsToTerraform(this._timeouts),
     };
   }

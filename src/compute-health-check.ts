@@ -64,43 +64,43 @@ consecutive failures. The default value is 2.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#grpc_health_check ComputeHealthCheck#grpc_health_check}
   */
-  readonly grpcHealthCheck?: ComputeHealthCheckGrpcHealthCheck[];
+  readonly grpcHealthCheck?: ComputeHealthCheckGrpcHealthCheck;
   /**
   * http2_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#http2_health_check ComputeHealthCheck#http2_health_check}
   */
-  readonly http2HealthCheck?: ComputeHealthCheckHttp2HealthCheck[];
+  readonly http2HealthCheck?: ComputeHealthCheckHttp2HealthCheck;
   /**
   * http_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#http_health_check ComputeHealthCheck#http_health_check}
   */
-  readonly httpHealthCheck?: ComputeHealthCheckHttpHealthCheck[];
+  readonly httpHealthCheck?: ComputeHealthCheckHttpHealthCheck;
   /**
   * https_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#https_health_check ComputeHealthCheck#https_health_check}
   */
-  readonly httpsHealthCheck?: ComputeHealthCheckHttpsHealthCheck[];
+  readonly httpsHealthCheck?: ComputeHealthCheckHttpsHealthCheck;
   /**
   * log_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#log_config ComputeHealthCheck#log_config}
   */
-  readonly logConfig?: ComputeHealthCheckLogConfig[];
+  readonly logConfig?: ComputeHealthCheckLogConfig;
   /**
   * ssl_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#ssl_health_check ComputeHealthCheck#ssl_health_check}
   */
-  readonly sslHealthCheck?: ComputeHealthCheckSslHealthCheck[];
+  readonly sslHealthCheck?: ComputeHealthCheckSslHealthCheck;
   /**
   * tcp_health_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#tcp_health_check ComputeHealthCheck#tcp_health_check}
   */
-  readonly tcpHealthCheck?: ComputeHealthCheckTcpHealthCheck[];
+  readonly tcpHealthCheck?: ComputeHealthCheckTcpHealthCheck;
   /**
   * timeouts block
   * 
@@ -155,8 +155,11 @@ If not specified, gRPC health check follows behavior specified in 'port' and
   readonly portSpecification?: string;
 }
 
-function computeHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeHealthCheckGrpcHealthCheck): any {
+function computeHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeHealthCheckGrpcHealthCheckOutputReference | ComputeHealthCheckGrpcHealthCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     grpc_service_name: cdktf.stringToTerraform(struct!.grpcServiceName),
     port: cdktf.numberToTerraform(struct!.port),
@@ -165,6 +168,80 @@ function computeHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeHealthChec
   }
 }
 
+export class ComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // grpc_service_name - computed: false, optional: true, required: false
+  private _grpcServiceName?: string | undefined; 
+  public get grpcServiceName() {
+    return this.getStringAttribute('grpc_service_name');
+  }
+  public set grpcServiceName(value: string | undefined) {
+    this._grpcServiceName = value;
+  }
+  public resetGrpcServiceName() {
+    this._grpcServiceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get grpcServiceNameInput() {
+    return this._grpcServiceName
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // port_name - computed: false, optional: true, required: false
+  private _portName?: string | undefined; 
+  public get portName() {
+    return this.getStringAttribute('port_name');
+  }
+  public set portName(value: string | undefined) {
+    this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
+  }
+
+  // port_specification - computed: false, optional: true, required: false
+  private _portSpecification?: string | undefined; 
+  public get portSpecification() {
+    return this.getStringAttribute('port_specification');
+  }
+  public set portSpecification(value: string | undefined) {
+    this._portSpecification = value;
+  }
+  public resetPortSpecification() {
+    this._portSpecification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portSpecificationInput() {
+    return this._portSpecification
+  }
+}
 export interface ComputeHealthCheckHttp2HealthCheck {
   /**
   * The value of the host header in the HTTP2 health check request.
@@ -231,8 +308,11 @@ can only be ASCII.
   readonly response?: string;
 }
 
-function computeHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeHealthCheckHttp2HealthCheck): any {
+function computeHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeHealthCheckHttp2HealthCheckOutputReference | ComputeHealthCheckHttp2HealthCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host: cdktf.stringToTerraform(struct!.host),
     port: cdktf.numberToTerraform(struct!.port),
@@ -244,6 +324,128 @@ function computeHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeHealthChe
   }
 }
 
+export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string | undefined; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string | undefined) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // port_name - computed: false, optional: true, required: false
+  private _portName?: string | undefined; 
+  public get portName() {
+    return this.getStringAttribute('port_name');
+  }
+  public set portName(value: string | undefined) {
+    this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
+  }
+
+  // port_specification - computed: false, optional: true, required: false
+  private _portSpecification?: string | undefined; 
+  public get portSpecification() {
+    return this.getStringAttribute('port_specification');
+  }
+  public set portSpecification(value: string | undefined) {
+    this._portSpecification = value;
+  }
+  public resetPortSpecification() {
+    this._portSpecification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portSpecificationInput() {
+    return this._portSpecification
+  }
+
+  // proxy_header - computed: false, optional: true, required: false
+  private _proxyHeader?: string | undefined; 
+  public get proxyHeader() {
+    return this.getStringAttribute('proxy_header');
+  }
+  public set proxyHeader(value: string | undefined) {
+    this._proxyHeader = value;
+  }
+  public resetProxyHeader() {
+    this._proxyHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyHeaderInput() {
+    return this._proxyHeader
+  }
+
+  // request_path - computed: false, optional: true, required: false
+  private _requestPath?: string | undefined; 
+  public get requestPath() {
+    return this.getStringAttribute('request_path');
+  }
+  public set requestPath(value: string | undefined) {
+    this._requestPath = value;
+  }
+  public resetRequestPath() {
+    this._requestPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestPathInput() {
+    return this._requestPath
+  }
+
+  // response - computed: false, optional: true, required: false
+  private _response?: string | undefined; 
+  public get response() {
+    return this.getStringAttribute('response');
+  }
+  public set response(value: string | undefined) {
+    this._response = value;
+  }
+  public resetResponse() {
+    this._response = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseInput() {
+    return this._response
+  }
+}
 export interface ComputeHealthCheckHttpHealthCheck {
   /**
   * The value of the host header in the HTTP health check request.
@@ -310,8 +512,11 @@ can only be ASCII.
   readonly response?: string;
 }
 
-function computeHealthCheckHttpHealthCheckToTerraform(struct?: ComputeHealthCheckHttpHealthCheck): any {
+function computeHealthCheckHttpHealthCheckToTerraform(struct?: ComputeHealthCheckHttpHealthCheckOutputReference | ComputeHealthCheckHttpHealthCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host: cdktf.stringToTerraform(struct!.host),
     port: cdktf.numberToTerraform(struct!.port),
@@ -323,6 +528,128 @@ function computeHealthCheckHttpHealthCheckToTerraform(struct?: ComputeHealthChec
   }
 }
 
+export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string | undefined; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string | undefined) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // port_name - computed: false, optional: true, required: false
+  private _portName?: string | undefined; 
+  public get portName() {
+    return this.getStringAttribute('port_name');
+  }
+  public set portName(value: string | undefined) {
+    this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
+  }
+
+  // port_specification - computed: false, optional: true, required: false
+  private _portSpecification?: string | undefined; 
+  public get portSpecification() {
+    return this.getStringAttribute('port_specification');
+  }
+  public set portSpecification(value: string | undefined) {
+    this._portSpecification = value;
+  }
+  public resetPortSpecification() {
+    this._portSpecification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portSpecificationInput() {
+    return this._portSpecification
+  }
+
+  // proxy_header - computed: false, optional: true, required: false
+  private _proxyHeader?: string | undefined; 
+  public get proxyHeader() {
+    return this.getStringAttribute('proxy_header');
+  }
+  public set proxyHeader(value: string | undefined) {
+    this._proxyHeader = value;
+  }
+  public resetProxyHeader() {
+    this._proxyHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyHeaderInput() {
+    return this._proxyHeader
+  }
+
+  // request_path - computed: false, optional: true, required: false
+  private _requestPath?: string | undefined; 
+  public get requestPath() {
+    return this.getStringAttribute('request_path');
+  }
+  public set requestPath(value: string | undefined) {
+    this._requestPath = value;
+  }
+  public resetRequestPath() {
+    this._requestPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestPathInput() {
+    return this._requestPath
+  }
+
+  // response - computed: false, optional: true, required: false
+  private _response?: string | undefined; 
+  public get response() {
+    return this.getStringAttribute('response');
+  }
+  public set response(value: string | undefined) {
+    this._response = value;
+  }
+  public resetResponse() {
+    this._response = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseInput() {
+    return this._response
+  }
+}
 export interface ComputeHealthCheckHttpsHealthCheck {
   /**
   * The value of the host header in the HTTPS health check request.
@@ -389,8 +716,11 @@ can only be ASCII.
   readonly response?: string;
 }
 
-function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHealthCheckHttpsHealthCheck): any {
+function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHealthCheckHttpsHealthCheckOutputReference | ComputeHealthCheckHttpsHealthCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host: cdktf.stringToTerraform(struct!.host),
     port: cdktf.numberToTerraform(struct!.port),
@@ -402,6 +732,128 @@ function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHealthChe
   }
 }
 
+export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string | undefined; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string | undefined) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // port_name - computed: false, optional: true, required: false
+  private _portName?: string | undefined; 
+  public get portName() {
+    return this.getStringAttribute('port_name');
+  }
+  public set portName(value: string | undefined) {
+    this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
+  }
+
+  // port_specification - computed: false, optional: true, required: false
+  private _portSpecification?: string | undefined; 
+  public get portSpecification() {
+    return this.getStringAttribute('port_specification');
+  }
+  public set portSpecification(value: string | undefined) {
+    this._portSpecification = value;
+  }
+  public resetPortSpecification() {
+    this._portSpecification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portSpecificationInput() {
+    return this._portSpecification
+  }
+
+  // proxy_header - computed: false, optional: true, required: false
+  private _proxyHeader?: string | undefined; 
+  public get proxyHeader() {
+    return this.getStringAttribute('proxy_header');
+  }
+  public set proxyHeader(value: string | undefined) {
+    this._proxyHeader = value;
+  }
+  public resetProxyHeader() {
+    this._proxyHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyHeaderInput() {
+    return this._proxyHeader
+  }
+
+  // request_path - computed: false, optional: true, required: false
+  private _requestPath?: string | undefined; 
+  public get requestPath() {
+    return this.getStringAttribute('request_path');
+  }
+  public set requestPath(value: string | undefined) {
+    this._requestPath = value;
+  }
+  public resetRequestPath() {
+    this._requestPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestPathInput() {
+    return this._requestPath
+  }
+
+  // response - computed: false, optional: true, required: false
+  private _response?: string | undefined; 
+  public get response() {
+    return this.getStringAttribute('response');
+  }
+  public set response(value: string | undefined) {
+    this._response = value;
+  }
+  public resetResponse() {
+    this._response = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseInput() {
+    return this._response
+  }
+}
 export interface ComputeHealthCheckLogConfig {
   /**
   * Indicates whether or not to export logs. This is false by default,
@@ -412,13 +864,42 @@ which means no health check logging will be done.
   readonly enable?: boolean | cdktf.IResolvable;
 }
 
-function computeHealthCheckLogConfigToTerraform(struct?: ComputeHealthCheckLogConfig): any {
+function computeHealthCheckLogConfigToTerraform(struct?: ComputeHealthCheckLogConfigOutputReference | ComputeHealthCheckLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable: cdktf.booleanToTerraform(struct!.enable),
   }
 }
 
+export class ComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable - computed: false, optional: true, required: false
+  private _enable?: boolean | cdktf.IResolvable | undefined; 
+  public get enable() {
+    return this.getBooleanAttribute('enable') as any;
+  }
+  public set enable(value: boolean | cdktf.IResolvable | undefined) {
+    this._enable = value;
+  }
+  public resetEnable() {
+    this._enable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableInput() {
+    return this._enable
+  }
+}
 export interface ComputeHealthCheckSslHealthCheck {
   /**
   * The TCP port number for the SSL health check request.
@@ -479,8 +960,11 @@ can only be ASCII.
   readonly response?: string;
 }
 
-function computeHealthCheckSslHealthCheckToTerraform(struct?: ComputeHealthCheckSslHealthCheck): any {
+function computeHealthCheckSslHealthCheckToTerraform(struct?: ComputeHealthCheckSslHealthCheckOutputReference | ComputeHealthCheckSslHealthCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     port: cdktf.numberToTerraform(struct!.port),
     port_name: cdktf.stringToTerraform(struct!.portName),
@@ -491,6 +975,112 @@ function computeHealthCheckSslHealthCheckToTerraform(struct?: ComputeHealthCheck
   }
 }
 
+export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // port_name - computed: false, optional: true, required: false
+  private _portName?: string | undefined; 
+  public get portName() {
+    return this.getStringAttribute('port_name');
+  }
+  public set portName(value: string | undefined) {
+    this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
+  }
+
+  // port_specification - computed: false, optional: true, required: false
+  private _portSpecification?: string | undefined; 
+  public get portSpecification() {
+    return this.getStringAttribute('port_specification');
+  }
+  public set portSpecification(value: string | undefined) {
+    this._portSpecification = value;
+  }
+  public resetPortSpecification() {
+    this._portSpecification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portSpecificationInput() {
+    return this._portSpecification
+  }
+
+  // proxy_header - computed: false, optional: true, required: false
+  private _proxyHeader?: string | undefined; 
+  public get proxyHeader() {
+    return this.getStringAttribute('proxy_header');
+  }
+  public set proxyHeader(value: string | undefined) {
+    this._proxyHeader = value;
+  }
+  public resetProxyHeader() {
+    this._proxyHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyHeaderInput() {
+    return this._proxyHeader
+  }
+
+  // request - computed: false, optional: true, required: false
+  private _request?: string | undefined; 
+  public get request() {
+    return this.getStringAttribute('request');
+  }
+  public set request(value: string | undefined) {
+    this._request = value;
+  }
+  public resetRequest() {
+    this._request = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestInput() {
+    return this._request
+  }
+
+  // response - computed: false, optional: true, required: false
+  private _response?: string | undefined; 
+  public get response() {
+    return this.getStringAttribute('response');
+  }
+  public set response(value: string | undefined) {
+    this._response = value;
+  }
+  public resetResponse() {
+    this._response = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseInput() {
+    return this._response
+  }
+}
 export interface ComputeHealthCheckTcpHealthCheck {
   /**
   * The TCP port number for the TCP health check request.
@@ -551,8 +1141,11 @@ can only be ASCII.
   readonly response?: string;
 }
 
-function computeHealthCheckTcpHealthCheckToTerraform(struct?: ComputeHealthCheckTcpHealthCheck): any {
+function computeHealthCheckTcpHealthCheckToTerraform(struct?: ComputeHealthCheckTcpHealthCheckOutputReference | ComputeHealthCheckTcpHealthCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     port: cdktf.numberToTerraform(struct!.port),
     port_name: cdktf.stringToTerraform(struct!.portName),
@@ -563,6 +1156,112 @@ function computeHealthCheckTcpHealthCheckToTerraform(struct?: ComputeHealthCheck
   }
 }
 
+export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // port_name - computed: false, optional: true, required: false
+  private _portName?: string | undefined; 
+  public get portName() {
+    return this.getStringAttribute('port_name');
+  }
+  public set portName(value: string | undefined) {
+    this._portName = value;
+  }
+  public resetPortName() {
+    this._portName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNameInput() {
+    return this._portName
+  }
+
+  // port_specification - computed: false, optional: true, required: false
+  private _portSpecification?: string | undefined; 
+  public get portSpecification() {
+    return this.getStringAttribute('port_specification');
+  }
+  public set portSpecification(value: string | undefined) {
+    this._portSpecification = value;
+  }
+  public resetPortSpecification() {
+    this._portSpecification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portSpecificationInput() {
+    return this._portSpecification
+  }
+
+  // proxy_header - computed: false, optional: true, required: false
+  private _proxyHeader?: string | undefined; 
+  public get proxyHeader() {
+    return this.getStringAttribute('proxy_header');
+  }
+  public set proxyHeader(value: string | undefined) {
+    this._proxyHeader = value;
+  }
+  public resetProxyHeader() {
+    this._proxyHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyHeaderInput() {
+    return this._proxyHeader
+  }
+
+  // request - computed: false, optional: true, required: false
+  private _request?: string | undefined; 
+  public get request() {
+    return this.getStringAttribute('request');
+  }
+  public set request(value: string | undefined) {
+    this._request = value;
+  }
+  public resetRequest() {
+    this._request = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestInput() {
+    return this._request
+  }
+
+  // response - computed: false, optional: true, required: false
+  private _response?: string | undefined; 
+  public get response() {
+    return this.getStringAttribute('response');
+  }
+  public set response(value: string | undefined) {
+    this._response = value;
+  }
+  public resetResponse() {
+    this._response = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseInput() {
+    return this._response
+  }
+}
 export interface ComputeHealthCheckTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html#create ComputeHealthCheck#create}
@@ -578,8 +1277,11 @@ export interface ComputeHealthCheckTimeouts {
   readonly update?: string;
 }
 
-function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthCheckTimeouts): any {
+function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthCheckTimeoutsOutputReference | ComputeHealthCheckTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -587,6 +1289,64 @@ function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthCheckTimeou
   }
 }
 
+export class ComputeHealthCheckTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_health_check.html google_compute_health_check}
@@ -642,11 +1402,11 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   // ==========
 
   // check_interval_sec - computed: false, optional: true, required: false
-  private _checkIntervalSec?: number;
+  private _checkIntervalSec?: number | undefined; 
   public get checkIntervalSec() {
     return this.getNumberAttribute('check_interval_sec');
   }
-  public set checkIntervalSec(value: number ) {
+  public set checkIntervalSec(value: number | undefined) {
     this._checkIntervalSec = value;
   }
   public resetCheckIntervalSec() {
@@ -663,11 +1423,11 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -679,11 +1439,11 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // healthy_threshold - computed: false, optional: true, required: false
-  private _healthyThreshold?: number;
+  private _healthyThreshold?: number | undefined; 
   public get healthyThreshold() {
     return this.getNumberAttribute('healthy_threshold');
   }
-  public set healthyThreshold(value: number ) {
+  public set healthyThreshold(value: number | undefined) {
     this._healthyThreshold = value;
   }
   public resetHealthyThreshold() {
@@ -700,7 +1460,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -713,11 +1473,11 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -734,11 +1494,11 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // timeout_sec - computed: false, optional: true, required: false
-  private _timeoutSec?: number;
+  private _timeoutSec?: number | undefined; 
   public get timeoutSec() {
     return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number ) {
+  public set timeoutSec(value: number | undefined) {
     this._timeoutSec = value;
   }
   public resetTimeoutSec() {
@@ -755,11 +1515,11 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // unhealthy_threshold - computed: false, optional: true, required: false
-  private _unhealthyThreshold?: number;
+  private _unhealthyThreshold?: number | undefined; 
   public get unhealthyThreshold() {
     return this.getNumberAttribute('unhealthy_threshold');
   }
-  public set unhealthyThreshold(value: number ) {
+  public set unhealthyThreshold(value: number | undefined) {
     this._unhealthyThreshold = value;
   }
   public resetUnhealthyThreshold() {
@@ -771,11 +1531,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // grpc_health_check - computed: false, optional: true, required: false
-  private _grpcHealthCheck?: ComputeHealthCheckGrpcHealthCheck[];
+  private _grpcHealthCheck?: ComputeHealthCheckGrpcHealthCheck | undefined; 
+  private __grpcHealthCheckOutput = new ComputeHealthCheckGrpcHealthCheckOutputReference(this as any, "grpc_health_check", true);
   public get grpcHealthCheck() {
-    return this.interpolationForAttribute('grpc_health_check') as any;
+    return this.__grpcHealthCheckOutput;
   }
-  public set grpcHealthCheck(value: ComputeHealthCheckGrpcHealthCheck[] ) {
+  public putGrpcHealthCheck(value: ComputeHealthCheckGrpcHealthCheck | undefined) {
     this._grpcHealthCheck = value;
   }
   public resetGrpcHealthCheck() {
@@ -787,11 +1548,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // http2_health_check - computed: false, optional: true, required: false
-  private _http2HealthCheck?: ComputeHealthCheckHttp2HealthCheck[];
+  private _http2HealthCheck?: ComputeHealthCheckHttp2HealthCheck | undefined; 
+  private __http2HealthCheckOutput = new ComputeHealthCheckHttp2HealthCheckOutputReference(this as any, "http2_health_check", true);
   public get http2HealthCheck() {
-    return this.interpolationForAttribute('http2_health_check') as any;
+    return this.__http2HealthCheckOutput;
   }
-  public set http2HealthCheck(value: ComputeHealthCheckHttp2HealthCheck[] ) {
+  public putHttp2HealthCheck(value: ComputeHealthCheckHttp2HealthCheck | undefined) {
     this._http2HealthCheck = value;
   }
   public resetHttp2HealthCheck() {
@@ -803,11 +1565,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // http_health_check - computed: false, optional: true, required: false
-  private _httpHealthCheck?: ComputeHealthCheckHttpHealthCheck[];
+  private _httpHealthCheck?: ComputeHealthCheckHttpHealthCheck | undefined; 
+  private __httpHealthCheckOutput = new ComputeHealthCheckHttpHealthCheckOutputReference(this as any, "http_health_check", true);
   public get httpHealthCheck() {
-    return this.interpolationForAttribute('http_health_check') as any;
+    return this.__httpHealthCheckOutput;
   }
-  public set httpHealthCheck(value: ComputeHealthCheckHttpHealthCheck[] ) {
+  public putHttpHealthCheck(value: ComputeHealthCheckHttpHealthCheck | undefined) {
     this._httpHealthCheck = value;
   }
   public resetHttpHealthCheck() {
@@ -819,11 +1582,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // https_health_check - computed: false, optional: true, required: false
-  private _httpsHealthCheck?: ComputeHealthCheckHttpsHealthCheck[];
+  private _httpsHealthCheck?: ComputeHealthCheckHttpsHealthCheck | undefined; 
+  private __httpsHealthCheckOutput = new ComputeHealthCheckHttpsHealthCheckOutputReference(this as any, "https_health_check", true);
   public get httpsHealthCheck() {
-    return this.interpolationForAttribute('https_health_check') as any;
+    return this.__httpsHealthCheckOutput;
   }
-  public set httpsHealthCheck(value: ComputeHealthCheckHttpsHealthCheck[] ) {
+  public putHttpsHealthCheck(value: ComputeHealthCheckHttpsHealthCheck | undefined) {
     this._httpsHealthCheck = value;
   }
   public resetHttpsHealthCheck() {
@@ -835,11 +1599,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeHealthCheckLogConfig[];
+  private _logConfig?: ComputeHealthCheckLogConfig | undefined; 
+  private __logConfigOutput = new ComputeHealthCheckLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.interpolationForAttribute('log_config') as any;
+    return this.__logConfigOutput;
   }
-  public set logConfig(value: ComputeHealthCheckLogConfig[] ) {
+  public putLogConfig(value: ComputeHealthCheckLogConfig | undefined) {
     this._logConfig = value;
   }
   public resetLogConfig() {
@@ -851,11 +1616,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // ssl_health_check - computed: false, optional: true, required: false
-  private _sslHealthCheck?: ComputeHealthCheckSslHealthCheck[];
+  private _sslHealthCheck?: ComputeHealthCheckSslHealthCheck | undefined; 
+  private __sslHealthCheckOutput = new ComputeHealthCheckSslHealthCheckOutputReference(this as any, "ssl_health_check", true);
   public get sslHealthCheck() {
-    return this.interpolationForAttribute('ssl_health_check') as any;
+    return this.__sslHealthCheckOutput;
   }
-  public set sslHealthCheck(value: ComputeHealthCheckSslHealthCheck[] ) {
+  public putSslHealthCheck(value: ComputeHealthCheckSslHealthCheck | undefined) {
     this._sslHealthCheck = value;
   }
   public resetSslHealthCheck() {
@@ -867,11 +1633,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // tcp_health_check - computed: false, optional: true, required: false
-  private _tcpHealthCheck?: ComputeHealthCheckTcpHealthCheck[];
+  private _tcpHealthCheck?: ComputeHealthCheckTcpHealthCheck | undefined; 
+  private __tcpHealthCheckOutput = new ComputeHealthCheckTcpHealthCheckOutputReference(this as any, "tcp_health_check", true);
   public get tcpHealthCheck() {
-    return this.interpolationForAttribute('tcp_health_check') as any;
+    return this.__tcpHealthCheckOutput;
   }
-  public set tcpHealthCheck(value: ComputeHealthCheckTcpHealthCheck[] ) {
+  public putTcpHealthCheck(value: ComputeHealthCheckTcpHealthCheck | undefined) {
     this._tcpHealthCheck = value;
   }
   public resetTcpHealthCheck() {
@@ -883,11 +1650,12 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeHealthCheckTimeouts;
+  private _timeouts?: ComputeHealthCheckTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeHealthCheckTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeHealthCheckTimeouts ) {
+  public putTimeouts(value: ComputeHealthCheckTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -911,13 +1679,13 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
       unhealthy_threshold: cdktf.numberToTerraform(this._unhealthyThreshold),
-      grpc_health_check: cdktf.listMapper(computeHealthCheckGrpcHealthCheckToTerraform)(this._grpcHealthCheck),
-      http2_health_check: cdktf.listMapper(computeHealthCheckHttp2HealthCheckToTerraform)(this._http2HealthCheck),
-      http_health_check: cdktf.listMapper(computeHealthCheckHttpHealthCheckToTerraform)(this._httpHealthCheck),
-      https_health_check: cdktf.listMapper(computeHealthCheckHttpsHealthCheckToTerraform)(this._httpsHealthCheck),
-      log_config: cdktf.listMapper(computeHealthCheckLogConfigToTerraform)(this._logConfig),
-      ssl_health_check: cdktf.listMapper(computeHealthCheckSslHealthCheckToTerraform)(this._sslHealthCheck),
-      tcp_health_check: cdktf.listMapper(computeHealthCheckTcpHealthCheckToTerraform)(this._tcpHealthCheck),
+      grpc_health_check: computeHealthCheckGrpcHealthCheckToTerraform(this._grpcHealthCheck),
+      http2_health_check: computeHealthCheckHttp2HealthCheckToTerraform(this._http2HealthCheck),
+      http_health_check: computeHealthCheckHttpHealthCheckToTerraform(this._httpHealthCheck),
+      https_health_check: computeHealthCheckHttpsHealthCheckToTerraform(this._httpsHealthCheck),
+      log_config: computeHealthCheckLogConfigToTerraform(this._logConfig),
+      ssl_health_check: computeHealthCheckSslHealthCheckToTerraform(this._sslHealthCheck),
+      tcp_health_check: computeHealthCheckTcpHealthCheckToTerraform(this._tcpHealthCheck),
       timeouts: computeHealthCheckTimeoutsToTerraform(this._timeouts),
     };
   }

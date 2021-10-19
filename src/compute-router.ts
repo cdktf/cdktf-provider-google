@@ -45,7 +45,7 @@ except the last character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#bgp ComputeRouter#bgp}
   */
-  readonly bgp?: ComputeRouterBgp[];
+  readonly bgp?: ComputeRouterBgp;
   /**
   * timeouts block
   * 
@@ -71,6 +71,9 @@ CIDR-formatted string.
 
 function computeRouterBgpAdvertisedIpRangesToTerraform(struct?: ComputeRouterBgpAdvertisedIpRanges): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     range: cdktf.stringToTerraform(struct!.range),
@@ -113,8 +116,11 @@ will have the same local ASN.
   readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[];
 }
 
-function computeRouterBgpToTerraform(struct?: ComputeRouterBgp): any {
+function computeRouterBgpToTerraform(struct?: ComputeRouterBgpOutputReference | ComputeRouterBgp): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     advertise_mode: cdktf.stringToTerraform(struct!.advertiseMode),
     advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.advertisedGroups),
@@ -123,6 +129,78 @@ function computeRouterBgpToTerraform(struct?: ComputeRouterBgp): any {
   }
 }
 
+export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // advertise_mode - computed: false, optional: true, required: false
+  private _advertiseMode?: string | undefined; 
+  public get advertiseMode() {
+    return this.getStringAttribute('advertise_mode');
+  }
+  public set advertiseMode(value: string | undefined) {
+    this._advertiseMode = value;
+  }
+  public resetAdvertiseMode() {
+    this._advertiseMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertiseModeInput() {
+    return this._advertiseMode
+  }
+
+  // advertised_groups - computed: false, optional: true, required: false
+  private _advertisedGroups?: string[] | undefined; 
+  public get advertisedGroups() {
+    return this.getListAttribute('advertised_groups');
+  }
+  public set advertisedGroups(value: string[] | undefined) {
+    this._advertisedGroups = value;
+  }
+  public resetAdvertisedGroups() {
+    this._advertisedGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedGroupsInput() {
+    return this._advertisedGroups
+  }
+
+  // asn - computed: false, optional: false, required: true
+  private _asn?: number; 
+  public get asn() {
+    return this.getNumberAttribute('asn');
+  }
+  public set asn(value: number) {
+    this._asn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get asnInput() {
+    return this._asn
+  }
+
+  // advertised_ip_ranges - computed: false, optional: true, required: false
+  private _advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[] | undefined; 
+  public get advertisedIpRanges() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('advertised_ip_ranges') as any;
+  }
+  public set advertisedIpRanges(value: ComputeRouterBgpAdvertisedIpRanges[] | undefined) {
+    this._advertisedIpRanges = value;
+  }
+  public resetAdvertisedIpRanges() {
+    this._advertisedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedIpRangesInput() {
+    return this._advertisedIpRanges
+  }
+}
 export interface ComputeRouterTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router.html#create ComputeRouter#create}
@@ -138,8 +216,11 @@ export interface ComputeRouterTimeouts {
   readonly update?: string;
 }
 
-function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeouts): any {
+function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeoutsOutputReference | ComputeRouterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -147,6 +228,64 @@ function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeouts): any {
   }
 }
 
+export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_router.html google_compute_router}
@@ -199,11 +338,11 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -220,7 +359,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -233,7 +372,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: false, required: true
-  private _network: string;
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
@@ -246,11 +385,11 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -262,11 +401,11 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -283,11 +422,12 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // bgp - computed: false, optional: true, required: false
-  private _bgp?: ComputeRouterBgp[];
+  private _bgp?: ComputeRouterBgp | undefined; 
+  private __bgpOutput = new ComputeRouterBgpOutputReference(this as any, "bgp", true);
   public get bgp() {
-    return this.interpolationForAttribute('bgp') as any;
+    return this.__bgpOutput;
   }
-  public set bgp(value: ComputeRouterBgp[] ) {
+  public putBgp(value: ComputeRouterBgp | undefined) {
     this._bgp = value;
   }
   public resetBgp() {
@@ -299,11 +439,12 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRouterTimeouts;
+  private _timeouts?: ComputeRouterTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRouterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRouterTimeouts ) {
+  public putTimeouts(value: ComputeRouterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -325,7 +466,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      bgp: cdktf.listMapper(computeRouterBgpToTerraform)(this._bgp),
+      bgp: computeRouterBgpToTerraform(this._bgp),
       timeouts: computeRouterTimeoutsToTerraform(this._timeouts),
     };
   }

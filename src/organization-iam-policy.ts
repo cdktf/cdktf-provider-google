@@ -70,7 +70,7 @@ export class OrganizationIamPolicy extends cdktf.TerraformResource {
   }
 
   // org_id - computed: false, optional: false, required: true
-  private _orgId: string;
+  private _orgId?: string; 
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
@@ -83,7 +83,7 @@ export class OrganizationIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

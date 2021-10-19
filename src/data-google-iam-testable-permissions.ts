@@ -24,7 +24,7 @@ export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexCo
 
   // api_disabled - computed: true, optional: false, required: false
   public get apiDisabled() {
-    return this.getBooleanAttribute('api_disabled');
+    return this.getBooleanAttribute('api_disabled') as any;
   }
 
   // custom_support_level - computed: true, optional: false, required: false
@@ -90,11 +90,11 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   // ==========
 
   // custom_support_level - computed: false, optional: true, required: false
-  private _customSupportLevel?: string;
+  private _customSupportLevel?: string | undefined; 
   public get customSupportLevel() {
     return this.getStringAttribute('custom_support_level');
   }
-  public set customSupportLevel(value: string ) {
+  public set customSupportLevel(value: string | undefined) {
     this._customSupportLevel = value;
   }
   public resetCustomSupportLevel() {
@@ -106,7 +106,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   }
 
   // full_resource_name - computed: false, optional: false, required: true
-  private _fullResourceName: string;
+  private _fullResourceName?: string; 
   public get fullResourceName() {
     return this.getStringAttribute('full_resource_name');
   }
@@ -129,11 +129,11 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   }
 
   // stages - computed: false, optional: true, required: false
-  private _stages?: string[];
+  private _stages?: string[] | undefined; 
   public get stages() {
     return this.getListAttribute('stages');
   }
-  public set stages(value: string[] ) {
+  public set stages(value: string[] | undefined) {
     this._stages = value;
   }
   public resetStages() {

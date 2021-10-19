@@ -24,14 +24,14 @@ export class DataGoogleProjectOrganizationPolicyBooleanPolicy extends cdktf.Comp
 
   // enforced - computed: true, optional: false, required: false
   public get enforced() {
-    return this.getBooleanAttribute('enforced');
+    return this.getBooleanAttribute('enforced') as any;
   }
 }
 export class DataGoogleProjectOrganizationPolicyListPolicyAllow extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
-    return this.getBooleanAttribute('all');
+    return this.getBooleanAttribute('all') as any;
   }
 
   // values - computed: true, optional: false, required: false
@@ -43,7 +43,7 @@ export class DataGoogleProjectOrganizationPolicyListPolicyDeny extends cdktf.Com
 
   // all - computed: true, optional: false, required: false
   public get all() {
-    return this.getBooleanAttribute('all');
+    return this.getBooleanAttribute('all') as any;
   }
 
   // values - computed: true, optional: false, required: false
@@ -55,17 +55,19 @@ export class DataGoogleProjectOrganizationPolicyListPolicy extends cdktf.Complex
 
   // allow - computed: true, optional: false, required: false
   public get allow() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allow') as any;
   }
 
   // deny - computed: true, optional: false, required: false
   public get deny() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('deny') as any;
   }
 
   // inherit_from_parent - computed: true, optional: false, required: false
   public get inheritFromParent() {
-    return this.getBooleanAttribute('inherit_from_parent');
+    return this.getBooleanAttribute('inherit_from_parent') as any;
   }
 
   // suggested_value - computed: true, optional: false, required: false
@@ -77,7 +79,7 @@ export class DataGoogleProjectOrganizationPolicyRestorePolicy extends cdktf.Comp
 
   // default - computed: true, optional: false, required: false
   public get default() {
-    return this.getBooleanAttribute('default');
+    return this.getBooleanAttribute('default') as any;
   }
 }
 
@@ -127,7 +129,7 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   }
 
   // constraint - computed: false, optional: false, required: true
-  private _constraint: string;
+  private _constraint?: string; 
   public get constraint() {
     return this.getStringAttribute('constraint');
   }
@@ -155,7 +157,7 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   }
 
   // project - computed: false, optional: false, required: true
-  private _project: string;
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }

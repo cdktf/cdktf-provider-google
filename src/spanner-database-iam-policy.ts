@@ -68,7 +68,7 @@ export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // database - computed: false, optional: false, required: true
-  private _database: string;
+  private _database?: string; 
   public get database() {
     return this.getStringAttribute('database');
   }
@@ -91,7 +91,7 @@ export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
   }
 
   // instance - computed: false, optional: false, required: true
-  private _instance: string;
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
@@ -104,7 +104,7 @@ export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -117,11 +117,11 @@ export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

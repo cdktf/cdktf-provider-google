@@ -109,11 +109,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -126,7 +126,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -135,11 +135,12 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -156,11 +157,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -177,11 +178,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string;
+  private _type?: string | undefined; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string ) {
+  public set type(value: string | undefined) {
     this._type = value;
   }
   public resetType() {
@@ -193,11 +194,12 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable;
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get userLabels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._userLabels = value;
   }
   public resetUserLabels() {

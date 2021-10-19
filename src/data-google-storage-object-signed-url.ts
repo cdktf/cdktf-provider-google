@@ -88,7 +88,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -101,11 +101,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // content_md5 - computed: false, optional: true, required: false
-  private _contentMd5?: string;
+  private _contentMd5?: string | undefined; 
   public get contentMd5() {
     return this.getStringAttribute('content_md5');
   }
-  public set contentMd5(value: string ) {
+  public set contentMd5(value: string | undefined) {
     this._contentMd5 = value;
   }
   public resetContentMd5() {
@@ -117,11 +117,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string;
+  private _contentType?: string | undefined; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string ) {
+  public set contentType(value: string | undefined) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -133,11 +133,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: string;
+  private _credentials?: string | undefined; 
   public get credentials() {
     return this.getStringAttribute('credentials');
   }
-  public set credentials(value: string ) {
+  public set credentials(value: string | undefined) {
     this._credentials = value;
   }
   public resetCredentials() {
@@ -149,11 +149,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // duration - computed: false, optional: true, required: false
-  private _duration?: string;
+  private _duration?: string | undefined; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string ) {
+  public set duration(value: string | undefined) {
     this._duration = value;
   }
   public resetDuration() {
@@ -165,11 +165,12 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // extension_headers - computed: false, optional: true, required: false
-  private _extensionHeaders?: { [key: string]: string } | cdktf.IResolvable;
+  private _extensionHeaders?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get extensionHeaders() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('extension_headers') as any;
   }
-  public set extensionHeaders(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set extensionHeaders(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._extensionHeaders = value;
   }
   public resetExtensionHeaders() {
@@ -181,11 +182,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // http_method - computed: false, optional: true, required: false
-  private _httpMethod?: string;
+  private _httpMethod?: string | undefined; 
   public get httpMethod() {
     return this.getStringAttribute('http_method');
   }
-  public set httpMethod(value: string ) {
+  public set httpMethod(value: string | undefined) {
     this._httpMethod = value;
   }
   public resetHttpMethod() {
@@ -202,7 +203,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // path - computed: false, optional: false, required: true
-  private _path: string;
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }

@@ -57,13 +57,13 @@ enablement check, quota, and billing.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_folder_feed.html#condition CloudAssetFolderFeed#condition}
   */
-  readonly condition?: CloudAssetFolderFeedCondition[];
+  readonly condition?: CloudAssetFolderFeedCondition;
   /**
   * feed_output_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_folder_feed.html#feed_output_config CloudAssetFolderFeed#feed_output_config}
   */
-  readonly feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig[];
+  readonly feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig;
   /**
   * timeouts block
   * 
@@ -101,8 +101,11 @@ This can be used e.g. in UIs which allow to enter the expression.
   readonly title?: string;
 }
 
-function cloudAssetFolderFeedConditionToTerraform(struct?: CloudAssetFolderFeedCondition): any {
+function cloudAssetFolderFeedConditionToTerraform(struct?: CloudAssetFolderFeedConditionOutputReference | CloudAssetFolderFeedCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -111,6 +114,77 @@ function cloudAssetFolderFeedConditionToTerraform(struct?: CloudAssetFolderFeedC
   }
 }
 
+export class CloudAssetFolderFeedConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // location - computed: false, optional: true, required: false
+  private _location?: string | undefined; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string | undefined) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // title - computed: false, optional: true, required: false
+  private _title?: string | undefined; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string | undefined) {
+    this._title = value;
+  }
+  public resetTitle() {
+    this._title = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 export interface CloudAssetFolderFeedFeedOutputConfigPubsubDestination {
   /**
   * Destination on Cloud Pubsub topic.
@@ -120,29 +194,82 @@ export interface CloudAssetFolderFeedFeedOutputConfigPubsubDestination {
   readonly topic: string;
 }
 
-function cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfigPubsubDestination): any {
+function cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference | CloudAssetFolderFeedFeedOutputConfigPubsubDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     topic: cdktf.stringToTerraform(struct!.topic),
   }
 }
 
+export class CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // topic - computed: false, optional: false, required: true
+  private _topic?: string; 
+  public get topic() {
+    return this.getStringAttribute('topic');
+  }
+  public set topic(value: string) {
+    this._topic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicInput() {
+    return this._topic
+  }
+}
 export interface CloudAssetFolderFeedFeedOutputConfig {
   /**
   * pubsub_destination block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_folder_feed.html#pubsub_destination CloudAssetFolderFeed#pubsub_destination}
   */
-  readonly pubsubDestination: CloudAssetFolderFeedFeedOutputConfigPubsubDestination[];
+  readonly pubsubDestination: CloudAssetFolderFeedFeedOutputConfigPubsubDestination;
 }
 
-function cloudAssetFolderFeedFeedOutputConfigToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfig): any {
+function cloudAssetFolderFeedFeedOutputConfigToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfigOutputReference | CloudAssetFolderFeedFeedOutputConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    pubsub_destination: cdktf.listMapper(cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform)(struct!.pubsubDestination),
+    pubsub_destination: cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform(struct!.pubsubDestination),
   }
 }
 
+export class CloudAssetFolderFeedFeedOutputConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // pubsub_destination - computed: false, optional: false, required: true
+  private _pubsubDestination?: CloudAssetFolderFeedFeedOutputConfigPubsubDestination; 
+  private __pubsubDestinationOutput = new CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference(this as any, "pubsub_destination", true);
+  public get pubsubDestination() {
+    return this.__pubsubDestinationOutput;
+  }
+  public putPubsubDestination(value: CloudAssetFolderFeedFeedOutputConfigPubsubDestination) {
+    this._pubsubDestination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubDestinationInput() {
+    return this._pubsubDestination
+  }
+}
 export interface CloudAssetFolderFeedTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_folder_feed.html#create CloudAssetFolderFeed#create}
@@ -158,8 +285,11 @@ export interface CloudAssetFolderFeedTimeouts {
   readonly update?: string;
 }
 
-function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTimeouts): any {
+function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTimeoutsOutputReference | CloudAssetFolderFeedTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -167,6 +297,64 @@ function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTi
   }
 }
 
+export class CloudAssetFolderFeedTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_asset_folder_feed.html google_cloud_asset_folder_feed}
@@ -216,11 +404,11 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   // ==========
 
   // asset_names - computed: false, optional: true, required: false
-  private _assetNames?: string[];
+  private _assetNames?: string[] | undefined; 
   public get assetNames() {
     return this.getListAttribute('asset_names');
   }
-  public set assetNames(value: string[] ) {
+  public set assetNames(value: string[] | undefined) {
     this._assetNames = value;
   }
   public resetAssetNames() {
@@ -232,11 +420,11 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // asset_types - computed: false, optional: true, required: false
-  private _assetTypes?: string[];
+  private _assetTypes?: string[] | undefined; 
   public get assetTypes() {
     return this.getListAttribute('asset_types');
   }
-  public set assetTypes(value: string[] ) {
+  public set assetTypes(value: string[] | undefined) {
     this._assetTypes = value;
   }
   public resetAssetTypes() {
@@ -248,7 +436,7 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // billing_project - computed: false, optional: false, required: true
-  private _billingProject: string;
+  private _billingProject?: string; 
   public get billingProject() {
     return this.getStringAttribute('billing_project');
   }
@@ -261,11 +449,11 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string;
+  private _contentType?: string | undefined; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string ) {
+  public set contentType(value: string | undefined) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -277,7 +465,7 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // feed_id - computed: false, optional: false, required: true
-  private _feedId: string;
+  private _feedId?: string; 
   public get feedId() {
     return this.getStringAttribute('feed_id');
   }
@@ -290,7 +478,7 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // folder - computed: false, optional: false, required: true
-  private _folder: string;
+  private _folder?: string; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
@@ -318,11 +506,12 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: CloudAssetFolderFeedCondition[];
+  private _condition?: CloudAssetFolderFeedCondition | undefined; 
+  private __conditionOutput = new CloudAssetFolderFeedConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: CloudAssetFolderFeedCondition[] ) {
+  public putCondition(value: CloudAssetFolderFeedCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -334,11 +523,12 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // feed_output_config - computed: false, optional: false, required: true
-  private _feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig[];
+  private _feedOutputConfig?: CloudAssetFolderFeedFeedOutputConfig; 
+  private __feedOutputConfigOutput = new CloudAssetFolderFeedFeedOutputConfigOutputReference(this as any, "feed_output_config", true);
   public get feedOutputConfig() {
-    return this.interpolationForAttribute('feed_output_config') as any;
+    return this.__feedOutputConfigOutput;
   }
-  public set feedOutputConfig(value: CloudAssetFolderFeedFeedOutputConfig[]) {
+  public putFeedOutputConfig(value: CloudAssetFolderFeedFeedOutputConfig) {
     this._feedOutputConfig = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -347,11 +537,12 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudAssetFolderFeedTimeouts;
+  private _timeouts?: CloudAssetFolderFeedTimeouts | undefined; 
+  private __timeoutsOutput = new CloudAssetFolderFeedTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: CloudAssetFolderFeedTimeouts ) {
+  public putTimeouts(value: CloudAssetFolderFeedTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -374,8 +565,8 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
       content_type: cdktf.stringToTerraform(this._contentType),
       feed_id: cdktf.stringToTerraform(this._feedId),
       folder: cdktf.stringToTerraform(this._folder),
-      condition: cdktf.listMapper(cloudAssetFolderFeedConditionToTerraform)(this._condition),
-      feed_output_config: cdktf.listMapper(cloudAssetFolderFeedFeedOutputConfigToTerraform)(this._feedOutputConfig),
+      condition: cloudAssetFolderFeedConditionToTerraform(this._condition),
+      feed_output_config: cloudAssetFolderFeedFeedOutputConfigToTerraform(this._feedOutputConfig),
       timeouts: cloudAssetFolderFeedTimeoutsToTerraform(this._timeouts),
     };
   }

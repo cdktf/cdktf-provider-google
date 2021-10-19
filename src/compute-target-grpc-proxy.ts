@@ -74,8 +74,11 @@ export interface ComputeTargetGrpcProxyTimeouts {
   readonly update?: string;
 }
 
-function computeTargetGrpcProxyTimeoutsToTerraform(struct?: ComputeTargetGrpcProxyTimeouts): any {
+function computeTargetGrpcProxyTimeoutsToTerraform(struct?: ComputeTargetGrpcProxyTimeoutsOutputReference | ComputeTargetGrpcProxyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,64 @@ function computeTargetGrpcProxyTimeoutsToTerraform(struct?: ComputeTargetGrpcPro
   }
 }
 
+export class ComputeTargetGrpcProxyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html google_compute_target_grpc_proxy}
@@ -134,11 +195,11 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -160,7 +221,7 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -173,11 +234,11 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -199,11 +260,11 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // url_map - computed: false, optional: true, required: false
-  private _urlMap?: string;
+  private _urlMap?: string | undefined; 
   public get urlMap() {
     return this.getStringAttribute('url_map');
   }
-  public set urlMap(value: string ) {
+  public set urlMap(value: string | undefined) {
     this._urlMap = value;
   }
   public resetUrlMap() {
@@ -215,11 +276,11 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // validate_for_proxyless - computed: false, optional: true, required: false
-  private _validateForProxyless?: boolean | cdktf.IResolvable;
+  private _validateForProxyless?: boolean | cdktf.IResolvable | undefined; 
   public get validateForProxyless() {
-    return this.getBooleanAttribute('validate_for_proxyless');
+    return this.getBooleanAttribute('validate_for_proxyless') as any;
   }
-  public set validateForProxyless(value: boolean | cdktf.IResolvable ) {
+  public set validateForProxyless(value: boolean | cdktf.IResolvable | undefined) {
     this._validateForProxyless = value;
   }
   public resetValidateForProxyless() {
@@ -231,11 +292,12 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeTargetGrpcProxyTimeouts;
+  private _timeouts?: ComputeTargetGrpcProxyTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeTargetGrpcProxyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeTargetGrpcProxyTimeouts ) {
+  public putTimeouts(value: ComputeTargetGrpcProxyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

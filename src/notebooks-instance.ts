@@ -192,19 +192,19 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#accelerator_config NotebooksInstance#accelerator_config}
   */
-  readonly acceleratorConfig?: NotebooksInstanceAcceleratorConfig[];
+  readonly acceleratorConfig?: NotebooksInstanceAcceleratorConfig;
   /**
   * container_image block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#container_image NotebooksInstance#container_image}
   */
-  readonly containerImage?: NotebooksInstanceContainerImage[];
+  readonly containerImage?: NotebooksInstanceContainerImage;
   /**
   * shielded_instance_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#shielded_instance_config NotebooksInstance#shielded_instance_config}
   */
-  readonly shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig[];
+  readonly shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig;
   /**
   * timeouts block
   * 
@@ -216,7 +216,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#vm_image NotebooksInstance#vm_image}
   */
-  readonly vmImage?: NotebooksInstanceVmImage[];
+  readonly vmImage?: NotebooksInstanceVmImage;
 }
 export interface NotebooksInstanceAcceleratorConfig {
   /**
@@ -233,14 +233,53 @@ export interface NotebooksInstanceAcceleratorConfig {
   readonly type: string;
 }
 
-function notebooksInstanceAcceleratorConfigToTerraform(struct?: NotebooksInstanceAcceleratorConfig): any {
+function notebooksInstanceAcceleratorConfigToTerraform(struct?: NotebooksInstanceAcceleratorConfigOutputReference | NotebooksInstanceAcceleratorConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     core_count: cdktf.numberToTerraform(struct!.coreCount),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // core_count - computed: false, optional: false, required: true
+  private _coreCount?: number; 
+  public get coreCount() {
+    return this.getNumberAttribute('core_count');
+  }
+  public set coreCount(value: number) {
+    this._coreCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get coreCountInput() {
+    return this._coreCount
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface NotebooksInstanceContainerImage {
   /**
   * The path to the container image repository.
@@ -257,14 +296,56 @@ For example: gcr.io/{project_id}/{imageName}
   readonly tag?: string;
 }
 
-function notebooksInstanceContainerImageToTerraform(struct?: NotebooksInstanceContainerImage): any {
+function notebooksInstanceContainerImageToTerraform(struct?: NotebooksInstanceContainerImageOutputReference | NotebooksInstanceContainerImage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     repository: cdktf.stringToTerraform(struct!.repository),
     tag: cdktf.stringToTerraform(struct!.tag),
   }
 }
 
+export class NotebooksInstanceContainerImageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // repository - computed: false, optional: false, required: true
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string | undefined; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string | undefined) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag
+  }
+}
 export interface NotebooksInstanceShieldedInstanceConfig {
   /**
   * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
@@ -293,8 +374,11 @@ Enabled by default.
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
-function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksInstanceShieldedInstanceConfig): any {
+function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksInstanceShieldedInstanceConfigOutputReference | NotebooksInstanceShieldedInstanceConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
     enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
@@ -302,6 +386,64 @@ function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksIn
   }
 }
 
+export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable_integrity_monitoring - computed: false, optional: true, required: false
+  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable | undefined; 
+  public get enableIntegrityMonitoring() {
+    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+  }
+  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable | undefined) {
+    this._enableIntegrityMonitoring = value;
+  }
+  public resetEnableIntegrityMonitoring() {
+    this._enableIntegrityMonitoring = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIntegrityMonitoringInput() {
+    return this._enableIntegrityMonitoring
+  }
+
+  // enable_secure_boot - computed: false, optional: true, required: false
+  private _enableSecureBoot?: boolean | cdktf.IResolvable | undefined; 
+  public get enableSecureBoot() {
+    return this.getBooleanAttribute('enable_secure_boot') as any;
+  }
+  public set enableSecureBoot(value: boolean | cdktf.IResolvable | undefined) {
+    this._enableSecureBoot = value;
+  }
+  public resetEnableSecureBoot() {
+    this._enableSecureBoot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableSecureBootInput() {
+    return this._enableSecureBoot
+  }
+
+  // enable_vtpm - computed: false, optional: true, required: false
+  private _enableVtpm?: boolean | cdktf.IResolvable | undefined; 
+  public get enableVtpm() {
+    return this.getBooleanAttribute('enable_vtpm') as any;
+  }
+  public set enableVtpm(value: boolean | cdktf.IResolvable | undefined) {
+    this._enableVtpm = value;
+  }
+  public resetEnableVtpm() {
+    this._enableVtpm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableVtpmInput() {
+    return this._enableVtpm
+  }
+}
 export interface NotebooksInstanceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html#create NotebooksInstance#create}
@@ -317,8 +459,11 @@ export interface NotebooksInstanceTimeouts {
   readonly update?: string;
 }
 
-function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceTimeouts): any {
+function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceTimeoutsOutputReference | NotebooksInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -326,6 +471,64 @@ function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceTimeouts
   }
 }
 
+export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface NotebooksInstanceVmImage {
   /**
   * Use this VM image family to find the image; the newest image in this family will be used.
@@ -348,8 +551,11 @@ Format: projects/{project_id}
   readonly project: string;
 }
 
-function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVmImage): any {
+function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVmImageOutputReference | NotebooksInstanceVmImage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     image_family: cdktf.stringToTerraform(struct!.imageFamily),
     image_name: cdktf.stringToTerraform(struct!.imageName),
@@ -357,6 +563,61 @@ function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVmImage):
   }
 }
 
+export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // image_family - computed: false, optional: true, required: false
+  private _imageFamily?: string | undefined; 
+  public get imageFamily() {
+    return this.getStringAttribute('image_family');
+  }
+  public set imageFamily(value: string | undefined) {
+    this._imageFamily = value;
+  }
+  public resetImageFamily() {
+    this._imageFamily = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageFamilyInput() {
+    return this._imageFamily
+  }
+
+  // image_name - computed: false, optional: true, required: false
+  private _imageName?: string | undefined; 
+  public get imageName() {
+    return this.getStringAttribute('image_name');
+  }
+  public set imageName(value: string | undefined) {
+    this._imageName = value;
+  }
+  public resetImageName() {
+    this._imageName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageNameInput() {
+    return this._imageName
+  }
+
+  // project - computed: false, optional: false, required: true
+  private _project?: string; 
+  public get project() {
+    return this.getStringAttribute('project');
+  }
+  public set project(value: string) {
+    this._project = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance.html google_notebooks_instance}
@@ -428,11 +689,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // ==========
 
   // boot_disk_size_gb - computed: false, optional: true, required: false
-  private _bootDiskSizeGb?: number;
+  private _bootDiskSizeGb?: number | undefined; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number ) {
+  public set bootDiskSizeGb(value: number | undefined) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -444,11 +705,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string;
+  private _bootDiskType?: string | undefined; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string ) {
+  public set bootDiskType(value: string | undefined) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -460,11 +721,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // create_time - computed: true, optional: true, required: false
-  private _createTime?: string;
+  private _createTime?: string | undefined; 
   public get createTime() {
     return this.getStringAttribute('create_time');
   }
-  public set createTime(value: string) {
+  public set createTime(value: string | undefined) {
     this._createTime = value;
   }
   public resetCreateTime() {
@@ -476,11 +737,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // custom_gpu_driver_path - computed: false, optional: true, required: false
-  private _customGpuDriverPath?: string;
+  private _customGpuDriverPath?: string | undefined; 
   public get customGpuDriverPath() {
     return this.getStringAttribute('custom_gpu_driver_path');
   }
-  public set customGpuDriverPath(value: string ) {
+  public set customGpuDriverPath(value: string | undefined) {
     this._customGpuDriverPath = value;
   }
   public resetCustomGpuDriverPath() {
@@ -492,11 +753,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // data_disk_size_gb - computed: false, optional: true, required: false
-  private _dataDiskSizeGb?: number;
+  private _dataDiskSizeGb?: number | undefined; 
   public get dataDiskSizeGb() {
     return this.getNumberAttribute('data_disk_size_gb');
   }
-  public set dataDiskSizeGb(value: number ) {
+  public set dataDiskSizeGb(value: number | undefined) {
     this._dataDiskSizeGb = value;
   }
   public resetDataDiskSizeGb() {
@@ -508,11 +769,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // data_disk_type - computed: false, optional: true, required: false
-  private _dataDiskType?: string;
+  private _dataDiskType?: string | undefined; 
   public get dataDiskType() {
     return this.getStringAttribute('data_disk_type');
   }
-  public set dataDiskType(value: string ) {
+  public set dataDiskType(value: string | undefined) {
     this._dataDiskType = value;
   }
   public resetDataDiskType() {
@@ -524,11 +785,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // disk_encryption - computed: false, optional: true, required: false
-  private _diskEncryption?: string;
+  private _diskEncryption?: string | undefined; 
   public get diskEncryption() {
     return this.getStringAttribute('disk_encryption');
   }
-  public set diskEncryption(value: string ) {
+  public set diskEncryption(value: string | undefined) {
     this._diskEncryption = value;
   }
   public resetDiskEncryption() {
@@ -545,11 +806,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // install_gpu_driver - computed: false, optional: true, required: false
-  private _installGpuDriver?: boolean | cdktf.IResolvable;
+  private _installGpuDriver?: boolean | cdktf.IResolvable | undefined; 
   public get installGpuDriver() {
-    return this.getBooleanAttribute('install_gpu_driver');
+    return this.getBooleanAttribute('install_gpu_driver') as any;
   }
-  public set installGpuDriver(value: boolean | cdktf.IResolvable ) {
+  public set installGpuDriver(value: boolean | cdktf.IResolvable | undefined) {
     this._installGpuDriver = value;
   }
   public resetInstallGpuDriver() {
@@ -561,11 +822,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // instance_owners - computed: false, optional: true, required: false
-  private _instanceOwners?: string[];
+  private _instanceOwners?: string[] | undefined; 
   public get instanceOwners() {
     return this.getListAttribute('instance_owners');
   }
-  public set instanceOwners(value: string[] ) {
+  public set instanceOwners(value: string[] | undefined) {
     this._instanceOwners = value;
   }
   public resetInstanceOwners() {
@@ -577,11 +838,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // kms_key - computed: false, optional: true, required: false
-  private _kmsKey?: string;
+  private _kmsKey?: string | undefined; 
   public get kmsKey() {
     return this.getStringAttribute('kms_key');
   }
-  public set kmsKey(value: string ) {
+  public set kmsKey(value: string | undefined) {
     this._kmsKey = value;
   }
   public resetKmsKey() {
@@ -593,11 +854,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable
-  public get labels(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('labels') as any; // Getting the computed value is not yet implemented
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get labels() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -609,7 +871,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -622,7 +884,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // machine_type - computed: false, optional: false, required: true
-  private _machineType: string;
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
@@ -635,11 +897,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get metadata() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -651,7 +914,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -664,11 +927,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // network - computed: true, optional: true, required: false
-  private _network?: string;
+  private _network?: string | undefined; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string) {
+  public set network(value: string | undefined) {
     this._network = value;
   }
   public resetNetwork() {
@@ -680,11 +943,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // no_proxy_access - computed: false, optional: true, required: false
-  private _noProxyAccess?: boolean | cdktf.IResolvable;
+  private _noProxyAccess?: boolean | cdktf.IResolvable | undefined; 
   public get noProxyAccess() {
-    return this.getBooleanAttribute('no_proxy_access');
+    return this.getBooleanAttribute('no_proxy_access') as any;
   }
-  public set noProxyAccess(value: boolean | cdktf.IResolvable ) {
+  public set noProxyAccess(value: boolean | cdktf.IResolvable | undefined) {
     this._noProxyAccess = value;
   }
   public resetNoProxyAccess() {
@@ -696,11 +959,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // no_public_ip - computed: false, optional: true, required: false
-  private _noPublicIp?: boolean | cdktf.IResolvable;
+  private _noPublicIp?: boolean | cdktf.IResolvable | undefined; 
   public get noPublicIp() {
-    return this.getBooleanAttribute('no_public_ip');
+    return this.getBooleanAttribute('no_public_ip') as any;
   }
-  public set noPublicIp(value: boolean | cdktf.IResolvable ) {
+  public set noPublicIp(value: boolean | cdktf.IResolvable | undefined) {
     this._noPublicIp = value;
   }
   public resetNoPublicIp() {
@@ -712,11 +975,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // no_remove_data_disk - computed: false, optional: true, required: false
-  private _noRemoveDataDisk?: boolean | cdktf.IResolvable;
+  private _noRemoveDataDisk?: boolean | cdktf.IResolvable | undefined; 
   public get noRemoveDataDisk() {
-    return this.getBooleanAttribute('no_remove_data_disk');
+    return this.getBooleanAttribute('no_remove_data_disk') as any;
   }
-  public set noRemoveDataDisk(value: boolean | cdktf.IResolvable ) {
+  public set noRemoveDataDisk(value: boolean | cdktf.IResolvable | undefined) {
     this._noRemoveDataDisk = value;
   }
   public resetNoRemoveDataDisk() {
@@ -728,11 +991,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // post_startup_script - computed: false, optional: true, required: false
-  private _postStartupScript?: string;
+  private _postStartupScript?: string | undefined; 
   public get postStartupScript() {
     return this.getStringAttribute('post_startup_script');
   }
-  public set postStartupScript(value: string ) {
+  public set postStartupScript(value: string | undefined) {
     this._postStartupScript = value;
   }
   public resetPostStartupScript() {
@@ -744,11 +1007,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -765,11 +1028,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // service_account - computed: true, optional: true, required: false
-  private _serviceAccount?: string;
+  private _serviceAccount?: string | undefined; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string) {
+  public set serviceAccount(value: string | undefined) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -781,11 +1044,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // service_account_scopes - computed: false, optional: true, required: false
-  private _serviceAccountScopes?: string[];
+  private _serviceAccountScopes?: string[] | undefined; 
   public get serviceAccountScopes() {
     return this.getListAttribute('service_account_scopes');
   }
-  public set serviceAccountScopes(value: string[] ) {
+  public set serviceAccountScopes(value: string[] | undefined) {
     this._serviceAccountScopes = value;
   }
   public resetServiceAccountScopes() {
@@ -802,11 +1065,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // subnet - computed: true, optional: true, required: false
-  private _subnet?: string;
+  private _subnet?: string | undefined; 
   public get subnet() {
     return this.getStringAttribute('subnet');
   }
-  public set subnet(value: string) {
+  public set subnet(value: string | undefined) {
     this._subnet = value;
   }
   public resetSubnet() {
@@ -818,11 +1081,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[];
+  private _tags?: string[] | undefined; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] ) {
+  public set tags(value: string[] | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -834,11 +1097,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // update_time - computed: true, optional: true, required: false
-  private _updateTime?: string;
+  private _updateTime?: string | undefined; 
   public get updateTime() {
     return this.getStringAttribute('update_time');
   }
-  public set updateTime(value: string) {
+  public set updateTime(value: string | undefined) {
     this._updateTime = value;
   }
   public resetUpdateTime() {
@@ -850,11 +1113,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // accelerator_config - computed: false, optional: true, required: false
-  private _acceleratorConfig?: NotebooksInstanceAcceleratorConfig[];
+  private _acceleratorConfig?: NotebooksInstanceAcceleratorConfig | undefined; 
+  private __acceleratorConfigOutput = new NotebooksInstanceAcceleratorConfigOutputReference(this as any, "accelerator_config", true);
   public get acceleratorConfig() {
-    return this.interpolationForAttribute('accelerator_config') as any;
+    return this.__acceleratorConfigOutput;
   }
-  public set acceleratorConfig(value: NotebooksInstanceAcceleratorConfig[] ) {
+  public putAcceleratorConfig(value: NotebooksInstanceAcceleratorConfig | undefined) {
     this._acceleratorConfig = value;
   }
   public resetAcceleratorConfig() {
@@ -866,11 +1130,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // container_image - computed: false, optional: true, required: false
-  private _containerImage?: NotebooksInstanceContainerImage[];
+  private _containerImage?: NotebooksInstanceContainerImage | undefined; 
+  private __containerImageOutput = new NotebooksInstanceContainerImageOutputReference(this as any, "container_image", true);
   public get containerImage() {
-    return this.interpolationForAttribute('container_image') as any;
+    return this.__containerImageOutput;
   }
-  public set containerImage(value: NotebooksInstanceContainerImage[] ) {
+  public putContainerImage(value: NotebooksInstanceContainerImage | undefined) {
     this._containerImage = value;
   }
   public resetContainerImage() {
@@ -882,11 +1147,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig[];
+  private _shieldedInstanceConfig?: NotebooksInstanceShieldedInstanceConfig | undefined; 
+  private __shieldedInstanceConfigOutput = new NotebooksInstanceShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
-    return this.interpolationForAttribute('shielded_instance_config') as any;
+    return this.__shieldedInstanceConfigOutput;
   }
-  public set shieldedInstanceConfig(value: NotebooksInstanceShieldedInstanceConfig[] ) {
+  public putShieldedInstanceConfig(value: NotebooksInstanceShieldedInstanceConfig | undefined) {
     this._shieldedInstanceConfig = value;
   }
   public resetShieldedInstanceConfig() {
@@ -898,11 +1164,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NotebooksInstanceTimeouts;
+  private _timeouts?: NotebooksInstanceTimeouts | undefined; 
+  private __timeoutsOutput = new NotebooksInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NotebooksInstanceTimeouts ) {
+  public putTimeouts(value: NotebooksInstanceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -914,11 +1181,12 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // vm_image - computed: false, optional: true, required: false
-  private _vmImage?: NotebooksInstanceVmImage[];
+  private _vmImage?: NotebooksInstanceVmImage | undefined; 
+  private __vmImageOutput = new NotebooksInstanceVmImageOutputReference(this as any, "vm_image", true);
   public get vmImage() {
-    return this.interpolationForAttribute('vm_image') as any;
+    return this.__vmImageOutput;
   }
-  public set vmImage(value: NotebooksInstanceVmImage[] ) {
+  public putVmImage(value: NotebooksInstanceVmImage | undefined) {
     this._vmImage = value;
   }
   public resetVmImage() {
@@ -961,11 +1229,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       subnet: cdktf.stringToTerraform(this._subnet),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       update_time: cdktf.stringToTerraform(this._updateTime),
-      accelerator_config: cdktf.listMapper(notebooksInstanceAcceleratorConfigToTerraform)(this._acceleratorConfig),
-      container_image: cdktf.listMapper(notebooksInstanceContainerImageToTerraform)(this._containerImage),
-      shielded_instance_config: cdktf.listMapper(notebooksInstanceShieldedInstanceConfigToTerraform)(this._shieldedInstanceConfig),
+      accelerator_config: notebooksInstanceAcceleratorConfigToTerraform(this._acceleratorConfig),
+      container_image: notebooksInstanceContainerImageToTerraform(this._containerImage),
+      shielded_instance_config: notebooksInstanceShieldedInstanceConfigToTerraform(this._shieldedInstanceConfig),
       timeouts: notebooksInstanceTimeoutsToTerraform(this._timeouts),
-      vm_image: cdktf.listMapper(notebooksInstanceVmImageToTerraform)(this._vmImage),
+      vm_image: notebooksInstanceVmImageToTerraform(this._vmImage),
     };
   }
 }

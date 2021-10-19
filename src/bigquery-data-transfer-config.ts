@@ -91,19 +91,19 @@ requesting user calling this API has permissions to act as this service account.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#email_preferences BigqueryDataTransferConfig#email_preferences}
   */
-  readonly emailPreferences?: BigqueryDataTransferConfigEmailPreferences[];
+  readonly emailPreferences?: BigqueryDataTransferConfigEmailPreferences;
   /**
   * schedule_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#schedule_options BigqueryDataTransferConfig#schedule_options}
   */
-  readonly scheduleOptions?: BigqueryDataTransferConfigScheduleOptions[];
+  readonly scheduleOptions?: BigqueryDataTransferConfigScheduleOptions;
   /**
   * sensitive_params block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#sensitive_params BigqueryDataTransferConfig#sensitive_params}
   */
-  readonly sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
+  readonly sensitiveParams?: BigqueryDataTransferConfigSensitiveParams;
   /**
   * timeouts block
   * 
@@ -120,13 +120,39 @@ export interface BigqueryDataTransferConfigEmailPreferences {
   readonly enableFailureEmail: boolean | cdktf.IResolvable;
 }
 
-function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: BigqueryDataTransferConfigEmailPreferences): any {
+function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: BigqueryDataTransferConfigEmailPreferencesOutputReference | BigqueryDataTransferConfigEmailPreferences): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable_failure_email: cdktf.booleanToTerraform(struct!.enableFailureEmail),
   }
 }
 
+export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable_failure_email - computed: false, optional: false, required: true
+  private _enableFailureEmail?: boolean | cdktf.IResolvable; 
+  public get enableFailureEmail() {
+    return this.getBooleanAttribute('enable_failure_email') as any;
+  }
+  public set enableFailureEmail(value: boolean | cdktf.IResolvable) {
+    this._enableFailureEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableFailureEmailInput() {
+    return this._enableFailureEmail
+  }
+}
 export interface BigqueryDataTransferConfigScheduleOptions {
   /**
   * If true, automatic scheduling of data transfer runs for this
@@ -159,8 +185,11 @@ limited by this option.
   readonly startTime?: string;
 }
 
-function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: BigqueryDataTransferConfigScheduleOptions): any {
+function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: BigqueryDataTransferConfigScheduleOptionsOutputReference | BigqueryDataTransferConfigScheduleOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disable_auto_scheduling: cdktf.booleanToTerraform(struct!.disableAutoScheduling),
     end_time: cdktf.stringToTerraform(struct!.endTime),
@@ -168,6 +197,64 @@ function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: BigqueryD
   }
 }
 
+export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // disable_auto_scheduling - computed: false, optional: true, required: false
+  private _disableAutoScheduling?: boolean | cdktf.IResolvable | undefined; 
+  public get disableAutoScheduling() {
+    return this.getBooleanAttribute('disable_auto_scheduling') as any;
+  }
+  public set disableAutoScheduling(value: boolean | cdktf.IResolvable | undefined) {
+    this._disableAutoScheduling = value;
+  }
+  public resetDisableAutoScheduling() {
+    this._disableAutoScheduling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableAutoSchedulingInput() {
+    return this._disableAutoScheduling
+  }
+
+  // end_time - computed: false, optional: true, required: false
+  private _endTime?: string | undefined; 
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+  public set endTime(value: string | undefined) {
+    this._endTime = value;
+  }
+  public resetEndTime() {
+    this._endTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endTimeInput() {
+    return this._endTime
+  }
+
+  // start_time - computed: false, optional: true, required: false
+  private _startTime?: string | undefined; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string | undefined) {
+    this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
+  }
+}
 export interface BigqueryDataTransferConfigSensitiveParams {
   /**
   * The Secret Access Key of the AWS account transferring data from.
@@ -177,13 +264,39 @@ export interface BigqueryDataTransferConfigSensitiveParams {
   readonly secretAccessKey: string;
 }
 
-function bigqueryDataTransferConfigSensitiveParamsToTerraform(struct?: BigqueryDataTransferConfigSensitiveParams): any {
+function bigqueryDataTransferConfigSensitiveParamsToTerraform(struct?: BigqueryDataTransferConfigSensitiveParamsOutputReference | BigqueryDataTransferConfigSensitiveParams): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     secret_access_key: cdktf.stringToTerraform(struct!.secretAccessKey),
   }
 }
 
+export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // secret_access_key - computed: false, optional: false, required: true
+  private _secretAccessKey?: string; 
+  public get secretAccessKey() {
+    return this.getStringAttribute('secret_access_key');
+  }
+  public set secretAccessKey(value: string) {
+    this._secretAccessKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretAccessKeyInput() {
+    return this._secretAccessKey
+  }
+}
 export interface BigqueryDataTransferConfigTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html#create BigqueryDataTransferConfig#create}
@@ -199,8 +312,11 @@ export interface BigqueryDataTransferConfigTimeouts {
   readonly update?: string;
 }
 
-function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTransferConfigTimeouts): any {
+function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTransferConfigTimeoutsOutputReference | BigqueryDataTransferConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -208,6 +324,64 @@ function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTran
   }
 }
 
+export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config.html google_bigquery_data_transfer_config}
@@ -263,11 +437,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   // ==========
 
   // data_refresh_window_days - computed: false, optional: true, required: false
-  private _dataRefreshWindowDays?: number;
+  private _dataRefreshWindowDays?: number | undefined; 
   public get dataRefreshWindowDays() {
     return this.getNumberAttribute('data_refresh_window_days');
   }
-  public set dataRefreshWindowDays(value: number ) {
+  public set dataRefreshWindowDays(value: number | undefined) {
     this._dataRefreshWindowDays = value;
   }
   public resetDataRefreshWindowDays() {
@@ -279,7 +453,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // data_source_id - computed: false, optional: false, required: true
-  private _dataSourceId: string;
+  private _dataSourceId?: string; 
   public get dataSourceId() {
     return this.getStringAttribute('data_source_id');
   }
@@ -292,11 +466,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // destination_dataset_id - computed: false, optional: true, required: false
-  private _destinationDatasetId?: string;
+  private _destinationDatasetId?: string | undefined; 
   public get destinationDatasetId() {
     return this.getStringAttribute('destination_dataset_id');
   }
-  public set destinationDatasetId(value: string ) {
+  public set destinationDatasetId(value: string | undefined) {
     this._destinationDatasetId = value;
   }
   public resetDestinationDatasetId() {
@@ -308,11 +482,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable;
+  private _disabled?: boolean | cdktf.IResolvable | undefined; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled');
+    return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable ) {
+  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -324,7 +498,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -342,11 +516,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string ) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -363,11 +537,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // notification_pubsub_topic - computed: false, optional: true, required: false
-  private _notificationPubsubTopic?: string;
+  private _notificationPubsubTopic?: string | undefined; 
   public get notificationPubsubTopic() {
     return this.getStringAttribute('notification_pubsub_topic');
   }
-  public set notificationPubsubTopic(value: string ) {
+  public set notificationPubsubTopic(value: string | undefined) {
     this._notificationPubsubTopic = value;
   }
   public resetNotificationPubsubTopic() {
@@ -379,8 +553,9 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // params - computed: false, optional: false, required: true
-  private _params: { [key: string]: string } | cdktf.IResolvable;
+  private _params?: { [key: string]: string } | cdktf.IResolvable; 
   public get params() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('params') as any;
   }
   public set params(value: { [key: string]: string } | cdktf.IResolvable) {
@@ -392,11 +567,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -408,11 +583,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule?: string;
+  private _schedule?: string | undefined; 
   public get schedule() {
     return this.getStringAttribute('schedule');
   }
-  public set schedule(value: string ) {
+  public set schedule(value: string | undefined) {
     this._schedule = value;
   }
   public resetSchedule() {
@@ -424,11 +599,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // service_account_name - computed: false, optional: true, required: false
-  private _serviceAccountName?: string;
+  private _serviceAccountName?: string | undefined; 
   public get serviceAccountName() {
     return this.getStringAttribute('service_account_name');
   }
-  public set serviceAccountName(value: string ) {
+  public set serviceAccountName(value: string | undefined) {
     this._serviceAccountName = value;
   }
   public resetServiceAccountName() {
@@ -440,11 +615,12 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // email_preferences - computed: false, optional: true, required: false
-  private _emailPreferences?: BigqueryDataTransferConfigEmailPreferences[];
+  private _emailPreferences?: BigqueryDataTransferConfigEmailPreferences | undefined; 
+  private __emailPreferencesOutput = new BigqueryDataTransferConfigEmailPreferencesOutputReference(this as any, "email_preferences", true);
   public get emailPreferences() {
-    return this.interpolationForAttribute('email_preferences') as any;
+    return this.__emailPreferencesOutput;
   }
-  public set emailPreferences(value: BigqueryDataTransferConfigEmailPreferences[] ) {
+  public putEmailPreferences(value: BigqueryDataTransferConfigEmailPreferences | undefined) {
     this._emailPreferences = value;
   }
   public resetEmailPreferences() {
@@ -456,11 +632,12 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // schedule_options - computed: false, optional: true, required: false
-  private _scheduleOptions?: BigqueryDataTransferConfigScheduleOptions[];
+  private _scheduleOptions?: BigqueryDataTransferConfigScheduleOptions | undefined; 
+  private __scheduleOptionsOutput = new BigqueryDataTransferConfigScheduleOptionsOutputReference(this as any, "schedule_options", true);
   public get scheduleOptions() {
-    return this.interpolationForAttribute('schedule_options') as any;
+    return this.__scheduleOptionsOutput;
   }
-  public set scheduleOptions(value: BigqueryDataTransferConfigScheduleOptions[] ) {
+  public putScheduleOptions(value: BigqueryDataTransferConfigScheduleOptions | undefined) {
     this._scheduleOptions = value;
   }
   public resetScheduleOptions() {
@@ -472,11 +649,12 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // sensitive_params - computed: false, optional: true, required: false
-  private _sensitiveParams?: BigqueryDataTransferConfigSensitiveParams[];
+  private _sensitiveParams?: BigqueryDataTransferConfigSensitiveParams | undefined; 
+  private __sensitiveParamsOutput = new BigqueryDataTransferConfigSensitiveParamsOutputReference(this as any, "sensitive_params", true);
   public get sensitiveParams() {
-    return this.interpolationForAttribute('sensitive_params') as any;
+    return this.__sensitiveParamsOutput;
   }
-  public set sensitiveParams(value: BigqueryDataTransferConfigSensitiveParams[] ) {
+  public putSensitiveParams(value: BigqueryDataTransferConfigSensitiveParams | undefined) {
     this._sensitiveParams = value;
   }
   public resetSensitiveParams() {
@@ -488,11 +666,12 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BigqueryDataTransferConfigTimeouts;
+  private _timeouts?: BigqueryDataTransferConfigTimeouts | undefined; 
+  private __timeoutsOutput = new BigqueryDataTransferConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: BigqueryDataTransferConfigTimeouts ) {
+  public putTimeouts(value: BigqueryDataTransferConfigTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -520,9 +699,9 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       schedule: cdktf.stringToTerraform(this._schedule),
       service_account_name: cdktf.stringToTerraform(this._serviceAccountName),
-      email_preferences: cdktf.listMapper(bigqueryDataTransferConfigEmailPreferencesToTerraform)(this._emailPreferences),
-      schedule_options: cdktf.listMapper(bigqueryDataTransferConfigScheduleOptionsToTerraform)(this._scheduleOptions),
-      sensitive_params: cdktf.listMapper(bigqueryDataTransferConfigSensitiveParamsToTerraform)(this._sensitiveParams),
+      email_preferences: bigqueryDataTransferConfigEmailPreferencesToTerraform(this._emailPreferences),
+      schedule_options: bigqueryDataTransferConfigScheduleOptionsToTerraform(this._scheduleOptions),
+      sensitive_params: bigqueryDataTransferConfigSensitiveParamsToTerraform(this._sensitiveParams),
       timeouts: bigqueryDataTransferConfigTimeoutsToTerraform(this._timeouts),
     };
   }

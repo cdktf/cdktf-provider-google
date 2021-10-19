@@ -58,7 +58,7 @@ export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // dicom_store_id - computed: false, optional: false, required: true
-  private _dicomStoreId: string;
+  private _dicomStoreId?: string; 
   public get dicomStoreId() {
     return this.getStringAttribute('dicom_store_id');
   }
@@ -81,7 +81,7 @@ export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

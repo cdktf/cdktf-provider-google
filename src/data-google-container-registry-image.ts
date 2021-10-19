@@ -73,11 +73,11 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   // ==========
 
   // digest - computed: false, optional: true, required: false
-  private _digest?: string;
+  private _digest?: string | undefined; 
   public get digest() {
     return this.getStringAttribute('digest');
   }
-  public set digest(value: string ) {
+  public set digest(value: string | undefined) {
     this._digest = value;
   }
   public resetDigest() {
@@ -99,7 +99,7 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -112,11 +112,11 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -128,11 +128,11 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string ) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -144,11 +144,11 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: string;
+  private _tag?: string | undefined; 
   public get tag() {
     return this.getStringAttribute('tag');
   }
-  public set tag(value: string ) {
+  public set tag(value: string | undefined) {
     this._tag = value;
   }
   public resetTag() {

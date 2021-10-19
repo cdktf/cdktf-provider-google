@@ -84,8 +84,11 @@ export interface ComputeNetworkTimeouts {
   readonly update?: string;
 }
 
-function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeouts): any {
+function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeoutsOutputReference | ComputeNetworkTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -93,6 +96,64 @@ function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeouts): any
   }
 }
 
+export class ComputeNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network.html google_compute_network}
@@ -141,11 +202,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   // ==========
 
   // auto_create_subnetworks - computed: false, optional: true, required: false
-  private _autoCreateSubnetworks?: boolean | cdktf.IResolvable;
+  private _autoCreateSubnetworks?: boolean | cdktf.IResolvable | undefined; 
   public get autoCreateSubnetworks() {
-    return this.getBooleanAttribute('auto_create_subnetworks');
+    return this.getBooleanAttribute('auto_create_subnetworks') as any;
   }
-  public set autoCreateSubnetworks(value: boolean | cdktf.IResolvable ) {
+  public set autoCreateSubnetworks(value: boolean | cdktf.IResolvable | undefined) {
     this._autoCreateSubnetworks = value;
   }
   public resetAutoCreateSubnetworks() {
@@ -157,11 +218,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // delete_default_routes_on_create - computed: false, optional: true, required: false
-  private _deleteDefaultRoutesOnCreate?: boolean | cdktf.IResolvable;
+  private _deleteDefaultRoutesOnCreate?: boolean | cdktf.IResolvable | undefined; 
   public get deleteDefaultRoutesOnCreate() {
-    return this.getBooleanAttribute('delete_default_routes_on_create');
+    return this.getBooleanAttribute('delete_default_routes_on_create') as any;
   }
-  public set deleteDefaultRoutesOnCreate(value: boolean | cdktf.IResolvable ) {
+  public set deleteDefaultRoutesOnCreate(value: boolean | cdktf.IResolvable | undefined) {
     this._deleteDefaultRoutesOnCreate = value;
   }
   public resetDeleteDefaultRoutesOnCreate() {
@@ -173,11 +234,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -199,11 +260,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // mtu - computed: true, optional: true, required: false
-  private _mtu?: number;
+  private _mtu?: number | undefined; 
   public get mtu() {
     return this.getNumberAttribute('mtu');
   }
-  public set mtu(value: number) {
+  public set mtu(value: number | undefined) {
     this._mtu = value;
   }
   public resetMtu() {
@@ -215,7 +276,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -228,11 +289,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -244,11 +305,11 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // routing_mode - computed: true, optional: true, required: false
-  private _routingMode?: string;
+  private _routingMode?: string | undefined; 
   public get routingMode() {
     return this.getStringAttribute('routing_mode');
   }
-  public set routingMode(value: string) {
+  public set routingMode(value: string | undefined) {
     this._routingMode = value;
   }
   public resetRoutingMode() {
@@ -265,11 +326,12 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeNetworkTimeouts;
+  private _timeouts?: ComputeNetworkTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeNetworkTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeNetworkTimeouts ) {
+  public putTimeouts(value: ComputeNetworkTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -31,13 +31,13 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#basic_algorithm DataprocAutoscalingPolicy#basic_algorithm}
   */
-  readonly basicAlgorithm?: DataprocAutoscalingPolicyBasicAlgorithm[];
+  readonly basicAlgorithm?: DataprocAutoscalingPolicyBasicAlgorithm;
   /**
   * secondary_worker_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#secondary_worker_config DataprocAutoscalingPolicy#secondary_worker_config}
   */
-  readonly secondaryWorkerConfig?: DataprocAutoscalingPolicySecondaryWorkerConfig[];
+  readonly secondaryWorkerConfig?: DataprocAutoscalingPolicySecondaryWorkerConfig;
   /**
   * timeouts block
   * 
@@ -49,7 +49,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#worker_config DataprocAutoscalingPolicy#worker_config}
   */
-  readonly workerConfig?: DataprocAutoscalingPolicyWorkerConfig[];
+  readonly workerConfig?: DataprocAutoscalingPolicyWorkerConfig;
 }
 export interface DataprocAutoscalingPolicyBasicAlgorithmYarnConfig {
   /**
@@ -110,8 +110,11 @@ Bounds: [0.0, 1.0]. Default: 0.0.
   readonly scaleUpMinWorkerFraction?: number;
 }
 
-function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig): any {
+function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference | DataprocAutoscalingPolicyBasicAlgorithmYarnConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     graceful_decommission_timeout: cdktf.stringToTerraform(struct!.gracefulDecommissionTimeout),
     scale_down_factor: cdktf.numberToTerraform(struct!.scaleDownFactor),
@@ -121,6 +124,87 @@ function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct?: D
   }
 }
 
+export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // graceful_decommission_timeout - computed: false, optional: false, required: true
+  private _gracefulDecommissionTimeout?: string; 
+  public get gracefulDecommissionTimeout() {
+    return this.getStringAttribute('graceful_decommission_timeout');
+  }
+  public set gracefulDecommissionTimeout(value: string) {
+    this._gracefulDecommissionTimeout = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gracefulDecommissionTimeoutInput() {
+    return this._gracefulDecommissionTimeout
+  }
+
+  // scale_down_factor - computed: false, optional: false, required: true
+  private _scaleDownFactor?: number; 
+  public get scaleDownFactor() {
+    return this.getNumberAttribute('scale_down_factor');
+  }
+  public set scaleDownFactor(value: number) {
+    this._scaleDownFactor = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleDownFactorInput() {
+    return this._scaleDownFactor
+  }
+
+  // scale_down_min_worker_fraction - computed: false, optional: true, required: false
+  private _scaleDownMinWorkerFraction?: number | undefined; 
+  public get scaleDownMinWorkerFraction() {
+    return this.getNumberAttribute('scale_down_min_worker_fraction');
+  }
+  public set scaleDownMinWorkerFraction(value: number | undefined) {
+    this._scaleDownMinWorkerFraction = value;
+  }
+  public resetScaleDownMinWorkerFraction() {
+    this._scaleDownMinWorkerFraction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleDownMinWorkerFractionInput() {
+    return this._scaleDownMinWorkerFraction
+  }
+
+  // scale_up_factor - computed: false, optional: false, required: true
+  private _scaleUpFactor?: number; 
+  public get scaleUpFactor() {
+    return this.getNumberAttribute('scale_up_factor');
+  }
+  public set scaleUpFactor(value: number) {
+    this._scaleUpFactor = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleUpFactorInput() {
+    return this._scaleUpFactor
+  }
+
+  // scale_up_min_worker_fraction - computed: false, optional: true, required: false
+  private _scaleUpMinWorkerFraction?: number | undefined; 
+  public get scaleUpMinWorkerFraction() {
+    return this.getNumberAttribute('scale_up_min_worker_fraction');
+  }
+  public set scaleUpMinWorkerFraction(value: number | undefined) {
+    this._scaleUpMinWorkerFraction = value;
+  }
+  public resetScaleUpMinWorkerFraction() {
+    this._scaleUpMinWorkerFraction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleUpMinWorkerFractionInput() {
+    return this._scaleUpMinWorkerFraction
+  }
+}
 export interface DataprocAutoscalingPolicyBasicAlgorithm {
   /**
   * Duration between scaling events. A scaling period starts after the
@@ -136,17 +220,60 @@ Bounds: [2m, 1d]. Default: 2m.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#yarn_config DataprocAutoscalingPolicy#yarn_config}
   */
-  readonly yarnConfig: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig[];
+  readonly yarnConfig: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig;
 }
 
-function dataprocAutoscalingPolicyBasicAlgorithmToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithm): any {
+function dataprocAutoscalingPolicyBasicAlgorithmToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithmOutputReference | DataprocAutoscalingPolicyBasicAlgorithm): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cooldown_period: cdktf.stringToTerraform(struct!.cooldownPeriod),
-    yarn_config: cdktf.listMapper(dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform)(struct!.yarnConfig),
+    yarn_config: dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct!.yarnConfig),
   }
 }
 
+export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cooldown_period - computed: false, optional: true, required: false
+  private _cooldownPeriod?: string | undefined; 
+  public get cooldownPeriod() {
+    return this.getStringAttribute('cooldown_period');
+  }
+  public set cooldownPeriod(value: string | undefined) {
+    this._cooldownPeriod = value;
+  }
+  public resetCooldownPeriod() {
+    this._cooldownPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cooldownPeriodInput() {
+    return this._cooldownPeriod
+  }
+
+  // yarn_config - computed: false, optional: false, required: true
+  private _yarnConfig?: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig; 
+  private __yarnConfigOutput = new DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference(this as any, "yarn_config", true);
+  public get yarnConfig() {
+    return this.__yarnConfigOutput;
+  }
+  public putYarnConfig(value: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig) {
+    this._yarnConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get yarnConfigInput() {
+    return this._yarnConfig
+  }
+}
 export interface DataprocAutoscalingPolicySecondaryWorkerConfig {
   /**
   * Maximum number of instances for this group. Note that by default, clusters will not use
@@ -183,8 +310,11 @@ only on primary workers, the cluster will use primary workers only and no second
   readonly weight?: number;
 }
 
-function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicySecondaryWorkerConfig): any {
+function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference | DataprocAutoscalingPolicySecondaryWorkerConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_instances: cdktf.numberToTerraform(struct!.maxInstances),
     min_instances: cdktf.numberToTerraform(struct!.minInstances),
@@ -192,6 +322,64 @@ function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct?: Data
   }
 }
 
+export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_instances - computed: false, optional: true, required: false
+  private _maxInstances?: number | undefined; 
+  public get maxInstances() {
+    return this.getNumberAttribute('max_instances');
+  }
+  public set maxInstances(value: number | undefined) {
+    this._maxInstances = value;
+  }
+  public resetMaxInstances() {
+    this._maxInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInstancesInput() {
+    return this._maxInstances
+  }
+
+  // min_instances - computed: false, optional: true, required: false
+  private _minInstances?: number | undefined; 
+  public get minInstances() {
+    return this.getNumberAttribute('min_instances');
+  }
+  public set minInstances(value: number | undefined) {
+    this._minInstances = value;
+  }
+  public resetMinInstances() {
+    this._minInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInstancesInput() {
+    return this._minInstances
+  }
+
+  // weight - computed: false, optional: true, required: false
+  private _weight?: number | undefined; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number | undefined) {
+    this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight
+  }
+}
 export interface DataprocAutoscalingPolicyTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html#create DataprocAutoscalingPolicy#create}
@@ -207,8 +395,11 @@ export interface DataprocAutoscalingPolicyTimeouts {
   readonly update?: string;
 }
 
-function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscalingPolicyTimeouts): any {
+function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscalingPolicyTimeoutsOutputReference | DataprocAutoscalingPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -216,6 +407,64 @@ function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscali
   }
 }
 
+export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface DataprocAutoscalingPolicyWorkerConfig {
   /**
   * Maximum number of instances for this group.
@@ -250,8 +499,11 @@ only on primary workers, the cluster will use primary workers only and no second
   readonly weight?: number;
 }
 
-function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicyWorkerConfig): any {
+function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicyWorkerConfigOutputReference | DataprocAutoscalingPolicyWorkerConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_instances: cdktf.numberToTerraform(struct!.maxInstances),
     min_instances: cdktf.numberToTerraform(struct!.minInstances),
@@ -259,6 +511,61 @@ function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutos
   }
 }
 
+export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_instances - computed: false, optional: false, required: true
+  private _maxInstances?: number; 
+  public get maxInstances() {
+    return this.getNumberAttribute('max_instances');
+  }
+  public set maxInstances(value: number) {
+    this._maxInstances = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInstancesInput() {
+    return this._maxInstances
+  }
+
+  // min_instances - computed: false, optional: true, required: false
+  private _minInstances?: number | undefined; 
+  public get minInstances() {
+    return this.getNumberAttribute('min_instances');
+  }
+  public set minInstances(value: number | undefined) {
+    this._minInstances = value;
+  }
+  public resetMinInstances() {
+    this._minInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInstancesInput() {
+    return this._minInstances
+  }
+
+  // weight - computed: false, optional: true, required: false
+  private _weight?: number | undefined; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number | undefined) {
+    this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy.html google_dataproc_autoscaling_policy}
@@ -311,11 +618,11 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string ) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -332,7 +639,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // policy_id - computed: false, optional: false, required: true
-  private _policyId: string;
+  private _policyId?: string; 
   public get policyId() {
     return this.getStringAttribute('policy_id');
   }
@@ -345,11 +652,11 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -361,11 +668,12 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // basic_algorithm - computed: false, optional: true, required: false
-  private _basicAlgorithm?: DataprocAutoscalingPolicyBasicAlgorithm[];
+  private _basicAlgorithm?: DataprocAutoscalingPolicyBasicAlgorithm | undefined; 
+  private __basicAlgorithmOutput = new DataprocAutoscalingPolicyBasicAlgorithmOutputReference(this as any, "basic_algorithm", true);
   public get basicAlgorithm() {
-    return this.interpolationForAttribute('basic_algorithm') as any;
+    return this.__basicAlgorithmOutput;
   }
-  public set basicAlgorithm(value: DataprocAutoscalingPolicyBasicAlgorithm[] ) {
+  public putBasicAlgorithm(value: DataprocAutoscalingPolicyBasicAlgorithm | undefined) {
     this._basicAlgorithm = value;
   }
   public resetBasicAlgorithm() {
@@ -377,11 +685,12 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // secondary_worker_config - computed: false, optional: true, required: false
-  private _secondaryWorkerConfig?: DataprocAutoscalingPolicySecondaryWorkerConfig[];
+  private _secondaryWorkerConfig?: DataprocAutoscalingPolicySecondaryWorkerConfig | undefined; 
+  private __secondaryWorkerConfigOutput = new DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference(this as any, "secondary_worker_config", true);
   public get secondaryWorkerConfig() {
-    return this.interpolationForAttribute('secondary_worker_config') as any;
+    return this.__secondaryWorkerConfigOutput;
   }
-  public set secondaryWorkerConfig(value: DataprocAutoscalingPolicySecondaryWorkerConfig[] ) {
+  public putSecondaryWorkerConfig(value: DataprocAutoscalingPolicySecondaryWorkerConfig | undefined) {
     this._secondaryWorkerConfig = value;
   }
   public resetSecondaryWorkerConfig() {
@@ -393,11 +702,12 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataprocAutoscalingPolicyTimeouts;
+  private _timeouts?: DataprocAutoscalingPolicyTimeouts | undefined; 
+  private __timeoutsOutput = new DataprocAutoscalingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataprocAutoscalingPolicyTimeouts ) {
+  public putTimeouts(value: DataprocAutoscalingPolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -409,11 +719,12 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig?: DataprocAutoscalingPolicyWorkerConfig[];
+  private _workerConfig?: DataprocAutoscalingPolicyWorkerConfig | undefined; 
+  private __workerConfigOutput = new DataprocAutoscalingPolicyWorkerConfigOutputReference(this as any, "worker_config", true);
   public get workerConfig() {
-    return this.interpolationForAttribute('worker_config') as any;
+    return this.__workerConfigOutput;
   }
-  public set workerConfig(value: DataprocAutoscalingPolicyWorkerConfig[] ) {
+  public putWorkerConfig(value: DataprocAutoscalingPolicyWorkerConfig | undefined) {
     this._workerConfig = value;
   }
   public resetWorkerConfig() {
@@ -433,10 +744,10 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       policy_id: cdktf.stringToTerraform(this._policyId),
       project: cdktf.stringToTerraform(this._project),
-      basic_algorithm: cdktf.listMapper(dataprocAutoscalingPolicyBasicAlgorithmToTerraform)(this._basicAlgorithm),
-      secondary_worker_config: cdktf.listMapper(dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform)(this._secondaryWorkerConfig),
+      basic_algorithm: dataprocAutoscalingPolicyBasicAlgorithmToTerraform(this._basicAlgorithm),
+      secondary_worker_config: dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(this._secondaryWorkerConfig),
       timeouts: dataprocAutoscalingPolicyTimeoutsToTerraform(this._timeouts),
-      worker_config: cdktf.listMapper(dataprocAutoscalingPolicyWorkerConfigToTerraform)(this._workerConfig),
+      worker_config: dataprocAutoscalingPolicyWorkerConfigToTerraform(this._workerConfig),
     };
   }
 }

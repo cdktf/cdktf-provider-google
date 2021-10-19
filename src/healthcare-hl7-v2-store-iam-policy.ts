@@ -63,7 +63,7 @@ export class HealthcareHl7V2StoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // hl7_v2_store_id - computed: false, optional: false, required: true
-  private _hl7V2StoreId: string;
+  private _hl7V2StoreId?: string; 
   public get hl7V2StoreId() {
     return this.getStringAttribute('hl7_v2_store_id');
   }
@@ -81,7 +81,7 @@ export class HealthcareHl7V2StoreIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

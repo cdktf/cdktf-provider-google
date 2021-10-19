@@ -46,25 +46,25 @@ export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#http_check MonitoringUptimeCheckConfig#http_check}
   */
-  readonly httpCheck?: MonitoringUptimeCheckConfigHttpCheck[];
+  readonly httpCheck?: MonitoringUptimeCheckConfigHttpCheck;
   /**
   * monitored_resource block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
   */
-  readonly monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource[];
+  readonly monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource;
   /**
   * resource_group block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#resource_group MonitoringUptimeCheckConfig#resource_group}
   */
-  readonly resourceGroup?: MonitoringUptimeCheckConfigResourceGroup[];
+  readonly resourceGroup?: MonitoringUptimeCheckConfigResourceGroup;
   /**
   * tcp_check block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#tcp_check MonitoringUptimeCheckConfig#tcp_check}
   */
-  readonly tcpCheck?: MonitoringUptimeCheckConfigTcpCheck[];
+  readonly tcpCheck?: MonitoringUptimeCheckConfigTcpCheck;
   /**
   * timeouts block
   * 
@@ -89,6 +89,9 @@ export interface MonitoringUptimeCheckConfigContentMatchers {
 
 function monitoringUptimeCheckConfigContentMatchersToTerraform(struct?: MonitoringUptimeCheckConfigContentMatchers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content: cdktf.stringToTerraform(struct!.content),
     matcher: cdktf.stringToTerraform(struct!.matcher),
@@ -110,14 +113,53 @@ export interface MonitoringUptimeCheckConfigHttpCheckAuthInfo {
   readonly username: string;
 }
 
-function monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckAuthInfo): any {
+function monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference | MonitoringUptimeCheckConfigHttpCheckAuthInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
 
+export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface MonitoringUptimeCheckConfigHttpCheck {
   /**
   * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
@@ -178,11 +220,14 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#auth_info MonitoringUptimeCheckConfig#auth_info}
   */
-  readonly authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo[];
+  readonly authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo;
 }
 
-function monitoringUptimeCheckConfigHttpCheckToTerraform(struct?: MonitoringUptimeCheckConfigHttpCheck): any {
+function monitoringUptimeCheckConfigHttpCheckToTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckOutputReference | MonitoringUptimeCheckConfigHttpCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     body: cdktf.stringToTerraform(struct!.body),
     content_type: cdktf.stringToTerraform(struct!.contentType),
@@ -193,10 +238,182 @@ function monitoringUptimeCheckConfigHttpCheckToTerraform(struct?: MonitoringUpti
     request_method: cdktf.stringToTerraform(struct!.requestMethod),
     use_ssl: cdktf.booleanToTerraform(struct!.useSsl),
     validate_ssl: cdktf.booleanToTerraform(struct!.validateSsl),
-    auth_info: cdktf.listMapper(monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform)(struct!.authInfo),
+    auth_info: monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct!.authInfo),
   }
 }
 
+export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // body - computed: false, optional: true, required: false
+  private _body?: string | undefined; 
+  public get body() {
+    return this.getStringAttribute('body');
+  }
+  public set body(value: string | undefined) {
+    this._body = value;
+  }
+  public resetBody() {
+    this._body = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bodyInput() {
+    return this._body
+  }
+
+  // content_type - computed: false, optional: true, required: false
+  private _contentType?: string | undefined; 
+  public get contentType() {
+    return this.getStringAttribute('content_type');
+  }
+  public set contentType(value: string | undefined) {
+    this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
+  }
+
+  // headers - computed: true, optional: true, required: false
+  private _headers?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get headers() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('headers') as any;
+  }
+  public set headers(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._headers = value;
+  }
+  public resetHeaders() {
+    this._headers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers
+  }
+
+  // mask_headers - computed: false, optional: true, required: false
+  private _maskHeaders?: boolean | cdktf.IResolvable | undefined; 
+  public get maskHeaders() {
+    return this.getBooleanAttribute('mask_headers') as any;
+  }
+  public set maskHeaders(value: boolean | cdktf.IResolvable | undefined) {
+    this._maskHeaders = value;
+  }
+  public resetMaskHeaders() {
+    this._maskHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maskHeadersInput() {
+    return this._maskHeaders
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string | undefined; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string | undefined) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // port - computed: true, optional: true, required: false
+  private _port?: number | undefined; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number | undefined) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // request_method - computed: false, optional: true, required: false
+  private _requestMethod?: string | undefined; 
+  public get requestMethod() {
+    return this.getStringAttribute('request_method');
+  }
+  public set requestMethod(value: string | undefined) {
+    this._requestMethod = value;
+  }
+  public resetRequestMethod() {
+    this._requestMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestMethodInput() {
+    return this._requestMethod
+  }
+
+  // use_ssl - computed: false, optional: true, required: false
+  private _useSsl?: boolean | cdktf.IResolvable | undefined; 
+  public get useSsl() {
+    return this.getBooleanAttribute('use_ssl') as any;
+  }
+  public set useSsl(value: boolean | cdktf.IResolvable | undefined) {
+    this._useSsl = value;
+  }
+  public resetUseSsl() {
+    this._useSsl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useSslInput() {
+    return this._useSsl
+  }
+
+  // validate_ssl - computed: false, optional: true, required: false
+  private _validateSsl?: boolean | cdktf.IResolvable | undefined; 
+  public get validateSsl() {
+    return this.getBooleanAttribute('validate_ssl') as any;
+  }
+  public set validateSsl(value: boolean | cdktf.IResolvable | undefined) {
+    this._validateSsl = value;
+  }
+  public resetValidateSsl() {
+    this._validateSsl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validateSslInput() {
+    return this._validateSsl
+  }
+
+  // auth_info - computed: false, optional: true, required: false
+  private _authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo | undefined; 
+  private __authInfoOutput = new MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference(this as any, "auth_info", true);
+  public get authInfo() {
+    return this.__authInfoOutput;
+  }
+  public putAuthInfo(value: MonitoringUptimeCheckConfigHttpCheckAuthInfo | undefined) {
+    this._authInfo = value;
+  }
+  public resetAuthInfo() {
+    this._authInfo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authInfoInput() {
+    return this._authInfo
+  }
+}
 export interface MonitoringUptimeCheckConfigMonitoredResource {
   /**
   * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
@@ -212,14 +429,54 @@ export interface MonitoringUptimeCheckConfigMonitoredResource {
   readonly type: string;
 }
 
-function monitoringUptimeCheckConfigMonitoredResourceToTerraform(struct?: MonitoringUptimeCheckConfigMonitoredResource): any {
+function monitoringUptimeCheckConfigMonitoredResourceToTerraform(struct?: MonitoringUptimeCheckConfigMonitoredResourceOutputReference | MonitoringUptimeCheckConfigMonitoredResource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // labels - computed: false, optional: false, required: true
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  public get labels() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('labels') as any;
+  }
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+    this._labels = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface MonitoringUptimeCheckConfigResourceGroup {
   /**
   * The group of resources being monitored. Should be the 'name' of a group
@@ -235,14 +492,59 @@ export interface MonitoringUptimeCheckConfigResourceGroup {
   readonly resourceType?: string;
 }
 
-function monitoringUptimeCheckConfigResourceGroupToTerraform(struct?: MonitoringUptimeCheckConfigResourceGroup): any {
+function monitoringUptimeCheckConfigResourceGroupToTerraform(struct?: MonitoringUptimeCheckConfigResourceGroupOutputReference | MonitoringUptimeCheckConfigResourceGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     group_id: cdktf.stringToTerraform(struct!.groupId),
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
   }
 }
 
+export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // group_id - computed: false, optional: true, required: false
+  private _groupId?: string | undefined; 
+  public get groupId() {
+    return this.getStringAttribute('group_id');
+  }
+  public set groupId(value: string | undefined) {
+    this._groupId = value;
+  }
+  public resetGroupId() {
+    this._groupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIdInput() {
+    return this._groupId
+  }
+
+  // resource_type - computed: false, optional: true, required: false
+  private _resourceType?: string | undefined; 
+  public get resourceType() {
+    return this.getStringAttribute('resource_type');
+  }
+  public set resourceType(value: string | undefined) {
+    this._resourceType = value;
+  }
+  public resetResourceType() {
+    this._resourceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceTypeInput() {
+    return this._resourceType
+  }
+}
 export interface MonitoringUptimeCheckConfigTcpCheck {
   /**
   * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
@@ -252,13 +554,39 @@ export interface MonitoringUptimeCheckConfigTcpCheck {
   readonly port: number;
 }
 
-function monitoringUptimeCheckConfigTcpCheckToTerraform(struct?: MonitoringUptimeCheckConfigTcpCheck): any {
+function monitoringUptimeCheckConfigTcpCheckToTerraform(struct?: MonitoringUptimeCheckConfigTcpCheckOutputReference | MonitoringUptimeCheckConfigTcpCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     port: cdktf.numberToTerraform(struct!.port),
   }
 }
 
+export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+}
 export interface MonitoringUptimeCheckConfigTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#create MonitoringUptimeCheckConfig#create}
@@ -274,8 +602,11 @@ export interface MonitoringUptimeCheckConfigTimeouts {
   readonly update?: string;
 }
 
-function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: MonitoringUptimeCheckConfigTimeouts): any {
+function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: MonitoringUptimeCheckConfigTimeoutsOutputReference | MonitoringUptimeCheckConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -283,6 +614,64 @@ function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: MonitoringUptim
   }
 }
 
+export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html google_monitoring_uptime_check_config}
@@ -334,7 +723,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   // ==========
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -357,11 +746,11 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // period - computed: false, optional: true, required: false
-  private _period?: string;
+  private _period?: string | undefined; 
   public get period() {
     return this.getStringAttribute('period');
   }
-  public set period(value: string ) {
+  public set period(value: string | undefined) {
     this._period = value;
   }
   public resetPeriod() {
@@ -373,11 +762,11 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -389,11 +778,11 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // selected_regions - computed: false, optional: true, required: false
-  private _selectedRegions?: string[];
+  private _selectedRegions?: string[] | undefined; 
   public get selectedRegions() {
     return this.getListAttribute('selected_regions');
   }
-  public set selectedRegions(value: string[] ) {
+  public set selectedRegions(value: string[] | undefined) {
     this._selectedRegions = value;
   }
   public resetSelectedRegions() {
@@ -405,7 +794,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // timeout - computed: false, optional: false, required: true
-  private _timeout: string;
+  private _timeout?: string; 
   public get timeout() {
     return this.getStringAttribute('timeout');
   }
@@ -423,11 +812,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // content_matchers - computed: false, optional: true, required: false
-  private _contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[];
+  private _contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[] | undefined; 
   public get contentMatchers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('content_matchers') as any;
   }
-  public set contentMatchers(value: MonitoringUptimeCheckConfigContentMatchers[] ) {
+  public set contentMatchers(value: MonitoringUptimeCheckConfigContentMatchers[] | undefined) {
     this._contentMatchers = value;
   }
   public resetContentMatchers() {
@@ -439,11 +829,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // http_check - computed: false, optional: true, required: false
-  private _httpCheck?: MonitoringUptimeCheckConfigHttpCheck[];
+  private _httpCheck?: MonitoringUptimeCheckConfigHttpCheck | undefined; 
+  private __httpCheckOutput = new MonitoringUptimeCheckConfigHttpCheckOutputReference(this as any, "http_check", true);
   public get httpCheck() {
-    return this.interpolationForAttribute('http_check') as any;
+    return this.__httpCheckOutput;
   }
-  public set httpCheck(value: MonitoringUptimeCheckConfigHttpCheck[] ) {
+  public putHttpCheck(value: MonitoringUptimeCheckConfigHttpCheck | undefined) {
     this._httpCheck = value;
   }
   public resetHttpCheck() {
@@ -455,11 +846,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // monitored_resource - computed: false, optional: true, required: false
-  private _monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource[];
+  private _monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource | undefined; 
+  private __monitoredResourceOutput = new MonitoringUptimeCheckConfigMonitoredResourceOutputReference(this as any, "monitored_resource", true);
   public get monitoredResource() {
-    return this.interpolationForAttribute('monitored_resource') as any;
+    return this.__monitoredResourceOutput;
   }
-  public set monitoredResource(value: MonitoringUptimeCheckConfigMonitoredResource[] ) {
+  public putMonitoredResource(value: MonitoringUptimeCheckConfigMonitoredResource | undefined) {
     this._monitoredResource = value;
   }
   public resetMonitoredResource() {
@@ -471,11 +863,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // resource_group - computed: false, optional: true, required: false
-  private _resourceGroup?: MonitoringUptimeCheckConfigResourceGroup[];
+  private _resourceGroup?: MonitoringUptimeCheckConfigResourceGroup | undefined; 
+  private __resourceGroupOutput = new MonitoringUptimeCheckConfigResourceGroupOutputReference(this as any, "resource_group", true);
   public get resourceGroup() {
-    return this.interpolationForAttribute('resource_group') as any;
+    return this.__resourceGroupOutput;
   }
-  public set resourceGroup(value: MonitoringUptimeCheckConfigResourceGroup[] ) {
+  public putResourceGroup(value: MonitoringUptimeCheckConfigResourceGroup | undefined) {
     this._resourceGroup = value;
   }
   public resetResourceGroup() {
@@ -487,11 +880,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // tcp_check - computed: false, optional: true, required: false
-  private _tcpCheck?: MonitoringUptimeCheckConfigTcpCheck[];
+  private _tcpCheck?: MonitoringUptimeCheckConfigTcpCheck | undefined; 
+  private __tcpCheckOutput = new MonitoringUptimeCheckConfigTcpCheckOutputReference(this as any, "tcp_check", true);
   public get tcpCheck() {
-    return this.interpolationForAttribute('tcp_check') as any;
+    return this.__tcpCheckOutput;
   }
-  public set tcpCheck(value: MonitoringUptimeCheckConfigTcpCheck[] ) {
+  public putTcpCheck(value: MonitoringUptimeCheckConfigTcpCheck | undefined) {
     this._tcpCheck = value;
   }
   public resetTcpCheck() {
@@ -503,11 +897,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringUptimeCheckConfigTimeouts;
+  private _timeouts?: MonitoringUptimeCheckConfigTimeouts | undefined; 
+  private __timeoutsOutput = new MonitoringUptimeCheckConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitoringUptimeCheckConfigTimeouts ) {
+  public putTimeouts(value: MonitoringUptimeCheckConfigTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -530,10 +925,10 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       selected_regions: cdktf.listMapper(cdktf.stringToTerraform)(this._selectedRegions),
       timeout: cdktf.stringToTerraform(this._timeout),
       content_matchers: cdktf.listMapper(monitoringUptimeCheckConfigContentMatchersToTerraform)(this._contentMatchers),
-      http_check: cdktf.listMapper(monitoringUptimeCheckConfigHttpCheckToTerraform)(this._httpCheck),
-      monitored_resource: cdktf.listMapper(monitoringUptimeCheckConfigMonitoredResourceToTerraform)(this._monitoredResource),
-      resource_group: cdktf.listMapper(monitoringUptimeCheckConfigResourceGroupToTerraform)(this._resourceGroup),
-      tcp_check: cdktf.listMapper(monitoringUptimeCheckConfigTcpCheckToTerraform)(this._tcpCheck),
+      http_check: monitoringUptimeCheckConfigHttpCheckToTerraform(this._httpCheck),
+      monitored_resource: monitoringUptimeCheckConfigMonitoredResourceToTerraform(this._monitoredResource),
+      resource_group: monitoringUptimeCheckConfigResourceGroupToTerraform(this._resourceGroup),
+      tcp_check: monitoringUptimeCheckConfigTcpCheckToTerraform(this._tcpCheck),
       timeouts: monitoringUptimeCheckConfigTimeoutsToTerraform(this._timeouts),
     };
   }

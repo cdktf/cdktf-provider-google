@@ -73,7 +73,7 @@ export class SecretManagerSecretIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -86,11 +86,11 @@ export class SecretManagerSecretIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -102,7 +102,7 @@ export class SecretManagerSecretIamPolicy extends cdktf.TerraformResource {
   }
 
   // secret_id - computed: false, optional: false, required: true
-  private _secretId: string;
+  private _secretId?: string; 
   public get secretId() {
     return this.getStringAttribute('secret_id');
   }

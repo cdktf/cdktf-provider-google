@@ -48,7 +48,7 @@ consistency to improve availability.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#single_cluster_routing BigtableAppProfile#single_cluster_routing}
   */
-  readonly singleClusterRouting?: BigtableAppProfileSingleClusterRouting[];
+  readonly singleClusterRouting?: BigtableAppProfileSingleClusterRouting;
   /**
   * timeouts block
   * 
@@ -72,14 +72,56 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
   readonly clusterId: string;
 }
 
-function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: BigtableAppProfileSingleClusterRouting): any {
+function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: BigtableAppProfileSingleClusterRoutingOutputReference | BigtableAppProfileSingleClusterRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_transactional_writes: cdktf.booleanToTerraform(struct!.allowTransactionalWrites),
     cluster_id: cdktf.stringToTerraform(struct!.clusterId),
   }
 }
 
+export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_transactional_writes - computed: false, optional: true, required: false
+  private _allowTransactionalWrites?: boolean | cdktf.IResolvable | undefined; 
+  public get allowTransactionalWrites() {
+    return this.getBooleanAttribute('allow_transactional_writes') as any;
+  }
+  public set allowTransactionalWrites(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowTransactionalWrites = value;
+  }
+  public resetAllowTransactionalWrites() {
+    this._allowTransactionalWrites = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowTransactionalWritesInput() {
+    return this._allowTransactionalWrites
+  }
+
+  // cluster_id - computed: false, optional: false, required: true
+  private _clusterId?: string; 
+  public get clusterId() {
+    return this.getStringAttribute('cluster_id');
+  }
+  public set clusterId(value: string) {
+    this._clusterId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterIdInput() {
+    return this._clusterId
+  }
+}
 export interface BigtableAppProfileTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#create BigtableAppProfile#create}
@@ -95,8 +137,11 @@ export interface BigtableAppProfileTimeouts {
   readonly update?: string;
 }
 
-function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeouts): any {
+function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeoutsOutputReference | BigtableAppProfileTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -104,6 +149,64 @@ function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeou
   }
 }
 
+export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html google_bigtable_app_profile}
@@ -152,7 +255,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   // ==========
 
   // app_profile_id - computed: false, optional: false, required: true
-  private _appProfileId: string;
+  private _appProfileId?: string; 
   public get appProfileId() {
     return this.getStringAttribute('app_profile_id');
   }
@@ -165,11 +268,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -186,11 +289,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // ignore_warnings - computed: false, optional: true, required: false
-  private _ignoreWarnings?: boolean | cdktf.IResolvable;
+  private _ignoreWarnings?: boolean | cdktf.IResolvable | undefined; 
   public get ignoreWarnings() {
-    return this.getBooleanAttribute('ignore_warnings');
+    return this.getBooleanAttribute('ignore_warnings') as any;
   }
-  public set ignoreWarnings(value: boolean | cdktf.IResolvable ) {
+  public set ignoreWarnings(value: boolean | cdktf.IResolvable | undefined) {
     this._ignoreWarnings = value;
   }
   public resetIgnoreWarnings() {
@@ -202,11 +305,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // instance - computed: false, optional: true, required: false
-  private _instance?: string;
+  private _instance?: string | undefined; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
-  public set instance(value: string ) {
+  public set instance(value: string | undefined) {
     this._instance = value;
   }
   public resetInstance() {
@@ -218,11 +321,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // multi_cluster_routing_use_any - computed: false, optional: true, required: false
-  private _multiClusterRoutingUseAny?: boolean | cdktf.IResolvable;
+  private _multiClusterRoutingUseAny?: boolean | cdktf.IResolvable | undefined; 
   public get multiClusterRoutingUseAny() {
-    return this.getBooleanAttribute('multi_cluster_routing_use_any');
+    return this.getBooleanAttribute('multi_cluster_routing_use_any') as any;
   }
-  public set multiClusterRoutingUseAny(value: boolean | cdktf.IResolvable ) {
+  public set multiClusterRoutingUseAny(value: boolean | cdktf.IResolvable | undefined) {
     this._multiClusterRoutingUseAny = value;
   }
   public resetMultiClusterRoutingUseAny() {
@@ -239,11 +342,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -255,11 +358,12 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // single_cluster_routing - computed: false, optional: true, required: false
-  private _singleClusterRouting?: BigtableAppProfileSingleClusterRouting[];
+  private _singleClusterRouting?: BigtableAppProfileSingleClusterRouting | undefined; 
+  private __singleClusterRoutingOutput = new BigtableAppProfileSingleClusterRoutingOutputReference(this as any, "single_cluster_routing", true);
   public get singleClusterRouting() {
-    return this.interpolationForAttribute('single_cluster_routing') as any;
+    return this.__singleClusterRoutingOutput;
   }
-  public set singleClusterRouting(value: BigtableAppProfileSingleClusterRouting[] ) {
+  public putSingleClusterRouting(value: BigtableAppProfileSingleClusterRouting | undefined) {
     this._singleClusterRouting = value;
   }
   public resetSingleClusterRouting() {
@@ -271,11 +375,12 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BigtableAppProfileTimeouts;
+  private _timeouts?: BigtableAppProfileTimeouts | undefined; 
+  private __timeoutsOutput = new BigtableAppProfileTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: BigtableAppProfileTimeouts ) {
+  public putTimeouts(value: BigtableAppProfileTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -298,7 +403,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       instance: cdktf.stringToTerraform(this._instance),
       multi_cluster_routing_use_any: cdktf.booleanToTerraform(this._multiClusterRoutingUseAny),
       project: cdktf.stringToTerraform(this._project),
-      single_cluster_routing: cdktf.listMapper(bigtableAppProfileSingleClusterRoutingToTerraform)(this._singleClusterRouting),
+      single_cluster_routing: bigtableAppProfileSingleClusterRoutingToTerraform(this._singleClusterRouting),
       timeouts: bigtableAppProfileTimeoutsToTerraform(this._timeouts),
     };
   }

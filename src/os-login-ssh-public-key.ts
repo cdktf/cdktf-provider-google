@@ -53,8 +53,11 @@ export interface OsLoginSshPublicKeyTimeouts {
   readonly update?: string;
 }
 
-function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTimeouts): any {
+function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTimeoutsOutputReference | OsLoginSshPublicKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -62,6 +65,64 @@ function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTime
   }
 }
 
+export class OsLoginSshPublicKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key.html google_os_login_ssh_public_key}
@@ -107,11 +168,11 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   // ==========
 
   // expiration_time_usec - computed: false, optional: true, required: false
-  private _expirationTimeUsec?: string;
+  private _expirationTimeUsec?: string | undefined; 
   public get expirationTimeUsec() {
     return this.getStringAttribute('expiration_time_usec');
   }
-  public set expirationTimeUsec(value: string ) {
+  public set expirationTimeUsec(value: string | undefined) {
     this._expirationTimeUsec = value;
   }
   public resetExpirationTimeUsec() {
@@ -133,7 +194,7 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   }
 
   // key - computed: false, optional: false, required: true
-  private _key: string;
+  private _key?: string; 
   public get key() {
     return this.getStringAttribute('key');
   }
@@ -146,11 +207,11 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -162,7 +223,7 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   }
 
   // user - computed: false, optional: false, required: true
-  private _user: string;
+  private _user?: string; 
   public get user() {
     return this.getStringAttribute('user');
   }
@@ -175,11 +236,12 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: OsLoginSshPublicKeyTimeouts;
+  private _timeouts?: OsLoginSshPublicKeyTimeouts | undefined; 
+  private __timeoutsOutput = new OsLoginSshPublicKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: OsLoginSshPublicKeyTimeouts ) {
+  public putTimeouts(value: OsLoginSshPublicKeyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

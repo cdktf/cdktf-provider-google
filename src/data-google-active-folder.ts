@@ -58,7 +58,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   // ==========
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -81,7 +81,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }

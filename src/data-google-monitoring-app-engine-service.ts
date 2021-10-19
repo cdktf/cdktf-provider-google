@@ -79,7 +79,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   }
 
   // module_id - computed: false, optional: false, required: true
-  private _moduleId: string;
+  private _moduleId?: string; 
   public get moduleId() {
     return this.getStringAttribute('module_id');
   }
@@ -97,11 +97,11 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

@@ -80,11 +80,13 @@ export class DataGoogleComputeResourcePolicyInstanceSchedulePolicy extends cdktf
 
   // vm_start_schedule - computed: true, optional: false, required: false
   public get vmStartSchedule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('vm_start_schedule') as any;
   }
 
   // vm_stop_schedule - computed: true, optional: false, required: false
   public get vmStopSchedule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('vm_stop_schedule') as any;
   }
 }
@@ -140,6 +142,7 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeekly
 
   // day_of_weeks - computed: true, optional: false, required: false
   public get dayOfWeeks() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('day_of_weeks') as any;
   }
 }
@@ -147,16 +150,19 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule exten
 
   // daily_schedule - computed: true, optional: false, required: false
   public get dailySchedule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('daily_schedule') as any;
   }
 
   // hourly_schedule - computed: true, optional: false, required: false
   public get hourlySchedule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('hourly_schedule') as any;
   }
 
   // weekly_schedule - computed: true, optional: false, required: false
   public get weeklySchedule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('weekly_schedule') as any;
   }
 }
@@ -164,11 +170,12 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProper
 
   // guest_flush - computed: true, optional: false, required: false
   public get guestFlush() {
-    return this.getBooleanAttribute('guest_flush');
+    return this.getBooleanAttribute('guest_flush') as any;
   }
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
 
@@ -181,16 +188,19 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicy extends cdktf
 
   // retention_policy - computed: true, optional: false, required: false
   public get retentionPolicy() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('retention_policy') as any;
   }
 
   // schedule - computed: true, optional: false, required: false
   public get schedule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('schedule') as any;
   }
 
   // snapshot_properties - computed: true, optional: false, required: false
   public get snapshotProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('snapshot_properties') as any;
   }
 }
@@ -257,7 +267,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -270,11 +280,11 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -286,11 +296,11 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string ) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {

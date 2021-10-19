@@ -55,7 +55,7 @@ groups or customers/{customer_id} for Google Groups.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#group_key CloudIdentityGroup#group_key}
   */
-  readonly groupKey: CloudIdentityGroupGroupKey[];
+  readonly groupKey: CloudIdentityGroupGroupKey;
   /**
   * timeouts block
   * 
@@ -93,14 +93,56 @@ and must be in the form of 'identitysources/{identity_source_id}'.
   readonly namespace?: string;
 }
 
-function cloudIdentityGroupGroupKeyToTerraform(struct?: CloudIdentityGroupGroupKey): any {
+function cloudIdentityGroupGroupKeyToTerraform(struct?: CloudIdentityGroupGroupKeyOutputReference | CloudIdentityGroupGroupKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     id: cdktf.stringToTerraform(struct!.id),
     namespace: cdktf.stringToTerraform(struct!.namespace),
   }
 }
 
+export class CloudIdentityGroupGroupKeyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id
+  }
+
+  // namespace - computed: false, optional: true, required: false
+  private _namespace?: string | undefined; 
+  public get namespace() {
+    return this.getStringAttribute('namespace');
+  }
+  public set namespace(value: string | undefined) {
+    this._namespace = value;
+  }
+  public resetNamespace() {
+    this._namespace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceInput() {
+    return this._namespace
+  }
+}
 export interface CloudIdentityGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html#create CloudIdentityGroup#create}
@@ -116,8 +158,11 @@ export interface CloudIdentityGroupTimeouts {
   readonly update?: string;
 }
 
-function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeouts): any {
+function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeoutsOutputReference | CloudIdentityGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -125,6 +170,64 @@ function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeou
   }
 }
 
+export class CloudIdentityGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group.html google_cloud_identity_group}
@@ -177,11 +280,11 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -193,11 +296,11 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -214,11 +317,11 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // initial_group_config - computed: false, optional: true, required: false
-  private _initialGroupConfig?: string;
+  private _initialGroupConfig?: string | undefined; 
   public get initialGroupConfig() {
     return this.getStringAttribute('initial_group_config');
   }
-  public set initialGroupConfig(value: string ) {
+  public set initialGroupConfig(value: string | undefined) {
     this._initialGroupConfig = value;
   }
   public resetInitialGroupConfig() {
@@ -230,8 +333,9 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: false, required: true
-  private _labels: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
   public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
@@ -248,7 +352,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
@@ -266,11 +370,12 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // group_key - computed: false, optional: false, required: true
-  private _groupKey: CloudIdentityGroupGroupKey[];
+  private _groupKey?: CloudIdentityGroupGroupKey; 
+  private __groupKeyOutput = new CloudIdentityGroupGroupKeyOutputReference(this as any, "group_key", true);
   public get groupKey() {
-    return this.interpolationForAttribute('group_key') as any;
+    return this.__groupKeyOutput;
   }
-  public set groupKey(value: CloudIdentityGroupGroupKey[]) {
+  public putGroupKey(value: CloudIdentityGroupGroupKey) {
     this._groupKey = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -279,11 +384,12 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudIdentityGroupTimeouts;
+  private _timeouts?: CloudIdentityGroupTimeouts | undefined; 
+  private __timeoutsOutput = new CloudIdentityGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: CloudIdentityGroupTimeouts ) {
+  public putTimeouts(value: CloudIdentityGroupTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -305,7 +411,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
       initial_group_config: cdktf.stringToTerraform(this._initialGroupConfig),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       parent: cdktf.stringToTerraform(this._parent),
-      group_key: cdktf.listMapper(cloudIdentityGroupGroupKeyToTerraform)(this._groupKey),
+      group_key: cloudIdentityGroupGroupKeyToTerraform(this._groupKey),
       timeouts: cloudIdentityGroupTimeoutsToTerraform(this._timeouts),
     };
   }

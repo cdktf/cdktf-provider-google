@@ -165,43 +165,43 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#cdn_policy ComputeRegionBackendService#cdn_policy}
   */
-  readonly cdnPolicy?: ComputeRegionBackendServiceCdnPolicy[];
+  readonly cdnPolicy?: ComputeRegionBackendServiceCdnPolicy;
   /**
   * circuit_breakers block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#circuit_breakers ComputeRegionBackendService#circuit_breakers}
   */
-  readonly circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers[];
+  readonly circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers;
   /**
   * consistent_hash block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#consistent_hash ComputeRegionBackendService#consistent_hash}
   */
-  readonly consistentHash?: ComputeRegionBackendServiceConsistentHash[];
+  readonly consistentHash?: ComputeRegionBackendServiceConsistentHash;
   /**
   * failover_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#failover_policy ComputeRegionBackendService#failover_policy}
   */
-  readonly failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy[];
+  readonly failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy;
   /**
   * iap block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#iap ComputeRegionBackendService#iap}
   */
-  readonly iap?: ComputeRegionBackendServiceIap[];
+  readonly iap?: ComputeRegionBackendServiceIap;
   /**
   * log_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#log_config ComputeRegionBackendService#log_config}
   */
-  readonly logConfig?: ComputeRegionBackendServiceLogConfig[];
+  readonly logConfig?: ComputeRegionBackendServiceLogConfig;
   /**
   * outlier_detection block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#outlier_detection ComputeRegionBackendService#outlier_detection}
   */
-  readonly outlierDetection?: ComputeRegionBackendServiceOutlierDetection[];
+  readonly outlierDetection?: ComputeRegionBackendServiceOutlierDetection;
   /**
   * timeouts block
   * 
@@ -352,6 +352,9 @@ Cannot be set for INTERNAL backend services.
 
 function computeRegionBackendServiceBackendToTerraform(struct?: ComputeRegionBackendServiceBackend): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     balancing_mode: cdktf.stringToTerraform(struct!.balancingMode),
     capacity_scaler: cdktf.numberToTerraform(struct!.capacityScaler),
@@ -417,8 +420,11 @@ delimiters.
   readonly queryStringWhitelist?: string[];
 }
 
-function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy): any {
+function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     include_host: cdktf.booleanToTerraform(struct!.includeHost),
     include_protocol: cdktf.booleanToTerraform(struct!.includeProtocol),
@@ -428,6 +434,96 @@ function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: 
   }
 }
 
+export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // include_host - computed: false, optional: true, required: false
+  private _includeHost?: boolean | cdktf.IResolvable | undefined; 
+  public get includeHost() {
+    return this.getBooleanAttribute('include_host') as any;
+  }
+  public set includeHost(value: boolean | cdktf.IResolvable | undefined) {
+    this._includeHost = value;
+  }
+  public resetIncludeHost() {
+    this._includeHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeHostInput() {
+    return this._includeHost
+  }
+
+  // include_protocol - computed: false, optional: true, required: false
+  private _includeProtocol?: boolean | cdktf.IResolvable | undefined; 
+  public get includeProtocol() {
+    return this.getBooleanAttribute('include_protocol') as any;
+  }
+  public set includeProtocol(value: boolean | cdktf.IResolvable | undefined) {
+    this._includeProtocol = value;
+  }
+  public resetIncludeProtocol() {
+    this._includeProtocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeProtocolInput() {
+    return this._includeProtocol
+  }
+
+  // include_query_string - computed: false, optional: true, required: false
+  private _includeQueryString?: boolean | cdktf.IResolvable | undefined; 
+  public get includeQueryString() {
+    return this.getBooleanAttribute('include_query_string') as any;
+  }
+  public set includeQueryString(value: boolean | cdktf.IResolvable | undefined) {
+    this._includeQueryString = value;
+  }
+  public resetIncludeQueryString() {
+    this._includeQueryString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeQueryStringInput() {
+    return this._includeQueryString
+  }
+
+  // query_string_blacklist - computed: false, optional: true, required: false
+  private _queryStringBlacklist?: string[] | undefined; 
+  public get queryStringBlacklist() {
+    return this.getListAttribute('query_string_blacklist');
+  }
+  public set queryStringBlacklist(value: string[] | undefined) {
+    this._queryStringBlacklist = value;
+  }
+  public resetQueryStringBlacklist() {
+    this._queryStringBlacklist = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryStringBlacklistInput() {
+    return this._queryStringBlacklist
+  }
+
+  // query_string_whitelist - computed: false, optional: true, required: false
+  private _queryStringWhitelist?: string[] | undefined; 
+  public get queryStringWhitelist() {
+    return this.getListAttribute('query_string_whitelist');
+  }
+  public set queryStringWhitelist(value: string[] | undefined) {
+    this._queryStringWhitelist = value;
+  }
+  public resetQueryStringWhitelist() {
+    this._queryStringWhitelist = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryStringWhitelistInput() {
+    return this._queryStringWhitelist
+  }
+}
 export interface ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy {
   /**
   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
@@ -440,6 +536,9 @@ can be specified as values, and you cannot specify a status code more than once.
 
 function computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     code: cdktf.numberToTerraform(struct!.code),
   }
@@ -504,7 +603,7 @@ responses will not be altered.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#cache_key_policy ComputeRegionBackendService#cache_key_policy}
   */
-  readonly cacheKeyPolicy?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy[];
+  readonly cacheKeyPolicy?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy;
   /**
   * negative_caching_policy block
   * 
@@ -513,8 +612,11 @@ responses will not be altered.
   readonly negativeCachingPolicy?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[];
 }
 
-function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicy): any {
+function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyOutputReference | ComputeRegionBackendServiceCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cache_mode: cdktf.stringToTerraform(struct!.cacheMode),
     client_ttl: cdktf.numberToTerraform(struct!.clientTtl),
@@ -523,11 +625,167 @@ function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionB
     negative_caching: cdktf.booleanToTerraform(struct!.negativeCaching),
     serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
-    cache_key_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform)(struct!.cacheKeyPolicy),
+    cache_key_policy: computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
     negative_caching_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
   }
 }
 
+export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cache_mode - computed: true, optional: true, required: false
+  private _cacheMode?: string | undefined; 
+  public get cacheMode() {
+    return this.getStringAttribute('cache_mode');
+  }
+  public set cacheMode(value: string | undefined) {
+    this._cacheMode = value;
+  }
+  public resetCacheMode() {
+    this._cacheMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheModeInput() {
+    return this._cacheMode
+  }
+
+  // client_ttl - computed: true, optional: true, required: false
+  private _clientTtl?: number | undefined; 
+  public get clientTtl() {
+    return this.getNumberAttribute('client_ttl');
+  }
+  public set clientTtl(value: number | undefined) {
+    this._clientTtl = value;
+  }
+  public resetClientTtl() {
+    this._clientTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientTtlInput() {
+    return this._clientTtl
+  }
+
+  // default_ttl - computed: true, optional: true, required: false
+  private _defaultTtl?: number | undefined; 
+  public get defaultTtl() {
+    return this.getNumberAttribute('default_ttl');
+  }
+  public set defaultTtl(value: number | undefined) {
+    this._defaultTtl = value;
+  }
+  public resetDefaultTtl() {
+    this._defaultTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTtlInput() {
+    return this._defaultTtl
+  }
+
+  // max_ttl - computed: true, optional: true, required: false
+  private _maxTtl?: number | undefined; 
+  public get maxTtl() {
+    return this.getNumberAttribute('max_ttl');
+  }
+  public set maxTtl(value: number | undefined) {
+    this._maxTtl = value;
+  }
+  public resetMaxTtl() {
+    this._maxTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxTtlInput() {
+    return this._maxTtl
+  }
+
+  // negative_caching - computed: true, optional: true, required: false
+  private _negativeCaching?: boolean | cdktf.IResolvable | undefined; 
+  public get negativeCaching() {
+    return this.getBooleanAttribute('negative_caching') as any;
+  }
+  public set negativeCaching(value: boolean | cdktf.IResolvable | undefined) {
+    this._negativeCaching = value;
+  }
+  public resetNegativeCaching() {
+    this._negativeCaching = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negativeCachingInput() {
+    return this._negativeCaching
+  }
+
+  // serve_while_stale - computed: true, optional: true, required: false
+  private _serveWhileStale?: number | undefined; 
+  public get serveWhileStale() {
+    return this.getNumberAttribute('serve_while_stale');
+  }
+  public set serveWhileStale(value: number | undefined) {
+    this._serveWhileStale = value;
+  }
+  public resetServeWhileStale() {
+    this._serveWhileStale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serveWhileStaleInput() {
+    return this._serveWhileStale
+  }
+
+  // signed_url_cache_max_age_sec - computed: false, optional: true, required: false
+  private _signedUrlCacheMaxAgeSec?: number | undefined; 
+  public get signedUrlCacheMaxAgeSec() {
+    return this.getNumberAttribute('signed_url_cache_max_age_sec');
+  }
+  public set signedUrlCacheMaxAgeSec(value: number | undefined) {
+    this._signedUrlCacheMaxAgeSec = value;
+  }
+  public resetSignedUrlCacheMaxAgeSec() {
+    this._signedUrlCacheMaxAgeSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signedUrlCacheMaxAgeSecInput() {
+    return this._signedUrlCacheMaxAgeSec
+  }
+
+  // cache_key_policy - computed: false, optional: true, required: false
+  private _cacheKeyPolicy?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined; 
+  private __cacheKeyPolicyOutput = new ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
+  public get cacheKeyPolicy() {
+    return this.__cacheKeyPolicyOutput;
+  }
+  public putCacheKeyPolicy(value: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined) {
+    this._cacheKeyPolicy = value;
+  }
+  public resetCacheKeyPolicy() {
+    this._cacheKeyPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheKeyPolicyInput() {
+    return this._cacheKeyPolicy
+  }
+
+  // negative_caching_policy - computed: false, optional: true, required: false
+  private _negativeCachingPolicy?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[] | undefined; 
+  public get negativeCachingPolicy() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('negative_caching_policy') as any;
+  }
+  public set negativeCachingPolicy(value: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[] | undefined) {
+    this._negativeCachingPolicy = value;
+  }
+  public resetNegativeCachingPolicy() {
+    this._negativeCachingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negativeCachingPolicyInput() {
+    return this._negativeCachingPolicy
+  }
+}
 export interface ComputeRegionBackendServiceCircuitBreakers {
   /**
   * The maximum number of connections to the backend cluster.
@@ -568,8 +826,11 @@ Defaults to 3.
   readonly maxRetries?: number;
 }
 
-function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: ComputeRegionBackendServiceCircuitBreakers): any {
+function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: ComputeRegionBackendServiceCircuitBreakersOutputReference | ComputeRegionBackendServiceCircuitBreakers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_connections: cdktf.numberToTerraform(struct!.maxConnections),
     max_pending_requests: cdktf.numberToTerraform(struct!.maxPendingRequests),
@@ -579,6 +840,96 @@ function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: ComputeR
   }
 }
 
+export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_connections - computed: false, optional: true, required: false
+  private _maxConnections?: number | undefined; 
+  public get maxConnections() {
+    return this.getNumberAttribute('max_connections');
+  }
+  public set maxConnections(value: number | undefined) {
+    this._maxConnections = value;
+  }
+  public resetMaxConnections() {
+    this._maxConnections = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConnectionsInput() {
+    return this._maxConnections
+  }
+
+  // max_pending_requests - computed: false, optional: true, required: false
+  private _maxPendingRequests?: number | undefined; 
+  public get maxPendingRequests() {
+    return this.getNumberAttribute('max_pending_requests');
+  }
+  public set maxPendingRequests(value: number | undefined) {
+    this._maxPendingRequests = value;
+  }
+  public resetMaxPendingRequests() {
+    this._maxPendingRequests = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxPendingRequestsInput() {
+    return this._maxPendingRequests
+  }
+
+  // max_requests - computed: false, optional: true, required: false
+  private _maxRequests?: number | undefined; 
+  public get maxRequests() {
+    return this.getNumberAttribute('max_requests');
+  }
+  public set maxRequests(value: number | undefined) {
+    this._maxRequests = value;
+  }
+  public resetMaxRequests() {
+    this._maxRequests = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRequestsInput() {
+    return this._maxRequests
+  }
+
+  // max_requests_per_connection - computed: false, optional: true, required: false
+  private _maxRequestsPerConnection?: number | undefined; 
+  public get maxRequestsPerConnection() {
+    return this.getNumberAttribute('max_requests_per_connection');
+  }
+  public set maxRequestsPerConnection(value: number | undefined) {
+    this._maxRequestsPerConnection = value;
+  }
+  public resetMaxRequestsPerConnection() {
+    this._maxRequestsPerConnection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRequestsPerConnectionInput() {
+    return this._maxRequestsPerConnection
+  }
+
+  // max_retries - computed: false, optional: true, required: false
+  private _maxRetries?: number | undefined; 
+  public get maxRetries() {
+    return this.getNumberAttribute('max_retries');
+  }
+  public set maxRetries(value: number | undefined) {
+    this._maxRetries = value;
+  }
+  public resetMaxRetries() {
+    this._maxRetries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRetriesInput() {
+    return this._maxRetries
+  }
+}
 export interface ComputeRegionBackendServiceConsistentHashHttpCookieTtl {
   /**
   * Span of time that's a fraction of a second at nanosecond
@@ -598,14 +949,56 @@ Must be from 0 to 315,576,000,000 inclusive.
   readonly seconds: number;
 }
 
-function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl): any {
+function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookieTtl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionBackendServiceConsistentHashHttpCookie {
   /**
   * Name of the cookie.
@@ -624,18 +1017,80 @@ export interface ComputeRegionBackendServiceConsistentHashHttpCookie {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#ttl ComputeRegionBackendService#ttl}
   */
-  readonly ttl?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl[];
+  readonly ttl?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl;
 }
 
-function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookie): any {
+function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookie): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     path: cdktf.stringToTerraform(struct!.path),
-    ttl: cdktf.listMapper(computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform)(struct!.ttl),
+    ttl: computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct!.ttl),
   }
 }
 
+export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string | undefined; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string | undefined) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string | undefined; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string | undefined) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // ttl - computed: false, optional: true, required: false
+  private _ttl?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined; 
+  private __ttlOutput = new ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference(this as any, "ttl", true);
+  public get ttl() {
+    return this.__ttlOutput;
+  }
+  public putTtl(value: ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined) {
+    this._ttl = value;
+  }
+  public resetTtl() {
+    this._ttl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl
+  }
+}
 export interface ComputeRegionBackendServiceConsistentHash {
   /**
   * The hash based on the value of the specified header field.
@@ -660,18 +1115,80 @@ Defaults to 1024.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#http_cookie ComputeRegionBackendService#http_cookie}
   */
-  readonly httpCookie?: ComputeRegionBackendServiceConsistentHashHttpCookie[];
+  readonly httpCookie?: ComputeRegionBackendServiceConsistentHashHttpCookie;
 }
 
-function computeRegionBackendServiceConsistentHashToTerraform(struct?: ComputeRegionBackendServiceConsistentHash): any {
+function computeRegionBackendServiceConsistentHashToTerraform(struct?: ComputeRegionBackendServiceConsistentHashOutputReference | ComputeRegionBackendServiceConsistentHash): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     http_header_name: cdktf.stringToTerraform(struct!.httpHeaderName),
     minimum_ring_size: cdktf.numberToTerraform(struct!.minimumRingSize),
-    http_cookie: cdktf.listMapper(computeRegionBackendServiceConsistentHashHttpCookieToTerraform)(struct!.httpCookie),
+    http_cookie: computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct!.httpCookie),
   }
 }
 
+export class ComputeRegionBackendServiceConsistentHashOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // http_header_name - computed: false, optional: true, required: false
+  private _httpHeaderName?: string | undefined; 
+  public get httpHeaderName() {
+    return this.getStringAttribute('http_header_name');
+  }
+  public set httpHeaderName(value: string | undefined) {
+    this._httpHeaderName = value;
+  }
+  public resetHttpHeaderName() {
+    this._httpHeaderName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpHeaderNameInput() {
+    return this._httpHeaderName
+  }
+
+  // minimum_ring_size - computed: false, optional: true, required: false
+  private _minimumRingSize?: number | undefined; 
+  public get minimumRingSize() {
+    return this.getNumberAttribute('minimum_ring_size');
+  }
+  public set minimumRingSize(value: number | undefined) {
+    this._minimumRingSize = value;
+  }
+  public resetMinimumRingSize() {
+    this._minimumRingSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumRingSizeInput() {
+    return this._minimumRingSize
+  }
+
+  // http_cookie - computed: false, optional: true, required: false
+  private _httpCookie?: ComputeRegionBackendServiceConsistentHashHttpCookie | undefined; 
+  private __httpCookieOutput = new ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference(this as any, "http_cookie", true);
+  public get httpCookie() {
+    return this.__httpCookieOutput;
+  }
+  public putHttpCookie(value: ComputeRegionBackendServiceConsistentHashHttpCookie | undefined) {
+    this._httpCookie = value;
+  }
+  public resetHttpCookie() {
+    this._httpCookie = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpCookieInput() {
+    return this._httpCookie
+  }
+}
 export interface ComputeRegionBackendServiceFailoverPolicy {
   /**
   * On failover or failback, this field indicates whether connection drain
@@ -710,8 +1227,11 @@ This field is only used with l4 load balancing.
   readonly failoverRatio?: number;
 }
 
-function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRegionBackendServiceFailoverPolicy): any {
+function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRegionBackendServiceFailoverPolicyOutputReference | ComputeRegionBackendServiceFailoverPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disable_connection_drain_on_failover: cdktf.booleanToTerraform(struct!.disableConnectionDrainOnFailover),
     drop_traffic_if_unhealthy: cdktf.booleanToTerraform(struct!.dropTrafficIfUnhealthy),
@@ -719,6 +1239,64 @@ function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRe
   }
 }
 
+export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // disable_connection_drain_on_failover - computed: false, optional: true, required: false
+  private _disableConnectionDrainOnFailover?: boolean | cdktf.IResolvable | undefined; 
+  public get disableConnectionDrainOnFailover() {
+    return this.getBooleanAttribute('disable_connection_drain_on_failover') as any;
+  }
+  public set disableConnectionDrainOnFailover(value: boolean | cdktf.IResolvable | undefined) {
+    this._disableConnectionDrainOnFailover = value;
+  }
+  public resetDisableConnectionDrainOnFailover() {
+    this._disableConnectionDrainOnFailover = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableConnectionDrainOnFailoverInput() {
+    return this._disableConnectionDrainOnFailover
+  }
+
+  // drop_traffic_if_unhealthy - computed: false, optional: true, required: false
+  private _dropTrafficIfUnhealthy?: boolean | cdktf.IResolvable | undefined; 
+  public get dropTrafficIfUnhealthy() {
+    return this.getBooleanAttribute('drop_traffic_if_unhealthy') as any;
+  }
+  public set dropTrafficIfUnhealthy(value: boolean | cdktf.IResolvable | undefined) {
+    this._dropTrafficIfUnhealthy = value;
+  }
+  public resetDropTrafficIfUnhealthy() {
+    this._dropTrafficIfUnhealthy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dropTrafficIfUnhealthyInput() {
+    return this._dropTrafficIfUnhealthy
+  }
+
+  // failover_ratio - computed: false, optional: true, required: false
+  private _failoverRatio?: number | undefined; 
+  public get failoverRatio() {
+    return this.getNumberAttribute('failover_ratio');
+  }
+  public set failoverRatio(value: number | undefined) {
+    this._failoverRatio = value;
+  }
+  public resetFailoverRatio() {
+    this._failoverRatio = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverRatioInput() {
+    return this._failoverRatio
+  }
+}
 export interface ComputeRegionBackendServiceIap {
   /**
   * OAuth2 Client ID for IAP
@@ -734,14 +1312,53 @@ export interface ComputeRegionBackendServiceIap {
   readonly oauth2ClientSecret: string;
 }
 
-function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegionBackendServiceIap): any {
+function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegionBackendServiceIapOutputReference | ComputeRegionBackendServiceIap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     oauth2_client_id: cdktf.stringToTerraform(struct!.oauth2ClientId),
     oauth2_client_secret: cdktf.stringToTerraform(struct!.oauth2ClientSecret),
   }
 }
 
+export class ComputeRegionBackendServiceIapOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // oauth2_client_id - computed: false, optional: false, required: true
+  private _oauth2ClientId?: string; 
+  public get oauth2ClientId() {
+    return this.getStringAttribute('oauth2_client_id');
+  }
+  public set oauth2ClientId(value: string) {
+    this._oauth2ClientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauth2ClientIdInput() {
+    return this._oauth2ClientId
+  }
+
+  // oauth2_client_secret - computed: false, optional: false, required: true
+  private _oauth2ClientSecret?: string; 
+  public get oauth2ClientSecret() {
+    return this.getStringAttribute('oauth2_client_secret');
+  }
+  public set oauth2ClientSecret(value: string) {
+    this._oauth2ClientSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauth2ClientSecretInput() {
+    return this._oauth2ClientSecret
+  }
+}
 export interface ComputeRegionBackendServiceLogConfig {
   /**
   * Whether to enable logging for the load balancer traffic served by this backend service.
@@ -760,14 +1377,59 @@ The default value is 1.0.
   readonly sampleRate?: number;
 }
 
-function computeRegionBackendServiceLogConfigToTerraform(struct?: ComputeRegionBackendServiceLogConfig): any {
+function computeRegionBackendServiceLogConfigToTerraform(struct?: ComputeRegionBackendServiceLogConfigOutputReference | ComputeRegionBackendServiceLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable: cdktf.booleanToTerraform(struct!.enable),
     sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
   }
 }
 
+export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable - computed: false, optional: true, required: false
+  private _enable?: boolean | cdktf.IResolvable | undefined; 
+  public get enable() {
+    return this.getBooleanAttribute('enable') as any;
+  }
+  public set enable(value: boolean | cdktf.IResolvable | undefined) {
+    this._enable = value;
+  }
+  public resetEnable() {
+    this._enable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableInput() {
+    return this._enable
+  }
+
+  // sample_rate - computed: false, optional: true, required: false
+  private _sampleRate?: number | undefined; 
+  public get sampleRate() {
+    return this.getNumberAttribute('sample_rate');
+  }
+  public set sampleRate(value: number | undefined) {
+    this._sampleRate = value;
+  }
+  public resetSampleRate() {
+    this._sampleRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sampleRateInput() {
+    return this._sampleRate
+  }
+}
 export interface ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -786,14 +1448,56 @@ inclusive.
   readonly seconds: number;
 }
 
-function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime): any {
+function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionBackendServiceOutlierDetectionInterval {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -812,14 +1516,56 @@ inclusive.
   readonly seconds: number;
 }
 
-function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionInterval): any {
+function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference | ComputeRegionBackendServiceOutlierDetectionInterval): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionBackendServiceOutlierDetection {
   /**
   * Number of errors before a host is ejected from the connection pool. When the
@@ -903,17 +1649,20 @@ runtime value should be 1900. Defaults to 1900.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#base_ejection_time ComputeRegionBackendService#base_ejection_time}
   */
-  readonly baseEjectionTime?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime[];
+  readonly baseEjectionTime?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime;
   /**
   * interval block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#interval ComputeRegionBackendService#interval}
   */
-  readonly interval?: ComputeRegionBackendServiceOutlierDetectionInterval[];
+  readonly interval?: ComputeRegionBackendServiceOutlierDetectionInterval;
 }
 
-function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: ComputeRegionBackendServiceOutlierDetection): any {
+function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionOutputReference | ComputeRegionBackendServiceOutlierDetection): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     consecutive_errors: cdktf.numberToTerraform(struct!.consecutiveErrors),
     consecutive_gateway_failure: cdktf.numberToTerraform(struct!.consecutiveGatewayFailure),
@@ -924,11 +1673,199 @@ function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: Compute
     success_rate_minimum_hosts: cdktf.numberToTerraform(struct!.successRateMinimumHosts),
     success_rate_request_volume: cdktf.numberToTerraform(struct!.successRateRequestVolume),
     success_rate_stdev_factor: cdktf.numberToTerraform(struct!.successRateStdevFactor),
-    base_ejection_time: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform)(struct!.baseEjectionTime),
-    interval: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionIntervalToTerraform)(struct!.interval),
+    base_ejection_time: computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct!.baseEjectionTime),
+    interval: computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct!.interval),
   }
 }
 
+export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // consecutive_errors - computed: false, optional: true, required: false
+  private _consecutiveErrors?: number | undefined; 
+  public get consecutiveErrors() {
+    return this.getNumberAttribute('consecutive_errors');
+  }
+  public set consecutiveErrors(value: number | undefined) {
+    this._consecutiveErrors = value;
+  }
+  public resetConsecutiveErrors() {
+    this._consecutiveErrors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consecutiveErrorsInput() {
+    return this._consecutiveErrors
+  }
+
+  // consecutive_gateway_failure - computed: false, optional: true, required: false
+  private _consecutiveGatewayFailure?: number | undefined; 
+  public get consecutiveGatewayFailure() {
+    return this.getNumberAttribute('consecutive_gateway_failure');
+  }
+  public set consecutiveGatewayFailure(value: number | undefined) {
+    this._consecutiveGatewayFailure = value;
+  }
+  public resetConsecutiveGatewayFailure() {
+    this._consecutiveGatewayFailure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consecutiveGatewayFailureInput() {
+    return this._consecutiveGatewayFailure
+  }
+
+  // enforcing_consecutive_errors - computed: false, optional: true, required: false
+  private _enforcingConsecutiveErrors?: number | undefined; 
+  public get enforcingConsecutiveErrors() {
+    return this.getNumberAttribute('enforcing_consecutive_errors');
+  }
+  public set enforcingConsecutiveErrors(value: number | undefined) {
+    this._enforcingConsecutiveErrors = value;
+  }
+  public resetEnforcingConsecutiveErrors() {
+    this._enforcingConsecutiveErrors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcingConsecutiveErrorsInput() {
+    return this._enforcingConsecutiveErrors
+  }
+
+  // enforcing_consecutive_gateway_failure - computed: false, optional: true, required: false
+  private _enforcingConsecutiveGatewayFailure?: number | undefined; 
+  public get enforcingConsecutiveGatewayFailure() {
+    return this.getNumberAttribute('enforcing_consecutive_gateway_failure');
+  }
+  public set enforcingConsecutiveGatewayFailure(value: number | undefined) {
+    this._enforcingConsecutiveGatewayFailure = value;
+  }
+  public resetEnforcingConsecutiveGatewayFailure() {
+    this._enforcingConsecutiveGatewayFailure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcingConsecutiveGatewayFailureInput() {
+    return this._enforcingConsecutiveGatewayFailure
+  }
+
+  // enforcing_success_rate - computed: false, optional: true, required: false
+  private _enforcingSuccessRate?: number | undefined; 
+  public get enforcingSuccessRate() {
+    return this.getNumberAttribute('enforcing_success_rate');
+  }
+  public set enforcingSuccessRate(value: number | undefined) {
+    this._enforcingSuccessRate = value;
+  }
+  public resetEnforcingSuccessRate() {
+    this._enforcingSuccessRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcingSuccessRateInput() {
+    return this._enforcingSuccessRate
+  }
+
+  // max_ejection_percent - computed: false, optional: true, required: false
+  private _maxEjectionPercent?: number | undefined; 
+  public get maxEjectionPercent() {
+    return this.getNumberAttribute('max_ejection_percent');
+  }
+  public set maxEjectionPercent(value: number | undefined) {
+    this._maxEjectionPercent = value;
+  }
+  public resetMaxEjectionPercent() {
+    this._maxEjectionPercent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxEjectionPercentInput() {
+    return this._maxEjectionPercent
+  }
+
+  // success_rate_minimum_hosts - computed: false, optional: true, required: false
+  private _successRateMinimumHosts?: number | undefined; 
+  public get successRateMinimumHosts() {
+    return this.getNumberAttribute('success_rate_minimum_hosts');
+  }
+  public set successRateMinimumHosts(value: number | undefined) {
+    this._successRateMinimumHosts = value;
+  }
+  public resetSuccessRateMinimumHosts() {
+    this._successRateMinimumHosts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successRateMinimumHostsInput() {
+    return this._successRateMinimumHosts
+  }
+
+  // success_rate_request_volume - computed: false, optional: true, required: false
+  private _successRateRequestVolume?: number | undefined; 
+  public get successRateRequestVolume() {
+    return this.getNumberAttribute('success_rate_request_volume');
+  }
+  public set successRateRequestVolume(value: number | undefined) {
+    this._successRateRequestVolume = value;
+  }
+  public resetSuccessRateRequestVolume() {
+    this._successRateRequestVolume = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successRateRequestVolumeInput() {
+    return this._successRateRequestVolume
+  }
+
+  // success_rate_stdev_factor - computed: false, optional: true, required: false
+  private _successRateStdevFactor?: number | undefined; 
+  public get successRateStdevFactor() {
+    return this.getNumberAttribute('success_rate_stdev_factor');
+  }
+  public set successRateStdevFactor(value: number | undefined) {
+    this._successRateStdevFactor = value;
+  }
+  public resetSuccessRateStdevFactor() {
+    this._successRateStdevFactor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successRateStdevFactorInput() {
+    return this._successRateStdevFactor
+  }
+
+  // base_ejection_time - computed: false, optional: true, required: false
+  private _baseEjectionTime?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined; 
+  private __baseEjectionTimeOutput = new ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this as any, "base_ejection_time", true);
+  public get baseEjectionTime() {
+    return this.__baseEjectionTimeOutput;
+  }
+  public putBaseEjectionTime(value: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined) {
+    this._baseEjectionTime = value;
+  }
+  public resetBaseEjectionTime() {
+    this._baseEjectionTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseEjectionTimeInput() {
+    return this._baseEjectionTime
+  }
+
+  // interval - computed: false, optional: true, required: false
+  private _interval?: ComputeRegionBackendServiceOutlierDetectionInterval | undefined; 
+  private __intervalOutput = new ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference(this as any, "interval", true);
+  public get interval() {
+    return this.__intervalOutput;
+  }
+  public putInterval(value: ComputeRegionBackendServiceOutlierDetectionInterval | undefined) {
+    this._interval = value;
+  }
+  public resetInterval() {
+    this._interval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval
+  }
+}
 export interface ComputeRegionBackendServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html#create ComputeRegionBackendService#create}
@@ -944,8 +1881,11 @@ export interface ComputeRegionBackendServiceTimeouts {
   readonly update?: string;
 }
 
-function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBackendServiceTimeouts): any {
+function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBackendServiceTimeoutsOutputReference | ComputeRegionBackendServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -953,6 +1893,64 @@ function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBa
   }
 }
 
+export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html google_compute_region_backend_service}
@@ -1017,11 +2015,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   // ==========
 
   // affinity_cookie_ttl_sec - computed: false, optional: true, required: false
-  private _affinityCookieTtlSec?: number;
+  private _affinityCookieTtlSec?: number | undefined; 
   public get affinityCookieTtlSec() {
     return this.getNumberAttribute('affinity_cookie_ttl_sec');
   }
-  public set affinityCookieTtlSec(value: number ) {
+  public set affinityCookieTtlSec(value: number | undefined) {
     this._affinityCookieTtlSec = value;
   }
   public resetAffinityCookieTtlSec() {
@@ -1033,11 +2031,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // connection_draining_timeout_sec - computed: false, optional: true, required: false
-  private _connectionDrainingTimeoutSec?: number;
+  private _connectionDrainingTimeoutSec?: number | undefined; 
   public get connectionDrainingTimeoutSec() {
     return this.getNumberAttribute('connection_draining_timeout_sec');
   }
-  public set connectionDrainingTimeoutSec(value: number ) {
+  public set connectionDrainingTimeoutSec(value: number | undefined) {
     this._connectionDrainingTimeoutSec = value;
   }
   public resetConnectionDrainingTimeoutSec() {
@@ -1054,11 +2052,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -1070,11 +2068,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean | cdktf.IResolvable;
+  private _enableCdn?: boolean | cdktf.IResolvable | undefined; 
   public get enableCdn() {
-    return this.getBooleanAttribute('enable_cdn');
+    return this.getBooleanAttribute('enable_cdn') as any;
   }
-  public set enableCdn(value: boolean | cdktf.IResolvable ) {
+  public set enableCdn(value: boolean | cdktf.IResolvable | undefined) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {
@@ -1091,11 +2089,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // health_checks - computed: false, optional: true, required: false
-  private _healthChecks?: string[];
+  private _healthChecks?: string[] | undefined; 
   public get healthChecks() {
     return this.getListAttribute('health_checks');
   }
-  public set healthChecks(value: string[] ) {
+  public set healthChecks(value: string[] | undefined) {
     this._healthChecks = value;
   }
   public resetHealthChecks() {
@@ -1112,11 +2110,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
-  private _loadBalancingScheme?: string;
+  private _loadBalancingScheme?: string | undefined; 
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string ) {
+  public set loadBalancingScheme(value: string | undefined) {
     this._loadBalancingScheme = value;
   }
   public resetLoadBalancingScheme() {
@@ -1128,11 +2126,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // locality_lb_policy - computed: false, optional: true, required: false
-  private _localityLbPolicy?: string;
+  private _localityLbPolicy?: string | undefined; 
   public get localityLbPolicy() {
     return this.getStringAttribute('locality_lb_policy');
   }
-  public set localityLbPolicy(value: string ) {
+  public set localityLbPolicy(value: string | undefined) {
     this._localityLbPolicy = value;
   }
   public resetLocalityLbPolicy() {
@@ -1144,7 +2142,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -1157,11 +2155,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string;
+  private _network?: string | undefined; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string ) {
+  public set network(value: string | undefined) {
     this._network = value;
   }
   public resetNetwork() {
@@ -1173,11 +2171,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // port_name - computed: true, optional: true, required: false
-  private _portName?: string;
+  private _portName?: string | undefined; 
   public get portName() {
     return this.getStringAttribute('port_name');
   }
-  public set portName(value: string) {
+  public set portName(value: string | undefined) {
     this._portName = value;
   }
   public resetPortName() {
@@ -1189,11 +2187,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -1205,11 +2203,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // protocol - computed: true, optional: true, required: false
-  private _protocol?: string;
+  private _protocol?: string | undefined; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string) {
+  public set protocol(value: string | undefined) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -1221,11 +2219,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -1242,11 +2240,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // session_affinity - computed: true, optional: true, required: false
-  private _sessionAffinity?: string;
+  private _sessionAffinity?: string | undefined; 
   public get sessionAffinity() {
     return this.getStringAttribute('session_affinity');
   }
-  public set sessionAffinity(value: string) {
+  public set sessionAffinity(value: string | undefined) {
     this._sessionAffinity = value;
   }
   public resetSessionAffinity() {
@@ -1258,11 +2256,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // timeout_sec - computed: true, optional: true, required: false
-  private _timeoutSec?: number;
+  private _timeoutSec?: number | undefined; 
   public get timeoutSec() {
     return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number) {
+  public set timeoutSec(value: number | undefined) {
     this._timeoutSec = value;
   }
   public resetTimeoutSec() {
@@ -1274,11 +2272,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // backend - computed: false, optional: true, required: false
-  private _backend?: ComputeRegionBackendServiceBackend[];
+  private _backend?: ComputeRegionBackendServiceBackend[] | undefined; 
   public get backend() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend') as any;
   }
-  public set backend(value: ComputeRegionBackendServiceBackend[] ) {
+  public set backend(value: ComputeRegionBackendServiceBackend[] | undefined) {
     this._backend = value;
   }
   public resetBackend() {
@@ -1290,11 +2289,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy?: ComputeRegionBackendServiceCdnPolicy[];
+  private _cdnPolicy?: ComputeRegionBackendServiceCdnPolicy | undefined; 
+  private __cdnPolicyOutput = new ComputeRegionBackendServiceCdnPolicyOutputReference(this as any, "cdn_policy", true);
   public get cdnPolicy() {
-    return this.interpolationForAttribute('cdn_policy') as any;
+    return this.__cdnPolicyOutput;
   }
-  public set cdnPolicy(value: ComputeRegionBackendServiceCdnPolicy[] ) {
+  public putCdnPolicy(value: ComputeRegionBackendServiceCdnPolicy | undefined) {
     this._cdnPolicy = value;
   }
   public resetCdnPolicy() {
@@ -1306,11 +2306,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
-  private _circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers[];
+  private _circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers | undefined; 
+  private __circuitBreakersOutput = new ComputeRegionBackendServiceCircuitBreakersOutputReference(this as any, "circuit_breakers", true);
   public get circuitBreakers() {
-    return this.interpolationForAttribute('circuit_breakers') as any;
+    return this.__circuitBreakersOutput;
   }
-  public set circuitBreakers(value: ComputeRegionBackendServiceCircuitBreakers[] ) {
+  public putCircuitBreakers(value: ComputeRegionBackendServiceCircuitBreakers | undefined) {
     this._circuitBreakers = value;
   }
   public resetCircuitBreakers() {
@@ -1322,11 +2323,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // consistent_hash - computed: false, optional: true, required: false
-  private _consistentHash?: ComputeRegionBackendServiceConsistentHash[];
+  private _consistentHash?: ComputeRegionBackendServiceConsistentHash | undefined; 
+  private __consistentHashOutput = new ComputeRegionBackendServiceConsistentHashOutputReference(this as any, "consistent_hash", true);
   public get consistentHash() {
-    return this.interpolationForAttribute('consistent_hash') as any;
+    return this.__consistentHashOutput;
   }
-  public set consistentHash(value: ComputeRegionBackendServiceConsistentHash[] ) {
+  public putConsistentHash(value: ComputeRegionBackendServiceConsistentHash | undefined) {
     this._consistentHash = value;
   }
   public resetConsistentHash() {
@@ -1338,11 +2340,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // failover_policy - computed: false, optional: true, required: false
-  private _failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy[];
+  private _failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy | undefined; 
+  private __failoverPolicyOutput = new ComputeRegionBackendServiceFailoverPolicyOutputReference(this as any, "failover_policy", true);
   public get failoverPolicy() {
-    return this.interpolationForAttribute('failover_policy') as any;
+    return this.__failoverPolicyOutput;
   }
-  public set failoverPolicy(value: ComputeRegionBackendServiceFailoverPolicy[] ) {
+  public putFailoverPolicy(value: ComputeRegionBackendServiceFailoverPolicy | undefined) {
     this._failoverPolicy = value;
   }
   public resetFailoverPolicy() {
@@ -1354,11 +2357,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap?: ComputeRegionBackendServiceIap[];
+  private _iap?: ComputeRegionBackendServiceIap | undefined; 
+  private __iapOutput = new ComputeRegionBackendServiceIapOutputReference(this as any, "iap", true);
   public get iap() {
-    return this.interpolationForAttribute('iap') as any;
+    return this.__iapOutput;
   }
-  public set iap(value: ComputeRegionBackendServiceIap[] ) {
+  public putIap(value: ComputeRegionBackendServiceIap | undefined) {
     this._iap = value;
   }
   public resetIap() {
@@ -1370,11 +2374,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeRegionBackendServiceLogConfig[];
+  private _logConfig?: ComputeRegionBackendServiceLogConfig | undefined; 
+  private __logConfigOutput = new ComputeRegionBackendServiceLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.interpolationForAttribute('log_config') as any;
+    return this.__logConfigOutput;
   }
-  public set logConfig(value: ComputeRegionBackendServiceLogConfig[] ) {
+  public putLogConfig(value: ComputeRegionBackendServiceLogConfig | undefined) {
     this._logConfig = value;
   }
   public resetLogConfig() {
@@ -1386,11 +2391,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // outlier_detection - computed: false, optional: true, required: false
-  private _outlierDetection?: ComputeRegionBackendServiceOutlierDetection[];
+  private _outlierDetection?: ComputeRegionBackendServiceOutlierDetection | undefined; 
+  private __outlierDetectionOutput = new ComputeRegionBackendServiceOutlierDetectionOutputReference(this as any, "outlier_detection", true);
   public get outlierDetection() {
-    return this.interpolationForAttribute('outlier_detection') as any;
+    return this.__outlierDetectionOutput;
   }
-  public set outlierDetection(value: ComputeRegionBackendServiceOutlierDetection[] ) {
+  public putOutlierDetection(value: ComputeRegionBackendServiceOutlierDetection | undefined) {
     this._outlierDetection = value;
   }
   public resetOutlierDetection() {
@@ -1402,11 +2408,12 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionBackendServiceTimeouts;
+  private _timeouts?: ComputeRegionBackendServiceTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRegionBackendServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRegionBackendServiceTimeouts ) {
+  public putTimeouts(value: ComputeRegionBackendServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1439,13 +2446,13 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
       backend: cdktf.listMapper(computeRegionBackendServiceBackendToTerraform)(this._backend),
-      cdn_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyToTerraform)(this._cdnPolicy),
-      circuit_breakers: cdktf.listMapper(computeRegionBackendServiceCircuitBreakersToTerraform)(this._circuitBreakers),
-      consistent_hash: cdktf.listMapper(computeRegionBackendServiceConsistentHashToTerraform)(this._consistentHash),
-      failover_policy: cdktf.listMapper(computeRegionBackendServiceFailoverPolicyToTerraform)(this._failoverPolicy),
-      iap: cdktf.listMapper(computeRegionBackendServiceIapToTerraform)(this._iap),
-      log_config: cdktf.listMapper(computeRegionBackendServiceLogConfigToTerraform)(this._logConfig),
-      outlier_detection: cdktf.listMapper(computeRegionBackendServiceOutlierDetectionToTerraform)(this._outlierDetection),
+      cdn_policy: computeRegionBackendServiceCdnPolicyToTerraform(this._cdnPolicy),
+      circuit_breakers: computeRegionBackendServiceCircuitBreakersToTerraform(this._circuitBreakers),
+      consistent_hash: computeRegionBackendServiceConsistentHashToTerraform(this._consistentHash),
+      failover_policy: computeRegionBackendServiceFailoverPolicyToTerraform(this._failoverPolicy),
+      iap: computeRegionBackendServiceIapToTerraform(this._iap),
+      log_config: computeRegionBackendServiceLogConfigToTerraform(this._logConfig),
+      outlier_detection: computeRegionBackendServiceOutlierDetectionToTerraform(this._outlierDetection),
       timeouts: computeRegionBackendServiceTimeoutsToTerraform(this._timeouts),
     };
   }

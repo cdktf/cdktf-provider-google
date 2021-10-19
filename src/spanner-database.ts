@@ -42,7 +42,7 @@ the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#encryption_config SpannerDatabase#encryption_config}
   */
-  readonly encryptionConfig?: SpannerDatabaseEncryptionConfig[];
+  readonly encryptionConfig?: SpannerDatabaseEncryptionConfig;
   /**
   * timeouts block
   * 
@@ -60,13 +60,39 @@ in the same location as the Spanner Database.
   readonly kmsKeyName: string;
 }
 
-function spannerDatabaseEncryptionConfigToTerraform(struct?: SpannerDatabaseEncryptionConfig): any {
+function spannerDatabaseEncryptionConfigToTerraform(struct?: SpannerDatabaseEncryptionConfigOutputReference | SpannerDatabaseEncryptionConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
 }
 
+export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName
+  }
+}
 export interface SpannerDatabaseTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#create SpannerDatabase#create}
@@ -82,8 +108,11 @@ export interface SpannerDatabaseTimeouts {
   readonly update?: string;
 }
 
-function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeouts): any {
+function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeoutsOutputReference | SpannerDatabaseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -91,6 +120,64 @@ function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeouts): a
   }
 }
 
+export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html google_spanner_database}
@@ -138,11 +225,11 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   // ==========
 
   // ddl - computed: false, optional: true, required: false
-  private _ddl?: string[];
+  private _ddl?: string[] | undefined; 
   public get ddl() {
     return this.getListAttribute('ddl');
   }
-  public set ddl(value: string[] ) {
+  public set ddl(value: string[] | undefined) {
     this._ddl = value;
   }
   public resetDdl() {
@@ -154,11 +241,11 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean | cdktf.IResolvable;
+  private _deletionProtection?: boolean | cdktf.IResolvable | undefined; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection');
+    return this.getBooleanAttribute('deletion_protection') as any;
   }
-  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable | undefined) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -175,7 +262,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // instance - computed: false, optional: false, required: true
-  private _instance: string;
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
@@ -188,7 +275,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -201,11 +288,11 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -222,11 +309,12 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig?: SpannerDatabaseEncryptionConfig[];
+  private _encryptionConfig?: SpannerDatabaseEncryptionConfig | undefined; 
+  private __encryptionConfigOutput = new SpannerDatabaseEncryptionConfigOutputReference(this as any, "encryption_config", true);
   public get encryptionConfig() {
-    return this.interpolationForAttribute('encryption_config') as any;
+    return this.__encryptionConfigOutput;
   }
-  public set encryptionConfig(value: SpannerDatabaseEncryptionConfig[] ) {
+  public putEncryptionConfig(value: SpannerDatabaseEncryptionConfig | undefined) {
     this._encryptionConfig = value;
   }
   public resetEncryptionConfig() {
@@ -238,11 +326,12 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpannerDatabaseTimeouts;
+  private _timeouts?: SpannerDatabaseTimeouts | undefined; 
+  private __timeoutsOutput = new SpannerDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SpannerDatabaseTimeouts ) {
+  public putTimeouts(value: SpannerDatabaseTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -264,7 +353,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
       instance: cdktf.stringToTerraform(this._instance),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      encryption_config: cdktf.listMapper(spannerDatabaseEncryptionConfigToTerraform)(this._encryptionConfig),
+      encryption_config: spannerDatabaseEncryptionConfigToTerraform(this._encryptionConfig),
       timeouts: spannerDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }

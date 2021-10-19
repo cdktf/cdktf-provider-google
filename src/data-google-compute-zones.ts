@@ -73,11 +73,11 @@ export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -89,11 +89,11 @@ export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string ) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -105,11 +105,11 @@ export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string;
+  private _status?: string | undefined; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string ) {
+  public set status(value: string | undefined) {
     this._status = value;
   }
   public resetStatus() {

@@ -44,7 +44,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#notification_config HealthcareHl7V2Store#notification_config}
   */
-  readonly notificationConfig?: HealthcareHl7V2StoreNotificationConfig[];
+  readonly notificationConfig?: HealthcareHl7V2StoreNotificationConfig;
   /**
   * notification_configs block
   * 
@@ -56,7 +56,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#parser_config HealthcareHl7V2Store#parser_config}
   */
-  readonly parserConfig?: HealthcareHl7V2StoreParserConfig[];
+  readonly parserConfig?: HealthcareHl7V2StoreParserConfig;
   /**
   * timeouts block
   * 
@@ -78,13 +78,39 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
   readonly pubsubTopic: string;
 }
 
-function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: HealthcareHl7V2StoreNotificationConfig): any {
+function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigOutputReference | HealthcareHl7V2StoreNotificationConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
   }
 }
 
+export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // pubsub_topic - computed: false, optional: false, required: true
+  private _pubsubTopic?: string; 
+  public get pubsubTopic() {
+    return this.getStringAttribute('pubsub_topic');
+  }
+  public set pubsubTopic(value: string) {
+    this._pubsubTopic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubTopicInput() {
+    return this._pubsubTopic
+  }
+}
 export interface HealthcareHl7V2StoreNotificationConfigs {
   /**
   * Restricts notifications sent for messages matching a filter. If this is empty, all messages
@@ -119,6 +145,9 @@ If a notification cannot be published to Cloud Pub/Sub, errors will be logged to
 
 function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     filter: cdktf.stringToTerraform(struct!.filter),
     pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
@@ -155,8 +184,11 @@ A base64-encoded string.
   readonly version?: string;
 }
 
-function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfig): any {
+function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfigOutputReference | HealthcareHl7V2StoreParserConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_null_header: cdktf.booleanToTerraform(struct!.allowNullHeader),
     schema: cdktf.stringToTerraform(struct!.schema),
@@ -165,6 +197,80 @@ function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2Sto
   }
 }
 
+export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_null_header - computed: false, optional: true, required: false
+  private _allowNullHeader?: boolean | cdktf.IResolvable | undefined; 
+  public get allowNullHeader() {
+    return this.getBooleanAttribute('allow_null_header') as any;
+  }
+  public set allowNullHeader(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowNullHeader = value;
+  }
+  public resetAllowNullHeader() {
+    this._allowNullHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowNullHeaderInput() {
+    return this._allowNullHeader
+  }
+
+  // schema - computed: false, optional: true, required: false
+  private _schema?: string | undefined; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string | undefined) {
+    this._schema = value;
+  }
+  public resetSchema() {
+    this._schema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema
+  }
+
+  // segment_terminator - computed: false, optional: true, required: false
+  private _segmentTerminator?: string | undefined; 
+  public get segmentTerminator() {
+    return this.getStringAttribute('segment_terminator');
+  }
+  public set segmentTerminator(value: string | undefined) {
+    this._segmentTerminator = value;
+  }
+  public resetSegmentTerminator() {
+    this._segmentTerminator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get segmentTerminatorInput() {
+    return this._segmentTerminator
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string | undefined; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string | undefined) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+}
 export interface HealthcareHl7V2StoreTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html#create HealthcareHl7V2Store#create}
@@ -180,8 +286,11 @@ export interface HealthcareHl7V2StoreTimeouts {
   readonly update?: string;
 }
 
-function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeouts): any {
+function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeoutsOutputReference | HealthcareHl7V2StoreTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -189,6 +298,64 @@ function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTi
   }
 }
 
+export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store.html google_healthcare_hl7_v2_store}
@@ -236,7 +403,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   // ==========
 
   // dataset - computed: false, optional: false, required: true
-  private _dataset: string;
+  private _dataset?: string; 
   public get dataset() {
     return this.getStringAttribute('dataset');
   }
@@ -254,11 +421,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -270,7 +438,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -288,11 +456,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig?: HealthcareHl7V2StoreNotificationConfig[];
+  private _notificationConfig?: HealthcareHl7V2StoreNotificationConfig | undefined; 
+  private __notificationConfigOutput = new HealthcareHl7V2StoreNotificationConfigOutputReference(this as any, "notification_config", true);
   public get notificationConfig() {
-    return this.interpolationForAttribute('notification_config') as any;
+    return this.__notificationConfigOutput;
   }
-  public set notificationConfig(value: HealthcareHl7V2StoreNotificationConfig[] ) {
+  public putNotificationConfig(value: HealthcareHl7V2StoreNotificationConfig | undefined) {
     this._notificationConfig = value;
   }
   public resetNotificationConfig() {
@@ -304,11 +473,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // notification_configs - computed: false, optional: true, required: false
-  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[];
+  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[] | undefined; 
   public get notificationConfigs() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('notification_configs') as any;
   }
-  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[] ) {
+  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[] | undefined) {
     this._notificationConfigs = value;
   }
   public resetNotificationConfigs() {
@@ -320,11 +490,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // parser_config - computed: false, optional: true, required: false
-  private _parserConfig?: HealthcareHl7V2StoreParserConfig[];
+  private _parserConfig?: HealthcareHl7V2StoreParserConfig | undefined; 
+  private __parserConfigOutput = new HealthcareHl7V2StoreParserConfigOutputReference(this as any, "parser_config", true);
   public get parserConfig() {
-    return this.interpolationForAttribute('parser_config') as any;
+    return this.__parserConfigOutput;
   }
-  public set parserConfig(value: HealthcareHl7V2StoreParserConfig[] ) {
+  public putParserConfig(value: HealthcareHl7V2StoreParserConfig | undefined) {
     this._parserConfig = value;
   }
   public resetParserConfig() {
@@ -336,11 +507,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HealthcareHl7V2StoreTimeouts;
+  private _timeouts?: HealthcareHl7V2StoreTimeouts | undefined; 
+  private __timeoutsOutput = new HealthcareHl7V2StoreTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: HealthcareHl7V2StoreTimeouts ) {
+  public putTimeouts(value: HealthcareHl7V2StoreTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -360,9 +532,9 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       dataset: cdktf.stringToTerraform(this._dataset),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
-      notification_config: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigToTerraform)(this._notificationConfig),
+      notification_config: healthcareHl7V2StoreNotificationConfigToTerraform(this._notificationConfig),
       notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs),
-      parser_config: cdktf.listMapper(healthcareHl7V2StoreParserConfigToTerraform)(this._parserConfig),
+      parser_config: healthcareHl7V2StoreParserConfigToTerraform(this._parserConfig),
       timeouts: healthcareHl7V2StoreTimeoutsToTerraform(this._timeouts),
     };
   }

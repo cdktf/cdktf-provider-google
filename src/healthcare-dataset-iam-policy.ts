@@ -58,7 +58,7 @@ export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // dataset_id - computed: false, optional: false, required: true
-  private _datasetId: string;
+  private _datasetId?: string; 
   public get datasetId() {
     return this.getStringAttribute('dataset_id');
   }
@@ -81,7 +81,7 @@ export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

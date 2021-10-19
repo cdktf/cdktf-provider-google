@@ -118,14 +118,59 @@ export interface ComputeAddressTimeouts {
   readonly delete?: string;
 }
 
-function computeAddressTimeoutsToTerraform(struct?: ComputeAddressTimeouts): any {
+function computeAddressTimeoutsToTerraform(struct?: ComputeAddressTimeoutsOutputReference | ComputeAddressTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class ComputeAddressTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_address.html google_compute_address}
@@ -178,11 +223,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   // ==========
 
   // address - computed: true, optional: true, required: false
-  private _address?: string;
+  private _address?: string | undefined; 
   public get address() {
     return this.getStringAttribute('address');
   }
-  public set address(value: string) {
+  public set address(value: string | undefined) {
     this._address = value;
   }
   public resetAddress() {
@@ -194,11 +239,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // address_type - computed: false, optional: true, required: false
-  private _addressType?: string;
+  private _addressType?: string | undefined; 
   public get addressType() {
     return this.getStringAttribute('address_type');
   }
-  public set addressType(value: string ) {
+  public set addressType(value: string | undefined) {
     this._addressType = value;
   }
   public resetAddressType() {
@@ -215,11 +260,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -236,7 +281,7 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -249,11 +294,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string;
+  private _network?: string | undefined; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string ) {
+  public set network(value: string | undefined) {
     this._network = value;
   }
   public resetNetwork() {
@@ -265,11 +310,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // network_tier - computed: true, optional: true, required: false
-  private _networkTier?: string;
+  private _networkTier?: string | undefined; 
   public get networkTier() {
     return this.getStringAttribute('network_tier');
   }
-  public set networkTier(value: string) {
+  public set networkTier(value: string | undefined) {
     this._networkTier = value;
   }
   public resetNetworkTier() {
@@ -281,11 +326,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // prefix_length - computed: false, optional: true, required: false
-  private _prefixLength?: number;
+  private _prefixLength?: number | undefined; 
   public get prefixLength() {
     return this.getNumberAttribute('prefix_length');
   }
-  public set prefixLength(value: number ) {
+  public set prefixLength(value: number | undefined) {
     this._prefixLength = value;
   }
   public resetPrefixLength() {
@@ -297,11 +342,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -313,11 +358,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // purpose - computed: true, optional: true, required: false
-  private _purpose?: string;
+  private _purpose?: string | undefined; 
   public get purpose() {
     return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string) {
+  public set purpose(value: string | undefined) {
     this._purpose = value;
   }
   public resetPurpose() {
@@ -329,11 +374,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -350,11 +395,11 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // subnetwork - computed: true, optional: true, required: false
-  private _subnetwork?: string;
+  private _subnetwork?: string | undefined; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string) {
+  public set subnetwork(value: string | undefined) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -371,11 +416,12 @@ export class ComputeAddress extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeAddressTimeouts;
+  private _timeouts?: ComputeAddressTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeAddressTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeAddressTimeouts ) {
+  public putTimeouts(value: ComputeAddressTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

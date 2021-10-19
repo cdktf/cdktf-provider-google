@@ -58,7 +58,7 @@ export class KmsCryptoKeyIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // crypto_key_id - computed: false, optional: false, required: true
-  private _cryptoKeyId: string;
+  private _cryptoKeyId?: string; 
   public get cryptoKeyId() {
     return this.getStringAttribute('crypto_key_id');
   }
@@ -81,7 +81,7 @@ export class KmsCryptoKeyIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

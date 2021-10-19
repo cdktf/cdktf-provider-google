@@ -63,7 +63,7 @@ export class FolderIamPolicy extends cdktf.TerraformResource {
   }
 
   // folder - computed: false, optional: false, required: true
-  private _folder: string;
+  private _folder?: string; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
@@ -81,7 +81,7 @@ export class FolderIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

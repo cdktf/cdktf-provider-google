@@ -24,7 +24,7 @@ export interface StorageBucketIamBindingConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#condition StorageBucketIamBinding#condition}
   */
-  readonly condition?: StorageBucketIamBindingCondition[];
+  readonly condition?: StorageBucketIamBindingCondition;
 }
 export interface StorageBucketIamBindingCondition {
   /**
@@ -41,8 +41,11 @@ export interface StorageBucketIamBindingCondition {
   readonly title: string;
 }
 
-function storageBucketIamBindingConditionToTerraform(struct?: StorageBucketIamBindingCondition): any {
+function storageBucketIamBindingConditionToTerraform(struct?: StorageBucketIamBindingConditionOutputReference | StorageBucketIamBindingCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -50,6 +53,58 @@ function storageBucketIamBindingConditionToTerraform(struct?: StorageBucketIamBi
   }
 }
 
+export class StorageBucketIamBindingConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html google_storage_bucket_iam_binding}
@@ -94,7 +149,7 @@ export class StorageBucketIamBinding extends cdktf.TerraformResource {
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -117,7 +172,7 @@ export class StorageBucketIamBinding extends cdktf.TerraformResource {
   }
 
   // members - computed: false, optional: false, required: true
-  private _members: string[];
+  private _members?: string[]; 
   public get members() {
     return this.getListAttribute('members');
   }
@@ -130,7 +185,7 @@ export class StorageBucketIamBinding extends cdktf.TerraformResource {
   }
 
   // role - computed: false, optional: false, required: true
-  private _role: string;
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
@@ -143,11 +198,12 @@ export class StorageBucketIamBinding extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: StorageBucketIamBindingCondition[];
+  private _condition?: StorageBucketIamBindingCondition | undefined; 
+  private __conditionOutput = new StorageBucketIamBindingConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: StorageBucketIamBindingCondition[] ) {
+  public putCondition(value: StorageBucketIamBindingCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -167,7 +223,7 @@ export class StorageBucketIamBinding extends cdktf.TerraformResource {
       bucket: cdktf.stringToTerraform(this._bucket),
       members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
       role: cdktf.stringToTerraform(this._role),
-      condition: cdktf.listMapper(storageBucketIamBindingConditionToTerraform)(this._condition),
+      condition: storageBucketIamBindingConditionToTerraform(this._condition),
     };
   }
 }

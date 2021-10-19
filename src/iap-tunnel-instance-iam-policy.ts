@@ -78,7 +78,7 @@ export class IapTunnelInstanceIamPolicy extends cdktf.TerraformResource {
   }
 
   // instance - computed: false, optional: false, required: true
-  private _instance: string;
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
@@ -91,7 +91,7 @@ export class IapTunnelInstanceIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -104,11 +104,11 @@ export class IapTunnelInstanceIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -120,11 +120,11 @@ export class IapTunnelInstanceIamPolicy extends cdktf.TerraformResource {
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string;
+  private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string) {
+  public set zone(value: string | undefined) {
     this._zone = value;
   }
   public resetZone() {

@@ -107,6 +107,9 @@ Note: the parameter content is subject to redaction if either parameter level re
 
 function dialogflowCxIntentParametersToTerraform(struct?: DialogflowCxIntentParameters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     entity_type: cdktf.stringToTerraform(struct!.entityType),
     id: cdktf.stringToTerraform(struct!.id),
@@ -130,8 +133,11 @@ export interface DialogflowCxIntentTimeouts {
   readonly update?: string;
 }
 
-function dialogflowCxIntentTimeoutsToTerraform(struct?: DialogflowCxIntentTimeouts): any {
+function dialogflowCxIntentTimeoutsToTerraform(struct?: DialogflowCxIntentTimeoutsOutputReference | DialogflowCxIntentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -139,6 +145,64 @@ function dialogflowCxIntentTimeoutsToTerraform(struct?: DialogflowCxIntentTimeou
   }
 }
 
+export class DialogflowCxIntentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface DialogflowCxIntentTrainingPhrasesParts {
   /**
   * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
@@ -156,6 +220,9 @@ export interface DialogflowCxIntentTrainingPhrasesParts {
 
 function dialogflowCxIntentTrainingPhrasesPartsToTerraform(struct?: DialogflowCxIntentTrainingPhrasesParts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     parameter_id: cdktf.stringToTerraform(struct!.parameterId),
     text: cdktf.stringToTerraform(struct!.text),
@@ -179,6 +246,9 @@ export interface DialogflowCxIntentTrainingPhrases {
 
 function dialogflowCxIntentTrainingPhrasesToTerraform(struct?: DialogflowCxIntentTrainingPhrases): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     repeat_count: cdktf.numberToTerraform(struct!.repeatCount),
     parts: cdktf.listMapper(dialogflowCxIntentTrainingPhrasesPartsToTerraform)(struct!.parts),
@@ -235,11 +305,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -251,7 +321,7 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -269,11 +339,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // is_fallback - computed: false, optional: true, required: false
-  private _isFallback?: boolean | cdktf.IResolvable;
+  private _isFallback?: boolean | cdktf.IResolvable | undefined; 
   public get isFallback() {
-    return this.getBooleanAttribute('is_fallback');
+    return this.getBooleanAttribute('is_fallback') as any;
   }
-  public set isFallback(value: boolean | cdktf.IResolvable ) {
+  public set isFallback(value: boolean | cdktf.IResolvable | undefined) {
     this._isFallback = value;
   }
   public resetIsFallback() {
@@ -285,11 +355,12 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -301,11 +372,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // language_code - computed: false, optional: true, required: false
-  private _languageCode?: string;
+  private _languageCode?: string | undefined; 
   public get languageCode() {
     return this.getStringAttribute('language_code');
   }
-  public set languageCode(value: string ) {
+  public set languageCode(value: string | undefined) {
     this._languageCode = value;
   }
   public resetLanguageCode() {
@@ -322,11 +393,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: true, required: false
-  private _parent?: string;
+  private _parent?: string | undefined; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
-  public set parent(value: string ) {
+  public set parent(value: string | undefined) {
     this._parent = value;
   }
   public resetParent() {
@@ -338,11 +409,11 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // priority - computed: false, optional: true, required: false
-  private _priority?: number;
+  private _priority?: number | undefined; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
-  public set priority(value: number ) {
+  public set priority(value: number | undefined) {
     this._priority = value;
   }
   public resetPriority() {
@@ -354,11 +425,12 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: DialogflowCxIntentParameters[];
+  private _parameters?: DialogflowCxIntentParameters[] | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: DialogflowCxIntentParameters[] ) {
+  public set parameters(value: DialogflowCxIntentParameters[] | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -370,11 +442,12 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowCxIntentTimeouts;
+  private _timeouts?: DialogflowCxIntentTimeouts | undefined; 
+  private __timeoutsOutput = new DialogflowCxIntentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DialogflowCxIntentTimeouts ) {
+  public putTimeouts(value: DialogflowCxIntentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -386,11 +459,12 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   }
 
   // training_phrases - computed: false, optional: true, required: false
-  private _trainingPhrases?: DialogflowCxIntentTrainingPhrases[];
+  private _trainingPhrases?: DialogflowCxIntentTrainingPhrases[] | undefined; 
   public get trainingPhrases() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('training_phrases') as any;
   }
-  public set trainingPhrases(value: DialogflowCxIntentTrainingPhrases[] ) {
+  public set trainingPhrases(value: DialogflowCxIntentTrainingPhrases[] | undefined) {
     this._trainingPhrases = value;
   }
   public resetTrainingPhrases() {

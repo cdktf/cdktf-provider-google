@@ -94,7 +94,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
 
   // mesh_uid - computed: false, optional: false, required: true
-  private _meshUid: string;
+  private _meshUid?: string; 
   public get meshUid() {
     return this.getStringAttribute('mesh_uid');
   }
@@ -112,11 +112,11 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -133,7 +133,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
 
   // service_name - computed: false, optional: false, required: true
-  private _serviceName: string;
+  private _serviceName?: string; 
   public get serviceName() {
     return this.getStringAttribute('service_name');
   }
@@ -146,7 +146,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
 
   // service_namespace - computed: false, optional: false, required: true
-  private _serviceNamespace: string;
+  private _serviceNamespace?: string; 
   public get serviceNamespace() {
     return this.getStringAttribute('service_namespace');
   }

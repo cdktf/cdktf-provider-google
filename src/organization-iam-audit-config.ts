@@ -43,6 +43,9 @@ export interface OrganizationIamAuditConfigAuditLogConfig {
 
 function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     exempted_members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exemptedMembers),
     log_type: cdktf.stringToTerraform(struct!.logType),
@@ -102,7 +105,7 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
 
   // org_id - computed: false, optional: false, required: true
-  private _orgId: string;
+  private _orgId?: string; 
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
@@ -115,7 +118,7 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service: string;
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
@@ -128,8 +131,9 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
 
   // audit_log_config - computed: false, optional: false, required: true
-  private _auditLogConfig: OrganizationIamAuditConfigAuditLogConfig[];
+  private _auditLogConfig?: OrganizationIamAuditConfigAuditLogConfig[]; 
   public get auditLogConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('audit_log_config') as any;
   }
   public set auditLogConfig(value: OrganizationIamAuditConfigAuditLogConfig[]) {

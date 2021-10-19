@@ -58,7 +58,7 @@ export class BillingAccountIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // billing_account_id - computed: false, optional: false, required: true
-  private _billingAccountId: string;
+  private _billingAccountId?: string; 
   public get billingAccountId() {
     return this.getStringAttribute('billing_account_id');
   }
@@ -81,7 +81,7 @@ export class BillingAccountIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }

@@ -91,11 +91,12 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // keepers - computed: false, optional: true, required: false
-  private _keepers?: { [key: string]: string } | cdktf.IResolvable;
+  private _keepers?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get keepers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('keepers') as any;
   }
-  public set keepers(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set keepers(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._keepers = value;
   }
   public resetKeepers() {
@@ -107,11 +108,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // key_algorithm - computed: false, optional: true, required: false
-  private _keyAlgorithm?: string;
+  private _keyAlgorithm?: string | undefined; 
   public get keyAlgorithm() {
     return this.getStringAttribute('key_algorithm');
   }
-  public set keyAlgorithm(value: string ) {
+  public set keyAlgorithm(value: string | undefined) {
     this._keyAlgorithm = value;
   }
   public resetKeyAlgorithm() {
@@ -133,11 +134,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // private_key_type - computed: false, optional: true, required: false
-  private _privateKeyType?: string;
+  private _privateKeyType?: string | undefined; 
   public get privateKeyType() {
     return this.getStringAttribute('private_key_type');
   }
-  public set privateKeyType(value: string ) {
+  public set privateKeyType(value: string | undefined) {
     this._privateKeyType = value;
   }
   public resetPrivateKeyType() {
@@ -154,11 +155,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // public_key_data - computed: false, optional: true, required: false
-  private _publicKeyData?: string;
+  private _publicKeyData?: string | undefined; 
   public get publicKeyData() {
     return this.getStringAttribute('public_key_data');
   }
-  public set publicKeyData(value: string ) {
+  public set publicKeyData(value: string | undefined) {
     this._publicKeyData = value;
   }
   public resetPublicKeyData() {
@@ -170,11 +171,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // public_key_type - computed: false, optional: true, required: false
-  private _publicKeyType?: string;
+  private _publicKeyType?: string | undefined; 
   public get publicKeyType() {
     return this.getStringAttribute('public_key_type');
   }
-  public set publicKeyType(value: string ) {
+  public set publicKeyType(value: string | undefined) {
     this._publicKeyType = value;
   }
   public resetPublicKeyType() {
@@ -186,7 +187,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // service_account_id - computed: false, optional: false, required: true
-  private _serviceAccountId: string;
+  private _serviceAccountId?: string; 
   public get serviceAccountId() {
     return this.getStringAttribute('service_account_id');
   }

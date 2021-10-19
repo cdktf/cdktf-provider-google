@@ -33,6 +33,9 @@ export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
 
 function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataGoogleIamPolicyAuditConfigAuditLogConfigs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     exempted_members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exemptedMembers),
     log_type: cdktf.stringToTerraform(struct!.logType),
@@ -54,6 +57,9 @@ export interface DataGoogleIamPolicyAuditConfig {
 
 function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyAuditConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     service: cdktf.stringToTerraform(struct!.service),
     audit_log_configs: cdktf.listMapper(dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform)(struct!.auditLogConfigs),
@@ -75,8 +81,11 @@ export interface DataGoogleIamPolicyBindingCondition {
   readonly title: string;
 }
 
-function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPolicyBindingCondition): any {
+function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPolicyBindingConditionOutputReference | DataGoogleIamPolicyBindingCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -84,6 +93,58 @@ function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPo
   }
 }
 
+export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 export interface DataGoogleIamPolicyBinding {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#members DataGoogleIamPolicy#members}
@@ -98,15 +159,18 @@ export interface DataGoogleIamPolicyBinding {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#condition DataGoogleIamPolicy#condition}
   */
-  readonly condition?: DataGoogleIamPolicyBindingCondition[];
+  readonly condition?: DataGoogleIamPolicyBindingCondition;
 }
 
 function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBinding): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.members),
     role: cdktf.stringToTerraform(struct!.role),
-    condition: cdktf.listMapper(dataGoogleIamPolicyBindingConditionToTerraform)(struct!.condition),
+    condition: dataGoogleIamPolicyBindingConditionToTerraform(struct!.condition),
   }
 }
 
@@ -162,11 +226,12 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
 
   // audit_config - computed: false, optional: true, required: false
-  private _auditConfig?: DataGoogleIamPolicyAuditConfig[];
+  private _auditConfig?: DataGoogleIamPolicyAuditConfig[] | undefined; 
   public get auditConfig() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('audit_config') as any;
   }
-  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] ) {
+  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] | undefined) {
     this._auditConfig = value;
   }
   public resetAuditConfig() {
@@ -178,11 +243,12 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
 
   // binding - computed: false, optional: true, required: false
-  private _binding?: DataGoogleIamPolicyBinding[];
+  private _binding?: DataGoogleIamPolicyBinding[] | undefined; 
   public get binding() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('binding') as any;
   }
-  public set binding(value: DataGoogleIamPolicyBinding[] ) {
+  public set binding(value: DataGoogleIamPolicyBinding[] | undefined) {
     this._binding = value;
   }
   public resetBinding() {

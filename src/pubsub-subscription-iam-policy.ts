@@ -73,7 +73,7 @@ export class PubsubSubscriptionIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -86,11 +86,11 @@ export class PubsubSubscriptionIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -102,7 +102,7 @@ export class PubsubSubscriptionIamPolicy extends cdktf.TerraformResource {
   }
 
   // subscription - computed: false, optional: false, required: true
-  private _subscription: string;
+  private _subscription?: string; 
   public get subscription() {
     return this.getStringAttribute('subscription');
   }

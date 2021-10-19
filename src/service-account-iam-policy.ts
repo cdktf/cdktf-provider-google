@@ -68,7 +68,7 @@ export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -81,7 +81,7 @@ export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
   }
 
   // service_account_id - computed: false, optional: false, required: true
-  private _serviceAccountId: string;
+  private _serviceAccountId?: string; 
   public get serviceAccountId() {
     return this.getStringAttribute('service_account_id');
   }

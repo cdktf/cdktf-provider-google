@@ -53,7 +53,7 @@ last character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#cdn_policy ComputeBackendBucket#cdn_policy}
   */
-  readonly cdnPolicy?: ComputeBackendBucketCdnPolicy[];
+  readonly cdnPolicy?: ComputeBackendBucketCdnPolicy;
   /**
   * timeouts block
   * 
@@ -80,6 +80,9 @@ can be specified as values, and you cannot specify a status code more than once.
 
 function computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     code: cdktf.numberToTerraform(struct!.code),
     ttl: cdktf.numberToTerraform(struct!.ttl),
@@ -146,8 +149,11 @@ header. The actual headers served in responses will not be altered.
   readonly negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[];
 }
 
-function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicy): any {
+function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicyOutputReference | ComputeBackendBucketCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cache_mode: cdktf.stringToTerraform(struct!.cacheMode),
     client_ttl: cdktf.numberToTerraform(struct!.clientTtl),
@@ -160,6 +166,145 @@ function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketC
   }
 }
 
+export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cache_mode - computed: true, optional: true, required: false
+  private _cacheMode?: string | undefined; 
+  public get cacheMode() {
+    return this.getStringAttribute('cache_mode');
+  }
+  public set cacheMode(value: string | undefined) {
+    this._cacheMode = value;
+  }
+  public resetCacheMode() {
+    this._cacheMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheModeInput() {
+    return this._cacheMode
+  }
+
+  // client_ttl - computed: true, optional: true, required: false
+  private _clientTtl?: number | undefined; 
+  public get clientTtl() {
+    return this.getNumberAttribute('client_ttl');
+  }
+  public set clientTtl(value: number | undefined) {
+    this._clientTtl = value;
+  }
+  public resetClientTtl() {
+    this._clientTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientTtlInput() {
+    return this._clientTtl
+  }
+
+  // default_ttl - computed: true, optional: true, required: false
+  private _defaultTtl?: number | undefined; 
+  public get defaultTtl() {
+    return this.getNumberAttribute('default_ttl');
+  }
+  public set defaultTtl(value: number | undefined) {
+    this._defaultTtl = value;
+  }
+  public resetDefaultTtl() {
+    this._defaultTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTtlInput() {
+    return this._defaultTtl
+  }
+
+  // max_ttl - computed: true, optional: true, required: false
+  private _maxTtl?: number | undefined; 
+  public get maxTtl() {
+    return this.getNumberAttribute('max_ttl');
+  }
+  public set maxTtl(value: number | undefined) {
+    this._maxTtl = value;
+  }
+  public resetMaxTtl() {
+    this._maxTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxTtlInput() {
+    return this._maxTtl
+  }
+
+  // negative_caching - computed: true, optional: true, required: false
+  private _negativeCaching?: boolean | cdktf.IResolvable | undefined; 
+  public get negativeCaching() {
+    return this.getBooleanAttribute('negative_caching') as any;
+  }
+  public set negativeCaching(value: boolean | cdktf.IResolvable | undefined) {
+    this._negativeCaching = value;
+  }
+  public resetNegativeCaching() {
+    this._negativeCaching = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negativeCachingInput() {
+    return this._negativeCaching
+  }
+
+  // serve_while_stale - computed: true, optional: true, required: false
+  private _serveWhileStale?: number | undefined; 
+  public get serveWhileStale() {
+    return this.getNumberAttribute('serve_while_stale');
+  }
+  public set serveWhileStale(value: number | undefined) {
+    this._serveWhileStale = value;
+  }
+  public resetServeWhileStale() {
+    this._serveWhileStale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serveWhileStaleInput() {
+    return this._serveWhileStale
+  }
+
+  // signed_url_cache_max_age_sec - computed: false, optional: true, required: false
+  private _signedUrlCacheMaxAgeSec?: number | undefined; 
+  public get signedUrlCacheMaxAgeSec() {
+    return this.getNumberAttribute('signed_url_cache_max_age_sec');
+  }
+  public set signedUrlCacheMaxAgeSec(value: number | undefined) {
+    this._signedUrlCacheMaxAgeSec = value;
+  }
+  public resetSignedUrlCacheMaxAgeSec() {
+    this._signedUrlCacheMaxAgeSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signedUrlCacheMaxAgeSecInput() {
+    return this._signedUrlCacheMaxAgeSec
+  }
+
+  // negative_caching_policy - computed: false, optional: true, required: false
+  private _negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[] | undefined; 
+  public get negativeCachingPolicy() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('negative_caching_policy') as any;
+  }
+  public set negativeCachingPolicy(value: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[] | undefined) {
+    this._negativeCachingPolicy = value;
+  }
+  public resetNegativeCachingPolicy() {
+    this._negativeCachingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negativeCachingPolicyInput() {
+    return this._negativeCachingPolicy
+  }
+}
 export interface ComputeBackendBucketTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html#create ComputeBackendBucket#create}
@@ -175,8 +320,11 @@ export interface ComputeBackendBucketTimeouts {
   readonly update?: string;
 }
 
-function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTimeouts): any {
+function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTimeoutsOutputReference | ComputeBackendBucketTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -184,6 +332,64 @@ function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTi
   }
 }
 
+export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket.html google_compute_backend_bucket}
@@ -232,7 +438,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   // ==========
 
   // bucket_name - computed: false, optional: false, required: true
-  private _bucketName: string;
+  private _bucketName?: string; 
   public get bucketName() {
     return this.getStringAttribute('bucket_name');
   }
@@ -250,11 +456,11 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // custom_response_headers - computed: false, optional: true, required: false
-  private _customResponseHeaders?: string[];
+  private _customResponseHeaders?: string[] | undefined; 
   public get customResponseHeaders() {
     return this.getListAttribute('custom_response_headers');
   }
-  public set customResponseHeaders(value: string[] ) {
+  public set customResponseHeaders(value: string[] | undefined) {
     this._customResponseHeaders = value;
   }
   public resetCustomResponseHeaders() {
@@ -266,11 +472,11 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -282,11 +488,11 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean | cdktf.IResolvable;
+  private _enableCdn?: boolean | cdktf.IResolvable | undefined; 
   public get enableCdn() {
-    return this.getBooleanAttribute('enable_cdn');
+    return this.getBooleanAttribute('enable_cdn') as any;
   }
-  public set enableCdn(value: boolean | cdktf.IResolvable ) {
+  public set enableCdn(value: boolean | cdktf.IResolvable | undefined) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {
@@ -303,7 +509,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -316,11 +522,11 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -337,11 +543,12 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy?: ComputeBackendBucketCdnPolicy[];
+  private _cdnPolicy?: ComputeBackendBucketCdnPolicy | undefined; 
+  private __cdnPolicyOutput = new ComputeBackendBucketCdnPolicyOutputReference(this as any, "cdn_policy", true);
   public get cdnPolicy() {
-    return this.interpolationForAttribute('cdn_policy') as any;
+    return this.__cdnPolicyOutput;
   }
-  public set cdnPolicy(value: ComputeBackendBucketCdnPolicy[] ) {
+  public putCdnPolicy(value: ComputeBackendBucketCdnPolicy | undefined) {
     this._cdnPolicy = value;
   }
   public resetCdnPolicy() {
@@ -353,11 +560,12 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeBackendBucketTimeouts;
+  private _timeouts?: ComputeBackendBucketTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeBackendBucketTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeBackendBucketTimeouts ) {
+  public putTimeouts(value: ComputeBackendBucketTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -380,7 +588,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      cdn_policy: cdktf.listMapper(computeBackendBucketCdnPolicyToTerraform)(this._cdnPolicy),
+      cdn_policy: computeBackendBucketCdnPolicyToTerraform(this._cdnPolicy),
       timeouts: computeBackendBucketTimeoutsToTerraform(this._timeouts),
     };
   }

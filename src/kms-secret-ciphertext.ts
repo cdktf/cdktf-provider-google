@@ -44,14 +44,59 @@ export interface KmsSecretCiphertextTimeouts {
   readonly delete?: string;
 }
 
-function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTimeouts): any {
+function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTimeoutsOutputReference | KmsSecretCiphertextTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
 }
 
+export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext.html google_kms_secret_ciphertext}
@@ -96,11 +141,11 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   // ==========
 
   // additional_authenticated_data - computed: false, optional: true, required: false
-  private _additionalAuthenticatedData?: string;
+  private _additionalAuthenticatedData?: string | undefined; 
   public get additionalAuthenticatedData() {
     return this.getStringAttribute('additional_authenticated_data');
   }
-  public set additionalAuthenticatedData(value: string ) {
+  public set additionalAuthenticatedData(value: string | undefined) {
     this._additionalAuthenticatedData = value;
   }
   public resetAdditionalAuthenticatedData() {
@@ -117,7 +162,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
 
   // crypto_key - computed: false, optional: false, required: true
-  private _cryptoKey: string;
+  private _cryptoKey?: string; 
   public get cryptoKey() {
     return this.getStringAttribute('crypto_key');
   }
@@ -135,7 +180,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
 
   // plaintext - computed: false, optional: false, required: true
-  private _plaintext: string;
+  private _plaintext?: string; 
   public get plaintext() {
     return this.getStringAttribute('plaintext');
   }
@@ -148,11 +193,12 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KmsSecretCiphertextTimeouts;
+  private _timeouts?: KmsSecretCiphertextTimeouts | undefined; 
+  private __timeoutsOutput = new KmsSecretCiphertextTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KmsSecretCiphertextTimeouts ) {
+  public putTimeouts(value: KmsSecretCiphertextTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -85,6 +85,9 @@ export interface BigtableInstanceCluster {
 
 function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cluster_id: cdktf.stringToTerraform(struct!.clusterId),
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
@@ -141,11 +144,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   // ==========
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean | cdktf.IResolvable;
+  private _deletionProtection?: boolean | cdktf.IResolvable | undefined; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection');
+    return this.getBooleanAttribute('deletion_protection') as any;
   }
-  public set deletionProtection(value: boolean | cdktf.IResolvable ) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable | undefined) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -157,11 +160,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // display_name - computed: true, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -178,11 +181,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // instance_type - computed: false, optional: true, required: false
-  private _instanceType?: string;
+  private _instanceType?: string | undefined; 
   public get instanceType() {
     return this.getStringAttribute('instance_type');
   }
-  public set instanceType(value: string ) {
+  public set instanceType(value: string | undefined) {
     this._instanceType = value;
   }
   public resetInstanceType() {
@@ -194,11 +197,12 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -210,7 +214,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -223,11 +227,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -239,11 +243,12 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // cluster - computed: false, optional: true, required: false
-  private _cluster?: BigtableInstanceCluster[];
+  private _cluster?: BigtableInstanceCluster[] | undefined; 
   public get cluster() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cluster') as any;
   }
-  public set cluster(value: BigtableInstanceCluster[] ) {
+  public set cluster(value: BigtableInstanceCluster[] | undefined) {
     this._cluster = value;
   }
   public resetCluster() {

@@ -114,11 +114,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // ==========
 
   // config - computed: false, optional: true, required: false
-  private _config?: string;
+  private _config?: string | undefined; 
   public get config() {
     return this.getStringAttribute('config');
   }
-  public set config(value: string ) {
+  public set config(value: string | undefined) {
     this._config = value;
   }
   public resetConfig() {
@@ -130,11 +130,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -146,11 +146,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable;
+  private _forceDestroy?: boolean | cdktf.IResolvable | undefined; 
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy');
+    return this.getBooleanAttribute('force_destroy') as any;
   }
-  public set forceDestroy(value: boolean | cdktf.IResolvable ) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable | undefined) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -167,11 +167,12 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -183,7 +184,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -196,11 +197,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // num_nodes - computed: true, optional: true, required: false
-  private _numNodes?: number;
+  private _numNodes?: number | undefined; 
   public get numNodes() {
     return this.getNumberAttribute('num_nodes');
   }
-  public set numNodes(value: number) {
+  public set numNodes(value: number | undefined) {
     this._numNodes = value;
   }
   public resetNumNodes() {
@@ -212,11 +213,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // processing_units - computed: true, optional: true, required: false
-  private _processingUnits?: number;
+  private _processingUnits?: number | undefined; 
   public get processingUnits() {
     return this.getNumberAttribute('processing_units');
   }
-  public set processingUnits(value: number) {
+  public set processingUnits(value: number | undefined) {
     this._processingUnits = value;
   }
   public resetProcessingUnits() {
@@ -228,11 +229,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string ) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

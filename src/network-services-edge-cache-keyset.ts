@@ -64,6 +64,9 @@ Representations or encodings of the public key other than this will be rejected 
 
 function networkServicesEdgeCacheKeysetPublicKeyToTerraform(struct?: NetworkServicesEdgeCacheKeysetPublicKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     id: cdktf.stringToTerraform(struct!.id),
     value: cdktf.stringToTerraform(struct!.value),
@@ -85,8 +88,11 @@ export interface NetworkServicesEdgeCacheKeysetTimeouts {
   readonly update?: string;
 }
 
-function networkServicesEdgeCacheKeysetTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheKeysetTimeouts): any {
+function networkServicesEdgeCacheKeysetTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheKeysetTimeoutsOutputReference | NetworkServicesEdgeCacheKeysetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -94,6 +100,64 @@ function networkServicesEdgeCacheKeysetTimeoutsToTerraform(struct?: NetworkServi
   }
 }
 
+export class NetworkServicesEdgeCacheKeysetTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html google_network_services_edge_cache_keyset}
@@ -140,11 +204,11 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -161,11 +225,12 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -177,7 +242,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -190,11 +255,11 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -206,8 +271,9 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // public_key - computed: false, optional: false, required: true
-  private _publicKey: NetworkServicesEdgeCacheKeysetPublicKey[];
+  private _publicKey?: NetworkServicesEdgeCacheKeysetPublicKey[]; 
   public get publicKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('public_key') as any;
   }
   public set publicKey(value: NetworkServicesEdgeCacheKeysetPublicKey[]) {
@@ -219,11 +285,12 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkServicesEdgeCacheKeysetTimeouts;
+  private _timeouts?: NetworkServicesEdgeCacheKeysetTimeouts | undefined; 
+  private __timeoutsOutput = new NetworkServicesEdgeCacheKeysetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NetworkServicesEdgeCacheKeysetTimeouts ) {
+  public putTimeouts(value: NetworkServicesEdgeCacheKeysetTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

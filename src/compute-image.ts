@@ -103,7 +103,7 @@ In order to create an image, you must provide the full or partial URL of one of 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#raw_disk ComputeImage#raw_disk}
   */
-  readonly rawDisk?: ComputeImageRawDisk[];
+  readonly rawDisk?: ComputeImageRawDisk;
   /**
   * timeouts block
   * 
@@ -122,6 +122,9 @@ export interface ComputeImageGuestOsFeatures {
 
 function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGuestOsFeatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
@@ -154,8 +157,11 @@ but not both.
   readonly source: string;
 }
 
-function computeImageRawDiskToTerraform(struct?: ComputeImageRawDisk): any {
+function computeImageRawDiskToTerraform(struct?: ComputeImageRawDiskOutputReference | ComputeImageRawDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     container_type: cdktf.stringToTerraform(struct!.containerType),
     sha1: cdktf.stringToTerraform(struct!.sha1),
@@ -163,6 +169,61 @@ function computeImageRawDiskToTerraform(struct?: ComputeImageRawDisk): any {
   }
 }
 
+export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // container_type - computed: false, optional: true, required: false
+  private _containerType?: string | undefined; 
+  public get containerType() {
+    return this.getStringAttribute('container_type');
+  }
+  public set containerType(value: string | undefined) {
+    this._containerType = value;
+  }
+  public resetContainerType() {
+    this._containerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerTypeInput() {
+    return this._containerType
+  }
+
+  // sha1 - computed: false, optional: true, required: false
+  private _sha1?: string | undefined; 
+  public get sha1() {
+    return this.getStringAttribute('sha1');
+  }
+  public set sha1(value: string | undefined) {
+    this._sha1 = value;
+  }
+  public resetSha1() {
+    this._sha1 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sha1Input() {
+    return this._sha1
+  }
+
+  // source - computed: false, optional: false, required: true
+  private _source?: string; 
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+  public set source(value: string) {
+    this._source = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source
+  }
+}
 export interface ComputeImageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image.html#create ComputeImage#create}
@@ -178,8 +239,11 @@ export interface ComputeImageTimeouts {
   readonly update?: string;
 }
 
-function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeouts): any {
+function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeoutsOutputReference | ComputeImageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -187,6 +251,64 @@ function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeouts): any {
   }
 }
 
+export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_image.html google_compute_image}
@@ -250,11 +372,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -266,11 +388,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // disk_size_gb - computed: true, optional: true, required: false
-  private _diskSizeGb?: number;
+  private _diskSizeGb?: number | undefined; 
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
   }
-  public set diskSizeGb(value: number) {
+  public set diskSizeGb(value: number | undefined) {
     this._diskSizeGb = value;
   }
   public resetDiskSizeGb() {
@@ -282,11 +404,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // family - computed: false, optional: true, required: false
-  private _family?: string;
+  private _family?: string | undefined; 
   public get family() {
     return this.getStringAttribute('family');
   }
-  public set family(value: string ) {
+  public set family(value: string | undefined) {
     this._family = value;
   }
   public resetFamily() {
@@ -308,11 +430,12 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -324,11 +447,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // licenses - computed: true, optional: true, required: false
-  private _licenses?: string[];
+  private _licenses?: string[] | undefined; 
   public get licenses() {
     return this.getListAttribute('licenses');
   }
-  public set licenses(value: string[]) {
+  public set licenses(value: string[] | undefined) {
     this._licenses = value;
   }
   public resetLicenses() {
@@ -340,7 +463,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -353,11 +476,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -374,11 +497,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // source_disk - computed: false, optional: true, required: false
-  private _sourceDisk?: string;
+  private _sourceDisk?: string | undefined; 
   public get sourceDisk() {
     return this.getStringAttribute('source_disk');
   }
-  public set sourceDisk(value: string ) {
+  public set sourceDisk(value: string | undefined) {
     this._sourceDisk = value;
   }
   public resetSourceDisk() {
@@ -390,11 +513,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // source_image - computed: false, optional: true, required: false
-  private _sourceImage?: string;
+  private _sourceImage?: string | undefined; 
   public get sourceImage() {
     return this.getStringAttribute('source_image');
   }
-  public set sourceImage(value: string ) {
+  public set sourceImage(value: string | undefined) {
     this._sourceImage = value;
   }
   public resetSourceImage() {
@@ -406,11 +529,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // source_snapshot - computed: false, optional: true, required: false
-  private _sourceSnapshot?: string;
+  private _sourceSnapshot?: string | undefined; 
   public get sourceSnapshot() {
     return this.getStringAttribute('source_snapshot');
   }
-  public set sourceSnapshot(value: string ) {
+  public set sourceSnapshot(value: string | undefined) {
     this._sourceSnapshot = value;
   }
   public resetSourceSnapshot() {
@@ -422,11 +545,12 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // guest_os_features - computed: false, optional: true, required: false
-  private _guestOsFeatures?: ComputeImageGuestOsFeatures[];
+  private _guestOsFeatures?: ComputeImageGuestOsFeatures[] | undefined; 
   public get guestOsFeatures() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('guest_os_features') as any;
   }
-  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[] ) {
+  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[] | undefined) {
     this._guestOsFeatures = value;
   }
   public resetGuestOsFeatures() {
@@ -438,11 +562,12 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // raw_disk - computed: false, optional: true, required: false
-  private _rawDisk?: ComputeImageRawDisk[];
+  private _rawDisk?: ComputeImageRawDisk | undefined; 
+  private __rawDiskOutput = new ComputeImageRawDiskOutputReference(this as any, "raw_disk", true);
   public get rawDisk() {
-    return this.interpolationForAttribute('raw_disk') as any;
+    return this.__rawDiskOutput;
   }
-  public set rawDisk(value: ComputeImageRawDisk[] ) {
+  public putRawDisk(value: ComputeImageRawDisk | undefined) {
     this._rawDisk = value;
   }
   public resetRawDisk() {
@@ -454,11 +579,12 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeImageTimeouts;
+  private _timeouts?: ComputeImageTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeImageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeImageTimeouts ) {
+  public putTimeouts(value: ComputeImageTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -486,7 +612,7 @@ export class ComputeImage extends cdktf.TerraformResource {
       source_image: cdktf.stringToTerraform(this._sourceImage),
       source_snapshot: cdktf.stringToTerraform(this._sourceSnapshot),
       guest_os_features: cdktf.listMapper(computeImageGuestOsFeaturesToTerraform)(this._guestOsFeatures),
-      raw_disk: cdktf.listMapper(computeImageRawDiskToTerraform)(this._rawDisk),
+      raw_disk: computeImageRawDiskToTerraform(this._rawDisk),
       timeouts: computeImageTimeoutsToTerraform(this._timeouts),
     };
   }

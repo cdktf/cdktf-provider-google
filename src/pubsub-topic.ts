@@ -38,13 +38,13 @@ The expected format is 'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#message_storage_policy PubsubTopic#message_storage_policy}
   */
-  readonly messageStoragePolicy?: PubsubTopicMessageStoragePolicy[];
+  readonly messageStoragePolicy?: PubsubTopicMessageStoragePolicy;
   /**
   * schema_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#schema_settings PubsubTopic#schema_settings}
   */
-  readonly schemaSettings?: PubsubTopicSchemaSettings[];
+  readonly schemaSettings?: PubsubTopicSchemaSettings;
   /**
   * timeouts block
   * 
@@ -66,13 +66,39 @@ and is not a valid configuration.
   readonly allowedPersistenceRegions: string[];
 }
 
-function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicMessageStoragePolicy): any {
+function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicMessageStoragePolicyOutputReference | PubsubTopicMessageStoragePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allowed_persistence_regions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedPersistenceRegions),
   }
 }
 
+export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allowed_persistence_regions - computed: false, optional: false, required: true
+  private _allowedPersistenceRegions?: string[]; 
+  public get allowedPersistenceRegions() {
+    return this.getListAttribute('allowed_persistence_regions');
+  }
+  public set allowedPersistenceRegions(value: string[]) {
+    this._allowedPersistenceRegions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedPersistenceRegionsInput() {
+    return this._allowedPersistenceRegions
+  }
+}
 export interface PubsubTopicSchemaSettings {
   /**
   * The encoding of messages validated against schema. Default value: "ENCODING_UNSPECIFIED" Possible values: ["ENCODING_UNSPECIFIED", "JSON", "BINARY"]
@@ -91,14 +117,56 @@ if the schema has been deleted.
   readonly schema: string;
 }
 
-function pubsubTopicSchemaSettingsToTerraform(struct?: PubsubTopicSchemaSettings): any {
+function pubsubTopicSchemaSettingsToTerraform(struct?: PubsubTopicSchemaSettingsOutputReference | PubsubTopicSchemaSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     encoding: cdktf.stringToTerraform(struct!.encoding),
     schema: cdktf.stringToTerraform(struct!.schema),
   }
 }
 
+export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string | undefined; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string | undefined) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema
+  }
+}
 export interface PubsubTopicTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html#create PubsubTopic#create}
@@ -114,8 +182,11 @@ export interface PubsubTopicTimeouts {
   readonly update?: string;
 }
 
-function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeouts): any {
+function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeoutsOutputReference | PubsubTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -123,6 +194,64 @@ function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeouts): any {
   }
 }
 
+export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic.html google_pubsub_topic}
@@ -175,11 +304,11 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // kms_key_name - computed: false, optional: true, required: false
-  private _kmsKeyName?: string;
+  private _kmsKeyName?: string | undefined; 
   public get kmsKeyName() {
     return this.getStringAttribute('kms_key_name');
   }
-  public set kmsKeyName(value: string ) {
+  public set kmsKeyName(value: string | undefined) {
     this._kmsKeyName = value;
   }
   public resetKmsKeyName() {
@@ -191,11 +320,12 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -207,7 +337,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -220,11 +350,11 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -236,11 +366,12 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // message_storage_policy - computed: false, optional: true, required: false
-  private _messageStoragePolicy?: PubsubTopicMessageStoragePolicy[];
+  private _messageStoragePolicy?: PubsubTopicMessageStoragePolicy | undefined; 
+  private __messageStoragePolicyOutput = new PubsubTopicMessageStoragePolicyOutputReference(this as any, "message_storage_policy", true);
   public get messageStoragePolicy() {
-    return this.interpolationForAttribute('message_storage_policy') as any;
+    return this.__messageStoragePolicyOutput;
   }
-  public set messageStoragePolicy(value: PubsubTopicMessageStoragePolicy[] ) {
+  public putMessageStoragePolicy(value: PubsubTopicMessageStoragePolicy | undefined) {
     this._messageStoragePolicy = value;
   }
   public resetMessageStoragePolicy() {
@@ -252,11 +383,12 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // schema_settings - computed: false, optional: true, required: false
-  private _schemaSettings?: PubsubTopicSchemaSettings[];
+  private _schemaSettings?: PubsubTopicSchemaSettings | undefined; 
+  private __schemaSettingsOutput = new PubsubTopicSchemaSettingsOutputReference(this as any, "schema_settings", true);
   public get schemaSettings() {
-    return this.interpolationForAttribute('schema_settings') as any;
+    return this.__schemaSettingsOutput;
   }
-  public set schemaSettings(value: PubsubTopicSchemaSettings[] ) {
+  public putSchemaSettings(value: PubsubTopicSchemaSettings | undefined) {
     this._schemaSettings = value;
   }
   public resetSchemaSettings() {
@@ -268,11 +400,12 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PubsubTopicTimeouts;
+  private _timeouts?: PubsubTopicTimeouts | undefined; 
+  private __timeoutsOutput = new PubsubTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PubsubTopicTimeouts ) {
+  public putTimeouts(value: PubsubTopicTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -293,8 +426,8 @@ export class PubsubTopic extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      message_storage_policy: cdktf.listMapper(pubsubTopicMessageStoragePolicyToTerraform)(this._messageStoragePolicy),
-      schema_settings: cdktf.listMapper(pubsubTopicSchemaSettingsToTerraform)(this._schemaSettings),
+      message_storage_policy: pubsubTopicMessageStoragePolicyToTerraform(this._messageStoragePolicy),
+      schema_settings: pubsubTopicSchemaSettingsToTerraform(this._schemaSettings),
       timeouts: pubsubTopicTimeoutsToTerraform(this._timeouts),
     };
   }

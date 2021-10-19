@@ -68,7 +68,7 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // cloud_function - computed: false, optional: false, required: true
-  private _cloudFunction: string;
+  private _cloudFunction?: string; 
   public get cloudFunction() {
     return this.getStringAttribute('cloud_function');
   }
@@ -91,7 +91,7 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -104,11 +104,11 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -120,11 +120,11 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {

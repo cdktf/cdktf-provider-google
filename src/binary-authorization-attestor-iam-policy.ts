@@ -63,7 +63,7 @@ export class BinaryAuthorizationAttestorIamPolicy extends cdktf.TerraformResourc
   // ==========
 
   // attestor - computed: false, optional: false, required: true
-  private _attestor: string;
+  private _attestor?: string; 
   public get attestor() {
     return this.getStringAttribute('attestor');
   }
@@ -86,7 +86,7 @@ export class BinaryAuthorizationAttestorIamPolicy extends cdktf.TerraformResourc
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -99,11 +99,11 @@ export class BinaryAuthorizationAttestorIamPolicy extends cdktf.TerraformResourc
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {

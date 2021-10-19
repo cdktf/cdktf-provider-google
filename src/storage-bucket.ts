@@ -76,7 +76,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#encryption StorageBucket#encryption}
   */
-  readonly encryption?: StorageBucketEncryption[];
+  readonly encryption?: StorageBucketEncryption;
   /**
   * lifecycle_rule block
   * 
@@ -88,25 +88,25 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#logging StorageBucket#logging}
   */
-  readonly logging?: StorageBucketLogging[];
+  readonly logging?: StorageBucketLogging;
   /**
   * retention_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#retention_policy StorageBucket#retention_policy}
   */
-  readonly retentionPolicy?: StorageBucketRetentionPolicy[];
+  readonly retentionPolicy?: StorageBucketRetentionPolicy;
   /**
   * versioning block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#versioning StorageBucket#versioning}
   */
-  readonly versioning?: StorageBucketVersioning[];
+  readonly versioning?: StorageBucketVersioning;
   /**
   * website block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#website StorageBucket#website}
   */
-  readonly website?: StorageBucketWebsite[];
+  readonly website?: StorageBucketWebsite;
 }
 export interface StorageBucketCors {
   /**
@@ -137,6 +137,9 @@ export interface StorageBucketCors {
 
 function storageBucketCorsToTerraform(struct?: StorageBucketCors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_age_seconds: cdktf.numberToTerraform(struct!.maxAgeSeconds),
     method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
@@ -154,13 +157,39 @@ export interface StorageBucketEncryption {
   readonly defaultKmsKeyName: string;
 }
 
-function storageBucketEncryptionToTerraform(struct?: StorageBucketEncryption): any {
+function storageBucketEncryptionToTerraform(struct?: StorageBucketEncryptionOutputReference | StorageBucketEncryption): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     default_kms_key_name: cdktf.stringToTerraform(struct!.defaultKmsKeyName),
   }
 }
 
+export class StorageBucketEncryptionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // default_kms_key_name - computed: false, optional: false, required: true
+  private _defaultKmsKeyName?: string; 
+  public get defaultKmsKeyName() {
+    return this.getStringAttribute('default_kms_key_name');
+  }
+  public set defaultKmsKeyName(value: string) {
+    this._defaultKmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultKmsKeyNameInput() {
+    return this._defaultKmsKeyName
+  }
+}
 export interface StorageBucketLifecycleRuleAction {
   /**
   * The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
@@ -176,14 +205,56 @@ export interface StorageBucketLifecycleRuleAction {
   readonly type: string;
 }
 
-function storageBucketLifecycleRuleActionToTerraform(struct?: StorageBucketLifecycleRuleAction): any {
+function storageBucketLifecycleRuleActionToTerraform(struct?: StorageBucketLifecycleRuleActionOutputReference | StorageBucketLifecycleRuleAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     storage_class: cdktf.stringToTerraform(struct!.storageClass),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class StorageBucketLifecycleRuleActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // storage_class - computed: false, optional: true, required: false
+  private _storageClass?: string | undefined; 
+  public get storageClass() {
+    return this.getStringAttribute('storage_class');
+  }
+  public set storageClass(value: string | undefined) {
+    this._storageClass = value;
+  }
+  public resetStorageClass() {
+    this._storageClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageClassInput() {
+    return this._storageClass
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface StorageBucketLifecycleRuleCondition {
   /**
   * Minimum age of an object in days to satisfy this condition.
@@ -242,8 +313,11 @@ export interface StorageBucketLifecycleRuleCondition {
   readonly withState?: string;
 }
 
-function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLifecycleRuleCondition): any {
+function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLifecycleRuleConditionOutputReference | StorageBucketLifecycleRuleCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     age: cdktf.numberToTerraform(struct!.age),
     created_before: cdktf.stringToTerraform(struct!.createdBefore),
@@ -257,26 +331,183 @@ function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLi
   }
 }
 
+export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // age - computed: false, optional: true, required: false
+  private _age?: number | undefined; 
+  public get age() {
+    return this.getNumberAttribute('age');
+  }
+  public set age(value: number | undefined) {
+    this._age = value;
+  }
+  public resetAge() {
+    this._age = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ageInput() {
+    return this._age
+  }
+
+  // created_before - computed: false, optional: true, required: false
+  private _createdBefore?: string | undefined; 
+  public get createdBefore() {
+    return this.getStringAttribute('created_before');
+  }
+  public set createdBefore(value: string | undefined) {
+    this._createdBefore = value;
+  }
+  public resetCreatedBefore() {
+    this._createdBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createdBeforeInput() {
+    return this._createdBefore
+  }
+
+  // custom_time_before - computed: false, optional: true, required: false
+  private _customTimeBefore?: string | undefined; 
+  public get customTimeBefore() {
+    return this.getStringAttribute('custom_time_before');
+  }
+  public set customTimeBefore(value: string | undefined) {
+    this._customTimeBefore = value;
+  }
+  public resetCustomTimeBefore() {
+    this._customTimeBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customTimeBeforeInput() {
+    return this._customTimeBefore
+  }
+
+  // days_since_custom_time - computed: false, optional: true, required: false
+  private _daysSinceCustomTime?: number | undefined; 
+  public get daysSinceCustomTime() {
+    return this.getNumberAttribute('days_since_custom_time');
+  }
+  public set daysSinceCustomTime(value: number | undefined) {
+    this._daysSinceCustomTime = value;
+  }
+  public resetDaysSinceCustomTime() {
+    this._daysSinceCustomTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysSinceCustomTimeInput() {
+    return this._daysSinceCustomTime
+  }
+
+  // days_since_noncurrent_time - computed: false, optional: true, required: false
+  private _daysSinceNoncurrentTime?: number | undefined; 
+  public get daysSinceNoncurrentTime() {
+    return this.getNumberAttribute('days_since_noncurrent_time');
+  }
+  public set daysSinceNoncurrentTime(value: number | undefined) {
+    this._daysSinceNoncurrentTime = value;
+  }
+  public resetDaysSinceNoncurrentTime() {
+    this._daysSinceNoncurrentTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysSinceNoncurrentTimeInput() {
+    return this._daysSinceNoncurrentTime
+  }
+
+  // matches_storage_class - computed: false, optional: true, required: false
+  private _matchesStorageClass?: string[] | undefined; 
+  public get matchesStorageClass() {
+    return this.getListAttribute('matches_storage_class');
+  }
+  public set matchesStorageClass(value: string[] | undefined) {
+    this._matchesStorageClass = value;
+  }
+  public resetMatchesStorageClass() {
+    this._matchesStorageClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchesStorageClassInput() {
+    return this._matchesStorageClass
+  }
+
+  // noncurrent_time_before - computed: false, optional: true, required: false
+  private _noncurrentTimeBefore?: string | undefined; 
+  public get noncurrentTimeBefore() {
+    return this.getStringAttribute('noncurrent_time_before');
+  }
+  public set noncurrentTimeBefore(value: string | undefined) {
+    this._noncurrentTimeBefore = value;
+  }
+  public resetNoncurrentTimeBefore() {
+    this._noncurrentTimeBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noncurrentTimeBeforeInput() {
+    return this._noncurrentTimeBefore
+  }
+
+  // num_newer_versions - computed: false, optional: true, required: false
+  private _numNewerVersions?: number | undefined; 
+  public get numNewerVersions() {
+    return this.getNumberAttribute('num_newer_versions');
+  }
+  public set numNewerVersions(value: number | undefined) {
+    this._numNewerVersions = value;
+  }
+  public resetNumNewerVersions() {
+    this._numNewerVersions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numNewerVersionsInput() {
+    return this._numNewerVersions
+  }
+
+  // with_state - computed: true, optional: true, required: false
+  private _withState?: string | undefined; 
+  public get withState() {
+    return this.getStringAttribute('with_state');
+  }
+  public set withState(value: string | undefined) {
+    this._withState = value;
+  }
+  public resetWithState() {
+    this._withState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get withStateInput() {
+    return this._withState
+  }
+}
 export interface StorageBucketLifecycleRule {
   /**
   * action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#action StorageBucket#action}
   */
-  readonly action: StorageBucketLifecycleRuleAction[];
+  readonly action: StorageBucketLifecycleRuleAction;
   /**
   * condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html#condition StorageBucket#condition}
   */
-  readonly condition: StorageBucketLifecycleRuleCondition[];
+  readonly condition: StorageBucketLifecycleRuleCondition;
 }
 
 function storageBucketLifecycleRuleToTerraform(struct?: StorageBucketLifecycleRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    action: cdktf.listMapper(storageBucketLifecycleRuleActionToTerraform)(struct!.action),
-    condition: cdktf.listMapper(storageBucketLifecycleRuleConditionToTerraform)(struct!.condition),
+    action: storageBucketLifecycleRuleActionToTerraform(struct!.action),
+    condition: storageBucketLifecycleRuleConditionToTerraform(struct!.condition),
   }
 }
 
@@ -295,14 +526,56 @@ export interface StorageBucketLogging {
   readonly logObjectPrefix?: string;
 }
 
-function storageBucketLoggingToTerraform(struct?: StorageBucketLogging): any {
+function storageBucketLoggingToTerraform(struct?: StorageBucketLoggingOutputReference | StorageBucketLogging): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     log_bucket: cdktf.stringToTerraform(struct!.logBucket),
     log_object_prefix: cdktf.stringToTerraform(struct!.logObjectPrefix),
   }
 }
 
+export class StorageBucketLoggingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // log_bucket - computed: false, optional: false, required: true
+  private _logBucket?: string; 
+  public get logBucket() {
+    return this.getStringAttribute('log_bucket');
+  }
+  public set logBucket(value: string) {
+    this._logBucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logBucketInput() {
+    return this._logBucket
+  }
+
+  // log_object_prefix - computed: true, optional: true, required: false
+  private _logObjectPrefix?: string | undefined; 
+  public get logObjectPrefix() {
+    return this.getStringAttribute('log_object_prefix');
+  }
+  public set logObjectPrefix(value: string | undefined) {
+    this._logObjectPrefix = value;
+  }
+  public resetLogObjectPrefix() {
+    this._logObjectPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logObjectPrefixInput() {
+    return this._logObjectPrefix
+  }
+}
 export interface StorageBucketRetentionPolicy {
   /**
   * If set to true, the bucket will be locked and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
@@ -318,14 +591,56 @@ export interface StorageBucketRetentionPolicy {
   readonly retentionPeriod: number;
 }
 
-function storageBucketRetentionPolicyToTerraform(struct?: StorageBucketRetentionPolicy): any {
+function storageBucketRetentionPolicyToTerraform(struct?: StorageBucketRetentionPolicyOutputReference | StorageBucketRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     is_locked: cdktf.booleanToTerraform(struct!.isLocked),
     retention_period: cdktf.numberToTerraform(struct!.retentionPeriod),
   }
 }
 
+export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // is_locked - computed: false, optional: true, required: false
+  private _isLocked?: boolean | cdktf.IResolvable | undefined; 
+  public get isLocked() {
+    return this.getBooleanAttribute('is_locked') as any;
+  }
+  public set isLocked(value: boolean | cdktf.IResolvable | undefined) {
+    this._isLocked = value;
+  }
+  public resetIsLocked() {
+    this._isLocked = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isLockedInput() {
+    return this._isLocked
+  }
+
+  // retention_period - computed: false, optional: false, required: true
+  private _retentionPeriod?: number; 
+  public get retentionPeriod() {
+    return this.getNumberAttribute('retention_period');
+  }
+  public set retentionPeriod(value: number) {
+    this._retentionPeriod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPeriodInput() {
+    return this._retentionPeriod
+  }
+}
 export interface StorageBucketVersioning {
   /**
   * While set to true, versioning is fully enabled for this bucket.
@@ -335,13 +650,39 @@ export interface StorageBucketVersioning {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function storageBucketVersioningToTerraform(struct?: StorageBucketVersioning): any {
+function storageBucketVersioningToTerraform(struct?: StorageBucketVersioningOutputReference | StorageBucketVersioning): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
+export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+}
 export interface StorageBucketWebsite {
   /**
   * Behaves as the bucket's directory index where missing objects are treated as potential directories.
@@ -357,14 +698,59 @@ export interface StorageBucketWebsite {
   readonly notFoundPage?: string;
 }
 
-function storageBucketWebsiteToTerraform(struct?: StorageBucketWebsite): any {
+function storageBucketWebsiteToTerraform(struct?: StorageBucketWebsiteOutputReference | StorageBucketWebsite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     main_page_suffix: cdktf.stringToTerraform(struct!.mainPageSuffix),
     not_found_page: cdktf.stringToTerraform(struct!.notFoundPage),
   }
 }
 
+export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // main_page_suffix - computed: false, optional: true, required: false
+  private _mainPageSuffix?: string | undefined; 
+  public get mainPageSuffix() {
+    return this.getStringAttribute('main_page_suffix');
+  }
+  public set mainPageSuffix(value: string | undefined) {
+    this._mainPageSuffix = value;
+  }
+  public resetMainPageSuffix() {
+    this._mainPageSuffix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mainPageSuffixInput() {
+    return this._mainPageSuffix
+  }
+
+  // not_found_page - computed: false, optional: true, required: false
+  private _notFoundPage?: string | undefined; 
+  public get notFoundPage() {
+    return this.getStringAttribute('not_found_page');
+  }
+  public set notFoundPage(value: string | undefined) {
+    this._notFoundPage = value;
+  }
+  public resetNotFoundPage() {
+    this._notFoundPage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notFoundPageInput() {
+    return this._notFoundPage
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket.html google_storage_bucket}
@@ -422,11 +808,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   // ==========
 
   // bucket_policy_only - computed: true, optional: true, required: false
-  private _bucketPolicyOnly?: boolean | cdktf.IResolvable;
+  private _bucketPolicyOnly?: boolean | cdktf.IResolvable | undefined; 
   public get bucketPolicyOnly() {
-    return this.getBooleanAttribute('bucket_policy_only');
+    return this.getBooleanAttribute('bucket_policy_only') as any;
   }
-  public set bucketPolicyOnly(value: boolean | cdktf.IResolvable) {
+  public set bucketPolicyOnly(value: boolean | cdktf.IResolvable | undefined) {
     this._bucketPolicyOnly = value;
   }
   public resetBucketPolicyOnly() {
@@ -438,11 +824,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // default_event_based_hold - computed: false, optional: true, required: false
-  private _defaultEventBasedHold?: boolean | cdktf.IResolvable;
+  private _defaultEventBasedHold?: boolean | cdktf.IResolvable | undefined; 
   public get defaultEventBasedHold() {
-    return this.getBooleanAttribute('default_event_based_hold');
+    return this.getBooleanAttribute('default_event_based_hold') as any;
   }
-  public set defaultEventBasedHold(value: boolean | cdktf.IResolvable ) {
+  public set defaultEventBasedHold(value: boolean | cdktf.IResolvable | undefined) {
     this._defaultEventBasedHold = value;
   }
   public resetDefaultEventBasedHold() {
@@ -454,11 +840,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable;
+  private _forceDestroy?: boolean | cdktf.IResolvable | undefined; 
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy');
+    return this.getBooleanAttribute('force_destroy') as any;
   }
-  public set forceDestroy(value: boolean | cdktf.IResolvable ) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable | undefined) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -475,11 +861,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable;
+  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get labels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._labels = value;
   }
   public resetLabels() {
@@ -491,11 +878,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string ) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -507,7 +894,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -520,11 +907,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -536,11 +923,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // requester_pays - computed: false, optional: true, required: false
-  private _requesterPays?: boolean | cdktf.IResolvable;
+  private _requesterPays?: boolean | cdktf.IResolvable | undefined; 
   public get requesterPays() {
-    return this.getBooleanAttribute('requester_pays');
+    return this.getBooleanAttribute('requester_pays') as any;
   }
-  public set requesterPays(value: boolean | cdktf.IResolvable ) {
+  public set requesterPays(value: boolean | cdktf.IResolvable | undefined) {
     this._requesterPays = value;
   }
   public resetRequesterPays() {
@@ -557,11 +944,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // storage_class - computed: false, optional: true, required: false
-  private _storageClass?: string;
+  private _storageClass?: string | undefined; 
   public get storageClass() {
     return this.getStringAttribute('storage_class');
   }
-  public set storageClass(value: string ) {
+  public set storageClass(value: string | undefined) {
     this._storageClass = value;
   }
   public resetStorageClass() {
@@ -573,11 +960,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // uniform_bucket_level_access - computed: true, optional: true, required: false
-  private _uniformBucketLevelAccess?: boolean | cdktf.IResolvable;
+  private _uniformBucketLevelAccess?: boolean | cdktf.IResolvable | undefined; 
   public get uniformBucketLevelAccess() {
-    return this.getBooleanAttribute('uniform_bucket_level_access');
+    return this.getBooleanAttribute('uniform_bucket_level_access') as any;
   }
-  public set uniformBucketLevelAccess(value: boolean | cdktf.IResolvable) {
+  public set uniformBucketLevelAccess(value: boolean | cdktf.IResolvable | undefined) {
     this._uniformBucketLevelAccess = value;
   }
   public resetUniformBucketLevelAccess() {
@@ -594,11 +981,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: StorageBucketCors[];
+  private _cors?: StorageBucketCors[] | undefined; 
   public get cors() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cors') as any;
   }
-  public set cors(value: StorageBucketCors[] ) {
+  public set cors(value: StorageBucketCors[] | undefined) {
     this._cors = value;
   }
   public resetCors() {
@@ -610,11 +998,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption?: StorageBucketEncryption[];
+  private _encryption?: StorageBucketEncryption | undefined; 
+  private __encryptionOutput = new StorageBucketEncryptionOutputReference(this as any, "encryption", true);
   public get encryption() {
-    return this.interpolationForAttribute('encryption') as any;
+    return this.__encryptionOutput;
   }
-  public set encryption(value: StorageBucketEncryption[] ) {
+  public putEncryption(value: StorageBucketEncryption | undefined) {
     this._encryption = value;
   }
   public resetEncryption() {
@@ -626,11 +1015,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // lifecycle_rule - computed: false, optional: true, required: false
-  private _lifecycleRule?: StorageBucketLifecycleRule[];
+  private _lifecycleRule?: StorageBucketLifecycleRule[] | undefined; 
   public get lifecycleRule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('lifecycle_rule') as any;
   }
-  public set lifecycleRule(value: StorageBucketLifecycleRule[] ) {
+  public set lifecycleRule(value: StorageBucketLifecycleRule[] | undefined) {
     this._lifecycleRule = value;
   }
   public resetLifecycleRule() {
@@ -642,11 +1032,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // logging - computed: false, optional: true, required: false
-  private _logging?: StorageBucketLogging[];
+  private _logging?: StorageBucketLogging | undefined; 
+  private __loggingOutput = new StorageBucketLoggingOutputReference(this as any, "logging", true);
   public get logging() {
-    return this.interpolationForAttribute('logging') as any;
+    return this.__loggingOutput;
   }
-  public set logging(value: StorageBucketLogging[] ) {
+  public putLogging(value: StorageBucketLogging | undefined) {
     this._logging = value;
   }
   public resetLogging() {
@@ -658,11 +1049,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy?: StorageBucketRetentionPolicy[];
+  private _retentionPolicy?: StorageBucketRetentionPolicy | undefined; 
+  private __retentionPolicyOutput = new StorageBucketRetentionPolicyOutputReference(this as any, "retention_policy", true);
   public get retentionPolicy() {
-    return this.interpolationForAttribute('retention_policy') as any;
+    return this.__retentionPolicyOutput;
   }
-  public set retentionPolicy(value: StorageBucketRetentionPolicy[] ) {
+  public putRetentionPolicy(value: StorageBucketRetentionPolicy | undefined) {
     this._retentionPolicy = value;
   }
   public resetRetentionPolicy() {
@@ -674,11 +1066,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // versioning - computed: false, optional: true, required: false
-  private _versioning?: StorageBucketVersioning[];
+  private _versioning?: StorageBucketVersioning | undefined; 
+  private __versioningOutput = new StorageBucketVersioningOutputReference(this as any, "versioning", true);
   public get versioning() {
-    return this.interpolationForAttribute('versioning') as any;
+    return this.__versioningOutput;
   }
-  public set versioning(value: StorageBucketVersioning[] ) {
+  public putVersioning(value: StorageBucketVersioning | undefined) {
     this._versioning = value;
   }
   public resetVersioning() {
@@ -690,11 +1083,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // website - computed: false, optional: true, required: false
-  private _website?: StorageBucketWebsite[];
+  private _website?: StorageBucketWebsite | undefined; 
+  private __websiteOutput = new StorageBucketWebsiteOutputReference(this as any, "website", true);
   public get website() {
-    return this.interpolationForAttribute('website') as any;
+    return this.__websiteOutput;
   }
-  public set website(value: StorageBucketWebsite[] ) {
+  public putWebsite(value: StorageBucketWebsite | undefined) {
     this._website = value;
   }
   public resetWebsite() {
@@ -722,12 +1116,12 @@ export class StorageBucket extends cdktf.TerraformResource {
       storage_class: cdktf.stringToTerraform(this._storageClass),
       uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),
       cors: cdktf.listMapper(storageBucketCorsToTerraform)(this._cors),
-      encryption: cdktf.listMapper(storageBucketEncryptionToTerraform)(this._encryption),
+      encryption: storageBucketEncryptionToTerraform(this._encryption),
       lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform)(this._lifecycleRule),
-      logging: cdktf.listMapper(storageBucketLoggingToTerraform)(this._logging),
-      retention_policy: cdktf.listMapper(storageBucketRetentionPolicyToTerraform)(this._retentionPolicy),
-      versioning: cdktf.listMapper(storageBucketVersioningToTerraform)(this._versioning),
-      website: cdktf.listMapper(storageBucketWebsiteToTerraform)(this._website),
+      logging: storageBucketLoggingToTerraform(this._logging),
+      retention_policy: storageBucketRetentionPolicyToTerraform(this._retentionPolicy),
+      versioning: storageBucketVersioningToTerraform(this._versioning),
+      website: storageBucketWebsiteToTerraform(this._website),
     };
   }
 }

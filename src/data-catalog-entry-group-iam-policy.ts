@@ -68,7 +68,7 @@ export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // entry_group - computed: false, optional: false, required: true
-  private _entryGroup: string;
+  private _entryGroup?: string; 
   public get entryGroup() {
     return this.getStringAttribute('entry_group');
   }
@@ -91,7 +91,7 @@ export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -104,11 +104,11 @@ export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -120,11 +120,11 @@ export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {

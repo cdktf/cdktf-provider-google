@@ -73,11 +73,11 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
 
   // delegates - computed: false, optional: true, required: false
-  private _delegates?: string[];
+  private _delegates?: string[] | undefined; 
   public get delegates() {
     return this.getListAttribute('delegates');
   }
-  public set delegates(value: string[] ) {
+  public set delegates(value: string[] | undefined) {
     this._delegates = value;
   }
   public resetDelegates() {
@@ -94,11 +94,11 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
 
   // lifetime - computed: false, optional: true, required: false
-  private _lifetime?: string;
+  private _lifetime?: string | undefined; 
   public get lifetime() {
     return this.getStringAttribute('lifetime');
   }
-  public set lifetime(value: string ) {
+  public set lifetime(value: string | undefined) {
     this._lifetime = value;
   }
   public resetLifetime() {
@@ -110,7 +110,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
 
   // scopes - computed: false, optional: false, required: true
-  private _scopes: string[];
+  private _scopes?: string[]; 
   public get scopes() {
     return this.getListAttribute('scopes');
   }
@@ -123,7 +123,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
 
   // target_service_account - computed: false, optional: false, required: true
-  private _targetServiceAccount: string;
+  private _targetServiceAccount?: string; 
   public get targetServiceAccount() {
     return this.getStringAttribute('target_service_account');
   }

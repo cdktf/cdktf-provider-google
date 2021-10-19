@@ -66,7 +66,7 @@ export interface ComputeFirewallPolicyRuleConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_rule.html#match ComputeFirewallPolicyRule#match}
   */
-  readonly match: ComputeFirewallPolicyRuleMatch[];
+  readonly match: ComputeFirewallPolicyRuleMatch;
   /**
   * timeouts block
   * 
@@ -91,6 +91,9 @@ export interface ComputeFirewallPolicyRuleMatchLayer4Configs {
 
 function computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform(struct?: ComputeFirewallPolicyRuleMatchLayer4Configs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ip_protocol: cdktf.stringToTerraform(struct!.ipProtocol),
     ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ports),
@@ -118,8 +121,11 @@ export interface ComputeFirewallPolicyRuleMatch {
   readonly layer4Configs: ComputeFirewallPolicyRuleMatchLayer4Configs[];
 }
 
-function computeFirewallPolicyRuleMatchToTerraform(struct?: ComputeFirewallPolicyRuleMatch): any {
+function computeFirewallPolicyRuleMatchToTerraform(struct?: ComputeFirewallPolicyRuleMatchOutputReference | ComputeFirewallPolicyRuleMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dest_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destIpRanges),
     src_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.srcIpRanges),
@@ -127,6 +133,62 @@ function computeFirewallPolicyRuleMatchToTerraform(struct?: ComputeFirewallPolic
   }
 }
 
+export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dest_ip_ranges - computed: false, optional: true, required: false
+  private _destIpRanges?: string[] | undefined; 
+  public get destIpRanges() {
+    return this.getListAttribute('dest_ip_ranges');
+  }
+  public set destIpRanges(value: string[] | undefined) {
+    this._destIpRanges = value;
+  }
+  public resetDestIpRanges() {
+    this._destIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destIpRangesInput() {
+    return this._destIpRanges
+  }
+
+  // src_ip_ranges - computed: false, optional: true, required: false
+  private _srcIpRanges?: string[] | undefined; 
+  public get srcIpRanges() {
+    return this.getListAttribute('src_ip_ranges');
+  }
+  public set srcIpRanges(value: string[] | undefined) {
+    this._srcIpRanges = value;
+  }
+  public resetSrcIpRanges() {
+    this._srcIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get srcIpRangesInput() {
+    return this._srcIpRanges
+  }
+
+  // layer4_configs - computed: false, optional: false, required: true
+  private _layer4Configs?: ComputeFirewallPolicyRuleMatchLayer4Configs[]; 
+  public get layer4Configs() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('layer4_configs') as any;
+  }
+  public set layer4Configs(value: ComputeFirewallPolicyRuleMatchLayer4Configs[]) {
+    this._layer4Configs = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get layer4ConfigsInput() {
+    return this._layer4Configs
+  }
+}
 export interface ComputeFirewallPolicyRuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_rule.html#create ComputeFirewallPolicyRule#create}
@@ -142,8 +204,11 @@ export interface ComputeFirewallPolicyRuleTimeouts {
   readonly update?: string;
 }
 
-function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFirewallPolicyRuleTimeouts): any {
+function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFirewallPolicyRuleTimeoutsOutputReference | ComputeFirewallPolicyRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -151,6 +216,64 @@ function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFirewallPo
   }
 }
 
+export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_rule.html google_compute_firewall_policy_rule}
@@ -202,7 +325,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   // ==========
 
   // action - computed: false, optional: false, required: true
-  private _action: string;
+  private _action?: string; 
   public get action() {
     return this.getStringAttribute('action');
   }
@@ -215,11 +338,11 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -231,7 +354,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // direction - computed: false, optional: false, required: true
-  private _direction: string;
+  private _direction?: string; 
   public get direction() {
     return this.getStringAttribute('direction');
   }
@@ -244,11 +367,11 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable;
+  private _disabled?: boolean | cdktf.IResolvable | undefined; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled');
+    return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable ) {
+  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -260,11 +383,11 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // enable_logging - computed: false, optional: true, required: false
-  private _enableLogging?: boolean | cdktf.IResolvable;
+  private _enableLogging?: boolean | cdktf.IResolvable | undefined; 
   public get enableLogging() {
-    return this.getBooleanAttribute('enable_logging');
+    return this.getBooleanAttribute('enable_logging') as any;
   }
-  public set enableLogging(value: boolean | cdktf.IResolvable ) {
+  public set enableLogging(value: boolean | cdktf.IResolvable | undefined) {
     this._enableLogging = value;
   }
   public resetEnableLogging() {
@@ -276,7 +399,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // firewall_policy - computed: false, optional: false, required: true
-  private _firewallPolicy: string;
+  private _firewallPolicy?: string; 
   public get firewallPolicy() {
     return this.getStringAttribute('firewall_policy');
   }
@@ -299,7 +422,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // priority - computed: false, optional: false, required: true
-  private _priority: number;
+  private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
@@ -317,11 +440,11 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // target_resources - computed: false, optional: true, required: false
-  private _targetResources?: string[];
+  private _targetResources?: string[] | undefined; 
   public get targetResources() {
     return this.getListAttribute('target_resources');
   }
-  public set targetResources(value: string[] ) {
+  public set targetResources(value: string[] | undefined) {
     this._targetResources = value;
   }
   public resetTargetResources() {
@@ -333,11 +456,11 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // target_service_accounts - computed: false, optional: true, required: false
-  private _targetServiceAccounts?: string[];
+  private _targetServiceAccounts?: string[] | undefined; 
   public get targetServiceAccounts() {
     return this.getListAttribute('target_service_accounts');
   }
-  public set targetServiceAccounts(value: string[] ) {
+  public set targetServiceAccounts(value: string[] | undefined) {
     this._targetServiceAccounts = value;
   }
   public resetTargetServiceAccounts() {
@@ -349,11 +472,12 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // match - computed: false, optional: false, required: true
-  private _match: ComputeFirewallPolicyRuleMatch[];
+  private _match?: ComputeFirewallPolicyRuleMatch; 
+  private __matchOutput = new ComputeFirewallPolicyRuleMatchOutputReference(this as any, "match", true);
   public get match() {
-    return this.interpolationForAttribute('match') as any;
+    return this.__matchOutput;
   }
-  public set match(value: ComputeFirewallPolicyRuleMatch[]) {
+  public putMatch(value: ComputeFirewallPolicyRuleMatch) {
     this._match = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -362,11 +486,12 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeFirewallPolicyRuleTimeouts;
+  private _timeouts?: ComputeFirewallPolicyRuleTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeFirewallPolicyRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeFirewallPolicyRuleTimeouts ) {
+  public putTimeouts(value: ComputeFirewallPolicyRuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -392,7 +517,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
       priority: cdktf.numberToTerraform(this._priority),
       target_resources: cdktf.listMapper(cdktf.stringToTerraform)(this._targetResources),
       target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._targetServiceAccounts),
-      match: cdktf.listMapper(computeFirewallPolicyRuleMatchToTerraform)(this._match),
+      match: computeFirewallPolicyRuleMatchToTerraform(this._match),
       timeouts: computeFirewallPolicyRuleTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -68,7 +68,7 @@ export class BigqueryTableIamPolicy extends cdktf.TerraformResource {
   // ==========
 
   // dataset_id - computed: false, optional: false, required: true
-  private _datasetId: string;
+  private _datasetId?: string; 
   public get datasetId() {
     return this.getStringAttribute('dataset_id');
   }
@@ -91,7 +91,7 @@ export class BigqueryTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // policy_data - computed: false, optional: false, required: true
-  private _policyData: string;
+  private _policyData?: string; 
   public get policyData() {
     return this.getStringAttribute('policy_data');
   }
@@ -104,11 +104,11 @@ export class BigqueryTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -120,7 +120,7 @@ export class BigqueryTableIamPolicy extends cdktf.TerraformResource {
   }
 
   // table_id - computed: false, optional: false, required: true
-  private _tableId: string;
+  private _tableId?: string; 
   public get tableId() {
     return this.getStringAttribute('table_id');
   }

@@ -68,11 +68,11 @@ export class BillingSubaccount extends cdktf.TerraformResource {
   }
 
   // deletion_policy - computed: false, optional: true, required: false
-  private _deletionPolicy?: string;
+  private _deletionPolicy?: string | undefined; 
   public get deletionPolicy() {
     return this.getStringAttribute('deletion_policy');
   }
-  public set deletionPolicy(value: string ) {
+  public set deletionPolicy(value: string | undefined) {
     this._deletionPolicy = value;
   }
   public resetDeletionPolicy() {
@@ -84,7 +84,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -102,7 +102,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
   }
 
   // master_billing_account - computed: false, optional: false, required: true
-  private _masterBillingAccount: string;
+  private _masterBillingAccount?: string; 
   public get masterBillingAccount() {
     return this.getStringAttribute('master_billing_account');
   }
@@ -121,7 +121,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
 
   // open - computed: true, optional: false, required: false
   public get open() {
-    return this.getBooleanAttribute('open');
+    return this.getBooleanAttribute('open') as any;
   }
 
   // =========

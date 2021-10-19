@@ -24,7 +24,7 @@ export interface BillingAccountIamMemberConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html#condition BillingAccountIamMember#condition}
   */
-  readonly condition?: BillingAccountIamMemberCondition[];
+  readonly condition?: BillingAccountIamMemberCondition;
 }
 export interface BillingAccountIamMemberCondition {
   /**
@@ -41,8 +41,11 @@ export interface BillingAccountIamMemberCondition {
   readonly title: string;
 }
 
-function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamMemberCondition): any {
+function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamMemberConditionOutputReference | BillingAccountIamMemberCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     expression: cdktf.stringToTerraform(struct!.expression),
@@ -50,6 +53,58 @@ function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamM
   }
 }
 
+export class BillingAccountIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // expression - computed: false, optional: false, required: true
+  private _expression?: string; 
+  public get expression() {
+    return this.getStringAttribute('expression');
+  }
+  public set expression(value: string) {
+    this._expression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressionInput() {
+    return this._expression
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member.html google_billing_account_iam_member}
@@ -94,7 +149,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   // ==========
 
   // billing_account_id - computed: false, optional: false, required: true
-  private _billingAccountId: string;
+  private _billingAccountId?: string; 
   public get billingAccountId() {
     return this.getStringAttribute('billing_account_id');
   }
@@ -117,7 +172,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   }
 
   // member - computed: false, optional: false, required: true
-  private _member: string;
+  private _member?: string; 
   public get member() {
     return this.getStringAttribute('member');
   }
@@ -130,7 +185,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   }
 
   // role - computed: false, optional: false, required: true
-  private _role: string;
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
@@ -143,11 +198,12 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: BillingAccountIamMemberCondition[];
+  private _condition?: BillingAccountIamMemberCondition | undefined; 
+  private __conditionOutput = new BillingAccountIamMemberConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.interpolationForAttribute('condition') as any;
+    return this.__conditionOutput;
   }
-  public set condition(value: BillingAccountIamMemberCondition[] ) {
+  public putCondition(value: BillingAccountIamMemberCondition | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -167,7 +223,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
       billing_account_id: cdktf.stringToTerraform(this._billingAccountId),
       member: cdktf.stringToTerraform(this._member),
       role: cdktf.stringToTerraform(this._role),
-      condition: cdktf.listMapper(billingAccountIamMemberConditionToTerraform)(this._condition),
+      condition: billingAccountIamMemberConditionToTerraform(this._condition),
     };
   }
 }

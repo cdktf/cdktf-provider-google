@@ -82,7 +82,7 @@ Europe/Paris.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html#speech_to_text_settings DialogflowCxAgent#speech_to_text_settings}
   */
-  readonly speechToTextSettings?: DialogflowCxAgentSpeechToTextSettings[];
+  readonly speechToTextSettings?: DialogflowCxAgentSpeechToTextSettings;
   /**
   * timeouts block
   * 
@@ -99,13 +99,42 @@ export interface DialogflowCxAgentSpeechToTextSettings {
   readonly enableSpeechAdaptation?: boolean | cdktf.IResolvable;
 }
 
-function dialogflowCxAgentSpeechToTextSettingsToTerraform(struct?: DialogflowCxAgentSpeechToTextSettings): any {
+function dialogflowCxAgentSpeechToTextSettingsToTerraform(struct?: DialogflowCxAgentSpeechToTextSettingsOutputReference | DialogflowCxAgentSpeechToTextSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable_speech_adaptation: cdktf.booleanToTerraform(struct!.enableSpeechAdaptation),
   }
 }
 
+export class DialogflowCxAgentSpeechToTextSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable_speech_adaptation - computed: false, optional: true, required: false
+  private _enableSpeechAdaptation?: boolean | cdktf.IResolvable | undefined; 
+  public get enableSpeechAdaptation() {
+    return this.getBooleanAttribute('enable_speech_adaptation') as any;
+  }
+  public set enableSpeechAdaptation(value: boolean | cdktf.IResolvable | undefined) {
+    this._enableSpeechAdaptation = value;
+  }
+  public resetEnableSpeechAdaptation() {
+    this._enableSpeechAdaptation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableSpeechAdaptationInput() {
+    return this._enableSpeechAdaptation
+  }
+}
 export interface DialogflowCxAgentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html#create DialogflowCxAgent#create}
@@ -121,8 +150,11 @@ export interface DialogflowCxAgentTimeouts {
   readonly update?: string;
 }
 
-function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentTimeouts): any {
+function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentTimeoutsOutputReference | DialogflowCxAgentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -130,6 +162,64 @@ function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentTimeouts
   }
 }
 
+export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent.html google_dialogflow_cx_agent}
@@ -183,11 +273,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   // ==========
 
   // avatar_uri - computed: false, optional: true, required: false
-  private _avatarUri?: string;
+  private _avatarUri?: string | undefined; 
   public get avatarUri() {
     return this.getStringAttribute('avatar_uri');
   }
-  public set avatarUri(value: string ) {
+  public set avatarUri(value: string | undefined) {
     this._avatarUri = value;
   }
   public resetAvatarUri() {
@@ -199,7 +289,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // default_language_code - computed: false, optional: false, required: true
-  private _defaultLanguageCode: string;
+  private _defaultLanguageCode?: string; 
   public get defaultLanguageCode() {
     return this.getStringAttribute('default_language_code');
   }
@@ -212,11 +302,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -228,7 +318,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -241,11 +331,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // enable_spell_correction - computed: false, optional: true, required: false
-  private _enableSpellCorrection?: boolean | cdktf.IResolvable;
+  private _enableSpellCorrection?: boolean | cdktf.IResolvable | undefined; 
   public get enableSpellCorrection() {
-    return this.getBooleanAttribute('enable_spell_correction');
+    return this.getBooleanAttribute('enable_spell_correction') as any;
   }
-  public set enableSpellCorrection(value: boolean | cdktf.IResolvable ) {
+  public set enableSpellCorrection(value: boolean | cdktf.IResolvable | undefined) {
     this._enableSpellCorrection = value;
   }
   public resetEnableSpellCorrection() {
@@ -257,11 +347,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // enable_stackdriver_logging - computed: false, optional: true, required: false
-  private _enableStackdriverLogging?: boolean | cdktf.IResolvable;
+  private _enableStackdriverLogging?: boolean | cdktf.IResolvable | undefined; 
   public get enableStackdriverLogging() {
-    return this.getBooleanAttribute('enable_stackdriver_logging');
+    return this.getBooleanAttribute('enable_stackdriver_logging') as any;
   }
-  public set enableStackdriverLogging(value: boolean | cdktf.IResolvable ) {
+  public set enableStackdriverLogging(value: boolean | cdktf.IResolvable | undefined) {
     this._enableStackdriverLogging = value;
   }
   public resetEnableStackdriverLogging() {
@@ -278,7 +368,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -296,11 +386,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -312,11 +402,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // security_settings - computed: false, optional: true, required: false
-  private _securitySettings?: string;
+  private _securitySettings?: string | undefined; 
   public get securitySettings() {
     return this.getStringAttribute('security_settings');
   }
-  public set securitySettings(value: string ) {
+  public set securitySettings(value: string | undefined) {
     this._securitySettings = value;
   }
   public resetSecuritySettings() {
@@ -333,11 +423,11 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // supported_language_codes - computed: false, optional: true, required: false
-  private _supportedLanguageCodes?: string[];
+  private _supportedLanguageCodes?: string[] | undefined; 
   public get supportedLanguageCodes() {
     return this.getListAttribute('supported_language_codes');
   }
-  public set supportedLanguageCodes(value: string[] ) {
+  public set supportedLanguageCodes(value: string[] | undefined) {
     this._supportedLanguageCodes = value;
   }
   public resetSupportedLanguageCodes() {
@@ -349,7 +439,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // time_zone - computed: false, optional: false, required: true
-  private _timeZone: string;
+  private _timeZone?: string; 
   public get timeZone() {
     return this.getStringAttribute('time_zone');
   }
@@ -362,11 +452,12 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // speech_to_text_settings - computed: false, optional: true, required: false
-  private _speechToTextSettings?: DialogflowCxAgentSpeechToTextSettings[];
+  private _speechToTextSettings?: DialogflowCxAgentSpeechToTextSettings | undefined; 
+  private __speechToTextSettingsOutput = new DialogflowCxAgentSpeechToTextSettingsOutputReference(this as any, "speech_to_text_settings", true);
   public get speechToTextSettings() {
-    return this.interpolationForAttribute('speech_to_text_settings') as any;
+    return this.__speechToTextSettingsOutput;
   }
-  public set speechToTextSettings(value: DialogflowCxAgentSpeechToTextSettings[] ) {
+  public putSpeechToTextSettings(value: DialogflowCxAgentSpeechToTextSettings | undefined) {
     this._speechToTextSettings = value;
   }
   public resetSpeechToTextSettings() {
@@ -378,11 +469,12 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowCxAgentTimeouts;
+  private _timeouts?: DialogflowCxAgentTimeouts | undefined; 
+  private __timeoutsOutput = new DialogflowCxAgentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DialogflowCxAgentTimeouts ) {
+  public putTimeouts(value: DialogflowCxAgentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -410,7 +502,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
       security_settings: cdktf.stringToTerraform(this._securitySettings),
       supported_language_codes: cdktf.listMapper(cdktf.stringToTerraform)(this._supportedLanguageCodes),
       time_zone: cdktf.stringToTerraform(this._timeZone),
-      speech_to_text_settings: cdktf.listMapper(dialogflowCxAgentSpeechToTextSettingsToTerraform)(this._speechToTextSettings),
+      speech_to_text_settings: dialogflowCxAgentSpeechToTextSettingsToTerraform(this._speechToTextSettings),
       timeouts: dialogflowCxAgentTimeoutsToTerraform(this._timeouts),
     };
   }

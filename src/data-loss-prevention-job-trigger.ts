@@ -37,7 +37,7 @@ or 'projects/{{project}}/locations/{{location}}'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#inspect_job DataLossPreventionJobTrigger#inspect_job}
   */
-  readonly inspectJob?: DataLossPreventionJobTriggerInspectJob[];
+  readonly inspectJob?: DataLossPreventionJobTriggerInspectJob;
   /**
   * timeouts block
   * 
@@ -73,8 +73,11 @@ export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutput
   readonly tableId?: string;
 }
 
-function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable): any {
+function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference | DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -82,6 +85,58 @@ function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTa
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // table_id - computed: false, optional: true, required: false
+  private _tableId?: string | undefined; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string | undefined) {
+    this._tableId = value;
+  }
+  public resetTableId() {
+    this._tableId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig {
   /**
   * Schema used for writing the findings for Inspect jobs. This field is only used for
@@ -101,46 +156,119 @@ Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLU
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#table DataLossPreventionJobTrigger#table}
   */
-  readonly table: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable[];
+  readonly table: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable;
 }
 
-function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig): any {
+function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference | DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     output_schema: cdktf.stringToTerraform(struct!.outputSchema),
-    table: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableToTerraform)(struct!.table),
+    table: dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableToTerraform(struct!.table),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // output_schema - computed: false, optional: true, required: false
+  private _outputSchema?: string | undefined; 
+  public get outputSchema() {
+    return this.getStringAttribute('output_schema');
+  }
+  public set outputSchema(value: string | undefined) {
+    this._outputSchema = value;
+  }
+  public resetOutputSchema() {
+    this._outputSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputSchemaInput() {
+    return this._outputSchema
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable; 
+  private __tableOutput = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference(this as any, "table", true);
+  public get table() {
+    return this.__tableOutput;
+  }
+  public putTable(value: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindings {
   /**
   * output_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#output_config DataLossPreventionJobTrigger#output_config}
   */
-  readonly outputConfig: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig[];
+  readonly outputConfig: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig;
 }
 
-function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsSaveFindings): any {
+function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference | DataLossPreventionJobTriggerInspectJobActionsSaveFindings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    output_config: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigToTerraform)(struct!.outputConfig),
+    output_config: dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigToTerraform(struct!.outputConfig),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // output_config - computed: false, optional: false, required: true
+  private _outputConfig?: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig; 
+  private __outputConfigOutput = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference(this as any, "output_config", true);
+  public get outputConfig() {
+    return this.__outputConfigOutput;
+  }
+  public putOutputConfig(value: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig) {
+    this._outputConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputConfigInput() {
+    return this._outputConfig
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobActions {
   /**
   * save_findings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#save_findings DataLossPreventionJobTrigger#save_findings}
   */
-  readonly saveFindings: DataLossPreventionJobTriggerInspectJobActionsSaveFindings[];
+  readonly saveFindings: DataLossPreventionJobTriggerInspectJobActionsSaveFindings;
 }
 
 function dataLossPreventionJobTriggerInspectJobActionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    save_findings: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerraform)(struct!.saveFindings),
+    save_findings: dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerraform(struct!.saveFindings),
   }
 }
 
@@ -165,8 +293,11 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOpti
   readonly tableId: string;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dataset_id: cdktf.stringToTerraform(struct!.datasetId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
@@ -174,22 +305,98 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTable
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+
+  // table_id - computed: false, optional: false, required: true
+  private _tableId?: string; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string) {
+    this._tableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
   /**
   * table_reference block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#table_reference DataLossPreventionJobTrigger#table_reference}
   */
-  readonly tableReference: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference[];
+  readonly tableReference: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    table_reference: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceToTerraform)(struct!.tableReference),
+    table_reference: dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceToTerraform(struct!.tableReference),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // table_reference - computed: false, optional: false, required: true
+  private _tableReference?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference; 
+  private __tableReferenceOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference(this as any, "table_reference", true);
+  public get tableReference() {
+    return this.__tableReferenceOutput;
+  }
+  public putTableReference(value: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference) {
+    this._tableReference = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableReferenceInput() {
+    return this._tableReference
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
   /**
   * The name of a Cloud Storage bucket.
@@ -215,8 +422,11 @@ match all files by default (this is equivalent to including .* in the list)
   readonly includeRegex?: string[];
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     bucket_name: cdktf.stringToTerraform(struct!.bucketName),
     exclude_regex: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludeRegex),
@@ -224,6 +434,61 @@ function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsF
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // bucket_name - computed: false, optional: false, required: true
+  private _bucketName?: string; 
+  public get bucketName() {
+    return this.getStringAttribute('bucket_name');
+  }
+  public set bucketName(value: string) {
+    this._bucketName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketNameInput() {
+    return this._bucketName
+  }
+
+  // exclude_regex - computed: false, optional: true, required: false
+  private _excludeRegex?: string[] | undefined; 
+  public get excludeRegex() {
+    return this.getListAttribute('exclude_regex');
+  }
+  public set excludeRegex(value: string[] | undefined) {
+    this._excludeRegex = value;
+  }
+  public resetExcludeRegex() {
+    this._excludeRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeRegexInput() {
+    return this._excludeRegex
+  }
+
+  // include_regex - computed: false, optional: true, required: false
+  private _includeRegex?: string[] | undefined; 
+  public get includeRegex() {
+    return this.getListAttribute('include_regex');
+  }
+  public set includeRegex(value: string[] | undefined) {
+    this._includeRegex = value;
+  }
+  public resetIncludeRegex() {
+    this._includeRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeRegexInput() {
+    return this._includeRegex
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet {
   /**
   * The Cloud Storage url of the file(s) to scan, in the format 'gs://<bucket>/<path>'. Trailing wildcard
@@ -241,17 +506,63 @@ equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#regex_file_set DataLossPreventionJobTrigger#regex_file_set}
   */
-  readonly regexFileSet?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet[];
+  readonly regexFileSet?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     url: cdktf.stringToTerraform(struct!.url),
-    regex_file_set: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetToTerraform)(struct!.regexFileSet),
+    regex_file_set: dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetToTerraform(struct!.regexFileSet),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url?: string | undefined; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string | undefined) {
+    this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url
+  }
+
+  // regex_file_set - computed: false, optional: true, required: false
+  private _regexFileSet?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet | undefined; 
+  private __regexFileSetOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference(this as any, "regex_file_set", true);
+  public get regexFileSet() {
+    return this.__regexFileSetOutput;
+  }
+  public putRegexFileSet(value: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet | undefined) {
+    this._regexFileSet = value;
+  }
+  public resetRegexFileSet() {
+    this._regexFileSet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexFileSetInput() {
+    return this._regexFileSet
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions {
   /**
   * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
@@ -294,21 +605,128 @@ If not specified, scanning would start from the top. Possible values: ["TOP", "R
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#file_set DataLossPreventionJobTrigger#file_set}
   */
-  readonly fileSet: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet[];
+  readonly fileSet: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     bytes_limit_per_file: cdktf.numberToTerraform(struct!.bytesLimitPerFile),
     bytes_limit_per_file_percent: cdktf.numberToTerraform(struct!.bytesLimitPerFilePercent),
     file_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileTypes),
     files_limit_percent: cdktf.numberToTerraform(struct!.filesLimitPercent),
     sample_method: cdktf.stringToTerraform(struct!.sampleMethod),
-    file_set: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetToTerraform)(struct!.fileSet),
+    file_set: dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetToTerraform(struct!.fileSet),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // bytes_limit_per_file - computed: false, optional: true, required: false
+  private _bytesLimitPerFile?: number | undefined; 
+  public get bytesLimitPerFile() {
+    return this.getNumberAttribute('bytes_limit_per_file');
+  }
+  public set bytesLimitPerFile(value: number | undefined) {
+    this._bytesLimitPerFile = value;
+  }
+  public resetBytesLimitPerFile() {
+    this._bytesLimitPerFile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bytesLimitPerFileInput() {
+    return this._bytesLimitPerFile
+  }
+
+  // bytes_limit_per_file_percent - computed: false, optional: true, required: false
+  private _bytesLimitPerFilePercent?: number | undefined; 
+  public get bytesLimitPerFilePercent() {
+    return this.getNumberAttribute('bytes_limit_per_file_percent');
+  }
+  public set bytesLimitPerFilePercent(value: number | undefined) {
+    this._bytesLimitPerFilePercent = value;
+  }
+  public resetBytesLimitPerFilePercent() {
+    this._bytesLimitPerFilePercent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bytesLimitPerFilePercentInput() {
+    return this._bytesLimitPerFilePercent
+  }
+
+  // file_types - computed: false, optional: true, required: false
+  private _fileTypes?: string[] | undefined; 
+  public get fileTypes() {
+    return this.getListAttribute('file_types');
+  }
+  public set fileTypes(value: string[] | undefined) {
+    this._fileTypes = value;
+  }
+  public resetFileTypes() {
+    this._fileTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileTypesInput() {
+    return this._fileTypes
+  }
+
+  // files_limit_percent - computed: false, optional: true, required: false
+  private _filesLimitPercent?: number | undefined; 
+  public get filesLimitPercent() {
+    return this.getNumberAttribute('files_limit_percent');
+  }
+  public set filesLimitPercent(value: number | undefined) {
+    this._filesLimitPercent = value;
+  }
+  public resetFilesLimitPercent() {
+    this._filesLimitPercent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filesLimitPercentInput() {
+    return this._filesLimitPercent
+  }
+
+  // sample_method - computed: false, optional: true, required: false
+  private _sampleMethod?: string | undefined; 
+  public get sampleMethod() {
+    return this.getStringAttribute('sample_method');
+  }
+  public set sampleMethod(value: string | undefined) {
+    this._sampleMethod = value;
+  }
+  public resetSampleMethod() {
+    this._sampleMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sampleMethodInput() {
+    return this._sampleMethod
+  }
+
+  // file_set - computed: false, optional: false, required: true
+  private _fileSet?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet; 
+  private __fileSetOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference(this as any, "file_set", true);
+  public get fileSet() {
+    return this.__fileSetOutput;
+  }
+  public putFileSet(value: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet) {
+    this._fileSet = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileSetInput() {
+    return this._fileSet
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind {
   /**
   * The name of the Datastore kind.
@@ -318,13 +736,39 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpt
   readonly name: string;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId {
   /**
   * If not empty, the ID of the namespace to which the entities belong.
@@ -340,37 +784,120 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpt
   readonly projectId: string;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     namespace_id: cdktf.stringToTerraform(struct!.namespaceId),
     project_id: cdktf.stringToTerraform(struct!.projectId),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // namespace_id - computed: false, optional: true, required: false
+  private _namespaceId?: string | undefined; 
+  public get namespaceId() {
+    return this.getStringAttribute('namespace_id');
+  }
+  public set namespaceId(value: string | undefined) {
+    this._namespaceId = value;
+  }
+  public resetNamespaceId() {
+    this._namespaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceIdInput() {
+    return this._namespaceId
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
   /**
   * kind block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#kind DataLossPreventionJobTrigger#kind}
   */
-  readonly kind: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind[];
+  readonly kind: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind;
   /**
   * partition_id block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#partition_id DataLossPreventionJobTrigger#partition_id}
   */
-  readonly partitionId: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId[];
+  readonly partitionId: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    kind: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindToTerraform)(struct!.kind),
-    partition_id: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdToTerraform)(struct!.partitionId),
+    kind: dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindToTerraform(struct!.kind),
+    partition_id: dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdToTerraform(struct!.partitionId),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // kind - computed: false, optional: false, required: true
+  private _kind?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind; 
+  private __kindOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference(this as any, "kind", true);
+  public get kind() {
+    return this.__kindOutput;
+  }
+  public putKind(value: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind) {
+    this._kind = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind
+  }
+
+  // partition_id - computed: false, optional: false, required: true
+  private _partitionId?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId; 
+  private __partitionIdOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference(this as any, "partition_id", true);
+  public get partitionId() {
+    return this.__partitionIdOutput;
+  }
+  public putPartitionId(value: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId) {
+    this._partitionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionIdInput() {
+    return this._partitionId
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField {
   /**
   * Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery.
@@ -387,13 +914,39 @@ timestamp property does not exist or its value is empty or invalid.
   readonly name: string;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig {
   /**
   * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
@@ -420,56 +973,212 @@ be based on the time of the execution of the last run of the JobTrigger.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#timestamp_field DataLossPreventionJobTrigger#timestamp_field}
   */
-  readonly timestampField: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField[];
+  readonly timestampField: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enable_auto_population_of_timespan_config: cdktf.booleanToTerraform(struct!.enableAutoPopulationOfTimespanConfig),
     end_time: cdktf.stringToTerraform(struct!.endTime),
     start_time: cdktf.stringToTerraform(struct!.startTime),
-    timestamp_field: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldToTerraform)(struct!.timestampField),
+    timestamp_field: dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldToTerraform(struct!.timestampField),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enable_auto_population_of_timespan_config - computed: false, optional: true, required: false
+  private _enableAutoPopulationOfTimespanConfig?: boolean | cdktf.IResolvable | undefined; 
+  public get enableAutoPopulationOfTimespanConfig() {
+    return this.getBooleanAttribute('enable_auto_population_of_timespan_config') as any;
+  }
+  public set enableAutoPopulationOfTimespanConfig(value: boolean | cdktf.IResolvable | undefined) {
+    this._enableAutoPopulationOfTimespanConfig = value;
+  }
+  public resetEnableAutoPopulationOfTimespanConfig() {
+    this._enableAutoPopulationOfTimespanConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutoPopulationOfTimespanConfigInput() {
+    return this._enableAutoPopulationOfTimespanConfig
+  }
+
+  // end_time - computed: false, optional: true, required: false
+  private _endTime?: string | undefined; 
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+  public set endTime(value: string | undefined) {
+    this._endTime = value;
+  }
+  public resetEndTime() {
+    this._endTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endTimeInput() {
+    return this._endTime
+  }
+
+  // start_time - computed: false, optional: true, required: false
+  private _startTime?: string | undefined; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string | undefined) {
+    this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
+  }
+
+  // timestamp_field - computed: false, optional: false, required: true
+  private _timestampField?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField; 
+  private __timestampFieldOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference(this as any, "timestamp_field", true);
+  public get timestampField() {
+    return this.__timestampFieldOutput;
+  }
+  public putTimestampField(value: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField) {
+    this._timestampField = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timestampFieldInput() {
+    return this._timestampField
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfig {
   /**
   * big_query_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#big_query_options DataLossPreventionJobTrigger#big_query_options}
   */
-  readonly bigQueryOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions[];
+  readonly bigQueryOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions;
   /**
   * cloud_storage_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#cloud_storage_options DataLossPreventionJobTrigger#cloud_storage_options}
   */
-  readonly cloudStorageOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions[];
+  readonly cloudStorageOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions;
   /**
   * datastore_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#datastore_options DataLossPreventionJobTrigger#datastore_options}
   */
-  readonly datastoreOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions[];
+  readonly datastoreOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions;
   /**
   * timespan_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#timespan_config DataLossPreventionJobTrigger#timespan_config}
   */
-  readonly timespanConfig?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig[];
+  readonly timespanConfig?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig;
 }
 
-function dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfig): any {
+function dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference | DataLossPreventionJobTriggerInspectJobStorageConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    big_query_options: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsToTerraform)(struct!.bigQueryOptions),
-    cloud_storage_options: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsToTerraform)(struct!.cloudStorageOptions),
-    datastore_options: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsToTerraform)(struct!.datastoreOptions),
-    timespan_config: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigToTerraform)(struct!.timespanConfig),
+    big_query_options: dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsToTerraform(struct!.bigQueryOptions),
+    cloud_storage_options: dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsToTerraform(struct!.cloudStorageOptions),
+    datastore_options: dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsToTerraform(struct!.datastoreOptions),
+    timespan_config: dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigToTerraform(struct!.timespanConfig),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // big_query_options - computed: false, optional: true, required: false
+  private _bigQueryOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions | undefined; 
+  private __bigQueryOptionsOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference(this as any, "big_query_options", true);
+  public get bigQueryOptions() {
+    return this.__bigQueryOptionsOutput;
+  }
+  public putBigQueryOptions(value: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions | undefined) {
+    this._bigQueryOptions = value;
+  }
+  public resetBigQueryOptions() {
+    this._bigQueryOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigQueryOptionsInput() {
+    return this._bigQueryOptions
+  }
+
+  // cloud_storage_options - computed: false, optional: true, required: false
+  private _cloudStorageOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions | undefined; 
+  private __cloudStorageOptionsOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference(this as any, "cloud_storage_options", true);
+  public get cloudStorageOptions() {
+    return this.__cloudStorageOptionsOutput;
+  }
+  public putCloudStorageOptions(value: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions | undefined) {
+    this._cloudStorageOptions = value;
+  }
+  public resetCloudStorageOptions() {
+    this._cloudStorageOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudStorageOptionsInput() {
+    return this._cloudStorageOptions
+  }
+
+  // datastore_options - computed: false, optional: true, required: false
+  private _datastoreOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions | undefined; 
+  private __datastoreOptionsOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference(this as any, "datastore_options", true);
+  public get datastoreOptions() {
+    return this.__datastoreOptionsOutput;
+  }
+  public putDatastoreOptions(value: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions | undefined) {
+    this._datastoreOptions = value;
+  }
+  public resetDatastoreOptions() {
+    this._datastoreOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datastoreOptionsInput() {
+    return this._datastoreOptions
+  }
+
+  // timespan_config - computed: false, optional: true, required: false
+  private _timespanConfig?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig | undefined; 
+  private __timespanConfigOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference(this as any, "timespan_config", true);
+  public get timespanConfig() {
+    return this.__timespanConfigOutput;
+  }
+  public putTimespanConfig(value: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig | undefined) {
+    this._timespanConfig = value;
+  }
+  public resetTimespanConfig() {
+    this._timespanConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timespanConfigInput() {
+    return this._timespanConfig
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJob {
   /**
   * The name of the template to run when this job is triggered.
@@ -488,18 +1197,72 @@ export interface DataLossPreventionJobTriggerInspectJob {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#storage_config DataLossPreventionJobTrigger#storage_config}
   */
-  readonly storageConfig: DataLossPreventionJobTriggerInspectJobStorageConfig[];
+  readonly storageConfig: DataLossPreventionJobTriggerInspectJobStorageConfig;
 }
 
-function dataLossPreventionJobTriggerInspectJobToTerraform(struct?: DataLossPreventionJobTriggerInspectJob): any {
+function dataLossPreventionJobTriggerInspectJobToTerraform(struct?: DataLossPreventionJobTriggerInspectJobOutputReference | DataLossPreventionJobTriggerInspectJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     inspect_template_name: cdktf.stringToTerraform(struct!.inspectTemplateName),
     actions: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsToTerraform)(struct!.actions),
-    storage_config: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform)(struct!.storageConfig),
+    storage_config: dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(struct!.storageConfig),
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // inspect_template_name - computed: false, optional: false, required: true
+  private _inspectTemplateName?: string; 
+  public get inspectTemplateName() {
+    return this.getStringAttribute('inspect_template_name');
+  }
+  public set inspectTemplateName(value: string) {
+    this._inspectTemplateName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inspectTemplateNameInput() {
+    return this._inspectTemplateName
+  }
+
+  // actions - computed: false, optional: false, required: true
+  private _actions?: DataLossPreventionJobTriggerInspectJobActions[]; 
+  public get actions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('actions') as any;
+  }
+  public set actions(value: DataLossPreventionJobTriggerInspectJobActions[]) {
+    this._actions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions
+  }
+
+  // storage_config - computed: false, optional: false, required: true
+  private _storageConfig?: DataLossPreventionJobTriggerInspectJobStorageConfig; 
+  private __storageConfigOutput = new DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference(this as any, "storage_config", true);
+  public get storageConfig() {
+    return this.__storageConfigOutput;
+  }
+  public putStorageConfig(value: DataLossPreventionJobTriggerInspectJobStorageConfig) {
+    this._storageConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageConfigInput() {
+    return this._storageConfig
+  }
+}
 export interface DataLossPreventionJobTriggerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#create DataLossPreventionJobTrigger#create}
@@ -515,8 +1278,11 @@ export interface DataLossPreventionJobTriggerTimeouts {
   readonly update?: string;
 }
 
-function dataLossPreventionJobTriggerTimeoutsToTerraform(struct?: DataLossPreventionJobTriggerTimeouts): any {
+function dataLossPreventionJobTriggerTimeoutsToTerraform(struct?: DataLossPreventionJobTriggerTimeoutsOutputReference | DataLossPreventionJobTriggerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -524,6 +1290,64 @@ function dataLossPreventionJobTriggerTimeoutsToTerraform(struct?: DataLossPreven
   }
 }
 
+export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface DataLossPreventionJobTriggerTriggersSchedule {
   /**
   * With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
@@ -539,26 +1363,58 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly recurrencePeriodDuration?: string;
 }
 
-function dataLossPreventionJobTriggerTriggersScheduleToTerraform(struct?: DataLossPreventionJobTriggerTriggersSchedule): any {
+function dataLossPreventionJobTriggerTriggersScheduleToTerraform(struct?: DataLossPreventionJobTriggerTriggersScheduleOutputReference | DataLossPreventionJobTriggerTriggersSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     recurrence_period_duration: cdktf.stringToTerraform(struct!.recurrencePeriodDuration),
   }
 }
 
+export class DataLossPreventionJobTriggerTriggersScheduleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // recurrence_period_duration - computed: false, optional: true, required: false
+  private _recurrencePeriodDuration?: string | undefined; 
+  public get recurrencePeriodDuration() {
+    return this.getStringAttribute('recurrence_period_duration');
+  }
+  public set recurrencePeriodDuration(value: string | undefined) {
+    this._recurrencePeriodDuration = value;
+  }
+  public resetRecurrencePeriodDuration() {
+    this._recurrencePeriodDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recurrencePeriodDurationInput() {
+    return this._recurrencePeriodDuration
+  }
+}
 export interface DataLossPreventionJobTriggerTriggers {
   /**
   * schedule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger.html#schedule DataLossPreventionJobTrigger#schedule}
   */
-  readonly schedule?: DataLossPreventionJobTriggerTriggersSchedule[];
+  readonly schedule?: DataLossPreventionJobTriggerTriggersSchedule;
 }
 
 function dataLossPreventionJobTriggerTriggersToTerraform(struct?: DataLossPreventionJobTriggerTriggers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    schedule: cdktf.listMapper(dataLossPreventionJobTriggerTriggersScheduleToTerraform)(struct!.schedule),
+    schedule: dataLossPreventionJobTriggerTriggersScheduleToTerraform(struct!.schedule),
   }
 }
 
@@ -609,11 +1465,11 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -625,11 +1481,11 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -656,7 +1512,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: false, required: true
-  private _parent: string;
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
@@ -669,11 +1525,11 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string;
+  private _status?: string | undefined; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string ) {
+  public set status(value: string | undefined) {
     this._status = value;
   }
   public resetStatus() {
@@ -685,11 +1541,12 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // inspect_job - computed: false, optional: true, required: false
-  private _inspectJob?: DataLossPreventionJobTriggerInspectJob[];
+  private _inspectJob?: DataLossPreventionJobTriggerInspectJob | undefined; 
+  private __inspectJobOutput = new DataLossPreventionJobTriggerInspectJobOutputReference(this as any, "inspect_job", true);
   public get inspectJob() {
-    return this.interpolationForAttribute('inspect_job') as any;
+    return this.__inspectJobOutput;
   }
-  public set inspectJob(value: DataLossPreventionJobTriggerInspectJob[] ) {
+  public putInspectJob(value: DataLossPreventionJobTriggerInspectJob | undefined) {
     this._inspectJob = value;
   }
   public resetInspectJob() {
@@ -701,11 +1558,12 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataLossPreventionJobTriggerTimeouts;
+  private _timeouts?: DataLossPreventionJobTriggerTimeouts | undefined; 
+  private __timeoutsOutput = new DataLossPreventionJobTriggerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataLossPreventionJobTriggerTimeouts ) {
+  public putTimeouts(value: DataLossPreventionJobTriggerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -717,8 +1575,9 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // triggers - computed: false, optional: false, required: true
-  private _triggers: DataLossPreventionJobTriggerTriggers[];
+  private _triggers?: DataLossPreventionJobTriggerTriggers[]; 
   public get triggers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('triggers') as any;
   }
   public set triggers(value: DataLossPreventionJobTriggerTriggers[]) {
@@ -739,7 +1598,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       parent: cdktf.stringToTerraform(this._parent),
       status: cdktf.stringToTerraform(this._status),
-      inspect_job: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobToTerraform)(this._inspectJob),
+      inspect_job: dataLossPreventionJobTriggerInspectJobToTerraform(this._inspectJob),
       timeouts: dataLossPreventionJobTriggerTimeoutsToTerraform(this._timeouts),
       triggers: cdktf.listMapper(dataLossPreventionJobTriggerTriggersToTerraform)(this._triggers),
     };

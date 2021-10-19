@@ -76,7 +76,7 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   // ==========
 
   // bucket - computed: false, optional: false, required: true
-  private _bucket: string;
+  private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
@@ -89,11 +89,11 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
 
   // default_acl - computed: false, optional: true, required: false
-  private _defaultAcl?: string;
+  private _defaultAcl?: string | undefined; 
   public get defaultAcl() {
     return this.getStringAttribute('default_acl');
   }
-  public set defaultAcl(value: string ) {
+  public set defaultAcl(value: string | undefined) {
     this._defaultAcl = value;
   }
   public resetDefaultAcl() {
@@ -110,11 +110,11 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
 
   // predefined_acl - computed: false, optional: true, required: false
-  private _predefinedAcl?: string;
+  private _predefinedAcl?: string | undefined; 
   public get predefinedAcl() {
     return this.getStringAttribute('predefined_acl');
   }
-  public set predefinedAcl(value: string ) {
+  public set predefinedAcl(value: string | undefined) {
     this._predefinedAcl = value;
   }
   public resetPredefinedAcl() {
@@ -126,11 +126,11 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
 
   // role_entity - computed: true, optional: true, required: false
-  private _roleEntity?: string[];
+  private _roleEntity?: string[] | undefined; 
   public get roleEntity() {
     return this.getListAttribute('role_entity');
   }
-  public set roleEntity(value: string[]) {
+  public set roleEntity(value: string[] | undefined) {
     this._roleEntity = value;
   }
   public resetRoleEntity() {

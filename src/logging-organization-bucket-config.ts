@@ -83,7 +83,7 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   // ==========
 
   // bucket_id - computed: false, optional: false, required: true
-  private _bucketId: string;
+  private _bucketId?: string; 
   public get bucketId() {
     return this.getStringAttribute('bucket_id');
   }
@@ -96,11 +96,11 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   }
 
   // description - computed: true, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -122,7 +122,7 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -140,7 +140,7 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   }
 
   // organization - computed: false, optional: false, required: true
-  private _organization: string;
+  private _organization?: string; 
   public get organization() {
     return this.getStringAttribute('organization');
   }
@@ -153,11 +153,11 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   }
 
   // retention_days - computed: false, optional: true, required: false
-  private _retentionDays?: number;
+  private _retentionDays?: number | undefined; 
   public get retentionDays() {
     return this.getNumberAttribute('retention_days');
   }
-  public set retentionDays(value: number ) {
+  public set retentionDays(value: number | undefined) {
     this._retentionDays = value;
   }
   public resetRetentionDays() {

@@ -76,8 +76,11 @@ export interface ApigeeOrganizationTimeouts {
   readonly update?: string;
 }
 
-function apigeeOrganizationTimeoutsToTerraform(struct?: ApigeeOrganizationTimeouts): any {
+function apigeeOrganizationTimeoutsToTerraform(struct?: ApigeeOrganizationTimeoutsOutputReference | ApigeeOrganizationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -85,6 +88,64 @@ function apigeeOrganizationTimeoutsToTerraform(struct?: ApigeeOrganizationTimeou
   }
 }
 
+export class ApigeeOrganizationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_organization.html google_apigee_organization}
@@ -133,11 +194,11 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   // ==========
 
   // analytics_region - computed: false, optional: true, required: false
-  private _analyticsRegion?: string;
+  private _analyticsRegion?: string | undefined; 
   public get analyticsRegion() {
     return this.getStringAttribute('analytics_region');
   }
-  public set analyticsRegion(value: string ) {
+  public set analyticsRegion(value: string | undefined) {
     this._analyticsRegion = value;
   }
   public resetAnalyticsRegion() {
@@ -149,11 +210,11 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // authorized_network - computed: false, optional: true, required: false
-  private _authorizedNetwork?: string;
+  private _authorizedNetwork?: string | undefined; 
   public get authorizedNetwork() {
     return this.getStringAttribute('authorized_network');
   }
-  public set authorizedNetwork(value: string ) {
+  public set authorizedNetwork(value: string | undefined) {
     this._authorizedNetwork = value;
   }
   public resetAuthorizedNetwork() {
@@ -170,11 +231,11 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -186,11 +247,11 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string ) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -212,7 +273,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // project_id - computed: false, optional: false, required: true
-  private _projectId: string;
+  private _projectId?: string; 
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
@@ -225,11 +286,11 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // runtime_database_encryption_key_name - computed: false, optional: true, required: false
-  private _runtimeDatabaseEncryptionKeyName?: string;
+  private _runtimeDatabaseEncryptionKeyName?: string | undefined; 
   public get runtimeDatabaseEncryptionKeyName() {
     return this.getStringAttribute('runtime_database_encryption_key_name');
   }
-  public set runtimeDatabaseEncryptionKeyName(value: string ) {
+  public set runtimeDatabaseEncryptionKeyName(value: string | undefined) {
     this._runtimeDatabaseEncryptionKeyName = value;
   }
   public resetRuntimeDatabaseEncryptionKeyName() {
@@ -241,11 +302,11 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // runtime_type - computed: false, optional: true, required: false
-  private _runtimeType?: string;
+  private _runtimeType?: string | undefined; 
   public get runtimeType() {
     return this.getStringAttribute('runtime_type');
   }
-  public set runtimeType(value: string ) {
+  public set runtimeType(value: string | undefined) {
     this._runtimeType = value;
   }
   public resetRuntimeType() {
@@ -262,11 +323,12 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApigeeOrganizationTimeouts;
+  private _timeouts?: ApigeeOrganizationTimeouts | undefined; 
+  private __timeoutsOutput = new ApigeeOrganizationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApigeeOrganizationTimeouts ) {
+  public putTimeouts(value: ApigeeOrganizationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -54,7 +54,7 @@ export interface LoggingFolderSinkConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_sink.html#bigquery_options LoggingFolderSink#bigquery_options}
   */
-  readonly bigqueryOptions?: LoggingFolderSinkBigqueryOptions[];
+  readonly bigqueryOptions?: LoggingFolderSinkBigqueryOptions;
   /**
   * exclusions block
   * 
@@ -71,13 +71,39 @@ export interface LoggingFolderSinkBigqueryOptions {
   readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
 
-function loggingFolderSinkBigqueryOptionsToTerraform(struct?: LoggingFolderSinkBigqueryOptions): any {
+function loggingFolderSinkBigqueryOptionsToTerraform(struct?: LoggingFolderSinkBigqueryOptionsOutputReference | LoggingFolderSinkBigqueryOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     use_partitioned_tables: cdktf.booleanToTerraform(struct!.usePartitionedTables),
   }
 }
 
+export class LoggingFolderSinkBigqueryOptionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // use_partitioned_tables - computed: false, optional: false, required: true
+  private _usePartitionedTables?: boolean | cdktf.IResolvable; 
+  public get usePartitionedTables() {
+    return this.getBooleanAttribute('use_partitioned_tables') as any;
+  }
+  public set usePartitionedTables(value: boolean | cdktf.IResolvable) {
+    this._usePartitionedTables = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usePartitionedTablesInput() {
+    return this._usePartitionedTables
+  }
+}
 export interface LoggingFolderSinkExclusions {
   /**
   * A description of this exclusion.
@@ -107,6 +133,9 @@ export interface LoggingFolderSinkExclusions {
 
 function loggingFolderSinkExclusionsToTerraform(struct?: LoggingFolderSinkExclusions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     disabled: cdktf.booleanToTerraform(struct!.disabled),
@@ -164,11 +193,11 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -180,7 +209,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination: string;
+  private _destination?: string; 
   public get destination() {
     return this.getStringAttribute('destination');
   }
@@ -193,11 +222,11 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable;
+  private _disabled?: boolean | cdktf.IResolvable | undefined; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled');
+    return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable ) {
+  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -209,11 +238,11 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string;
+  private _filter?: string | undefined; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string ) {
+  public set filter(value: string | undefined) {
     this._filter = value;
   }
   public resetFilter() {
@@ -225,7 +254,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // folder - computed: false, optional: false, required: true
-  private _folder: string;
+  private _folder?: string; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
@@ -243,11 +272,11 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // include_children - computed: false, optional: true, required: false
-  private _includeChildren?: boolean | cdktf.IResolvable;
+  private _includeChildren?: boolean | cdktf.IResolvable | undefined; 
   public get includeChildren() {
-    return this.getBooleanAttribute('include_children');
+    return this.getBooleanAttribute('include_children') as any;
   }
-  public set includeChildren(value: boolean | cdktf.IResolvable ) {
+  public set includeChildren(value: boolean | cdktf.IResolvable | undefined) {
     this._includeChildren = value;
   }
   public resetIncludeChildren() {
@@ -259,7 +288,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -277,11 +306,12 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // bigquery_options - computed: false, optional: true, required: false
-  private _bigqueryOptions?: LoggingFolderSinkBigqueryOptions[];
+  private _bigqueryOptions?: LoggingFolderSinkBigqueryOptions | undefined; 
+  private __bigqueryOptionsOutput = new LoggingFolderSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
   public get bigqueryOptions() {
-    return this.interpolationForAttribute('bigquery_options') as any;
+    return this.__bigqueryOptionsOutput;
   }
-  public set bigqueryOptions(value: LoggingFolderSinkBigqueryOptions[] ) {
+  public putBigqueryOptions(value: LoggingFolderSinkBigqueryOptions | undefined) {
     this._bigqueryOptions = value;
   }
   public resetBigqueryOptions() {
@@ -293,11 +323,12 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   }
 
   // exclusions - computed: false, optional: true, required: false
-  private _exclusions?: LoggingFolderSinkExclusions[];
+  private _exclusions?: LoggingFolderSinkExclusions[] | undefined; 
   public get exclusions() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('exclusions') as any;
   }
-  public set exclusions(value: LoggingFolderSinkExclusions[] ) {
+  public set exclusions(value: LoggingFolderSinkExclusions[] | undefined) {
     this._exclusions = value;
   }
   public resetExclusions() {
@@ -321,7 +352,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
       folder: cdktf.stringToTerraform(this._folder),
       include_children: cdktf.booleanToTerraform(this._includeChildren),
       name: cdktf.stringToTerraform(this._name),
-      bigquery_options: cdktf.listMapper(loggingFolderSinkBigqueryOptionsToTerraform)(this._bigqueryOptions),
+      bigquery_options: loggingFolderSinkBigqueryOptionsToTerraform(this._bigqueryOptions),
       exclusions: cdktf.listMapper(loggingFolderSinkExclusionsToTerraform)(this._exclusions),
     };
   }

@@ -54,7 +54,7 @@ If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#default_url_redirect ComputeRegionUrlMap#default_url_redirect}
   */
-  readonly defaultUrlRedirect?: ComputeRegionUrlMapDefaultUrlRedirect[];
+  readonly defaultUrlRedirect?: ComputeRegionUrlMapDefaultUrlRedirect;
   /**
   * host_rule block
   * 
@@ -146,8 +146,11 @@ retained.
   readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
-function computeRegionUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeRegionUrlMapDefaultUrlRedirect): any {
+function computeRegionUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeRegionUrlMapDefaultUrlRedirectOutputReference | ComputeRegionUrlMapDefaultUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
     https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
@@ -158,6 +161,109 @@ function computeRegionUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeRegion
   }
 }
 
+export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_redirect - computed: false, optional: true, required: false
+  private _hostRedirect?: string | undefined; 
+  public get hostRedirect() {
+    return this.getStringAttribute('host_redirect');
+  }
+  public set hostRedirect(value: string | undefined) {
+    this._hostRedirect = value;
+  }
+  public resetHostRedirect() {
+    this._hostRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRedirectInput() {
+    return this._hostRedirect
+  }
+
+  // https_redirect - computed: false, optional: true, required: false
+  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  public get httpsRedirect() {
+    return this.getBooleanAttribute('https_redirect') as any;
+  }
+  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+    this._httpsRedirect = value;
+  }
+  public resetHttpsRedirect() {
+    this._httpsRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsRedirectInput() {
+    return this._httpsRedirect
+  }
+
+  // path_redirect - computed: false, optional: true, required: false
+  private _pathRedirect?: string | undefined; 
+  public get pathRedirect() {
+    return this.getStringAttribute('path_redirect');
+  }
+  public set pathRedirect(value: string | undefined) {
+    this._pathRedirect = value;
+  }
+  public resetPathRedirect() {
+    this._pathRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathRedirectInput() {
+    return this._pathRedirect
+  }
+
+  // prefix_redirect - computed: false, optional: true, required: false
+  private _prefixRedirect?: string | undefined; 
+  public get prefixRedirect() {
+    return this.getStringAttribute('prefix_redirect');
+  }
+  public set prefixRedirect(value: string | undefined) {
+    this._prefixRedirect = value;
+  }
+  public resetPrefixRedirect() {
+    this._prefixRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixRedirectInput() {
+    return this._prefixRedirect
+  }
+
+  // redirect_response_code - computed: false, optional: true, required: false
+  private _redirectResponseCode?: string | undefined; 
+  public get redirectResponseCode() {
+    return this.getStringAttribute('redirect_response_code');
+  }
+  public set redirectResponseCode(value: string | undefined) {
+    this._redirectResponseCode = value;
+  }
+  public resetRedirectResponseCode() {
+    this._redirectResponseCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectResponseCodeInput() {
+    return this._redirectResponseCode
+  }
+
+  // strip_query - computed: false, optional: false, required: true
+  private _stripQuery?: boolean | cdktf.IResolvable; 
+  public get stripQuery() {
+    return this.getBooleanAttribute('strip_query') as any;
+  }
+  public set stripQuery(value: boolean | cdktf.IResolvable) {
+    this._stripQuery = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stripQueryInput() {
+    return this._stripQuery
+  }
+}
 export interface ComputeRegionUrlMapHostRule {
   /**
   * An optional description of this HostRule. Provide this property
@@ -186,6 +292,9 @@ the URL if the hostRule matches the URL's host portion.
 
 function computeRegionUrlMapHostRuleToTerraform(struct?: ComputeRegionUrlMapHostRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     hosts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hosts),
@@ -259,8 +368,11 @@ retained.
   readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
-function computeRegionUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeRegionUrlMapPathMatcherDefaultUrlRedirect): any {
+function computeRegionUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference | ComputeRegionUrlMapPathMatcherDefaultUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
     https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
@@ -271,6 +383,109 @@ function computeRegionUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: Co
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_redirect - computed: false, optional: true, required: false
+  private _hostRedirect?: string | undefined; 
+  public get hostRedirect() {
+    return this.getStringAttribute('host_redirect');
+  }
+  public set hostRedirect(value: string | undefined) {
+    this._hostRedirect = value;
+  }
+  public resetHostRedirect() {
+    this._hostRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRedirectInput() {
+    return this._hostRedirect
+  }
+
+  // https_redirect - computed: false, optional: true, required: false
+  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  public get httpsRedirect() {
+    return this.getBooleanAttribute('https_redirect') as any;
+  }
+  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+    this._httpsRedirect = value;
+  }
+  public resetHttpsRedirect() {
+    this._httpsRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsRedirectInput() {
+    return this._httpsRedirect
+  }
+
+  // path_redirect - computed: false, optional: true, required: false
+  private _pathRedirect?: string | undefined; 
+  public get pathRedirect() {
+    return this.getStringAttribute('path_redirect');
+  }
+  public set pathRedirect(value: string | undefined) {
+    this._pathRedirect = value;
+  }
+  public resetPathRedirect() {
+    this._pathRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathRedirectInput() {
+    return this._pathRedirect
+  }
+
+  // prefix_redirect - computed: false, optional: true, required: false
+  private _prefixRedirect?: string | undefined; 
+  public get prefixRedirect() {
+    return this.getStringAttribute('prefix_redirect');
+  }
+  public set prefixRedirect(value: string | undefined) {
+    this._prefixRedirect = value;
+  }
+  public resetPrefixRedirect() {
+    this._prefixRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixRedirectInput() {
+    return this._prefixRedirect
+  }
+
+  // redirect_response_code - computed: false, optional: true, required: false
+  private _redirectResponseCode?: string | undefined; 
+  public get redirectResponseCode() {
+    return this.getStringAttribute('redirect_response_code');
+  }
+  public set redirectResponseCode(value: string | undefined) {
+    this._redirectResponseCode = value;
+  }
+  public resetRedirectResponseCode() {
+    this._redirectResponseCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectResponseCodeInput() {
+    return this._redirectResponseCode
+  }
+
+  // strip_query - computed: false, optional: false, required: true
+  private _stripQuery?: boolean | cdktf.IResolvable; 
+  public get stripQuery() {
+    return this.getBooleanAttribute('strip_query') as any;
+  }
+  public set stripQuery(value: boolean | cdktf.IResolvable) {
+    this._stripQuery = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stripQueryInput() {
+    return this._stripQuery
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
   /**
   * In response to a preflight request, setting this to true indicates that the
@@ -328,8 +543,11 @@ translates to the content for the Access-Control-Max-Age header.
   readonly maxAge?: number;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
     allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
@@ -342,6 +560,141 @@ function computeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_credentials - computed: false, optional: true, required: false
+  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  public get allowCredentials() {
+    return this.getBooleanAttribute('allow_credentials') as any;
+  }
+  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowCredentials = value;
+  }
+  public resetAllowCredentials() {
+    this._allowCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowCredentialsInput() {
+    return this._allowCredentials
+  }
+
+  // allow_headers - computed: false, optional: true, required: false
+  private _allowHeaders?: string[] | undefined; 
+  public get allowHeaders() {
+    return this.getListAttribute('allow_headers');
+  }
+  public set allowHeaders(value: string[] | undefined) {
+    this._allowHeaders = value;
+  }
+  public resetAllowHeaders() {
+    this._allowHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowHeadersInput() {
+    return this._allowHeaders
+  }
+
+  // allow_methods - computed: false, optional: true, required: false
+  private _allowMethods?: string[] | undefined; 
+  public get allowMethods() {
+    return this.getListAttribute('allow_methods');
+  }
+  public set allowMethods(value: string[] | undefined) {
+    this._allowMethods = value;
+  }
+  public resetAllowMethods() {
+    this._allowMethods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowMethodsInput() {
+    return this._allowMethods
+  }
+
+  // allow_origin_regexes - computed: false, optional: true, required: false
+  private _allowOriginRegexes?: string[] | undefined; 
+  public get allowOriginRegexes() {
+    return this.getListAttribute('allow_origin_regexes');
+  }
+  public set allowOriginRegexes(value: string[] | undefined) {
+    this._allowOriginRegexes = value;
+  }
+  public resetAllowOriginRegexes() {
+    this._allowOriginRegexes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowOriginRegexesInput() {
+    return this._allowOriginRegexes
+  }
+
+  // allow_origins - computed: false, optional: true, required: false
+  private _allowOrigins?: string[] | undefined; 
+  public get allowOrigins() {
+    return this.getListAttribute('allow_origins');
+  }
+  public set allowOrigins(value: string[] | undefined) {
+    this._allowOrigins = value;
+  }
+  public resetAllowOrigins() {
+    this._allowOrigins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowOriginsInput() {
+    return this._allowOrigins
+  }
+
+  // disabled - computed: false, optional: false, required: true
+  private _disabled?: boolean | cdktf.IResolvable; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled') as any;
+  }
+  public set disabled(value: boolean | cdktf.IResolvable) {
+    this._disabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
+  }
+
+  // expose_headers - computed: false, optional: true, required: false
+  private _exposeHeaders?: string[] | undefined; 
+  public get exposeHeaders() {
+    return this.getListAttribute('expose_headers');
+  }
+  public set exposeHeaders(value: string[] | undefined) {
+    this._exposeHeaders = value;
+  }
+  public resetExposeHeaders() {
+    this._exposeHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exposeHeadersInput() {
+    return this._exposeHeaders
+  }
+
+  // max_age - computed: false, optional: true, required: false
+  private _maxAge?: number | undefined; 
+  public get maxAge() {
+    return this.getNumberAttribute('max_age');
+  }
+  public set maxAge(value: number | undefined) {
+    this._maxAge = value;
+  }
+  public resetMaxAge() {
+    this._maxAge = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInput() {
+    return this._maxAge
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
   /**
   * The HTTP status code used to abort the request. The value must be between 200
@@ -360,14 +713,53 @@ inclusive.
   readonly percentage: number;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     http_status: cdktf.numberToTerraform(struct!.httpStatus),
     percentage: cdktf.numberToTerraform(struct!.percentage),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // http_status - computed: false, optional: false, required: true
+  private _httpStatus?: number; 
+  public get httpStatus() {
+    return this.getNumberAttribute('http_status');
+  }
+  public set httpStatus(value: number) {
+    this._httpStatus = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpStatusInput() {
+    return this._httpStatus
+  }
+
+  // percentage - computed: false, optional: false, required: true
+  private _percentage?: number; 
+  public get percentage() {
+    return this.getNumberAttribute('percentage');
+  }
+  public set percentage(value: number) {
+    this._percentage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentageInput() {
+    return this._percentage
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -386,14 +778,56 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.stringToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
   /**
   * The percentage of traffic (connections/operations/requests) on which delay will
@@ -408,40 +842,127 @@ be introduced as part of fault injection. The value must be between 0.0 and
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#fixed_delay ComputeRegionUrlMap#fixed_delay}
   */
-  readonly fixedDelay: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay[];
+  readonly fixedDelay: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     percentage: cdktf.numberToTerraform(struct!.percentage),
-    fixed_delay: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform)(struct!.fixedDelay),
+    fixed_delay: computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct!.fixedDelay),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // percentage - computed: false, optional: false, required: true
+  private _percentage?: number; 
+  public get percentage() {
+    return this.getNumberAttribute('percentage');
+  }
+  public set percentage(value: number) {
+    this._percentage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentageInput() {
+    return this._percentage
+  }
+
+  // fixed_delay - computed: false, optional: false, required: true
+  private _fixedDelay?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay; 
+  private __fixedDelayOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  public get fixedDelay() {
+    return this.__fixedDelayOutput;
+  }
+  public putFixedDelay(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay) {
+    this._fixedDelay = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedDelayInput() {
+    return this._fixedDelay
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
   /**
   * abort block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#abort ComputeRegionUrlMap#abort}
   */
-  readonly abort?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort[];
+  readonly abort?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort;
   /**
   * delay block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#delay ComputeRegionUrlMap#delay}
   */
-  readonly delay?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay[];
+  readonly delay?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    abort: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform)(struct!.abort),
-    delay: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform)(struct!.delay),
+    abort: computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct!.abort),
+    delay: computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct!.delay),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // abort - computed: false, optional: true, required: false
+  private _abort?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined; 
+  private __abortOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  public get abort() {
+    return this.__abortOutput;
+  }
+  public putAbort(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined) {
+    this._abort = value;
+  }
+  public resetAbort() {
+    this._abort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get abortInput() {
+    return this._abort
+  }
+
+  // delay - computed: false, optional: true, required: false
+  private _delay?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined; 
+  private __delayOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  public get delay() {
+    return this.__delayOutput;
+  }
+  public putDelay(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined) {
+    this._delay = value;
+  }
+  public resetDelay() {
+    this._delay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delayInput() {
+    return this._delay
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
   /**
   * The RegionBackendService resource being mirrored to.
@@ -451,13 +972,39 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorP
   readonly backendService: string;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_service: cdktf.stringToTerraform(struct!.backendService),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // backend_service - computed: false, optional: false, required: true
+  private _backendService?: string; 
+  public get backendService() {
+    return this.getStringAttribute('backend_service');
+  }
+  public set backendService(value: string) {
+    this._backendService = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -476,14 +1023,56 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.stringToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
   /**
   * Specifies the allowed number retries. This number must be > 0.
@@ -523,18 +1112,80 @@ the gRPC status code in the response header is set to unavailable
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#per_try_timeout ComputeRegionUrlMap#per_try_timeout}
   */
-  readonly perTryTimeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout[];
+  readonly perTryTimeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     num_retries: cdktf.numberToTerraform(struct!.numRetries),
     retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
-    per_try_timeout: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform)(struct!.perTryTimeout),
+    per_try_timeout: computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // num_retries - computed: false, optional: true, required: false
+  private _numRetries?: number | undefined; 
+  public get numRetries() {
+    return this.getNumberAttribute('num_retries');
+  }
+  public set numRetries(value: number | undefined) {
+    this._numRetries = value;
+  }
+  public resetNumRetries() {
+    this._numRetries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numRetriesInput() {
+    return this._numRetries
+  }
+
+  // retry_conditions - computed: false, optional: true, required: false
+  private _retryConditions?: string[] | undefined; 
+  public get retryConditions() {
+    return this.getListAttribute('retry_conditions');
+  }
+  public set retryConditions(value: string[] | undefined) {
+    this._retryConditions = value;
+  }
+  public resetRetryConditions() {
+    this._retryConditions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryConditionsInput() {
+    return this._retryConditions
+  }
+
+  // per_try_timeout - computed: false, optional: true, required: false
+  private _perTryTimeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined; 
+  private __perTryTimeoutOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  public get perTryTimeout() {
+    return this.__perTryTimeoutOutput;
+  }
+  public putPerTryTimeout(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined) {
+    this._perTryTimeout = value;
+  }
+  public resetPerTryTimeout() {
+    this._perTryTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perTryTimeoutInput() {
+    return this._perTryTimeout
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -553,14 +1204,56 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.stringToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
   /**
   * Prior to forwarding the request to the selected service, the request's host
@@ -580,14 +1273,59 @@ be between 1 and 1024 characters.
   readonly pathPrefixRewrite?: string;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
     path_prefix_rewrite: cdktf.stringToTerraform(struct!.pathPrefixRewrite),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_rewrite - computed: false, optional: true, required: false
+  private _hostRewrite?: string | undefined; 
+  public get hostRewrite() {
+    return this.getStringAttribute('host_rewrite');
+  }
+  public set hostRewrite(value: string | undefined) {
+    this._hostRewrite = value;
+  }
+  public resetHostRewrite() {
+    this._hostRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRewriteInput() {
+    return this._hostRewrite
+  }
+
+  // path_prefix_rewrite - computed: false, optional: true, required: false
+  private _pathPrefixRewrite?: string | undefined; 
+  public get pathPrefixRewrite() {
+    return this.getStringAttribute('path_prefix_rewrite');
+  }
+  public set pathPrefixRewrite(value: string | undefined) {
+    this._pathPrefixRewrite = value;
+  }
+  public resetPathPrefixRewrite() {
+    this._pathPrefixRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathPrefixRewriteInput() {
+    return this._pathPrefixRewrite
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
@@ -613,6 +1351,9 @@ were set for that header.
 
 function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -645,6 +1386,9 @@ were set for that header.
 
 function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -681,8 +1425,11 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
     response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
@@ -691,6 +1438,82 @@ function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendService
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // request_headers_to_remove - computed: false, optional: true, required: false
+  private _requestHeadersToRemove?: string[] | undefined; 
+  public get requestHeadersToRemove() {
+    return this.getListAttribute('request_headers_to_remove');
+  }
+  public set requestHeadersToRemove(value: string[] | undefined) {
+    this._requestHeadersToRemove = value;
+  }
+  public resetRequestHeadersToRemove() {
+    this._requestHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToRemoveInput() {
+    return this._requestHeadersToRemove
+  }
+
+  // response_headers_to_remove - computed: false, optional: true, required: false
+  private _responseHeadersToRemove?: string[] | undefined; 
+  public get responseHeadersToRemove() {
+    return this.getListAttribute('response_headers_to_remove');
+  }
+  public set responseHeadersToRemove(value: string[] | undefined) {
+    this._responseHeadersToRemove = value;
+  }
+  public resetResponseHeadersToRemove() {
+    this._responseHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToRemoveInput() {
+    return this._responseHeadersToRemove
+  }
+
+  // request_headers_to_add - computed: false, optional: true, required: false
+  private _requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined; 
+  public get requestHeadersToAdd() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('request_headers_to_add') as any;
+  }
+  public set requestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined) {
+    this._requestHeadersToAdd = value;
+  }
+  public resetRequestHeadersToAdd() {
+    this._requestHeadersToAdd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToAddInput() {
+    return this._requestHeadersToAdd
+  }
+
+  // response_headers_to_add - computed: false, optional: true, required: false
+  private _responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined; 
+  public get responseHeadersToAdd() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('response_headers_to_add') as any;
+  }
+  public set responseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined) {
+    this._responseHeadersToAdd = value;
+  }
+  public resetResponseHeadersToAdd() {
+    this._responseHeadersToAdd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToAddInput() {
+    return this._responseHeadersToAdd
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices {
   /**
   * The default RegionBackendService resource. Before
@@ -716,15 +1539,18 @@ The value must be between 0 and 1000
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#header_action ComputeRegionUrlMap#header_action}
   */
-  readonly headerAction?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction[];
+  readonly headerAction?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction;
 }
 
 function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_service: cdktf.stringToTerraform(struct!.backendService),
     weight: cdktf.numberToTerraform(struct!.weight),
-    header_action: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform)(struct!.headerAction),
+    header_action: computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct!.headerAction),
   }
 }
 
@@ -734,37 +1560,37 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#cors_policy ComputeRegionUrlMap#cors_policy}
   */
-  readonly corsPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy[];
+  readonly corsPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy;
   /**
   * fault_injection_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#fault_injection_policy ComputeRegionUrlMap#fault_injection_policy}
   */
-  readonly faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy[];
+  readonly faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy;
   /**
   * request_mirror_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#request_mirror_policy ComputeRegionUrlMap#request_mirror_policy}
   */
-  readonly requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy[];
+  readonly requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy;
   /**
   * retry_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#retry_policy ComputeRegionUrlMap#retry_policy}
   */
-  readonly retryPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy[];
+  readonly retryPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy;
   /**
   * timeout block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#timeout ComputeRegionUrlMap#timeout}
   */
-  readonly timeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout[];
+  readonly timeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout;
   /**
   * url_rewrite block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#url_rewrite ComputeRegionUrlMap#url_rewrite}
   */
-  readonly urlRewrite?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite[];
+  readonly urlRewrite?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite;
   /**
   * weighted_backend_services block
   * 
@@ -773,19 +1599,151 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteAction {
   readonly weightedBackendServices?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[];
 }
 
-function computeRegionUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteAction): any {
+function computeRegionUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference | ComputeRegionUrlMapPathMatcherPathRuleRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    cors_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform)(struct!.corsPolicy),
-    fault_injection_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform)(struct!.faultInjectionPolicy),
-    request_mirror_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform)(struct!.requestMirrorPolicy),
-    retry_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform)(struct!.retryPolicy),
-    timeout: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform)(struct!.timeout),
-    url_rewrite: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform)(struct!.urlRewrite),
+    cors_policy: computeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct!.corsPolicy),
+    fault_injection_policy: computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct!.faultInjectionPolicy),
+    request_mirror_policy: computeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct!.requestMirrorPolicy),
+    retry_policy: computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
+    timeout: computeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct!.timeout),
+    url_rewrite: computeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct!.urlRewrite),
     weighted_backend_services: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cors_policy - computed: false, optional: true, required: false
+  private _corsPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined; 
+  private __corsPolicyOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  public get corsPolicy() {
+    return this.__corsPolicyOutput;
+  }
+  public putCorsPolicy(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined) {
+    this._corsPolicy = value;
+  }
+  public resetCorsPolicy() {
+    this._corsPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get corsPolicyInput() {
+    return this._corsPolicy
+  }
+
+  // fault_injection_policy - computed: false, optional: true, required: false
+  private _faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined; 
+  private __faultInjectionPolicyOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  public get faultInjectionPolicy() {
+    return this.__faultInjectionPolicyOutput;
+  }
+  public putFaultInjectionPolicy(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined) {
+    this._faultInjectionPolicy = value;
+  }
+  public resetFaultInjectionPolicy() {
+    this._faultInjectionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get faultInjectionPolicyInput() {
+    return this._faultInjectionPolicy
+  }
+
+  // request_mirror_policy - computed: false, optional: true, required: false
+  private _requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined; 
+  private __requestMirrorPolicyOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  public get requestMirrorPolicy() {
+    return this.__requestMirrorPolicyOutput;
+  }
+  public putRequestMirrorPolicy(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined) {
+    this._requestMirrorPolicy = value;
+  }
+  public resetRequestMirrorPolicy() {
+    this._requestMirrorPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestMirrorPolicyInput() {
+    return this._requestMirrorPolicy
+  }
+
+  // retry_policy - computed: false, optional: true, required: false
+  private _retryPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined; 
+  private __retryPolicyOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  public get retryPolicy() {
+    return this.__retryPolicyOutput;
+  }
+  public putRetryPolicy(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined) {
+    this._retryPolicy = value;
+  }
+  public resetRetryPolicy() {
+    this._retryPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryPolicyInput() {
+    return this._retryPolicy
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout | undefined; 
+  private __timeoutOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  public get timeout() {
+    return this.__timeoutOutput;
+  }
+  public putTimeout(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout | undefined) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
+  }
+
+  // url_rewrite - computed: false, optional: true, required: false
+  private _urlRewrite?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined; 
+  private __urlRewriteOutput = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  public get urlRewrite() {
+    return this.__urlRewriteOutput;
+  }
+  public putUrlRewrite(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined) {
+    this._urlRewrite = value;
+  }
+  public resetUrlRewrite() {
+    this._urlRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRewriteInput() {
+    return this._urlRewrite
+  }
+
+  // weighted_backend_services - computed: false, optional: true, required: false
+  private _weightedBackendServices?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | undefined; 
+  public get weightedBackendServices() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('weighted_backend_services') as any;
+  }
+  public set weightedBackendServices(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | undefined) {
+    this._weightedBackendServices = value;
+  }
+  public resetWeightedBackendServices() {
+    this._weightedBackendServices = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightedBackendServicesInput() {
+    return this._weightedBackendServices
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one
@@ -855,8 +1813,11 @@ original URL is retained.
   readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
-function computeRegionUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect): any {
+function computeRegionUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference | ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
     https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
@@ -867,6 +1828,109 @@ function computeRegionUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: C
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_redirect - computed: false, optional: true, required: false
+  private _hostRedirect?: string | undefined; 
+  public get hostRedirect() {
+    return this.getStringAttribute('host_redirect');
+  }
+  public set hostRedirect(value: string | undefined) {
+    this._hostRedirect = value;
+  }
+  public resetHostRedirect() {
+    this._hostRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRedirectInput() {
+    return this._hostRedirect
+  }
+
+  // https_redirect - computed: false, optional: true, required: false
+  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  public get httpsRedirect() {
+    return this.getBooleanAttribute('https_redirect') as any;
+  }
+  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+    this._httpsRedirect = value;
+  }
+  public resetHttpsRedirect() {
+    this._httpsRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsRedirectInput() {
+    return this._httpsRedirect
+  }
+
+  // path_redirect - computed: false, optional: true, required: false
+  private _pathRedirect?: string | undefined; 
+  public get pathRedirect() {
+    return this.getStringAttribute('path_redirect');
+  }
+  public set pathRedirect(value: string | undefined) {
+    this._pathRedirect = value;
+  }
+  public resetPathRedirect() {
+    this._pathRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathRedirectInput() {
+    return this._pathRedirect
+  }
+
+  // prefix_redirect - computed: false, optional: true, required: false
+  private _prefixRedirect?: string | undefined; 
+  public get prefixRedirect() {
+    return this.getStringAttribute('prefix_redirect');
+  }
+  public set prefixRedirect(value: string | undefined) {
+    this._prefixRedirect = value;
+  }
+  public resetPrefixRedirect() {
+    this._prefixRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixRedirectInput() {
+    return this._prefixRedirect
+  }
+
+  // redirect_response_code - computed: false, optional: true, required: false
+  private _redirectResponseCode?: string | undefined; 
+  public get redirectResponseCode() {
+    return this.getStringAttribute('redirect_response_code');
+  }
+  public set redirectResponseCode(value: string | undefined) {
+    this._redirectResponseCode = value;
+  }
+  public resetRedirectResponseCode() {
+    this._redirectResponseCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectResponseCodeInput() {
+    return this._redirectResponseCode
+  }
+
+  // strip_query - computed: false, optional: false, required: true
+  private _stripQuery?: boolean | cdktf.IResolvable; 
+  public get stripQuery() {
+    return this.getBooleanAttribute('strip_query') as any;
+  }
+  public set stripQuery(value: boolean | cdktf.IResolvable) {
+    this._stripQuery = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stripQueryInput() {
+    return this._stripQuery
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRule {
   /**
   * The list of path patterns to match. Each must start with / and the only place a
@@ -894,22 +1958,25 @@ service or routeAction.weightedBackendService must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#route_action ComputeRegionUrlMap#route_action}
   */
-  readonly routeAction?: ComputeRegionUrlMapPathMatcherPathRuleRouteAction[];
+  readonly routeAction?: ComputeRegionUrlMapPathMatcherPathRuleRouteAction;
   /**
   * url_redirect block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#url_redirect ComputeRegionUrlMap#url_redirect}
   */
-  readonly urlRedirect?: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect[];
+  readonly urlRedirect?: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect;
 }
 
 function computeRegionUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeRegionUrlMapPathMatcherPathRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
     service: cdktf.stringToTerraform(struct!.service),
-    route_action: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleRouteActionToTerraform)(struct!.routeAction),
-    url_redirect: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleUrlRedirectToTerraform)(struct!.urlRedirect),
+    route_action: computeRegionUrlMapPathMatcherPathRuleRouteActionToTerraform(struct!.routeAction),
+    url_redirect: computeRegionUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct!.urlRedirect),
   }
 }
 
@@ -938,6 +2005,9 @@ were set for that header.
 
 function computeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -970,6 +2040,9 @@ were set for that header.
 
 function computeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -1006,8 +2079,11 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction): any {
+function computeRegionUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
     response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
@@ -1016,6 +2092,82 @@ function computeRegionUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // request_headers_to_remove - computed: false, optional: true, required: false
+  private _requestHeadersToRemove?: string[] | undefined; 
+  public get requestHeadersToRemove() {
+    return this.getListAttribute('request_headers_to_remove');
+  }
+  public set requestHeadersToRemove(value: string[] | undefined) {
+    this._requestHeadersToRemove = value;
+  }
+  public resetRequestHeadersToRemove() {
+    this._requestHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToRemoveInput() {
+    return this._requestHeadersToRemove
+  }
+
+  // response_headers_to_remove - computed: false, optional: true, required: false
+  private _responseHeadersToRemove?: string[] | undefined; 
+  public get responseHeadersToRemove() {
+    return this.getListAttribute('response_headers_to_remove');
+  }
+  public set responseHeadersToRemove(value: string[] | undefined) {
+    this._responseHeadersToRemove = value;
+  }
+  public resetResponseHeadersToRemove() {
+    this._responseHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToRemoveInput() {
+    return this._responseHeadersToRemove
+  }
+
+  // request_headers_to_add - computed: false, optional: true, required: false
+  private _requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | undefined; 
+  public get requestHeadersToAdd() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('request_headers_to_add') as any;
+  }
+  public set requestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | undefined) {
+    this._requestHeadersToAdd = value;
+  }
+  public resetRequestHeadersToAdd() {
+    this._requestHeadersToAdd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToAddInput() {
+    return this._requestHeadersToAdd
+  }
+
+  // response_headers_to_add - computed: false, optional: true, required: false
+  private _responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | undefined; 
+  public get responseHeadersToAdd() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('response_headers_to_add') as any;
+  }
+  public set responseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | undefined) {
+    this._responseHeadersToAdd = value;
+  }
+  public resetResponseHeadersToAdd() {
+    this._responseHeadersToAdd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToAddInput() {
+    return this._responseHeadersToAdd
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
   /**
   * The end of the range (exclusive).
@@ -1031,14 +2183,53 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches
   readonly rangeStart: number;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch): any {
+function computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     range_end: cdktf.numberToTerraform(struct!.rangeEnd),
     range_start: cdktf.numberToTerraform(struct!.rangeStart),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // range_end - computed: false, optional: false, required: true
+  private _rangeEnd?: number; 
+  public get rangeEnd() {
+    return this.getNumberAttribute('range_end');
+  }
+  public set rangeEnd(value: number) {
+    this._rangeEnd = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeEndInput() {
+    return this._rangeEnd
+  }
+
+  // range_start - computed: false, optional: false, required: true
+  private _rangeStart?: number; 
+  public get rangeStart() {
+    return this.getNumberAttribute('range_start');
+  }
+  public set rangeStart(value: number) {
+    this._rangeStart = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeStartInput() {
+    return this._rangeStart
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches {
   /**
   * The value should exactly match contents of exactMatch. Only one of exactMatch,
@@ -1104,11 +2295,14 @@ must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#range_match ComputeRegionUrlMap#range_match}
   */
-  readonly rangeMatch?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch[];
+  readonly rangeMatch?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch;
 }
 
 function computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     exact_match: cdktf.stringToTerraform(struct!.exactMatch),
     header_name: cdktf.stringToTerraform(struct!.headerName),
@@ -1117,7 +2311,7 @@ function computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraf
     present_match: cdktf.booleanToTerraform(struct!.presentMatch),
     regex_match: cdktf.stringToTerraform(struct!.regexMatch),
     suffix_match: cdktf.stringToTerraform(struct!.suffixMatch),
-    range_match: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform)(struct!.rangeMatch),
+    range_match: computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct!.rangeMatch),
   }
 }
 
@@ -1140,6 +2334,9 @@ length of 1024 characters.
 
 function computeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
@@ -1169,6 +2366,9 @@ the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
 
 function computeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     filter_match_criteria: cdktf.stringToTerraform(struct!.filterMatchCriteria),
     filter_labels: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform)(struct!.filterLabels),
@@ -1212,6 +2412,9 @@ exactMatch and regexMatch must be set.
 
 function computeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     exact_match: cdktf.stringToTerraform(struct!.exactMatch),
     name: cdktf.stringToTerraform(struct!.name),
@@ -1279,6 +2482,9 @@ fullPathMatch or regexMatch must be specified.
 
 function computeRegionUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     full_path_match: cdktf.stringToTerraform(struct!.fullPathMatch),
     ignore_case: cdktf.booleanToTerraform(struct!.ignoreCase),
@@ -1348,8 +2554,11 @@ translates to the content for the Access-Control-Max-Age header.
   readonly maxAge?: number;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
     allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
@@ -1362,6 +2571,144 @@ function computeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerrafor
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_credentials - computed: false, optional: true, required: false
+  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  public get allowCredentials() {
+    return this.getBooleanAttribute('allow_credentials') as any;
+  }
+  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowCredentials = value;
+  }
+  public resetAllowCredentials() {
+    this._allowCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowCredentialsInput() {
+    return this._allowCredentials
+  }
+
+  // allow_headers - computed: false, optional: true, required: false
+  private _allowHeaders?: string[] | undefined; 
+  public get allowHeaders() {
+    return this.getListAttribute('allow_headers');
+  }
+  public set allowHeaders(value: string[] | undefined) {
+    this._allowHeaders = value;
+  }
+  public resetAllowHeaders() {
+    this._allowHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowHeadersInput() {
+    return this._allowHeaders
+  }
+
+  // allow_methods - computed: false, optional: true, required: false
+  private _allowMethods?: string[] | undefined; 
+  public get allowMethods() {
+    return this.getListAttribute('allow_methods');
+  }
+  public set allowMethods(value: string[] | undefined) {
+    this._allowMethods = value;
+  }
+  public resetAllowMethods() {
+    this._allowMethods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowMethodsInput() {
+    return this._allowMethods
+  }
+
+  // allow_origin_regexes - computed: false, optional: true, required: false
+  private _allowOriginRegexes?: string[] | undefined; 
+  public get allowOriginRegexes() {
+    return this.getListAttribute('allow_origin_regexes');
+  }
+  public set allowOriginRegexes(value: string[] | undefined) {
+    this._allowOriginRegexes = value;
+  }
+  public resetAllowOriginRegexes() {
+    this._allowOriginRegexes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowOriginRegexesInput() {
+    return this._allowOriginRegexes
+  }
+
+  // allow_origins - computed: false, optional: true, required: false
+  private _allowOrigins?: string[] | undefined; 
+  public get allowOrigins() {
+    return this.getListAttribute('allow_origins');
+  }
+  public set allowOrigins(value: string[] | undefined) {
+    this._allowOrigins = value;
+  }
+  public resetAllowOrigins() {
+    this._allowOrigins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowOriginsInput() {
+    return this._allowOrigins
+  }
+
+  // disabled - computed: false, optional: true, required: false
+  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled') as any;
+  }
+  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled
+  }
+
+  // expose_headers - computed: false, optional: true, required: false
+  private _exposeHeaders?: string[] | undefined; 
+  public get exposeHeaders() {
+    return this.getListAttribute('expose_headers');
+  }
+  public set exposeHeaders(value: string[] | undefined) {
+    this._exposeHeaders = value;
+  }
+  public resetExposeHeaders() {
+    this._exposeHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exposeHeadersInput() {
+    return this._exposeHeaders
+  }
+
+  // max_age - computed: false, optional: true, required: false
+  private _maxAge?: number | undefined; 
+  public get maxAge() {
+    return this.getNumberAttribute('max_age');
+  }
+  public set maxAge(value: number | undefined) {
+    this._maxAge = value;
+  }
+  public resetMaxAge() {
+    this._maxAge = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInput() {
+    return this._maxAge
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort {
   /**
   * The HTTP status code used to abort the request. The value must be between 200
@@ -1380,14 +2727,59 @@ inclusive.
   readonly percentage?: number;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     http_status: cdktf.numberToTerraform(struct!.httpStatus),
     percentage: cdktf.numberToTerraform(struct!.percentage),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // http_status - computed: false, optional: true, required: false
+  private _httpStatus?: number | undefined; 
+  public get httpStatus() {
+    return this.getNumberAttribute('http_status');
+  }
+  public set httpStatus(value: number | undefined) {
+    this._httpStatus = value;
+  }
+  public resetHttpStatus() {
+    this._httpStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpStatusInput() {
+    return this._httpStatus
+  }
+
+  // percentage - computed: false, optional: true, required: false
+  private _percentage?: number | undefined; 
+  public get percentage() {
+    return this.getNumberAttribute('percentage');
+  }
+  public set percentage(value: number | undefined) {
+    this._percentage = value;
+  }
+  public resetPercentage() {
+    this._percentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentageInput() {
+    return this._percentage
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -1406,14 +2798,56 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.stringToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay {
   /**
   * The percentage of traffic (connections/operations/requests) on which delay will
@@ -1428,40 +2862,133 @@ be introduced as part of fault injection. The value must be between 0.0 and
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#fixed_delay ComputeRegionUrlMap#fixed_delay}
   */
-  readonly fixedDelay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay[];
+  readonly fixedDelay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     percentage: cdktf.numberToTerraform(struct!.percentage),
-    fixed_delay: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform)(struct!.fixedDelay),
+    fixed_delay: computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct!.fixedDelay),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // percentage - computed: false, optional: true, required: false
+  private _percentage?: number | undefined; 
+  public get percentage() {
+    return this.getNumberAttribute('percentage');
+  }
+  public set percentage(value: number | undefined) {
+    this._percentage = value;
+  }
+  public resetPercentage() {
+    this._percentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentageInput() {
+    return this._percentage
+  }
+
+  // fixed_delay - computed: false, optional: true, required: false
+  private _fixedDelay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined; 
+  private __fixedDelayOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  public get fixedDelay() {
+    return this.__fixedDelayOutput;
+  }
+  public putFixedDelay(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
+    this._fixedDelay = value;
+  }
+  public resetFixedDelay() {
+    this._fixedDelay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedDelayInput() {
+    return this._fixedDelay
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
   /**
   * abort block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#abort ComputeRegionUrlMap#abort}
   */
-  readonly abort?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort[];
+  readonly abort?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort;
   /**
   * delay block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#delay ComputeRegionUrlMap#delay}
   */
-  readonly delay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay[];
+  readonly delay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    abort: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform)(struct!.abort),
-    delay: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform)(struct!.delay),
+    abort: computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct!.abort),
+    delay: computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct!.delay),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // abort - computed: false, optional: true, required: false
+  private _abort?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined; 
+  private __abortOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  public get abort() {
+    return this.__abortOutput;
+  }
+  public putAbort(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined) {
+    this._abort = value;
+  }
+  public resetAbort() {
+    this._abort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get abortInput() {
+    return this._abort
+  }
+
+  // delay - computed: false, optional: true, required: false
+  private _delay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined; 
+  private __delayOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  public get delay() {
+    return this.__delayOutput;
+  }
+  public putDelay(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined) {
+    this._delay = value;
+  }
+  public resetDelay() {
+    this._delay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delayInput() {
+    return this._delay
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
   /**
   * The RegionBackendService resource being mirrored to.
@@ -1471,13 +2998,39 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirro
   readonly backendService: string;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_service: cdktf.stringToTerraform(struct!.backendService),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // backend_service - computed: false, optional: false, required: true
+  private _backendService?: string; 
+  public get backendService() {
+    return this.getStringAttribute('backend_service');
+  }
+  public set backendService(value: string) {
+    this._backendService = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -1496,14 +3049,56 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.stringToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
   /**
   * Specifies the allowed number retries. This number must be > 0.
@@ -1543,18 +3138,77 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#per_try_timeout ComputeRegionUrlMap#per_try_timeout}
   */
-  readonly perTryTimeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout[];
+  readonly perTryTimeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     num_retries: cdktf.numberToTerraform(struct!.numRetries),
     retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
-    per_try_timeout: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform)(struct!.perTryTimeout),
+    per_try_timeout: computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // num_retries - computed: false, optional: false, required: true
+  private _numRetries?: number; 
+  public get numRetries() {
+    return this.getNumberAttribute('num_retries');
+  }
+  public set numRetries(value: number) {
+    this._numRetries = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numRetriesInput() {
+    return this._numRetries
+  }
+
+  // retry_conditions - computed: false, optional: true, required: false
+  private _retryConditions?: string[] | undefined; 
+  public get retryConditions() {
+    return this.getListAttribute('retry_conditions');
+  }
+  public set retryConditions(value: string[] | undefined) {
+    this._retryConditions = value;
+  }
+  public resetRetryConditions() {
+    this._retryConditions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryConditionsInput() {
+    return this._retryConditions
+  }
+
+  // per_try_timeout - computed: false, optional: true, required: false
+  private _perTryTimeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined; 
+  private __perTryTimeoutOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  public get perTryTimeout() {
+    return this.__perTryTimeoutOutput;
+  }
+  public putPerTryTimeout(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined) {
+    this._perTryTimeout = value;
+  }
+  public resetPerTryTimeout() {
+    this._perTryTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perTryTimeoutInput() {
+    return this._perTryTimeout
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
@@ -1573,14 +3227,56 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.stringToTerraform(struct!.seconds),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number | undefined; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number | undefined) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos
+  }
+
+  // seconds - computed: false, optional: false, required: true
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite {
   /**
   * Prior to forwarding the request to the selected service, the request's host
@@ -1600,14 +3296,59 @@ be between 1 and 1024 characters.
   readonly pathPrefixRewrite?: string;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
     path_prefix_rewrite: cdktf.stringToTerraform(struct!.pathPrefixRewrite),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_rewrite - computed: false, optional: true, required: false
+  private _hostRewrite?: string | undefined; 
+  public get hostRewrite() {
+    return this.getStringAttribute('host_rewrite');
+  }
+  public set hostRewrite(value: string | undefined) {
+    this._hostRewrite = value;
+  }
+  public resetHostRewrite() {
+    this._hostRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRewriteInput() {
+    return this._hostRewrite
+  }
+
+  // path_prefix_rewrite - computed: false, optional: true, required: false
+  private _pathPrefixRewrite?: string | undefined; 
+  public get pathPrefixRewrite() {
+    return this.getStringAttribute('path_prefix_rewrite');
+  }
+  public set pathPrefixRewrite(value: string | undefined) {
+    this._pathPrefixRewrite = value;
+  }
+  public resetPathPrefixRewrite() {
+    this._pathPrefixRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathPrefixRewriteInput() {
+    return this._pathPrefixRewrite
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
@@ -1633,6 +3374,9 @@ were set for that header.
 
 function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -1665,6 +3409,9 @@ were set for that header.
 
 function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -1701,8 +3448,11 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
     response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
@@ -1711,6 +3461,82 @@ function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServi
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // request_headers_to_remove - computed: false, optional: true, required: false
+  private _requestHeadersToRemove?: string[] | undefined; 
+  public get requestHeadersToRemove() {
+    return this.getListAttribute('request_headers_to_remove');
+  }
+  public set requestHeadersToRemove(value: string[] | undefined) {
+    this._requestHeadersToRemove = value;
+  }
+  public resetRequestHeadersToRemove() {
+    this._requestHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToRemoveInput() {
+    return this._requestHeadersToRemove
+  }
+
+  // response_headers_to_remove - computed: false, optional: true, required: false
+  private _responseHeadersToRemove?: string[] | undefined; 
+  public get responseHeadersToRemove() {
+    return this.getListAttribute('response_headers_to_remove');
+  }
+  public set responseHeadersToRemove(value: string[] | undefined) {
+    this._responseHeadersToRemove = value;
+  }
+  public resetResponseHeadersToRemove() {
+    this._responseHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToRemoveInput() {
+    return this._responseHeadersToRemove
+  }
+
+  // request_headers_to_add - computed: false, optional: true, required: false
+  private _requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined; 
+  public get requestHeadersToAdd() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('request_headers_to_add') as any;
+  }
+  public set requestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined) {
+    this._requestHeadersToAdd = value;
+  }
+  public resetRequestHeadersToAdd() {
+    this._requestHeadersToAdd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToAddInput() {
+    return this._requestHeadersToAdd
+  }
+
+  // response_headers_to_add - computed: false, optional: true, required: false
+  private _responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined; 
+  public get responseHeadersToAdd() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('response_headers_to_add') as any;
+  }
+  public set responseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined) {
+    this._responseHeadersToAdd = value;
+  }
+  public resetResponseHeadersToAdd() {
+    this._responseHeadersToAdd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToAddInput() {
+    return this._responseHeadersToAdd
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices {
   /**
   * The default RegionBackendService resource. Before
@@ -1736,15 +3562,18 @@ The value must be between 0 and 1000
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#header_action ComputeRegionUrlMap#header_action}
   */
-  readonly headerAction?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction[];
+  readonly headerAction?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction;
 }
 
 function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_service: cdktf.stringToTerraform(struct!.backendService),
     weight: cdktf.numberToTerraform(struct!.weight),
-    header_action: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform)(struct!.headerAction),
+    header_action: computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct!.headerAction),
   }
 }
 
@@ -1754,37 +3583,37 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#cors_policy ComputeRegionUrlMap#cors_policy}
   */
-  readonly corsPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy[];
+  readonly corsPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy;
   /**
   * fault_injection_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#fault_injection_policy ComputeRegionUrlMap#fault_injection_policy}
   */
-  readonly faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy[];
+  readonly faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy;
   /**
   * request_mirror_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#request_mirror_policy ComputeRegionUrlMap#request_mirror_policy}
   */
-  readonly requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy[];
+  readonly requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy;
   /**
   * retry_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#retry_policy ComputeRegionUrlMap#retry_policy}
   */
-  readonly retryPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy[];
+  readonly retryPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy;
   /**
   * timeout block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#timeout ComputeRegionUrlMap#timeout}
   */
-  readonly timeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout[];
+  readonly timeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout;
   /**
   * url_rewrite block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#url_rewrite ComputeRegionUrlMap#url_rewrite}
   */
-  readonly urlRewrite?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite[];
+  readonly urlRewrite?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite;
   /**
   * weighted_backend_services block
   * 
@@ -1793,19 +3622,151 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteAction {
   readonly weightedBackendServices?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[];
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteAction): any {
+function computeRegionUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    cors_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform)(struct!.corsPolicy),
-    fault_injection_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform)(struct!.faultInjectionPolicy),
-    request_mirror_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform)(struct!.requestMirrorPolicy),
-    retry_policy: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform)(struct!.retryPolicy),
-    timeout: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform)(struct!.timeout),
-    url_rewrite: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform)(struct!.urlRewrite),
+    cors_policy: computeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct!.corsPolicy),
+    fault_injection_policy: computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct!.faultInjectionPolicy),
+    request_mirror_policy: computeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct!.requestMirrorPolicy),
+    retry_policy: computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
+    timeout: computeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct!.timeout),
+    url_rewrite: computeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct!.urlRewrite),
     weighted_backend_services: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cors_policy - computed: false, optional: true, required: false
+  private _corsPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined; 
+  private __corsPolicyOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  public get corsPolicy() {
+    return this.__corsPolicyOutput;
+  }
+  public putCorsPolicy(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined) {
+    this._corsPolicy = value;
+  }
+  public resetCorsPolicy() {
+    this._corsPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get corsPolicyInput() {
+    return this._corsPolicy
+  }
+
+  // fault_injection_policy - computed: false, optional: true, required: false
+  private _faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined; 
+  private __faultInjectionPolicyOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  public get faultInjectionPolicy() {
+    return this.__faultInjectionPolicyOutput;
+  }
+  public putFaultInjectionPolicy(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined) {
+    this._faultInjectionPolicy = value;
+  }
+  public resetFaultInjectionPolicy() {
+    this._faultInjectionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get faultInjectionPolicyInput() {
+    return this._faultInjectionPolicy
+  }
+
+  // request_mirror_policy - computed: false, optional: true, required: false
+  private _requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined; 
+  private __requestMirrorPolicyOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  public get requestMirrorPolicy() {
+    return this.__requestMirrorPolicyOutput;
+  }
+  public putRequestMirrorPolicy(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined) {
+    this._requestMirrorPolicy = value;
+  }
+  public resetRequestMirrorPolicy() {
+    this._requestMirrorPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestMirrorPolicyInput() {
+    return this._requestMirrorPolicy
+  }
+
+  // retry_policy - computed: false, optional: true, required: false
+  private _retryPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined; 
+  private __retryPolicyOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  public get retryPolicy() {
+    return this.__retryPolicyOutput;
+  }
+  public putRetryPolicy(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined) {
+    this._retryPolicy = value;
+  }
+  public resetRetryPolicy() {
+    this._retryPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryPolicyInput() {
+    return this._retryPolicy
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined; 
+  private __timeoutOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  public get timeout() {
+    return this.__timeoutOutput;
+  }
+  public putTimeout(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
+  }
+
+  // url_rewrite - computed: false, optional: true, required: false
+  private _urlRewrite?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined; 
+  private __urlRewriteOutput = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  public get urlRewrite() {
+    return this.__urlRewriteOutput;
+  }
+  public putUrlRewrite(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined) {
+    this._urlRewrite = value;
+  }
+  public resetUrlRewrite() {
+    this._urlRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRewriteInput() {
+    return this._urlRewrite
+  }
+
+  // weighted_backend_services - computed: false, optional: true, required: false
+  private _weightedBackendServices?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | undefined; 
+  public get weightedBackendServices() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('weighted_backend_services') as any;
+  }
+  public set weightedBackendServices(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | undefined) {
+    this._weightedBackendServices = value;
+  }
+  public resetWeightedBackendServices() {
+    this._weightedBackendServices = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightedBackendServicesInput() {
+    return this._weightedBackendServices
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one
@@ -1874,8 +3835,11 @@ portion of the original URL is retained. The default value is false.
   readonly stripQuery?: boolean | cdktf.IResolvable;
 }
 
-function computeRegionUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect): any {
+function computeRegionUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference | ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_redirect: cdktf.stringToTerraform(struct!.hostRedirect),
     https_redirect: cdktf.booleanToTerraform(struct!.httpsRedirect),
@@ -1886,6 +3850,112 @@ function computeRegionUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?:
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_redirect - computed: false, optional: true, required: false
+  private _hostRedirect?: string | undefined; 
+  public get hostRedirect() {
+    return this.getStringAttribute('host_redirect');
+  }
+  public set hostRedirect(value: string | undefined) {
+    this._hostRedirect = value;
+  }
+  public resetHostRedirect() {
+    this._hostRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRedirectInput() {
+    return this._hostRedirect
+  }
+
+  // https_redirect - computed: false, optional: true, required: false
+  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  public get httpsRedirect() {
+    return this.getBooleanAttribute('https_redirect') as any;
+  }
+  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+    this._httpsRedirect = value;
+  }
+  public resetHttpsRedirect() {
+    this._httpsRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsRedirectInput() {
+    return this._httpsRedirect
+  }
+
+  // path_redirect - computed: false, optional: true, required: false
+  private _pathRedirect?: string | undefined; 
+  public get pathRedirect() {
+    return this.getStringAttribute('path_redirect');
+  }
+  public set pathRedirect(value: string | undefined) {
+    this._pathRedirect = value;
+  }
+  public resetPathRedirect() {
+    this._pathRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathRedirectInput() {
+    return this._pathRedirect
+  }
+
+  // prefix_redirect - computed: false, optional: true, required: false
+  private _prefixRedirect?: string | undefined; 
+  public get prefixRedirect() {
+    return this.getStringAttribute('prefix_redirect');
+  }
+  public set prefixRedirect(value: string | undefined) {
+    this._prefixRedirect = value;
+  }
+  public resetPrefixRedirect() {
+    this._prefixRedirect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixRedirectInput() {
+    return this._prefixRedirect
+  }
+
+  // redirect_response_code - computed: false, optional: true, required: false
+  private _redirectResponseCode?: string | undefined; 
+  public get redirectResponseCode() {
+    return this.getStringAttribute('redirect_response_code');
+  }
+  public set redirectResponseCode(value: string | undefined) {
+    this._redirectResponseCode = value;
+  }
+  public resetRedirectResponseCode() {
+    this._redirectResponseCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectResponseCodeInput() {
+    return this._redirectResponseCode
+  }
+
+  // strip_query - computed: false, optional: true, required: false
+  private _stripQuery?: boolean | cdktf.IResolvable | undefined; 
+  public get stripQuery() {
+    return this.getBooleanAttribute('strip_query') as any;
+  }
+  public set stripQuery(value: boolean | cdktf.IResolvable | undefined) {
+    this._stripQuery = value;
+  }
+  public resetStripQuery() {
+    this._stripQuery = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stripQueryInput() {
+    return this._stripQuery
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRules {
   /**
   * For routeRules within a given pathMatcher, priority determines the order
@@ -1924,7 +3994,7 @@ service or routeAction.weightedBackendService must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#header_action ComputeRegionUrlMap#header_action}
   */
-  readonly headerAction?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction[];
+  readonly headerAction?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction;
   /**
   * match_rules block
   * 
@@ -1936,24 +4006,27 @@ service or routeAction.weightedBackendService must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#route_action ComputeRegionUrlMap#route_action}
   */
-  readonly routeAction?: ComputeRegionUrlMapPathMatcherRouteRulesRouteAction[];
+  readonly routeAction?: ComputeRegionUrlMapPathMatcherRouteRulesRouteAction;
   /**
   * url_redirect block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#url_redirect ComputeRegionUrlMap#url_redirect}
   */
-  readonly urlRedirect?: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect[];
+  readonly urlRedirect?: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect;
 }
 
 function computeRegionUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeRegionUrlMapPathMatcherRouteRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     priority: cdktf.numberToTerraform(struct!.priority),
     service: cdktf.stringToTerraform(struct!.service),
-    header_action: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesHeaderActionToTerraform)(struct!.headerAction),
+    header_action: computeRegionUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct!.headerAction),
     match_rules: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesMatchRulesToTerraform)(struct!.matchRules),
-    route_action: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesRouteActionToTerraform)(struct!.routeAction),
-    url_redirect: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesUrlRedirectToTerraform)(struct!.urlRedirect),
+    route_action: computeRegionUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct!.routeAction),
+    url_redirect: computeRegionUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct!.urlRedirect),
   }
 }
 
@@ -1983,7 +4056,7 @@ the URL's path portion.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html#default_url_redirect ComputeRegionUrlMap#default_url_redirect}
   */
-  readonly defaultUrlRedirect?: ComputeRegionUrlMapPathMatcherDefaultUrlRedirect[];
+  readonly defaultUrlRedirect?: ComputeRegionUrlMapPathMatcherDefaultUrlRedirect;
   /**
   * path_rule block
   * 
@@ -2000,11 +4073,14 @@ the URL's path portion.
 
 function computeRegionUrlMapPathMatcherToTerraform(struct?: ComputeRegionUrlMapPathMatcher): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     default_service: cdktf.stringToTerraform(struct!.defaultService),
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
-    default_url_redirect: cdktf.listMapper(computeRegionUrlMapPathMatcherDefaultUrlRedirectToTerraform)(struct!.defaultUrlRedirect),
+    default_url_redirect: computeRegionUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct!.defaultUrlRedirect),
     path_rule: cdktf.listMapper(computeRegionUrlMapPathMatcherPathRuleToTerraform)(struct!.pathRule),
     route_rules: cdktf.listMapper(computeRegionUrlMapPathMatcherRouteRulesToTerraform)(struct!.routeRules),
   }
@@ -2039,6 +4115,9 @@ export interface ComputeRegionUrlMapTest {
 
 function computeRegionUrlMapTestToTerraform(struct?: ComputeRegionUrlMapTest): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     host: cdktf.stringToTerraform(struct!.host),
@@ -2062,8 +4141,11 @@ export interface ComputeRegionUrlMapTimeouts {
   readonly update?: string;
 }
 
-function computeRegionUrlMapTimeoutsToTerraform(struct?: ComputeRegionUrlMapTimeouts): any {
+function computeRegionUrlMapTimeoutsToTerraform(struct?: ComputeRegionUrlMapTimeoutsOutputReference | ComputeRegionUrlMapTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -2071,6 +4153,64 @@ function computeRegionUrlMapTimeoutsToTerraform(struct?: ComputeRegionUrlMapTime
   }
 }
 
+export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map.html google_compute_region_url_map}
@@ -2126,11 +4266,11 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // default_service - computed: false, optional: true, required: false
-  private _defaultService?: string;
+  private _defaultService?: string | undefined; 
   public get defaultService() {
     return this.getStringAttribute('default_service');
   }
-  public set defaultService(value: string ) {
+  public set defaultService(value: string | undefined) {
     this._defaultService = value;
   }
   public resetDefaultService() {
@@ -2142,11 +4282,11 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -2173,7 +4313,7 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -2186,11 +4326,11 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string;
+  private _project?: string | undefined; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string) {
+  public set project(value: string | undefined) {
     this._project = value;
   }
   public resetProject() {
@@ -2202,11 +4342,11 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string;
+  private _region?: string | undefined; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string) {
+  public set region(value: string | undefined) {
     this._region = value;
   }
   public resetRegion() {
@@ -2223,11 +4363,12 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // default_url_redirect - computed: false, optional: true, required: false
-  private _defaultUrlRedirect?: ComputeRegionUrlMapDefaultUrlRedirect[];
+  private _defaultUrlRedirect?: ComputeRegionUrlMapDefaultUrlRedirect | undefined; 
+  private __defaultUrlRedirectOutput = new ComputeRegionUrlMapDefaultUrlRedirectOutputReference(this as any, "default_url_redirect", true);
   public get defaultUrlRedirect() {
-    return this.interpolationForAttribute('default_url_redirect') as any;
+    return this.__defaultUrlRedirectOutput;
   }
-  public set defaultUrlRedirect(value: ComputeRegionUrlMapDefaultUrlRedirect[] ) {
+  public putDefaultUrlRedirect(value: ComputeRegionUrlMapDefaultUrlRedirect | undefined) {
     this._defaultUrlRedirect = value;
   }
   public resetDefaultUrlRedirect() {
@@ -2239,11 +4380,12 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // host_rule - computed: false, optional: true, required: false
-  private _hostRule?: ComputeRegionUrlMapHostRule[];
+  private _hostRule?: ComputeRegionUrlMapHostRule[] | undefined; 
   public get hostRule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('host_rule') as any;
   }
-  public set hostRule(value: ComputeRegionUrlMapHostRule[] ) {
+  public set hostRule(value: ComputeRegionUrlMapHostRule[] | undefined) {
     this._hostRule = value;
   }
   public resetHostRule() {
@@ -2255,11 +4397,12 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // path_matcher - computed: false, optional: true, required: false
-  private _pathMatcher?: ComputeRegionUrlMapPathMatcher[];
+  private _pathMatcher?: ComputeRegionUrlMapPathMatcher[] | undefined; 
   public get pathMatcher() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('path_matcher') as any;
   }
-  public set pathMatcher(value: ComputeRegionUrlMapPathMatcher[] ) {
+  public set pathMatcher(value: ComputeRegionUrlMapPathMatcher[] | undefined) {
     this._pathMatcher = value;
   }
   public resetPathMatcher() {
@@ -2271,11 +4414,12 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // test - computed: false, optional: true, required: false
-  private _test?: ComputeRegionUrlMapTest[];
+  private _test?: ComputeRegionUrlMapTest[] | undefined; 
   public get test() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('test') as any;
   }
-  public set test(value: ComputeRegionUrlMapTest[] ) {
+  public set test(value: ComputeRegionUrlMapTest[] | undefined) {
     this._test = value;
   }
   public resetTest() {
@@ -2287,11 +4431,12 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionUrlMapTimeouts;
+  private _timeouts?: ComputeRegionUrlMapTimeouts | undefined; 
+  private __timeoutsOutput = new ComputeRegionUrlMapTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ComputeRegionUrlMapTimeouts ) {
+  public putTimeouts(value: ComputeRegionUrlMapTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -2313,7 +4458,7 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      default_url_redirect: cdktf.listMapper(computeRegionUrlMapDefaultUrlRedirectToTerraform)(this._defaultUrlRedirect),
+      default_url_redirect: computeRegionUrlMapDefaultUrlRedirectToTerraform(this._defaultUrlRedirect),
       host_rule: cdktf.listMapper(computeRegionUrlMapHostRuleToTerraform)(this._hostRule),
       path_matcher: cdktf.listMapper(computeRegionUrlMapPathMatcherToTerraform)(this._pathMatcher),
       test: cdktf.listMapper(computeRegionUrlMapTestToTerraform)(this._test),
