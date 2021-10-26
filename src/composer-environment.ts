@@ -135,7 +135,7 @@ export interface ComposerEnvironmentConfigNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#zone ComposerEnvironment#zone}
   */
-  readonly zone: string;
+  readonly zone?: string;
 }
 
 function composerEnvironmentConfigNodeConfigToTerraform(struct?: ComposerEnvironmentConfigNodeConfigOutputReference | ComposerEnvironmentConfigNodeConfig): any {
@@ -295,13 +295,16 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
     return this._tags
   }
 
-  // zone - computed: false, optional: false, required: true
-  private _zone?: string; 
+  // zone - computed: true, optional: true, required: false
+  private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string) {
+  public set zone(value: string | undefined) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
@@ -430,7 +433,7 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   */
   readonly airflowConfigOverrides?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER.
+  * Additional environment variables to provide to the Apache Airflow schedulerf, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment.html#env_variables ComposerEnvironment#env_variables}
   */

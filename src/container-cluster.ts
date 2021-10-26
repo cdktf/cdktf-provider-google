@@ -1641,6 +1641,10 @@ export interface ContainerClusterNodeConfigGuestAccelerator {
   */
   readonly count?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#gpu_partition_size ContainerCluster#gpu_partition_size}
+  */
+  readonly gpuPartitionSize?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#type ContainerCluster#type}
   */
   readonly type?: string;
@@ -1653,6 +1657,7 @@ function containerClusterNodeConfigGuestAcceleratorToTerraform(struct?: Containe
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    gpu_partition_size: cdktf.stringToTerraform(struct!.gpuPartitionSize),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1788,7 +1793,7 @@ export class ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // mode - computed: false, optional: true, required: false
+  // mode - computed: true, optional: true, required: false
   private _mode?: string | undefined; 
   public get mode() {
     return this.getStringAttribute('mode');
@@ -2352,6 +2357,10 @@ export interface ContainerClusterNodePoolNodeConfigGuestAccelerator {
   */
   readonly count?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#gpu_partition_size ContainerCluster#gpu_partition_size}
+  */
+  readonly gpuPartitionSize?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#type ContainerCluster#type}
   */
   readonly type?: string;
@@ -2364,6 +2373,7 @@ function containerClusterNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: 
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    gpu_partition_size: cdktf.stringToTerraform(struct!.gpuPartitionSize),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -2499,7 +2509,7 @@ export class ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // mode - computed: false, optional: true, required: false
+  // mode - computed: true, optional: true, required: false
   private _mode?: string | undefined; 
   public get mode() {
     return this.getStringAttribute('mode');
@@ -3605,7 +3615,13 @@ export interface ContainerClusterWorkloadIdentityConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#identity_namespace ContainerCluster#identity_namespace}
   */
-  readonly identityNamespace: string;
+  readonly identityNamespace?: string;
+  /**
+  * The workload pool to attach all Kubernetes service accounts to.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster.html#workload_pool ContainerCluster#workload_pool}
+  */
+  readonly workloadPool?: string;
 }
 
 function containerClusterWorkloadIdentityConfigToTerraform(struct?: ContainerClusterWorkloadIdentityConfigOutputReference | ContainerClusterWorkloadIdentityConfig): any {
@@ -3615,6 +3631,7 @@ function containerClusterWorkloadIdentityConfigToTerraform(struct?: ContainerClu
   }
   return {
     identity_namespace: cdktf.stringToTerraform(struct!.identityNamespace),
+    workload_pool: cdktf.stringToTerraform(struct!.workloadPool),
   }
 }
 
@@ -3628,17 +3645,36 @@ export class ContainerClusterWorkloadIdentityConfigOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // identity_namespace - computed: false, optional: false, required: true
-  private _identityNamespace?: string; 
+  // identity_namespace - computed: false, optional: true, required: false
+  private _identityNamespace?: string | undefined; 
   public get identityNamespace() {
     return this.getStringAttribute('identity_namespace');
   }
-  public set identityNamespace(value: string) {
+  public set identityNamespace(value: string | undefined) {
     this._identityNamespace = value;
+  }
+  public resetIdentityNamespace() {
+    this._identityNamespace = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityNamespaceInput() {
     return this._identityNamespace
+  }
+
+  // workload_pool - computed: false, optional: true, required: false
+  private _workloadPool?: string | undefined; 
+  public get workloadPool() {
+    return this.getStringAttribute('workload_pool');
+  }
+  public set workloadPool(value: string | undefined) {
+    this._workloadPool = value;
+  }
+  public resetWorkloadPool() {
+    this._workloadPool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadPoolInput() {
+    return this._workloadPool
   }
 }
 

@@ -340,6 +340,11 @@ export class DataGoogleContainerClusterNodeConfigGuestAccelerator extends cdktf.
     return this.getNumberAttribute('count');
   }
 
+  // gpu_partition_size - computed: true, optional: false, required: false
+  public get gpuPartitionSize() {
+    return this.getStringAttribute('gpu_partition_size');
+  }
+
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
@@ -503,6 +508,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator extend
   // count - computed: true, optional: false, required: false
   public get count() {
     return this.getNumberAttribute('count');
+  }
+
+  // gpu_partition_size - computed: true, optional: false, required: false
+  public get gpuPartitionSize() {
+    return this.getStringAttribute('gpu_partition_size');
   }
 
   // type - computed: true, optional: false, required: false
@@ -813,6 +823,11 @@ export class DataGoogleContainerClusterWorkloadIdentityConfig extends cdktf.Comp
   // identity_namespace - computed: true, optional: false, required: false
   public get identityNamespace() {
     return this.getStringAttribute('identity_namespace');
+  }
+
+  // workload_pool - computed: true, optional: false, required: false
+  public get workloadPool() {
+    return this.getStringAttribute('workload_pool');
   }
 }
 
