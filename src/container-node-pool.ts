@@ -234,6 +234,10 @@ export interface ContainerNodePoolNodeConfigGuestAccelerator {
   */
   readonly count?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#gpu_partition_size ContainerNodePool#gpu_partition_size}
+  */
+  readonly gpuPartitionSize?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool.html#type ContainerNodePool#type}
   */
   readonly type?: string;
@@ -246,6 +250,7 @@ function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: Contain
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    gpu_partition_size: cdktf.stringToTerraform(struct!.gpuPartitionSize),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -381,7 +386,7 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // mode - computed: false, optional: true, required: false
+  // mode - computed: true, optional: true, required: false
   private _mode?: string | undefined; 
   public get mode() {
     return this.getStringAttribute('mode');

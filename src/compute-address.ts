@@ -79,6 +79,10 @@ specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
   that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
   Interconnect configuration. These addresses are regional resources.
 
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
+
 This should only be set when using an Internal address.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#purpose ComputeAddress#purpose}
