@@ -978,9 +978,9 @@ async-retry@^1.2.1:
     retry "0.13.1"
 
 async@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-3.2.1.tgz#d3274ec66d107a47476a4c49136aacdb00665fc8"
-  integrity sha512-XdD5lRO/87udXCMC9meWdYiR+Nq6ZjUfXidViUZGu2F1MO4T3XwZ1et0hb2++BgLfhyJwy44BGB/yx80ABx8hg==
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.2.tgz#2eb7671034bb2194d45d30e31e24ec7e7f9670cd"
+  integrity sha512-H0E+qZaDEfx/FY4t7iLRv1W2fFI6+pyCeTw1uN20AQPiwqwM6ojPxHxdLv4z8hi2DtnW9BOckSspLucW7pIE5g==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -2745,9 +2745,9 @@ graphql-tag@^2.11.0, graphql-tag@^2.12.3:
     tslib "^2.1.0"
 
 graphql@^15.5.1:
-  version "15.7.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.7.1.tgz#c821a1741e04e2bc2c91e138f34c06a86c0464f1"
-  integrity sha512-x34S6gC0/peBZnlK60zCJox/d45A7p6At9oN9EPA3qhoIAlR4LNZmXRLkICBckwwTMJzVdA8cx3QIQZMOl606A==
+  version "15.7.2"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.7.2.tgz#85ab0eeb83722977151b3feb4d631b5f2ab287ef"
+  integrity sha512-AnnKk7hFQFmU/2I9YSQf3xw44ctnSFCfp3zE0N6W174gqe9fWG/2rKaKxROK7CcI3XtERpjEKFqts8o319Kf7A==
 
 handlebars@^4.7.6:
   version "4.7.7"
@@ -5323,9 +5323,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.109"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.109.tgz#becef627fde92f882294e4480aabfe6692dd163a"
-  integrity sha512-yfhDBP1fFzjr9YrDF+LyLdyNUdskaVEEeAvVi+oZCDbJ+VWTQW+3SznmLt3jdVqtv0OhLYFIgHs5v8SBRFOHkQ==
+  version "1.2.110"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.110.tgz#55bc73f1fc3819a319f81f9abf2df4885ff6a2d0"
+  integrity sha512-N7CfhTuwRGlZ5gvz5fXPUDPoURV33k754mFWZw6D9B0HLGBhoZTkK7UfHwUimOwk8R4q9pR/oW6LXZKWRb8bKg==
 
 sshpk@^1.7.0:
   version "1.16.1"
