@@ -1903,11 +1903,6 @@ decamelize@^1.1.0, decamelize@^1.2.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
-decamelize@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-4.0.0.tgz#aa472d7bf660eb15f3494efd531cab7f2a709837"
-  integrity sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ==
-
 decamelize@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-5.0.1.tgz#db11a92e58c741ef339fb0a2868d8a06a9a7b1e9"
@@ -4618,14 +4613,14 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.31.13:
-  version "0.31.13"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.31.13.tgz#c963139f6abe3ca2a14f9f40b4a5b52ef8eacdcf"
-  integrity sha512-NAaeC3DG2ucmTqn0fevqma2U/JQJZKaQGczJ/gBsEdyt7NlppSHA3g5BRS9chet25EkDoZxNy6bDgCXg80UdLA==
+projen@^0.32.6:
+  version "0.32.6"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.32.6.tgz#93662e9aa358abf0ecba79822925a8f471e41317"
+  integrity sha512-SwD30ix/5sl7jDtr/q15z6GImU8799SFiSI6ptQFDq2OLhSRqCAf5CXz+RIfdgyY3opC4hRlO1tddL1nFj9fEA==
   dependencies:
     "@iarna/toml" "^2.2.5"
+    case "^1.6.3"
     chalk "^4.1.2"
-    decamelize "^4.0.0"
     fs-extra "^9.1.0"
     glob "^7"
     ini "^2.0.0"
