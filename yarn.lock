@@ -170,11 +170,11 @@
     tslib "~2.1.0"
 
 "@graphql-tools/import@^6.2.6":
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/import/-/import-6.6.0.tgz#4779d08ce2b62ddaa95dbe4877e26cdabc1f746f"
-  integrity sha512-qRuvLQQoeF3XEnz1uaH+7Xhs6TA7dUvyJi2VTzD6zLRPoqMXRxtSwoW67jlvskau31mI+7Q8yqG0P3QpdYg1Dw==
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/import/-/import-6.6.1.tgz#2a7e1ceda10103ffeb8652a48ddc47150b035485"
+  integrity sha512-i9WA6k+erJMci822o9w9DoX+uncVBK60LGGYW8mdbhX0l7wEubUpA000thJ1aarCusYh0u+ZT9qX0HyVPXu25Q==
   dependencies:
-    "@graphql-tools/utils" "8.5.2"
+    "@graphql-tools/utils" "8.5.3"
     resolve-from "5.0.0"
     tslib "~2.3.0"
 
@@ -237,10 +237,10 @@
   dependencies:
     tslib "~2.3.0"
 
-"@graphql-tools/utils@8.5.2", "@graphql-tools/utils@^8.0.0", "@graphql-tools/utils@^8.5.1":
-  version "8.5.2"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-8.5.2.tgz#fa775d92c19237f648105f7d4aeeeb63ba3d257f"
-  integrity sha512-wxA51td/759nQziPYh+HxE0WbURRufrp1lwfOYMgfK4e8Aa6gCa1P1p6ERogUIm423NrIfOVau19Q/BBpHdolw==
+"@graphql-tools/utils@8.5.3", "@graphql-tools/utils@^8.0.0", "@graphql-tools/utils@^8.5.1":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-8.5.3.tgz#404062e62cae9453501197039687749c4885356e"
+  integrity sha512-HDNGWFVa8QQkoQB0H1lftvaO1X5xUaUDk1zr1qDe0xN1NL0E/CrQdJ5UKLqOvH4hkqVUPxQsyOoAZFkaH6rLHg==
   dependencies:
     tslib "~2.3.0"
 
@@ -3312,9 +3312,9 @@ is-unicode-supported@^0.1.0:
   integrity sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==
 
 is-valid-domain@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/is-valid-domain/-/is-valid-domain-0.1.2.tgz#bd1b144716ca663df5996d62e2e7e45a971c7223"
-  integrity sha512-vm/9Ynw80MusgfSMffjGRuMhO8hjk5MOxLoFL7nYWvWXTPCxTGQtACiCwO055UqHICG8xP6hIvRXK1iwnuU9GA==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/is-valid-domain/-/is-valid-domain-0.1.4.tgz#5d5d811e1627cac9d39f504b645c57e76d946629"
+  integrity sha512-Caa6rwGze6pihA29wy3T1yNXzd53caGHvL0OfJ8RLtv0tVVzVZGlxFcQ0W8kls/uG0QUrv2B3J9xi/YB5/cfUQ==
   dependencies:
     punycode "^2.1.1"
 
@@ -5318,9 +5318,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.119"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.119.tgz#091ab4c335ed52cb6db7ae999ac1b1208706d964"
-  integrity sha512-e4jWv2GxeMShdg9tBJxv/LXwbvN83oRe/1I6wDOgtFn6kYH9PRUzYL6Jye4/ukuu+FsKWw1OTw32x4YigXPN2g==
+  version "1.2.120"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.120.tgz#883317c1ade7bea4a46393ccf3e4f37f21c6ccec"
+  integrity sha512-gcbK/0l72TTxMzecE+oiJgbANfj8k4KWlUAy/cHTH4KVkdXA2833xPwzCWchJu2FVnNoPKw1lGkkGMUpDFnTDw==
 
 sshpk@^1.7.0:
   version "1.16.1"
