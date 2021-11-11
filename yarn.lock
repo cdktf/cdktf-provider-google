@@ -211,9 +211,9 @@
     tslib "~2.3.0"
 
 "@graphql-tools/mock@^8.1.2":
-  version "8.4.2"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/mock/-/mock-8.4.2.tgz#301b8baf47588bf1cd87de4ad2130eb9f406781b"
-  integrity sha512-2v4v99mWUB1by+6Bk01PoJCUVnYoNSOT0E5VvFRf5oMwJPaRKLAbC+IjZaRoen1tWpVrg+3Coub7co8jyhvm/Q==
+  version "8.4.3"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/mock/-/mock-8.4.3.tgz#9d4838ba583969ae70c187e5cdb5cf286e266cd7"
+  integrity sha512-jj7obzDz4FAfmIGSh1Mo6cUs9d8MSaN6TH/iju3Qyuz6CZ6NLuJrWOg50ysEUgkT4Y/Aey8SlWOf/U15Z7qWYw==
   dependencies:
     "@graphql-tools/schema" "^8.3.1"
     "@graphql-tools/utils" "^8.5.1"
@@ -5327,9 +5327,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.122"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.122.tgz#e1a03d38a7e74a6b736f8da78ef280c2517e691b"
-  integrity sha512-Xvc/LX+BLgqA1BQe4xNaRfYBa3t6WD6x44hfsmO8tvk5d8H8rlpcO8IDQkTCZcUJ9tDZ9PLUTHUahh6QCpTdLQ==
+  version "1.2.123"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.123.tgz#b6fba958c3bec1e729afc4f41841a46cadf39831"
+  integrity sha512-Bhw7rsqv3x12whVvUFgzpcHkv81cOOfpY18VbkegI5DdWCy6Ua5hth0M2w29gYNFCkTiikW3wEdDkpeRghPBDg==
 
 sshpk@^1.7.0:
   version "1.16.1"
