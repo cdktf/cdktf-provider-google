@@ -3013,9 +3013,9 @@ ink-spinner@^4.0.1:
     cli-spinners "^2.3.0"
 
 ink-text-input@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ink-text-input/-/ink-text-input-4.0.1.tgz#e3de3f7e7f4247d64018838c57bbbc6120901368"
-  integrity sha512-wiqkrB2tgnCnv51r2LpNLVfgrd/V+UXF3ccry+/Q7on9CBt8LVavX6NDYRMdXljuM+CcFV/sVro0bCr5oxB05w==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ink-text-input/-/ink-text-input-4.0.2.tgz#59b41604058b29bc2b8c1335838c213076308205"
+  integrity sha512-euuugcNExOx5E+qNM1c+pDF7V8yw/xzCRWEfFk1KjQT9CYtaVAYre13YbMFsYPkGD26dvX6XAffUgkwXme/p5Q==
   dependencies:
     chalk "^4.1.0"
     type-fest "^0.15.1"
@@ -5327,9 +5327,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.125"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.125.tgz#1fcb6cf2bfcee97effe7993581e5fba6c1f6c427"
-  integrity sha512-RSlu5c9aD7+PvFVprE/NEqNs94gRqO5vXlzpXLfY6P8G9q65cXuEmjZUTT8x4D2ee93ILfrk/SKDfjGnCjazTw==
+  version "1.2.126"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.126.tgz#4ab934e28f9ea22a5fdb98ea6b70e2319318cd60"
+  integrity sha512-9/y6mq7oe2kVj/KY+iOFlGzKq+ibudU6UtVV9GOwk40neiaUkIpCNvHcYsI3GnHYMc6KyUKovBPFHC+JnzmTDg==
 
 sshpk@^1.7.0:
   version "1.16.1"
