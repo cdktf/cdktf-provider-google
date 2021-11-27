@@ -5352,9 +5352,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.137"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.137.tgz#a0eeb42b7824e2a8bbe3526df6861ca68de7e308"
-  integrity sha512-2idrr9XG8Xs0r683k1gXiUcbuAuG7ep5dYTtE95lNyXMtOBGWF7DCErUEnErA617HXwoHRc2M2AgjvTJ1tvphQ==
+  version "1.2.138"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.138.tgz#00e9ae0e7a2fca2e18cac27f08d85368d2e76be3"
+  integrity sha512-EaiWFpkSocWogZzsD2q7T4tCQfM3roLyCHPqaCKxxYsLrlSLplRWdtq6HUQoucG90pzud9P2lfX0fvQkkz0A3A==
 
 sshpk@^1.7.0:
   version "1.16.1"
