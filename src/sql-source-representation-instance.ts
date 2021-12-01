@@ -61,7 +61,7 @@ export interface SqlSourceRepresentationInstanceTimeouts {
   readonly delete?: string;
 }
 
-function sqlSourceRepresentationInstanceTimeoutsToTerraform(struct?: SqlSourceRepresentationInstanceTimeoutsOutputReference | SqlSourceRepresentationInstanceTimeouts): any {
+export function sqlSourceRepresentationInstanceTimeoutsToTerraform(struct?: SqlSourceRepresentationInstanceTimeoutsOutputReference | SqlSourceRepresentationInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,12 +82,37 @@ export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlSourceRepresentationInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlSourceRepresentationInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -95,15 +120,15 @@ export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -111,7 +136,7 @@ export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -153,7 +178,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
     this._port = config.port;
     this._project = config.project;
     this._region = config.region;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -170,7 +195,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseVersionInput() {
-    return this._databaseVersion
+    return this._databaseVersion;
   }
 
   // host - computed: false, optional: false, required: true
@@ -183,7 +208,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get hostInput() {
-    return this._host
+    return this._host;
   }
 
   // id - computed: true, optional: true, required: false
@@ -201,15 +226,15 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -217,15 +242,15 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -233,15 +258,15 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -249,24 +274,23 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlSourceRepresentationInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new SqlSourceRepresentationInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlSourceRepresentationInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SqlSourceRepresentationInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SqlSourceRepresentationInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -281,7 +305,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
       port: cdktf.numberToTerraform(this._port),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      timeouts: sqlSourceRepresentationInstanceTimeoutsToTerraform(this._timeouts),
+      timeouts: sqlSourceRepresentationInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

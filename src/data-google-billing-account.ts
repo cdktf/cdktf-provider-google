@@ -63,11 +63,11 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   // ==========
 
   // billing_account - computed: false, optional: true, required: false
-  private _billingAccount?: string | undefined; 
+  private _billingAccount?: string; 
   public get billingAccount() {
     return this.getStringAttribute('billing_account');
   }
-  public set billingAccount(value: string | undefined) {
+  public set billingAccount(value: string) {
     this._billingAccount = value;
   }
   public resetBillingAccount() {
@@ -75,15 +75,15 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get billingAccountInput() {
-    return this._billingAccount
+    return this._billingAccount;
   }
 
   // display_name - computed: true, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -91,7 +91,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -105,11 +105,11 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
 
   // open - computed: true, optional: true, required: false
-  private _open?: boolean | cdktf.IResolvable | undefined; 
+  private _open?: boolean | cdktf.IResolvable; 
   public get open() {
     return this.getBooleanAttribute('open') as any;
   }
-  public set open(value: boolean | cdktf.IResolvable | undefined) {
+  public set open(value: boolean | cdktf.IResolvable) {
     this._open = value;
   }
   public resetOpen() {
@@ -117,7 +117,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get openInput() {
-    return this._open
+    return this._open;
   }
 
   // project_ids - computed: true, optional: false, required: false

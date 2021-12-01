@@ -88,7 +88,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
   readonly schemaVersion?: string;
 }
 
-function billingBudgetAllUpdatesRuleToTerraform(struct?: BillingBudgetAllUpdatesRuleOutputReference | BillingBudgetAllUpdatesRule): any {
+export function billingBudgetAllUpdatesRuleToTerraform(struct?: BillingBudgetAllUpdatesRuleOutputReference | BillingBudgetAllUpdatesRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -111,12 +111,49 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BillingBudgetAllUpdatesRule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._disableDefaultIamRecipients) {
+      hasAnyValues = true;
+      internalValueResult.disableDefaultIamRecipients = this._disableDefaultIamRecipients;
+    }
+    if (this._monitoringNotificationChannels) {
+      hasAnyValues = true;
+      internalValueResult.monitoringNotificationChannels = this._monitoringNotificationChannels;
+    }
+    if (this._pubsubTopic) {
+      hasAnyValues = true;
+      internalValueResult.pubsubTopic = this._pubsubTopic;
+    }
+    if (this._schemaVersion) {
+      hasAnyValues = true;
+      internalValueResult.schemaVersion = this._schemaVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetAllUpdatesRule | undefined) {
+    if (value === undefined) {
+      this._disableDefaultIamRecipients = undefined;
+      this._monitoringNotificationChannels = undefined;
+      this._pubsubTopic = undefined;
+      this._schemaVersion = undefined;
+    }
+    else {
+      this._disableDefaultIamRecipients = value.disableDefaultIamRecipients;
+      this._monitoringNotificationChannels = value.monitoringNotificationChannels;
+      this._pubsubTopic = value.pubsubTopic;
+      this._schemaVersion = value.schemaVersion;
+    }
+  }
+
   // disable_default_iam_recipients - computed: false, optional: true, required: false
-  private _disableDefaultIamRecipients?: boolean | cdktf.IResolvable | undefined; 
+  private _disableDefaultIamRecipients?: boolean | cdktf.IResolvable; 
   public get disableDefaultIamRecipients() {
     return this.getBooleanAttribute('disable_default_iam_recipients') as any;
   }
-  public set disableDefaultIamRecipients(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableDefaultIamRecipients(value: boolean | cdktf.IResolvable) {
     this._disableDefaultIamRecipients = value;
   }
   public resetDisableDefaultIamRecipients() {
@@ -124,15 +161,15 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get disableDefaultIamRecipientsInput() {
-    return this._disableDefaultIamRecipients
+    return this._disableDefaultIamRecipients;
   }
 
   // monitoring_notification_channels - computed: false, optional: true, required: false
-  private _monitoringNotificationChannels?: string[] | undefined; 
+  private _monitoringNotificationChannels?: string[]; 
   public get monitoringNotificationChannels() {
     return this.getListAttribute('monitoring_notification_channels');
   }
-  public set monitoringNotificationChannels(value: string[] | undefined) {
+  public set monitoringNotificationChannels(value: string[]) {
     this._monitoringNotificationChannels = value;
   }
   public resetMonitoringNotificationChannels() {
@@ -140,15 +177,15 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get monitoringNotificationChannelsInput() {
-    return this._monitoringNotificationChannels
+    return this._monitoringNotificationChannels;
   }
 
   // pubsub_topic - computed: false, optional: true, required: false
-  private _pubsubTopic?: string | undefined; 
+  private _pubsubTopic?: string; 
   public get pubsubTopic() {
     return this.getStringAttribute('pubsub_topic');
   }
-  public set pubsubTopic(value: string | undefined) {
+  public set pubsubTopic(value: string) {
     this._pubsubTopic = value;
   }
   public resetPubsubTopic() {
@@ -156,15 +193,15 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubTopicInput() {
-    return this._pubsubTopic
+    return this._pubsubTopic;
   }
 
   // schema_version - computed: false, optional: true, required: false
-  private _schemaVersion?: string | undefined; 
+  private _schemaVersion?: string; 
   public get schemaVersion() {
     return this.getStringAttribute('schema_version');
   }
-  public set schemaVersion(value: string | undefined) {
+  public set schemaVersion(value: string) {
     this._schemaVersion = value;
   }
   public resetSchemaVersion() {
@@ -172,7 +209,7 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get schemaVersionInput() {
-    return this._schemaVersion
+    return this._schemaVersion;
   }
 }
 export interface BillingBudgetAmountSpecifiedAmount {
@@ -203,7 +240,7 @@ is "USD", then 1 unit is one US dollar.
   readonly units?: string;
 }
 
-function billingBudgetAmountSpecifiedAmountToTerraform(struct?: BillingBudgetAmountSpecifiedAmountOutputReference | BillingBudgetAmountSpecifiedAmount): any {
+export function billingBudgetAmountSpecifiedAmountToTerraform(struct?: BillingBudgetAmountSpecifiedAmountOutputReference | BillingBudgetAmountSpecifiedAmount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -225,12 +262,43 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BillingBudgetAmountSpecifiedAmount | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._currencyCode) {
+      hasAnyValues = true;
+      internalValueResult.currencyCode = this._currencyCode;
+    }
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._units) {
+      hasAnyValues = true;
+      internalValueResult.units = this._units;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetAmountSpecifiedAmount | undefined) {
+    if (value === undefined) {
+      this._currencyCode = undefined;
+      this._nanos = undefined;
+      this._units = undefined;
+    }
+    else {
+      this._currencyCode = value.currencyCode;
+      this._nanos = value.nanos;
+      this._units = value.units;
+    }
+  }
+
   // currency_code - computed: true, optional: true, required: false
-  private _currencyCode?: string | undefined; 
+  private _currencyCode?: string; 
   public get currencyCode() {
     return this.getStringAttribute('currency_code');
   }
-  public set currencyCode(value: string | undefined) {
+  public set currencyCode(value: string) {
     this._currencyCode = value;
   }
   public resetCurrencyCode() {
@@ -238,15 +306,15 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get currencyCodeInput() {
-    return this._currencyCode
+    return this._currencyCode;
   }
 
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -254,15 +322,15 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // units - computed: false, optional: true, required: false
-  private _units?: string | undefined; 
+  private _units?: string; 
   public get units() {
     return this.getStringAttribute('units');
   }
-  public set units(value: string | undefined) {
+  public set units(value: string) {
     this._units = value;
   }
   public resetUnits() {
@@ -270,7 +338,7 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get unitsInput() {
-    return this._units
+    return this._units;
   }
 }
 export interface BillingBudgetAmount {
@@ -291,7 +359,7 @@ use the 'specified_amount' block.
   readonly specifiedAmount?: BillingBudgetAmountSpecifiedAmount;
 }
 
-function billingBudgetAmountToTerraform(struct?: BillingBudgetAmountOutputReference | BillingBudgetAmount): any {
+export function billingBudgetAmountToTerraform(struct?: BillingBudgetAmountOutputReference | BillingBudgetAmount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -312,12 +380,37 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BillingBudgetAmount | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._lastPeriodAmount) {
+      hasAnyValues = true;
+      internalValueResult.lastPeriodAmount = this._lastPeriodAmount;
+    }
+    if (this._specifiedAmount) {
+      hasAnyValues = true;
+      internalValueResult.specifiedAmount = this._specifiedAmount?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetAmount | undefined) {
+    if (value === undefined) {
+      this._lastPeriodAmount = undefined;
+      this._specifiedAmount.internalValue = undefined;
+    }
+    else {
+      this._lastPeriodAmount = value.lastPeriodAmount;
+      this._specifiedAmount.internalValue = value.specifiedAmount;
+    }
+  }
+
   // last_period_amount - computed: false, optional: true, required: false
-  private _lastPeriodAmount?: boolean | cdktf.IResolvable | undefined; 
+  private _lastPeriodAmount?: boolean | cdktf.IResolvable; 
   public get lastPeriodAmount() {
     return this.getBooleanAttribute('last_period_amount') as any;
   }
-  public set lastPeriodAmount(value: boolean | cdktf.IResolvable | undefined) {
+  public set lastPeriodAmount(value: boolean | cdktf.IResolvable) {
     this._lastPeriodAmount = value;
   }
   public resetLastPeriodAmount() {
@@ -325,24 +418,23 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get lastPeriodAmountInput() {
-    return this._lastPeriodAmount
+    return this._lastPeriodAmount;
   }
 
   // specified_amount - computed: false, optional: true, required: false
-  private _specifiedAmount?: BillingBudgetAmountSpecifiedAmount | undefined; 
-  private __specifiedAmountOutput = new BillingBudgetAmountSpecifiedAmountOutputReference(this as any, "specified_amount", true);
+  private _specifiedAmount = new BillingBudgetAmountSpecifiedAmountOutputReference(this as any, "specified_amount", true);
   public get specifiedAmount() {
-    return this.__specifiedAmountOutput;
+    return this._specifiedAmount;
   }
-  public putSpecifiedAmount(value: BillingBudgetAmountSpecifiedAmount | undefined) {
-    this._specifiedAmount = value;
+  public putSpecifiedAmount(value: BillingBudgetAmountSpecifiedAmount) {
+    this._specifiedAmount.internalValue = value;
   }
   public resetSpecifiedAmount() {
-    this._specifiedAmount = undefined;
+    this._specifiedAmount.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get specifiedAmountInput() {
-    return this._specifiedAmount
+    return this._specifiedAmount.internalValue;
   }
 }
 export interface BillingBudgetBudgetFilter {
@@ -405,7 +497,7 @@ account and all subaccounts, if they exist.
   readonly subaccounts?: string[];
 }
 
-function billingBudgetBudgetFilterToTerraform(struct?: BillingBudgetBudgetFilterOutputReference | BillingBudgetBudgetFilter): any {
+export function billingBudgetBudgetFilterToTerraform(struct?: BillingBudgetBudgetFilterOutputReference | BillingBudgetBudgetFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -430,12 +522,61 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BillingBudgetBudgetFilter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._creditTypes) {
+      hasAnyValues = true;
+      internalValueResult.creditTypes = this._creditTypes;
+    }
+    if (this._creditTypesTreatment) {
+      hasAnyValues = true;
+      internalValueResult.creditTypesTreatment = this._creditTypesTreatment;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    if (this._projects) {
+      hasAnyValues = true;
+      internalValueResult.projects = this._projects;
+    }
+    if (this._services) {
+      hasAnyValues = true;
+      internalValueResult.services = this._services;
+    }
+    if (this._subaccounts) {
+      hasAnyValues = true;
+      internalValueResult.subaccounts = this._subaccounts;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetBudgetFilter | undefined) {
+    if (value === undefined) {
+      this._creditTypes = undefined;
+      this._creditTypesTreatment = undefined;
+      this._labels = undefined;
+      this._projects = undefined;
+      this._services = undefined;
+      this._subaccounts = undefined;
+    }
+    else {
+      this._creditTypes = value.creditTypes;
+      this._creditTypesTreatment = value.creditTypesTreatment;
+      this._labels = value.labels;
+      this._projects = value.projects;
+      this._services = value.services;
+      this._subaccounts = value.subaccounts;
+    }
+  }
+
   // credit_types - computed: true, optional: true, required: false
-  private _creditTypes?: string[] | undefined; 
+  private _creditTypes?: string[]; 
   public get creditTypes() {
     return this.getListAttribute('credit_types');
   }
-  public set creditTypes(value: string[] | undefined) {
+  public set creditTypes(value: string[]) {
     this._creditTypes = value;
   }
   public resetCreditTypes() {
@@ -443,15 +584,15 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get creditTypesInput() {
-    return this._creditTypes
+    return this._creditTypes;
   }
 
   // credit_types_treatment - computed: false, optional: true, required: false
-  private _creditTypesTreatment?: string | undefined; 
+  private _creditTypesTreatment?: string; 
   public get creditTypesTreatment() {
     return this.getStringAttribute('credit_types_treatment');
   }
-  public set creditTypesTreatment(value: string | undefined) {
+  public set creditTypesTreatment(value: string) {
     this._creditTypesTreatment = value;
   }
   public resetCreditTypesTreatment() {
@@ -459,16 +600,16 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get creditTypesTreatmentInput() {
-    return this._creditTypesTreatment
+    return this._creditTypesTreatment;
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -476,15 +617,15 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // projects - computed: false, optional: true, required: false
-  private _projects?: string[] | undefined; 
+  private _projects?: string[]; 
   public get projects() {
     return this.getListAttribute('projects');
   }
-  public set projects(value: string[] | undefined) {
+  public set projects(value: string[]) {
     this._projects = value;
   }
   public resetProjects() {
@@ -492,15 +633,15 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get projectsInput() {
-    return this._projects
+    return this._projects;
   }
 
   // services - computed: true, optional: true, required: false
-  private _services?: string[] | undefined; 
+  private _services?: string[]; 
   public get services() {
     return this.getListAttribute('services');
   }
-  public set services(value: string[] | undefined) {
+  public set services(value: string[]) {
     this._services = value;
   }
   public resetServices() {
@@ -508,15 +649,15 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get servicesInput() {
-    return this._services
+    return this._services;
   }
 
   // subaccounts - computed: true, optional: true, required: false
-  private _subaccounts?: string[] | undefined; 
+  private _subaccounts?: string[]; 
   public get subaccounts() {
     return this.getListAttribute('subaccounts');
   }
-  public set subaccounts(value: string[] | undefined) {
+  public set subaccounts(value: string[]) {
     this._subaccounts = value;
   }
   public resetSubaccounts() {
@@ -524,7 +665,7 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get subaccountsInput() {
-    return this._subaccounts
+    return this._subaccounts;
   }
 }
 export interface BillingBudgetThresholdRules {
@@ -544,7 +685,7 @@ the threshold. Default value: "CURRENT_SPEND" Possible values: ["CURRENT_SPEND",
   readonly thresholdPercent: number;
 }
 
-function billingBudgetThresholdRulesToTerraform(struct?: BillingBudgetThresholdRules): any {
+export function billingBudgetThresholdRulesToTerraform(struct?: BillingBudgetThresholdRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -570,7 +711,7 @@ export interface BillingBudgetTimeouts {
   readonly update?: string;
 }
 
-function billingBudgetTimeoutsToTerraform(struct?: BillingBudgetTimeoutsOutputReference | BillingBudgetTimeouts): any {
+export function billingBudgetTimeoutsToTerraform(struct?: BillingBudgetTimeoutsOutputReference | BillingBudgetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -592,12 +733,43 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BillingBudgetTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -605,15 +777,15 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -621,15 +793,15 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -637,7 +809,7 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -675,11 +847,11 @@ export class BillingBudget extends cdktf.TerraformResource {
     });
     this._billingAccount = config.billingAccount;
     this._displayName = config.displayName;
-    this._allUpdatesRule = config.allUpdatesRule;
-    this._amount = config.amount;
-    this._budgetFilter = config.budgetFilter;
+    this._allUpdatesRule.internalValue = config.allUpdatesRule;
+    this._amount.internalValue = config.amount;
+    this._budgetFilter.internalValue = config.budgetFilter;
     this._thresholdRules = config.thresholdRules;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -696,15 +868,15 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get billingAccountInput() {
-    return this._billingAccount
+    return this._billingAccount;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -712,7 +884,7 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -726,51 +898,48 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // all_updates_rule - computed: false, optional: true, required: false
-  private _allUpdatesRule?: BillingBudgetAllUpdatesRule | undefined; 
-  private __allUpdatesRuleOutput = new BillingBudgetAllUpdatesRuleOutputReference(this as any, "all_updates_rule", true);
+  private _allUpdatesRule = new BillingBudgetAllUpdatesRuleOutputReference(this as any, "all_updates_rule", true);
   public get allUpdatesRule() {
-    return this.__allUpdatesRuleOutput;
+    return this._allUpdatesRule;
   }
-  public putAllUpdatesRule(value: BillingBudgetAllUpdatesRule | undefined) {
-    this._allUpdatesRule = value;
+  public putAllUpdatesRule(value: BillingBudgetAllUpdatesRule) {
+    this._allUpdatesRule.internalValue = value;
   }
   public resetAllUpdatesRule() {
-    this._allUpdatesRule = undefined;
+    this._allUpdatesRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get allUpdatesRuleInput() {
-    return this._allUpdatesRule
+    return this._allUpdatesRule.internalValue;
   }
 
   // amount - computed: false, optional: false, required: true
-  private _amount?: BillingBudgetAmount; 
-  private __amountOutput = new BillingBudgetAmountOutputReference(this as any, "amount", true);
+  private _amount = new BillingBudgetAmountOutputReference(this as any, "amount", true);
   public get amount() {
-    return this.__amountOutput;
+    return this._amount;
   }
   public putAmount(value: BillingBudgetAmount) {
-    this._amount = value;
+    this._amount.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get amountInput() {
-    return this._amount
+    return this._amount.internalValue;
   }
 
   // budget_filter - computed: false, optional: true, required: false
-  private _budgetFilter?: BillingBudgetBudgetFilter | undefined; 
-  private __budgetFilterOutput = new BillingBudgetBudgetFilterOutputReference(this as any, "budget_filter", true);
+  private _budgetFilter = new BillingBudgetBudgetFilterOutputReference(this as any, "budget_filter", true);
   public get budgetFilter() {
-    return this.__budgetFilterOutput;
+    return this._budgetFilter;
   }
-  public putBudgetFilter(value: BillingBudgetBudgetFilter | undefined) {
-    this._budgetFilter = value;
+  public putBudgetFilter(value: BillingBudgetBudgetFilter) {
+    this._budgetFilter.internalValue = value;
   }
   public resetBudgetFilter() {
-    this._budgetFilter = undefined;
+    this._budgetFilter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get budgetFilterInput() {
-    return this._budgetFilter
+    return this._budgetFilter.internalValue;
   }
 
   // threshold_rules - computed: false, optional: false, required: true
@@ -784,24 +953,23 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdRulesInput() {
-    return this._thresholdRules
+    return this._thresholdRules;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BillingBudgetTimeouts | undefined; 
-  private __timeoutsOutput = new BillingBudgetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BillingBudgetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BillingBudgetTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BillingBudgetTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -812,11 +980,11 @@ export class BillingBudget extends cdktf.TerraformResource {
     return {
       billing_account: cdktf.stringToTerraform(this._billingAccount),
       display_name: cdktf.stringToTerraform(this._displayName),
-      all_updates_rule: billingBudgetAllUpdatesRuleToTerraform(this._allUpdatesRule),
-      amount: billingBudgetAmountToTerraform(this._amount),
-      budget_filter: billingBudgetBudgetFilterToTerraform(this._budgetFilter),
+      all_updates_rule: billingBudgetAllUpdatesRuleToTerraform(this._allUpdatesRule.internalValue),
+      amount: billingBudgetAmountToTerraform(this._amount.internalValue),
+      budget_filter: billingBudgetBudgetFilterToTerraform(this._budgetFilter.internalValue),
       threshold_rules: cdktf.listMapper(billingBudgetThresholdRulesToTerraform)(this._thresholdRules),
-      timeouts: billingBudgetTimeoutsToTerraform(this._timeouts),
+      timeouts: billingBudgetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

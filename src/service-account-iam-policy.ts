@@ -77,7 +77,7 @@ export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // service_account_id - computed: false, optional: false, required: true
@@ -90,7 +90,7 @@ export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountIdInput() {
-    return this._serviceAccountId
+    return this._serviceAccountId;
   }
 
   // =========

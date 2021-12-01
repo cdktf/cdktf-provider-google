@@ -123,7 +123,7 @@ export interface StorageBucketObjectCustomerEncryption {
   readonly encryptionKey: string;
 }
 
-function storageBucketObjectCustomerEncryptionToTerraform(struct?: StorageBucketObjectCustomerEncryptionOutputReference | StorageBucketObjectCustomerEncryption): any {
+export function storageBucketObjectCustomerEncryptionToTerraform(struct?: StorageBucketObjectCustomerEncryptionOutputReference | StorageBucketObjectCustomerEncryption): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -144,12 +144,37 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageBucketObjectCustomerEncryption | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._encryptionAlgorithm) {
+      hasAnyValues = true;
+      internalValueResult.encryptionAlgorithm = this._encryptionAlgorithm;
+    }
+    if (this._encryptionKey) {
+      hasAnyValues = true;
+      internalValueResult.encryptionKey = this._encryptionKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketObjectCustomerEncryption | undefined) {
+    if (value === undefined) {
+      this._encryptionAlgorithm = undefined;
+      this._encryptionKey = undefined;
+    }
+    else {
+      this._encryptionAlgorithm = value.encryptionAlgorithm;
+      this._encryptionKey = value.encryptionKey;
+    }
+  }
+
   // encryption_algorithm - computed: false, optional: true, required: false
-  private _encryptionAlgorithm?: string | undefined; 
+  private _encryptionAlgorithm?: string; 
   public get encryptionAlgorithm() {
     return this.getStringAttribute('encryption_algorithm');
   }
-  public set encryptionAlgorithm(value: string | undefined) {
+  public set encryptionAlgorithm(value: string) {
     this._encryptionAlgorithm = value;
   }
   public resetEncryptionAlgorithm() {
@@ -157,7 +182,7 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionAlgorithmInput() {
-    return this._encryptionAlgorithm
+    return this._encryptionAlgorithm;
   }
 
   // encryption_key - computed: false, optional: false, required: true
@@ -170,7 +195,7 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionKeyInput() {
-    return this._encryptionKey
+    return this._encryptionKey;
   }
 }
 export interface StorageBucketObjectTimeouts {
@@ -188,7 +213,7 @@ export interface StorageBucketObjectTimeouts {
   readonly update?: string;
 }
 
-function storageBucketObjectTimeoutsToTerraform(struct?: StorageBucketObjectTimeoutsOutputReference | StorageBucketObjectTimeouts): any {
+export function storageBucketObjectTimeoutsToTerraform(struct?: StorageBucketObjectTimeoutsOutputReference | StorageBucketObjectTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -210,12 +235,43 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageBucketObjectTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketObjectTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -223,15 +279,15 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -239,15 +295,15 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -255,7 +311,7 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -306,8 +362,8 @@ export class StorageBucketObject extends cdktf.TerraformResource {
     this._source = config.source;
     this._storageClass = config.storageClass;
     this._temporaryHold = config.temporaryHold;
-    this._customerEncryption = config.customerEncryption;
-    this._timeouts = config.timeouts;
+    this._customerEncryption.internalValue = config.customerEncryption;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -324,15 +380,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // cache_control - computed: false, optional: true, required: false
-  private _cacheControl?: string | undefined; 
+  private _cacheControl?: string; 
   public get cacheControl() {
     return this.getStringAttribute('cache_control');
   }
-  public set cacheControl(value: string | undefined) {
+  public set cacheControl(value: string) {
     this._cacheControl = value;
   }
   public resetCacheControl() {
@@ -340,15 +396,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cacheControlInput() {
-    return this._cacheControl
+    return this._cacheControl;
   }
 
   // content - computed: false, optional: true, required: false
-  private _content?: string | undefined; 
+  private _content?: string; 
   public get content() {
     return this.getStringAttribute('content');
   }
-  public set content(value: string | undefined) {
+  public set content(value: string) {
     this._content = value;
   }
   public resetContent() {
@@ -356,15 +412,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentInput() {
-    return this._content
+    return this._content;
   }
 
   // content_disposition - computed: false, optional: true, required: false
-  private _contentDisposition?: string | undefined; 
+  private _contentDisposition?: string; 
   public get contentDisposition() {
     return this.getStringAttribute('content_disposition');
   }
-  public set contentDisposition(value: string | undefined) {
+  public set contentDisposition(value: string) {
     this._contentDisposition = value;
   }
   public resetContentDisposition() {
@@ -372,15 +428,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentDispositionInput() {
-    return this._contentDisposition
+    return this._contentDisposition;
   }
 
   // content_encoding - computed: false, optional: true, required: false
-  private _contentEncoding?: string | undefined; 
+  private _contentEncoding?: string; 
   public get contentEncoding() {
     return this.getStringAttribute('content_encoding');
   }
-  public set contentEncoding(value: string | undefined) {
+  public set contentEncoding(value: string) {
     this._contentEncoding = value;
   }
   public resetContentEncoding() {
@@ -388,15 +444,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentEncodingInput() {
-    return this._contentEncoding
+    return this._contentEncoding;
   }
 
   // content_language - computed: false, optional: true, required: false
-  private _contentLanguage?: string | undefined; 
+  private _contentLanguage?: string; 
   public get contentLanguage() {
     return this.getStringAttribute('content_language');
   }
-  public set contentLanguage(value: string | undefined) {
+  public set contentLanguage(value: string) {
     this._contentLanguage = value;
   }
   public resetContentLanguage() {
@@ -404,15 +460,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentLanguageInput() {
-    return this._contentLanguage
+    return this._contentLanguage;
   }
 
   // content_type - computed: true, optional: true, required: false
-  private _contentType?: string | undefined; 
+  private _contentType?: string; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -420,7 +476,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
-    return this._contentType
+    return this._contentType;
   }
 
   // crc32c - computed: true, optional: false, required: false
@@ -429,11 +485,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // detect_md5hash - computed: false, optional: true, required: false
-  private _detectMd5Hash?: string | undefined; 
+  private _detectMd5Hash?: string; 
   public get detectMd5Hash() {
     return this.getStringAttribute('detect_md5hash');
   }
-  public set detectMd5Hash(value: string | undefined) {
+  public set detectMd5Hash(value: string) {
     this._detectMd5Hash = value;
   }
   public resetDetectMd5Hash() {
@@ -441,15 +497,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get detectMd5HashInput() {
-    return this._detectMd5Hash
+    return this._detectMd5Hash;
   }
 
   // event_based_hold - computed: false, optional: true, required: false
-  private _eventBasedHold?: boolean | cdktf.IResolvable | undefined; 
+  private _eventBasedHold?: boolean | cdktf.IResolvable; 
   public get eventBasedHold() {
     return this.getBooleanAttribute('event_based_hold') as any;
   }
-  public set eventBasedHold(value: boolean | cdktf.IResolvable | undefined) {
+  public set eventBasedHold(value: boolean | cdktf.IResolvable) {
     this._eventBasedHold = value;
   }
   public resetEventBasedHold() {
@@ -457,7 +513,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventBasedHoldInput() {
-    return this._eventBasedHold
+    return this._eventBasedHold;
   }
 
   // id - computed: true, optional: true, required: false
@@ -466,11 +522,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // kms_key_name - computed: true, optional: true, required: false
-  private _kmsKeyName?: string | undefined; 
+  private _kmsKeyName?: string; 
   public get kmsKeyName() {
     return this.getStringAttribute('kms_key_name');
   }
-  public set kmsKeyName(value: string | undefined) {
+  public set kmsKeyName(value: string) {
     this._kmsKeyName = value;
   }
   public resetKmsKeyName() {
@@ -478,7 +534,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
-    return this._kmsKeyName
+    return this._kmsKeyName;
   }
 
   // md5hash - computed: true, optional: false, required: false
@@ -492,12 +548,12 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -505,7 +561,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -518,7 +574,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // output_name - computed: true, optional: false, required: false
@@ -532,11 +588,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source?: string | undefined; 
+  private _source?: string; 
   public get source() {
     return this.getStringAttribute('source');
   }
-  public set source(value: string | undefined) {
+  public set source(value: string) {
     this._source = value;
   }
   public resetSource() {
@@ -544,15 +600,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source
+    return this._source;
   }
 
   // storage_class - computed: true, optional: true, required: false
-  private _storageClass?: string | undefined; 
+  private _storageClass?: string; 
   public get storageClass() {
     return this.getStringAttribute('storage_class');
   }
-  public set storageClass(value: string | undefined) {
+  public set storageClass(value: string) {
     this._storageClass = value;
   }
   public resetStorageClass() {
@@ -560,15 +616,15 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageClassInput() {
-    return this._storageClass
+    return this._storageClass;
   }
 
   // temporary_hold - computed: false, optional: true, required: false
-  private _temporaryHold?: boolean | cdktf.IResolvable | undefined; 
+  private _temporaryHold?: boolean | cdktf.IResolvable; 
   public get temporaryHold() {
     return this.getBooleanAttribute('temporary_hold') as any;
   }
-  public set temporaryHold(value: boolean | cdktf.IResolvable | undefined) {
+  public set temporaryHold(value: boolean | cdktf.IResolvable) {
     this._temporaryHold = value;
   }
   public resetTemporaryHold() {
@@ -576,41 +632,39 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get temporaryHoldInput() {
-    return this._temporaryHold
+    return this._temporaryHold;
   }
 
   // customer_encryption - computed: false, optional: true, required: false
-  private _customerEncryption?: StorageBucketObjectCustomerEncryption | undefined; 
-  private __customerEncryptionOutput = new StorageBucketObjectCustomerEncryptionOutputReference(this as any, "customer_encryption", true);
+  private _customerEncryption = new StorageBucketObjectCustomerEncryptionOutputReference(this as any, "customer_encryption", true);
   public get customerEncryption() {
-    return this.__customerEncryptionOutput;
+    return this._customerEncryption;
   }
-  public putCustomerEncryption(value: StorageBucketObjectCustomerEncryption | undefined) {
-    this._customerEncryption = value;
+  public putCustomerEncryption(value: StorageBucketObjectCustomerEncryption) {
+    this._customerEncryption.internalValue = value;
   }
   public resetCustomerEncryption() {
-    this._customerEncryption = undefined;
+    this._customerEncryption.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customerEncryptionInput() {
-    return this._customerEncryption
+    return this._customerEncryption.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageBucketObjectTimeouts | undefined; 
-  private __timeoutsOutput = new StorageBucketObjectTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageBucketObjectTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageBucketObjectTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageBucketObjectTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -634,8 +688,8 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       source: cdktf.stringToTerraform(this._source),
       storage_class: cdktf.stringToTerraform(this._storageClass),
       temporary_hold: cdktf.booleanToTerraform(this._temporaryHold),
-      customer_encryption: storageBucketObjectCustomerEncryptionToTerraform(this._customerEncryption),
-      timeouts: storageBucketObjectTimeoutsToTerraform(this._timeouts),
+      customer_encryption: storageBucketObjectCustomerEncryptionToTerraform(this._customerEncryption.internalValue),
+      timeouts: storageBucketObjectTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

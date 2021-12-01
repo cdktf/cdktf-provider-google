@@ -82,7 +82,7 @@ export interface SecretManagerSecretReplicationUserManagedReplicasCustomerManage
   readonly kmsKeyName: string;
 }
 
-function secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference | SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption): any {
+export function secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference | SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,6 +102,25 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined) {
+    if (value === undefined) {
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
   // kms_key_name - computed: false, optional: false, required: true
   private _kmsKeyName?: string; 
   public get kmsKeyName() {
@@ -112,7 +131,7 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
-    return this._kmsKeyName
+    return this._kmsKeyName;
   }
 }
 export interface SecretManagerSecretReplicationUserManagedReplicas {
@@ -130,7 +149,7 @@ export interface SecretManagerSecretReplicationUserManagedReplicas {
   readonly customerManagedEncryption?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption;
 }
 
-function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas): any {
+export function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -150,7 +169,7 @@ export interface SecretManagerSecretReplicationUserManaged {
   readonly replicas: SecretManagerSecretReplicationUserManagedReplicas[];
 }
 
-function secretManagerSecretReplicationUserManagedToTerraform(struct?: SecretManagerSecretReplicationUserManagedOutputReference | SecretManagerSecretReplicationUserManaged): any {
+export function secretManagerSecretReplicationUserManagedToTerraform(struct?: SecretManagerSecretReplicationUserManagedOutputReference | SecretManagerSecretReplicationUserManaged): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -170,6 +189,25 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecretManagerSecretReplicationUserManaged | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._replicas) {
+      hasAnyValues = true;
+      internalValueResult.replicas = this._replicas;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecretManagerSecretReplicationUserManaged | undefined) {
+    if (value === undefined) {
+      this._replicas = undefined;
+    }
+    else {
+      this._replicas = value.replicas;
+    }
+  }
+
   // replicas - computed: false, optional: false, required: true
   private _replicas?: SecretManagerSecretReplicationUserManagedReplicas[]; 
   public get replicas() {
@@ -181,7 +219,7 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get replicasInput() {
-    return this._replicas
+    return this._replicas;
   }
 }
 export interface SecretManagerSecretReplication {
@@ -199,7 +237,7 @@ export interface SecretManagerSecretReplication {
   readonly userManaged?: SecretManagerSecretReplicationUserManaged;
 }
 
-function secretManagerSecretReplicationToTerraform(struct?: SecretManagerSecretReplicationOutputReference | SecretManagerSecretReplication): any {
+export function secretManagerSecretReplicationToTerraform(struct?: SecretManagerSecretReplicationOutputReference | SecretManagerSecretReplication): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -220,12 +258,37 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecretManagerSecretReplication | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._automatic) {
+      hasAnyValues = true;
+      internalValueResult.automatic = this._automatic;
+    }
+    if (this._userManaged) {
+      hasAnyValues = true;
+      internalValueResult.userManaged = this._userManaged?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecretManagerSecretReplication | undefined) {
+    if (value === undefined) {
+      this._automatic = undefined;
+      this._userManaged.internalValue = undefined;
+    }
+    else {
+      this._automatic = value.automatic;
+      this._userManaged.internalValue = value.userManaged;
+    }
+  }
+
   // automatic - computed: false, optional: true, required: false
-  private _automatic?: boolean | cdktf.IResolvable | undefined; 
+  private _automatic?: boolean | cdktf.IResolvable; 
   public get automatic() {
     return this.getBooleanAttribute('automatic') as any;
   }
-  public set automatic(value: boolean | cdktf.IResolvable | undefined) {
+  public set automatic(value: boolean | cdktf.IResolvable) {
     this._automatic = value;
   }
   public resetAutomatic() {
@@ -233,24 +296,23 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get automaticInput() {
-    return this._automatic
+    return this._automatic;
   }
 
   // user_managed - computed: false, optional: true, required: false
-  private _userManaged?: SecretManagerSecretReplicationUserManaged | undefined; 
-  private __userManagedOutput = new SecretManagerSecretReplicationUserManagedOutputReference(this as any, "user_managed", true);
+  private _userManaged = new SecretManagerSecretReplicationUserManagedOutputReference(this as any, "user_managed", true);
   public get userManaged() {
-    return this.__userManagedOutput;
+    return this._userManaged;
   }
-  public putUserManaged(value: SecretManagerSecretReplicationUserManaged | undefined) {
-    this._userManaged = value;
+  public putUserManaged(value: SecretManagerSecretReplicationUserManaged) {
+    this._userManaged.internalValue = value;
   }
   public resetUserManaged() {
-    this._userManaged = undefined;
+    this._userManaged.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get userManagedInput() {
-    return this._userManaged
+    return this._userManaged.internalValue;
   }
 }
 export interface SecretManagerSecretRotation {
@@ -270,7 +332,7 @@ If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time'
   readonly rotationPeriod?: string;
 }
 
-function secretManagerSecretRotationToTerraform(struct?: SecretManagerSecretRotationOutputReference | SecretManagerSecretRotation): any {
+export function secretManagerSecretRotationToTerraform(struct?: SecretManagerSecretRotationOutputReference | SecretManagerSecretRotation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -291,12 +353,37 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecretManagerSecretRotation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nextRotationTime) {
+      hasAnyValues = true;
+      internalValueResult.nextRotationTime = this._nextRotationTime;
+    }
+    if (this._rotationPeriod) {
+      hasAnyValues = true;
+      internalValueResult.rotationPeriod = this._rotationPeriod;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecretManagerSecretRotation | undefined) {
+    if (value === undefined) {
+      this._nextRotationTime = undefined;
+      this._rotationPeriod = undefined;
+    }
+    else {
+      this._nextRotationTime = value.nextRotationTime;
+      this._rotationPeriod = value.rotationPeriod;
+    }
+  }
+
   // next_rotation_time - computed: false, optional: true, required: false
-  private _nextRotationTime?: string | undefined; 
+  private _nextRotationTime?: string; 
   public get nextRotationTime() {
     return this.getStringAttribute('next_rotation_time');
   }
-  public set nextRotationTime(value: string | undefined) {
+  public set nextRotationTime(value: string) {
     this._nextRotationTime = value;
   }
   public resetNextRotationTime() {
@@ -304,15 +391,15 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get nextRotationTimeInput() {
-    return this._nextRotationTime
+    return this._nextRotationTime;
   }
 
   // rotation_period - computed: false, optional: true, required: false
-  private _rotationPeriod?: string | undefined; 
+  private _rotationPeriod?: string; 
   public get rotationPeriod() {
     return this.getStringAttribute('rotation_period');
   }
-  public set rotationPeriod(value: string | undefined) {
+  public set rotationPeriod(value: string) {
     this._rotationPeriod = value;
   }
   public resetRotationPeriod() {
@@ -320,7 +407,7 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get rotationPeriodInput() {
-    return this._rotationPeriod
+    return this._rotationPeriod;
   }
 }
 export interface SecretManagerSecretTimeouts {
@@ -338,7 +425,7 @@ export interface SecretManagerSecretTimeouts {
   readonly update?: string;
 }
 
-function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTimeoutsOutputReference | SecretManagerSecretTimeouts): any {
+export function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTimeoutsOutputReference | SecretManagerSecretTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -360,12 +447,43 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecretManagerSecretTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecretManagerSecretTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -373,15 +491,15 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -389,15 +507,15 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -405,7 +523,7 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface SecretManagerSecretTopics {
@@ -418,7 +536,7 @@ For publication to succeed, the Secret Manager Service Agent service account mus
   readonly name: string;
 }
 
-function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecretTopics): any {
+export function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecretTopics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -466,9 +584,9 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
     this._project = config.project;
     this._secretId = config.secretId;
     this._ttl = config.ttl;
-    this._replication = config.replication;
-    this._rotation = config.rotation;
-    this._timeouts = config.timeouts;
+    this._replication.internalValue = config.replication;
+    this._rotation.internalValue = config.rotation;
+    this._timeouts.internalValue = config.timeouts;
     this._topics = config.topics;
   }
 
@@ -482,11 +600,11 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // expire_time - computed: true, optional: true, required: false
-  private _expireTime?: string | undefined; 
+  private _expireTime?: string; 
   public get expireTime() {
     return this.getStringAttribute('expire_time');
   }
-  public set expireTime(value: string | undefined) {
+  public set expireTime(value: string) {
     this._expireTime = value;
   }
   public resetExpireTime() {
@@ -494,7 +612,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get expireTimeInput() {
-    return this._expireTime
+    return this._expireTime;
   }
 
   // id - computed: true, optional: true, required: false
@@ -503,12 +621,12 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -516,7 +634,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: true, optional: false, required: false
@@ -525,11 +643,11 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -537,7 +655,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // secret_id - computed: false, optional: false, required: true
@@ -550,15 +668,15 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secretIdInput() {
-    return this._secretId
+    return this._secretId;
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl?: string | undefined; 
+  private _ttl?: string; 
   public get ttl() {
     return this.getStringAttribute('ttl');
   }
-  public set ttl(value: string | undefined) {
+  public set ttl(value: string) {
     this._ttl = value;
   }
   public resetTtl() {
@@ -566,64 +684,61 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
-    return this._ttl
+    return this._ttl;
   }
 
   // replication - computed: false, optional: false, required: true
-  private _replication?: SecretManagerSecretReplication; 
-  private __replicationOutput = new SecretManagerSecretReplicationOutputReference(this as any, "replication", true);
+  private _replication = new SecretManagerSecretReplicationOutputReference(this as any, "replication", true);
   public get replication() {
-    return this.__replicationOutput;
+    return this._replication;
   }
   public putReplication(value: SecretManagerSecretReplication) {
-    this._replication = value;
+    this._replication.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get replicationInput() {
-    return this._replication
+    return this._replication.internalValue;
   }
 
   // rotation - computed: false, optional: true, required: false
-  private _rotation?: SecretManagerSecretRotation | undefined; 
-  private __rotationOutput = new SecretManagerSecretRotationOutputReference(this as any, "rotation", true);
+  private _rotation = new SecretManagerSecretRotationOutputReference(this as any, "rotation", true);
   public get rotation() {
-    return this.__rotationOutput;
+    return this._rotation;
   }
-  public putRotation(value: SecretManagerSecretRotation | undefined) {
-    this._rotation = value;
+  public putRotation(value: SecretManagerSecretRotation) {
+    this._rotation.internalValue = value;
   }
   public resetRotation() {
-    this._rotation = undefined;
+    this._rotation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rotationInput() {
-    return this._rotation
+    return this._rotation.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SecretManagerSecretTimeouts | undefined; 
-  private __timeoutsOutput = new SecretManagerSecretTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecretManagerSecretTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SecretManagerSecretTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SecretManagerSecretTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // topics - computed: false, optional: true, required: false
-  private _topics?: SecretManagerSecretTopics[] | undefined; 
+  private _topics?: SecretManagerSecretTopics[]; 
   public get topics() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('topics') as any;
   }
-  public set topics(value: SecretManagerSecretTopics[] | undefined) {
+  public set topics(value: SecretManagerSecretTopics[]) {
     this._topics = value;
   }
   public resetTopics() {
@@ -631,7 +746,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get topicsInput() {
-    return this._topics
+    return this._topics;
   }
 
   // =========
@@ -645,9 +760,9 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       secret_id: cdktf.stringToTerraform(this._secretId),
       ttl: cdktf.stringToTerraform(this._ttl),
-      replication: secretManagerSecretReplicationToTerraform(this._replication),
-      rotation: secretManagerSecretRotationToTerraform(this._rotation),
-      timeouts: secretManagerSecretTimeoutsToTerraform(this._timeouts),
+      replication: secretManagerSecretReplicationToTerraform(this._replication.internalValue),
+      rotation: secretManagerSecretRotationToTerraform(this._rotation.internalValue),
+      timeouts: secretManagerSecretTimeoutsToTerraform(this._timeouts.internalValue),
       topics: cdktf.listMapper(secretManagerSecretTopicsToTerraform)(this._topics),
     };
   }

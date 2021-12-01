@@ -67,7 +67,7 @@ export class StorageBucketIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -90,7 +90,7 @@ export class StorageBucketIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

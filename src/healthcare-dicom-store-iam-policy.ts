@@ -67,7 +67,7 @@ export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dicomStoreIdInput() {
-    return this._dicomStoreId
+    return this._dicomStoreId;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -90,7 +90,7 @@ export class HealthcareDicomStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

@@ -88,11 +88,11 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -100,7 +100,7 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // secret - computed: false, optional: false, required: true
@@ -113,7 +113,7 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret
+    return this._secret;
   }
 
   // secret_data - computed: true, optional: false, required: false
@@ -122,11 +122,11 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -134,7 +134,7 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // =========

@@ -47,7 +47,7 @@ export interface ComputeProjectMetadataItemTimeouts {
   readonly update?: string;
 }
 
-function computeProjectMetadataItemTimeoutsToTerraform(struct?: ComputeProjectMetadataItemTimeoutsOutputReference | ComputeProjectMetadataItemTimeouts): any {
+export function computeProjectMetadataItemTimeoutsToTerraform(struct?: ComputeProjectMetadataItemTimeoutsOutputReference | ComputeProjectMetadataItemTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -69,12 +69,43 @@ export class ComputeProjectMetadataItemTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeProjectMetadataItemTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeProjectMetadataItemTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -82,15 +113,15 @@ export class ComputeProjectMetadataItemTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -98,15 +129,15 @@ export class ComputeProjectMetadataItemTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -114,7 +145,7 @@ export class ComputeProjectMetadataItemTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -153,7 +184,7 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
     this._key = config.key;
     this._project = config.project;
     this._value = config.value;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -175,15 +206,15 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
-    return this._key
+    return this._key;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -191,7 +222,7 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // value - computed: false, optional: false, required: true
@@ -204,24 +235,23 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
-    return this._value
+    return this._value;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeProjectMetadataItemTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeProjectMetadataItemTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeProjectMetadataItemTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeProjectMetadataItemTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeProjectMetadataItemTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -233,7 +263,7 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
       key: cdktf.stringToTerraform(this._key),
       project: cdktf.stringToTerraform(this._project),
       value: cdktf.stringToTerraform(this._value),
-      timeouts: computeProjectMetadataItemTimeoutsToTerraform(this._timeouts),
+      timeouts: computeProjectMetadataItemTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

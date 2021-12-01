@@ -47,7 +47,7 @@ export interface ComputeSecurityPolicyRuleMatchConfig {
   readonly srcIpRanges: string[];
 }
 
-function computeSecurityPolicyRuleMatchConfigToTerraform(struct?: ComputeSecurityPolicyRuleMatchConfigOutputReference | ComputeSecurityPolicyRuleMatchConfig): any {
+export function computeSecurityPolicyRuleMatchConfigToTerraform(struct?: ComputeSecurityPolicyRuleMatchConfigOutputReference | ComputeSecurityPolicyRuleMatchConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -67,6 +67,25 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSecurityPolicyRuleMatchConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._srcIpRanges) {
+      hasAnyValues = true;
+      internalValueResult.srcIpRanges = this._srcIpRanges;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRuleMatchConfig | undefined) {
+    if (value === undefined) {
+      this._srcIpRanges = undefined;
+    }
+    else {
+      this._srcIpRanges = value.srcIpRanges;
+    }
+  }
+
   // src_ip_ranges - computed: false, optional: false, required: true
   private _srcIpRanges?: string[]; 
   public get srcIpRanges() {
@@ -77,7 +96,7 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get srcIpRangesInput() {
-    return this._srcIpRanges
+    return this._srcIpRanges;
   }
 }
 export interface ComputeSecurityPolicyRuleMatchExpr {
@@ -89,7 +108,7 @@ export interface ComputeSecurityPolicyRuleMatchExpr {
   readonly expression: string;
 }
 
-function computeSecurityPolicyRuleMatchExprToTerraform(struct?: ComputeSecurityPolicyRuleMatchExprOutputReference | ComputeSecurityPolicyRuleMatchExpr): any {
+export function computeSecurityPolicyRuleMatchExprToTerraform(struct?: ComputeSecurityPolicyRuleMatchExprOutputReference | ComputeSecurityPolicyRuleMatchExpr): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -109,6 +128,25 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSecurityPolicyRuleMatchExpr | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._expression) {
+      hasAnyValues = true;
+      internalValueResult.expression = this._expression;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRuleMatchExpr | undefined) {
+    if (value === undefined) {
+      this._expression = undefined;
+    }
+    else {
+      this._expression = value.expression;
+    }
+  }
+
   // expression - computed: false, optional: false, required: true
   private _expression?: string; 
   public get expression() {
@@ -119,7 +157,7 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get expressionInput() {
-    return this._expression
+    return this._expression;
   }
 }
 export interface ComputeSecurityPolicyRuleMatch {
@@ -143,7 +181,7 @@ export interface ComputeSecurityPolicyRuleMatch {
   readonly expr?: ComputeSecurityPolicyRuleMatchExpr;
 }
 
-function computeSecurityPolicyRuleMatchToTerraform(struct?: ComputeSecurityPolicyRuleMatchOutputReference | ComputeSecurityPolicyRuleMatch): any {
+export function computeSecurityPolicyRuleMatchToTerraform(struct?: ComputeSecurityPolicyRuleMatchOutputReference | ComputeSecurityPolicyRuleMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -165,12 +203,43 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSecurityPolicyRuleMatch | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._versionedExpr) {
+      hasAnyValues = true;
+      internalValueResult.versionedExpr = this._versionedExpr;
+    }
+    if (this._config) {
+      hasAnyValues = true;
+      internalValueResult.config = this._config?.internalValue;
+    }
+    if (this._expr) {
+      hasAnyValues = true;
+      internalValueResult.expr = this._expr?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRuleMatch | undefined) {
+    if (value === undefined) {
+      this._versionedExpr = undefined;
+      this._config.internalValue = undefined;
+      this._expr.internalValue = undefined;
+    }
+    else {
+      this._versionedExpr = value.versionedExpr;
+      this._config.internalValue = value.config;
+      this._expr.internalValue = value.expr;
+    }
+  }
+
   // versioned_expr - computed: false, optional: true, required: false
-  private _versionedExpr?: string | undefined; 
+  private _versionedExpr?: string; 
   public get versionedExpr() {
     return this.getStringAttribute('versioned_expr');
   }
-  public set versionedExpr(value: string | undefined) {
+  public set versionedExpr(value: string) {
     this._versionedExpr = value;
   }
   public resetVersionedExpr() {
@@ -178,41 +247,39 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get versionedExprInput() {
-    return this._versionedExpr
+    return this._versionedExpr;
   }
 
   // config - computed: false, optional: true, required: false
-  private _config?: ComputeSecurityPolicyRuleMatchConfig | undefined; 
-  private __configOutput = new ComputeSecurityPolicyRuleMatchConfigOutputReference(this as any, "config", true);
+  private _config = new ComputeSecurityPolicyRuleMatchConfigOutputReference(this as any, "config", true);
   public get config() {
-    return this.__configOutput;
+    return this._config;
   }
-  public putConfig(value: ComputeSecurityPolicyRuleMatchConfig | undefined) {
-    this._config = value;
+  public putConfig(value: ComputeSecurityPolicyRuleMatchConfig) {
+    this._config.internalValue = value;
   }
   public resetConfig() {
-    this._config = undefined;
+    this._config.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get configInput() {
-    return this._config
+    return this._config.internalValue;
   }
 
   // expr - computed: false, optional: true, required: false
-  private _expr?: ComputeSecurityPolicyRuleMatchExpr | undefined; 
-  private __exprOutput = new ComputeSecurityPolicyRuleMatchExprOutputReference(this as any, "expr", true);
+  private _expr = new ComputeSecurityPolicyRuleMatchExprOutputReference(this as any, "expr", true);
   public get expr() {
-    return this.__exprOutput;
+    return this._expr;
   }
-  public putExpr(value: ComputeSecurityPolicyRuleMatchExpr | undefined) {
-    this._expr = value;
+  public putExpr(value: ComputeSecurityPolicyRuleMatchExpr) {
+    this._expr.internalValue = value;
   }
   public resetExpr() {
-    this._expr = undefined;
+    this._expr.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get exprInput() {
-    return this._expr
+    return this._expr.internalValue;
   }
 }
 export interface ComputeSecurityPolicyRule {
@@ -248,7 +315,7 @@ export interface ComputeSecurityPolicyRule {
   readonly match: ComputeSecurityPolicyRuleMatch;
 }
 
-function computeSecurityPolicyRuleToTerraform(struct?: ComputeSecurityPolicyRule): any {
+export function computeSecurityPolicyRuleToTerraform(struct?: ComputeSecurityPolicyRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -277,7 +344,7 @@ export interface ComputeSecurityPolicyTimeouts {
   readonly update?: string;
 }
 
-function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurityPolicyTimeoutsOutputReference | ComputeSecurityPolicyTimeouts): any {
+export function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurityPolicyTimeoutsOutputReference | ComputeSecurityPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -299,12 +366,43 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSecurityPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -312,15 +410,15 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -328,15 +426,15 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -344,7 +442,7 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -384,7 +482,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._rule = config.rule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -392,11 +490,11 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -404,7 +502,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -427,15 +525,15 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -443,7 +541,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -452,12 +550,12 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: ComputeSecurityPolicyRule[] | undefined; 
+  private _rule?: ComputeSecurityPolicyRule[]; 
   public get rule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rule') as any;
   }
-  public set rule(value: ComputeSecurityPolicyRule[] | undefined) {
+  public set rule(value: ComputeSecurityPolicyRule[]) {
     this._rule = value;
   }
   public resetRule() {
@@ -465,24 +563,23 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule
+    return this._rule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeSecurityPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeSecurityPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeSecurityPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeSecurityPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeSecurityPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -495,7 +592,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       rule: cdktf.listMapper(computeSecurityPolicyRuleToTerraform)(this._rule),
-      timeouts: computeSecurityPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: computeSecurityPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

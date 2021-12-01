@@ -83,7 +83,7 @@ export interface EventarcTriggerDestinationCloudRunService {
   readonly service: string;
 }
 
-function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: EventarcTriggerDestinationCloudRunServiceOutputReference | EventarcTriggerDestinationCloudRunService): any {
+export function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: EventarcTriggerDestinationCloudRunServiceOutputReference | EventarcTriggerDestinationCloudRunService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,12 +105,43 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventarcTriggerDestinationCloudRunService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._region) {
+      hasAnyValues = true;
+      internalValueResult.region = this._region;
+    }
+    if (this._service) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventarcTriggerDestinationCloudRunService | undefined) {
+    if (value === undefined) {
+      this._path = undefined;
+      this._region = undefined;
+      this._service = undefined;
+    }
+    else {
+      this._path = value.path;
+      this._region = value.region;
+      this._service = value.service;
+    }
+  }
+
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -118,15 +149,15 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -134,7 +165,7 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // service - computed: false, optional: false, required: true
@@ -147,7 +178,7 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 }
 export interface EventarcTriggerDestination {
@@ -165,7 +196,7 @@ export interface EventarcTriggerDestination {
   readonly cloudRunService?: EventarcTriggerDestinationCloudRunService;
 }
 
-function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDestinationOutputReference | EventarcTriggerDestination): any {
+export function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDestinationOutputReference | EventarcTriggerDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -186,12 +217,37 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventarcTriggerDestination | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cloudFunction) {
+      hasAnyValues = true;
+      internalValueResult.cloudFunction = this._cloudFunction;
+    }
+    if (this._cloudRunService) {
+      hasAnyValues = true;
+      internalValueResult.cloudRunService = this._cloudRunService?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventarcTriggerDestination | undefined) {
+    if (value === undefined) {
+      this._cloudFunction = undefined;
+      this._cloudRunService.internalValue = undefined;
+    }
+    else {
+      this._cloudFunction = value.cloudFunction;
+      this._cloudRunService.internalValue = value.cloudRunService;
+    }
+  }
+
   // cloud_function - computed: false, optional: true, required: false
-  private _cloudFunction?: string | undefined; 
+  private _cloudFunction?: string; 
   public get cloudFunction() {
     return this.getStringAttribute('cloud_function');
   }
-  public set cloudFunction(value: string | undefined) {
+  public set cloudFunction(value: string) {
     this._cloudFunction = value;
   }
   public resetCloudFunction() {
@@ -199,24 +255,23 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get cloudFunctionInput() {
-    return this._cloudFunction
+    return this._cloudFunction;
   }
 
   // cloud_run_service - computed: false, optional: true, required: false
-  private _cloudRunService?: EventarcTriggerDestinationCloudRunService | undefined; 
-  private __cloudRunServiceOutput = new EventarcTriggerDestinationCloudRunServiceOutputReference(this as any, "cloud_run_service", true);
+  private _cloudRunService = new EventarcTriggerDestinationCloudRunServiceOutputReference(this as any, "cloud_run_service", true);
   public get cloudRunService() {
-    return this.__cloudRunServiceOutput;
+    return this._cloudRunService;
   }
-  public putCloudRunService(value: EventarcTriggerDestinationCloudRunService | undefined) {
-    this._cloudRunService = value;
+  public putCloudRunService(value: EventarcTriggerDestinationCloudRunService) {
+    this._cloudRunService.internalValue = value;
   }
   public resetCloudRunService() {
-    this._cloudRunService = undefined;
+    this._cloudRunService.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloudRunServiceInput() {
-    return this._cloudRunService
+    return this._cloudRunService.internalValue;
   }
 }
 export interface EventarcTriggerMatchingCriteria {
@@ -234,7 +289,7 @@ export interface EventarcTriggerMatchingCriteria {
   readonly value: string;
 }
 
-function eventarcTriggerMatchingCriteriaToTerraform(struct?: EventarcTriggerMatchingCriteria): any {
+export function eventarcTriggerMatchingCriteriaToTerraform(struct?: EventarcTriggerMatchingCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -260,7 +315,7 @@ export interface EventarcTriggerTimeouts {
   readonly update?: string;
 }
 
-function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeoutsOutputReference | EventarcTriggerTimeouts): any {
+export function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeoutsOutputReference | EventarcTriggerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -282,12 +337,43 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventarcTriggerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventarcTriggerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -295,15 +381,15 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -311,15 +397,15 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -327,7 +413,7 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface EventarcTriggerTransportPubsub {
@@ -339,7 +425,7 @@ export interface EventarcTriggerTransportPubsub {
   readonly topic?: string;
 }
 
-function eventarcTriggerTransportPubsubToTerraform(struct?: EventarcTriggerTransportPubsubOutputReference | EventarcTriggerTransportPubsub): any {
+export function eventarcTriggerTransportPubsubToTerraform(struct?: EventarcTriggerTransportPubsubOutputReference | EventarcTriggerTransportPubsub): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -359,12 +445,31 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventarcTriggerTransportPubsub | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._topic) {
+      hasAnyValues = true;
+      internalValueResult.topic = this._topic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventarcTriggerTransportPubsub | undefined) {
+    if (value === undefined) {
+      this._topic = undefined;
+    }
+    else {
+      this._topic = value.topic;
+    }
+  }
+
   // topic - computed: false, optional: true, required: false
-  private _topic?: string | undefined; 
+  private _topic?: string; 
   public get topic() {
     return this.getStringAttribute('topic');
   }
-  public set topic(value: string | undefined) {
+  public set topic(value: string) {
     this._topic = value;
   }
   public resetTopic() {
@@ -372,7 +477,7 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get topicInput() {
-    return this._topic
+    return this._topic;
   }
 }
 export interface EventarcTriggerTransport {
@@ -384,7 +489,7 @@ export interface EventarcTriggerTransport {
   readonly pubsub?: EventarcTriggerTransportPubsub;
 }
 
-function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTransportOutputReference | EventarcTriggerTransport): any {
+export function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTransportOutputReference | EventarcTriggerTransport): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -404,21 +509,39 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // pubsub - computed: false, optional: true, required: false
-  private _pubsub?: EventarcTriggerTransportPubsub | undefined; 
-  private __pubsubOutput = new EventarcTriggerTransportPubsubOutputReference(this as any, "pubsub", true);
-  public get pubsub() {
-    return this.__pubsubOutput;
+  public get internalValue(): EventarcTriggerTransport | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._pubsub) {
+      hasAnyValues = true;
+      internalValueResult.pubsub = this._pubsub?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putPubsub(value: EventarcTriggerTransportPubsub | undefined) {
-    this._pubsub = value;
+
+  public set internalValue(value: EventarcTriggerTransport | undefined) {
+    if (value === undefined) {
+      this._pubsub.internalValue = undefined;
+    }
+    else {
+      this._pubsub.internalValue = value.pubsub;
+    }
+  }
+
+  // pubsub - computed: false, optional: true, required: false
+  private _pubsub = new EventarcTriggerTransportPubsubOutputReference(this as any, "pubsub", true);
+  public get pubsub() {
+    return this._pubsub;
+  }
+  public putPubsub(value: EventarcTriggerTransportPubsub) {
+    this._pubsub.internalValue = value;
   }
   public resetPubsub() {
-    this._pubsub = undefined;
+    this._pubsub.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubInput() {
-    return this._pubsub
+    return this._pubsub.internalValue;
   }
 }
 
@@ -459,10 +582,10 @@ export class EventarcTrigger extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._serviceAccount = config.serviceAccount;
-    this._destination = config.destination;
+    this._destination.internalValue = config.destination;
     this._matchingCriteria = config.matchingCriteria;
-    this._timeouts = config.timeouts;
-    this._transport = config.transport;
+    this._timeouts.internalValue = config.timeouts;
+    this._transport.internalValue = config.transport;
   }
 
   // ==========
@@ -485,12 +608,12 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -498,7 +621,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // location - computed: false, optional: false, required: true
@@ -511,7 +634,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -524,15 +647,15 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -540,15 +663,15 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service_account - computed: false, optional: true, required: false
-  private _serviceAccount?: string | undefined; 
+  private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string | undefined) {
+  public set serviceAccount(value: string) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -556,7 +679,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount;
   }
 
   // uid - computed: true, optional: false, required: false
@@ -570,17 +693,16 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination?: EventarcTriggerDestination; 
-  private __destinationOutput = new EventarcTriggerDestinationOutputReference(this as any, "destination", true);
+  private _destination = new EventarcTriggerDestinationOutputReference(this as any, "destination", true);
   public get destination() {
-    return this.__destinationOutput;
+    return this._destination;
   }
   public putDestination(value: EventarcTriggerDestination) {
-    this._destination = value;
+    this._destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination.internalValue;
   }
 
   // matching_criteria - computed: false, optional: false, required: true
@@ -594,41 +716,39 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get matchingCriteriaInput() {
-    return this._matchingCriteria
+    return this._matchingCriteria;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EventarcTriggerTimeouts | undefined; 
-  private __timeoutsOutput = new EventarcTriggerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventarcTriggerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: EventarcTriggerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: EventarcTriggerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // transport - computed: false, optional: true, required: false
-  private _transport?: EventarcTriggerTransport | undefined; 
-  private __transportOutput = new EventarcTriggerTransportOutputReference(this as any, "transport", true);
+  private _transport = new EventarcTriggerTransportOutputReference(this as any, "transport", true);
   public get transport() {
-    return this.__transportOutput;
+    return this._transport;
   }
-  public putTransport(value: EventarcTriggerTransport | undefined) {
-    this._transport = value;
+  public putTransport(value: EventarcTriggerTransport) {
+    this._transport.internalValue = value;
   }
   public resetTransport() {
-    this._transport = undefined;
+    this._transport.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get transportInput() {
-    return this._transport
+    return this._transport.internalValue;
   }
 
   // =========
@@ -642,10 +762,10 @@ export class EventarcTrigger extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
-      destination: eventarcTriggerDestinationToTerraform(this._destination),
+      destination: eventarcTriggerDestinationToTerraform(this._destination.internalValue),
       matching_criteria: cdktf.listMapper(eventarcTriggerMatchingCriteriaToTerraform)(this._matchingCriteria),
-      timeouts: eventarcTriggerTimeoutsToTerraform(this._timeouts),
-      transport: eventarcTriggerTransportToTerraform(this._transport),
+      timeouts: eventarcTriggerTimeoutsToTerraform(this._timeouts.internalValue),
+      transport: eventarcTriggerTransportToTerraform(this._transport.internalValue),
     };
   }
 }

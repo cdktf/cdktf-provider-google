@@ -75,7 +75,7 @@ If 'MANUAL', 'certificateId' must be manually specified in order to configure SS
   readonly sslManagementType: string;
 }
 
-function appEngineDomainMappingSslSettingsToTerraform(struct?: AppEngineDomainMappingSslSettingsOutputReference | AppEngineDomainMappingSslSettings): any {
+export function appEngineDomainMappingSslSettingsToTerraform(struct?: AppEngineDomainMappingSslSettingsOutputReference | AppEngineDomainMappingSslSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -96,12 +96,37 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineDomainMappingSslSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._certificateId) {
+      hasAnyValues = true;
+      internalValueResult.certificateId = this._certificateId;
+    }
+    if (this._sslManagementType) {
+      hasAnyValues = true;
+      internalValueResult.sslManagementType = this._sslManagementType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineDomainMappingSslSettings | undefined) {
+    if (value === undefined) {
+      this._certificateId = undefined;
+      this._sslManagementType = undefined;
+    }
+    else {
+      this._certificateId = value.certificateId;
+      this._sslManagementType = value.sslManagementType;
+    }
+  }
+
   // certificate_id - computed: true, optional: true, required: false
-  private _certificateId?: string | undefined; 
+  private _certificateId?: string; 
   public get certificateId() {
     return this.getStringAttribute('certificate_id');
   }
-  public set certificateId(value: string | undefined) {
+  public set certificateId(value: string) {
     this._certificateId = value;
   }
   public resetCertificateId() {
@@ -109,7 +134,7 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get certificateIdInput() {
-    return this._certificateId
+    return this._certificateId;
   }
 
   // ssl_management_type - computed: false, optional: false, required: true
@@ -122,7 +147,7 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get sslManagementTypeInput() {
-    return this._sslManagementType
+    return this._sslManagementType;
   }
 }
 export interface AppEngineDomainMappingTimeouts {
@@ -140,7 +165,7 @@ export interface AppEngineDomainMappingTimeouts {
   readonly update?: string;
 }
 
-function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappingTimeoutsOutputReference | AppEngineDomainMappingTimeouts): any {
+export function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappingTimeoutsOutputReference | AppEngineDomainMappingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -162,12 +187,43 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineDomainMappingTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineDomainMappingTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -175,15 +231,15 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -191,15 +247,15 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -207,7 +263,7 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -246,8 +302,8 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
     this._domainName = config.domainName;
     this._overrideStrategy = config.overrideStrategy;
     this._project = config.project;
-    this._sslSettings = config.sslSettings;
-    this._timeouts = config.timeouts;
+    this._sslSettings.internalValue = config.sslSettings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -264,7 +320,7 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get domainNameInput() {
-    return this._domainName
+    return this._domainName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -278,11 +334,11 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
 
   // override_strategy - computed: false, optional: true, required: false
-  private _overrideStrategy?: string | undefined; 
+  private _overrideStrategy?: string; 
   public get overrideStrategy() {
     return this.getStringAttribute('override_strategy');
   }
-  public set overrideStrategy(value: string | undefined) {
+  public set overrideStrategy(value: string) {
     this._overrideStrategy = value;
   }
   public resetOverrideStrategy() {
@@ -290,15 +346,15 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get overrideStrategyInput() {
-    return this._overrideStrategy
+    return this._overrideStrategy;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -306,7 +362,7 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // resource_records - computed: true, optional: false, required: false
@@ -315,37 +371,35 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
 
   // ssl_settings - computed: false, optional: true, required: false
-  private _sslSettings?: AppEngineDomainMappingSslSettings | undefined; 
-  private __sslSettingsOutput = new AppEngineDomainMappingSslSettingsOutputReference(this as any, "ssl_settings", true);
+  private _sslSettings = new AppEngineDomainMappingSslSettingsOutputReference(this as any, "ssl_settings", true);
   public get sslSettings() {
-    return this.__sslSettingsOutput;
+    return this._sslSettings;
   }
-  public putSslSettings(value: AppEngineDomainMappingSslSettings | undefined) {
-    this._sslSettings = value;
+  public putSslSettings(value: AppEngineDomainMappingSslSettings) {
+    this._sslSettings.internalValue = value;
   }
   public resetSslSettings() {
-    this._sslSettings = undefined;
+    this._sslSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sslSettingsInput() {
-    return this._sslSettings
+    return this._sslSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineDomainMappingTimeouts | undefined; 
-  private __timeoutsOutput = new AppEngineDomainMappingTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineDomainMappingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppEngineDomainMappingTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppEngineDomainMappingTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -357,8 +411,8 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
       domain_name: cdktf.stringToTerraform(this._domainName),
       override_strategy: cdktf.stringToTerraform(this._overrideStrategy),
       project: cdktf.stringToTerraform(this._project),
-      ssl_settings: appEngineDomainMappingSslSettingsToTerraform(this._sslSettings),
-      timeouts: appEngineDomainMappingTimeoutsToTerraform(this._timeouts),
+      ssl_settings: appEngineDomainMappingSslSettingsToTerraform(this._sslSettings.internalValue),
+      timeouts: appEngineDomainMappingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

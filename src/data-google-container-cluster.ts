@@ -983,11 +983,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -995,7 +995,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // logging_config - computed: true, optional: false, required: false
@@ -1053,7 +1053,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: true, optional: false, required: false
@@ -1112,11 +1112,11 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1124,7 +1124,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // release_channel - computed: true, optional: false, required: false

@@ -65,7 +65,7 @@ export interface BigtableGcPolicyMaxAge {
   readonly duration?: string;
 }
 
-function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAgeOutputReference | BigtableGcPolicyMaxAge): any {
+export function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAgeOutputReference | BigtableGcPolicyMaxAge): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,12 +86,37 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigtableGcPolicyMaxAge | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._days) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigtableGcPolicyMaxAge | undefined) {
+    if (value === undefined) {
+      this._days = undefined;
+      this._duration = undefined;
+    }
+    else {
+      this._days = value.days;
+      this._duration = value.duration;
+    }
+  }
+
   // days - computed: true, optional: true, required: false
-  private _days?: number | undefined; 
+  private _days?: number; 
   public get days() {
     return this.getNumberAttribute('days');
   }
-  public set days(value: number | undefined) {
+  public set days(value: number) {
     this._days = value;
   }
   public resetDays() {
@@ -99,15 +124,15 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get daysInput() {
-    return this._days
+    return this._days;
   }
 
   // duration - computed: true, optional: true, required: false
-  private _duration?: string | undefined; 
+  private _duration?: string; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string) {
     this._duration = value;
   }
   public resetDuration() {
@@ -115,7 +140,7 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 }
 export interface BigtableGcPolicyMaxVersion {
@@ -127,7 +152,7 @@ export interface BigtableGcPolicyMaxVersion {
   readonly number: number;
 }
 
-function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersion): any {
+export function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -175,7 +200,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
     this._mode = config.mode;
     this._project = config.project;
     this._table = config.table;
-    this._maxAge = config.maxAge;
+    this._maxAge.internalValue = config.maxAge;
     this._maxVersion = config.maxVersion;
   }
 
@@ -193,7 +218,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get columnFamilyInput() {
-    return this._columnFamily
+    return this._columnFamily;
   }
 
   // id - computed: true, optional: true, required: false
@@ -211,15 +236,15 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceNameInput() {
-    return this._instanceName
+    return this._instanceName;
   }
 
   // mode - computed: false, optional: true, required: false
-  private _mode?: string | undefined; 
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string) {
     this._mode = value;
   }
   public resetMode() {
@@ -227,15 +252,15 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -243,7 +268,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // table - computed: false, optional: false, required: true
@@ -256,33 +281,32 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tableInput() {
-    return this._table
+    return this._table;
   }
 
   // max_age - computed: false, optional: true, required: false
-  private _maxAge?: BigtableGcPolicyMaxAge | undefined; 
-  private __maxAgeOutput = new BigtableGcPolicyMaxAgeOutputReference(this as any, "max_age", true);
+  private _maxAge = new BigtableGcPolicyMaxAgeOutputReference(this as any, "max_age", true);
   public get maxAge() {
-    return this.__maxAgeOutput;
+    return this._maxAge;
   }
-  public putMaxAge(value: BigtableGcPolicyMaxAge | undefined) {
-    this._maxAge = value;
+  public putMaxAge(value: BigtableGcPolicyMaxAge) {
+    this._maxAge.internalValue = value;
   }
   public resetMaxAge() {
-    this._maxAge = undefined;
+    this._maxAge.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInput() {
-    return this._maxAge
+    return this._maxAge.internalValue;
   }
 
   // max_version - computed: false, optional: true, required: false
-  private _maxVersion?: BigtableGcPolicyMaxVersion[] | undefined; 
+  private _maxVersion?: BigtableGcPolicyMaxVersion[]; 
   public get maxVersion() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('max_version') as any;
   }
-  public set maxVersion(value: BigtableGcPolicyMaxVersion[] | undefined) {
+  public set maxVersion(value: BigtableGcPolicyMaxVersion[]) {
     this._maxVersion = value;
   }
   public resetMaxVersion() {
@@ -290,7 +314,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxVersionInput() {
-    return this._maxVersion
+    return this._maxVersion;
   }
 
   // =========
@@ -304,7 +328,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       mode: cdktf.stringToTerraform(this._mode),
       project: cdktf.stringToTerraform(this._project),
       table: cdktf.stringToTerraform(this._table),
-      max_age: bigtableGcPolicyMaxAgeToTerraform(this._maxAge),
+      max_age: bigtableGcPolicyMaxAgeToTerraform(this._maxAge.internalValue),
       max_version: cdktf.listMapper(bigtableGcPolicyMaxVersionToTerraform)(this._maxVersion),
     };
   }

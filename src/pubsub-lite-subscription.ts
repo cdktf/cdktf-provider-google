@@ -57,7 +57,7 @@ export interface PubsubLiteSubscriptionDeliveryConfig {
   readonly deliveryRequirement: string;
 }
 
-function pubsubLiteSubscriptionDeliveryConfigToTerraform(struct?: PubsubLiteSubscriptionDeliveryConfigOutputReference | PubsubLiteSubscriptionDeliveryConfig): any {
+export function pubsubLiteSubscriptionDeliveryConfigToTerraform(struct?: PubsubLiteSubscriptionDeliveryConfigOutputReference | PubsubLiteSubscriptionDeliveryConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -77,6 +77,25 @@ export class PubsubLiteSubscriptionDeliveryConfigOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PubsubLiteSubscriptionDeliveryConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._deliveryRequirement) {
+      hasAnyValues = true;
+      internalValueResult.deliveryRequirement = this._deliveryRequirement;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PubsubLiteSubscriptionDeliveryConfig | undefined) {
+    if (value === undefined) {
+      this._deliveryRequirement = undefined;
+    }
+    else {
+      this._deliveryRequirement = value.deliveryRequirement;
+    }
+  }
+
   // delivery_requirement - computed: false, optional: false, required: true
   private _deliveryRequirement?: string; 
   public get deliveryRequirement() {
@@ -87,7 +106,7 @@ export class PubsubLiteSubscriptionDeliveryConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deliveryRequirementInput() {
-    return this._deliveryRequirement
+    return this._deliveryRequirement;
   }
 }
 export interface PubsubLiteSubscriptionTimeouts {
@@ -105,7 +124,7 @@ export interface PubsubLiteSubscriptionTimeouts {
   readonly update?: string;
 }
 
-function pubsubLiteSubscriptionTimeoutsToTerraform(struct?: PubsubLiteSubscriptionTimeoutsOutputReference | PubsubLiteSubscriptionTimeouts): any {
+export function pubsubLiteSubscriptionTimeoutsToTerraform(struct?: PubsubLiteSubscriptionTimeoutsOutputReference | PubsubLiteSubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -127,12 +146,43 @@ export class PubsubLiteSubscriptionTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PubsubLiteSubscriptionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PubsubLiteSubscriptionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -140,15 +190,15 @@ export class PubsubLiteSubscriptionTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -156,15 +206,15 @@ export class PubsubLiteSubscriptionTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -172,7 +222,7 @@ export class PubsubLiteSubscriptionTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -213,8 +263,8 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
     this._region = config.region;
     this._topic = config.topic;
     this._zone = config.zone;
-    this._deliveryConfig = config.deliveryConfig;
-    this._timeouts = config.timeouts;
+    this._deliveryConfig.internalValue = config.deliveryConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -236,15 +286,15 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -252,15 +302,15 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -268,7 +318,7 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // topic - computed: false, optional: false, required: true
@@ -281,15 +331,15 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get topicInput() {
-    return this._topic
+    return this._topic;
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -297,41 +347,39 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // delivery_config - computed: false, optional: true, required: false
-  private _deliveryConfig?: PubsubLiteSubscriptionDeliveryConfig | undefined; 
-  private __deliveryConfigOutput = new PubsubLiteSubscriptionDeliveryConfigOutputReference(this as any, "delivery_config", true);
+  private _deliveryConfig = new PubsubLiteSubscriptionDeliveryConfigOutputReference(this as any, "delivery_config", true);
   public get deliveryConfig() {
-    return this.__deliveryConfigOutput;
+    return this._deliveryConfig;
   }
-  public putDeliveryConfig(value: PubsubLiteSubscriptionDeliveryConfig | undefined) {
-    this._deliveryConfig = value;
+  public putDeliveryConfig(value: PubsubLiteSubscriptionDeliveryConfig) {
+    this._deliveryConfig.internalValue = value;
   }
   public resetDeliveryConfig() {
-    this._deliveryConfig = undefined;
+    this._deliveryConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get deliveryConfigInput() {
-    return this._deliveryConfig
+    return this._deliveryConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PubsubLiteSubscriptionTimeouts | undefined; 
-  private __timeoutsOutput = new PubsubLiteSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PubsubLiteSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PubsubLiteSubscriptionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PubsubLiteSubscriptionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -345,8 +393,8 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       topic: cdktf.stringToTerraform(this._topic),
       zone: cdktf.stringToTerraform(this._zone),
-      delivery_config: pubsubLiteSubscriptionDeliveryConfigToTerraform(this._deliveryConfig),
-      timeouts: pubsubLiteSubscriptionTimeoutsToTerraform(this._timeouts),
+      delivery_config: pubsubLiteSubscriptionDeliveryConfigToTerraform(this._deliveryConfig.internalValue),
+      timeouts: pubsubLiteSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

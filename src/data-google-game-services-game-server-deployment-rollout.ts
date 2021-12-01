@@ -89,7 +89,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
   }
   // Temporarily expose input value. Use with caution.
   public get deploymentIdInput() {
-    return this._deploymentId
+    return this._deploymentId;
   }
 
   // game_server_config_overrides - computed: true, optional: false, required: false

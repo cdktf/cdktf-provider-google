@@ -67,7 +67,7 @@ export class KmsCryptoKeyIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyIdInput() {
-    return this._cryptoKeyId
+    return this._cryptoKeyId;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -90,7 +90,7 @@ export class KmsCryptoKeyIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

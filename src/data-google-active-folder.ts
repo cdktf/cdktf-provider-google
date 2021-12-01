@@ -67,7 +67,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -90,7 +90,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // =========

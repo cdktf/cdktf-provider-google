@@ -85,7 +85,7 @@ attached. Possible values: ["COLLOCATED"]
   readonly vmCount?: number;
 }
 
-function computeResourcePolicyGroupPlacementPolicyToTerraform(struct?: ComputeResourcePolicyGroupPlacementPolicyOutputReference | ComputeResourcePolicyGroupPlacementPolicy): any {
+export function computeResourcePolicyGroupPlacementPolicyToTerraform(struct?: ComputeResourcePolicyGroupPlacementPolicyOutputReference | ComputeResourcePolicyGroupPlacementPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -107,12 +107,43 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicyGroupPlacementPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._availabilityDomainCount) {
+      hasAnyValues = true;
+      internalValueResult.availabilityDomainCount = this._availabilityDomainCount;
+    }
+    if (this._collocation) {
+      hasAnyValues = true;
+      internalValueResult.collocation = this._collocation;
+    }
+    if (this._vmCount) {
+      hasAnyValues = true;
+      internalValueResult.vmCount = this._vmCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicyGroupPlacementPolicy | undefined) {
+    if (value === undefined) {
+      this._availabilityDomainCount = undefined;
+      this._collocation = undefined;
+      this._vmCount = undefined;
+    }
+    else {
+      this._availabilityDomainCount = value.availabilityDomainCount;
+      this._collocation = value.collocation;
+      this._vmCount = value.vmCount;
+    }
+  }
+
   // availability_domain_count - computed: false, optional: true, required: false
-  private _availabilityDomainCount?: number | undefined; 
+  private _availabilityDomainCount?: number; 
   public get availabilityDomainCount() {
     return this.getNumberAttribute('availability_domain_count');
   }
-  public set availabilityDomainCount(value: number | undefined) {
+  public set availabilityDomainCount(value: number) {
     this._availabilityDomainCount = value;
   }
   public resetAvailabilityDomainCount() {
@@ -120,15 +151,15 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get availabilityDomainCountInput() {
-    return this._availabilityDomainCount
+    return this._availabilityDomainCount;
   }
 
   // collocation - computed: false, optional: true, required: false
-  private _collocation?: string | undefined; 
+  private _collocation?: string; 
   public get collocation() {
     return this.getStringAttribute('collocation');
   }
-  public set collocation(value: string | undefined) {
+  public set collocation(value: string) {
     this._collocation = value;
   }
   public resetCollocation() {
@@ -136,15 +167,15 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get collocationInput() {
-    return this._collocation
+    return this._collocation;
   }
 
   // vm_count - computed: false, optional: true, required: false
-  private _vmCount?: number | undefined; 
+  private _vmCount?: number; 
   public get vmCount() {
     return this.getNumberAttribute('vm_count');
   }
-  public set vmCount(value: number | undefined) {
+  public set vmCount(value: number) {
     this._vmCount = value;
   }
   public resetVmCount() {
@@ -152,7 +183,7 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get vmCountInput() {
-    return this._vmCount
+    return this._vmCount;
   }
 }
 export interface ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule {
@@ -164,7 +195,7 @@ export interface ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule {
   readonly schedule: string;
 }
 
-function computeResourcePolicyInstanceSchedulePolicyVmStartScheduleToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference | ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule): any {
+export function computeResourcePolicyInstanceSchedulePolicyVmStartScheduleToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference | ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -184,6 +215,25 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._schedule) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined) {
+    if (value === undefined) {
+      this._schedule = undefined;
+    }
+    else {
+      this._schedule = value.schedule;
+    }
+  }
+
   // schedule - computed: false, optional: false, required: true
   private _schedule?: string; 
   public get schedule() {
@@ -194,7 +244,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule
+    return this._schedule;
   }
 }
 export interface ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule {
@@ -206,7 +256,7 @@ export interface ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule {
   readonly schedule: string;
 }
 
-function computeResourcePolicyInstanceSchedulePolicyVmStopScheduleToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference | ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule): any {
+export function computeResourcePolicyInstanceSchedulePolicyVmStopScheduleToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference | ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -226,6 +276,25 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._schedule) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined) {
+    if (value === undefined) {
+      this._schedule = undefined;
+    }
+    else {
+      this._schedule = value.schedule;
+    }
+  }
+
   // schedule - computed: false, optional: false, required: true
   private _schedule?: string; 
   public get schedule() {
@@ -236,7 +305,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule
+    return this._schedule;
   }
 }
 export interface ComputeResourcePolicyInstanceSchedulePolicy {
@@ -273,7 +342,7 @@ from the tz database: http://en.wikipedia.org/wiki/Tz_database.
   readonly vmStopSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 }
 
-function computeResourcePolicyInstanceSchedulePolicyToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyOutputReference | ComputeResourcePolicyInstanceSchedulePolicy): any {
+export function computeResourcePolicyInstanceSchedulePolicyToTerraform(struct?: ComputeResourcePolicyInstanceSchedulePolicyOutputReference | ComputeResourcePolicyInstanceSchedulePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -297,12 +366,55 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._expirationTime) {
+      hasAnyValues = true;
+      internalValueResult.expirationTime = this._expirationTime;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    if (this._timeZone) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone;
+    }
+    if (this._vmStartSchedule) {
+      hasAnyValues = true;
+      internalValueResult.vmStartSchedule = this._vmStartSchedule?.internalValue;
+    }
+    if (this._vmStopSchedule) {
+      hasAnyValues = true;
+      internalValueResult.vmStopSchedule = this._vmStopSchedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicyInstanceSchedulePolicy | undefined) {
+    if (value === undefined) {
+      this._expirationTime = undefined;
+      this._startTime = undefined;
+      this._timeZone = undefined;
+      this._vmStartSchedule.internalValue = undefined;
+      this._vmStopSchedule.internalValue = undefined;
+    }
+    else {
+      this._expirationTime = value.expirationTime;
+      this._startTime = value.startTime;
+      this._timeZone = value.timeZone;
+      this._vmStartSchedule.internalValue = value.vmStartSchedule;
+      this._vmStopSchedule.internalValue = value.vmStopSchedule;
+    }
+  }
+
   // expiration_time - computed: false, optional: true, required: false
-  private _expirationTime?: string | undefined; 
+  private _expirationTime?: string; 
   public get expirationTime() {
     return this.getStringAttribute('expiration_time');
   }
-  public set expirationTime(value: string | undefined) {
+  public set expirationTime(value: string) {
     this._expirationTime = value;
   }
   public resetExpirationTime() {
@@ -310,15 +422,15 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get expirationTimeInput() {
-    return this._expirationTime
+    return this._expirationTime;
   }
 
   // start_time - computed: false, optional: true, required: false
-  private _startTime?: string | undefined; 
+  private _startTime?: string; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -326,7 +438,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 
   // time_zone - computed: false, optional: false, required: true
@@ -339,41 +451,39 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get timeZoneInput() {
-    return this._timeZone
+    return this._timeZone;
   }
 
   // vm_start_schedule - computed: false, optional: true, required: false
-  private _vmStartSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined; 
-  private __vmStartScheduleOutput = new ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference(this as any, "vm_start_schedule", true);
+  private _vmStartSchedule = new ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference(this as any, "vm_start_schedule", true);
   public get vmStartSchedule() {
-    return this.__vmStartScheduleOutput;
+    return this._vmStartSchedule;
   }
-  public putVmStartSchedule(value: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined) {
-    this._vmStartSchedule = value;
+  public putVmStartSchedule(value: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule) {
+    this._vmStartSchedule.internalValue = value;
   }
   public resetVmStartSchedule() {
-    this._vmStartSchedule = undefined;
+    this._vmStartSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vmStartScheduleInput() {
-    return this._vmStartSchedule
+    return this._vmStartSchedule.internalValue;
   }
 
   // vm_stop_schedule - computed: false, optional: true, required: false
-  private _vmStopSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined; 
-  private __vmStopScheduleOutput = new ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference(this as any, "vm_stop_schedule", true);
+  private _vmStopSchedule = new ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference(this as any, "vm_stop_schedule", true);
   public get vmStopSchedule() {
-    return this.__vmStopScheduleOutput;
+    return this._vmStopSchedule;
   }
-  public putVmStopSchedule(value: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined) {
-    this._vmStopSchedule = value;
+  public putVmStopSchedule(value: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule) {
+    this._vmStopSchedule.internalValue = value;
   }
   public resetVmStopSchedule() {
-    this._vmStopSchedule = undefined;
+    this._vmStopSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vmStopScheduleInput() {
-    return this._vmStopSchedule
+    return this._vmStopSchedule.internalValue;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy {
@@ -392,7 +502,7 @@ the source disk is deleted. Default value: "KEEP_AUTO_SNAPSHOTS" Possible values
   readonly onSourceDiskDelete?: string;
 }
 
-function computeResourcePolicySnapshotSchedulePolicyRetentionPolicyToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference | ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy): any {
+export function computeResourcePolicySnapshotSchedulePolicyRetentionPolicyToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference | ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -413,6 +523,31 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxRetentionDays) {
+      hasAnyValues = true;
+      internalValueResult.maxRetentionDays = this._maxRetentionDays;
+    }
+    if (this._onSourceDiskDelete) {
+      hasAnyValues = true;
+      internalValueResult.onSourceDiskDelete = this._onSourceDiskDelete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this._maxRetentionDays = undefined;
+      this._onSourceDiskDelete = undefined;
+    }
+    else {
+      this._maxRetentionDays = value.maxRetentionDays;
+      this._onSourceDiskDelete = value.onSourceDiskDelete;
+    }
+  }
+
   // max_retention_days - computed: false, optional: false, required: true
   private _maxRetentionDays?: number; 
   public get maxRetentionDays() {
@@ -423,15 +558,15 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get maxRetentionDaysInput() {
-    return this._maxRetentionDays
+    return this._maxRetentionDays;
   }
 
   // on_source_disk_delete - computed: false, optional: true, required: false
-  private _onSourceDiskDelete?: string | undefined; 
+  private _onSourceDiskDelete?: string; 
   public get onSourceDiskDelete() {
     return this.getStringAttribute('on_source_disk_delete');
   }
-  public set onSourceDiskDelete(value: string | undefined) {
+  public set onSourceDiskDelete(value: string) {
     this._onSourceDiskDelete = value;
   }
   public resetOnSourceDiskDelete() {
@@ -439,7 +574,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get onSourceDiskDeleteInput() {
-    return this._onSourceDiskDelete
+    return this._onSourceDiskDelete;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
@@ -459,7 +594,7 @@ both 13:00-5 and 08:00 are valid.
   readonly startTime: string;
 }
 
-function computeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule): any {
+export function computeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -480,6 +615,31 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._daysInCycle) {
+      hasAnyValues = true;
+      internalValueResult.daysInCycle = this._daysInCycle;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined) {
+    if (value === undefined) {
+      this._daysInCycle = undefined;
+      this._startTime = undefined;
+    }
+    else {
+      this._daysInCycle = value.daysInCycle;
+      this._startTime = value.startTime;
+    }
+  }
+
   // days_in_cycle - computed: false, optional: false, required: true
   private _daysInCycle?: number; 
   public get daysInCycle() {
@@ -490,7 +650,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
   }
   // Temporarily expose input value. Use with caution.
   public get daysInCycleInput() {
-    return this._daysInCycle
+    return this._daysInCycle;
   }
 
   // start_time - computed: false, optional: false, required: true
@@ -503,7 +663,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
@@ -524,7 +684,7 @@ eg: 21:00
   readonly startTime: string;
 }
 
-function computeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule): any {
+export function computeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -545,6 +705,31 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hoursInCycle) {
+      hasAnyValues = true;
+      internalValueResult.hoursInCycle = this._hoursInCycle;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined) {
+    if (value === undefined) {
+      this._hoursInCycle = undefined;
+      this._startTime = undefined;
+    }
+    else {
+      this._hoursInCycle = value.hoursInCycle;
+      this._startTime = value.startTime;
+    }
+  }
+
   // hours_in_cycle - computed: false, optional: false, required: true
   private _hoursInCycle?: number; 
   public get hoursInCycle() {
@@ -555,7 +740,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
   }
   // Temporarily expose input value. Use with caution.
   public get hoursInCycleInput() {
-    return this._hoursInCycle
+    return this._hoursInCycle;
   }
 
   // start_time - computed: false, optional: false, required: true
@@ -568,7 +753,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks {
@@ -587,7 +772,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
   readonly startTime: string;
 }
 
-function computeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks): any {
+export function computeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -607,7 +792,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedu
   readonly dayOfWeeks: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks[];
 }
 
-function computeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule): any {
+export function computeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -627,6 +812,25 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dayOfWeeks) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeeks = this._dayOfWeeks;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined) {
+    if (value === undefined) {
+      this._dayOfWeeks = undefined;
+    }
+    else {
+      this._dayOfWeeks = value.dayOfWeeks;
+    }
+  }
+
   // day_of_weeks - computed: false, optional: false, required: true
   private _dayOfWeeks?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks[]; 
   public get dayOfWeeks() {
@@ -638,7 +842,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOu
   }
   // Temporarily expose input value. Use with caution.
   public get dayOfWeeksInput() {
-    return this._dayOfWeeks
+    return this._dayOfWeeks;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicySchedule {
@@ -662,7 +866,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicySchedule {
   readonly weeklySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule;
 }
 
-function computeResourcePolicySnapshotSchedulePolicyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicySchedule): any {
+export function computeResourcePolicySnapshotSchedulePolicyScheduleToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference | ComputeResourcePolicySnapshotSchedulePolicySchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -684,55 +888,83 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // daily_schedule - computed: false, optional: true, required: false
-  private _dailySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined; 
-  private __dailyScheduleOutput = new ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference(this as any, "daily_schedule", true);
-  public get dailySchedule() {
-    return this.__dailyScheduleOutput;
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dailySchedule) {
+      hasAnyValues = true;
+      internalValueResult.dailySchedule = this._dailySchedule?.internalValue;
+    }
+    if (this._hourlySchedule) {
+      hasAnyValues = true;
+      internalValueResult.hourlySchedule = this._hourlySchedule?.internalValue;
+    }
+    if (this._weeklySchedule) {
+      hasAnyValues = true;
+      internalValueResult.weeklySchedule = this._weeklySchedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putDailySchedule(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined) {
-    this._dailySchedule = value;
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicySchedule | undefined) {
+    if (value === undefined) {
+      this._dailySchedule.internalValue = undefined;
+      this._hourlySchedule.internalValue = undefined;
+      this._weeklySchedule.internalValue = undefined;
+    }
+    else {
+      this._dailySchedule.internalValue = value.dailySchedule;
+      this._hourlySchedule.internalValue = value.hourlySchedule;
+      this._weeklySchedule.internalValue = value.weeklySchedule;
+    }
+  }
+
+  // daily_schedule - computed: false, optional: true, required: false
+  private _dailySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference(this as any, "daily_schedule", true);
+  public get dailySchedule() {
+    return this._dailySchedule;
+  }
+  public putDailySchedule(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule) {
+    this._dailySchedule.internalValue = value;
   }
   public resetDailySchedule() {
-    this._dailySchedule = undefined;
+    this._dailySchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dailyScheduleInput() {
-    return this._dailySchedule
+    return this._dailySchedule.internalValue;
   }
 
   // hourly_schedule - computed: false, optional: true, required: false
-  private _hourlySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined; 
-  private __hourlyScheduleOutput = new ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference(this as any, "hourly_schedule", true);
+  private _hourlySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference(this as any, "hourly_schedule", true);
   public get hourlySchedule() {
-    return this.__hourlyScheduleOutput;
+    return this._hourlySchedule;
   }
-  public putHourlySchedule(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined) {
-    this._hourlySchedule = value;
+  public putHourlySchedule(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule) {
+    this._hourlySchedule.internalValue = value;
   }
   public resetHourlySchedule() {
-    this._hourlySchedule = undefined;
+    this._hourlySchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hourlyScheduleInput() {
-    return this._hourlySchedule
+    return this._hourlySchedule.internalValue;
   }
 
   // weekly_schedule - computed: false, optional: true, required: false
-  private _weeklySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined; 
-  private __weeklyScheduleOutput = new ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference(this as any, "weekly_schedule", true);
+  private _weeklySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference(this as any, "weekly_schedule", true);
   public get weeklySchedule() {
-    return this.__weeklyScheduleOutput;
+    return this._weeklySchedule;
   }
-  public putWeeklySchedule(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined) {
-    this._weeklySchedule = value;
+  public putWeeklySchedule(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule) {
+    this._weeklySchedule.internalValue = value;
   }
   public resetWeeklySchedule() {
-    this._weeklySchedule = undefined;
+    this._weeklySchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weeklyScheduleInput() {
-    return this._weeklySchedule
+    return this._weeklySchedule.internalValue;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties {
@@ -757,7 +989,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties {
   readonly storageLocations?: string[];
 }
 
-function computeResourcePolicySnapshotSchedulePolicySnapshotPropertiesToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference | ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties): any {
+export function computeResourcePolicySnapshotSchedulePolicySnapshotPropertiesToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference | ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -779,12 +1011,43 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._guestFlush) {
+      hasAnyValues = true;
+      internalValueResult.guestFlush = this._guestFlush;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    if (this._storageLocations) {
+      hasAnyValues = true;
+      internalValueResult.storageLocations = this._storageLocations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined) {
+    if (value === undefined) {
+      this._guestFlush = undefined;
+      this._labels = undefined;
+      this._storageLocations = undefined;
+    }
+    else {
+      this._guestFlush = value.guestFlush;
+      this._labels = value.labels;
+      this._storageLocations = value.storageLocations;
+    }
+  }
+
   // guest_flush - computed: false, optional: true, required: false
-  private _guestFlush?: boolean | cdktf.IResolvable | undefined; 
+  private _guestFlush?: boolean | cdktf.IResolvable; 
   public get guestFlush() {
     return this.getBooleanAttribute('guest_flush') as any;
   }
-  public set guestFlush(value: boolean | cdktf.IResolvable | undefined) {
+  public set guestFlush(value: boolean | cdktf.IResolvable) {
     this._guestFlush = value;
   }
   public resetGuestFlush() {
@@ -792,16 +1055,16 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   }
   // Temporarily expose input value. Use with caution.
   public get guestFlushInput() {
-    return this._guestFlush
+    return this._guestFlush;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -809,15 +1072,15 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // storage_locations - computed: false, optional: true, required: false
-  private _storageLocations?: string[] | undefined; 
+  private _storageLocations?: string[]; 
   public get storageLocations() {
     return this.getListAttribute('storage_locations');
   }
-  public set storageLocations(value: string[] | undefined) {
+  public set storageLocations(value: string[]) {
     this._storageLocations = value;
   }
   public resetStorageLocations() {
@@ -825,7 +1088,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   }
   // Temporarily expose input value. Use with caution.
   public get storageLocationsInput() {
-    return this._storageLocations
+    return this._storageLocations;
   }
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicy {
@@ -849,7 +1112,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicy {
   readonly snapshotProperties?: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties;
 }
 
-function computeResourcePolicySnapshotSchedulePolicyToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyOutputReference | ComputeResourcePolicySnapshotSchedulePolicy): any {
+export function computeResourcePolicySnapshotSchedulePolicyToTerraform(struct?: ComputeResourcePolicySnapshotSchedulePolicyOutputReference | ComputeResourcePolicySnapshotSchedulePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -871,52 +1134,80 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy?: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined; 
-  private __retentionPolicyOutput = new ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference(this as any, "retention_policy", true);
-  public get retentionPolicy() {
-    return this.__retentionPolicyOutput;
+  public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._retentionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
+    }
+    if (this._schedule) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule?.internalValue;
+    }
+    if (this._snapshotProperties) {
+      hasAnyValues = true;
+      internalValueResult.snapshotProperties = this._snapshotProperties?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putRetentionPolicy(value: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined) {
-    this._retentionPolicy = value;
+
+  public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicy | undefined) {
+    if (value === undefined) {
+      this._retentionPolicy.internalValue = undefined;
+      this._schedule.internalValue = undefined;
+      this._snapshotProperties.internalValue = undefined;
+    }
+    else {
+      this._retentionPolicy.internalValue = value.retentionPolicy;
+      this._schedule.internalValue = value.schedule;
+      this._snapshotProperties.internalValue = value.snapshotProperties;
+    }
+  }
+
+  // retention_policy - computed: false, optional: true, required: false
+  private _retentionPolicy = new ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference(this as any, "retention_policy", true);
+  public get retentionPolicy() {
+    return this._retentionPolicy;
+  }
+  public putRetentionPolicy(value: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy) {
+    this._retentionPolicy.internalValue = value;
   }
   public resetRetentionPolicy() {
-    this._retentionPolicy = undefined;
+    this._retentionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyInput() {
-    return this._retentionPolicy
+    return this._retentionPolicy.internalValue;
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule?: ComputeResourcePolicySnapshotSchedulePolicySchedule; 
-  private __scheduleOutput = new ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference(this as any, "schedule", true);
   public get schedule() {
-    return this.__scheduleOutput;
+    return this._schedule;
   }
   public putSchedule(value: ComputeResourcePolicySnapshotSchedulePolicySchedule) {
-    this._schedule = value;
+    this._schedule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule
+    return this._schedule.internalValue;
   }
 
   // snapshot_properties - computed: false, optional: true, required: false
-  private _snapshotProperties?: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined; 
-  private __snapshotPropertiesOutput = new ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference(this as any, "snapshot_properties", true);
+  private _snapshotProperties = new ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference(this as any, "snapshot_properties", true);
   public get snapshotProperties() {
-    return this.__snapshotPropertiesOutput;
+    return this._snapshotProperties;
   }
-  public putSnapshotProperties(value: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined) {
-    this._snapshotProperties = value;
+  public putSnapshotProperties(value: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties) {
+    this._snapshotProperties.internalValue = value;
   }
   public resetSnapshotProperties() {
-    this._snapshotProperties = undefined;
+    this._snapshotProperties.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get snapshotPropertiesInput() {
-    return this._snapshotProperties
+    return this._snapshotProperties.internalValue;
   }
 }
 export interface ComputeResourcePolicyTimeouts {
@@ -930,7 +1221,7 @@ export interface ComputeResourcePolicyTimeouts {
   readonly delete?: string;
 }
 
-function computeResourcePolicyTimeoutsToTerraform(struct?: ComputeResourcePolicyTimeoutsOutputReference | ComputeResourcePolicyTimeouts): any {
+export function computeResourcePolicyTimeoutsToTerraform(struct?: ComputeResourcePolicyTimeoutsOutputReference | ComputeResourcePolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -951,12 +1242,37 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeResourcePolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeResourcePolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -964,15 +1280,15 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -980,7 +1296,7 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -1020,10 +1336,10 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
-    this._groupPlacementPolicy = config.groupPlacementPolicy;
-    this._instanceSchedulePolicy = config.instanceSchedulePolicy;
-    this._snapshotSchedulePolicy = config.snapshotSchedulePolicy;
-    this._timeouts = config.timeouts;
+    this._groupPlacementPolicy.internalValue = config.groupPlacementPolicy;
+    this._instanceSchedulePolicy.internalValue = config.instanceSchedulePolicy;
+    this._snapshotSchedulePolicy.internalValue = config.snapshotSchedulePolicy;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1031,11 +1347,11 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1043,7 +1359,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1061,15 +1377,15 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1077,15 +1393,15 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -1093,7 +1409,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -1102,71 +1418,67 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
 
   // group_placement_policy - computed: false, optional: true, required: false
-  private _groupPlacementPolicy?: ComputeResourcePolicyGroupPlacementPolicy | undefined; 
-  private __groupPlacementPolicyOutput = new ComputeResourcePolicyGroupPlacementPolicyOutputReference(this as any, "group_placement_policy", true);
+  private _groupPlacementPolicy = new ComputeResourcePolicyGroupPlacementPolicyOutputReference(this as any, "group_placement_policy", true);
   public get groupPlacementPolicy() {
-    return this.__groupPlacementPolicyOutput;
+    return this._groupPlacementPolicy;
   }
-  public putGroupPlacementPolicy(value: ComputeResourcePolicyGroupPlacementPolicy | undefined) {
-    this._groupPlacementPolicy = value;
+  public putGroupPlacementPolicy(value: ComputeResourcePolicyGroupPlacementPolicy) {
+    this._groupPlacementPolicy.internalValue = value;
   }
   public resetGroupPlacementPolicy() {
-    this._groupPlacementPolicy = undefined;
+    this._groupPlacementPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get groupPlacementPolicyInput() {
-    return this._groupPlacementPolicy
+    return this._groupPlacementPolicy.internalValue;
   }
 
   // instance_schedule_policy - computed: false, optional: true, required: false
-  private _instanceSchedulePolicy?: ComputeResourcePolicyInstanceSchedulePolicy | undefined; 
-  private __instanceSchedulePolicyOutput = new ComputeResourcePolicyInstanceSchedulePolicyOutputReference(this as any, "instance_schedule_policy", true);
+  private _instanceSchedulePolicy = new ComputeResourcePolicyInstanceSchedulePolicyOutputReference(this as any, "instance_schedule_policy", true);
   public get instanceSchedulePolicy() {
-    return this.__instanceSchedulePolicyOutput;
+    return this._instanceSchedulePolicy;
   }
-  public putInstanceSchedulePolicy(value: ComputeResourcePolicyInstanceSchedulePolicy | undefined) {
-    this._instanceSchedulePolicy = value;
+  public putInstanceSchedulePolicy(value: ComputeResourcePolicyInstanceSchedulePolicy) {
+    this._instanceSchedulePolicy.internalValue = value;
   }
   public resetInstanceSchedulePolicy() {
-    this._instanceSchedulePolicy = undefined;
+    this._instanceSchedulePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instanceSchedulePolicyInput() {
-    return this._instanceSchedulePolicy
+    return this._instanceSchedulePolicy.internalValue;
   }
 
   // snapshot_schedule_policy - computed: false, optional: true, required: false
-  private _snapshotSchedulePolicy?: ComputeResourcePolicySnapshotSchedulePolicy | undefined; 
-  private __snapshotSchedulePolicyOutput = new ComputeResourcePolicySnapshotSchedulePolicyOutputReference(this as any, "snapshot_schedule_policy", true);
+  private _snapshotSchedulePolicy = new ComputeResourcePolicySnapshotSchedulePolicyOutputReference(this as any, "snapshot_schedule_policy", true);
   public get snapshotSchedulePolicy() {
-    return this.__snapshotSchedulePolicyOutput;
+    return this._snapshotSchedulePolicy;
   }
-  public putSnapshotSchedulePolicy(value: ComputeResourcePolicySnapshotSchedulePolicy | undefined) {
-    this._snapshotSchedulePolicy = value;
+  public putSnapshotSchedulePolicy(value: ComputeResourcePolicySnapshotSchedulePolicy) {
+    this._snapshotSchedulePolicy.internalValue = value;
   }
   public resetSnapshotSchedulePolicy() {
-    this._snapshotSchedulePolicy = undefined;
+    this._snapshotSchedulePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get snapshotSchedulePolicyInput() {
-    return this._snapshotSchedulePolicy
+    return this._snapshotSchedulePolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeResourcePolicyTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeResourcePolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeResourcePolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeResourcePolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeResourcePolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1179,10 +1491,10 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      group_placement_policy: computeResourcePolicyGroupPlacementPolicyToTerraform(this._groupPlacementPolicy),
-      instance_schedule_policy: computeResourcePolicyInstanceSchedulePolicyToTerraform(this._instanceSchedulePolicy),
-      snapshot_schedule_policy: computeResourcePolicySnapshotSchedulePolicyToTerraform(this._snapshotSchedulePolicy),
-      timeouts: computeResourcePolicyTimeoutsToTerraform(this._timeouts),
+      group_placement_policy: computeResourcePolicyGroupPlacementPolicyToTerraform(this._groupPlacementPolicy.internalValue),
+      instance_schedule_policy: computeResourcePolicyInstanceSchedulePolicyToTerraform(this._instanceSchedulePolicy.internalValue),
+      snapshot_schedule_policy: computeResourcePolicySnapshotSchedulePolicyToTerraform(this._snapshotSchedulePolicy.internalValue),
+      timeouts: computeResourcePolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

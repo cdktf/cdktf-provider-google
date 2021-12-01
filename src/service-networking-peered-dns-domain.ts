@@ -59,7 +59,7 @@ export interface ServiceNetworkingPeeredDnsDomainTimeouts {
   readonly read?: string;
 }
 
-function serviceNetworkingPeeredDnsDomainTimeoutsToTerraform(struct?: ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference | ServiceNetworkingPeeredDnsDomainTimeouts): any {
+export function serviceNetworkingPeeredDnsDomainTimeoutsToTerraform(struct?: ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference | ServiceNetworkingPeeredDnsDomainTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -81,12 +81,43 @@ export class ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ServiceNetworkingPeeredDnsDomainTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceNetworkingPeeredDnsDomainTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -94,15 +125,15 @@ export class ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -110,15 +141,15 @@ export class ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -126,7 +157,7 @@ export class ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -167,7 +198,7 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
     this._network = config.network;
     this._project = config.project;
     this._service = config.service;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -184,7 +215,7 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsSuffixInput() {
-    return this._dnsSuffix
+    return this._dnsSuffix;
   }
 
   // id - computed: true, optional: true, required: false
@@ -202,7 +233,7 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: false, required: true
@@ -215,7 +246,7 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // parent - computed: true, optional: false, required: false
@@ -224,11 +255,11 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -236,15 +267,15 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service - computed: false, optional: true, required: false
-  private _service?: string | undefined; 
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
-  public set service(value: string | undefined) {
+  public set service(value: string) {
     this._service = value;
   }
   public resetService() {
@@ -252,24 +283,23 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServiceNetworkingPeeredDnsDomainTimeouts | undefined; 
-  private __timeoutsOutput = new ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServiceNetworkingPeeredDnsDomainTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ServiceNetworkingPeeredDnsDomainTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ServiceNetworkingPeeredDnsDomainTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -283,7 +313,7 @@ export class ServiceNetworkingPeeredDnsDomain extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       service: cdktf.stringToTerraform(this._service),
-      timeouts: serviceNetworkingPeeredDnsDomainTimeoutsToTerraform(this._timeouts),
+      timeouts: serviceNetworkingPeeredDnsDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

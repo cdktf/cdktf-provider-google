@@ -108,7 +108,7 @@ be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY"
   readonly identityType?: string;
 }
 
-function accessContextManagerServicePerimeterSpecEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOutputReference | AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom): any {
+export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOutputReference | AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -129,12 +129,37 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identities) {
+      hasAnyValues = true;
+      internalValueResult.identities = this._identities;
+    }
+    if (this._identityType) {
+      hasAnyValues = true;
+      internalValueResult.identityType = this._identityType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom | undefined) {
+    if (value === undefined) {
+      this._identities = undefined;
+      this._identityType = undefined;
+    }
+    else {
+      this._identities = value.identities;
+      this._identityType = value.identityType;
+    }
+  }
+
   // identities - computed: false, optional: true, required: false
-  private _identities?: string[] | undefined; 
+  private _identities?: string[]; 
   public get identities() {
     return this.getListAttribute('identities');
   }
-  public set identities(value: string[] | undefined) {
+  public set identities(value: string[]) {
     this._identities = value;
   }
   public resetIdentities() {
@@ -142,15 +167,15 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOut
   }
   // Temporarily expose input value. Use with caution.
   public get identitiesInput() {
-    return this._identities
+    return this._identities;
   }
 
   // identity_type - computed: false, optional: true, required: false
-  private _identityType?: string | undefined; 
+  private _identityType?: string; 
   public get identityType() {
     return this.getStringAttribute('identity_type');
   }
-  public set identityType(value: string | undefined) {
+  public set identityType(value: string) {
     this._identityType = value;
   }
   public resetIdentityType() {
@@ -158,7 +183,7 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOut
   }
   // Temporarily expose input value. Use with caution.
   public get identityTypeInput() {
-    return this._identityType
+    return this._identityType;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors {
@@ -179,7 +204,7 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors): any {
+export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -207,7 +232,7 @@ field set to '*' will allow all methods AND permissions for all services.
   readonly methodSelectors?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors[];
 }
 
-function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations): any {
+export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -237,7 +262,7 @@ the perimeter.
   readonly operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[];
 }
 
-function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutputReference | AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo): any {
+export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutputReference | AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -258,12 +283,37 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._resources) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources;
+    }
+    if (this._operations) {
+      hasAnyValues = true;
+      internalValueResult.operations = this._operations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo | undefined) {
+    if (value === undefined) {
+      this._resources = undefined;
+      this._operations = undefined;
+    }
+    else {
+      this._resources = value.resources;
+      this._operations = value.operations;
+    }
+  }
+
   // resources - computed: false, optional: true, required: false
-  private _resources?: string[] | undefined; 
+  private _resources?: string[]; 
   public get resources() {
     return this.getListAttribute('resources');
   }
-  public set resources(value: string[] | undefined) {
+  public set resources(value: string[]) {
     this._resources = value;
   }
   public resetResources() {
@@ -271,16 +321,16 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources;
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | undefined; 
+  private _operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[]; 
   public get operations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('operations') as any;
   }
-  public set operations(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | undefined) {
+  public set operations(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[]) {
     this._operations = value;
   }
   public resetOperations() {
@@ -288,7 +338,7 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations
+    return this._operations;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecEgressPolicies {
@@ -306,7 +356,7 @@ export interface AccessContextManagerServicePerimeterSpecEgressPolicies {
   readonly egressTo?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo;
 }
 
-function accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPolicies): any {
+export function accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPolicies): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -344,7 +394,7 @@ of allowing all Google Cloud resources only is not supported.
   readonly resource?: string;
 }
 
-function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources): any {
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -380,7 +430,7 @@ allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "
   readonly sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[];
 }
 
-function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromOutputReference | AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom): any {
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromOutputReference | AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -402,12 +452,43 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identities) {
+      hasAnyValues = true;
+      internalValueResult.identities = this._identities;
+    }
+    if (this._identityType) {
+      hasAnyValues = true;
+      internalValueResult.identityType = this._identityType;
+    }
+    if (this._sources) {
+      hasAnyValues = true;
+      internalValueResult.sources = this._sources;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom | undefined) {
+    if (value === undefined) {
+      this._identities = undefined;
+      this._identityType = undefined;
+      this._sources = undefined;
+    }
+    else {
+      this._identities = value.identities;
+      this._identityType = value.identityType;
+      this._sources = value.sources;
+    }
+  }
+
   // identities - computed: false, optional: true, required: false
-  private _identities?: string[] | undefined; 
+  private _identities?: string[]; 
   public get identities() {
     return this.getListAttribute('identities');
   }
-  public set identities(value: string[] | undefined) {
+  public set identities(value: string[]) {
     this._identities = value;
   }
   public resetIdentities() {
@@ -415,15 +496,15 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   }
   // Temporarily expose input value. Use with caution.
   public get identitiesInput() {
-    return this._identities
+    return this._identities;
   }
 
   // identity_type - computed: false, optional: true, required: false
-  private _identityType?: string | undefined; 
+  private _identityType?: string; 
   public get identityType() {
     return this.getStringAttribute('identity_type');
   }
-  public set identityType(value: string | undefined) {
+  public set identityType(value: string) {
     this._identityType = value;
   }
   public resetIdentityType() {
@@ -431,16 +512,16 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   }
   // Temporarily expose input value. Use with caution.
   public get identityTypeInput() {
-    return this._identityType
+    return this._identityType;
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | undefined; 
+  private _sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[]; 
   public get sources() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('sources') as any;
   }
-  public set sources(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | undefined) {
+  public set sources(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[]) {
     this._sources = value;
   }
   public resetSources() {
@@ -448,7 +529,7 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   }
   // Temporarily expose input value. Use with caution.
   public get sourcesInput() {
-    return this._sources
+    return this._sources;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors {
@@ -469,7 +550,7 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors): any {
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -497,7 +578,7 @@ field set to '*' will allow all methods AND permissions for all services.
   readonly methodSelectors?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors[];
 }
 
-function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations): any {
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -530,7 +611,7 @@ also matches the 'operations' field.
   readonly operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[];
 }
 
-function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOutputReference | AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo): any {
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOutputReference | AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -551,12 +632,37 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._resources) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources;
+    }
+    if (this._operations) {
+      hasAnyValues = true;
+      internalValueResult.operations = this._operations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo | undefined) {
+    if (value === undefined) {
+      this._resources = undefined;
+      this._operations = undefined;
+    }
+    else {
+      this._resources = value.resources;
+      this._operations = value.operations;
+    }
+  }
+
   // resources - computed: false, optional: true, required: false
-  private _resources?: string[] | undefined; 
+  private _resources?: string[]; 
   public get resources() {
     return this.getListAttribute('resources');
   }
-  public set resources(value: string[] | undefined) {
+  public set resources(value: string[]) {
     this._resources = value;
   }
   public resetResources() {
@@ -564,16 +670,16 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources;
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | undefined; 
+  private _operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[]; 
   public get operations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('operations') as any;
   }
-  public set operations(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | undefined) {
+  public set operations(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[]) {
     this._operations = value;
   }
   public resetOperations() {
@@ -581,7 +687,7 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations
+    return this._operations;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecIngressPolicies {
@@ -599,7 +705,7 @@ export interface AccessContextManagerServicePerimeterSpecIngressPolicies {
   readonly ingressTo?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo;
 }
 
-function accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPolicies): any {
+export function accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPolicies): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -627,7 +733,7 @@ list of APIs specified in 'allowedServices'.
   readonly enableRestriction?: boolean | cdktf.IResolvable;
 }
 
-function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference | AccessContextManagerServicePerimeterSpecVpcAccessibleServices): any {
+export function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference | AccessContextManagerServicePerimeterSpecVpcAccessibleServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -648,12 +754,37 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterSpecVpcAccessibleServices | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedServices) {
+      hasAnyValues = true;
+      internalValueResult.allowedServices = this._allowedServices;
+    }
+    if (this._enableRestriction) {
+      hasAnyValues = true;
+      internalValueResult.enableRestriction = this._enableRestriction;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecVpcAccessibleServices | undefined) {
+    if (value === undefined) {
+      this._allowedServices = undefined;
+      this._enableRestriction = undefined;
+    }
+    else {
+      this._allowedServices = value.allowedServices;
+      this._enableRestriction = value.enableRestriction;
+    }
+  }
+
   // allowed_services - computed: false, optional: true, required: false
-  private _allowedServices?: string[] | undefined; 
+  private _allowedServices?: string[]; 
   public get allowedServices() {
     return this.getListAttribute('allowed_services');
   }
-  public set allowedServices(value: string[] | undefined) {
+  public set allowedServices(value: string[]) {
     this._allowedServices = value;
   }
   public resetAllowedServices() {
@@ -661,15 +792,15 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
   }
   // Temporarily expose input value. Use with caution.
   public get allowedServicesInput() {
-    return this._allowedServices
+    return this._allowedServices;
   }
 
   // enable_restriction - computed: false, optional: true, required: false
-  private _enableRestriction?: boolean | cdktf.IResolvable | undefined; 
+  private _enableRestriction?: boolean | cdktf.IResolvable; 
   public get enableRestriction() {
     return this.getBooleanAttribute('enable_restriction') as any;
   }
-  public set enableRestriction(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableRestriction(value: boolean | cdktf.IResolvable) {
     this._enableRestriction = value;
   }
   public resetEnableRestriction() {
@@ -677,7 +808,7 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
   }
   // Temporarily expose input value. Use with caution.
   public get enableRestrictionInput() {
-    return this._enableRestriction
+    return this._enableRestriction;
   }
 }
 export interface AccessContextManagerServicePerimeterSpec {
@@ -734,7 +865,7 @@ restrictions.
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimeterSpecVpcAccessibleServices;
 }
 
-function accessContextManagerServicePerimeterSpecToTerraform(struct?: AccessContextManagerServicePerimeterSpecOutputReference | AccessContextManagerServicePerimeterSpec): any {
+export function accessContextManagerServicePerimeterSpecToTerraform(struct?: AccessContextManagerServicePerimeterSpecOutputReference | AccessContextManagerServicePerimeterSpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -759,12 +890,61 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterSpec | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._accessLevels) {
+      hasAnyValues = true;
+      internalValueResult.accessLevels = this._accessLevels;
+    }
+    if (this._resources) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources;
+    }
+    if (this._restrictedServices) {
+      hasAnyValues = true;
+      internalValueResult.restrictedServices = this._restrictedServices;
+    }
+    if (this._egressPolicies) {
+      hasAnyValues = true;
+      internalValueResult.egressPolicies = this._egressPolicies;
+    }
+    if (this._ingressPolicies) {
+      hasAnyValues = true;
+      internalValueResult.ingressPolicies = this._ingressPolicies;
+    }
+    if (this._vpcAccessibleServices) {
+      hasAnyValues = true;
+      internalValueResult.vpcAccessibleServices = this._vpcAccessibleServices?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpec | undefined) {
+    if (value === undefined) {
+      this._accessLevels = undefined;
+      this._resources = undefined;
+      this._restrictedServices = undefined;
+      this._egressPolicies = undefined;
+      this._ingressPolicies = undefined;
+      this._vpcAccessibleServices.internalValue = undefined;
+    }
+    else {
+      this._accessLevels = value.accessLevels;
+      this._resources = value.resources;
+      this._restrictedServices = value.restrictedServices;
+      this._egressPolicies = value.egressPolicies;
+      this._ingressPolicies = value.ingressPolicies;
+      this._vpcAccessibleServices.internalValue = value.vpcAccessibleServices;
+    }
+  }
+
   // access_levels - computed: false, optional: true, required: false
-  private _accessLevels?: string[] | undefined; 
+  private _accessLevels?: string[]; 
   public get accessLevels() {
     return this.getListAttribute('access_levels');
   }
-  public set accessLevels(value: string[] | undefined) {
+  public set accessLevels(value: string[]) {
     this._accessLevels = value;
   }
   public resetAccessLevels() {
@@ -772,15 +952,15 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get accessLevelsInput() {
-    return this._accessLevels
+    return this._accessLevels;
   }
 
   // resources - computed: false, optional: true, required: false
-  private _resources?: string[] | undefined; 
+  private _resources?: string[]; 
   public get resources() {
     return this.getListAttribute('resources');
   }
-  public set resources(value: string[] | undefined) {
+  public set resources(value: string[]) {
     this._resources = value;
   }
   public resetResources() {
@@ -788,15 +968,15 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources;
   }
 
   // restricted_services - computed: false, optional: true, required: false
-  private _restrictedServices?: string[] | undefined; 
+  private _restrictedServices?: string[]; 
   public get restrictedServices() {
     return this.getListAttribute('restricted_services');
   }
-  public set restrictedServices(value: string[] | undefined) {
+  public set restrictedServices(value: string[]) {
     this._restrictedServices = value;
   }
   public resetRestrictedServices() {
@@ -804,16 +984,16 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get restrictedServicesInput() {
-    return this._restrictedServices
+    return this._restrictedServices;
   }
 
   // egress_policies - computed: false, optional: true, required: false
-  private _egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[] | undefined; 
+  private _egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[]; 
   public get egressPolicies() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('egress_policies') as any;
   }
-  public set egressPolicies(value: AccessContextManagerServicePerimeterSpecEgressPolicies[] | undefined) {
+  public set egressPolicies(value: AccessContextManagerServicePerimeterSpecEgressPolicies[]) {
     this._egressPolicies = value;
   }
   public resetEgressPolicies() {
@@ -821,16 +1001,16 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get egressPoliciesInput() {
-    return this._egressPolicies
+    return this._egressPolicies;
   }
 
   // ingress_policies - computed: false, optional: true, required: false
-  private _ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[] | undefined; 
+  private _ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[]; 
   public get ingressPolicies() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ingress_policies') as any;
   }
-  public set ingressPolicies(value: AccessContextManagerServicePerimeterSpecIngressPolicies[] | undefined) {
+  public set ingressPolicies(value: AccessContextManagerServicePerimeterSpecIngressPolicies[]) {
     this._ingressPolicies = value;
   }
   public resetIngressPolicies() {
@@ -838,24 +1018,23 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get ingressPoliciesInput() {
-    return this._ingressPolicies
+    return this._ingressPolicies;
   }
 
   // vpc_accessible_services - computed: false, optional: true, required: false
-  private _vpcAccessibleServices?: AccessContextManagerServicePerimeterSpecVpcAccessibleServices | undefined; 
-  private __vpcAccessibleServicesOutput = new AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference(this as any, "vpc_accessible_services", true);
+  private _vpcAccessibleServices = new AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference(this as any, "vpc_accessible_services", true);
   public get vpcAccessibleServices() {
-    return this.__vpcAccessibleServicesOutput;
+    return this._vpcAccessibleServices;
   }
-  public putVpcAccessibleServices(value: AccessContextManagerServicePerimeterSpecVpcAccessibleServices | undefined) {
-    this._vpcAccessibleServices = value;
+  public putVpcAccessibleServices(value: AccessContextManagerServicePerimeterSpecVpcAccessibleServices) {
+    this._vpcAccessibleServices.internalValue = value;
   }
   public resetVpcAccessibleServices() {
-    this._vpcAccessibleServices = undefined;
+    this._vpcAccessibleServices.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vpcAccessibleServicesInput() {
-    return this._vpcAccessibleServices
+    return this._vpcAccessibleServices.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom {
@@ -877,7 +1056,7 @@ be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY"
   readonly identityType?: string;
 }
 
-function accessContextManagerServicePerimeterStatusEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromOutputReference | AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom): any {
+export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromOutputReference | AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -898,12 +1077,37 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identities) {
+      hasAnyValues = true;
+      internalValueResult.identities = this._identities;
+    }
+    if (this._identityType) {
+      hasAnyValues = true;
+      internalValueResult.identityType = this._identityType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom | undefined) {
+    if (value === undefined) {
+      this._identities = undefined;
+      this._identityType = undefined;
+    }
+    else {
+      this._identities = value.identities;
+      this._identityType = value.identityType;
+    }
+  }
+
   // identities - computed: false, optional: true, required: false
-  private _identities?: string[] | undefined; 
+  private _identities?: string[]; 
   public get identities() {
     return this.getListAttribute('identities');
   }
-  public set identities(value: string[] | undefined) {
+  public set identities(value: string[]) {
     this._identities = value;
   }
   public resetIdentities() {
@@ -911,15 +1115,15 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromO
   }
   // Temporarily expose input value. Use with caution.
   public get identitiesInput() {
-    return this._identities
+    return this._identities;
   }
 
   // identity_type - computed: false, optional: true, required: false
-  private _identityType?: string | undefined; 
+  private _identityType?: string; 
   public get identityType() {
     return this.getStringAttribute('identity_type');
   }
-  public set identityType(value: string | undefined) {
+  public set identityType(value: string) {
     this._identityType = value;
   }
   public resetIdentityType() {
@@ -927,7 +1131,7 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromO
   }
   // Temporarily expose input value. Use with caution.
   public get identityTypeInput() {
-    return this._identityType
+    return this._identityType;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors {
@@ -948,7 +1152,7 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors): any {
+export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -976,7 +1180,7 @@ field set to '*' will allow all methods AND permissions for all services.
   readonly methodSelectors?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors[];
 }
 
-function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations): any {
+export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1006,7 +1210,7 @@ the perimeter.
   readonly operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[];
 }
 
-function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOutputReference | AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo): any {
+export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOutputReference | AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1027,12 +1231,37 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._resources) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources;
+    }
+    if (this._operations) {
+      hasAnyValues = true;
+      internalValueResult.operations = this._operations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo | undefined) {
+    if (value === undefined) {
+      this._resources = undefined;
+      this._operations = undefined;
+    }
+    else {
+      this._resources = value.resources;
+      this._operations = value.operations;
+    }
+  }
+
   // resources - computed: false, optional: true, required: false
-  private _resources?: string[] | undefined; 
+  private _resources?: string[]; 
   public get resources() {
     return this.getListAttribute('resources');
   }
-  public set resources(value: string[] | undefined) {
+  public set resources(value: string[]) {
     this._resources = value;
   }
   public resetResources() {
@@ -1040,16 +1269,16 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources;
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | undefined; 
+  private _operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[]; 
   public get operations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('operations') as any;
   }
-  public set operations(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | undefined) {
+  public set operations(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[]) {
     this._operations = value;
   }
   public resetOperations() {
@@ -1057,7 +1286,7 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations
+    return this._operations;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusEgressPolicies {
@@ -1075,7 +1304,7 @@ export interface AccessContextManagerServicePerimeterStatusEgressPolicies {
   readonly egressTo?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo;
 }
 
-function accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPolicies): any {
+export function accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPolicies): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1113,7 +1342,7 @@ of allowing all Google Cloud resources only is not supported.
   readonly resource?: string;
 }
 
-function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources): any {
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1149,7 +1378,7 @@ allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "
   readonly sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[];
 }
 
-function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromOutputReference | AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom): any {
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromOutputReference | AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1171,12 +1400,43 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identities) {
+      hasAnyValues = true;
+      internalValueResult.identities = this._identities;
+    }
+    if (this._identityType) {
+      hasAnyValues = true;
+      internalValueResult.identityType = this._identityType;
+    }
+    if (this._sources) {
+      hasAnyValues = true;
+      internalValueResult.sources = this._sources;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom | undefined) {
+    if (value === undefined) {
+      this._identities = undefined;
+      this._identityType = undefined;
+      this._sources = undefined;
+    }
+    else {
+      this._identities = value.identities;
+      this._identityType = value.identityType;
+      this._sources = value.sources;
+    }
+  }
+
   // identities - computed: false, optional: true, required: false
-  private _identities?: string[] | undefined; 
+  private _identities?: string[]; 
   public get identities() {
     return this.getListAttribute('identities');
   }
-  public set identities(value: string[] | undefined) {
+  public set identities(value: string[]) {
     this._identities = value;
   }
   public resetIdentities() {
@@ -1184,15 +1444,15 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   }
   // Temporarily expose input value. Use with caution.
   public get identitiesInput() {
-    return this._identities
+    return this._identities;
   }
 
   // identity_type - computed: false, optional: true, required: false
-  private _identityType?: string | undefined; 
+  private _identityType?: string; 
   public get identityType() {
     return this.getStringAttribute('identity_type');
   }
-  public set identityType(value: string | undefined) {
+  public set identityType(value: string) {
     this._identityType = value;
   }
   public resetIdentityType() {
@@ -1200,16 +1460,16 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   }
   // Temporarily expose input value. Use with caution.
   public get identityTypeInput() {
-    return this._identityType
+    return this._identityType;
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | undefined; 
+  private _sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[]; 
   public get sources() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('sources') as any;
   }
-  public set sources(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | undefined) {
+  public set sources(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[]) {
     this._sources = value;
   }
   public resetSources() {
@@ -1217,7 +1477,7 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   }
   // Temporarily expose input value. Use with caution.
   public get sourcesInput() {
-    return this._sources
+    return this._sources;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors {
@@ -1238,7 +1498,7 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors): any {
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1266,7 +1526,7 @@ field set to '*' will allow all methods AND permissions for all services.
   readonly methodSelectors?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors[];
 }
 
-function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations): any {
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1299,7 +1559,7 @@ also matches the 'operations' field.
   readonly operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[];
 }
 
-function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOutputReference | AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo): any {
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOutputReference | AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1320,12 +1580,37 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._resources) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources;
+    }
+    if (this._operations) {
+      hasAnyValues = true;
+      internalValueResult.operations = this._operations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo | undefined) {
+    if (value === undefined) {
+      this._resources = undefined;
+      this._operations = undefined;
+    }
+    else {
+      this._resources = value.resources;
+      this._operations = value.operations;
+    }
+  }
+
   // resources - computed: false, optional: true, required: false
-  private _resources?: string[] | undefined; 
+  private _resources?: string[]; 
   public get resources() {
     return this.getListAttribute('resources');
   }
-  public set resources(value: string[] | undefined) {
+  public set resources(value: string[]) {
     this._resources = value;
   }
   public resetResources() {
@@ -1333,16 +1618,16 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources;
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | undefined; 
+  private _operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[]; 
   public get operations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('operations') as any;
   }
-  public set operations(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | undefined) {
+  public set operations(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[]) {
     this._operations = value;
   }
   public resetOperations() {
@@ -1350,7 +1635,7 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations
+    return this._operations;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusIngressPolicies {
@@ -1368,7 +1653,7 @@ export interface AccessContextManagerServicePerimeterStatusIngressPolicies {
   readonly ingressTo?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo;
 }
 
-function accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPolicies): any {
+export function accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPolicies): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1396,7 +1681,7 @@ list of APIs specified in 'allowedServices'.
   readonly enableRestriction?: boolean | cdktf.IResolvable;
 }
 
-function accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference | AccessContextManagerServicePerimeterStatusVpcAccessibleServices): any {
+export function accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference | AccessContextManagerServicePerimeterStatusVpcAccessibleServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1417,12 +1702,37 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterStatusVpcAccessibleServices | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedServices) {
+      hasAnyValues = true;
+      internalValueResult.allowedServices = this._allowedServices;
+    }
+    if (this._enableRestriction) {
+      hasAnyValues = true;
+      internalValueResult.enableRestriction = this._enableRestriction;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusVpcAccessibleServices | undefined) {
+    if (value === undefined) {
+      this._allowedServices = undefined;
+      this._enableRestriction = undefined;
+    }
+    else {
+      this._allowedServices = value.allowedServices;
+      this._enableRestriction = value.enableRestriction;
+    }
+  }
+
   // allowed_services - computed: false, optional: true, required: false
-  private _allowedServices?: string[] | undefined; 
+  private _allowedServices?: string[]; 
   public get allowedServices() {
     return this.getListAttribute('allowed_services');
   }
-  public set allowedServices(value: string[] | undefined) {
+  public set allowedServices(value: string[]) {
     this._allowedServices = value;
   }
   public resetAllowedServices() {
@@ -1430,15 +1740,15 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
   }
   // Temporarily expose input value. Use with caution.
   public get allowedServicesInput() {
-    return this._allowedServices
+    return this._allowedServices;
   }
 
   // enable_restriction - computed: false, optional: true, required: false
-  private _enableRestriction?: boolean | cdktf.IResolvable | undefined; 
+  private _enableRestriction?: boolean | cdktf.IResolvable; 
   public get enableRestriction() {
     return this.getBooleanAttribute('enable_restriction') as any;
   }
-  public set enableRestriction(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableRestriction(value: boolean | cdktf.IResolvable) {
     this._enableRestriction = value;
   }
   public resetEnableRestriction() {
@@ -1446,7 +1756,7 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
   }
   // Temporarily expose input value. Use with caution.
   public get enableRestrictionInput() {
-    return this._enableRestriction
+    return this._enableRestriction;
   }
 }
 export interface AccessContextManagerServicePerimeterStatus {
@@ -1503,7 +1813,7 @@ restrictions.
   readonly vpcAccessibleServices?: AccessContextManagerServicePerimeterStatusVpcAccessibleServices;
 }
 
-function accessContextManagerServicePerimeterStatusToTerraform(struct?: AccessContextManagerServicePerimeterStatusOutputReference | AccessContextManagerServicePerimeterStatus): any {
+export function accessContextManagerServicePerimeterStatusToTerraform(struct?: AccessContextManagerServicePerimeterStatusOutputReference | AccessContextManagerServicePerimeterStatus): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1528,12 +1838,61 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterStatus | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._accessLevels) {
+      hasAnyValues = true;
+      internalValueResult.accessLevels = this._accessLevels;
+    }
+    if (this._resources) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources;
+    }
+    if (this._restrictedServices) {
+      hasAnyValues = true;
+      internalValueResult.restrictedServices = this._restrictedServices;
+    }
+    if (this._egressPolicies) {
+      hasAnyValues = true;
+      internalValueResult.egressPolicies = this._egressPolicies;
+    }
+    if (this._ingressPolicies) {
+      hasAnyValues = true;
+      internalValueResult.ingressPolicies = this._ingressPolicies;
+    }
+    if (this._vpcAccessibleServices) {
+      hasAnyValues = true;
+      internalValueResult.vpcAccessibleServices = this._vpcAccessibleServices?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatus | undefined) {
+    if (value === undefined) {
+      this._accessLevels = undefined;
+      this._resources = undefined;
+      this._restrictedServices = undefined;
+      this._egressPolicies = undefined;
+      this._ingressPolicies = undefined;
+      this._vpcAccessibleServices.internalValue = undefined;
+    }
+    else {
+      this._accessLevels = value.accessLevels;
+      this._resources = value.resources;
+      this._restrictedServices = value.restrictedServices;
+      this._egressPolicies = value.egressPolicies;
+      this._ingressPolicies = value.ingressPolicies;
+      this._vpcAccessibleServices.internalValue = value.vpcAccessibleServices;
+    }
+  }
+
   // access_levels - computed: false, optional: true, required: false
-  private _accessLevels?: string[] | undefined; 
+  private _accessLevels?: string[]; 
   public get accessLevels() {
     return this.getListAttribute('access_levels');
   }
-  public set accessLevels(value: string[] | undefined) {
+  public set accessLevels(value: string[]) {
     this._accessLevels = value;
   }
   public resetAccessLevels() {
@@ -1541,15 +1900,15 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get accessLevelsInput() {
-    return this._accessLevels
+    return this._accessLevels;
   }
 
   // resources - computed: false, optional: true, required: false
-  private _resources?: string[] | undefined; 
+  private _resources?: string[]; 
   public get resources() {
     return this.getListAttribute('resources');
   }
-  public set resources(value: string[] | undefined) {
+  public set resources(value: string[]) {
     this._resources = value;
   }
   public resetResources() {
@@ -1557,15 +1916,15 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources;
   }
 
   // restricted_services - computed: false, optional: true, required: false
-  private _restrictedServices?: string[] | undefined; 
+  private _restrictedServices?: string[]; 
   public get restrictedServices() {
     return this.getListAttribute('restricted_services');
   }
-  public set restrictedServices(value: string[] | undefined) {
+  public set restrictedServices(value: string[]) {
     this._restrictedServices = value;
   }
   public resetRestrictedServices() {
@@ -1573,16 +1932,16 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get restrictedServicesInput() {
-    return this._restrictedServices
+    return this._restrictedServices;
   }
 
   // egress_policies - computed: false, optional: true, required: false
-  private _egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[] | undefined; 
+  private _egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[]; 
   public get egressPolicies() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('egress_policies') as any;
   }
-  public set egressPolicies(value: AccessContextManagerServicePerimeterStatusEgressPolicies[] | undefined) {
+  public set egressPolicies(value: AccessContextManagerServicePerimeterStatusEgressPolicies[]) {
     this._egressPolicies = value;
   }
   public resetEgressPolicies() {
@@ -1590,16 +1949,16 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get egressPoliciesInput() {
-    return this._egressPolicies
+    return this._egressPolicies;
   }
 
   // ingress_policies - computed: false, optional: true, required: false
-  private _ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[] | undefined; 
+  private _ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[]; 
   public get ingressPolicies() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ingress_policies') as any;
   }
-  public set ingressPolicies(value: AccessContextManagerServicePerimeterStatusIngressPolicies[] | undefined) {
+  public set ingressPolicies(value: AccessContextManagerServicePerimeterStatusIngressPolicies[]) {
     this._ingressPolicies = value;
   }
   public resetIngressPolicies() {
@@ -1607,24 +1966,23 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get ingressPoliciesInput() {
-    return this._ingressPolicies
+    return this._ingressPolicies;
   }
 
   // vpc_accessible_services - computed: false, optional: true, required: false
-  private _vpcAccessibleServices?: AccessContextManagerServicePerimeterStatusVpcAccessibleServices | undefined; 
-  private __vpcAccessibleServicesOutput = new AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference(this as any, "vpc_accessible_services", true);
+  private _vpcAccessibleServices = new AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference(this as any, "vpc_accessible_services", true);
   public get vpcAccessibleServices() {
-    return this.__vpcAccessibleServicesOutput;
+    return this._vpcAccessibleServices;
   }
-  public putVpcAccessibleServices(value: AccessContextManagerServicePerimeterStatusVpcAccessibleServices | undefined) {
-    this._vpcAccessibleServices = value;
+  public putVpcAccessibleServices(value: AccessContextManagerServicePerimeterStatusVpcAccessibleServices) {
+    this._vpcAccessibleServices.internalValue = value;
   }
   public resetVpcAccessibleServices() {
-    this._vpcAccessibleServices = undefined;
+    this._vpcAccessibleServices.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vpcAccessibleServicesInput() {
-    return this._vpcAccessibleServices
+    return this._vpcAccessibleServices.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterTimeouts {
@@ -1642,7 +2000,7 @@ export interface AccessContextManagerServicePerimeterTimeouts {
   readonly update?: string;
 }
 
-function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?: AccessContextManagerServicePerimeterTimeoutsOutputReference | AccessContextManagerServicePerimeterTimeouts): any {
+export function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?: AccessContextManagerServicePerimeterTimeoutsOutputReference | AccessContextManagerServicePerimeterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1664,12 +2022,43 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerServicePerimeterTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1677,15 +2066,15 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1693,15 +2082,15 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1709,7 +2098,7 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1751,9 +2140,9 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
     this._perimeterType = config.perimeterType;
     this._title = config.title;
     this._useExplicitDryRunSpec = config.useExplicitDryRunSpec;
-    this._spec = config.spec;
-    this._status = config.status;
-    this._timeouts = config.timeouts;
+    this._spec.internalValue = config.spec;
+    this._status.internalValue = config.status;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1766,11 +2155,11 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1778,7 +2167,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1796,7 +2185,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parent - computed: false, optional: false, required: true
@@ -1809,15 +2198,15 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // perimeter_type - computed: false, optional: true, required: false
-  private _perimeterType?: string | undefined; 
+  private _perimeterType?: string; 
   public get perimeterType() {
     return this.getStringAttribute('perimeter_type');
   }
-  public set perimeterType(value: string | undefined) {
+  public set perimeterType(value: string) {
     this._perimeterType = value;
   }
   public resetPerimeterType() {
@@ -1825,7 +2214,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get perimeterTypeInput() {
-    return this._perimeterType
+    return this._perimeterType;
   }
 
   // title - computed: false, optional: false, required: true
@@ -1838,7 +2227,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -1847,11 +2236,11 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // use_explicit_dry_run_spec - computed: false, optional: true, required: false
-  private _useExplicitDryRunSpec?: boolean | cdktf.IResolvable | undefined; 
+  private _useExplicitDryRunSpec?: boolean | cdktf.IResolvable; 
   public get useExplicitDryRunSpec() {
     return this.getBooleanAttribute('use_explicit_dry_run_spec') as any;
   }
-  public set useExplicitDryRunSpec(value: boolean | cdktf.IResolvable | undefined) {
+  public set useExplicitDryRunSpec(value: boolean | cdktf.IResolvable) {
     this._useExplicitDryRunSpec = value;
   }
   public resetUseExplicitDryRunSpec() {
@@ -1859,58 +2248,55 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get useExplicitDryRunSpecInput() {
-    return this._useExplicitDryRunSpec
+    return this._useExplicitDryRunSpec;
   }
 
   // spec - computed: false, optional: true, required: false
-  private _spec?: AccessContextManagerServicePerimeterSpec | undefined; 
-  private __specOutput = new AccessContextManagerServicePerimeterSpecOutputReference(this as any, "spec", true);
+  private _spec = new AccessContextManagerServicePerimeterSpecOutputReference(this as any, "spec", true);
   public get spec() {
-    return this.__specOutput;
+    return this._spec;
   }
-  public putSpec(value: AccessContextManagerServicePerimeterSpec | undefined) {
-    this._spec = value;
+  public putSpec(value: AccessContextManagerServicePerimeterSpec) {
+    this._spec.internalValue = value;
   }
   public resetSpec() {
-    this._spec = undefined;
+    this._spec.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get specInput() {
-    return this._spec
+    return this._spec.internalValue;
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: AccessContextManagerServicePerimeterStatus | undefined; 
-  private __statusOutput = new AccessContextManagerServicePerimeterStatusOutputReference(this as any, "status", true);
+  private _status = new AccessContextManagerServicePerimeterStatusOutputReference(this as any, "status", true);
   public get status() {
-    return this.__statusOutput;
+    return this._status;
   }
-  public putStatus(value: AccessContextManagerServicePerimeterStatus | undefined) {
-    this._status = value;
+  public putStatus(value: AccessContextManagerServicePerimeterStatus) {
+    this._status.internalValue = value;
   }
   public resetStatus() {
-    this._status = undefined;
+    this._status.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
-    return this._status
+    return this._status.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AccessContextManagerServicePerimeterTimeouts | undefined; 
-  private __timeoutsOutput = new AccessContextManagerServicePerimeterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AccessContextManagerServicePerimeterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AccessContextManagerServicePerimeterTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AccessContextManagerServicePerimeterTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1925,9 +2311,9 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
       perimeter_type: cdktf.stringToTerraform(this._perimeterType),
       title: cdktf.stringToTerraform(this._title),
       use_explicit_dry_run_spec: cdktf.booleanToTerraform(this._useExplicitDryRunSpec),
-      spec: accessContextManagerServicePerimeterSpecToTerraform(this._spec),
-      status: accessContextManagerServicePerimeterStatusToTerraform(this._status),
-      timeouts: accessContextManagerServicePerimeterTimeoutsToTerraform(this._timeouts),
+      spec: accessContextManagerServicePerimeterSpecToTerraform(this._spec.internalValue),
+      status: accessContextManagerServicePerimeterStatusToTerraform(this._status.internalValue),
+      timeouts: accessContextManagerServicePerimeterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

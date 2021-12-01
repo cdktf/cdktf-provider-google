@@ -82,7 +82,7 @@ export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appIdInput() {
-    return this._appId
+    return this._appId;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -105,15 +105,15 @@ export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -121,7 +121,7 @@ export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service - computed: false, optional: false, required: true
@@ -134,7 +134,7 @@ export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // version_id - computed: false, optional: false, required: true
@@ -147,7 +147,7 @@ export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionIdInput() {
-    return this._versionId
+    return this._versionId;
   }
 
   // =========

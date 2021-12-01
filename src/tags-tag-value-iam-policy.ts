@@ -77,7 +77,7 @@ export class TagsTagValueIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // tag_value - computed: false, optional: false, required: true
@@ -90,7 +90,7 @@ export class TagsTagValueIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagValueInput() {
-    return this._tagValue
+    return this._tagValue;
   }
 
   // =========

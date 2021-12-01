@@ -139,7 +139,7 @@ export interface SqlDatabaseInstanceClone {
   readonly sourceInstanceName: string;
 }
 
-function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstanceCloneOutputReference | SqlDatabaseInstanceClone): any {
+export function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstanceCloneOutputReference | SqlDatabaseInstanceClone): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -160,12 +160,37 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceClone | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._pointInTime) {
+      hasAnyValues = true;
+      internalValueResult.pointInTime = this._pointInTime;
+    }
+    if (this._sourceInstanceName) {
+      hasAnyValues = true;
+      internalValueResult.sourceInstanceName = this._sourceInstanceName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceClone | undefined) {
+    if (value === undefined) {
+      this._pointInTime = undefined;
+      this._sourceInstanceName = undefined;
+    }
+    else {
+      this._pointInTime = value.pointInTime;
+      this._sourceInstanceName = value.sourceInstanceName;
+    }
+  }
+
   // point_in_time - computed: false, optional: true, required: false
-  private _pointInTime?: string | undefined; 
+  private _pointInTime?: string; 
   public get pointInTime() {
     return this.getStringAttribute('point_in_time');
   }
-  public set pointInTime(value: string | undefined) {
+  public set pointInTime(value: string) {
     this._pointInTime = value;
   }
   public resetPointInTime() {
@@ -173,7 +198,7 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get pointInTimeInput() {
-    return this._pointInTime
+    return this._pointInTime;
   }
 
   // source_instance_name - computed: false, optional: false, required: true
@@ -186,7 +211,7 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInstanceNameInput() {
-    return this._sourceInstanceName
+    return this._sourceInstanceName;
   }
 }
 export interface SqlDatabaseInstanceReplicaConfiguration {
@@ -258,7 +283,7 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   readonly verifyServerCertificate?: boolean | cdktf.IResolvable;
 }
 
-function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlDatabaseInstanceReplicaConfigurationOutputReference | SqlDatabaseInstanceReplicaConfiguration): any {
+export function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlDatabaseInstanceReplicaConfigurationOutputReference | SqlDatabaseInstanceReplicaConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -288,12 +313,91 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceReplicaConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._caCertificate) {
+      hasAnyValues = true;
+      internalValueResult.caCertificate = this._caCertificate;
+    }
+    if (this._clientCertificate) {
+      hasAnyValues = true;
+      internalValueResult.clientCertificate = this._clientCertificate;
+    }
+    if (this._clientKey) {
+      hasAnyValues = true;
+      internalValueResult.clientKey = this._clientKey;
+    }
+    if (this._connectRetryInterval) {
+      hasAnyValues = true;
+      internalValueResult.connectRetryInterval = this._connectRetryInterval;
+    }
+    if (this._dumpFilePath) {
+      hasAnyValues = true;
+      internalValueResult.dumpFilePath = this._dumpFilePath;
+    }
+    if (this._failoverTarget) {
+      hasAnyValues = true;
+      internalValueResult.failoverTarget = this._failoverTarget;
+    }
+    if (this._masterHeartbeatPeriod) {
+      hasAnyValues = true;
+      internalValueResult.masterHeartbeatPeriod = this._masterHeartbeatPeriod;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._sslCipher) {
+      hasAnyValues = true;
+      internalValueResult.sslCipher = this._sslCipher;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    if (this._verifyServerCertificate) {
+      hasAnyValues = true;
+      internalValueResult.verifyServerCertificate = this._verifyServerCertificate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceReplicaConfiguration | undefined) {
+    if (value === undefined) {
+      this._caCertificate = undefined;
+      this._clientCertificate = undefined;
+      this._clientKey = undefined;
+      this._connectRetryInterval = undefined;
+      this._dumpFilePath = undefined;
+      this._failoverTarget = undefined;
+      this._masterHeartbeatPeriod = undefined;
+      this._password = undefined;
+      this._sslCipher = undefined;
+      this._username = undefined;
+      this._verifyServerCertificate = undefined;
+    }
+    else {
+      this._caCertificate = value.caCertificate;
+      this._clientCertificate = value.clientCertificate;
+      this._clientKey = value.clientKey;
+      this._connectRetryInterval = value.connectRetryInterval;
+      this._dumpFilePath = value.dumpFilePath;
+      this._failoverTarget = value.failoverTarget;
+      this._masterHeartbeatPeriod = value.masterHeartbeatPeriod;
+      this._password = value.password;
+      this._sslCipher = value.sslCipher;
+      this._username = value.username;
+      this._verifyServerCertificate = value.verifyServerCertificate;
+    }
+  }
+
   // ca_certificate - computed: false, optional: true, required: false
-  private _caCertificate?: string | undefined; 
+  private _caCertificate?: string; 
   public get caCertificate() {
     return this.getStringAttribute('ca_certificate');
   }
-  public set caCertificate(value: string | undefined) {
+  public set caCertificate(value: string) {
     this._caCertificate = value;
   }
   public resetCaCertificate() {
@@ -301,15 +405,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get caCertificateInput() {
-    return this._caCertificate
+    return this._caCertificate;
   }
 
   // client_certificate - computed: false, optional: true, required: false
-  private _clientCertificate?: string | undefined; 
+  private _clientCertificate?: string; 
   public get clientCertificate() {
     return this.getStringAttribute('client_certificate');
   }
-  public set clientCertificate(value: string | undefined) {
+  public set clientCertificate(value: string) {
     this._clientCertificate = value;
   }
   public resetClientCertificate() {
@@ -317,15 +421,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateInput() {
-    return this._clientCertificate
+    return this._clientCertificate;
   }
 
   // client_key - computed: false, optional: true, required: false
-  private _clientKey?: string | undefined; 
+  private _clientKey?: string; 
   public get clientKey() {
     return this.getStringAttribute('client_key');
   }
-  public set clientKey(value: string | undefined) {
+  public set clientKey(value: string) {
     this._clientKey = value;
   }
   public resetClientKey() {
@@ -333,15 +437,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get clientKeyInput() {
-    return this._clientKey
+    return this._clientKey;
   }
 
   // connect_retry_interval - computed: false, optional: true, required: false
-  private _connectRetryInterval?: number | undefined; 
+  private _connectRetryInterval?: number; 
   public get connectRetryInterval() {
     return this.getNumberAttribute('connect_retry_interval');
   }
-  public set connectRetryInterval(value: number | undefined) {
+  public set connectRetryInterval(value: number) {
     this._connectRetryInterval = value;
   }
   public resetConnectRetryInterval() {
@@ -349,15 +453,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get connectRetryIntervalInput() {
-    return this._connectRetryInterval
+    return this._connectRetryInterval;
   }
 
   // dump_file_path - computed: false, optional: true, required: false
-  private _dumpFilePath?: string | undefined; 
+  private _dumpFilePath?: string; 
   public get dumpFilePath() {
     return this.getStringAttribute('dump_file_path');
   }
-  public set dumpFilePath(value: string | undefined) {
+  public set dumpFilePath(value: string) {
     this._dumpFilePath = value;
   }
   public resetDumpFilePath() {
@@ -365,15 +469,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get dumpFilePathInput() {
-    return this._dumpFilePath
+    return this._dumpFilePath;
   }
 
   // failover_target - computed: false, optional: true, required: false
-  private _failoverTarget?: boolean | cdktf.IResolvable | undefined; 
+  private _failoverTarget?: boolean | cdktf.IResolvable; 
   public get failoverTarget() {
     return this.getBooleanAttribute('failover_target') as any;
   }
-  public set failoverTarget(value: boolean | cdktf.IResolvable | undefined) {
+  public set failoverTarget(value: boolean | cdktf.IResolvable) {
     this._failoverTarget = value;
   }
   public resetFailoverTarget() {
@@ -381,15 +485,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get failoverTargetInput() {
-    return this._failoverTarget
+    return this._failoverTarget;
   }
 
   // master_heartbeat_period - computed: false, optional: true, required: false
-  private _masterHeartbeatPeriod?: number | undefined; 
+  private _masterHeartbeatPeriod?: number; 
   public get masterHeartbeatPeriod() {
     return this.getNumberAttribute('master_heartbeat_period');
   }
-  public set masterHeartbeatPeriod(value: number | undefined) {
+  public set masterHeartbeatPeriod(value: number) {
     this._masterHeartbeatPeriod = value;
   }
   public resetMasterHeartbeatPeriod() {
@@ -397,15 +501,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get masterHeartbeatPeriodInput() {
-    return this._masterHeartbeatPeriod
+    return this._masterHeartbeatPeriod;
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -413,15 +517,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // ssl_cipher - computed: false, optional: true, required: false
-  private _sslCipher?: string | undefined; 
+  private _sslCipher?: string; 
   public get sslCipher() {
     return this.getStringAttribute('ssl_cipher');
   }
-  public set sslCipher(value: string | undefined) {
+  public set sslCipher(value: string) {
     this._sslCipher = value;
   }
   public resetSslCipher() {
@@ -429,15 +533,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get sslCipherInput() {
-    return this._sslCipher
+    return this._sslCipher;
   }
 
   // username - computed: false, optional: true, required: false
-  private _username?: string | undefined; 
+  private _username?: string; 
   public get username() {
     return this.getStringAttribute('username');
   }
-  public set username(value: string | undefined) {
+  public set username(value: string) {
     this._username = value;
   }
   public resetUsername() {
@@ -445,15 +549,15 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // verify_server_certificate - computed: false, optional: true, required: false
-  private _verifyServerCertificate?: boolean | cdktf.IResolvable | undefined; 
+  private _verifyServerCertificate?: boolean | cdktf.IResolvable; 
   public get verifyServerCertificate() {
     return this.getBooleanAttribute('verify_server_certificate') as any;
   }
-  public set verifyServerCertificate(value: boolean | cdktf.IResolvable | undefined) {
+  public set verifyServerCertificate(value: boolean | cdktf.IResolvable) {
     this._verifyServerCertificate = value;
   }
   public resetVerifyServerCertificate() {
@@ -461,7 +565,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get verifyServerCertificateInput() {
-    return this._verifyServerCertificate
+    return this._verifyServerCertificate;
   }
 }
 export interface SqlDatabaseInstanceRestoreBackupContext {
@@ -485,7 +589,7 @@ export interface SqlDatabaseInstanceRestoreBackupContext {
   readonly project?: string;
 }
 
-function sqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: SqlDatabaseInstanceRestoreBackupContextOutputReference | SqlDatabaseInstanceRestoreBackupContext): any {
+export function sqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: SqlDatabaseInstanceRestoreBackupContextOutputReference | SqlDatabaseInstanceRestoreBackupContext): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -507,6 +611,37 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceRestoreBackupContext | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._backupRunId) {
+      hasAnyValues = true;
+      internalValueResult.backupRunId = this._backupRunId;
+    }
+    if (this._instanceId) {
+      hasAnyValues = true;
+      internalValueResult.instanceId = this._instanceId;
+    }
+    if (this._project) {
+      hasAnyValues = true;
+      internalValueResult.project = this._project;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceRestoreBackupContext | undefined) {
+    if (value === undefined) {
+      this._backupRunId = undefined;
+      this._instanceId = undefined;
+      this._project = undefined;
+    }
+    else {
+      this._backupRunId = value.backupRunId;
+      this._instanceId = value.instanceId;
+      this._project = value.project;
+    }
+  }
+
   // backup_run_id - computed: false, optional: false, required: true
   private _backupRunId?: number; 
   public get backupRunId() {
@@ -517,15 +652,15 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get backupRunIdInput() {
-    return this._backupRunId
+    return this._backupRunId;
   }
 
   // instance_id - computed: false, optional: true, required: false
-  private _instanceId?: string | undefined; 
+  private _instanceId?: string; 
   public get instanceId() {
     return this.getStringAttribute('instance_id');
   }
-  public set instanceId(value: string | undefined) {
+  public set instanceId(value: string) {
     this._instanceId = value;
   }
   public resetInstanceId() {
@@ -533,15 +668,15 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get instanceIdInput() {
-    return this._instanceId
+    return this._instanceId;
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -549,7 +684,7 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 }
 export interface SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
@@ -567,7 +702,7 @@ export interface SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSe
   readonly retentionUnit?: string;
 }
 
-function sqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference | SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings): any {
+export function sqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference | SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -588,6 +723,31 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._retainedBackups) {
+      hasAnyValues = true;
+      internalValueResult.retainedBackups = this._retainedBackups;
+    }
+    if (this._retentionUnit) {
+      hasAnyValues = true;
+      internalValueResult.retentionUnit = this._retentionUnit;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined) {
+    if (value === undefined) {
+      this._retainedBackups = undefined;
+      this._retentionUnit = undefined;
+    }
+    else {
+      this._retainedBackups = value.retainedBackups;
+      this._retentionUnit = value.retentionUnit;
+    }
+  }
+
   // retained_backups - computed: false, optional: false, required: true
   private _retainedBackups?: number; 
   public get retainedBackups() {
@@ -598,15 +758,15 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
   }
   // Temporarily expose input value. Use with caution.
   public get retainedBackupsInput() {
-    return this._retainedBackups
+    return this._retainedBackups;
   }
 
   // retention_unit - computed: false, optional: true, required: false
-  private _retentionUnit?: string | undefined; 
+  private _retentionUnit?: string; 
   public get retentionUnit() {
     return this.getStringAttribute('retention_unit');
   }
-  public set retentionUnit(value: string | undefined) {
+  public set retentionUnit(value: string) {
     this._retentionUnit = value;
   }
   public resetRetentionUnit() {
@@ -614,7 +774,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
   }
   // Temporarily expose input value. Use with caution.
   public get retentionUnitInput() {
-    return this._retentionUnit
+    return this._retentionUnit;
   }
 }
 export interface SqlDatabaseInstanceSettingsBackupConfiguration {
@@ -662,7 +822,7 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   readonly backupRetentionSettings?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings;
 }
 
-function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationOutputReference | SqlDatabaseInstanceSettingsBackupConfiguration): any {
+export function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationOutputReference | SqlDatabaseInstanceSettingsBackupConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -688,12 +848,67 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettingsBackupConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._binaryLogEnabled) {
+      hasAnyValues = true;
+      internalValueResult.binaryLogEnabled = this._binaryLogEnabled;
+    }
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._location) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._pointInTimeRecoveryEnabled) {
+      hasAnyValues = true;
+      internalValueResult.pointInTimeRecoveryEnabled = this._pointInTimeRecoveryEnabled;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    if (this._transactionLogRetentionDays) {
+      hasAnyValues = true;
+      internalValueResult.transactionLogRetentionDays = this._transactionLogRetentionDays;
+    }
+    if (this._backupRetentionSettings) {
+      hasAnyValues = true;
+      internalValueResult.backupRetentionSettings = this._backupRetentionSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsBackupConfiguration | undefined) {
+    if (value === undefined) {
+      this._binaryLogEnabled = undefined;
+      this._enabled = undefined;
+      this._location = undefined;
+      this._pointInTimeRecoveryEnabled = undefined;
+      this._startTime = undefined;
+      this._transactionLogRetentionDays = undefined;
+      this._backupRetentionSettings.internalValue = undefined;
+    }
+    else {
+      this._binaryLogEnabled = value.binaryLogEnabled;
+      this._enabled = value.enabled;
+      this._location = value.location;
+      this._pointInTimeRecoveryEnabled = value.pointInTimeRecoveryEnabled;
+      this._startTime = value.startTime;
+      this._transactionLogRetentionDays = value.transactionLogRetentionDays;
+      this._backupRetentionSettings.internalValue = value.backupRetentionSettings;
+    }
+  }
+
   // binary_log_enabled - computed: false, optional: true, required: false
-  private _binaryLogEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _binaryLogEnabled?: boolean | cdktf.IResolvable; 
   public get binaryLogEnabled() {
     return this.getBooleanAttribute('binary_log_enabled') as any;
   }
-  public set binaryLogEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set binaryLogEnabled(value: boolean | cdktf.IResolvable) {
     this._binaryLogEnabled = value;
   }
   public resetBinaryLogEnabled() {
@@ -701,15 +916,15 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get binaryLogEnabledInput() {
-    return this._binaryLogEnabled
+    return this._binaryLogEnabled;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -717,15 +932,15 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -733,15 +948,15 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // point_in_time_recovery_enabled - computed: false, optional: true, required: false
-  private _pointInTimeRecoveryEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _pointInTimeRecoveryEnabled?: boolean | cdktf.IResolvable; 
   public get pointInTimeRecoveryEnabled() {
     return this.getBooleanAttribute('point_in_time_recovery_enabled') as any;
   }
-  public set pointInTimeRecoveryEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set pointInTimeRecoveryEnabled(value: boolean | cdktf.IResolvable) {
     this._pointInTimeRecoveryEnabled = value;
   }
   public resetPointInTimeRecoveryEnabled() {
@@ -749,15 +964,15 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get pointInTimeRecoveryEnabledInput() {
-    return this._pointInTimeRecoveryEnabled
+    return this._pointInTimeRecoveryEnabled;
   }
 
   // start_time - computed: true, optional: true, required: false
-  private _startTime?: string | undefined; 
+  private _startTime?: string; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -765,15 +980,15 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 
   // transaction_log_retention_days - computed: true, optional: true, required: false
-  private _transactionLogRetentionDays?: number | undefined; 
+  private _transactionLogRetentionDays?: number; 
   public get transactionLogRetentionDays() {
     return this.getNumberAttribute('transaction_log_retention_days');
   }
-  public set transactionLogRetentionDays(value: number | undefined) {
+  public set transactionLogRetentionDays(value: number) {
     this._transactionLogRetentionDays = value;
   }
   public resetTransactionLogRetentionDays() {
@@ -781,24 +996,23 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get transactionLogRetentionDaysInput() {
-    return this._transactionLogRetentionDays
+    return this._transactionLogRetentionDays;
   }
 
   // backup_retention_settings - computed: false, optional: true, required: false
-  private _backupRetentionSettings?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined; 
-  private __backupRetentionSettingsOutput = new SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this as any, "backup_retention_settings", true);
+  private _backupRetentionSettings = new SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this as any, "backup_retention_settings", true);
   public get backupRetentionSettings() {
-    return this.__backupRetentionSettingsOutput;
+    return this._backupRetentionSettings;
   }
-  public putBackupRetentionSettings(value: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined) {
-    this._backupRetentionSettings = value;
+  public putBackupRetentionSettings(value: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings) {
+    this._backupRetentionSettings.internalValue = value;
   }
   public resetBackupRetentionSettings() {
-    this._backupRetentionSettings = undefined;
+    this._backupRetentionSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get backupRetentionSettingsInput() {
-    return this._backupRetentionSettings
+    return this._backupRetentionSettings.internalValue;
   }
 }
 export interface SqlDatabaseInstanceSettingsDatabaseFlags {
@@ -816,7 +1030,7 @@ export interface SqlDatabaseInstanceSettingsDatabaseFlags {
   readonly value: string;
 }
 
-function sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: SqlDatabaseInstanceSettingsDatabaseFlags): any {
+export function sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: SqlDatabaseInstanceSettingsDatabaseFlags): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -854,7 +1068,7 @@ export interface SqlDatabaseInstanceSettingsInsightsConfig {
   readonly recordClientAddress?: boolean | cdktf.IResolvable;
 }
 
-function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: SqlDatabaseInstanceSettingsInsightsConfigOutputReference | SqlDatabaseInstanceSettingsInsightsConfig): any {
+export function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: SqlDatabaseInstanceSettingsInsightsConfigOutputReference | SqlDatabaseInstanceSettingsInsightsConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -877,12 +1091,49 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettingsInsightsConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._queryInsightsEnabled) {
+      hasAnyValues = true;
+      internalValueResult.queryInsightsEnabled = this._queryInsightsEnabled;
+    }
+    if (this._queryStringLength) {
+      hasAnyValues = true;
+      internalValueResult.queryStringLength = this._queryStringLength;
+    }
+    if (this._recordApplicationTags) {
+      hasAnyValues = true;
+      internalValueResult.recordApplicationTags = this._recordApplicationTags;
+    }
+    if (this._recordClientAddress) {
+      hasAnyValues = true;
+      internalValueResult.recordClientAddress = this._recordClientAddress;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsInsightsConfig | undefined) {
+    if (value === undefined) {
+      this._queryInsightsEnabled = undefined;
+      this._queryStringLength = undefined;
+      this._recordApplicationTags = undefined;
+      this._recordClientAddress = undefined;
+    }
+    else {
+      this._queryInsightsEnabled = value.queryInsightsEnabled;
+      this._queryStringLength = value.queryStringLength;
+      this._recordApplicationTags = value.recordApplicationTags;
+      this._recordClientAddress = value.recordClientAddress;
+    }
+  }
+
   // query_insights_enabled - computed: false, optional: true, required: false
-  private _queryInsightsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _queryInsightsEnabled?: boolean | cdktf.IResolvable; 
   public get queryInsightsEnabled() {
     return this.getBooleanAttribute('query_insights_enabled') as any;
   }
-  public set queryInsightsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set queryInsightsEnabled(value: boolean | cdktf.IResolvable) {
     this._queryInsightsEnabled = value;
   }
   public resetQueryInsightsEnabled() {
@@ -890,15 +1141,15 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get queryInsightsEnabledInput() {
-    return this._queryInsightsEnabled
+    return this._queryInsightsEnabled;
   }
 
   // query_string_length - computed: false, optional: true, required: false
-  private _queryStringLength?: number | undefined; 
+  private _queryStringLength?: number; 
   public get queryStringLength() {
     return this.getNumberAttribute('query_string_length');
   }
-  public set queryStringLength(value: number | undefined) {
+  public set queryStringLength(value: number) {
     this._queryStringLength = value;
   }
   public resetQueryStringLength() {
@@ -906,15 +1157,15 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringLengthInput() {
-    return this._queryStringLength
+    return this._queryStringLength;
   }
 
   // record_application_tags - computed: false, optional: true, required: false
-  private _recordApplicationTags?: boolean | cdktf.IResolvable | undefined; 
+  private _recordApplicationTags?: boolean | cdktf.IResolvable; 
   public get recordApplicationTags() {
     return this.getBooleanAttribute('record_application_tags') as any;
   }
-  public set recordApplicationTags(value: boolean | cdktf.IResolvable | undefined) {
+  public set recordApplicationTags(value: boolean | cdktf.IResolvable) {
     this._recordApplicationTags = value;
   }
   public resetRecordApplicationTags() {
@@ -922,15 +1173,15 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get recordApplicationTagsInput() {
-    return this._recordApplicationTags
+    return this._recordApplicationTags;
   }
 
   // record_client_address - computed: false, optional: true, required: false
-  private _recordClientAddress?: boolean | cdktf.IResolvable | undefined; 
+  private _recordClientAddress?: boolean | cdktf.IResolvable; 
   public get recordClientAddress() {
     return this.getBooleanAttribute('record_client_address') as any;
   }
-  public set recordClientAddress(value: boolean | cdktf.IResolvable | undefined) {
+  public set recordClientAddress(value: boolean | cdktf.IResolvable) {
     this._recordClientAddress = value;
   }
   public resetRecordClientAddress() {
@@ -938,7 +1189,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get recordClientAddressInput() {
-    return this._recordClientAddress
+    return this._recordClientAddress;
   }
 }
 export interface SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
@@ -956,7 +1207,7 @@ export interface SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
   readonly value: string;
 }
 
-function sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks): any {
+export function sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -993,7 +1244,7 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   readonly authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[];
 }
 
-function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationOutputReference | SqlDatabaseInstanceSettingsIpConfiguration): any {
+export function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationOutputReference | SqlDatabaseInstanceSettingsIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1016,12 +1267,49 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettingsIpConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._ipv4Enabled) {
+      hasAnyValues = true;
+      internalValueResult.ipv4Enabled = this._ipv4Enabled;
+    }
+    if (this._privateNetwork) {
+      hasAnyValues = true;
+      internalValueResult.privateNetwork = this._privateNetwork;
+    }
+    if (this._requireSsl) {
+      hasAnyValues = true;
+      internalValueResult.requireSsl = this._requireSsl;
+    }
+    if (this._authorizedNetworks) {
+      hasAnyValues = true;
+      internalValueResult.authorizedNetworks = this._authorizedNetworks;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsIpConfiguration | undefined) {
+    if (value === undefined) {
+      this._ipv4Enabled = undefined;
+      this._privateNetwork = undefined;
+      this._requireSsl = undefined;
+      this._authorizedNetworks = undefined;
+    }
+    else {
+      this._ipv4Enabled = value.ipv4Enabled;
+      this._privateNetwork = value.privateNetwork;
+      this._requireSsl = value.requireSsl;
+      this._authorizedNetworks = value.authorizedNetworks;
+    }
+  }
+
   // ipv4_enabled - computed: false, optional: true, required: false
-  private _ipv4Enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _ipv4Enabled?: boolean | cdktf.IResolvable; 
   public get ipv4Enabled() {
     return this.getBooleanAttribute('ipv4_enabled') as any;
   }
-  public set ipv4Enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set ipv4Enabled(value: boolean | cdktf.IResolvable) {
     this._ipv4Enabled = value;
   }
   public resetIpv4Enabled() {
@@ -1029,15 +1317,15 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get ipv4EnabledInput() {
-    return this._ipv4Enabled
+    return this._ipv4Enabled;
   }
 
   // private_network - computed: false, optional: true, required: false
-  private _privateNetwork?: string | undefined; 
+  private _privateNetwork?: string; 
   public get privateNetwork() {
     return this.getStringAttribute('private_network');
   }
-  public set privateNetwork(value: string | undefined) {
+  public set privateNetwork(value: string) {
     this._privateNetwork = value;
   }
   public resetPrivateNetwork() {
@@ -1045,15 +1333,15 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get privateNetworkInput() {
-    return this._privateNetwork
+    return this._privateNetwork;
   }
 
   // require_ssl - computed: false, optional: true, required: false
-  private _requireSsl?: boolean | cdktf.IResolvable | undefined; 
+  private _requireSsl?: boolean | cdktf.IResolvable; 
   public get requireSsl() {
     return this.getBooleanAttribute('require_ssl') as any;
   }
-  public set requireSsl(value: boolean | cdktf.IResolvable | undefined) {
+  public set requireSsl(value: boolean | cdktf.IResolvable) {
     this._requireSsl = value;
   }
   public resetRequireSsl() {
@@ -1061,16 +1349,16 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get requireSslInput() {
-    return this._requireSsl
+    return this._requireSsl;
   }
 
   // authorized_networks - computed: false, optional: true, required: false
-  private _authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[] | undefined; 
+  private _authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[]; 
   public get authorizedNetworks() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('authorized_networks') as any;
   }
-  public set authorizedNetworks(value: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[] | undefined) {
+  public set authorizedNetworks(value: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[]) {
     this._authorizedNetworks = value;
   }
   public resetAuthorizedNetworks() {
@@ -1078,7 +1366,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get authorizedNetworksInput() {
-    return this._authorizedNetworks
+    return this._authorizedNetworks;
   }
 }
 export interface SqlDatabaseInstanceSettingsLocationPreference {
@@ -1096,7 +1384,7 @@ export interface SqlDatabaseInstanceSettingsLocationPreference {
   readonly zone?: string;
 }
 
-function sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct?: SqlDatabaseInstanceSettingsLocationPreferenceOutputReference | SqlDatabaseInstanceSettingsLocationPreference): any {
+export function sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct?: SqlDatabaseInstanceSettingsLocationPreferenceOutputReference | SqlDatabaseInstanceSettingsLocationPreference): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1117,12 +1405,37 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettingsLocationPreference | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._followGaeApplication) {
+      hasAnyValues = true;
+      internalValueResult.followGaeApplication = this._followGaeApplication;
+    }
+    if (this._zone) {
+      hasAnyValues = true;
+      internalValueResult.zone = this._zone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsLocationPreference | undefined) {
+    if (value === undefined) {
+      this._followGaeApplication = undefined;
+      this._zone = undefined;
+    }
+    else {
+      this._followGaeApplication = value.followGaeApplication;
+      this._zone = value.zone;
+    }
+  }
+
   // follow_gae_application - computed: false, optional: true, required: false
-  private _followGaeApplication?: string | undefined; 
+  private _followGaeApplication?: string; 
   public get followGaeApplication() {
     return this.getStringAttribute('follow_gae_application');
   }
-  public set followGaeApplication(value: string | undefined) {
+  public set followGaeApplication(value: string) {
     this._followGaeApplication = value;
   }
   public resetFollowGaeApplication() {
@@ -1130,15 +1443,15 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get followGaeApplicationInput() {
-    return this._followGaeApplication
+    return this._followGaeApplication;
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -1146,7 +1459,7 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 }
 export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
@@ -1170,7 +1483,7 @@ export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
   readonly updateTrack?: string;
 }
 
-function sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct?: SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference | SqlDatabaseInstanceSettingsMaintenanceWindow): any {
+export function sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct?: SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference | SqlDatabaseInstanceSettingsMaintenanceWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1192,12 +1505,43 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettingsMaintenanceWindow | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._day) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._hour) {
+      hasAnyValues = true;
+      internalValueResult.hour = this._hour;
+    }
+    if (this._updateTrack) {
+      hasAnyValues = true;
+      internalValueResult.updateTrack = this._updateTrack;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this._day = undefined;
+      this._hour = undefined;
+      this._updateTrack = undefined;
+    }
+    else {
+      this._day = value.day;
+      this._hour = value.hour;
+      this._updateTrack = value.updateTrack;
+    }
+  }
+
   // day - computed: false, optional: true, required: false
-  private _day?: number | undefined; 
+  private _day?: number; 
   public get day() {
     return this.getNumberAttribute('day');
   }
-  public set day(value: number | undefined) {
+  public set day(value: number) {
     this._day = value;
   }
   public resetDay() {
@@ -1205,15 +1549,15 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get dayInput() {
-    return this._day
+    return this._day;
   }
 
   // hour - computed: false, optional: true, required: false
-  private _hour?: number | undefined; 
+  private _hour?: number; 
   public get hour() {
     return this.getNumberAttribute('hour');
   }
-  public set hour(value: number | undefined) {
+  public set hour(value: number) {
     this._hour = value;
   }
   public resetHour() {
@@ -1221,15 +1565,15 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get hourInput() {
-    return this._hour
+    return this._hour;
   }
 
   // update_track - computed: false, optional: true, required: false
-  private _updateTrack?: string | undefined; 
+  private _updateTrack?: string; 
   public get updateTrack() {
     return this.getStringAttribute('update_track');
   }
-  public set updateTrack(value: string | undefined) {
+  public set updateTrack(value: string) {
     this._updateTrack = value;
   }
   public resetUpdateTrack() {
@@ -1237,7 +1581,7 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateTrackInput() {
-    return this._updateTrack
+    return this._updateTrack;
   }
 }
 export interface SqlDatabaseInstanceSettings {
@@ -1360,7 +1704,7 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   readonly maintenanceWindow?: SqlDatabaseInstanceSettingsMaintenanceWindow;
 }
 
-function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsOutputReference | SqlDatabaseInstanceSettings): any {
+export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsOutputReference | SqlDatabaseInstanceSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1398,12 +1742,139 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._activationPolicy) {
+      hasAnyValues = true;
+      internalValueResult.activationPolicy = this._activationPolicy;
+    }
+    if (this._authorizedGaeApplications) {
+      hasAnyValues = true;
+      internalValueResult.authorizedGaeApplications = this._authorizedGaeApplications;
+    }
+    if (this._availabilityType) {
+      hasAnyValues = true;
+      internalValueResult.availabilityType = this._availabilityType;
+    }
+    if (this._collation) {
+      hasAnyValues = true;
+      internalValueResult.collation = this._collation;
+    }
+    if (this._crashSafeReplication) {
+      hasAnyValues = true;
+      internalValueResult.crashSafeReplication = this._crashSafeReplication;
+    }
+    if (this._diskAutoresize) {
+      hasAnyValues = true;
+      internalValueResult.diskAutoresize = this._diskAutoresize;
+    }
+    if (this._diskAutoresizeLimit) {
+      hasAnyValues = true;
+      internalValueResult.diskAutoresizeLimit = this._diskAutoresizeLimit;
+    }
+    if (this._diskSize) {
+      hasAnyValues = true;
+      internalValueResult.diskSize = this._diskSize;
+    }
+    if (this._diskType) {
+      hasAnyValues = true;
+      internalValueResult.diskType = this._diskType;
+    }
+    if (this._pricingPlan) {
+      hasAnyValues = true;
+      internalValueResult.pricingPlan = this._pricingPlan;
+    }
+    if (this._replicationType) {
+      hasAnyValues = true;
+      internalValueResult.replicationType = this._replicationType;
+    }
+    if (this._tier) {
+      hasAnyValues = true;
+      internalValueResult.tier = this._tier;
+    }
+    if (this._userLabels) {
+      hasAnyValues = true;
+      internalValueResult.userLabels = this._userLabels;
+    }
+    if (this._backupConfiguration) {
+      hasAnyValues = true;
+      internalValueResult.backupConfiguration = this._backupConfiguration?.internalValue;
+    }
+    if (this._databaseFlags) {
+      hasAnyValues = true;
+      internalValueResult.databaseFlags = this._databaseFlags;
+    }
+    if (this._insightsConfig) {
+      hasAnyValues = true;
+      internalValueResult.insightsConfig = this._insightsConfig?.internalValue;
+    }
+    if (this._ipConfiguration) {
+      hasAnyValues = true;
+      internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
+    }
+    if (this._locationPreference) {
+      hasAnyValues = true;
+      internalValueResult.locationPreference = this._locationPreference?.internalValue;
+    }
+    if (this._maintenanceWindow) {
+      hasAnyValues = true;
+      internalValueResult.maintenanceWindow = this._maintenanceWindow?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettings | undefined) {
+    if (value === undefined) {
+      this._activationPolicy = undefined;
+      this._authorizedGaeApplications = undefined;
+      this._availabilityType = undefined;
+      this._collation = undefined;
+      this._crashSafeReplication = undefined;
+      this._diskAutoresize = undefined;
+      this._diskAutoresizeLimit = undefined;
+      this._diskSize = undefined;
+      this._diskType = undefined;
+      this._pricingPlan = undefined;
+      this._replicationType = undefined;
+      this._tier = undefined;
+      this._userLabels = undefined;
+      this._backupConfiguration.internalValue = undefined;
+      this._databaseFlags = undefined;
+      this._insightsConfig.internalValue = undefined;
+      this._ipConfiguration.internalValue = undefined;
+      this._locationPreference.internalValue = undefined;
+      this._maintenanceWindow.internalValue = undefined;
+    }
+    else {
+      this._activationPolicy = value.activationPolicy;
+      this._authorizedGaeApplications = value.authorizedGaeApplications;
+      this._availabilityType = value.availabilityType;
+      this._collation = value.collation;
+      this._crashSafeReplication = value.crashSafeReplication;
+      this._diskAutoresize = value.diskAutoresize;
+      this._diskAutoresizeLimit = value.diskAutoresizeLimit;
+      this._diskSize = value.diskSize;
+      this._diskType = value.diskType;
+      this._pricingPlan = value.pricingPlan;
+      this._replicationType = value.replicationType;
+      this._tier = value.tier;
+      this._userLabels = value.userLabels;
+      this._backupConfiguration.internalValue = value.backupConfiguration;
+      this._databaseFlags = value.databaseFlags;
+      this._insightsConfig.internalValue = value.insightsConfig;
+      this._ipConfiguration.internalValue = value.ipConfiguration;
+      this._locationPreference.internalValue = value.locationPreference;
+      this._maintenanceWindow.internalValue = value.maintenanceWindow;
+    }
+  }
+
   // activation_policy - computed: true, optional: true, required: false
-  private _activationPolicy?: string | undefined; 
+  private _activationPolicy?: string; 
   public get activationPolicy() {
     return this.getStringAttribute('activation_policy');
   }
-  public set activationPolicy(value: string | undefined) {
+  public set activationPolicy(value: string) {
     this._activationPolicy = value;
   }
   public resetActivationPolicy() {
@@ -1411,15 +1882,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get activationPolicyInput() {
-    return this._activationPolicy
+    return this._activationPolicy;
   }
 
   // authorized_gae_applications - computed: true, optional: true, required: false
-  private _authorizedGaeApplications?: string[] | undefined; 
+  private _authorizedGaeApplications?: string[]; 
   public get authorizedGaeApplications() {
     return this.getListAttribute('authorized_gae_applications');
   }
-  public set authorizedGaeApplications(value: string[] | undefined) {
+  public set authorizedGaeApplications(value: string[]) {
     this._authorizedGaeApplications = value;
   }
   public resetAuthorizedGaeApplications() {
@@ -1427,15 +1898,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get authorizedGaeApplicationsInput() {
-    return this._authorizedGaeApplications
+    return this._authorizedGaeApplications;
   }
 
   // availability_type - computed: true, optional: true, required: false
-  private _availabilityType?: string | undefined; 
+  private _availabilityType?: string; 
   public get availabilityType() {
     return this.getStringAttribute('availability_type');
   }
-  public set availabilityType(value: string | undefined) {
+  public set availabilityType(value: string) {
     this._availabilityType = value;
   }
   public resetAvailabilityType() {
@@ -1443,15 +1914,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get availabilityTypeInput() {
-    return this._availabilityType
+    return this._availabilityType;
   }
 
   // collation - computed: false, optional: true, required: false
-  private _collation?: string | undefined; 
+  private _collation?: string; 
   public get collation() {
     return this.getStringAttribute('collation');
   }
-  public set collation(value: string | undefined) {
+  public set collation(value: string) {
     this._collation = value;
   }
   public resetCollation() {
@@ -1459,15 +1930,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
-    return this._collation
+    return this._collation;
   }
 
   // crash_safe_replication - computed: true, optional: true, required: false
-  private _crashSafeReplication?: boolean | cdktf.IResolvable | undefined; 
+  private _crashSafeReplication?: boolean | cdktf.IResolvable; 
   public get crashSafeReplication() {
     return this.getBooleanAttribute('crash_safe_replication') as any;
   }
-  public set crashSafeReplication(value: boolean | cdktf.IResolvable | undefined) {
+  public set crashSafeReplication(value: boolean | cdktf.IResolvable) {
     this._crashSafeReplication = value;
   }
   public resetCrashSafeReplication() {
@@ -1475,15 +1946,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get crashSafeReplicationInput() {
-    return this._crashSafeReplication
+    return this._crashSafeReplication;
   }
 
   // disk_autoresize - computed: false, optional: true, required: false
-  private _diskAutoresize?: boolean | cdktf.IResolvable | undefined; 
+  private _diskAutoresize?: boolean | cdktf.IResolvable; 
   public get diskAutoresize() {
     return this.getBooleanAttribute('disk_autoresize') as any;
   }
-  public set diskAutoresize(value: boolean | cdktf.IResolvable | undefined) {
+  public set diskAutoresize(value: boolean | cdktf.IResolvable) {
     this._diskAutoresize = value;
   }
   public resetDiskAutoresize() {
@@ -1491,15 +1962,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get diskAutoresizeInput() {
-    return this._diskAutoresize
+    return this._diskAutoresize;
   }
 
   // disk_autoresize_limit - computed: false, optional: true, required: false
-  private _diskAutoresizeLimit?: number | undefined; 
+  private _diskAutoresizeLimit?: number; 
   public get diskAutoresizeLimit() {
     return this.getNumberAttribute('disk_autoresize_limit');
   }
-  public set diskAutoresizeLimit(value: number | undefined) {
+  public set diskAutoresizeLimit(value: number) {
     this._diskAutoresizeLimit = value;
   }
   public resetDiskAutoresizeLimit() {
@@ -1507,15 +1978,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get diskAutoresizeLimitInput() {
-    return this._diskAutoresizeLimit
+    return this._diskAutoresizeLimit;
   }
 
   // disk_size - computed: true, optional: true, required: false
-  private _diskSize?: number | undefined; 
+  private _diskSize?: number; 
   public get diskSize() {
     return this.getNumberAttribute('disk_size');
   }
-  public set diskSize(value: number | undefined) {
+  public set diskSize(value: number) {
     this._diskSize = value;
   }
   public resetDiskSize() {
@@ -1523,15 +1994,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get diskSizeInput() {
-    return this._diskSize
+    return this._diskSize;
   }
 
   // disk_type - computed: true, optional: true, required: false
-  private _diskType?: string | undefined; 
+  private _diskType?: string; 
   public get diskType() {
     return this.getStringAttribute('disk_type');
   }
-  public set diskType(value: string | undefined) {
+  public set diskType(value: string) {
     this._diskType = value;
   }
   public resetDiskType() {
@@ -1539,15 +2010,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get diskTypeInput() {
-    return this._diskType
+    return this._diskType;
   }
 
   // pricing_plan - computed: false, optional: true, required: false
-  private _pricingPlan?: string | undefined; 
+  private _pricingPlan?: string; 
   public get pricingPlan() {
     return this.getStringAttribute('pricing_plan');
   }
-  public set pricingPlan(value: string | undefined) {
+  public set pricingPlan(value: string) {
     this._pricingPlan = value;
   }
   public resetPricingPlan() {
@@ -1555,15 +2026,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get pricingPlanInput() {
-    return this._pricingPlan
+    return this._pricingPlan;
   }
 
   // replication_type - computed: true, optional: true, required: false
-  private _replicationType?: string | undefined; 
+  private _replicationType?: string; 
   public get replicationType() {
     return this.getStringAttribute('replication_type');
   }
-  public set replicationType(value: string | undefined) {
+  public set replicationType(value: string) {
     this._replicationType = value;
   }
   public resetReplicationType() {
@@ -1571,7 +2042,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get replicationTypeInput() {
-    return this._replicationType
+    return this._replicationType;
   }
 
   // tier - computed: false, optional: false, required: true
@@ -1584,16 +2055,16 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
-    return this._tier
+    return this._tier;
   }
 
   // user_labels - computed: true, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
   public get userLabels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -1601,33 +2072,32 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get userLabelsInput() {
-    return this._userLabels
+    return this._userLabels;
   }
 
   // backup_configuration - computed: false, optional: true, required: false
-  private _backupConfiguration?: SqlDatabaseInstanceSettingsBackupConfiguration | undefined; 
-  private __backupConfigurationOutput = new SqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this as any, "backup_configuration", true);
+  private _backupConfiguration = new SqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this as any, "backup_configuration", true);
   public get backupConfiguration() {
-    return this.__backupConfigurationOutput;
+    return this._backupConfiguration;
   }
-  public putBackupConfiguration(value: SqlDatabaseInstanceSettingsBackupConfiguration | undefined) {
-    this._backupConfiguration = value;
+  public putBackupConfiguration(value: SqlDatabaseInstanceSettingsBackupConfiguration) {
+    this._backupConfiguration.internalValue = value;
   }
   public resetBackupConfiguration() {
-    this._backupConfiguration = undefined;
+    this._backupConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get backupConfigurationInput() {
-    return this._backupConfiguration
+    return this._backupConfiguration.internalValue;
   }
 
   // database_flags - computed: false, optional: true, required: false
-  private _databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[] | undefined; 
+  private _databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[]; 
   public get databaseFlags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('database_flags') as any;
   }
-  public set databaseFlags(value: SqlDatabaseInstanceSettingsDatabaseFlags[] | undefined) {
+  public set databaseFlags(value: SqlDatabaseInstanceSettingsDatabaseFlags[]) {
     this._databaseFlags = value;
   }
   public resetDatabaseFlags() {
@@ -1635,75 +2105,71 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get databaseFlagsInput() {
-    return this._databaseFlags
+    return this._databaseFlags;
   }
 
   // insights_config - computed: false, optional: true, required: false
-  private _insightsConfig?: SqlDatabaseInstanceSettingsInsightsConfig | undefined; 
-  private __insightsConfigOutput = new SqlDatabaseInstanceSettingsInsightsConfigOutputReference(this as any, "insights_config", true);
+  private _insightsConfig = new SqlDatabaseInstanceSettingsInsightsConfigOutputReference(this as any, "insights_config", true);
   public get insightsConfig() {
-    return this.__insightsConfigOutput;
+    return this._insightsConfig;
   }
-  public putInsightsConfig(value: SqlDatabaseInstanceSettingsInsightsConfig | undefined) {
-    this._insightsConfig = value;
+  public putInsightsConfig(value: SqlDatabaseInstanceSettingsInsightsConfig) {
+    this._insightsConfig.internalValue = value;
   }
   public resetInsightsConfig() {
-    this._insightsConfig = undefined;
+    this._insightsConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get insightsConfigInput() {
-    return this._insightsConfig
+    return this._insightsConfig.internalValue;
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration?: SqlDatabaseInstanceSettingsIpConfiguration | undefined; 
-  private __ipConfigurationOutput = new SqlDatabaseInstanceSettingsIpConfigurationOutputReference(this as any, "ip_configuration", true);
+  private _ipConfiguration = new SqlDatabaseInstanceSettingsIpConfigurationOutputReference(this as any, "ip_configuration", true);
   public get ipConfiguration() {
-    return this.__ipConfigurationOutput;
+    return this._ipConfiguration;
   }
-  public putIpConfiguration(value: SqlDatabaseInstanceSettingsIpConfiguration | undefined) {
-    this._ipConfiguration = value;
+  public putIpConfiguration(value: SqlDatabaseInstanceSettingsIpConfiguration) {
+    this._ipConfiguration.internalValue = value;
   }
   public resetIpConfiguration() {
-    this._ipConfiguration = undefined;
+    this._ipConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
-    return this._ipConfiguration
+    return this._ipConfiguration.internalValue;
   }
 
   // location_preference - computed: false, optional: true, required: false
-  private _locationPreference?: SqlDatabaseInstanceSettingsLocationPreference | undefined; 
-  private __locationPreferenceOutput = new SqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this as any, "location_preference", true);
+  private _locationPreference = new SqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this as any, "location_preference", true);
   public get locationPreference() {
-    return this.__locationPreferenceOutput;
+    return this._locationPreference;
   }
-  public putLocationPreference(value: SqlDatabaseInstanceSettingsLocationPreference | undefined) {
-    this._locationPreference = value;
+  public putLocationPreference(value: SqlDatabaseInstanceSettingsLocationPreference) {
+    this._locationPreference.internalValue = value;
   }
   public resetLocationPreference() {
-    this._locationPreference = undefined;
+    this._locationPreference.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get locationPreferenceInput() {
-    return this._locationPreference
+    return this._locationPreference.internalValue;
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow?: SqlDatabaseInstanceSettingsMaintenanceWindow | undefined; 
-  private __maintenanceWindowOutput = new SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
   public get maintenanceWindow() {
-    return this.__maintenanceWindowOutput;
+    return this._maintenanceWindow;
   }
-  public putMaintenanceWindow(value: SqlDatabaseInstanceSettingsMaintenanceWindow | undefined) {
-    this._maintenanceWindow = value;
+  public putMaintenanceWindow(value: SqlDatabaseInstanceSettingsMaintenanceWindow) {
+    this._maintenanceWindow.internalValue = value;
   }
   public resetMaintenanceWindow() {
-    this._maintenanceWindow = undefined;
+    this._maintenanceWindow.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get maintenanceWindowInput() {
-    return this._maintenanceWindow
+    return this._maintenanceWindow.internalValue;
   }
 }
 export interface SqlDatabaseInstanceTimeouts {
@@ -1721,7 +2187,7 @@ export interface SqlDatabaseInstanceTimeouts {
   readonly update?: string;
 }
 
-function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInstanceTimeoutsOutputReference | SqlDatabaseInstanceTimeouts): any {
+export function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInstanceTimeoutsOutputReference | SqlDatabaseInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1743,12 +2209,43 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1756,15 +2253,15 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1772,15 +2269,15 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1788,7 +2285,7 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1831,11 +2328,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._rootPassword = config.rootPassword;
-    this._clone = config.clone;
-    this._replicaConfiguration = config.replicaConfiguration;
-    this._restoreBackupContext = config.restoreBackupContext;
-    this._settings = config.settings;
-    this._timeouts = config.timeouts;
+    this._clone.internalValue = config.clone;
+    this._replicaConfiguration.internalValue = config.replicaConfiguration;
+    this._restoreBackupContext.internalValue = config.restoreBackupContext;
+    this._settings.internalValue = config.settings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1848,11 +2345,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // database_version - computed: false, optional: true, required: false
-  private _databaseVersion?: string | undefined; 
+  private _databaseVersion?: string; 
   public get databaseVersion() {
     return this.getStringAttribute('database_version');
   }
-  public set databaseVersion(value: string | undefined) {
+  public set databaseVersion(value: string) {
     this._databaseVersion = value;
   }
   public resetDatabaseVersion() {
@@ -1860,15 +2357,15 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseVersionInput() {
-    return this._databaseVersion
+    return this._databaseVersion;
   }
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean | cdktf.IResolvable | undefined; 
+  private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection') as any;
   }
-  public set deletionProtection(value: boolean | cdktf.IResolvable | undefined) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -1876,7 +2373,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deletionProtectionInput() {
-    return this._deletionProtection
+    return this._deletionProtection;
   }
 
   // first_ip_address - computed: true, optional: false, required: false
@@ -1895,11 +2392,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // master_instance_name - computed: true, optional: true, required: false
-  private _masterInstanceName?: string | undefined; 
+  private _masterInstanceName?: string; 
   public get masterInstanceName() {
     return this.getStringAttribute('master_instance_name');
   }
-  public set masterInstanceName(value: string | undefined) {
+  public set masterInstanceName(value: string) {
     this._masterInstanceName = value;
   }
   public resetMasterInstanceName() {
@@ -1907,15 +2404,15 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get masterInstanceNameInput() {
-    return this._masterInstanceName
+    return this._masterInstanceName;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -1923,7 +2420,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // private_ip_address - computed: true, optional: false, required: false
@@ -1932,11 +2429,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1944,7 +2441,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // public_ip_address - computed: true, optional: false, required: false
@@ -1953,11 +2450,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -1965,15 +2462,15 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // root_password - computed: false, optional: true, required: false
-  private _rootPassword?: string | undefined; 
+  private _rootPassword?: string; 
   public get rootPassword() {
     return this.getStringAttribute('root_password');
   }
-  public set rootPassword(value: string | undefined) {
+  public set rootPassword(value: string) {
     this._rootPassword = value;
   }
   public resetRootPassword() {
@@ -1981,7 +2478,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rootPasswordInput() {
-    return this._rootPassword
+    return this._rootPassword;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -2000,88 +2497,83 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // clone - computed: false, optional: true, required: false
-  private _clone?: SqlDatabaseInstanceClone | undefined; 
-  private __cloneOutput = new SqlDatabaseInstanceCloneOutputReference(this as any, "clone", true);
+  private _clone = new SqlDatabaseInstanceCloneOutputReference(this as any, "clone", true);
   public get clone() {
-    return this.__cloneOutput;
+    return this._clone;
   }
-  public putClone(value: SqlDatabaseInstanceClone | undefined) {
-    this._clone = value;
+  public putClone(value: SqlDatabaseInstanceClone) {
+    this._clone.internalValue = value;
   }
   public resetClone() {
-    this._clone = undefined;
+    this._clone.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloneInput() {
-    return this._clone
+    return this._clone.internalValue;
   }
 
   // replica_configuration - computed: false, optional: true, required: false
-  private _replicaConfiguration?: SqlDatabaseInstanceReplicaConfiguration | undefined; 
-  private __replicaConfigurationOutput = new SqlDatabaseInstanceReplicaConfigurationOutputReference(this as any, "replica_configuration", true);
+  private _replicaConfiguration = new SqlDatabaseInstanceReplicaConfigurationOutputReference(this as any, "replica_configuration", true);
   public get replicaConfiguration() {
-    return this.__replicaConfigurationOutput;
+    return this._replicaConfiguration;
   }
-  public putReplicaConfiguration(value: SqlDatabaseInstanceReplicaConfiguration | undefined) {
-    this._replicaConfiguration = value;
+  public putReplicaConfiguration(value: SqlDatabaseInstanceReplicaConfiguration) {
+    this._replicaConfiguration.internalValue = value;
   }
   public resetReplicaConfiguration() {
-    this._replicaConfiguration = undefined;
+    this._replicaConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get replicaConfigurationInput() {
-    return this._replicaConfiguration
+    return this._replicaConfiguration.internalValue;
   }
 
   // restore_backup_context - computed: false, optional: true, required: false
-  private _restoreBackupContext?: SqlDatabaseInstanceRestoreBackupContext | undefined; 
-  private __restoreBackupContextOutput = new SqlDatabaseInstanceRestoreBackupContextOutputReference(this as any, "restore_backup_context", true);
+  private _restoreBackupContext = new SqlDatabaseInstanceRestoreBackupContextOutputReference(this as any, "restore_backup_context", true);
   public get restoreBackupContext() {
-    return this.__restoreBackupContextOutput;
+    return this._restoreBackupContext;
   }
-  public putRestoreBackupContext(value: SqlDatabaseInstanceRestoreBackupContext | undefined) {
-    this._restoreBackupContext = value;
+  public putRestoreBackupContext(value: SqlDatabaseInstanceRestoreBackupContext) {
+    this._restoreBackupContext.internalValue = value;
   }
   public resetRestoreBackupContext() {
-    this._restoreBackupContext = undefined;
+    this._restoreBackupContext.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get restoreBackupContextInput() {
-    return this._restoreBackupContext
+    return this._restoreBackupContext.internalValue;
   }
 
   // settings - computed: false, optional: true, required: false
-  private _settings?: SqlDatabaseInstanceSettings | undefined; 
-  private __settingsOutput = new SqlDatabaseInstanceSettingsOutputReference(this as any, "settings", true);
+  private _settings = new SqlDatabaseInstanceSettingsOutputReference(this as any, "settings", true);
   public get settings() {
-    return this.__settingsOutput;
+    return this._settings;
   }
-  public putSettings(value: SqlDatabaseInstanceSettings | undefined) {
-    this._settings = value;
+  public putSettings(value: SqlDatabaseInstanceSettings) {
+    this._settings.internalValue = value;
   }
   public resetSettings() {
-    this._settings = undefined;
+    this._settings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get settingsInput() {
-    return this._settings
+    return this._settings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlDatabaseInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new SqlDatabaseInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlDatabaseInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SqlDatabaseInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SqlDatabaseInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2097,11 +2589,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       root_password: cdktf.stringToTerraform(this._rootPassword),
-      clone: sqlDatabaseInstanceCloneToTerraform(this._clone),
-      replica_configuration: sqlDatabaseInstanceReplicaConfigurationToTerraform(this._replicaConfiguration),
-      restore_backup_context: sqlDatabaseInstanceRestoreBackupContextToTerraform(this._restoreBackupContext),
-      settings: sqlDatabaseInstanceSettingsToTerraform(this._settings),
-      timeouts: sqlDatabaseInstanceTimeoutsToTerraform(this._timeouts),
+      clone: sqlDatabaseInstanceCloneToTerraform(this._clone.internalValue),
+      replica_configuration: sqlDatabaseInstanceReplicaConfigurationToTerraform(this._replicaConfiguration.internalValue),
+      restore_backup_context: sqlDatabaseInstanceRestoreBackupContextToTerraform(this._restoreBackupContext.internalValue),
+      settings: sqlDatabaseInstanceSettingsToTerraform(this._settings.internalValue),
+      timeouts: sqlDatabaseInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

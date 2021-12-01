@@ -67,7 +67,7 @@ export interface SqlDatabaseTimeouts {
   readonly update?: string;
 }
 
-function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeoutsOutputReference | SqlDatabaseTimeouts): any {
+export function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeoutsOutputReference | SqlDatabaseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -89,12 +89,43 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlDatabaseTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -102,15 +133,15 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -118,15 +149,15 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -134,7 +165,7 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -175,7 +206,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
     this._instance = config.instance;
     this._name = config.name;
     this._project = config.project;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -183,11 +214,11 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // ==========
 
   // charset - computed: true, optional: true, required: false
-  private _charset?: string | undefined; 
+  private _charset?: string; 
   public get charset() {
     return this.getStringAttribute('charset');
   }
-  public set charset(value: string | undefined) {
+  public set charset(value: string) {
     this._charset = value;
   }
   public resetCharset() {
@@ -195,15 +226,15 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get charsetInput() {
-    return this._charset
+    return this._charset;
   }
 
   // collation - computed: true, optional: true, required: false
-  private _collation?: string | undefined; 
+  private _collation?: string; 
   public get collation() {
     return this.getStringAttribute('collation');
   }
-  public set collation(value: string | undefined) {
+  public set collation(value: string) {
     this._collation = value;
   }
   public resetCollation() {
@@ -211,7 +242,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
-    return this._collation
+    return this._collation;
   }
 
   // id - computed: true, optional: true, required: false
@@ -229,7 +260,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // name - computed: false, optional: false, required: true
@@ -242,15 +273,15 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -258,7 +289,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -267,20 +298,19 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlDatabaseTimeouts | undefined; 
-  private __timeoutsOutput = new SqlDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SqlDatabaseTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SqlDatabaseTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -294,7 +324,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
       instance: cdktf.stringToTerraform(this._instance),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      timeouts: sqlDatabaseTimeoutsToTerraform(this._timeouts),
+      timeouts: sqlDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

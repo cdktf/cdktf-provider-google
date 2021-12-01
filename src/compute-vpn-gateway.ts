@@ -59,7 +59,7 @@ export interface ComputeVpnGatewayTimeouts {
   readonly delete?: string;
 }
 
-function computeVpnGatewayTimeoutsToTerraform(struct?: ComputeVpnGatewayTimeoutsOutputReference | ComputeVpnGatewayTimeouts): any {
+export function computeVpnGatewayTimeoutsToTerraform(struct?: ComputeVpnGatewayTimeoutsOutputReference | ComputeVpnGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,12 +80,37 @@ export class ComputeVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeVpnGatewayTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeVpnGatewayTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -93,15 +118,15 @@ export class ComputeVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -109,7 +134,7 @@ export class ComputeVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -150,7 +175,7 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
     this._network = config.network;
     this._project = config.project;
     this._region = config.region;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -163,11 +188,11 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -175,7 +200,7 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // gateway_id - computed: true, optional: false, required: false
@@ -198,7 +223,7 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: false, required: true
@@ -211,15 +236,15 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -227,15 +252,15 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -243,7 +268,7 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -252,20 +277,19 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeVpnGatewayTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeVpnGatewayTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeVpnGatewayTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -279,7 +303,7 @@ export class ComputeVpnGateway extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      timeouts: computeVpnGatewayTimeoutsToTerraform(this._timeouts),
+      timeouts: computeVpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

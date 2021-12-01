@@ -72,7 +72,7 @@ export class HealthcareHl7V2StoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get hl7V2StoreIdInput() {
-    return this._hl7V2StoreId
+    return this._hl7V2StoreId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -90,7 +90,7 @@ export class HealthcareHl7V2StoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

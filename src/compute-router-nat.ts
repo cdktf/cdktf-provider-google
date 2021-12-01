@@ -140,7 +140,7 @@ export interface ComputeRouterNatLogConfig {
   readonly filter: string;
 }
 
-function computeRouterNatLogConfigToTerraform(struct?: ComputeRouterNatLogConfigOutputReference | ComputeRouterNatLogConfig): any {
+export function computeRouterNatLogConfigToTerraform(struct?: ComputeRouterNatLogConfigOutputReference | ComputeRouterNatLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -161,6 +161,31 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRouterNatLogConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enable) {
+      hasAnyValues = true;
+      internalValueResult.enable = this._enable;
+    }
+    if (this._filter) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterNatLogConfig | undefined) {
+    if (value === undefined) {
+      this._enable = undefined;
+      this._filter = undefined;
+    }
+    else {
+      this._enable = value.enable;
+      this._filter = value.filter;
+    }
+  }
+
   // enable - computed: false, optional: false, required: true
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
@@ -171,7 +196,7 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get enableInput() {
-    return this._enable
+    return this._enable;
   }
 
   // filter - computed: false, optional: false, required: true
@@ -184,7 +209,7 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 }
 export interface ComputeRouterNatSubnetwork {
@@ -214,7 +239,7 @@ should have NAT enabled. Supported values include:
   readonly sourceIpRangesToNat: string[];
 }
 
-function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatSubnetwork): any {
+export function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatSubnetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -241,7 +266,7 @@ export interface ComputeRouterNatTimeouts {
   readonly update?: string;
 }
 
-function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeoutsOutputReference | ComputeRouterNatTimeouts): any {
+export function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeoutsOutputReference | ComputeRouterNatTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -263,12 +288,43 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRouterNatTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterNatTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -276,15 +332,15 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -292,15 +348,15 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -308,7 +364,7 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -358,9 +414,9 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     this._tcpEstablishedIdleTimeoutSec = config.tcpEstablishedIdleTimeoutSec;
     this._tcpTransitoryIdleTimeoutSec = config.tcpTransitoryIdleTimeoutSec;
     this._udpIdleTimeoutSec = config.udpIdleTimeoutSec;
-    this._logConfig = config.logConfig;
+    this._logConfig.internalValue = config.logConfig;
     this._subnetwork = config.subnetwork;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -368,11 +424,11 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // ==========
 
   // drain_nat_ips - computed: false, optional: true, required: false
-  private _drainNatIps?: string[] | undefined; 
+  private _drainNatIps?: string[]; 
   public get drainNatIps() {
     return this.getListAttribute('drain_nat_ips');
   }
-  public set drainNatIps(value: string[] | undefined) {
+  public set drainNatIps(value: string[]) {
     this._drainNatIps = value;
   }
   public resetDrainNatIps() {
@@ -380,15 +436,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get drainNatIpsInput() {
-    return this._drainNatIps
+    return this._drainNatIps;
   }
 
   // enable_endpoint_independent_mapping - computed: false, optional: true, required: false
-  private _enableEndpointIndependentMapping?: boolean | cdktf.IResolvable | undefined; 
+  private _enableEndpointIndependentMapping?: boolean | cdktf.IResolvable; 
   public get enableEndpointIndependentMapping() {
     return this.getBooleanAttribute('enable_endpoint_independent_mapping') as any;
   }
-  public set enableEndpointIndependentMapping(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableEndpointIndependentMapping(value: boolean | cdktf.IResolvable) {
     this._enableEndpointIndependentMapping = value;
   }
   public resetEnableEndpointIndependentMapping() {
@@ -396,15 +452,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableEndpointIndependentMappingInput() {
-    return this._enableEndpointIndependentMapping
+    return this._enableEndpointIndependentMapping;
   }
 
   // icmp_idle_timeout_sec - computed: false, optional: true, required: false
-  private _icmpIdleTimeoutSec?: number | undefined; 
+  private _icmpIdleTimeoutSec?: number; 
   public get icmpIdleTimeoutSec() {
     return this.getNumberAttribute('icmp_idle_timeout_sec');
   }
-  public set icmpIdleTimeoutSec(value: number | undefined) {
+  public set icmpIdleTimeoutSec(value: number) {
     this._icmpIdleTimeoutSec = value;
   }
   public resetIcmpIdleTimeoutSec() {
@@ -412,7 +468,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get icmpIdleTimeoutSecInput() {
-    return this._icmpIdleTimeoutSec
+    return this._icmpIdleTimeoutSec;
   }
 
   // id - computed: true, optional: true, required: false
@@ -421,11 +477,11 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // min_ports_per_vm - computed: false, optional: true, required: false
-  private _minPortsPerVm?: number | undefined; 
+  private _minPortsPerVm?: number; 
   public get minPortsPerVm() {
     return this.getNumberAttribute('min_ports_per_vm');
   }
-  public set minPortsPerVm(value: number | undefined) {
+  public set minPortsPerVm(value: number) {
     this._minPortsPerVm = value;
   }
   public resetMinPortsPerVm() {
@@ -433,7 +489,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minPortsPerVmInput() {
-    return this._minPortsPerVm
+    return this._minPortsPerVm;
   }
 
   // name - computed: false, optional: false, required: true
@@ -446,7 +502,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // nat_ip_allocate_option - computed: false, optional: false, required: true
@@ -459,15 +515,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get natIpAllocateOptionInput() {
-    return this._natIpAllocateOption
+    return this._natIpAllocateOption;
   }
 
   // nat_ips - computed: false, optional: true, required: false
-  private _natIps?: string[] | undefined; 
+  private _natIps?: string[]; 
   public get natIps() {
     return this.getListAttribute('nat_ips');
   }
-  public set natIps(value: string[] | undefined) {
+  public set natIps(value: string[]) {
     this._natIps = value;
   }
   public resetNatIps() {
@@ -475,15 +531,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get natIpsInput() {
-    return this._natIps
+    return this._natIps;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -491,15 +547,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -507,7 +563,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // router - computed: false, optional: false, required: true
@@ -520,7 +576,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routerInput() {
-    return this._router
+    return this._router;
   }
 
   // source_subnetwork_ip_ranges_to_nat - computed: false, optional: false, required: true
@@ -533,15 +589,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceSubnetworkIpRangesToNatInput() {
-    return this._sourceSubnetworkIpRangesToNat
+    return this._sourceSubnetworkIpRangesToNat;
   }
 
   // tcp_established_idle_timeout_sec - computed: false, optional: true, required: false
-  private _tcpEstablishedIdleTimeoutSec?: number | undefined; 
+  private _tcpEstablishedIdleTimeoutSec?: number; 
   public get tcpEstablishedIdleTimeoutSec() {
     return this.getNumberAttribute('tcp_established_idle_timeout_sec');
   }
-  public set tcpEstablishedIdleTimeoutSec(value: number | undefined) {
+  public set tcpEstablishedIdleTimeoutSec(value: number) {
     this._tcpEstablishedIdleTimeoutSec = value;
   }
   public resetTcpEstablishedIdleTimeoutSec() {
@@ -549,15 +605,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tcpEstablishedIdleTimeoutSecInput() {
-    return this._tcpEstablishedIdleTimeoutSec
+    return this._tcpEstablishedIdleTimeoutSec;
   }
 
   // tcp_transitory_idle_timeout_sec - computed: false, optional: true, required: false
-  private _tcpTransitoryIdleTimeoutSec?: number | undefined; 
+  private _tcpTransitoryIdleTimeoutSec?: number; 
   public get tcpTransitoryIdleTimeoutSec() {
     return this.getNumberAttribute('tcp_transitory_idle_timeout_sec');
   }
-  public set tcpTransitoryIdleTimeoutSec(value: number | undefined) {
+  public set tcpTransitoryIdleTimeoutSec(value: number) {
     this._tcpTransitoryIdleTimeoutSec = value;
   }
   public resetTcpTransitoryIdleTimeoutSec() {
@@ -565,15 +621,15 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tcpTransitoryIdleTimeoutSecInput() {
-    return this._tcpTransitoryIdleTimeoutSec
+    return this._tcpTransitoryIdleTimeoutSec;
   }
 
   // udp_idle_timeout_sec - computed: false, optional: true, required: false
-  private _udpIdleTimeoutSec?: number | undefined; 
+  private _udpIdleTimeoutSec?: number; 
   public get udpIdleTimeoutSec() {
     return this.getNumberAttribute('udp_idle_timeout_sec');
   }
-  public set udpIdleTimeoutSec(value: number | undefined) {
+  public set udpIdleTimeoutSec(value: number) {
     this._udpIdleTimeoutSec = value;
   }
   public resetUdpIdleTimeoutSec() {
@@ -581,33 +637,32 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get udpIdleTimeoutSecInput() {
-    return this._udpIdleTimeoutSec
+    return this._udpIdleTimeoutSec;
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeRouterNatLogConfig | undefined; 
-  private __logConfigOutput = new ComputeRouterNatLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeRouterNatLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.__logConfigOutput;
+    return this._logConfig;
   }
-  public putLogConfig(value: ComputeRouterNatLogConfig | undefined) {
-    this._logConfig = value;
+  public putLogConfig(value: ComputeRouterNatLogConfig) {
+    this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
-    this._logConfig = undefined;
+    this._logConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logConfigInput() {
-    return this._logConfig
+    return this._logConfig.internalValue;
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: ComputeRouterNatSubnetwork[] | undefined; 
+  private _subnetwork?: ComputeRouterNatSubnetwork[]; 
   public get subnetwork() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subnetwork') as any;
   }
-  public set subnetwork(value: ComputeRouterNatSubnetwork[] | undefined) {
+  public set subnetwork(value: ComputeRouterNatSubnetwork[]) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -615,24 +670,23 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRouterNatTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeRouterNatTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRouterNatTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeRouterNatTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeRouterNatTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -655,9 +709,9 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       tcp_established_idle_timeout_sec: cdktf.numberToTerraform(this._tcpEstablishedIdleTimeoutSec),
       tcp_transitory_idle_timeout_sec: cdktf.numberToTerraform(this._tcpTransitoryIdleTimeoutSec),
       udp_idle_timeout_sec: cdktf.numberToTerraform(this._udpIdleTimeoutSec),
-      log_config: computeRouterNatLogConfigToTerraform(this._logConfig),
+      log_config: computeRouterNatLogConfigToTerraform(this._logConfig.internalValue),
       subnetwork: cdktf.listMapper(computeRouterNatSubnetworkToTerraform)(this._subnetwork),
-      timeouts: computeRouterNatTimeoutsToTerraform(this._timeouts),
+      timeouts: computeRouterNatTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -68,11 +68,11 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
   }
 
   // domain - computed: true, optional: true, required: false
-  private _domain?: string | undefined; 
+  private _domain?: string; 
   public get domain() {
     return this.getStringAttribute('domain');
   }
-  public set domain(value: string | undefined) {
+  public set domain(value: string) {
     this._domain = value;
   }
   public resetDomain() {
@@ -80,7 +80,7 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get domainInput() {
-    return this._domain
+    return this._domain;
   }
 
   // id - computed: true, optional: true, required: false
@@ -104,11 +104,11 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
   }
 
   // organization - computed: false, optional: true, required: false
-  private _organization?: string | undefined; 
+  private _organization?: string; 
   public get organization() {
     return this.getStringAttribute('organization');
   }
-  public set organization(value: string | undefined) {
+  public set organization(value: string) {
     this._organization = value;
   }
   public resetOrganization() {
@@ -116,7 +116,7 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get organizationInput() {
-    return this._organization
+    return this._organization;
   }
 
   // =========

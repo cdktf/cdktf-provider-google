@@ -59,7 +59,7 @@ export interface OrgPolicyPolicySpecRulesCondition {
   readonly title?: string;
 }
 
-function orgPolicyPolicySpecRulesConditionToTerraform(struct?: OrgPolicyPolicySpecRulesConditionOutputReference | OrgPolicyPolicySpecRulesCondition): any {
+export function orgPolicyPolicySpecRulesConditionToTerraform(struct?: OrgPolicyPolicySpecRulesConditionOutputReference | OrgPolicyPolicySpecRulesCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,12 +82,49 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OrgPolicyPolicySpecRulesCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._expression) {
+      hasAnyValues = true;
+      internalValueResult.expression = this._expression;
+    }
+    if (this._location) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._title) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrgPolicyPolicySpecRulesCondition | undefined) {
+    if (value === undefined) {
+      this._description = undefined;
+      this._expression = undefined;
+      this._location = undefined;
+      this._title = undefined;
+    }
+    else {
+      this._description = value.description;
+      this._expression = value.expression;
+      this._location = value.location;
+      this._title = value.title;
+    }
+  }
+
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -95,15 +132,15 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // expression - computed: false, optional: true, required: false
-  private _expression?: string | undefined; 
+  private _expression?: string; 
   public get expression() {
     return this.getStringAttribute('expression');
   }
-  public set expression(value: string | undefined) {
+  public set expression(value: string) {
     this._expression = value;
   }
   public resetExpression() {
@@ -111,15 +148,15 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get expressionInput() {
-    return this._expression
+    return this._expression;
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -127,15 +164,15 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // title - computed: false, optional: true, required: false
-  private _title?: string | undefined; 
+  private _title?: string; 
   public get title() {
     return this.getStringAttribute('title');
   }
-  public set title(value: string | undefined) {
+  public set title(value: string) {
     this._title = value;
   }
   public resetTitle() {
@@ -143,7 +180,7 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 }
 export interface OrgPolicyPolicySpecRulesValues {
@@ -161,7 +198,7 @@ export interface OrgPolicyPolicySpecRulesValues {
   readonly deniedValues?: string[];
 }
 
-function orgPolicyPolicySpecRulesValuesToTerraform(struct?: OrgPolicyPolicySpecRulesValuesOutputReference | OrgPolicyPolicySpecRulesValues): any {
+export function orgPolicyPolicySpecRulesValuesToTerraform(struct?: OrgPolicyPolicySpecRulesValuesOutputReference | OrgPolicyPolicySpecRulesValues): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -182,12 +219,37 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OrgPolicyPolicySpecRulesValues | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedValues) {
+      hasAnyValues = true;
+      internalValueResult.allowedValues = this._allowedValues;
+    }
+    if (this._deniedValues) {
+      hasAnyValues = true;
+      internalValueResult.deniedValues = this._deniedValues;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrgPolicyPolicySpecRulesValues | undefined) {
+    if (value === undefined) {
+      this._allowedValues = undefined;
+      this._deniedValues = undefined;
+    }
+    else {
+      this._allowedValues = value.allowedValues;
+      this._deniedValues = value.deniedValues;
+    }
+  }
+
   // allowed_values - computed: false, optional: true, required: false
-  private _allowedValues?: string[] | undefined; 
+  private _allowedValues?: string[]; 
   public get allowedValues() {
     return this.getListAttribute('allowed_values');
   }
-  public set allowedValues(value: string[] | undefined) {
+  public set allowedValues(value: string[]) {
     this._allowedValues = value;
   }
   public resetAllowedValues() {
@@ -195,15 +257,15 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get allowedValuesInput() {
-    return this._allowedValues
+    return this._allowedValues;
   }
 
   // denied_values - computed: false, optional: true, required: false
-  private _deniedValues?: string[] | undefined; 
+  private _deniedValues?: string[]; 
   public get deniedValues() {
     return this.getListAttribute('denied_values');
   }
-  public set deniedValues(value: string[] | undefined) {
+  public set deniedValues(value: string[]) {
     this._deniedValues = value;
   }
   public resetDeniedValues() {
@@ -211,7 +273,7 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deniedValuesInput() {
-    return this._deniedValues
+    return this._deniedValues;
   }
 }
 export interface OrgPolicyPolicySpecRules {
@@ -247,7 +309,7 @@ export interface OrgPolicyPolicySpecRules {
   readonly values?: OrgPolicyPolicySpecRulesValues;
 }
 
-function orgPolicyPolicySpecRulesToTerraform(struct?: OrgPolicyPolicySpecRules): any {
+export function orgPolicyPolicySpecRulesToTerraform(struct?: OrgPolicyPolicySpecRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -282,7 +344,7 @@ export interface OrgPolicyPolicySpec {
   readonly rules?: OrgPolicyPolicySpecRules[];
 }
 
-function orgPolicyPolicySpecToTerraform(struct?: OrgPolicyPolicySpecOutputReference | OrgPolicyPolicySpec): any {
+export function orgPolicyPolicySpecToTerraform(struct?: OrgPolicyPolicySpecOutputReference | OrgPolicyPolicySpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -304,12 +366,43 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OrgPolicyPolicySpec | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._inheritFromParent) {
+      hasAnyValues = true;
+      internalValueResult.inheritFromParent = this._inheritFromParent;
+    }
+    if (this._reset) {
+      hasAnyValues = true;
+      internalValueResult.reset = this._reset;
+    }
+    if (this._rules) {
+      hasAnyValues = true;
+      internalValueResult.rules = this._rules;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrgPolicyPolicySpec | undefined) {
+    if (value === undefined) {
+      this._inheritFromParent = undefined;
+      this._reset = undefined;
+      this._rules = undefined;
+    }
+    else {
+      this._inheritFromParent = value.inheritFromParent;
+      this._reset = value.reset;
+      this._rules = value.rules;
+    }
+  }
+
   // inherit_from_parent - computed: false, optional: true, required: false
-  private _inheritFromParent?: boolean | cdktf.IResolvable | undefined; 
+  private _inheritFromParent?: boolean | cdktf.IResolvable; 
   public get inheritFromParent() {
     return this.getBooleanAttribute('inherit_from_parent') as any;
   }
-  public set inheritFromParent(value: boolean | cdktf.IResolvable | undefined) {
+  public set inheritFromParent(value: boolean | cdktf.IResolvable) {
     this._inheritFromParent = value;
   }
   public resetInheritFromParent() {
@@ -317,15 +410,15 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get inheritFromParentInput() {
-    return this._inheritFromParent
+    return this._inheritFromParent;
   }
 
   // reset - computed: false, optional: true, required: false
-  private _reset?: boolean | cdktf.IResolvable | undefined; 
+  private _reset?: boolean | cdktf.IResolvable; 
   public get reset() {
     return this.getBooleanAttribute('reset') as any;
   }
-  public set reset(value: boolean | cdktf.IResolvable | undefined) {
+  public set reset(value: boolean | cdktf.IResolvable) {
     this._reset = value;
   }
   public resetReset() {
@@ -333,16 +426,16 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get resetInput() {
-    return this._reset
+    return this._reset;
   }
 
   // rules - computed: false, optional: true, required: false
-  private _rules?: OrgPolicyPolicySpecRules[] | undefined; 
+  private _rules?: OrgPolicyPolicySpecRules[]; 
   public get rules() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rules') as any;
   }
-  public set rules(value: OrgPolicyPolicySpecRules[] | undefined) {
+  public set rules(value: OrgPolicyPolicySpecRules[]) {
     this._rules = value;
   }
   public resetRules() {
@@ -350,7 +443,7 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get rulesInput() {
-    return this._rules
+    return this._rules;
   }
 }
 export interface OrgPolicyPolicyTimeouts {
@@ -368,7 +461,7 @@ export interface OrgPolicyPolicyTimeouts {
   readonly update?: string;
 }
 
-function orgPolicyPolicyTimeoutsToTerraform(struct?: OrgPolicyPolicyTimeoutsOutputReference | OrgPolicyPolicyTimeouts): any {
+export function orgPolicyPolicyTimeoutsToTerraform(struct?: OrgPolicyPolicyTimeoutsOutputReference | OrgPolicyPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -390,12 +483,43 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OrgPolicyPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrgPolicyPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -403,15 +527,15 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -419,15 +543,15 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -435,7 +559,7 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -473,8 +597,8 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
     });
     this._name = config.name;
     this._parent = config.parent;
-    this._spec = config.spec;
-    this._timeouts = config.timeouts;
+    this._spec.internalValue = config.spec;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -496,7 +620,7 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parent - computed: false, optional: false, required: true
@@ -509,41 +633,39 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // spec - computed: false, optional: true, required: false
-  private _spec?: OrgPolicyPolicySpec | undefined; 
-  private __specOutput = new OrgPolicyPolicySpecOutputReference(this as any, "spec", true);
+  private _spec = new OrgPolicyPolicySpecOutputReference(this as any, "spec", true);
   public get spec() {
-    return this.__specOutput;
+    return this._spec;
   }
-  public putSpec(value: OrgPolicyPolicySpec | undefined) {
-    this._spec = value;
+  public putSpec(value: OrgPolicyPolicySpec) {
+    this._spec.internalValue = value;
   }
   public resetSpec() {
-    this._spec = undefined;
+    this._spec.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get specInput() {
-    return this._spec
+    return this._spec.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: OrgPolicyPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new OrgPolicyPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new OrgPolicyPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: OrgPolicyPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: OrgPolicyPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -554,8 +676,8 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
     return {
       name: cdktf.stringToTerraform(this._name),
       parent: cdktf.stringToTerraform(this._parent),
-      spec: orgPolicyPolicySpecToTerraform(this._spec),
-      timeouts: orgPolicyPolicyTimeoutsToTerraform(this._timeouts),
+      spec: orgPolicyPolicySpecToTerraform(this._spec.internalValue),
+      timeouts: orgPolicyPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

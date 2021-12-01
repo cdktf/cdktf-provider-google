@@ -43,7 +43,7 @@ export interface SecretManagerSecretVersionTimeouts {
   readonly delete?: string;
 }
 
-function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSecretVersionTimeoutsOutputReference | SecretManagerSecretVersionTimeouts): any {
+export function secretManagerSecretVersionTimeoutsToTerraform(struct?: SecretManagerSecretVersionTimeoutsOutputReference | SecretManagerSecretVersionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -64,12 +64,37 @@ export class SecretManagerSecretVersionTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecretManagerSecretVersionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecretManagerSecretVersionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -77,15 +102,15 @@ export class SecretManagerSecretVersionTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -93,7 +118,7 @@ export class SecretManagerSecretVersionTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -132,7 +157,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
     this._enabled = config.enabled;
     this._secret = config.secret;
     this._secretData = config.secretData;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -150,11 +175,11 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -162,7 +187,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -185,7 +210,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret
+    return this._secret;
   }
 
   // secret_data - computed: false, optional: false, required: true
@@ -198,24 +223,23 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secretDataInput() {
-    return this._secretData
+    return this._secretData;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SecretManagerSecretVersionTimeouts | undefined; 
-  private __timeoutsOutput = new SecretManagerSecretVersionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecretManagerSecretVersionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SecretManagerSecretVersionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SecretManagerSecretVersionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -227,7 +251,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       secret: cdktf.stringToTerraform(this._secret),
       secret_data: cdktf.stringToTerraform(this._secretData),
-      timeouts: secretManagerSecretVersionTimeoutsToTerraform(this._timeouts),
+      timeouts: secretManagerSecretVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

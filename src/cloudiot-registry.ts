@@ -80,7 +80,7 @@ export interface CloudiotRegistryCredentials {
   readonly publicKeyCertificate: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredentials): any {
+export function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredentials): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -109,7 +109,7 @@ item.
   readonly subfolderMatches?: string;
 }
 
-function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: CloudiotRegistryEventNotificationConfigs): any {
+export function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: CloudiotRegistryEventNotificationConfigs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -135,7 +135,7 @@ export interface CloudiotRegistryTimeouts {
   readonly update?: string;
 }
 
-function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeoutsOutputReference | CloudiotRegistryTimeouts): any {
+export function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeoutsOutputReference | CloudiotRegistryTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -157,12 +157,43 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudiotRegistryTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudiotRegistryTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -170,15 +201,15 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -186,15 +217,15 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -202,7 +233,7 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -247,7 +278,7 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
     this._stateNotificationConfig = config.stateNotificationConfig;
     this._credentials = config.credentials;
     this._eventNotificationConfigs = config.eventNotificationConfigs;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -255,12 +286,12 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   // ==========
 
   // http_config - computed: true, optional: true, required: false
-  private _httpConfig?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _httpConfig?: { [key: string]: string } | cdktf.IResolvable; 
   public get httpConfig() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('http_config') as any;
   }
-  public set httpConfig(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set httpConfig(value: { [key: string]: string } | cdktf.IResolvable) {
     this._httpConfig = value;
   }
   public resetHttpConfig() {
@@ -268,7 +299,7 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpConfigInput() {
-    return this._httpConfig
+    return this._httpConfig;
   }
 
   // id - computed: true, optional: true, required: false
@@ -277,11 +308,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // log_level - computed: false, optional: true, required: false
-  private _logLevel?: string | undefined; 
+  private _logLevel?: string; 
   public get logLevel() {
     return this.getStringAttribute('log_level');
   }
-  public set logLevel(value: string | undefined) {
+  public set logLevel(value: string) {
     this._logLevel = value;
   }
   public resetLogLevel() {
@@ -289,16 +320,16 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logLevelInput() {
-    return this._logLevel
+    return this._logLevel;
   }
 
   // mqtt_config - computed: true, optional: true, required: false
-  private _mqttConfig?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _mqttConfig?: { [key: string]: string } | cdktf.IResolvable; 
   public get mqttConfig() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('mqtt_config') as any;
   }
-  public set mqttConfig(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set mqttConfig(value: { [key: string]: string } | cdktf.IResolvable) {
     this._mqttConfig = value;
   }
   public resetMqttConfig() {
@@ -306,7 +337,7 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mqttConfigInput() {
-    return this._mqttConfig
+    return this._mqttConfig;
   }
 
   // name - computed: false, optional: false, required: true
@@ -319,15 +350,15 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -335,15 +366,15 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -351,16 +382,16 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // state_notification_config - computed: false, optional: true, required: false
-  private _stateNotificationConfig?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _stateNotificationConfig?: { [key: string]: string } | cdktf.IResolvable; 
   public get stateNotificationConfig() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('state_notification_config') as any;
   }
-  public set stateNotificationConfig(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set stateNotificationConfig(value: { [key: string]: string } | cdktf.IResolvable) {
     this._stateNotificationConfig = value;
   }
   public resetStateNotificationConfig() {
@@ -368,16 +399,16 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get stateNotificationConfigInput() {
-    return this._stateNotificationConfig
+    return this._stateNotificationConfig;
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: CloudiotRegistryCredentials[] | undefined; 
+  private _credentials?: CloudiotRegistryCredentials[]; 
   public get credentials() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('credentials') as any;
   }
-  public set credentials(value: CloudiotRegistryCredentials[] | undefined) {
+  public set credentials(value: CloudiotRegistryCredentials[]) {
     this._credentials = value;
   }
   public resetCredentials() {
@@ -385,16 +416,16 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get credentialsInput() {
-    return this._credentials
+    return this._credentials;
   }
 
   // event_notification_configs - computed: false, optional: true, required: false
-  private _eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[] | undefined; 
+  private _eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[]; 
   public get eventNotificationConfigs() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('event_notification_configs') as any;
   }
-  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[] | undefined) {
+  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[]) {
     this._eventNotificationConfigs = value;
   }
   public resetEventNotificationConfigs() {
@@ -402,24 +433,23 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventNotificationConfigsInput() {
-    return this._eventNotificationConfigs
+    return this._eventNotificationConfigs;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudiotRegistryTimeouts | undefined; 
-  private __timeoutsOutput = new CloudiotRegistryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudiotRegistryTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CloudiotRegistryTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CloudiotRegistryTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -437,7 +467,7 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
       state_notification_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._stateNotificationConfig),
       credentials: cdktf.listMapper(cloudiotRegistryCredentialsToTerraform)(this._credentials),
       event_notification_configs: cdktf.listMapper(cloudiotRegistryEventNotificationConfigsToTerraform)(this._eventNotificationConfigs),
-      timeouts: cloudiotRegistryTimeoutsToTerraform(this._timeouts),
+      timeouts: cloudiotRegistryTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

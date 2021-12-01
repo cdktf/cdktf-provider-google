@@ -350,7 +350,7 @@ Cannot be set for INTERNAL backend services.
   readonly maxUtilization?: number;
 }
 
-function computeRegionBackendServiceBackendToTerraform(struct?: ComputeRegionBackendServiceBackend): any {
+export function computeRegionBackendServiceBackendToTerraform(struct?: ComputeRegionBackendServiceBackend): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -420,7 +420,7 @@ delimiters.
   readonly queryStringWhitelist?: string[];
 }
 
-function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy): any {
+export function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -444,12 +444,55 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._includeHost) {
+      hasAnyValues = true;
+      internalValueResult.includeHost = this._includeHost;
+    }
+    if (this._includeProtocol) {
+      hasAnyValues = true;
+      internalValueResult.includeProtocol = this._includeProtocol;
+    }
+    if (this._includeQueryString) {
+      hasAnyValues = true;
+      internalValueResult.includeQueryString = this._includeQueryString;
+    }
+    if (this._queryStringBlacklist) {
+      hasAnyValues = true;
+      internalValueResult.queryStringBlacklist = this._queryStringBlacklist;
+    }
+    if (this._queryStringWhitelist) {
+      hasAnyValues = true;
+      internalValueResult.queryStringWhitelist = this._queryStringWhitelist;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined) {
+    if (value === undefined) {
+      this._includeHost = undefined;
+      this._includeProtocol = undefined;
+      this._includeQueryString = undefined;
+      this._queryStringBlacklist = undefined;
+      this._queryStringWhitelist = undefined;
+    }
+    else {
+      this._includeHost = value.includeHost;
+      this._includeProtocol = value.includeProtocol;
+      this._includeQueryString = value.includeQueryString;
+      this._queryStringBlacklist = value.queryStringBlacklist;
+      this._queryStringWhitelist = value.queryStringWhitelist;
+    }
+  }
+
   // include_host - computed: false, optional: true, required: false
-  private _includeHost?: boolean | cdktf.IResolvable | undefined; 
+  private _includeHost?: boolean | cdktf.IResolvable; 
   public get includeHost() {
     return this.getBooleanAttribute('include_host') as any;
   }
-  public set includeHost(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeHost(value: boolean | cdktf.IResolvable) {
     this._includeHost = value;
   }
   public resetIncludeHost() {
@@ -457,15 +500,15 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get includeHostInput() {
-    return this._includeHost
+    return this._includeHost;
   }
 
   // include_protocol - computed: false, optional: true, required: false
-  private _includeProtocol?: boolean | cdktf.IResolvable | undefined; 
+  private _includeProtocol?: boolean | cdktf.IResolvable; 
   public get includeProtocol() {
     return this.getBooleanAttribute('include_protocol') as any;
   }
-  public set includeProtocol(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeProtocol(value: boolean | cdktf.IResolvable) {
     this._includeProtocol = value;
   }
   public resetIncludeProtocol() {
@@ -473,15 +516,15 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get includeProtocolInput() {
-    return this._includeProtocol
+    return this._includeProtocol;
   }
 
   // include_query_string - computed: false, optional: true, required: false
-  private _includeQueryString?: boolean | cdktf.IResolvable | undefined; 
+  private _includeQueryString?: boolean | cdktf.IResolvable; 
   public get includeQueryString() {
     return this.getBooleanAttribute('include_query_string') as any;
   }
-  public set includeQueryString(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeQueryString(value: boolean | cdktf.IResolvable) {
     this._includeQueryString = value;
   }
   public resetIncludeQueryString() {
@@ -489,15 +532,15 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get includeQueryStringInput() {
-    return this._includeQueryString
+    return this._includeQueryString;
   }
 
   // query_string_blacklist - computed: false, optional: true, required: false
-  private _queryStringBlacklist?: string[] | undefined; 
+  private _queryStringBlacklist?: string[]; 
   public get queryStringBlacklist() {
     return this.getListAttribute('query_string_blacklist');
   }
-  public set queryStringBlacklist(value: string[] | undefined) {
+  public set queryStringBlacklist(value: string[]) {
     this._queryStringBlacklist = value;
   }
   public resetQueryStringBlacklist() {
@@ -505,15 +548,15 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringBlacklistInput() {
-    return this._queryStringBlacklist
+    return this._queryStringBlacklist;
   }
 
   // query_string_whitelist - computed: false, optional: true, required: false
-  private _queryStringWhitelist?: string[] | undefined; 
+  private _queryStringWhitelist?: string[]; 
   public get queryStringWhitelist() {
     return this.getListAttribute('query_string_whitelist');
   }
-  public set queryStringWhitelist(value: string[] | undefined) {
+  public set queryStringWhitelist(value: string[]) {
     this._queryStringWhitelist = value;
   }
   public resetQueryStringWhitelist() {
@@ -521,7 +564,7 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringWhitelistInput() {
-    return this._queryStringWhitelist
+    return this._queryStringWhitelist;
   }
 }
 export interface ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy {
@@ -534,7 +577,7 @@ can be specified as values, and you cannot specify a status code more than once.
   readonly code?: number;
 }
 
-function computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy): any {
+export function computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -612,7 +655,7 @@ responses will not be altered.
   readonly negativeCachingPolicy?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[];
 }
 
-function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyOutputReference | ComputeRegionBackendServiceCdnPolicy): any {
+export function computeRegionBackendServiceCdnPolicyToTerraform(struct?: ComputeRegionBackendServiceCdnPolicyOutputReference | ComputeRegionBackendServiceCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -640,12 +683,79 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceCdnPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cacheMode) {
+      hasAnyValues = true;
+      internalValueResult.cacheMode = this._cacheMode;
+    }
+    if (this._clientTtl) {
+      hasAnyValues = true;
+      internalValueResult.clientTtl = this._clientTtl;
+    }
+    if (this._defaultTtl) {
+      hasAnyValues = true;
+      internalValueResult.defaultTtl = this._defaultTtl;
+    }
+    if (this._maxTtl) {
+      hasAnyValues = true;
+      internalValueResult.maxTtl = this._maxTtl;
+    }
+    if (this._negativeCaching) {
+      hasAnyValues = true;
+      internalValueResult.negativeCaching = this._negativeCaching;
+    }
+    if (this._serveWhileStale) {
+      hasAnyValues = true;
+      internalValueResult.serveWhileStale = this._serveWhileStale;
+    }
+    if (this._signedUrlCacheMaxAgeSec) {
+      hasAnyValues = true;
+      internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
+    }
+    if (this._cacheKeyPolicy) {
+      hasAnyValues = true;
+      internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
+    }
+    if (this._negativeCachingPolicy) {
+      hasAnyValues = true;
+      internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceCdnPolicy | undefined) {
+    if (value === undefined) {
+      this._cacheMode = undefined;
+      this._clientTtl = undefined;
+      this._defaultTtl = undefined;
+      this._maxTtl = undefined;
+      this._negativeCaching = undefined;
+      this._serveWhileStale = undefined;
+      this._signedUrlCacheMaxAgeSec = undefined;
+      this._cacheKeyPolicy.internalValue = undefined;
+      this._negativeCachingPolicy = undefined;
+    }
+    else {
+      this._cacheMode = value.cacheMode;
+      this._clientTtl = value.clientTtl;
+      this._defaultTtl = value.defaultTtl;
+      this._maxTtl = value.maxTtl;
+      this._negativeCaching = value.negativeCaching;
+      this._serveWhileStale = value.serveWhileStale;
+      this._signedUrlCacheMaxAgeSec = value.signedUrlCacheMaxAgeSec;
+      this._cacheKeyPolicy.internalValue = value.cacheKeyPolicy;
+      this._negativeCachingPolicy = value.negativeCachingPolicy;
+    }
+  }
+
   // cache_mode - computed: true, optional: true, required: false
-  private _cacheMode?: string | undefined; 
+  private _cacheMode?: string; 
   public get cacheMode() {
     return this.getStringAttribute('cache_mode');
   }
-  public set cacheMode(value: string | undefined) {
+  public set cacheMode(value: string) {
     this._cacheMode = value;
   }
   public resetCacheMode() {
@@ -653,15 +763,15 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get cacheModeInput() {
-    return this._cacheMode
+    return this._cacheMode;
   }
 
   // client_ttl - computed: true, optional: true, required: false
-  private _clientTtl?: number | undefined; 
+  private _clientTtl?: number; 
   public get clientTtl() {
     return this.getNumberAttribute('client_ttl');
   }
-  public set clientTtl(value: number | undefined) {
+  public set clientTtl(value: number) {
     this._clientTtl = value;
   }
   public resetClientTtl() {
@@ -669,15 +779,15 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get clientTtlInput() {
-    return this._clientTtl
+    return this._clientTtl;
   }
 
   // default_ttl - computed: true, optional: true, required: false
-  private _defaultTtl?: number | undefined; 
+  private _defaultTtl?: number; 
   public get defaultTtl() {
     return this.getNumberAttribute('default_ttl');
   }
-  public set defaultTtl(value: number | undefined) {
+  public set defaultTtl(value: number) {
     this._defaultTtl = value;
   }
   public resetDefaultTtl() {
@@ -685,15 +795,15 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlInput() {
-    return this._defaultTtl
+    return this._defaultTtl;
   }
 
   // max_ttl - computed: true, optional: true, required: false
-  private _maxTtl?: number | undefined; 
+  private _maxTtl?: number; 
   public get maxTtl() {
     return this.getNumberAttribute('max_ttl');
   }
-  public set maxTtl(value: number | undefined) {
+  public set maxTtl(value: number) {
     this._maxTtl = value;
   }
   public resetMaxTtl() {
@@ -701,15 +811,15 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get maxTtlInput() {
-    return this._maxTtl
+    return this._maxTtl;
   }
 
   // negative_caching - computed: true, optional: true, required: false
-  private _negativeCaching?: boolean | cdktf.IResolvable | undefined; 
+  private _negativeCaching?: boolean | cdktf.IResolvable; 
   public get negativeCaching() {
     return this.getBooleanAttribute('negative_caching') as any;
   }
-  public set negativeCaching(value: boolean | cdktf.IResolvable | undefined) {
+  public set negativeCaching(value: boolean | cdktf.IResolvable) {
     this._negativeCaching = value;
   }
   public resetNegativeCaching() {
@@ -717,15 +827,15 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get negativeCachingInput() {
-    return this._negativeCaching
+    return this._negativeCaching;
   }
 
   // serve_while_stale - computed: true, optional: true, required: false
-  private _serveWhileStale?: number | undefined; 
+  private _serveWhileStale?: number; 
   public get serveWhileStale() {
     return this.getNumberAttribute('serve_while_stale');
   }
-  public set serveWhileStale(value: number | undefined) {
+  public set serveWhileStale(value: number) {
     this._serveWhileStale = value;
   }
   public resetServeWhileStale() {
@@ -733,15 +843,15 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get serveWhileStaleInput() {
-    return this._serveWhileStale
+    return this._serveWhileStale;
   }
 
   // signed_url_cache_max_age_sec - computed: false, optional: true, required: false
-  private _signedUrlCacheMaxAgeSec?: number | undefined; 
+  private _signedUrlCacheMaxAgeSec?: number; 
   public get signedUrlCacheMaxAgeSec() {
     return this.getNumberAttribute('signed_url_cache_max_age_sec');
   }
-  public set signedUrlCacheMaxAgeSec(value: number | undefined) {
+  public set signedUrlCacheMaxAgeSec(value: number) {
     this._signedUrlCacheMaxAgeSec = value;
   }
   public resetSignedUrlCacheMaxAgeSec() {
@@ -749,33 +859,32 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get signedUrlCacheMaxAgeSecInput() {
-    return this._signedUrlCacheMaxAgeSec
+    return this._signedUrlCacheMaxAgeSec;
   }
 
   // cache_key_policy - computed: false, optional: true, required: false
-  private _cacheKeyPolicy?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined; 
-  private __cacheKeyPolicyOutput = new ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
+  private _cacheKeyPolicy = new ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
   public get cacheKeyPolicy() {
-    return this.__cacheKeyPolicyOutput;
+    return this._cacheKeyPolicy;
   }
-  public putCacheKeyPolicy(value: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined) {
-    this._cacheKeyPolicy = value;
+  public putCacheKeyPolicy(value: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy) {
+    this._cacheKeyPolicy.internalValue = value;
   }
   public resetCacheKeyPolicy() {
-    this._cacheKeyPolicy = undefined;
+    this._cacheKeyPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cacheKeyPolicyInput() {
-    return this._cacheKeyPolicy
+    return this._cacheKeyPolicy.internalValue;
   }
 
   // negative_caching_policy - computed: false, optional: true, required: false
-  private _negativeCachingPolicy?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[] | undefined; 
+  private _negativeCachingPolicy?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[]; 
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('negative_caching_policy') as any;
   }
-  public set negativeCachingPolicy(value: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[] | undefined) {
+  public set negativeCachingPolicy(value: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy[]) {
     this._negativeCachingPolicy = value;
   }
   public resetNegativeCachingPolicy() {
@@ -783,7 +892,7 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get negativeCachingPolicyInput() {
-    return this._negativeCachingPolicy
+    return this._negativeCachingPolicy;
   }
 }
 export interface ComputeRegionBackendServiceCircuitBreakers {
@@ -826,7 +935,7 @@ Defaults to 3.
   readonly maxRetries?: number;
 }
 
-function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: ComputeRegionBackendServiceCircuitBreakersOutputReference | ComputeRegionBackendServiceCircuitBreakers): any {
+export function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: ComputeRegionBackendServiceCircuitBreakersOutputReference | ComputeRegionBackendServiceCircuitBreakers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -850,12 +959,55 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceCircuitBreakers | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxConnections) {
+      hasAnyValues = true;
+      internalValueResult.maxConnections = this._maxConnections;
+    }
+    if (this._maxPendingRequests) {
+      hasAnyValues = true;
+      internalValueResult.maxPendingRequests = this._maxPendingRequests;
+    }
+    if (this._maxRequests) {
+      hasAnyValues = true;
+      internalValueResult.maxRequests = this._maxRequests;
+    }
+    if (this._maxRequestsPerConnection) {
+      hasAnyValues = true;
+      internalValueResult.maxRequestsPerConnection = this._maxRequestsPerConnection;
+    }
+    if (this._maxRetries) {
+      hasAnyValues = true;
+      internalValueResult.maxRetries = this._maxRetries;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceCircuitBreakers | undefined) {
+    if (value === undefined) {
+      this._maxConnections = undefined;
+      this._maxPendingRequests = undefined;
+      this._maxRequests = undefined;
+      this._maxRequestsPerConnection = undefined;
+      this._maxRetries = undefined;
+    }
+    else {
+      this._maxConnections = value.maxConnections;
+      this._maxPendingRequests = value.maxPendingRequests;
+      this._maxRequests = value.maxRequests;
+      this._maxRequestsPerConnection = value.maxRequestsPerConnection;
+      this._maxRetries = value.maxRetries;
+    }
+  }
+
   // max_connections - computed: false, optional: true, required: false
-  private _maxConnections?: number | undefined; 
+  private _maxConnections?: number; 
   public get maxConnections() {
     return this.getNumberAttribute('max_connections');
   }
-  public set maxConnections(value: number | undefined) {
+  public set maxConnections(value: number) {
     this._maxConnections = value;
   }
   public resetMaxConnections() {
@@ -863,15 +1015,15 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get maxConnectionsInput() {
-    return this._maxConnections
+    return this._maxConnections;
   }
 
   // max_pending_requests - computed: false, optional: true, required: false
-  private _maxPendingRequests?: number | undefined; 
+  private _maxPendingRequests?: number; 
   public get maxPendingRequests() {
     return this.getNumberAttribute('max_pending_requests');
   }
-  public set maxPendingRequests(value: number | undefined) {
+  public set maxPendingRequests(value: number) {
     this._maxPendingRequests = value;
   }
   public resetMaxPendingRequests() {
@@ -879,15 +1031,15 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get maxPendingRequestsInput() {
-    return this._maxPendingRequests
+    return this._maxPendingRequests;
   }
 
   // max_requests - computed: false, optional: true, required: false
-  private _maxRequests?: number | undefined; 
+  private _maxRequests?: number; 
   public get maxRequests() {
     return this.getNumberAttribute('max_requests');
   }
-  public set maxRequests(value: number | undefined) {
+  public set maxRequests(value: number) {
     this._maxRequests = value;
   }
   public resetMaxRequests() {
@@ -895,15 +1047,15 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get maxRequestsInput() {
-    return this._maxRequests
+    return this._maxRequests;
   }
 
   // max_requests_per_connection - computed: false, optional: true, required: false
-  private _maxRequestsPerConnection?: number | undefined; 
+  private _maxRequestsPerConnection?: number; 
   public get maxRequestsPerConnection() {
     return this.getNumberAttribute('max_requests_per_connection');
   }
-  public set maxRequestsPerConnection(value: number | undefined) {
+  public set maxRequestsPerConnection(value: number) {
     this._maxRequestsPerConnection = value;
   }
   public resetMaxRequestsPerConnection() {
@@ -911,15 +1063,15 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get maxRequestsPerConnectionInput() {
-    return this._maxRequestsPerConnection
+    return this._maxRequestsPerConnection;
   }
 
   // max_retries - computed: false, optional: true, required: false
-  private _maxRetries?: number | undefined; 
+  private _maxRetries?: number; 
   public get maxRetries() {
     return this.getNumberAttribute('max_retries');
   }
-  public set maxRetries(value: number | undefined) {
+  public set maxRetries(value: number) {
     this._maxRetries = value;
   }
   public resetMaxRetries() {
@@ -927,7 +1079,7 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get maxRetriesInput() {
-    return this._maxRetries
+    return this._maxRetries;
   }
 }
 export interface ComputeRegionBackendServiceConsistentHashHttpCookieTtl {
@@ -949,7 +1101,7 @@ Must be from 0 to 315,576,000,000 inclusive.
   readonly seconds: number;
 }
 
-function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookieTtl): any {
+export function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookieTtl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -970,12 +1122,37 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -983,7 +1160,7 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -996,7 +1173,7 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeRegionBackendServiceConsistentHashHttpCookie {
@@ -1020,7 +1197,7 @@ export interface ComputeRegionBackendServiceConsistentHashHttpCookie {
   readonly ttl?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl;
 }
 
-function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookie): any {
+export function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookie): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1042,12 +1219,43 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookie | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._ttl) {
+      hasAnyValues = true;
+      internalValueResult.ttl = this._ttl?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceConsistentHashHttpCookie | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._path = undefined;
+      this._ttl.internalValue = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._path = value.path;
+      this._ttl.internalValue = value.ttl;
+    }
+  }
+
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -1055,15 +1263,15 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -1071,24 +1279,23 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl?: ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined; 
-  private __ttlOutput = new ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference(this as any, "ttl", true);
+  private _ttl = new ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference(this as any, "ttl", true);
   public get ttl() {
-    return this.__ttlOutput;
+    return this._ttl;
   }
-  public putTtl(value: ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined) {
-    this._ttl = value;
+  public putTtl(value: ComputeRegionBackendServiceConsistentHashHttpCookieTtl) {
+    this._ttl.internalValue = value;
   }
   public resetTtl() {
-    this._ttl = undefined;
+    this._ttl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
-    return this._ttl
+    return this._ttl.internalValue;
   }
 }
 export interface ComputeRegionBackendServiceConsistentHash {
@@ -1118,7 +1325,7 @@ Defaults to 1024.
   readonly httpCookie?: ComputeRegionBackendServiceConsistentHashHttpCookie;
 }
 
-function computeRegionBackendServiceConsistentHashToTerraform(struct?: ComputeRegionBackendServiceConsistentHashOutputReference | ComputeRegionBackendServiceConsistentHash): any {
+export function computeRegionBackendServiceConsistentHashToTerraform(struct?: ComputeRegionBackendServiceConsistentHashOutputReference | ComputeRegionBackendServiceConsistentHash): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1140,12 +1347,43 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceConsistentHash | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._httpHeaderName) {
+      hasAnyValues = true;
+      internalValueResult.httpHeaderName = this._httpHeaderName;
+    }
+    if (this._minimumRingSize) {
+      hasAnyValues = true;
+      internalValueResult.minimumRingSize = this._minimumRingSize;
+    }
+    if (this._httpCookie) {
+      hasAnyValues = true;
+      internalValueResult.httpCookie = this._httpCookie?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceConsistentHash | undefined) {
+    if (value === undefined) {
+      this._httpHeaderName = undefined;
+      this._minimumRingSize = undefined;
+      this._httpCookie.internalValue = undefined;
+    }
+    else {
+      this._httpHeaderName = value.httpHeaderName;
+      this._minimumRingSize = value.minimumRingSize;
+      this._httpCookie.internalValue = value.httpCookie;
+    }
+  }
+
   // http_header_name - computed: false, optional: true, required: false
-  private _httpHeaderName?: string | undefined; 
+  private _httpHeaderName?: string; 
   public get httpHeaderName() {
     return this.getStringAttribute('http_header_name');
   }
-  public set httpHeaderName(value: string | undefined) {
+  public set httpHeaderName(value: string) {
     this._httpHeaderName = value;
   }
   public resetHttpHeaderName() {
@@ -1153,15 +1391,15 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get httpHeaderNameInput() {
-    return this._httpHeaderName
+    return this._httpHeaderName;
   }
 
   // minimum_ring_size - computed: false, optional: true, required: false
-  private _minimumRingSize?: number | undefined; 
+  private _minimumRingSize?: number; 
   public get minimumRingSize() {
     return this.getNumberAttribute('minimum_ring_size');
   }
-  public set minimumRingSize(value: number | undefined) {
+  public set minimumRingSize(value: number) {
     this._minimumRingSize = value;
   }
   public resetMinimumRingSize() {
@@ -1169,24 +1407,23 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get minimumRingSizeInput() {
-    return this._minimumRingSize
+    return this._minimumRingSize;
   }
 
   // http_cookie - computed: false, optional: true, required: false
-  private _httpCookie?: ComputeRegionBackendServiceConsistentHashHttpCookie | undefined; 
-  private __httpCookieOutput = new ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference(this as any, "http_cookie", true);
+  private _httpCookie = new ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference(this as any, "http_cookie", true);
   public get httpCookie() {
-    return this.__httpCookieOutput;
+    return this._httpCookie;
   }
-  public putHttpCookie(value: ComputeRegionBackendServiceConsistentHashHttpCookie | undefined) {
-    this._httpCookie = value;
+  public putHttpCookie(value: ComputeRegionBackendServiceConsistentHashHttpCookie) {
+    this._httpCookie.internalValue = value;
   }
   public resetHttpCookie() {
-    this._httpCookie = undefined;
+    this._httpCookie.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpCookieInput() {
-    return this._httpCookie
+    return this._httpCookie.internalValue;
   }
 }
 export interface ComputeRegionBackendServiceFailoverPolicy {
@@ -1227,7 +1464,7 @@ This field is only used with l4 load balancing.
   readonly failoverRatio?: number;
 }
 
-function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRegionBackendServiceFailoverPolicyOutputReference | ComputeRegionBackendServiceFailoverPolicy): any {
+export function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: ComputeRegionBackendServiceFailoverPolicyOutputReference | ComputeRegionBackendServiceFailoverPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1249,12 +1486,43 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceFailoverPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._disableConnectionDrainOnFailover) {
+      hasAnyValues = true;
+      internalValueResult.disableConnectionDrainOnFailover = this._disableConnectionDrainOnFailover;
+    }
+    if (this._dropTrafficIfUnhealthy) {
+      hasAnyValues = true;
+      internalValueResult.dropTrafficIfUnhealthy = this._dropTrafficIfUnhealthy;
+    }
+    if (this._failoverRatio) {
+      hasAnyValues = true;
+      internalValueResult.failoverRatio = this._failoverRatio;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceFailoverPolicy | undefined) {
+    if (value === undefined) {
+      this._disableConnectionDrainOnFailover = undefined;
+      this._dropTrafficIfUnhealthy = undefined;
+      this._failoverRatio = undefined;
+    }
+    else {
+      this._disableConnectionDrainOnFailover = value.disableConnectionDrainOnFailover;
+      this._dropTrafficIfUnhealthy = value.dropTrafficIfUnhealthy;
+      this._failoverRatio = value.failoverRatio;
+    }
+  }
+
   // disable_connection_drain_on_failover - computed: false, optional: true, required: false
-  private _disableConnectionDrainOnFailover?: boolean | cdktf.IResolvable | undefined; 
+  private _disableConnectionDrainOnFailover?: boolean | cdktf.IResolvable; 
   public get disableConnectionDrainOnFailover() {
     return this.getBooleanAttribute('disable_connection_drain_on_failover') as any;
   }
-  public set disableConnectionDrainOnFailover(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableConnectionDrainOnFailover(value: boolean | cdktf.IResolvable) {
     this._disableConnectionDrainOnFailover = value;
   }
   public resetDisableConnectionDrainOnFailover() {
@@ -1262,15 +1530,15 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get disableConnectionDrainOnFailoverInput() {
-    return this._disableConnectionDrainOnFailover
+    return this._disableConnectionDrainOnFailover;
   }
 
   // drop_traffic_if_unhealthy - computed: false, optional: true, required: false
-  private _dropTrafficIfUnhealthy?: boolean | cdktf.IResolvable | undefined; 
+  private _dropTrafficIfUnhealthy?: boolean | cdktf.IResolvable; 
   public get dropTrafficIfUnhealthy() {
     return this.getBooleanAttribute('drop_traffic_if_unhealthy') as any;
   }
-  public set dropTrafficIfUnhealthy(value: boolean | cdktf.IResolvable | undefined) {
+  public set dropTrafficIfUnhealthy(value: boolean | cdktf.IResolvable) {
     this._dropTrafficIfUnhealthy = value;
   }
   public resetDropTrafficIfUnhealthy() {
@@ -1278,15 +1546,15 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get dropTrafficIfUnhealthyInput() {
-    return this._dropTrafficIfUnhealthy
+    return this._dropTrafficIfUnhealthy;
   }
 
   // failover_ratio - computed: false, optional: true, required: false
-  private _failoverRatio?: number | undefined; 
+  private _failoverRatio?: number; 
   public get failoverRatio() {
     return this.getNumberAttribute('failover_ratio');
   }
-  public set failoverRatio(value: number | undefined) {
+  public set failoverRatio(value: number) {
     this._failoverRatio = value;
   }
   public resetFailoverRatio() {
@@ -1294,7 +1562,7 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get failoverRatioInput() {
-    return this._failoverRatio
+    return this._failoverRatio;
   }
 }
 export interface ComputeRegionBackendServiceIap {
@@ -1312,7 +1580,7 @@ export interface ComputeRegionBackendServiceIap {
   readonly oauth2ClientSecret: string;
 }
 
-function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegionBackendServiceIapOutputReference | ComputeRegionBackendServiceIap): any {
+export function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegionBackendServiceIapOutputReference | ComputeRegionBackendServiceIap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1333,6 +1601,31 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceIap | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._oauth2ClientId) {
+      hasAnyValues = true;
+      internalValueResult.oauth2ClientId = this._oauth2ClientId;
+    }
+    if (this._oauth2ClientSecret) {
+      hasAnyValues = true;
+      internalValueResult.oauth2ClientSecret = this._oauth2ClientSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceIap | undefined) {
+    if (value === undefined) {
+      this._oauth2ClientId = undefined;
+      this._oauth2ClientSecret = undefined;
+    }
+    else {
+      this._oauth2ClientId = value.oauth2ClientId;
+      this._oauth2ClientSecret = value.oauth2ClientSecret;
+    }
+  }
+
   // oauth2_client_id - computed: false, optional: false, required: true
   private _oauth2ClientId?: string; 
   public get oauth2ClientId() {
@@ -1343,7 +1636,7 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get oauth2ClientIdInput() {
-    return this._oauth2ClientId
+    return this._oauth2ClientId;
   }
 
   // oauth2_client_secret - computed: false, optional: false, required: true
@@ -1356,7 +1649,7 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get oauth2ClientSecretInput() {
-    return this._oauth2ClientSecret
+    return this._oauth2ClientSecret;
   }
 }
 export interface ComputeRegionBackendServiceLogConfig {
@@ -1377,7 +1670,7 @@ The default value is 1.0.
   readonly sampleRate?: number;
 }
 
-function computeRegionBackendServiceLogConfigToTerraform(struct?: ComputeRegionBackendServiceLogConfigOutputReference | ComputeRegionBackendServiceLogConfig): any {
+export function computeRegionBackendServiceLogConfigToTerraform(struct?: ComputeRegionBackendServiceLogConfigOutputReference | ComputeRegionBackendServiceLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1398,12 +1691,37 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceLogConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enable) {
+      hasAnyValues = true;
+      internalValueResult.enable = this._enable;
+    }
+    if (this._sampleRate) {
+      hasAnyValues = true;
+      internalValueResult.sampleRate = this._sampleRate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceLogConfig | undefined) {
+    if (value === undefined) {
+      this._enable = undefined;
+      this._sampleRate = undefined;
+    }
+    else {
+      this._enable = value.enable;
+      this._sampleRate = value.sampleRate;
+    }
+  }
+
   // enable - computed: false, optional: true, required: false
-  private _enable?: boolean | cdktf.IResolvable | undefined; 
+  private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
     return this.getBooleanAttribute('enable') as any;
   }
-  public set enable(value: boolean | cdktf.IResolvable | undefined) {
+  public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
   }
   public resetEnable() {
@@ -1411,15 +1729,15 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get enableInput() {
-    return this._enable
+    return this._enable;
   }
 
   // sample_rate - computed: false, optional: true, required: false
-  private _sampleRate?: number | undefined; 
+  private _sampleRate?: number; 
   public get sampleRate() {
     return this.getNumberAttribute('sample_rate');
   }
-  public set sampleRate(value: number | undefined) {
+  public set sampleRate(value: number) {
     this._sampleRate = value;
   }
   public resetSampleRate() {
@@ -1427,7 +1745,7 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get sampleRateInput() {
-    return this._sampleRate
+    return this._sampleRate;
   }
 }
 export interface ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime {
@@ -1448,7 +1766,7 @@ inclusive.
   readonly seconds: number;
 }
 
-function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime): any {
+export function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1469,12 +1787,37 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -1482,7 +1825,7 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -1495,7 +1838,7 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeRegionBackendServiceOutlierDetectionInterval {
@@ -1516,7 +1859,7 @@ inclusive.
   readonly seconds: number;
 }
 
-function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference | ComputeRegionBackendServiceOutlierDetectionInterval): any {
+export function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference | ComputeRegionBackendServiceOutlierDetectionInterval): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1537,12 +1880,37 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceOutlierDetectionInterval | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceOutlierDetectionInterval | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -1550,7 +1918,7 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -1563,7 +1931,7 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeRegionBackendServiceOutlierDetection {
@@ -1658,7 +2026,7 @@ runtime value should be 1900. Defaults to 1900.
   readonly interval?: ComputeRegionBackendServiceOutlierDetectionInterval;
 }
 
-function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionOutputReference | ComputeRegionBackendServiceOutlierDetection): any {
+export function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionOutputReference | ComputeRegionBackendServiceOutlierDetection): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1688,12 +2056,91 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceOutlierDetection | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._consecutiveErrors) {
+      hasAnyValues = true;
+      internalValueResult.consecutiveErrors = this._consecutiveErrors;
+    }
+    if (this._consecutiveGatewayFailure) {
+      hasAnyValues = true;
+      internalValueResult.consecutiveGatewayFailure = this._consecutiveGatewayFailure;
+    }
+    if (this._enforcingConsecutiveErrors) {
+      hasAnyValues = true;
+      internalValueResult.enforcingConsecutiveErrors = this._enforcingConsecutiveErrors;
+    }
+    if (this._enforcingConsecutiveGatewayFailure) {
+      hasAnyValues = true;
+      internalValueResult.enforcingConsecutiveGatewayFailure = this._enforcingConsecutiveGatewayFailure;
+    }
+    if (this._enforcingSuccessRate) {
+      hasAnyValues = true;
+      internalValueResult.enforcingSuccessRate = this._enforcingSuccessRate;
+    }
+    if (this._maxEjectionPercent) {
+      hasAnyValues = true;
+      internalValueResult.maxEjectionPercent = this._maxEjectionPercent;
+    }
+    if (this._successRateMinimumHosts) {
+      hasAnyValues = true;
+      internalValueResult.successRateMinimumHosts = this._successRateMinimumHosts;
+    }
+    if (this._successRateRequestVolume) {
+      hasAnyValues = true;
+      internalValueResult.successRateRequestVolume = this._successRateRequestVolume;
+    }
+    if (this._successRateStdevFactor) {
+      hasAnyValues = true;
+      internalValueResult.successRateStdevFactor = this._successRateStdevFactor;
+    }
+    if (this._baseEjectionTime) {
+      hasAnyValues = true;
+      internalValueResult.baseEjectionTime = this._baseEjectionTime?.internalValue;
+    }
+    if (this._interval) {
+      hasAnyValues = true;
+      internalValueResult.interval = this._interval?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceOutlierDetection | undefined) {
+    if (value === undefined) {
+      this._consecutiveErrors = undefined;
+      this._consecutiveGatewayFailure = undefined;
+      this._enforcingConsecutiveErrors = undefined;
+      this._enforcingConsecutiveGatewayFailure = undefined;
+      this._enforcingSuccessRate = undefined;
+      this._maxEjectionPercent = undefined;
+      this._successRateMinimumHosts = undefined;
+      this._successRateRequestVolume = undefined;
+      this._successRateStdevFactor = undefined;
+      this._baseEjectionTime.internalValue = undefined;
+      this._interval.internalValue = undefined;
+    }
+    else {
+      this._consecutiveErrors = value.consecutiveErrors;
+      this._consecutiveGatewayFailure = value.consecutiveGatewayFailure;
+      this._enforcingConsecutiveErrors = value.enforcingConsecutiveErrors;
+      this._enforcingConsecutiveGatewayFailure = value.enforcingConsecutiveGatewayFailure;
+      this._enforcingSuccessRate = value.enforcingSuccessRate;
+      this._maxEjectionPercent = value.maxEjectionPercent;
+      this._successRateMinimumHosts = value.successRateMinimumHosts;
+      this._successRateRequestVolume = value.successRateRequestVolume;
+      this._successRateStdevFactor = value.successRateStdevFactor;
+      this._baseEjectionTime.internalValue = value.baseEjectionTime;
+      this._interval.internalValue = value.interval;
+    }
+  }
+
   // consecutive_errors - computed: false, optional: true, required: false
-  private _consecutiveErrors?: number | undefined; 
+  private _consecutiveErrors?: number; 
   public get consecutiveErrors() {
     return this.getNumberAttribute('consecutive_errors');
   }
-  public set consecutiveErrors(value: number | undefined) {
+  public set consecutiveErrors(value: number) {
     this._consecutiveErrors = value;
   }
   public resetConsecutiveErrors() {
@@ -1701,15 +2148,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get consecutiveErrorsInput() {
-    return this._consecutiveErrors
+    return this._consecutiveErrors;
   }
 
   // consecutive_gateway_failure - computed: false, optional: true, required: false
-  private _consecutiveGatewayFailure?: number | undefined; 
+  private _consecutiveGatewayFailure?: number; 
   public get consecutiveGatewayFailure() {
     return this.getNumberAttribute('consecutive_gateway_failure');
   }
-  public set consecutiveGatewayFailure(value: number | undefined) {
+  public set consecutiveGatewayFailure(value: number) {
     this._consecutiveGatewayFailure = value;
   }
   public resetConsecutiveGatewayFailure() {
@@ -1717,15 +2164,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get consecutiveGatewayFailureInput() {
-    return this._consecutiveGatewayFailure
+    return this._consecutiveGatewayFailure;
   }
 
   // enforcing_consecutive_errors - computed: false, optional: true, required: false
-  private _enforcingConsecutiveErrors?: number | undefined; 
+  private _enforcingConsecutiveErrors?: number; 
   public get enforcingConsecutiveErrors() {
     return this.getNumberAttribute('enforcing_consecutive_errors');
   }
-  public set enforcingConsecutiveErrors(value: number | undefined) {
+  public set enforcingConsecutiveErrors(value: number) {
     this._enforcingConsecutiveErrors = value;
   }
   public resetEnforcingConsecutiveErrors() {
@@ -1733,15 +2180,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get enforcingConsecutiveErrorsInput() {
-    return this._enforcingConsecutiveErrors
+    return this._enforcingConsecutiveErrors;
   }
 
   // enforcing_consecutive_gateway_failure - computed: false, optional: true, required: false
-  private _enforcingConsecutiveGatewayFailure?: number | undefined; 
+  private _enforcingConsecutiveGatewayFailure?: number; 
   public get enforcingConsecutiveGatewayFailure() {
     return this.getNumberAttribute('enforcing_consecutive_gateway_failure');
   }
-  public set enforcingConsecutiveGatewayFailure(value: number | undefined) {
+  public set enforcingConsecutiveGatewayFailure(value: number) {
     this._enforcingConsecutiveGatewayFailure = value;
   }
   public resetEnforcingConsecutiveGatewayFailure() {
@@ -1749,15 +2196,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get enforcingConsecutiveGatewayFailureInput() {
-    return this._enforcingConsecutiveGatewayFailure
+    return this._enforcingConsecutiveGatewayFailure;
   }
 
   // enforcing_success_rate - computed: false, optional: true, required: false
-  private _enforcingSuccessRate?: number | undefined; 
+  private _enforcingSuccessRate?: number; 
   public get enforcingSuccessRate() {
     return this.getNumberAttribute('enforcing_success_rate');
   }
-  public set enforcingSuccessRate(value: number | undefined) {
+  public set enforcingSuccessRate(value: number) {
     this._enforcingSuccessRate = value;
   }
   public resetEnforcingSuccessRate() {
@@ -1765,15 +2212,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get enforcingSuccessRateInput() {
-    return this._enforcingSuccessRate
+    return this._enforcingSuccessRate;
   }
 
   // max_ejection_percent - computed: false, optional: true, required: false
-  private _maxEjectionPercent?: number | undefined; 
+  private _maxEjectionPercent?: number; 
   public get maxEjectionPercent() {
     return this.getNumberAttribute('max_ejection_percent');
   }
-  public set maxEjectionPercent(value: number | undefined) {
+  public set maxEjectionPercent(value: number) {
     this._maxEjectionPercent = value;
   }
   public resetMaxEjectionPercent() {
@@ -1781,15 +2228,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get maxEjectionPercentInput() {
-    return this._maxEjectionPercent
+    return this._maxEjectionPercent;
   }
 
   // success_rate_minimum_hosts - computed: false, optional: true, required: false
-  private _successRateMinimumHosts?: number | undefined; 
+  private _successRateMinimumHosts?: number; 
   public get successRateMinimumHosts() {
     return this.getNumberAttribute('success_rate_minimum_hosts');
   }
-  public set successRateMinimumHosts(value: number | undefined) {
+  public set successRateMinimumHosts(value: number) {
     this._successRateMinimumHosts = value;
   }
   public resetSuccessRateMinimumHosts() {
@@ -1797,15 +2244,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get successRateMinimumHostsInput() {
-    return this._successRateMinimumHosts
+    return this._successRateMinimumHosts;
   }
 
   // success_rate_request_volume - computed: false, optional: true, required: false
-  private _successRateRequestVolume?: number | undefined; 
+  private _successRateRequestVolume?: number; 
   public get successRateRequestVolume() {
     return this.getNumberAttribute('success_rate_request_volume');
   }
-  public set successRateRequestVolume(value: number | undefined) {
+  public set successRateRequestVolume(value: number) {
     this._successRateRequestVolume = value;
   }
   public resetSuccessRateRequestVolume() {
@@ -1813,15 +2260,15 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get successRateRequestVolumeInput() {
-    return this._successRateRequestVolume
+    return this._successRateRequestVolume;
   }
 
   // success_rate_stdev_factor - computed: false, optional: true, required: false
-  private _successRateStdevFactor?: number | undefined; 
+  private _successRateStdevFactor?: number; 
   public get successRateStdevFactor() {
     return this.getNumberAttribute('success_rate_stdev_factor');
   }
-  public set successRateStdevFactor(value: number | undefined) {
+  public set successRateStdevFactor(value: number) {
     this._successRateStdevFactor = value;
   }
   public resetSuccessRateStdevFactor() {
@@ -1829,41 +2276,39 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get successRateStdevFactorInput() {
-    return this._successRateStdevFactor
+    return this._successRateStdevFactor;
   }
 
   // base_ejection_time - computed: false, optional: true, required: false
-  private _baseEjectionTime?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined; 
-  private __baseEjectionTimeOutput = new ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this as any, "base_ejection_time", true);
+  private _baseEjectionTime = new ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this as any, "base_ejection_time", true);
   public get baseEjectionTime() {
-    return this.__baseEjectionTimeOutput;
+    return this._baseEjectionTime;
   }
-  public putBaseEjectionTime(value: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined) {
-    this._baseEjectionTime = value;
+  public putBaseEjectionTime(value: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime) {
+    this._baseEjectionTime.internalValue = value;
   }
   public resetBaseEjectionTime() {
-    this._baseEjectionTime = undefined;
+    this._baseEjectionTime.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get baseEjectionTimeInput() {
-    return this._baseEjectionTime
+    return this._baseEjectionTime.internalValue;
   }
 
   // interval - computed: false, optional: true, required: false
-  private _interval?: ComputeRegionBackendServiceOutlierDetectionInterval | undefined; 
-  private __intervalOutput = new ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference(this as any, "interval", true);
+  private _interval = new ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference(this as any, "interval", true);
   public get interval() {
-    return this.__intervalOutput;
+    return this._interval;
   }
-  public putInterval(value: ComputeRegionBackendServiceOutlierDetectionInterval | undefined) {
-    this._interval = value;
+  public putInterval(value: ComputeRegionBackendServiceOutlierDetectionInterval) {
+    this._interval.internalValue = value;
   }
   public resetInterval() {
-    this._interval = undefined;
+    this._interval.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInput() {
-    return this._interval
+    return this._interval.internalValue;
   }
 }
 export interface ComputeRegionBackendServiceTimeouts {
@@ -1881,7 +2326,7 @@ export interface ComputeRegionBackendServiceTimeouts {
   readonly update?: string;
 }
 
-function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBackendServiceTimeoutsOutputReference | ComputeRegionBackendServiceTimeouts): any {
+export function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeRegionBackendServiceTimeoutsOutputReference | ComputeRegionBackendServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1903,12 +2348,43 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionBackendServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionBackendServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1916,15 +2392,15 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1932,15 +2408,15 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1948,7 +2424,7 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -2000,14 +2476,14 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     this._sessionAffinity = config.sessionAffinity;
     this._timeoutSec = config.timeoutSec;
     this._backend = config.backend;
-    this._cdnPolicy = config.cdnPolicy;
-    this._circuitBreakers = config.circuitBreakers;
-    this._consistentHash = config.consistentHash;
-    this._failoverPolicy = config.failoverPolicy;
-    this._iap = config.iap;
-    this._logConfig = config.logConfig;
-    this._outlierDetection = config.outlierDetection;
-    this._timeouts = config.timeouts;
+    this._cdnPolicy.internalValue = config.cdnPolicy;
+    this._circuitBreakers.internalValue = config.circuitBreakers;
+    this._consistentHash.internalValue = config.consistentHash;
+    this._failoverPolicy.internalValue = config.failoverPolicy;
+    this._iap.internalValue = config.iap;
+    this._logConfig.internalValue = config.logConfig;
+    this._outlierDetection.internalValue = config.outlierDetection;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -2015,11 +2491,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   // ==========
 
   // affinity_cookie_ttl_sec - computed: false, optional: true, required: false
-  private _affinityCookieTtlSec?: number | undefined; 
+  private _affinityCookieTtlSec?: number; 
   public get affinityCookieTtlSec() {
     return this.getNumberAttribute('affinity_cookie_ttl_sec');
   }
-  public set affinityCookieTtlSec(value: number | undefined) {
+  public set affinityCookieTtlSec(value: number) {
     this._affinityCookieTtlSec = value;
   }
   public resetAffinityCookieTtlSec() {
@@ -2027,15 +2503,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get affinityCookieTtlSecInput() {
-    return this._affinityCookieTtlSec
+    return this._affinityCookieTtlSec;
   }
 
   // connection_draining_timeout_sec - computed: false, optional: true, required: false
-  private _connectionDrainingTimeoutSec?: number | undefined; 
+  private _connectionDrainingTimeoutSec?: number; 
   public get connectionDrainingTimeoutSec() {
     return this.getNumberAttribute('connection_draining_timeout_sec');
   }
-  public set connectionDrainingTimeoutSec(value: number | undefined) {
+  public set connectionDrainingTimeoutSec(value: number) {
     this._connectionDrainingTimeoutSec = value;
   }
   public resetConnectionDrainingTimeoutSec() {
@@ -2043,7 +2519,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionDrainingTimeoutSecInput() {
-    return this._connectionDrainingTimeoutSec
+    return this._connectionDrainingTimeoutSec;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -2052,11 +2528,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -2064,15 +2540,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean | cdktf.IResolvable | undefined; 
+  private _enableCdn?: boolean | cdktf.IResolvable; 
   public get enableCdn() {
     return this.getBooleanAttribute('enable_cdn') as any;
   }
-  public set enableCdn(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableCdn(value: boolean | cdktf.IResolvable) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {
@@ -2080,7 +2556,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableCdnInput() {
-    return this._enableCdn
+    return this._enableCdn;
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -2089,11 +2565,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // health_checks - computed: false, optional: true, required: false
-  private _healthChecks?: string[] | undefined; 
+  private _healthChecks?: string[]; 
   public get healthChecks() {
     return this.getListAttribute('health_checks');
   }
-  public set healthChecks(value: string[] | undefined) {
+  public set healthChecks(value: string[]) {
     this._healthChecks = value;
   }
   public resetHealthChecks() {
@@ -2101,7 +2577,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get healthChecksInput() {
-    return this._healthChecks
+    return this._healthChecks;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2110,11 +2586,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
-  private _loadBalancingScheme?: string | undefined; 
+  private _loadBalancingScheme?: string; 
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string | undefined) {
+  public set loadBalancingScheme(value: string) {
     this._loadBalancingScheme = value;
   }
   public resetLoadBalancingScheme() {
@@ -2122,15 +2598,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancingSchemeInput() {
-    return this._loadBalancingScheme
+    return this._loadBalancingScheme;
   }
 
   // locality_lb_policy - computed: false, optional: true, required: false
-  private _localityLbPolicy?: string | undefined; 
+  private _localityLbPolicy?: string; 
   public get localityLbPolicy() {
     return this.getStringAttribute('locality_lb_policy');
   }
-  public set localityLbPolicy(value: string | undefined) {
+  public set localityLbPolicy(value: string) {
     this._localityLbPolicy = value;
   }
   public resetLocalityLbPolicy() {
@@ -2138,7 +2614,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get localityLbPolicyInput() {
-    return this._localityLbPolicy
+    return this._localityLbPolicy;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2151,15 +2627,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -2167,15 +2643,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // port_name - computed: true, optional: true, required: false
-  private _portName?: string | undefined; 
+  private _portName?: string; 
   public get portName() {
     return this.getStringAttribute('port_name');
   }
-  public set portName(value: string | undefined) {
+  public set portName(value: string) {
     this._portName = value;
   }
   public resetPortName() {
@@ -2183,15 +2659,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portNameInput() {
-    return this._portName
+    return this._portName;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -2199,15 +2675,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // protocol - computed: true, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -2215,15 +2691,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -2231,7 +2707,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -2240,11 +2716,11 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // session_affinity - computed: true, optional: true, required: false
-  private _sessionAffinity?: string | undefined; 
+  private _sessionAffinity?: string; 
   public get sessionAffinity() {
     return this.getStringAttribute('session_affinity');
   }
-  public set sessionAffinity(value: string | undefined) {
+  public set sessionAffinity(value: string) {
     this._sessionAffinity = value;
   }
   public resetSessionAffinity() {
@@ -2252,15 +2728,15 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sessionAffinityInput() {
-    return this._sessionAffinity
+    return this._sessionAffinity;
   }
 
   // timeout_sec - computed: true, optional: true, required: false
-  private _timeoutSec?: number | undefined; 
+  private _timeoutSec?: number; 
   public get timeoutSec() {
     return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number) {
     this._timeoutSec = value;
   }
   public resetTimeoutSec() {
@@ -2268,16 +2744,16 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutSecInput() {
-    return this._timeoutSec
+    return this._timeoutSec;
   }
 
   // backend - computed: false, optional: true, required: false
-  private _backend?: ComputeRegionBackendServiceBackend[] | undefined; 
+  private _backend?: ComputeRegionBackendServiceBackend[]; 
   public get backend() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend') as any;
   }
-  public set backend(value: ComputeRegionBackendServiceBackend[] | undefined) {
+  public set backend(value: ComputeRegionBackendServiceBackend[]) {
     this._backend = value;
   }
   public resetBackend() {
@@ -2285,143 +2761,135 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendInput() {
-    return this._backend
+    return this._backend;
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy?: ComputeRegionBackendServiceCdnPolicy | undefined; 
-  private __cdnPolicyOutput = new ComputeRegionBackendServiceCdnPolicyOutputReference(this as any, "cdn_policy", true);
+  private _cdnPolicy = new ComputeRegionBackendServiceCdnPolicyOutputReference(this as any, "cdn_policy", true);
   public get cdnPolicy() {
-    return this.__cdnPolicyOutput;
+    return this._cdnPolicy;
   }
-  public putCdnPolicy(value: ComputeRegionBackendServiceCdnPolicy | undefined) {
-    this._cdnPolicy = value;
+  public putCdnPolicy(value: ComputeRegionBackendServiceCdnPolicy) {
+    this._cdnPolicy.internalValue = value;
   }
   public resetCdnPolicy() {
-    this._cdnPolicy = undefined;
+    this._cdnPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cdnPolicyInput() {
-    return this._cdnPolicy
+    return this._cdnPolicy.internalValue;
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
-  private _circuitBreakers?: ComputeRegionBackendServiceCircuitBreakers | undefined; 
-  private __circuitBreakersOutput = new ComputeRegionBackendServiceCircuitBreakersOutputReference(this as any, "circuit_breakers", true);
+  private _circuitBreakers = new ComputeRegionBackendServiceCircuitBreakersOutputReference(this as any, "circuit_breakers", true);
   public get circuitBreakers() {
-    return this.__circuitBreakersOutput;
+    return this._circuitBreakers;
   }
-  public putCircuitBreakers(value: ComputeRegionBackendServiceCircuitBreakers | undefined) {
-    this._circuitBreakers = value;
+  public putCircuitBreakers(value: ComputeRegionBackendServiceCircuitBreakers) {
+    this._circuitBreakers.internalValue = value;
   }
   public resetCircuitBreakers() {
-    this._circuitBreakers = undefined;
+    this._circuitBreakers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get circuitBreakersInput() {
-    return this._circuitBreakers
+    return this._circuitBreakers.internalValue;
   }
 
   // consistent_hash - computed: false, optional: true, required: false
-  private _consistentHash?: ComputeRegionBackendServiceConsistentHash | undefined; 
-  private __consistentHashOutput = new ComputeRegionBackendServiceConsistentHashOutputReference(this as any, "consistent_hash", true);
+  private _consistentHash = new ComputeRegionBackendServiceConsistentHashOutputReference(this as any, "consistent_hash", true);
   public get consistentHash() {
-    return this.__consistentHashOutput;
+    return this._consistentHash;
   }
-  public putConsistentHash(value: ComputeRegionBackendServiceConsistentHash | undefined) {
-    this._consistentHash = value;
+  public putConsistentHash(value: ComputeRegionBackendServiceConsistentHash) {
+    this._consistentHash.internalValue = value;
   }
   public resetConsistentHash() {
-    this._consistentHash = undefined;
+    this._consistentHash.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get consistentHashInput() {
-    return this._consistentHash
+    return this._consistentHash.internalValue;
   }
 
   // failover_policy - computed: false, optional: true, required: false
-  private _failoverPolicy?: ComputeRegionBackendServiceFailoverPolicy | undefined; 
-  private __failoverPolicyOutput = new ComputeRegionBackendServiceFailoverPolicyOutputReference(this as any, "failover_policy", true);
+  private _failoverPolicy = new ComputeRegionBackendServiceFailoverPolicyOutputReference(this as any, "failover_policy", true);
   public get failoverPolicy() {
-    return this.__failoverPolicyOutput;
+    return this._failoverPolicy;
   }
-  public putFailoverPolicy(value: ComputeRegionBackendServiceFailoverPolicy | undefined) {
-    this._failoverPolicy = value;
+  public putFailoverPolicy(value: ComputeRegionBackendServiceFailoverPolicy) {
+    this._failoverPolicy.internalValue = value;
   }
   public resetFailoverPolicy() {
-    this._failoverPolicy = undefined;
+    this._failoverPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get failoverPolicyInput() {
-    return this._failoverPolicy
+    return this._failoverPolicy.internalValue;
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap?: ComputeRegionBackendServiceIap | undefined; 
-  private __iapOutput = new ComputeRegionBackendServiceIapOutputReference(this as any, "iap", true);
+  private _iap = new ComputeRegionBackendServiceIapOutputReference(this as any, "iap", true);
   public get iap() {
-    return this.__iapOutput;
+    return this._iap;
   }
-  public putIap(value: ComputeRegionBackendServiceIap | undefined) {
-    this._iap = value;
+  public putIap(value: ComputeRegionBackendServiceIap) {
+    this._iap.internalValue = value;
   }
   public resetIap() {
-    this._iap = undefined;
+    this._iap.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get iapInput() {
-    return this._iap
+    return this._iap.internalValue;
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeRegionBackendServiceLogConfig | undefined; 
-  private __logConfigOutput = new ComputeRegionBackendServiceLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeRegionBackendServiceLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.__logConfigOutput;
+    return this._logConfig;
   }
-  public putLogConfig(value: ComputeRegionBackendServiceLogConfig | undefined) {
-    this._logConfig = value;
+  public putLogConfig(value: ComputeRegionBackendServiceLogConfig) {
+    this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
-    this._logConfig = undefined;
+    this._logConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logConfigInput() {
-    return this._logConfig
+    return this._logConfig.internalValue;
   }
 
   // outlier_detection - computed: false, optional: true, required: false
-  private _outlierDetection?: ComputeRegionBackendServiceOutlierDetection | undefined; 
-  private __outlierDetectionOutput = new ComputeRegionBackendServiceOutlierDetectionOutputReference(this as any, "outlier_detection", true);
+  private _outlierDetection = new ComputeRegionBackendServiceOutlierDetectionOutputReference(this as any, "outlier_detection", true);
   public get outlierDetection() {
-    return this.__outlierDetectionOutput;
+    return this._outlierDetection;
   }
-  public putOutlierDetection(value: ComputeRegionBackendServiceOutlierDetection | undefined) {
-    this._outlierDetection = value;
+  public putOutlierDetection(value: ComputeRegionBackendServiceOutlierDetection) {
+    this._outlierDetection.internalValue = value;
   }
   public resetOutlierDetection() {
-    this._outlierDetection = undefined;
+    this._outlierDetection.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get outlierDetectionInput() {
-    return this._outlierDetection
+    return this._outlierDetection.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionBackendServiceTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeRegionBackendServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRegionBackendServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeRegionBackendServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeRegionBackendServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2446,14 +2914,14 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
       backend: cdktf.listMapper(computeRegionBackendServiceBackendToTerraform)(this._backend),
-      cdn_policy: computeRegionBackendServiceCdnPolicyToTerraform(this._cdnPolicy),
-      circuit_breakers: computeRegionBackendServiceCircuitBreakersToTerraform(this._circuitBreakers),
-      consistent_hash: computeRegionBackendServiceConsistentHashToTerraform(this._consistentHash),
-      failover_policy: computeRegionBackendServiceFailoverPolicyToTerraform(this._failoverPolicy),
-      iap: computeRegionBackendServiceIapToTerraform(this._iap),
-      log_config: computeRegionBackendServiceLogConfigToTerraform(this._logConfig),
-      outlier_detection: computeRegionBackendServiceOutlierDetectionToTerraform(this._outlierDetection),
-      timeouts: computeRegionBackendServiceTimeoutsToTerraform(this._timeouts),
+      cdn_policy: computeRegionBackendServiceCdnPolicyToTerraform(this._cdnPolicy.internalValue),
+      circuit_breakers: computeRegionBackendServiceCircuitBreakersToTerraform(this._circuitBreakers.internalValue),
+      consistent_hash: computeRegionBackendServiceConsistentHashToTerraform(this._consistentHash.internalValue),
+      failover_policy: computeRegionBackendServiceFailoverPolicyToTerraform(this._failoverPolicy.internalValue),
+      iap: computeRegionBackendServiceIapToTerraform(this._iap.internalValue),
+      log_config: computeRegionBackendServiceLogConfigToTerraform(this._logConfig.internalValue),
+      outlier_detection: computeRegionBackendServiceOutlierDetectionToTerraform(this._outlierDetection.internalValue),
+      timeouts: computeRegionBackendServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

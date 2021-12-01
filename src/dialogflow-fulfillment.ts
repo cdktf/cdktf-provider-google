@@ -52,7 +52,7 @@ export interface DialogflowFulfillmentFeatures {
   readonly type: string;
 }
 
-function dialogflowFulfillmentFeaturesToTerraform(struct?: DialogflowFulfillmentFeatures): any {
+export function dialogflowFulfillmentFeaturesToTerraform(struct?: DialogflowFulfillmentFeatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -89,7 +89,7 @@ export interface DialogflowFulfillmentGenericWebService {
   readonly username?: string;
 }
 
-function dialogflowFulfillmentGenericWebServiceToTerraform(struct?: DialogflowFulfillmentGenericWebServiceOutputReference | DialogflowFulfillmentGenericWebService): any {
+export function dialogflowFulfillmentGenericWebServiceToTerraform(struct?: DialogflowFulfillmentGenericWebServiceOutputReference | DialogflowFulfillmentGenericWebService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,12 +112,49 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowFulfillmentGenericWebService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._requestHeaders) {
+      hasAnyValues = true;
+      internalValueResult.requestHeaders = this._requestHeaders;
+    }
+    if (this._uri) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowFulfillmentGenericWebService | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._requestHeaders = undefined;
+      this._uri = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._requestHeaders = value.requestHeaders;
+      this._uri = value.uri;
+      this._username = value.username;
+    }
+  }
+
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -125,16 +162,16 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // request_headers - computed: false, optional: true, required: false
-  private _requestHeaders?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _requestHeaders?: { [key: string]: string } | cdktf.IResolvable; 
   public get requestHeaders() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers') as any;
   }
-  public set requestHeaders(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set requestHeaders(value: { [key: string]: string } | cdktf.IResolvable) {
     this._requestHeaders = value;
   }
   public resetRequestHeaders() {
@@ -142,7 +179,7 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersInput() {
-    return this._requestHeaders
+    return this._requestHeaders;
   }
 
   // uri - computed: false, optional: false, required: true
@@ -155,15 +192,15 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get uriInput() {
-    return this._uri
+    return this._uri;
   }
 
   // username - computed: false, optional: true, required: false
-  private _username?: string | undefined; 
+  private _username?: string; 
   public get username() {
     return this.getStringAttribute('username');
   }
-  public set username(value: string | undefined) {
+  public set username(value: string) {
     this._username = value;
   }
   public resetUsername() {
@@ -171,7 +208,7 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface DialogflowFulfillmentTimeouts {
@@ -189,7 +226,7 @@ export interface DialogflowFulfillmentTimeouts {
   readonly update?: string;
 }
 
-function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulfillmentTimeoutsOutputReference | DialogflowFulfillmentTimeouts): any {
+export function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulfillmentTimeoutsOutputReference | DialogflowFulfillmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -211,12 +248,43 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowFulfillmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowFulfillmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -224,15 +292,15 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -240,15 +308,15 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -256,7 +324,7 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -296,8 +364,8 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
     this._enabled = config.enabled;
     this._project = config.project;
     this._features = config.features;
-    this._genericWebService = config.genericWebService;
-    this._timeouts = config.timeouts;
+    this._genericWebService.internalValue = config.genericWebService;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -314,15 +382,15 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -330,7 +398,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -344,11 +412,11 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -356,16 +424,16 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // features - computed: false, optional: true, required: false
-  private _features?: DialogflowFulfillmentFeatures[] | undefined; 
+  private _features?: DialogflowFulfillmentFeatures[]; 
   public get features() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('features') as any;
   }
-  public set features(value: DialogflowFulfillmentFeatures[] | undefined) {
+  public set features(value: DialogflowFulfillmentFeatures[]) {
     this._features = value;
   }
   public resetFeatures() {
@@ -373,41 +441,39 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get featuresInput() {
-    return this._features
+    return this._features;
   }
 
   // generic_web_service - computed: false, optional: true, required: false
-  private _genericWebService?: DialogflowFulfillmentGenericWebService | undefined; 
-  private __genericWebServiceOutput = new DialogflowFulfillmentGenericWebServiceOutputReference(this as any, "generic_web_service", true);
+  private _genericWebService = new DialogflowFulfillmentGenericWebServiceOutputReference(this as any, "generic_web_service", true);
   public get genericWebService() {
-    return this.__genericWebServiceOutput;
+    return this._genericWebService;
   }
-  public putGenericWebService(value: DialogflowFulfillmentGenericWebService | undefined) {
-    this._genericWebService = value;
+  public putGenericWebService(value: DialogflowFulfillmentGenericWebService) {
+    this._genericWebService.internalValue = value;
   }
   public resetGenericWebService() {
-    this._genericWebService = undefined;
+    this._genericWebService.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get genericWebServiceInput() {
-    return this._genericWebService
+    return this._genericWebService.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowFulfillmentTimeouts | undefined; 
-  private __timeoutsOutput = new DialogflowFulfillmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DialogflowFulfillmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DialogflowFulfillmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DialogflowFulfillmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -420,8 +486,8 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       project: cdktf.stringToTerraform(this._project),
       features: cdktf.listMapper(dialogflowFulfillmentFeaturesToTerraform)(this._features),
-      generic_web_service: dialogflowFulfillmentGenericWebServiceToTerraform(this._genericWebService),
-      timeouts: dialogflowFulfillmentTimeoutsToTerraform(this._timeouts),
+      generic_web_service: dialogflowFulfillmentGenericWebServiceToTerraform(this._genericWebService.internalValue),
+      timeouts: dialogflowFulfillmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

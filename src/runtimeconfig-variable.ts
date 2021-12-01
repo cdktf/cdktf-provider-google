@@ -93,7 +93,7 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parent - computed: false, optional: false, required: true
@@ -106,15 +106,15 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -122,15 +122,15 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // text - computed: false, optional: true, required: false
-  private _text?: string | undefined; 
+  private _text?: string; 
   public get text() {
     return this.getStringAttribute('text');
   }
-  public set text(value: string | undefined) {
+  public set text(value: string) {
     this._text = value;
   }
   public resetText() {
@@ -138,7 +138,7 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get textInput() {
-    return this._text
+    return this._text;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -147,11 +147,11 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
 
   // value - computed: false, optional: true, required: false
-  private _value?: string | undefined; 
+  private _value?: string; 
   public get value() {
     return this.getStringAttribute('value');
   }
-  public set value(value: string | undefined) {
+  public set value(value: string) {
     this._value = value;
   }
   public resetValue() {
@@ -159,7 +159,7 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
-    return this._value
+    return this._value;
   }
 
   // =========

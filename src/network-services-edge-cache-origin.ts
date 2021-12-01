@@ -146,7 +146,7 @@ Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
   readonly responseTimeout?: string;
 }
 
-function networkServicesEdgeCacheOriginTimeoutToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutOutputReference | NetworkServicesEdgeCacheOriginTimeout): any {
+export function networkServicesEdgeCacheOriginTimeoutToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutOutputReference | NetworkServicesEdgeCacheOriginTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -168,12 +168,43 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheOriginTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._connectTimeout) {
+      hasAnyValues = true;
+      internalValueResult.connectTimeout = this._connectTimeout;
+    }
+    if (this._maxAttemptsTimeout) {
+      hasAnyValues = true;
+      internalValueResult.maxAttemptsTimeout = this._maxAttemptsTimeout;
+    }
+    if (this._responseTimeout) {
+      hasAnyValues = true;
+      internalValueResult.responseTimeout = this._responseTimeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginTimeout | undefined) {
+    if (value === undefined) {
+      this._connectTimeout = undefined;
+      this._maxAttemptsTimeout = undefined;
+      this._responseTimeout = undefined;
+    }
+    else {
+      this._connectTimeout = value.connectTimeout;
+      this._maxAttemptsTimeout = value.maxAttemptsTimeout;
+      this._responseTimeout = value.responseTimeout;
+    }
+  }
+
   // connect_timeout - computed: false, optional: true, required: false
-  private _connectTimeout?: string | undefined; 
+  private _connectTimeout?: string; 
   public get connectTimeout() {
     return this.getStringAttribute('connect_timeout');
   }
-  public set connectTimeout(value: string | undefined) {
+  public set connectTimeout(value: string) {
     this._connectTimeout = value;
   }
   public resetConnectTimeout() {
@@ -181,15 +212,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get connectTimeoutInput() {
-    return this._connectTimeout
+    return this._connectTimeout;
   }
 
   // max_attempts_timeout - computed: false, optional: true, required: false
-  private _maxAttemptsTimeout?: string | undefined; 
+  private _maxAttemptsTimeout?: string; 
   public get maxAttemptsTimeout() {
     return this.getStringAttribute('max_attempts_timeout');
   }
-  public set maxAttemptsTimeout(value: string | undefined) {
+  public set maxAttemptsTimeout(value: string) {
     this._maxAttemptsTimeout = value;
   }
   public resetMaxAttemptsTimeout() {
@@ -197,15 +228,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get maxAttemptsTimeoutInput() {
-    return this._maxAttemptsTimeout
+    return this._maxAttemptsTimeout;
   }
 
   // response_timeout - computed: false, optional: true, required: false
-  private _responseTimeout?: string | undefined; 
+  private _responseTimeout?: string; 
   public get responseTimeout() {
     return this.getStringAttribute('response_timeout');
   }
-  public set responseTimeout(value: string | undefined) {
+  public set responseTimeout(value: string) {
     this._responseTimeout = value;
   }
   public resetResponseTimeout() {
@@ -213,7 +244,7 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get responseTimeoutInput() {
-    return this._responseTimeout
+    return this._responseTimeout;
   }
 }
 export interface NetworkServicesEdgeCacheOriginTimeouts {
@@ -231,7 +262,7 @@ export interface NetworkServicesEdgeCacheOriginTimeouts {
   readonly update?: string;
 }
 
-function networkServicesEdgeCacheOriginTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutsOutputReference | NetworkServicesEdgeCacheOriginTimeouts): any {
+export function networkServicesEdgeCacheOriginTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutsOutputReference | NetworkServicesEdgeCacheOriginTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -253,12 +284,43 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheOriginTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -266,15 +328,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -282,15 +344,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -298,7 +360,7 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -344,8 +406,8 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     this._project = config.project;
     this._protocol = config.protocol;
     this._retryConditions = config.retryConditions;
-    this._timeout = config.timeout;
-    this._timeouts = config.timeouts;
+    this._timeout.internalValue = config.timeout;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -353,11 +415,11 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -365,15 +427,15 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // failover_origin - computed: false, optional: true, required: false
-  private _failoverOrigin?: string | undefined; 
+  private _failoverOrigin?: string; 
   public get failoverOrigin() {
     return this.getStringAttribute('failover_origin');
   }
-  public set failoverOrigin(value: string | undefined) {
+  public set failoverOrigin(value: string) {
     this._failoverOrigin = value;
   }
   public resetFailoverOrigin() {
@@ -381,7 +443,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get failoverOriginInput() {
-    return this._failoverOrigin
+    return this._failoverOrigin;
   }
 
   // id - computed: true, optional: true, required: false
@@ -390,12 +452,12 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -403,15 +465,15 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // max_attempts - computed: false, optional: true, required: false
-  private _maxAttempts?: number | undefined; 
+  private _maxAttempts?: number; 
   public get maxAttempts() {
     return this.getNumberAttribute('max_attempts');
   }
-  public set maxAttempts(value: number | undefined) {
+  public set maxAttempts(value: number) {
     this._maxAttempts = value;
   }
   public resetMaxAttempts() {
@@ -419,7 +481,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxAttemptsInput() {
-    return this._maxAttempts
+    return this._maxAttempts;
   }
 
   // name - computed: false, optional: false, required: true
@@ -432,7 +494,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // origin_address - computed: false, optional: false, required: true
@@ -445,15 +507,15 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get originAddressInput() {
-    return this._originAddress
+    return this._originAddress;
   }
 
   // port - computed: true, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -461,15 +523,15 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -477,15 +539,15 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // protocol - computed: true, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -493,15 +555,15 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // retry_conditions - computed: true, optional: true, required: false
-  private _retryConditions?: string[] | undefined; 
+  private _retryConditions?: string[]; 
   public get retryConditions() {
     return this.getListAttribute('retry_conditions');
   }
-  public set retryConditions(value: string[] | undefined) {
+  public set retryConditions(value: string[]) {
     this._retryConditions = value;
   }
   public resetRetryConditions() {
@@ -509,41 +571,39 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get retryConditionsInput() {
-    return this._retryConditions
+    return this._retryConditions;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: NetworkServicesEdgeCacheOriginTimeout | undefined; 
-  private __timeoutOutput = new NetworkServicesEdgeCacheOriginTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new NetworkServicesEdgeCacheOriginTimeoutOutputReference(this as any, "timeout", true);
   public get timeout() {
-    return this.__timeoutOutput;
+    return this._timeout;
   }
-  public putTimeout(value: NetworkServicesEdgeCacheOriginTimeout | undefined) {
-    this._timeout = value;
+  public putTimeout(value: NetworkServicesEdgeCacheOriginTimeout) {
+    this._timeout.internalValue = value;
   }
   public resetTimeout() {
-    this._timeout = undefined;
+    this._timeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkServicesEdgeCacheOriginTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkServicesEdgeCacheOriginTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkServicesEdgeCacheOriginTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkServicesEdgeCacheOriginTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkServicesEdgeCacheOriginTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -562,8 +622,8 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       protocol: cdktf.stringToTerraform(this._protocol),
       retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(this._retryConditions),
-      timeout: networkServicesEdgeCacheOriginTimeoutToTerraform(this._timeout),
-      timeouts: networkServicesEdgeCacheOriginTimeoutsToTerraform(this._timeouts),
+      timeout: networkServicesEdgeCacheOriginTimeoutToTerraform(this._timeout.internalValue),
+      timeouts: networkServicesEdgeCacheOriginTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

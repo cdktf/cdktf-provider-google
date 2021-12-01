@@ -72,7 +72,7 @@ export class FolderIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderInput() {
-    return this._folder
+    return this._folder;
   }
 
   // id - computed: true, optional: true, required: false
@@ -90,7 +90,7 @@ export class FolderIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

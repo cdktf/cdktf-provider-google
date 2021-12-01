@@ -72,7 +72,7 @@ export class DataGoogleKmsSecretCiphertext extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyInput() {
-    return this._cryptoKey
+    return this._cryptoKey;
   }
 
   // id - computed: true, optional: true, required: false
@@ -90,7 +90,7 @@ export class DataGoogleKmsSecretCiphertext extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get plaintextInput() {
-    return this._plaintext
+    return this._plaintext;
   }
 
   // =========

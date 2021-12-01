@@ -99,7 +99,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyRingInput() {
-    return this._keyRing
+    return this._keyRing;
   }
 
   // labels - computed: true, optional: false, required: false
@@ -117,7 +117,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // purpose - computed: true, optional: false, required: false

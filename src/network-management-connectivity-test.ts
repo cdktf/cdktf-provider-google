@@ -106,7 +106,7 @@ project.
   readonly projectId?: string;
 }
 
-function networkManagementConnectivityTestDestinationToTerraform(struct?: NetworkManagementConnectivityTestDestinationOutputReference | NetworkManagementConnectivityTestDestination): any {
+export function networkManagementConnectivityTestDestinationToTerraform(struct?: NetworkManagementConnectivityTestDestinationOutputReference | NetworkManagementConnectivityTestDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -130,12 +130,55 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkManagementConnectivityTestDestination | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._instance) {
+      hasAnyValues = true;
+      internalValueResult.instance = this._instance;
+    }
+    if (this._ipAddress) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._network) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._projectId) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkManagementConnectivityTestDestination | undefined) {
+    if (value === undefined) {
+      this._instance = undefined;
+      this._ipAddress = undefined;
+      this._network = undefined;
+      this._port = undefined;
+      this._projectId = undefined;
+    }
+    else {
+      this._instance = value.instance;
+      this._ipAddress = value.ipAddress;
+      this._network = value.network;
+      this._port = value.port;
+      this._projectId = value.projectId;
+    }
+  }
+
   // instance - computed: false, optional: true, required: false
-  private _instance?: string | undefined; 
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
-  public set instance(value: string | undefined) {
+  public set instance(value: string) {
     this._instance = value;
   }
   public resetInstance() {
@@ -143,15 +186,15 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // ip_address - computed: false, optional: true, required: false
-  private _ipAddress?: string | undefined; 
+  private _ipAddress?: string; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string | undefined) {
+  public set ipAddress(value: string) {
     this._ipAddress = value;
   }
   public resetIpAddress() {
@@ -159,15 +202,15 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
-    return this._ipAddress
+    return this._ipAddress;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -175,15 +218,15 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -191,15 +234,15 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // project_id - computed: false, optional: true, required: false
-  private _projectId?: string | undefined; 
+  private _projectId?: string; 
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
-  public set projectId(value: string | undefined) {
+  public set projectId(value: string) {
     this._projectId = value;
   }
   public resetProjectId() {
@@ -207,7 +250,7 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get projectIdInput() {
-    return this._projectId
+    return this._projectId;
   }
 }
 export interface NetworkManagementConnectivityTestSource {
@@ -261,7 +304,7 @@ The following are two cases where you must provide the project ID:
   readonly projectId?: string;
 }
 
-function networkManagementConnectivityTestSourceToTerraform(struct?: NetworkManagementConnectivityTestSourceOutputReference | NetworkManagementConnectivityTestSource): any {
+export function networkManagementConnectivityTestSourceToTerraform(struct?: NetworkManagementConnectivityTestSourceOutputReference | NetworkManagementConnectivityTestSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -286,12 +329,61 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkManagementConnectivityTestSource | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._instance) {
+      hasAnyValues = true;
+      internalValueResult.instance = this._instance;
+    }
+    if (this._ipAddress) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._network) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._networkType) {
+      hasAnyValues = true;
+      internalValueResult.networkType = this._networkType;
+    }
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._projectId) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkManagementConnectivityTestSource | undefined) {
+    if (value === undefined) {
+      this._instance = undefined;
+      this._ipAddress = undefined;
+      this._network = undefined;
+      this._networkType = undefined;
+      this._port = undefined;
+      this._projectId = undefined;
+    }
+    else {
+      this._instance = value.instance;
+      this._ipAddress = value.ipAddress;
+      this._network = value.network;
+      this._networkType = value.networkType;
+      this._port = value.port;
+      this._projectId = value.projectId;
+    }
+  }
+
   // instance - computed: false, optional: true, required: false
-  private _instance?: string | undefined; 
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
-  public set instance(value: string | undefined) {
+  public set instance(value: string) {
     this._instance = value;
   }
   public resetInstance() {
@@ -299,15 +391,15 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // ip_address - computed: false, optional: true, required: false
-  private _ipAddress?: string | undefined; 
+  private _ipAddress?: string; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string | undefined) {
+  public set ipAddress(value: string) {
     this._ipAddress = value;
   }
   public resetIpAddress() {
@@ -315,15 +407,15 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
-    return this._ipAddress
+    return this._ipAddress;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -331,15 +423,15 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // network_type - computed: false, optional: true, required: false
-  private _networkType?: string | undefined; 
+  private _networkType?: string; 
   public get networkType() {
     return this.getStringAttribute('network_type');
   }
-  public set networkType(value: string | undefined) {
+  public set networkType(value: string) {
     this._networkType = value;
   }
   public resetNetworkType() {
@@ -347,15 +439,15 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get networkTypeInput() {
-    return this._networkType
+    return this._networkType;
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -363,15 +455,15 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // project_id - computed: false, optional: true, required: false
-  private _projectId?: string | undefined; 
+  private _projectId?: string; 
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
-  public set projectId(value: string | undefined) {
+  public set projectId(value: string) {
     this._projectId = value;
   }
   public resetProjectId() {
@@ -379,7 +471,7 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get projectIdInput() {
-    return this._projectId
+    return this._projectId;
   }
 }
 export interface NetworkManagementConnectivityTestTimeouts {
@@ -397,7 +489,7 @@ export interface NetworkManagementConnectivityTestTimeouts {
   readonly update?: string;
 }
 
-function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkManagementConnectivityTestTimeoutsOutputReference | NetworkManagementConnectivityTestTimeouts): any {
+export function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkManagementConnectivityTestTimeoutsOutputReference | NetworkManagementConnectivityTestTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -419,12 +511,43 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkManagementConnectivityTestTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkManagementConnectivityTestTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -432,15 +555,15 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -448,15 +571,15 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -464,7 +587,7 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -506,9 +629,9 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
     this._project = config.project;
     this._protocol = config.protocol;
     this._relatedProjects = config.relatedProjects;
-    this._destination = config.destination;
-    this._source = config.source;
-    this._timeouts = config.timeouts;
+    this._destination.internalValue = config.destination;
+    this._source.internalValue = config.source;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -516,11 +639,11 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -528,7 +651,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -537,12 +660,12 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -550,7 +673,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -563,15 +686,15 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -579,15 +702,15 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // protocol - computed: false, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -595,15 +718,15 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // related_projects - computed: false, optional: true, required: false
-  private _relatedProjects?: string[] | undefined; 
+  private _relatedProjects?: string[]; 
   public get relatedProjects() {
     return this.getListAttribute('related_projects');
   }
-  public set relatedProjects(value: string[] | undefined) {
+  public set relatedProjects(value: string[]) {
     this._relatedProjects = value;
   }
   public resetRelatedProjects() {
@@ -611,52 +734,49 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get relatedProjectsInput() {
-    return this._relatedProjects
+    return this._relatedProjects;
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination?: NetworkManagementConnectivityTestDestination; 
-  private __destinationOutput = new NetworkManagementConnectivityTestDestinationOutputReference(this as any, "destination", true);
+  private _destination = new NetworkManagementConnectivityTestDestinationOutputReference(this as any, "destination", true);
   public get destination() {
-    return this.__destinationOutput;
+    return this._destination;
   }
   public putDestination(value: NetworkManagementConnectivityTestDestination) {
-    this._destination = value;
+    this._destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination.internalValue;
   }
 
   // source - computed: false, optional: false, required: true
-  private _source?: NetworkManagementConnectivityTestSource; 
-  private __sourceOutput = new NetworkManagementConnectivityTestSourceOutputReference(this as any, "source", true);
+  private _source = new NetworkManagementConnectivityTestSourceOutputReference(this as any, "source", true);
   public get source() {
-    return this.__sourceOutput;
+    return this._source;
   }
   public putSource(value: NetworkManagementConnectivityTestSource) {
-    this._source = value;
+    this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source
+    return this._source.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkManagementConnectivityTestTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkManagementConnectivityTestTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkManagementConnectivityTestTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkManagementConnectivityTestTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkManagementConnectivityTestTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -671,9 +791,9 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       protocol: cdktf.stringToTerraform(this._protocol),
       related_projects: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedProjects),
-      destination: networkManagementConnectivityTestDestinationToTerraform(this._destination),
-      source: networkManagementConnectivityTestSourceToTerraform(this._source),
-      timeouts: networkManagementConnectivityTestTimeoutsToTerraform(this._timeouts),
+      destination: networkManagementConnectivityTestDestinationToTerraform(this._destination.internalValue),
+      source: networkManagementConnectivityTestSourceToTerraform(this._source.internalValue),
+      timeouts: networkManagementConnectivityTestTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

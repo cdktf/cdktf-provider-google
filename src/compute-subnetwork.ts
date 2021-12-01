@@ -142,7 +142,7 @@ export interface ComputeSubnetworkSecondaryIpRange {
   readonly rangeName?: string;
 }
 
-function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSubnetworkSecondaryIpRange): any {
+export function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSubnetworkSecondaryIpRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -198,7 +198,7 @@ Can only be specified if VPC flow logs for this subnetwork is enabled and "metad
   readonly metadataFields?: string[];
 }
 
-function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetworkLogConfigOutputReference | ComputeSubnetworkLogConfig): any {
+export function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetworkLogConfigOutputReference | ComputeSubnetworkLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -222,12 +222,55 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSubnetworkLogConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._aggregationInterval) {
+      hasAnyValues = true;
+      internalValueResult.aggregationInterval = this._aggregationInterval;
+    }
+    if (this._filterExpr) {
+      hasAnyValues = true;
+      internalValueResult.filterExpr = this._filterExpr;
+    }
+    if (this._flowSampling) {
+      hasAnyValues = true;
+      internalValueResult.flowSampling = this._flowSampling;
+    }
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._metadataFields) {
+      hasAnyValues = true;
+      internalValueResult.metadataFields = this._metadataFields;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSubnetworkLogConfig | undefined) {
+    if (value === undefined) {
+      this._aggregationInterval = undefined;
+      this._filterExpr = undefined;
+      this._flowSampling = undefined;
+      this._metadata = undefined;
+      this._metadataFields = undefined;
+    }
+    else {
+      this._aggregationInterval = value.aggregationInterval;
+      this._filterExpr = value.filterExpr;
+      this._flowSampling = value.flowSampling;
+      this._metadata = value.metadata;
+      this._metadataFields = value.metadataFields;
+    }
+  }
+
   // aggregation_interval - computed: false, optional: true, required: false
-  private _aggregationInterval?: string | undefined; 
+  private _aggregationInterval?: string; 
   public get aggregationInterval() {
     return this.getStringAttribute('aggregation_interval');
   }
-  public set aggregationInterval(value: string | undefined) {
+  public set aggregationInterval(value: string) {
     this._aggregationInterval = value;
   }
   public resetAggregationInterval() {
@@ -235,15 +278,15 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationIntervalInput() {
-    return this._aggregationInterval
+    return this._aggregationInterval;
   }
 
   // filter_expr - computed: false, optional: true, required: false
-  private _filterExpr?: string | undefined; 
+  private _filterExpr?: string; 
   public get filterExpr() {
     return this.getStringAttribute('filter_expr');
   }
-  public set filterExpr(value: string | undefined) {
+  public set filterExpr(value: string) {
     this._filterExpr = value;
   }
   public resetFilterExpr() {
@@ -251,15 +294,15 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get filterExprInput() {
-    return this._filterExpr
+    return this._filterExpr;
   }
 
   // flow_sampling - computed: false, optional: true, required: false
-  private _flowSampling?: number | undefined; 
+  private _flowSampling?: number; 
   public get flowSampling() {
     return this.getNumberAttribute('flow_sampling');
   }
-  public set flowSampling(value: number | undefined) {
+  public set flowSampling(value: number) {
     this._flowSampling = value;
   }
   public resetFlowSampling() {
@@ -267,15 +310,15 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get flowSamplingInput() {
-    return this._flowSampling
+    return this._flowSampling;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: string | undefined; 
+  private _metadata?: string; 
   public get metadata() {
     return this.getStringAttribute('metadata');
   }
-  public set metadata(value: string | undefined) {
+  public set metadata(value: string) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -283,15 +326,15 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // metadata_fields - computed: false, optional: true, required: false
-  private _metadataFields?: string[] | undefined; 
+  private _metadataFields?: string[]; 
   public get metadataFields() {
     return this.getListAttribute('metadata_fields');
   }
-  public set metadataFields(value: string[] | undefined) {
+  public set metadataFields(value: string[]) {
     this._metadataFields = value;
   }
   public resetMetadataFields() {
@@ -299,7 +342,7 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get metadataFieldsInput() {
-    return this._metadataFields
+    return this._metadataFields;
   }
 }
 export interface ComputeSubnetworkTimeouts {
@@ -317,7 +360,7 @@ export interface ComputeSubnetworkTimeouts {
   readonly update?: string;
 }
 
-function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkTimeoutsOutputReference | ComputeSubnetworkTimeouts): any {
+export function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkTimeoutsOutputReference | ComputeSubnetworkTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -339,12 +382,43 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSubnetworkTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSubnetworkTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -352,15 +426,15 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -368,15 +442,15 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -384,7 +458,7 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -433,8 +507,8 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     this._role = config.role;
     this._secondaryIpRange = config.secondaryIpRange;
     this._stackType = config.stackType;
-    this._logConfig = config.logConfig;
-    this._timeouts = config.timeouts;
+    this._logConfig.internalValue = config.logConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -447,11 +521,11 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -459,7 +533,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // external_ipv6_prefix - computed: true, optional: false, required: false
@@ -492,15 +566,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipCidrRangeInput() {
-    return this._ipCidrRange
+    return this._ipCidrRange;
   }
 
   // ipv6_access_type - computed: false, optional: true, required: false
-  private _ipv6AccessType?: string | undefined; 
+  private _ipv6AccessType?: string; 
   public get ipv6AccessType() {
     return this.getStringAttribute('ipv6_access_type');
   }
-  public set ipv6AccessType(value: string | undefined) {
+  public set ipv6AccessType(value: string) {
     this._ipv6AccessType = value;
   }
   public resetIpv6AccessType() {
@@ -508,7 +582,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipv6AccessTypeInput() {
-    return this._ipv6AccessType
+    return this._ipv6AccessType;
   }
 
   // ipv6_cidr_range - computed: true, optional: false, required: false
@@ -526,7 +600,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: false, required: true
@@ -539,15 +613,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // private_ip_google_access - computed: false, optional: true, required: false
-  private _privateIpGoogleAccess?: boolean | cdktf.IResolvable | undefined; 
+  private _privateIpGoogleAccess?: boolean | cdktf.IResolvable; 
   public get privateIpGoogleAccess() {
     return this.getBooleanAttribute('private_ip_google_access') as any;
   }
-  public set privateIpGoogleAccess(value: boolean | cdktf.IResolvable | undefined) {
+  public set privateIpGoogleAccess(value: boolean | cdktf.IResolvable) {
     this._privateIpGoogleAccess = value;
   }
   public resetPrivateIpGoogleAccess() {
@@ -555,15 +629,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateIpGoogleAccessInput() {
-    return this._privateIpGoogleAccess
+    return this._privateIpGoogleAccess;
   }
 
   // private_ipv6_google_access - computed: true, optional: true, required: false
-  private _privateIpv6GoogleAccess?: string | undefined; 
+  private _privateIpv6GoogleAccess?: string; 
   public get privateIpv6GoogleAccess() {
     return this.getStringAttribute('private_ipv6_google_access');
   }
-  public set privateIpv6GoogleAccess(value: string | undefined) {
+  public set privateIpv6GoogleAccess(value: string) {
     this._privateIpv6GoogleAccess = value;
   }
   public resetPrivateIpv6GoogleAccess() {
@@ -571,15 +645,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateIpv6GoogleAccessInput() {
-    return this._privateIpv6GoogleAccess
+    return this._privateIpv6GoogleAccess;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -587,15 +661,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // purpose - computed: true, optional: true, required: false
-  private _purpose?: string | undefined; 
+  private _purpose?: string; 
   public get purpose() {
     return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string | undefined) {
+  public set purpose(value: string) {
     this._purpose = value;
   }
   public resetPurpose() {
@@ -603,15 +677,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get purposeInput() {
-    return this._purpose
+    return this._purpose;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -619,15 +693,15 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // role - computed: false, optional: true, required: false
-  private _role?: string | undefined; 
+  private _role?: string; 
   public get role() {
     return this.getStringAttribute('role');
   }
-  public set role(value: string | undefined) {
+  public set role(value: string) {
     this._role = value;
   }
   public resetRole() {
@@ -635,16 +709,16 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleInput() {
-    return this._role
+    return this._role;
   }
 
   // secondary_ip_range - computed: true, optional: true, required: false
-  private _secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[] | undefined; 
+  private _secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[]; 
   public get secondaryIpRange() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('secondary_ip_range') as any;
   }
-  public set secondaryIpRange(value: ComputeSubnetworkSecondaryIpRange[] | undefined) {
+  public set secondaryIpRange(value: ComputeSubnetworkSecondaryIpRange[]) {
     this._secondaryIpRange = value;
   }
   public resetSecondaryIpRange() {
@@ -652,7 +726,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secondaryIpRangeInput() {
-    return this._secondaryIpRange
+    return this._secondaryIpRange;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -661,11 +735,11 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
 
   // stack_type - computed: true, optional: true, required: false
-  private _stackType?: string | undefined; 
+  private _stackType?: string; 
   public get stackType() {
     return this.getStringAttribute('stack_type');
   }
-  public set stackType(value: string | undefined) {
+  public set stackType(value: string) {
     this._stackType = value;
   }
   public resetStackType() {
@@ -673,41 +747,39 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get stackTypeInput() {
-    return this._stackType
+    return this._stackType;
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeSubnetworkLogConfig | undefined; 
-  private __logConfigOutput = new ComputeSubnetworkLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeSubnetworkLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.__logConfigOutput;
+    return this._logConfig;
   }
-  public putLogConfig(value: ComputeSubnetworkLogConfig | undefined) {
-    this._logConfig = value;
+  public putLogConfig(value: ComputeSubnetworkLogConfig) {
+    this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
-    this._logConfig = undefined;
+    this._logConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logConfigInput() {
-    return this._logConfig
+    return this._logConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeSubnetworkTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeSubnetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeSubnetworkTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeSubnetworkTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeSubnetworkTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -729,8 +801,8 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       role: cdktf.stringToTerraform(this._role),
       secondary_ip_range: cdktf.listMapper(computeSubnetworkSecondaryIpRangeToTerraform)(this._secondaryIpRange),
       stack_type: cdktf.stringToTerraform(this._stackType),
-      log_config: computeSubnetworkLogConfigToTerraform(this._logConfig),
-      timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts),
+      log_config: computeSubnetworkLogConfigToTerraform(this._logConfig.internalValue),
+      timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

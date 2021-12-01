@@ -70,7 +70,7 @@ export interface ComputeSslCertificateTimeouts {
   readonly delete?: string;
 }
 
-function computeSslCertificateTimeoutsToTerraform(struct?: ComputeSslCertificateTimeoutsOutputReference | ComputeSslCertificateTimeouts): any {
+export function computeSslCertificateTimeoutsToTerraform(struct?: ComputeSslCertificateTimeoutsOutputReference | ComputeSslCertificateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -91,12 +91,37 @@ export class ComputeSslCertificateTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeSslCertificateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSslCertificateTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -104,15 +129,15 @@ export class ComputeSslCertificateTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -120,7 +145,7 @@ export class ComputeSslCertificateTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -162,7 +187,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
     this._namePrefix = config.namePrefix;
     this._privateKey = config.privateKey;
     this._project = config.project;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -179,7 +204,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get certificateInput() {
-    return this._certificate
+    return this._certificate;
   }
 
   // certificate_id - computed: true, optional: false, required: false
@@ -193,11 +218,11 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -205,7 +230,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -214,11 +239,11 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -226,15 +251,15 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_prefix - computed: true, optional: true, required: false
-  private _namePrefix?: string | undefined; 
+  private _namePrefix?: string; 
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string) {
     this._namePrefix = value;
   }
   public resetNamePrefix() {
@@ -242,7 +267,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namePrefixInput() {
-    return this._namePrefix
+    return this._namePrefix;
   }
 
   // private_key - computed: false, optional: false, required: true
@@ -255,15 +280,15 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyInput() {
-    return this._privateKey
+    return this._privateKey;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -271,7 +296,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -280,20 +305,19 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeSslCertificateTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeSslCertificateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeSslCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeSslCertificateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeSslCertificateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -308,7 +332,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
       name_prefix: cdktf.stringToTerraform(this._namePrefix),
       private_key: cdktf.stringToTerraform(this._privateKey),
       project: cdktf.stringToTerraform(this._project),
-      timeouts: computeSslCertificateTimeoutsToTerraform(this._timeouts),
+      timeouts: computeSslCertificateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

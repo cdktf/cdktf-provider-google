@@ -76,7 +76,7 @@ for the standard tier, or 2560 GiB for the premium tier.
   readonly name: string;
 }
 
-function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanceFileSharesOutputReference | FilestoreInstanceFileShares): any {
+export function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanceFileSharesOutputReference | FilestoreInstanceFileShares): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,6 +97,31 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FilestoreInstanceFileShares | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._capacityGb) {
+      hasAnyValues = true;
+      internalValueResult.capacityGb = this._capacityGb;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FilestoreInstanceFileShares | undefined) {
+    if (value === undefined) {
+      this._capacityGb = undefined;
+      this._name = undefined;
+    }
+    else {
+      this._capacityGb = value.capacityGb;
+      this._name = value.name;
+    }
+  }
+
   // capacity_gb - computed: false, optional: false, required: true
   private _capacityGb?: number; 
   public get capacityGb() {
@@ -107,7 +132,7 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get capacityGbInput() {
-    return this._capacityGb
+    return this._capacityGb;
   }
 
   // name - computed: false, optional: false, required: true
@@ -120,7 +145,7 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface FilestoreInstanceNetworks {
@@ -147,7 +172,7 @@ addresses reserved for this instance.
   readonly reservedIpRange?: string;
 }
 
-function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceNetworks): any {
+export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceNetworks): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -174,7 +199,7 @@ export interface FilestoreInstanceTimeouts {
   readonly update?: string;
 }
 
-function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceTimeoutsOutputReference | FilestoreInstanceTimeouts): any {
+export function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceTimeoutsOutputReference | FilestoreInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,12 +221,43 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FilestoreInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FilestoreInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -209,15 +265,15 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -225,15 +281,15 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -241,7 +297,7 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -283,9 +339,9 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     this._project = config.project;
     this._tier = config.tier;
     this._zone = config.zone;
-    this._fileShares = config.fileShares;
+    this._fileShares.internalValue = config.fileShares;
     this._networks = config.networks;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -298,11 +354,11 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -310,7 +366,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -324,12 +380,12 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -337,7 +393,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -350,15 +406,15 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -366,7 +422,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // tier - computed: false, optional: false, required: true
@@ -379,7 +435,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
-    return this._tier
+    return this._tier;
   }
 
   // zone - computed: false, optional: false, required: true
@@ -392,21 +448,20 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // file_shares - computed: false, optional: false, required: true
-  private _fileShares?: FilestoreInstanceFileShares; 
-  private __fileSharesOutput = new FilestoreInstanceFileSharesOutputReference(this as any, "file_shares", true);
+  private _fileShares = new FilestoreInstanceFileSharesOutputReference(this as any, "file_shares", true);
   public get fileShares() {
-    return this.__fileSharesOutput;
+    return this._fileShares;
   }
   public putFileShares(value: FilestoreInstanceFileShares) {
-    this._fileShares = value;
+    this._fileShares.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get fileSharesInput() {
-    return this._fileShares
+    return this._fileShares.internalValue;
   }
 
   // networks - computed: false, optional: false, required: true
@@ -420,24 +475,23 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networksInput() {
-    return this._networks
+    return this._networks;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FilestoreInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new FilestoreInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FilestoreInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: FilestoreInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: FilestoreInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -452,9 +506,9 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       tier: cdktf.stringToTerraform(this._tier),
       zone: cdktf.stringToTerraform(this._zone),
-      file_shares: filestoreInstanceFileSharesToTerraform(this._fileShares),
+      file_shares: filestoreInstanceFileSharesToTerraform(this._fileShares.internalValue),
       networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform)(this._networks),
-      timeouts: filestoreInstanceTimeoutsToTerraform(this._timeouts),
+      timeouts: filestoreInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

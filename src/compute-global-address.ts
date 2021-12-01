@@ -100,7 +100,7 @@ export interface ComputeGlobalAddressTimeouts {
   readonly delete?: string;
 }
 
-function computeGlobalAddressTimeoutsToTerraform(struct?: ComputeGlobalAddressTimeoutsOutputReference | ComputeGlobalAddressTimeouts): any {
+export function computeGlobalAddressTimeoutsToTerraform(struct?: ComputeGlobalAddressTimeoutsOutputReference | ComputeGlobalAddressTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -121,12 +121,37 @@ export class ComputeGlobalAddressTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeGlobalAddressTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeGlobalAddressTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -134,15 +159,15 @@ export class ComputeGlobalAddressTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -150,7 +175,7 @@ export class ComputeGlobalAddressTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -195,7 +220,7 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
     this._prefixLength = config.prefixLength;
     this._project = config.project;
     this._purpose = config.purpose;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -203,11 +228,11 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   // ==========
 
   // address - computed: true, optional: true, required: false
-  private _address?: string | undefined; 
+  private _address?: string; 
   public get address() {
     return this.getStringAttribute('address');
   }
-  public set address(value: string | undefined) {
+  public set address(value: string) {
     this._address = value;
   }
   public resetAddress() {
@@ -215,15 +240,15 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get addressInput() {
-    return this._address
+    return this._address;
   }
 
   // address_type - computed: false, optional: true, required: false
-  private _addressType?: string | undefined; 
+  private _addressType?: string; 
   public get addressType() {
     return this.getStringAttribute('address_type');
   }
-  public set addressType(value: string | undefined) {
+  public set addressType(value: string) {
     this._addressType = value;
   }
   public resetAddressType() {
@@ -231,7 +256,7 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get addressTypeInput() {
-    return this._addressType
+    return this._addressType;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -240,11 +265,11 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -252,7 +277,7 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -261,11 +286,11 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
 
   // ip_version - computed: false, optional: true, required: false
-  private _ipVersion?: string | undefined; 
+  private _ipVersion?: string; 
   public get ipVersion() {
     return this.getStringAttribute('ip_version');
   }
-  public set ipVersion(value: string | undefined) {
+  public set ipVersion(value: string) {
     this._ipVersion = value;
   }
   public resetIpVersion() {
@@ -273,7 +298,7 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipVersionInput() {
-    return this._ipVersion
+    return this._ipVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -286,15 +311,15 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -302,15 +327,15 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // prefix_length - computed: false, optional: true, required: false
-  private _prefixLength?: number | undefined; 
+  private _prefixLength?: number; 
   public get prefixLength() {
     return this.getNumberAttribute('prefix_length');
   }
-  public set prefixLength(value: number | undefined) {
+  public set prefixLength(value: number) {
     this._prefixLength = value;
   }
   public resetPrefixLength() {
@@ -318,15 +343,15 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get prefixLengthInput() {
-    return this._prefixLength
+    return this._prefixLength;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -334,15 +359,15 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // purpose - computed: false, optional: true, required: false
-  private _purpose?: string | undefined; 
+  private _purpose?: string; 
   public get purpose() {
     return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string | undefined) {
+  public set purpose(value: string) {
     this._purpose = value;
   }
   public resetPurpose() {
@@ -350,7 +375,7 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get purposeInput() {
-    return this._purpose
+    return this._purpose;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -359,20 +384,19 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeGlobalAddressTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeGlobalAddressTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeGlobalAddressTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeGlobalAddressTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeGlobalAddressTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -390,7 +414,7 @@ export class ComputeGlobalAddress extends cdktf.TerraformResource {
       prefix_length: cdktf.numberToTerraform(this._prefixLength),
       project: cdktf.stringToTerraform(this._project),
       purpose: cdktf.stringToTerraform(this._purpose),
-      timeouts: computeGlobalAddressTimeoutsToTerraform(this._timeouts),
+      timeouts: computeGlobalAddressTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

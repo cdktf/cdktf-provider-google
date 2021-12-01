@@ -110,7 +110,7 @@ create.
   readonly projectIdOrNum: string;
 }
 
-function computeServiceAttachmentConsumerAcceptListsToTerraform(struct?: ComputeServiceAttachmentConsumerAcceptLists): any {
+export function computeServiceAttachmentConsumerAcceptListsToTerraform(struct?: ComputeServiceAttachmentConsumerAcceptLists): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -136,7 +136,7 @@ export interface ComputeServiceAttachmentTimeouts {
   readonly update?: string;
 }
 
-function computeServiceAttachmentTimeoutsToTerraform(struct?: ComputeServiceAttachmentTimeoutsOutputReference | ComputeServiceAttachmentTimeouts): any {
+export function computeServiceAttachmentTimeoutsToTerraform(struct?: ComputeServiceAttachmentTimeoutsOutputReference | ComputeServiceAttachmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -158,12 +158,43 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeServiceAttachmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeServiceAttachmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -171,15 +202,15 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -187,15 +218,15 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -203,7 +234,7 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -249,7 +280,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
     this._region = config.region;
     this._targetService = config.targetService;
     this._consumerAcceptLists = config.consumerAcceptLists;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -271,15 +302,15 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionPreferenceInput() {
-    return this._connectionPreference
+    return this._connectionPreference;
   }
 
   // consumer_reject_lists - computed: false, optional: true, required: false
-  private _consumerRejectLists?: string[] | undefined; 
+  private _consumerRejectLists?: string[]; 
   public get consumerRejectLists() {
     return this.getListAttribute('consumer_reject_lists');
   }
-  public set consumerRejectLists(value: string[] | undefined) {
+  public set consumerRejectLists(value: string[]) {
     this._consumerRejectLists = value;
   }
   public resetConsumerRejectLists() {
@@ -287,15 +318,15 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get consumerRejectListsInput() {
-    return this._consumerRejectLists
+    return this._consumerRejectLists;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -303,7 +334,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enable_proxy_protocol - computed: false, optional: false, required: true
@@ -316,7 +347,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableProxyProtocolInput() {
-    return this._enableProxyProtocol
+    return this._enableProxyProtocol;
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -339,7 +370,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // nat_subnets - computed: false, optional: false, required: true
@@ -352,15 +383,15 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get natSubnetsInput() {
-    return this._natSubnets
+    return this._natSubnets;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -368,15 +399,15 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -384,7 +415,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -402,16 +433,16 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetServiceInput() {
-    return this._targetService
+    return this._targetService;
   }
 
   // consumer_accept_lists - computed: false, optional: true, required: false
-  private _consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[] | undefined; 
+  private _consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[]; 
   public get consumerAcceptLists() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('consumer_accept_lists') as any;
   }
-  public set consumerAcceptLists(value: ComputeServiceAttachmentConsumerAcceptLists[] | undefined) {
+  public set consumerAcceptLists(value: ComputeServiceAttachmentConsumerAcceptLists[]) {
     this._consumerAcceptLists = value;
   }
   public resetConsumerAcceptLists() {
@@ -419,24 +450,23 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get consumerAcceptListsInput() {
-    return this._consumerAcceptLists
+    return this._consumerAcceptLists;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeServiceAttachmentTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeServiceAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeServiceAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeServiceAttachmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeServiceAttachmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -455,7 +485,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       target_service: cdktf.stringToTerraform(this._targetService),
       consumer_accept_lists: cdktf.listMapper(computeServiceAttachmentConsumerAcceptListsToTerraform)(this._consumerAcceptLists),
-      timeouts: computeServiceAttachmentTimeoutsToTerraform(this._timeouts),
+      timeouts: computeServiceAttachmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

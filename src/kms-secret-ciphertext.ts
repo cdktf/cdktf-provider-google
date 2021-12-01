@@ -44,7 +44,7 @@ export interface KmsSecretCiphertextTimeouts {
   readonly delete?: string;
 }
 
-function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTimeoutsOutputReference | KmsSecretCiphertextTimeouts): any {
+export function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphertextTimeoutsOutputReference | KmsSecretCiphertextTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -65,12 +65,37 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KmsSecretCiphertextTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KmsSecretCiphertextTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -78,15 +103,15 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -94,7 +119,7 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -133,7 +158,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
     this._additionalAuthenticatedData = config.additionalAuthenticatedData;
     this._cryptoKey = config.cryptoKey;
     this._plaintext = config.plaintext;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -141,11 +166,11 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   // ==========
 
   // additional_authenticated_data - computed: false, optional: true, required: false
-  private _additionalAuthenticatedData?: string | undefined; 
+  private _additionalAuthenticatedData?: string; 
   public get additionalAuthenticatedData() {
     return this.getStringAttribute('additional_authenticated_data');
   }
-  public set additionalAuthenticatedData(value: string | undefined) {
+  public set additionalAuthenticatedData(value: string) {
     this._additionalAuthenticatedData = value;
   }
   public resetAdditionalAuthenticatedData() {
@@ -153,7 +178,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalAuthenticatedDataInput() {
-    return this._additionalAuthenticatedData
+    return this._additionalAuthenticatedData;
   }
 
   // ciphertext - computed: true, optional: false, required: false
@@ -171,7 +196,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyInput() {
-    return this._cryptoKey
+    return this._cryptoKey;
   }
 
   // id - computed: true, optional: true, required: false
@@ -189,24 +214,23 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get plaintextInput() {
-    return this._plaintext
+    return this._plaintext;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KmsSecretCiphertextTimeouts | undefined; 
-  private __timeoutsOutput = new KmsSecretCiphertextTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KmsSecretCiphertextTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: KmsSecretCiphertextTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: KmsSecretCiphertextTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -218,7 +242,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
       additional_authenticated_data: cdktf.stringToTerraform(this._additionalAuthenticatedData),
       crypto_key: cdktf.stringToTerraform(this._cryptoKey),
       plaintext: cdktf.stringToTerraform(this._plaintext),
-      timeouts: kmsSecretCiphertextTimeoutsToTerraform(this._timeouts),
+      timeouts: kmsSecretCiphertextTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

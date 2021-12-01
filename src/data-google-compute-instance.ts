@@ -537,11 +537,11 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -549,7 +549,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_interface - computed: true, optional: false, required: false
@@ -558,11 +558,11 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -570,7 +570,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // reservation_affinity - computed: true, optional: false, required: false
@@ -594,11 +594,11 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
 
   // self_link - computed: false, optional: true, required: false
-  private _selfLink?: string | undefined; 
+  private _selfLink?: string; 
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string | undefined) {
+  public set selfLink(value: string) {
     this._selfLink = value;
   }
   public resetSelfLink() {
@@ -606,7 +606,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get selfLinkInput() {
-    return this._selfLink
+    return this._selfLink;
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -630,11 +630,11 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -642,7 +642,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // =========

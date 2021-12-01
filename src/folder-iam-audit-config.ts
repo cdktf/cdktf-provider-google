@@ -39,7 +39,7 @@ export interface FolderIamAuditConfigAuditLogConfig {
   readonly logType: string;
 }
 
-function folderIamAuditConfigAuditLogConfigToTerraform(struct?: FolderIamAuditConfigAuditLogConfig): any {
+export function folderIamAuditConfigAuditLogConfigToTerraform(struct?: FolderIamAuditConfigAuditLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -107,7 +107,7 @@ export class FolderIamAuditConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderInput() {
-    return this._folder
+    return this._folder;
   }
 
   // id - computed: true, optional: true, required: false
@@ -125,7 +125,7 @@ export class FolderIamAuditConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // audit_log_config - computed: false, optional: false, required: true
@@ -139,7 +139,7 @@ export class FolderIamAuditConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get auditLogConfigInput() {
-    return this._auditLogConfig
+    return this._auditLogConfig;
   }
 
   // =========

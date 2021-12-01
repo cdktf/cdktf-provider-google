@@ -57,7 +57,7 @@ public key).
   readonly signatureAlgorithm?: string;
 }
 
-function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference | BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey): any {
+export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference | BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -78,12 +78,37 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._publicKeyPem) {
+      hasAnyValues = true;
+      internalValueResult.publicKeyPem = this._publicKeyPem;
+    }
+    if (this._signatureAlgorithm) {
+      hasAnyValues = true;
+      internalValueResult.signatureAlgorithm = this._signatureAlgorithm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey | undefined) {
+    if (value === undefined) {
+      this._publicKeyPem = undefined;
+      this._signatureAlgorithm = undefined;
+    }
+    else {
+      this._publicKeyPem = value.publicKeyPem;
+      this._signatureAlgorithm = value.signatureAlgorithm;
+    }
+  }
+
   // public_key_pem - computed: false, optional: true, required: false
-  private _publicKeyPem?: string | undefined; 
+  private _publicKeyPem?: string; 
   public get publicKeyPem() {
     return this.getStringAttribute('public_key_pem');
   }
-  public set publicKeyPem(value: string | undefined) {
+  public set publicKeyPem(value: string) {
     this._publicKeyPem = value;
   }
   public resetPublicKeyPem() {
@@ -91,15 +116,15 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
   }
   // Temporarily expose input value. Use with caution.
   public get publicKeyPemInput() {
-    return this._publicKeyPem
+    return this._publicKeyPem;
   }
 
   // signature_algorithm - computed: false, optional: true, required: false
-  private _signatureAlgorithm?: string | undefined; 
+  private _signatureAlgorithm?: string; 
   public get signatureAlgorithm() {
     return this.getStringAttribute('signature_algorithm');
   }
-  public set signatureAlgorithm(value: string | undefined) {
+  public set signatureAlgorithm(value: string) {
     this._signatureAlgorithm = value;
   }
   public resetSignatureAlgorithm() {
@@ -107,7 +132,7 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
   }
   // Temporarily expose input value. Use with caution.
   public get signatureAlgorithmInput() {
-    return this._signatureAlgorithm
+    return this._signatureAlgorithm;
   }
 }
 export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
@@ -150,7 +175,7 @@ See the documentation on publicKey cases below for details.
   readonly pkixPublicKey?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey;
 }
 
-function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys): any {
+export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -183,7 +208,7 @@ and that links to this Note.
   readonly publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[];
 }
 
-function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference | BinaryAuthorizationAttestorAttestationAuthorityNote): any {
+export function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference | BinaryAuthorizationAttestorAttestationAuthorityNote): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -204,6 +229,31 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNote | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._noteReference) {
+      hasAnyValues = true;
+      internalValueResult.noteReference = this._noteReference;
+    }
+    if (this._publicKeys) {
+      hasAnyValues = true;
+      internalValueResult.publicKeys = this._publicKeys;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationAttestorAttestationAuthorityNote | undefined) {
+    if (value === undefined) {
+      this._noteReference = undefined;
+      this._publicKeys = undefined;
+    }
+    else {
+      this._noteReference = value.noteReference;
+      this._publicKeys = value.publicKeys;
+    }
+  }
+
   // note_reference - computed: false, optional: false, required: true
   private _noteReference?: string; 
   public get noteReference() {
@@ -214,16 +264,16 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get noteReferenceInput() {
-    return this._noteReference
+    return this._noteReference;
   }
 
   // public_keys - computed: false, optional: true, required: false
-  private _publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | undefined; 
+  private _publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[]; 
   public get publicKeys() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('public_keys') as any;
   }
-  public set publicKeys(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | undefined) {
+  public set publicKeys(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[]) {
     this._publicKeys = value;
   }
   public resetPublicKeys() {
@@ -231,7 +281,7 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get publicKeysInput() {
-    return this._publicKeys
+    return this._publicKeys;
   }
 }
 export interface BinaryAuthorizationAttestorTimeouts {
@@ -249,7 +299,7 @@ export interface BinaryAuthorizationAttestorTimeouts {
   readonly update?: string;
 }
 
-function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthorizationAttestorTimeoutsOutputReference | BinaryAuthorizationAttestorTimeouts): any {
+export function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthorizationAttestorTimeoutsOutputReference | BinaryAuthorizationAttestorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -271,12 +321,43 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BinaryAuthorizationAttestorTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationAttestorTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -284,15 +365,15 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -300,15 +381,15 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -316,7 +397,7 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -355,8 +436,8 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._project = config.project;
-    this._attestationAuthorityNote = config.attestationAuthorityNote;
-    this._timeouts = config.timeouts;
+    this._attestationAuthorityNote.internalValue = config.attestationAuthorityNote;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -364,11 +445,11 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -376,7 +457,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -394,15 +475,15 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -410,38 +491,36 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // attestation_authority_note - computed: false, optional: false, required: true
-  private _attestationAuthorityNote?: BinaryAuthorizationAttestorAttestationAuthorityNote; 
-  private __attestationAuthorityNoteOutput = new BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference(this as any, "attestation_authority_note", true);
+  private _attestationAuthorityNote = new BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference(this as any, "attestation_authority_note", true);
   public get attestationAuthorityNote() {
-    return this.__attestationAuthorityNoteOutput;
+    return this._attestationAuthorityNote;
   }
   public putAttestationAuthorityNote(value: BinaryAuthorizationAttestorAttestationAuthorityNote) {
-    this._attestationAuthorityNote = value;
+    this._attestationAuthorityNote.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get attestationAuthorityNoteInput() {
-    return this._attestationAuthorityNote
+    return this._attestationAuthorityNote.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BinaryAuthorizationAttestorTimeouts | undefined; 
-  private __timeoutsOutput = new BinaryAuthorizationAttestorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BinaryAuthorizationAttestorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BinaryAuthorizationAttestorTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BinaryAuthorizationAttestorTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -453,8 +532,8 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      attestation_authority_note: binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(this._attestationAuthorityNote),
-      timeouts: binaryAuthorizationAttestorTimeoutsToTerraform(this._timeouts),
+      attestation_authority_note: binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(this._attestationAuthorityNote.internalValue),
+      timeouts: binaryAuthorizationAttestorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

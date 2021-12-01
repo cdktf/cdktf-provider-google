@@ -79,7 +79,7 @@ export class OrganizationIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get orgIdInput() {
-    return this._orgId
+    return this._orgId;
   }
 
   // policy_data - computed: false, optional: false, required: true
@@ -92,7 +92,7 @@ export class OrganizationIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

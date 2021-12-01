@@ -52,7 +52,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
   readonly path: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,6 +72,25 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined) {
+    if (value === undefined) {
+      this._path = undefined;
+    }
+    else {
+      this._path = value.path;
+    }
+  }
+
   // path - computed: false, optional: false, required: true
   private _path?: string; 
   public get path() {
@@ -82,7 +101,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList {
@@ -95,7 +114,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
   readonly words: string[];
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -115,6 +134,25 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._words) {
+      hasAnyValues = true;
+      internalValueResult.words = this._words;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined) {
+    if (value === undefined) {
+      this._words = undefined;
+    }
+    else {
+      this._words = value.words;
+    }
+  }
+
   // words - computed: false, optional: false, required: true
   private _words?: string[]; 
   public get words() {
@@ -125,7 +163,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
   // Temporarily expose input value. Use with caution.
   public get wordsInput() {
-    return this._words
+    return this._words;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary {
@@ -143,7 +181,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
   readonly wordList?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -164,38 +202,61 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined; 
-  private __cloudStoragePathOutput = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
-  public get cloudStoragePath() {
-    return this.__cloudStoragePathOutput;
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cloudStoragePath) {
+      hasAnyValues = true;
+      internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
+    }
+    if (this._wordList) {
+      hasAnyValues = true;
+      internalValueResult.wordList = this._wordList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCloudStoragePath(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined) {
-    this._cloudStoragePath = value;
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary | undefined) {
+    if (value === undefined) {
+      this._cloudStoragePath.internalValue = undefined;
+      this._wordList.internalValue = undefined;
+    }
+    else {
+      this._cloudStoragePath.internalValue = value.cloudStoragePath;
+      this._wordList.internalValue = value.wordList;
+    }
+  }
+
+  // cloud_storage_path - computed: false, optional: true, required: false
+  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
+  public get cloudStoragePath() {
+    return this._cloudStoragePath;
+  }
+  public putCloudStoragePath(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath) {
+    this._cloudStoragePath.internalValue = value;
   }
   public resetCloudStoragePath() {
-    this._cloudStoragePath = undefined;
+    this._cloudStoragePath.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloudStoragePathInput() {
-    return this._cloudStoragePath
+    return this._cloudStoragePath.internalValue;
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined; 
-  private __wordListOutput = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this as any, "word_list", true);
+  private _wordList = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this as any, "word_list", true);
   public get wordList() {
-    return this.__wordListOutput;
+    return this._wordList;
   }
-  public putWordList(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined) {
-    this._wordList = value;
+  public putWordList(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList) {
+    this._wordList.internalValue = value;
   }
   public resetWordList() {
-    this._wordList = undefined;
+    this._wordList.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get wordListInput() {
-    return this._wordList
+    return this._wordList.internalValue;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType {
@@ -208,7 +269,7 @@ listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying 
   readonly name: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -228,6 +289,25 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -238,7 +318,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex {
@@ -257,7 +337,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
   readonly pattern: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -278,13 +358,38 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._groupIndexes) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex | undefined) {
+    if (value === undefined) {
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
   // group_indexes - computed: false, optional: true, required: false
-  private _groupIndexes?: number[] | undefined; 
+  private _groupIndexes?: number[]; 
   public get groupIndexes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('group_indexes') as any;
   }
-  public set groupIndexes(value: number[] | undefined) {
+  public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
   }
   public resetGroupIndexes() {
@@ -292,7 +397,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   }
   // Temporarily expose input value. Use with caution.
   public get groupIndexesInput() {
-    return this._groupIndexes
+    return this._groupIndexes;
   }
 
   // pattern - computed: false, optional: false, required: true
@@ -305,7 +410,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   }
   // Temporarily expose input value. Use with caution.
   public get patternInput() {
-    return this._pattern
+    return this._pattern;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType {
@@ -318,7 +423,7 @@ or 'projects/project-id/storedInfoTypes/432452342'.
   readonly name: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -338,6 +443,25 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -348,7 +472,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes {
@@ -391,7 +515,7 @@ specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLI
   readonly storedType?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes): any {
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -416,7 +540,7 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypes): any {
+export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -436,7 +560,7 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType): any {
+export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -456,6 +580,25 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -466,7 +609,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType {
@@ -484,7 +627,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindings
   readonly infoType: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType): any {
+export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -516,7 +659,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigLimits {
   readonly maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[];
 }
 
-function dataLossPreventionInspectTemplateInspectConfigLimitsToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference | DataLossPreventionInspectTemplateInspectConfigLimits): any {
+export function dataLossPreventionInspectTemplateInspectConfigLimitsToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference | DataLossPreventionInspectTemplateInspectConfigLimits): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -538,6 +681,37 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimits | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxFindingsPerItem) {
+      hasAnyValues = true;
+      internalValueResult.maxFindingsPerItem = this._maxFindingsPerItem;
+    }
+    if (this._maxFindingsPerRequest) {
+      hasAnyValues = true;
+      internalValueResult.maxFindingsPerRequest = this._maxFindingsPerRequest;
+    }
+    if (this._maxFindingsPerInfoType) {
+      hasAnyValues = true;
+      internalValueResult.maxFindingsPerInfoType = this._maxFindingsPerInfoType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigLimits | undefined) {
+    if (value === undefined) {
+      this._maxFindingsPerItem = undefined;
+      this._maxFindingsPerRequest = undefined;
+      this._maxFindingsPerInfoType = undefined;
+    }
+    else {
+      this._maxFindingsPerItem = value.maxFindingsPerItem;
+      this._maxFindingsPerRequest = value.maxFindingsPerRequest;
+      this._maxFindingsPerInfoType = value.maxFindingsPerInfoType;
+    }
+  }
+
   // max_findings_per_item - computed: false, optional: false, required: true
   private _maxFindingsPerItem?: number; 
   public get maxFindingsPerItem() {
@@ -548,7 +722,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get maxFindingsPerItemInput() {
-    return this._maxFindingsPerItem
+    return this._maxFindingsPerItem;
   }
 
   // max_findings_per_request - computed: false, optional: false, required: true
@@ -561,16 +735,16 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get maxFindingsPerRequestInput() {
-    return this._maxFindingsPerRequest
+    return this._maxFindingsPerRequest;
   }
 
   // max_findings_per_info_type - computed: false, optional: true, required: false
-  private _maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[] | undefined; 
+  private _maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[]; 
   public get maxFindingsPerInfoType() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('max_findings_per_info_type') as any;
   }
-  public set maxFindingsPerInfoType(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[] | undefined) {
+  public set maxFindingsPerInfoType(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[]) {
     this._maxFindingsPerInfoType = value;
   }
   public resetMaxFindingsPerInfoType() {
@@ -578,7 +752,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get maxFindingsPerInfoTypeInput() {
-    return this._maxFindingsPerInfoType
+    return this._maxFindingsPerInfoType;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes {
@@ -591,7 +765,7 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -610,7 +784,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   readonly path: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -630,6 +804,25 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined) {
+    if (value === undefined) {
+      this._path = undefined;
+    }
+    else {
+      this._path = value.path;
+    }
+  }
+
   // path - computed: false, optional: false, required: true
   private _path?: string; 
   public get path() {
@@ -640,7 +833,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList {
@@ -653,7 +846,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
   readonly words: string[];
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -673,6 +866,25 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._words) {
+      hasAnyValues = true;
+      internalValueResult.words = this._words;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined) {
+    if (value === undefined) {
+      this._words = undefined;
+    }
+    else {
+      this._words = value.words;
+    }
+  }
+
   // words - computed: false, optional: false, required: true
   private _words?: string[]; 
   public get words() {
@@ -683,7 +895,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
   // Temporarily expose input value. Use with caution.
   public get wordsInput() {
-    return this._words
+    return this._words;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary {
@@ -701,7 +913,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   readonly wordList?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -722,38 +934,61 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined; 
-  private __cloudStoragePathOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
-  public get cloudStoragePath() {
-    return this.__cloudStoragePathOutput;
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cloudStoragePath) {
+      hasAnyValues = true;
+      internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
+    }
+    if (this._wordList) {
+      hasAnyValues = true;
+      internalValueResult.wordList = this._wordList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCloudStoragePath(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined) {
-    this._cloudStoragePath = value;
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined) {
+    if (value === undefined) {
+      this._cloudStoragePath.internalValue = undefined;
+      this._wordList.internalValue = undefined;
+    }
+    else {
+      this._cloudStoragePath.internalValue = value.cloudStoragePath;
+      this._wordList.internalValue = value.wordList;
+    }
+  }
+
+  // cloud_storage_path - computed: false, optional: true, required: false
+  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
+  public get cloudStoragePath() {
+    return this._cloudStoragePath;
+  }
+  public putCloudStoragePath(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath) {
+    this._cloudStoragePath.internalValue = value;
   }
   public resetCloudStoragePath() {
-    this._cloudStoragePath = undefined;
+    this._cloudStoragePath.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloudStoragePathInput() {
-    return this._cloudStoragePath
+    return this._cloudStoragePath.internalValue;
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined; 
-  private __wordListOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this as any, "word_list", true);
+  private _wordList = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this as any, "word_list", true);
   public get wordList() {
-    return this.__wordListOutput;
+    return this._wordList;
   }
-  public putWordList(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined) {
-    this._wordList = value;
+  public putWordList(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList) {
+    this._wordList.internalValue = value;
   }
   public resetWordList() {
-    this._wordList = undefined;
+    this._wordList.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get wordListInput() {
-    return this._wordList
+    return this._wordList.internalValue;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
@@ -766,7 +1001,7 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -785,7 +1020,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[];
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -805,6 +1040,25 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._infoTypes) {
+      hasAnyValues = true;
+      internalValueResult.infoTypes = this._infoTypes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined) {
+    if (value === undefined) {
+      this._infoTypes = undefined;
+    }
+    else {
+      this._infoTypes = value.infoTypes;
+    }
+  }
+
   // info_types - computed: false, optional: false, required: true
   private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[]; 
   public get infoTypes() {
@@ -816,7 +1070,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
   // Temporarily expose input value. Use with caution.
   public get infoTypesInput() {
-    return this._infoTypes
+    return this._infoTypes;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex {
@@ -835,7 +1089,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
   readonly pattern: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -856,13 +1110,38 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._groupIndexes) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined) {
+    if (value === undefined) {
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
   // group_indexes - computed: false, optional: true, required: false
-  private _groupIndexes?: number[] | undefined; 
+  private _groupIndexes?: number[]; 
   public get groupIndexes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('group_indexes') as any;
   }
-  public set groupIndexes(value: number[] | undefined) {
+  public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
   }
   public resetGroupIndexes() {
@@ -870,7 +1149,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
   // Temporarily expose input value. Use with caution.
   public get groupIndexesInput() {
-    return this._groupIndexes
+    return this._groupIndexes;
   }
 
   // pattern - computed: false, optional: false, required: true
@@ -883,7 +1162,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
   // Temporarily expose input value. Use with caution.
   public get patternInput() {
-    return this._pattern
+    return this._pattern;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule {
@@ -913,7 +1192,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   readonly regex?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -936,6 +1215,43 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._matchingType) {
+      hasAnyValues = true;
+      internalValueResult.matchingType = this._matchingType;
+    }
+    if (this._dictionary) {
+      hasAnyValues = true;
+      internalValueResult.dictionary = this._dictionary?.internalValue;
+    }
+    if (this._excludeInfoTypes) {
+      hasAnyValues = true;
+      internalValueResult.excludeInfoTypes = this._excludeInfoTypes?.internalValue;
+    }
+    if (this._regex) {
+      hasAnyValues = true;
+      internalValueResult.regex = this._regex?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule | undefined) {
+    if (value === undefined) {
+      this._matchingType = undefined;
+      this._dictionary.internalValue = undefined;
+      this._excludeInfoTypes.internalValue = undefined;
+      this._regex.internalValue = undefined;
+    }
+    else {
+      this._matchingType = value.matchingType;
+      this._dictionary.internalValue = value.dictionary;
+      this._excludeInfoTypes.internalValue = value.excludeInfoTypes;
+      this._regex.internalValue = value.regex;
+    }
+  }
+
   // matching_type - computed: false, optional: false, required: true
   private _matchingType?: string; 
   public get matchingType() {
@@ -946,58 +1262,55 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
   // Temporarily expose input value. Use with caution.
   public get matchingTypeInput() {
-    return this._matchingType
+    return this._matchingType;
   }
 
   // dictionary - computed: false, optional: true, required: false
-  private _dictionary?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined; 
-  private __dictionaryOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this as any, "dictionary", true);
+  private _dictionary = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this as any, "dictionary", true);
   public get dictionary() {
-    return this.__dictionaryOutput;
+    return this._dictionary;
   }
-  public putDictionary(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined) {
-    this._dictionary = value;
+  public putDictionary(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary) {
+    this._dictionary.internalValue = value;
   }
   public resetDictionary() {
-    this._dictionary = undefined;
+    this._dictionary.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dictionaryInput() {
-    return this._dictionary
+    return this._dictionary.internalValue;
   }
 
   // exclude_info_types - computed: false, optional: true, required: false
-  private _excludeInfoTypes?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined; 
-  private __excludeInfoTypesOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this as any, "exclude_info_types", true);
+  private _excludeInfoTypes = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this as any, "exclude_info_types", true);
   public get excludeInfoTypes() {
-    return this.__excludeInfoTypesOutput;
+    return this._excludeInfoTypes;
   }
-  public putExcludeInfoTypes(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined) {
-    this._excludeInfoTypes = value;
+  public putExcludeInfoTypes(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes) {
+    this._excludeInfoTypes.internalValue = value;
   }
   public resetExcludeInfoTypes() {
-    this._excludeInfoTypes = undefined;
+    this._excludeInfoTypes.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get excludeInfoTypesInput() {
-    return this._excludeInfoTypes
+    return this._excludeInfoTypes.internalValue;
   }
 
   // regex - computed: false, optional: true, required: false
-  private _regex?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined; 
-  private __regexOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this as any, "regex", true);
+  private _regex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this as any, "regex", true);
   public get regex() {
-    return this.__regexOutput;
+    return this._regex;
   }
-  public putRegex(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined) {
-    this._regex = value;
+  public putRegex(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex) {
+    this._regex.internalValue = value;
   }
   public resetRegex() {
-    this._regex = undefined;
+    this._regex.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get regexInput() {
-    return this._regex
+    return this._regex.internalValue;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex {
@@ -1017,7 +1330,7 @@ the entire match is returned. No more than 3 may be included.
   readonly pattern: string;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1038,13 +1351,38 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._groupIndexes) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined) {
+    if (value === undefined) {
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
   // group_indexes - computed: false, optional: true, required: false
-  private _groupIndexes?: number[] | undefined; 
+  private _groupIndexes?: number[]; 
   public get groupIndexes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('group_indexes') as any;
   }
-  public set groupIndexes(value: number[] | undefined) {
+  public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
   }
   public resetGroupIndexes() {
@@ -1052,7 +1390,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
   // Temporarily expose input value. Use with caution.
   public get groupIndexesInput() {
-    return this._groupIndexes
+    return this._groupIndexes;
   }
 
   // pattern - computed: false, optional: false, required: true
@@ -1065,7 +1403,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
   // Temporarily expose input value. Use with caution.
   public get patternInput() {
-    return this._pattern
+    return this._pattern;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment {
@@ -1088,7 +1426,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
   readonly relativeLikelihood?: number;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1109,12 +1447,37 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fixedLikelihood) {
+      hasAnyValues = true;
+      internalValueResult.fixedLikelihood = this._fixedLikelihood;
+    }
+    if (this._relativeLikelihood) {
+      hasAnyValues = true;
+      internalValueResult.relativeLikelihood = this._relativeLikelihood;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined) {
+    if (value === undefined) {
+      this._fixedLikelihood = undefined;
+      this._relativeLikelihood = undefined;
+    }
+    else {
+      this._fixedLikelihood = value.fixedLikelihood;
+      this._relativeLikelihood = value.relativeLikelihood;
+    }
+  }
+
   // fixed_likelihood - computed: false, optional: true, required: false
-  private _fixedLikelihood?: string | undefined; 
+  private _fixedLikelihood?: string; 
   public get fixedLikelihood() {
     return this.getStringAttribute('fixed_likelihood');
   }
-  public set fixedLikelihood(value: string | undefined) {
+  public set fixedLikelihood(value: string) {
     this._fixedLikelihood = value;
   }
   public resetFixedLikelihood() {
@@ -1122,15 +1485,15 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
   // Temporarily expose input value. Use with caution.
   public get fixedLikelihoodInput() {
-    return this._fixedLikelihood
+    return this._fixedLikelihood;
   }
 
   // relative_likelihood - computed: false, optional: true, required: false
-  private _relativeLikelihood?: number | undefined; 
+  private _relativeLikelihood?: number; 
   public get relativeLikelihood() {
     return this.getNumberAttribute('relative_likelihood');
   }
-  public set relativeLikelihood(value: number | undefined) {
+  public set relativeLikelihood(value: number) {
     this._relativeLikelihood = value;
   }
   public resetRelativeLikelihood() {
@@ -1138,7 +1501,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
   // Temporarily expose input value. Use with caution.
   public get relativeLikelihoodInput() {
-    return this._relativeLikelihood
+    return this._relativeLikelihood;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity {
@@ -1156,7 +1519,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   readonly windowBefore?: number;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1177,12 +1540,37 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._windowAfter) {
+      hasAnyValues = true;
+      internalValueResult.windowAfter = this._windowAfter;
+    }
+    if (this._windowBefore) {
+      hasAnyValues = true;
+      internalValueResult.windowBefore = this._windowBefore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity | undefined) {
+    if (value === undefined) {
+      this._windowAfter = undefined;
+      this._windowBefore = undefined;
+    }
+    else {
+      this._windowAfter = value.windowAfter;
+      this._windowBefore = value.windowBefore;
+    }
+  }
+
   // window_after - computed: false, optional: true, required: false
-  private _windowAfter?: number | undefined; 
+  private _windowAfter?: number; 
   public get windowAfter() {
     return this.getNumberAttribute('window_after');
   }
-  public set windowAfter(value: number | undefined) {
+  public set windowAfter(value: number) {
     this._windowAfter = value;
   }
   public resetWindowAfter() {
@@ -1190,15 +1578,15 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
   // Temporarily expose input value. Use with caution.
   public get windowAfterInput() {
-    return this._windowAfter
+    return this._windowAfter;
   }
 
   // window_before - computed: false, optional: true, required: false
-  private _windowBefore?: number | undefined; 
+  private _windowBefore?: number; 
   public get windowBefore() {
     return this.getNumberAttribute('window_before');
   }
-  public set windowBefore(value: number | undefined) {
+  public set windowBefore(value: number) {
     this._windowBefore = value;
   }
   public resetWindowBefore() {
@@ -1206,7 +1594,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
   // Temporarily expose input value. Use with caution.
   public get windowBeforeInput() {
-    return this._windowBefore
+    return this._windowBefore;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule {
@@ -1230,7 +1618,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   readonly proximity: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1252,46 +1640,74 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hotwordRegex) {
+      hasAnyValues = true;
+      internalValueResult.hotwordRegex = this._hotwordRegex?.internalValue;
+    }
+    if (this._likelihoodAdjustment) {
+      hasAnyValues = true;
+      internalValueResult.likelihoodAdjustment = this._likelihoodAdjustment?.internalValue;
+    }
+    if (this._proximity) {
+      hasAnyValues = true;
+      internalValueResult.proximity = this._proximity?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule | undefined) {
+    if (value === undefined) {
+      this._hotwordRegex.internalValue = undefined;
+      this._likelihoodAdjustment.internalValue = undefined;
+      this._proximity.internalValue = undefined;
+    }
+    else {
+      this._hotwordRegex.internalValue = value.hotwordRegex;
+      this._likelihoodAdjustment.internalValue = value.likelihoodAdjustment;
+      this._proximity.internalValue = value.proximity;
+    }
+  }
+
   // hotword_regex - computed: false, optional: false, required: true
-  private _hotwordRegex?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex; 
-  private __hotwordRegexOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this as any, "hotword_regex", true);
+  private _hotwordRegex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this as any, "hotword_regex", true);
   public get hotwordRegex() {
-    return this.__hotwordRegexOutput;
+    return this._hotwordRegex;
   }
   public putHotwordRegex(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex) {
-    this._hotwordRegex = value;
+    this._hotwordRegex.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get hotwordRegexInput() {
-    return this._hotwordRegex
+    return this._hotwordRegex.internalValue;
   }
 
   // likelihood_adjustment - computed: false, optional: false, required: true
-  private _likelihoodAdjustment?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment; 
-  private __likelihoodAdjustmentOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this as any, "likelihood_adjustment", true);
+  private _likelihoodAdjustment = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this as any, "likelihood_adjustment", true);
   public get likelihoodAdjustment() {
-    return this.__likelihoodAdjustmentOutput;
+    return this._likelihoodAdjustment;
   }
   public putLikelihoodAdjustment(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment) {
-    this._likelihoodAdjustment = value;
+    this._likelihoodAdjustment.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get likelihoodAdjustmentInput() {
-    return this._likelihoodAdjustment
+    return this._likelihoodAdjustment.internalValue;
   }
 
   // proximity - computed: false, optional: false, required: true
-  private _proximity?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity; 
-  private __proximityOutput = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this as any, "proximity", true);
+  private _proximity = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this as any, "proximity", true);
   public get proximity() {
-    return this.__proximityOutput;
+    return this._proximity;
   }
   public putProximity(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity) {
-    this._proximity = value;
+    this._proximity.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get proximityInput() {
-    return this._proximity
+    return this._proximity.internalValue;
   }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRules {
@@ -1309,7 +1725,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRules {
   readonly hotwordRule?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule;
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRules): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1335,7 +1751,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSet {
   readonly rules: DataLossPreventionInspectTemplateInspectConfigRuleSetRules[];
 }
 
-function dataLossPreventionInspectTemplateInspectConfigRuleSetToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSet): any {
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1397,7 +1813,7 @@ export interface DataLossPreventionInspectTemplateInspectConfig {
   readonly ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[];
 }
 
-function dataLossPreventionInspectTemplateInspectConfigToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigOutputReference | DataLossPreventionInspectTemplateInspectConfig): any {
+export function dataLossPreventionInspectTemplateInspectConfigToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigOutputReference | DataLossPreventionInspectTemplateInspectConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1424,12 +1840,73 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._contentOptions) {
+      hasAnyValues = true;
+      internalValueResult.contentOptions = this._contentOptions;
+    }
+    if (this._excludeInfoTypes) {
+      hasAnyValues = true;
+      internalValueResult.excludeInfoTypes = this._excludeInfoTypes;
+    }
+    if (this._includeQuote) {
+      hasAnyValues = true;
+      internalValueResult.includeQuote = this._includeQuote;
+    }
+    if (this._minLikelihood) {
+      hasAnyValues = true;
+      internalValueResult.minLikelihood = this._minLikelihood;
+    }
+    if (this._customInfoTypes) {
+      hasAnyValues = true;
+      internalValueResult.customInfoTypes = this._customInfoTypes;
+    }
+    if (this._infoTypes) {
+      hasAnyValues = true;
+      internalValueResult.infoTypes = this._infoTypes;
+    }
+    if (this._limits) {
+      hasAnyValues = true;
+      internalValueResult.limits = this._limits?.internalValue;
+    }
+    if (this._ruleSet) {
+      hasAnyValues = true;
+      internalValueResult.ruleSet = this._ruleSet;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfig | undefined) {
+    if (value === undefined) {
+      this._contentOptions = undefined;
+      this._excludeInfoTypes = undefined;
+      this._includeQuote = undefined;
+      this._minLikelihood = undefined;
+      this._customInfoTypes = undefined;
+      this._infoTypes = undefined;
+      this._limits.internalValue = undefined;
+      this._ruleSet = undefined;
+    }
+    else {
+      this._contentOptions = value.contentOptions;
+      this._excludeInfoTypes = value.excludeInfoTypes;
+      this._includeQuote = value.includeQuote;
+      this._minLikelihood = value.minLikelihood;
+      this._customInfoTypes = value.customInfoTypes;
+      this._infoTypes = value.infoTypes;
+      this._limits.internalValue = value.limits;
+      this._ruleSet = value.ruleSet;
+    }
+  }
+
   // content_options - computed: false, optional: true, required: false
-  private _contentOptions?: string[] | undefined; 
+  private _contentOptions?: string[]; 
   public get contentOptions() {
     return this.getListAttribute('content_options');
   }
-  public set contentOptions(value: string[] | undefined) {
+  public set contentOptions(value: string[]) {
     this._contentOptions = value;
   }
   public resetContentOptions() {
@@ -1437,15 +1914,15 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get contentOptionsInput() {
-    return this._contentOptions
+    return this._contentOptions;
   }
 
   // exclude_info_types - computed: false, optional: true, required: false
-  private _excludeInfoTypes?: boolean | cdktf.IResolvable | undefined; 
+  private _excludeInfoTypes?: boolean | cdktf.IResolvable; 
   public get excludeInfoTypes() {
     return this.getBooleanAttribute('exclude_info_types') as any;
   }
-  public set excludeInfoTypes(value: boolean | cdktf.IResolvable | undefined) {
+  public set excludeInfoTypes(value: boolean | cdktf.IResolvable) {
     this._excludeInfoTypes = value;
   }
   public resetExcludeInfoTypes() {
@@ -1453,15 +1930,15 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get excludeInfoTypesInput() {
-    return this._excludeInfoTypes
+    return this._excludeInfoTypes;
   }
 
   // include_quote - computed: false, optional: true, required: false
-  private _includeQuote?: boolean | cdktf.IResolvable | undefined; 
+  private _includeQuote?: boolean | cdktf.IResolvable; 
   public get includeQuote() {
     return this.getBooleanAttribute('include_quote') as any;
   }
-  public set includeQuote(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeQuote(value: boolean | cdktf.IResolvable) {
     this._includeQuote = value;
   }
   public resetIncludeQuote() {
@@ -1469,15 +1946,15 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get includeQuoteInput() {
-    return this._includeQuote
+    return this._includeQuote;
   }
 
   // min_likelihood - computed: false, optional: true, required: false
-  private _minLikelihood?: string | undefined; 
+  private _minLikelihood?: string; 
   public get minLikelihood() {
     return this.getStringAttribute('min_likelihood');
   }
-  public set minLikelihood(value: string | undefined) {
+  public set minLikelihood(value: string) {
     this._minLikelihood = value;
   }
   public resetMinLikelihood() {
@@ -1485,16 +1962,16 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get minLikelihoodInput() {
-    return this._minLikelihood
+    return this._minLikelihood;
   }
 
   // custom_info_types - computed: false, optional: true, required: false
-  private _customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[] | undefined; 
+  private _customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[]; 
   public get customInfoTypes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_info_types') as any;
   }
-  public set customInfoTypes(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[] | undefined) {
+  public set customInfoTypes(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[]) {
     this._customInfoTypes = value;
   }
   public resetCustomInfoTypes() {
@@ -1502,16 +1979,16 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get customInfoTypesInput() {
-    return this._customInfoTypes
+    return this._customInfoTypes;
   }
 
   // info_types - computed: false, optional: true, required: false
-  private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[] | undefined; 
+  private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[]; 
   public get infoTypes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('info_types') as any;
   }
-  public set infoTypes(value: DataLossPreventionInspectTemplateInspectConfigInfoTypes[] | undefined) {
+  public set infoTypes(value: DataLossPreventionInspectTemplateInspectConfigInfoTypes[]) {
     this._infoTypes = value;
   }
   public resetInfoTypes() {
@@ -1519,33 +1996,32 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get infoTypesInput() {
-    return this._infoTypes
+    return this._infoTypes;
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits?: DataLossPreventionInspectTemplateInspectConfigLimits | undefined; 
-  private __limitsOutput = new DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(this as any, "limits", true);
+  private _limits = new DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(this as any, "limits", true);
   public get limits() {
-    return this.__limitsOutput;
+    return this._limits;
   }
-  public putLimits(value: DataLossPreventionInspectTemplateInspectConfigLimits | undefined) {
-    this._limits = value;
+  public putLimits(value: DataLossPreventionInspectTemplateInspectConfigLimits) {
+    this._limits.internalValue = value;
   }
   public resetLimits() {
-    this._limits = undefined;
+    this._limits.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get limitsInput() {
-    return this._limits
+    return this._limits.internalValue;
   }
 
   // rule_set - computed: false, optional: true, required: false
-  private _ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[] | undefined; 
+  private _ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[]; 
   public get ruleSet() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rule_set') as any;
   }
-  public set ruleSet(value: DataLossPreventionInspectTemplateInspectConfigRuleSet[] | undefined) {
+  public set ruleSet(value: DataLossPreventionInspectTemplateInspectConfigRuleSet[]) {
     this._ruleSet = value;
   }
   public resetRuleSet() {
@@ -1553,7 +2029,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get ruleSetInput() {
-    return this._ruleSet
+    return this._ruleSet;
   }
 }
 export interface DataLossPreventionInspectTemplateTimeouts {
@@ -1571,7 +2047,7 @@ export interface DataLossPreventionInspectTemplateTimeouts {
   readonly update?: string;
 }
 
-function dataLossPreventionInspectTemplateTimeoutsToTerraform(struct?: DataLossPreventionInspectTemplateTimeoutsOutputReference | DataLossPreventionInspectTemplateTimeouts): any {
+export function dataLossPreventionInspectTemplateTimeoutsToTerraform(struct?: DataLossPreventionInspectTemplateTimeoutsOutputReference | DataLossPreventionInspectTemplateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1593,12 +2069,43 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionInspectTemplateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1606,15 +2113,15 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1622,15 +2129,15 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1638,7 +2145,7 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1677,8 +2184,8 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._parent = config.parent;
-    this._inspectConfig = config.inspectConfig;
-    this._timeouts = config.timeouts;
+    this._inspectConfig.internalValue = config.inspectConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1686,11 +2193,11 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1698,15 +2205,15 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -1714,7 +2221,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1737,41 +2244,39 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // inspect_config - computed: false, optional: true, required: false
-  private _inspectConfig?: DataLossPreventionInspectTemplateInspectConfig | undefined; 
-  private __inspectConfigOutput = new DataLossPreventionInspectTemplateInspectConfigOutputReference(this as any, "inspect_config", true);
+  private _inspectConfig = new DataLossPreventionInspectTemplateInspectConfigOutputReference(this as any, "inspect_config", true);
   public get inspectConfig() {
-    return this.__inspectConfigOutput;
+    return this._inspectConfig;
   }
-  public putInspectConfig(value: DataLossPreventionInspectTemplateInspectConfig | undefined) {
-    this._inspectConfig = value;
+  public putInspectConfig(value: DataLossPreventionInspectTemplateInspectConfig) {
+    this._inspectConfig.internalValue = value;
   }
   public resetInspectConfig() {
-    this._inspectConfig = undefined;
+    this._inspectConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inspectConfigInput() {
-    return this._inspectConfig
+    return this._inspectConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataLossPreventionInspectTemplateTimeouts | undefined; 
-  private __timeoutsOutput = new DataLossPreventionInspectTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataLossPreventionInspectTemplateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataLossPreventionInspectTemplateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataLossPreventionInspectTemplateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1783,8 +2288,8 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       parent: cdktf.stringToTerraform(this._parent),
-      inspect_config: dataLossPreventionInspectTemplateInspectConfigToTerraform(this._inspectConfig),
-      timeouts: dataLossPreventionInspectTemplateTimeoutsToTerraform(this._timeouts),
+      inspect_config: dataLossPreventionInspectTemplateInspectConfigToTerraform(this._inspectConfig.internalValue),
+      timeouts: dataLossPreventionInspectTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

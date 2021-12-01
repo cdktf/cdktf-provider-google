@@ -72,7 +72,7 @@ export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get fhirStoreIdInput() {
-    return this._fhirStoreId
+    return this._fhirStoreId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -90,7 +90,7 @@ export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

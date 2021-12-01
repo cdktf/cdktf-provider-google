@@ -77,7 +77,7 @@ export interface DataprocWorkflowTemplateJobsHadoopJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsHadoopJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsHadoopJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsHadoopJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsHadoopJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,13 +97,32 @@ export class DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsHadoopJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -111,7 +130,7 @@ export class DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsHadoopJob {
@@ -165,7 +184,7 @@ export interface DataprocWorkflowTemplateJobsHadoopJob {
   readonly loggingConfig?: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig;
 }
 
-function dataprocWorkflowTemplateJobsHadoopJobToTerraform(struct?: DataprocWorkflowTemplateJobsHadoopJobOutputReference | DataprocWorkflowTemplateJobsHadoopJob): any {
+export function dataprocWorkflowTemplateJobsHadoopJobToTerraform(struct?: DataprocWorkflowTemplateJobsHadoopJobOutputReference | DataprocWorkflowTemplateJobsHadoopJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -192,12 +211,73 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsHadoopJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._archiveUris) {
+      hasAnyValues = true;
+      internalValueResult.archiveUris = this._archiveUris;
+    }
+    if (this._args) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._fileUris) {
+      hasAnyValues = true;
+      internalValueResult.fileUris = this._fileUris;
+    }
+    if (this._jarFileUris) {
+      hasAnyValues = true;
+      internalValueResult.jarFileUris = this._jarFileUris;
+    }
+    if (this._mainClass) {
+      hasAnyValues = true;
+      internalValueResult.mainClass = this._mainClass;
+    }
+    if (this._mainJarFileUri) {
+      hasAnyValues = true;
+      internalValueResult.mainJarFileUri = this._mainJarFileUri;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsHadoopJob | undefined) {
+    if (value === undefined) {
+      this._archiveUris = undefined;
+      this._args = undefined;
+      this._fileUris = undefined;
+      this._jarFileUris = undefined;
+      this._mainClass = undefined;
+      this._mainJarFileUri = undefined;
+      this._properties = undefined;
+      this._loggingConfig.internalValue = undefined;
+    }
+    else {
+      this._archiveUris = value.archiveUris;
+      this._args = value.args;
+      this._fileUris = value.fileUris;
+      this._jarFileUris = value.jarFileUris;
+      this._mainClass = value.mainClass;
+      this._mainJarFileUri = value.mainJarFileUri;
+      this._properties = value.properties;
+      this._loggingConfig.internalValue = value.loggingConfig;
+    }
+  }
+
   // archive_uris - computed: false, optional: true, required: false
-  private _archiveUris?: string[] | undefined; 
+  private _archiveUris?: string[]; 
   public get archiveUris() {
     return this.getListAttribute('archive_uris');
   }
-  public set archiveUris(value: string[] | undefined) {
+  public set archiveUris(value: string[]) {
     this._archiveUris = value;
   }
   public resetArchiveUris() {
@@ -205,15 +285,15 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get archiveUrisInput() {
-    return this._archiveUris
+    return this._archiveUris;
   }
 
   // args - computed: false, optional: true, required: false
-  private _args?: string[] | undefined; 
+  private _args?: string[]; 
   public get args() {
     return this.getListAttribute('args');
   }
-  public set args(value: string[] | undefined) {
+  public set args(value: string[]) {
     this._args = value;
   }
   public resetArgs() {
@@ -221,15 +301,15 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get argsInput() {
-    return this._args
+    return this._args;
   }
 
   // file_uris - computed: false, optional: true, required: false
-  private _fileUris?: string[] | undefined; 
+  private _fileUris?: string[]; 
   public get fileUris() {
     return this.getListAttribute('file_uris');
   }
-  public set fileUris(value: string[] | undefined) {
+  public set fileUris(value: string[]) {
     this._fileUris = value;
   }
   public resetFileUris() {
@@ -237,15 +317,15 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get fileUrisInput() {
-    return this._fileUris
+    return this._fileUris;
   }
 
   // jar_file_uris - computed: false, optional: true, required: false
-  private _jarFileUris?: string[] | undefined; 
+  private _jarFileUris?: string[]; 
   public get jarFileUris() {
     return this.getListAttribute('jar_file_uris');
   }
-  public set jarFileUris(value: string[] | undefined) {
+  public set jarFileUris(value: string[]) {
     this._jarFileUris = value;
   }
   public resetJarFileUris() {
@@ -253,15 +333,15 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get jarFileUrisInput() {
-    return this._jarFileUris
+    return this._jarFileUris;
   }
 
   // main_class - computed: false, optional: true, required: false
-  private _mainClass?: string | undefined; 
+  private _mainClass?: string; 
   public get mainClass() {
     return this.getStringAttribute('main_class');
   }
-  public set mainClass(value: string | undefined) {
+  public set mainClass(value: string) {
     this._mainClass = value;
   }
   public resetMainClass() {
@@ -269,15 +349,15 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get mainClassInput() {
-    return this._mainClass
+    return this._mainClass;
   }
 
   // main_jar_file_uri - computed: false, optional: true, required: false
-  private _mainJarFileUri?: string | undefined; 
+  private _mainJarFileUri?: string; 
   public get mainJarFileUri() {
     return this.getStringAttribute('main_jar_file_uri');
   }
-  public set mainJarFileUri(value: string | undefined) {
+  public set mainJarFileUri(value: string) {
     this._mainJarFileUri = value;
   }
   public resetMainJarFileUri() {
@@ -285,16 +365,16 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get mainJarFileUriInput() {
-    return this._mainJarFileUri
+    return this._mainJarFileUri;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -302,24 +382,23 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsHiveJobQueryList {
@@ -331,7 +410,7 @@ export interface DataprocWorkflowTemplateJobsHiveJobQueryList {
   readonly queries: string[];
 }
 
-function dataprocWorkflowTemplateJobsHiveJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference | DataprocWorkflowTemplateJobsHiveJobQueryList): any {
+export function dataprocWorkflowTemplateJobsHiveJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference | DataprocWorkflowTemplateJobsHiveJobQueryList): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -351,6 +430,25 @@ export class DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsHiveJobQueryList | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._queries) {
+      hasAnyValues = true;
+      internalValueResult.queries = this._queries;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsHiveJobQueryList | undefined) {
+    if (value === undefined) {
+      this._queries = undefined;
+    }
+    else {
+      this._queries = value.queries;
+    }
+  }
+
   // queries - computed: false, optional: false, required: true
   private _queries?: string[]; 
   public get queries() {
@@ -361,7 +459,7 @@ export class DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get queriesInput() {
-    return this._queries
+    return this._queries;
   }
 }
 export interface DataprocWorkflowTemplateJobsHiveJob {
@@ -403,7 +501,7 @@ export interface DataprocWorkflowTemplateJobsHiveJob {
   readonly queryList?: DataprocWorkflowTemplateJobsHiveJobQueryList;
 }
 
-function dataprocWorkflowTemplateJobsHiveJobToTerraform(struct?: DataprocWorkflowTemplateJobsHiveJobOutputReference | DataprocWorkflowTemplateJobsHiveJob): any {
+export function dataprocWorkflowTemplateJobsHiveJobToTerraform(struct?: DataprocWorkflowTemplateJobsHiveJobOutputReference | DataprocWorkflowTemplateJobsHiveJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -428,12 +526,61 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsHiveJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._continueOnFailure) {
+      hasAnyValues = true;
+      internalValueResult.continueOnFailure = this._continueOnFailure;
+    }
+    if (this._jarFileUris) {
+      hasAnyValues = true;
+      internalValueResult.jarFileUris = this._jarFileUris;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._queryFileUri) {
+      hasAnyValues = true;
+      internalValueResult.queryFileUri = this._queryFileUri;
+    }
+    if (this._scriptVariables) {
+      hasAnyValues = true;
+      internalValueResult.scriptVariables = this._scriptVariables;
+    }
+    if (this._queryList) {
+      hasAnyValues = true;
+      internalValueResult.queryList = this._queryList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsHiveJob | undefined) {
+    if (value === undefined) {
+      this._continueOnFailure = undefined;
+      this._jarFileUris = undefined;
+      this._properties = undefined;
+      this._queryFileUri = undefined;
+      this._scriptVariables = undefined;
+      this._queryList.internalValue = undefined;
+    }
+    else {
+      this._continueOnFailure = value.continueOnFailure;
+      this._jarFileUris = value.jarFileUris;
+      this._properties = value.properties;
+      this._queryFileUri = value.queryFileUri;
+      this._scriptVariables = value.scriptVariables;
+      this._queryList.internalValue = value.queryList;
+    }
+  }
+
   // continue_on_failure - computed: false, optional: true, required: false
-  private _continueOnFailure?: boolean | cdktf.IResolvable | undefined; 
+  private _continueOnFailure?: boolean | cdktf.IResolvable; 
   public get continueOnFailure() {
     return this.getBooleanAttribute('continue_on_failure') as any;
   }
-  public set continueOnFailure(value: boolean | cdktf.IResolvable | undefined) {
+  public set continueOnFailure(value: boolean | cdktf.IResolvable) {
     this._continueOnFailure = value;
   }
   public resetContinueOnFailure() {
@@ -441,15 +588,15 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get continueOnFailureInput() {
-    return this._continueOnFailure
+    return this._continueOnFailure;
   }
 
   // jar_file_uris - computed: false, optional: true, required: false
-  private _jarFileUris?: string[] | undefined; 
+  private _jarFileUris?: string[]; 
   public get jarFileUris() {
     return this.getListAttribute('jar_file_uris');
   }
-  public set jarFileUris(value: string[] | undefined) {
+  public set jarFileUris(value: string[]) {
     this._jarFileUris = value;
   }
   public resetJarFileUris() {
@@ -457,16 +604,16 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get jarFileUrisInput() {
-    return this._jarFileUris
+    return this._jarFileUris;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -474,15 +621,15 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // query_file_uri - computed: false, optional: true, required: false
-  private _queryFileUri?: string | undefined; 
+  private _queryFileUri?: string; 
   public get queryFileUri() {
     return this.getStringAttribute('query_file_uri');
   }
-  public set queryFileUri(value: string | undefined) {
+  public set queryFileUri(value: string) {
     this._queryFileUri = value;
   }
   public resetQueryFileUri() {
@@ -490,16 +637,16 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get queryFileUriInput() {
-    return this._queryFileUri
+    return this._queryFileUri;
   }
 
   // script_variables - computed: false, optional: true, required: false
-  private _scriptVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _scriptVariables?: { [key: string]: string } | cdktf.IResolvable; 
   public get scriptVariables() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('script_variables') as any;
   }
-  public set scriptVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set scriptVariables(value: { [key: string]: string } | cdktf.IResolvable) {
     this._scriptVariables = value;
   }
   public resetScriptVariables() {
@@ -507,24 +654,23 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get scriptVariablesInput() {
-    return this._scriptVariables
+    return this._scriptVariables;
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList?: DataprocWorkflowTemplateJobsHiveJobQueryList | undefined; 
-  private __queryListOutput = new DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference(this as any, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference(this as any, "query_list", true);
   public get queryList() {
-    return this.__queryListOutput;
+    return this._queryList;
   }
-  public putQueryList(value: DataprocWorkflowTemplateJobsHiveJobQueryList | undefined) {
-    this._queryList = value;
+  public putQueryList(value: DataprocWorkflowTemplateJobsHiveJobQueryList) {
+    this._queryList.internalValue = value;
   }
   public resetQueryList() {
-    this._queryList = undefined;
+    this._queryList.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryListInput() {
-    return this._queryList
+    return this._queryList.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsPigJobLoggingConfig {
@@ -536,7 +682,7 @@ export interface DataprocWorkflowTemplateJobsPigJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsPigJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsPigJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsPigJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsPigJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -556,13 +702,32 @@ export class DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPigJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPigJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -570,7 +735,7 @@ export class DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsPigJobQueryList {
@@ -582,7 +747,7 @@ export interface DataprocWorkflowTemplateJobsPigJobQueryList {
   readonly queries: string[];
 }
 
-function dataprocWorkflowTemplateJobsPigJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobQueryListOutputReference | DataprocWorkflowTemplateJobsPigJobQueryList): any {
+export function dataprocWorkflowTemplateJobsPigJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobQueryListOutputReference | DataprocWorkflowTemplateJobsPigJobQueryList): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -602,6 +767,25 @@ export class DataprocWorkflowTemplateJobsPigJobQueryListOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPigJobQueryList | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._queries) {
+      hasAnyValues = true;
+      internalValueResult.queries = this._queries;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPigJobQueryList | undefined) {
+    if (value === undefined) {
+      this._queries = undefined;
+    }
+    else {
+      this._queries = value.queries;
+    }
+  }
+
   // queries - computed: false, optional: false, required: true
   private _queries?: string[]; 
   public get queries() {
@@ -612,7 +796,7 @@ export class DataprocWorkflowTemplateJobsPigJobQueryListOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get queriesInput() {
-    return this._queries
+    return this._queries;
   }
 }
 export interface DataprocWorkflowTemplateJobsPigJob {
@@ -660,7 +844,7 @@ export interface DataprocWorkflowTemplateJobsPigJob {
   readonly queryList?: DataprocWorkflowTemplateJobsPigJobQueryList;
 }
 
-function dataprocWorkflowTemplateJobsPigJobToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobOutputReference | DataprocWorkflowTemplateJobsPigJob): any {
+export function dataprocWorkflowTemplateJobsPigJobToTerraform(struct?: DataprocWorkflowTemplateJobsPigJobOutputReference | DataprocWorkflowTemplateJobsPigJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -686,12 +870,67 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPigJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._continueOnFailure) {
+      hasAnyValues = true;
+      internalValueResult.continueOnFailure = this._continueOnFailure;
+    }
+    if (this._jarFileUris) {
+      hasAnyValues = true;
+      internalValueResult.jarFileUris = this._jarFileUris;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._queryFileUri) {
+      hasAnyValues = true;
+      internalValueResult.queryFileUri = this._queryFileUri;
+    }
+    if (this._scriptVariables) {
+      hasAnyValues = true;
+      internalValueResult.scriptVariables = this._scriptVariables;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    if (this._queryList) {
+      hasAnyValues = true;
+      internalValueResult.queryList = this._queryList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPigJob | undefined) {
+    if (value === undefined) {
+      this._continueOnFailure = undefined;
+      this._jarFileUris = undefined;
+      this._properties = undefined;
+      this._queryFileUri = undefined;
+      this._scriptVariables = undefined;
+      this._loggingConfig.internalValue = undefined;
+      this._queryList.internalValue = undefined;
+    }
+    else {
+      this._continueOnFailure = value.continueOnFailure;
+      this._jarFileUris = value.jarFileUris;
+      this._properties = value.properties;
+      this._queryFileUri = value.queryFileUri;
+      this._scriptVariables = value.scriptVariables;
+      this._loggingConfig.internalValue = value.loggingConfig;
+      this._queryList.internalValue = value.queryList;
+    }
+  }
+
   // continue_on_failure - computed: false, optional: true, required: false
-  private _continueOnFailure?: boolean | cdktf.IResolvable | undefined; 
+  private _continueOnFailure?: boolean | cdktf.IResolvable; 
   public get continueOnFailure() {
     return this.getBooleanAttribute('continue_on_failure') as any;
   }
-  public set continueOnFailure(value: boolean | cdktf.IResolvable | undefined) {
+  public set continueOnFailure(value: boolean | cdktf.IResolvable) {
     this._continueOnFailure = value;
   }
   public resetContinueOnFailure() {
@@ -699,15 +938,15 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get continueOnFailureInput() {
-    return this._continueOnFailure
+    return this._continueOnFailure;
   }
 
   // jar_file_uris - computed: false, optional: true, required: false
-  private _jarFileUris?: string[] | undefined; 
+  private _jarFileUris?: string[]; 
   public get jarFileUris() {
     return this.getListAttribute('jar_file_uris');
   }
-  public set jarFileUris(value: string[] | undefined) {
+  public set jarFileUris(value: string[]) {
     this._jarFileUris = value;
   }
   public resetJarFileUris() {
@@ -715,16 +954,16 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get jarFileUrisInput() {
-    return this._jarFileUris
+    return this._jarFileUris;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -732,15 +971,15 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // query_file_uri - computed: false, optional: true, required: false
-  private _queryFileUri?: string | undefined; 
+  private _queryFileUri?: string; 
   public get queryFileUri() {
     return this.getStringAttribute('query_file_uri');
   }
-  public set queryFileUri(value: string | undefined) {
+  public set queryFileUri(value: string) {
     this._queryFileUri = value;
   }
   public resetQueryFileUri() {
@@ -748,16 +987,16 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get queryFileUriInput() {
-    return this._queryFileUri
+    return this._queryFileUri;
   }
 
   // script_variables - computed: false, optional: true, required: false
-  private _scriptVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _scriptVariables?: { [key: string]: string } | cdktf.IResolvable; 
   public get scriptVariables() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('script_variables') as any;
   }
-  public set scriptVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set scriptVariables(value: { [key: string]: string } | cdktf.IResolvable) {
     this._scriptVariables = value;
   }
   public resetScriptVariables() {
@@ -765,41 +1004,39 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scriptVariablesInput() {
-    return this._scriptVariables
+    return this._scriptVariables;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsPigJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsPigJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsPigJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList?: DataprocWorkflowTemplateJobsPigJobQueryList | undefined; 
-  private __queryListOutput = new DataprocWorkflowTemplateJobsPigJobQueryListOutputReference(this as any, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsPigJobQueryListOutputReference(this as any, "query_list", true);
   public get queryList() {
-    return this.__queryListOutput;
+    return this._queryList;
   }
-  public putQueryList(value: DataprocWorkflowTemplateJobsPigJobQueryList | undefined) {
-    this._queryList = value;
+  public putQueryList(value: DataprocWorkflowTemplateJobsPigJobQueryList) {
+    this._queryList.internalValue = value;
   }
   public resetQueryList() {
-    this._queryList = undefined;
+    this._queryList.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryListInput() {
-    return this._queryList
+    return this._queryList.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsPrestoJobLoggingConfig {
@@ -811,7 +1048,7 @@ export interface DataprocWorkflowTemplateJobsPrestoJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsPrestoJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsPrestoJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsPrestoJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsPrestoJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -831,13 +1068,32 @@ export class DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPrestoJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -845,7 +1101,7 @@ export class DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsPrestoJobQueryList {
@@ -857,7 +1113,7 @@ export interface DataprocWorkflowTemplateJobsPrestoJobQueryList {
   readonly queries: string[];
 }
 
-function dataprocWorkflowTemplateJobsPrestoJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference | DataprocWorkflowTemplateJobsPrestoJobQueryList): any {
+export function dataprocWorkflowTemplateJobsPrestoJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference | DataprocWorkflowTemplateJobsPrestoJobQueryList): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -877,6 +1133,25 @@ export class DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPrestoJobQueryList | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._queries) {
+      hasAnyValues = true;
+      internalValueResult.queries = this._queries;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPrestoJobQueryList | undefined) {
+    if (value === undefined) {
+      this._queries = undefined;
+    }
+    else {
+      this._queries = value.queries;
+    }
+  }
+
   // queries - computed: false, optional: false, required: true
   private _queries?: string[]; 
   public get queries() {
@@ -887,7 +1162,7 @@ export class DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get queriesInput() {
-    return this._queries
+    return this._queries;
   }
 }
 export interface DataprocWorkflowTemplateJobsPrestoJob {
@@ -935,7 +1210,7 @@ export interface DataprocWorkflowTemplateJobsPrestoJob {
   readonly queryList?: DataprocWorkflowTemplateJobsPrestoJobQueryList;
 }
 
-function dataprocWorkflowTemplateJobsPrestoJobToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobOutputReference | DataprocWorkflowTemplateJobsPrestoJob): any {
+export function dataprocWorkflowTemplateJobsPrestoJobToTerraform(struct?: DataprocWorkflowTemplateJobsPrestoJobOutputReference | DataprocWorkflowTemplateJobsPrestoJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -961,12 +1236,67 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPrestoJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientTags) {
+      hasAnyValues = true;
+      internalValueResult.clientTags = this._clientTags;
+    }
+    if (this._continueOnFailure) {
+      hasAnyValues = true;
+      internalValueResult.continueOnFailure = this._continueOnFailure;
+    }
+    if (this._outputFormat) {
+      hasAnyValues = true;
+      internalValueResult.outputFormat = this._outputFormat;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._queryFileUri) {
+      hasAnyValues = true;
+      internalValueResult.queryFileUri = this._queryFileUri;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    if (this._queryList) {
+      hasAnyValues = true;
+      internalValueResult.queryList = this._queryList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPrestoJob | undefined) {
+    if (value === undefined) {
+      this._clientTags = undefined;
+      this._continueOnFailure = undefined;
+      this._outputFormat = undefined;
+      this._properties = undefined;
+      this._queryFileUri = undefined;
+      this._loggingConfig.internalValue = undefined;
+      this._queryList.internalValue = undefined;
+    }
+    else {
+      this._clientTags = value.clientTags;
+      this._continueOnFailure = value.continueOnFailure;
+      this._outputFormat = value.outputFormat;
+      this._properties = value.properties;
+      this._queryFileUri = value.queryFileUri;
+      this._loggingConfig.internalValue = value.loggingConfig;
+      this._queryList.internalValue = value.queryList;
+    }
+  }
+
   // client_tags - computed: false, optional: true, required: false
-  private _clientTags?: string[] | undefined; 
+  private _clientTags?: string[]; 
   public get clientTags() {
     return this.getListAttribute('client_tags');
   }
-  public set clientTags(value: string[] | undefined) {
+  public set clientTags(value: string[]) {
     this._clientTags = value;
   }
   public resetClientTags() {
@@ -974,15 +1304,15 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get clientTagsInput() {
-    return this._clientTags
+    return this._clientTags;
   }
 
   // continue_on_failure - computed: false, optional: true, required: false
-  private _continueOnFailure?: boolean | cdktf.IResolvable | undefined; 
+  private _continueOnFailure?: boolean | cdktf.IResolvable; 
   public get continueOnFailure() {
     return this.getBooleanAttribute('continue_on_failure') as any;
   }
-  public set continueOnFailure(value: boolean | cdktf.IResolvable | undefined) {
+  public set continueOnFailure(value: boolean | cdktf.IResolvable) {
     this._continueOnFailure = value;
   }
   public resetContinueOnFailure() {
@@ -990,15 +1320,15 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get continueOnFailureInput() {
-    return this._continueOnFailure
+    return this._continueOnFailure;
   }
 
   // output_format - computed: false, optional: true, required: false
-  private _outputFormat?: string | undefined; 
+  private _outputFormat?: string; 
   public get outputFormat() {
     return this.getStringAttribute('output_format');
   }
-  public set outputFormat(value: string | undefined) {
+  public set outputFormat(value: string) {
     this._outputFormat = value;
   }
   public resetOutputFormat() {
@@ -1006,16 +1336,16 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get outputFormatInput() {
-    return this._outputFormat
+    return this._outputFormat;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -1023,15 +1353,15 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // query_file_uri - computed: false, optional: true, required: false
-  private _queryFileUri?: string | undefined; 
+  private _queryFileUri?: string; 
   public get queryFileUri() {
     return this.getStringAttribute('query_file_uri');
   }
-  public set queryFileUri(value: string | undefined) {
+  public set queryFileUri(value: string) {
     this._queryFileUri = value;
   }
   public resetQueryFileUri() {
@@ -1039,41 +1369,39 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get queryFileUriInput() {
-    return this._queryFileUri
+    return this._queryFileUri;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList?: DataprocWorkflowTemplateJobsPrestoJobQueryList | undefined; 
-  private __queryListOutput = new DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference(this as any, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference(this as any, "query_list", true);
   public get queryList() {
-    return this.__queryListOutput;
+    return this._queryList;
   }
-  public putQueryList(value: DataprocWorkflowTemplateJobsPrestoJobQueryList | undefined) {
-    this._queryList = value;
+  public putQueryList(value: DataprocWorkflowTemplateJobsPrestoJobQueryList) {
+    this._queryList.internalValue = value;
   }
   public resetQueryList() {
-    this._queryList = undefined;
+    this._queryList.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryListInput() {
-    return this._queryList
+    return this._queryList.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsPysparkJobLoggingConfig {
@@ -1085,7 +1413,7 @@ export interface DataprocWorkflowTemplateJobsPysparkJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsPysparkJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsPysparkJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsPysparkJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsPysparkJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1105,13 +1433,32 @@ export class DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPysparkJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -1119,7 +1466,7 @@ export class DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsPysparkJob {
@@ -1173,7 +1520,7 @@ export interface DataprocWorkflowTemplateJobsPysparkJob {
   readonly loggingConfig?: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig;
 }
 
-function dataprocWorkflowTemplateJobsPysparkJobToTerraform(struct?: DataprocWorkflowTemplateJobsPysparkJobOutputReference | DataprocWorkflowTemplateJobsPysparkJob): any {
+export function dataprocWorkflowTemplateJobsPysparkJobToTerraform(struct?: DataprocWorkflowTemplateJobsPysparkJobOutputReference | DataprocWorkflowTemplateJobsPysparkJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1200,12 +1547,73 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsPysparkJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._archiveUris) {
+      hasAnyValues = true;
+      internalValueResult.archiveUris = this._archiveUris;
+    }
+    if (this._args) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._fileUris) {
+      hasAnyValues = true;
+      internalValueResult.fileUris = this._fileUris;
+    }
+    if (this._jarFileUris) {
+      hasAnyValues = true;
+      internalValueResult.jarFileUris = this._jarFileUris;
+    }
+    if (this._mainPythonFileUri) {
+      hasAnyValues = true;
+      internalValueResult.mainPythonFileUri = this._mainPythonFileUri;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._pythonFileUris) {
+      hasAnyValues = true;
+      internalValueResult.pythonFileUris = this._pythonFileUris;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsPysparkJob | undefined) {
+    if (value === undefined) {
+      this._archiveUris = undefined;
+      this._args = undefined;
+      this._fileUris = undefined;
+      this._jarFileUris = undefined;
+      this._mainPythonFileUri = undefined;
+      this._properties = undefined;
+      this._pythonFileUris = undefined;
+      this._loggingConfig.internalValue = undefined;
+    }
+    else {
+      this._archiveUris = value.archiveUris;
+      this._args = value.args;
+      this._fileUris = value.fileUris;
+      this._jarFileUris = value.jarFileUris;
+      this._mainPythonFileUri = value.mainPythonFileUri;
+      this._properties = value.properties;
+      this._pythonFileUris = value.pythonFileUris;
+      this._loggingConfig.internalValue = value.loggingConfig;
+    }
+  }
+
   // archive_uris - computed: false, optional: true, required: false
-  private _archiveUris?: string[] | undefined; 
+  private _archiveUris?: string[]; 
   public get archiveUris() {
     return this.getListAttribute('archive_uris');
   }
-  public set archiveUris(value: string[] | undefined) {
+  public set archiveUris(value: string[]) {
     this._archiveUris = value;
   }
   public resetArchiveUris() {
@@ -1213,15 +1621,15 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get archiveUrisInput() {
-    return this._archiveUris
+    return this._archiveUris;
   }
 
   // args - computed: false, optional: true, required: false
-  private _args?: string[] | undefined; 
+  private _args?: string[]; 
   public get args() {
     return this.getListAttribute('args');
   }
-  public set args(value: string[] | undefined) {
+  public set args(value: string[]) {
     this._args = value;
   }
   public resetArgs() {
@@ -1229,15 +1637,15 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get argsInput() {
-    return this._args
+    return this._args;
   }
 
   // file_uris - computed: false, optional: true, required: false
-  private _fileUris?: string[] | undefined; 
+  private _fileUris?: string[]; 
   public get fileUris() {
     return this.getListAttribute('file_uris');
   }
-  public set fileUris(value: string[] | undefined) {
+  public set fileUris(value: string[]) {
     this._fileUris = value;
   }
   public resetFileUris() {
@@ -1245,15 +1653,15 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get fileUrisInput() {
-    return this._fileUris
+    return this._fileUris;
   }
 
   // jar_file_uris - computed: false, optional: true, required: false
-  private _jarFileUris?: string[] | undefined; 
+  private _jarFileUris?: string[]; 
   public get jarFileUris() {
     return this.getListAttribute('jar_file_uris');
   }
-  public set jarFileUris(value: string[] | undefined) {
+  public set jarFileUris(value: string[]) {
     this._jarFileUris = value;
   }
   public resetJarFileUris() {
@@ -1261,7 +1669,7 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get jarFileUrisInput() {
-    return this._jarFileUris
+    return this._jarFileUris;
   }
 
   // main_python_file_uri - computed: false, optional: false, required: true
@@ -1274,16 +1682,16 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get mainPythonFileUriInput() {
-    return this._mainPythonFileUri
+    return this._mainPythonFileUri;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -1291,15 +1699,15 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // python_file_uris - computed: false, optional: true, required: false
-  private _pythonFileUris?: string[] | undefined; 
+  private _pythonFileUris?: string[]; 
   public get pythonFileUris() {
     return this.getListAttribute('python_file_uris');
   }
-  public set pythonFileUris(value: string[] | undefined) {
+  public set pythonFileUris(value: string[]) {
     this._pythonFileUris = value;
   }
   public resetPythonFileUris() {
@@ -1307,24 +1715,23 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get pythonFileUrisInput() {
-    return this._pythonFileUris
+    return this._pythonFileUris;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsScheduling {
@@ -1342,7 +1749,7 @@ export interface DataprocWorkflowTemplateJobsScheduling {
   readonly maxFailuresTotal?: number;
 }
 
-function dataprocWorkflowTemplateJobsSchedulingToTerraform(struct?: DataprocWorkflowTemplateJobsSchedulingOutputReference | DataprocWorkflowTemplateJobsScheduling): any {
+export function dataprocWorkflowTemplateJobsSchedulingToTerraform(struct?: DataprocWorkflowTemplateJobsSchedulingOutputReference | DataprocWorkflowTemplateJobsScheduling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1363,12 +1770,37 @@ export class DataprocWorkflowTemplateJobsSchedulingOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsScheduling | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxFailuresPerHour) {
+      hasAnyValues = true;
+      internalValueResult.maxFailuresPerHour = this._maxFailuresPerHour;
+    }
+    if (this._maxFailuresTotal) {
+      hasAnyValues = true;
+      internalValueResult.maxFailuresTotal = this._maxFailuresTotal;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsScheduling | undefined) {
+    if (value === undefined) {
+      this._maxFailuresPerHour = undefined;
+      this._maxFailuresTotal = undefined;
+    }
+    else {
+      this._maxFailuresPerHour = value.maxFailuresPerHour;
+      this._maxFailuresTotal = value.maxFailuresTotal;
+    }
+  }
+
   // max_failures_per_hour - computed: false, optional: true, required: false
-  private _maxFailuresPerHour?: number | undefined; 
+  private _maxFailuresPerHour?: number; 
   public get maxFailuresPerHour() {
     return this.getNumberAttribute('max_failures_per_hour');
   }
-  public set maxFailuresPerHour(value: number | undefined) {
+  public set maxFailuresPerHour(value: number) {
     this._maxFailuresPerHour = value;
   }
   public resetMaxFailuresPerHour() {
@@ -1376,15 +1808,15 @@ export class DataprocWorkflowTemplateJobsSchedulingOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get maxFailuresPerHourInput() {
-    return this._maxFailuresPerHour
+    return this._maxFailuresPerHour;
   }
 
   // max_failures_total - computed: false, optional: true, required: false
-  private _maxFailuresTotal?: number | undefined; 
+  private _maxFailuresTotal?: number; 
   public get maxFailuresTotal() {
     return this.getNumberAttribute('max_failures_total');
   }
-  public set maxFailuresTotal(value: number | undefined) {
+  public set maxFailuresTotal(value: number) {
     this._maxFailuresTotal = value;
   }
   public resetMaxFailuresTotal() {
@@ -1392,7 +1824,7 @@ export class DataprocWorkflowTemplateJobsSchedulingOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get maxFailuresTotalInput() {
-    return this._maxFailuresTotal
+    return this._maxFailuresTotal;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkJobLoggingConfig {
@@ -1404,7 +1836,7 @@ export interface DataprocWorkflowTemplateJobsSparkJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsSparkJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsSparkJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsSparkJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsSparkJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1424,13 +1856,32 @@ export class DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -1438,7 +1889,7 @@ export class DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkJob {
@@ -1492,7 +1943,7 @@ export interface DataprocWorkflowTemplateJobsSparkJob {
   readonly loggingConfig?: DataprocWorkflowTemplateJobsSparkJobLoggingConfig;
 }
 
-function dataprocWorkflowTemplateJobsSparkJobToTerraform(struct?: DataprocWorkflowTemplateJobsSparkJobOutputReference | DataprocWorkflowTemplateJobsSparkJob): any {
+export function dataprocWorkflowTemplateJobsSparkJobToTerraform(struct?: DataprocWorkflowTemplateJobsSparkJobOutputReference | DataprocWorkflowTemplateJobsSparkJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1519,12 +1970,73 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._archiveUris) {
+      hasAnyValues = true;
+      internalValueResult.archiveUris = this._archiveUris;
+    }
+    if (this._args) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._fileUris) {
+      hasAnyValues = true;
+      internalValueResult.fileUris = this._fileUris;
+    }
+    if (this._jarFileUris) {
+      hasAnyValues = true;
+      internalValueResult.jarFileUris = this._jarFileUris;
+    }
+    if (this._mainClass) {
+      hasAnyValues = true;
+      internalValueResult.mainClass = this._mainClass;
+    }
+    if (this._mainJarFileUri) {
+      hasAnyValues = true;
+      internalValueResult.mainJarFileUri = this._mainJarFileUri;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkJob | undefined) {
+    if (value === undefined) {
+      this._archiveUris = undefined;
+      this._args = undefined;
+      this._fileUris = undefined;
+      this._jarFileUris = undefined;
+      this._mainClass = undefined;
+      this._mainJarFileUri = undefined;
+      this._properties = undefined;
+      this._loggingConfig.internalValue = undefined;
+    }
+    else {
+      this._archiveUris = value.archiveUris;
+      this._args = value.args;
+      this._fileUris = value.fileUris;
+      this._jarFileUris = value.jarFileUris;
+      this._mainClass = value.mainClass;
+      this._mainJarFileUri = value.mainJarFileUri;
+      this._properties = value.properties;
+      this._loggingConfig.internalValue = value.loggingConfig;
+    }
+  }
+
   // archive_uris - computed: false, optional: true, required: false
-  private _archiveUris?: string[] | undefined; 
+  private _archiveUris?: string[]; 
   public get archiveUris() {
     return this.getListAttribute('archive_uris');
   }
-  public set archiveUris(value: string[] | undefined) {
+  public set archiveUris(value: string[]) {
     this._archiveUris = value;
   }
   public resetArchiveUris() {
@@ -1532,15 +2044,15 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get archiveUrisInput() {
-    return this._archiveUris
+    return this._archiveUris;
   }
 
   // args - computed: false, optional: true, required: false
-  private _args?: string[] | undefined; 
+  private _args?: string[]; 
   public get args() {
     return this.getListAttribute('args');
   }
-  public set args(value: string[] | undefined) {
+  public set args(value: string[]) {
     this._args = value;
   }
   public resetArgs() {
@@ -1548,15 +2060,15 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get argsInput() {
-    return this._args
+    return this._args;
   }
 
   // file_uris - computed: false, optional: true, required: false
-  private _fileUris?: string[] | undefined; 
+  private _fileUris?: string[]; 
   public get fileUris() {
     return this.getListAttribute('file_uris');
   }
-  public set fileUris(value: string[] | undefined) {
+  public set fileUris(value: string[]) {
     this._fileUris = value;
   }
   public resetFileUris() {
@@ -1564,15 +2076,15 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get fileUrisInput() {
-    return this._fileUris
+    return this._fileUris;
   }
 
   // jar_file_uris - computed: false, optional: true, required: false
-  private _jarFileUris?: string[] | undefined; 
+  private _jarFileUris?: string[]; 
   public get jarFileUris() {
     return this.getListAttribute('jar_file_uris');
   }
-  public set jarFileUris(value: string[] | undefined) {
+  public set jarFileUris(value: string[]) {
     this._jarFileUris = value;
   }
   public resetJarFileUris() {
@@ -1580,15 +2092,15 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get jarFileUrisInput() {
-    return this._jarFileUris
+    return this._jarFileUris;
   }
 
   // main_class - computed: false, optional: true, required: false
-  private _mainClass?: string | undefined; 
+  private _mainClass?: string; 
   public get mainClass() {
     return this.getStringAttribute('main_class');
   }
-  public set mainClass(value: string | undefined) {
+  public set mainClass(value: string) {
     this._mainClass = value;
   }
   public resetMainClass() {
@@ -1596,15 +2108,15 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get mainClassInput() {
-    return this._mainClass
+    return this._mainClass;
   }
 
   // main_jar_file_uri - computed: false, optional: true, required: false
-  private _mainJarFileUri?: string | undefined; 
+  private _mainJarFileUri?: string; 
   public get mainJarFileUri() {
     return this.getStringAttribute('main_jar_file_uri');
   }
-  public set mainJarFileUri(value: string | undefined) {
+  public set mainJarFileUri(value: string) {
     this._mainJarFileUri = value;
   }
   public resetMainJarFileUri() {
@@ -1612,16 +2124,16 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get mainJarFileUriInput() {
-    return this._mainJarFileUri
+    return this._mainJarFileUri;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -1629,24 +2141,23 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsSparkJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsSparkJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsSparkJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkRJobLoggingConfig {
@@ -1658,7 +2169,7 @@ export interface DataprocWorkflowTemplateJobsSparkRJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsSparkRJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsSparkRJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsSparkRJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsSparkRJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1678,13 +2189,32 @@ export class DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkRJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -1692,7 +2222,7 @@ export class DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkRJob {
@@ -1734,7 +2264,7 @@ export interface DataprocWorkflowTemplateJobsSparkRJob {
   readonly loggingConfig?: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig;
 }
 
-function dataprocWorkflowTemplateJobsSparkRJobToTerraform(struct?: DataprocWorkflowTemplateJobsSparkRJobOutputReference | DataprocWorkflowTemplateJobsSparkRJob): any {
+export function dataprocWorkflowTemplateJobsSparkRJobToTerraform(struct?: DataprocWorkflowTemplateJobsSparkRJobOutputReference | DataprocWorkflowTemplateJobsSparkRJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1759,12 +2289,61 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkRJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._archiveUris) {
+      hasAnyValues = true;
+      internalValueResult.archiveUris = this._archiveUris;
+    }
+    if (this._args) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._fileUris) {
+      hasAnyValues = true;
+      internalValueResult.fileUris = this._fileUris;
+    }
+    if (this._mainRFileUri) {
+      hasAnyValues = true;
+      internalValueResult.mainRFileUri = this._mainRFileUri;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkRJob | undefined) {
+    if (value === undefined) {
+      this._archiveUris = undefined;
+      this._args = undefined;
+      this._fileUris = undefined;
+      this._mainRFileUri = undefined;
+      this._properties = undefined;
+      this._loggingConfig.internalValue = undefined;
+    }
+    else {
+      this._archiveUris = value.archiveUris;
+      this._args = value.args;
+      this._fileUris = value.fileUris;
+      this._mainRFileUri = value.mainRFileUri;
+      this._properties = value.properties;
+      this._loggingConfig.internalValue = value.loggingConfig;
+    }
+  }
+
   // archive_uris - computed: false, optional: true, required: false
-  private _archiveUris?: string[] | undefined; 
+  private _archiveUris?: string[]; 
   public get archiveUris() {
     return this.getListAttribute('archive_uris');
   }
-  public set archiveUris(value: string[] | undefined) {
+  public set archiveUris(value: string[]) {
     this._archiveUris = value;
   }
   public resetArchiveUris() {
@@ -1772,15 +2351,15 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get archiveUrisInput() {
-    return this._archiveUris
+    return this._archiveUris;
   }
 
   // args - computed: false, optional: true, required: false
-  private _args?: string[] | undefined; 
+  private _args?: string[]; 
   public get args() {
     return this.getListAttribute('args');
   }
-  public set args(value: string[] | undefined) {
+  public set args(value: string[]) {
     this._args = value;
   }
   public resetArgs() {
@@ -1788,15 +2367,15 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get argsInput() {
-    return this._args
+    return this._args;
   }
 
   // file_uris - computed: false, optional: true, required: false
-  private _fileUris?: string[] | undefined; 
+  private _fileUris?: string[]; 
   public get fileUris() {
     return this.getListAttribute('file_uris');
   }
-  public set fileUris(value: string[] | undefined) {
+  public set fileUris(value: string[]) {
     this._fileUris = value;
   }
   public resetFileUris() {
@@ -1804,7 +2383,7 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get fileUrisInput() {
-    return this._fileUris
+    return this._fileUris;
   }
 
   // main_r_file_uri - computed: false, optional: false, required: true
@@ -1817,16 +2396,16 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get mainRFileUriInput() {
-    return this._mainRFileUri
+    return this._mainRFileUri;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -1834,24 +2413,23 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig {
@@ -1863,7 +2441,7 @@ export interface DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig {
   readonly driverLogLevels?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig): any {
+export function dataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference | DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1883,13 +2461,32 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
   // driver_log_levels - computed: false, optional: true, required: false
-  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _driverLogLevels?: { [key: string]: string } | cdktf.IResolvable; 
   public get driverLogLevels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('driver_log_levels') as any;
   }
-  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set driverLogLevels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._driverLogLevels = value;
   }
   public resetDriverLogLevels() {
@@ -1897,7 +2494,7 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get driverLogLevelsInput() {
-    return this._driverLogLevels
+    return this._driverLogLevels;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkSqlJobQueryList {
@@ -1909,7 +2506,7 @@ export interface DataprocWorkflowTemplateJobsSparkSqlJobQueryList {
   readonly queries: string[];
 }
 
-function dataprocWorkflowTemplateJobsSparkSqlJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference | DataprocWorkflowTemplateJobsSparkSqlJobQueryList): any {
+export function dataprocWorkflowTemplateJobsSparkSqlJobQueryListToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference | DataprocWorkflowTemplateJobsSparkSqlJobQueryList): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1929,6 +2526,25 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJobQueryList | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._queries) {
+      hasAnyValues = true;
+      internalValueResult.queries = this._queries;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkSqlJobQueryList | undefined) {
+    if (value === undefined) {
+      this._queries = undefined;
+    }
+    else {
+      this._queries = value.queries;
+    }
+  }
+
   // queries - computed: false, optional: false, required: true
   private _queries?: string[]; 
   public get queries() {
@@ -1939,7 +2555,7 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get queriesInput() {
-    return this._queries
+    return this._queries;
   }
 }
 export interface DataprocWorkflowTemplateJobsSparkSqlJob {
@@ -1981,7 +2597,7 @@ export interface DataprocWorkflowTemplateJobsSparkSqlJob {
   readonly queryList?: DataprocWorkflowTemplateJobsSparkSqlJobQueryList;
 }
 
-function dataprocWorkflowTemplateJobsSparkSqlJobToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobOutputReference | DataprocWorkflowTemplateJobsSparkSqlJob): any {
+export function dataprocWorkflowTemplateJobsSparkSqlJobToTerraform(struct?: DataprocWorkflowTemplateJobsSparkSqlJobOutputReference | DataprocWorkflowTemplateJobsSparkSqlJob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2006,12 +2622,61 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._jarFileUris) {
+      hasAnyValues = true;
+      internalValueResult.jarFileUris = this._jarFileUris;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._queryFileUri) {
+      hasAnyValues = true;
+      internalValueResult.queryFileUri = this._queryFileUri;
+    }
+    if (this._scriptVariables) {
+      hasAnyValues = true;
+      internalValueResult.scriptVariables = this._scriptVariables;
+    }
+    if (this._loggingConfig) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    if (this._queryList) {
+      hasAnyValues = true;
+      internalValueResult.queryList = this._queryList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateJobsSparkSqlJob | undefined) {
+    if (value === undefined) {
+      this._jarFileUris = undefined;
+      this._properties = undefined;
+      this._queryFileUri = undefined;
+      this._scriptVariables = undefined;
+      this._loggingConfig.internalValue = undefined;
+      this._queryList.internalValue = undefined;
+    }
+    else {
+      this._jarFileUris = value.jarFileUris;
+      this._properties = value.properties;
+      this._queryFileUri = value.queryFileUri;
+      this._scriptVariables = value.scriptVariables;
+      this._loggingConfig.internalValue = value.loggingConfig;
+      this._queryList.internalValue = value.queryList;
+    }
+  }
+
   // jar_file_uris - computed: false, optional: true, required: false
-  private _jarFileUris?: string[] | undefined; 
+  private _jarFileUris?: string[]; 
   public get jarFileUris() {
     return this.getListAttribute('jar_file_uris');
   }
-  public set jarFileUris(value: string[] | undefined) {
+  public set jarFileUris(value: string[]) {
     this._jarFileUris = value;
   }
   public resetJarFileUris() {
@@ -2019,16 +2684,16 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get jarFileUrisInput() {
-    return this._jarFileUris
+    return this._jarFileUris;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -2036,15 +2701,15 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // query_file_uri - computed: false, optional: true, required: false
-  private _queryFileUri?: string | undefined; 
+  private _queryFileUri?: string; 
   public get queryFileUri() {
     return this.getStringAttribute('query_file_uri');
   }
-  public set queryFileUri(value: string | undefined) {
+  public set queryFileUri(value: string) {
     this._queryFileUri = value;
   }
   public resetQueryFileUri() {
@@ -2052,16 +2717,16 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get queryFileUriInput() {
-    return this._queryFileUri
+    return this._queryFileUri;
   }
 
   // script_variables - computed: false, optional: true, required: false
-  private _scriptVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _scriptVariables?: { [key: string]: string } | cdktf.IResolvable; 
   public get scriptVariables() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('script_variables') as any;
   }
-  public set scriptVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set scriptVariables(value: { [key: string]: string } | cdktf.IResolvable) {
     this._scriptVariables = value;
   }
   public resetScriptVariables() {
@@ -2069,41 +2734,39 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get scriptVariablesInput() {
-    return this._scriptVariables
+    return this._scriptVariables;
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig?: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig | undefined; 
-  private __loggingConfigOutput = new DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference(this as any, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference(this as any, "logging_config", true);
   public get loggingConfig() {
-    return this.__loggingConfigOutput;
+    return this._loggingConfig;
   }
-  public putLoggingConfig(value: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig | undefined) {
-    this._loggingConfig = value;
+  public putLoggingConfig(value: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig) {
+    this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
-    this._loggingConfig = undefined;
+    this._loggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingConfigInput() {
-    return this._loggingConfig
+    return this._loggingConfig.internalValue;
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList?: DataprocWorkflowTemplateJobsSparkSqlJobQueryList | undefined; 
-  private __queryListOutput = new DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference(this as any, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference(this as any, "query_list", true);
   public get queryList() {
-    return this.__queryListOutput;
+    return this._queryList;
   }
-  public putQueryList(value: DataprocWorkflowTemplateJobsSparkSqlJobQueryList | undefined) {
-    this._queryList = value;
+  public putQueryList(value: DataprocWorkflowTemplateJobsSparkSqlJobQueryList) {
+    this._queryList.internalValue = value;
   }
   public resetQueryList() {
-    this._queryList = undefined;
+    this._queryList.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryListInput() {
-    return this._queryList
+    return this._queryList.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateJobs {
@@ -2181,7 +2844,7 @@ export interface DataprocWorkflowTemplateJobs {
   readonly sparkSqlJob?: DataprocWorkflowTemplateJobsSparkSqlJob;
 }
 
-function dataprocWorkflowTemplateJobsToTerraform(struct?: DataprocWorkflowTemplateJobs): any {
+export function dataprocWorkflowTemplateJobsToTerraform(struct?: DataprocWorkflowTemplateJobs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2211,7 +2874,7 @@ export interface DataprocWorkflowTemplateParametersValidationRegex {
   readonly regexes: string[];
 }
 
-function dataprocWorkflowTemplateParametersValidationRegexToTerraform(struct?: DataprocWorkflowTemplateParametersValidationRegexOutputReference | DataprocWorkflowTemplateParametersValidationRegex): any {
+export function dataprocWorkflowTemplateParametersValidationRegexToTerraform(struct?: DataprocWorkflowTemplateParametersValidationRegexOutputReference | DataprocWorkflowTemplateParametersValidationRegex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2231,6 +2894,25 @@ export class DataprocWorkflowTemplateParametersValidationRegexOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateParametersValidationRegex | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._regexes) {
+      hasAnyValues = true;
+      internalValueResult.regexes = this._regexes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateParametersValidationRegex | undefined) {
+    if (value === undefined) {
+      this._regexes = undefined;
+    }
+    else {
+      this._regexes = value.regexes;
+    }
+  }
+
   // regexes - computed: false, optional: false, required: true
   private _regexes?: string[]; 
   public get regexes() {
@@ -2241,7 +2923,7 @@ export class DataprocWorkflowTemplateParametersValidationRegexOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get regexesInput() {
-    return this._regexes
+    return this._regexes;
   }
 }
 export interface DataprocWorkflowTemplateParametersValidationValues {
@@ -2253,7 +2935,7 @@ export interface DataprocWorkflowTemplateParametersValidationValues {
   readonly values: string[];
 }
 
-function dataprocWorkflowTemplateParametersValidationValuesToTerraform(struct?: DataprocWorkflowTemplateParametersValidationValuesOutputReference | DataprocWorkflowTemplateParametersValidationValues): any {
+export function dataprocWorkflowTemplateParametersValidationValuesToTerraform(struct?: DataprocWorkflowTemplateParametersValidationValuesOutputReference | DataprocWorkflowTemplateParametersValidationValues): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2273,6 +2955,25 @@ export class DataprocWorkflowTemplateParametersValidationValuesOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateParametersValidationValues | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateParametersValidationValues | undefined) {
+    if (value === undefined) {
+      this._values = undefined;
+    }
+    else {
+      this._values = value.values;
+    }
+  }
+
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
@@ -2283,7 +2984,7 @@ export class DataprocWorkflowTemplateParametersValidationValuesOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface DataprocWorkflowTemplateParametersValidation {
@@ -2301,7 +3002,7 @@ export interface DataprocWorkflowTemplateParametersValidation {
   readonly values?: DataprocWorkflowTemplateParametersValidationValues;
 }
 
-function dataprocWorkflowTemplateParametersValidationToTerraform(struct?: DataprocWorkflowTemplateParametersValidationOutputReference | DataprocWorkflowTemplateParametersValidation): any {
+export function dataprocWorkflowTemplateParametersValidationToTerraform(struct?: DataprocWorkflowTemplateParametersValidationOutputReference | DataprocWorkflowTemplateParametersValidation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2322,38 +3023,61 @@ export class DataprocWorkflowTemplateParametersValidationOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // regex - computed: false, optional: true, required: false
-  private _regex?: DataprocWorkflowTemplateParametersValidationRegex | undefined; 
-  private __regexOutput = new DataprocWorkflowTemplateParametersValidationRegexOutputReference(this as any, "regex", true);
-  public get regex() {
-    return this.__regexOutput;
+  public get internalValue(): DataprocWorkflowTemplateParametersValidation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._regex) {
+      hasAnyValues = true;
+      internalValueResult.regex = this._regex?.internalValue;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putRegex(value: DataprocWorkflowTemplateParametersValidationRegex | undefined) {
-    this._regex = value;
+
+  public set internalValue(value: DataprocWorkflowTemplateParametersValidation | undefined) {
+    if (value === undefined) {
+      this._regex.internalValue = undefined;
+      this._values.internalValue = undefined;
+    }
+    else {
+      this._regex.internalValue = value.regex;
+      this._values.internalValue = value.values;
+    }
+  }
+
+  // regex - computed: false, optional: true, required: false
+  private _regex = new DataprocWorkflowTemplateParametersValidationRegexOutputReference(this as any, "regex", true);
+  public get regex() {
+    return this._regex;
+  }
+  public putRegex(value: DataprocWorkflowTemplateParametersValidationRegex) {
+    this._regex.internalValue = value;
   }
   public resetRegex() {
-    this._regex = undefined;
+    this._regex.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get regexInput() {
-    return this._regex
+    return this._regex.internalValue;
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: DataprocWorkflowTemplateParametersValidationValues | undefined; 
-  private __valuesOutput = new DataprocWorkflowTemplateParametersValidationValuesOutputReference(this as any, "values", true);
+  private _values = new DataprocWorkflowTemplateParametersValidationValuesOutputReference(this as any, "values", true);
   public get values() {
-    return this.__valuesOutput;
+    return this._values;
   }
-  public putValues(value: DataprocWorkflowTemplateParametersValidationValues | undefined) {
-    this._values = value;
+  public putValues(value: DataprocWorkflowTemplateParametersValidationValues) {
+    this._values.internalValue = value;
   }
   public resetValues() {
-    this._values = undefined;
+    this._values.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateParameters {
@@ -2383,7 +3107,7 @@ export interface DataprocWorkflowTemplateParameters {
   readonly validation?: DataprocWorkflowTemplateParametersValidation;
 }
 
-function dataprocWorkflowTemplateParametersToTerraform(struct?: DataprocWorkflowTemplateParameters): any {
+export function dataprocWorkflowTemplateParametersToTerraform(struct?: DataprocWorkflowTemplateParameters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2411,7 +3135,7 @@ export interface DataprocWorkflowTemplatePlacementClusterSelector {
   readonly zone?: string;
 }
 
-function dataprocWorkflowTemplatePlacementClusterSelectorToTerraform(struct?: DataprocWorkflowTemplatePlacementClusterSelectorOutputReference | DataprocWorkflowTemplatePlacementClusterSelector): any {
+export function dataprocWorkflowTemplatePlacementClusterSelectorToTerraform(struct?: DataprocWorkflowTemplatePlacementClusterSelectorOutputReference | DataprocWorkflowTemplatePlacementClusterSelector): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2432,6 +3156,31 @@ export class DataprocWorkflowTemplatePlacementClusterSelectorOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementClusterSelector | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clusterLabels) {
+      hasAnyValues = true;
+      internalValueResult.clusterLabels = this._clusterLabels;
+    }
+    if (this._zone) {
+      hasAnyValues = true;
+      internalValueResult.zone = this._zone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementClusterSelector | undefined) {
+    if (value === undefined) {
+      this._clusterLabels = undefined;
+      this._zone = undefined;
+    }
+    else {
+      this._clusterLabels = value.clusterLabels;
+      this._zone = value.zone;
+    }
+  }
+
   // cluster_labels - computed: false, optional: false, required: true
   private _clusterLabels?: { [key: string]: string } | cdktf.IResolvable; 
   public get clusterLabels() {
@@ -2443,15 +3192,15 @@ export class DataprocWorkflowTemplatePlacementClusterSelectorOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get clusterLabelsInput() {
-    return this._clusterLabels
+    return this._clusterLabels;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -2459,7 +3208,7 @@ export class DataprocWorkflowTemplatePlacementClusterSelectorOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig {
@@ -2471,7 +3220,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalin
   readonly policy?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2491,12 +3240,31 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingCon
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._policy) {
+      hasAnyValues = true;
+      internalValueResult.policy = this._policy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig | undefined) {
+    if (value === undefined) {
+      this._policy = undefined;
+    }
+    else {
+      this._policy = value.policy;
+    }
+  }
+
   // policy - computed: false, optional: true, required: false
-  private _policy?: string | undefined; 
+  private _policy?: string; 
   public get policy() {
     return this.getStringAttribute('policy');
   }
-  public set policy(value: string | undefined) {
+  public set policy(value: string) {
     this._policy = value;
   }
   public resetPolicy() {
@@ -2504,7 +3272,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingCon
   }
   // Temporarily expose input value. Use with caution.
   public get policyInput() {
-    return this._policy
+    return this._policy;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig {
@@ -2516,7 +3284,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEncryption
   readonly gcePdKmsKeyName?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2536,12 +3304,31 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._gcePdKmsKeyName) {
+      hasAnyValues = true;
+      internalValueResult.gcePdKmsKeyName = this._gcePdKmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig | undefined) {
+    if (value === undefined) {
+      this._gcePdKmsKeyName = undefined;
+    }
+    else {
+      this._gcePdKmsKeyName = value.gcePdKmsKeyName;
+    }
+  }
+
   // gce_pd_kms_key_name - computed: false, optional: true, required: false
-  private _gcePdKmsKeyName?: string | undefined; 
+  private _gcePdKmsKeyName?: string; 
   public get gcePdKmsKeyName() {
     return this.getStringAttribute('gce_pd_kms_key_name');
   }
-  public set gcePdKmsKeyName(value: string | undefined) {
+  public set gcePdKmsKeyName(value: string) {
     this._gcePdKmsKeyName = value;
   }
   public resetGcePdKmsKeyName() {
@@ -2549,7 +3336,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConf
   }
   // Temporarily expose input value. Use with caution.
   public get gcePdKmsKeyNameInput() {
-    return this._gcePdKmsKeyName
+    return this._gcePdKmsKeyName;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
@@ -2561,7 +3348,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointCo
   readonly enableHttpPortAccess?: boolean | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2581,12 +3368,31 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableHttpPortAccess) {
+      hasAnyValues = true;
+      internalValueResult.enableHttpPortAccess = this._enableHttpPortAccess;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig | undefined) {
+    if (value === undefined) {
+      this._enableHttpPortAccess = undefined;
+    }
+    else {
+      this._enableHttpPortAccess = value.enableHttpPortAccess;
+    }
+  }
+
   // enable_http_port_access - computed: false, optional: true, required: false
-  private _enableHttpPortAccess?: boolean | cdktf.IResolvable | undefined; 
+  private _enableHttpPortAccess?: boolean | cdktf.IResolvable; 
   public get enableHttpPortAccess() {
     return this.getBooleanAttribute('enable_http_port_access') as any;
   }
-  public set enableHttpPortAccess(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableHttpPortAccess(value: boolean | cdktf.IResolvable) {
     this._enableHttpPortAccess = value;
   }
   public resetEnableHttpPortAccess() {
@@ -2594,7 +3400,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig
   }
   // Temporarily expose input value. Use with caution.
   public get enableHttpPortAccessInput() {
-    return this._enableHttpPortAccess
+    return this._enableHttpPortAccess;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity {
@@ -2606,7 +3412,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceCluster
   readonly nodeGroup: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2626,6 +3432,25 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nodeGroup) {
+      hasAnyValues = true;
+      internalValueResult.nodeGroup = this._nodeGroup;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity | undefined) {
+    if (value === undefined) {
+      this._nodeGroup = undefined;
+    }
+    else {
+      this._nodeGroup = value.nodeGroup;
+    }
+  }
+
   // node_group - computed: false, optional: false, required: true
   private _nodeGroup?: string; 
   public get nodeGroup() {
@@ -2636,7 +3461,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get nodeGroupInput() {
-    return this._nodeGroup
+    return this._nodeGroup;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity {
@@ -2660,7 +3485,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceCluster
   readonly values?: string[];
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2682,12 +3507,43 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._consumeReservationType) {
+      hasAnyValues = true;
+      internalValueResult.consumeReservationType = this._consumeReservationType;
+    }
+    if (this._key) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity | undefined) {
+    if (value === undefined) {
+      this._consumeReservationType = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._consumeReservationType = value.consumeReservationType;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
   // consume_reservation_type - computed: false, optional: true, required: false
-  private _consumeReservationType?: string | undefined; 
+  private _consumeReservationType?: string; 
   public get consumeReservationType() {
     return this.getStringAttribute('consume_reservation_type');
   }
-  public set consumeReservationType(value: string | undefined) {
+  public set consumeReservationType(value: string) {
     this._consumeReservationType = value;
   }
   public resetConsumeReservationType() {
@@ -2695,15 +3551,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get consumeReservationTypeInput() {
-    return this._consumeReservationType
+    return this._consumeReservationType;
   }
 
   // key - computed: false, optional: true, required: false
-  private _key?: string | undefined; 
+  private _key?: string; 
   public get key() {
     return this.getStringAttribute('key');
   }
-  public set key(value: string | undefined) {
+  public set key(value: string) {
     this._key = value;
   }
   public resetKey() {
@@ -2711,15 +3567,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
-    return this._key
+    return this._key;
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: string[] | undefined; 
+  private _values?: string[]; 
   public get values() {
     return this.getListAttribute('values');
   }
-  public set values(value: string[] | undefined) {
+  public set values(value: string[]) {
     this._values = value;
   }
   public resetValues() {
@@ -2727,7 +3583,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig {
@@ -2799,7 +3655,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceCluster
   readonly reservationAffinity?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2829,12 +3685,91 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._internalIpOnly) {
+      hasAnyValues = true;
+      internalValueResult.internalIpOnly = this._internalIpOnly;
+    }
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._network) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._privateIpv6GoogleAccess) {
+      hasAnyValues = true;
+      internalValueResult.privateIpv6GoogleAccess = this._privateIpv6GoogleAccess;
+    }
+    if (this._serviceAccount) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccount = this._serviceAccount;
+    }
+    if (this._serviceAccountScopes) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccountScopes = this._serviceAccountScopes;
+    }
+    if (this._subnetwork) {
+      hasAnyValues = true;
+      internalValueResult.subnetwork = this._subnetwork;
+    }
+    if (this._tags) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._zone) {
+      hasAnyValues = true;
+      internalValueResult.zone = this._zone;
+    }
+    if (this._nodeGroupAffinity) {
+      hasAnyValues = true;
+      internalValueResult.nodeGroupAffinity = this._nodeGroupAffinity?.internalValue;
+    }
+    if (this._reservationAffinity) {
+      hasAnyValues = true;
+      internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig | undefined) {
+    if (value === undefined) {
+      this._internalIpOnly = undefined;
+      this._metadata = undefined;
+      this._network = undefined;
+      this._privateIpv6GoogleAccess = undefined;
+      this._serviceAccount = undefined;
+      this._serviceAccountScopes = undefined;
+      this._subnetwork = undefined;
+      this._tags = undefined;
+      this._zone = undefined;
+      this._nodeGroupAffinity.internalValue = undefined;
+      this._reservationAffinity.internalValue = undefined;
+    }
+    else {
+      this._internalIpOnly = value.internalIpOnly;
+      this._metadata = value.metadata;
+      this._network = value.network;
+      this._privateIpv6GoogleAccess = value.privateIpv6GoogleAccess;
+      this._serviceAccount = value.serviceAccount;
+      this._serviceAccountScopes = value.serviceAccountScopes;
+      this._subnetwork = value.subnetwork;
+      this._tags = value.tags;
+      this._zone = value.zone;
+      this._nodeGroupAffinity.internalValue = value.nodeGroupAffinity;
+      this._reservationAffinity.internalValue = value.reservationAffinity;
+    }
+  }
+
   // internal_ip_only - computed: true, optional: true, required: false
-  private _internalIpOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _internalIpOnly?: boolean | cdktf.IResolvable; 
   public get internalIpOnly() {
     return this.getBooleanAttribute('internal_ip_only') as any;
   }
-  public set internalIpOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set internalIpOnly(value: boolean | cdktf.IResolvable) {
     this._internalIpOnly = value;
   }
   public resetInternalIpOnly() {
@@ -2842,16 +3777,16 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get internalIpOnlyInput() {
-    return this._internalIpOnly
+    return this._internalIpOnly;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -2859,15 +3794,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -2875,15 +3810,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // private_ipv6_google_access - computed: false, optional: true, required: false
-  private _privateIpv6GoogleAccess?: string | undefined; 
+  private _privateIpv6GoogleAccess?: string; 
   public get privateIpv6GoogleAccess() {
     return this.getStringAttribute('private_ipv6_google_access');
   }
-  public set privateIpv6GoogleAccess(value: string | undefined) {
+  public set privateIpv6GoogleAccess(value: string) {
     this._privateIpv6GoogleAccess = value;
   }
   public resetPrivateIpv6GoogleAccess() {
@@ -2891,15 +3826,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get privateIpv6GoogleAccessInput() {
-    return this._privateIpv6GoogleAccess
+    return this._privateIpv6GoogleAccess;
   }
 
   // service_account - computed: false, optional: true, required: false
-  private _serviceAccount?: string | undefined; 
+  private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string | undefined) {
+  public set serviceAccount(value: string) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -2907,15 +3842,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount;
   }
 
   // service_account_scopes - computed: false, optional: true, required: false
-  private _serviceAccountScopes?: string[] | undefined; 
+  private _serviceAccountScopes?: string[]; 
   public get serviceAccountScopes() {
     return this.getListAttribute('service_account_scopes');
   }
-  public set serviceAccountScopes(value: string[] | undefined) {
+  public set serviceAccountScopes(value: string[]) {
     this._serviceAccountScopes = value;
   }
   public resetServiceAccountScopes() {
@@ -2923,15 +3858,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountScopesInput() {
-    return this._serviceAccountScopes
+    return this._serviceAccountScopes;
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -2939,15 +3874,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -2955,15 +3890,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -2971,41 +3906,39 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // node_group_affinity - computed: false, optional: true, required: false
-  private _nodeGroupAffinity?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity | undefined; 
-  private __nodeGroupAffinityOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference(this as any, "node_group_affinity", true);
+  private _nodeGroupAffinity = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference(this as any, "node_group_affinity", true);
   public get nodeGroupAffinity() {
-    return this.__nodeGroupAffinityOutput;
+    return this._nodeGroupAffinity;
   }
-  public putNodeGroupAffinity(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity | undefined) {
-    this._nodeGroupAffinity = value;
+  public putNodeGroupAffinity(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity) {
+    this._nodeGroupAffinity.internalValue = value;
   }
   public resetNodeGroupAffinity() {
-    this._nodeGroupAffinity = undefined;
+    this._nodeGroupAffinity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nodeGroupAffinityInput() {
-    return this._nodeGroupAffinity
+    return this._nodeGroupAffinity.internalValue;
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
-  private _reservationAffinity?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity | undefined; 
-  private __reservationAffinityOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference(this as any, "reservation_affinity", true);
+  private _reservationAffinity = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference(this as any, "reservation_affinity", true);
   public get reservationAffinity() {
-    return this.__reservationAffinityOutput;
+    return this._reservationAffinity;
   }
-  public putReservationAffinity(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity | undefined) {
-    this._reservationAffinity = value;
+  public putReservationAffinity(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity) {
+    this._reservationAffinity.internalValue = value;
   }
   public resetReservationAffinity() {
-    this._reservationAffinity = undefined;
+    this._reservationAffinity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get reservationAffinityInput() {
-    return this._reservationAffinity
+    return this._reservationAffinity.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions {
@@ -3023,7 +3956,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigInitializa
   readonly executionTimeout?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3055,7 +3988,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleC
   readonly idleDeleteTtl?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3077,12 +4010,43 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._autoDeleteTime) {
+      hasAnyValues = true;
+      internalValueResult.autoDeleteTime = this._autoDeleteTime;
+    }
+    if (this._autoDeleteTtl) {
+      hasAnyValues = true;
+      internalValueResult.autoDeleteTtl = this._autoDeleteTtl;
+    }
+    if (this._idleDeleteTtl) {
+      hasAnyValues = true;
+      internalValueResult.idleDeleteTtl = this._idleDeleteTtl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig | undefined) {
+    if (value === undefined) {
+      this._autoDeleteTime = undefined;
+      this._autoDeleteTtl = undefined;
+      this._idleDeleteTtl = undefined;
+    }
+    else {
+      this._autoDeleteTime = value.autoDeleteTime;
+      this._autoDeleteTtl = value.autoDeleteTtl;
+      this._idleDeleteTtl = value.idleDeleteTtl;
+    }
+  }
+
   // auto_delete_time - computed: false, optional: true, required: false
-  private _autoDeleteTime?: string | undefined; 
+  private _autoDeleteTime?: string; 
   public get autoDeleteTime() {
     return this.getStringAttribute('auto_delete_time');
   }
-  public set autoDeleteTime(value: string | undefined) {
+  public set autoDeleteTime(value: string) {
     this._autoDeleteTime = value;
   }
   public resetAutoDeleteTime() {
@@ -3090,15 +4054,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
   }
   // Temporarily expose input value. Use with caution.
   public get autoDeleteTimeInput() {
-    return this._autoDeleteTime
+    return this._autoDeleteTime;
   }
 
   // auto_delete_ttl - computed: false, optional: true, required: false
-  private _autoDeleteTtl?: string | undefined; 
+  private _autoDeleteTtl?: string; 
   public get autoDeleteTtl() {
     return this.getStringAttribute('auto_delete_ttl');
   }
-  public set autoDeleteTtl(value: string | undefined) {
+  public set autoDeleteTtl(value: string) {
     this._autoDeleteTtl = value;
   }
   public resetAutoDeleteTtl() {
@@ -3106,15 +4070,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
   }
   // Temporarily expose input value. Use with caution.
   public get autoDeleteTtlInput() {
-    return this._autoDeleteTtl
+    return this._autoDeleteTtl;
   }
 
   // idle_delete_ttl - computed: false, optional: true, required: false
-  private _idleDeleteTtl?: string | undefined; 
+  private _idleDeleteTtl?: string; 
   public get idleDeleteTtl() {
     return this.getStringAttribute('idle_delete_ttl');
   }
-  public set idleDeleteTtl(value: string | undefined) {
+  public set idleDeleteTtl(value: string) {
     this._idleDeleteTtl = value;
   }
   public resetIdleDeleteTtl() {
@@ -3122,7 +4086,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
   }
   // Temporarily expose input value. Use with caution.
   public get idleDeleteTtlInput() {
-    return this._idleDeleteTtl
+    return this._idleDeleteTtl;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators {
@@ -3140,7 +4104,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConf
   readonly acceleratorType?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3172,7 +4136,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConf
   readonly numLocalSsds?: number;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3194,12 +4158,43 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bootDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
+    }
+    if (this._bootDiskType) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskType = this._bootDiskType;
+    }
+    if (this._numLocalSsds) {
+      hasAnyValues = true;
+      internalValueResult.numLocalSsds = this._numLocalSsds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig | undefined) {
+    if (value === undefined) {
+      this._bootDiskSizeGb = undefined;
+      this._bootDiskType = undefined;
+      this._numLocalSsds = undefined;
+    }
+    else {
+      this._bootDiskSizeGb = value.bootDiskSizeGb;
+      this._bootDiskType = value.bootDiskType;
+      this._numLocalSsds = value.numLocalSsds;
+    }
+  }
+
   // boot_disk_size_gb - computed: false, optional: true, required: false
-  private _bootDiskSizeGb?: number | undefined; 
+  private _bootDiskSizeGb?: number; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number | undefined) {
+  public set bootDiskSizeGb(value: number) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -3207,15 +4202,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskSizeGbInput() {
-    return this._bootDiskSizeGb
+    return this._bootDiskSizeGb;
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string | undefined; 
+  private _bootDiskType?: string; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string | undefined) {
+  public set bootDiskType(value: string) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -3223,15 +4218,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskTypeInput() {
-    return this._bootDiskType
+    return this._bootDiskType;
   }
 
   // num_local_ssds - computed: true, optional: true, required: false
-  private _numLocalSsds?: number | undefined; 
+  private _numLocalSsds?: number; 
   public get numLocalSsds() {
     return this.getNumberAttribute('num_local_ssds');
   }
-  public set numLocalSsds(value: number | undefined) {
+  public set numLocalSsds(value: number) {
     this._numLocalSsds = value;
   }
   public resetNumLocalSsds() {
@@ -3239,7 +4234,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
   }
   // Temporarily expose input value. Use with caution.
   public get numLocalSsdsInput() {
-    return this._numLocalSsds
+    return this._numLocalSsds;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig {
@@ -3287,7 +4282,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConf
   readonly diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3313,12 +4308,67 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._image) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._minCpuPlatform) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
+    if (this._numInstances) {
+      hasAnyValues = true;
+      internalValueResult.numInstances = this._numInstances;
+    }
+    if (this._preemptibility) {
+      hasAnyValues = true;
+      internalValueResult.preemptibility = this._preemptibility;
+    }
+    if (this._accelerators) {
+      hasAnyValues = true;
+      internalValueResult.accelerators = this._accelerators;
+    }
+    if (this._diskConfig) {
+      hasAnyValues = true;
+      internalValueResult.diskConfig = this._diskConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig | undefined) {
+    if (value === undefined) {
+      this._image = undefined;
+      this._machineType = undefined;
+      this._minCpuPlatform = undefined;
+      this._numInstances = undefined;
+      this._preemptibility = undefined;
+      this._accelerators = undefined;
+      this._diskConfig.internalValue = undefined;
+    }
+    else {
+      this._image = value.image;
+      this._machineType = value.machineType;
+      this._minCpuPlatform = value.minCpuPlatform;
+      this._numInstances = value.numInstances;
+      this._preemptibility = value.preemptibility;
+      this._accelerators = value.accelerators;
+      this._diskConfig.internalValue = value.diskConfig;
+    }
+  }
+
   // image - computed: false, optional: true, required: false
-  private _image?: string | undefined; 
+  private _image?: string; 
   public get image() {
     return this.getStringAttribute('image');
   }
-  public set image(value: string | undefined) {
+  public set image(value: string) {
     this._image = value;
   }
   public resetImage() {
@@ -3326,15 +4376,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get imageInput() {
-    return this._image
+    return this._image;
   }
 
   // machine_type - computed: false, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -3342,15 +4392,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -3358,15 +4408,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // num_instances - computed: false, optional: true, required: false
-  private _numInstances?: number | undefined; 
+  private _numInstances?: number; 
   public get numInstances() {
     return this.getNumberAttribute('num_instances');
   }
-  public set numInstances(value: number | undefined) {
+  public set numInstances(value: number) {
     this._numInstances = value;
   }
   public resetNumInstances() {
@@ -3374,15 +4424,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
-    return this._numInstances
+    return this._numInstances;
   }
 
   // preemptibility - computed: false, optional: true, required: false
-  private _preemptibility?: string | undefined; 
+  private _preemptibility?: string; 
   public get preemptibility() {
     return this.getStringAttribute('preemptibility');
   }
-  public set preemptibility(value: string | undefined) {
+  public set preemptibility(value: string) {
     this._preemptibility = value;
   }
   public resetPreemptibility() {
@@ -3390,16 +4440,16 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibilityInput() {
-    return this._preemptibility
+    return this._preemptibility;
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators[] | undefined; 
+  private _accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators[]; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('accelerators') as any;
   }
-  public set accelerators(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators[] | undefined) {
+  public set accelerators(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators[]) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -3407,24 +4457,23 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get acceleratorsInput() {
-    return this._accelerators
+    return this._accelerators;
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig | undefined; 
-  private __diskConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigOutputReference(this as any, "disk_config", true);
   public get diskConfig() {
-    return this.__diskConfigOutput;
+    return this._diskConfig;
   }
-  public putDiskConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig | undefined) {
-    this._diskConfig = value;
+  public putDiskConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig) {
+    this._diskConfig.internalValue = value;
   }
   public resetDiskConfig() {
-    this._diskConfig = undefined;
+    this._diskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskConfigInput() {
-    return this._diskConfig
+    return this._diskConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators {
@@ -3442,7 +4491,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryW
   readonly acceleratorType?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3474,7 +4523,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryW
   readonly numLocalSsds?: number;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3496,12 +4545,43 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bootDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
+    }
+    if (this._bootDiskType) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskType = this._bootDiskType;
+    }
+    if (this._numLocalSsds) {
+      hasAnyValues = true;
+      internalValueResult.numLocalSsds = this._numLocalSsds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig | undefined) {
+    if (value === undefined) {
+      this._bootDiskSizeGb = undefined;
+      this._bootDiskType = undefined;
+      this._numLocalSsds = undefined;
+    }
+    else {
+      this._bootDiskSizeGb = value.bootDiskSizeGb;
+      this._bootDiskType = value.bootDiskType;
+      this._numLocalSsds = value.numLocalSsds;
+    }
+  }
+
   // boot_disk_size_gb - computed: false, optional: true, required: false
-  private _bootDiskSizeGb?: number | undefined; 
+  private _bootDiskSizeGb?: number; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number | undefined) {
+  public set bootDiskSizeGb(value: number) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -3509,15 +4589,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskSizeGbInput() {
-    return this._bootDiskSizeGb
+    return this._bootDiskSizeGb;
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string | undefined; 
+  private _bootDiskType?: string; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string | undefined) {
+  public set bootDiskType(value: string) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -3525,15 +4605,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskTypeInput() {
-    return this._bootDiskType
+    return this._bootDiskType;
   }
 
   // num_local_ssds - computed: true, optional: true, required: false
-  private _numLocalSsds?: number | undefined; 
+  private _numLocalSsds?: number; 
   public get numLocalSsds() {
     return this.getNumberAttribute('num_local_ssds');
   }
-  public set numLocalSsds(value: number | undefined) {
+  public set numLocalSsds(value: number) {
     this._numLocalSsds = value;
   }
   public resetNumLocalSsds() {
@@ -3541,7 +4621,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get numLocalSsdsInput() {
-    return this._numLocalSsds
+    return this._numLocalSsds;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig {
@@ -3589,7 +4669,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryW
   readonly diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3615,12 +4695,67 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._image) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._minCpuPlatform) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
+    if (this._numInstances) {
+      hasAnyValues = true;
+      internalValueResult.numInstances = this._numInstances;
+    }
+    if (this._preemptibility) {
+      hasAnyValues = true;
+      internalValueResult.preemptibility = this._preemptibility;
+    }
+    if (this._accelerators) {
+      hasAnyValues = true;
+      internalValueResult.accelerators = this._accelerators;
+    }
+    if (this._diskConfig) {
+      hasAnyValues = true;
+      internalValueResult.diskConfig = this._diskConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig | undefined) {
+    if (value === undefined) {
+      this._image = undefined;
+      this._machineType = undefined;
+      this._minCpuPlatform = undefined;
+      this._numInstances = undefined;
+      this._preemptibility = undefined;
+      this._accelerators = undefined;
+      this._diskConfig.internalValue = undefined;
+    }
+    else {
+      this._image = value.image;
+      this._machineType = value.machineType;
+      this._minCpuPlatform = value.minCpuPlatform;
+      this._numInstances = value.numInstances;
+      this._preemptibility = value.preemptibility;
+      this._accelerators = value.accelerators;
+      this._diskConfig.internalValue = value.diskConfig;
+    }
+  }
+
   // image - computed: false, optional: true, required: false
-  private _image?: string | undefined; 
+  private _image?: string; 
   public get image() {
     return this.getStringAttribute('image');
   }
-  public set image(value: string | undefined) {
+  public set image(value: string) {
     this._image = value;
   }
   public resetImage() {
@@ -3628,15 +4763,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get imageInput() {
-    return this._image
+    return this._image;
   }
 
   // machine_type - computed: false, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -3644,15 +4779,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -3660,15 +4795,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // num_instances - computed: false, optional: true, required: false
-  private _numInstances?: number | undefined; 
+  private _numInstances?: number; 
   public get numInstances() {
     return this.getNumberAttribute('num_instances');
   }
-  public set numInstances(value: number | undefined) {
+  public set numInstances(value: number) {
     this._numInstances = value;
   }
   public resetNumInstances() {
@@ -3676,15 +4811,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
-    return this._numInstances
+    return this._numInstances;
   }
 
   // preemptibility - computed: false, optional: true, required: false
-  private _preemptibility?: string | undefined; 
+  private _preemptibility?: string; 
   public get preemptibility() {
     return this.getStringAttribute('preemptibility');
   }
-  public set preemptibility(value: string | undefined) {
+  public set preemptibility(value: string) {
     this._preemptibility = value;
   }
   public resetPreemptibility() {
@@ -3692,16 +4827,16 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibilityInput() {
-    return this._preemptibility
+    return this._preemptibility;
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators[] | undefined; 
+  private _accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators[]; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('accelerators') as any;
   }
-  public set accelerators(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators[] | undefined) {
+  public set accelerators(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators[]) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -3709,24 +4844,23 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
   // Temporarily expose input value. Use with caution.
   public get acceleratorsInput() {
-    return this._accelerators
+    return this._accelerators;
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig | undefined; 
-  private __diskConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
   public get diskConfig() {
-    return this.__diskConfigOutput;
+    return this._diskConfig;
   }
-  public putDiskConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig | undefined) {
-    this._diskConfig = value;
+  public putDiskConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig) {
+    this._diskConfig.internalValue = value;
   }
   public resetDiskConfig() {
-    this._diskConfig = undefined;
+    this._diskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskConfigInput() {
-    return this._diskConfig
+    return this._diskConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig {
@@ -3822,7 +4956,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityCo
   readonly truststorePassword?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3856,12 +4990,115 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._crossRealmTrustAdminServer) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustAdminServer = this._crossRealmTrustAdminServer;
+    }
+    if (this._crossRealmTrustKdc) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustKdc = this._crossRealmTrustKdc;
+    }
+    if (this._crossRealmTrustRealm) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustRealm = this._crossRealmTrustRealm;
+    }
+    if (this._crossRealmTrustSharedPassword) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustSharedPassword = this._crossRealmTrustSharedPassword;
+    }
+    if (this._enableKerberos) {
+      hasAnyValues = true;
+      internalValueResult.enableKerberos = this._enableKerberos;
+    }
+    if (this._kdcDbKey) {
+      hasAnyValues = true;
+      internalValueResult.kdcDbKey = this._kdcDbKey;
+    }
+    if (this._keyPassword) {
+      hasAnyValues = true;
+      internalValueResult.keyPassword = this._keyPassword;
+    }
+    if (this._keystore) {
+      hasAnyValues = true;
+      internalValueResult.keystore = this._keystore;
+    }
+    if (this._keystorePassword) {
+      hasAnyValues = true;
+      internalValueResult.keystorePassword = this._keystorePassword;
+    }
+    if (this._kmsKey) {
+      hasAnyValues = true;
+      internalValueResult.kmsKey = this._kmsKey;
+    }
+    if (this._realm) {
+      hasAnyValues = true;
+      internalValueResult.realm = this._realm;
+    }
+    if (this._rootPrincipalPassword) {
+      hasAnyValues = true;
+      internalValueResult.rootPrincipalPassword = this._rootPrincipalPassword;
+    }
+    if (this._tgtLifetimeHours) {
+      hasAnyValues = true;
+      internalValueResult.tgtLifetimeHours = this._tgtLifetimeHours;
+    }
+    if (this._truststore) {
+      hasAnyValues = true;
+      internalValueResult.truststore = this._truststore;
+    }
+    if (this._truststorePassword) {
+      hasAnyValues = true;
+      internalValueResult.truststorePassword = this._truststorePassword;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig | undefined) {
+    if (value === undefined) {
+      this._crossRealmTrustAdminServer = undefined;
+      this._crossRealmTrustKdc = undefined;
+      this._crossRealmTrustRealm = undefined;
+      this._crossRealmTrustSharedPassword = undefined;
+      this._enableKerberos = undefined;
+      this._kdcDbKey = undefined;
+      this._keyPassword = undefined;
+      this._keystore = undefined;
+      this._keystorePassword = undefined;
+      this._kmsKey = undefined;
+      this._realm = undefined;
+      this._rootPrincipalPassword = undefined;
+      this._tgtLifetimeHours = undefined;
+      this._truststore = undefined;
+      this._truststorePassword = undefined;
+    }
+    else {
+      this._crossRealmTrustAdminServer = value.crossRealmTrustAdminServer;
+      this._crossRealmTrustKdc = value.crossRealmTrustKdc;
+      this._crossRealmTrustRealm = value.crossRealmTrustRealm;
+      this._crossRealmTrustSharedPassword = value.crossRealmTrustSharedPassword;
+      this._enableKerberos = value.enableKerberos;
+      this._kdcDbKey = value.kdcDbKey;
+      this._keyPassword = value.keyPassword;
+      this._keystore = value.keystore;
+      this._keystorePassword = value.keystorePassword;
+      this._kmsKey = value.kmsKey;
+      this._realm = value.realm;
+      this._rootPrincipalPassword = value.rootPrincipalPassword;
+      this._tgtLifetimeHours = value.tgtLifetimeHours;
+      this._truststore = value.truststore;
+      this._truststorePassword = value.truststorePassword;
+    }
+  }
+
   // cross_realm_trust_admin_server - computed: false, optional: true, required: false
-  private _crossRealmTrustAdminServer?: string | undefined; 
+  private _crossRealmTrustAdminServer?: string; 
   public get crossRealmTrustAdminServer() {
     return this.getStringAttribute('cross_realm_trust_admin_server');
   }
-  public set crossRealmTrustAdminServer(value: string | undefined) {
+  public set crossRealmTrustAdminServer(value: string) {
     this._crossRealmTrustAdminServer = value;
   }
   public resetCrossRealmTrustAdminServer() {
@@ -3869,15 +5106,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustAdminServerInput() {
-    return this._crossRealmTrustAdminServer
+    return this._crossRealmTrustAdminServer;
   }
 
   // cross_realm_trust_kdc - computed: false, optional: true, required: false
-  private _crossRealmTrustKdc?: string | undefined; 
+  private _crossRealmTrustKdc?: string; 
   public get crossRealmTrustKdc() {
     return this.getStringAttribute('cross_realm_trust_kdc');
   }
-  public set crossRealmTrustKdc(value: string | undefined) {
+  public set crossRealmTrustKdc(value: string) {
     this._crossRealmTrustKdc = value;
   }
   public resetCrossRealmTrustKdc() {
@@ -3885,15 +5122,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustKdcInput() {
-    return this._crossRealmTrustKdc
+    return this._crossRealmTrustKdc;
   }
 
   // cross_realm_trust_realm - computed: false, optional: true, required: false
-  private _crossRealmTrustRealm?: string | undefined; 
+  private _crossRealmTrustRealm?: string; 
   public get crossRealmTrustRealm() {
     return this.getStringAttribute('cross_realm_trust_realm');
   }
-  public set crossRealmTrustRealm(value: string | undefined) {
+  public set crossRealmTrustRealm(value: string) {
     this._crossRealmTrustRealm = value;
   }
   public resetCrossRealmTrustRealm() {
@@ -3901,15 +5138,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustRealmInput() {
-    return this._crossRealmTrustRealm
+    return this._crossRealmTrustRealm;
   }
 
   // cross_realm_trust_shared_password - computed: false, optional: true, required: false
-  private _crossRealmTrustSharedPassword?: string | undefined; 
+  private _crossRealmTrustSharedPassword?: string; 
   public get crossRealmTrustSharedPassword() {
     return this.getStringAttribute('cross_realm_trust_shared_password');
   }
-  public set crossRealmTrustSharedPassword(value: string | undefined) {
+  public set crossRealmTrustSharedPassword(value: string) {
     this._crossRealmTrustSharedPassword = value;
   }
   public resetCrossRealmTrustSharedPassword() {
@@ -3917,15 +5154,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustSharedPasswordInput() {
-    return this._crossRealmTrustSharedPassword
+    return this._crossRealmTrustSharedPassword;
   }
 
   // enable_kerberos - computed: false, optional: true, required: false
-  private _enableKerberos?: boolean | cdktf.IResolvable | undefined; 
+  private _enableKerberos?: boolean | cdktf.IResolvable; 
   public get enableKerberos() {
     return this.getBooleanAttribute('enable_kerberos') as any;
   }
-  public set enableKerberos(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableKerberos(value: boolean | cdktf.IResolvable) {
     this._enableKerberos = value;
   }
   public resetEnableKerberos() {
@@ -3933,15 +5170,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get enableKerberosInput() {
-    return this._enableKerberos
+    return this._enableKerberos;
   }
 
   // kdc_db_key - computed: false, optional: true, required: false
-  private _kdcDbKey?: string | undefined; 
+  private _kdcDbKey?: string; 
   public get kdcDbKey() {
     return this.getStringAttribute('kdc_db_key');
   }
-  public set kdcDbKey(value: string | undefined) {
+  public set kdcDbKey(value: string) {
     this._kdcDbKey = value;
   }
   public resetKdcDbKey() {
@@ -3949,15 +5186,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get kdcDbKeyInput() {
-    return this._kdcDbKey
+    return this._kdcDbKey;
   }
 
   // key_password - computed: false, optional: true, required: false
-  private _keyPassword?: string | undefined; 
+  private _keyPassword?: string; 
   public get keyPassword() {
     return this.getStringAttribute('key_password');
   }
-  public set keyPassword(value: string | undefined) {
+  public set keyPassword(value: string) {
     this._keyPassword = value;
   }
   public resetKeyPassword() {
@@ -3965,15 +5202,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get keyPasswordInput() {
-    return this._keyPassword
+    return this._keyPassword;
   }
 
   // keystore - computed: false, optional: true, required: false
-  private _keystore?: string | undefined; 
+  private _keystore?: string; 
   public get keystore() {
     return this.getStringAttribute('keystore');
   }
-  public set keystore(value: string | undefined) {
+  public set keystore(value: string) {
     this._keystore = value;
   }
   public resetKeystore() {
@@ -3981,15 +5218,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get keystoreInput() {
-    return this._keystore
+    return this._keystore;
   }
 
   // keystore_password - computed: false, optional: true, required: false
-  private _keystorePassword?: string | undefined; 
+  private _keystorePassword?: string; 
   public get keystorePassword() {
     return this.getStringAttribute('keystore_password');
   }
-  public set keystorePassword(value: string | undefined) {
+  public set keystorePassword(value: string) {
     this._keystorePassword = value;
   }
   public resetKeystorePassword() {
@@ -3997,15 +5234,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get keystorePasswordInput() {
-    return this._keystorePassword
+    return this._keystorePassword;
   }
 
   // kms_key - computed: false, optional: true, required: false
-  private _kmsKey?: string | undefined; 
+  private _kmsKey?: string; 
   public get kmsKey() {
     return this.getStringAttribute('kms_key');
   }
-  public set kmsKey(value: string | undefined) {
+  public set kmsKey(value: string) {
     this._kmsKey = value;
   }
   public resetKmsKey() {
@@ -4013,15 +5250,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyInput() {
-    return this._kmsKey
+    return this._kmsKey;
   }
 
   // realm - computed: false, optional: true, required: false
-  private _realm?: string | undefined; 
+  private _realm?: string; 
   public get realm() {
     return this.getStringAttribute('realm');
   }
-  public set realm(value: string | undefined) {
+  public set realm(value: string) {
     this._realm = value;
   }
   public resetRealm() {
@@ -4029,15 +5266,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get realmInput() {
-    return this._realm
+    return this._realm;
   }
 
   // root_principal_password - computed: false, optional: true, required: false
-  private _rootPrincipalPassword?: string | undefined; 
+  private _rootPrincipalPassword?: string; 
   public get rootPrincipalPassword() {
     return this.getStringAttribute('root_principal_password');
   }
-  public set rootPrincipalPassword(value: string | undefined) {
+  public set rootPrincipalPassword(value: string) {
     this._rootPrincipalPassword = value;
   }
   public resetRootPrincipalPassword() {
@@ -4045,15 +5282,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get rootPrincipalPasswordInput() {
-    return this._rootPrincipalPassword
+    return this._rootPrincipalPassword;
   }
 
   // tgt_lifetime_hours - computed: false, optional: true, required: false
-  private _tgtLifetimeHours?: number | undefined; 
+  private _tgtLifetimeHours?: number; 
   public get tgtLifetimeHours() {
     return this.getNumberAttribute('tgt_lifetime_hours');
   }
-  public set tgtLifetimeHours(value: number | undefined) {
+  public set tgtLifetimeHours(value: number) {
     this._tgtLifetimeHours = value;
   }
   public resetTgtLifetimeHours() {
@@ -4061,15 +5298,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get tgtLifetimeHoursInput() {
-    return this._tgtLifetimeHours
+    return this._tgtLifetimeHours;
   }
 
   // truststore - computed: false, optional: true, required: false
-  private _truststore?: string | undefined; 
+  private _truststore?: string; 
   public get truststore() {
     return this.getStringAttribute('truststore');
   }
-  public set truststore(value: string | undefined) {
+  public set truststore(value: string) {
     this._truststore = value;
   }
   public resetTruststore() {
@@ -4077,15 +5314,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get truststoreInput() {
-    return this._truststore
+    return this._truststore;
   }
 
   // truststore_password - computed: false, optional: true, required: false
-  private _truststorePassword?: string | undefined; 
+  private _truststorePassword?: string; 
   public get truststorePassword() {
     return this.getStringAttribute('truststore_password');
   }
-  public set truststorePassword(value: string | undefined) {
+  public set truststorePassword(value: string) {
     this._truststorePassword = value;
   }
   public resetTruststorePassword() {
@@ -4093,7 +5330,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
   // Temporarily expose input value. Use with caution.
   public get truststorePasswordInput() {
-    return this._truststorePassword
+    return this._truststorePassword;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
@@ -4105,7 +5342,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityCo
   readonly kerberosConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4125,21 +5362,39 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // kerberos_config - computed: false, optional: true, required: false
-  private _kerberosConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig | undefined; 
-  private __kerberosConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference(this as any, "kerberos_config", true);
-  public get kerberosConfig() {
-    return this.__kerberosConfigOutput;
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kerberosConfig) {
+      hasAnyValues = true;
+      internalValueResult.kerberosConfig = this._kerberosConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putKerberosConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig | undefined) {
-    this._kerberosConfig = value;
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig | undefined) {
+    if (value === undefined) {
+      this._kerberosConfig.internalValue = undefined;
+    }
+    else {
+      this._kerberosConfig.internalValue = value.kerberosConfig;
+    }
+  }
+
+  // kerberos_config - computed: false, optional: true, required: false
+  private _kerberosConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference(this as any, "kerberos_config", true);
+  public get kerberosConfig() {
+    return this._kerberosConfig;
+  }
+  public putKerberosConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig) {
+    this._kerberosConfig.internalValue = value;
   }
   public resetKerberosConfig() {
-    this._kerberosConfig = undefined;
+    this._kerberosConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kerberosConfigInput() {
-    return this._kerberosConfig
+    return this._kerberosConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
@@ -4163,7 +5418,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareCo
   readonly properties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4185,12 +5440,43 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._imageVersion) {
+      hasAnyValues = true;
+      internalValueResult.imageVersion = this._imageVersion;
+    }
+    if (this._optionalComponents) {
+      hasAnyValues = true;
+      internalValueResult.optionalComponents = this._optionalComponents;
+    }
+    if (this._properties) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig | undefined) {
+    if (value === undefined) {
+      this._imageVersion = undefined;
+      this._optionalComponents = undefined;
+      this._properties = undefined;
+    }
+    else {
+      this._imageVersion = value.imageVersion;
+      this._optionalComponents = value.optionalComponents;
+      this._properties = value.properties;
+    }
+  }
+
   // image_version - computed: false, optional: true, required: false
-  private _imageVersion?: string | undefined; 
+  private _imageVersion?: string; 
   public get imageVersion() {
     return this.getStringAttribute('image_version');
   }
-  public set imageVersion(value: string | undefined) {
+  public set imageVersion(value: string) {
     this._imageVersion = value;
   }
   public resetImageVersion() {
@@ -4198,15 +5484,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
   }
   // Temporarily expose input value. Use with caution.
   public get imageVersionInput() {
-    return this._imageVersion
+    return this._imageVersion;
   }
 
   // optional_components - computed: false, optional: true, required: false
-  private _optionalComponents?: string[] | undefined; 
+  private _optionalComponents?: string[]; 
   public get optionalComponents() {
     return this.getListAttribute('optional_components');
   }
-  public set optionalComponents(value: string[] | undefined) {
+  public set optionalComponents(value: string[]) {
     this._optionalComponents = value;
   }
   public resetOptionalComponents() {
@@ -4214,16 +5500,16 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
   }
   // Temporarily expose input value. Use with caution.
   public get optionalComponentsInput() {
-    return this._optionalComponents
+    return this._optionalComponents;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -4231,7 +5517,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators {
@@ -4249,7 +5535,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConf
   readonly acceleratorType?: string;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4281,7 +5567,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConf
   readonly numLocalSsds?: number;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4303,12 +5589,43 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bootDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
+    }
+    if (this._bootDiskType) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskType = this._bootDiskType;
+    }
+    if (this._numLocalSsds) {
+      hasAnyValues = true;
+      internalValueResult.numLocalSsds = this._numLocalSsds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig | undefined) {
+    if (value === undefined) {
+      this._bootDiskSizeGb = undefined;
+      this._bootDiskType = undefined;
+      this._numLocalSsds = undefined;
+    }
+    else {
+      this._bootDiskSizeGb = value.bootDiskSizeGb;
+      this._bootDiskType = value.bootDiskType;
+      this._numLocalSsds = value.numLocalSsds;
+    }
+  }
+
   // boot_disk_size_gb - computed: false, optional: true, required: false
-  private _bootDiskSizeGb?: number | undefined; 
+  private _bootDiskSizeGb?: number; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number | undefined) {
+  public set bootDiskSizeGb(value: number) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -4316,15 +5633,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskSizeGbInput() {
-    return this._bootDiskSizeGb
+    return this._bootDiskSizeGb;
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string | undefined; 
+  private _bootDiskType?: string; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string | undefined) {
+  public set bootDiskType(value: string) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -4332,15 +5649,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskTypeInput() {
-    return this._bootDiskType
+    return this._bootDiskType;
   }
 
   // num_local_ssds - computed: true, optional: true, required: false
-  private _numLocalSsds?: number | undefined; 
+  private _numLocalSsds?: number; 
   public get numLocalSsds() {
     return this.getNumberAttribute('num_local_ssds');
   }
-  public set numLocalSsds(value: number | undefined) {
+  public set numLocalSsds(value: number) {
     this._numLocalSsds = value;
   }
   public resetNumLocalSsds() {
@@ -4348,7 +5665,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
   }
   // Temporarily expose input value. Use with caution.
   public get numLocalSsdsInput() {
-    return this._numLocalSsds
+    return this._numLocalSsds;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
@@ -4396,7 +5713,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConf
   readonly diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4422,12 +5739,67 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._image) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._minCpuPlatform) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
+    if (this._numInstances) {
+      hasAnyValues = true;
+      internalValueResult.numInstances = this._numInstances;
+    }
+    if (this._preemptibility) {
+      hasAnyValues = true;
+      internalValueResult.preemptibility = this._preemptibility;
+    }
+    if (this._accelerators) {
+      hasAnyValues = true;
+      internalValueResult.accelerators = this._accelerators;
+    }
+    if (this._diskConfig) {
+      hasAnyValues = true;
+      internalValueResult.diskConfig = this._diskConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig | undefined) {
+    if (value === undefined) {
+      this._image = undefined;
+      this._machineType = undefined;
+      this._minCpuPlatform = undefined;
+      this._numInstances = undefined;
+      this._preemptibility = undefined;
+      this._accelerators = undefined;
+      this._diskConfig.internalValue = undefined;
+    }
+    else {
+      this._image = value.image;
+      this._machineType = value.machineType;
+      this._minCpuPlatform = value.minCpuPlatform;
+      this._numInstances = value.numInstances;
+      this._preemptibility = value.preemptibility;
+      this._accelerators = value.accelerators;
+      this._diskConfig.internalValue = value.diskConfig;
+    }
+  }
+
   // image - computed: false, optional: true, required: false
-  private _image?: string | undefined; 
+  private _image?: string; 
   public get image() {
     return this.getStringAttribute('image');
   }
-  public set image(value: string | undefined) {
+  public set image(value: string) {
     this._image = value;
   }
   public resetImage() {
@@ -4435,15 +5807,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get imageInput() {
-    return this._image
+    return this._image;
   }
 
   // machine_type - computed: false, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -4451,15 +5823,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -4467,15 +5839,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // num_instances - computed: false, optional: true, required: false
-  private _numInstances?: number | undefined; 
+  private _numInstances?: number; 
   public get numInstances() {
     return this.getNumberAttribute('num_instances');
   }
-  public set numInstances(value: number | undefined) {
+  public set numInstances(value: number) {
     this._numInstances = value;
   }
   public resetNumInstances() {
@@ -4483,15 +5855,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
-    return this._numInstances
+    return this._numInstances;
   }
 
   // preemptibility - computed: false, optional: true, required: false
-  private _preemptibility?: string | undefined; 
+  private _preemptibility?: string; 
   public get preemptibility() {
     return this.getStringAttribute('preemptibility');
   }
-  public set preemptibility(value: string | undefined) {
+  public set preemptibility(value: string) {
     this._preemptibility = value;
   }
   public resetPreemptibility() {
@@ -4499,16 +5871,16 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibilityInput() {
-    return this._preemptibility
+    return this._preemptibility;
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators[] | undefined; 
+  private _accelerators?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators[]; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('accelerators') as any;
   }
-  public set accelerators(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators[] | undefined) {
+  public set accelerators(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators[]) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -4516,24 +5888,23 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
   // Temporarily expose input value. Use with caution.
   public get acceleratorsInput() {
-    return this._accelerators
+    return this._accelerators;
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig | undefined; 
-  private __diskConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
   public get diskConfig() {
-    return this.__diskConfigOutput;
+    return this._diskConfig;
   }
-  public putDiskConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig | undefined) {
-    this._diskConfig = value;
+  public putDiskConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig) {
+    this._diskConfig.internalValue = value;
   }
   public resetDiskConfig() {
-    this._diskConfig = undefined;
+    this._diskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskConfigInput() {
-    return this._diskConfig
+    return this._diskConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfig {
@@ -4617,7 +5988,7 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfig {
   readonly workerConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfig): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4649,12 +6020,103 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._stagingBucket) {
+      hasAnyValues = true;
+      internalValueResult.stagingBucket = this._stagingBucket;
+    }
+    if (this._tempBucket) {
+      hasAnyValues = true;
+      internalValueResult.tempBucket = this._tempBucket;
+    }
+    if (this._autoscalingConfig) {
+      hasAnyValues = true;
+      internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
+    }
+    if (this._encryptionConfig) {
+      hasAnyValues = true;
+      internalValueResult.encryptionConfig = this._encryptionConfig?.internalValue;
+    }
+    if (this._endpointConfig) {
+      hasAnyValues = true;
+      internalValueResult.endpointConfig = this._endpointConfig?.internalValue;
+    }
+    if (this._gceClusterConfig) {
+      hasAnyValues = true;
+      internalValueResult.gceClusterConfig = this._gceClusterConfig?.internalValue;
+    }
+    if (this._initializationActions) {
+      hasAnyValues = true;
+      internalValueResult.initializationActions = this._initializationActions;
+    }
+    if (this._lifecycleConfig) {
+      hasAnyValues = true;
+      internalValueResult.lifecycleConfig = this._lifecycleConfig?.internalValue;
+    }
+    if (this._masterConfig) {
+      hasAnyValues = true;
+      internalValueResult.masterConfig = this._masterConfig?.internalValue;
+    }
+    if (this._secondaryWorkerConfig) {
+      hasAnyValues = true;
+      internalValueResult.secondaryWorkerConfig = this._secondaryWorkerConfig?.internalValue;
+    }
+    if (this._securityConfig) {
+      hasAnyValues = true;
+      internalValueResult.securityConfig = this._securityConfig?.internalValue;
+    }
+    if (this._softwareConfig) {
+      hasAnyValues = true;
+      internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
+    }
+    if (this._workerConfig) {
+      hasAnyValues = true;
+      internalValueResult.workerConfig = this._workerConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfig | undefined) {
+    if (value === undefined) {
+      this._stagingBucket = undefined;
+      this._tempBucket = undefined;
+      this._autoscalingConfig.internalValue = undefined;
+      this._encryptionConfig.internalValue = undefined;
+      this._endpointConfig.internalValue = undefined;
+      this._gceClusterConfig.internalValue = undefined;
+      this._initializationActions = undefined;
+      this._lifecycleConfig.internalValue = undefined;
+      this._masterConfig.internalValue = undefined;
+      this._secondaryWorkerConfig.internalValue = undefined;
+      this._securityConfig.internalValue = undefined;
+      this._softwareConfig.internalValue = undefined;
+      this._workerConfig.internalValue = undefined;
+    }
+    else {
+      this._stagingBucket = value.stagingBucket;
+      this._tempBucket = value.tempBucket;
+      this._autoscalingConfig.internalValue = value.autoscalingConfig;
+      this._encryptionConfig.internalValue = value.encryptionConfig;
+      this._endpointConfig.internalValue = value.endpointConfig;
+      this._gceClusterConfig.internalValue = value.gceClusterConfig;
+      this._initializationActions = value.initializationActions;
+      this._lifecycleConfig.internalValue = value.lifecycleConfig;
+      this._masterConfig.internalValue = value.masterConfig;
+      this._secondaryWorkerConfig.internalValue = value.secondaryWorkerConfig;
+      this._securityConfig.internalValue = value.securityConfig;
+      this._softwareConfig.internalValue = value.softwareConfig;
+      this._workerConfig.internalValue = value.workerConfig;
+    }
+  }
+
   // staging_bucket - computed: false, optional: true, required: false
-  private _stagingBucket?: string | undefined; 
+  private _stagingBucket?: string; 
   public get stagingBucket() {
     return this.getStringAttribute('staging_bucket');
   }
-  public set stagingBucket(value: string | undefined) {
+  public set stagingBucket(value: string) {
     this._stagingBucket = value;
   }
   public resetStagingBucket() {
@@ -4662,15 +6124,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get stagingBucketInput() {
-    return this._stagingBucket
+    return this._stagingBucket;
   }
 
   // temp_bucket - computed: false, optional: true, required: false
-  private _tempBucket?: string | undefined; 
+  private _tempBucket?: string; 
   public get tempBucket() {
     return this.getStringAttribute('temp_bucket');
   }
-  public set tempBucket(value: string | undefined) {
+  public set tempBucket(value: string) {
     this._tempBucket = value;
   }
   public resetTempBucket() {
@@ -4678,84 +6140,80 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get tempBucketInput() {
-    return this._tempBucket
+    return this._tempBucket;
   }
 
   // autoscaling_config - computed: false, optional: true, required: false
-  private _autoscalingConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig | undefined; 
-  private __autoscalingConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigOutputReference(this as any, "autoscaling_config", true);
+  private _autoscalingConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigOutputReference(this as any, "autoscaling_config", true);
   public get autoscalingConfig() {
-    return this.__autoscalingConfigOutput;
+    return this._autoscalingConfig;
   }
-  public putAutoscalingConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig | undefined) {
-    this._autoscalingConfig = value;
+  public putAutoscalingConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig) {
+    this._autoscalingConfig.internalValue = value;
   }
   public resetAutoscalingConfig() {
-    this._autoscalingConfig = undefined;
+    this._autoscalingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscalingConfigInput() {
-    return this._autoscalingConfig
+    return this._autoscalingConfig.internalValue;
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig | undefined; 
-  private __encryptionConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigOutputReference(this as any, "encryption_config", true);
+  private _encryptionConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigOutputReference(this as any, "encryption_config", true);
   public get encryptionConfig() {
-    return this.__encryptionConfigOutput;
+    return this._encryptionConfig;
   }
-  public putEncryptionConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig | undefined) {
-    this._encryptionConfig = value;
+  public putEncryptionConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig) {
+    this._encryptionConfig.internalValue = value;
   }
   public resetEncryptionConfig() {
-    this._encryptionConfig = undefined;
+    this._encryptionConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionConfigInput() {
-    return this._encryptionConfig
+    return this._encryptionConfig.internalValue;
   }
 
   // endpoint_config - computed: false, optional: true, required: false
-  private _endpointConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig | undefined; 
-  private __endpointConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference(this as any, "endpoint_config", true);
+  private _endpointConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference(this as any, "endpoint_config", true);
   public get endpointConfig() {
-    return this.__endpointConfigOutput;
+    return this._endpointConfig;
   }
-  public putEndpointConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig | undefined) {
-    this._endpointConfig = value;
+  public putEndpointConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig) {
+    this._endpointConfig.internalValue = value;
   }
   public resetEndpointConfig() {
-    this._endpointConfig = undefined;
+    this._endpointConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get endpointConfigInput() {
-    return this._endpointConfig
+    return this._endpointConfig.internalValue;
   }
 
   // gce_cluster_config - computed: false, optional: true, required: false
-  private _gceClusterConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig | undefined; 
-  private __gceClusterConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference(this as any, "gce_cluster_config", true);
+  private _gceClusterConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference(this as any, "gce_cluster_config", true);
   public get gceClusterConfig() {
-    return this.__gceClusterConfigOutput;
+    return this._gceClusterConfig;
   }
-  public putGceClusterConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig | undefined) {
-    this._gceClusterConfig = value;
+  public putGceClusterConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig) {
+    this._gceClusterConfig.internalValue = value;
   }
   public resetGceClusterConfig() {
-    this._gceClusterConfig = undefined;
+    this._gceClusterConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gceClusterConfigInput() {
-    return this._gceClusterConfig
+    return this._gceClusterConfig.internalValue;
   }
 
   // initialization_actions - computed: false, optional: true, required: false
-  private _initializationActions?: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions[] | undefined; 
+  private _initializationActions?: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions[]; 
   public get initializationActions() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('initialization_actions') as any;
   }
-  public set initializationActions(value: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions[] | undefined) {
+  public set initializationActions(value: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions[]) {
     this._initializationActions = value;
   }
   public resetInitializationActions() {
@@ -4763,109 +6221,103 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get initializationActionsInput() {
-    return this._initializationActions
+    return this._initializationActions;
   }
 
   // lifecycle_config - computed: false, optional: true, required: false
-  private _lifecycleConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig | undefined; 
-  private __lifecycleConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigOutputReference(this as any, "lifecycle_config", true);
+  private _lifecycleConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigOutputReference(this as any, "lifecycle_config", true);
   public get lifecycleConfig() {
-    return this.__lifecycleConfigOutput;
+    return this._lifecycleConfig;
   }
-  public putLifecycleConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig | undefined) {
-    this._lifecycleConfig = value;
+  public putLifecycleConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig) {
+    this._lifecycleConfig.internalValue = value;
   }
   public resetLifecycleConfig() {
-    this._lifecycleConfig = undefined;
+    this._lifecycleConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get lifecycleConfigInput() {
-    return this._lifecycleConfig
+    return this._lifecycleConfig.internalValue;
   }
 
   // master_config - computed: false, optional: true, required: false
-  private _masterConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig | undefined; 
-  private __masterConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference(this as any, "master_config", true);
+  private _masterConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference(this as any, "master_config", true);
   public get masterConfig() {
-    return this.__masterConfigOutput;
+    return this._masterConfig;
   }
-  public putMasterConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig | undefined) {
-    this._masterConfig = value;
+  public putMasterConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig) {
+    this._masterConfig.internalValue = value;
   }
   public resetMasterConfig() {
-    this._masterConfig = undefined;
+    this._masterConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get masterConfigInput() {
-    return this._masterConfig
+    return this._masterConfig.internalValue;
   }
 
   // secondary_worker_config - computed: false, optional: true, required: false
-  private _secondaryWorkerConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig | undefined; 
-  private __secondaryWorkerConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference(this as any, "secondary_worker_config", true);
+  private _secondaryWorkerConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference(this as any, "secondary_worker_config", true);
   public get secondaryWorkerConfig() {
-    return this.__secondaryWorkerConfigOutput;
+    return this._secondaryWorkerConfig;
   }
-  public putSecondaryWorkerConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig | undefined) {
-    this._secondaryWorkerConfig = value;
+  public putSecondaryWorkerConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig) {
+    this._secondaryWorkerConfig.internalValue = value;
   }
   public resetSecondaryWorkerConfig() {
-    this._secondaryWorkerConfig = undefined;
+    this._secondaryWorkerConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secondaryWorkerConfigInput() {
-    return this._secondaryWorkerConfig
+    return this._secondaryWorkerConfig.internalValue;
   }
 
   // security_config - computed: false, optional: true, required: false
-  private _securityConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig | undefined; 
-  private __securityConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigOutputReference(this as any, "security_config", true);
+  private _securityConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigOutputReference(this as any, "security_config", true);
   public get securityConfig() {
-    return this.__securityConfigOutput;
+    return this._securityConfig;
   }
-  public putSecurityConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig | undefined) {
-    this._securityConfig = value;
+  public putSecurityConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig) {
+    this._securityConfig.internalValue = value;
   }
   public resetSecurityConfig() {
-    this._securityConfig = undefined;
+    this._securityConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get securityConfigInput() {
-    return this._securityConfig
+    return this._securityConfig.internalValue;
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig | undefined; 
-  private __softwareConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigOutputReference(this as any, "software_config", true);
+  private _softwareConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigOutputReference(this as any, "software_config", true);
   public get softwareConfig() {
-    return this.__softwareConfigOutput;
+    return this._softwareConfig;
   }
-  public putSoftwareConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig | undefined) {
-    this._softwareConfig = value;
+  public putSoftwareConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig) {
+    this._softwareConfig.internalValue = value;
   }
   public resetSoftwareConfig() {
-    this._softwareConfig = undefined;
+    this._softwareConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get softwareConfigInput() {
-    return this._softwareConfig
+    return this._softwareConfig.internalValue;
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig | undefined; 
-  private __workerConfigOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference(this as any, "worker_config", true);
+  private _workerConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference(this as any, "worker_config", true);
   public get workerConfig() {
-    return this.__workerConfigOutput;
+    return this._workerConfig;
   }
-  public putWorkerConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig | undefined) {
-    this._workerConfig = value;
+  public putWorkerConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig) {
+    this._workerConfig.internalValue = value;
   }
   public resetWorkerConfig() {
-    this._workerConfig = undefined;
+    this._workerConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get workerConfigInput() {
-    return this._workerConfig
+    return this._workerConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedCluster {
@@ -4889,7 +6341,7 @@ export interface DataprocWorkflowTemplatePlacementManagedCluster {
   readonly config: DataprocWorkflowTemplatePlacementManagedClusterConfig;
 }
 
-function dataprocWorkflowTemplatePlacementManagedClusterToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterOutputReference | DataprocWorkflowTemplatePlacementManagedCluster): any {
+export function dataprocWorkflowTemplatePlacementManagedClusterToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterOutputReference | DataprocWorkflowTemplatePlacementManagedCluster): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4911,6 +6363,37 @@ export class DataprocWorkflowTemplatePlacementManagedClusterOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedCluster | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clusterName) {
+      hasAnyValues = true;
+      internalValueResult.clusterName = this._clusterName;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    if (this._config) {
+      hasAnyValues = true;
+      internalValueResult.config = this._config?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedCluster | undefined) {
+    if (value === undefined) {
+      this._clusterName = undefined;
+      this._labels = undefined;
+      this._config.internalValue = undefined;
+    }
+    else {
+      this._clusterName = value.clusterName;
+      this._labels = value.labels;
+      this._config.internalValue = value.config;
+    }
+  }
+
   // cluster_name - computed: false, optional: false, required: true
   private _clusterName?: string; 
   public get clusterName() {
@@ -4921,16 +6404,16 @@ export class DataprocWorkflowTemplatePlacementManagedClusterOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get clusterNameInput() {
-    return this._clusterName
+    return this._clusterName;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -4938,21 +6421,20 @@ export class DataprocWorkflowTemplatePlacementManagedClusterOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // config - computed: false, optional: false, required: true
-  private _config?: DataprocWorkflowTemplatePlacementManagedClusterConfig; 
-  private __configOutput = new DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference(this as any, "config", true);
+  private _config = new DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference(this as any, "config", true);
   public get config() {
-    return this.__configOutput;
+    return this._config;
   }
   public putConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfig) {
-    this._config = value;
+    this._config.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get configInput() {
-    return this._config
+    return this._config.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacement {
@@ -4970,7 +6452,7 @@ export interface DataprocWorkflowTemplatePlacement {
   readonly managedCluster?: DataprocWorkflowTemplatePlacementManagedCluster;
 }
 
-function dataprocWorkflowTemplatePlacementToTerraform(struct?: DataprocWorkflowTemplatePlacementOutputReference | DataprocWorkflowTemplatePlacement): any {
+export function dataprocWorkflowTemplatePlacementToTerraform(struct?: DataprocWorkflowTemplatePlacementOutputReference | DataprocWorkflowTemplatePlacement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4991,38 +6473,61 @@ export class DataprocWorkflowTemplatePlacementOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cluster_selector - computed: false, optional: true, required: false
-  private _clusterSelector?: DataprocWorkflowTemplatePlacementClusterSelector | undefined; 
-  private __clusterSelectorOutput = new DataprocWorkflowTemplatePlacementClusterSelectorOutputReference(this as any, "cluster_selector", true);
-  public get clusterSelector() {
-    return this.__clusterSelectorOutput;
+  public get internalValue(): DataprocWorkflowTemplatePlacement | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clusterSelector) {
+      hasAnyValues = true;
+      internalValueResult.clusterSelector = this._clusterSelector?.internalValue;
+    }
+    if (this._managedCluster) {
+      hasAnyValues = true;
+      internalValueResult.managedCluster = this._managedCluster?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putClusterSelector(value: DataprocWorkflowTemplatePlacementClusterSelector | undefined) {
-    this._clusterSelector = value;
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacement | undefined) {
+    if (value === undefined) {
+      this._clusterSelector.internalValue = undefined;
+      this._managedCluster.internalValue = undefined;
+    }
+    else {
+      this._clusterSelector.internalValue = value.clusterSelector;
+      this._managedCluster.internalValue = value.managedCluster;
+    }
+  }
+
+  // cluster_selector - computed: false, optional: true, required: false
+  private _clusterSelector = new DataprocWorkflowTemplatePlacementClusterSelectorOutputReference(this as any, "cluster_selector", true);
+  public get clusterSelector() {
+    return this._clusterSelector;
+  }
+  public putClusterSelector(value: DataprocWorkflowTemplatePlacementClusterSelector) {
+    this._clusterSelector.internalValue = value;
   }
   public resetClusterSelector() {
-    this._clusterSelector = undefined;
+    this._clusterSelector.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clusterSelectorInput() {
-    return this._clusterSelector
+    return this._clusterSelector.internalValue;
   }
 
   // managed_cluster - computed: false, optional: true, required: false
-  private _managedCluster?: DataprocWorkflowTemplatePlacementManagedCluster | undefined; 
-  private __managedClusterOutput = new DataprocWorkflowTemplatePlacementManagedClusterOutputReference(this as any, "managed_cluster", true);
+  private _managedCluster = new DataprocWorkflowTemplatePlacementManagedClusterOutputReference(this as any, "managed_cluster", true);
   public get managedCluster() {
-    return this.__managedClusterOutput;
+    return this._managedCluster;
   }
-  public putManagedCluster(value: DataprocWorkflowTemplatePlacementManagedCluster | undefined) {
-    this._managedCluster = value;
+  public putManagedCluster(value: DataprocWorkflowTemplatePlacementManagedCluster) {
+    this._managedCluster.internalValue = value;
   }
   public resetManagedCluster() {
-    this._managedCluster = undefined;
+    this._managedCluster.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get managedClusterInput() {
-    return this._managedCluster
+    return this._managedCluster.internalValue;
   }
 }
 export interface DataprocWorkflowTemplateTimeouts {
@@ -5036,7 +6541,7 @@ export interface DataprocWorkflowTemplateTimeouts {
   readonly delete?: string;
 }
 
-function dataprocWorkflowTemplateTimeoutsToTerraform(struct?: DataprocWorkflowTemplateTimeoutsOutputReference | DataprocWorkflowTemplateTimeouts): any {
+export function dataprocWorkflowTemplateTimeoutsToTerraform(struct?: DataprocWorkflowTemplateTimeoutsOutputReference | DataprocWorkflowTemplateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5057,12 +6562,37 @@ export class DataprocWorkflowTemplateTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocWorkflowTemplateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplateTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -5070,15 +6600,15 @@ export class DataprocWorkflowTemplateTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -5086,7 +6616,7 @@ export class DataprocWorkflowTemplateTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -5130,8 +6660,8 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
     this._version = config.version;
     this._jobs = config.jobs;
     this._parameters = config.parameters;
-    this._placement = config.placement;
-    this._timeouts = config.timeouts;
+    this._placement.internalValue = config.placement;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -5144,11 +6674,11 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
 
   // dag_timeout - computed: false, optional: true, required: false
-  private _dagTimeout?: string | undefined; 
+  private _dagTimeout?: string; 
   public get dagTimeout() {
     return this.getStringAttribute('dag_timeout');
   }
-  public set dagTimeout(value: string | undefined) {
+  public set dagTimeout(value: string) {
     this._dagTimeout = value;
   }
   public resetDagTimeout() {
@@ -5156,7 +6686,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dagTimeoutInput() {
-    return this._dagTimeout
+    return this._dagTimeout;
   }
 
   // id - computed: true, optional: true, required: false
@@ -5165,12 +6695,12 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -5178,7 +6708,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // location - computed: false, optional: false, required: true
@@ -5191,7 +6721,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -5204,15 +6734,15 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -5220,7 +6750,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -5229,11 +6759,11 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: number | undefined; 
+  private _version?: number; 
   public get version() {
     return this.getNumberAttribute('version');
   }
-  public set version(value: number | undefined) {
+  public set version(value: number) {
     this._version = value;
   }
   public resetVersion() {
@@ -5241,7 +6771,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // jobs - computed: false, optional: false, required: true
@@ -5255,16 +6785,16 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get jobsInput() {
-    return this._jobs
+    return this._jobs;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: DataprocWorkflowTemplateParameters[] | undefined; 
+  private _parameters?: DataprocWorkflowTemplateParameters[]; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: DataprocWorkflowTemplateParameters[] | undefined) {
+  public set parameters(value: DataprocWorkflowTemplateParameters[]) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -5272,38 +6802,36 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // placement - computed: false, optional: false, required: true
-  private _placement?: DataprocWorkflowTemplatePlacement; 
-  private __placementOutput = new DataprocWorkflowTemplatePlacementOutputReference(this as any, "placement", true);
+  private _placement = new DataprocWorkflowTemplatePlacementOutputReference(this as any, "placement", true);
   public get placement() {
-    return this.__placementOutput;
+    return this._placement;
   }
   public putPlacement(value: DataprocWorkflowTemplatePlacement) {
-    this._placement = value;
+    this._placement.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get placementInput() {
-    return this._placement
+    return this._placement.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataprocWorkflowTemplateTimeouts | undefined; 
-  private __timeoutsOutput = new DataprocWorkflowTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataprocWorkflowTemplateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataprocWorkflowTemplateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataprocWorkflowTemplateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -5320,8 +6848,8 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
       version: cdktf.numberToTerraform(this._version),
       jobs: cdktf.listMapper(dataprocWorkflowTemplateJobsToTerraform)(this._jobs),
       parameters: cdktf.listMapper(dataprocWorkflowTemplateParametersToTerraform)(this._parameters),
-      placement: dataprocWorkflowTemplatePlacementToTerraform(this._placement),
-      timeouts: dataprocWorkflowTemplateTimeoutsToTerraform(this._timeouts),
+      placement: dataprocWorkflowTemplatePlacementToTerraform(this._placement.internalValue),
+      timeouts: dataprocWorkflowTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

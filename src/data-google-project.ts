@@ -95,11 +95,11 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
   }
 
   // project_id - computed: false, optional: true, required: false
-  private _projectId?: string | undefined; 
+  private _projectId?: string; 
   public get projectId() {
     return this.getStringAttribute('project_id');
   }
-  public set projectId(value: string | undefined) {
+  public set projectId(value: string) {
     this._projectId = value;
   }
   public resetProjectId() {
@@ -107,7 +107,7 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectIdInput() {
-    return this._projectId
+    return this._projectId;
   }
 
   // skip_delete - computed: true, optional: false, required: false

@@ -83,7 +83,7 @@ export interface BigtableInstanceCluster {
   readonly zone?: string;
 }
 
-function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): any {
+export function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -144,11 +144,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   // ==========
 
   // deletion_protection - computed: false, optional: true, required: false
-  private _deletionProtection?: boolean | cdktf.IResolvable | undefined; 
+  private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection') as any;
   }
-  public set deletionProtection(value: boolean | cdktf.IResolvable | undefined) {
+  public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
   }
   public resetDeletionProtection() {
@@ -156,15 +156,15 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deletionProtectionInput() {
-    return this._deletionProtection
+    return this._deletionProtection;
   }
 
   // display_name - computed: true, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -172,7 +172,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -181,11 +181,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // instance_type - computed: false, optional: true, required: false
-  private _instanceType?: string | undefined; 
+  private _instanceType?: string; 
   public get instanceType() {
     return this.getStringAttribute('instance_type');
   }
-  public set instanceType(value: string | undefined) {
+  public set instanceType(value: string) {
     this._instanceType = value;
   }
   public resetInstanceType() {
@@ -193,16 +193,16 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceTypeInput() {
-    return this._instanceType
+    return this._instanceType;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -210,7 +210,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -223,15 +223,15 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -239,16 +239,16 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // cluster - computed: false, optional: true, required: false
-  private _cluster?: BigtableInstanceCluster[] | undefined; 
+  private _cluster?: BigtableInstanceCluster[]; 
   public get cluster() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cluster') as any;
   }
-  public set cluster(value: BigtableInstanceCluster[] | undefined) {
+  public set cluster(value: BigtableInstanceCluster[]) {
     this._cluster = value;
   }
   public resetCluster() {
@@ -256,7 +256,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterInput() {
-    return this._cluster
+    return this._cluster;
   }
 
   // =========

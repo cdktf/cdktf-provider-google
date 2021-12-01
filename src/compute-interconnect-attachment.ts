@@ -184,7 +184,7 @@ export interface ComputeInterconnectAttachmentTimeouts {
   readonly update?: string;
 }
 
-function computeInterconnectAttachmentTimeoutsToTerraform(struct?: ComputeInterconnectAttachmentTimeoutsOutputReference | ComputeInterconnectAttachmentTimeouts): any {
+export function computeInterconnectAttachmentTimeoutsToTerraform(struct?: ComputeInterconnectAttachmentTimeoutsOutputReference | ComputeInterconnectAttachmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -206,12 +206,43 @@ export class ComputeInterconnectAttachmentTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInterconnectAttachmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInterconnectAttachmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -219,15 +250,15 @@ export class ComputeInterconnectAttachmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -235,15 +266,15 @@ export class ComputeInterconnectAttachmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -251,7 +282,7 @@ export class ComputeInterconnectAttachmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -302,7 +333,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
     this._router = config.router;
     this._type = config.type;
     this._vlanTag8021Q = config.vlanTag8021Q;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -310,11 +341,11 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   // ==========
 
   // admin_enabled - computed: false, optional: true, required: false
-  private _adminEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _adminEnabled?: boolean | cdktf.IResolvable; 
   public get adminEnabled() {
     return this.getBooleanAttribute('admin_enabled') as any;
   }
-  public set adminEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set adminEnabled(value: boolean | cdktf.IResolvable) {
     this._adminEnabled = value;
   }
   public resetAdminEnabled() {
@@ -322,15 +353,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get adminEnabledInput() {
-    return this._adminEnabled
+    return this._adminEnabled;
   }
 
   // bandwidth - computed: true, optional: true, required: false
-  private _bandwidth?: string | undefined; 
+  private _bandwidth?: string; 
   public get bandwidth() {
     return this.getStringAttribute('bandwidth');
   }
-  public set bandwidth(value: string | undefined) {
+  public set bandwidth(value: string) {
     this._bandwidth = value;
   }
   public resetBandwidth() {
@@ -338,15 +369,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bandwidthInput() {
-    return this._bandwidth
+    return this._bandwidth;
   }
 
   // candidate_subnets - computed: false, optional: true, required: false
-  private _candidateSubnets?: string[] | undefined; 
+  private _candidateSubnets?: string[]; 
   public get candidateSubnets() {
     return this.getListAttribute('candidate_subnets');
   }
-  public set candidateSubnets(value: string[] | undefined) {
+  public set candidateSubnets(value: string[]) {
     this._candidateSubnets = value;
   }
   public resetCandidateSubnets() {
@@ -354,7 +385,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get candidateSubnetsInput() {
-    return this._candidateSubnets
+    return this._candidateSubnets;
   }
 
   // cloud_router_ip_address - computed: true, optional: false, required: false
@@ -373,11 +404,11 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -385,15 +416,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // edge_availability_domain - computed: true, optional: true, required: false
-  private _edgeAvailabilityDomain?: string | undefined; 
+  private _edgeAvailabilityDomain?: string; 
   public get edgeAvailabilityDomain() {
     return this.getStringAttribute('edge_availability_domain');
   }
-  public set edgeAvailabilityDomain(value: string | undefined) {
+  public set edgeAvailabilityDomain(value: string) {
     this._edgeAvailabilityDomain = value;
   }
   public resetEdgeAvailabilityDomain() {
@@ -401,15 +432,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get edgeAvailabilityDomainInput() {
-    return this._edgeAvailabilityDomain
+    return this._edgeAvailabilityDomain;
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption?: string | undefined; 
+  private _encryption?: string; 
   public get encryption() {
     return this.getStringAttribute('encryption');
   }
-  public set encryption(value: string | undefined) {
+  public set encryption(value: string) {
     this._encryption = value;
   }
   public resetEncryption() {
@@ -417,7 +448,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionInput() {
-    return this._encryption
+    return this._encryption;
   }
 
   // google_reference_id - computed: true, optional: false, required: false
@@ -431,11 +462,11 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
 
   // interconnect - computed: false, optional: true, required: false
-  private _interconnect?: string | undefined; 
+  private _interconnect?: string; 
   public get interconnect() {
     return this.getStringAttribute('interconnect');
   }
-  public set interconnect(value: string | undefined) {
+  public set interconnect(value: string) {
     this._interconnect = value;
   }
   public resetInterconnect() {
@@ -443,15 +474,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get interconnectInput() {
-    return this._interconnect
+    return this._interconnect;
   }
 
   // ipsec_internal_addresses - computed: false, optional: true, required: false
-  private _ipsecInternalAddresses?: string[] | undefined; 
+  private _ipsecInternalAddresses?: string[]; 
   public get ipsecInternalAddresses() {
     return this.getListAttribute('ipsec_internal_addresses');
   }
-  public set ipsecInternalAddresses(value: string[] | undefined) {
+  public set ipsecInternalAddresses(value: string[]) {
     this._ipsecInternalAddresses = value;
   }
   public resetIpsecInternalAddresses() {
@@ -459,15 +490,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipsecInternalAddressesInput() {
-    return this._ipsecInternalAddresses
+    return this._ipsecInternalAddresses;
   }
 
   // mtu - computed: true, optional: true, required: false
-  private _mtu?: string | undefined; 
+  private _mtu?: string; 
   public get mtu() {
     return this.getStringAttribute('mtu');
   }
-  public set mtu(value: string | undefined) {
+  public set mtu(value: string) {
     this._mtu = value;
   }
   public resetMtu() {
@@ -475,7 +506,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mtuInput() {
-    return this._mtu
+    return this._mtu;
   }
 
   // name - computed: false, optional: false, required: true
@@ -488,7 +519,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // pairing_key - computed: true, optional: false, required: false
@@ -507,11 +538,11 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -519,15 +550,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -535,7 +566,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // router - computed: false, optional: false, required: true
@@ -548,7 +579,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routerInput() {
-    return this._router
+    return this._router;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -562,11 +593,11 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
 
   // type - computed: true, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -574,15 +605,15 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // vlan_tag8021q - computed: true, optional: true, required: false
-  private _vlanTag8021Q?: number | undefined; 
+  private _vlanTag8021Q?: number; 
   public get vlanTag8021Q() {
     return this.getNumberAttribute('vlan_tag8021q');
   }
-  public set vlanTag8021Q(value: number | undefined) {
+  public set vlanTag8021Q(value: number) {
     this._vlanTag8021Q = value;
   }
   public resetVlanTag8021Q() {
@@ -590,24 +621,23 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get vlanTag8021QInput() {
-    return this._vlanTag8021Q
+    return this._vlanTag8021Q;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeInterconnectAttachmentTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeInterconnectAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInterconnectAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeInterconnectAttachmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeInterconnectAttachmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -631,7 +661,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
       router: cdktf.stringToTerraform(this._router),
       type: cdktf.stringToTerraform(this._type),
       vlan_tag8021q: cdktf.numberToTerraform(this._vlanTag8021Q),
-      timeouts: computeInterconnectAttachmentTimeoutsToTerraform(this._timeouts),
+      timeouts: computeInterconnectAttachmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

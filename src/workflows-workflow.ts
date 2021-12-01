@@ -76,7 +76,7 @@ export interface WorkflowsWorkflowTimeouts {
   readonly update?: string;
 }
 
-function workflowsWorkflowTimeoutsToTerraform(struct?: WorkflowsWorkflowTimeoutsOutputReference | WorkflowsWorkflowTimeouts): any {
+export function workflowsWorkflowTimeoutsToTerraform(struct?: WorkflowsWorkflowTimeoutsOutputReference | WorkflowsWorkflowTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -98,12 +98,43 @@ export class WorkflowsWorkflowTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): WorkflowsWorkflowTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WorkflowsWorkflowTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -111,15 +142,15 @@ export class WorkflowsWorkflowTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -127,15 +158,15 @@ export class WorkflowsWorkflowTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -143,7 +174,7 @@ export class WorkflowsWorkflowTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -187,7 +218,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
     this._region = config.region;
     this._serviceAccount = config.serviceAccount;
     this._sourceContents = config.sourceContents;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -200,11 +231,11 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // description - computed: true, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -212,7 +243,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -221,12 +252,12 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -234,15 +265,15 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -250,15 +281,15 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_prefix - computed: true, optional: true, required: false
-  private _namePrefix?: string | undefined; 
+  private _namePrefix?: string; 
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string) {
     this._namePrefix = value;
   }
   public resetNamePrefix() {
@@ -266,15 +297,15 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namePrefixInput() {
-    return this._namePrefix
+    return this._namePrefix;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -282,15 +313,15 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -298,7 +329,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // revision_id - computed: true, optional: false, required: false
@@ -307,11 +338,11 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // service_account - computed: true, optional: true, required: false
-  private _serviceAccount?: string | undefined; 
+  private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string | undefined) {
+  public set serviceAccount(value: string) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -319,15 +350,15 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount;
   }
 
   // source_contents - computed: false, optional: true, required: false
-  private _sourceContents?: string | undefined; 
+  private _sourceContents?: string; 
   public get sourceContents() {
     return this.getStringAttribute('source_contents');
   }
-  public set sourceContents(value: string | undefined) {
+  public set sourceContents(value: string) {
     this._sourceContents = value;
   }
   public resetSourceContents() {
@@ -335,7 +366,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceContentsInput() {
-    return this._sourceContents
+    return this._sourceContents;
   }
 
   // state - computed: true, optional: false, required: false
@@ -349,20 +380,19 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: WorkflowsWorkflowTimeouts | undefined; 
-  private __timeoutsOutput = new WorkflowsWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new WorkflowsWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: WorkflowsWorkflowTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: WorkflowsWorkflowTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -379,7 +409,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
       source_contents: cdktf.stringToTerraform(this._sourceContents),
-      timeouts: workflowsWorkflowTimeoutsToTerraform(this._timeouts),
+      timeouts: workflowsWorkflowTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

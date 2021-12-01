@@ -113,7 +113,7 @@ export interface TpuNodeSchedulingConfig {
   readonly preemptible: boolean | cdktf.IResolvable;
 }
 
-function tpuNodeSchedulingConfigToTerraform(struct?: TpuNodeSchedulingConfigOutputReference | TpuNodeSchedulingConfig): any {
+export function tpuNodeSchedulingConfigToTerraform(struct?: TpuNodeSchedulingConfigOutputReference | TpuNodeSchedulingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -133,6 +133,25 @@ export class TpuNodeSchedulingConfigOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TpuNodeSchedulingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._preemptible) {
+      hasAnyValues = true;
+      internalValueResult.preemptible = this._preemptible;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TpuNodeSchedulingConfig | undefined) {
+    if (value === undefined) {
+      this._preemptible = undefined;
+    }
+    else {
+      this._preemptible = value.preemptible;
+    }
+  }
+
   // preemptible - computed: false, optional: false, required: true
   private _preemptible?: boolean | cdktf.IResolvable; 
   public get preemptible() {
@@ -143,7 +162,7 @@ export class TpuNodeSchedulingConfigOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibleInput() {
-    return this._preemptible
+    return this._preemptible;
   }
 }
 export interface TpuNodeTimeouts {
@@ -161,7 +180,7 @@ export interface TpuNodeTimeouts {
   readonly update?: string;
 }
 
-function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeoutsOutputReference | TpuNodeTimeouts): any {
+export function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeoutsOutputReference | TpuNodeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -183,12 +202,43 @@ export class TpuNodeTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TpuNodeTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TpuNodeTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -196,15 +246,15 @@ export class TpuNodeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -212,15 +262,15 @@ export class TpuNodeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -228,7 +278,7 @@ export class TpuNodeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -274,8 +324,8 @@ export class TpuNode extends cdktf.TerraformResource {
     this._tensorflowVersion = config.tensorflowVersion;
     this._useServiceNetworking = config.useServiceNetworking;
     this._zone = config.zone;
-    this._schedulingConfig = config.schedulingConfig;
-    this._timeouts = config.timeouts;
+    this._schedulingConfig.internalValue = config.schedulingConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -292,15 +342,15 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get acceleratorTypeInput() {
-    return this._acceleratorType
+    return this._acceleratorType;
   }
 
   // cidr_block - computed: true, optional: true, required: false
-  private _cidrBlock?: string | undefined; 
+  private _cidrBlock?: string; 
   public get cidrBlock() {
     return this.getStringAttribute('cidr_block');
   }
-  public set cidrBlock(value: string | undefined) {
+  public set cidrBlock(value: string) {
     this._cidrBlock = value;
   }
   public resetCidrBlock() {
@@ -308,15 +358,15 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cidrBlockInput() {
-    return this._cidrBlock
+    return this._cidrBlock;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -324,7 +374,7 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -333,12 +383,12 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -346,7 +396,7 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -359,15 +409,15 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: true, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -375,7 +425,7 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // network_endpoints - computed: true, optional: false, required: false
@@ -384,11 +434,11 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -396,7 +446,7 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -414,15 +464,15 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tensorflowVersionInput() {
-    return this._tensorflowVersion
+    return this._tensorflowVersion;
   }
 
   // use_service_networking - computed: false, optional: true, required: false
-  private _useServiceNetworking?: boolean | cdktf.IResolvable | undefined; 
+  private _useServiceNetworking?: boolean | cdktf.IResolvable; 
   public get useServiceNetworking() {
     return this.getBooleanAttribute('use_service_networking') as any;
   }
-  public set useServiceNetworking(value: boolean | cdktf.IResolvable | undefined) {
+  public set useServiceNetworking(value: boolean | cdktf.IResolvable) {
     this._useServiceNetworking = value;
   }
   public resetUseServiceNetworking() {
@@ -430,15 +480,15 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get useServiceNetworkingInput() {
-    return this._useServiceNetworking
+    return this._useServiceNetworking;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -446,41 +496,39 @@ export class TpuNode extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // scheduling_config - computed: false, optional: true, required: false
-  private _schedulingConfig?: TpuNodeSchedulingConfig | undefined; 
-  private __schedulingConfigOutput = new TpuNodeSchedulingConfigOutputReference(this as any, "scheduling_config", true);
+  private _schedulingConfig = new TpuNodeSchedulingConfigOutputReference(this as any, "scheduling_config", true);
   public get schedulingConfig() {
-    return this.__schedulingConfigOutput;
+    return this._schedulingConfig;
   }
-  public putSchedulingConfig(value: TpuNodeSchedulingConfig | undefined) {
-    this._schedulingConfig = value;
+  public putSchedulingConfig(value: TpuNodeSchedulingConfig) {
+    this._schedulingConfig.internalValue = value;
   }
   public resetSchedulingConfig() {
-    this._schedulingConfig = undefined;
+    this._schedulingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get schedulingConfigInput() {
-    return this._schedulingConfig
+    return this._schedulingConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: TpuNodeTimeouts | undefined; 
-  private __timeoutsOutput = new TpuNodeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TpuNodeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: TpuNodeTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: TpuNodeTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -499,8 +547,8 @@ export class TpuNode extends cdktf.TerraformResource {
       tensorflow_version: cdktf.stringToTerraform(this._tensorflowVersion),
       use_service_networking: cdktf.booleanToTerraform(this._useServiceNetworking),
       zone: cdktf.stringToTerraform(this._zone),
-      scheduling_config: tpuNodeSchedulingConfigToTerraform(this._schedulingConfig),
-      timeouts: tpuNodeTimeoutsToTerraform(this._timeouts),
+      scheduling_config: tpuNodeSchedulingConfigToTerraform(this._schedulingConfig.internalValue),
+      timeouts: tpuNodeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -90,11 +90,11 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   // ==========
 
   // custom_support_level - computed: false, optional: true, required: false
-  private _customSupportLevel?: string | undefined; 
+  private _customSupportLevel?: string; 
   public get customSupportLevel() {
     return this.getStringAttribute('custom_support_level');
   }
-  public set customSupportLevel(value: string | undefined) {
+  public set customSupportLevel(value: string) {
     this._customSupportLevel = value;
   }
   public resetCustomSupportLevel() {
@@ -102,7 +102,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get customSupportLevelInput() {
-    return this._customSupportLevel
+    return this._customSupportLevel;
   }
 
   // full_resource_name - computed: false, optional: false, required: true
@@ -115,7 +115,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get fullResourceNameInput() {
-    return this._fullResourceName
+    return this._fullResourceName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -129,11 +129,11 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   }
 
   // stages - computed: false, optional: true, required: false
-  private _stages?: string[] | undefined; 
+  private _stages?: string[]; 
   public get stages() {
     return this.getListAttribute('stages');
   }
-  public set stages(value: string[] | undefined) {
+  public set stages(value: string[]) {
     this._stages = value;
   }
   public resetStages() {
@@ -141,7 +141,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get stagesInput() {
-    return this._stages
+    return this._stages;
   }
 
   // =========

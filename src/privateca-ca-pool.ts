@@ -73,7 +73,7 @@ export interface PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes {
   readonly allowCsrBasedIssuance: boolean | cdktf.IResolvable;
 }
 
-function privatecaCaPoolIssuancePolicyAllowedIssuanceModesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference | PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes): any {
+export function privatecaCaPoolIssuancePolicyAllowedIssuanceModesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference | PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,6 +94,31 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowConfigBasedIssuance) {
+      hasAnyValues = true;
+      internalValueResult.allowConfigBasedIssuance = this._allowConfigBasedIssuance;
+    }
+    if (this._allowCsrBasedIssuance) {
+      hasAnyValues = true;
+      internalValueResult.allowCsrBasedIssuance = this._allowCsrBasedIssuance;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined) {
+    if (value === undefined) {
+      this._allowConfigBasedIssuance = undefined;
+      this._allowCsrBasedIssuance = undefined;
+    }
+    else {
+      this._allowConfigBasedIssuance = value.allowConfigBasedIssuance;
+      this._allowCsrBasedIssuance = value.allowCsrBasedIssuance;
+    }
+  }
+
   // allow_config_based_issuance - computed: false, optional: false, required: true
   private _allowConfigBasedIssuance?: boolean | cdktf.IResolvable; 
   public get allowConfigBasedIssuance() {
@@ -104,7 +129,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get allowConfigBasedIssuanceInput() {
-    return this._allowConfigBasedIssuance
+    return this._allowConfigBasedIssuance;
   }
 
   // allow_csr_based_issuance - computed: false, optional: false, required: true
@@ -117,7 +142,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get allowCsrBasedIssuanceInput() {
-    return this._allowCsrBasedIssuance
+    return this._allowCsrBasedIssuance;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve {
@@ -129,7 +154,7 @@ export interface PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve {
   readonly signatureAlgorithm: string;
 }
 
-function privatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputReference | PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve): any {
+export function privatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputReference | PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -149,6 +174,25 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._signatureAlgorithm) {
+      hasAnyValues = true;
+      internalValueResult.signatureAlgorithm = this._signatureAlgorithm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve | undefined) {
+    if (value === undefined) {
+      this._signatureAlgorithm = undefined;
+    }
+    else {
+      this._signatureAlgorithm = value.signatureAlgorithm;
+    }
+  }
+
   // signature_algorithm - computed: false, optional: false, required: true
   private _signatureAlgorithm?: string; 
   public get signatureAlgorithm() {
@@ -159,7 +203,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get signatureAlgorithmInput() {
-    return this._signatureAlgorithm
+    return this._signatureAlgorithm;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa {
@@ -179,7 +223,7 @@ service-level min RSA modulus size will continue to apply.
   readonly minModulusSize?: string;
 }
 
-function privatecaCaPoolIssuancePolicyAllowedKeyTypesRsaToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference | PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa): any {
+export function privatecaCaPoolIssuancePolicyAllowedKeyTypesRsaToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference | PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -200,12 +244,37 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxModulusSize) {
+      hasAnyValues = true;
+      internalValueResult.maxModulusSize = this._maxModulusSize;
+    }
+    if (this._minModulusSize) {
+      hasAnyValues = true;
+      internalValueResult.minModulusSize = this._minModulusSize;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa | undefined) {
+    if (value === undefined) {
+      this._maxModulusSize = undefined;
+      this._minModulusSize = undefined;
+    }
+    else {
+      this._maxModulusSize = value.maxModulusSize;
+      this._minModulusSize = value.minModulusSize;
+    }
+  }
+
   // max_modulus_size - computed: false, optional: true, required: false
-  private _maxModulusSize?: string | undefined; 
+  private _maxModulusSize?: string; 
   public get maxModulusSize() {
     return this.getStringAttribute('max_modulus_size');
   }
-  public set maxModulusSize(value: string | undefined) {
+  public set maxModulusSize(value: string) {
     this._maxModulusSize = value;
   }
   public resetMaxModulusSize() {
@@ -213,15 +282,15 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get maxModulusSizeInput() {
-    return this._maxModulusSize
+    return this._maxModulusSize;
   }
 
   // min_modulus_size - computed: false, optional: true, required: false
-  private _minModulusSize?: string | undefined; 
+  private _minModulusSize?: string; 
   public get minModulusSize() {
     return this.getStringAttribute('min_modulus_size');
   }
-  public set minModulusSize(value: string | undefined) {
+  public set minModulusSize(value: string) {
     this._minModulusSize = value;
   }
   public resetMinModulusSize() {
@@ -229,7 +298,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get minModulusSizeInput() {
-    return this._minModulusSize
+    return this._minModulusSize;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyAllowedKeyTypes {
@@ -247,7 +316,7 @@ export interface PrivatecaCaPoolIssuancePolicyAllowedKeyTypes {
   readonly rsa?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa;
 }
 
-function privatecaCaPoolIssuancePolicyAllowedKeyTypesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypes): any {
+export function privatecaCaPoolIssuancePolicyAllowedKeyTypesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -267,7 +336,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions
   readonly objectIdPath: number[];
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectIdToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectIdOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectIdToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectIdOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -287,6 +356,25 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._objectIdPath) {
+      hasAnyValues = true;
+      internalValueResult.objectIdPath = this._objectIdPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId | undefined) {
+    if (value === undefined) {
+      this._objectIdPath = undefined;
+    }
+    else {
+      this._objectIdPath = value.objectIdPath;
+    }
+  }
+
   // object_id_path - computed: false, optional: false, required: true
   private _objectIdPath?: number[]; 
   public get objectIdPath() {
@@ -298,7 +386,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObje
   }
   // Temporarily expose input value. Use with caution.
   public get objectIdPathInput() {
-    return this._objectIdPath
+    return this._objectIdPath;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions {
@@ -323,7 +411,7 @@ handle this extension, the client should consider this to be an error).
   readonly objectId: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId;
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -353,7 +441,7 @@ value is missing, the max path length will be omitted from the CA certificate.
   readonly maxIssuerPathLength?: number;
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesCaOptionsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesCaOptionsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -374,12 +462,37 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._isCa) {
+      hasAnyValues = true;
+      internalValueResult.isCa = this._isCa;
+    }
+    if (this._maxIssuerPathLength) {
+      hasAnyValues = true;
+      internalValueResult.maxIssuerPathLength = this._maxIssuerPathLength;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions | undefined) {
+    if (value === undefined) {
+      this._isCa = undefined;
+      this._maxIssuerPathLength = undefined;
+    }
+    else {
+      this._isCa = value.isCa;
+      this._maxIssuerPathLength = value.maxIssuerPathLength;
+    }
+  }
+
   // is_ca - computed: false, optional: true, required: false
-  private _isCa?: boolean | cdktf.IResolvable | undefined; 
+  private _isCa?: boolean | cdktf.IResolvable; 
   public get isCa() {
     return this.getBooleanAttribute('is_ca') as any;
   }
-  public set isCa(value: boolean | cdktf.IResolvable | undefined) {
+  public set isCa(value: boolean | cdktf.IResolvable) {
     this._isCa = value;
   }
   public resetIsCa() {
@@ -387,15 +500,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get isCaInput() {
-    return this._isCa
+    return this._isCa;
   }
 
   // max_issuer_path_length - computed: false, optional: true, required: false
-  private _maxIssuerPathLength?: number | undefined; 
+  private _maxIssuerPathLength?: number; 
   public get maxIssuerPathLength() {
     return this.getNumberAttribute('max_issuer_path_length');
   }
-  public set maxIssuerPathLength(value: number | undefined) {
+  public set maxIssuerPathLength(value: number) {
     this._maxIssuerPathLength = value;
   }
   public resetMaxIssuerPathLength() {
@@ -403,7 +516,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get maxIssuerPathLengthInput() {
-    return this._maxIssuerPathLength
+    return this._maxIssuerPathLength;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage {
@@ -463,7 +576,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
   readonly keyEncipherment?: boolean | cdktf.IResolvable;
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -491,12 +604,79 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._certSign) {
+      hasAnyValues = true;
+      internalValueResult.certSign = this._certSign;
+    }
+    if (this._contentCommitment) {
+      hasAnyValues = true;
+      internalValueResult.contentCommitment = this._contentCommitment;
+    }
+    if (this._crlSign) {
+      hasAnyValues = true;
+      internalValueResult.crlSign = this._crlSign;
+    }
+    if (this._dataEncipherment) {
+      hasAnyValues = true;
+      internalValueResult.dataEncipherment = this._dataEncipherment;
+    }
+    if (this._decipherOnly) {
+      hasAnyValues = true;
+      internalValueResult.decipherOnly = this._decipherOnly;
+    }
+    if (this._digitalSignature) {
+      hasAnyValues = true;
+      internalValueResult.digitalSignature = this._digitalSignature;
+    }
+    if (this._encipherOnly) {
+      hasAnyValues = true;
+      internalValueResult.encipherOnly = this._encipherOnly;
+    }
+    if (this._keyAgreement) {
+      hasAnyValues = true;
+      internalValueResult.keyAgreement = this._keyAgreement;
+    }
+    if (this._keyEncipherment) {
+      hasAnyValues = true;
+      internalValueResult.keyEncipherment = this._keyEncipherment;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage | undefined) {
+    if (value === undefined) {
+      this._certSign = undefined;
+      this._contentCommitment = undefined;
+      this._crlSign = undefined;
+      this._dataEncipherment = undefined;
+      this._decipherOnly = undefined;
+      this._digitalSignature = undefined;
+      this._encipherOnly = undefined;
+      this._keyAgreement = undefined;
+      this._keyEncipherment = undefined;
+    }
+    else {
+      this._certSign = value.certSign;
+      this._contentCommitment = value.contentCommitment;
+      this._crlSign = value.crlSign;
+      this._dataEncipherment = value.dataEncipherment;
+      this._decipherOnly = value.decipherOnly;
+      this._digitalSignature = value.digitalSignature;
+      this._encipherOnly = value.encipherOnly;
+      this._keyAgreement = value.keyAgreement;
+      this._keyEncipherment = value.keyEncipherment;
+    }
+  }
+
   // cert_sign - computed: false, optional: true, required: false
-  private _certSign?: boolean | cdktf.IResolvable | undefined; 
+  private _certSign?: boolean | cdktf.IResolvable; 
   public get certSign() {
     return this.getBooleanAttribute('cert_sign') as any;
   }
-  public set certSign(value: boolean | cdktf.IResolvable | undefined) {
+  public set certSign(value: boolean | cdktf.IResolvable) {
     this._certSign = value;
   }
   public resetCertSign() {
@@ -504,15 +684,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get certSignInput() {
-    return this._certSign
+    return this._certSign;
   }
 
   // content_commitment - computed: false, optional: true, required: false
-  private _contentCommitment?: boolean | cdktf.IResolvable | undefined; 
+  private _contentCommitment?: boolean | cdktf.IResolvable; 
   public get contentCommitment() {
     return this.getBooleanAttribute('content_commitment') as any;
   }
-  public set contentCommitment(value: boolean | cdktf.IResolvable | undefined) {
+  public set contentCommitment(value: boolean | cdktf.IResolvable) {
     this._contentCommitment = value;
   }
   public resetContentCommitment() {
@@ -520,15 +700,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get contentCommitmentInput() {
-    return this._contentCommitment
+    return this._contentCommitment;
   }
 
   // crl_sign - computed: false, optional: true, required: false
-  private _crlSign?: boolean | cdktf.IResolvable | undefined; 
+  private _crlSign?: boolean | cdktf.IResolvable; 
   public get crlSign() {
     return this.getBooleanAttribute('crl_sign') as any;
   }
-  public set crlSign(value: boolean | cdktf.IResolvable | undefined) {
+  public set crlSign(value: boolean | cdktf.IResolvable) {
     this._crlSign = value;
   }
   public resetCrlSign() {
@@ -536,15 +716,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get crlSignInput() {
-    return this._crlSign
+    return this._crlSign;
   }
 
   // data_encipherment - computed: false, optional: true, required: false
-  private _dataEncipherment?: boolean | cdktf.IResolvable | undefined; 
+  private _dataEncipherment?: boolean | cdktf.IResolvable; 
   public get dataEncipherment() {
     return this.getBooleanAttribute('data_encipherment') as any;
   }
-  public set dataEncipherment(value: boolean | cdktf.IResolvable | undefined) {
+  public set dataEncipherment(value: boolean | cdktf.IResolvable) {
     this._dataEncipherment = value;
   }
   public resetDataEncipherment() {
@@ -552,15 +732,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get dataEnciphermentInput() {
-    return this._dataEncipherment
+    return this._dataEncipherment;
   }
 
   // decipher_only - computed: false, optional: true, required: false
-  private _decipherOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _decipherOnly?: boolean | cdktf.IResolvable; 
   public get decipherOnly() {
     return this.getBooleanAttribute('decipher_only') as any;
   }
-  public set decipherOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set decipherOnly(value: boolean | cdktf.IResolvable) {
     this._decipherOnly = value;
   }
   public resetDecipherOnly() {
@@ -568,15 +748,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get decipherOnlyInput() {
-    return this._decipherOnly
+    return this._decipherOnly;
   }
 
   // digital_signature - computed: false, optional: true, required: false
-  private _digitalSignature?: boolean | cdktf.IResolvable | undefined; 
+  private _digitalSignature?: boolean | cdktf.IResolvable; 
   public get digitalSignature() {
     return this.getBooleanAttribute('digital_signature') as any;
   }
-  public set digitalSignature(value: boolean | cdktf.IResolvable | undefined) {
+  public set digitalSignature(value: boolean | cdktf.IResolvable) {
     this._digitalSignature = value;
   }
   public resetDigitalSignature() {
@@ -584,15 +764,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get digitalSignatureInput() {
-    return this._digitalSignature
+    return this._digitalSignature;
   }
 
   // encipher_only - computed: false, optional: true, required: false
-  private _encipherOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _encipherOnly?: boolean | cdktf.IResolvable; 
   public get encipherOnly() {
     return this.getBooleanAttribute('encipher_only') as any;
   }
-  public set encipherOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set encipherOnly(value: boolean | cdktf.IResolvable) {
     this._encipherOnly = value;
   }
   public resetEncipherOnly() {
@@ -600,15 +780,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get encipherOnlyInput() {
-    return this._encipherOnly
+    return this._encipherOnly;
   }
 
   // key_agreement - computed: false, optional: true, required: false
-  private _keyAgreement?: boolean | cdktf.IResolvable | undefined; 
+  private _keyAgreement?: boolean | cdktf.IResolvable; 
   public get keyAgreement() {
     return this.getBooleanAttribute('key_agreement') as any;
   }
-  public set keyAgreement(value: boolean | cdktf.IResolvable | undefined) {
+  public set keyAgreement(value: boolean | cdktf.IResolvable) {
     this._keyAgreement = value;
   }
   public resetKeyAgreement() {
@@ -616,15 +796,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get keyAgreementInput() {
-    return this._keyAgreement
+    return this._keyAgreement;
   }
 
   // key_encipherment - computed: false, optional: true, required: false
-  private _keyEncipherment?: boolean | cdktf.IResolvable | undefined; 
+  private _keyEncipherment?: boolean | cdktf.IResolvable; 
   public get keyEncipherment() {
     return this.getBooleanAttribute('key_encipherment') as any;
   }
-  public set keyEncipherment(value: boolean | cdktf.IResolvable | undefined) {
+  public set keyEncipherment(value: boolean | cdktf.IResolvable) {
     this._keyEncipherment = value;
   }
   public resetKeyEncipherment() {
@@ -632,7 +812,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get keyEnciphermentInput() {
-    return this._keyEncipherment
+    return this._keyEncipherment;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage {
@@ -674,7 +854,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyU
   readonly timeStamping?: boolean | cdktf.IResolvable;
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -699,12 +879,61 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientAuth) {
+      hasAnyValues = true;
+      internalValueResult.clientAuth = this._clientAuth;
+    }
+    if (this._codeSigning) {
+      hasAnyValues = true;
+      internalValueResult.codeSigning = this._codeSigning;
+    }
+    if (this._emailProtection) {
+      hasAnyValues = true;
+      internalValueResult.emailProtection = this._emailProtection;
+    }
+    if (this._ocspSigning) {
+      hasAnyValues = true;
+      internalValueResult.ocspSigning = this._ocspSigning;
+    }
+    if (this._serverAuth) {
+      hasAnyValues = true;
+      internalValueResult.serverAuth = this._serverAuth;
+    }
+    if (this._timeStamping) {
+      hasAnyValues = true;
+      internalValueResult.timeStamping = this._timeStamping;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage | undefined) {
+    if (value === undefined) {
+      this._clientAuth = undefined;
+      this._codeSigning = undefined;
+      this._emailProtection = undefined;
+      this._ocspSigning = undefined;
+      this._serverAuth = undefined;
+      this._timeStamping = undefined;
+    }
+    else {
+      this._clientAuth = value.clientAuth;
+      this._codeSigning = value.codeSigning;
+      this._emailProtection = value.emailProtection;
+      this._ocspSigning = value.ocspSigning;
+      this._serverAuth = value.serverAuth;
+      this._timeStamping = value.timeStamping;
+    }
+  }
+
   // client_auth - computed: false, optional: true, required: false
-  private _clientAuth?: boolean | cdktf.IResolvable | undefined; 
+  private _clientAuth?: boolean | cdktf.IResolvable; 
   public get clientAuth() {
     return this.getBooleanAttribute('client_auth') as any;
   }
-  public set clientAuth(value: boolean | cdktf.IResolvable | undefined) {
+  public set clientAuth(value: boolean | cdktf.IResolvable) {
     this._clientAuth = value;
   }
   public resetClientAuth() {
@@ -712,15 +941,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
   // Temporarily expose input value. Use with caution.
   public get clientAuthInput() {
-    return this._clientAuth
+    return this._clientAuth;
   }
 
   // code_signing - computed: false, optional: true, required: false
-  private _codeSigning?: boolean | cdktf.IResolvable | undefined; 
+  private _codeSigning?: boolean | cdktf.IResolvable; 
   public get codeSigning() {
     return this.getBooleanAttribute('code_signing') as any;
   }
-  public set codeSigning(value: boolean | cdktf.IResolvable | undefined) {
+  public set codeSigning(value: boolean | cdktf.IResolvable) {
     this._codeSigning = value;
   }
   public resetCodeSigning() {
@@ -728,15 +957,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
   // Temporarily expose input value. Use with caution.
   public get codeSigningInput() {
-    return this._codeSigning
+    return this._codeSigning;
   }
 
   // email_protection - computed: false, optional: true, required: false
-  private _emailProtection?: boolean | cdktf.IResolvable | undefined; 
+  private _emailProtection?: boolean | cdktf.IResolvable; 
   public get emailProtection() {
     return this.getBooleanAttribute('email_protection') as any;
   }
-  public set emailProtection(value: boolean | cdktf.IResolvable | undefined) {
+  public set emailProtection(value: boolean | cdktf.IResolvable) {
     this._emailProtection = value;
   }
   public resetEmailProtection() {
@@ -744,15 +973,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
   // Temporarily expose input value. Use with caution.
   public get emailProtectionInput() {
-    return this._emailProtection
+    return this._emailProtection;
   }
 
   // ocsp_signing - computed: false, optional: true, required: false
-  private _ocspSigning?: boolean | cdktf.IResolvable | undefined; 
+  private _ocspSigning?: boolean | cdktf.IResolvable; 
   public get ocspSigning() {
     return this.getBooleanAttribute('ocsp_signing') as any;
   }
-  public set ocspSigning(value: boolean | cdktf.IResolvable | undefined) {
+  public set ocspSigning(value: boolean | cdktf.IResolvable) {
     this._ocspSigning = value;
   }
   public resetOcspSigning() {
@@ -760,15 +989,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
   // Temporarily expose input value. Use with caution.
   public get ocspSigningInput() {
-    return this._ocspSigning
+    return this._ocspSigning;
   }
 
   // server_auth - computed: false, optional: true, required: false
-  private _serverAuth?: boolean | cdktf.IResolvable | undefined; 
+  private _serverAuth?: boolean | cdktf.IResolvable; 
   public get serverAuth() {
     return this.getBooleanAttribute('server_auth') as any;
   }
-  public set serverAuth(value: boolean | cdktf.IResolvable | undefined) {
+  public set serverAuth(value: boolean | cdktf.IResolvable) {
     this._serverAuth = value;
   }
   public resetServerAuth() {
@@ -776,15 +1005,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
   // Temporarily expose input value. Use with caution.
   public get serverAuthInput() {
-    return this._serverAuth
+    return this._serverAuth;
   }
 
   // time_stamping - computed: false, optional: true, required: false
-  private _timeStamping?: boolean | cdktf.IResolvable | undefined; 
+  private _timeStamping?: boolean | cdktf.IResolvable; 
   public get timeStamping() {
     return this.getBooleanAttribute('time_stamping') as any;
   }
-  public set timeStamping(value: boolean | cdktf.IResolvable | undefined) {
+  public set timeStamping(value: boolean | cdktf.IResolvable) {
     this._timeStamping = value;
   }
   public resetTimeStamping() {
@@ -792,7 +1021,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
   // Temporarily expose input value. Use with caution.
   public get timeStampingInput() {
-    return this._timeStamping
+    return this._timeStamping;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages {
@@ -804,7 +1033,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExten
   readonly objectIdPath: number[];
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsagesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsagesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -835,7 +1064,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage {
   readonly unknownExtendedKeyUsages?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages[];
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -857,41 +1086,70 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._baseKeyUsage) {
+      hasAnyValues = true;
+      internalValueResult.baseKeyUsage = this._baseKeyUsage?.internalValue;
+    }
+    if (this._extendedKeyUsage) {
+      hasAnyValues = true;
+      internalValueResult.extendedKeyUsage = this._extendedKeyUsage?.internalValue;
+    }
+    if (this._unknownExtendedKeyUsages) {
+      hasAnyValues = true;
+      internalValueResult.unknownExtendedKeyUsages = this._unknownExtendedKeyUsages;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage | undefined) {
+    if (value === undefined) {
+      this._baseKeyUsage.internalValue = undefined;
+      this._extendedKeyUsage.internalValue = undefined;
+      this._unknownExtendedKeyUsages = undefined;
+    }
+    else {
+      this._baseKeyUsage.internalValue = value.baseKeyUsage;
+      this._extendedKeyUsage.internalValue = value.extendedKeyUsage;
+      this._unknownExtendedKeyUsages = value.unknownExtendedKeyUsages;
+    }
+  }
+
   // base_key_usage - computed: false, optional: false, required: true
-  private _baseKeyUsage?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage; 
-  private __baseKeyUsageOutput = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference(this as any, "base_key_usage", true);
+  private _baseKeyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference(this as any, "base_key_usage", true);
   public get baseKeyUsage() {
-    return this.__baseKeyUsageOutput;
+    return this._baseKeyUsage;
   }
   public putBaseKeyUsage(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage) {
-    this._baseKeyUsage = value;
+    this._baseKeyUsage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get baseKeyUsageInput() {
-    return this._baseKeyUsage
+    return this._baseKeyUsage.internalValue;
   }
 
   // extended_key_usage - computed: false, optional: false, required: true
-  private _extendedKeyUsage?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage; 
-  private __extendedKeyUsageOutput = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference(this as any, "extended_key_usage", true);
+  private _extendedKeyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference(this as any, "extended_key_usage", true);
   public get extendedKeyUsage() {
-    return this.__extendedKeyUsageOutput;
+    return this._extendedKeyUsage;
   }
   public putExtendedKeyUsage(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage) {
-    this._extendedKeyUsage = value;
+    this._extendedKeyUsage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get extendedKeyUsageInput() {
-    return this._extendedKeyUsage
+    return this._extendedKeyUsage.internalValue;
   }
 
   // unknown_extended_key_usages - computed: false, optional: true, required: false
-  private _unknownExtendedKeyUsages?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages[] | undefined; 
+  private _unknownExtendedKeyUsages?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages[]; 
   public get unknownExtendedKeyUsages() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('unknown_extended_key_usages') as any;
   }
-  public set unknownExtendedKeyUsages(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages[] | undefined) {
+  public set unknownExtendedKeyUsages(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages[]) {
     this._unknownExtendedKeyUsages = value;
   }
   public resetUnknownExtendedKeyUsages() {
@@ -899,7 +1157,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get unknownExtendedKeyUsagesInput() {
-    return this._unknownExtendedKeyUsages
+    return this._unknownExtendedKeyUsages;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds {
@@ -911,7 +1169,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds {
   readonly objectIdPath: number[];
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesPolicyIdsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesPolicyIdsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -955,7 +1213,7 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValues {
   readonly policyIds?: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds[];
 }
 
-function privatecaCaPoolIssuancePolicyBaselineValuesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValues): any {
+export function privatecaCaPoolIssuancePolicyBaselineValuesToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValues): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -979,12 +1237,55 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValues | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._aiaOcspServers) {
+      hasAnyValues = true;
+      internalValueResult.aiaOcspServers = this._aiaOcspServers;
+    }
+    if (this._additionalExtensions) {
+      hasAnyValues = true;
+      internalValueResult.additionalExtensions = this._additionalExtensions;
+    }
+    if (this._caOptions) {
+      hasAnyValues = true;
+      internalValueResult.caOptions = this._caOptions?.internalValue;
+    }
+    if (this._keyUsage) {
+      hasAnyValues = true;
+      internalValueResult.keyUsage = this._keyUsage?.internalValue;
+    }
+    if (this._policyIds) {
+      hasAnyValues = true;
+      internalValueResult.policyIds = this._policyIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValues | undefined) {
+    if (value === undefined) {
+      this._aiaOcspServers = undefined;
+      this._additionalExtensions = undefined;
+      this._caOptions.internalValue = undefined;
+      this._keyUsage.internalValue = undefined;
+      this._policyIds = undefined;
+    }
+    else {
+      this._aiaOcspServers = value.aiaOcspServers;
+      this._additionalExtensions = value.additionalExtensions;
+      this._caOptions.internalValue = value.caOptions;
+      this._keyUsage.internalValue = value.keyUsage;
+      this._policyIds = value.policyIds;
+    }
+  }
+
   // aia_ocsp_servers - computed: false, optional: true, required: false
-  private _aiaOcspServers?: string[] | undefined; 
+  private _aiaOcspServers?: string[]; 
   public get aiaOcspServers() {
     return this.getListAttribute('aia_ocsp_servers');
   }
-  public set aiaOcspServers(value: string[] | undefined) {
+  public set aiaOcspServers(value: string[]) {
     this._aiaOcspServers = value;
   }
   public resetAiaOcspServers() {
@@ -992,16 +1293,16 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get aiaOcspServersInput() {
-    return this._aiaOcspServers
+    return this._aiaOcspServers;
   }
 
   // additional_extensions - computed: false, optional: true, required: false
-  private _additionalExtensions?: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions[] | undefined; 
+  private _additionalExtensions?: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions[]; 
   public get additionalExtensions() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_extensions') as any;
   }
-  public set additionalExtensions(value: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions[] | undefined) {
+  public set additionalExtensions(value: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensions[]) {
     this._additionalExtensions = value;
   }
   public resetAdditionalExtensions() {
@@ -1009,44 +1310,42 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get additionalExtensionsInput() {
-    return this._additionalExtensions
+    return this._additionalExtensions;
   }
 
   // ca_options - computed: false, optional: false, required: true
-  private _caOptions?: PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions; 
-  private __caOptionsOutput = new PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference(this as any, "ca_options", true);
+  private _caOptions = new PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference(this as any, "ca_options", true);
   public get caOptions() {
-    return this.__caOptionsOutput;
+    return this._caOptions;
   }
   public putCaOptions(value: PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions) {
-    this._caOptions = value;
+    this._caOptions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get caOptionsInput() {
-    return this._caOptions
+    return this._caOptions.internalValue;
   }
 
   // key_usage - computed: false, optional: false, required: true
-  private _keyUsage?: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage; 
-  private __keyUsageOutput = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference(this as any, "key_usage", true);
+  private _keyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference(this as any, "key_usage", true);
   public get keyUsage() {
-    return this.__keyUsageOutput;
+    return this._keyUsage;
   }
   public putKeyUsage(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage) {
-    this._keyUsage = value;
+    this._keyUsage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get keyUsageInput() {
-    return this._keyUsage
+    return this._keyUsage.internalValue;
   }
 
   // policy_ids - computed: false, optional: true, required: false
-  private _policyIds?: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds[] | undefined; 
+  private _policyIds?: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds[]; 
   public get policyIds() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('policy_ids') as any;
   }
-  public set policyIds(value: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds[] | undefined) {
+  public set policyIds(value: PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds[]) {
     this._policyIds = value;
   }
   public resetPolicyIds() {
@@ -1054,7 +1353,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get policyIdsInput() {
-    return this._policyIds
+    return this._policyIds;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression {
@@ -1084,7 +1383,7 @@ export interface PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression {
   readonly title?: string;
 }
 
-function privatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionToTerraform(struct?: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference | PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression): any {
+export function privatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionToTerraform(struct?: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference | PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1107,12 +1406,49 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._expression) {
+      hasAnyValues = true;
+      internalValueResult.expression = this._expression;
+    }
+    if (this._location) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._title) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined) {
+    if (value === undefined) {
+      this._description = undefined;
+      this._expression = undefined;
+      this._location = undefined;
+      this._title = undefined;
+    }
+    else {
+      this._description = value.description;
+      this._expression = value.expression;
+      this._location = value.location;
+      this._title = value.title;
+    }
+  }
+
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1120,7 +1456,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // expression - computed: false, optional: false, required: true
@@ -1133,15 +1469,15 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   }
   // Temporarily expose input value. Use with caution.
   public get expressionInput() {
-    return this._expression
+    return this._expression;
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -1149,15 +1485,15 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // title - computed: false, optional: true, required: false
-  private _title?: string | undefined; 
+  private _title?: string; 
   public get title() {
     return this.getStringAttribute('title');
   }
-  public set title(value: string | undefined) {
+  public set title(value: string) {
     this._title = value;
   }
   public resetTitle() {
@@ -1165,7 +1501,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicyIdentityConstraints {
@@ -1191,7 +1527,7 @@ Otherwise, the requested Subject will be discarded.
   readonly celExpression?: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression;
 }
 
-function privatecaCaPoolIssuancePolicyIdentityConstraintsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference | PrivatecaCaPoolIssuancePolicyIdentityConstraints): any {
+export function privatecaCaPoolIssuancePolicyIdentityConstraintsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference | PrivatecaCaPoolIssuancePolicyIdentityConstraints): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1213,6 +1549,37 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowSubjectAltNamesPassthrough) {
+      hasAnyValues = true;
+      internalValueResult.allowSubjectAltNamesPassthrough = this._allowSubjectAltNamesPassthrough;
+    }
+    if (this._allowSubjectPassthrough) {
+      hasAnyValues = true;
+      internalValueResult.allowSubjectPassthrough = this._allowSubjectPassthrough;
+    }
+    if (this._celExpression) {
+      hasAnyValues = true;
+      internalValueResult.celExpression = this._celExpression?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined) {
+    if (value === undefined) {
+      this._allowSubjectAltNamesPassthrough = undefined;
+      this._allowSubjectPassthrough = undefined;
+      this._celExpression.internalValue = undefined;
+    }
+    else {
+      this._allowSubjectAltNamesPassthrough = value.allowSubjectAltNamesPassthrough;
+      this._allowSubjectPassthrough = value.allowSubjectPassthrough;
+      this._celExpression.internalValue = value.celExpression;
+    }
+  }
+
   // allow_subject_alt_names_passthrough - computed: false, optional: false, required: true
   private _allowSubjectAltNamesPassthrough?: boolean | cdktf.IResolvable; 
   public get allowSubjectAltNamesPassthrough() {
@@ -1223,7 +1590,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get allowSubjectAltNamesPassthroughInput() {
-    return this._allowSubjectAltNamesPassthrough
+    return this._allowSubjectAltNamesPassthrough;
   }
 
   // allow_subject_passthrough - computed: false, optional: false, required: true
@@ -1236,24 +1603,23 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get allowSubjectPassthroughInput() {
-    return this._allowSubjectPassthrough
+    return this._allowSubjectPassthrough;
   }
 
   // cel_expression - computed: false, optional: true, required: false
-  private _celExpression?: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined; 
-  private __celExpressionOutput = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference(this as any, "cel_expression", true);
+  private _celExpression = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference(this as any, "cel_expression", true);
   public get celExpression() {
-    return this.__celExpressionOutput;
+    return this._celExpression;
   }
-  public putCelExpression(value: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined) {
-    this._celExpression = value;
+  public putCelExpression(value: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression) {
+    this._celExpression.internalValue = value;
   }
   public resetCelExpression() {
-    this._celExpression = undefined;
+    this._celExpression.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get celExpressionInput() {
-    return this._celExpression
+    return this._celExpression.internalValue;
   }
 }
 export interface PrivatecaCaPoolIssuancePolicy {
@@ -1290,7 +1656,7 @@ expires before a Certificate's requested maximumLifetime, the effective lifetime
   readonly identityConstraints?: PrivatecaCaPoolIssuancePolicyIdentityConstraints;
 }
 
-function privatecaCaPoolIssuancePolicyToTerraform(struct?: PrivatecaCaPoolIssuancePolicyOutputReference | PrivatecaCaPoolIssuancePolicy): any {
+export function privatecaCaPoolIssuancePolicyToTerraform(struct?: PrivatecaCaPoolIssuancePolicyOutputReference | PrivatecaCaPoolIssuancePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1314,12 +1680,55 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolIssuancePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maximumLifetime) {
+      hasAnyValues = true;
+      internalValueResult.maximumLifetime = this._maximumLifetime;
+    }
+    if (this._allowedIssuanceModes) {
+      hasAnyValues = true;
+      internalValueResult.allowedIssuanceModes = this._allowedIssuanceModes?.internalValue;
+    }
+    if (this._allowedKeyTypes) {
+      hasAnyValues = true;
+      internalValueResult.allowedKeyTypes = this._allowedKeyTypes;
+    }
+    if (this._baselineValues) {
+      hasAnyValues = true;
+      internalValueResult.baselineValues = this._baselineValues?.internalValue;
+    }
+    if (this._identityConstraints) {
+      hasAnyValues = true;
+      internalValueResult.identityConstraints = this._identityConstraints?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicy | undefined) {
+    if (value === undefined) {
+      this._maximumLifetime = undefined;
+      this._allowedIssuanceModes.internalValue = undefined;
+      this._allowedKeyTypes = undefined;
+      this._baselineValues.internalValue = undefined;
+      this._identityConstraints.internalValue = undefined;
+    }
+    else {
+      this._maximumLifetime = value.maximumLifetime;
+      this._allowedIssuanceModes.internalValue = value.allowedIssuanceModes;
+      this._allowedKeyTypes = value.allowedKeyTypes;
+      this._baselineValues.internalValue = value.baselineValues;
+      this._identityConstraints.internalValue = value.identityConstraints;
+    }
+  }
+
   // maximum_lifetime - computed: false, optional: true, required: false
-  private _maximumLifetime?: string | undefined; 
+  private _maximumLifetime?: string; 
   public get maximumLifetime() {
     return this.getStringAttribute('maximum_lifetime');
   }
-  public set maximumLifetime(value: string | undefined) {
+  public set maximumLifetime(value: string) {
     this._maximumLifetime = value;
   }
   public resetMaximumLifetime() {
@@ -1327,33 +1736,32 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get maximumLifetimeInput() {
-    return this._maximumLifetime
+    return this._maximumLifetime;
   }
 
   // allowed_issuance_modes - computed: false, optional: true, required: false
-  private _allowedIssuanceModes?: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined; 
-  private __allowedIssuanceModesOutput = new PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference(this as any, "allowed_issuance_modes", true);
+  private _allowedIssuanceModes = new PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference(this as any, "allowed_issuance_modes", true);
   public get allowedIssuanceModes() {
-    return this.__allowedIssuanceModesOutput;
+    return this._allowedIssuanceModes;
   }
-  public putAllowedIssuanceModes(value: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined) {
-    this._allowedIssuanceModes = value;
+  public putAllowedIssuanceModes(value: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes) {
+    this._allowedIssuanceModes.internalValue = value;
   }
   public resetAllowedIssuanceModes() {
-    this._allowedIssuanceModes = undefined;
+    this._allowedIssuanceModes.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get allowedIssuanceModesInput() {
-    return this._allowedIssuanceModes
+    return this._allowedIssuanceModes.internalValue;
   }
 
   // allowed_key_types - computed: false, optional: true, required: false
-  private _allowedKeyTypes?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypes[] | undefined; 
+  private _allowedKeyTypes?: PrivatecaCaPoolIssuancePolicyAllowedKeyTypes[]; 
   public get allowedKeyTypes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allowed_key_types') as any;
   }
-  public set allowedKeyTypes(value: PrivatecaCaPoolIssuancePolicyAllowedKeyTypes[] | undefined) {
+  public set allowedKeyTypes(value: PrivatecaCaPoolIssuancePolicyAllowedKeyTypes[]) {
     this._allowedKeyTypes = value;
   }
   public resetAllowedKeyTypes() {
@@ -1361,41 +1769,39 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get allowedKeyTypesInput() {
-    return this._allowedKeyTypes
+    return this._allowedKeyTypes;
   }
 
   // baseline_values - computed: false, optional: true, required: false
-  private _baselineValues?: PrivatecaCaPoolIssuancePolicyBaselineValues | undefined; 
-  private __baselineValuesOutput = new PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference(this as any, "baseline_values", true);
+  private _baselineValues = new PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference(this as any, "baseline_values", true);
   public get baselineValues() {
-    return this.__baselineValuesOutput;
+    return this._baselineValues;
   }
-  public putBaselineValues(value: PrivatecaCaPoolIssuancePolicyBaselineValues | undefined) {
-    this._baselineValues = value;
+  public putBaselineValues(value: PrivatecaCaPoolIssuancePolicyBaselineValues) {
+    this._baselineValues.internalValue = value;
   }
   public resetBaselineValues() {
-    this._baselineValues = undefined;
+    this._baselineValues.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get baselineValuesInput() {
-    return this._baselineValues
+    return this._baselineValues.internalValue;
   }
 
   // identity_constraints - computed: false, optional: true, required: false
-  private _identityConstraints?: PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined; 
-  private __identityConstraintsOutput = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference(this as any, "identity_constraints", true);
+  private _identityConstraints = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference(this as any, "identity_constraints", true);
   public get identityConstraints() {
-    return this.__identityConstraintsOutput;
+    return this._identityConstraints;
   }
-  public putIdentityConstraints(value: PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined) {
-    this._identityConstraints = value;
+  public putIdentityConstraints(value: PrivatecaCaPoolIssuancePolicyIdentityConstraints) {
+    this._identityConstraints.internalValue = value;
   }
   public resetIdentityConstraints() {
-    this._identityConstraints = undefined;
+    this._identityConstraints.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityConstraintsInput() {
-    return this._identityConstraints
+    return this._identityConstraints.internalValue;
   }
 }
 export interface PrivatecaCaPoolPublishingOptions {
@@ -1418,7 +1824,7 @@ also rebuilt shortly after a certificate is revoked.
   readonly publishCrl: boolean | cdktf.IResolvable;
 }
 
-function privatecaCaPoolPublishingOptionsToTerraform(struct?: PrivatecaCaPoolPublishingOptionsOutputReference | PrivatecaCaPoolPublishingOptions): any {
+export function privatecaCaPoolPublishingOptionsToTerraform(struct?: PrivatecaCaPoolPublishingOptionsOutputReference | PrivatecaCaPoolPublishingOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1439,6 +1845,31 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolPublishingOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._publishCaCert) {
+      hasAnyValues = true;
+      internalValueResult.publishCaCert = this._publishCaCert;
+    }
+    if (this._publishCrl) {
+      hasAnyValues = true;
+      internalValueResult.publishCrl = this._publishCrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolPublishingOptions | undefined) {
+    if (value === undefined) {
+      this._publishCaCert = undefined;
+      this._publishCrl = undefined;
+    }
+    else {
+      this._publishCaCert = value.publishCaCert;
+      this._publishCrl = value.publishCrl;
+    }
+  }
+
   // publish_ca_cert - computed: false, optional: false, required: true
   private _publishCaCert?: boolean | cdktf.IResolvable; 
   public get publishCaCert() {
@@ -1449,7 +1880,7 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get publishCaCertInput() {
-    return this._publishCaCert
+    return this._publishCaCert;
   }
 
   // publish_crl - computed: false, optional: false, required: true
@@ -1462,7 +1893,7 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get publishCrlInput() {
-    return this._publishCrl
+    return this._publishCrl;
   }
 }
 export interface PrivatecaCaPoolTimeouts {
@@ -1480,7 +1911,7 @@ export interface PrivatecaCaPoolTimeouts {
   readonly update?: string;
 }
 
-function privatecaCaPoolTimeoutsToTerraform(struct?: PrivatecaCaPoolTimeoutsOutputReference | PrivatecaCaPoolTimeouts): any {
+export function privatecaCaPoolTimeoutsToTerraform(struct?: PrivatecaCaPoolTimeoutsOutputReference | PrivatecaCaPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1502,12 +1933,43 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivatecaCaPoolTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1515,15 +1977,15 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1531,15 +1993,15 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1547,7 +2009,7 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1588,9 +2050,9 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._tier = config.tier;
-    this._issuancePolicy = config.issuancePolicy;
-    this._publishingOptions = config.publishingOptions;
-    this._timeouts = config.timeouts;
+    this._issuancePolicy.internalValue = config.issuancePolicy;
+    this._publishingOptions.internalValue = config.publishingOptions;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1603,12 +2065,12 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1616,7 +2078,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1629,7 +2091,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1642,15 +2104,15 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1658,7 +2120,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // tier - computed: false, optional: false, required: true
@@ -1671,58 +2133,55 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
-    return this._tier
+    return this._tier;
   }
 
   // issuance_policy - computed: false, optional: true, required: false
-  private _issuancePolicy?: PrivatecaCaPoolIssuancePolicy | undefined; 
-  private __issuancePolicyOutput = new PrivatecaCaPoolIssuancePolicyOutputReference(this as any, "issuance_policy", true);
+  private _issuancePolicy = new PrivatecaCaPoolIssuancePolicyOutputReference(this as any, "issuance_policy", true);
   public get issuancePolicy() {
-    return this.__issuancePolicyOutput;
+    return this._issuancePolicy;
   }
-  public putIssuancePolicy(value: PrivatecaCaPoolIssuancePolicy | undefined) {
-    this._issuancePolicy = value;
+  public putIssuancePolicy(value: PrivatecaCaPoolIssuancePolicy) {
+    this._issuancePolicy.internalValue = value;
   }
   public resetIssuancePolicy() {
-    this._issuancePolicy = undefined;
+    this._issuancePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get issuancePolicyInput() {
-    return this._issuancePolicy
+    return this._issuancePolicy.internalValue;
   }
 
   // publishing_options - computed: false, optional: true, required: false
-  private _publishingOptions?: PrivatecaCaPoolPublishingOptions | undefined; 
-  private __publishingOptionsOutput = new PrivatecaCaPoolPublishingOptionsOutputReference(this as any, "publishing_options", true);
+  private _publishingOptions = new PrivatecaCaPoolPublishingOptionsOutputReference(this as any, "publishing_options", true);
   public get publishingOptions() {
-    return this.__publishingOptionsOutput;
+    return this._publishingOptions;
   }
-  public putPublishingOptions(value: PrivatecaCaPoolPublishingOptions | undefined) {
-    this._publishingOptions = value;
+  public putPublishingOptions(value: PrivatecaCaPoolPublishingOptions) {
+    this._publishingOptions.internalValue = value;
   }
   public resetPublishingOptions() {
-    this._publishingOptions = undefined;
+    this._publishingOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get publishingOptionsInput() {
-    return this._publishingOptions
+    return this._publishingOptions.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PrivatecaCaPoolTimeouts | undefined; 
-  private __timeoutsOutput = new PrivatecaCaPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivatecaCaPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PrivatecaCaPoolTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PrivatecaCaPoolTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1736,9 +2195,9 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       tier: cdktf.stringToTerraform(this._tier),
-      issuance_policy: privatecaCaPoolIssuancePolicyToTerraform(this._issuancePolicy),
-      publishing_options: privatecaCaPoolPublishingOptionsToTerraform(this._publishingOptions),
-      timeouts: privatecaCaPoolTimeoutsToTerraform(this._timeouts),
+      issuance_policy: privatecaCaPoolIssuancePolicyToTerraform(this._issuancePolicy.internalValue),
+      publishing_options: privatecaCaPoolPublishingOptionsToTerraform(this._publishingOptions.internalValue),
+      timeouts: privatecaCaPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

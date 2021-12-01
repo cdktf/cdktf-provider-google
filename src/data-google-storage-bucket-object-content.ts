@@ -90,7 +90,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // cache_control - computed: true, optional: false, required: false
@@ -99,11 +99,11 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
 
   // content - computed: false, optional: true, required: false
-  private _content?: string | undefined; 
+  private _content?: string; 
   public get content() {
     return this.getStringAttribute('content');
   }
-  public set content(value: string | undefined) {
+  public set content(value: string) {
     this._content = value;
   }
   public resetContent() {
@@ -111,7 +111,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get contentInput() {
-    return this._content
+    return this._content;
   }
 
   // content_disposition - computed: true, optional: false, required: false
@@ -189,7 +189,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // output_name - computed: true, optional: false, required: false

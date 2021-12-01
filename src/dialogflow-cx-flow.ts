@@ -80,7 +80,7 @@ export interface DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText {
   readonly text?: string[];
 }
 
-function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText): any {
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -100,12 +100,31 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputRe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._text) {
+      hasAnyValues = true;
+      internalValueResult.text = this._text;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText | undefined) {
+    if (value === undefined) {
+      this._text = undefined;
+    }
+    else {
+      this._text = value.text;
+    }
+  }
+
   // text - computed: false, optional: true, required: false
-  private _text?: string[] | undefined; 
+  private _text?: string[]; 
   public get text() {
     return this.getListAttribute('text');
   }
-  public set text(value: string[] | undefined) {
+  public set text(value: string[]) {
     this._text = value;
   }
   public resetText() {
@@ -113,7 +132,7 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get textInput() {
-    return this._text
+    return this._text;
   }
 }
 export interface DialogflowCxFlowEventHandlersTriggerFulfillmentMessages {
@@ -125,7 +144,7 @@ export interface DialogflowCxFlowEventHandlersTriggerFulfillmentMessages {
   readonly text?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText;
 }
 
-function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages): any {
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -162,7 +181,7 @@ export interface DialogflowCxFlowEventHandlersTriggerFulfillment {
   readonly messages?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages[];
 }
 
-function dialogflowCxFlowEventHandlersTriggerFulfillmentToTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillment): any {
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentToTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -185,12 +204,49 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillment | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._returnPartialResponses) {
+      hasAnyValues = true;
+      internalValueResult.returnPartialResponses = this._returnPartialResponses;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    if (this._webhook) {
+      hasAnyValues = true;
+      internalValueResult.webhook = this._webhook;
+    }
+    if (this._messages) {
+      hasAnyValues = true;
+      internalValueResult.messages = this._messages;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxFlowEventHandlersTriggerFulfillment | undefined) {
+    if (value === undefined) {
+      this._returnPartialResponses = undefined;
+      this._tag = undefined;
+      this._webhook = undefined;
+      this._messages = undefined;
+    }
+    else {
+      this._returnPartialResponses = value.returnPartialResponses;
+      this._tag = value.tag;
+      this._webhook = value.webhook;
+      this._messages = value.messages;
+    }
+  }
+
   // return_partial_responses - computed: false, optional: true, required: false
-  private _returnPartialResponses?: boolean | cdktf.IResolvable | undefined; 
+  private _returnPartialResponses?: boolean | cdktf.IResolvable; 
   public get returnPartialResponses() {
     return this.getBooleanAttribute('return_partial_responses') as any;
   }
-  public set returnPartialResponses(value: boolean | cdktf.IResolvable | undefined) {
+  public set returnPartialResponses(value: boolean | cdktf.IResolvable) {
     this._returnPartialResponses = value;
   }
   public resetReturnPartialResponses() {
@@ -198,15 +254,15 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get returnPartialResponsesInput() {
-    return this._returnPartialResponses
+    return this._returnPartialResponses;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: string | undefined; 
+  private _tag?: string; 
   public get tag() {
     return this.getStringAttribute('tag');
   }
-  public set tag(value: string | undefined) {
+  public set tag(value: string) {
     this._tag = value;
   }
   public resetTag() {
@@ -214,15 +270,15 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 
   // webhook - computed: false, optional: true, required: false
-  private _webhook?: string | undefined; 
+  private _webhook?: string; 
   public get webhook() {
     return this.getStringAttribute('webhook');
   }
-  public set webhook(value: string | undefined) {
+  public set webhook(value: string) {
     this._webhook = value;
   }
   public resetWebhook() {
@@ -230,16 +286,16 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get webhookInput() {
-    return this._webhook
+    return this._webhook;
   }
 
   // messages - computed: false, optional: true, required: false
-  private _messages?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages[] | undefined; 
+  private _messages?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages[]; 
   public get messages() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('messages') as any;
   }
-  public set messages(value: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages[] | undefined) {
+  public set messages(value: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages[]) {
     this._messages = value;
   }
   public resetMessages() {
@@ -247,7 +303,7 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get messagesInput() {
-    return this._messages
+    return this._messages;
   }
 }
 export interface DialogflowCxFlowEventHandlers {
@@ -279,7 +335,7 @@ Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<F
   readonly triggerFulfillment?: DialogflowCxFlowEventHandlersTriggerFulfillment;
 }
 
-function dialogflowCxFlowEventHandlersToTerraform(struct?: DialogflowCxFlowEventHandlers): any {
+export function dialogflowCxFlowEventHandlersToTerraform(struct?: DialogflowCxFlowEventHandlers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -318,7 +374,7 @@ If the returned score value is less than the threshold value, then a no-match ev
   readonly modelType?: string;
 }
 
-function dialogflowCxFlowNluSettingsToTerraform(struct?: DialogflowCxFlowNluSettingsOutputReference | DialogflowCxFlowNluSettings): any {
+export function dialogflowCxFlowNluSettingsToTerraform(struct?: DialogflowCxFlowNluSettingsOutputReference | DialogflowCxFlowNluSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -340,12 +396,43 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxFlowNluSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._classificationThreshold) {
+      hasAnyValues = true;
+      internalValueResult.classificationThreshold = this._classificationThreshold;
+    }
+    if (this._modelTrainingMode) {
+      hasAnyValues = true;
+      internalValueResult.modelTrainingMode = this._modelTrainingMode;
+    }
+    if (this._modelType) {
+      hasAnyValues = true;
+      internalValueResult.modelType = this._modelType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxFlowNluSettings | undefined) {
+    if (value === undefined) {
+      this._classificationThreshold = undefined;
+      this._modelTrainingMode = undefined;
+      this._modelType = undefined;
+    }
+    else {
+      this._classificationThreshold = value.classificationThreshold;
+      this._modelTrainingMode = value.modelTrainingMode;
+      this._modelType = value.modelType;
+    }
+  }
+
   // classification_threshold - computed: false, optional: true, required: false
-  private _classificationThreshold?: number | undefined; 
+  private _classificationThreshold?: number; 
   public get classificationThreshold() {
     return this.getNumberAttribute('classification_threshold');
   }
-  public set classificationThreshold(value: number | undefined) {
+  public set classificationThreshold(value: number) {
     this._classificationThreshold = value;
   }
   public resetClassificationThreshold() {
@@ -353,15 +440,15 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get classificationThresholdInput() {
-    return this._classificationThreshold
+    return this._classificationThreshold;
   }
 
   // model_training_mode - computed: false, optional: true, required: false
-  private _modelTrainingMode?: string | undefined; 
+  private _modelTrainingMode?: string; 
   public get modelTrainingMode() {
     return this.getStringAttribute('model_training_mode');
   }
-  public set modelTrainingMode(value: string | undefined) {
+  public set modelTrainingMode(value: string) {
     this._modelTrainingMode = value;
   }
   public resetModelTrainingMode() {
@@ -369,15 +456,15 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get modelTrainingModeInput() {
-    return this._modelTrainingMode
+    return this._modelTrainingMode;
   }
 
   // model_type - computed: false, optional: true, required: false
-  private _modelType?: string | undefined; 
+  private _modelType?: string; 
   public get modelType() {
     return this.getStringAttribute('model_type');
   }
-  public set modelType(value: string | undefined) {
+  public set modelType(value: string) {
     this._modelType = value;
   }
   public resetModelType() {
@@ -385,7 +472,7 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get modelTypeInput() {
-    return this._modelType
+    return this._modelType;
   }
 }
 export interface DialogflowCxFlowTimeouts {
@@ -403,7 +490,7 @@ export interface DialogflowCxFlowTimeouts {
   readonly update?: string;
 }
 
-function dialogflowCxFlowTimeoutsToTerraform(struct?: DialogflowCxFlowTimeoutsOutputReference | DialogflowCxFlowTimeouts): any {
+export function dialogflowCxFlowTimeoutsToTerraform(struct?: DialogflowCxFlowTimeoutsOutputReference | DialogflowCxFlowTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -425,12 +512,43 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxFlowTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxFlowTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -438,15 +556,15 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -454,15 +572,15 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -470,7 +588,7 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText {
@@ -482,7 +600,7 @@ export interface DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText 
   readonly text?: string[];
 }
 
-function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextToTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText): any {
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextToTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -502,12 +620,31 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutpu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._text) {
+      hasAnyValues = true;
+      internalValueResult.text = this._text;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText | undefined) {
+    if (value === undefined) {
+      this._text = undefined;
+    }
+    else {
+      this._text = value.text;
+    }
+  }
+
   // text - computed: false, optional: true, required: false
-  private _text?: string[] | undefined; 
+  private _text?: string[]; 
   public get text() {
     return this.getListAttribute('text');
   }
-  public set text(value: string[] | undefined) {
+  public set text(value: string[]) {
     this._text = value;
   }
   public resetText() {
@@ -515,7 +652,7 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get textInput() {
-    return this._text
+    return this._text;
   }
 }
 export interface DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages {
@@ -527,7 +664,7 @@ export interface DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages {
   readonly text?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText;
 }
 
-function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages): any {
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -564,7 +701,7 @@ export interface DialogflowCxFlowTransitionRoutesTriggerFulfillment {
   readonly messages?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages[];
 }
 
-function dialogflowCxFlowTransitionRoutesTriggerFulfillmentToTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillment): any {
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentToTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -587,12 +724,49 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillment | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._returnPartialResponses) {
+      hasAnyValues = true;
+      internalValueResult.returnPartialResponses = this._returnPartialResponses;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    if (this._webhook) {
+      hasAnyValues = true;
+      internalValueResult.webhook = this._webhook;
+    }
+    if (this._messages) {
+      hasAnyValues = true;
+      internalValueResult.messages = this._messages;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxFlowTransitionRoutesTriggerFulfillment | undefined) {
+    if (value === undefined) {
+      this._returnPartialResponses = undefined;
+      this._tag = undefined;
+      this._webhook = undefined;
+      this._messages = undefined;
+    }
+    else {
+      this._returnPartialResponses = value.returnPartialResponses;
+      this._tag = value.tag;
+      this._webhook = value.webhook;
+      this._messages = value.messages;
+    }
+  }
+
   // return_partial_responses - computed: false, optional: true, required: false
-  private _returnPartialResponses?: boolean | cdktf.IResolvable | undefined; 
+  private _returnPartialResponses?: boolean | cdktf.IResolvable; 
   public get returnPartialResponses() {
     return this.getBooleanAttribute('return_partial_responses') as any;
   }
-  public set returnPartialResponses(value: boolean | cdktf.IResolvable | undefined) {
+  public set returnPartialResponses(value: boolean | cdktf.IResolvable) {
     this._returnPartialResponses = value;
   }
   public resetReturnPartialResponses() {
@@ -600,15 +774,15 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get returnPartialResponsesInput() {
-    return this._returnPartialResponses
+    return this._returnPartialResponses;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: string | undefined; 
+  private _tag?: string; 
   public get tag() {
     return this.getStringAttribute('tag');
   }
-  public set tag(value: string | undefined) {
+  public set tag(value: string) {
     this._tag = value;
   }
   public resetTag() {
@@ -616,15 +790,15 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 
   // webhook - computed: false, optional: true, required: false
-  private _webhook?: string | undefined; 
+  private _webhook?: string; 
   public get webhook() {
     return this.getStringAttribute('webhook');
   }
-  public set webhook(value: string | undefined) {
+  public set webhook(value: string) {
     this._webhook = value;
   }
   public resetWebhook() {
@@ -632,16 +806,16 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get webhookInput() {
-    return this._webhook
+    return this._webhook;
   }
 
   // messages - computed: false, optional: true, required: false
-  private _messages?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages[] | undefined; 
+  private _messages?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages[]; 
   public get messages() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('messages') as any;
   }
-  public set messages(value: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages[] | undefined) {
+  public set messages(value: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages[]) {
     this._messages = value;
   }
   public resetMessages() {
@@ -649,7 +823,7 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get messagesInput() {
-    return this._messages
+    return this._messages;
   }
 }
 export interface DialogflowCxFlowTransitionRoutes {
@@ -689,7 +863,7 @@ Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<F
   readonly triggerFulfillment?: DialogflowCxFlowTransitionRoutesTriggerFulfillment;
 }
 
-function dialogflowCxFlowTransitionRoutesToTerraform(struct?: DialogflowCxFlowTransitionRoutes): any {
+export function dialogflowCxFlowTransitionRoutesToTerraform(struct?: DialogflowCxFlowTransitionRoutes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -742,8 +916,8 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
     this._parent = config.parent;
     this._transitionRouteGroups = config.transitionRouteGroups;
     this._eventHandlers = config.eventHandlers;
-    this._nluSettings = config.nluSettings;
-    this._timeouts = config.timeouts;
+    this._nluSettings.internalValue = config.nluSettings;
+    this._timeouts.internalValue = config.timeouts;
     this._transitionRoutes = config.transitionRoutes;
   }
 
@@ -752,11 +926,11 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -764,7 +938,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -777,7 +951,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -786,11 +960,11 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
 
   // language_code - computed: false, optional: true, required: false
-  private _languageCode?: string | undefined; 
+  private _languageCode?: string; 
   public get languageCode() {
     return this.getStringAttribute('language_code');
   }
-  public set languageCode(value: string | undefined) {
+  public set languageCode(value: string) {
     this._languageCode = value;
   }
   public resetLanguageCode() {
@@ -798,7 +972,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get languageCodeInput() {
-    return this._languageCode
+    return this._languageCode;
   }
 
   // name - computed: true, optional: false, required: false
@@ -807,11 +981,11 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: true, required: false
-  private _parent?: string | undefined; 
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
-  public set parent(value: string | undefined) {
+  public set parent(value: string) {
     this._parent = value;
   }
   public resetParent() {
@@ -819,15 +993,15 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // transition_route_groups - computed: false, optional: true, required: false
-  private _transitionRouteGroups?: string[] | undefined; 
+  private _transitionRouteGroups?: string[]; 
   public get transitionRouteGroups() {
     return this.getListAttribute('transition_route_groups');
   }
-  public set transitionRouteGroups(value: string[] | undefined) {
+  public set transitionRouteGroups(value: string[]) {
     this._transitionRouteGroups = value;
   }
   public resetTransitionRouteGroups() {
@@ -835,16 +1009,16 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get transitionRouteGroupsInput() {
-    return this._transitionRouteGroups
+    return this._transitionRouteGroups;
   }
 
   // event_handlers - computed: false, optional: true, required: false
-  private _eventHandlers?: DialogflowCxFlowEventHandlers[] | undefined; 
+  private _eventHandlers?: DialogflowCxFlowEventHandlers[]; 
   public get eventHandlers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('event_handlers') as any;
   }
-  public set eventHandlers(value: DialogflowCxFlowEventHandlers[] | undefined) {
+  public set eventHandlers(value: DialogflowCxFlowEventHandlers[]) {
     this._eventHandlers = value;
   }
   public resetEventHandlers() {
@@ -852,50 +1026,48 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventHandlersInput() {
-    return this._eventHandlers
+    return this._eventHandlers;
   }
 
   // nlu_settings - computed: false, optional: true, required: false
-  private _nluSettings?: DialogflowCxFlowNluSettings | undefined; 
-  private __nluSettingsOutput = new DialogflowCxFlowNluSettingsOutputReference(this as any, "nlu_settings", true);
+  private _nluSettings = new DialogflowCxFlowNluSettingsOutputReference(this as any, "nlu_settings", true);
   public get nluSettings() {
-    return this.__nluSettingsOutput;
+    return this._nluSettings;
   }
-  public putNluSettings(value: DialogflowCxFlowNluSettings | undefined) {
-    this._nluSettings = value;
+  public putNluSettings(value: DialogflowCxFlowNluSettings) {
+    this._nluSettings.internalValue = value;
   }
   public resetNluSettings() {
-    this._nluSettings = undefined;
+    this._nluSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nluSettingsInput() {
-    return this._nluSettings
+    return this._nluSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowCxFlowTimeouts | undefined; 
-  private __timeoutsOutput = new DialogflowCxFlowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DialogflowCxFlowTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DialogflowCxFlowTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DialogflowCxFlowTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // transition_routes - computed: false, optional: true, required: false
-  private _transitionRoutes?: DialogflowCxFlowTransitionRoutes[] | undefined; 
+  private _transitionRoutes?: DialogflowCxFlowTransitionRoutes[]; 
   public get transitionRoutes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('transition_routes') as any;
   }
-  public set transitionRoutes(value: DialogflowCxFlowTransitionRoutes[] | undefined) {
+  public set transitionRoutes(value: DialogflowCxFlowTransitionRoutes[]) {
     this._transitionRoutes = value;
   }
   public resetTransitionRoutes() {
@@ -903,7 +1075,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get transitionRoutesInput() {
-    return this._transitionRoutes
+    return this._transitionRoutes;
   }
 
   // =========
@@ -918,8 +1090,8 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
       parent: cdktf.stringToTerraform(this._parent),
       transition_route_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._transitionRouteGroups),
       event_handlers: cdktf.listMapper(dialogflowCxFlowEventHandlersToTerraform)(this._eventHandlers),
-      nlu_settings: dialogflowCxFlowNluSettingsToTerraform(this._nluSettings),
-      timeouts: dialogflowCxFlowTimeoutsToTerraform(this._timeouts),
+      nlu_settings: dialogflowCxFlowNluSettingsToTerraform(this._nluSettings.internalValue),
+      timeouts: dialogflowCxFlowTimeoutsToTerraform(this._timeouts.internalValue),
       transition_routes: cdktf.listMapper(dialogflowCxFlowTransitionRoutesToTerraform)(this._transitionRoutes),
     };
   }

@@ -65,7 +65,7 @@ export interface IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates
   readonly x509Certificate?: string;
 }
 
-function identityPlatformTenantInboundSamlConfigIdpConfigIdpCertificatesToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates): any {
+export function identityPlatformTenantInboundSamlConfigIdpConfigIdpCertificatesToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,7 +102,7 @@ export interface IdentityPlatformTenantInboundSamlConfigIdpConfig {
   readonly idpCertificates: IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates[];
 }
 
-function identityPlatformTenantInboundSamlConfigIdpConfigToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference | IdentityPlatformTenantInboundSamlConfigIdpConfig): any {
+export function identityPlatformTenantInboundSamlConfigIdpConfigToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference | IdentityPlatformTenantInboundSamlConfigIdpConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,6 +125,43 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IdentityPlatformTenantInboundSamlConfigIdpConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._idpEntityId) {
+      hasAnyValues = true;
+      internalValueResult.idpEntityId = this._idpEntityId;
+    }
+    if (this._signRequest) {
+      hasAnyValues = true;
+      internalValueResult.signRequest = this._signRequest;
+    }
+    if (this._ssoUrl) {
+      hasAnyValues = true;
+      internalValueResult.ssoUrl = this._ssoUrl;
+    }
+    if (this._idpCertificates) {
+      hasAnyValues = true;
+      internalValueResult.idpCertificates = this._idpCertificates;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantInboundSamlConfigIdpConfig | undefined) {
+    if (value === undefined) {
+      this._idpEntityId = undefined;
+      this._signRequest = undefined;
+      this._ssoUrl = undefined;
+      this._idpCertificates = undefined;
+    }
+    else {
+      this._idpEntityId = value.idpEntityId;
+      this._signRequest = value.signRequest;
+      this._ssoUrl = value.ssoUrl;
+      this._idpCertificates = value.idpCertificates;
+    }
+  }
+
   // idp_entity_id - computed: false, optional: false, required: true
   private _idpEntityId?: string; 
   public get idpEntityId() {
@@ -135,15 +172,15 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get idpEntityIdInput() {
-    return this._idpEntityId
+    return this._idpEntityId;
   }
 
   // sign_request - computed: false, optional: true, required: false
-  private _signRequest?: boolean | cdktf.IResolvable | undefined; 
+  private _signRequest?: boolean | cdktf.IResolvable; 
   public get signRequest() {
     return this.getBooleanAttribute('sign_request') as any;
   }
-  public set signRequest(value: boolean | cdktf.IResolvable | undefined) {
+  public set signRequest(value: boolean | cdktf.IResolvable) {
     this._signRequest = value;
   }
   public resetSignRequest() {
@@ -151,7 +188,7 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get signRequestInput() {
-    return this._signRequest
+    return this._signRequest;
   }
 
   // sso_url - computed: false, optional: false, required: true
@@ -164,7 +201,7 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get ssoUrlInput() {
-    return this._ssoUrl
+    return this._ssoUrl;
   }
 
   // idp_certificates - computed: false, optional: false, required: true
@@ -178,7 +215,7 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get idpCertificatesInput() {
-    return this._idpCertificates
+    return this._idpCertificates;
   }
 }
 export interface IdentityPlatformTenantInboundSamlConfigSpConfig {
@@ -196,7 +233,7 @@ export interface IdentityPlatformTenantInboundSamlConfigSpConfig {
   readonly spEntityId: string;
 }
 
-function identityPlatformTenantInboundSamlConfigSpConfigToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference | IdentityPlatformTenantInboundSamlConfigSpConfig): any {
+export function identityPlatformTenantInboundSamlConfigSpConfigToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference | IdentityPlatformTenantInboundSamlConfigSpConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -217,6 +254,31 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IdentityPlatformTenantInboundSamlConfigSpConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._callbackUri) {
+      hasAnyValues = true;
+      internalValueResult.callbackUri = this._callbackUri;
+    }
+    if (this._spEntityId) {
+      hasAnyValues = true;
+      internalValueResult.spEntityId = this._spEntityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantInboundSamlConfigSpConfig | undefined) {
+    if (value === undefined) {
+      this._callbackUri = undefined;
+      this._spEntityId = undefined;
+    }
+    else {
+      this._callbackUri = value.callbackUri;
+      this._spEntityId = value.spEntityId;
+    }
+  }
+
   // callback_uri - computed: false, optional: false, required: true
   private _callbackUri?: string; 
   public get callbackUri() {
@@ -227,7 +289,7 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get callbackUriInput() {
-    return this._callbackUri
+    return this._callbackUri;
   }
 
   // sp_entity_id - computed: false, optional: false, required: true
@@ -240,7 +302,7 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get spEntityIdInput() {
-    return this._spEntityId
+    return this._spEntityId;
   }
 }
 export interface IdentityPlatformTenantInboundSamlConfigTimeouts {
@@ -258,7 +320,7 @@ export interface IdentityPlatformTenantInboundSamlConfigTimeouts {
   readonly update?: string;
 }
 
-function identityPlatformTenantInboundSamlConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference | IdentityPlatformTenantInboundSamlConfigTimeouts): any {
+export function identityPlatformTenantInboundSamlConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference | IdentityPlatformTenantInboundSamlConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -280,12 +342,43 @@ export class IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IdentityPlatformTenantInboundSamlConfigTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantInboundSamlConfigTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -293,15 +386,15 @@ export class IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -309,15 +402,15 @@ export class IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -325,7 +418,7 @@ export class IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -366,9 +459,9 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
     this._name = config.name;
     this._project = config.project;
     this._tenant = config.tenant;
-    this._idpConfig = config.idpConfig;
-    this._spConfig = config.spConfig;
-    this._timeouts = config.timeouts;
+    this._idpConfig.internalValue = config.idpConfig;
+    this._spConfig.internalValue = config.spConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -385,15 +478,15 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -401,7 +494,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -419,15 +512,15 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -435,7 +528,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // tenant - computed: false, optional: false, required: true
@@ -448,52 +541,49 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get tenantInput() {
-    return this._tenant
+    return this._tenant;
   }
 
   // idp_config - computed: false, optional: false, required: true
-  private _idpConfig?: IdentityPlatformTenantInboundSamlConfigIdpConfig; 
-  private __idpConfigOutput = new IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference(this as any, "idp_config", true);
+  private _idpConfig = new IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference(this as any, "idp_config", true);
   public get idpConfig() {
-    return this.__idpConfigOutput;
+    return this._idpConfig;
   }
   public putIdpConfig(value: IdentityPlatformTenantInboundSamlConfigIdpConfig) {
-    this._idpConfig = value;
+    this._idpConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get idpConfigInput() {
-    return this._idpConfig
+    return this._idpConfig.internalValue;
   }
 
   // sp_config - computed: false, optional: false, required: true
-  private _spConfig?: IdentityPlatformTenantInboundSamlConfigSpConfig; 
-  private __spConfigOutput = new IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference(this as any, "sp_config", true);
+  private _spConfig = new IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference(this as any, "sp_config", true);
   public get spConfig() {
-    return this.__spConfigOutput;
+    return this._spConfig;
   }
   public putSpConfig(value: IdentityPlatformTenantInboundSamlConfigSpConfig) {
-    this._spConfig = value;
+    this._spConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get spConfigInput() {
-    return this._spConfig
+    return this._spConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IdentityPlatformTenantInboundSamlConfigTimeouts | undefined; 
-  private __timeoutsOutput = new IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IdentityPlatformTenantInboundSamlConfigTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IdentityPlatformTenantInboundSamlConfigTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -507,9 +597,9 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       tenant: cdktf.stringToTerraform(this._tenant),
-      idp_config: identityPlatformTenantInboundSamlConfigIdpConfigToTerraform(this._idpConfig),
-      sp_config: identityPlatformTenantInboundSamlConfigSpConfigToTerraform(this._spConfig),
-      timeouts: identityPlatformTenantInboundSamlConfigTimeoutsToTerraform(this._timeouts),
+      idp_config: identityPlatformTenantInboundSamlConfigIdpConfigToTerraform(this._idpConfig.internalValue),
+      sp_config: identityPlatformTenantInboundSamlConfigSpConfigToTerraform(this._spConfig.internalValue),
+      timeouts: identityPlatformTenantInboundSamlConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

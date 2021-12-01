@@ -48,7 +48,7 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   readonly realms?: string[];
 }
 
-function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference | GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
+export function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference | GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,31 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._realms) {
+      hasAnyValues = true;
+      internalValueResult.realms = this._realms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined) {
+    if (value === undefined) {
+      this._realms = undefined;
+    }
+    else {
+      this._realms = value.realms;
+    }
+  }
+
   // realms - computed: false, optional: true, required: false
-  private _realms?: string[] | undefined; 
+  private _realms?: string[]; 
   public get realms() {
     return this.getListAttribute('realms');
   }
-  public set realms(value: string[] | undefined) {
+  public set realms(value: string[]) {
     this._realms = value;
   }
   public resetRealms() {
@@ -81,7 +100,7 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
   }
   // Temporarily expose input value. Use with caution.
   public get realmsInput() {
-    return this._realms
+    return this._realms;
   }
 }
 export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverrides {
@@ -99,7 +118,7 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector;
 }
 
-function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides): any {
+export function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,7 +144,7 @@ export interface GameServicesGameServerDeploymentRolloutTimeouts {
   readonly update?: string;
 }
 
-function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeoutsOutputReference | GameServicesGameServerDeploymentRolloutTimeouts): any {
+export function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeoutsOutputReference | GameServicesGameServerDeploymentRolloutTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -147,12 +166,43 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): GameServicesGameServerDeploymentRolloutTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GameServicesGameServerDeploymentRolloutTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -160,15 +210,15 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -176,15 +226,15 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -192,7 +242,7 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -232,7 +282,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
     this._deploymentId = config.deploymentId;
     this._project = config.project;
     this._gameServerConfigOverrides = config.gameServerConfigOverrides;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -249,7 +299,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get defaultGameServerConfigInput() {
-    return this._defaultGameServerConfig
+    return this._defaultGameServerConfig;
   }
 
   // deployment_id - computed: false, optional: false, required: true
@@ -262,7 +312,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get deploymentIdInput() {
-    return this._deploymentId
+    return this._deploymentId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -276,11 +326,11 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -288,16 +338,16 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // game_server_config_overrides - computed: false, optional: true, required: false
-  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | undefined; 
+  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[]; 
   public get gameServerConfigOverrides() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('game_server_config_overrides') as any;
   }
-  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | undefined) {
+  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[]) {
     this._gameServerConfigOverrides = value;
   }
   public resetGameServerConfigOverrides() {
@@ -305,24 +355,23 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get gameServerConfigOverridesInput() {
-    return this._gameServerConfigOverrides
+    return this._gameServerConfigOverrides;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: GameServicesGameServerDeploymentRolloutTimeouts | undefined; 
-  private __timeoutsOutput = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: GameServicesGameServerDeploymentRolloutTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: GameServicesGameServerDeploymentRolloutTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -335,7 +384,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
       deployment_id: cdktf.stringToTerraform(this._deploymentId),
       project: cdktf.stringToTerraform(this._project),
       game_server_config_overrides: cdktf.listMapper(gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform)(this._gameServerConfigOverrides),
-      timeouts: gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(this._timeouts),
+      timeouts: gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

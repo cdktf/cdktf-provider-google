@@ -99,7 +99,7 @@ Example value: "v1", "v2".
   readonly version?: string;
 }
 
-function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeRegionNetworkEndpointGroupAppEngineOutputReference | ComputeRegionNetworkEndpointGroupAppEngine): any {
+export function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeRegionNetworkEndpointGroupAppEngineOutputReference | ComputeRegionNetworkEndpointGroupAppEngine): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -121,12 +121,43 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionNetworkEndpointGroupAppEngine | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._service) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._urlMask) {
+      hasAnyValues = true;
+      internalValueResult.urlMask = this._urlMask;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionNetworkEndpointGroupAppEngine | undefined) {
+    if (value === undefined) {
+      this._service = undefined;
+      this._urlMask = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._service = value.service;
+      this._urlMask = value.urlMask;
+      this._version = value.version;
+    }
+  }
+
   // service - computed: false, optional: true, required: false
-  private _service?: string | undefined; 
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
-  public set service(value: string | undefined) {
+  public set service(value: string) {
     this._service = value;
   }
   public resetService() {
@@ -134,15 +165,15 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // url_mask - computed: false, optional: true, required: false
-  private _urlMask?: string | undefined; 
+  private _urlMask?: string; 
   public get urlMask() {
     return this.getStringAttribute('url_mask');
   }
-  public set urlMask(value: string | undefined) {
+  public set urlMask(value: string) {
     this._urlMask = value;
   }
   public resetUrlMask() {
@@ -150,15 +181,15 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get urlMaskInput() {
-    return this._urlMask
+    return this._urlMask;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -166,7 +197,7 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface ComputeRegionNetworkEndpointGroupCloudFunction {
@@ -192,7 +223,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
   readonly urlMask?: string;
 }
 
-function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference | ComputeRegionNetworkEndpointGroupCloudFunction): any {
+export function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference | ComputeRegionNetworkEndpointGroupCloudFunction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -213,12 +244,37 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionNetworkEndpointGroupCloudFunction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._function) {
+      hasAnyValues = true;
+      internalValueResult.function = this._function;
+    }
+    if (this._urlMask) {
+      hasAnyValues = true;
+      internalValueResult.urlMask = this._urlMask;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionNetworkEndpointGroupCloudFunction | undefined) {
+    if (value === undefined) {
+      this._function = undefined;
+      this._urlMask = undefined;
+    }
+    else {
+      this._function = value.function;
+      this._urlMask = value.urlMask;
+    }
+  }
+
   // function - computed: false, optional: true, required: false
-  private _function?: string | undefined; 
+  private _function?: string; 
   public get function() {
     return this.getStringAttribute('function');
   }
-  public set function(value: string | undefined) {
+  public set function(value: string) {
     this._function = value;
   }
   public resetFunction() {
@@ -226,15 +282,15 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get functionInput() {
-    return this._function
+    return this._function;
   }
 
   // url_mask - computed: false, optional: true, required: false
-  private _urlMask?: string | undefined; 
+  private _urlMask?: string; 
   public get urlMask() {
     return this.getStringAttribute('url_mask');
   }
-  public set urlMask(value: string | undefined) {
+  public set urlMask(value: string) {
     this._urlMask = value;
   }
   public resetUrlMask() {
@@ -242,7 +298,7 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get urlMaskInput() {
-    return this._urlMask
+    return this._urlMask;
   }
 }
 export interface ComputeRegionNetworkEndpointGroupCloudRun {
@@ -278,7 +334,7 @@ and { service="bar2", tag="foo2" } respectively.
   readonly urlMask?: string;
 }
 
-function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudRunOutputReference | ComputeRegionNetworkEndpointGroupCloudRun): any {
+export function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudRunOutputReference | ComputeRegionNetworkEndpointGroupCloudRun): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -300,12 +356,43 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionNetworkEndpointGroupCloudRun | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._service) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    if (this._urlMask) {
+      hasAnyValues = true;
+      internalValueResult.urlMask = this._urlMask;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionNetworkEndpointGroupCloudRun | undefined) {
+    if (value === undefined) {
+      this._service = undefined;
+      this._tag = undefined;
+      this._urlMask = undefined;
+    }
+    else {
+      this._service = value.service;
+      this._tag = value.tag;
+      this._urlMask = value.urlMask;
+    }
+  }
+
   // service - computed: false, optional: true, required: false
-  private _service?: string | undefined; 
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
-  public set service(value: string | undefined) {
+  public set service(value: string) {
     this._service = value;
   }
   public resetService() {
@@ -313,15 +400,15 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: string | undefined; 
+  private _tag?: string; 
   public get tag() {
     return this.getStringAttribute('tag');
   }
-  public set tag(value: string | undefined) {
+  public set tag(value: string) {
     this._tag = value;
   }
   public resetTag() {
@@ -329,15 +416,15 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 
   // url_mask - computed: false, optional: true, required: false
-  private _urlMask?: string | undefined; 
+  private _urlMask?: string; 
   public get urlMask() {
     return this.getStringAttribute('url_mask');
   }
-  public set urlMask(value: string | undefined) {
+  public set urlMask(value: string) {
     this._urlMask = value;
   }
   public resetUrlMask() {
@@ -345,7 +432,7 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get urlMaskInput() {
-    return this._urlMask
+    return this._urlMask;
   }
 }
 export interface ComputeRegionNetworkEndpointGroupTimeouts {
@@ -359,7 +446,7 @@ export interface ComputeRegionNetworkEndpointGroupTimeouts {
   readonly delete?: string;
 }
 
-function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeoutsOutputReference | ComputeRegionNetworkEndpointGroupTimeouts): any {
+export function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeoutsOutputReference | ComputeRegionNetworkEndpointGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -380,12 +467,37 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionNetworkEndpointGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionNetworkEndpointGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -393,15 +505,15 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -409,7 +521,7 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -450,10 +562,10 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
     this._networkEndpointType = config.networkEndpointType;
     this._project = config.project;
     this._region = config.region;
-    this._appEngine = config.appEngine;
-    this._cloudFunction = config.cloudFunction;
-    this._cloudRun = config.cloudRun;
-    this._timeouts = config.timeouts;
+    this._appEngine.internalValue = config.appEngine;
+    this._cloudFunction.internalValue = config.cloudFunction;
+    this._cloudRun.internalValue = config.cloudRun;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -461,11 +573,11 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -473,7 +585,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -491,15 +603,15 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_endpoint_type - computed: false, optional: true, required: false
-  private _networkEndpointType?: string | undefined; 
+  private _networkEndpointType?: string; 
   public get networkEndpointType() {
     return this.getStringAttribute('network_endpoint_type');
   }
-  public set networkEndpointType(value: string | undefined) {
+  public set networkEndpointType(value: string) {
     this._networkEndpointType = value;
   }
   public resetNetworkEndpointType() {
@@ -507,15 +619,15 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkEndpointTypeInput() {
-    return this._networkEndpointType
+    return this._networkEndpointType;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -523,7 +635,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: false, required: true
@@ -536,7 +648,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -545,71 +657,67 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // app_engine - computed: false, optional: true, required: false
-  private _appEngine?: ComputeRegionNetworkEndpointGroupAppEngine | undefined; 
-  private __appEngineOutput = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this as any, "app_engine", true);
+  private _appEngine = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this as any, "app_engine", true);
   public get appEngine() {
-    return this.__appEngineOutput;
+    return this._appEngine;
   }
-  public putAppEngine(value: ComputeRegionNetworkEndpointGroupAppEngine | undefined) {
-    this._appEngine = value;
+  public putAppEngine(value: ComputeRegionNetworkEndpointGroupAppEngine) {
+    this._appEngine.internalValue = value;
   }
   public resetAppEngine() {
-    this._appEngine = undefined;
+    this._appEngine.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get appEngineInput() {
-    return this._appEngine
+    return this._appEngine.internalValue;
   }
 
   // cloud_function - computed: false, optional: true, required: false
-  private _cloudFunction?: ComputeRegionNetworkEndpointGroupCloudFunction | undefined; 
-  private __cloudFunctionOutput = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this as any, "cloud_function", true);
+  private _cloudFunction = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this as any, "cloud_function", true);
   public get cloudFunction() {
-    return this.__cloudFunctionOutput;
+    return this._cloudFunction;
   }
-  public putCloudFunction(value: ComputeRegionNetworkEndpointGroupCloudFunction | undefined) {
-    this._cloudFunction = value;
+  public putCloudFunction(value: ComputeRegionNetworkEndpointGroupCloudFunction) {
+    this._cloudFunction.internalValue = value;
   }
   public resetCloudFunction() {
-    this._cloudFunction = undefined;
+    this._cloudFunction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloudFunctionInput() {
-    return this._cloudFunction
+    return this._cloudFunction.internalValue;
   }
 
   // cloud_run - computed: false, optional: true, required: false
-  private _cloudRun?: ComputeRegionNetworkEndpointGroupCloudRun | undefined; 
-  private __cloudRunOutput = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this as any, "cloud_run", true);
+  private _cloudRun = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this as any, "cloud_run", true);
   public get cloudRun() {
-    return this.__cloudRunOutput;
+    return this._cloudRun;
   }
-  public putCloudRun(value: ComputeRegionNetworkEndpointGroupCloudRun | undefined) {
-    this._cloudRun = value;
+  public putCloudRun(value: ComputeRegionNetworkEndpointGroupCloudRun) {
+    this._cloudRun.internalValue = value;
   }
   public resetCloudRun() {
-    this._cloudRun = undefined;
+    this._cloudRun.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloudRunInput() {
-    return this._cloudRun
+    return this._cloudRun.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionNetworkEndpointGroupTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeRegionNetworkEndpointGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeRegionNetworkEndpointGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -623,10 +731,10 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
       network_endpoint_type: cdktf.stringToTerraform(this._networkEndpointType),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      app_engine: computeRegionNetworkEndpointGroupAppEngineToTerraform(this._appEngine),
-      cloud_function: computeRegionNetworkEndpointGroupCloudFunctionToTerraform(this._cloudFunction),
-      cloud_run: computeRegionNetworkEndpointGroupCloudRunToTerraform(this._cloudRun),
-      timeouts: computeRegionNetworkEndpointGroupTimeoutsToTerraform(this._timeouts),
+      app_engine: computeRegionNetworkEndpointGroupAppEngineToTerraform(this._appEngine.internalValue),
+      cloud_function: computeRegionNetworkEndpointGroupCloudFunctionToTerraform(this._cloudFunction.internalValue),
+      cloud_run: computeRegionNetworkEndpointGroupCloudRunToTerraform(this._cloudRun.internalValue),
+      timeouts: computeRegionNetworkEndpointGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

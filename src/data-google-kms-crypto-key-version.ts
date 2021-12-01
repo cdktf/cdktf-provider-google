@@ -84,7 +84,7 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyInput() {
-    return this._cryptoKey
+    return this._cryptoKey;
   }
 
   // id - computed: true, optional: true, required: false
@@ -113,11 +113,11 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: number | undefined; 
+  private _version?: number; 
   public get version() {
     return this.getNumberAttribute('version');
   }
-  public set version(value: number | undefined) {
+  public set version(value: number) {
     this._version = value;
   }
   public resetVersion() {
@@ -125,7 +125,7 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // =========

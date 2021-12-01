@@ -100,7 +100,7 @@ than or equal to max-nodes. The default value is 0.
   readonly mode?: string;
 }
 
-function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNodeGroupAutoscalingPolicyOutputReference | ComputeNodeGroupAutoscalingPolicy): any {
+export function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNodeGroupAutoscalingPolicyOutputReference | ComputeNodeGroupAutoscalingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -122,12 +122,43 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeNodeGroupAutoscalingPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxNodes) {
+      hasAnyValues = true;
+      internalValueResult.maxNodes = this._maxNodes;
+    }
+    if (this._minNodes) {
+      hasAnyValues = true;
+      internalValueResult.minNodes = this._minNodes;
+    }
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeNodeGroupAutoscalingPolicy | undefined) {
+    if (value === undefined) {
+      this._maxNodes = undefined;
+      this._minNodes = undefined;
+      this._mode = undefined;
+    }
+    else {
+      this._maxNodes = value.maxNodes;
+      this._minNodes = value.minNodes;
+      this._mode = value.mode;
+    }
+  }
+
   // max_nodes - computed: true, optional: true, required: false
-  private _maxNodes?: number | undefined; 
+  private _maxNodes?: number; 
   public get maxNodes() {
     return this.getNumberAttribute('max_nodes');
   }
-  public set maxNodes(value: number | undefined) {
+  public set maxNodes(value: number) {
     this._maxNodes = value;
   }
   public resetMaxNodes() {
@@ -135,15 +166,15 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get maxNodesInput() {
-    return this._maxNodes
+    return this._maxNodes;
   }
 
   // min_nodes - computed: true, optional: true, required: false
-  private _minNodes?: number | undefined; 
+  private _minNodes?: number; 
   public get minNodes() {
     return this.getNumberAttribute('min_nodes');
   }
-  public set minNodes(value: number | undefined) {
+  public set minNodes(value: number) {
     this._minNodes = value;
   }
   public resetMinNodes() {
@@ -151,15 +182,15 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get minNodesInput() {
-    return this._minNodes
+    return this._minNodes;
   }
 
   // mode - computed: true, optional: true, required: false
-  private _mode?: string | undefined; 
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string) {
     this._mode = value;
   }
   public resetMode() {
@@ -167,7 +198,7 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 }
 export interface ComputeNodeGroupMaintenanceWindow {
@@ -179,7 +210,7 @@ export interface ComputeNodeGroupMaintenanceWindow {
   readonly startTime: string;
 }
 
-function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNodeGroupMaintenanceWindowOutputReference | ComputeNodeGroupMaintenanceWindow): any {
+export function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNodeGroupMaintenanceWindowOutputReference | ComputeNodeGroupMaintenanceWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -199,6 +230,25 @@ export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeNodeGroupMaintenanceWindow | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeNodeGroupMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this._startTime = undefined;
+    }
+    else {
+      this._startTime = value.startTime;
+    }
+  }
+
   // start_time - computed: false, optional: false, required: true
   private _startTime?: string; 
   public get startTime() {
@@ -209,7 +259,7 @@ export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 }
 export interface ComputeNodeGroupTimeouts {
@@ -227,7 +277,7 @@ export interface ComputeNodeGroupTimeouts {
   readonly update?: string;
 }
 
-function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeoutsOutputReference | ComputeNodeGroupTimeouts): any {
+export function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeoutsOutputReference | ComputeNodeGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -249,12 +299,43 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeNodeGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeNodeGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -262,15 +343,15 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -278,15 +359,15 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -294,7 +375,7 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -338,9 +419,9 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
     this._project = config.project;
     this._size = config.size;
     this._zone = config.zone;
-    this._autoscalingPolicy = config.autoscalingPolicy;
-    this._maintenanceWindow = config.maintenanceWindow;
-    this._timeouts = config.timeouts;
+    this._autoscalingPolicy.internalValue = config.autoscalingPolicy;
+    this._maintenanceWindow.internalValue = config.maintenanceWindow;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -353,11 +434,11 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -365,7 +446,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -374,11 +455,11 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // initial_size - computed: false, optional: true, required: false
-  private _initialSize?: number | undefined; 
+  private _initialSize?: number; 
   public get initialSize() {
     return this.getNumberAttribute('initial_size');
   }
-  public set initialSize(value: number | undefined) {
+  public set initialSize(value: number) {
     this._initialSize = value;
   }
   public resetInitialSize() {
@@ -386,15 +467,15 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get initialSizeInput() {
-    return this._initialSize
+    return this._initialSize;
   }
 
   // maintenance_policy - computed: false, optional: true, required: false
-  private _maintenancePolicy?: string | undefined; 
+  private _maintenancePolicy?: string; 
   public get maintenancePolicy() {
     return this.getStringAttribute('maintenance_policy');
   }
-  public set maintenancePolicy(value: string | undefined) {
+  public set maintenancePolicy(value: string) {
     this._maintenancePolicy = value;
   }
   public resetMaintenancePolicy() {
@@ -402,15 +483,15 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maintenancePolicyInput() {
-    return this._maintenancePolicy
+    return this._maintenancePolicy;
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -418,7 +499,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // node_template - computed: false, optional: false, required: true
@@ -431,15 +512,15 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nodeTemplateInput() {
-    return this._nodeTemplate
+    return this._nodeTemplate;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -447,7 +528,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -456,11 +537,11 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // size - computed: true, optional: true, required: false
-  private _size?: number | undefined; 
+  private _size?: number; 
   public get size() {
     return this.getNumberAttribute('size');
   }
-  public set size(value: number | undefined) {
+  public set size(value: number) {
     this._size = value;
   }
   public resetSize() {
@@ -468,15 +549,15 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sizeInput() {
-    return this._size
+    return this._size;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -484,58 +565,55 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // autoscaling_policy - computed: false, optional: true, required: false
-  private _autoscalingPolicy?: ComputeNodeGroupAutoscalingPolicy | undefined; 
-  private __autoscalingPolicyOutput = new ComputeNodeGroupAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
+  private _autoscalingPolicy = new ComputeNodeGroupAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
   public get autoscalingPolicy() {
-    return this.__autoscalingPolicyOutput;
+    return this._autoscalingPolicy;
   }
-  public putAutoscalingPolicy(value: ComputeNodeGroupAutoscalingPolicy | undefined) {
-    this._autoscalingPolicy = value;
+  public putAutoscalingPolicy(value: ComputeNodeGroupAutoscalingPolicy) {
+    this._autoscalingPolicy.internalValue = value;
   }
   public resetAutoscalingPolicy() {
-    this._autoscalingPolicy = undefined;
+    this._autoscalingPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscalingPolicyInput() {
-    return this._autoscalingPolicy
+    return this._autoscalingPolicy.internalValue;
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow?: ComputeNodeGroupMaintenanceWindow | undefined; 
-  private __maintenanceWindowOutput = new ComputeNodeGroupMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new ComputeNodeGroupMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
   public get maintenanceWindow() {
-    return this.__maintenanceWindowOutput;
+    return this._maintenanceWindow;
   }
-  public putMaintenanceWindow(value: ComputeNodeGroupMaintenanceWindow | undefined) {
-    this._maintenanceWindow = value;
+  public putMaintenanceWindow(value: ComputeNodeGroupMaintenanceWindow) {
+    this._maintenanceWindow.internalValue = value;
   }
   public resetMaintenanceWindow() {
-    this._maintenanceWindow = undefined;
+    this._maintenanceWindow.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get maintenanceWindowInput() {
-    return this._maintenanceWindow
+    return this._maintenanceWindow.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeNodeGroupTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeNodeGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeNodeGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeNodeGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeNodeGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -552,9 +630,9 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       size: cdktf.numberToTerraform(this._size),
       zone: cdktf.stringToTerraform(this._zone),
-      autoscaling_policy: computeNodeGroupAutoscalingPolicyToTerraform(this._autoscalingPolicy),
-      maintenance_window: computeNodeGroupMaintenanceWindowToTerraform(this._maintenanceWindow),
-      timeouts: computeNodeGroupTimeoutsToTerraform(this._timeouts),
+      autoscaling_policy: computeNodeGroupAutoscalingPolicyToTerraform(this._autoscalingPolicy.internalValue),
+      maintenance_window: computeNodeGroupMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
+      timeouts: computeNodeGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

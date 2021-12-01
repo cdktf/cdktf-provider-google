@@ -167,7 +167,7 @@ export interface ComputeInstanceTemplateAdvancedMachineFeatures {
   readonly threadsPerCore?: number;
 }
 
-function computeInstanceTemplateAdvancedMachineFeaturesToTerraform(struct?: ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference | ComputeInstanceTemplateAdvancedMachineFeatures): any {
+export function computeInstanceTemplateAdvancedMachineFeaturesToTerraform(struct?: ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference | ComputeInstanceTemplateAdvancedMachineFeatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -188,12 +188,37 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateAdvancedMachineFeatures | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableNestedVirtualization) {
+      hasAnyValues = true;
+      internalValueResult.enableNestedVirtualization = this._enableNestedVirtualization;
+    }
+    if (this._threadsPerCore) {
+      hasAnyValues = true;
+      internalValueResult.threadsPerCore = this._threadsPerCore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateAdvancedMachineFeatures | undefined) {
+    if (value === undefined) {
+      this._enableNestedVirtualization = undefined;
+      this._threadsPerCore = undefined;
+    }
+    else {
+      this._enableNestedVirtualization = value.enableNestedVirtualization;
+      this._threadsPerCore = value.threadsPerCore;
+    }
+  }
+
   // enable_nested_virtualization - computed: false, optional: true, required: false
-  private _enableNestedVirtualization?: boolean | cdktf.IResolvable | undefined; 
+  private _enableNestedVirtualization?: boolean | cdktf.IResolvable; 
   public get enableNestedVirtualization() {
     return this.getBooleanAttribute('enable_nested_virtualization') as any;
   }
-  public set enableNestedVirtualization(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableNestedVirtualization(value: boolean | cdktf.IResolvable) {
     this._enableNestedVirtualization = value;
   }
   public resetEnableNestedVirtualization() {
@@ -201,15 +226,15 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get enableNestedVirtualizationInput() {
-    return this._enableNestedVirtualization
+    return this._enableNestedVirtualization;
   }
 
   // threads_per_core - computed: false, optional: true, required: false
-  private _threadsPerCore?: number | undefined; 
+  private _threadsPerCore?: number; 
   public get threadsPerCore() {
     return this.getNumberAttribute('threads_per_core');
   }
-  public set threadsPerCore(value: number | undefined) {
+  public set threadsPerCore(value: number) {
     this._threadsPerCore = value;
   }
   public resetThreadsPerCore() {
@@ -217,7 +242,7 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get threadsPerCoreInput() {
-    return this._threadsPerCore
+    return this._threadsPerCore;
   }
 }
 export interface ComputeInstanceTemplateConfidentialInstanceConfig {
@@ -229,7 +254,7 @@ export interface ComputeInstanceTemplateConfidentialInstanceConfig {
   readonly enableConfidentialCompute: boolean | cdktf.IResolvable;
 }
 
-function computeInstanceTemplateConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceTemplateConfidentialInstanceConfigOutputReference | ComputeInstanceTemplateConfidentialInstanceConfig): any {
+export function computeInstanceTemplateConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceTemplateConfidentialInstanceConfigOutputReference | ComputeInstanceTemplateConfidentialInstanceConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -249,6 +274,25 @@ export class ComputeInstanceTemplateConfidentialInstanceConfigOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateConfidentialInstanceConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableConfidentialCompute) {
+      hasAnyValues = true;
+      internalValueResult.enableConfidentialCompute = this._enableConfidentialCompute;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateConfidentialInstanceConfig | undefined) {
+    if (value === undefined) {
+      this._enableConfidentialCompute = undefined;
+    }
+    else {
+      this._enableConfidentialCompute = value.enableConfidentialCompute;
+    }
+  }
+
   // enable_confidential_compute - computed: false, optional: false, required: true
   private _enableConfidentialCompute?: boolean | cdktf.IResolvable; 
   public get enableConfidentialCompute() {
@@ -259,7 +303,7 @@ export class ComputeInstanceTemplateConfidentialInstanceConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get enableConfidentialComputeInput() {
-    return this._enableConfidentialCompute
+    return this._enableConfidentialCompute;
   }
 }
 export interface ComputeInstanceTemplateDiskDiskEncryptionKey {
@@ -271,7 +315,7 @@ export interface ComputeInstanceTemplateDiskDiskEncryptionKey {
   readonly kmsKeySelfLink: string;
 }
 
-function computeInstanceTemplateDiskDiskEncryptionKeyToTerraform(struct?: ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference | ComputeInstanceTemplateDiskDiskEncryptionKey): any {
+export function computeInstanceTemplateDiskDiskEncryptionKeyToTerraform(struct?: ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference | ComputeInstanceTemplateDiskDiskEncryptionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -291,6 +335,25 @@ export class ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateDiskDiskEncryptionKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateDiskDiskEncryptionKey | undefined) {
+    if (value === undefined) {
+      this._kmsKeySelfLink = undefined;
+    }
+    else {
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+    }
+  }
+
   // kms_key_self_link - computed: false, optional: false, required: true
   private _kmsKeySelfLink?: string; 
   public get kmsKeySelfLink() {
@@ -301,7 +364,7 @@ export class ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeySelfLinkInput() {
-    return this._kmsKeySelfLink
+    return this._kmsKeySelfLink;
   }
 }
 export interface ComputeInstanceTemplateDisk {
@@ -391,7 +454,7 @@ export interface ComputeInstanceTemplateDisk {
   readonly diskEncryptionKey?: ComputeInstanceTemplateDiskDiskEncryptionKey;
 }
 
-function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceTemplateDisk): any {
+export function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceTemplateDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -429,7 +492,7 @@ export interface ComputeInstanceTemplateGuestAccelerator {
   readonly type: string;
 }
 
-function computeInstanceTemplateGuestAcceleratorToTerraform(struct?: ComputeInstanceTemplateGuestAccelerator): any {
+export function computeInstanceTemplateGuestAcceleratorToTerraform(struct?: ComputeInstanceTemplateGuestAccelerator): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -455,7 +518,7 @@ export interface ComputeInstanceTemplateNetworkInterfaceAccessConfig {
   readonly networkTier?: string;
 }
 
-function computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceAccessConfig): any {
+export function computeInstanceTemplateNetworkInterfaceAccessConfigToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceAccessConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -481,7 +544,7 @@ export interface ComputeInstanceTemplateNetworkInterfaceAliasIpRange {
   readonly subnetworkRangeName?: string;
 }
 
-function computeInstanceTemplateNetworkInterfaceAliasIpRangeToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceAliasIpRange): any {
+export function computeInstanceTemplateNetworkInterfaceAliasIpRangeToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceAliasIpRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -501,7 +564,7 @@ export interface ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig {
   readonly networkTier: string;
 }
 
-function computeInstanceTemplateNetworkInterfaceIpv6AccessConfigToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig): any {
+export function computeInstanceTemplateNetworkInterfaceIpv6AccessConfigToTerraform(struct?: ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -568,7 +631,7 @@ export interface ComputeInstanceTemplateNetworkInterface {
   readonly ipv6AccessConfig?: ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig[];
 }
 
-function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInstanceTemplateNetworkInterface): any {
+export function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: ComputeInstanceTemplateNetworkInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -601,7 +664,7 @@ export interface ComputeInstanceTemplateReservationAffinitySpecificReservation {
   readonly values: string[];
 }
 
-function computeInstanceTemplateReservationAffinitySpecificReservationToTerraform(struct?: ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference | ComputeInstanceTemplateReservationAffinitySpecificReservation): any {
+export function computeInstanceTemplateReservationAffinitySpecificReservationToTerraform(struct?: ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference | ComputeInstanceTemplateReservationAffinitySpecificReservation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -622,6 +685,31 @@ export class ComputeInstanceTemplateReservationAffinitySpecificReservationOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateReservationAffinitySpecificReservation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._key) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateReservationAffinitySpecificReservation | undefined) {
+    if (value === undefined) {
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
   // key - computed: false, optional: false, required: true
   private _key?: string; 
   public get key() {
@@ -632,7 +720,7 @@ export class ComputeInstanceTemplateReservationAffinitySpecificReservationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
-    return this._key
+    return this._key;
   }
 
   // values - computed: false, optional: false, required: true
@@ -645,7 +733,7 @@ export class ComputeInstanceTemplateReservationAffinitySpecificReservationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ComputeInstanceTemplateReservationAffinity {
@@ -663,7 +751,7 @@ export interface ComputeInstanceTemplateReservationAffinity {
   readonly specificReservation?: ComputeInstanceTemplateReservationAffinitySpecificReservation;
 }
 
-function computeInstanceTemplateReservationAffinityToTerraform(struct?: ComputeInstanceTemplateReservationAffinityOutputReference | ComputeInstanceTemplateReservationAffinity): any {
+export function computeInstanceTemplateReservationAffinityToTerraform(struct?: ComputeInstanceTemplateReservationAffinityOutputReference | ComputeInstanceTemplateReservationAffinity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -684,6 +772,31 @@ export class ComputeInstanceTemplateReservationAffinityOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateReservationAffinity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._specificReservation) {
+      hasAnyValues = true;
+      internalValueResult.specificReservation = this._specificReservation?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateReservationAffinity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+      this._specificReservation.internalValue = undefined;
+    }
+    else {
+      this._type = value.type;
+      this._specificReservation.internalValue = value.specificReservation;
+    }
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -694,24 +807,23 @@ export class ComputeInstanceTemplateReservationAffinityOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // specific_reservation - computed: false, optional: true, required: false
-  private _specificReservation?: ComputeInstanceTemplateReservationAffinitySpecificReservation | undefined; 
-  private __specificReservationOutput = new ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference(this as any, "specific_reservation", true);
+  private _specificReservation = new ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference(this as any, "specific_reservation", true);
   public get specificReservation() {
-    return this.__specificReservationOutput;
+    return this._specificReservation;
   }
-  public putSpecificReservation(value: ComputeInstanceTemplateReservationAffinitySpecificReservation | undefined) {
-    this._specificReservation = value;
+  public putSpecificReservation(value: ComputeInstanceTemplateReservationAffinitySpecificReservation) {
+    this._specificReservation.internalValue = value;
   }
   public resetSpecificReservation() {
-    this._specificReservation = undefined;
+    this._specificReservation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get specificReservationInput() {
-    return this._specificReservation
+    return this._specificReservation.internalValue;
   }
 }
 export interface ComputeInstanceTemplateSchedulingNodeAffinities {
@@ -729,7 +841,7 @@ export interface ComputeInstanceTemplateSchedulingNodeAffinities {
   readonly values: string[];
 }
 
-function computeInstanceTemplateSchedulingNodeAffinitiesToTerraform(struct?: ComputeInstanceTemplateSchedulingNodeAffinities): any {
+export function computeInstanceTemplateSchedulingNodeAffinitiesToTerraform(struct?: ComputeInstanceTemplateSchedulingNodeAffinities): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -774,7 +886,7 @@ export interface ComputeInstanceTemplateScheduling {
   readonly nodeAffinities?: ComputeInstanceTemplateSchedulingNodeAffinities[];
 }
 
-function computeInstanceTemplateSchedulingToTerraform(struct?: ComputeInstanceTemplateSchedulingOutputReference | ComputeInstanceTemplateScheduling): any {
+export function computeInstanceTemplateSchedulingToTerraform(struct?: ComputeInstanceTemplateSchedulingOutputReference | ComputeInstanceTemplateScheduling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -798,12 +910,55 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateScheduling | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._automaticRestart) {
+      hasAnyValues = true;
+      internalValueResult.automaticRestart = this._automaticRestart;
+    }
+    if (this._minNodeCpus) {
+      hasAnyValues = true;
+      internalValueResult.minNodeCpus = this._minNodeCpus;
+    }
+    if (this._onHostMaintenance) {
+      hasAnyValues = true;
+      internalValueResult.onHostMaintenance = this._onHostMaintenance;
+    }
+    if (this._preemptible) {
+      hasAnyValues = true;
+      internalValueResult.preemptible = this._preemptible;
+    }
+    if (this._nodeAffinities) {
+      hasAnyValues = true;
+      internalValueResult.nodeAffinities = this._nodeAffinities;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateScheduling | undefined) {
+    if (value === undefined) {
+      this._automaticRestart = undefined;
+      this._minNodeCpus = undefined;
+      this._onHostMaintenance = undefined;
+      this._preemptible = undefined;
+      this._nodeAffinities = undefined;
+    }
+    else {
+      this._automaticRestart = value.automaticRestart;
+      this._minNodeCpus = value.minNodeCpus;
+      this._onHostMaintenance = value.onHostMaintenance;
+      this._preemptible = value.preemptible;
+      this._nodeAffinities = value.nodeAffinities;
+    }
+  }
+
   // automatic_restart - computed: false, optional: true, required: false
-  private _automaticRestart?: boolean | cdktf.IResolvable | undefined; 
+  private _automaticRestart?: boolean | cdktf.IResolvable; 
   public get automaticRestart() {
     return this.getBooleanAttribute('automatic_restart') as any;
   }
-  public set automaticRestart(value: boolean | cdktf.IResolvable | undefined) {
+  public set automaticRestart(value: boolean | cdktf.IResolvable) {
     this._automaticRestart = value;
   }
   public resetAutomaticRestart() {
@@ -811,15 +966,15 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get automaticRestartInput() {
-    return this._automaticRestart
+    return this._automaticRestart;
   }
 
   // min_node_cpus - computed: false, optional: true, required: false
-  private _minNodeCpus?: number | undefined; 
+  private _minNodeCpus?: number; 
   public get minNodeCpus() {
     return this.getNumberAttribute('min_node_cpus');
   }
-  public set minNodeCpus(value: number | undefined) {
+  public set minNodeCpus(value: number) {
     this._minNodeCpus = value;
   }
   public resetMinNodeCpus() {
@@ -827,15 +982,15 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get minNodeCpusInput() {
-    return this._minNodeCpus
+    return this._minNodeCpus;
   }
 
   // on_host_maintenance - computed: true, optional: true, required: false
-  private _onHostMaintenance?: string | undefined; 
+  private _onHostMaintenance?: string; 
   public get onHostMaintenance() {
     return this.getStringAttribute('on_host_maintenance');
   }
-  public set onHostMaintenance(value: string | undefined) {
+  public set onHostMaintenance(value: string) {
     this._onHostMaintenance = value;
   }
   public resetOnHostMaintenance() {
@@ -843,15 +998,15 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get onHostMaintenanceInput() {
-    return this._onHostMaintenance
+    return this._onHostMaintenance;
   }
 
   // preemptible - computed: false, optional: true, required: false
-  private _preemptible?: boolean | cdktf.IResolvable | undefined; 
+  private _preemptible?: boolean | cdktf.IResolvable; 
   public get preemptible() {
     return this.getBooleanAttribute('preemptible') as any;
   }
-  public set preemptible(value: boolean | cdktf.IResolvable | undefined) {
+  public set preemptible(value: boolean | cdktf.IResolvable) {
     this._preemptible = value;
   }
   public resetPreemptible() {
@@ -859,16 +1014,16 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibleInput() {
-    return this._preemptible
+    return this._preemptible;
   }
 
   // node_affinities - computed: false, optional: true, required: false
-  private _nodeAffinities?: ComputeInstanceTemplateSchedulingNodeAffinities[] | undefined; 
+  private _nodeAffinities?: ComputeInstanceTemplateSchedulingNodeAffinities[]; 
   public get nodeAffinities() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_affinities') as any;
   }
-  public set nodeAffinities(value: ComputeInstanceTemplateSchedulingNodeAffinities[] | undefined) {
+  public set nodeAffinities(value: ComputeInstanceTemplateSchedulingNodeAffinities[]) {
     this._nodeAffinities = value;
   }
   public resetNodeAffinities() {
@@ -876,7 +1031,7 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get nodeAffinitiesInput() {
-    return this._nodeAffinities
+    return this._nodeAffinities;
   }
 }
 export interface ComputeInstanceTemplateServiceAccount {
@@ -894,7 +1049,7 @@ export interface ComputeInstanceTemplateServiceAccount {
   readonly scopes: string[];
 }
 
-function computeInstanceTemplateServiceAccountToTerraform(struct?: ComputeInstanceTemplateServiceAccountOutputReference | ComputeInstanceTemplateServiceAccount): any {
+export function computeInstanceTemplateServiceAccountToTerraform(struct?: ComputeInstanceTemplateServiceAccountOutputReference | ComputeInstanceTemplateServiceAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -915,12 +1070,37 @@ export class ComputeInstanceTemplateServiceAccountOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateServiceAccount | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._email) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    if (this._scopes) {
+      hasAnyValues = true;
+      internalValueResult.scopes = this._scopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateServiceAccount | undefined) {
+    if (value === undefined) {
+      this._email = undefined;
+      this._scopes = undefined;
+    }
+    else {
+      this._email = value.email;
+      this._scopes = value.scopes;
+    }
+  }
+
   // email - computed: true, optional: true, required: false
-  private _email?: string | undefined; 
+  private _email?: string; 
   public get email() {
     return this.getStringAttribute('email');
   }
-  public set email(value: string | undefined) {
+  public set email(value: string) {
     this._email = value;
   }
   public resetEmail() {
@@ -928,7 +1108,7 @@ export class ComputeInstanceTemplateServiceAccountOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get emailInput() {
-    return this._email
+    return this._email;
   }
 
   // scopes - computed: false, optional: false, required: true
@@ -941,7 +1121,7 @@ export class ComputeInstanceTemplateServiceAccountOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get scopesInput() {
-    return this._scopes
+    return this._scopes;
   }
 }
 export interface ComputeInstanceTemplateShieldedInstanceConfig {
@@ -965,7 +1145,7 @@ export interface ComputeInstanceTemplateShieldedInstanceConfig {
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
-function computeInstanceTemplateShieldedInstanceConfigToTerraform(struct?: ComputeInstanceTemplateShieldedInstanceConfigOutputReference | ComputeInstanceTemplateShieldedInstanceConfig): any {
+export function computeInstanceTemplateShieldedInstanceConfigToTerraform(struct?: ComputeInstanceTemplateShieldedInstanceConfigOutputReference | ComputeInstanceTemplateShieldedInstanceConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -987,12 +1167,43 @@ export class ComputeInstanceTemplateShieldedInstanceConfigOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateShieldedInstanceConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableIntegrityMonitoring) {
+      hasAnyValues = true;
+      internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
+    }
+    if (this._enableSecureBoot) {
+      hasAnyValues = true;
+      internalValueResult.enableSecureBoot = this._enableSecureBoot;
+    }
+    if (this._enableVtpm) {
+      hasAnyValues = true;
+      internalValueResult.enableVtpm = this._enableVtpm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateShieldedInstanceConfig | undefined) {
+    if (value === undefined) {
+      this._enableIntegrityMonitoring = undefined;
+      this._enableSecureBoot = undefined;
+      this._enableVtpm = undefined;
+    }
+    else {
+      this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
+      this._enableSecureBoot = value.enableSecureBoot;
+      this._enableVtpm = value.enableVtpm;
+    }
+  }
+
   // enable_integrity_monitoring - computed: false, optional: true, required: false
-  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable | undefined; 
+  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
     return this.getBooleanAttribute('enable_integrity_monitoring') as any;
   }
-  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
   }
   public resetEnableIntegrityMonitoring() {
@@ -1000,15 +1211,15 @@ export class ComputeInstanceTemplateShieldedInstanceConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get enableIntegrityMonitoringInput() {
-    return this._enableIntegrityMonitoring
+    return this._enableIntegrityMonitoring;
   }
 
   // enable_secure_boot - computed: false, optional: true, required: false
-  private _enableSecureBoot?: boolean | cdktf.IResolvable | undefined; 
+  private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
     return this.getBooleanAttribute('enable_secure_boot') as any;
   }
-  public set enableSecureBoot(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
   }
   public resetEnableSecureBoot() {
@@ -1016,15 +1227,15 @@ export class ComputeInstanceTemplateShieldedInstanceConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get enableSecureBootInput() {
-    return this._enableSecureBoot
+    return this._enableSecureBoot;
   }
 
   // enable_vtpm - computed: false, optional: true, required: false
-  private _enableVtpm?: boolean | cdktf.IResolvable | undefined; 
+  private _enableVtpm?: boolean | cdktf.IResolvable; 
   public get enableVtpm() {
     return this.getBooleanAttribute('enable_vtpm') as any;
   }
-  public set enableVtpm(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableVtpm(value: boolean | cdktf.IResolvable) {
     this._enableVtpm = value;
   }
   public resetEnableVtpm() {
@@ -1032,7 +1243,7 @@ export class ComputeInstanceTemplateShieldedInstanceConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get enableVtpmInput() {
-    return this._enableVtpm
+    return this._enableVtpm;
   }
 }
 export interface ComputeInstanceTemplateTimeouts {
@@ -1046,7 +1257,7 @@ export interface ComputeInstanceTemplateTimeouts {
   readonly delete?: string;
 }
 
-function computeInstanceTemplateTimeoutsToTerraform(struct?: ComputeInstanceTemplateTimeoutsOutputReference | ComputeInstanceTemplateTimeouts): any {
+export function computeInstanceTemplateTimeoutsToTerraform(struct?: ComputeInstanceTemplateTimeoutsOutputReference | ComputeInstanceTemplateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1067,12 +1278,37 @@ export class ComputeInstanceTemplateTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceTemplateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1080,15 +1316,15 @@ export class ComputeInstanceTemplateTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1096,7 +1332,7 @@ export class ComputeInstanceTemplateTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -1146,16 +1382,16 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._tags = config.tags;
-    this._advancedMachineFeatures = config.advancedMachineFeatures;
-    this._confidentialInstanceConfig = config.confidentialInstanceConfig;
+    this._advancedMachineFeatures.internalValue = config.advancedMachineFeatures;
+    this._confidentialInstanceConfig.internalValue = config.confidentialInstanceConfig;
     this._disk = config.disk;
     this._guestAccelerator = config.guestAccelerator;
     this._networkInterface = config.networkInterface;
-    this._reservationAffinity = config.reservationAffinity;
-    this._scheduling = config.scheduling;
-    this._serviceAccount = config.serviceAccount;
-    this._shieldedInstanceConfig = config.shieldedInstanceConfig;
-    this._timeouts = config.timeouts;
+    this._reservationAffinity.internalValue = config.reservationAffinity;
+    this._scheduling.internalValue = config.scheduling;
+    this._serviceAccount.internalValue = config.serviceAccount;
+    this._shieldedInstanceConfig.internalValue = config.shieldedInstanceConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1163,11 +1399,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   // ==========
 
   // can_ip_forward - computed: false, optional: true, required: false
-  private _canIpForward?: boolean | cdktf.IResolvable | undefined; 
+  private _canIpForward?: boolean | cdktf.IResolvable; 
   public get canIpForward() {
     return this.getBooleanAttribute('can_ip_forward') as any;
   }
-  public set canIpForward(value: boolean | cdktf.IResolvable | undefined) {
+  public set canIpForward(value: boolean | cdktf.IResolvable) {
     this._canIpForward = value;
   }
   public resetCanIpForward() {
@@ -1175,15 +1411,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get canIpForwardInput() {
-    return this._canIpForward
+    return this._canIpForward;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1191,15 +1427,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enable_display - computed: false, optional: true, required: false
-  private _enableDisplay?: boolean | cdktf.IResolvable | undefined; 
+  private _enableDisplay?: boolean | cdktf.IResolvable; 
   public get enableDisplay() {
     return this.getBooleanAttribute('enable_display') as any;
   }
-  public set enableDisplay(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableDisplay(value: boolean | cdktf.IResolvable) {
     this._enableDisplay = value;
   }
   public resetEnableDisplay() {
@@ -1207,7 +1443,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableDisplayInput() {
-    return this._enableDisplay
+    return this._enableDisplay;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1216,11 +1452,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // instance_description - computed: false, optional: true, required: false
-  private _instanceDescription?: string | undefined; 
+  private _instanceDescription?: string; 
   public get instanceDescription() {
     return this.getStringAttribute('instance_description');
   }
-  public set instanceDescription(value: string | undefined) {
+  public set instanceDescription(value: string) {
     this._instanceDescription = value;
   }
   public resetInstanceDescription() {
@@ -1228,16 +1464,16 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceDescriptionInput() {
-    return this._instanceDescription
+    return this._instanceDescription;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1245,7 +1481,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // machine_type - computed: false, optional: false, required: true
@@ -1258,16 +1494,16 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -1275,7 +1511,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // metadata_fingerprint - computed: true, optional: false, required: false
@@ -1284,11 +1520,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // metadata_startup_script - computed: false, optional: true, required: false
-  private _metadataStartupScript?: string | undefined; 
+  private _metadataStartupScript?: string; 
   public get metadataStartupScript() {
     return this.getStringAttribute('metadata_startup_script');
   }
-  public set metadataStartupScript(value: string | undefined) {
+  public set metadataStartupScript(value: string) {
     this._metadataStartupScript = value;
   }
   public resetMetadataStartupScript() {
@@ -1296,15 +1532,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataStartupScriptInput() {
-    return this._metadataStartupScript
+    return this._metadataStartupScript;
   }
 
   // min_cpu_platform - computed: false, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -1312,15 +1548,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -1328,15 +1564,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_prefix - computed: true, optional: true, required: false
-  private _namePrefix?: string | undefined; 
+  private _namePrefix?: string; 
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string) {
     this._namePrefix = value;
   }
   public resetNamePrefix() {
@@ -1344,15 +1580,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namePrefixInput() {
-    return this._namePrefix
+    return this._namePrefix;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1360,15 +1596,15 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -1376,7 +1612,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -1385,11 +1621,11 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -1397,7 +1633,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // tags_fingerprint - computed: true, optional: false, required: false
@@ -1406,37 +1642,35 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // advanced_machine_features - computed: false, optional: true, required: false
-  private _advancedMachineFeatures?: ComputeInstanceTemplateAdvancedMachineFeatures | undefined; 
-  private __advancedMachineFeaturesOutput = new ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference(this as any, "advanced_machine_features", true);
+  private _advancedMachineFeatures = new ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference(this as any, "advanced_machine_features", true);
   public get advancedMachineFeatures() {
-    return this.__advancedMachineFeaturesOutput;
+    return this._advancedMachineFeatures;
   }
-  public putAdvancedMachineFeatures(value: ComputeInstanceTemplateAdvancedMachineFeatures | undefined) {
-    this._advancedMachineFeatures = value;
+  public putAdvancedMachineFeatures(value: ComputeInstanceTemplateAdvancedMachineFeatures) {
+    this._advancedMachineFeatures.internalValue = value;
   }
   public resetAdvancedMachineFeatures() {
-    this._advancedMachineFeatures = undefined;
+    this._advancedMachineFeatures.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get advancedMachineFeaturesInput() {
-    return this._advancedMachineFeatures
+    return this._advancedMachineFeatures.internalValue;
   }
 
   // confidential_instance_config - computed: false, optional: true, required: false
-  private _confidentialInstanceConfig?: ComputeInstanceTemplateConfidentialInstanceConfig | undefined; 
-  private __confidentialInstanceConfigOutput = new ComputeInstanceTemplateConfidentialInstanceConfigOutputReference(this as any, "confidential_instance_config", true);
+  private _confidentialInstanceConfig = new ComputeInstanceTemplateConfidentialInstanceConfigOutputReference(this as any, "confidential_instance_config", true);
   public get confidentialInstanceConfig() {
-    return this.__confidentialInstanceConfigOutput;
+    return this._confidentialInstanceConfig;
   }
-  public putConfidentialInstanceConfig(value: ComputeInstanceTemplateConfidentialInstanceConfig | undefined) {
-    this._confidentialInstanceConfig = value;
+  public putConfidentialInstanceConfig(value: ComputeInstanceTemplateConfidentialInstanceConfig) {
+    this._confidentialInstanceConfig.internalValue = value;
   }
   public resetConfidentialInstanceConfig() {
-    this._confidentialInstanceConfig = undefined;
+    this._confidentialInstanceConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get confidentialInstanceConfigInput() {
-    return this._confidentialInstanceConfig
+    return this._confidentialInstanceConfig.internalValue;
   }
 
   // disk - computed: false, optional: false, required: true
@@ -1450,16 +1684,16 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get diskInput() {
-    return this._disk
+    return this._disk;
   }
 
   // guest_accelerator - computed: false, optional: true, required: false
-  private _guestAccelerator?: ComputeInstanceTemplateGuestAccelerator[] | undefined; 
+  private _guestAccelerator?: ComputeInstanceTemplateGuestAccelerator[]; 
   public get guestAccelerator() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('guest_accelerator') as any;
   }
-  public set guestAccelerator(value: ComputeInstanceTemplateGuestAccelerator[] | undefined) {
+  public set guestAccelerator(value: ComputeInstanceTemplateGuestAccelerator[]) {
     this._guestAccelerator = value;
   }
   public resetGuestAccelerator() {
@@ -1467,16 +1701,16 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get guestAcceleratorInput() {
-    return this._guestAccelerator
+    return this._guestAccelerator;
   }
 
   // network_interface - computed: false, optional: true, required: false
-  private _networkInterface?: ComputeInstanceTemplateNetworkInterface[] | undefined; 
+  private _networkInterface?: ComputeInstanceTemplateNetworkInterface[]; 
   public get networkInterface() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('network_interface') as any;
   }
-  public set networkInterface(value: ComputeInstanceTemplateNetworkInterface[] | undefined) {
+  public set networkInterface(value: ComputeInstanceTemplateNetworkInterface[]) {
     this._networkInterface = value;
   }
   public resetNetworkInterface() {
@@ -1484,92 +1718,87 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceInput() {
-    return this._networkInterface
+    return this._networkInterface;
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
-  private _reservationAffinity?: ComputeInstanceTemplateReservationAffinity | undefined; 
-  private __reservationAffinityOutput = new ComputeInstanceTemplateReservationAffinityOutputReference(this as any, "reservation_affinity", true);
+  private _reservationAffinity = new ComputeInstanceTemplateReservationAffinityOutputReference(this as any, "reservation_affinity", true);
   public get reservationAffinity() {
-    return this.__reservationAffinityOutput;
+    return this._reservationAffinity;
   }
-  public putReservationAffinity(value: ComputeInstanceTemplateReservationAffinity | undefined) {
-    this._reservationAffinity = value;
+  public putReservationAffinity(value: ComputeInstanceTemplateReservationAffinity) {
+    this._reservationAffinity.internalValue = value;
   }
   public resetReservationAffinity() {
-    this._reservationAffinity = undefined;
+    this._reservationAffinity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get reservationAffinityInput() {
-    return this._reservationAffinity
+    return this._reservationAffinity.internalValue;
   }
 
   // scheduling - computed: false, optional: true, required: false
-  private _scheduling?: ComputeInstanceTemplateScheduling | undefined; 
-  private __schedulingOutput = new ComputeInstanceTemplateSchedulingOutputReference(this as any, "scheduling", true);
+  private _scheduling = new ComputeInstanceTemplateSchedulingOutputReference(this as any, "scheduling", true);
   public get scheduling() {
-    return this.__schedulingOutput;
+    return this._scheduling;
   }
-  public putScheduling(value: ComputeInstanceTemplateScheduling | undefined) {
-    this._scheduling = value;
+  public putScheduling(value: ComputeInstanceTemplateScheduling) {
+    this._scheduling.internalValue = value;
   }
   public resetScheduling() {
-    this._scheduling = undefined;
+    this._scheduling.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get schedulingInput() {
-    return this._scheduling
+    return this._scheduling.internalValue;
   }
 
   // service_account - computed: false, optional: true, required: false
-  private _serviceAccount?: ComputeInstanceTemplateServiceAccount | undefined; 
-  private __serviceAccountOutput = new ComputeInstanceTemplateServiceAccountOutputReference(this as any, "service_account", true);
+  private _serviceAccount = new ComputeInstanceTemplateServiceAccountOutputReference(this as any, "service_account", true);
   public get serviceAccount() {
-    return this.__serviceAccountOutput;
+    return this._serviceAccount;
   }
-  public putServiceAccount(value: ComputeInstanceTemplateServiceAccount | undefined) {
-    this._serviceAccount = value;
+  public putServiceAccount(value: ComputeInstanceTemplateServiceAccount) {
+    this._serviceAccount.internalValue = value;
   }
   public resetServiceAccount() {
-    this._serviceAccount = undefined;
+    this._serviceAccount.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount.internalValue;
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig?: ComputeInstanceTemplateShieldedInstanceConfig | undefined; 
-  private __shieldedInstanceConfigOutput = new ComputeInstanceTemplateShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new ComputeInstanceTemplateShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
-    return this.__shieldedInstanceConfigOutput;
+    return this._shieldedInstanceConfig;
   }
-  public putShieldedInstanceConfig(value: ComputeInstanceTemplateShieldedInstanceConfig | undefined) {
-    this._shieldedInstanceConfig = value;
+  public putShieldedInstanceConfig(value: ComputeInstanceTemplateShieldedInstanceConfig) {
+    this._shieldedInstanceConfig.internalValue = value;
   }
   public resetShieldedInstanceConfig() {
-    this._shieldedInstanceConfig = undefined;
+    this._shieldedInstanceConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get shieldedInstanceConfigInput() {
-    return this._shieldedInstanceConfig
+    return this._shieldedInstanceConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeInstanceTemplateTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeInstanceTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInstanceTemplateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeInstanceTemplateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeInstanceTemplateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1592,16 +1821,16 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
-      advanced_machine_features: computeInstanceTemplateAdvancedMachineFeaturesToTerraform(this._advancedMachineFeatures),
-      confidential_instance_config: computeInstanceTemplateConfidentialInstanceConfigToTerraform(this._confidentialInstanceConfig),
+      advanced_machine_features: computeInstanceTemplateAdvancedMachineFeaturesToTerraform(this._advancedMachineFeatures.internalValue),
+      confidential_instance_config: computeInstanceTemplateConfidentialInstanceConfigToTerraform(this._confidentialInstanceConfig.internalValue),
       disk: cdktf.listMapper(computeInstanceTemplateDiskToTerraform)(this._disk),
       guest_accelerator: cdktf.listMapper(computeInstanceTemplateGuestAcceleratorToTerraform)(this._guestAccelerator),
       network_interface: cdktf.listMapper(computeInstanceTemplateNetworkInterfaceToTerraform)(this._networkInterface),
-      reservation_affinity: computeInstanceTemplateReservationAffinityToTerraform(this._reservationAffinity),
-      scheduling: computeInstanceTemplateSchedulingToTerraform(this._scheduling),
-      service_account: computeInstanceTemplateServiceAccountToTerraform(this._serviceAccount),
-      shielded_instance_config: computeInstanceTemplateShieldedInstanceConfigToTerraform(this._shieldedInstanceConfig),
-      timeouts: computeInstanceTemplateTimeoutsToTerraform(this._timeouts),
+      reservation_affinity: computeInstanceTemplateReservationAffinityToTerraform(this._reservationAffinity.internalValue),
+      scheduling: computeInstanceTemplateSchedulingToTerraform(this._scheduling.internalValue),
+      service_account: computeInstanceTemplateServiceAccountToTerraform(this._serviceAccount.internalValue),
+      shielded_instance_config: computeInstanceTemplateShieldedInstanceConfigToTerraform(this._shieldedInstanceConfig.internalValue),
+      timeouts: computeInstanceTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

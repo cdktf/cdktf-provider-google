@@ -67,7 +67,7 @@ export class BillingAccountIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get billingAccountIdInput() {
-    return this._billingAccountId
+    return this._billingAccountId;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -90,7 +90,7 @@ export class BillingAccountIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

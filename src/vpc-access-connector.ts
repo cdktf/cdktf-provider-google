@@ -65,7 +65,7 @@ export interface VpcAccessConnectorTimeouts {
   readonly delete?: string;
 }
 
-function vpcAccessConnectorTimeoutsToTerraform(struct?: VpcAccessConnectorTimeoutsOutputReference | VpcAccessConnectorTimeouts): any {
+export function vpcAccessConnectorTimeoutsToTerraform(struct?: VpcAccessConnectorTimeoutsOutputReference | VpcAccessConnectorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,12 +86,37 @@ export class VpcAccessConnectorTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VpcAccessConnectorTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcAccessConnectorTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -99,15 +124,15 @@ export class VpcAccessConnectorTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -115,7 +140,7 @@ export class VpcAccessConnectorTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -158,7 +183,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     this._network = config.network;
     this._project = config.project;
     this._region = config.region;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -171,11 +196,11 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
 
   // ip_cidr_range - computed: false, optional: true, required: false
-  private _ipCidrRange?: string | undefined; 
+  private _ipCidrRange?: string; 
   public get ipCidrRange() {
     return this.getStringAttribute('ip_cidr_range');
   }
-  public set ipCidrRange(value: string | undefined) {
+  public set ipCidrRange(value: string) {
     this._ipCidrRange = value;
   }
   public resetIpCidrRange() {
@@ -183,15 +208,15 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipCidrRangeInput() {
-    return this._ipCidrRange
+    return this._ipCidrRange;
   }
 
   // max_throughput - computed: false, optional: true, required: false
-  private _maxThroughput?: number | undefined; 
+  private _maxThroughput?: number; 
   public get maxThroughput() {
     return this.getNumberAttribute('max_throughput');
   }
-  public set maxThroughput(value: number | undefined) {
+  public set maxThroughput(value: number) {
     this._maxThroughput = value;
   }
   public resetMaxThroughput() {
@@ -199,15 +224,15 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxThroughputInput() {
-    return this._maxThroughput
+    return this._maxThroughput;
   }
 
   // min_throughput - computed: false, optional: true, required: false
-  private _minThroughput?: number | undefined; 
+  private _minThroughput?: number; 
   public get minThroughput() {
     return this.getNumberAttribute('min_throughput');
   }
-  public set minThroughput(value: number | undefined) {
+  public set minThroughput(value: number) {
     this._minThroughput = value;
   }
   public resetMinThroughput() {
@@ -215,7 +240,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minThroughputInput() {
-    return this._minThroughput
+    return this._minThroughput;
   }
 
   // name - computed: false, optional: false, required: true
@@ -228,15 +253,15 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -244,15 +269,15 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -260,15 +285,15 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -276,7 +301,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -290,20 +315,19 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VpcAccessConnectorTimeouts | undefined; 
-  private __timeoutsOutput = new VpcAccessConnectorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VpcAccessConnectorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VpcAccessConnectorTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VpcAccessConnectorTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -319,7 +343,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      timeouts: vpcAccessConnectorTimeoutsToTerraform(this._timeouts),
+      timeouts: vpcAccessConnectorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

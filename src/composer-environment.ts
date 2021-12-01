@@ -67,7 +67,7 @@ export interface ComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
   readonly useIpAliases?: boolean | cdktf.IResolvable;
 }
 
-function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
+export function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -138,7 +138,7 @@ export interface ComposerEnvironmentConfigNodeConfig {
   readonly zone?: string;
 }
 
-function composerEnvironmentConfigNodeConfigToTerraform(struct?: ComposerEnvironmentConfigNodeConfigOutputReference | ComposerEnvironmentConfigNodeConfig): any {
+export function composerEnvironmentConfigNodeConfigToTerraform(struct?: ComposerEnvironmentConfigNodeConfigOutputReference | ComposerEnvironmentConfigNodeConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -166,12 +166,79 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComposerEnvironmentConfigNodeConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._diskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._ipAllocationPolicy) {
+      hasAnyValues = true;
+      internalValueResult.ipAllocationPolicy = this._ipAllocationPolicy;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._network) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._oauthScopes) {
+      hasAnyValues = true;
+      internalValueResult.oauthScopes = this._oauthScopes;
+    }
+    if (this._serviceAccount) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccount = this._serviceAccount;
+    }
+    if (this._subnetwork) {
+      hasAnyValues = true;
+      internalValueResult.subnetwork = this._subnetwork;
+    }
+    if (this._tags) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._zone) {
+      hasAnyValues = true;
+      internalValueResult.zone = this._zone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentConfigNodeConfig | undefined) {
+    if (value === undefined) {
+      this._diskSizeGb = undefined;
+      this._ipAllocationPolicy = undefined;
+      this._machineType = undefined;
+      this._network = undefined;
+      this._oauthScopes = undefined;
+      this._serviceAccount = undefined;
+      this._subnetwork = undefined;
+      this._tags = undefined;
+      this._zone = undefined;
+    }
+    else {
+      this._diskSizeGb = value.diskSizeGb;
+      this._ipAllocationPolicy = value.ipAllocationPolicy;
+      this._machineType = value.machineType;
+      this._network = value.network;
+      this._oauthScopes = value.oauthScopes;
+      this._serviceAccount = value.serviceAccount;
+      this._subnetwork = value.subnetwork;
+      this._tags = value.tags;
+      this._zone = value.zone;
+    }
+  }
+
   // disk_size_gb - computed: true, optional: true, required: false
-  private _diskSizeGb?: number | undefined; 
+  private _diskSizeGb?: number; 
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
   }
-  public set diskSizeGb(value: number | undefined) {
+  public set diskSizeGb(value: number) {
     this._diskSizeGb = value;
   }
   public resetDiskSizeGb() {
@@ -179,16 +246,16 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
-    return this._diskSizeGb
+    return this._diskSizeGb;
   }
 
   // ip_allocation_policy - computed: true, optional: true, required: false
-  private _ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[] | undefined; 
+  private _ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[]; 
   public get ipAllocationPolicy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_allocation_policy') as any;
   }
-  public set ipAllocationPolicy(value: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[] | undefined) {
+  public set ipAllocationPolicy(value: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[]) {
     this._ipAllocationPolicy = value;
   }
   public resetIpAllocationPolicy() {
@@ -196,15 +263,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get ipAllocationPolicyInput() {
-    return this._ipAllocationPolicy
+    return this._ipAllocationPolicy;
   }
 
   // machine_type - computed: true, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -212,15 +279,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // network - computed: true, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -228,15 +295,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // oauth_scopes - computed: true, optional: true, required: false
-  private _oauthScopes?: string[] | undefined; 
+  private _oauthScopes?: string[]; 
   public get oauthScopes() {
     return this.getListAttribute('oauth_scopes');
   }
-  public set oauthScopes(value: string[] | undefined) {
+  public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
   }
   public resetOauthScopes() {
@@ -244,15 +311,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get oauthScopesInput() {
-    return this._oauthScopes
+    return this._oauthScopes;
   }
 
   // service_account - computed: true, optional: true, required: false
-  private _serviceAccount?: string | undefined; 
+  private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string | undefined) {
+  public set serviceAccount(value: string) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -260,15 +327,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount;
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -276,15 +343,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -292,15 +359,15 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -308,7 +375,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 }
 export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
@@ -338,7 +405,7 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   readonly webServerIpv4CidrBlock?: string;
 }
 
-function composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct?: ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference | ComposerEnvironmentConfigPrivateEnvironmentConfig): any {
+export function composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct?: ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference | ComposerEnvironmentConfigPrivateEnvironmentConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -361,12 +428,49 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cloudSqlIpv4CidrBlock) {
+      hasAnyValues = true;
+      internalValueResult.cloudSqlIpv4CidrBlock = this._cloudSqlIpv4CidrBlock;
+    }
+    if (this._enablePrivateEndpoint) {
+      hasAnyValues = true;
+      internalValueResult.enablePrivateEndpoint = this._enablePrivateEndpoint;
+    }
+    if (this._masterIpv4CidrBlock) {
+      hasAnyValues = true;
+      internalValueResult.masterIpv4CidrBlock = this._masterIpv4CidrBlock;
+    }
+    if (this._webServerIpv4CidrBlock) {
+      hasAnyValues = true;
+      internalValueResult.webServerIpv4CidrBlock = this._webServerIpv4CidrBlock;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined) {
+    if (value === undefined) {
+      this._cloudSqlIpv4CidrBlock = undefined;
+      this._enablePrivateEndpoint = undefined;
+      this._masterIpv4CidrBlock = undefined;
+      this._webServerIpv4CidrBlock = undefined;
+    }
+    else {
+      this._cloudSqlIpv4CidrBlock = value.cloudSqlIpv4CidrBlock;
+      this._enablePrivateEndpoint = value.enablePrivateEndpoint;
+      this._masterIpv4CidrBlock = value.masterIpv4CidrBlock;
+      this._webServerIpv4CidrBlock = value.webServerIpv4CidrBlock;
+    }
+  }
+
   // cloud_sql_ipv4_cidr_block - computed: true, optional: true, required: false
-  private _cloudSqlIpv4CidrBlock?: string | undefined; 
+  private _cloudSqlIpv4CidrBlock?: string; 
   public get cloudSqlIpv4CidrBlock() {
     return this.getStringAttribute('cloud_sql_ipv4_cidr_block');
   }
-  public set cloudSqlIpv4CidrBlock(value: string | undefined) {
+  public set cloudSqlIpv4CidrBlock(value: string) {
     this._cloudSqlIpv4CidrBlock = value;
   }
   public resetCloudSqlIpv4CidrBlock() {
@@ -374,15 +478,15 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get cloudSqlIpv4CidrBlockInput() {
-    return this._cloudSqlIpv4CidrBlock
+    return this._cloudSqlIpv4CidrBlock;
   }
 
   // enable_private_endpoint - computed: false, optional: true, required: false
-  private _enablePrivateEndpoint?: boolean | cdktf.IResolvable | undefined; 
+  private _enablePrivateEndpoint?: boolean | cdktf.IResolvable; 
   public get enablePrivateEndpoint() {
     return this.getBooleanAttribute('enable_private_endpoint') as any;
   }
-  public set enablePrivateEndpoint(value: boolean | cdktf.IResolvable | undefined) {
+  public set enablePrivateEndpoint(value: boolean | cdktf.IResolvable) {
     this._enablePrivateEndpoint = value;
   }
   public resetEnablePrivateEndpoint() {
@@ -390,15 +494,15 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get enablePrivateEndpointInput() {
-    return this._enablePrivateEndpoint
+    return this._enablePrivateEndpoint;
   }
 
   // master_ipv4_cidr_block - computed: true, optional: true, required: false
-  private _masterIpv4CidrBlock?: string | undefined; 
+  private _masterIpv4CidrBlock?: string; 
   public get masterIpv4CidrBlock() {
     return this.getStringAttribute('master_ipv4_cidr_block');
   }
-  public set masterIpv4CidrBlock(value: string | undefined) {
+  public set masterIpv4CidrBlock(value: string) {
     this._masterIpv4CidrBlock = value;
   }
   public resetMasterIpv4CidrBlock() {
@@ -406,15 +510,15 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get masterIpv4CidrBlockInput() {
-    return this._masterIpv4CidrBlock
+    return this._masterIpv4CidrBlock;
   }
 
   // web_server_ipv4_cidr_block - computed: true, optional: true, required: false
-  private _webServerIpv4CidrBlock?: string | undefined; 
+  private _webServerIpv4CidrBlock?: string; 
   public get webServerIpv4CidrBlock() {
     return this.getStringAttribute('web_server_ipv4_cidr_block');
   }
-  public set webServerIpv4CidrBlock(value: string | undefined) {
+  public set webServerIpv4CidrBlock(value: string) {
     this._webServerIpv4CidrBlock = value;
   }
   public resetWebServerIpv4CidrBlock() {
@@ -422,7 +526,7 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get webServerIpv4CidrBlockInput() {
-    return this._webServerIpv4CidrBlock
+    return this._webServerIpv4CidrBlock;
   }
 }
 export interface ComposerEnvironmentConfigSoftwareConfig {
@@ -464,7 +568,7 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   readonly schedulerCount?: number;
 }
 
-function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: ComposerEnvironmentConfigSoftwareConfigOutputReference | ComposerEnvironmentConfigSoftwareConfig): any {
+export function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: ComposerEnvironmentConfigSoftwareConfigOutputReference | ComposerEnvironmentConfigSoftwareConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -489,13 +593,62 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComposerEnvironmentConfigSoftwareConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._airflowConfigOverrides) {
+      hasAnyValues = true;
+      internalValueResult.airflowConfigOverrides = this._airflowConfigOverrides;
+    }
+    if (this._envVariables) {
+      hasAnyValues = true;
+      internalValueResult.envVariables = this._envVariables;
+    }
+    if (this._imageVersion) {
+      hasAnyValues = true;
+      internalValueResult.imageVersion = this._imageVersion;
+    }
+    if (this._pypiPackages) {
+      hasAnyValues = true;
+      internalValueResult.pypiPackages = this._pypiPackages;
+    }
+    if (this._pythonVersion) {
+      hasAnyValues = true;
+      internalValueResult.pythonVersion = this._pythonVersion;
+    }
+    if (this._schedulerCount) {
+      hasAnyValues = true;
+      internalValueResult.schedulerCount = this._schedulerCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentConfigSoftwareConfig | undefined) {
+    if (value === undefined) {
+      this._airflowConfigOverrides = undefined;
+      this._envVariables = undefined;
+      this._imageVersion = undefined;
+      this._pypiPackages = undefined;
+      this._pythonVersion = undefined;
+      this._schedulerCount = undefined;
+    }
+    else {
+      this._airflowConfigOverrides = value.airflowConfigOverrides;
+      this._envVariables = value.envVariables;
+      this._imageVersion = value.imageVersion;
+      this._pypiPackages = value.pypiPackages;
+      this._pythonVersion = value.pythonVersion;
+      this._schedulerCount = value.schedulerCount;
+    }
+  }
+
   // airflow_config_overrides - computed: false, optional: true, required: false
-  private _airflowConfigOverrides?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _airflowConfigOverrides?: { [key: string]: string } | cdktf.IResolvable; 
   public get airflowConfigOverrides() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('airflow_config_overrides') as any;
   }
-  public set airflowConfigOverrides(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set airflowConfigOverrides(value: { [key: string]: string } | cdktf.IResolvable) {
     this._airflowConfigOverrides = value;
   }
   public resetAirflowConfigOverrides() {
@@ -503,16 +656,16 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get airflowConfigOverridesInput() {
-    return this._airflowConfigOverrides
+    return this._airflowConfigOverrides;
   }
 
   // env_variables - computed: false, optional: true, required: false
-  private _envVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _envVariables?: { [key: string]: string } | cdktf.IResolvable; 
   public get envVariables() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('env_variables') as any;
   }
-  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable) {
     this._envVariables = value;
   }
   public resetEnvVariables() {
@@ -520,15 +673,15 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get envVariablesInput() {
-    return this._envVariables
+    return this._envVariables;
   }
 
   // image_version - computed: true, optional: true, required: false
-  private _imageVersion?: string | undefined; 
+  private _imageVersion?: string; 
   public get imageVersion() {
     return this.getStringAttribute('image_version');
   }
-  public set imageVersion(value: string | undefined) {
+  public set imageVersion(value: string) {
     this._imageVersion = value;
   }
   public resetImageVersion() {
@@ -536,16 +689,16 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get imageVersionInput() {
-    return this._imageVersion
+    return this._imageVersion;
   }
 
   // pypi_packages - computed: false, optional: true, required: false
-  private _pypiPackages?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _pypiPackages?: { [key: string]: string } | cdktf.IResolvable; 
   public get pypiPackages() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('pypi_packages') as any;
   }
-  public set pypiPackages(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set pypiPackages(value: { [key: string]: string } | cdktf.IResolvable) {
     this._pypiPackages = value;
   }
   public resetPypiPackages() {
@@ -553,15 +706,15 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get pypiPackagesInput() {
-    return this._pypiPackages
+    return this._pypiPackages;
   }
 
   // python_version - computed: true, optional: true, required: false
-  private _pythonVersion?: string | undefined; 
+  private _pythonVersion?: string; 
   public get pythonVersion() {
     return this.getStringAttribute('python_version');
   }
-  public set pythonVersion(value: string | undefined) {
+  public set pythonVersion(value: string) {
     this._pythonVersion = value;
   }
   public resetPythonVersion() {
@@ -569,15 +722,15 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get pythonVersionInput() {
-    return this._pythonVersion
+    return this._pythonVersion;
   }
 
   // scheduler_count - computed: true, optional: true, required: false
-  private _schedulerCount?: number | undefined; 
+  private _schedulerCount?: number; 
   public get schedulerCount() {
     return this.getNumberAttribute('scheduler_count');
   }
-  public set schedulerCount(value: number | undefined) {
+  public set schedulerCount(value: number) {
     this._schedulerCount = value;
   }
   public resetSchedulerCount() {
@@ -585,7 +738,7 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get schedulerCountInput() {
-    return this._schedulerCount
+    return this._schedulerCount;
   }
 }
 export interface ComposerEnvironmentConfigA {
@@ -615,7 +768,7 @@ export interface ComposerEnvironmentConfigA {
   readonly softwareConfig?: ComposerEnvironmentConfigSoftwareConfig;
 }
 
-function composerEnvironmentConfigAToTerraform(struct?: ComposerEnvironmentConfigAOutputReference | ComposerEnvironmentConfigA): any {
+export function composerEnvironmentConfigAToTerraform(struct?: ComposerEnvironmentConfigAOutputReference | ComposerEnvironmentConfigA): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -638,12 +791,49 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComposerEnvironmentConfigA | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nodeCount) {
+      hasAnyValues = true;
+      internalValueResult.nodeCount = this._nodeCount;
+    }
+    if (this._nodeConfig) {
+      hasAnyValues = true;
+      internalValueResult.nodeConfig = this._nodeConfig?.internalValue;
+    }
+    if (this._privateEnvironmentConfig) {
+      hasAnyValues = true;
+      internalValueResult.privateEnvironmentConfig = this._privateEnvironmentConfig?.internalValue;
+    }
+    if (this._softwareConfig) {
+      hasAnyValues = true;
+      internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentConfigA | undefined) {
+    if (value === undefined) {
+      this._nodeCount = undefined;
+      this._nodeConfig.internalValue = undefined;
+      this._privateEnvironmentConfig.internalValue = undefined;
+      this._softwareConfig.internalValue = undefined;
+    }
+    else {
+      this._nodeCount = value.nodeCount;
+      this._nodeConfig.internalValue = value.nodeConfig;
+      this._privateEnvironmentConfig.internalValue = value.privateEnvironmentConfig;
+      this._softwareConfig.internalValue = value.softwareConfig;
+    }
+  }
+
   // node_count - computed: true, optional: true, required: false
-  private _nodeCount?: number | undefined; 
+  private _nodeCount?: number; 
   public get nodeCount() {
     return this.getNumberAttribute('node_count');
   }
-  public set nodeCount(value: number | undefined) {
+  public set nodeCount(value: number) {
     this._nodeCount = value;
   }
   public resetNodeCount() {
@@ -651,58 +841,55 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get nodeCountInput() {
-    return this._nodeCount
+    return this._nodeCount;
   }
 
   // node_config - computed: false, optional: true, required: false
-  private _nodeConfig?: ComposerEnvironmentConfigNodeConfig | undefined; 
-  private __nodeConfigOutput = new ComposerEnvironmentConfigNodeConfigOutputReference(this as any, "node_config", true);
+  private _nodeConfig = new ComposerEnvironmentConfigNodeConfigOutputReference(this as any, "node_config", true);
   public get nodeConfig() {
-    return this.__nodeConfigOutput;
+    return this._nodeConfig;
   }
-  public putNodeConfig(value: ComposerEnvironmentConfigNodeConfig | undefined) {
-    this._nodeConfig = value;
+  public putNodeConfig(value: ComposerEnvironmentConfigNodeConfig) {
+    this._nodeConfig.internalValue = value;
   }
   public resetNodeConfig() {
-    this._nodeConfig = undefined;
+    this._nodeConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nodeConfigInput() {
-    return this._nodeConfig
+    return this._nodeConfig.internalValue;
   }
 
   // private_environment_config - computed: false, optional: true, required: false
-  private _privateEnvironmentConfig?: ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined; 
-  private __privateEnvironmentConfigOutput = new ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this as any, "private_environment_config", true);
+  private _privateEnvironmentConfig = new ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this as any, "private_environment_config", true);
   public get privateEnvironmentConfig() {
-    return this.__privateEnvironmentConfigOutput;
+    return this._privateEnvironmentConfig;
   }
-  public putPrivateEnvironmentConfig(value: ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined) {
-    this._privateEnvironmentConfig = value;
+  public putPrivateEnvironmentConfig(value: ComposerEnvironmentConfigPrivateEnvironmentConfig) {
+    this._privateEnvironmentConfig.internalValue = value;
   }
   public resetPrivateEnvironmentConfig() {
-    this._privateEnvironmentConfig = undefined;
+    this._privateEnvironmentConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateEnvironmentConfigInput() {
-    return this._privateEnvironmentConfig
+    return this._privateEnvironmentConfig.internalValue;
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig?: ComposerEnvironmentConfigSoftwareConfig | undefined; 
-  private __softwareConfigOutput = new ComposerEnvironmentConfigSoftwareConfigOutputReference(this as any, "software_config", true);
+  private _softwareConfig = new ComposerEnvironmentConfigSoftwareConfigOutputReference(this as any, "software_config", true);
   public get softwareConfig() {
-    return this.__softwareConfigOutput;
+    return this._softwareConfig;
   }
-  public putSoftwareConfig(value: ComposerEnvironmentConfigSoftwareConfig | undefined) {
-    this._softwareConfig = value;
+  public putSoftwareConfig(value: ComposerEnvironmentConfigSoftwareConfig) {
+    this._softwareConfig.internalValue = value;
   }
   public resetSoftwareConfig() {
-    this._softwareConfig = undefined;
+    this._softwareConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get softwareConfigInput() {
-    return this._softwareConfig
+    return this._softwareConfig.internalValue;
   }
 }
 export interface ComposerEnvironmentTimeouts {
@@ -720,7 +907,7 @@ export interface ComposerEnvironmentTimeouts {
   readonly update?: string;
 }
 
-function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironmentTimeoutsOutputReference | ComposerEnvironmentTimeouts): any {
+export function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironmentTimeoutsOutputReference | ComposerEnvironmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -742,12 +929,43 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComposerEnvironmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -755,15 +973,15 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -771,15 +989,15 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -787,7 +1005,7 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -827,8 +1045,8 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
-    this._config = config.config;
-    this._timeouts = config.timeouts;
+    this._config.internalValue = config.config;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -841,12 +1059,12 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -854,7 +1072,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -867,15 +1085,15 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -883,15 +1101,15 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -899,41 +1117,39 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // config - computed: false, optional: true, required: false
-  private _config?: ComposerEnvironmentConfigA | undefined; 
-  private __configOutput = new ComposerEnvironmentConfigAOutputReference(this as any, "config", true);
+  private _config = new ComposerEnvironmentConfigAOutputReference(this as any, "config", true);
   public get config() {
-    return this.__configOutput;
+    return this._config;
   }
-  public putConfig(value: ComposerEnvironmentConfigA | undefined) {
-    this._config = value;
+  public putConfig(value: ComposerEnvironmentConfigA) {
+    this._config.internalValue = value;
   }
   public resetConfig() {
-    this._config = undefined;
+    this._config.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get configInput() {
-    return this._config
+    return this._config.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComposerEnvironmentTimeouts | undefined; 
-  private __timeoutsOutput = new ComposerEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComposerEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComposerEnvironmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComposerEnvironmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -946,8 +1162,8 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      config: composerEnvironmentConfigAToTerraform(this._config),
-      timeouts: composerEnvironmentTimeoutsToTerraform(this._timeouts),
+      config: composerEnvironmentConfigAToTerraform(this._config.internalValue),
+      timeouts: composerEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -72,7 +72,7 @@ export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get consentStoreIdInput() {
-    return this._consentStoreId
+    return this._consentStoreId;
   }
 
   // dataset - computed: false, optional: false, required: true
@@ -85,7 +85,7 @@ export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetInput() {
-    return this._dataset
+    return this._dataset;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -108,7 +108,7 @@ export class HealthcareConsentStoreIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

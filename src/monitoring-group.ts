@@ -63,7 +63,7 @@ export interface MonitoringGroupTimeouts {
   readonly update?: string;
 }
 
-function monitoringGroupTimeoutsToTerraform(struct?: MonitoringGroupTimeoutsOutputReference | MonitoringGroupTimeouts): any {
+export function monitoringGroupTimeoutsToTerraform(struct?: MonitoringGroupTimeoutsOutputReference | MonitoringGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -85,12 +85,43 @@ export class MonitoringGroupTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -98,15 +129,15 @@ export class MonitoringGroupTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -114,15 +145,15 @@ export class MonitoringGroupTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -130,7 +161,7 @@ export class MonitoringGroupTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -171,7 +202,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
     this._isCluster = config.isCluster;
     this._parentName = config.parentName;
     this._project = config.project;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -188,7 +219,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // filter - computed: false, optional: false, required: true
@@ -201,7 +232,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -210,11 +241,11 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
 
   // is_cluster - computed: false, optional: true, required: false
-  private _isCluster?: boolean | cdktf.IResolvable | undefined; 
+  private _isCluster?: boolean | cdktf.IResolvable; 
   public get isCluster() {
     return this.getBooleanAttribute('is_cluster') as any;
   }
-  public set isCluster(value: boolean | cdktf.IResolvable | undefined) {
+  public set isCluster(value: boolean | cdktf.IResolvable) {
     this._isCluster = value;
   }
   public resetIsCluster() {
@@ -222,7 +253,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isClusterInput() {
-    return this._isCluster
+    return this._isCluster;
   }
 
   // name - computed: true, optional: false, required: false
@@ -231,11 +262,11 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
 
   // parent_name - computed: false, optional: true, required: false
-  private _parentName?: string | undefined; 
+  private _parentName?: string; 
   public get parentName() {
     return this.getStringAttribute('parent_name');
   }
-  public set parentName(value: string | undefined) {
+  public set parentName(value: string) {
     this._parentName = value;
   }
   public resetParentName() {
@@ -243,15 +274,15 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentNameInput() {
-    return this._parentName
+    return this._parentName;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -259,24 +290,23 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringGroupTimeouts | undefined; 
-  private __timeoutsOutput = new MonitoringGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitoringGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitoringGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -290,7 +320,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
       is_cluster: cdktf.booleanToTerraform(this._isCluster),
       parent_name: cdktf.stringToTerraform(this._parentName),
       project: cdktf.stringToTerraform(this._project),
-      timeouts: monitoringGroupTimeoutsToTerraform(this._timeouts),
+      timeouts: monitoringGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

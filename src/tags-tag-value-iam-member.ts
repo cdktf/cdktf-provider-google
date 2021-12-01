@@ -41,7 +41,7 @@ export interface TagsTagValueIamMemberCondition {
   readonly title: string;
 }
 
-function tagsTagValueIamMemberConditionToTerraform(struct?: TagsTagValueIamMemberConditionOutputReference | TagsTagValueIamMemberCondition): any {
+export function tagsTagValueIamMemberConditionToTerraform(struct?: TagsTagValueIamMemberConditionOutputReference | TagsTagValueIamMemberCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,12 +63,43 @@ export class TagsTagValueIamMemberConditionOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TagsTagValueIamMemberCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._expression) {
+      hasAnyValues = true;
+      internalValueResult.expression = this._expression;
+    }
+    if (this._title) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TagsTagValueIamMemberCondition | undefined) {
+    if (value === undefined) {
+      this._description = undefined;
+      this._expression = undefined;
+      this._title = undefined;
+    }
+    else {
+      this._description = value.description;
+      this._expression = value.expression;
+      this._title = value.title;
+    }
+  }
+
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -76,7 +107,7 @@ export class TagsTagValueIamMemberConditionOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // expression - computed: false, optional: false, required: true
@@ -89,7 +120,7 @@ export class TagsTagValueIamMemberConditionOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get expressionInput() {
-    return this._expression
+    return this._expression;
   }
 
   // title - computed: false, optional: false, required: true
@@ -102,7 +133,7 @@ export class TagsTagValueIamMemberConditionOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 }
 
@@ -141,7 +172,7 @@ export class TagsTagValueIamMember extends cdktf.TerraformResource {
     this._member = config.member;
     this._role = config.role;
     this._tagValue = config.tagValue;
-    this._condition = config.condition;
+    this._condition.internalValue = config.condition;
   }
 
   // ==========
@@ -168,7 +199,7 @@ export class TagsTagValueIamMember extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get memberInput() {
-    return this._member
+    return this._member;
   }
 
   // role - computed: false, optional: false, required: true
@@ -181,7 +212,7 @@ export class TagsTagValueIamMember extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleInput() {
-    return this._role
+    return this._role;
   }
 
   // tag_value - computed: false, optional: false, required: true
@@ -194,24 +225,23 @@ export class TagsTagValueIamMember extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagValueInput() {
-    return this._tagValue
+    return this._tagValue;
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: TagsTagValueIamMemberCondition | undefined; 
-  private __conditionOutput = new TagsTagValueIamMemberConditionOutputReference(this as any, "condition", true);
+  private _condition = new TagsTagValueIamMemberConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.__conditionOutput;
+    return this._condition;
   }
-  public putCondition(value: TagsTagValueIamMemberCondition | undefined) {
-    this._condition = value;
+  public putCondition(value: TagsTagValueIamMemberCondition) {
+    this._condition.internalValue = value;
   }
   public resetCondition() {
-    this._condition = undefined;
+    this._condition.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get conditionInput() {
-    return this._condition
+    return this._condition.internalValue;
   }
 
   // =========
@@ -223,7 +253,7 @@ export class TagsTagValueIamMember extends cdktf.TerraformResource {
       member: cdktf.stringToTerraform(this._member),
       role: cdktf.stringToTerraform(this._role),
       tag_value: cdktf.stringToTerraform(this._tagValue),
-      condition: tagsTagValueIamMemberConditionToTerraform(this._condition),
+      condition: tagsTagValueIamMemberConditionToTerraform(this._condition.internalValue),
     };
   }
 }

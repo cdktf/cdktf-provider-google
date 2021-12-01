@@ -59,7 +59,7 @@ export interface ProjectOrganizationPolicyBooleanPolicy {
   readonly enforced: boolean | cdktf.IResolvable;
 }
 
-function projectOrganizationPolicyBooleanPolicyToTerraform(struct?: ProjectOrganizationPolicyBooleanPolicyOutputReference | ProjectOrganizationPolicyBooleanPolicy): any {
+export function projectOrganizationPolicyBooleanPolicyToTerraform(struct?: ProjectOrganizationPolicyBooleanPolicyOutputReference | ProjectOrganizationPolicyBooleanPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -79,6 +79,25 @@ export class ProjectOrganizationPolicyBooleanPolicyOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectOrganizationPolicyBooleanPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enforced) {
+      hasAnyValues = true;
+      internalValueResult.enforced = this._enforced;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectOrganizationPolicyBooleanPolicy | undefined) {
+    if (value === undefined) {
+      this._enforced = undefined;
+    }
+    else {
+      this._enforced = value.enforced;
+    }
+  }
+
   // enforced - computed: false, optional: false, required: true
   private _enforced?: boolean | cdktf.IResolvable; 
   public get enforced() {
@@ -89,7 +108,7 @@ export class ProjectOrganizationPolicyBooleanPolicyOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get enforcedInput() {
-    return this._enforced
+    return this._enforced;
   }
 }
 export interface ProjectOrganizationPolicyListPolicyAllow {
@@ -107,7 +126,7 @@ export interface ProjectOrganizationPolicyListPolicyAllow {
   readonly values?: string[];
 }
 
-function projectOrganizationPolicyListPolicyAllowToTerraform(struct?: ProjectOrganizationPolicyListPolicyAllowOutputReference | ProjectOrganizationPolicyListPolicyAllow): any {
+export function projectOrganizationPolicyListPolicyAllowToTerraform(struct?: ProjectOrganizationPolicyListPolicyAllowOutputReference | ProjectOrganizationPolicyListPolicyAllow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -128,12 +147,37 @@ export class ProjectOrganizationPolicyListPolicyAllowOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectOrganizationPolicyListPolicyAllow | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._all) {
+      hasAnyValues = true;
+      internalValueResult.all = this._all;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectOrganizationPolicyListPolicyAllow | undefined) {
+    if (value === undefined) {
+      this._all = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._all = value.all;
+      this._values = value.values;
+    }
+  }
+
   // all - computed: false, optional: true, required: false
-  private _all?: boolean | cdktf.IResolvable | undefined; 
+  private _all?: boolean | cdktf.IResolvable; 
   public get all() {
     return this.getBooleanAttribute('all') as any;
   }
-  public set all(value: boolean | cdktf.IResolvable | undefined) {
+  public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
   }
   public resetAll() {
@@ -141,15 +185,15 @@ export class ProjectOrganizationPolicyListPolicyAllowOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get allInput() {
-    return this._all
+    return this._all;
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: string[] | undefined; 
+  private _values?: string[]; 
   public get values() {
     return this.getListAttribute('values');
   }
-  public set values(value: string[] | undefined) {
+  public set values(value: string[]) {
     this._values = value;
   }
   public resetValues() {
@@ -157,7 +201,7 @@ export class ProjectOrganizationPolicyListPolicyAllowOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ProjectOrganizationPolicyListPolicyDeny {
@@ -175,7 +219,7 @@ export interface ProjectOrganizationPolicyListPolicyDeny {
   readonly values?: string[];
 }
 
-function projectOrganizationPolicyListPolicyDenyToTerraform(struct?: ProjectOrganizationPolicyListPolicyDenyOutputReference | ProjectOrganizationPolicyListPolicyDeny): any {
+export function projectOrganizationPolicyListPolicyDenyToTerraform(struct?: ProjectOrganizationPolicyListPolicyDenyOutputReference | ProjectOrganizationPolicyListPolicyDeny): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,12 +240,37 @@ export class ProjectOrganizationPolicyListPolicyDenyOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectOrganizationPolicyListPolicyDeny | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._all) {
+      hasAnyValues = true;
+      internalValueResult.all = this._all;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectOrganizationPolicyListPolicyDeny | undefined) {
+    if (value === undefined) {
+      this._all = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._all = value.all;
+      this._values = value.values;
+    }
+  }
+
   // all - computed: false, optional: true, required: false
-  private _all?: boolean | cdktf.IResolvable | undefined; 
+  private _all?: boolean | cdktf.IResolvable; 
   public get all() {
     return this.getBooleanAttribute('all') as any;
   }
-  public set all(value: boolean | cdktf.IResolvable | undefined) {
+  public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
   }
   public resetAll() {
@@ -209,15 +278,15 @@ export class ProjectOrganizationPolicyListPolicyDenyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get allInput() {
-    return this._all
+    return this._all;
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: string[] | undefined; 
+  private _values?: string[]; 
   public get values() {
     return this.getListAttribute('values');
   }
-  public set values(value: string[] | undefined) {
+  public set values(value: string[]) {
     this._values = value;
   }
   public resetValues() {
@@ -225,7 +294,7 @@ export class ProjectOrganizationPolicyListPolicyDenyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ProjectOrganizationPolicyListPolicy {
@@ -255,7 +324,7 @@ export interface ProjectOrganizationPolicyListPolicy {
   readonly deny?: ProjectOrganizationPolicyListPolicyDeny;
 }
 
-function projectOrganizationPolicyListPolicyToTerraform(struct?: ProjectOrganizationPolicyListPolicyOutputReference | ProjectOrganizationPolicyListPolicy): any {
+export function projectOrganizationPolicyListPolicyToTerraform(struct?: ProjectOrganizationPolicyListPolicyOutputReference | ProjectOrganizationPolicyListPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -278,12 +347,49 @@ export class ProjectOrganizationPolicyListPolicyOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectOrganizationPolicyListPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._inheritFromParent) {
+      hasAnyValues = true;
+      internalValueResult.inheritFromParent = this._inheritFromParent;
+    }
+    if (this._suggestedValue) {
+      hasAnyValues = true;
+      internalValueResult.suggestedValue = this._suggestedValue;
+    }
+    if (this._allow) {
+      hasAnyValues = true;
+      internalValueResult.allow = this._allow?.internalValue;
+    }
+    if (this._deny) {
+      hasAnyValues = true;
+      internalValueResult.deny = this._deny?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectOrganizationPolicyListPolicy | undefined) {
+    if (value === undefined) {
+      this._inheritFromParent = undefined;
+      this._suggestedValue = undefined;
+      this._allow.internalValue = undefined;
+      this._deny.internalValue = undefined;
+    }
+    else {
+      this._inheritFromParent = value.inheritFromParent;
+      this._suggestedValue = value.suggestedValue;
+      this._allow.internalValue = value.allow;
+      this._deny.internalValue = value.deny;
+    }
+  }
+
   // inherit_from_parent - computed: false, optional: true, required: false
-  private _inheritFromParent?: boolean | cdktf.IResolvable | undefined; 
+  private _inheritFromParent?: boolean | cdktf.IResolvable; 
   public get inheritFromParent() {
     return this.getBooleanAttribute('inherit_from_parent') as any;
   }
-  public set inheritFromParent(value: boolean | cdktf.IResolvable | undefined) {
+  public set inheritFromParent(value: boolean | cdktf.IResolvable) {
     this._inheritFromParent = value;
   }
   public resetInheritFromParent() {
@@ -291,15 +397,15 @@ export class ProjectOrganizationPolicyListPolicyOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get inheritFromParentInput() {
-    return this._inheritFromParent
+    return this._inheritFromParent;
   }
 
   // suggested_value - computed: true, optional: true, required: false
-  private _suggestedValue?: string | undefined; 
+  private _suggestedValue?: string; 
   public get suggestedValue() {
     return this.getStringAttribute('suggested_value');
   }
-  public set suggestedValue(value: string | undefined) {
+  public set suggestedValue(value: string) {
     this._suggestedValue = value;
   }
   public resetSuggestedValue() {
@@ -307,41 +413,39 @@ export class ProjectOrganizationPolicyListPolicyOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get suggestedValueInput() {
-    return this._suggestedValue
+    return this._suggestedValue;
   }
 
   // allow - computed: false, optional: true, required: false
-  private _allow?: ProjectOrganizationPolicyListPolicyAllow | undefined; 
-  private __allowOutput = new ProjectOrganizationPolicyListPolicyAllowOutputReference(this as any, "allow", true);
+  private _allow = new ProjectOrganizationPolicyListPolicyAllowOutputReference(this as any, "allow", true);
   public get allow() {
-    return this.__allowOutput;
+    return this._allow;
   }
-  public putAllow(value: ProjectOrganizationPolicyListPolicyAllow | undefined) {
-    this._allow = value;
+  public putAllow(value: ProjectOrganizationPolicyListPolicyAllow) {
+    this._allow.internalValue = value;
   }
   public resetAllow() {
-    this._allow = undefined;
+    this._allow.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get allowInput() {
-    return this._allow
+    return this._allow.internalValue;
   }
 
   // deny - computed: false, optional: true, required: false
-  private _deny?: ProjectOrganizationPolicyListPolicyDeny | undefined; 
-  private __denyOutput = new ProjectOrganizationPolicyListPolicyDenyOutputReference(this as any, "deny", true);
+  private _deny = new ProjectOrganizationPolicyListPolicyDenyOutputReference(this as any, "deny", true);
   public get deny() {
-    return this.__denyOutput;
+    return this._deny;
   }
-  public putDeny(value: ProjectOrganizationPolicyListPolicyDeny | undefined) {
-    this._deny = value;
+  public putDeny(value: ProjectOrganizationPolicyListPolicyDeny) {
+    this._deny.internalValue = value;
   }
   public resetDeny() {
-    this._deny = undefined;
+    this._deny.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get denyInput() {
-    return this._deny
+    return this._deny.internalValue;
   }
 }
 export interface ProjectOrganizationPolicyRestorePolicy {
@@ -353,7 +457,7 @@ export interface ProjectOrganizationPolicyRestorePolicy {
   readonly default: boolean | cdktf.IResolvable;
 }
 
-function projectOrganizationPolicyRestorePolicyToTerraform(struct?: ProjectOrganizationPolicyRestorePolicyOutputReference | ProjectOrganizationPolicyRestorePolicy): any {
+export function projectOrganizationPolicyRestorePolicyToTerraform(struct?: ProjectOrganizationPolicyRestorePolicyOutputReference | ProjectOrganizationPolicyRestorePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -373,6 +477,25 @@ export class ProjectOrganizationPolicyRestorePolicyOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectOrganizationPolicyRestorePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._default) {
+      hasAnyValues = true;
+      internalValueResult.default = this._default;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectOrganizationPolicyRestorePolicy | undefined) {
+    if (value === undefined) {
+      this._default = undefined;
+    }
+    else {
+      this._default = value.default;
+    }
+  }
+
   // default - computed: false, optional: false, required: true
   private _default?: boolean | cdktf.IResolvable; 
   public get default() {
@@ -383,7 +506,7 @@ export class ProjectOrganizationPolicyRestorePolicyOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get defaultInput() {
-    return this._default
+    return this._default;
   }
 }
 export interface ProjectOrganizationPolicyTimeouts {
@@ -405,7 +528,7 @@ export interface ProjectOrganizationPolicyTimeouts {
   readonly update?: string;
 }
 
-function projectOrganizationPolicyTimeoutsToTerraform(struct?: ProjectOrganizationPolicyTimeoutsOutputReference | ProjectOrganizationPolicyTimeouts): any {
+export function projectOrganizationPolicyTimeoutsToTerraform(struct?: ProjectOrganizationPolicyTimeoutsOutputReference | ProjectOrganizationPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -428,12 +551,49 @@ export class ProjectOrganizationPolicyTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectOrganizationPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectOrganizationPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -441,15 +601,15 @@ export class ProjectOrganizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -457,15 +617,15 @@ export class ProjectOrganizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -473,15 +633,15 @@ export class ProjectOrganizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -489,7 +649,7 @@ export class ProjectOrganizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -528,10 +688,10 @@ export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
     this._constraint = config.constraint;
     this._project = config.project;
     this._version = config.version;
-    this._booleanPolicy = config.booleanPolicy;
-    this._listPolicy = config.listPolicy;
-    this._restorePolicy = config.restorePolicy;
-    this._timeouts = config.timeouts;
+    this._booleanPolicy.internalValue = config.booleanPolicy;
+    this._listPolicy.internalValue = config.listPolicy;
+    this._restorePolicy.internalValue = config.restorePolicy;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -548,7 +708,7 @@ export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get constraintInput() {
-    return this._constraint
+    return this._constraint;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -571,7 +731,7 @@ export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -580,11 +740,11 @@ export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: number | undefined; 
+  private _version?: number; 
   public get version() {
     return this.getNumberAttribute('version');
   }
-  public set version(value: number | undefined) {
+  public set version(value: number) {
     this._version = value;
   }
   public resetVersion() {
@@ -592,75 +752,71 @@ export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // boolean_policy - computed: false, optional: true, required: false
-  private _booleanPolicy?: ProjectOrganizationPolicyBooleanPolicy | undefined; 
-  private __booleanPolicyOutput = new ProjectOrganizationPolicyBooleanPolicyOutputReference(this as any, "boolean_policy", true);
+  private _booleanPolicy = new ProjectOrganizationPolicyBooleanPolicyOutputReference(this as any, "boolean_policy", true);
   public get booleanPolicy() {
-    return this.__booleanPolicyOutput;
+    return this._booleanPolicy;
   }
-  public putBooleanPolicy(value: ProjectOrganizationPolicyBooleanPolicy | undefined) {
-    this._booleanPolicy = value;
+  public putBooleanPolicy(value: ProjectOrganizationPolicyBooleanPolicy) {
+    this._booleanPolicy.internalValue = value;
   }
   public resetBooleanPolicy() {
-    this._booleanPolicy = undefined;
+    this._booleanPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get booleanPolicyInput() {
-    return this._booleanPolicy
+    return this._booleanPolicy.internalValue;
   }
 
   // list_policy - computed: false, optional: true, required: false
-  private _listPolicy?: ProjectOrganizationPolicyListPolicy | undefined; 
-  private __listPolicyOutput = new ProjectOrganizationPolicyListPolicyOutputReference(this as any, "list_policy", true);
+  private _listPolicy = new ProjectOrganizationPolicyListPolicyOutputReference(this as any, "list_policy", true);
   public get listPolicy() {
-    return this.__listPolicyOutput;
+    return this._listPolicy;
   }
-  public putListPolicy(value: ProjectOrganizationPolicyListPolicy | undefined) {
-    this._listPolicy = value;
+  public putListPolicy(value: ProjectOrganizationPolicyListPolicy) {
+    this._listPolicy.internalValue = value;
   }
   public resetListPolicy() {
-    this._listPolicy = undefined;
+    this._listPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get listPolicyInput() {
-    return this._listPolicy
+    return this._listPolicy.internalValue;
   }
 
   // restore_policy - computed: false, optional: true, required: false
-  private _restorePolicy?: ProjectOrganizationPolicyRestorePolicy | undefined; 
-  private __restorePolicyOutput = new ProjectOrganizationPolicyRestorePolicyOutputReference(this as any, "restore_policy", true);
+  private _restorePolicy = new ProjectOrganizationPolicyRestorePolicyOutputReference(this as any, "restore_policy", true);
   public get restorePolicy() {
-    return this.__restorePolicyOutput;
+    return this._restorePolicy;
   }
-  public putRestorePolicy(value: ProjectOrganizationPolicyRestorePolicy | undefined) {
-    this._restorePolicy = value;
+  public putRestorePolicy(value: ProjectOrganizationPolicyRestorePolicy) {
+    this._restorePolicy.internalValue = value;
   }
   public resetRestorePolicy() {
-    this._restorePolicy = undefined;
+    this._restorePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get restorePolicyInput() {
-    return this._restorePolicy
+    return this._restorePolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ProjectOrganizationPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new ProjectOrganizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ProjectOrganizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ProjectOrganizationPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ProjectOrganizationPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -672,10 +828,10 @@ export class ProjectOrganizationPolicy extends cdktf.TerraformResource {
       constraint: cdktf.stringToTerraform(this._constraint),
       project: cdktf.stringToTerraform(this._project),
       version: cdktf.numberToTerraform(this._version),
-      boolean_policy: projectOrganizationPolicyBooleanPolicyToTerraform(this._booleanPolicy),
-      list_policy: projectOrganizationPolicyListPolicyToTerraform(this._listPolicy),
-      restore_policy: projectOrganizationPolicyRestorePolicyToTerraform(this._restorePolicy),
-      timeouts: projectOrganizationPolicyTimeoutsToTerraform(this._timeouts),
+      boolean_policy: projectOrganizationPolicyBooleanPolicyToTerraform(this._booleanPolicy.internalValue),
+      list_policy: projectOrganizationPolicyListPolicyToTerraform(this._listPolicy.internalValue),
+      restore_policy: projectOrganizationPolicyRestorePolicyToTerraform(this._restorePolicy.internalValue),
+      timeouts: projectOrganizationPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -59,7 +59,7 @@ export interface StorageTransferJobScheduleScheduleEndDate {
   readonly year: number;
 }
 
-function storageTransferJobScheduleScheduleEndDateToTerraform(struct?: StorageTransferJobScheduleScheduleEndDateOutputReference | StorageTransferJobScheduleScheduleEndDate): any {
+export function storageTransferJobScheduleScheduleEndDateToTerraform(struct?: StorageTransferJobScheduleScheduleEndDateOutputReference | StorageTransferJobScheduleScheduleEndDate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -81,6 +81,37 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobScheduleScheduleEndDate | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._day) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._month) {
+      hasAnyValues = true;
+      internalValueResult.month = this._month;
+    }
+    if (this._year) {
+      hasAnyValues = true;
+      internalValueResult.year = this._year;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobScheduleScheduleEndDate | undefined) {
+    if (value === undefined) {
+      this._day = undefined;
+      this._month = undefined;
+      this._year = undefined;
+    }
+    else {
+      this._day = value.day;
+      this._month = value.month;
+      this._year = value.year;
+    }
+  }
+
   // day - computed: false, optional: false, required: true
   private _day?: number; 
   public get day() {
@@ -91,7 +122,7 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get dayInput() {
-    return this._day
+    return this._day;
   }
 
   // month - computed: false, optional: false, required: true
@@ -104,7 +135,7 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get monthInput() {
-    return this._month
+    return this._month;
   }
 
   // year - computed: false, optional: false, required: true
@@ -117,7 +148,7 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get yearInput() {
-    return this._year
+    return this._year;
   }
 }
 export interface StorageTransferJobScheduleScheduleStartDate {
@@ -141,7 +172,7 @@ export interface StorageTransferJobScheduleScheduleStartDate {
   readonly year: number;
 }
 
-function storageTransferJobScheduleScheduleStartDateToTerraform(struct?: StorageTransferJobScheduleScheduleStartDateOutputReference | StorageTransferJobScheduleScheduleStartDate): any {
+export function storageTransferJobScheduleScheduleStartDateToTerraform(struct?: StorageTransferJobScheduleScheduleStartDateOutputReference | StorageTransferJobScheduleScheduleStartDate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -163,6 +194,37 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobScheduleScheduleStartDate | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._day) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._month) {
+      hasAnyValues = true;
+      internalValueResult.month = this._month;
+    }
+    if (this._year) {
+      hasAnyValues = true;
+      internalValueResult.year = this._year;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobScheduleScheduleStartDate | undefined) {
+    if (value === undefined) {
+      this._day = undefined;
+      this._month = undefined;
+      this._year = undefined;
+    }
+    else {
+      this._day = value.day;
+      this._month = value.month;
+      this._year = value.year;
+    }
+  }
+
   // day - computed: false, optional: false, required: true
   private _day?: number; 
   public get day() {
@@ -173,7 +235,7 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get dayInput() {
-    return this._day
+    return this._day;
   }
 
   // month - computed: false, optional: false, required: true
@@ -186,7 +248,7 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get monthInput() {
-    return this._month
+    return this._month;
   }
 
   // year - computed: false, optional: false, required: true
@@ -199,7 +261,7 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get yearInput() {
-    return this._year
+    return this._year;
   }
 }
 export interface StorageTransferJobScheduleStartTimeOfDay {
@@ -229,7 +291,7 @@ export interface StorageTransferJobScheduleStartTimeOfDay {
   readonly seconds: number;
 }
 
-function storageTransferJobScheduleStartTimeOfDayToTerraform(struct?: StorageTransferJobScheduleStartTimeOfDayOutputReference | StorageTransferJobScheduleStartTimeOfDay): any {
+export function storageTransferJobScheduleStartTimeOfDayToTerraform(struct?: StorageTransferJobScheduleStartTimeOfDayOutputReference | StorageTransferJobScheduleStartTimeOfDay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -252,6 +314,43 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobScheduleStartTimeOfDay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hours) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobScheduleStartTimeOfDay | undefined) {
+    if (value === undefined) {
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // hours - computed: false, optional: false, required: true
   private _hours?: number; 
   public get hours() {
@@ -262,7 +361,7 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get hoursInput() {
-    return this._hours
+    return this._hours;
   }
 
   // minutes - computed: false, optional: false, required: true
@@ -275,7 +374,7 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get minutesInput() {
-    return this._minutes
+    return this._minutes;
   }
 
   // nanos - computed: false, optional: false, required: true
@@ -288,7 +387,7 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -301,7 +400,7 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface StorageTransferJobSchedule {
@@ -325,7 +424,7 @@ export interface StorageTransferJobSchedule {
   readonly startTimeOfDay?: StorageTransferJobScheduleStartTimeOfDay;
 }
 
-function storageTransferJobScheduleToTerraform(struct?: StorageTransferJobScheduleOutputReference | StorageTransferJobSchedule): any {
+export function storageTransferJobScheduleToTerraform(struct?: StorageTransferJobScheduleOutputReference | StorageTransferJobSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -347,52 +446,80 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // schedule_end_date - computed: false, optional: true, required: false
-  private _scheduleEndDate?: StorageTransferJobScheduleScheduleEndDate | undefined; 
-  private __scheduleEndDateOutput = new StorageTransferJobScheduleScheduleEndDateOutputReference(this as any, "schedule_end_date", true);
-  public get scheduleEndDate() {
-    return this.__scheduleEndDateOutput;
+  public get internalValue(): StorageTransferJobSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._scheduleEndDate) {
+      hasAnyValues = true;
+      internalValueResult.scheduleEndDate = this._scheduleEndDate?.internalValue;
+    }
+    if (this._scheduleStartDate) {
+      hasAnyValues = true;
+      internalValueResult.scheduleStartDate = this._scheduleStartDate?.internalValue;
+    }
+    if (this._startTimeOfDay) {
+      hasAnyValues = true;
+      internalValueResult.startTimeOfDay = this._startTimeOfDay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putScheduleEndDate(value: StorageTransferJobScheduleScheduleEndDate | undefined) {
-    this._scheduleEndDate = value;
+
+  public set internalValue(value: StorageTransferJobSchedule | undefined) {
+    if (value === undefined) {
+      this._scheduleEndDate.internalValue = undefined;
+      this._scheduleStartDate.internalValue = undefined;
+      this._startTimeOfDay.internalValue = undefined;
+    }
+    else {
+      this._scheduleEndDate.internalValue = value.scheduleEndDate;
+      this._scheduleStartDate.internalValue = value.scheduleStartDate;
+      this._startTimeOfDay.internalValue = value.startTimeOfDay;
+    }
+  }
+
+  // schedule_end_date - computed: false, optional: true, required: false
+  private _scheduleEndDate = new StorageTransferJobScheduleScheduleEndDateOutputReference(this as any, "schedule_end_date", true);
+  public get scheduleEndDate() {
+    return this._scheduleEndDate;
+  }
+  public putScheduleEndDate(value: StorageTransferJobScheduleScheduleEndDate) {
+    this._scheduleEndDate.internalValue = value;
   }
   public resetScheduleEndDate() {
-    this._scheduleEndDate = undefined;
+    this._scheduleEndDate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleEndDateInput() {
-    return this._scheduleEndDate
+    return this._scheduleEndDate.internalValue;
   }
 
   // schedule_start_date - computed: false, optional: false, required: true
-  private _scheduleStartDate?: StorageTransferJobScheduleScheduleStartDate; 
-  private __scheduleStartDateOutput = new StorageTransferJobScheduleScheduleStartDateOutputReference(this as any, "schedule_start_date", true);
+  private _scheduleStartDate = new StorageTransferJobScheduleScheduleStartDateOutputReference(this as any, "schedule_start_date", true);
   public get scheduleStartDate() {
-    return this.__scheduleStartDateOutput;
+    return this._scheduleStartDate;
   }
   public putScheduleStartDate(value: StorageTransferJobScheduleScheduleStartDate) {
-    this._scheduleStartDate = value;
+    this._scheduleStartDate.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleStartDateInput() {
-    return this._scheduleStartDate
+    return this._scheduleStartDate.internalValue;
   }
 
   // start_time_of_day - computed: false, optional: true, required: false
-  private _startTimeOfDay?: StorageTransferJobScheduleStartTimeOfDay | undefined; 
-  private __startTimeOfDayOutput = new StorageTransferJobScheduleStartTimeOfDayOutputReference(this as any, "start_time_of_day", true);
+  private _startTimeOfDay = new StorageTransferJobScheduleStartTimeOfDayOutputReference(this as any, "start_time_of_day", true);
   public get startTimeOfDay() {
-    return this.__startTimeOfDayOutput;
+    return this._startTimeOfDay;
   }
-  public putStartTimeOfDay(value: StorageTransferJobScheduleStartTimeOfDay | undefined) {
-    this._startTimeOfDay = value;
+  public putStartTimeOfDay(value: StorageTransferJobScheduleStartTimeOfDay) {
+    this._startTimeOfDay.internalValue = value;
   }
   public resetStartTimeOfDay() {
-    this._startTimeOfDay = undefined;
+    this._startTimeOfDay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeOfDayInput() {
-    return this._startTimeOfDay
+    return this._startTimeOfDay.internalValue;
   }
 }
 export interface StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
@@ -410,7 +537,7 @@ export interface StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
   readonly secretAccessKey: string;
 }
 
-function storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference | StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey): any {
+export function storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference | StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -431,6 +558,31 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._accessKeyId) {
+      hasAnyValues = true;
+      internalValueResult.accessKeyId = this._accessKeyId;
+    }
+    if (this._secretAccessKey) {
+      hasAnyValues = true;
+      internalValueResult.secretAccessKey = this._secretAccessKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey | undefined) {
+    if (value === undefined) {
+      this._accessKeyId = undefined;
+      this._secretAccessKey = undefined;
+    }
+    else {
+      this._accessKeyId = value.accessKeyId;
+      this._secretAccessKey = value.secretAccessKey;
+    }
+  }
+
   // access_key_id - computed: false, optional: false, required: true
   private _accessKeyId?: string; 
   public get accessKeyId() {
@@ -441,7 +593,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get accessKeyIdInput() {
-    return this._accessKeyId
+    return this._accessKeyId;
   }
 
   // secret_access_key - computed: false, optional: false, required: true
@@ -454,7 +606,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get secretAccessKeyInput() {
-    return this._secretAccessKey
+    return this._secretAccessKey;
   }
 }
 export interface StorageTransferJobTransferSpecAwsS3DataSource {
@@ -472,7 +624,7 @@ export interface StorageTransferJobTransferSpecAwsS3DataSource {
   readonly awsAccessKey: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
 }
 
-function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceOutputReference | StorageTransferJobTransferSpecAwsS3DataSource): any {
+export function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceOutputReference | StorageTransferJobTransferSpecAwsS3DataSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -493,6 +645,31 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSource | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucketName) {
+      hasAnyValues = true;
+      internalValueResult.bucketName = this._bucketName;
+    }
+    if (this._awsAccessKey) {
+      hasAnyValues = true;
+      internalValueResult.awsAccessKey = this._awsAccessKey?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecAwsS3DataSource | undefined) {
+    if (value === undefined) {
+      this._bucketName = undefined;
+      this._awsAccessKey.internalValue = undefined;
+    }
+    else {
+      this._bucketName = value.bucketName;
+      this._awsAccessKey.internalValue = value.awsAccessKey;
+    }
+  }
+
   // bucket_name - computed: false, optional: false, required: true
   private _bucketName?: string; 
   public get bucketName() {
@@ -503,21 +680,20 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get bucketNameInput() {
-    return this._bucketName
+    return this._bucketName;
   }
 
   // aws_access_key - computed: false, optional: false, required: true
-  private _awsAccessKey?: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey; 
-  private __awsAccessKeyOutput = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this as any, "aws_access_key", true);
+  private _awsAccessKey = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this as any, "aws_access_key", true);
   public get awsAccessKey() {
-    return this.__awsAccessKeyOutput;
+    return this._awsAccessKey;
   }
   public putAwsAccessKey(value: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey) {
-    this._awsAccessKey = value;
+    this._awsAccessKey.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get awsAccessKeyInput() {
-    return this._awsAccessKey
+    return this._awsAccessKey.internalValue;
   }
 }
 export interface StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials {
@@ -529,7 +705,7 @@ export interface StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCr
   readonly sasToken: string;
 }
 
-function storageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference | StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials): any {
+export function storageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference | StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -549,6 +725,25 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._sasToken) {
+      hasAnyValues = true;
+      internalValueResult.sasToken = this._sasToken;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials | undefined) {
+    if (value === undefined) {
+      this._sasToken = undefined;
+    }
+    else {
+      this._sasToken = value.sasToken;
+    }
+  }
+
   // sas_token - computed: false, optional: false, required: true
   private _sasToken?: string; 
   public get sasToken() {
@@ -559,7 +754,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
   }
   // Temporarily expose input value. Use with caution.
   public get sasTokenInput() {
-    return this._sasToken
+    return this._sasToken;
   }
 }
 export interface StorageTransferJobTransferSpecAzureBlobStorageDataSource {
@@ -589,7 +784,7 @@ export interface StorageTransferJobTransferSpecAzureBlobStorageDataSource {
   readonly azureCredentials: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials;
 }
 
-function storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference | StorageTransferJobTransferSpecAzureBlobStorageDataSource): any {
+export function storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference | StorageTransferJobTransferSpecAzureBlobStorageDataSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -612,6 +807,43 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._container) {
+      hasAnyValues = true;
+      internalValueResult.container = this._container;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._storageAccount) {
+      hasAnyValues = true;
+      internalValueResult.storageAccount = this._storageAccount;
+    }
+    if (this._azureCredentials) {
+      hasAnyValues = true;
+      internalValueResult.azureCredentials = this._azureCredentials?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined) {
+    if (value === undefined) {
+      this._container = undefined;
+      this._path = undefined;
+      this._storageAccount = undefined;
+      this._azureCredentials.internalValue = undefined;
+    }
+    else {
+      this._container = value.container;
+      this._path = value.path;
+      this._storageAccount = value.storageAccount;
+      this._azureCredentials.internalValue = value.azureCredentials;
+    }
+  }
+
   // container - computed: false, optional: false, required: true
   private _container?: string; 
   public get container() {
@@ -622,15 +854,15 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container
+    return this._container;
   }
 
   // path - computed: true, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -638,7 +870,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // storage_account - computed: false, optional: false, required: true
@@ -651,21 +883,20 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount
+    return this._storageAccount;
   }
 
   // azure_credentials - computed: false, optional: false, required: true
-  private _azureCredentials?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials; 
-  private __azureCredentialsOutput = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference(this as any, "azure_credentials", true);
+  private _azureCredentials = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference(this as any, "azure_credentials", true);
   public get azureCredentials() {
-    return this.__azureCredentialsOutput;
+    return this._azureCredentials;
   }
   public putAzureCredentials(value: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials) {
-    this._azureCredentials = value;
+    this._azureCredentials.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get azureCredentialsInput() {
-    return this._azureCredentials
+    return this._azureCredentials.internalValue;
   }
 }
 export interface StorageTransferJobTransferSpecGcsDataSink {
@@ -683,7 +914,7 @@ export interface StorageTransferJobTransferSpecGcsDataSink {
   readonly path?: string;
 }
 
-function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSinkOutputReference | StorageTransferJobTransferSpecGcsDataSink): any {
+export function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSinkOutputReference | StorageTransferJobTransferSpecGcsDataSink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -704,6 +935,31 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecGcsDataSink | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucketName) {
+      hasAnyValues = true;
+      internalValueResult.bucketName = this._bucketName;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecGcsDataSink | undefined) {
+    if (value === undefined) {
+      this._bucketName = undefined;
+      this._path = undefined;
+    }
+    else {
+      this._bucketName = value.bucketName;
+      this._path = value.path;
+    }
+  }
+
   // bucket_name - computed: false, optional: false, required: true
   private _bucketName?: string; 
   public get bucketName() {
@@ -714,15 +970,15 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get bucketNameInput() {
-    return this._bucketName
+    return this._bucketName;
   }
 
   // path - computed: true, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -730,7 +986,7 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 }
 export interface StorageTransferJobTransferSpecGcsDataSource {
@@ -748,7 +1004,7 @@ export interface StorageTransferJobTransferSpecGcsDataSource {
   readonly path?: string;
 }
 
-function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSourceOutputReference | StorageTransferJobTransferSpecGcsDataSource): any {
+export function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSourceOutputReference | StorageTransferJobTransferSpecGcsDataSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -769,6 +1025,31 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecGcsDataSource | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucketName) {
+      hasAnyValues = true;
+      internalValueResult.bucketName = this._bucketName;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecGcsDataSource | undefined) {
+    if (value === undefined) {
+      this._bucketName = undefined;
+      this._path = undefined;
+    }
+    else {
+      this._bucketName = value.bucketName;
+      this._path = value.path;
+    }
+  }
+
   // bucket_name - computed: false, optional: false, required: true
   private _bucketName?: string; 
   public get bucketName() {
@@ -779,15 +1060,15 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get bucketNameInput() {
-    return this._bucketName
+    return this._bucketName;
   }
 
   // path - computed: true, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -795,7 +1076,7 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 }
 export interface StorageTransferJobTransferSpecHttpDataSource {
@@ -807,7 +1088,7 @@ export interface StorageTransferJobTransferSpecHttpDataSource {
   readonly listUrl: string;
 }
 
-function storageTransferJobTransferSpecHttpDataSourceToTerraform(struct?: StorageTransferJobTransferSpecHttpDataSourceOutputReference | StorageTransferJobTransferSpecHttpDataSource): any {
+export function storageTransferJobTransferSpecHttpDataSourceToTerraform(struct?: StorageTransferJobTransferSpecHttpDataSourceOutputReference | StorageTransferJobTransferSpecHttpDataSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -827,6 +1108,25 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecHttpDataSource | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._listUrl) {
+      hasAnyValues = true;
+      internalValueResult.listUrl = this._listUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecHttpDataSource | undefined) {
+    if (value === undefined) {
+      this._listUrl = undefined;
+    }
+    else {
+      this._listUrl = value.listUrl;
+    }
+  }
+
   // list_url - computed: false, optional: false, required: true
   private _listUrl?: string; 
   public get listUrl() {
@@ -837,7 +1137,7 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get listUrlInput() {
-    return this._listUrl
+    return this._listUrl;
   }
 }
 export interface StorageTransferJobTransferSpecObjectConditions {
@@ -867,7 +1167,7 @@ export interface StorageTransferJobTransferSpecObjectConditions {
   readonly minTimeElapsedSinceLastModification?: string;
 }
 
-function storageTransferJobTransferSpecObjectConditionsToTerraform(struct?: StorageTransferJobTransferSpecObjectConditionsOutputReference | StorageTransferJobTransferSpecObjectConditions): any {
+export function storageTransferJobTransferSpecObjectConditionsToTerraform(struct?: StorageTransferJobTransferSpecObjectConditionsOutputReference | StorageTransferJobTransferSpecObjectConditions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -890,12 +1190,49 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecObjectConditions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._excludePrefixes) {
+      hasAnyValues = true;
+      internalValueResult.excludePrefixes = this._excludePrefixes;
+    }
+    if (this._includePrefixes) {
+      hasAnyValues = true;
+      internalValueResult.includePrefixes = this._includePrefixes;
+    }
+    if (this._maxTimeElapsedSinceLastModification) {
+      hasAnyValues = true;
+      internalValueResult.maxTimeElapsedSinceLastModification = this._maxTimeElapsedSinceLastModification;
+    }
+    if (this._minTimeElapsedSinceLastModification) {
+      hasAnyValues = true;
+      internalValueResult.minTimeElapsedSinceLastModification = this._minTimeElapsedSinceLastModification;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecObjectConditions | undefined) {
+    if (value === undefined) {
+      this._excludePrefixes = undefined;
+      this._includePrefixes = undefined;
+      this._maxTimeElapsedSinceLastModification = undefined;
+      this._minTimeElapsedSinceLastModification = undefined;
+    }
+    else {
+      this._excludePrefixes = value.excludePrefixes;
+      this._includePrefixes = value.includePrefixes;
+      this._maxTimeElapsedSinceLastModification = value.maxTimeElapsedSinceLastModification;
+      this._minTimeElapsedSinceLastModification = value.minTimeElapsedSinceLastModification;
+    }
+  }
+
   // exclude_prefixes - computed: false, optional: true, required: false
-  private _excludePrefixes?: string[] | undefined; 
+  private _excludePrefixes?: string[]; 
   public get excludePrefixes() {
     return this.getListAttribute('exclude_prefixes');
   }
-  public set excludePrefixes(value: string[] | undefined) {
+  public set excludePrefixes(value: string[]) {
     this._excludePrefixes = value;
   }
   public resetExcludePrefixes() {
@@ -903,15 +1240,15 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get excludePrefixesInput() {
-    return this._excludePrefixes
+    return this._excludePrefixes;
   }
 
   // include_prefixes - computed: false, optional: true, required: false
-  private _includePrefixes?: string[] | undefined; 
+  private _includePrefixes?: string[]; 
   public get includePrefixes() {
     return this.getListAttribute('include_prefixes');
   }
-  public set includePrefixes(value: string[] | undefined) {
+  public set includePrefixes(value: string[]) {
     this._includePrefixes = value;
   }
   public resetIncludePrefixes() {
@@ -919,15 +1256,15 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get includePrefixesInput() {
-    return this._includePrefixes
+    return this._includePrefixes;
   }
 
   // max_time_elapsed_since_last_modification - computed: false, optional: true, required: false
-  private _maxTimeElapsedSinceLastModification?: string | undefined; 
+  private _maxTimeElapsedSinceLastModification?: string; 
   public get maxTimeElapsedSinceLastModification() {
     return this.getStringAttribute('max_time_elapsed_since_last_modification');
   }
-  public set maxTimeElapsedSinceLastModification(value: string | undefined) {
+  public set maxTimeElapsedSinceLastModification(value: string) {
     this._maxTimeElapsedSinceLastModification = value;
   }
   public resetMaxTimeElapsedSinceLastModification() {
@@ -935,15 +1272,15 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get maxTimeElapsedSinceLastModificationInput() {
-    return this._maxTimeElapsedSinceLastModification
+    return this._maxTimeElapsedSinceLastModification;
   }
 
   // min_time_elapsed_since_last_modification - computed: false, optional: true, required: false
-  private _minTimeElapsedSinceLastModification?: string | undefined; 
+  private _minTimeElapsedSinceLastModification?: string; 
   public get minTimeElapsedSinceLastModification() {
     return this.getStringAttribute('min_time_elapsed_since_last_modification');
   }
-  public set minTimeElapsedSinceLastModification(value: string | undefined) {
+  public set minTimeElapsedSinceLastModification(value: string) {
     this._minTimeElapsedSinceLastModification = value;
   }
   public resetMinTimeElapsedSinceLastModification() {
@@ -951,7 +1288,7 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get minTimeElapsedSinceLastModificationInput() {
-    return this._minTimeElapsedSinceLastModification
+    return this._minTimeElapsedSinceLastModification;
   }
 }
 export interface StorageTransferJobTransferSpecTransferOptions {
@@ -975,7 +1312,7 @@ export interface StorageTransferJobTransferSpecTransferOptions {
   readonly overwriteObjectsAlreadyExistingInSink?: boolean | cdktf.IResolvable;
 }
 
-function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: StorageTransferJobTransferSpecTransferOptionsOutputReference | StorageTransferJobTransferSpecTransferOptions): any {
+export function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: StorageTransferJobTransferSpecTransferOptionsOutputReference | StorageTransferJobTransferSpecTransferOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -997,12 +1334,43 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageTransferJobTransferSpecTransferOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._deleteObjectsFromSourceAfterTransfer) {
+      hasAnyValues = true;
+      internalValueResult.deleteObjectsFromSourceAfterTransfer = this._deleteObjectsFromSourceAfterTransfer;
+    }
+    if (this._deleteObjectsUniqueInSink) {
+      hasAnyValues = true;
+      internalValueResult.deleteObjectsUniqueInSink = this._deleteObjectsUniqueInSink;
+    }
+    if (this._overwriteObjectsAlreadyExistingInSink) {
+      hasAnyValues = true;
+      internalValueResult.overwriteObjectsAlreadyExistingInSink = this._overwriteObjectsAlreadyExistingInSink;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecTransferOptions | undefined) {
+    if (value === undefined) {
+      this._deleteObjectsFromSourceAfterTransfer = undefined;
+      this._deleteObjectsUniqueInSink = undefined;
+      this._overwriteObjectsAlreadyExistingInSink = undefined;
+    }
+    else {
+      this._deleteObjectsFromSourceAfterTransfer = value.deleteObjectsFromSourceAfterTransfer;
+      this._deleteObjectsUniqueInSink = value.deleteObjectsUniqueInSink;
+      this._overwriteObjectsAlreadyExistingInSink = value.overwriteObjectsAlreadyExistingInSink;
+    }
+  }
+
   // delete_objects_from_source_after_transfer - computed: false, optional: true, required: false
-  private _deleteObjectsFromSourceAfterTransfer?: boolean | cdktf.IResolvable | undefined; 
+  private _deleteObjectsFromSourceAfterTransfer?: boolean | cdktf.IResolvable; 
   public get deleteObjectsFromSourceAfterTransfer() {
     return this.getBooleanAttribute('delete_objects_from_source_after_transfer') as any;
   }
-  public set deleteObjectsFromSourceAfterTransfer(value: boolean | cdktf.IResolvable | undefined) {
+  public set deleteObjectsFromSourceAfterTransfer(value: boolean | cdktf.IResolvable) {
     this._deleteObjectsFromSourceAfterTransfer = value;
   }
   public resetDeleteObjectsFromSourceAfterTransfer() {
@@ -1010,15 +1378,15 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get deleteObjectsFromSourceAfterTransferInput() {
-    return this._deleteObjectsFromSourceAfterTransfer
+    return this._deleteObjectsFromSourceAfterTransfer;
   }
 
   // delete_objects_unique_in_sink - computed: false, optional: true, required: false
-  private _deleteObjectsUniqueInSink?: boolean | cdktf.IResolvable | undefined; 
+  private _deleteObjectsUniqueInSink?: boolean | cdktf.IResolvable; 
   public get deleteObjectsUniqueInSink() {
     return this.getBooleanAttribute('delete_objects_unique_in_sink') as any;
   }
-  public set deleteObjectsUniqueInSink(value: boolean | cdktf.IResolvable | undefined) {
+  public set deleteObjectsUniqueInSink(value: boolean | cdktf.IResolvable) {
     this._deleteObjectsUniqueInSink = value;
   }
   public resetDeleteObjectsUniqueInSink() {
@@ -1026,15 +1394,15 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get deleteObjectsUniqueInSinkInput() {
-    return this._deleteObjectsUniqueInSink
+    return this._deleteObjectsUniqueInSink;
   }
 
   // overwrite_objects_already_existing_in_sink - computed: false, optional: true, required: false
-  private _overwriteObjectsAlreadyExistingInSink?: boolean | cdktf.IResolvable | undefined; 
+  private _overwriteObjectsAlreadyExistingInSink?: boolean | cdktf.IResolvable; 
   public get overwriteObjectsAlreadyExistingInSink() {
     return this.getBooleanAttribute('overwrite_objects_already_existing_in_sink') as any;
   }
-  public set overwriteObjectsAlreadyExistingInSink(value: boolean | cdktf.IResolvable | undefined) {
+  public set overwriteObjectsAlreadyExistingInSink(value: boolean | cdktf.IResolvable) {
     this._overwriteObjectsAlreadyExistingInSink = value;
   }
   public resetOverwriteObjectsAlreadyExistingInSink() {
@@ -1042,7 +1410,7 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get overwriteObjectsAlreadyExistingInSinkInput() {
-    return this._overwriteObjectsAlreadyExistingInSink
+    return this._overwriteObjectsAlreadyExistingInSink;
   }
 }
 export interface StorageTransferJobTransferSpec {
@@ -1090,7 +1458,7 @@ export interface StorageTransferJobTransferSpec {
   readonly transferOptions?: StorageTransferJobTransferSpecTransferOptions;
 }
 
-function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTransferSpecOutputReference | StorageTransferJobTransferSpec): any {
+export function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTransferSpecOutputReference | StorageTransferJobTransferSpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1116,123 +1484,171 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // aws_s3_data_source - computed: false, optional: true, required: false
-  private _awsS3DataSource?: StorageTransferJobTransferSpecAwsS3DataSource | undefined; 
-  private __awsS3DataSourceOutput = new StorageTransferJobTransferSpecAwsS3DataSourceOutputReference(this as any, "aws_s3_data_source", true);
-  public get awsS3DataSource() {
-    return this.__awsS3DataSourceOutput;
+  public get internalValue(): StorageTransferJobTransferSpec | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._awsS3DataSource) {
+      hasAnyValues = true;
+      internalValueResult.awsS3DataSource = this._awsS3DataSource?.internalValue;
+    }
+    if (this._azureBlobStorageDataSource) {
+      hasAnyValues = true;
+      internalValueResult.azureBlobStorageDataSource = this._azureBlobStorageDataSource?.internalValue;
+    }
+    if (this._gcsDataSink) {
+      hasAnyValues = true;
+      internalValueResult.gcsDataSink = this._gcsDataSink?.internalValue;
+    }
+    if (this._gcsDataSource) {
+      hasAnyValues = true;
+      internalValueResult.gcsDataSource = this._gcsDataSource?.internalValue;
+    }
+    if (this._httpDataSource) {
+      hasAnyValues = true;
+      internalValueResult.httpDataSource = this._httpDataSource?.internalValue;
+    }
+    if (this._objectConditions) {
+      hasAnyValues = true;
+      internalValueResult.objectConditions = this._objectConditions?.internalValue;
+    }
+    if (this._transferOptions) {
+      hasAnyValues = true;
+      internalValueResult.transferOptions = this._transferOptions?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAwsS3DataSource(value: StorageTransferJobTransferSpecAwsS3DataSource | undefined) {
-    this._awsS3DataSource = value;
+
+  public set internalValue(value: StorageTransferJobTransferSpec | undefined) {
+    if (value === undefined) {
+      this._awsS3DataSource.internalValue = undefined;
+      this._azureBlobStorageDataSource.internalValue = undefined;
+      this._gcsDataSink.internalValue = undefined;
+      this._gcsDataSource.internalValue = undefined;
+      this._httpDataSource.internalValue = undefined;
+      this._objectConditions.internalValue = undefined;
+      this._transferOptions.internalValue = undefined;
+    }
+    else {
+      this._awsS3DataSource.internalValue = value.awsS3DataSource;
+      this._azureBlobStorageDataSource.internalValue = value.azureBlobStorageDataSource;
+      this._gcsDataSink.internalValue = value.gcsDataSink;
+      this._gcsDataSource.internalValue = value.gcsDataSource;
+      this._httpDataSource.internalValue = value.httpDataSource;
+      this._objectConditions.internalValue = value.objectConditions;
+      this._transferOptions.internalValue = value.transferOptions;
+    }
+  }
+
+  // aws_s3_data_source - computed: false, optional: true, required: false
+  private _awsS3DataSource = new StorageTransferJobTransferSpecAwsS3DataSourceOutputReference(this as any, "aws_s3_data_source", true);
+  public get awsS3DataSource() {
+    return this._awsS3DataSource;
+  }
+  public putAwsS3DataSource(value: StorageTransferJobTransferSpecAwsS3DataSource) {
+    this._awsS3DataSource.internalValue = value;
   }
   public resetAwsS3DataSource() {
-    this._awsS3DataSource = undefined;
+    this._awsS3DataSource.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get awsS3DataSourceInput() {
-    return this._awsS3DataSource
+    return this._awsS3DataSource.internalValue;
   }
 
   // azure_blob_storage_data_source - computed: false, optional: true, required: false
-  private _azureBlobStorageDataSource?: StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined; 
-  private __azureBlobStorageDataSourceOutput = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference(this as any, "azure_blob_storage_data_source", true);
+  private _azureBlobStorageDataSource = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference(this as any, "azure_blob_storage_data_source", true);
   public get azureBlobStorageDataSource() {
-    return this.__azureBlobStorageDataSourceOutput;
+    return this._azureBlobStorageDataSource;
   }
-  public putAzureBlobStorageDataSource(value: StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined) {
-    this._azureBlobStorageDataSource = value;
+  public putAzureBlobStorageDataSource(value: StorageTransferJobTransferSpecAzureBlobStorageDataSource) {
+    this._azureBlobStorageDataSource.internalValue = value;
   }
   public resetAzureBlobStorageDataSource() {
-    this._azureBlobStorageDataSource = undefined;
+    this._azureBlobStorageDataSource.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureBlobStorageDataSourceInput() {
-    return this._azureBlobStorageDataSource
+    return this._azureBlobStorageDataSource.internalValue;
   }
 
   // gcs_data_sink - computed: false, optional: true, required: false
-  private _gcsDataSink?: StorageTransferJobTransferSpecGcsDataSink | undefined; 
-  private __gcsDataSinkOutput = new StorageTransferJobTransferSpecGcsDataSinkOutputReference(this as any, "gcs_data_sink", true);
+  private _gcsDataSink = new StorageTransferJobTransferSpecGcsDataSinkOutputReference(this as any, "gcs_data_sink", true);
   public get gcsDataSink() {
-    return this.__gcsDataSinkOutput;
+    return this._gcsDataSink;
   }
-  public putGcsDataSink(value: StorageTransferJobTransferSpecGcsDataSink | undefined) {
-    this._gcsDataSink = value;
+  public putGcsDataSink(value: StorageTransferJobTransferSpecGcsDataSink) {
+    this._gcsDataSink.internalValue = value;
   }
   public resetGcsDataSink() {
-    this._gcsDataSink = undefined;
+    this._gcsDataSink.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcsDataSinkInput() {
-    return this._gcsDataSink
+    return this._gcsDataSink.internalValue;
   }
 
   // gcs_data_source - computed: false, optional: true, required: false
-  private _gcsDataSource?: StorageTransferJobTransferSpecGcsDataSource | undefined; 
-  private __gcsDataSourceOutput = new StorageTransferJobTransferSpecGcsDataSourceOutputReference(this as any, "gcs_data_source", true);
+  private _gcsDataSource = new StorageTransferJobTransferSpecGcsDataSourceOutputReference(this as any, "gcs_data_source", true);
   public get gcsDataSource() {
-    return this.__gcsDataSourceOutput;
+    return this._gcsDataSource;
   }
-  public putGcsDataSource(value: StorageTransferJobTransferSpecGcsDataSource | undefined) {
-    this._gcsDataSource = value;
+  public putGcsDataSource(value: StorageTransferJobTransferSpecGcsDataSource) {
+    this._gcsDataSource.internalValue = value;
   }
   public resetGcsDataSource() {
-    this._gcsDataSource = undefined;
+    this._gcsDataSource.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcsDataSourceInput() {
-    return this._gcsDataSource
+    return this._gcsDataSource.internalValue;
   }
 
   // http_data_source - computed: false, optional: true, required: false
-  private _httpDataSource?: StorageTransferJobTransferSpecHttpDataSource | undefined; 
-  private __httpDataSourceOutput = new StorageTransferJobTransferSpecHttpDataSourceOutputReference(this as any, "http_data_source", true);
+  private _httpDataSource = new StorageTransferJobTransferSpecHttpDataSourceOutputReference(this as any, "http_data_source", true);
   public get httpDataSource() {
-    return this.__httpDataSourceOutput;
+    return this._httpDataSource;
   }
-  public putHttpDataSource(value: StorageTransferJobTransferSpecHttpDataSource | undefined) {
-    this._httpDataSource = value;
+  public putHttpDataSource(value: StorageTransferJobTransferSpecHttpDataSource) {
+    this._httpDataSource.internalValue = value;
   }
   public resetHttpDataSource() {
-    this._httpDataSource = undefined;
+    this._httpDataSource.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpDataSourceInput() {
-    return this._httpDataSource
+    return this._httpDataSource.internalValue;
   }
 
   // object_conditions - computed: false, optional: true, required: false
-  private _objectConditions?: StorageTransferJobTransferSpecObjectConditions | undefined; 
-  private __objectConditionsOutput = new StorageTransferJobTransferSpecObjectConditionsOutputReference(this as any, "object_conditions", true);
+  private _objectConditions = new StorageTransferJobTransferSpecObjectConditionsOutputReference(this as any, "object_conditions", true);
   public get objectConditions() {
-    return this.__objectConditionsOutput;
+    return this._objectConditions;
   }
-  public putObjectConditions(value: StorageTransferJobTransferSpecObjectConditions | undefined) {
-    this._objectConditions = value;
+  public putObjectConditions(value: StorageTransferJobTransferSpecObjectConditions) {
+    this._objectConditions.internalValue = value;
   }
   public resetObjectConditions() {
-    this._objectConditions = undefined;
+    this._objectConditions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get objectConditionsInput() {
-    return this._objectConditions
+    return this._objectConditions.internalValue;
   }
 
   // transfer_options - computed: false, optional: true, required: false
-  private _transferOptions?: StorageTransferJobTransferSpecTransferOptions | undefined; 
-  private __transferOptionsOutput = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this as any, "transfer_options", true);
+  private _transferOptions = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this as any, "transfer_options", true);
   public get transferOptions() {
-    return this.__transferOptionsOutput;
+    return this._transferOptions;
   }
-  public putTransferOptions(value: StorageTransferJobTransferSpecTransferOptions | undefined) {
-    this._transferOptions = value;
+  public putTransferOptions(value: StorageTransferJobTransferSpecTransferOptions) {
+    this._transferOptions.internalValue = value;
   }
   public resetTransferOptions() {
-    this._transferOptions = undefined;
+    this._transferOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get transferOptionsInput() {
-    return this._transferOptions
+    return this._transferOptions.internalValue;
   }
 }
 
@@ -1271,8 +1687,8 @@ export class StorageTransferJob extends cdktf.TerraformResource {
     this._description = config.description;
     this._project = config.project;
     this._status = config.status;
-    this._schedule = config.schedule;
-    this._transferSpec = config.transferSpec;
+    this._schedule.internalValue = config.schedule;
+    this._transferSpec.internalValue = config.transferSpec;
   }
 
   // ==========
@@ -1299,7 +1715,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1318,11 +1734,11 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1330,15 +1746,15 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string | undefined; 
+  private _status?: string; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string) {
     this._status = value;
   }
   public resetStatus() {
@@ -1346,35 +1762,33 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
-    return this._status
+    return this._status;
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule?: StorageTransferJobSchedule; 
-  private __scheduleOutput = new StorageTransferJobScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new StorageTransferJobScheduleOutputReference(this as any, "schedule", true);
   public get schedule() {
-    return this.__scheduleOutput;
+    return this._schedule;
   }
   public putSchedule(value: StorageTransferJobSchedule) {
-    this._schedule = value;
+    this._schedule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule
+    return this._schedule.internalValue;
   }
 
   // transfer_spec - computed: false, optional: false, required: true
-  private _transferSpec?: StorageTransferJobTransferSpec; 
-  private __transferSpecOutput = new StorageTransferJobTransferSpecOutputReference(this as any, "transfer_spec", true);
+  private _transferSpec = new StorageTransferJobTransferSpecOutputReference(this as any, "transfer_spec", true);
   public get transferSpec() {
-    return this.__transferSpecOutput;
+    return this._transferSpec;
   }
   public putTransferSpec(value: StorageTransferJobTransferSpec) {
-    this._transferSpec = value;
+    this._transferSpec.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get transferSpecInput() {
-    return this._transferSpec
+    return this._transferSpec.internalValue;
   }
 
   // =========
@@ -1386,8 +1800,8 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       project: cdktf.stringToTerraform(this._project),
       status: cdktf.stringToTerraform(this._status),
-      schedule: storageTransferJobScheduleToTerraform(this._schedule),
-      transfer_spec: storageTransferJobTransferSpecToTerraform(this._transferSpec),
+      schedule: storageTransferJobScheduleToTerraform(this._schedule.internalValue),
+      transfer_spec: storageTransferJobTransferSpecToTerraform(this._transferSpec.internalValue),
     };
   }
 }

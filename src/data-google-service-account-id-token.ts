@@ -68,11 +68,11 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   // ==========
 
   // delegates - computed: false, optional: true, required: false
-  private _delegates?: string[] | undefined; 
+  private _delegates?: string[]; 
   public get delegates() {
     return this.getListAttribute('delegates');
   }
-  public set delegates(value: string[] | undefined) {
+  public set delegates(value: string[]) {
     this._delegates = value;
   }
   public resetDelegates() {
@@ -80,7 +80,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get delegatesInput() {
-    return this._delegates
+    return this._delegates;
   }
 
   // id - computed: true, optional: true, required: false
@@ -94,11 +94,11 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
 
   // include_email - computed: false, optional: true, required: false
-  private _includeEmail?: boolean | cdktf.IResolvable | undefined; 
+  private _includeEmail?: boolean | cdktf.IResolvable; 
   public get includeEmail() {
     return this.getBooleanAttribute('include_email') as any;
   }
-  public set includeEmail(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeEmail(value: boolean | cdktf.IResolvable) {
     this._includeEmail = value;
   }
   public resetIncludeEmail() {
@@ -106,7 +106,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get includeEmailInput() {
-    return this._includeEmail
+    return this._includeEmail;
   }
 
   // target_audience - computed: false, optional: false, required: true
@@ -119,15 +119,15 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetAudienceInput() {
-    return this._targetAudience
+    return this._targetAudience;
   }
 
   // target_service_account - computed: false, optional: true, required: false
-  private _targetServiceAccount?: string | undefined; 
+  private _targetServiceAccount?: string; 
   public get targetServiceAccount() {
     return this.getStringAttribute('target_service_account');
   }
-  public set targetServiceAccount(value: string | undefined) {
+  public set targetServiceAccount(value: string) {
     this._targetServiceAccount = value;
   }
   public resetTargetServiceAccount() {
@@ -135,7 +135,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetServiceAccountInput() {
-    return this._targetServiceAccount
+    return this._targetServiceAccount;
   }
 
   // =========

@@ -71,7 +71,7 @@ export interface ApigeeInstanceTimeouts {
   readonly delete?: string;
 }
 
-function apigeeInstanceTimeoutsToTerraform(struct?: ApigeeInstanceTimeoutsOutputReference | ApigeeInstanceTimeouts): any {
+export function apigeeInstanceTimeoutsToTerraform(struct?: ApigeeInstanceTimeoutsOutputReference | ApigeeInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,12 +92,37 @@ export class ApigeeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApigeeInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApigeeInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -105,15 +130,15 @@ export class ApigeeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -121,7 +146,7 @@ export class ApigeeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -164,7 +189,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     this._name = config.name;
     this._orgId = config.orgId;
     this._peeringCidrRange = config.peeringCidrRange;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -172,11 +197,11 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -184,15 +209,15 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // disk_encryption_key_name - computed: false, optional: true, required: false
-  private _diskEncryptionKeyName?: string | undefined; 
+  private _diskEncryptionKeyName?: string; 
   public get diskEncryptionKeyName() {
     return this.getStringAttribute('disk_encryption_key_name');
   }
-  public set diskEncryptionKeyName(value: string | undefined) {
+  public set diskEncryptionKeyName(value: string) {
     this._diskEncryptionKeyName = value;
   }
   public resetDiskEncryptionKeyName() {
@@ -200,15 +225,15 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionKeyNameInput() {
-    return this._diskEncryptionKeyName
+    return this._diskEncryptionKeyName;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -216,7 +241,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // host - computed: true, optional: false, required: false
@@ -239,7 +264,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -252,7 +277,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // org_id - computed: false, optional: false, required: true
@@ -265,15 +290,15 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get orgIdInput() {
-    return this._orgId
+    return this._orgId;
   }
 
   // peering_cidr_range - computed: false, optional: true, required: false
-  private _peeringCidrRange?: string | undefined; 
+  private _peeringCidrRange?: string; 
   public get peeringCidrRange() {
     return this.getStringAttribute('peering_cidr_range');
   }
-  public set peeringCidrRange(value: string | undefined) {
+  public set peeringCidrRange(value: string) {
     this._peeringCidrRange = value;
   }
   public resetPeeringCidrRange() {
@@ -281,7 +306,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get peeringCidrRangeInput() {
-    return this._peeringCidrRange
+    return this._peeringCidrRange;
   }
 
   // port - computed: true, optional: false, required: false
@@ -290,20 +315,19 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApigeeInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new ApigeeInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApigeeInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApigeeInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApigeeInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -319,7 +343,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),
       peering_cidr_range: cdktf.stringToTerraform(this._peeringCidrRange),
-      timeouts: apigeeInstanceTimeoutsToTerraform(this._timeouts),
+      timeouts: apigeeInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

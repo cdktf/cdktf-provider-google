@@ -72,7 +72,7 @@ Note: These values are supported as input, but considered a legacy format:
   readonly enrollmentLevel?: string;
 }
 
-function folderAccessApprovalSettingsEnrolledServicesToTerraform(struct?: FolderAccessApprovalSettingsEnrolledServices): any {
+export function folderAccessApprovalSettingsEnrolledServicesToTerraform(struct?: FolderAccessApprovalSettingsEnrolledServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -98,7 +98,7 @@ export interface FolderAccessApprovalSettingsTimeouts {
   readonly update?: string;
 }
 
-function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessApprovalSettingsTimeoutsOutputReference | FolderAccessApprovalSettingsTimeouts): any {
+export function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderAccessApprovalSettingsTimeoutsOutputReference | FolderAccessApprovalSettingsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -120,12 +120,43 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FolderAccessApprovalSettingsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FolderAccessApprovalSettingsTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -133,15 +164,15 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -149,15 +180,15 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -165,7 +196,7 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -204,7 +235,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
     this._folderId = config.folderId;
     this._notificationEmails = config.notificationEmails;
     this._enrolledServices = config.enrolledServices;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -226,7 +257,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderIdInput() {
-    return this._folderId
+    return this._folderId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -240,11 +271,11 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // notification_emails - computed: true, optional: true, required: false
-  private _notificationEmails?: string[] | undefined; 
+  private _notificationEmails?: string[]; 
   public get notificationEmails() {
     return this.getListAttribute('notification_emails');
   }
-  public set notificationEmails(value: string[] | undefined) {
+  public set notificationEmails(value: string[]) {
     this._notificationEmails = value;
   }
   public resetNotificationEmails() {
@@ -252,7 +283,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationEmailsInput() {
-    return this._notificationEmails
+    return this._notificationEmails;
   }
 
   // enrolled_services - computed: false, optional: false, required: true
@@ -266,24 +297,23 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enrolledServicesInput() {
-    return this._enrolledServices
+    return this._enrolledServices;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FolderAccessApprovalSettingsTimeouts | undefined; 
-  private __timeoutsOutput = new FolderAccessApprovalSettingsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FolderAccessApprovalSettingsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: FolderAccessApprovalSettingsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: FolderAccessApprovalSettingsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -295,7 +325,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
       folder_id: cdktf.stringToTerraform(this._folderId),
       notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
       enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),
-      timeouts: folderAccessApprovalSettingsTimeoutsToTerraform(this._timeouts),
+      timeouts: folderAccessApprovalSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -84,7 +84,7 @@ export interface LoggingMetricBucketOptionsExplicitBuckets {
   readonly bounds: number[];
 }
 
-function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: LoggingMetricBucketOptionsExplicitBucketsOutputReference | LoggingMetricBucketOptionsExplicitBuckets): any {
+export function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: LoggingMetricBucketOptionsExplicitBucketsOutputReference | LoggingMetricBucketOptionsExplicitBuckets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -104,6 +104,25 @@ export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingMetricBucketOptionsExplicitBuckets | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bounds) {
+      hasAnyValues = true;
+      internalValueResult.bounds = this._bounds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingMetricBucketOptionsExplicitBuckets | undefined) {
+    if (value === undefined) {
+      this._bounds = undefined;
+    }
+    else {
+      this._bounds = value.bounds;
+    }
+  }
+
   // bounds - computed: false, optional: false, required: true
   private _bounds?: number[]; 
   public get bounds() {
@@ -115,7 +134,7 @@ export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get boundsInput() {
-    return this._bounds
+    return this._bounds;
   }
 }
 export interface LoggingMetricBucketOptionsExponentialBuckets {
@@ -139,7 +158,7 @@ export interface LoggingMetricBucketOptionsExponentialBuckets {
   readonly scale?: number;
 }
 
-function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?: LoggingMetricBucketOptionsExponentialBucketsOutputReference | LoggingMetricBucketOptionsExponentialBuckets): any {
+export function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?: LoggingMetricBucketOptionsExponentialBucketsOutputReference | LoggingMetricBucketOptionsExponentialBuckets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -161,12 +180,43 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingMetricBucketOptionsExponentialBuckets | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._growthFactor) {
+      hasAnyValues = true;
+      internalValueResult.growthFactor = this._growthFactor;
+    }
+    if (this._numFiniteBuckets) {
+      hasAnyValues = true;
+      internalValueResult.numFiniteBuckets = this._numFiniteBuckets;
+    }
+    if (this._scale) {
+      hasAnyValues = true;
+      internalValueResult.scale = this._scale;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingMetricBucketOptionsExponentialBuckets | undefined) {
+    if (value === undefined) {
+      this._growthFactor = undefined;
+      this._numFiniteBuckets = undefined;
+      this._scale = undefined;
+    }
+    else {
+      this._growthFactor = value.growthFactor;
+      this._numFiniteBuckets = value.numFiniteBuckets;
+      this._scale = value.scale;
+    }
+  }
+
   // growth_factor - computed: false, optional: true, required: false
-  private _growthFactor?: number | undefined; 
+  private _growthFactor?: number; 
   public get growthFactor() {
     return this.getNumberAttribute('growth_factor');
   }
-  public set growthFactor(value: number | undefined) {
+  public set growthFactor(value: number) {
     this._growthFactor = value;
   }
   public resetGrowthFactor() {
@@ -174,15 +224,15 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get growthFactorInput() {
-    return this._growthFactor
+    return this._growthFactor;
   }
 
   // num_finite_buckets - computed: false, optional: true, required: false
-  private _numFiniteBuckets?: number | undefined; 
+  private _numFiniteBuckets?: number; 
   public get numFiniteBuckets() {
     return this.getNumberAttribute('num_finite_buckets');
   }
-  public set numFiniteBuckets(value: number | undefined) {
+  public set numFiniteBuckets(value: number) {
     this._numFiniteBuckets = value;
   }
   public resetNumFiniteBuckets() {
@@ -190,15 +240,15 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get numFiniteBucketsInput() {
-    return this._numFiniteBuckets
+    return this._numFiniteBuckets;
   }
 
   // scale - computed: false, optional: true, required: false
-  private _scale?: number | undefined; 
+  private _scale?: number; 
   public get scale() {
     return this.getNumberAttribute('scale');
   }
-  public set scale(value: number | undefined) {
+  public set scale(value: number) {
     this._scale = value;
   }
   public resetScale() {
@@ -206,7 +256,7 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get scaleInput() {
-    return this._scale
+    return this._scale;
   }
 }
 export interface LoggingMetricBucketOptionsLinearBuckets {
@@ -230,7 +280,7 @@ export interface LoggingMetricBucketOptionsLinearBuckets {
   readonly width?: number;
 }
 
-function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: LoggingMetricBucketOptionsLinearBucketsOutputReference | LoggingMetricBucketOptionsLinearBuckets): any {
+export function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: LoggingMetricBucketOptionsLinearBucketsOutputReference | LoggingMetricBucketOptionsLinearBuckets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -252,12 +302,43 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingMetricBucketOptionsLinearBuckets | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._numFiniteBuckets) {
+      hasAnyValues = true;
+      internalValueResult.numFiniteBuckets = this._numFiniteBuckets;
+    }
+    if (this._offset) {
+      hasAnyValues = true;
+      internalValueResult.offset = this._offset;
+    }
+    if (this._width) {
+      hasAnyValues = true;
+      internalValueResult.width = this._width;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingMetricBucketOptionsLinearBuckets | undefined) {
+    if (value === undefined) {
+      this._numFiniteBuckets = undefined;
+      this._offset = undefined;
+      this._width = undefined;
+    }
+    else {
+      this._numFiniteBuckets = value.numFiniteBuckets;
+      this._offset = value.offset;
+      this._width = value.width;
+    }
+  }
+
   // num_finite_buckets - computed: false, optional: true, required: false
-  private _numFiniteBuckets?: number | undefined; 
+  private _numFiniteBuckets?: number; 
   public get numFiniteBuckets() {
     return this.getNumberAttribute('num_finite_buckets');
   }
-  public set numFiniteBuckets(value: number | undefined) {
+  public set numFiniteBuckets(value: number) {
     this._numFiniteBuckets = value;
   }
   public resetNumFiniteBuckets() {
@@ -265,15 +346,15 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get numFiniteBucketsInput() {
-    return this._numFiniteBuckets
+    return this._numFiniteBuckets;
   }
 
   // offset - computed: false, optional: true, required: false
-  private _offset?: number | undefined; 
+  private _offset?: number; 
   public get offset() {
     return this.getNumberAttribute('offset');
   }
-  public set offset(value: number | undefined) {
+  public set offset(value: number) {
     this._offset = value;
   }
   public resetOffset() {
@@ -281,15 +362,15 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get offsetInput() {
-    return this._offset
+    return this._offset;
   }
 
   // width - computed: false, optional: true, required: false
-  private _width?: number | undefined; 
+  private _width?: number; 
   public get width() {
     return this.getNumberAttribute('width');
   }
-  public set width(value: number | undefined) {
+  public set width(value: number) {
     this._width = value;
   }
   public resetWidth() {
@@ -297,7 +378,7 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get widthInput() {
-    return this._width
+    return this._width;
   }
 }
 export interface LoggingMetricBucketOptions {
@@ -321,7 +402,7 @@ export interface LoggingMetricBucketOptions {
   readonly linearBuckets?: LoggingMetricBucketOptionsLinearBuckets;
 }
 
-function loggingMetricBucketOptionsToTerraform(struct?: LoggingMetricBucketOptionsOutputReference | LoggingMetricBucketOptions): any {
+export function loggingMetricBucketOptionsToTerraform(struct?: LoggingMetricBucketOptionsOutputReference | LoggingMetricBucketOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -343,55 +424,83 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // explicit_buckets - computed: false, optional: true, required: false
-  private _explicitBuckets?: LoggingMetricBucketOptionsExplicitBuckets | undefined; 
-  private __explicitBucketsOutput = new LoggingMetricBucketOptionsExplicitBucketsOutputReference(this as any, "explicit_buckets", true);
-  public get explicitBuckets() {
-    return this.__explicitBucketsOutput;
+  public get internalValue(): LoggingMetricBucketOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._explicitBuckets) {
+      hasAnyValues = true;
+      internalValueResult.explicitBuckets = this._explicitBuckets?.internalValue;
+    }
+    if (this._exponentialBuckets) {
+      hasAnyValues = true;
+      internalValueResult.exponentialBuckets = this._exponentialBuckets?.internalValue;
+    }
+    if (this._linearBuckets) {
+      hasAnyValues = true;
+      internalValueResult.linearBuckets = this._linearBuckets?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putExplicitBuckets(value: LoggingMetricBucketOptionsExplicitBuckets | undefined) {
-    this._explicitBuckets = value;
+
+  public set internalValue(value: LoggingMetricBucketOptions | undefined) {
+    if (value === undefined) {
+      this._explicitBuckets.internalValue = undefined;
+      this._exponentialBuckets.internalValue = undefined;
+      this._linearBuckets.internalValue = undefined;
+    }
+    else {
+      this._explicitBuckets.internalValue = value.explicitBuckets;
+      this._exponentialBuckets.internalValue = value.exponentialBuckets;
+      this._linearBuckets.internalValue = value.linearBuckets;
+    }
+  }
+
+  // explicit_buckets - computed: false, optional: true, required: false
+  private _explicitBuckets = new LoggingMetricBucketOptionsExplicitBucketsOutputReference(this as any, "explicit_buckets", true);
+  public get explicitBuckets() {
+    return this._explicitBuckets;
+  }
+  public putExplicitBuckets(value: LoggingMetricBucketOptionsExplicitBuckets) {
+    this._explicitBuckets.internalValue = value;
   }
   public resetExplicitBuckets() {
-    this._explicitBuckets = undefined;
+    this._explicitBuckets.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get explicitBucketsInput() {
-    return this._explicitBuckets
+    return this._explicitBuckets.internalValue;
   }
 
   // exponential_buckets - computed: false, optional: true, required: false
-  private _exponentialBuckets?: LoggingMetricBucketOptionsExponentialBuckets | undefined; 
-  private __exponentialBucketsOutput = new LoggingMetricBucketOptionsExponentialBucketsOutputReference(this as any, "exponential_buckets", true);
+  private _exponentialBuckets = new LoggingMetricBucketOptionsExponentialBucketsOutputReference(this as any, "exponential_buckets", true);
   public get exponentialBuckets() {
-    return this.__exponentialBucketsOutput;
+    return this._exponentialBuckets;
   }
-  public putExponentialBuckets(value: LoggingMetricBucketOptionsExponentialBuckets | undefined) {
-    this._exponentialBuckets = value;
+  public putExponentialBuckets(value: LoggingMetricBucketOptionsExponentialBuckets) {
+    this._exponentialBuckets.internalValue = value;
   }
   public resetExponentialBuckets() {
-    this._exponentialBuckets = undefined;
+    this._exponentialBuckets.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get exponentialBucketsInput() {
-    return this._exponentialBuckets
+    return this._exponentialBuckets.internalValue;
   }
 
   // linear_buckets - computed: false, optional: true, required: false
-  private _linearBuckets?: LoggingMetricBucketOptionsLinearBuckets | undefined; 
-  private __linearBucketsOutput = new LoggingMetricBucketOptionsLinearBucketsOutputReference(this as any, "linear_buckets", true);
+  private _linearBuckets = new LoggingMetricBucketOptionsLinearBucketsOutputReference(this as any, "linear_buckets", true);
   public get linearBuckets() {
-    return this.__linearBucketsOutput;
+    return this._linearBuckets;
   }
-  public putLinearBuckets(value: LoggingMetricBucketOptionsLinearBuckets | undefined) {
-    this._linearBuckets = value;
+  public putLinearBuckets(value: LoggingMetricBucketOptionsLinearBuckets) {
+    this._linearBuckets.internalValue = value;
   }
   public resetLinearBuckets() {
-    this._linearBuckets = undefined;
+    this._linearBuckets.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linearBucketsInput() {
-    return this._linearBuckets
+    return this._linearBuckets.internalValue;
   }
 }
 export interface LoggingMetricMetricDescriptorLabels {
@@ -415,7 +524,7 @@ export interface LoggingMetricMetricDescriptorLabels {
   readonly valueType?: string;
 }
 
-function loggingMetricMetricDescriptorLabelsToTerraform(struct?: LoggingMetricMetricDescriptorLabels): any {
+export function loggingMetricMetricDescriptorLabelsToTerraform(struct?: LoggingMetricMetricDescriptorLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -468,7 +577,7 @@ For counter metrics, set this to INT64. Possible values: ["BOOL", "INT64", "DOUB
   readonly labels?: LoggingMetricMetricDescriptorLabels[];
 }
 
-function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricMetricDescriptorOutputReference | LoggingMetricMetricDescriptor): any {
+export function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricMetricDescriptorOutputReference | LoggingMetricMetricDescriptor): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -492,12 +601,55 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingMetricMetricDescriptor | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._displayName) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
+    if (this._metricKind) {
+      hasAnyValues = true;
+      internalValueResult.metricKind = this._metricKind;
+    }
+    if (this._unit) {
+      hasAnyValues = true;
+      internalValueResult.unit = this._unit;
+    }
+    if (this._valueType) {
+      hasAnyValues = true;
+      internalValueResult.valueType = this._valueType;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingMetricMetricDescriptor | undefined) {
+    if (value === undefined) {
+      this._displayName = undefined;
+      this._metricKind = undefined;
+      this._unit = undefined;
+      this._valueType = undefined;
+      this._labels = undefined;
+    }
+    else {
+      this._displayName = value.displayName;
+      this._metricKind = value.metricKind;
+      this._unit = value.unit;
+      this._valueType = value.valueType;
+      this._labels = value.labels;
+    }
+  }
+
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -505,7 +657,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // metric_kind - computed: false, optional: false, required: true
@@ -518,15 +670,15 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get metricKindInput() {
-    return this._metricKind
+    return this._metricKind;
   }
 
   // unit - computed: false, optional: true, required: false
-  private _unit?: string | undefined; 
+  private _unit?: string; 
   public get unit() {
     return this.getStringAttribute('unit');
   }
-  public set unit(value: string | undefined) {
+  public set unit(value: string) {
     this._unit = value;
   }
   public resetUnit() {
@@ -534,7 +686,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get unitInput() {
-    return this._unit
+    return this._unit;
   }
 
   // value_type - computed: false, optional: false, required: true
@@ -547,16 +699,16 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get valueTypeInput() {
-    return this._valueType
+    return this._valueType;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: LoggingMetricMetricDescriptorLabels[] | undefined; 
+  private _labels?: LoggingMetricMetricDescriptorLabels[]; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: LoggingMetricMetricDescriptorLabels[] | undefined) {
+  public set labels(value: LoggingMetricMetricDescriptorLabels[]) {
     this._labels = value;
   }
   public resetLabels() {
@@ -564,7 +716,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 }
 export interface LoggingMetricTimeouts {
@@ -582,7 +734,7 @@ export interface LoggingMetricTimeouts {
   readonly update?: string;
 }
 
-function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeoutsOutputReference | LoggingMetricTimeouts): any {
+export function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeoutsOutputReference | LoggingMetricTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -604,12 +756,43 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingMetricTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingMetricTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -617,15 +800,15 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -633,15 +816,15 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -649,7 +832,7 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -691,9 +874,9 @@ export class LoggingMetric extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._valueExtractor = config.valueExtractor;
-    this._bucketOptions = config.bucketOptions;
-    this._metricDescriptor = config.metricDescriptor;
-    this._timeouts = config.timeouts;
+    this._bucketOptions.internalValue = config.bucketOptions;
+    this._metricDescriptor.internalValue = config.metricDescriptor;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -701,11 +884,11 @@ export class LoggingMetric extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -713,7 +896,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // filter - computed: false, optional: false, required: true
@@ -726,7 +909,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -735,12 +918,12 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // label_extractors - computed: false, optional: true, required: false
-  private _labelExtractors?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labelExtractors?: { [key: string]: string } | cdktf.IResolvable; 
   public get labelExtractors() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('label_extractors') as any;
   }
-  public set labelExtractors(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labelExtractors(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labelExtractors = value;
   }
   public resetLabelExtractors() {
@@ -748,7 +931,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelExtractorsInput() {
-    return this._labelExtractors
+    return this._labelExtractors;
   }
 
   // name - computed: false, optional: false, required: true
@@ -761,15 +944,15 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -777,15 +960,15 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // value_extractor - computed: false, optional: true, required: false
-  private _valueExtractor?: string | undefined; 
+  private _valueExtractor?: string; 
   public get valueExtractor() {
     return this.getStringAttribute('value_extractor');
   }
-  public set valueExtractor(value: string | undefined) {
+  public set valueExtractor(value: string) {
     this._valueExtractor = value;
   }
   public resetValueExtractor() {
@@ -793,55 +976,52 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get valueExtractorInput() {
-    return this._valueExtractor
+    return this._valueExtractor;
   }
 
   // bucket_options - computed: false, optional: true, required: false
-  private _bucketOptions?: LoggingMetricBucketOptions | undefined; 
-  private __bucketOptionsOutput = new LoggingMetricBucketOptionsOutputReference(this as any, "bucket_options", true);
+  private _bucketOptions = new LoggingMetricBucketOptionsOutputReference(this as any, "bucket_options", true);
   public get bucketOptions() {
-    return this.__bucketOptionsOutput;
+    return this._bucketOptions;
   }
-  public putBucketOptions(value: LoggingMetricBucketOptions | undefined) {
-    this._bucketOptions = value;
+  public putBucketOptions(value: LoggingMetricBucketOptions) {
+    this._bucketOptions.internalValue = value;
   }
   public resetBucketOptions() {
-    this._bucketOptions = undefined;
+    this._bucketOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bucketOptionsInput() {
-    return this._bucketOptions
+    return this._bucketOptions.internalValue;
   }
 
   // metric_descriptor - computed: false, optional: false, required: true
-  private _metricDescriptor?: LoggingMetricMetricDescriptor; 
-  private __metricDescriptorOutput = new LoggingMetricMetricDescriptorOutputReference(this as any, "metric_descriptor", true);
+  private _metricDescriptor = new LoggingMetricMetricDescriptorOutputReference(this as any, "metric_descriptor", true);
   public get metricDescriptor() {
-    return this.__metricDescriptorOutput;
+    return this._metricDescriptor;
   }
   public putMetricDescriptor(value: LoggingMetricMetricDescriptor) {
-    this._metricDescriptor = value;
+    this._metricDescriptor.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get metricDescriptorInput() {
-    return this._metricDescriptor
+    return this._metricDescriptor.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LoggingMetricTimeouts | undefined; 
-  private __timeoutsOutput = new LoggingMetricTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LoggingMetricTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LoggingMetricTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LoggingMetricTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -856,9 +1036,9 @@ export class LoggingMetric extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       value_extractor: cdktf.stringToTerraform(this._valueExtractor),
-      bucket_options: loggingMetricBucketOptionsToTerraform(this._bucketOptions),
-      metric_descriptor: loggingMetricMetricDescriptorToTerraform(this._metricDescriptor),
-      timeouts: loggingMetricTimeoutsToTerraform(this._timeouts),
+      bucket_options: loggingMetricBucketOptionsToTerraform(this._bucketOptions.internalValue),
+      metric_descriptor: loggingMetricMetricDescriptorToTerraform(this._metricDescriptor.internalValue),
+      timeouts: loggingMetricTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }
